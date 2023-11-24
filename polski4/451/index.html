@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Tytuł tekstu prasowego nosi znamiona manipulacji. Słowa wartościujące dodatnio ("gigantyczne") i chwytliwe sformułowania ("czekają na odkrycie", "ukryta podaż") mają na celu wzbudzenie sensacji poprzez zasugerowanie odbiorcy, iż w kraju odkryto bogate złoża surowców naturalnych. Właściwy tekst ma odwrotne przesłanie - obala tezę zawartą w tytule. Autor wykazuje bowiem, że sam dostęp do zasobów naturalnych nie przyniesie żadnemu państwu zysku, jeśli nie będzie ono w stanie skutecznie ich wydobyć i eskploatować ("[...] o wiele większe znaczenie dla wzrostu gospodarczego mają umiejętności wykorzystywania tych surowców aniżeli samo ich posiadanie.").   </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 427px; height: 184px;">
+<tbody>
+<tr style="height: 51px;">
+<td style="background-color: #99ccff; text-align: center; height: 51px; width: 133px;">-</td>
+<td style="background-color: #99ccff; text-align: center; height: 51px; width: 284px;"><strong>Przykłady z tekstu</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 51px; width: 213px;"><strong>Uzasadnienie wyboru</strong></td>
+</tr>
+<tr style="height: 147px;">
+<td style="background-color: #99ccff; text-align: center; height: 147px; width: 133px;"><strong>Informacje</strong></td>
+<td style="width: 284px; text-align: center; height: 147px;">
+<p>"Zasoby surowców naturalnych w przeszłości mocno determinowały to, czy dany kraj ma przewagę nad innymi."</p>
+<p>"W końcu efektywne wykorzystanie soli jest prostsze niż efektywne wykorzystanie krzemu czy litu."</p>
+<p>"cień szansy na pozyskiwanie w naszym kraju gazu łupkowego"</p>
+<p>"wyskakujący w przeglądarce [...] artykuł"</p>
+</td>
+<td style="width: 213px; text-align: center; height: 147px;">fakty, stwierdzenia o obiektywnym charakterze, odwołujące się do wiedzy ogólnej</td>
+</tr>
+<tr style="height: 29px;">
+<td style="background-color: #99ccff; text-align: center; height: 29px; width: 133px;"><strong>Opinie</strong></td>
+<td style="width: 284px; text-align: center; height: 29px;">
+<p>"trochę bardziej skomplikowane"</p>
+<p>"korzystny i pożądany"</p>
+<p>"łupkowy ambaras"</p>
+<p>"wymowny tytuł"</p>
+</td>
+<td style="width: 213px; text-align: center; height: 29px;">wyrazy i sformułowania wartościujące lub nacechowane emocjonalnie</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Biblijna sentencja: "Przewrotności ust się wystrzegaj, od fałszu warg bądź z daleka" potępia wszelkie przejawy dezinformacji. Poucza, by nie kłamać ani nie słuchać kłamstw opowiadanych przez innych ludzi.</p>
+<p> </p>
+<p>b) Część indywidualna</p><br>

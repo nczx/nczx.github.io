@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. made </p>
+<p>(<em>make a reservation</em> - zrobić rezerwację) </p>
+<p>2. made</p>
+<p>(<em>make a decision</em> - podjąć decyzję)</p>
+<p>3. did</p>
+<p>(<em>do one's best</em> - robić co w czyjejś mocy)</p>
+<p>4. made</p>
+<p>(<em>make friends</em> - zaprzyjaźnić się)</p>
+<p>5. do</p>
+<p>(<em>do a favour</em> - wyświadczyć przysługę)</p>
+<p>6. made</p>
+<p>(<em>make good use of something</em> - dobrze coś wykorzystać)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. d</p>
+<p>(<em>make out</em> - usłyszeć, zrozumieć) </p>
+<p>2. c</p>
+<p>(<em>make up</em> - wymyślić, zmyślić)</p>
+<p>3. b</p>
+<p>(<em>make something into something</em> - zmienić coś w/ na coś)</p>
+<p>4. f</p>
+<p>(<em>do up</em> - odnowić, udekorować coś)</p>
+<p>5. e</p>
+<p>(<em>do away with</em> - pozbyć się )</p>
+<p>6. a</p>
+<p>(<em>do somebody good</em> - dobrze na kogoś działać)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="height: 505px; width: 633px; border-collapse: collapse; text-align: center;">
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 50px; background-color: #bdb76b;"><strong>Name</strong> (nazwa)</td>
+<td style="height: 50px; background-color: #bdb76b;"><strong>Destination</strong> (cel podróży)</td>
+<td style="height: 50px; background-color: #bdb76b;"><strong>Activity</strong> (czynność)</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 202.656px; height: 18px;">Rosie</td>
+<td style="width: 206.528px; height: 18px;">Costa Rica (Kostaryka) </td>
+<td style="width: 213.42px; height: 18px;">
+<p>zip-linking</p>
+<p>(zjeżdżanie tyrolką)</p>
+</td>
+</tr>
+<tr style="height: 134px;">
+<td style="width: 202.656px; height: 134px;">Oscar</td>
+<td style="width: 206.528px; height: 134px;">Mexico City (miasto Meksyk)</td>
+<td style="width: 213.42px; height: 134px;">
+<p>going on guided tours, visiting famous buildings </p>
+<p>(zwiedzanie z przewodnikiem, zwiedzanie słynnych budynków)</p>
+</td>
+</tr>
+<tr style="height: 54px;">
+<td style="width: 202.656px; height: 54px;">Jim</td>
+<td style="width: 206.528px; height: 54px;">Philadelphia, USA (Filadelfia, Stany Zjednoczone)</td>
+<td style="width: 213.42px; height: 54px;">
+<p>taking part in a football youth tournament</p>
+<p>(udział w młodzieżowym turnieju piłkarskim)</p>
+</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 202.656px; height: 36px;">Kiara</td>
+<td style="width: 206.528px; height: 36px;">Haiti </td>
+<td style="width: 213.42px; height: 36px;">
+<p>volunteering</p>
+<p>(udzielanie się jako wolontariusz)</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 202.656px; height: 18px;">Scarlett</td>
+<td style="width: 206.528px; height: 18px;">Australia </td>
+<td style="width: 213.42px; height: 18px;">
+<p>scuba diving</p>
+<p>(nurkowanie z akwalungiem)</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Rosie B </p>
+<p>2. Oscar E</p>
+<p>3. Jim C</p>
+<p>4. Kiara D</p>
+<p>5. Scarlett F</p>
+<p><strong>The extra statement is A.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

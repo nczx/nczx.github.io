@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <span style="text-decoration: line-through;">buying</span><strong> to buy</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>remember + gerund </em>oznacza "pamiętać, że coś się robiło", a <em>remember + to</em> + bezokolicznik - "pamiętać, żeby coś zrobić". </p>
+<p>2. <span style="text-decoration: line-through;">to talk</span> <strong>talking</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>stop + gerund </em>oznacza - "przestać coś robić", a <em>stop + to</em> + bezokolicznik - "zatrzymać się, żeby coś zrobić". </p>
+<p>3. <span style="text-decoration: line-through;">getting</span> <strong>to get</strong> </p>
+<p><strong>Uzasadnienie</strong>: <em>go on + gerund </em>oznacza - "kontynuować", a <em>go on + to</em> + bezokolicznik - "przejść do czegoś".</p>
+<p>4. <span style="text-decoration: line-through;">speaking</span> <strong>to speak </strong></p>
+<p><strong>Uzasadnienie</strong>: <em>try</em> + <em>to + </em>bezokolicznik oznacza, że próbujemy coś zrobić i wkładamy w to wysiłek, a<em> try + gerund</em> - próbowanie czegoś jako eksperymentu, szczególnie jako możliwe rozwiązanie w celu sprawdzenia, czy coś działa. </p>
+<p>5. <span style="text-decoration: line-through;">not to study</span> <strong>not studying</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>regret + gerund </em>oznacza - "żałuję, że...", a <em>regret + to</em> + bezokolicznik - "z przykrością muszę powiedzieć, że...". </p>
+<p>6. <span style="text-decoration: line-through;">informing</span> <strong>to inform</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>regret + gerund </em>oznacza - "żałuję, że...", a <em>regret + to</em> + bezokolicznik - "z przykrością muszę powiedzieć, że...". </p>
+<p>7. <span style="text-decoration: line-through;">buying</span> <strong>to buy</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>stop + gerund </em>oznacza - "przestać coś robić", a stop + to + bezokolicznik - "zatrzymać się, żeby coś zrobić". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. leaving</p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>after + gerund</em>.  </p>
+<p>2. to change </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>it + czasownik + przymiotnik + to-infinitive</em>. </p>
+<p>3. to follow</p>
+<p><strong>Uzasadnienie</strong>: <em>want + to-infinitive</em>. </p>
+<p>4. getting</p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>after + gerund</em>. </p>
+<p>5. making</p>
+<p><strong>Uzasadnienie</strong>: <em>regret + gerund </em>oznacza - "żałować". </p>
+<p>6. discovering </p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>of + gerund</em>. </p>
+<p>7. Looking</p>
+<p><strong>Uzasadnienie</strong>: czasownik z końcówką <em>-ing</em> w funkcji podmiotu w zdaniu. </p>
+<p>8. to put up</p>
+<p><strong>Uzasadnienie</strong>: <em>try</em> + <em>to-infinitive</em> oznacza, że próbujemy coś zrobić i wkładamy w to wysiłek. </p>
+<p>9. to ask</p>
+<p><strong>Uzasadnienie</strong>: <em>learn + to-infinitive</em>. </p>
+<p>10. knowing</p>
+<p><strong>Uzasadnienie</strong>: <em>interested in + <em>gerund. </em></em></p>
+<p>11. take</p>
+<p><strong>Uzasadnienie</strong>: <em>let + object + infinitive without to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. am in favour of studying </p>
+<p><strong>Uzasadnienie</strong>: <em>in favour of + gerund</em>.  </p>
+<p>2. no use complaining since</p>
+<p><strong>Uzasadnienie</strong>: It's no use<em> + gerund</em>. </p>
+<p>3. didn't mean to upset </p>
+<p><strong>Uzasadnienie</strong>: <em>mean + to-infinitive</em>. </p>
+<p>4. no point in going to </p>
+<p><strong>Uzasadnienie</strong>: <em>There is no point (in) + gerund</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. is believed to have cheated</p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzyła się w przeszłości - podmiot + czasownik w stronie biernej + <em>to have done</em>.  </p>
+<p>2. It is often said </p>
+<p> <strong>Uzasadnienie</strong>: opis ogólnej opinii - <em>It</em> + czasownik w stronie biernej + <em>that</em>.</p>
+<p>3. There is believed to have been</p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzyła się w przeszłości - <em>There</em> + czasownik w stronie biernej + <em>to have been</em>.</p>
+<p>are said to have gone</p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzyła się w przeszłości - podmiot + czasownik w stronie biernej + <em>to have done</em>. </p>
+<p>4. It has been claimed many times </p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - <em>It</em> + czasownik w stronie biernej + <em>that</em>.</p>
+<p>5. are known to video </p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - podmiot + czasownik w stronie biernej + <em>to do</em>. </p>
+<p>6. There are reported to be </p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - <em>There</em> + czasownik w stronie biernej + <em>to be</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Zdania uzupełniamy według następujących możliwych wzorów:</strong></p>
+<p><strong><em>It</em> + czasownik w stronie biernej + <em>that</em></strong></p>
+<p><strong>podmiot + czasownik w stronie biernej + <em>to do/ to have done/ to be doing</em></strong></p>
+<p><strong><em>There</em> + czasownik w stronie biernej + <em>to be/ to have been</em>. </strong></p>
+<hr/>
+<p> </p>
+<p>1. a. It is </p>
+<p>b. He is</p>
+<p>c. There is </p>
+<p>2. a. have been</p>
+<p>b. to have </p>
+<p>c. It is </p>
+<p>3. a. are known</p>
+<p>b. has been </p>
+<p>c. have had</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. is often assumed that a degree will get you a good job.</p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - <em>It</em> + czasownik w stronie biernej + <em>that</em>. </p>
+<p>2. is believed to have started during the Bronze Age about five thousand years ago. </p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzyła się w przeszłości - podmiot + czasownik w stronie biernej + <em>to have done</em>. </p>
+<p>3. are reported to have broken the halls of residence rules 234 times in total last year. </p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzyła się w przeszłości - podmiot + czasownik w stronie biernej + <em>to have done</em>. </p>
+<p>4. are expected to be thirty scholarships offered to foreign students next year. </p>
+<p><strong>Uzasadnienie</strong>: opinia o sytuacji, która wydarzy się w przyszłości - <em>There</em> + czasownik w stronie biernej + <em>to be</em>. </p><br>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a) W przedostatnie strofie podmiot liryczny pragnie odnaleŸæ "mistrza i nauczyciela". Tylko bowiem taka osoba mo¿e pomóc osobie mówi¹cej w odzyskaniu zmys³ów oraz równowagi ducha, powrocie do wczeœniejszego sposobu postrzegania rzeczywistoœci. Podmiot ma nadziejê, ¿e mistrz na nowo nazwie elementy œwiata, a dodatkowo "[...] oddzieli œwiat³o od ciemnoœci". Tym samym uporz¹dkuje on chaos i zrekonstruuje œwiat w jego w³aœciwej postaci. Fragment ten zawiera czytelne aluzje biblijne, które akcentuj¹ spustoszenie dokonañ przez wojnê - nie tylko w sensie materialnym, ale te¿ duchowym. Poszukiwanie nauczyciela przywracaj¹cego zmys³y mo¿na odnieœæ do dzia³alnoœci Chrystusa oraz dokonywanych przez niego uzdrowieñ. Tym samym poeta sugeruje, i¿ tylko cud mo¿e odmieniæ los "ocalonego", który ca³y czas cierpi z powodu swych doœwiadczeñ. Z kolei s³owa: "niech jeszcze raz nazwie rzeczy i pojêcia / niech oddzieli œwiat³o od ciemnoœci" nawi¹zuj¹ do biblijnego stworzenia œwiata. W ten sposób zostaje podkreœlony dramatyzm wojny oraz jej wp³yw na rzeczywistoœæ: wszystkie dotychczasowe osi¹gniêcia cz³owieka zostaj¹ zaprzepaszczone, nastêpuje natomiast powrót do chaosu z pocz¹tku œwiata. Konieczne staje siê wiêc uporz¹dkowanie go na nowo - podobnie jak nazwanie ró¿nych zjawisk czy elementów. Tylko w ten sposób cz³owiek mo¿e odzyskaæ harmoniê ducha oraz sta³e punkty odniesienia.</p>
+<p> </p>
+<p>b) Tematyka wypowiedzi jest niezwykle podnios³a i powa¿na, poniewa¿ dotyczy fundamentalnych kwestii dla podmiotu lirycznego, które maj¹ uniwersalny charakter. Na takie wra¿enie wp³ywaj¹ tak¿e nawi¹zania biblijne. Tematyka ta kontrastuje jednak ze stylem. Jest on bardzo oszczêdny, wywa¿ony, pozbawiony jakichkolwiek ozdobników czy oznak silnych emocji. Przypomina raczej neutralne przedstawianie faktów. Zabieg ten mo¿na uznaæ za przejaw poetyki œciœniêtego gard³a. O wielkich rzeczach podmiot lirycznych opowiada bowiem w powœci¹gliwy sposób, bez patosu, co potêguje tragizm losu podmiotu. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Tytu³ utworu dotyczy bezpoœrednio bohatera wiersza - m³odego cz³owieka, który w czasie wojny unikn¹³ œmierci. Jego los w szerszej perspektywie odzwierciedla prze¿ycia osób nale¿¹cych do pokolenia Kolumbów, zyskuje tym samym uniwersalny charakter. Wypowiadaj¹cy siê w utworze m³ody mê¿czyzna jest ukazany jako "ocalony", poniewa¿ uratowa³ swe ¿ycie, nie spotka³o go to, co innych ludzi ("widzia³em: furgony por¹banych ludzi / którzy nie zostan¹ zbawieni"). Mimo tego ocalenie stanowi pozór, zaœ sam tytu³ ma ironiczny wydŸwiêk. "Ocalony" bowiem nie odczuwa ulgi z powodu uratowania swej egzystencji. Wrêcz przeciwnie: nie potrafi odnaleŸæ siê w rzeczywistoœci, boleœnie odczuwa zachowanie porz¹dku œwiata i zatarcie siê sensów podstawowych pojêæ: "To s¹ nazwy puste i i jednoznaczne: / cz³owiek i zwierzê / mi³oœæ i nienawiœæ / wróg i przyjaciel". Jest zagubiony, gdy¿ traci podstawowe punkty odniesienia, z tego te¿ powodu poszukuje osoby, która przywróci harmoniê: "niech jeszcze raz nazwie rzeczy i pojêcia / niech oddzieli œwiat³o od ciemnoœci". Ironia polega wiêc na tym, i¿ mimo zachowania ¿ycia w fizycznym wymiarze, jest martwy duchowo, obci¹¿ony doœwiadczeniem wojny. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>a) Wiersz Ró¿ewicza wywo³uje skojarzenia z obrazowaniem kubistycznym ze wzglêdu na swoj¹ kompozycjê przypominaj¹c¹ kola¿. Poeta rozbija bowiem zdania na wersy (niektóre zawieraj¹ tylko jedno s³owo), a przy tym prawie zupe³nie rezygnuje z interpunkcji, co zwiêksza mo¿liwoœci interpretacyjne. Ponadto pisz¹cy zestawia ze sob¹ pojedyncze elementy, np.: "cz³owiek i zwierzê / mi³oœæ i nienawiœæ / wróg i przyjaciel / ciemnoœæ i œwiat³o". Chocia¿ mo¿na je rozpatrywaæ indywidualnie, to razem tworz¹ spójn¹ ca³oœæ umo¿liwiaj¹c¹ przedstawienie pewnej refleksji na temat kryzysu wartoœci oraz rozpadu œwiata. Z kolei Picasso wykorzystuje nieco inne œrodki, typowe dla dzie³a malarskiego. D¹¿y on bowiem do uproszczenia przedstawianych form, okreœlenia ich za pomoc¹ geometrycznych kszta³tów. Wywo³uje to tak¿e pewn¹ deformacjê ukazanej rzeczywistoœci. Inn¹ cech¹ typow¹ dla kubizmu jest równie¿ forma kola¿u oraz silny kontrast. Wynika on z ograniczenia palety barw do bieli, szaroœci oraz czerni. Wybór takiego sposobu obrazowania przez artystów sugeruje pewn¹ prawdê na temat œwiata. Pozwala to na ukazanie rozpadu rzeczywistoœci, zachwianie dotychczasowej harmonii, która zosta³a zaburzona przez wojnê. W ten sposób twórcom udaje siê oddaæ wra¿enia cz³owieka doœwiadczaj¹cego kryzysu, trac¹cego dotychczasowe punkty odniesienia.</p>
+<p> </p>
+<p>b) Przyk³adowe nawi¹zania do dzie³ i motywów:</p>
+<ul>
+<li>Goya, <em>Trzeci maja 1808</em> -&gt; Picasso nawi¹zuje do dzie³a tego malarza poprzez odwo³anie siê do tematyki historycznej. Ponadto artystów ³¹czy to, i¿ przedstawiaj¹ masakrê ludnoœci cywilnej, samo zaœ zagro¿enie jest pozbawione konkretnej twarzy, przez co zyskuje uniwersalny wymiar. Podobieñstwo mo¿na dostrzec tak¿e w wymowie obrazów: stanowi¹ sprzeciw wobec okrucieñstwa, nieuzasadnionej przemocy.</li>
+<li>Malarstwo batalistyczne -&gt; Sposób ukazania postaci wywo³uje skojarzenia z malarstwem batalistycznym, poniewa¿ ma dynamiczny charakter, wywo³uje poczucie chaosu. Bohaterowie zaœ gin¹ w nierównej walce z niespodziewanym i okrutnym przeciwnikiem - wojn¹.</li>
+<li>Malarstwo religijne -&gt; Postaæ po prawej stronie, z wyci¹gniêtymi do góry rêkami, stanowi aluzjê do œmierci Chrystusa na krzy¿u. Picasso tym samym pog³êbia interpretacjê cierpienia niewinnych, poniewa¿ zrównuje je z ofiar¹ Jezusa, nadaje mu sakralny wymiar. </li>
+<li>Motyw piety -&gt; Kobieta op³akuj¹ca œmieræ dziecka, które trzyma na rêkach, to nawi¹zanie do takiego sposobu przedstawienia Matki Bo¿ej. Podobnie jak postaæ z wyci¹gniêtymi rêkami wprowadza religijn¹ symbolikê. Podkreœla przy tym dramatyzm losu niewinnych ofiar oraz cierpienie matek. </li>
+<li>Motyw <em>vanitas</em> -&gt; O przemijaniu, kruchoœci ¿ycia przypominaj¹ pewne elementy dzie³a: wiatr, dym, œwieca. Motyw ten przypomina o niszczycielskiej roli wojny, która odbiera ¿ycia i niszczy porz¹dek œwiata.</li>
+<li>Motyw cierpienia i wojny -&gt; Te dwa zjawiska u Picassa s¹ ze sob¹ nierozerwalnie po³¹czone. Malarz skupia siê na przedstawieniu konsekwencji konfliktu oraz prze¿yciach ofiar. Zastosowanie silnych kontrastów, uproszczonych form i wyrazistej ekspresji postaci potêguje wra¿enie rozgrywaj¹cego siê koszmaru, przed którym nie mo¿na uciec. </li>
+<li>Motyw œwiat³a -&gt; Nad postaciami znajduje siê ¿arówka, zaœ jedna z postaci trzyma w d³oni lampê. Sposób przedstawienia ¿arówki, niby oka, wywo³uje skojarzenia z Bo¿a opatrznoœci¹ lub tez bomb¹, co wprowadza z³owrogie sensy. Z kolei lampa byæ mo¿e symbolizuje poznanie, prawdê, potwierdza tragizm sytuacji.</li>
+<li>Motyw zwierz¹t -&gt; Wprowadzenie zwierzêcych postaci sugeruje totalny wymiar wojny. Dotyka ona bowiem nie tylko ludzi, ale te¿ ca³y œwiat natury, prowadzi do jego degradacji. Zabieg ten sugeruje tak¿e przebudzenie siê w ludziach pierwotnych instynktów, odczuwaj¹ przede wszystkim strach i ból, a najwa¿niejsze staje siê przetrwanie czy ucieczka. </li>
+</ul>
+<p> </p>
+<p>c) Wiersz i obraz ³¹czy wystêpowanie podobnych motywów. Dominuj¹cym jest doœwiadczenie wojny oraz cierpienia. Picasso i Ró¿ewicz udowadniaj¹, i¿ konflikt nie ma w sobie piêkna ani wznios³oœci. Jest jedynie Ÿród³em niewyobra¿alnej tragedii, która prowadzi do destrukcji. Dla podmiotu lirycznego w wierszu wojna staje siê przyczyn¹ za³amania œwiatopogl¹du, zw¹tpienia w podstawowe wartoœci: "Jednako wa¿y cnota i wystêpek / widzia³em: / cz³owieka który by³ jeden / wystêpny i cnotliwy". Picasso tak¿e akcentuje przede wszystkim cierpienie niewinnych ofiar, poniewa¿ niszczy ona przyjazn¹ wizjê rzeczywistoœci, a przynosi ból i rozpacz. Artyœci tym samym odwo³uj¹ siê tak¿e do motywu œmierci. Traci ona jednak swój podnios³y wymiar, gdy¿ zostaje sprowadzona wy³¹cznie do procesu biologicznego, jest pozbawiona sfery duchowej: "Cz³owieka tak siê zabija jak zwierzê". Równie¿ malarskie przedstawienie nie prowadzi do idealizacji œmierci, lecz podkreœla jej wstrz¹saj¹cy wymiar. Moment ten nie cechuje siê piêknem lub patosem, na co wskazuje ekspresja bohaterów dzie³a, ich dostrzegalne cierpienie lub rozcz³onkowanie. Wiersz i obraz ³¹czy tak¿e motyw œwiat³a i ciemnoœci - kontrastu. U Ró¿ewicza zaznacza on zagubienie moralne podmiotu lirycznego, który nie dostrzega ju¿ ró¿nicy miêdzy sprzecznymi wartoœciami. Traci wiêc sta³e punkty odniesienia, jest zagubiony. Z kolei w malarskim przedstawieniu œwiat³o i ciemnoœæ podkreœlaj¹ grozê ukazanej sytuacji, sugeruj¹ walkê miêdzy si³ami z³a a dobrem, nadziej¹. Taka zbie¿noœæ wskazuje na podobny sposób postrzegania wojny - jako zjawiska niepo¿¹danego, które wywo³uje sprzeciw. Dla twórców o podobnej wra¿liwoœci staje siê ona tylko Ÿród³em negatywnych doœwiadczeñ, cierpienia, zag³ady. Artyœci sw¹ uwagê kieruj¹ wiêc na doœwiadczenia ofiar konfliktu, byæ mo¿e po to, aby nikt o nich nie zapomnia³. W ten sposób uwra¿liwiaj¹ tak¿e odbiorców na podjêt¹ tematykê, byæ mo¿e z nadziej¹, i¿ wojna nigdy wiêcej siê nie powtórzy. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br>

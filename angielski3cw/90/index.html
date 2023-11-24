@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. play football  (grać w piłkę nożną)  </p>
+<p>2. go swimming  (pływać)</p>
+<p>3. do yoga  (uprawiać jogę)</p>
+<p>4. play hockey  (grać w hokeja)</p>
+<p>5. do athletics  (uprawiać lekkoatletykę)</p>
+<p>6. go running  (biegać)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="border-collapse: collapse; width: 565px; height: 261.091px; border-width: 1px; border-spacing: 5px; border-color: rgb(34, 30, 120);">
+<tbody>
+<tr style="height: 89.818px;">
+<td style="width: 185.234px; background-color: rgb(197, 201, 236); text-align: center; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); height: 89.818px;">
+<p><strong>People in sport</strong></p>
+<p>(osoby związane ze sportem)</p>
+</td>
+<td style="width: 184.859px; background-color: rgb(197, 201, 236); text-align: center; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); height: 89.818px;">
+<p><strong>Things you can participate</strong></p>
+<p>(rzeczy w których można brać udział)</p>
+</td>
+<td style="width: 184.906px; background-color: rgb(197, 201, 236); text-align: center; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); height: 89.818px;">
+<p><strong>Rewards for winning</strong></p>
+<p>(nagrody za zwycięstwo)</p>
+</td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 185.234px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>athlete (lekkoatleta) </p>
+</td>
+<td style="width: 184.859px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>championship (mistrzostwa)</p>
+</td>
+<td style="width: 184.906px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>medal</p>
+</td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 185.234px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>champion (mistrz)</p>
+</td>
+<td style="width: 184.859px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>event (wydarzenie, impreza)</p>
+</td>
+<td style="width: 184.906px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 62.9091px;">
+<p>trophy (trofeum)</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 185.234px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 45.4545px;">
+<p>-</p>
+</td>
+<td style="width: 184.859px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 45.4545px;">
+<p>tournament (turniej)</p>
+</td>
+<td style="width: 184.906px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center; height: 45.4545px;">-</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Tekst dotyczy wydarzeń z przeszłości, dlatego wybrane czasowniki należy wstawić w formie <em>past simple</em> (II kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</strong> </p>
+<hr/>
+<p><br/>1. beat </p>
+<p><strong>Uzasadnienie</strong>: <em>beat someone 2-0 </em>- pokonać kogoś 2 do 0. </p>
+<p>2. held</p>
+<p><strong>Uzasadnienie</strong>: <em>be held </em>- odbywać się (o wydarzeniu). Tutaj wyjątkowo forma <em>past participle</em>, aby utworzyć stronę bierną (<em>hold - held - <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">held</span></em>).</p>
+<p>3. trained</p>
+<p><strong>Uzasadnienie</strong>: <em>train hard </em>- ciężko trenować.</p>
+<p>4. set</p>
+<p><strong>Uzasadnienie</strong>: <em>set records </em>- ustanawiać rekordy.</p>
+<p>5. lost</p>
+<p><strong>Uzasadnienie</strong>: <em>lose a match </em>- przegrać mecz.</p>
+<p>6. scored</p>
+<p><strong>Uzasadnienie</strong>: <em>score goals </em>- strzelać gole.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. a match </p>
+<p><strong>Uzasadnienie</strong>: podane czasowniki utworzą kolokacje tylko z rzeczownikiem <em>record</em>: <em>break a record </em>- pobić rekord; <em>hold a record </em>- być rekordzistą/tką; <em>set a record </em>- ustanowić rekord. </p>
+<p>2. an opponent</p>
+<p><strong>Uzasadnienie</strong>: podany czasownik utworzy kolokacje tylko z rzeczownikami <em>trophy </em>(zdobyć trofeum), <em>match </em>(wygrać mecz), <em>title </em>(zdobyć tytuł).</p>
+<p>3. a medal</p>
+<p><strong>Uzasadnienie</strong>: podane wyrażenie utworzy kolokacje tylko z rzeczownikami <em>sports event </em>(brać udział w wydarzeniu sportowym) oraz <em>tournament </em>(brać udział w turnieju).</p>
+<p>4. a trophy</p>
+<p><strong>Uzasadnienie</strong>: <em>support a team </em>- kibicować drużynie.</p>
+<p>5. a title</p>
+<p><strong>Uzasadnienie</strong>: niepasującym wyrazem jest <em>title</em>. Pozostałe wyrazy tworzą wyrażenia z czasownikiem <em>beat </em>(<em>beat a team</em> - pokonać drużynę, <em>beat another athlete</em> - pokonać innego sportowca).  </p>
+<p>6. a goal</p>
+<p><strong>Uzasadnienie</strong>: niepasującym wyrazem jest <em>goal</em>. Pozostałe tworzą wyrażenia z czasownikiem <em>lose </em>(<em>lose a game / a match</em> - przegrać mecz).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. support </p>
+<p>(Moi znajomi wszyscy <strong>kibicują</strong> Lechowi Poznań, ale ja wolę Legię Warszawa.) </p>
+<p>2. tournament</p>
+<p>(Zwycięzcy <strong>turnieju</strong> otrzymają piękne trofeum w kształcie orła.)</p>
+<p>3. athletes</p>
+<p>(Niektórzy z tych paraolimpijskich <strong>lekkoatletów</strong> są niesamowici.)</p>
+<p>4. long and high</p>
+<p>(Podczas dniu sportu w szkole brałem udział zarówno w zawodach skoku <strong>w dal,</strong> jak i skoku <strong>wzwyż</strong>.)</p>
+<p>5. work</p>
+<p>(A może <strong>poćwiczymy</strong> dziś wieczorem na sali gimnastycznej?)</p>
+<p>6. held</p>
+<p>(Bronisław Malinowski <strong>miał </strong>rekord Polski w biegu na milę przez czterdzieści trzy lata - od sierpnia 1976 roku do czerwca 2019 roku.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>A:</p>
+<p>1 - c (rzucać piłką - <strong>koszykówka</strong>) </p>
+<p>2 - b (uderzać piłkę - <strong>tenis</strong>)</p>
+<p>3 - a (kopać piłkę - <strong>piłka nożna</strong>)</p>
+<p><br/>B:</p>
+<p>1 - c (strzelić gola - <strong>hokej</strong>)</p>
+<p>2 - b (trafić w dołek - <strong>golf</strong>)</p>
+<p>3 - a (zaserwować asa - <strong>tenis</strong>)</p>
+<p><br/>C:</p>
+<p>1 - b (obronić karnego - <strong>piłka nożna</strong>)</p>
+<p>2 - c (wygrać wyścig - <strong>lekkoatletyka</strong>)</p>
+<p>3 - a (złapać falę - <strong>surfing</strong>)</p><br>

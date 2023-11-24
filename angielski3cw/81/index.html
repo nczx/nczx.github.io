@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a.<strong>✓</strong> </p>
+<p>(Jak zmienia się czas podczas podróży.)</p>
+<p><strong>Fragment w tekście: </strong>"When you travel abroad, you often find that you have changed from one time zone to another." - Kiedy podróżujesz za granicę, często okazuje się, że przeniosłeś się z jednej strefy czasowej do drugiej.</p>
+<p>b. <strong>✓ </strong></p>
+<p>(Przekraczanie strefy czasowej pieszo.)</p>
+<p><strong>Fragment w tekście: </strong>"We all celebrated merrily in Finland and then crowded across the bridge into Sweden (...)." - Wszyscy wesoło świętowaliśmy w Finlandii, a potem tłumnie przekroczyliśmy most do Szwecji (...).</p>
+<p>c. ✘</p>
+<p>(Cofnięcie się w czasie ponad Międzynarodową Linią Daty.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>55 - the time that a flight from Lviv to Katowice takes<br/>      (czas jaki zajmuje lot z Lwowa do Katowic)</p>
+<p><strong>Fragment w tekście: </strong>"If you fly from Lviv to Katowice, for example, you will arrive five minutes before you set off, as the flight takes fifty-five minutes (...)." - Jeśli polecisz na przykład ze Lwowa do Katowic, to dotrzesz na miejsce pięć minut przed wyruszeniem, ponieważ lot trwa pięćdziesiąt pięć minut (...). </p>
+<p>4 - the number of time zones in The USA<br/>      (liczba stref czasowych w Stanach)</p>
+<p><strong>Fragment w tekście: </strong>"In the USA, for example, the mainland is divided into four zones (...)." - Na przykład w Stanach Zjednoczonych kontynent jest podzielony na cztery strefy (...).</p>
+<p>1 - the number of time zones in China<br/>      (liczba stref czasowych w Chinach)</p>
+<p><strong>Fragment w tekście: </strong>"However, China, which is a similar size to the USA, has only one time zone for the whole country." - Jednak Chiny, które mają podobną wielkość co Stany Zjednoczone, mają tylko jedną strefę czasową w całym kraju.</p>
+<p>5¾ - the difference in hours between Nepal and GMT<br/>      (różnica godzin między Nepalem, a czasem Greenwich)</p>
+<p><strong>Fragment w tekście: </strong>"Nepal, on the other hand, is truly unique - its time is 5¾ hours ahead of GMT (Greenwich Mean Time)." - Natomiast sytuacja w Nepalu jest naprawdę wyjątkowa - tamtejszy czas wyprzedza GMT (czas Greenwich) o 5¾ godziny.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. people who travelled to different time zones  </p>
+<p><strong>Fragment w tekście: </strong>"When you travel abroad, you often find that you have changed from one time zone to another. Fortunately, mobile phones and computers change their times automatically. Gone are the days when you might forget to change your watch and miss a meeting." - Kiedy podróżujesz za granicę, często okazuje się, że zmieniłeś strefy czasowe. Na szczęście telefony komórkowe i komputery zmieniają swój czas automatycznie. Minęły już czasy, kiedy można było zapomnieć przestawić zegarek i przegapić spotkanie.</p>
+<p>2. is one hour earlier than</p>
+<p><strong>Fragment w tekście: </strong>"If you fly from Lviv to Katowice, for example, you will arrive five minutes before you set off, as the flight takes fifty-five minutes, but you put your clocks back by sixty." - Jeśli polecisz na przykład ze Lwowa do Katowic, to dotrzesz na miejsce pięć minut przed wyruszeniem, ponieważ lot trwa pięćdziesiąt pięć minut, ale przestawia się zegarki o godzinę.</p>
+<p>3. country that has half-hour</p>
+<p><strong>Fragment w tekście: </strong>"Apart from Afghanistan, a few other countries also have half-hour time zones." - Oprócz Afganistanu, kilka innych krajów również posiada półgodzinne strefy czasowe.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. C  </p>
+<p><strong>Fragment w tekście: </strong>"I never really understood how this worked, but it made me put the area of the world near the International Date Line high on my bucket list of places to visit." - Nigdy tak naprawdę nie rozumiałam, jak to działa, ale ta historia sprawiła, że wpisałam obszar świata w pobliżu Międzynarodowej Linii Daty na szczyt mojej listy miejsc do odwiedzenia.</p>
+<p>2. B</p>
+<p><strong>Fragment w tekście: </strong>"That took me to New Zealand and, from there, a flight to the Cook Islands: gorgeous Pacific Islands (...) I had an extra day's holiday - at least until I had to return." - To pozwoliło mi dotrzeć do Nowej Zelandii, a stamtąd poleciałam na Wyspy Cooka: przepiękne wyspy na Pacyfiku (...) Miałam dodatkowy dzień urlopu - przynajmniej do czasu, gdy musiałam wrócić.</p>
+<p>3. A</p>
+<p><strong>Fragment w tekście: </strong>"Although I didn't notice many tourists, the local residents had obviously had the same idea as me. We all celebrated merrily in Finland and then crowded across the bridge into Sweden (...)." - Choć nie zauważyłam wielu turystów, to miejscowi mieli ewidentnie ten sam pomysł co ja. Wszyscy wesoło świętowaliśmy w Finlandii, a potem tłumnie przekroczyliśmy most do Szwecji (...).</p><br>

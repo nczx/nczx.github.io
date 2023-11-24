@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. T</p>
+<p><strong>Fragment w tekście:</strong> "WHAT IS IT? An international festival of art, music and culture that takes place in Edinburgh, Scotland" - Co to jest? Międzynarodowy festiwal sztuki, muzyki i kultury, który odbywa się w Edynburgu w Szkocji.  </p>
+<p>2. T</p>
+<p><strong>Fragment w tekście:</strong> "WHERE DOES IT HAPPEN? All around the city, in public buildings and outside on the streets" - Gdzie się odbywa? W całym mieście, w publicznych budynkach i na ulicach. </p>
+<p>3. T</p>
+<p><strong>Fragment w tekście:</strong> "WHEN IS IT? Every August, for three weeks" - Kiedy się odbywa? Każdego sierpnia przez trzy tygodnie.</p>
+<p>4<strong>. </strong>F</p>
+<p><strong>Fragment w tekście:</strong> "It's been going since 1947. It started at the same time as the Edinburgh International Festival, which celebrates classical music, dance, opera and drama" - trwa od 1947 roku. Zaczął się w tym samym czasie co Edinburgh International Festival, który świętuje muzykę klasyczną, taniec, operę i teatr. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. They went to the place where they were staying. </p>
+<p>2. It took them a long time because they were watching street performers. </p>
+<p><strong>Fragment w tekście do punktów 1 i 2:</strong> "We took ages to find the address where we're staying because we kept stopping to watch different performances" - Znalezienie adresu, pod którym mieliśmy się zatrzymać zajęło nam wieki, ponieważ zatrzymywaliśmy się, żeby obejrzeć różne występy. </p>
+<p>3. They didn't use it because they found it much more enjoyable to wander about without guidance.</p>
+<p><strong>Fragment w teście:</strong> "Our hosts gave us a brochure that lists all the Fringe events, but it's much more fun to wander about and take pot luck" - Nasi gospodarze dali nam broszurę z listą wszystkich wydarzeń odbywających się podczas festiwalu Fringe, ale zdecydowanie fajniej jest spacerować i zdać się na los. </p>
+<p>4. They got a text from a friend.</p>
+<p><strong>Fragment w teście:</strong> "Then we got a text from a friend who's up here with his student drama society. They're performing a street theatre version of Shakespeare's <em>Macbeth</em>!" - Wtedy dostaliśmy wiadomość od kolegi/koleżanki, który/a jest tu z uczniowskim kółkiem teatralnym. Przedstawiają <em>Makbeta</em> Szekspira w wersji ulicznej!</p>
+<p>5. The performance was 'very different' because the actors were mingling with the crowd and the audience were following them around. </p>
+<p><strong>Fragment w teście:</strong> "The audience were following the actors around from place to place, and the actors were mixing with the crowds, saying their lines directly to them" - Publiczność chodziła za aktorami od miejsca do miejsca, a aktorzy mieszali się z tłumem, deklamując tekst bezpośrednio do nich. </p>
+<p>6. He was in a café while writing the blog. </p>
+<p><strong>Fragment w teście:</strong> "Right now, we're sitting in a café looking out on the Royal Mile, which is the most famous street in Edinburgh" - Teraz siedzimy w kawiarni z widokiem na <em>Royal Mile</em>, która jest najsłynniejszą ulica w Edynburgu. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. take pot luck</p>
+<p>(wybrać coś bez zastanowienia - <strong>zdać się na los</strong>) </p>
+<p>2. drop off</p>
+<p>(zanieść coś dokądś - <strong>podrzucić</strong>)</p>
+<p>3. took ages</p>
+<p>(było powolne, zajęło dużo czasu - <strong>trwało wieki</strong>)</p>
+<p>4. handing out</p>
+<p>(rozdawanie rzeczy ludziom - <strong>wręczanie</strong>)</p>
+<p>5. going on</p>
+<p>(dziać się - <strong>mieć miejsce</strong>)</p>
+<p>6. looking out on</p>
+<p>(mające widok na ... - <strong>z widokiem na ...</strong>)</p>
+<p>7. headed off</p>
+<p>(ruszyć w konkretnym kierunku - <strong>kierować się</strong>)</p>
+<p>8. watch the world go by</p>
+<p>(obserwować przechodzących ludzi - <strong>oglądać zmieniającą się scenerię</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br>

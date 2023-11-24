@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 45</a><br>
+<p><em>Obu tym reakcjom ulegają alkeny oraz alkiny.</em></p> <p>Wzory węglowodorów, które należy wskazać to: </p> <p> <math-expr expr="C_4H_6,\ C_4H_8,\ C_2H_4,\ C_2H_2" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 46</a><br>
+<p>Zaczynamy od obliczenia stosunków masowych w podanych alkenach (masa atomowa węgla to 12 u zaś wodoru 1 u):</p> <p>- C<sub>2</sub>H<sub>4</sub>:</p> <p> <math-expr expr="m_C/m_H=(2*12)/(4*1)=(24)/4=6/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=6:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>3</sub>H<sub>6</sub>:</p> <p> <math-expr expr="m_C/m_H=(3*12)/(6*1)=(36)/6=6/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=6:1)" syntax="text"></math-expr>    </p> <p> </p> <p>- C<sub>4</sub>H<sub>8</sub>:</p> <p> <math-expr expr="m_C/m_H=(4*12)/(8*1)=(48)/8=6/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=6:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>5</sub>H<sub>10</sub>:</p> <p> <math-expr expr="m_C/m_H=(5*12)/(10*1)=(60)/(10)=6/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=6:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>6</sub>H<sub>12</sub>:</p> <p> <math-expr expr="m_C/m_H=(6*12)/(12*1)=(72)/(12)=6/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=6:1)" syntax="text"></math-expr>   </p> <p><br/><strong>W szeregu homologicznym alkenów występuje prawidłowość , że stosunek masowy węgla do wodoru w cząsteczce każdego z alkenów wynosi 6:1.</strong></p> <p>Sprawdzamy jak zmieniają się stosunki masowe pierwiastków w szeregach homologicznych alkanów i alkinów. W tym celu liczymy stosunki masowe pierwiastków dla węglowodorów zawierających po 2, 3 oraz 4 atomy węgla w cząsteczce, z każdego z szeregów:</p> <p>Alkany:</p> <p>- C<sub>2</sub>H<sub>6</sub>:</p> <p> <math-expr expr="m_C/m_H=(2*12)/(6*1)=(24)/6=4/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=4:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>3</sub>H<sub>8</sub>:</p> <p> <math-expr expr="m_C/m_H=(3*12)/(8*1)=(36)/8=9/2\ \ \ =&gt;\ \ \ bbul(m_C:m_H=9:2)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>4</sub>H<sub>10</sub>:</p> <p> <math-expr expr="m_C/m_H=(4*12)/(10*1)=(48)/(10)=(24)/5\ \ \ =&gt;\ \ \ bbul(m_C:m_H=24:5)" syntax="text"></math-expr>   </p> <p> </p> <p>Alkeny:</p> <p>- C<sub>2</sub>H<sub>2</sub>:</p> <p> <math-expr expr="m_C/m_H=(2*12)/(2*1)=(24)/2=12/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=12:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>3</sub>H<sub>4</sub>:</p> <p> <math-expr expr="m_C/m_H=(3*12)/(4*1)=(36)/4=9/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=9:1)" syntax="text"></math-expr>   </p> <p> </p> <p>- C<sub>4</sub>H<sub>6</sub>:</p> <p> <math-expr expr="m_C/m_H=(4*12)/(6*1)=(48)/6=8/1\ \ \ =&gt;\ \ \ bbul(m_C:m_H=8:1)" syntax="text"></math-expr>   </p> <p> <br/><strong>Szeregi homologiczne alkanów i alkinów nie wykazują podobnej prawidłowości jak szereg homologiczny alkenów.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 47</a><br>
+<p>a)</p> <p>1.     <math-expr expr="Al_4C_3+12\ HCl-&gt;4\ AlCl_3+3\ CH_4" syntax="text"></math-expr>   </p> <p>2.     <math-expr expr='CH_4+Cl_2#(-&gt;)^("światło")CH_3Cl+HCl' syntax="text"></math-expr>   </p> <p>3.      <math-expr expr='2\ CH_3Cl+2\ Na#(-&gt;)^("eter")CH_3-CH_3+2\ NaCl' syntax="text"></math-expr>       </p> <p><br/>b)</p> <p>1.     <math-expr expr="CH-=C-CH_3\ +\ H_2\ #(-&gt;)^(Ni)\ CH_2=CH-CH_3" syntax="text"></math-expr>   </p> <p>2.     <math-expr expr="CH_2=CH-CH_3\ +\ H_2\ #(-&gt;)^(Ni)\ CH_3-CH_2-CH_3" syntax="text"></math-expr>   </p> <p><br/>c)</p> <p>1.    <img alt="" height="50" src="./data/936046-0.jpg" width="165"/></p><br><a style="color:red; font-size:25px;">Zadanie 48</a><br>
+<p>1. Do zatkanych probówek zawierających badane gazy dodajemy wodę bromową. Probówka, w której nie dojdzie do odbarwienia zawiera <span style="text-decoration: underline;"><strong> etan </strong></span>.</p>
+<p>2.  Pozostałe dwa gazy poddajemy spaleniu. <span style="text-decoration: underline;"><strong> Eten </strong></span> spala się niebieskim płomieniem, zaś <span style="text-decoration: underline;"><strong> etyn </strong></span> żółtym i silnie kopcącym.</p><br><a style="color:red; font-size:25px;">Zadanie 49</a><br>
+<p>Zaczynamy od obliczenia objętości tlenu. Z równania reakcji widzimy, że stosunek molowy acetylenu do tlenu wynosi 2:5. Jeden mol tlenu w warunkach normalnych (zakładamy, że w takich zachodzi reakcja) zajmuje objętość 22,4 dm<sup>3</sup>.</p> <p> <math-expr expr='2\ "mole"_(C_2H_2)\ \ -\ \ 5*22,4\ dm^3\ _(O_2)' syntax="text"></math-expr>    </p> <p> <math-expr expr="0,25\ mola_(C_2H_2)\ \ -\ \ V_(O_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr='V_(O_2)=(0,25\ mola*5*22,4\ dm^3)/(2\ "mole")=14\ dm^3' syntax="text"></math-expr>   </p> <p><br/>Liczymy objętość powietrza:</p> <p> <math-expr expr="14\ dm^3\ \ -\ \ 20%" syntax="text"></math-expr>   </p> <p> <math-expr expr="x\ \ -\ \ 100%" syntax="text"></math-expr>   </p> <p> <math-expr expr="x=(100%*14\ dm^3)/(20%)=70\ dm^3" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Do całkowitego spalenia 0,25 mola acetylenu potrzeba 70 dm<sup>3</sup> powietrza.</strong>  </p><br><a style="color:red; font-size:25px;">Zadanie 50</a><br>
+<p>Liczba elektronów zdelokalizowanych: <span style="text-decoration:underline;"><em><strong> 6 </strong></em></span></p>
+<p>Liczba wiązań typu <span style="font-weight:400;">σ:  <span style="text-decoration:underline;"><em><strong> 12 </strong></em></span></span></p>
+<p><span style="font-weight:400;">Liczba wiązań typu 𝜋: <span style="text-decoration:underline;"><em><strong> 1 </strong></em></span></span></p>
+<p> </p>
+<p><span style="font-weight:400;">Wyjaśnienie:</span></p>
+<p><span style="font-weight:400;">Benzen posiada 6 elektronów zdelokalizowanych tworzących 1 wiązanie typu 𝜋 dlatego właśnie posiada aromatyczny charakter.</span></p><br><a style="color:red; font-size:25px;">Zadanie 51</a><br>
+<p>Benzen jest <span style="text-decoration: underline;"><em><strong>bezbarwną</strong></em></span>, <span style="text-decoration: underline;"><em><strong>palną</strong></em></span> cieczą, która <span style="text-decoration: underline;"><em><strong>ma charakterystyczny zapach</strong></em></span>. Jego gęstość jest <span style="text-decoration: underline;"><em><strong>mniejsza</strong></em></span> od gęstości wody. Benzen rozpuszcza się w <span style="text-decoration: underline;"><em><strong>rozpuszczalnikach organicznych</strong></em></span>. <span style="text-decoration: underline;"><em><strong>Jest</strong></em></span> substancją toksyczną i rakotwórczą.</p><br><a style="color:red; font-size:25px;">Zadanie 52</a><br>
+<p>a) metylobenzen</p>
+<p>b) 1,4-dimetylobenzen</p>
+<p>c) benzen </p>
+<p>d) 1,2-dimetylobenzen</p>
+<p>e) 1,3-dimetylobenzen</p>
+<p>f) etylobenzen</p>
+<p> </p>
+<p>Homologi:</p>
+<p>Związki <strong>a</strong>, <strong>b</strong>, <strong>d</strong>, <strong>e</strong> oraz <strong>f</strong> są homologami związku <strong>c</strong>.</p>
+<p>Izomery:</p>
+<p>Izomerami względem siebie są związki <strong>b</strong>, <strong>d</strong>, <strong>e</strong> oraz <strong>f</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 53</a><br>
+<p>Podpisane oznaczenia: </p>
+<p><img alt="" height="200" src="./data/936195-0.jpg" width="220"/></p><br>

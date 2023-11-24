@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. set </p>
+<p>2. myself</p>
+<p>3. out</p>
+<p>4. into </p>
+<p>5. goals</p>
+<p>6. come</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Kilka miesięcy temu <strong>postawiłem/am</strong> sobie cel - w sześć miesięcy poprawię swoją kondycję najlepiej jak to możliwe. Pewnego poranka zaspałem/am i musiałem/am biec na autobus, ale okazało się dla <strong>mnie</strong> wielkim wysiłkiem przebiegnięcie tego krótkiego dystansu. Właśnie wtedy uświadomiłem/am sobie, że <strong>nie mam</strong> kondycji i muszę wrócić <strong>do</strong> formy. Tak więc, zdecydowałem/am się dołączyć do klubu biegaczy, który pomaga mi osiągnąć <strong>cele</strong> treningowe. Nie <strong>wygrałem/am</strong> (come first) jeszcze żadnego wyścigu, ale to świetna zabawa!</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. respiratory</p>
+<p>(Po zarażeniu się COVID-19 wielu pacjentów cierpi z powodu uszkodzenia układu <strong>oddechowego</strong>.)  </p>
+<p>2. blurred</p>
+<p>(Po tym jak zawodnik rugby został uderzony w głowę, przez chwilę widział <strong>nieostro</strong>.)</p>
+<p>3. anxiety</p>
+<p>(Zbyt duże spożycie kawy może prowadzić do uczucia <strong>niepokoju</strong>, depresji i bezsenności.)</p>
+<p>4. indigestion</p>
+<p>(Jak mogłam zjeść całą paczkę? Teraz mam <strong>niestrawność</strong> i czuję się naprawdę pełny/a.)</p>
+<p>5. unconscious</p>
+<p>(Zrobił się zupełnie biały na twarzy i upadł na podłogę. Był <strong>nieprzytomny</strong>.)</p>
+<p>6. slurred</p>
+<p>(Jest kilka objawów udaru - jednym z nich jest <strong>niewyraźne</strong> mówienie.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. both</p>
+<p><strong>Uzasadnienie</strong>: <em>both + of + them</em> (obydwoje) - odnosi się do konkretnych rzeczy/ludzi, wspomnianych wcześniej.  </p>
+<p>2. whose</p>
+<p><strong>Uzasadnienie</strong>: <em>non-defining relative clause</em> z zaimkiem względnym <em>whose</em> (której), oznaczającym czyjąś przynależność.</p>
+<p>3. whole</p>
+<p><strong>Uzasadnienie:</strong> <em>whole</em> (cała) + rzeczownik w liczbie pojedynczej.</p>
+<p>4. neither</p>
+<p><strong>Uzasadnienie</strong>: <em>neither of</em> (żaden z) + zaimek <em>us</em>. </p>
+<p>5. another</p>
+<p><strong>Uzasadnienie</strong>: <em>another</em> (kolejny) + rzeczownik w liczbie pojedynczej. </p>
+<p>6. where</p>
+<p><strong>Uzasadnienie</strong>: <em>defining relative clause</em> z zaimkiem względem <em>where</em> (gdzie). </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. with either of them </p>
+<p>2. whose brother is </p>
+<p>3. which/that you can see there </p>
+<p>4. each of the players is</p>
+<p>5. people who play</p>
+<p>6. Every one of our coaches has </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. made</p>
+<p><strong>Uzasadnienie</strong>: <em>make strides</em> - robić postępy, usprawniać; <em>make something up</em> - zmyślić coś; <em>make something into something</em> - zmienić coś na/w coś (np. książkę w film). </p>
+<p>2. out</p>
+<p><strong>Uzasadnienie: </strong><em>pass out</em> - zemdleć; <em>rule out</em> - wykluczyć, zabronić; <em>come out in a rash</em> - dostać wysypki.</p>
+<p>3. go</p>
+<p><strong>Uzasadnienie</strong>: <em>go vegan</em> - przejść na weganizm; <em>go on a crash diet</em> - przejść na rygorystyczną dietę; <em>go on foot</em> - iść pieszo.</p>
+<p>4. in</p>
+<p><strong>Uzasadnienie</strong>:<em> in peak form</em> - w szczytowej formie; <em>in the public eye</em> - na oczach wszystkich; <em>in captivity</em> - w niewoli.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. placement </p>
+<p>2. violation</p>
+<p>3. consumption</p>
+<p>4. strengthen </p>
+<p>5. possibilities</p>
+<p>6. wearable </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Kilka tygodni temu mój ulubiony sportowiec pojawił się na boisku z butelką wody witaminowej w ręce. To był klasyczny przykład <strong>lokowania</strong> produktu, za co dostał pewnie mnóstwo pieniędzy. Naprawdę nie przeszkadzałoby mi to, gdyby nie fakt, że ten napój zawiera cukier! Według mnie sportowcy powinni promować zdrowe nawyki żywieniowe, a reklamowanie słodkich napojów jest czymś zupełnie przeciwnym. Właściwie jest to <strong>naruszenie</strong> podstawowych zasad żywienia - ze wszystkich niezdrowych nawyków żywieniowych, które mamy <strong>spożycie</strong> cukru jest najgorszym. Taki PR nie <strong>umacnia</strong> jego pozycji jako sportowca. Mam na myśli to, że jeśli potrzebuje pieniędzy, mogę wyobrazić sobie nieskończone inne <strong>możliwości</strong>. Mógłby na przykład reklamować urządzenia najnowszej technologii, <strong>które można nosić</strong> i stają się bardzo popularne. W każdym razie, cała ta sprawa jest dużym rozczarowaniem. </p><br>

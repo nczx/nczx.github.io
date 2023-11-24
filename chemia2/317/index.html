@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>a) Kolejność zgodnie z rosnącą temperaturą wrzenia:</p> <p> <math-expr expr="CH_4,\ C_2H_6,\ C_3H_8,\ C_4H_(10),\ C_5H_(12),\ C_7H_(16),\ C_8H_(18),\ C_(10)H_(22)" syntax="text"></math-expr>   </p> <p><em>wyjaśnienie: Wraz z wydłużaniem łańcucha węglowego alkanów wzrasta ich temperatura wrzenia.</em> </p> <p><br/>b) Kolejność zgodnie z rosnącą lotnością:</p> <p> <math-expr expr="C_(10)H_(22),\ C_8H_(18),\ C_7H_(16),\ C_5H_(12),\ C_4H_(10),\ C_3H_8,\ C_2H_6,\ CH_4" syntax="text"></math-expr>   </p> <p><em>wyjaśnienie: Wraz z wydłużaniem łańcucha węglowego alkanów maleje ich lotność.</em> </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Zaczynamy od ustalenia stosunku liczbowego, w oparciu o stosunek masowy, atomów w tym związku i wyprowadzenia wzoru empirycznego C<sub>x</sub>H<sub>y</sub>. Masa molowa węgla to 12 g/mol, zaś wodoru 1 g/mol.</p> <p> <math-expr expr="m_x/m_y=(24)/5" syntax="text"></math-expr>    </p> <p> <math-expr expr="(x*12)/(y*1)=(24)/5" syntax="text"></math-expr>    </p> <p> <math-expr expr="x:y=2:5" syntax="text"></math-expr>   </p> <p>Wzór empiryczny tego związku to C<sub>2</sub>H<sub>5</sub>.</p> <p>Wyznaczamy wzór rzeczywisty:</p> <p> <math-expr expr="M_((C_2H_5)_n)=58\ g/(mol)" syntax="text"></math-expr>   </p> <p> <math-expr expr="n*(2*M_C+5*M_H)=58\ g/(mol)" syntax="text"></math-expr>    </p> <p> <math-expr expr="n*(2*12\ g/(mol)+5*1\ g/(mol))=58\ g/(mol)" syntax="text"></math-expr>   </p> <p> <math-expr expr='n*29\ g/(mol)=58\ g/(mol)\ \ \ "/":29\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=2" syntax="text"></math-expr>   </p> <p> <math-expr expr="(C_2H_5)_2=bbul(C_4H_(10))" syntax="text"></math-expr>   </p> <p><strong>Wzór empiryczny tego związku to C<sub>2</sub>H<sub>5</sub>, a jego wzór rzeczywisty to C<sub>4</sub>H<sub>10</sub>.</strong>    </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>a)</p> <p> <math-expr expr='Al_4C_3+12\ HCl-&gt;4\ AlCl_3+\ 3\ #(CH_4)_("metan")' syntax="text"></math-expr>   </p> <p><br/>b) </p> <p> <math-expr expr='Al_4C_3+12\ H_2O-&gt;4\ Al(OH)_3+\ 3\ #(CH_4)_("metan")' syntax="text"></math-expr>   </p> <p><br/>c)</p> <p> <math-expr expr='CH_3-CH_3\ +\ Br_2\ #(-&gt;)^("światło")\ #(CH_3-CH_2Br)_("bromoetan")\ +\ HBr' syntax="text"></math-expr>   </p> <p><br/>d)</p> <p> <math-expr expr='CH_2Cl_2\ +\ Cl_2\ #(-&gt;)^("światło")\ #(CHCl_3)_("trichlorometan")\ +\ HCl' syntax="text"></math-expr>   </p> <p><br/>e)</p> <p> <math-expr expr='CH_3-CH_2-CH_3\ +\ Cl_2\ #(-&gt;)^("światło")\ #(CH_3-CHCl-CH_3)_("2-chloropropan")\ +\ HCl' syntax="text"></math-expr>   </p> <p><br/>f)</p> <p> <math-expr expr='CH_3Cl\ +\ CH_3-CH_2-CH_2Cl\ +\ 2\ Na\ -&gt;\ #(CH_3-CH_2-CH_2-CH_3)_("butan")\ +\ 2\ NaCl' syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Zapisujemy równanie tej reakcji:</p> <p> <math-expr expr="C_5H_(12)+8\ O_2-&gt;5\ CO_2+6\ H_2O" syntax="text"></math-expr>   </p> <p>Z równania reakcji wynika, że stosunek otrzymanego tlenku węgla(IV) do wody wynosi 5:6. Masa molowa wody to 18 g/mol, zaś jeden mol CO<sub>2</sub> w warunkach normalnych zajmuje 22,4 dm<sup>3</sup>.</p> <p> <math-expr expr="6*18\ g\ \ -\ \ 5*22,4\ dm^3" syntax="text"></math-expr>   </p> <p> <math-expr expr="5,4\ g\ \ -\ \ V_(CO_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr="V_(CO_2)=(5,4\ g*5*22,4\ dm^3)/(6*18\ g)=5,6\ dm^3" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Objętość powstałego tlenku węgla(IV) to 5,6 dm</strong><sup style="font-weight: bold;">3</sup><strong>.</strong>     </p><br><a style="color:red; font-size:25px;">Zadanie 15</a><br>
+<p>a)</p>
+<p><img alt="" height="75" src="./data/935030-0.jpg" width="189"/> n-pentan</p>
+<p><img alt="" height="120" src="./data/935030-1.jpg" width="161"/> 2-metylobutan</p>
+<p><img alt="" height="160" src="./data/935030-2.jpg" width="124"/> 2,2-dimetylopropan</p>
+<p><br/>b) </p>
+<p><img alt="" height="75" src="./data/935030-3.jpg" width="216"/> n-heksan</p>
+<p><img alt="" height="120" src="./data/935030-4.jpg" width="197"/> 2-metylopentan</p>
+<p><img alt="" height="120" src="./data/935030-5.jpg" width="188"/> 3-metylopentan</p>
+<p><img alt="" height="160" src="./data/935030-6.jpg" width="152"/> 2,3-dimetylobutan</p>
+<p><img alt="" height="160" src="./data/935030-7.jpg" width="154"/>2,2-dimetylobutan</p><br><a style="color:red; font-size:25px;">Zadanie 16</a><br>
+<p>Homologiem butanu jest CH<sub>3</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>3</sub>  <em>(ponieważ spełnia ten sam wzór ogólny C<sub>n</sub>H<sub>2n+n</sub> i różni się ilością grup CH<sub>2</sub> w łańcuchu).</em></p>
+<p>Izomerem butanu jest <img alt="" height="40" src="./data/935059-0.jpg" width="89"/> <em>(zawiera tę samą ilość atomów węgla i wodoru w cząsteczce co butan, jednak różni się ich położeniem).</em></p><br><a style="color:red; font-size:25px;">Zadanie 17</a><br>
+<p>a) 2-metylopropan</p>
+<p>b) 2,2,4-trimetylopentan</p>
+<p>c) 3,5,5-trimetylooktan</p>
+<p>d) 2,2,4,4-tetrametyloheksan</p>
+<p>e) 2,2-dimetylopropan</p>
+<p>f) 2,2-dimetylobutan</p>
+<p> </p>
+<hr/>
+<p><strong>Wskazówka</strong>:</p>
+<p>Ponumerowany łańcuch główny dla podpunktu c)</p>
+<p><img alt="" height="113" src="./data/935068-0.jpg" width="333"/></p><br><a style="color:red; font-size:25px;">Zadanie 18</a><br>
+<p>a)</p> <p><img alt="" height="75" src="./data/935349-0.jpg" width="234"/></p> <p><br/>b) </p> <p><img alt="" height="60" src="./data/935349-1.jpg" width="263"/></p> <p><br/>c)</p> <p><img alt="" height="50" src="./data/935349-2.jpg" width="137"/></p> <p><br/>d)</p> <p><img alt="" height="80" src="./data/935349-3.jpg" width="406"/></p> <p><br/>e)</p> <p><img alt="" height="75" src="./data/935349-4.jpg" width="284"/></p> <p><br/>f)</p> <p> <math-expr expr="CH_3-#C_(#(Cl)^(|))H-CH_3" syntax="text"></math-expr>   </p> <p><br/>g)</p> <p> <math-expr expr="#C^(#(Cl)_(|))H_2-#C_(#(Br)^(|))H-CH_2-CH_3" syntax="text"></math-expr>   </p> <p><br/>h)</p> <p> <math-expr expr="CH_3-##C_(#(Br)^(|))^(#(Br)_(|))-#C_(#(Cl)^(|))H-CH_2-CH_3" syntax="text"></math-expr>   </p> <p><br/>i)</p> <p><img alt="" height="77" src="./data/935349-5.jpg" width="186"/></p><br>

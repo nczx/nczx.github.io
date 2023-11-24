@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. can't have been - <strong>c</strong>  </p>
+<p>2. could have tried - <strong>a</strong></p>
+<p>3. must have run out - <strong>d</strong></p>
+<p>4. must have gone - <strong>b</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Do wyrażenia spekulacji i dedukcji odnośnie teraźniejszości używamy następujących czasowników modalnych:</strong></p>
+<ul>
+<li><em><strong>must </strong></em><strong>+ bezokolicznik</strong><strong> - kiedy myślimy, że coś jest zdecydowanie prawdziwe;<br/><br/></strong></li>
+<li><em><strong>might/could </strong></em><strong>+ bezokolicznik</strong><strong> - kiedy myślimy, że coś może być prawdziwe;<br/><br/></strong></li>
+<li><em><strong>can't </strong></em><strong>+ bezokolicznik</strong><strong> - kiedy myślimy, że coś zdecydowanie nie jest prawdziwe.</strong></li>
+</ul>
+<p><strong> </strong></p>
+<p><strong>Za pomocą czasowników modalnych możemy też spekulować odnośnie przeszłości:</strong></p>
+<ul>
+<li><strong>konstrukcja</strong><em><strong> can't have +</strong></em><strong> <em>past participle </em>wyraża pewność, że coś się nie wydarzyło;<br/><br/></strong></li>
+<li><em><strong>might/could have + past participle </strong></em><strong>wyraża brak pewności co do wydarzenia z przeszłości;<br/><br/></strong></li>
+<li><em><strong>must have + past participle</strong></em><strong> wyraża pewność, że coś miało miejsce.</strong></li>
+</ul>
+<hr/>
+<p> </p>
+<p>1. must be  </p>
+<p>2. can't be</p>
+<p><strong>Uzasadnienie (1-2)</strong>: na fakt, że spekulujemy odnośnie teraźniejszości (czasownik modalny + bezokolicznik), wskazuje nam okolicznik <em>now </em>(teraz), a także czas <em>present continuous</em> ("isn't working").</p>
+<p>3. must have passed</p>
+<p>4. can't have left</p>
+<p><strong>Uzasadnienie (3-4)</strong>: na fakt, że spekulujemy odnośnie wydarzenia z przeszłości (czasownik modalny + <em>have + past participle</em>) wskazuje nam kontekst - przestawiony jest efekt ("Clara wygląda na szczęśliwą", "Nie mogę znaleźć okularów"), więc wyrażamy dedukcję odnośnie przyczyny z przeszłości.</p>
+<p>5. might be, could be</p>
+<p><strong>Uzasadnienie: </strong>spekulujemy odnośnie obecnej sytuacji / stanu ("Sary dziś nie ma na kółku teatralnym. Może jest chora, albo być może jest na wakacjach").</p>
+<p>6. might have got</p>
+<p><strong>Uzasadnienie: </strong>spekulujemy odnośnie czynności w przeszłości. Wskazują nam na to okoliczniki <em>already </em>(już) oraz <em>yesterday </em>(wczoraj), które pokazują, że chodzi o coś, co już się wydarzyło.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Do wyrażenia spekulacji i dedukcji używamy następujących czasowników modalnych:</strong></p>
+<ul>
+<li><em><strong>must</strong></em><strong> - kiedy myślimy, że coś jest zdecydowanie prawdziwe;<br/><br/></strong></li>
+<li><em><strong>might/could</strong></em><strong> - kiedy myślimy, że coś może być prawdziwe;<br/><br/></strong></li>
+<li><em><strong>can't</strong></em><strong> - kiedy myślimy, że coś zdecydowanie nie jest prawdziwe.</strong></li>
+</ul>
+<p><strong><br/>Przykłady: </strong></p>
+<p style="padding-left: 40px;"><strong><em>This must be Tom at the door. He texted me he was on his way a few minutes ago.</em><br/>(Przy drzwiach z pewnością stoi Tom. Parę minut temu napisał mi, że jest już w drodze.)</strong></p>
+<p style="padding-left: 40px;"><strong><em>The girl in the photo could/might be a student. She's carrying a backpack.</em><br/>(Dziewczyna na zdjęciu może być uczennicą. Niesie plecak.)</strong></p>
+<p style="padding-left: 40px;"><strong><em>I see some flowers in the background so it can't be winter.</em><br/>(W tle widzę jakieś kwiaty, więc to na pewno nie jest zima.)</strong> </p>
+<hr/>
+<p> </p>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. must  </p>
+<p>2. must</p>
+<p>3. can't</p>
+<p>4. can't</p>
+<p>5. could / might</p>
+<p>6. must</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p> - To zdjęcie <strong>na pewno</strong> jest fałszywe. Przecież nie jest prawdziwe?</p>
+<p> - Jest prawdziwe! To żółw jaszczurowaty, który spędził dwa tygodnie w ziemi przy wyschniętym jeziorze.</p>
+<p> - Spójrz na tę całą ziemię na jego skorupie. <strong>Na pewno</strong> jest ciężka! Z pewnością<strong> nie może</strong> szybko chodzić, kiedy ma ją na sobie. Czy to jest w Anglii, jak sądzisz?</p>
+<p> - Nie, to <strong>nie może </strong>być Anglia, bo te żółwie tam nie żyją. <strong>Możliwe</strong>, że to Stany lub ewentualnie Kanada, nie jestem pewny/a.</p>
+<p> - Jestem pewny/a, że <strong>musi</strong> być głodny po tym, jak nie jadł przez dwa tygodnie.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. (przykład)</p>
+<p>2. must have made</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>must have + past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych), aby wyrazić pewność co do tego, że coś wydarzyło się w przeszłości. Na konieczność użycia tego czasownika modalnego wskazuje kontekst - druga część zdania ("ponieważ linie niektórych kształtów są bardzo precyzyjne") podaje powód na poparcie przypuszczenia. </p>
+<p>3. couldn't/can't have created</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>couldn't/can't have + past participle </em>(tu: końcówka -ed), aby powiedzieć, że coś nie mogło wydarzyć się w przeszłości. Na konieczność użycia tych czasowników modalnych wskazuje nam kontekst - druga część zdania ("to by było niemożliwe") podaje powód, dla którego wspomniana czynność nie mogła mieć miejsca.</p>
+<p>4. must have built</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>must have + past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych), aby wyrazić pewność co do tego, że coś wydarzyło się w przeszłości.</p>
+<p>5. couldn't/can't have done</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>couldn't/can't have + past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych), aby powiedzieć, że coś nie mogło wydarzyć się w przeszłości. Na konieczność użycia tych czasowników modalnych wskazuje nam kontekst - druga część zdania ("to byłoby zdecydowanie zbyt trudne") podaje powód, dla którego wspomniana czynność nie mogła się wydarzyć.</p>
+<p>6. might/could be</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>might/could </em>+ bezokolicznik, aby powiedzieć, że coś może być prawdziwe w teraźniejszości.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. You must be tired </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>must + </em>bezokolicznik, aby wyrazić pewność co do sytuacji w teraźniejszości. </p>
+<p>2. Someone might/could have sent</p>
+<p>3. might/could have visited</p>
+<p><strong>Uzasadnienie (2, 3)</strong>: konstrukcja <em>might/could have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed), aby wyrazić przypuszczenie na temat czynności z przeszłości.</p>
+<p>4. I must have pressed</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>must have + past participle</em>, aby wyrazić pewność co do czynności z przeszłości.</p>
+<p>5. This can't be</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>can't + </em>bezokolicznik, aby wyrazić pewność co do sytuacji w teraźniejszości.</p><br>

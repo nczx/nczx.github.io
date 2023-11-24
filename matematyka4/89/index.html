@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Odcinek<strong> R<sub>1</sub>S<sub>1</sub></strong> jest rzutem prostokątnym odcinka<strong> RS</strong> na płaszczyznę <strong>P</strong>. </p>
+<p>Rysunek:  </p>
+<p><img alt="" height="356" src="./data/1194080-0.jpg" width="392"/></p>
+<p>Odcinek <strong>R<sub>1</sub>S<sub>1</sub></strong> nie może być dłuższy od odcinka <strong>RS</strong>. </p>
+<hr/>
+<p><em><strong>Twierdzenie: </strong></em></p>
+<p>Odcinek <strong>R<sub>1</sub>S<sub>1</sub></strong> będący rzutem prostokątnym odcinka <strong>RS</strong> nie może być dłuższy od odcinka <strong>RS</strong>.</p>
+<hr/>
+<p><em><strong>Dowód:</strong></em></p>
+<p>Odcinek <strong>RS</strong> jest przeciwprostokątną w trójkącie prostokątnym, w którym przyprostokątna ma taką samą długość jak odcinek <strong>R<sub>1</sub>S<sub>1</sub></strong>.</p>
+<p>W trójkącie prostokątnym, przeciwprostokątna jest dłuższa od przyprostokątnej, więc odcinek <strong>RS</strong> jest dłuższy niż odcinek <strong>R<sub>1</sub>S<sub>1</sub></strong>. </p>
+<p>Gdyby odcinek <strong>RS</strong> był równoległy do płaszczyzny <strong>P</strong>, to odcinki <strong>RS</strong> i <strong>R<sub>1</sub>S<sub>1</sub></strong> miałyby jednakową długość. </p>
+<p>Zatem, odcinek <strong>R<sub>1</sub>S<sub>1</sub></strong> będący rzutem prostokątnym odcinka <strong>RS</strong> nie może być dłuższy od odcinka <strong>RS</strong>.</p>
+<p><strong>co kończy dowód.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Rysunek:</p> <p><img alt="" height="268" src="./data/1194082-0.jpg" width="488"/></p> <p><strong>a)</strong></p> <p>Wypiszmy proste równoległe i proste prostopadłe do prostej <strong>EF<sub>1</sub></strong>. Mamy:  </p> <ul> <li> <span> <math-expr expr='"proste równoległe:"\ \ \ BC_1,\ AD_1' syntax="text"></math-expr> </span>  </li> <li> <span> <math-expr expr='"proste prostopadłe:"\ \ \ BE,\ AB,\ AE,\ CF,\ DC,\ DF,\ B_1E_1,\ A_1B_1,\ A_1E_1,\ C_1F_1,\ D_1C_1,\ D_1F_1,\ E_1F,\ B_1C,\ A_1D' syntax="text"></math-expr> </span>  </li> </ul> <hr/> <p><strong>b)</strong></p> <p>Wypiszmy proste równoległe i proste prostopadłe do prostej <strong>A<sub>1</sub>C<sub>1</sub></strong>. Mamy:</p> <ul> <li> <span> <math-expr expr='"proste równoległe:"\ \ \ B_1F_1,\ AC,\ BF' syntax="text"></math-expr> </span>  </li> <li> <span> <math-expr expr='"proste prostopadłe:"\ \ \ D_1B_1,\ C_1E_1,\ DB,\ CE,\ A A _1,\ BB_1,\ C C _1,\ DD_1,\ E E_1,\ FF_1,\ D_1B,\ B_1D,\ C_1E,\ E_1C' syntax="text"></math-expr> </span>  </li> </ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Rysunek:</p>
+<p><img alt="" height="275" src="./data/1194084-0.jpg" width="300"/></p>
+<p>Rzutem prostokątnym odcinka<strong> D<sub>1</sub>B</strong> na ścianę <strong>ABCD</strong> sześcianu jest odcinek <strong>DB</strong> - jak zaznaczono na rysunku.  </p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Rzutem prostokątnym odcinka <strong>D<sub>1</sub>B</strong> na ścianę <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1</sub>D<sub>1</sub></strong> sześcianu jest odcinek <strong>D<sub>1</sub>B<sub>1</sub></strong>. </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Rzutem prostokątnym odcinka <strong>D<sub>1</sub>B</strong> na ścianę <strong>ADD<sub>1</sub>A<sub>1</sub></strong> sześcianu jest odcinek <strong>AD<sub>1</sub></strong>. </p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Rzutem prostokątnym odcinka <strong>D<sub>1</sub>B</strong> na ścianę <strong>BCC<sub>1</sub>B<sub>1</sub></strong> sześcianu jest odcinek <strong>C<sub>1</sub>B</strong>. </p>
+<hr/>
+<p><strong>d)</strong></p>
+<p>Rzutem prostokątnym odcinka <strong>D<sub>1</sub>B</strong> na ścianę <strong>ABB<sub>1</sub>A<sub>1</sub></strong> sześcianu jest odcinek <strong>A<sub>1</sub>B</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Uzasadnijmy, że dla prostych w przestrzeni <span style="text-decoration: underline;"><strong>nie</strong></span> zachodzi własność:</p>
+<p><em>Jeśli<strong> k</strong></em><span style="font-weight: 400;"><strong>⊥l</strong> i <strong>l⊥m</strong><em>, to</em> <strong>k||m</strong>. </span></p>
+<p>Jako kontrprzykład podamy proste zawierające boki sześcianu. Rysunek:  </p>
+<p><img alt="" height="281" src="./data/1194086-0.jpg" width="312"/></p>
+<p>Niech prosta <strong>k</strong> będzie prostą zawierającą bok <strong>AD</strong>. </p>
+<p>Niech prosta <strong>l</strong> będzie prostą zawierającą bok <strong>DH</strong>. </p>
+<p>Proste<strong> l</strong> i<strong> k</strong> są prostopadłe (bo boki <strong>AD</strong> i <strong>DH</strong> są prostopadłe). </p>
+<p>Niech prosta <strong>n</strong> będzie prostą zawierającą bok <strong>DC</strong>. </p>
+<p>Proste <strong>l</strong> i<strong> n</strong> są prostopadłe (bo boki <strong>DH</strong> i <strong>DC</strong> są prostopadłe). </p>
+<p>Proste <strong>k</strong> i <strong>n <span style="text-decoration: underline;">nie</span></strong> są równoległe - są prostopadłe (bo boki <strong>AD</strong> i <strong>DC</strong> są prostopadłe). </p><br>

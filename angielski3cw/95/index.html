@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. speed</p>
+<p>(W bieganiu ważna jest <strong>szybkość</strong>, ponieważ najszybsza osoba wygrywa.) </p>
+<p>2. confidence</p>
+<p>(Uprawianie sportu może zwiększyć twoją <strong>pewność siebie</strong>, dając ci przekonanie, że możesz osiągnąć dobre wyniki.)</p>
+<p>3. flexibility, balance</p>
+<p>(Gimnastycy potrzebują dobrej <strong>gibkości</strong>, aby móc łatwo poruszać swoim ciałem. Potrzebują również doskonałej <strong>równowagi</strong>, aby nie spaść ze sprzętu.)</p>
+<p>4. stamina</p>
+<p>(Przed biegiem w maratonie ważne jest, aby wyrobić sobie <strong>wytrzymałość</strong>, ponieważ jest to długi wyścig.)</p>
+<p>5. accuracy</p>
+<p>(Jeśli chcesz strzelić gola, niezbędna jest <strong>celność</strong>, inaczej spudłujesz.)</p>
+<p>6. focus, coordination</p>
+<p>(Trening sportowy może poprawić twoje <strong>skupienie </strong>i <strong>koordynację</strong>. To pierwsze, to twoja zdolność do koncentracji, a drugie to zdolność do kontrolowania różnych części ciała, aby dobrze ze sobą współpracowały.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. skilful </p>
+<p>(Aby uprawiać większość sportów, trzeba być <strong>zręcznym</strong>.) </p>
+<p>2. fitness</p>
+<p>(Jeśli chcesz przebiec dziesięć kilometrów, musisz mieć dużą <strong>sprawność fizyczną</strong>.)</p>
+<p>3. strength</p>
+<p>(Możesz wyrobić sobie <strong>siłę</strong>, ćwicząc na siłowni.)</p>
+<p>4. flexible</p>
+<p>(Joga jest dobra, jeśli chce się być bardziej <strong>gibkim</strong>.)</p>
+<p>5. focused</p>
+<p>(Jeśli jest się bramkarzem, nie można bujać w obłokach podczas meczu. Trzeba być <strong>skupionym</strong> przez cały czas!)</p>
+<p>6. accurate</p>
+<p>(W sportach takich jak koszykówka ważne jest, aby być <strong>celnym</strong>, inaczej piłka nie trafi do siatki.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. fit </p>
+<p><strong>Uzasadnienie</strong>: <em>get fit </em>- nabrać formy. </p>
+<p>2. stamina</p>
+<p><strong>Uzasadnienie</strong>: <em>build your stamina </em>- wyrobić sobie wytrzymałość.</p>
+<p>3. strength</p>
+<p><strong>Uzasadnienie</strong>: <em>build muscle strength </em>- wyrobić siłę mięśni.</p>
+<p>4. accurate</p>
+<p><strong>Uzasadnienie</strong>: <em>be more accurate </em>- być bardziej dokładnym.</p>
+<p>5. coordination</p>
+<p><strong>Uzasadnienie</strong>: <em>help with coordination </em>- pomagać w (ćwiczeniu) koordynacji.</p>
+<p>6. confidence</p>
+<p><strong>Uzasadnienie</strong>: <em>improve confidence in something </em>- poprawić wiarę w coś.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. 2,000  </p>
+<p>2. 40</p>
+<p>3. 2007</p>
+<p>4. 2005</p>
+<p>5. 53</p>
+<p>6. 14, 25</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. sports organisation called  </p>
+<p>2. poor communities </p>
+<p>3. people's confidence</p>
+<p>4. the law</p>
+<p>5. achieving goals</p>
+<p>6. see themselves as sporty</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. StreetGames gives <s class="odr-strikethrough">all young people</s> <strong>young people from poor communities</strong> more possibilities of doing sport.</p>
+<p>(<em>StreetGames is a charity that aims to increase opportunities for young people from poor communities ...</em>) </p>
+<p><br/>2. Participants <s class="odr-strikethrough">had to do all the</s> <strong>could choose from a range of 40</strong> different sports and activities.</p>
+<p>(<em>The young people who took part could choose from a range of 40 different sports and activities.</em>)<br/><br/></p>
+<p>3. All the participants were from <s class="odr-strikethrough">Cardiff</s> <strong>Wales</strong>.</p>
+<p>(<em>Two thousand young people from the poorest communities in Wales were invited to take part.</em>)</p>
+<p><br/>4. The speaker links crime to not having <s class="odr-strikethrough">a job</s> <strong>anything to do</strong>.</p>
+<p>(<em>... and, in areas where there is not much else to do, it can keep young people away from crime ...</em>)</p><br>

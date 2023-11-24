@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>(przykład)</p>
+<p>Saint Basil's Cathedral is absolutely <strong>charming</strong> and <strong>old-fashioned</strong> at the same time - it looks like it was a castle from w Disney film!</p>
+<p>(Cerkiew Wasyla Błogosławionego jest absolutnie <strong>urocza</strong> i jednocześnie <strong>staroświecka</strong> - wygląda jak zamek z filmu Disney'a!) </p>
+<p>The Leaning Tower of Pisa seems <strong>isolated</strong>.</p>
+<p>(Krzywa Wieża w Pizie wydaje się <strong>odizolowana</strong>.)</p>
+<p>Versailles looks extremely <strong>impressive</strong> with all these columns. </p>
+<p>(Wersal wygląda <strong>imponująco</strong> z tymi wszystkimi kolumnami.)</p>
+<p>Saint Basil's Cathedral is really <strong>gorgeous</strong> - I've never seen anything like this before. </p>
+<p>(Cerkiew Wasyla Błogosławionego jest naprawdę <strong>zachwycająca</strong> - nigdy wcześniej nie widziałem/am czegoś podobnego.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. The journalist was inspired by the fact that in 2020 Hagia Sophia was turned into a mosque. </p>
+<p><strong>Fragment w tekście:</strong> "In 2020 the iconic Hagia Sophia (...) in Istanbul was stripped of museum status and turned into a mosque." - W 2020 roku kultowa Hagia Sophia (...) w Stambule  została pozbawiona statusu muzeum i zmieniona w meczet. </p>
+<p>2. It is controversial because the building is a UNESCO World Heritage site and it used to be a museum open to visitors. </p>
+<p><strong>Fragment w tekście:</strong> "As it is a UNESCO World Heritage site, the decision made by President Erdoğan prompted criticism from religious and political leaders worldwide." - Ponieważ budynek znajduje się na liście światowego dziedzictwa UNESCO, decyzja podjęta przez prezydenta Erdoğana spotkała się z krytyką przywódców religijnych i politycznych z całego świata. </p>
+<p>3. It is called "a bridge between two faiths" because over the years there were periods of time when it was a Christian cathedral and when it was a mosque. The buildings includes the ornaments and valuable signs of both Christian and Islamic cultures.</p>
+<p><strong>Fragment w tekście:</strong> "(...) the international community openly argued that, with its cultural and historical heritage, Hagia Sophia belongs to all humanity, not just the conservative Turkish government. It was claimed that the monument was a bridge between two faiths and a symbol of co-existence and, therefore, it should remain protected and unchanged." - (...) międzynarodowa społeczność otwarcie twierdziła, że przez swoje kulturalne i historyczne dziedzictwo, Hagia Sophia należy do ludzkości, a nie do konserwatywnego tureckiego rządu. Twierdzono, że zabytek jest mostem łączącym dwie wiary i symbolem współistnienia i dlatego powinien pozostać chroniony i bez zmian. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. D</p>
+<p><strong>Uzasadnienie</strong>:  zdanie D: "Wybudowana 1500 lat temu przez imperatora rzymskiego jako katedra prawosławna, Hagia Sophia jest świetnym przykładem sztuki i architektury bizantyjskiej" łączy się ze zdaniem po luce: "W tamtym czasie to największe wnętrze na świecie, kościół (nazywany czasem świątynią) zawierał ogromną kopułę na szczycie prostokątnej bazyliki (...)".  </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie</strong>: zdanie B: "Od tego czasu Hagia Sophia przyciąga tysiące turystów każdego roku, ponieważ wszystko w niej jest zachwycające" łączy się ze zdaniem przed luką: "Dopiero w 1934 roku prezydent Atatürk, o którym mówi się, że upodobnił Turcję do zachodu, ogłosił budowlę świeckim miejscem oraz muzeum otwartym dla zwiedzających". </p>
+<p>3. F</p>
+<p><strong>Uzasadnienie</strong>: zdanie F: "Nic dziwnego, że groźba przekształcenia budynku w miejsce przeznaczone wyłączenie do islamskiego kultu, zamknięte dla wszystkich pragnących podziwiać jego piękno, była stanowczo krytykowana zarówno przez turecką opozycję jak i konserwatorów architektury na całym świecie" łączy się ze zdaniem po luce: "Pojawił się strach, że taka zmiana doprowadzi do zniszczenia niektórych chrześcijańskich ornamentów o ogromnej wartości historycznej". </p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: zdanie A: "Na szczęście, jak na razie zabytek jest otwarty dla zwiedzających wszystkich religii, a chrześcijańskie symbole są zasłaniane podczas modlitw islamskich" łączy się ze zdaniem po luce: "Pozostaje jednak pytanie, czy przyszłe pokolenia i rządzący będą w stanie uszanować dziedzictwo tego zabytku". </p>
+<p> </p>
+<p><strong>The extra sentences are: C and E.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. secular (świecki) </p>
+<p>2. heritage (dziedzictwo)</p>
+<p>3. medieval (średniowieczny)</p>
+<p>4. mosque (meczet)</p>
+<p>5. iconic (kultowy)</p>
+<p>6. temple (świątynia)</p>
+<p>7. ornaments (ornamenty, zdobienia)</p>
+<p>8. abundant (liczny)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. medieval</p>
+<p>(Podczas wycieczki zwiedziliśmy <strong>średniowieczny</strong> kościół, powstały w XV wieku.) </p>
+<p>2. ornaments</p>
+<p>(To, co podobało mi się najbardziej we wnętrzu to marmurowe <strong>ornamenty</strong> na ścianach. </p>
+<p>3. iconic</p>
+<p>(Jego film stał się <strong>kultowym</strong> obrazem wojny domowej w Syrii.)</p>
+<p>4. secular</p>
+<p>(Na początku komponował tylko muzykę do psalmów, ale potem skupił się na muzyce <strong>świeckiej</strong>.)</p>
+<p>5. heritage</p>
+<p>(Głównym celem naszej społeczności jest zachowanie naszego narodowego <strong>dziedzictwa</strong>.)</p>
+<p>6. Mosques</p>
+<p>(<strong>Meczety</strong> nie są zbyt popularne w moim kraju, bo Islam nie jest główną religią.)</p>
+<p>7. abundant</p>
+<p>(Stoiska, na których lokalni mieszkańcy sprzedają swoje produkty są <strong>liczne</strong> w tej części miasta.)</p>
+<p>8. temples</p>
+<p>(Rozmawialiśmy o piramidach egipskich i <strong>świątyniach</strong> na lekcji historii w zeszłym tygodniu.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

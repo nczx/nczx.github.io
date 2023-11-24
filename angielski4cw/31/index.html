@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. could + c</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie możliwości - <em>could</em>. </p>
+<p>2. should + g</p>
+<p><strong>Uzasadnienie</strong>: dawanie rady - <em>should</em>.</p>
+<p>3. have to + h</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przymusu - <em>have to<strong>*</strong></em>.</p>
+<p>4. don't have to + d</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku przymusu - <em>don't have to</em>. </p>
+<p>5. can't + b</p>
+<p><strong>Uzasadnienie</strong>: zakaz - <em>can't</em>.</p>
+<p>6. might + e</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie prawdopodobieństwa, możliwości - <em>might</em>.</p>
+<p>7. have to + a</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przymusu - <em>have to</em>.</p>
+<p>8. must + f</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przymusu - must<em><strong>*</strong></em>.</p>
+<p> </p>
+<p><strong>*</strong>Zarówno <em>have to</em> jak i <em>must</em> wyrażają przymus, jednak istnieje pewna różnica w znaczeniu. <em>Must</em> wyraża nakaz, który sami sobie narzucamy, np.<em> I must see this film!</em> (Muszę obejrzeć ten film!), a <em>have to</em> opisuje sytuacje narzucone przez kogoś innego, np. <em>I have to go to school every day</em>. (Codziennie muszę chodzić do szkoły). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. must </p>
+<p>2. can</p>
+<p>3. have</p>
+<p>4. mustn't </p>
+<p>5. may</p>
+<p>6.  ought</p>
+<p>7. can't</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogubione):</strong></p>
+<p>Jak centrum handlowe może przetrwać w przyszłości?</p>
+<p>X: Bycie menadżerem centrum handlowego <strong>musi</strong> być trudne w dzisiejszych czasach, kiedy zakupy online stają się coraz bardziej popularne. Co <strong>można</strong> zrobić, żeby nadal przyciągać klientów i generować zyski?</p>
+<p>Y: Cóż, masz rację, że jest to wyzwanie i <strong>musimy</strong> dostosować się i ruszyć naprzód. Ale<strong> nie możemy</strong> panikować. Jest kilka rzeczy, które <strong>mogą</strong> wydarzyć się w przyszłości. Jedno z nich to centrum docelowe, w którym sklepy są skoncentrowane wokół jakiejś dużej atrakcji, jak na przykład wewnętrzny stok narciarski albo scena koncertowa. Centrum handlowe Maroko ma akwarium, w którym można nurkować! Coś takiego <strong>powinno</strong> przyciągnąć ludzi, którzy następnie mogliby też zrobić zakupy. </p>
+<p>X: Na pewno tak będzie. <strong>Nie mogę</strong> się doczekać jednego z tych wspaniałych miejsc!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. had better go to </p>
+<p><strong>Uzasadnienie</strong>: dawanie rady - <em>had better</em>. </p>
+<p>2. can't have seen me</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>can't have + past participle.</em></p>
+<p>3. don't have to fill in a feedback form</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku przymusu - <em>don't have to</em>. </p>
+<p>4. May I watch a film tonight</p>
+<p><strong>Uzasadnienie</strong>: pytanie o pozwolenie - <em>may</em>.</p>
+<p>5. needn't have bought tickets in advance</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie, że coś wydarzyło się niepotrzebnie -<em> needn't have + past participle</em>.</p>
+<p>6. mustn't take food </p>
+<p><strong>Uzasadnienie</strong>: zakaz - <em>mustn't</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. have to </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku przymusu - <em>don't have to/don't need to/needn't</em>.  </p>
+<p>2. can</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pozwolenia, możliwości - <em>can</em>.</p>
+<p>3. better</p>
+<p><strong>Uzasadnienie</strong>: dawanie rady (w tym przypadku sobie samemu) - <em>had better</em>.</p>
+<p>4. have</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu, że coś się (nie) wydarzyło w przeszłości - <em>should have + past participle</em>.</p>
+<p>5. might</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie prawdopodobieństwa - <em>might.</em></p>
+<p>6. should</p>
+<p><strong>Uzasadnienie</strong>: dawanie rady - <em>should</em>.</p>
+<p>7. to</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przymusu - <em>have to</em>.</p>
+<p>8. ought</p>
+<p><strong>Uzasadnienie</strong>: dawanie rady - <em>ought (not) to</em>.</p><br>

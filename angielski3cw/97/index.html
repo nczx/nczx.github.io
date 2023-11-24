@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1 - e</p>
+<p>(Tom <strong>ciężko </strong>trenował.) </p>
+<p>2 - a</p>
+<p>(Elaine wygrała <strong>mecz</strong>.)</p>
+<p>3 - h</p>
+<p>(Maxine była na <strong>stadionie</strong>.)</p>
+<p>4 - f</p>
+<p>(Mark ustanowił <strong>nowy rekord</strong>.)</p>
+<p>5 - c</p>
+<p>(Jason strzelił <strong>bramkę</strong>.)</p>
+<p>6 - g</p>
+<p>(Beth włożyła <strong>kask</strong>.)</p>
+<p>7 - b</p>
+<p>(Cathy pokonała <strong>swoją przeciwniczkę</strong>.)</p>
+<p>8 - d</p>
+<p>(Roberta była na <strong>boisku</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. boxing </p>
+<p>(Alex i jego przeciwnik stoją na ringu i czekają na rozpoczęcie. - <strong>boks</strong>) </p>
+<p>2. tennis</p>
+<p>(No dalej - odbij ją tym razem za siatkę. - <strong>tenis</strong>)</p>
+<p>3. surfing</p>
+<p>(Donna potrzebuje stroju piankowego na tę pogodę. - <strong>surfing</strong>)</p>
+<p>4. skiing</p>
+<p>(Clara jest na szczycie stoku. - <strong>narciarstwo</strong>)</p>
+<p>5. athletics</p>
+<p>(I Jack przebiega przez linię mety. - <strong>lekkoatletyka</strong>)</p>
+<p>6. football</p>
+<p>(O rety. Jest w tarapatach. Sędzia mówi że to faul i wyciąga czerwoną kartkę. - <strong>piłka nożna</strong>)</p>
+<p>7. ice skating</p>
+<p>(Są na lodowisku i przygotowują się do rozpoczęcia. - <strong>łyżwiarstwo</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Most </p>
+<p><strong>Uzasadnienie:</strong> przed rzeczownikiem w liczbie mnogiej możemy użyć jedynie określenia <em>most </em>(większość). </p>
+<p>2. Few</p>
+<p><strong>Uzasadnienie:</strong> przed rzeczownikiem policzalnym w liczbie mnogiej można użyć określenia <em>few </em>(niewiele).</p>
+<p>3. to win</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>manage </em>używamy bezokolicznika z <em>to</em>.</p>
+<p>4. neither</p>
+<p><strong>Uzasadnienie:</strong> w zdaniu z czasownikiem w formie twierdzącej używamy określenia <em>neither</em> (żadne).</p>
+<p>5. None</p>
+<p><strong>Uzasadnienie: </strong>konstrukcja <em>none of the </em>(żaden z) + rzeczownik.</p>
+<p>6. a good deal of time</p>
+<p><strong>Uzasadnienie:</strong> w zdaniu twierdzącym można użyć określenia <em>a good deal of</em> (dużo).</p>
+<p>7. to allow</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik <em>stop </em>oznacza "przestać coś robić", używamy po nim bezokolicznika z <em>to</em>.</p>
+<p>8. Each</p>
+<p><strong>Uzasadnienie:</strong> tylko po wyrażeniu z <em>each</em> może wystąpić forma czasownika dla liczby pojedynczej (tu: <em>was</em>). Aby można było użyć wyrażenia <em>both of ...</em>, czasownik musiałby mieć formę dla liczby mnogiej (<em>were</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. to do</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>decide </em>(postanowić) używamy bezokolicznika z <em>to</em>. </p>
+<p>2. Both</p>
+<p><strong>Uzasadnienie:</strong> do opisania dwóch osób używamy określenia <em>both </em>(oboje).</p>
+<p>3. being</p>
+<p><strong>Uzasadnienie:</strong> jako podmiotu w zdaniu używamy formy czasownika z -ing.</p>
+<p>4. neither</p>
+<p><strong>Uzasadnienie:</strong> do wykluczenia dwóch osób w zdaniu z czasownikiem w formie twierdzącej używamy określenia <em>neither </em>(żaden).</p>
+<p>5. working</p>
+<p><strong>Uzasadnienie:</strong> <em>work hard </em>- ciężko pracować. Po czasowniku <em>keep </em>(nie przestawać) używamy formy czasownika z -ing.</p>
+<p>6. few</p>
+<p><strong>Uzasadnienie: </strong>określenia <em>a few </em>(kilka) używamy przed rzeczownikiem w liczbie mnogiej.</p>
+<p><s class="odr-strikethrough">either</s>, <s class="odr-strikethrough">little</s>, <s class="odr-strikethrough">make</s></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. broken/set/held </p>
+<p><strong>Uzasadnienie:</strong> <em>broke/set/hold a record </em>- pobić/ustanowić rekord / być rekordzistą. Forma <em>past participle</em>, aby powstał czas <em>present perfect </em>(<em>have/has + past participle</em>). </p>
+<p>2. won</p>
+<p><strong>Uzasadnienie:</strong> <em>win an award </em>- zdobyć nagrodę. Forma <em>past participle</em>, aby powstał czas <em>present perfect </em>(<em>have/has + past participle</em>).</p>
+<p>3. to</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>manage </em>(zdołać) używamy bezokolicznika z <em>to</em>.</p>
+<p>4. stadium</p>
+<p><strong>Uzasadnienie:</strong> <em>stadium </em>- stadion. </p>
+<p>5. None</p>
+<p><strong>Uzasadnienie:</strong> <em>none of the fans </em>- nikt z fanów. W odniesieniu do większej ilości osób używamy określenia <em>none</em>, ale nie <em>neither. </em>Tutaj potrzebujemy określnika o znaczeniu negatywnym, bo zdanie dotyczy reakcji fanów z przeciwnej drużyny (nikt z nich nie kibicował, kiedy ich drużyna zaczęła przegrywać).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. I forgot to go </p>
+<p><strong>Uzasadnienie:</strong> czas <em>past simple</em> dla czynności zakończonej w określonym momencie w przeszłości. Kiedy czasownik <em>forget</em> oznacza "zapomnieć, żeby coś zrobić", używamy po nim bezokolicznika z <em>to</em>. </p>
+<p>2. Watching football live</p>
+<p><strong>Uzasadnienie:</strong> jako podmiotu w zdaniu używamy formy czasownika z końcówką -ing.</p>
+<p>3. referee spoke to both of the</p>
+<p><strong>Uzasadnienie:</strong> <em>referee </em>- sędzia w piłce nożnej. <em>Speak to somebody </em>- rozmawiać z. Wyrażenie <em>both of the </em>+ rzeczownik, aby mówić o dwóch osobach.</p>
+<p>4. none of us</p>
+<p><strong>Uzasadnienie:</strong> w odniesieniu do większej ilości osób (<em>my friends and I </em>- moi przyjaciele i ja) używamy określenia <em>none of</em> + zaimek/rzeczownik.</p><br>

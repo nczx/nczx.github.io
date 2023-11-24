@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>A - Christian Guémy</p>
+<p><strong>Fragment w tekście:</strong> "(...) he's been using stencils to create portraits of people such as refugees, the elderly and the homeless." -(...) używał szablonów do stworzenia portretów ludzi takich jak uchodźcy, starsi i bezdomni.</p>
+<p>B - Pez</p>
+<p><strong>Fragment w tekście:</strong> "(...) he painted murals influenced by comics. (...) His works are simple but stylish and typically have bright colours and, of course, smiles." - (...) malował murale inspirowane komiksami. (...) Jego prace są proste, ale stylowe i zazwyczaj mają żywe kolory i oczywiście uśmiechy.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. T</p>
+<p><strong>Fragment w tekście</strong>: "Two of her popular works were created using thirty thousand pieces of origami folded by hundreds of volunteers, an impressive feat!" - Dwa z jej znanych dzieł zostały stworzone przy użyciu trzydziestu tysięcy origami zrobionych przez setki ochotników, imponujący wyczyn! </p>
+<p>2. T</p>
+<p><strong>Fragment w tekście</strong>: "Just looking at his paintings makes people cheerful (...)" - Samo patrzenie na jego obrazy rozwesela ludzi (...).</p>
+<p>3. F - His art is usually about animals.</p>
+<p><strong>Fragment w tekście</strong>: "(...) usually animals such as deer, birds or dragons (...)" - (...) zazwyczaj zwierzęta takie jak jelenie, ptaki czy smoki (...).</p>
+<p>4. F - the most incredible thing about his work is the expression of the portrayed people's eyes. </p>
+<p><strong>Fragment w tekście</strong>: "The most stunning thing, though, is the expression he gives to each person's eyes." - Jednak najbardziej oszałamiającą rzeczą jest to, co wyrażają oczy portretowanych przez niego osób.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. C</p>
+<p><strong>Uzasadnienie</strong>: zdanie występujące po luce: "Oto kilku z nich, na których polecamy zwrócić uwagę." nawiązuje do zdania C: "Artyści ze wszystkich kultur i środowisk popisują się swoimi umiejętnościami przed równie zróżnicowaną publicznością". </p>
+<p>2. E</p>
+<p><strong>Uzasadnienie</strong>: zdanie E: "Jest to forma sztuki, która zawsze symbolizowała nadzieję, miłość i pokój." łączy się ze zdaniem po luce: "To powód, dla którego po powrocie do domu zaczęła używać poskładanego papieru do tworzenia sztuki ulicznej 3D w nadziei szerzenia podobnego przesłania".</p>
+<p>3. B</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką: "Pez kiedyś podpisywał swoje prace i szybko stał się rozpoznawalny." łączy się ze zdaniem B: "Jednak później zastąpił tę praktykę uśmiechniętą postacią niebieskiej ryby.", podobnie jak zdanie po luce: "Ten symbol pozytywności stał się jego nowym podpisem". </p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką: "Jednak najbardziej oszałamiającą rzeczą jest to, co wyrażają oczy portretowanych przez niego osób." łączy się ze zdaniem A: "To sprawia, że naprawdę myślisz o tych ludziach i o tym, co mogą czuć i co prawdopodobnie przeżyli". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. an art </p>
+<p>2. being in Japan</p>
+<p>3. blue fish symbol</p>
+<p>4. expressive eyes which </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Tekst zapoznaje nas ze street artem i z tym, jak wreszcie stał się formą <strong>sztuki</strong>. Zwraca uwagę na fakt, iż globalność tej dziedziny sprawia, że jest ona wyjątkowa w świecie sztuki. Następnie przedstawionych jest czworo dobrze znanych artystów ulicznych. Pierwszą z nich, Mademoiselle Maurice, zaintrygowało origami kiedy <strong>była w Japonii</strong> i teraz tworzy je sama, czasem z pomocą innych. Pez, artysta z Barcelony, znalazł inspirację w komiksach. Jego działa zawierają <strong>niebieski symbol ryby</strong>. Oprócz wystawiania swoich prac dookoła świata, Pez publikuje je również w książkach i w Internecie.  DALeast, chiński artysta specjalizujący się w malowaniu zwierząt, sprawia wrażenie tworzenia z metalu, jednak osiąga efekt 3D za pomocą farby. Czwarty artysta, znany jako C215, wykorzystuje sztukę do zwrócenia uwagi na problemy społeczne. Jego postaci mają niesamowicie <strong>pełne wyrazu oczy, które</strong> wywierają silny wpływ na oglądających je ludzi. Mimo, że jest Francuzem, jego prace pojawiły się w kilku krajach na świecie. </p><br>

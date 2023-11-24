@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1.  job</p>
+<p>(policzalne, praca, którą wykonuje się regularnie w celu zarobienia pieniędzy) </p>
+<p>2. work</p>
+<p>(niepoliczalne, działanie, które obejmuje wysiłek fizyczny lub psychiczny)</p>
+<p>3. labour</p>
+<p>(niepoliczalne, formalny odpowiednik słowa "work", szczególnie jeśli obejmuje ciężki fizyczny wysiłek)</p>
+<p>4. career</p>
+<p>(policzalne, profesja, która zajmuje znaczną część życia zawodowego)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. d</p>
+<p>(minimalne wynagrodzenie) </p>
+<p>2. c</p>
+<p>(zatrudnianie nieletnich)</p>
+<p>3. e</p>
+<p>(łamanie praw człowieka)</p>
+<p>4. b</p>
+<p>(etyczne praktyki)</p>
+<p>5. h</p>
+<p>(główny producent)</p>
+<p>6. a</p>
+<p>(nieludzkie warunki pracy)</p>
+<p>7. f</p>
+<p>(przepisy bezpieczeństwa)</p>
+<p>8. g</p>
+<p>(odnawialne źródła)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. minimum wage </p>
+<p>(Wielu ludziom pracującym za <strong>minimalne wynagrodzenie</strong> ciężko jest poradzić sobie finansowo.) </p>
+<p>2. sustainable sources</p>
+<p>(Możesz wymienić jakiekolwiek <strong>odnawialne źródła</strong> energii poza energią z hydroelektrowni?)</p>
+<p>3. safety regulations</p>
+<p>(Odpowiednie oświetlenie i wentylacja są uwzględnione w <strong>przepisach bezpieczeństwa</strong> w miejscu pracy.)</p>
+<p>4. major manufacturers</p>
+<p>(Znasz jakichkolwiek <strong>głównych producentów</strong> posiadających certyfikat "wolne od okrucieństwa"?)</p>
+<p>5. ethical practices </p>
+<p>(Osobista odpowiedzialność i wzajemny szacunek są przykładami <strong>etycznych praktyk</strong> w rożnych organizacjach.)</p>
+<p>6. human rights violation</p>
+<p>(Kiedy kupujesz produkty zgodne z zasadami sprawiedliwego handlu, upewniasz się, że twój zakup nie przyczyni się do <strong>łamania praw człowieka</strong>, na przykład wypędzania ludzi z domów w celu stworzenia farm.)</p>
+<p>7. inhumane working conditions</p>
+<p>(Pracownicy narzekali na <strong>nieludzkie warunki pracy</strong>, na przykład stanie przy linii produkcyjnej przez całą zmianę.)</p>
+<p>8. child labour</p>
+<p>(Ta firma odzieżowa notorycznie wykorzystuje <strong>pracę dzieci</strong>, mimo że jest to nielegalne.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Tłumaczenie definicji:</strong></p>
+<p>koltan - czarna ruda metalu </p>
+<p>lit - pierwiastek chemiczny, który jest miękkim, srebrnobiałym metalem.</p>
+<p>szkodliwy - powodujący zniszczenie.</p>
+<p>nieskazitelny - nieuszkodzony; w idealnym stanie. </p>
+<p> </p>
+<p><strong>Uwaga! Należy samodzielnie przewidzieć temat wywiadu.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>1. He was invited to tell the audience about the the drawbacks of coltan mining and why it is harmful. </p>
+<p>(Został zaproszony, żeby opowiedzieć publiczności o minusach wydobycia koltanu i dlaczego jest to szkodliwe.)</p>
+<p>2. They often violate human rights and cause damage to the environment. </p>
+<p>(Często łamią prawa człowieka oraz niszczą środowisko.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. multibillion dollar global business </p>
+<p>2. Australia and Canada</p>
+<p>3. are paid more</p>
+<p>4. risk their lives</p>
+<p>5. the wildlife and the native tribes</p>
+<p>6. make sure that coltan they use comes from sustainable sources</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

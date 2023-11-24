@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W wierszu zostaj¹ zasygnalizowane przygotowania do jesieni, kiedy to zamykane s¹ kawiarniane ogródki, a pojawia siê zaœ poranna mg³a - wywo³uj¹ one melancholijny nastrój. W zwyczajny dzieñ wpisuje siê naturalny porz¹dek œwiata - œmieræ i narodziny ("[...] przyby³ nam poeta / albo ktoœ siê w ³azience powiesi³ na pasku".). Kluczowym elementem codziennoœci staj¹ siê jednak postawy ludzi, którzy pozostali w miasteczku. Poszukuj¹ skutecznej metody pozwalaj¹cej na pogodzenie siê z rzeczywistoœci¹: za pomoc¹ alkoholu, snucia marzeñ czy pogr¹¿ania siê w wirtualnym œwiecie. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Poeta w doœæ oszczêdny oraz subtelny sposób kreuje specyfikê jesiennej aury. Ta pora roku jest goœciem; przychodzi nieœmia³o, ukradkiem, na co wskazuje uosobienie: "Do naszego miasteczka zagl¹da ju¿ jesieñ". Jesienny nastrój zaznacza tak¿e wskazanie pozornie drobnego dzia³ania ("kawiarnie zwijaj¹ ogródki [...]"), poniewa¿ sugeruje ono spadek aktywnoœci ludzi, którzy nie przesiaduj¹ ju¿ na zewn¹trz, lecz raczej chroni¹ siê w budynkach. Jesienn¹ aurê podkreœlaj¹ tak¿e epitet i metafora zawarte we fragmencie: "[...] mg³a o brzasku / zwiastuje znów nieszczêœcie [...]". S³owa te odwo³uj¹ siê nie tylko do zjawiska kojarzonego z t¹ por¹ roku, lecz tak¿e wprowadzaj¹ atmosferê smutku, zadumy, przeczucia nadchodz¹cej katastrofy. Jesienne nastroje odzwierciedlaj¹ tak¿e wskazane w utworze postawy ludzi: pogr¹¿aj¹ siê w apatii, s¹ znu¿eni swoj¹ egzystencj¹, wrêcz pozbawieni ¿ycia oraz woli dzia³ania. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Przytoczone metafory wskazuj¹ na pewn¹ próbê ucieczki ludzi, którzy ju¿ stracili nadziejê na zmianê swej sytuacji ¿yciowej. Z tego te¿ sposobu poszukuj¹ ukojenia, czegoœ, co pozwoli im na zapomnienie. S³owa "ponawia plan ucieczki jedynym otworem / trudnej szyjki butelki" sugeruj¹, i¿ tak¹ funkcjê prawdopodobnie pe³ni alkohol. Na³óg niejako pozwala na oswojenie siê z ¿alem, poczuciem beznadziei i w³asnymi wyborami ¿yciowymi. Z kolei metafora "zadaje siê z maszyn¹" wskazuj¹ na alternatywne rozwi¹zanie. Jest nim wirtualny œwiat, w którym mo¿na dowolnie kszta³towaæ swój wizerunek oraz ch³on¹æ to, czym ¿yj¹ inni ludzie. W ten sposób mo¿liwe staje siê oderwanie od monotonii w³asnego ¿ycia, a zetkniêcie siê z innym œwiatem - piêknym oraz fascynuj¹cym. "Maszyna" mo¿e wiêc oznaczaæ telefon, komputer czy inny sprzêt, który umo¿liwia spêdzanie czasu w internecie lub np. na portalach spo³ecznoœciowych. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Podmiot liryczny charakteryzuje wspó³czesne spo³eczeñstwo przez pryzmat pewnego miasteczka i sytuacji ludzi wywodz¹cych siê z niego. Najmniej uwagi poœwiêca osobom, które wyjecha³y, a wiêc postanowi³y zmieniæ coœ w swoim ¿yciu, zdecydowa³y siê na radykalne rozwi¹zanie. Koncentruje siê natomiast na dwóch innych grupach okreœlanych mianem A i B, co wywo³uje skojarzenia z pewnym badaniem socjologicznym lub statystycznym. Grupy te sk³adaj¹ siê z ludzi, którzy pozostali w miasteczku, w zwi¹zku z czym odczuwaj¹ ¿al, byæ mo¿e rozczarowanie. Rzeczywistoœæ nie ma im bowiem nic do zaoferowania. Przedstawiciele grupy A szukaj¹ ucieczki w butelce, co mo¿e sugerowaæ nadmierne spo¿ycie alkoholu. Pogr¹¿aj¹ siê tak¿e w œwiecie marzeñ i wyobra¿eñ na temat tego, jak mog³oby wygl¹daæ ich ¿ycie: "[...] Gdyby siê uda³o zamieszkaæ w szklanym domu, mo¿na rzek¹ dotrzeæ / do oceanu [...]". Definiuje ich marazm, biernoœæ, têsknota za innym losem. Grupa B równie¿ nie wydaje siê pogodzona z rzeczywistoœci¹, jednak poszukuje innej ucieczki - w wirtualny œwiat. Tam uzewnêtrznia siê, prowadzi alternatywne ¿ycie, które dostarcza ekscytacji, wytchnienia od codziennoœci, rozrywki. Mo¿e wiêc zrealizowaæ wszystkie swe fantazje i marzenia, chocia¿ w iluzoryczny sposób. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przerzutnie z wiersza:</p>
+<ul>
+<li>"Do naszego miasteczka zagl¹da ju¿ jesieñ / kawiarnie zwijaj¹ [...]";</li>
+<li>"[...] mg³a o brzasku / zwiastuje znów [...]"; </li>
+<li>"[...] przyby³ nam poeta / albo ktoœ [...]";</li>
+<li>"[...] Grupa A z uporem / ponawia plan ucieczki [...]";</li>
+<li>"[...] jedynym otworem / trudnej szyjki butelki. [...]";</li>
+<li>"[...] Gdyby siê uda³o / zamieszkaæ [...]";</li>
+<li>"[...] mo¿na rzek¹ dotrzeæ / do oceanu [...]";</li>
+<li>"[...] mo¿e wytwórnia krewetek / wy³owi [...]:;</li>
+<li>"[...] Lecz cia³o, niestety / takie ma³o plastyczne. [...]";</li>
+<li>"[...] Grupa B natomiast / zadaje siê z maszyn¹ [...]';</li>
+<li>"[...] powierza jej swoje / sekrety [...]". </li>
+</ul>
+<p> </p>
+<p>Poeta w swym utworze bardzo czêsto wykorzystuje przerzutniê, która przejawia siê w odmiennym porz¹dku sk³adniowym i intonacyjnymi. Przede wszystkim zabieg ten wp³ywa na odbiorcê, poniewa¿ wytr¹ca go z przyzwyczajeñ, zmusza go do ci¹g³ego skupienia. Jednoczeœnie wp³ywa to na mo¿liwoœci interpretacyjne. Rozbicie porz¹dku sk³adniowo-intonacyjnego mo¿e bowiem odzwierciedlaæ ukazan¹ wizjê rzeczywistoœci - jest ona pozbawiona spójnoœci oraz harmonii. Ponadto zabieg ten powoduje, i¿ uwaga odbiorcy zostaje zwrócona na wyrazy koñcz¹ce dane wersy - nadaje im siê w ten sposób szczególne znaczenie. Przerzutnia tym samym niejako umo¿liwia ró¿norodne odczytywanie sensów wiersza - w zale¿noœci od odbiorcy. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Tomasz Ró¿ycki proponuje dychotomiczn¹ wizjê œwiata. Ruch odzwierciedla bowiem zachodz¹ce przemiany, oddzia³ywanie pór roku na ¿ycie miasta. Potwierdza to metafora: "kawiarnie zwijaj¹ ogródki [...]", która jednoczeœnie zaznacza zamieranie ¿ycia w miasteczku. Pewien dynamizm wi¹¿e siê z pojawianiem siê nowych ludzi ("[...] przyby³ nam poeta") lub ich decyzj¹ o odejœciu z tego œwiata ("[...] ktoœ siê w ³azience powiesi³ na pasku"). Okreœla on jednak przede wszystkich tym, którzy zdecydowali siê na opuszczenie miasteczka, prze³amanie biernoœci. Akcentuje to powtórzenie czasownika: "Którzy mieli wyjechaæ, dawno wyjechali". W opisie miasteczka dominuje jednak statycznoœæ - odzwierciedla ona sytuacjê pozosta³ych ludzi pogr¹¿aj¹cych siê w biernoœci i znu¿eniu. Jakikolwiek dynamizm w ich sytuacji jest wy³¹cznie zwi¹zany ze sfer¹ wyobra¿eñ czy marzeñ o ucieczce: "[...] Gdyby siê uda³o / zamieszkaæ w szklanym domu, mo¿na rzek¹ dotrzeæ / do oceanu [...]". Mieszkañcy pogr¹¿aj¹ siê w stagnacji, nie potrafi¹ zmieniæ swojej sytuacji - jedyne ukojenie przynosi im alkohol lub wirtualny œwiat. Kontrastowe zestawienie ruchu i statycznoœci sugeruje doœæ pesymistycznie, i¿ nie ma innej mo¿liwoœci dla przedstawionych w utworze ludzi. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>a) W ka¿dym wersie znajduje siê trzynaœcie sylab. Jest wiêc to trzynastozg³oskowiec - stanowi format wiersza sylabicznego.</p>
+<p> </p>
+<p>b) Przyk³ady innych utworów:</p>
+<ul>
+<li>
+<em>Pan Tadeusz</em>, Mickiewicz;</li>
+<li>
+<em>Testament mój</em>, S³owacki;</li>
+<li>
+<em>Transakcja wojny chocimskiej</em>, Potocki. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowo:</p>
+<p>Utwory Ró¿yckiego i Bursy ³¹czy podejmowana tematyka. Poeci ukazuj¹ bowiem codziennoœæ, która jest pozbawiona jakichkolwiek upiêkszeñ. Przepe³nia j¹ to, co prozaiczne i zasadniczo pozbawione jakiejkolwiek nadziei na zmianê. Ró¿ycki w swym wierszu zestawia, niczym w statystykach, trzy grupy. Odró¿nia je przyjêta sytuacja ¿yciowa. Niektórzy bowiem podejmuj¹ ryzyko, opuszczaj¹ miasto, które nie zapewnia im innych perspektyw. Los innych jest zaœ mniej optymistyczny. Okreœlenie pozosta³ych mieszkañców jako przynale¿nych do grup A i B sugeruje pewn¹ utratê to¿samoœci - jednostki zlewaj¹ siê w biern¹, pogr¹¿on¹ w monotonii masê. Ludzie ci oddaj¹ siê na³ogom (alkohol) i ¿yj¹ marzeniami, poniewa¿ rzeczywistoœæ jest dla nich nie do zniesienia: "[...] Gdyby siê uda³o // zamieszkaæ w szklanym domu, mo¿na rzek¹ dotrzeæ do oceanu [...]". Grupa B poszukuje natomiast ucieczki w wirtualnym œwiecie - mo¿na w nim wyjawiæ swoje uczucia, prowadziæ lepsze i bardziej ekscytuj¹ce ¿ycie, a wrêcz kilka ró¿nych. </p>
+<p>Utwór Bursy pozornie stanowi pochwa³ê sobotniego wieczoru. Osoba mówi¹ca wyra¿a zachwyt iloœci¹ alkoholu, czasem spêdzanym prawdopodobnie w barze ("a potem pl¹tanina / w kulisach tego raju / miêdzy pluszow¹ kotar¹ / a kuchni¹ za krat¹"). Miejsce to pe³ni istotn¹ funkcjê w ¿yciu podmiotu: "czu³em jak wyzwalam siê / od zbêdnego nadmiaru energii / w któr¹ wyposa¿y³a mnie m³odoœæ". S³owa te s¹ jednak przesycone ironi¹ i poczuciem rozczarowania rzeczywistoœci¹. M³ody cz³owiek buntuje siê przeciwko realiom, poniewa¿ nie znajduje celu w swoim ¿yciu, jest ograniczony przez czynniki niezale¿ne od niego. Jedyn¹ alternatyw¹ staje siê pisanie reporta¿y, co nie budzi przekonania mówi¹cego. </p>
+<p>Mimo ¿e utwory ³¹czy tematyka i zbli¿ona wizja rzeczywistoœci, doœæ pesymistyczna, to odró¿nia je przede wszystkim wyrazista ironia w wierszu Bursy. Ponadto nieco inna jest postawa bohaterów. U Ró¿yckiego dominuje znu¿enie, biernoœæ, beznadzieja, której nie mo¿na pokonaæ. Mieszkañcy miasta poddaj¹ siê jej, chocia¿ poszukuj¹ tak¿e ukojenia i ucieczki. Z kolei podmiot liryczny w <em>Sobocie</em>, choæ tak¿e rozgoryczony rzeczywistoœci¹, na swój sposób buntuje siê. Nie chce ulegaæ szarej rzeczywistoœci i dlatego oddaje siê prostym rozrywkom. </p><br>

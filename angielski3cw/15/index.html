@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. (przykład)</p>
+<p>2. classmates, unkind</p>
+<p>(Wszyscy uczniowie w mojej szkole są mili. Żadna osoba z moich <strong>kolegów i koleżanek z klasy</strong> nie jest <strong>niemiła</strong>.) </p>
+<p>3. colleague, impatient</p>
+<p>(Amy pracuje ze Stevem. To świetny <strong>kolega z pracy</strong>, ale bywa trochę <strong>niecierpliwy</strong>, bo nie znosi na nic czekać.)</p>
+<p>4. travel buddy, intolerant</p>
+<p>(Odwiedziliśmy/łyśmy razem osiem krajów. Silvia jest świetną <strong>towarzyszką podróży</strong>, ponieważ jest otwarta na nowe pomysły - na pewno nie jest <strong>nietolerancyjna</strong>.)</p>
+<p>5. opponents, irresponsible</p>
+<p>(Nasi <strong>przeciwnicy</strong> grali bardzo niebezpiecznie i jeden z moich kolegów z drużyny doznał kontuzji. Ich zawodnicy byli <strong>nieodpowiedzialni</strong> i nie myśleli o konsekwencjach swoich działań.)</p>
+<p>6. siblings, immature</p>
+<p>(Mam młodszego brata i siostrę. Moje <strong>rodzeństwo</strong> jest miłe, ale jest jeszcze trochę <strong>niedojrzałe</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. relationship  </p>
+<p>2. hurt</p>
+<p>3. disagreement</p>
+<p>4. upset</p>
+<p>5. hurtful</p>
+<p>6. forgive</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Czy internetowe przyjaźnie mogą być tak bliskie jak te w prawdziwym życiu? W przypadku wielu ludzi odpowiedź brzmi: tak. W przyjaźni chodzi o to, by kogoś rozumieć, pokazywać, że nam zależy i wspierać tę osobę, kiedy potrzebuje pomocy. Można mieć z kimś dobrą <strong>relację</strong>, nie spotkawszy nigdy tego człowieka osobiście.</p>
+<p>Relacje internetowe są bardzo podobne do tych w prawdziwym życiu, i nawet kiedy dobrze się z kimś dogadujesz, to możliwe, że czasami będą się pojawiać problemy. Można kogoś <strong>zranić</strong>, celowo zachowując się nieżyczliwie lub przypadkiem mówiąc coś niewłaściwego. Można wdać się w jakiś <strong>spór</strong>, bez względu na to, czy chodzi o poważny temat jak polityka, lub coś mniej ważnego jak muzyka, i <strong>zezłościć </strong>się na siebie nawzajem. Potem, kiedy się uspokoisz i czujesz się źle przez wszelkie <strong>przykre</strong> rzeczy, które napisałeś/aś albo powiedziałeś/aś, możesz przeprosić i poprosić swojego przyjaciela / swoją przyjaciółkę, by ci <strong>wybaczył/a</strong>.</p>
+<p>Jedyna różnica polega na tym, że kiedy jest się w internecie, nie można przytulić swoich przyjaciół, kiedy tego potrzebują, a to czasem może zrobić dużą różnicę. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. who</p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy informację o jakiejś osobie za pomocą zdania przydawkowego, używamy zaimka <em>who</em>.  </p>
+<p>2. each other</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana z wzajemnością, używamy zaimka <em>each other</em>.</p>
+<p>3. who</p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy informację o jakiejś osobie za pomocą zdania przydawkowego, używamy zaimka <em>who</em>.</p>
+<p>4. where</p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy informację o jakimś miejscu (że coś się w nim znajduje albo dzieje) za pomocą zdania przydawkowego, używamy zaimka <em>where</em>.</p>
+<p>5. himself</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie albo samodzielnie, używamy zaimka zwrotnego. Zaimek zwrotny w 3. osobie l. poj. w rodzaju męskim ma formę <em>himself</em>.</p>
+<p>6. whose</p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy informację o czyimś posiadaniu za pomocą zdania przydawkowego, używamy zaimka <em>whose</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>box 1 - <strong>C</strong> </p>
+<p>1. nerves </p>
+<p><strong>Uzasadnienie:</strong> <em>get on somebody's nerves</em> - działać komuś na nerwy.</p>
+<p>2. itself </p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem wykonawcy, używamy zaimka zwrotnego. Zaimek zwrotny w 3. osobie l. poj. w rodzaju nijakim ma formę <em>itself</em>.</p>
+<p>3. which </p>
+<p><strong>Uzasadnienie:</strong> kiedy dodajemy komentarz do poprzedniego zdania za pomocą zdania przydawkowego, używamy zaimka względnego <em>which</em>. </p>
+<p><br/>box 2 - <strong>A</strong></p>
+<p>4. who</p>
+<p><strong>Uzasadnienie:</strong> kiedy podajemy informację o jakiejś osobie za pomocą zdania przydawkowego, używamy zaimka względnego <em>who</em>.</p>
+<p>5. terms</p>
+<p><strong>Uzasadnienie:</strong> <em>be on good terms</em> - być w dobrych stosunkach.</p>
+<p>6. fight</p>
+<p><strong>Uzasadnienie:</strong> <em>get into a fight</em> - wdać się w sprzeczkę.</p>
+<p><br/>box 3 - <strong>B</strong></p>
+<p>7. next</p>
+<p><strong>Uzasadnienie:</strong> <em>next-door neighbour</em> - sąsiad z naprzeciwka/zza ściany.</p>
+<p>8. whose</p>
+<p><strong>Uzasadnienie:</strong> kiedy podajemy informację o czyimś posiadaniu za pomocą zdania przydawkowego, używamy zaimka względnego <em>whose</em>.</p>
+<p>9. himself</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem wykonawcy, używamy zaimka zwrotnego. Zaimek zwrotny w 3. osobie l. poj. w rodzaju męskim ma formę <em>himself</em>.</p>
+<p><br/>box 4 - <strong>D</strong></p>
+<p>10. teammates</p>
+<p><strong>Uzasadnienie:</strong> w tej luce brakuje rzeczownika opisującego nazwę znajomej osoby, dlatego pasującym wyrazem jest <em>teammates </em>(koledzy/koleżanki z drużyny).</p>
+<p>11. each</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana z wzajemnością, używamy wyrażenia <em>each other</em>.</p>
+<p>12. which</p>
+<p><strong>Uzasadnienie:</strong> kiedy dodajemy komentarz do poprzedniego zdania za pomocą zdania przydawkowego, używamy zaimka względnego <em>which</em>.</p><br>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. close </p>
+<p>2. acquaintance </p>
+<p>3. flatmates</p>
+<p>4. colleagues</p>
+<p>5. nephew</p>
+<p>6. niece</p>
+<p>7. siblings</p>
+<p>8. half brother </p>
+<p>9. travel buddy</p>
+<p>10. teammate</p>
+<p>11. sister-in-law</p>
+<p>12. stepsister </p>
+<p> </p>
+<p><strong>Tłumaczenie dialogu (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. X: Dlaczego nie zaprosiłeś/aś Craiga na piknik?</p>
+<p>Y: Nie jest moim <strong>bliskim</strong> przyjacielem. Jest tylko <strong>znajomym</strong>. </p>
+<p>2. X: Czuję się samotny/a tu w Londynie.</p>
+<p>Y: Jak możesz być samotny/a? Masz dwoje świetnych <strong>współlokatorów </strong>i dużo <strong>kolegów/koleżanek w pracy</strong>. </p>
+<p>3. X: Moja siostra właśnie urodziła dziecko.</p>
+<p>Y: Naprawdę? Więc jesteś wujkiem. Masz <strong>siostrzeńca/bratanka</strong> czy <strong>siostrzenicę/bratanicę*</strong>?</p>
+<p>4. X: Masz jakieś <strong>rodzeństwo</strong>?</p>
+<p>Y: Cóż, mam <strong>przyrodniego brata</strong>, liczy się?</p>
+<p>5. X: Skąd znasz Josha?</p>
+<p>Y: Jest moim <strong>towarzyszem podróży</strong>, kiedy jeździmy na wakacje i <strong>kolegą z drużyny</strong>, kiedy gramy w rugby.</p>
+<p>6. X: Nie dogaduję się z moją <strong>szwagierką</strong>. </p>
+<p>Y: Nie masz jej. Twój brat ma dziesięć lat, nie sądzę żeby był już żonaty! Masz<strong> przyszywaną siostrę</strong> i wiem, że się nie dogadujecie, bo za każdym razem kiedy do ciebie przychodzę kłócisz się z nią!</p>
+<p> </p>
+<p><strong>*</strong>W języku angielskim <em>niece</em> oznacza zarówno siostrzenicę jak i bratanicę (córkę siostry albo brata). Analogicznie <em>nephew</em> to siostrzeniec albo bratanek. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. mate </p>
+<p>2. classmates</p>
+<p>3. workmate</p>
+<p>4. neighbours</p>
+<p>5. relatives</p>
+<p>6. cousins</p>
+<p>7. twins</p>
+<p>8. great</p>
+<p><strong>Niewykorzystane słowa:</strong> <em>acquaintance, half, nieces, roommates, siblings, stepsister</em>. </p>
+<p> </p>
+<p><strong>Tłumaczenie tekstu (wstawione słowa zostały pogrubione)</strong></p>
+<p>To zdjęcie z wesela mojego brata. Ten młody mężczyzna w garniturze to jego najlepszy <strong>kumpel</strong> ze studiów. Jest naprawdę zabawny. Jest z kilkorgiem <strong>kolegów/koleżanek z klasy</strong> mojego brata i jego<strong> kolegą/ koleżanką z biura</strong>. Ta starsza para obok niego to nasi <strong>sąsiedzi</strong>, pan i pani Green. Nie mają żadnych <strong>krewnych</strong>, więc stali się częścią naszej rodziny. Kiedy byliśmy mali, byli dla nas jak wujek i ciocia. Ta kobieta to moja prawdziwa ciocia, a te dziewczynki, które są z nią to jej córki, moje <strong>kuzynki</strong>. Jak widzisz są <strong>bliźniaczkami</strong> - wyglądają identycznie. Wszyscy całkiem dobrze się dogadujemy. A ten starszy mężczyzna, który siedzi to dziadek żony mojego brata... nie, czekaj, to jej <strong>pra</strong>dziadek. Ma 104 lata!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. has just passed</p>
+<p><strong>Uzasadnienie</strong>: opis efektu czynności - czas <em>present perfect simple</em>. </p>
+<p>2. has been raining</p>
+<p><strong>Uzasadnienie</strong>: czynność powtarzająca się w bliskiej, nieokreślonej przeszłości - czas <em>present perfect continuous</em>.</p>
+<p>3. have been doing </p>
+<p><strong>Uzasadnienie</strong>: czynność rozpoczęta w przeszłości  i będąca nadal w trakcie trwania - czas <em>present perfect continuou</em>s.</p>
+<p>4. has wanted</p>
+<p><strong>Uzasadnienie</strong>: czasowników statecznych (takich jak <em>want</em>) nie używamy w formie <em>continuous</em> - czas <em>present perfect simple</em>.</p>
+<p>5. have been studying </p>
+<p><strong>Uzasadnienie</strong>: czynność powtarzająca się w bliskiej, nieokreślonej przeszłości - czas <em>present perfect continuous</em>.</p>
+<p>6. have run</p>
+<p><strong>Uzasadnienie</strong>: nacisk położony jest na efekt działania (przebiegnięcie 10 km) - czas <em>present perfect simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. have been running</p>
+<p><strong>Uzasadnienie</strong>: czynność powtarzająca się w niedalekiej przeszłości, nacisk na działanie - czas <em>present perfect continuous</em>. </p>
+<p>2. have been here since</p>
+<p><strong>Uzasadnienie</strong>: czynność, która rozpoczęła się w przeszłości i trwa nadal - czas <em>present perfect simpl</em>e.</p>
+<p>3. have never played volleyball before</p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś doświadczenia - czas <em>present perfect simple</em>.</p>
+<p>4. has known his roommate for </p>
+<p><strong>Uzasadnienie</strong>: sytuacja rozpoczęta w przeszłości i trwająca do teraz; czasownik <em>know</em> jest stateczny, więc nie występuje w formie <em>continuous</em> - czas <em>present perfect simple</em>.</p>
+<p>5. has been dark </p>
+<p><strong>Uzasadnienie</strong>: sytuacja rozpoczęta w przeszłości i trwająca nadal - czas <em>present perfect simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. nephew and niece have been arguing</p>
+<p><strong>Uzasadnienie</strong>: sytuacja rozpoczęta w przeszłości, która jeszcze się nie zakończyła - czas <em>present perfect continuous</em>. </p>
+<p>2. has been living with her stepsister for albo: has lived with her stepsister for</p>
+<p><strong>Uzasadnienie</strong>: zarówno czas <em>present perfect simple</em> jak i <em>present perfect continuous</em> są w tym przykładzie poprawne, a obydwa zdania mają takie samo znaczenie.</p>
+<p>3. My neighbour has been to New York</p>
+<p><strong>Uzasadnienie</strong>: opis czyichś doświadczeń - czas <em>present perfect simple</em>.</p>
+<p>4. I have had three siblings</p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji, która rozpoczęła się w przeszłości i trwa nadal; w tym kontekście "have" jest czasownikiem statecznym, czyli nie występuje w formie <em>continuous</em> - czas <em>present perfect simple</em>.</p>
+<p>5. My mum has been trying </p>
+<p><strong>Uzasadnianie</strong>: powtarzająca się sytuacja rozpoczęta w przeszłości i trwająca nadal - <em>present perfect continuous.</em></p><br>

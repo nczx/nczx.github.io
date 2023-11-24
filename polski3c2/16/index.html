@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Po 1918 r. w Europie zapanowa³a euforia po zakoñczeniu I wojny œwiatowej. Zrujnowane gospodarki krajów uczestnicz¹cych w wojnie zaczê³y gwa³townie przyspieszaæ. Przyczyni³ siê do tego równie¿ postêp techniczny. Jednak¿e w latach 30. XX wieku dosz³o do wielkiego krachu ekonomiczno-gospodarczego, który wynika³ z nadprodukcji. Pojawi³y siê konflikty spo³eczne, zw³aszcza pomiêdzy równymi nacjami zamieszkuj¹cymi dane kraje. Czêsto zmieniaj¹ce siê rz¹dy i liczne partie polityczne spowodowa³y tendencjê do centralizacji w³adzy i ograniczenia swobód obywatelskich. Przyczyn¹ radykalizacji nastrojów spo³ecznych by³a zw³aszcza niestabilnoœæ polityczna i pragnienie zrzucenia odpowiedzialnoœci za losy obywateli oraz ich bezpieczeñstwo na barki silnej jednostki.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Na model kultury i sztuki w okresie miêdzywojennym wp³ywa przede wszystkim zmiana dotycz¹ca odbiorców sztuki, poniewa¿ obok elity intelektualnej coraz wiêksze znaczenie zyskuj¹ przeciêtni ludzie oraz ich upodobania. Z tego te¿ powodu dzie³a staj¹ siê mnie skomplikowane, a przy tym przystêpne. Istotna jest tak¿e zmiana sytuacji politycznej oraz rozwój gospodarczy (do 1929 roku) - powoduj¹ one, i¿ ówczeœnie ¿yj¹cy pragn¹ cieszyæ siê ¿yciem, poszukuj¹ rozrywek; popularnoœci¹ ciesz¹ siê kabarety, rewie, kawiarnie, muzyka jazzowa. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Styl ¿ycia w czasach M³odej Polski i dwudziestolecia miêdzywojennego w szerokiej perspektywie by³ dosyæ podobny, znacz¹co ró¿ni³ siê natomiast w bli¿szej perspektywie. Ludzie oprócz pracy spêdzali czas na rozrywkach i odpoczynku. Po wojnie szczególnie modne sta³y siê ró¿nego rodzaju rewie, przedstawienia i dansingi. Podobnie jak wczeœniej, przesiadywano w kawiarniach, ale tak¿e i kabaretach. S³uchano jazzu, tañczono i uprawiano ró¿nego rodzaju dyscypliny sportowe, co w stosunku do poprzedniej epoki by³o pewnym novum. Zmieni³ siê tak¿e styl ubierania kobiet i mê¿czyzn, które porzuci³y gorsety i twarde kapelusze, zastêpuj¹c je prostymi sukienkami do kolan. Œciêto d³ugie w³osy, brody i w¹sy. Kobiety prezentowa³y typ ch³opczycy - energicznej, wysportowanej i postêpowej. Zaczê³y tak¿e pe³niæ coraz wa¿niejsze funkcje w spo³eczeñstwie, studiuj¹c i pracuj¹c. Now¹ rozrywk¹ sta³o siê s³uchanie coraz powszechniejszego radia oraz gramofonu. Jednak¿e kryzys, jaki nast¹pi³ w latach 30., zahamowa³ entuzjazm "szalonych lat 20." i spowodowa³ zwrot ku tradycyjnemu modelowi spo³eczeñstwa.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowe rozwi¹zanie:</p>
+<ul>
+<li>totalitaryzm - jest systemem politycznym, w którym pañstwo sprawuje ca³kowit¹ kontrolê nad spo³eczeñstwem i wszelkimi aspektami ¿ycia spo³ecznego oraz prywatnego;</li>
+<li>faszyzm - to doktryna polityczna sprzeciwiaj¹ca siê demokracji, liberalizmowi i komunizmowi. Zak³ada ona dominacjê jednej partii, autorytaryzm i cenzurê;</li>
+<li>nazizm - niemiecka skrajna odmiana faszyzmu: rasistowska, antykomunistyczna, antydemokratyczna i antysemicka ideologia Narodowosocjalistycznej Niemieckiej Partii Robotników (NSDAP); opiera siê ona na biologicznym darwinizmie oraz rasizmie;</li>
+<li>komunizm - ustrój totalitarny ZSRR, który zosta³ narzucony innym krajom Europy Wschodniej oraz Œrodkowej po II wojnie œwiatowej; ideologia ta postulowa³a zbudowanie spo³eczeñstwa bezklasowego, o wspólnej w³asnoœci wszelkich œrodków oraz równym podziale dóbr;</li>
+<li>rasizm - pogl¹d oparty na przekonaniu wy¿szoœci jednej rasy ludzkiej nad innymi;</li>
+<li>antysemityzm - pogl¹d zak³adaj¹cy wy¿szoœæ rasy aryjskiej nad semick¹.</li>
+</ul>
+<p> </p>
+<p>Do hitlerowskich Niemiec mo¿na odnieœæ: nazizm, rasizm, antysemityzm, komunizm, totalitaryzm, faszyzm.</p>
+<p>Do Rosji sowieckiej mo¿na odnieœæ: totalitaryzm, komunizm.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Nazizm narodzi³ siê w Niemczech nied³ugo po zakoñczeniu I wojny œwiatowej. By³ on protestem, reakcj¹ Niemiec przeciwko zakoñczeniu hegemonii Niemiec w Europie, systemowi wersalskiemu oraz kryzysowi powojennych lat, który doprowadzi³ do wzrostu wp³ywów lewicowych œrodowisk. Program ruchu zosta³ opracowany w 1920 r. przez Gottfrieda Federa, natomiast rozwiniêty przez Adolfa Hitlera w 1925 r. (<em>Mein Kampf</em>) i Alfreda Rosenberga (1930 r. - <em>Der Mythos des 20. Jahrhundets</em>). To ideologia ludzi pokonanych, rozczarowanych i spragnionych zemsty. Nazizm by³ skierowany przeciwko ideologiom próbuj¹cym stworzyæ nowy, powojenny ³ad: liberalizmowi, demokracji, pluralizmowi, komunizmowi, marksizmowi oraz wszelkim religiom.</p><br>

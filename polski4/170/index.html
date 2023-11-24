@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór Zbigniewa Herberta można zaliczyć do typu liryki bezpośredniej - liryki maski. W wierszu wypowiada się bowiem Pan Cogito - stanowi on poetycką kreację. Przesłanie wyrażone przez tą postać można jednocześnie utożsamić z poglądami samego Herberta. W utworze widoczne są ponadto cechy liryki inwokacyjnej. Wypowiadający się w dziele kieruje swą wypowiedź do bliżej nieokreślonego odbiorcy. Wskazują na to formy liczne formy czasowników w 2. os lp i trybie rozkazującym ("idź", "bądź", czuwaj") czy też zaimki ("twój", "cię").</p>
+<p>Podmiot liryczny nie ujawnia się bezpośrednio (np. za pomocą odpowiednich form) ani nie opisuje swych przeżyć - cała jego wypowiedź jest skierowana do odbiorcy. Na podstawie tytułu można wywnioskować, iż w wierszu wypowiada się Pan Cogito, który przekazuje swój kodeks moralnym innymi. Jest on intelektualistą, który doskonale orientuje się w kulturze i historii, o czym świadczą liczne nawiązania np. do wielkich bohaterów ("do grona twoich przodków: Gilgamesza Hektora Ronalda"), mitologii ("złote runo"). Ważne są dla niego uniwersalne zasady moralne. Głosi znaczenie niezłomności, honoru, godności, chociaż też rozumie, że nieprzyjazna rzeczywistość utrudnia egzystencję zgodną z pożądanymi ideami. Wie bowiem, iż słuszne postępowanie nie wiąże się z nagrodą czy uznaniem: "a nagrodzą cię za to tym co mają pod ręką / chłostą śmiechu zabójstwem na śmietniku". Mimo tego uważa, że w każdej sytuacji należy zachować swoje człowieczeństwo. Do tego również stara się zobowiązać swych odbiorców, zachęcić ich do wierności zasadom, przeciwstawianiu się przejawom zła.</p>
+<p>Najmniej określony w utworze jest odbiorca przesłania. Nie wskazują na niego żadne formy, więc można uznać, że adresatem jest współcześnie żyjący człowiek. Taka konstrukcja wpływa na ponadczasowość tekstu, ponieważ staje się w ten sposób źródłem refleksji dla każdej jednostki - niezależnie od czasów czy okoliczności. Ponadto utwór porusza uniwersalne zagadnienia, z którymi człowiek mierzy się w ciągu swego życia.</p>
+<p><em>Przesłanie Pana Cogito</em> składa się z czternastu strof o różnej długości. Najkrótsza ma zaledwie jeden wers i stanowi podsumowanie, zaś w najdłużej jest pięć wersów. Budowa tekstu ma tym samym nieregularny charakter, brakuje także rymów, zaś sama interpunkcja jest ograniczona. Poeta oszczędnie stosuje także wielką literę - pojawia się ona wyłącznie w przypadku imion czy słów, którym autor nadaje szczególne znaczenie. W wierszu są także obecne różne środki stylistyczne, np.: epitety ("złote runo"), metafora (""złote runo nicości"), wyliczenie ("[...] wśród tych co na kolanach / wśród odwróconych plecami i obalonych w proch"), powtórzenie ("bądź odważny gdy rozum zawodzi bądź odważny"), porównanie ("jak ci co szli przez pustynie i ginęli w piasku"), personifikacja ("twoja siostra Pogarda"). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowy kodeks:</p>
+<ul>
+<li>Cierpliwie zmierzaj do swojego celu, nie poddawaj się. </li>
+<li>W każdych okolicznościach bądź wierny swoim zasadom i godności.</li>
+<li>Pamiętaj, że masz dać świadectwo człowieczeństwa.</li>
+<li>Zachowaj odwagę.</li>
+<li>Sprzeciwiaj się niesprawiedliwości.</li>
+<li>Gardź tymi, którzy ulegają najniższym instynktom.</li>
+<li>Nie przyznawaj sobie prawa do wybaczania w imieniu innych ludzi.</li>
+<li>Zachowaj pokorę, unikaj nadmiernej dumy.</li>
+<li>Nie bądź oschły/a.</li>
+<li>Doceniaj piękno i niezmienność świata.</li>
+<li>Bądź czujny i zawsze gotowy do wysiłku.</li>
+<li>Odwołuj się do tradycji i dorobku minionych pokoleń.</li>
+<li>Bądź wierny uniwersalnym wartościom.</li>
+<li>Nie oczekuj nagrody za swoją niezłomność.</li>
+<li>Nigdy nie rezygnuj ze swoich ideałów - nawet mimo trudności. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Osoba mówiąca wzywa odbiorcę do tego, by przyjął w życiu aktywną postawę. Nie powinien więc poddawać się, ulegać innym ludziom, zatrzymywać się w swej życiowej wędrówce. Zamiast tego dla podmiotu lirycznego kluczowe jest pozostanie wiernym swym zasadom moralnym, konsekwencja w działaniu. Rozkaz "idź" można więc odnieść do życia jednostki. Nie może być ona bierna, bezwolna względem losu. Zamiast tego w swej egzystencji powinna realizować pewne ideały moralne, by w ten sposób "dać świadectwo" dołączyć do grona wielkich postaci. Wezwanie to stanowi dla odbiorcy zachętę, motywację, aby niezależnie od okoliczności zachował swą godność oraz człowieczeństwo. </p>
+<p> </p>
+<p>Wyrażenie swojej opinii -  część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>"Tamci" to jednostki które przyjęły w życiu postawę przedstawioną przez podmiot liryczny. Wybierają bowiem niełatwą wędrówkę - nie przynosi ona zaszczytów ani nagrody: "po złote runo nicości twoją ostatnią nagrodę". Są wierni swoim zasadom, pełni dumy i godności, dlatego też stanowią wzór postępowania. Do tego grona podmiot liryczny zalicza wielkich bohaterów: "[...] Gilgamesza Hektora Rolanda". Osoba mówiąca zachęca, by podążyć wyznaczoną przez nich drogą, ponieważ tylko w ten sposób można dać świadectwo prawdziwe. Heroizm ten to forma przeciwstawienia się złu oraz wierność uniwersalnym zasadom. Jest więc to słuszne postępowanie, ponieważ prowadzi do ocalenia ducha w obliczu naznaczonej absurdem egzystencji doczesnej. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W drugiej strofie zostają wskazane trzy postawy życiowe, które zestawiono z nakazem podmiotu lirycznego ("idź") na zasadzie przeciwieństwa. Pierwsza z nich zawiera się w słowach: "[...] wśród tych co na kolanach". Sugerują one uległość oraz pokorę, brak woli działania czy życia w zgodzie z zasadami moralnymi. Można więc określić tę postawę jako konformistyczną. Z kolei druga przejawia się w inny sposób: "wśród odwróconych plecami [...]". Polega ona na obojętności, odwróceniu się od świata oraz jego problemów. Ostatnia zaś ("[...] obalonych w proch") sugeruje z kolei unicestwienie, ale także całkowite zapomnienie, być może również poddanie się swym słabościom. </p>
+<p> </p>
+<p>Przykładowi bohaterowie:</p>
+<ul>
+<li>postawa pierwsza: Zenon Ziembiewicz (<em>Granica</em>, Nałkowska);</li>
+<li>postawa druga: kapłan, lewita (Przypowieść o miłosiernym Samarytaninie);</li>
+<li>postawa trzecia: Winrych, (<em>Rozdzióbią nas kruki, wrony…</em>, Żeromski). </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Postawę wyprostowaną z etosem rycerskim łączy to, że ona również odwołuje się do określonego zbioru zasad, które należy przestrzegać. Ważne w jej przypadku są także zbliżone wartości. Wśród nich można m.in. wymienić: odwagę ("idź wyprostowany wśród tych co na kolanach"), godność ("niech nie opuszcza ciebie twoja siostra Pogarda / dla szpiclów katów tchórzy [...]"), szlachetność ("Gniew twój bezsilny niech będzie jak morze / ilekroć usłyszysz głos poniżonych i bitych"). "Wyprostowany" - podobnie jak wojownicy kierujący się etosem - ma swoją dumę oraz honor, ale także nigdy nie zgadza się na zło. Jest niezależnie od okoliczności wierny swoim zasadom, wyraża gotowość do poświęcenia się w imię określonych idei. </p>
+<p> </p>
+<p>Przykłady - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowe podobieństwa:</p>
+<ul>
+<li>W wierszu Herberta podkreślone zostaje znaczenie wierności zasadom moralnym. Niejednokrotnie wymaga to dokonania trudnych wyborów: czy pozostać niezłomną jednostką, czy też ulec ("idź wyprostowany wśród tych co na kolanach"). Podobna myśl pojawia się w etyce chrześcijańskiej, ponieważ zakłada ona, iż trzeba jednoznacznie opowiedzieć się po którejś stronie. Potwierdza to biblijny cytat: "Żaden sługa nie może dwom panom służyć". </li>
+<li>Podmiot liryczny w utworze Herberta zachęca do tego, aby dać świadectwo prawdzie. Pojęcie to jest także kluczowe w etyce chrześcijańskiej, ponieważ zakłada ona, że fałsz jest czymś złym, niemoralnym. Z tego też powodu jedno z przykazań nakazuje: "Nie mów fałszywego świadectwa przeciw bliźniemu swemu".</li>
+<li><em>Przesłanie Pana Cogito</em> przypomina o tym, że w życiu należy kierować się odwagą - niezależnie od okoliczności: "bądź odważny gdy rozum zawodzi [...]". Tylko ona pozwala na konsekwentne działanie, życie w prawdzie. Refleksja ta jest obecna także w chrześcijaństwie, ponieważ ono także wymaga od człowieka odwagi - przejawia się np. poprzez głoszenie świadectwa wiary czy też rezygnację z dóbr doczesnych, zmianę swego dotychczasowego życia.</li>
+<li>Kolejnym elementem łączącym przesłanie wiersza i etykę chrześcijańską jest stosunek do drugiego człowieka. Opiera się on na trosce o bliźniego. Polega także na jawnym sprzeciwie wobec niesprawiedliwości, stawaniu w obronie słabszych. </li>
+<li>Przejawem etyki chrześcijańskiej w wierszu Herberta jest również pokora. Podmiot liryczny apeluje bowiem, aby nie popadać w pychę, lecz zachować dystans względem swej misji: "powtarzaj: zostałem powołany: czyż nie było lepszych". Jednocześnie konieczne staje się ciągłe zachowywanie czujności ("czuwaj - kiedy światło na górach daje znak - wstań i idź"). Takie zalecenie pojawia się również w Biblii, ponieważ zawsze należy być gotowym na przyjście Pana.</li>
+<li>Etyka chrześcijańska ukazuje świat natury jako dzieło Boga, z którym nierozerwalnie związany jest człowiek. Staje się on opiekunem rzeczywistości. Jednocześnie powinien on szanować świat i doceniać jego wartość, co ujawnia się w słowach: "[...] kochaj źródło zaranne / ptaka o nieznanym imieniu dąb zimowy".</li>
+</ul>
+<p> </p>
+<p>Przykładowe różnice:</p>
+<ul>
+<li>Etyka chrześcijańska odwołuje się przede wszystkim do miłości i cierpliwego znoszenia doznawanych krzywd. Z kolei w wierszu Herberta podkreślone zostaje znaczenie negatywnych uczuć - jako reakcji na niesprawiedliwość i tchórzostwo innych: "A Gniew twój bezsilny niech będzie jak morze", "niech nie opuszcza ciebie twoja siostra Pogarda". Tym samym podmiot liryczny rezygnuje z zasady miłosierdzia. </li>
+<li>Ważnym elementem chrześcijaństwa jest wybaczenie doznanych krzywd. Z kolei w utworze Herberta pojawiają się słowa: "i nie przebaczaj zaiste nie w twojej mocy". Przypominają o tym, że każdy musi odpowiedź za popełnione zło; nie można brać na siebie odpowiedzialności za rozgrzeszenie z win.</li>
+<li>Chrześcijaństwo zakłada, że czyny człowieka zostaną osądzone, a on sam zyska zbawienie lub będzie potępiony. W wierszu Herberta perspektywa jest nieco inna, ponieważ na jednostkę postępującą w zgodzie z przedstawionymi zasadami nie czeka nagroda. Co prawda dołączy do wielkich bohaterów, jednak wierność swoim zasadom wiąże się z zapomnieniem: "a nagrodzą cię za to tym co mają pod ręką / chłostą śmiechu zabójstwem na śmietniku". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Zapis rzeczowników pospolitych wielkimi literami świadczy o nadaniu im szczególnego znaczenia. Gniew i Pogarda - według podmiotu lirycznego - powinny towarzyszyć człowiekowi, by zawsze pamiętał o tym, że pewne postawy zasługują na brak akceptacji. Są bowiem sprzeczne z postawą aprobowaną przez osobę mówiącą. Zabieg ten sugeruje również personifikację tych pojęć; rzeczowniki pospolite w ten sposób pełnią funkcję nazw własnych, są jak imiona: "a Gniew twój bezsilny niech będzie jak morze", "niech nie opuszcza ciebie twoja siostra Pogarda". </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>W kontekście wiersza Herberta "[...] stare zaklęcia ludzkości bajki i legendy" oznaczają dorobek cywilizacyjny człowieka, pewne podania i teksty kultury. Kształtują one wizję rzeczywistości, ale także pewne idee czy systemy wartości, postawy godne naśladowania. Według podmiotu lirycznego są one bardzo ważne dla człowieka. Przede wszystkim stanowią przejaw tradycji i tożsamości kulturowej, niejednokrotnie zawierają uniwersalne prawdy czy też głoszą pochwałę prawdy, piękna, odwagi. Z tego też powodu są dla człowieka stałym punktem odniesienia w nieraz nieprzyjaznej rzeczywistości, kształtują jego tożsamość. Pomagają człowiekowi w zdobyciu dobra, a przy tym zapewniają wieź z przeszłością oraz minionymi pokoleniami. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowe aluzje:</p>
+<ul>
+<li>"wśród [...] obalonych w proch" -&gt; Jest to refleksja na temat jednostek, które uległy unicestwieniu, dotknęło je przemijanie. Może być to także sygnał, że zostały zapomniane. </li>
+<li>"[...] trzeba dać świadectwo" -&gt; Według podmiotu lirycznego zadaniem człowieka moralnego jest jasne wyrażenie tego, w co wierzy. Ma więc głosić ważne dla siebie idee, a przy tym nie powinien poddawać się niesprzyjającym okolicznościom.</li>
+<li>"[...] zostałem powołany - czyż nie było lepszych" -&gt; Osoba mówiąca sugeruje, aby nie popadać w pychę. Zachęca do samokrytycyzmu, ciągłego weryfikowania swojej postawy w kontekście innych. Osoba zachowująca swoją godność cechuje się bowiem pokorą i skromnością. </li>
+<li>"[...] wstań i idź" -&gt; Podmiot liryczny zachęca do przyjęcia aktywnej postawy. Obowiązkiem moralnym człowieka jest głoszenie prawdy - niezależnie od okoliczności. Nie należy się poddawać, lecz trzeba dochować wierności swym zasadom.  </li>
+<li>"jak ci co szli przez pustynie i ginęli w piasku" -&gt; Osoba mówiąca odwołuje się tutaj do wędrówki Izraelitów. Wskazuje w ten sposób na to, że niektórzy nie osiągną zamierzonego celu. Trzeba jednak wykazać się uporem w swych dążeniach, nie wątpić w sens misji.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przykładowo:</p>
+<p><em>Przesłanie Pana Cogito </em>to jeden z najpopularniejszych utworów Zbigniewa Herberta, który wyróżnia się swym uniwersalnym przesłaniem. Z tego powodu można go odczytywać na wielu płaszczyznach, na nowo znajdować w nim oryginalne, nieoczywiste sensy. </p>
+<p>W kontekście kulturowo-literackim wiersz Herberta stanowi zachętę do kontynuowania pewnej utrwalonej w kulturze tradycji. Wyznaczają ją postawy wielkich jednostek: Hektora, Rolanda, Gilgamesza. Są oni wzorem bohaterów, którzy cechują się męstwem, odwagą, honorem Nie obawiają się także poświęceń w imię najwyższych wartości, uparcie dążą do tego, aby głosić prawdę. Kontekst ten kieruje też uwagę odbiorcy na "[...] stare zaklęcia ludzkości bajki i legendy". Podmiot liryczny w wierszu dostrzega ich szczególne znaczenie. Stają się one bowiem łącznikiem człowieka z przeszłością i określonym systemem wartości. Przekazują cenne idee, one zaś pomagają człowiekowi w osiągnięciu dobra. Kontekst literacko-kulturowy wynika także z czytelnych aluzji, które odsyłają odbiorcę do mitologii czy też Biblii. Pan Cogito uważa bowiem, iż postawa, którą zaleca, jest zakorzeniona w mitologii czy też niektórych zasadach etycznych chrześcijaństwa. W ten sposób stawia przed czytelnikiem wyzwanie, swoistą misję - nie przynosi ona jednak zaszczytów ani chwały, ponieważ opiera się na bezinteresownym heroizmie.</p>
+<p>Kontekst historyczny kieruje uwagę odbiorcy na pewne prawidłowości, stały schemat dziejów. Powtarzalna staje się bowiem sytuacja jednostki - w obliczu zła i niesprawiedliwości musi podjąć decyzję dotyczącą swej postawy. Może bowiem pozostać konformistyczna, podatna na zewnętrzne wpływy. Z kolei niezłomność, godność, honor nie przynoszą chwały. Podmiot liryczny wyraża bowiem przekonanie o tym, że najważniejsze jest coś innego: "bądź odważny gdy rozum zawodzi bądź odważny / w ostatecznym rachunku jedynie to się liczy". Kontekst historyczny narzuca skojarzenia z ówczesną sytuacją kraju, w którym doszło do walki o wolność. Tak interpretowane <em>Przesłanie Pana Cogito</em> stanowi wezwanie do tego, aby nawet w niesprzyjających okolicznościach historycznych pozostać wiernym sobie i utrwalonym w tradycji zasadom, by zawsze zachować swe człowieczeństwo. </p>
+<p>Z kolei kontekst polityczny niejako uzupełnia perspektywę historyczną, również wywołuje skojarzenia z komunizmem w Polsce. W takiej sytuacji wiersz Herberta stanowi napomnienie, by nie ulegać manipulacjom, nie być konformistą ani człowiekiem obojętnym na wydarzenia: "idź wyprostowany wśród tych co na kolanach / wśród odwróconych plecami i obalonych w proch". Należy sprzeciwiać się niesprawiedliwości rządzących i zachowywać pogardę względem "[...] szpiclów katów tchórz [..]", ponieważ kluczowe jest postępowanie w zgodzie z zasadami etycznymi. Tylko takie zachowanie gwarantuje, iż dołączyć się do grona wielkich jednostek. </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 15</a><br>
+<p>Przykładowo:</p>
+<p>Pan Cogito to postać, dla której ważnym punktem odniesienia staje się dorobek europejskiej kultury, zwłaszcza myśl starożytna. Jednocześnie pewne jego refleksje w czytelny sposób odwołują się do etyki chrześcijańskiej. Postawę Pana Cogito kształtują zasady utrwalone w przekazach, legendach, mitach oraz wielkie jednostki ("[...] Gilgamesza Hektora Rolanda"). Z tego też powodu bohater ceni sobie przede wszystkim podstawowe wartości: odwagę, prawdę, godność, niezłomność. Doskonale wie, że postępowanie w zgodzie z tymi pojęciami nie gwarantuje nagrody, jednak pozwala na zachowanie człowieczeństwa w obliczu zła czy tchórzostwa. Pan Cogito sprzeciwia się niesprawiedliwości, gardzi donosicielami, zbrodniarzami, ponieważ kluczowa jest dla niego szlachetność. Jednocześnie przestrzega przed nadmierną dumą, której należy się wyzbyć. Zachęca za to do kontemplacji świata natury oraz tego, by nie zapominać uczuć, ponieważ uznaje oschłość za zagrożenie dla jednostki. Podkreśla przy tym znaczenie czujności, gotowości do podążania swoją drogą. Na światopogląd Pana Cogito znacząco wpływają przekazywane z pokolenia na pokolenie teksty ("powtarzaj stare zaklęcia ludzkości bajki i i legendy") - kształtują one tożsamość, zapewniają także łączność z tradycją i dorobkiem kulturowym Europy, być może przynoszą otuchę w trudnych momentach. Pan Cogito jest bowiem przekonany o tym, iż należy przeciwstawiać się rzeczywistości, a przy tym pozostawać wiernym sobie, by w ten sposób dołączyć do grona legendarnych bohaterów.</p>
+<p> </p>
+<p>Wskazanie problemów egzystencjalnych - część indywidualna </p><br>

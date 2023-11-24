@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W polskie kulturze dochodzi do wyodrêbnienia okresu zwi¹zanego z II wojn¹ œwiatow¹ ze wzglêdu na znaczenie tego wydarzenia. W innych krajach nie wp³ynê³o ono w tak silny sposób na charakter sztuki. Inaczej dzieje siê w Polsce, gdzie wojna i ówczesna sytuacja historyczna oddzia³uj¹ na charakter twórczoœci, przyczyniaj¹ siê do rozwoju ukrytego ¿ycia artystycznego.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Okupacja by³a czasem bardzo trudnym dla Polaków, jednak ich sytuacja nieco ró¿ni³a siê - w zale¿noœci od terenu, na którym ¿yli. Obszar kraju zosta³ bowiem podzielony na trzy czêœci. Œl¹sk, Pomorze i Wielkopolska wcielono do III Rzeszy. Tam d¹¿ono do eksterminacji Polaków oraz ich kultury. Uwaga hitlerowców koncentrowa³a siê przede wszystkim na przedstawicielach inteligencji oraz patriotach, których mordowano lub zamykano w obozach. Z centralnych województw powsta³o Generalne Gubernatorstwo. Zapewnia³o ono surowce oraz niezbêdn¹ si³ê robocz¹; na obszarze tym tak¿e d¹¿ono do podporz¹dkowania sobie Polaków przy u¿yciu przemocy oraz surowych ograniczeñ ¿ycia politycznego czy kulturalnego. Codziennoœci¹ sta³y siê tak¿e ³apanki, wywozy na przymusowe roboty itd. Podobne metody dzia³ania zastosowano na ziemiach wcielonych do ZSRR, gdzie dosz³o do wyniszczenia elity narodu. Czêsto zsy³ano tak¿e ludzi w g³¹b kraju lub wykorzystywano ich do ciê¿kiej pracy. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Dzia³alnoœæ Polskiego Pañstwa Podziemnego mia³a du¿y wp³yw na ówczesn¹ kulturê i sztukê. Przede wszystkim umo¿liwi³a przetrwanie narodowego ducha i nieoficjalny rozwój artystyczny. Nie tylko zapewnia³a edukacjê; pañstwo podziemne przyczyni³o siê do powstania ruchu wydawniczego. W ten sposób mo¿liwe sta³o siê wydawanie pism. Przekazywa³y one informacje lub te¿ rozpowszechnia³y teksty literackie, satyryczne. Rozpowszechniano tak¿e przedruki dzie³ emigracyjnych, antologie ówczesnych twórców. Mo¿na wiêc powiedzieæ, ¿e dzia³alnoœæ pañstwa podziemnego pozwoli³a na przetrwanie kultury i sztuki oraz jej tajne funkcjonowanie. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>¯ycie w Generalnym Gubernatorstwie by³o naznaczone wieloma trudnoœciami. Skromne przydzia³y kartkowe przyczyni³y siê do rozwoju czarnego rynku, dosz³o tak¿e do drastycznego wzrostu cen. Mimo surowych kar Polacy szukali rozwi¹zañ, np. przemycali po¿ywienie ze wsi do miasta. Postêpuj¹ce zubo¿enie spo³eczeñstwa sprawi³o, i¿ ludzie byli zmuszeni do przerabiania starych ubrañ czy zastêpowania skórzanego obuwia drewniakami, zamiast taksówek kursowa³y zaœ riksze. Niemcy d¹¿yli tak¿e do ograniczenia ¿ycia kulturalnego, co mia³o negatywny wp³yw na sytuacjê inteligencji. Dzia³ania te spowodowa³y zaistnienie kultury w podziemiu - miejscem spotkañ stawa³y siê zazwyczaj prywatne mieszkania. Niemcy wprowadzali do Generalnego Gubernatorstwa terror. Karali za s³uchanie radia, nadmierne zu¿ywanie pr¹du itd., ograniczali tak¿e prawa Polaków (strefy dla Niemców, godzina policyjna). Czêsto organizowano tak¿e ³apanki, wywo¿ono na przymusowe roboty lub zsy³ano do obozów koncentracyjnych. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

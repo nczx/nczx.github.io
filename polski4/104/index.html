@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Różewicz krytycznie ocenia siebie jako syna i poetę. Działalność literacka nie jest dla niego powodem do dumy, wręcz wstydzi się o tym mówić rodzicom: "[...] nie śmiałem Ci tego powiedzieć, za życia... jestem Poetą". Deklaracja ta budzi strach Różewicza, dlatego też unika jej: "Bałem się tego słowa nigdy go nie powiedziałem Ojcu... nie wiedziałem czy godzi się coś takiego mówić". Ma do siebie żal, ponieważ nie dotrzymał złożonych matce obietnic. Ubolewa również nad tym, iż jako poeta często w swej twórczości opisywał matki, jednak nie zadbał o to, aby z własną spędzić więcej czasu. Dodatkowo odczuwa znaczący rozdźwięk między swymi rolami - syna i poety. Pragnie przekuć swe emocje i doświadczenia w poezję, jednak wie, że dążenie do doskonałości twórczej jest pewną zdradą emocji, wyklucza je. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>Lęk poety może wynikać z tego, iż oficjalne określenie się tym mianem narzuca pewien sposób postrzegania tej jednostki i jej obowiązków względem innych. Być może Różewicz obawia się, że rodzice nie do końca to zrozumieją lub jest to przejaw jego skromności, niechęć do zmiany charakteru relacji łączącej go z najbliższymi. Jednocześnie Różewicz niepokoi się tym, że rola poety jest nieco sprzeczna z rolą syna. Twórca dąży bowiem do doskonałości poetyckiej, zaś podejmowane działania, przetwarzanie doświadczeń na tekst pozbawiają go pewnych emocji czy przeżyć, oddalają od rodziców. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Oczy matki są czujne, przepełnione troską oraz zmartwieniem. Dostrzegają przeżycia i emocje syna. Chociaż jest dorosły, wyraża przekonanie o tym, że wzrok rodzicielki przekracza jakiekolwiek granice - nawet dzielące życie od śmierci. Niezależnie od postępowania dziecka, jego wyborów matka zawsze je obdarza miłością, nieustannie widzi w nim swego ukochanego potomka. Różewicz cały czas czuje obecność swej matki, prowadzi z nią intymny dialog. Wzrok kobiety przypomina mu o tym, że jej ciepło pozwala na odnalezienie w życiu właściwej drogi, zapewnia poczucie bezpieczeństwa. Oczy matki sprawiają, że pozostaje dla niej niewinnym dzieckiem, nie zaś poetą czy dojrzałym człowiekiem, jest odarty ze swych późniejszych doświadczeń dorosłego. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowe elementy autoironii:</p>
+<ul>
+<li><em>No tak! Syn mieszkał w Krakowie... młody "obiecujący" poeta... i ten poeta, który tyle wierszy napisał dla matki i tyle wierszy dla wszystkich matek... nie przywiózł Mamy  do Krakowa w roku 1947 ani w 1949...</em></li>
+<li><em>Czy poeta to człowiek, który pisze z suchymi oczami treny, bo musi dobrze widzieć ich formę?</em></li>
+<li><em>A teraz ten lament przed publicznością na jarmarku książki na odpuście poezji, na giełdzie literatury. </em></li>
+</ul>
+<p> </p>
+<p>Autoironia świadczy o tym, że poeta nie postrzega siebie w przesadnie poważny sposób. Zamiast tego wykazuje dystans względem swojej osoby, zachowań i twórczości. Różewicz ponadto w ten sposób udowadnia, iż potrafi spojrzeć na siebie krytycznie, wytknąć sobie pewne postawy. Ponadto ten celowy zabieg świadczy o wyrzutach sumienia twórcy, który uświadamia sobie, w jaki sposób działalność literacka wpłynęła na jego relacje z matką. Odkrywa bowiem, że nie poświęcał jej tyle czasu, ile powinien. Z tego też powodu potrafi dostrzec rozdźwięk między rolą syna a poety, który uczucia i przeżycia przekształca w tekst. Autoironia w pewien sposób pozwala więc na dokonanie rozliczenia z samym sobą, wyrażenie swych skomplikowanych odczuć. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Poeta w swym utworze zwraca przede wszystkim uwagę na ubiór, twarz i dłonie matki. Do opisu wykorzystuje m.in. epitety: "w sinym kitlu", "z drewnianym uśmiechem", "z białymi dziąsłami". Podkreślają one wiek matki i wskazują na charakterystyczne elementy jej powierzchowności, wręcz stopniową degradację ciała. Ważną funkcję w wierszu poety pełnią także określenia kolorystyczne i porównania: "jej twarz jest jak wielka mętna łza / żółte ręce składa jak przestraszona / dziewczynka / a wargi ma granatowe". Sposób obrazowania sugeruje przede wszystkim słabość kobiety, kruchość, jej zły stan zdrowia - kolor warg i rąk nie jest bowiem naturalny, zaś rysy twarzy zdają się zacierać. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Emocje umierającej matki wyeksponowane przez poetę:</p>
+<ul>
+<li>strach -&gt; "która trzęsie się"; </li>
+<li>bezradność, niepewność, zagubienie -&gt; "Która wierzyła przez pięćdziesiąt lat / a teraz płacze i mówi: »nie wiem... nie wiem«";</li>
+<li>smutek -&gt; "jej twarz jest jak wielka mętna łza";</li>
+<li>niepokój -&gt;" żółte ręce składa jak przestraszona";</li>
+<li>zaskoczenie -&gt; "zaszczute zwierzątko / z wytrzeszczonym okiem". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>a) Kontrastowość zastosowanych środków polega na tym, że są skrajnie odmienne od charakteru osoby, której dotyczą. Poeta bowiem w utworze opisuje swą matkę - kobietę wiekową, ale przy tym zapewne doświadczoną, dojrzałą. Rodzicielka w tradycji to także znak miłości, bezpieczeństwa, niewątpliwego autorytetu moralnego i przewodnictwa. Wykorzystane środki wyrazu nie budują jednak takiego wizerunku matki, lecz podkreślają przede wszystkim jej kruchość, strach czy bezradność wobec nadchodzącej śmierci. Sugerują także odwrócenie dotychczasowego porządku: syn bowiem staje się na starość opiekunem kobiety, która z kolei przypomina zagubione dziecko wymagające czułej troski.</p>
+<p>Kontrast ten uwidaczniają pewne środki wyrazu. Epitety ("w sinym kitlu", "z drewnianym uśmiechem / z białymi dziąsłami", żółte ręce") świadczą o wpływie czasu na ciało bohaterki. Traci ona swoją sprawność. Chociaż jest dorosłym człowiekiem, to staje się zależna od innych, jej wygląd jest inny niż zdrowego człowieka w pełni sił. Porównania z kolei ("Jej twarz jest jak wielka mętna łza / żółte ręce składa jak przestraszona / dziewczynka") służą wyrazistemu zaznaczeniu kruchości i bezradności matki. Nie daje już oparcia swemu synowi, lecz sama potrzebuje pomocy czy zrozumienia. Upodabnia się w tym do dziecka - zaznacza się tutaj kontrast między faktycznym wiekiem bohaterki a jej reakcją, która jest typowa dla dziecka. Zdrobnienia świadczą o czułości osoby mówiącej ("dziewczynka", "zwierzątko"), ale jednocześnie zaznaczają niepewność, bezradność i oszołomienie chorej kobiety. One także kontrastują z samą osobą bohaterki, gdyż są poufałe, niejako odzierają ją z jej statusu osoby doświadczonej, będącej autorytetem dla dziecka. Dobór słów w wierszu, oszczędny, ale przy tym obrazowy, uwypukla powrót sędziwej jednostki do dzieciństwa. Na starość upodabnia się bowiem do bezbronnego dziecka, które mało wie o świecie i odczuwa niepokój.</p>
+<p> </p>
+<p>b) <em>Nosić pod sercem</em> oznacza, że ktoś jest w ciąży, daje nowe życie. Z kolei podmiot liryczny wyraża swoje pragnienie w następujący sposób: "ach chciałbym ją nosić na sercu". Tymi słowami osoba mówiąca wyraża swą wolę, by stać się czułym opiekunem matki. Podobnie jak kobieta oczekująca narodzin dziecka chce otoczyć swą rodzicielką miłością, zapewnić jej tylko radość i słodycz. Słowa te wywołują również skojarzenia z frazą "ktoś nosi w sercu kogoś". Wtedy słowa podmiotu lirycznego mogą świadczyć, iż chce zachować życie matki poprzez pamięć o niej, wspominanie wspólnie spędzonych chwil. </p>
+<p> </p>
+<p>c) Zastosowane anafory ("która trzęsie się / która sztywnieje / z drewnianym uśmiechem / z białymi dziąsłami") nadają temu fragmentowi rytm. Służą wyrażeniu ekspresji, a nawet stanowią źródło paralelizmu. Wydobywają współistniejące ze sobą charakterystyczne cechy zachowania i wyglądu bohaterki. Powtórzenia pełnią podobną funkcję, np. we fragmencie: "w sinym kitlu w białym szpitalu". Ponadto wskazują one na emocje matki, jej bezradność wynikającą z utraty stałych punktów odniesienia: "nie wiem... nie wiem" lub też budują zestawienie kobiety z innymi elementami, co zaznacza jej spłoszenie, niepokój. </p>
+<p> </p>
+<p>d) Kompozycja utworu przypomina ogłoszenie, w którymi podmiot liryczny opisuje swą matkę, by wskazać właściwy względem niej sposób postępowania. Osoba mówiąca dąży do puenty swej wypowiedzi, na co wskazują powtarzającej się słowa: "Ale kto zobaczy [...]". W kulminacyjnym momencie dochodzi jednak do załamania wypowiedzi. Wers "ten" sugeruje bowiem urwanie dalszego ciągu zdania, pewne niedomówienie. Można uznać, że emocje osoby mówiącej są na tyle silne, iż uniemożliwiają jej wyrażenie swojej myśli. Z tego też powodu podmiot liryczny rezygnuje z dokończenia rozpoczętej wypowiedzi, być może nie znajduje w tej sytuacji odpowiednich słów. Zamiast tego wyraża swą czułość i przywiązanie do kobiety, chęć zapewnienia jej opieki. Czyni to w emocjonalny i czuły sposób: "a chciałbym ją nosić na sercu / i karmić słodyczą". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowe podobieństwa pod względem ortografii, interpunkcji, wykorzystanych środków stylistycznych w prozie Różewicza:</p>
+<ul>
+<li>niektóre wyrazy pospolite są zapisane wielką literą -&gt; "[...] i nigdy nie zobaczę jej Twarzy [...]"; </li>
+<li>nie ma dwukropka przed czyjąś przytoczoną wypowiedzią -&gt; "[...] pytają milcząc »co cię martwi synku?«";</li>
+<li>poeta rezygnuje często z przecinków -&gt; "Kiedy matka odwróci oczy od swojego dziecka dziecko zaczyna błądzić i ginie w świecie pozbawionym miłości i ciepła";</li>
+<li>cudzysłów wyróżnia przytoczone słowa -&gt; "no powiedz - mówi Matka - co cię trapi?";</li>
+<li>uszanowane zostają zasady pisowni wyrazów z <em>u, rz, ó, ch</em> - "czułe", "patrzą", "góry", "suchymi";</li>
+<li>występują powtórzenia oraz wyliczenia -&gt; "Oczy matki wszystko widzące patrzą na urodziny patrzą przez całe życie i patrzą po śmierci [...]";</li>
+<li>pojawiają się liczne epitety -&gt; "wszystkich matek", "bursztynowego kamyczka", "całe serce";</li>
+<li>można dostrzec obecność metafor odwołujących się do motywu serca -&gt; "Poeta, człowiek bez serca?";</li>
+<li>środki stylistyczne są wykorzystywane w oszczędny sposób. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowo:</p>
+<p>Zastosowanie kolażu powoduje, iż czytelnik ma wrażenie, jakby struktura dzieła odpowiadała kronice domowej czy też emocjom poety związanym z konkretnymi sytuacjami. Pewne kwestie odbiorca musi sam sobie dopowiedzieć, wywnioskować, ponieważ taki tekst nie ma linearnego charakteru. Zabieg ten pozwala na poznanie różnych perspektyw, które wzajemnie się uzupełniają lub przecinają. Pogłębia to wielowymiarowość przedstawienia, a przy tym wprowadza wieloznaczność i bogate możliwości interpretacyjne. Artysta tworzy w ten sposób efekt rozpadu rzeczywistości - ma ona mozaikowy charakter, składający się z różnych elementów. Oddaje w ten sposób przeżycia człowieka, który musi na nowo odnaleźć się w nowej rzeczywistości po stracie ukochanej osoby. W ten sposób czytelnik również może doświadczyć zagubienia, chaosu, który staje się udziałem piszącego. </p>
+<p> </p>
+<p>Ocena pomysłu - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>a) Przykładowe fragmenty tekstu Różewicza, które korespondują z budową trenu:</p>
+<ul>
+<li>wyrażenie żalu -&gt; "Czemu Jej nie zawiozłem do Krakowa i nie pokazałem Sukiennic, kościoła Mariackiego, Wawelu... Wisły". </li>
+<li>opłakiwanie -&gt; "ach chciałbym ją nosić na sercu / i karmić słodyczą"</li>
+<li>pouczenie -&gt; "Kiedy matka odwróci oczy od swojego dziecka dziecko zaczyna błądzić i gin w świecie pozbawionym miłości i ciepła". </li>
+</ul>
+<p> </p>
+<p>Fragmenty, w których Różewicz odbiega od klasycznej formy trenu:</p>
+<ul>
+<li>poeta rezygnuje z przedstawienia zasług matki, skupia się raczej na poczuciu braku wywołanym jej śmiercią;</li>
+<li>mówiący nie zostaje pocieszony: "I nie mam nawet tej pociechy [...]";</li>
+<li>pojawiają się dygresje na temat poezji: "Wiesz Mamo, tylko Tobie mogę to powiedzieć na stare lata, mogę to powiedzieć, bo jestem już starszy od Ciebie... nie śmiałem Ci tego powiedzieć, za życia... jestem Poetą. Bałem się tego słowa nigdy go nie powiedziałem Ojcu... nie wiedziałem czy się godzi coś takiego mówić.";</li>
+<li>w centrum zostaje postawiony nie zmarły, lecz syn - przede wszystkim twórca: "Poeta, człowiek bez serca? A teraz ten lament przed publicznością na jarmarku książki na odpuście poezji, na giełdzie literatury.";</li>
+<li>Różewicz nie ukazuje wielkości zmarłej, zamiast tego podkreśla kruchość matki - rezygnuje przy tym z patosu: "zaszczute zwierzątko / z wytrzeszczonym okiem".</li>
+</ul>
+<p> </p>
+<p>b) Graz z tradycją pozwala na nowatorskie przetworzenie gatunku obecnego od dawna w dziejach literatury. W ten sposób Różewicz łączy w swych utworach zróżnicowane perspektywy - wzbogaca to narrację. Jest bowiem nie tylko synem cierpiącym po stracie matki, ale też człowiekiem obwiniającym się o to, że nie nie spełnił swych obietnic czy poetą. W ten sposób być może łatwiej jest mu przeżyć żałobę i zapanować nad emocjami, a przy tym dochodzi do stworzenia pewnej kreacji artystycznej. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Sformułowanie "żebracze treny" może sugerować przede wszystkim pokorę i skromność poety. Nie określa on swych utworów mianem wielkich, lecz wręcz umniejsza ich wartość, zaznacza pewne braki, które w nich dostrzega. Jednocześnie określenie to wywołuje skojarzenia z postawą św. Franciszka, jego ascetycznym sposobem życia, ubóstwem, prostotą. Tekst Różewicza realizuje te zasady, ponieważ jest pozbawiony licznych środków stylistycznych, rozbudowanej metaforyki czy innych ozdobników. Jest wręcz surowy, ascetyczny w swej formie, ubogi. </p><br>

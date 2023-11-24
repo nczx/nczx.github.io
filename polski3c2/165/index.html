@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowe prawdy: </p>
+<ul>
+<li>Formy s¹ zwi¹zane z ogó³em relacji miêdzyludzkich.</li>
+<li>Ich przejaw w opisie pojedynku stanowi¹ miny bohaterów, które maj¹ na celu wywarcie odpowiedniego wp³ywu na drugiego cz³owieka.</li>
+<li>Formy s¹ ukszta³towane przez ludzi, jednak zarazem staj¹ siê dla nich pewnym wiêzieniem.</li>
+<li>Pozwalaj¹ na uzyskanie w³adzy nad drugim cz³owiekiem, narzucenie mu czegoœ - stanowi¹ manifestacjê si³y, a nawet przemocy. Mog¹ byæ te¿ prób¹ ochrony przed innymi.</li>
+<li>Wejœcie w pewne role prowadzi do zatracenia to¿samoœci, sprawia, ¿e w pewnym momencie trudno z nich zrezygnowaæ. </li>
+</ul>
+<p> </p>
+<p>Podanie przyk³adów - czêœæ indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>W przytoczonym fragmencie Gombrowicz przetwarza motywy obecne od wieków w tradycji literackiej - czyni to jednak w zaskakuj¹cy i nowatorski sposób. Pojedynek na miny to bowiem parodia pojedynków rycerskich. £¹cz¹ je wspólne cechy, m.in.: wybór arbitrów (oraz superarbitra) czy te¿ ustalenie œcis³ych zasad, którymi musz¹ kierowaæ siê walcz¹cy: "Przeciwnicy stan¹ naprzeciwko siebie i oddadz¹ seriê min kolejnych, przy czym na ka¿d¹ buduj¹c¹ i piêkn¹ minê Pylaszczkiewicza Miêtalski odpowie burz¹c¹ i szpetn¹ kontrmin¹. Miny - jak najbardziej osobiste, swoiste i wsobne, jak najbardziej rani¹ce i mia¿d¿¹ce - stosowane byæ maj¹ bez t³umika a¿ do skutku". W przeciwieñstwie jednak do tradycyjnych opisów pojedynku kluczowe staj¹ siê sensy przenoœne oraz symbolika narzucania komuœ swej miny. Scena ta jest tak¿e niepozbawiona elementów wp³ywaj¹cych na groteskowe przedstawienie. Podnios³oœæ, patos zdaj¹ siê kontrastowaæ z samym charakterem walki postaci, s¹ wrêcz nieadekwatne do zdarzeñ: "Nieostro¿ny! Miêtus tylko na to czeka³! Gdy poczu³, ¿e uda³o mu siê œci¹gn¹æ na siebie wzrok Syfona z wy¿yn, momentalnie wyszczerzy³ siê i wypi¹³ gêbê tak obmierŸle, ¿e tamten, ugodzony do ¿ywego, sykn¹³". Absurdalna jest tak¿e sama koncepcja walki polegaj¹cej na tym, aby narzuciæ przeciwnikowi swoj¹ minê. Ponadto narracja wyolbrzymia przedstawion¹ sytuacjê, wzmacnia jej dramatyzm, chocia¿ jednoczeœnie budzi œmiesznoœæ: "Po³o¿enie Miêtalskiego stawa³o siê straszne, gdy¿ wyczerpa³ ju¿ wszystkie swe ohydy, a palec Syfona ci¹gle i ci¹gle wskazywa³ do góry. Groza œciê³a arbitrów i superarbitra!". Groteskowy wymiar dzie³a wzmacnia tak¿e przerysowany sposób przedstawienia postaci.</p>
+<p>Zastosowanie parodii pozwala Gombrowiczowi na podjêcie dialogu z tradycj¹ literack¹. Przetworzenie znanego ju¿ w kulturze motywu prowadzi do odkrycia jego nowych sensów, a tak¿e dekompozycji pewnego schematu. W po³¹czeniu z grotesk¹ s³u¿y wyra¿eniu doœæ gorzkiej refleksji na temat rzeczywistoœci oraz relacji miêdzyludzkich. Wyolbrzymienie sytuacji czy zachowañ bohaterów przypomina bowiem odbiorcy o tym, ¿e cz³owiek niejako podporz¹dkowuje siê utrwalonym konwenansom oraz wzorom. Pojedynek na miny wyraziœcie wskazuje na to, i¿ ludzie narzucaj¹ sobie to¿samoœæ, d¹¿¹ do zdominowania innej jednostki, co prowadzi do zaniku autentycznoœci. Pewne role i postawy s¹ tym samym narzucane przez otoczenie. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Pierwszy z przywo³anych tytu³ów (<em>Porwanie</em>) odnosi siê bezpoœrednio do sytuacji narratora - œwiadomego swej niedojrza³oœci oraz nieokreœlonoœci. Wizyta profesora sprawia, i¿ bohaterowi zostaje narzucona rola infantylnego dziecka; wbrew swej woli ma ponownie staæ siê uczniem: "Chcia³em krzykn¹æ, ¿e nie jestem uczeñ, ¿e zasz³a pomy³ka, porwa³em siê do ucieczki, ale coœ mnie z ty³u chwyci³o jak w kleszcze i przygwoŸdzi³o na miejscu - dzieciêca, infantylna pupa mnie chwyci³a". Jest niejako porwany przez okreœlon¹ Formê. Z kolei drugi tytu³ (<em>Przy³apanie i dalsze miêtoszenie</em>) odwo³uje siê do sytuacji bohaterów, którzy wchodz¹ w rolê niedojrza³ych uczniów (przybieraj¹ wyraziste Formy), oraz samego pojedynku. "Dalsze miêtoszenie" wywo³uje bowiem skojarzenia z nazwiskiem Miêtalskiego, ale tak¿e z prób¹ narzucenia swej dominacji, wp³ywem na reakcjê drugiego cz³owieka. Stanowi to zaœ istotê pojedynku postaci. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowo:</p>
+<p>Symetrycznoœæ zachowañ Syfona i Miêtusa zdaje siê sugerowaæ nawi¹zanie do jednej ze staro¿ytnych filozofii - stoicyzmu. K³adzie ona nacisk na takie zachowania cz³owieka, które wynikaj¹ z odwo³ywania siê do praw natury. Istota ludzka obserwuje zmiany zachodz¹ce w œwiecie przyrody, nastêpnie intepretuje je w taki sposób, by pewne racjonalne zasady wprowadziæ do swego ¿ycia - reaguje wiêc zgodnie ze swymi spostrze¿eniami. Pozwala to na osi¹gniêcie równowagi ducha oraz zyskanie samoœwiadomoœci. W pojedynku bohaterów zauwa¿alne jest wiêc odniesienie do tej tradycji. Miny bohaterów s¹ bezpoœredni¹ reakcj¹ na to, co prezentuje druga osoba. Stanowi¹ swoje przeciwieñstwa ("[...] na ka¿d¹ buduj¹c¹ i piêkn¹ minê Pylaszczkiewicza Miêtalski odpowie burz¹c¹ i szpetn¹ [...]"), przez co zachowana zostaje harmonia, równowaga sensów. Dialog Gombrowicza z tradycj¹ sugeruje jednak doœæ gorzk¹ prawdê na temat sytuacji cz³owieka i jego mo¿liwoœci poznawczych. W stoicyzmie symetria cz³owieka wzglêdem praw natury umo¿liwia³a mu osi¹gniêcie pewnej postawy uwa¿anej za pozytywn¹. Z kolei pojedynek u Gombrowicza przypomina o ograniczonych mo¿liwoœciach poznawczych, poniewa¿ ka¿da mina pojedynkuj¹cych siê stanowi odpowiedŸ na zachowanie przeciwnika. Nie maj¹ wiêc mo¿liwoœci, aby wyjœæ poza narzucone ramy; mog¹ robiæ miny, które s¹ uzale¿nione od tego, co prezentuje druga osoba. Wskazuje to na brak pe³nej swobody, poniewa¿ bohaterowie wzajemnie kszta³tuj¹ swoje postawy, stanowi¹ dla siebie pewien sta³y kontekst. Sytuacja ta staje siê Ÿród³em swoistego zniewolenia oraz sztucznoœci: "Bo Syfon - orientuj¹c siê w porê, ¿e niepotrzebnie zagalopowa³ siê na twarz Miêtusa i ¿e z irytacji w³asna zaczyna mu odmawiaæ pos³uszeñstwa - prêdko siê wycofa³, doprowadzi³ do porz¹dku rysy, z powrotem wystrzeli³ okiem w górê, a co wiêcej, wysun¹³ naprzód jedn¹ nogê, zwichrzy³ trochê w³osy, kosmyk nieznacznie wypuœci³ na czo³o i trwa³ tak samowystarczalnie, z zasadami i idea³ami; po czym podniós³ rêkê i nieoczekiwanie wystawi³ palec, wskazuj¹c wzwy¿!". Symetria ta stanowi wiêc formê zniewolenia, pewnej maski. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>. </p><br>

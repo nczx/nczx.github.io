@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. plus </p>
+<p>(Rowery nie są drogie,<strong> a dodatkowo</strong> długo wytrzymują.) </p>
+<p>2. As well as</p>
+<p>(<strong>Oprócz tego</strong>, że wytrzymują długo, rowery nie są drogie.)</p>
+<p>3. as well</p>
+<p>(Rowery nie są drogie, a <strong>w dodatku</strong> wytrzymują długo.)</p>
+<p>4. also</p>
+<p>(Rowery nie są drogie, <strong>a także</strong> długo wytrzymują.)</p>
+<p>5. or</p>
+<p>(Można kupić rowery albo przez Internet, <strong>albo</strong> stacjonarnie.)</p>
+<p>6. but</p>
+<p>(Rowery można kupić przez Internet, <strong>ale</strong> nie stacjonarnie.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Skate board wood is very strong as well as flexible. </p>
+<p>(Drewno do deskorolek jest bardzo wytrzymałe, a także elastyczne.) </p>
+<p>2. You don't need to use plastic or much metal.</p>
+<p>(Nie trzeba używać plastiku ani dużej ilości metalu.)</p>
+<p>3. Either we will repurpose old skateboards, or they will be thrown away.</p>
+<p>(Albo ponownie wykorzystamy stare deskorolki, albo zostaną one wyrzucone.)</p>
+<p>4. The frame is made of wood, so it's eco-friendly, plus there are some great designs.</p>
+<p>(Rama jest wykonana z drewna, więc jest ekologiczna, a w dodatku dostępnych jest kilka świetnych wzorów.)</p>
+<p>5. The frames are made of wood, unlike most glasses.</p>
+<p>(Oprawki są wykonane z drewna, w przeciwieństwie do większości okularów.)</p>
+<p>6. The sunglasses look cool, and also no trees were cut down to make them.</p>
+<p>(Okulary przeciwsłoneczne wyglądają fajnie, a w dodatku nie wycięto żadnych drzew, aby je wyprodukować.)</p>
+<p> </p>
+<p> </p>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Everyone can help the planet - you can do it, too! (Każdy może pomóc planecie - ty też możesz to zrobić!)</p>
+<p>Being eco-friendly might seem difficult, but it's actually very easy. (Bycie ekologicznym może wydawać się trudne, ale w rzeczywistości jest bardzo proste.)</p>
+<p>Cycling is a great exercise, and it's also good for the environment. (Jazda na rowerze to świetne ćwiczenie, które jest również korzystne dla środowiska.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Product: </strong>a reusable water bottle with a filter (butelka na wodę wielokrotnego użytku z filtrem)</p>
+<p><strong><br/>Key phrases to use: </strong>(kluczowe zwroty, których użyję)</p>
+<p>• It is ... as well as ... (Jest..., a także...) </p>
+<p>• It's a great choice if you care about the environment, plus ... (Jest świetnym wyborem, jeśli zależy ci na środowisku, a dodatkowo...)</p>
+<p>• Either you can ..., or you can ... (Możesz albo..., albo...)</p>
+<p> </p>
+<p><strong>Blog post: </strong>(wpis na blogu)</p>
+<p><em>Hi, everyone. Since we all need to be eco-friendly today, I decided to buy products that are as eco-friendly as possible. </em>This time I decided to try out a reusable water bottle. It has got a carbon filter, so it allows you to drink tap water. The bottle is made of a special material that is tough as well as eco-friendly.</p>
+<p>It's a great choice if you care about the environment, plus it lets you save money. You no longer have to keep buying bottled water and creating plastic waste. You can take the bottle with you and enjoy fresh water wherever you are.</p>
+<p>I think this is a fantastic invention. I will definitely keep using it. It comes in different colours and sizes, and you can either buy it in a shop or through their website. I'd definitely recommend it!</p>
+<p>Let me know what you think in the comments.</p>
+<p><br/>(Liczba słów: 150)</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Cześć wszystkim. Ponieważ dzisiaj wszyscy musimy być ekologiczni, postanowiłem/am kupować produkty, które są tak przyjazne dla środowiska, jak to tylko możliwe. Tym razem zdecydowałem/am się wypróbować butelkę wielokrotnego użytku. Posiada ona filtr węglowy, więc pozwala na picie wody z kranu. Butelka jest wykonana ze specjalnego materiału, który jest wytrzymały i przyjazny dla środowiska.</p>
+<p>To świetny wybór, jeśli dbasz o środowisko, a ponadto pozwala zaoszczędzić pieniądze. Nie trzeba już kupować wody butelkowanej i tworzyć plastikowych odpadów. Można zabrać butelkę ze sobą i cieszyć się świeżą wodą gdziekolwiek się jest.</p>
+<p>Myślę, że to fantastyczny wynalazek. Zdecydowanie będę go używać. Butelka jest dostępna w różnych kolorach i rozmiarach, można ją kupić zarówno w sklepie, jak i na stronie internetowej. Zdecydowanie polecam!</p>
+<p>Dajcie znać w komentarzach, co o tym myślicie.</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Comment 1: </strong>I like the idea, but what about mould? My aunt had a bamboo chair once and it got mouldy after a while ... I feel like bikes should be made of things that can't be destroyed by water or humidity.</p>
+<p>(Podoba mi się ten pomysł, ale co z pleśnią? Moja ciocia miała kiedyś bambusowe krzesło, które po jakimś czasie spleśniało... Wydaje mi się, że rowery powinny być wykonane z materiałów, których nie zniszczy woda ani wilgoć.)</p>
+<p><br/><strong>Comment 2: </strong>I love this! I plan on buying a new bike, so maybe I'll look into it. I hope these bamboo bikes aren't very expensive.</p>
+<p>(Uwielbiam to! Planuję zakup nowego roweru, więc może się temu przyjrzę. Mam nadzieję, że te bambusowe rowery nie są zbyt drogie.)</p>
+<p><br/><strong>Comment 3: </strong>It's crazy how they've been around since the 19th century. I've never heard of them!</p>
+<p>(To szalone, że istnieją już od XIX wieku. Nigdy o nich nie słyszałem/am!)</p><br><a style="color:red; font-size:25px;">RESEARCH IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>One eco-friendly material I found out about while researching is hemp. According to a few sources, hemp might be able to replace plastics and concrete in the future. It is an organic material, which means it can decompose easily. It also grows very fast, which is a plus.</p>
+<p>It has already been used inside a BMW electric car. It's a plant, but it can be used to make things like clothes, building products, paint, fuels, or paper. </p>
+<p>I wouldn't mind using things made of hemp instead of plastic. It would feel good to know I'm using something that doesn't harm the environment. I probably wouldn't even notice the difference.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Jednym z ekologicznych materiałów, o którym dowiedziałem/am się podczas poszukiwania informacji, są konopie. Według kilku źródeł, konopie mogą w przyszłości zastąpić plastik i beton. Jest to materiał organiczny, co oznacza, że łatwo się rozkłada. Rośnie również bardzo szybko, co jest plusem.</p>
+<p>Konopie zostały już wykorzystane we wnętrzu samochodu elektrycznego BMW. Jest to roślina, ale może być wykorzystywana do produkcji takich rzeczy jak ubrania, produkty budowlane, farby, paliwa czy papier.</p>
+<p>Nie miał(a)bym nic przeciwko używaniu rzeczy wykonanych z konopi zamiast plastiku. Dobrze byłoby wiedzieć, że używam czegoś, co nie szkodzi środowisku. Prawdopodobnie nawet nie zauważył(a)bym różnicy.</p><br>

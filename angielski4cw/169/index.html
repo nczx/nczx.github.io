@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>6.1. D</p>
+<p><strong>Fragment w tekście:</strong> "Mrs Leverly had not moved since showing the detective into the sitting room and then, collapsing onto the rather worn out sofa like a rag doll. Up to now, she had only mumbled how horrible it was, how she couldn't understand where the coat and the knife had come from, and how could this have happened here?" -  Pani Leverly nie ruszyła się od momentu, gdy pokazała detektywowi salon i następnie, jak materiałowa lalka, upadła na dość zużytą kanapę. Do tej pory tylko mamrotała, jak to jest okropne, że nie może zrozumieć, skąd pochodzi płaszcz i nóż i jak to mogło się tutaj wydarzyć? </p>
+<p>6.2. C</p>
+<p><strong>Fragment w tekście:</strong> "'And what time was it when you did go?' 'At about half past eight, I think. I didn't really notice, but it was soon after I'd had my second cup of tea.' 'Did you speak to anyone this morning?' 'Oh - oh, yes, I rang my sister. We give each other a ring every morning, without fail. That was about quarter past eight. After my breakfast, and before my second cup.'" - "Która była godzina,<span> k</span><span>ied</span><span>y</span><span> pos</span><span>z</span><span>ł</span><span>a</span><span>ś</span><span>?"</span><span> "</span><span>Ch</span><span>y</span><span>ba</span><span> o</span><span>ko</span><span>ł</span><span>o</span><span> ó</span><span>s</span><span>me</span><span>j</span><span> tr</span><span>z</span><span>yd</span><span>zie</span><span>ś</span><span>ci</span><span>.</span><span> N</span><span>ie</span><span> z</span><span>wr</span><span>ó</span><span>ci</span><span>ł</span><span>am</span><span> na</span><span> to</span><span> u</span><span>w</span><span>agi</span><span>,</span><span> ale</span><span> to</span><span> by</span><span>ł</span><span>o</span><span> tu</span><span>ż</span><span> po</span><span> ty</span><span>m</span><span>,</span><span> j</span><span>ak</span><span> w</span><span>yp</span><span>i</span><span>ł</span><span>am</span><span> drug</span><span>ą</span><span> fil</span><span>i</span><span>ż</span><span>ank</span><span>ę</span><span> her</span><span>bat</span><span>y</span><span>."</span><span> "</span><span>C</span><span>zy</span><span> d</span><span>z</span><span>is</span><span>ia</span><span>j</span><span> ran</span><span>o</span><span> ro</span><span>z</span><span>m</span><span>aw</span><span>ia</span><span>ł</span><span>a</span><span>ś</span><span> z</span><span> k</span><span>im</span><span>ś</span><span>?"</span><span> "</span><span>O</span><span>ch</span><span> -</span><span> o</span><span> t</span><span>ak</span><span>,</span><span> d</span><span>z</span><span>w</span><span>oni</span><span>ł</span><span>am</span><span> do</span><span> mo</span><span>je</span><span>j</span><span> si</span><span>ost</span><span>ry</span><span>.</span><span> Z</span><span>aws</span><span>ze</span><span> d</span><span>z</span><span>won</span><span>im</span><span>y</span><span> so</span><span>bie</span><span> ran</span><span>o</span><span>.</span><span> To</span><span> by</span><span>ł</span><span>o</span><span> jakoś </span><span>k</span><span>w</span><span>ad</span><span>rans</span><span> po</span><span> ó</span><span>s</span><span>me</span><span>j</span><span>.</span><span> Po</span><span> ś</span><span>ni</span><span>ad</span><span>ani</span><span>u</span><span>,</span><span> a</span><span> pr</span><span>zed</span><span> drug</span><span>ą</span><span> fil</span><span>i</span><span>ż</span><span>ank</span><span>ą</span><span> her</span><span>bat</span><span>y</span><span>."</span></p>
+<p>6.3. C</p>
+<p><strong>Fragment w tekście:</strong> "'No, a murder very seldom makes sense', the detective said flatly. 'That is why we need to consider every possibility of what might have happened there'" - "Nie, morderstwo rzadko ma sens.", powiedziała detektyw bez emocji. "Właśnie dlatego musimy brać pod uwagę każde prawdopodobne rozwiązanie tego, co się tu wydarzyło".</p>
+<p>6.4. D</p>
+<p><strong>Fragment w tekście:</strong> "'(...) He had three daughters, you see, but there was a family row - absolutely not his fault, you know - after his first wife's death, and they cut off all contact'"- "(...) Miał trzy córki, widzisz, ale po śmierci jego pierwszej żony doszło do rodzinnego konfliktu - absolutnie nie jego winy, wiesz - i całkowicie zerwali kontakt".</p>
+<p><strong>Przykładowe odpowiedzi:</strong></p>
+<p>6.5. reconstruction of the entire building and replanting its valuable plants</p>
+<p>(W tytule autor odwołuje się do "lepszej niż dawna świetności", ponieważ renowacja wiktoriańskiej szklarni obejmowała <strong>rekonstrukcję całego budynku oraz ponowne zasadzenie jej drogocennych roślin</strong>.)</p>
+<p>6.6. rare</p>
+<p>(Większość roślin znajdujących się w Temperate House jest niezwykle <strong>rzadka</strong> i właśnie dlatego nie da się ich zastąpić innymi.)</p>
+<p>6.7. deteriorated</p>
+<p>(Wiek i zła konserwacja całkowicie <strong>pogorszyły</strong> stan Temperate House.)</p><br>

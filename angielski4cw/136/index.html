@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. when</p>
+<p><strong>Uzasadnienie</strong>: w zdaniach opisujących sytuację z przeszłości przerwaną przez inne zdarzenie zwykle stosujemy <em>when</em> - (kiedy). </p>
+<p>2. rush</p>
+<p><strong>Uzasadnienie</strong>: przypływ adrenaliny.</p>
+<p>3. run</p>
+<p><strong>Uzasadnienie</strong>: <em>run into</em> - wpaść na, napotkać.</p>
+<p>4. as</p>
+<p><strong>Uzasadnienie</strong>: <em>as fast as possible</em> - tak szybko, jak to możliwe.</p>
+<p>5. had</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która miała miejsce przed innym zdarzeniem z przeszłości - czas <em>past perfect</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. used</p>
+<p><strong>Uzasadnienie</strong>: stan z przeszłości - <em>used to + bezokolicznik</em>. </p>
+<p>2. been </p>
+<p> <strong>Uzasadnienie</strong>: sytuacja, która miała miejsce przed innym zdarzeniem z przeszłości - czas <em>past perfect</em>.</p>
+<p>3. However</p>
+<p><strong>Uzasadnienie</strong>: <em>however </em>(jednakże) wprowadza kontrastową, odmienną od wcześniejszej informację.</p>
+<p>4. on</p>
+<p><strong>Uzasadnienie</strong>: <em>test sth <span style="text-decoration: underline;">on</span> sb - </em> testować coś <span style="text-decoration: underline;">na</span> kimś. </p>
+<p>5. working</p>
+<p><strong>Uzasadnienie</strong>: <em>when he wasn't working</em>, ... - kiedy nie pracował, ...</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. like</p>
+<p><strong>Uzasadnienie</strong>: <em>what would it be like?</em> - jakie by było? </p>
+<p>2. number</p>
+<p><strong>Uzasadnienie: </strong><em>number of people</em> - liczba ludzi.</p>
+<p>3. which</p>
+<p><strong>Uzasadnienie</strong>: <em>by which -</em> za pomocą którego; zaimek względny <em>which</em> odnosi się do rzeczownika <em>process</em>. </p>
+<p>4. making</p>
+<p><strong>Uzasadnienie: </strong><em>make strides</em> - robić postępy; tutaj w czasie <em>present continuous</em> (<em>making</em>).</p>
+<p>5. be</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która (nie) będzie w trakcie wykonywania w konkretnym momencie w przyszłości - czas <em>future continuous</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. answer</p>
+<p><strong>Uzasadnienie</strong>: <em>the answer is ...</em> - odpowiedź to... </p>
+<p>2. very</p>
+<p><strong>Uzasadnienie</strong>: <em>for very long</em> - bardzo długo. </p>
+<p>3. used</p>
+<p><strong>Uzasadnienie</strong>: <em>use one's intuition</em> - użyć intuicji.</p>
+<p>4. in</p>
+<p><strong>Uzasadnienie:<em> </em></strong><em>rich in sth</em> - bogaty w coś.</p>
+<p>5. habits</p>
+<p><strong>Uzasadnienie</strong>: <em>consumption habits</em> - zwyczaje żywieniowe. </p><br>

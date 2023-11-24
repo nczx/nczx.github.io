@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>4.1. D</p>
+<p><strong>Fragment w tekście:</strong> "(...) almost ninety percent of them exceed the daily screen time limit, which can result in poor eyesight, weight problems or difficulties with reading" - (...) prawie dziewięćdziesiąt procent z nich wydłuża dzienny limit czasu spędzonego przed ekranem, co może prowadzić do słabszego wzroku, problemów z wagą czy problemów z czytaniem. </p>
+<p>4.2. D</p>
+<p><strong>Fragment w tekście:</strong> "Keeping the balance between sitting and exercising is difficult in the times of the pandemic as we don't move around the office or school building a lot" - Ut<span>r</span><span>zy</span><span>man</span><span>ie</span><span> r</span><span>ó</span><span>wn</span><span>ow</span><span>agi</span><span> mi</span><span>ę</span><span>d</span><span>zy</span><span> s</span><span>ied</span><span>zen</span><span>iem</span><span> a</span><span> ć</span><span>wic</span><span>zen</span><span>iami</span><span> j</span><span>est</span><span> tr</span><span>ud</span><span>ne</span><span> w</span><span> cz</span><span>as</span><span>ach</span><span> pand</span><span>em</span><span>ii</span><span>,</span><span> p</span><span>on</span><span>iew</span><span>a</span><span>ż</span><span> n</span><span>ie</span><span> p</span><span>orus</span><span>z</span><span>amy</span><span> si</span><span>ę</span><span> po</span><span> bi</span><span>ur</span><span>ze</span><span> l</span><span>ub</span><span> bud</span><span>yn</span><span>ku</span><span> s</span><span>z</span><span>k</span><span>ol</span><span>ny</span><span>m</span><span> z</span><span>by</span><span>t</span><span> cz</span><span>ę</span><span>st</span><span>o</span><span>.</span></p>
+<p><span>4.3. A</span></p>
+<p><span><strong>Fragment w tekście:</strong> "Going outside has a number of benefits. There's more to it than improving your metabolism. If you only look at a screen, you don't let your eyes practise looking at objects in the distance" - Wychodzenie na zewnątrz ma wiele korzyści. To nie tylko poprawia metabolizm. Jeśli ciągle </span>tylko patrzysz na ekran, nie pozwalasz swoim oczom ćwiczyć patrzenia na obiekty w oddali.</p>
+<p>4.4. B</p>
+<p><span><strong>Fragment w tekście:</strong> "(...) it is up to us how we organise our daily activities which include screen time. For many students, online education is a change that allows them to set their own schedules , learn at their own pace and, paradoxically, find time for physical activity" - To od nas zależy, jak organizujemy nasze codzienne aktywności, w tym czas spędzany przed ekranem. Dla wielu uczniów edukacja online jest zmianą, która pozwala im ułożyć własny harmonogram, uczyć się we własnym tempie i, paradoksalnie, znaleźć czas na aktywność fizyczną. </span></p>
+<p><span>4.5. C</span></p>
+<p><span><strong>Uzasadnienie</strong>: tytuł najlepiej oddaje tematykę tekstu, czyli omówienie wyzwania, jakim jest czas spędzany codziennie przez ludzi przed ekranem. </span></p><br>

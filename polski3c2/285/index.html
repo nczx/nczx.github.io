@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Doœwiadczenie I wojny œwiatowej mia³o ogromny wp³yw na mentalnoœæ ludzi, poniewa¿ ze wzglêdu na konflikt oraz epidemie znacz¹co wzros³a œmiertelnoœæ. Kryzys ten dotkn¹³ nie tylko Europê, ale tak¿e USA, zaœ uczestnicy wojny z trudem odnajdywali siê w powojennej rzeczywistoœci. Walki te doprowadzi³y jednak do znacz¹cego rozwoju techniki, który pozytywnie wp³yn¹³ na ¿ycie przeciêtnych ludzi. W zwi¹zku z tym samochód sta³ siê dostêpny dla szerszego grona, zaczê³y siê rozwijaæ linie lotnicze, upowszechni³a siê tak¿e elektrycznoœæ. Zmieni³ siê tak¿e kszta³t spo³eczeñstwa, poniewa¿ w czasie wojny kobiety przejê³y czêœæ obowi¹zków i ról mê¿czyzn. Wp³ynê³o to na wzrost ich pozycji spo³ecznej. Przekszta³ceniu uleg³ tak¿e model odbiorców kultury, gdy¿ wa¿n¹ grup¹ stali siê przeciêtni ludzie. Wymusi³o to na artystach koniecznoœæ dostosowania siê do ich potrzeb. </p>
+<p>W dwudziestoleciu nast¹pi³ gwa³towny rozwój przemys³u i us³ug, który ostatecznie zakoñczy³ siê kryzysem i za³amaniem gospodarki. Z tego powodu wiele firm zbankrutowa³o, zaœ ludzie stracili pracê. Ros³o tak¿e niezadowolenie z demokracji parlamentarnej. Doprowadzi³ to do powstawania konfliktów spo³ecznych, ograniczania swobód obywatelskich, a w efekcie - do wzrostu popularnoœci ideologii totalitarnych. Niestabilnoœæ sytuacji, zmêczenie czasem wojny przyczynia³ siê do tego, i¿ w Rzeszy, Rosji oraz we W³oszech w³adzê zyskali dyktatorzy. </p>
+<p>Zakoñczenie wojny by³o tak¿e kluczowym momentem dla Polaków, poniewa¿ wtedy uda³o im siê stworzyæ niepodleg³e pañstwo. Mimo trudnoœci - zwi¹zanych z odmienn¹ sytuacj¹ na ziemiach pochodz¹cych z trzech zaborów - powoli udawa³o siê zmniejszaæ ró¿nice w rozwoju i unowoczeœniaæ pañstwo, np. poprzez budowê portu, Centralnego Okrêgu Przemys³owego. </p>
+<p>Du¿y wp³yw na rozwój kultury mia³ wspomniany postêp techniczny - za jego spraw¹ film sta³ siê dziedzin¹ sztuki. Jego udŸwiêkowienie zwiêkszy³o wartoœæ artystyczn¹ i rozrywkow¹. W dwudziestoleciu rozkwit³y kierunki, które przed wojn¹ dopiero by³y zapocz¹tkowane. Artyœci poszukiwali nowych form wyrazów, czego potwierdzenie stanowi m.in. kubizm, abstrakcjonizm, surrealizm, dadaizm. W Polsce na charakter twórczoœci wp³ynê³o przede wszystkim odzyskanie niepodleg³oœci. Artyœci d¹¿yli do stworzenia stylu narodowego, inspirowali siê kultur¹ ludow¹. Zainteresowanie przeciêtnym cz³owiekiem wp³ynê³o z kolei na model architektury w dwudziestoleciu, poniewa¿ d¹¿ono do projektowania tanich i funkcjonalnych budynków. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="border-collapse:collapse;width:666px;height:213px;">
+<tbody>
+<tr>
+<td colspan="3" style="width:662px;background-color:#a5d6a7;text-align:center;"><strong>Koncepcje filozoficzne </strong></td>
+</tr>
+<tr>
+<td style="background-color:#e8f5e9;text-align:center;width:217.875px;"><strong>nurt akademicki</strong></td>
+<td style="background-color:#e8f5e9;text-align:center;width:219.05px;"><strong>nurt zbudowany na psychoanalizie</strong></td>
+<td style="background-color:#e8f5e9;text-align:center;width:219.075px;"><strong>nurt poœwiêcony refleksji nad kultur¹ i cywilizacj¹</strong></td>
+</tr>
+<tr>
+<td style="width:217.875px;">
+<ul>
+<li>zajmuje siê przede wszystkim teori¹ poznania, zdobyciem niekwestionowanej wiedzy;</li>
+<li>nale¿y do niego fenomenologia Husserla, który rezygnuje z uwarunkowañ psychologicznych, jakikolwiek za³o¿eñ czy subiektywizmu;</li>
+<li>filozofia analityczna wykorzystuje myœlenie racjonalistyczne oraz logikê;</li>
+<li>szko³a lwowsko-warszawska bada teoriê poznania i logikê; </li>
+</ul>
+</td>
+<td style="width:219.05px;">
+<ul>
+<li>zainteresowanie ludzk¹ psychik¹ oraz treœciami ukrywanymi;</li>
+<li>motywy dzia³añ wskazuj¹ na nieœwiadome pragnienia;</li>
+<li>w psychice cz³owieka istniej¹ trzy sfery: id, ego i superego;</li>
+<li>id odnosi siê do nieœwiadomoœci;</li>
+<li>ego stanowi œwiadomoœæ cz³owieka;</li>
+<li>superego to przyswojone wzorce i normy postêpowania;</li>
+<li>behawioryzm to teoria skupiaj¹ca siê na na obserwacji zachowania; odrzuca stan umys³u i œwiadomoœæ jako niewarte analizie; </li>
+</ul>
+</td>
+<td style="width:219.075px;">
+<ul>
+<li>przekonanie o koñcu kultury europejskiej;</li>
+<li>rezygnacja z postrzegania rozwoju cywilizacyjnego, jako czegoœ, co dotyczy ca³ej ludzkoœci;</li>
+<li>wyró¿nienie w ¿yciu spo³eczeñstwa sta³ych etapów rozwoju;</li>
+<li>katastrofizm;</li>
+<li>powi¹zanie rozwoju kultury spo³eczeñstwa z jego wzrostem oraz cywilizacji ze schy³kowym czasem rozwoju spo³eczeñstwa;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="width:662px;background-color:#e8f5e9;text-align:center;"><strong>Dzie³a, na które wp³ynê³a filozofia*</strong></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>*Omówienie dzie³ - czêœæ indywidualna (ca³oœæ lektury)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="border-collapse:collapse;width:819px;height:260px;">
+<tbody>
+<tr>
+<td colspan="5" style="width:815px;background-color:#a5d6a7;text-align:center;"><strong>G³ówne nurty w sztuce</strong></td>
+</tr>
+<tr>
+<td style="background-color:#e8f5e9;text-align:center;width:157.425px;">ekspresjonizm</td>
+<td style="background-color:#e8f5e9;text-align:center;width:157.425px;">kubizm</td>
+<td style="background-color:#e8f5e9;text-align:center;width:157.425px;">abstrakcjonizm</td>
+<td style="background-color:#e8f5e9;text-align:center;width:157.425px;">surrealizm</td>
+<td style="background-color:#e8f5e9;text-align:center;width:173.3px;">dadaizm </td>
+</tr>
+<tr>
+<td style="width:157.425px;">
+<ul>
+<li>spontanicznoœæ;</li>
+<li>odrzucenie realizmu;</li>
+<li>skupienie na prze¿yciach i uczuciach jednostki;</li>
+<li>silne kontrasty;</li>
+<li>mocna kolorystyka;</li>
+<li>grube linie;</li>
+<li>deformacja;</li>
+<li>wyolbrzymianie okreœlonych zjawisk;</li>
+<li>groteskowoœæ przedstawienia;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>rezygnacja z perspektywy;</li>
+<li>uproszczenie bry³;</li>
+<li>ukazywanie geometrycznych form;</li>
+<li>rozbijanie bry³y na sk³adniki;</li>
+<li>³¹czenie ró¿nych perspektyw;</li>
+<li>wykorzystywanie kola¿u;</li>
+<li>synteza;</li>
+<li>chaotyczna kompozycja;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>nowatorskie rozumienie sztuki;</li>
+<li>przedstawianie nieistniej¹cej rzeczywistoœci;</li>
+<li>zainteresowanie relacj¹ miêdzy form¹ i kolorem;</li>
+<li>proste formy geometryczne;</li>
+<li>brak wiernego naœladowania rzeczywistoœci;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>odrzucenie zasad logicznych, etycznych, estetycznych;</li>
+<li>fascynacja nieœwiadomoœci¹, ludzk¹ psychik¹;</li>
+<li>fantastyczny charakter przedstawienia;</li>
+<li>wykorzystanie techniki strumienia œwiadomoœci;</li>
+</ul>
+</td>
+<td style="width:173.3px;">
+<ul>
+<li>wykorzystanie fotomonta¿u i kola¿u;</li>
+<li>tworzenie dzie³ z przedmiotów codziennego u¿ytku;</li>
+<li>szokuj¹cy charakter sztuki;</li>
+<li>zerwanie z tradycj¹;</li>
+<li>bunt przeciwko dotychczasowej koncepcji twórczoœci;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="5" style="width:815px;background-color:#e8f5e9;text-align:center;"><strong>Przyk³ady dzie³*</strong></td>
+</tr>
+<tr>
+<td style="width:157.425px;">
+<ul>
+<li>
+<em>Domy</em>, Chaim Soutine;</li>
+<li>
+<em>Kucaj¹ca para</em> (<em>Rodzina</em>), Egon Schiele;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>
+<em>Mandolina i gitara</em>, Pablo Picasso;</li>
+<li>
+<em>Akt schodz¹cy po schodach</em>, Marcel Duchamp;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>
+<em>Linia poprzeczna</em>, Wassily Kandinsky;</li>
+<li>
+<em>Kompozycja w czerwieni, ¿ó³ci, b³êkicie i czerni</em>, Pie Mondrian;</li>
+</ul>
+</td>
+<td style="width:157.425px;">
+<ul>
+<li>
+<em>P³on¹ca ¿yrafa</em>, Salvador Dali;</li>
+<li>
+<em>Reprodukcja zakazana</em>, René Magritte;</li>
+</ul>
+</td>
+<td style="width:173.3px;">
+<ul>
+<li>
+<em>L.H.O.O.Q. (Mona Lisa z w¹sami</em>), Marcel Duchamp;</li>
+<li>
+<em>Merzbild 1A (Psychiatra)</em>, Kurt Schiwtters;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Omówienie cech na wybranych przyk³adach - czêœæ indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="border-collapse:collapse;width:813px;height:302px;">
+<tbody>
+<tr>
+<td colspan="4" style="width:809px;background-color:#aed581;text-align:center;"><strong>Polskie grupy literackie </strong></td>
+</tr>
+<tr>
+<td style="background-color:#dcedc8;text-align:center;width:200px;"><strong>Skamandryci</strong></td>
+<td style="background-color:#dcedc8;text-align:center;width:200px;"><strong>Futuryœci</strong></td>
+<td style="background-color:#dcedc8;text-align:center;width:200px;"><strong>Awangarda Krakowska</strong></td>
+<td style="background-color:#dcedc8;text-align:center;width:200px;"><strong>Druga Awangarda</strong></td>
+</tr>
+<tr>
+<td style="width:200px;">
+<ul>
+<li>g³oszenie pochwa³y codziennego ¿ycia;</li>
+<li>brak tematyki narodowowyzwoleñczej;</li>
+<li>witalizm;</li>
+<li>optymistyczna wizja œwiata;</li>
+<li>wizja artysty jako aktywnej jednostki;</li>
+<li>poszukiwanie swobody;</li>
+<li>spontanicznoœæ;</li>
+<li>fascynacja miejsk¹ przestrzeni¹;</li>
+<li>docenienie m³odoœci;</li>
+<li>respektowanie osi¹gnieæ tradycji klasycznej oraz romantycznej;</li>
+<li>zainteresowanie jêzykiem potocznym w poezji;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>nierespektowanie tradycji;</li>
+<li>uwolnienie sztuki od jakichkolwiek zasad;</li>
+<li>fascynacja nowoczesnoœci¹;</li>
+<li>sk³onnoœæ do prowokacji;</li>
+<li>eksperymenty artystyczne;</li>
+<li>skupienie siê na zagadnieniach spo³ecznych;</li>
+<li>rewolucjonizm;</li>
+<li>odciêcie siê od przesz³oœci;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>3 x M (miasto, masa maszyna);</li>
+<li>nowy wizerunek poety;</li>
+<li>podkreœlenie znaczenia metafory;</li>
+<li>precyzja wypowiedzi;</li>
+<li>kondensacja treœci;</li>
+<li>zainteresowanie nowoczesn¹ rzeczywistoœci¹;</li>
+<li>ekwiwalentyzacja uczuæ;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>katastrofizm;</li>
+<li>wizyjny charakter literatury;</li>
+<li>sceptyczny stosunek wzglêdem skamandrytów i Awangardy Krakowskiej;</li>
+<li>brak optymizmu;</li>
+<li>wyra¿enie poczucia niepewnoœci, zagubienia;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="background-color:#aed581;width:809px;text-align:center;"><strong>Przedstawiciele</strong></td>
+</tr>
+<tr>
+<td style="width:200px;">
+<ul>
+<li>Jan Lechoñ;</li>
+<li>Julian Tuwim;</li>
+<li>Antoni S³onimski;</li>
+<li>Kazimierz Wierzyñski;</li>
+<li>Jaros³aw Iwaszkiewicz;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>Aleksander Wat;</li>
+<li>Bruno Jasieñski;</li>
+<li>Stanis³aw M³odo¿eniec;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>Tadeusz Peiper;</li>
+<li>Jalu Kurek;</li>
+<li>Julian Przyboœ;</li>
+<li>Jan Brzêkowski;</li>
+</ul>
+</td>
+<td style="width:200px;">
+<ul>
+<li>Czes³aw Mi³osz;</li>
+<li>Józef Czechowicz;</li>
+<li>Konstanty Ildefons Ga³czyñski;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Awangarda oznacza ruchy artystyczne, które w dwudziestoleciu rozwijaj¹ siê w ca³ej Europie. Odwo³uj¹ siê one do tego, co nowoczesne, poszukuj¹ tak¿e nowych form wyrazu. Wi¹¿¹ siê tym samym z otwartoœci¹ na nowe realia rzeczywistoœci, odwag¹ w prze³amywaniu tradycji. Awangarda wyra¿a zainteresowanie przede wszystkim teraŸniejszoœci¹ i przysz³oœci¹, nie zaœ przesz³oœci¹ czy dotychczasowymi zasadami tworzenia. Do awangardy w malarstwie mo¿na zaliczyæ np. kubizm, dadaizm, futuryzm. Zrywaj¹ one z realistycznym odwzorowaniem rzeczywistoœci, zamiast tego pozwalaj¹ na przedstawienie subiektywnej wizji wizji œwiata. Rezygnuj¹ z dotychczasowych zasad tworzenia, natomiast wskazuj¹ na fascynacjê ¿yciem miasta, nauk¹ i technik¹, d¹¿¹ do uproszczenia form lub przedstawienia ludzkiej podœwiadomoœci. Awangarda w poezji tak¿e odrzuca dotychczasowe tematy i zasady tworzenia. Zamiast tego d¹¿y do eksperymentowania z jêzykiem, czego przejawem jest np. nagromadzenie metafor - jako jako klucza do wyra¿enia ró¿norodnych sensów. Dla poezji tej typowe jest tak¿e rozbicie ca³oœci sk³adniowo-znaczeniowych oraz obrazowanie za pomoc¹ peryfraz, a tak¿e ekwiwalentyzacja uczuæ.</p>
+<p> </p>
+<p>Omówienie przyk³adów - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Charakterystyczn¹ cech¹ wierszy Leœmiana jest przede wszystkim ich kreacjonizm. Poeta bowiem nie odtwarza w wierny sposób rzeczywistoœci, lecz tworzy subiektywn¹, oryginaln¹ wizjê œwiata, która jest ukszta³towana przez wra¿liwoœæ autora. Przejawia siê to w ³¹czeniu elementów realistycznych oraz fantastycznych, czego przyk³adem mo¿e byæ <em>Dusio³ek</em>. W nim to poeta opisuje pozornie zwyczajn¹ scenê wêdrówki ch³opa Bajda³y, co sugeruje tak¿e zainteresowanie ludowoœci¹. Realistyczna konwencja zostaje jednak nagle prze³amana pojawieniem siê tytu³owej zmory drêcz¹cej œpi¹cego mê¿czyznê. Dusio³ek wprowadza do wiersza elementy œwiata nadprzyrodzonego oraz poczucie niepokoju, grozy, gdy¿ zaburza harmonijn¹ wizjê rzeczywistoœci, prowokuje te¿ pytania o Ÿród³o z³a: "Nie doœæ ci, ¿eœ potworzy³ mnie, szkapê i wo³ka, / Jeszczeœ musia³ takiego zmajstrowaæ Dusio³ka?". Podobna niezwyk³oœæ i oryginalnoœæ ujawnia siê tak¿e w <em>Topielcu</em> bêd¹cym przejawem wyobraŸni Leœmiana oraz nowatorskiego ujêcia motywu natury. Opisana sytuacja zdaje siê rozgrywaæ poza czasem i konkretn¹ przestrzeni¹, zyskuje w ten sposób uniwersalny wymiar. Przyroda staje siê niepowstrzymanym ¿ywio³em, który wp³ywa na rzeczywistoœæ; budzi fascynacjê, mo¿e te¿ staæ siê zagro¿eniem, na co wskazuje los tytu³owego bohatera. Jest on ofiar¹, ale te¿ istot¹ zafascynowan¹ "zieleni¹ sam¹ w sobie", d¹¿¹c¹ do poznania. Ta niejednoznacznoœæ realiów, swoista nieokreœlonoœæ rzeczywistoœci tak¿e mo¿e byæ uznana za przejaw kreacjonizmu w twórczoœci Leœmiana. Ujawnia siê on tak¿e w sposobie przedstawienia bohaterów: to nie tylko zmory (Dusio³ek), ch³opi (Bajda³a), wreszcie natura, lecz tak¿e demony - dochodzi wiêc do po³¹czenia dwóch odmiennych p³aszczyzn, które zdaj¹ siê wykluczaæ. Subiektywizm postrzegania zaznacza siê tak¿e w <em>Œwidrydze i Midrydze</em>, poniewa¿ utwór ten ³¹czy w sobie ró¿ne estetyki i nastroje. Beztroska zabawa mê¿czyzn ³¹czy siê z poczuciem grozy oraz niew¹tpliwymi elementami groteski, które wprowadza taniec z Po³udnic¹. Prowadzi to do zaskakuj¹cego fina³u: "A¿ wwichrzeni w mrok dwóch trumien, jak dwa b³êdne wióry, / Powpadali w otch³añ œmierci nogami do góry!". </p>
+<p>Na kszta³t wspomnianych utwór poety wp³ywa tak¿e bez w¹tpienia inspiracja filozofi¹ Bergsona. Œwiadczy o tym potrzeba poznania rzeczywistoœci, zg³êbienia jej tajemnic, co te¿ czyni bohater <em>Topielca</em>. Przekracza on wszelkie granice, by ostatecznie zjednoczyæ siê na dobre z natur¹ - mo¿na j¹ poznaæ tylko w wyniku okreœlenia siebie przez jej pryzmat. Leœmian podkreœla tym samym znaczenie intuicji, która jest wa¿niejszym narzêdziem rozpoznania rzeczywistoœci ni¿ rozum. Ponadto wa¿nym elementem œwiata staje siê pêd ¿yciowy - Ÿród³o dynamizmu, co mo¿na dostrzec we <em>Œwidrydze i Midrydze</em>. Œwiat staje siê aren¹ zmagañ cia³a z duchem. To podejœcie pozwala poecie na dotarcie do prawdy o poznaniu, obna¿a niejednoznacznoœæ realiów, które odkrywaj¹ swe ró¿norakie sensy. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo (na podstawie wybranych tekstów z podrêcznika):</p>
+<p>Jêzyk poetycki Leœmiana bez w¹tpienia wyró¿nia siê swoj¹ oryginalnoœci¹, opiera siê przede wszystkim na zabawie jêzykiem. Artysta tworzy nowe wyrazy (neologizmy), co odzwierciedla jego subiektywn¹ wizjê œwiata, ale pozwala tak¿e na nazwanie nowych zjawisk, wyra¿enie prawdy o z³o¿onoœci i niezwyk³oœci realiów. Jednoczeœnie zabiegi w zakresie s³owotwórstwa umo¿liwiaj¹ przedstawienie filozoficznej refleksji oraz odzwierciedlenie bogatej wyobraŸni twórcy. W tej dziedzinie Leœmian dokonuje ró¿norodnych dzia³añ. Mo¿na wœród nich wymieniæ:</p>
+<ul>
+<li>tworzenie czasowników, które wskazuj¹ na powtarzalnoœæ lub narastanie czegoœ (<em>potworzyæ, cz³owieczeæ</em>) - wp³ywaj¹ one na specyficzn¹ wizjê œwiata jako miejsca, w którym dochodzi do ci¹g³ych metamorfoz; sugeruj¹, i¿ œwiat nie jest nigdy miejscem skoñczonym, osi¹gaj¹cym doskona³oœæ, poniewa¿ jest przede wszystkim zmienny;</li>
+<li>dodawanie pewnego typu przedrostków (<em>bezœmiechem, bezœwiat, bez¿a³obie</em>) - przedrostki sugeruj¹ce brak czegoœ pozwalaj¹ na ukazanie innego wymiaru rzeczywistoœci; wi¹¿e siê on z pustk¹, zaprzeczeniem istnienia;</li>
+<li>³¹czenie rdzeni czasownika z przyrostkami osobowymi (<em>Dusio³ek, Bajda³a</em>) - utworzone w ten sposób nazwy jednoczeœnie wskazuj¹ na charakterystyczne cechy postaci (Bajda³a - 'ten, który lub bajdurzyæ'; Dusio³ek - ' ten, co dusi');</li>
+<li>tworzenie nowych czasowników i rzeczowników od pozosta³ych czêœci mowy (<em>zamrocz, zniszczot¹</em>) - neologizmy te wzbogacaj¹ jêzyk, s³u¿¹ nazwaniu nowych zjawisk niezbêdnych w opisie poetyckiej rzeczywistoœci.</li>
+</ul>
+<p>Leœmian nie wykorzystuje tylko œrodków s³owotwórczych. Wielki wp³yw na kszta³t jêzyka poetyckiego maj¹ te¿ œrodki z zakresu sk³adni i leksyki. Poeta bowiem odnajduje inspiracjê dla swej twórczoœci w kulturze ludowej. Z tego powodu chêtnie u¿ywa s³ów, które s¹ zwi¹zane z gwar¹ ("tyli", "Jeszczeœ", "dziewki wy³aj¹"). W jego utworach s¹ równie¿ obecne powtórzenia, anafory, które nadaj¹ rytm oraz akcentuj¹ okreœlone treœci: "W tak¹ zamrocz paproci, w takich cisz kurchany, / W taki bezœwiat zaroœli, w taki bezbrzask g³uchy, / W takich szumów ostatnie kêdyœ zawieruchy". Równie kluczowe s¹ tautologie; powielanie znaczeñ to nawi¹zanie do filozofii Bergsona, poniewa¿ tylko wejœcie w istotê czegoœ staje siê Ÿród³em intuicyjnego poznania: "A¿ nagle w niecierpliwej zapragn¹³ ¿a³obie / Zwiedziæ duchem na prze³aj zieleñ sam¹ w sobie". Oprócz tego zauwa¿alne s¹ formu³y o magicznym charakterze ("O, rety - olaboga!"), które przypominaj¹ o ludowym sposobie postrzegania œwiata i wierze w magiczne rytua³y. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przyk³adowo (na podstawie wybranych tekstów z podrêcznika):</p>
+<p>Codziennoœæ to wa¿ny temat podejmowany przez poetów dwudziestolecia miêdzywojennego. Odzyskanie niepodleg³oœci, rozwój grup poetyckich przyczyniaj¹ siê do poszukiwania nowych Ÿróde³ inspiracji artystycznej. Jednym z nich staje siê to, co zwi¹zane z przeciêtn¹ egzystencj¹. Poeci dostrzegaj¹ bowiem piêkno i znaczenie codziennoœci, przyczyniaj¹ siê do jej uwznioœlenia.</p>
+<p>Temat ten jest szczególnie obecny w utworach Tuwima, które odwo³uj¹ siê do doœwiadczeñ zwyk³ego cz³owieka. Z tego te¿ powodu autor interesuje siê miastem oraz jego dynamik¹ i zmiennoœci¹, czego dowodem jest wiersz <em>Wiosna. Dytyramb</em>. W nim to ujawnia siê fascynacja biologizmem, si³¹ masy, która d¹¿y do realizacji swych popêdów: "Na ³awce, psiekrewie, na trawce, / Naróbcie Polsce bachorów". Tuwim nie d¹¿y do upiêkszenia t³umu, lecz pokazuje go w doœæ brutalny sposób. Zaintrygowanie moc¹ sprawcz¹ masy ³¹czy siê z pewnym wstrêtem. Wynika on z tego, i¿ ukazani w ten sposób ludzie wyzbywaj¹ siê jakichkolwiek zasad moralnych, s¹ prymitywni: "Wyrywajcie bachorom jêzyki boleœnie". Z kolei w innym ze swoich utworów poeta docenia przede wszystkim miasto jako Ÿród³o inspiracji. <em>Do krytyków</em> stanowi swoisty manifest, w którym to twórca ponownie odwo³uje siê do motywu miasta. Pozornie drobne elementy rzeczywistoœci, atmosfera miejskiego ¿ycia i rozkwitaj¹ca natura pozytywnie oddzia³uj¹ na osobê mówi¹c¹. S¹ dla niej Ÿród³em silnych doznañ: "Weso³o w czubie i w piêtach, / A najweselej na skrêtach!". Szczególne znaczenie w tym utworze zyskuj¹ tak¿e osi¹gniêcia cz³owieka w zakresie techniki. Przeja¿d¿ka tramwajem pobudza wra¿liwoœæ podmiotu lirycznego, stanowi tak¿e przeciwwagê dla postawy powa¿nych krytyków, którzy byæ mo¿e nie doceniaj¹ uroków rzeczywistoœci. Tym samym Tuwim przedstawia codziennoœæ jako sferê wart¹ uwagi, która staje siê wdziêcznym tematem literackim.</p>
+<p>Fascynacja codziennoœci¹ ujawnia siê tak¿e w <em>Herostratesie</em> Lechonia. Poeta bowiem pragnie zerwaæ z romantycznymi mitami i literatur¹, która s³u¿y ojczyŸnie. Zamiast tego artysta chce doœwiadczaæ w pe³ni teraŸniejszoœci. Przejawem tego jest dostrze¿enie wreszcie piêkna natury, nie zaœ ci¹g³e skupienie siê na ojczyŸnie. Œwiadcz¹ o tym s³owa: "A latem niech siê s³oñce przegl¹da w motylach, / A wiosn¹ - niechaj wiosnê, nie Polskê zobaczê". Lechoñ d¹¿y wiêc do prostoty i doceniania rzeczywistoœci, która w jego wierszu nabiera szczególnego znaczenia, gdy¿ stanowi odejœcie od narodowych mitów czy martyrologii.</p>
+<p>Codziennoœæ to temat ujawniaj¹cy siê tak¿e w niektórych dzie³ach Pawlikowskiej-Jasnorzewskiej.<em> La Précieuse</em> jest przyk³adem miniatury odwo³uj¹cej siê do banalnej scenki z ¿ycia w mieœcie. Przedstawienie wykwintnej i delikatnej damy, która obawia siê przekroczenia ka³u¿y, prowadzi do g³êbszej refleksji na uniwersalne tematy dotycz¹ce kwestii ostatecznych: "I jak¿e¿ ty zrobisz krok w nieskoñczonoœæ?". Do wspomnianego motywu nawi¹zuje tak¿e <em>Stara kobieta</em>. W tym utworze poetka bez upiêkszeñ opisuje zmêczon¹ ¿yciem bohaterkê, zauwa¿a metamorfozê jej cia³a: "jest z³amana, pogiêta, / pociêta poorana". Tym samym prze³amuje tabu, gdy¿ w wyrazisty sposób porusza temat przemijania i osamotnienia. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Jan Lechoñ w swym utworze przeprowadza rewizjê dawnych mitów, które ukszta³towa³y to¿samoœæ Polaków. Ju¿ sam tytu³ utworu zapowiada buntownicz¹ i krytyczn¹ postawê. Odwo³uje siê bowiem do postaci Herostratesa - szewca, który dla s³awy, podpali³ jeden z siedmiu cudów œwiata. Poeta sugeruje w ten sposób koniecznoœæ zburzenia narodowych œwiêtoœci, przeprowadzenia wrêcz szokuj¹cych dzia³añ. Z tego te¿ powodu odwo³uje siê do dziejów Polski - naznaczonych cierpieniem, walkami, narodowowyzwoleñczymi, ale równie¿ ukszta³towanych ideami romantycznymi:</p>
+<p><em>Czy­li to bê­dzie w So­fii, czy te¿ w Wa­szyng­to­nie.</em></p>
+<p><em>Od egip­skich pi­ra­mid do œnie­gów To­bol­ska</em></p>
+<p><em>Na ty­si¹­cz­ne siê wior­sty roz­sia­d³a nam Pol­ska,</em></p>
+<p><em>Pa­pu­ga wszyst­kich lu­dów - w cier­nio­wej ko­ro­nie.</em></p>
+<p>Poeta zauwa¿a sk³onnoœæ Polaków do ¿ycia przesz³oœci¹, co przyczynia siê do rozpamiêtywania tragedii, braku pogodzenia siê z minionymi dziejami. Rodacy nie wyci¹gaj¹ jakichkolwiek wniosków ("Dziew­czy­na, na mat­czy­ne nie­po­mna prze­stro­gi"). Podmiot liryczny buntuje siê przeciwko takiej postawie oraz zbyt silnym wp³ywom tradycji, zw³aszcza romantycznej (mesjanizm polski, twórczoœæ S³owackiego i Mickiewicza). Zamiast tego proponuje przyjêcie nowej perspektywy, która prowadzi do skupienia siê na tym, co aktualne, codzienne. W tym celu domaga siê odciêcia od mitów narodowych i przekonañ, które ograniczaj¹ mo¿liwoœci rozwoju Polski:</p>
+<p><em>O! zwal­cie¿ mi £azien­ki kró­lew­skie w War­sza­wie,</em></p>
+<p><em>Bez­dusz­ne, zim­nym ryl­cem dra­pa­ne mar­mu­ry,</em></p>
+<p><em>Po­krusz­cie na ka­wa³­ki gip­so­we fi­gu­ry</em></p>
+<p><em>A Ce­res k³o­so­no­œn¹ utop­cie mi w sta­wie.</em></p>
+<p>Odwo³anie do historycznych miejsc czy dramatu Wyspiañskiego (Ceres z <em>Nocy listopadowej</em>) podkreœla koniecznoœæ rewizji tego, co do tej pory definiowa³o to¿samoœæ rodaków. Osoba mówi¹ca wyra¿a wiêc dystans do dorobku przesz³oœci, poniewa¿ d¹¿ do poszerzenia swych horyzontów, dostrze¿enia czegoœ wiêcej ni¿ trudna i bolesna przesz³oœæ ("Czy wi­dzisz te ko­lum­ny na wy­spie w te­atrze, / Co wi­dok mi za­mknê­³y da­le­ki na œcie­¿aj? / Ja to­bie roz­ka­zu­jê! W te s³u­py ude­rzaj"). Podobnie wezwanie do zamordowania Kiliñskiego œwiadczy o zdecydowaniu, potrzebie wyznaczenia nowego kierunku rozwoju dla narodu. Osoba mówi¹ca pragnie zniszczenia dotychczasowych œwiêtoœci, podkreœla przy tym wartoœæ natury i codziennoœci. Zale¿y jej na tym, aby mo¿na by³o cieszyæ siê codziennoœci¹, dostrzegaæ jej urok oraz zmiennoœæ:</p>
+<p>Ja nie chcê nic in­ne­go, niech jeno mi p³a­cze</p>
+<p>Je­sien­nych wia­trów gêdŸ­ba w pó³­na­gich ba­dy­lach;</p>
+<p>A la­tem niech siê s³oñ­ce prze­gl¹­da w mo­ty­lach,</p>
+<p>A wio­sn¹ - nie­chaj wio­snê, nie Pol­skê zo­ba­czê. </p>
+<p>Podmiot liryczny odrzuca wiêc cierpienie, mesjanizm, poœwiêcenie na rzecz ojczyzny. Zamiast tego g³osi pochwa³ê zwyczajnoœci, natury, aktywnej postawy przejawiaj¹cej siê w trosce o teraŸniejszoœæ i przysz³oœæ. Postawa ta sugeruje tak¿e now¹ koncepcjê twórczoœci literackiej - ju¿ nie tyrtejskiej, poœwiêconej dzia³aniom narodowowyzwoleñczym. Jej idea jest zwi¹zana z dostrze¿eniem œwiata przyrody, tego, co bliskie zwyk³emu cz³owiekowi, a wyzbyte balastu historii. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przyk³adowo (na podstawie wybranych tekstów z podrêcznika): </p>
+<p>I³³akowiczówna wykorzystuje motyw mi³oœci w swych dwóch utworach: <em>B³êkitnej chwili</em> i<em> Co siê staæ musi</em>. Poetka przedstawia to uczucie jako wa¿ne i cenne, poniewa¿ wp³ywa ono na sposób postrzegania rzeczywistoœci. W pierwszym z tych wierszy wiêŸ ³¹cz¹ca zakochanych sprawia, i¿ mog¹ zapomnieæ o otaczaj¹cym ich œwiecie - nic siê dla nich nie liczy. Sielankowy nastrój wzmacnia natura, która strze¿e kochanków, podkreœla piêkno i harmoniê tych chwil: "jesteœmy wolni, jesteœmy sami / œród zió³ pachn¹cych, pod b³êkitami". Przyroda koresponduje z sytuacj¹ podmiotu, ale zapewnia tak¿e intymnoœæ. Mi³oœæ sprawia, ¿e czas przestaje mieæ znaczenie: najwa¿niejszy staje siê tylko ulotni moment, który staje siê Ÿród³em przyjemnoœci i szczêœcia. Z tego te¿ powodu podmiot liryczny zauwa¿a: "Wczoraj - zginê³o, Dzisiaj - jest nasze, / a Jutra nie chc¹ widzieæ za mg³ami / oczy zamkniête poca³unkami". Mi³oœæ zasadniczo wp³ywa wiêc na perspektywê postrzegania rzeczywistoœci, poniewa¿ nagle staje siê dla osoby mówi¹cej piêkna i tajemnicza. Podmiot liryczny doœwiadcza jej w pe³ny oraz wielowymiarowy sposób - za pomoc¹ rozmaitych zmys³ów, które s¹ wyostrzone, oraz swej wra¿liwoœci. Mo¿e siê wiêc cieszyæ beztroskim uczuciem, nie myœleæ o jakichkolwiek konsekwencjach.</p>
+<p>Nieco inny jest obraz zakochanej kobiety w drugim wierszu - <em>Co siê staæ musi</em>. W nim to podmiot liryczny doœwiadcza nie tylko ekscytacji i radoœci, ale tak¿e cierpienia. W utworze wypowiada siê prawdopodobnie kobieta, która marzy o podró¿y ze swym wybrankiem. Wycieczka do "wielkiego miasta le¿¹cego na wodzie" staje siê pretekstem do ukazania baœniowej oraz magicznej rzeczywistoœci. Przestrzeñ ta zapewnia niezwyk³e doznania, ale staje siê tak¿e fantastycznym t³em dla pary: "Jeszcze bêdziemy w miesi¹cu jechali / przy czarnych wios³ach po szumi¹cej fali / gêstwin¹ kana³ów, pod zwodzone mosty, / gdzie siê jak wê¿e czaj¹ wodorosty". Mi³oœæ staje siê jednak dla podmiotu tak¿e Ÿród³em niepokoju i obaw, poniewa¿ zdaje siê pozostawaæ tajemna, ukryta przed innymi ludŸmi. Jednoczeœnie osoba mówi¹ca doœwiadcza wielkiego cierpienia, które wi¹¿e siê z mo¿liw¹ têsknot¹ oraz roz³¹k¹. Mimo ca³ego bólu nie wypiera siê uczucia, lecz ma œwiadomoœæ, ¿e los nieodwracalnie po³¹czy³ j¹ z wybrankiem: "jak potêpieñcy do siebie têsknili, / na jednym stosie do krzy¿a przybici, / wiecznie pragn¹cy i nigdy niesyci!".</p>
+<p>Z kolei Pawlikowska-Jasnorzewska ukazuje przede wszystkim odczucia kobiety cierpi¹cej z powodu mi³oœci, która musi na nowo u³o¿yæ sobie ¿ycie. Zagadnienie to szczególnie zaznacza siê w utworze pt. <em>Mi³oœæ</em>. Uczucie ma wielki wp³yw na egzystencjê osoby mówi¹cej oraz jej samopoczucie. Roz³¹ka z wybrankiem jest trudnym doœwiadczeniem, które prowadzi do przeanalizowania swojej sytuacji. Jednoczeœnie podmiot liryczny paradoksalnie odkrywa, ¿e mo¿e funkcjonowaæ bez ukochanego cz³owieka, który by³ niczym powietrze. Cierpienie to stan tymczasowy, z czasem wra¿enie to s³abnie. Mi³oœæ jednak w ¿yciu kobiety jawi siê jako niepowstrzymana si³a, która nawet mimo braku odwzajemnienia d³ugo nie daje o sobie zapomnieæ. Potwierdza tê myœl wiersz <em>Nike</em> przypominaj¹cy o piêknie i tragizmie mi³oœci. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 15</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 16</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 17</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 18</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 19</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 20</a><br>
+<p>.</p><br>

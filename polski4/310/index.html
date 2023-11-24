@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Początkowe słowa utworu Jana Polkowskiego są przyznaniem się do kooperacji w trakcie przesłuchania. Podmiot liryczny wyjawił wszystkie sekrety. Stan, który potem odczuwał, opisuje jako wewnętrzną pustkę i zbrukanie. To drugie interpretować można jako przejaw poczucia winy lub zdrady własnych wartości.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W pierwszej strofie podmiotowi lirycznemu towarzyszy wstyd. Czuje, że naruszył wyznawane przez siebie zasady moralne. Mówi: "powiedziałem / i poczułem się pusty i nieczysty". Druga część utworu przynosi zgoła inny obraz. Osoba mówiąca powraca do domu do małego dziecka, którego kwilenie przynosi ulgę i spokój. Ma wrażenie, że podjęła dobrą decyzję, o czym świadczą słowa: "czułem się jak rybak, który [...] / wypuścił rybę i wraca, dumny". W ostatniej strofie podmiot liryczny przeczuwa nadchodzące zagrożenie. W mężczyźnie rodzi opiekuńczość i potrzeba zapewnienia synowi bezpieczeństwa za wszelką cenę.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Aluzje do Biblii pojawiają się w drugiej strofie utworu w słowach: </p>
+<p style="padding-left: 60px;"><em>Wchodziłem i słuchałem jak kwili syn</em></p>
+<p style="padding-left: 60px;"><em>i to było Pismo, cytra, dolina owocująca</em></p>
+<p>Płacz dziecka porównany zostaje więc do świętej księgi chrześcijan. Jest on swoistym objawieniem, w nim zawiera się to, co dla podmiotu lirycznego najważniejsze. Grę na cytrze odnieść można do postaci króla Dawida i tworzonych przez niego psalmów ku chwale Boga. Dolina owocująca kieruje z kolei myśli czytelnika w stronę ziemi obiecanej, krainy dobrobytu i szczęścia. Przywołane symbole tworzą poczucie z jednej strony - wzniosłości, sakralności, z drugiej - radości i bezpieczeństwa. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Osoba mówiąca ma ambiwalentny stosunek do swoich czynów. Z jednej strony czuje, że postępuje amoralnie. Powiedzenie wszystkiego, prawdopodobnie w trakcie przesłuchania, nie sprawia jej ulgi. Odczuwana przez podmiot liryczny pustka nie łączy się ze swoistym aktem oczyszczenia, lecz - wręcz przeciwnie - z wewnętrznym zbrukaniem. Z drugiej strony osoba mówiąca ma świadomość, że wszystkie jej działania podporządkowane są trosce o bezpieczeństwo swoich najbliższych. Zdaje sobie sprawę, że dbanie o dobro nowo narodzonego syna ważniejsze jest od trwania w niezłomności wobec opresyjnej władzy. Priorytetem jest więc jego życie osobiste, a nie walka ideowa. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Wszystkie przedstawione utwory dotyczą stanu wojennego, ich autorzy podejmują jednak temat na różne sposoby. </p>
+<p><em>Tym którzy bronią wojny </em>Ryszarda Krynickiego jest najbardziej rzeczowy spośród zacytowanych tekstów. Autor posługuje się prostym, zbliżonym do mowy codziennej językiem. Rezygnuje ze środków artystycznego wyrazu, chcąc zachować pełną klarowność wypowiedzi. Odnosi się przy tym do konkretnych wydarzeń, jego wiersz nabiera cech odezwy wystosowanej w reakcji na wydarzenia w polskim parlamencie. </p>
+<p>Wiersz Anny Kamieńskiej z kolei tylko częściowo opiera się na koncepcie bliskości codzienności. Autorka wspomina wprawdzie na początku o praktykach takich jak najścia w domach czy działalność dwulicowych agentów, w gruncie rzeczy jednak są one jedynie podstawą głębszej symboliki, rozwijanej w kolejnych dwóch strofach. Jako jedyna odwołuje się też do tradycji romantycznej, dokonując uwznioślenia i sakralizacji cierpienia narodu polskiego.</p>
+<p>Liryka Polkowskiego zdaje się najbardziej intymna spośród wszystkich podanych utworów. Autor nie pisze wprost o stanie wojennym, sugeruje jedynie obraz przesłuchania i płonącego ognia za plecami. Wydarzenie to staje się tłem dla rozgrywającego się dramatu w sumieniu podmiotu lirycznego, który musi wybierać między bezpieczeństwem dziecka a nieugiętością wobec władzy. Polkowski posługuje się bogactwem środków artystycznych, wplatając w tekst również wątki biblijne.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Poeci tworzący w okresie PRL-u posługiwali się konkretem, ich twórczość oparta była o bliską obserwację codziennych sytuacji. Niechęć do odwoływania się do pojęć ogólnych, abstrakcji wynikać może ze świadomości fałszowani rzeczywistości za pomocą języka. Komunistyczna propaganda dokonała przewartościowania takich pojęć jak wolność, równość, jedność. Stały się one pustymi hasłami, za którymi kryły się opresyjne często mechanizmy rządzące systemem totalitarnym.  Świadomi płynności znaczeń literaci uciekali od abstrakcji. Przedstawiając konkretne, bliskie im sytuacje, nie pozostawiali miejsca na nadinterpretacje i manipulacje. Wymowa ich tekstów stawała się jednoznaczna.</p><br>

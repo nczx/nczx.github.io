@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. While  </p>
+<p>2. so</p>
+<p>3. in order to</p>
+<p>4. As a result</p>
+<p>5. After</p>
+<p><strong>Uzasadnienie</strong>: używamy <em>after</em>, ponieważ jest to przyimek i łączy się z rzeczownikiem (<em>the battle</em>). Odrzucamy <em>afterwards </em>(potem, później), ponieważ jest to przysłówek, więc nie możemy go użyć w połączeniu z innym wyrazem.</p>
+<p>6. though</p>
+<p><s class="odr-strikethrough">afterwards</s></p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>W zeszłym tygodniu pojechałem/am do Krakowa z moimi rodzicami. <strong>Podczas gdy </strong>moi rodzice się rozpakowywali, ja czytałem/am o starożytnej krakowskiej legendzie.</p>
+<p>W XIII wieku stróż zauważył ogromną chmurę kurzu w oddali. Nadchodziła przerażająca grupa Tatarów, by zaatakować miasto, <strong>więc</strong> chwycił za trąbkę i grał na niej, <strong>żeby</strong> ostrzec innych. <strong>W rezultacie</strong> zdołali się przygotować i pokonać Tatarów.</p>
+<p><strong>Jednak po </strong>bitwie odkryli, że strzała zabiła stróża. Dzisiaj trębacz co godzinę gra tę samą melodię i zawsze przerywa dokładnie w momencie, w którym strzała trafiła stróża. To bardzo dramatyczna i inspirująca historia.</p>
+<p>Znacie jakieś fajne legendy z innych krajów?</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. ancient </p>
+<p><strong>Fragment w tekście: </strong>"(...) I read about an ancient Kraków legend." - (...) ja czytałem/am o starożytnej krakowskiej legendzie. </p>
+<p>2. huge</p>
+<p><strong>Fragment w tekście: </strong>"(...) a watchman noticed a huge cloud of dust in the distance." - (...) stróż zauważył ogromną chmurę pyłu unoszącą się w oddali.</p>
+<p>3. terrifying</p>
+<p><strong>Fragment w tekście: </strong>"A terrifying group of Tatars were coming to attack the city (...)." - Nadciągała przerażająca grupa Tatarów, żeby zaatakować miasto (...).</p>
+<p>4. dramatic, inspiring</p>
+<p><strong>Fragment w tekście: </strong>"It's a very dramatic and inspiring story." - To bardzo dramatyczna i inspirująca historia.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. As a result  </p>
+<p>2. Although</p>
+<p>3. after</p>
+<p><strong>Uzasadnienie</strong>: <em>afterwards </em>(potem) nie pasuje, bo jest przysłówkiem i nie łączy się z rzeczownikami (<em>a while </em>- chwila).</p>
+<p>4. So</p>
+<p>5. Then</p>
+<p>6. While</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Istnieje słoweńska legenda, zgodnie z którą w Jaskini Postojnej mieszkały straszne smoki. <strong>W rezultacie</strong> ludzie bali się zbliżać do tej jaskini, Legenda mówi, że pewnego dnia rzeka wylała i porwała wszystkie smoki poza jednym, który nazywał się Jami. Jami był mały i przyjazny. <strong>Mimo że </strong>chciał się zaprzyjaźnić z dziećmi, te się go bały. Był bardzo smutny, ale <strong>po</strong> chwili spotkał żuka, który opowiedział mu wszystko o stworzeniach mieszkających w tych jaskiniach. Jami poznał <strong>więc</strong> wielu nowych przyjaciół. <strong>Potem</strong>, pewnego dnia, poproszono go, by strzegł pereł przed chciwym skrzatem zwanym Switch. Jami się zgodził, ale zasnął. <strong>Podczas gdy </strong>chrapał, skrzat przyszedł ukraść perły...</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>Today I want to tell you about a cool legend I've recently heard about.</em> The legend comes from Krakow. I've been there twice and it's very beautiful. I first learned about it last week. I heard it from my grandma who likes to tell stories. </p>
+<p>The legend is about a nobleman named Sir Twardowski, who made a deal with a devil. The devil gave Twardowski special powers and wisdom in return for the man's soul. There was a rule that said the devil could only take Twardowski's soul in Rome. Twardowski used this rule and avoided this city. However, one day the devil tricked Twardowski into going to a tavern called Rome. Twardowski is now stuck on the moon forever for trying to trick the devil.</p>
+<p>I think it's fascinating. Especially once you learn this legend might be based on a real person.</p>
+<p>Let me know what you think!</p>
+<p><br/>(Liczba słów: 149)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Dzisiaj chcę Wam opowiedzieć o fajnej legendzie, o której ostatnio słyszałem/am. Legenda pochodzi z Krakowa. Byłem/am tam dwa razy i jest tam bardzo pięknie. Po raz pierwszy dowiedziałem/am się o niej w zeszłym tygodniu. Usłyszałem/am ją od mojej babci, która lubi opowiadać historie. </p>
+<p>Legenda opowiada o szlachcicu o imieniu Sir Twardowski, który zawarł umowę z diabłem. Diabeł dał Twardowskiemu specjalne moce i mądrość w zamian za jego duszę. Istniała zasada, która mówiła, że diabeł może zabrać duszę Twardowskiego tylko w Rzymie. Twardowski skorzystał z tej zasady i unikał tego miasta. Jednak pewnego dnia diabeł nakłonił Twardowskiego do udania się do karczmy o nazwie Rzym. Za próbę oszukania diabła Twardowski utknął na zawsze na Księżycu.</p>
+<p>Myślę, że to fascynujące. Zwłaszcza, gdy okazuje się, że legenda ta może być oparta na prawdziwej osobie.</p>
+<p>Dajcie znać, co o tym myślicie!</p><br>

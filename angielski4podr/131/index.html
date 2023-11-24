@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. B </p>
+<p>2. A</p>
+<p>3. E</p>
+<p>4. C</p>
+<p><strong>The extra statement is D.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>1. B</p>
+<p><strong>Fragment w tekście:</strong> "(...) disconnecting and spending some time alone can help to clear your mind and improve your ability to focus. This in turn will help you to increase your work rate, so you get more things done and you are more efficient. (...) This brain activity helps you to learn about yourself (...) and this can strengthen your relationships with others" - (...) odłączenie się od urządzeń elektronicznych i spędzenie czasu w samotności może pomóc oczyścić umysł i poprawić zdolność skupienia się. To z kolei zwiększy tempo pracy, więc wykonasz więcej obowiązków i będziesz bardziej efektywny/a. (...) To ćwiczenie mózgu pomaga uczyć się siebie (...) a to może wzmocnić twoje relacje z innymi. </p>
+<p>2. D</p>
+<p><strong>Fragment w tekście:</strong> "The message is that humans are social animals who require people, social interaction, conversation and physical contact" - Przekaz jest taki, że ludzie są zwierzętami społecznymi, które potrzebują drugiego człowieka, interakcji społecznych, rozmów i kontaktu fizycznego. </p>
+<p>3. A</p>
+<p><strong>Fragment w tekście:</strong> "Research shows that people forced to spend time alone, such as people in prison, often suffer mental problems. (...) On the other hand, there is evidence that a certain amount of time alone can actually be beneficial" - Badania pokazują, że ludzie zmuszeni do spędzania czasu w samotności, tacy jak ludzie w więzieniach, często mają problemy psychiczne. (...) Z drugiej strony istnieją dowody na to, że pewna ilość czasu spędzonego w samotności może tak naprawdę być pożyteczna. </p>
+<p>4. C</p>
+<p><strong>Fragment w tekście:</strong> "In the modern world, it can be simply a question of disconnecting and giving up all your devices for a while. You could also try closing your door to keep people out" - W nowoczesnym świecie to może być po prostu kwestia odłączenia się i nieużywania urządzeń elektronicznych przez pewien czas. Możesz też spróbować zamknąć drzwi, żeby ludzie trzymali się z dala. </p>
+<p>5. B</p>
+<p><strong>Fragment w tekście:</strong> "(...) disconnecting and spending some time alone can help to clear your mind and improve your ability to focus. This in turn will help you to increase your work rate, so you get more things done and you are more efficient. - (...) odłączenie się od urządzeń elektronicznych i spędzenie czasu w samotności może pomóc oczyścić umysł i poprawić zdolność skupienia się. To z kolei zwiększy tempo pracy, więc wykonasz więcej obowiązków i będziesz bardziej efektywny/a.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne</p><br>

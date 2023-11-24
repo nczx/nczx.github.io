@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<table border="1" style="border-collapse: collapse; width: 490px; height: 173px; border-width: 1px; border-spacing: 5px; border-color: rgb(255, 255, 255);"><colgroup><col style="width: 240px;"/><col style="width: 249px;"/></colgroup>
+<tbody>
+<tr style="height: 34.9091px;">
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>6 -</strong> hard working <br/>(ciężko pracujący/a) </td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>3 -</strong> same interests <br/>(te same zainteresowania)</td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>2 -</strong> funny <br/>(zabawny/a)</td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>4 -</strong> sociable <br/>(towarzyski/a)</td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>5 -</strong> never gets upset <br/>(nigdy się nie denerwuje)</td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); height: 34.9091px; padding: 5px; vertical-align: top;"><strong>1 -</strong> loyal <br/>(lojalny/a)</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>I think that being loyal is the most important. You can't truly be friends with someone unless you know you can trust that person.</p>
+<p>Being funny is also important to me because I like people with a good sense of humour. I appreciate it when friends make me laugh.</p>
+<p>Having the same interests isn't the most important thing but it's useful. You and your friend can spend more time together when you share hobbies.</p>
+<p>The last three qualities are generally positive but I wouldn't care if my friend didn't have them. I also think it's unreasonable to expect someone to never get upset. It's an understandable reaction in some situations.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Myślę, że bycie lojalnym jest najważniejsze. Nie można naprawdę się z kimś przyjaźnić, jeśli nie wie się, że można tej osobie zaufać.</p>
+<p>Bycie zabawnym jest dla mnie również ważne, ponieważ lubię ludzi z dobrym poczuciem humoru. Doceniam, gdy przyjaciele mnie rozśmieszają.</p>
+<p>Posiadanie tych samych zainteresowań nie jest najważniejsze, ale jest przydatne. Ty i twój przyjaciel możecie spędzać więcej czasu razem, gdy macie wspólne hobby.</p>
+<p>Ostatnie trzy cechy są ogólnie pozytywne, ale nie przejmował(a)bym się, gdyby mój przyjaciel / moja przyjaciółka ich nie miał/a. Myślę też, że nierozsądnie jest oczekiwać, że ktoś nigdy się nie zdenerwuje. To zrozumiała reakcja w niektórych sytuacjach.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. Whenever we don't see each other, my friend and I keep in touch via Messenger and Instagram. Sometimes we also have video chats.</p>
+<p>(Kiedy się nie widzimy, mój przyjaciel / moja przyjaciółka i ja pozostajemy w kontakcie za pośrednictwem Messengera i Instagrama. Czasami prowadzimy też rozmowy wideo.) </p>
+<p><br/>2. We have similar hobbies and we have the same sense of humour. That's why it's easy to be friends with that person.</p>
+<p>(Mamy podobne hobby i poczucie humoru. Dlatego łatwo jest przyjaźnić się z tą osobą.)</p>
+<p><br/>3. I really like the fact that I can count on him/her. I know he/she will always be there for me and vice versa.</p>
+<p>(Bardzo podoba mi się fakt, że mogę na niego/nią liczyć. Wiem, że zawsze będzie obok i na odwrót.)</p>
+<p><br/>4. We like going on bike rides or hanging out in the park. We also enjoy simply sitting at home, watching films or playing video games.</p>
+<p>(Lubimy jeździć na rowerze lub spędzać czas w parku. Lubimy też po prostu siedzieć w domu, oglądać filmy lub grać w gry wideo.)</p>
+<p><br/>5. Yes, he/she can. I wouldn't be friends with someone I didn't trust.</p>
+<p>(Tak, potrafi. Nie przyjaźnił(a)bym się z kimś, komu nie ufam.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a. 3  </p>
+<p>b. 4</p>
+<p>c. 1</p>
+<p>d. 5</p>
+<p>e. 2</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. B  </p>
+<p>2. B</p>
+<p>3. BM</p>
+<p>4. M</p>
+<p>5. B</p>
+<p>6. M</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. Speaking of </p>
+<p>(Mój kanał nazywa się <em>The B Word</em>, dzielę się na nim przeżyciami z mojego życia i, oczywiście, spędzam czas z moimi przyjaciółmi. <strong>A propos</strong> przyjaciół, dziś będziecie mieli okazję poznać jedną z nich.) </p>
+<p>2. Got it</p>
+<p>(... zapiszemy nasze odpowiedzi, a potem je ujawnimy, żeby zobaczyć, czy się pokrywają. Łatwe, prawda? <strong>Rozumiesz</strong>?)</p>
+<p>3. basically</p>
+<p>(- Ja napisałam "telefonicznie". Co ty napisałaś?</p>
+<p> - Napisałam "za pomocą SMS-ów".</p>
+<p> - Dobra, no to <strong>w zasadzie</strong> to samo.)</p>
+<p>4. on the same page</p>
+<p>("Filmy" / "Kino".</p>
+<p> - W porządku, więc w tym <strong>się zgadzamy</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. basically </p>
+<p>(Słowa "mądry" i "inteligentny" oznaczają <strong>w zasadzie</strong> to samo, choć czasem występuje niewielka różnica.) </p>
+<p><br/>2. speaking of</p>
+<p>(X: Michelle urządza w piątek imprezę.</p>
+<p>Y: Och, <strong>a propos</strong> imprez, jak było u Luke'a w zeszły weekend?)</p>
+<p><br/>3. on the same page</p>
+<p>(X: Dobra, słuchajcie, plan jest taki, żeby nabrać kondycji. Czy <strong>dobrze się rozumiemy</strong>?</p>
+<p>Y: Tak! Chodźmy pobiegać!)</p>
+<p><br/>4. get it</p>
+<p>(X: Apple wyprodukowało samochód, ale nikt go nie kupił.</p>
+<p>Y: Dlaczego?</p>
+<p>X: Bo nie ma w nim okien!<strong>*</strong> Ha! Ha!</p>
+<p>Y: Nie <strong>łapię</strong>.)</p>
+<p><strong>*</strong>Gra słów - zdanie "It doesn't have windows" oznacza jednocześnie "Nie ma okien", jak i "Nie ma w nim Windowsa" (systemu operacyjnego konkurencji Apple'a).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Yes, there are things my best friend and I don't have in common. Our parents are nothing alike when it comes to their personalities and we also have different goals for the future. I don't think it matters. It's the differences between people that make friendships valuable and interesting.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Tak, są rzeczy, których ja i mój najlepszy przyjaciel / moja najlepsza przyjaciółka nie mamy ze sobą wspólnego. Nasi rodzice wcale nie są do siebie podobni, jeśli chodzi o ich osobowości, mamy też różne cele na przyszłość. Nie sądzę jednak, by miało to jakiekolwiek znaczenie. To właśnie różnice między ludźmi sprawiają, że przyjaźnie są wartościowe i interesujące.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>One game I know is called 'Categories'. The aim of the game is to give an example for each category that starts with a chosen letter. The first player who finishes the round starts counting down from 10. You get points for each word you have. You get more points if none of the players have the word you do.</p>
+<p>(Jedna z gier, które znam, nazywa się "Państwa-miasta". Celem gry jest podanie przykładu dla każdej kategorii, która zaczyna się na wybraną literę. Pierwszy gracz, który ukończy rundę, zaczyna odliczać od 10. Otrzymuje się punkty za każde słowo. Zdobywasz więcej punktów, jeśli żaden z graczy nie ma podanego przez ciebie słowa.)</p>
+<p><br/><strong>Instructions: </strong>(instrukcje)</p>
+<p>1. Each player gets a piece of paper and makes a table where one column is one category.<br/>(Każdy gracz otrzymuje kartkę papieru i tworzy tabelę, w której jedna kolumna odpowiada jednej kategorii.)</p>
+<p>2. The categories are up to the players but they usually include the following:<br/>(Kategorie zależą od graczy, ale zazwyczaj obejmują następujące elementy)</p>
+<ul>
+<li>Country <br/>(państwa)</li>
+<li>City/Town <br/>(miasta)</li>
+<li>Plant <br/>(rośliny)</li>
+<li>Animal <br/>(zwierzęta)</li>
+<li>Object <br/>(rzeczy)</li>
+<li>Name <br/>(imiona)</li>
+</ul>
+<p>3. Choose a letter - one player starts to silently say the alphabet and another player says 'stop' at random. <br/>(Wybierz literę - jeden gracz zaczyna po cichu wymawiać alfabet, a drugi losowo mówi "stop".)</p>
+<p>4. Each player starts to write one word for each category. All words in this round have to start with the letter that has just been chosen.<br/>(Każdy gracz zaczyna wpisywać po jednym słowie do każdej kategorii. Wszystkie słowa w tej rundzie muszą zaczynać się na literę, która została właśnie wybrana.)</p>
+<p>5. The player who finishes first starts counting down from 10. Each player stops writing when the counting stops.<br/>(Gracz, który skończy jako pierwszy, zaczyna odliczać od 10. Każdy gracz przestaje pisać, gdy liczenie dobiegnie końca.)</p>
+<p>6. Count the points. Players get points for each word they have. If a player writes down a word no one else has, they get more points. If a player hasn't come up with a word for a category, they get 0 points.<br/>(Liczenie punktów. Gracze otrzymują punkty za każde zapisane słowo. Jeśli gracz zapisze słowo, którego nie ma nikt inny, otrzymuje więcej punktów. Jeśli gracz nie wymyślił słowa dla danej kategorii, otrzymuje 0 punktów.)</p>
+<p>7. Go back to point 3 to continue the game.<br/>(Wróć do punktu 3, aby kontynuować grę.)</p>
+<p>8. The player who gets the most points in total wins.<br/>(Gracz, który zdobędzie łącznie najwięcej punktów, wygrywa.)</p><br>

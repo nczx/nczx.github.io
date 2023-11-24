@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Młodzi żołnierze wysyłani na ulice polskich miast spotykali się na co dzień z negatywnymi reakcjami innych obywateli. Ludzie bali się ich, nie chcieli wchodzić w interakcje. Byli znienawidzoną grupą społeczną, podporządkowaną, według opinii reszty społeczeństwa, zbrodniczemu reżimowi. Oprócz braku szacunku, musieli znosić także inne niewygody, np. wielogodzinne przebywanie na siarczystym mrozie. Zdaje się, że młodzi żołnierze nie byli przygotowani na to, co ich czeka. Nie myśleli o eskalacji przemocy, którą przewidywała staruszka z tekstu.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>W słowach staruszki można odnaleźć współczucie dla całego społeczeństwa polskiego, również dla tych, którzy stali się narzędziem w rękach systemu totalitarnego. Kobieta zdaje sobie sprawę z tego, że w jej kraju nikt nie jest wolny, rządzący podporządkowują sobie wszystkich obywateli niezależnie od tego, czy ci działają dla nich, czy przeciwko nim. Empatia wobec tych, którzy nie współpracują z władzą jest zjawiskiem oczywistym, w słowach kobiety ujawnia się również litość dla takich osób, które poddały się przymusowi reżimu. Cierpienie obywateli w państwie totalitarnym wydaje się doświadczeniem uniwersalnym, ponad podziałami.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Określenia dotyczące temperatury:</p>
+<ul>
+<li>"po przeciwnej stronie przegrodzonej drogi żarzył się koks w piecyku";</li>
+<li>"[...] jego dłonie opuszczały strefę ciepła nad ogniem i spoczywały na maszynowej broni"; </li>
+<li>"zaczęła grzać ręce nad żarem";</li>
+<li>"zimno ci, żołnierzyku [...]";</li>
+<li>"mróz potęgował się";</li>
+<li>"[...] słowa starej były jeszcze bardziej lodowate";</li>
+</ul>
+<p> </p>
+<p>Zimno jest symbolem oddalenia, podziałów międzyludzkich, samotności, emocjonalnego chłodu. Służba wartowników zmusza ich do marznięcia - również wewnętrznego. Aby trzymać ręce na broni, żołnierz musi zrezygnować z ogrzewania ich nad ogniem. Ciepło z kolei łączy, wskazuje na wspólnotowość. Dlatego przedstawiciele dwóch przeciwnych biegunów - wojskowy i staruszka - spotykają się na moment nad rozgrzanym koksownikiem. Młody mężczyzna zostaje nad źródłem ciepła po jej odejściu, być może dlatego, że został ogrzany litością napotkanej kobiety.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>W tekście dominują zdania krótkie, pojedyncze, nierozwinięte, np. "Zapadła ciemność", "Odprowadzał ich czujnym spojrzeniem". Są rzeczowe, konkretne, pozbawione ozdobników. Przekazują najważniejsze informacje o rozgrywających się wydarzeniach. Ich użycie koresponduje z tytułem <em>Raport o stanie wojennym, </em>dzięki nim bowiem omawiany tekst przypomina sprawozdanie lub raport.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Wybór <em>Stanu wojny </em>na opowiadanie otwierające zbiór nie jest przypadkowy. W ten sposób Marek Nowakowski wskazuje, że tematem jego tekstów będzie nie sam przebieg stanu wojennego, a to, jaki miał on wpływ na relacje między ludźmi. W utworze tym ujawnia się również postawa narratora. Jest bacznym, lecz bezstronnym obserwatorem społeczeństwa, powstrzymuje się od komentarza. Można założyć, że, podobnie jak staruszka, kieruje się współczuciem wobec całego pokrzywdzonego narodu.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>W opowiadaniu <em>Stan wojny </em>Marek Nowakowski pokazuje realia życia w pierwszych dniach stanu wojennego. Pochyla się nad codziennością zwykłych ludzi - młodego żołnierza i starej kobiety. W utworze nie dzieje się nic spektakularnego, bohaterowie wymieniają między sobą kilka zdań i rozchodzą się. Używają prostego, codziennego języka, np. kolokwializmów ("co wy, babko?", "głupia jakaś").</p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Przykładowo:</p>
+<p>Tytuł zbioru <em>Raport o stanie wojennym </em>wskazuje na cechy stylu opowiadań Nowakowskiego - rzeczowość, skrótowość, narracyjna przezroczystość. Utwory te stanowią swoiste sprawozdanie z życia Polaków w okresie od grudnia 1981 roku. Autor pochyla się nad epizodami z życia codziennego jednostek i nad tym, w jaki sposób wprowadzenie stanu wojennego zmieniło ich rzeczywistość. <em>Raport... </em>przedstawia historię tego kluczowego wydarzenia w dziejach Polski z bliższej człowiekowi perspektywy, niż ta prezentowana w prawdziwych raportach dotyczących stanu wojennego. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Marek Nowakowski w opowiadaniu <em>Stan wojny </em>opisuje epizod z pierwszych dni stanu wojennego. Nie prezentuje więc szerokiej perspektywy wydarzeń, skupia się na wyimkach z życia zwykłych, anonimowych obywateli. Pokazuje, jak wydarzenia z grudnia 1981 roku wpłynęły na codzienność przeciętnych Polaków. Jego relacja jest lakoniczna, skrótowa i konkretna. Sylwetki bohaterów są nakreślone jedynie pobieżnie. </p>
+<p>Zbigniew Herbert w utworze <em>Raport z oblężonego Miasta </em>ujmuje stan wojenny w szerokiej perspektywie zarówno przestrzennej, jak i czasowej. Okres oblężenia zdaje się nie mieć początku ani końca. Podmiot liryczny przyjmuje rolę kronikarza próbującego uchwycić i utrwalić najważniejsze wydarzenia rozgrywające się w tym czasie. Nakreśla nie tylko sytuację w kraju, lecz także to, co dzieje się na arenie międzynarodowej. Jego spojrzenie jest bardziej osobiste niż to narratora w <em>Stanie wojny</em>. Dzieli się swoimi przemyśleniami i emocjami z odbiorcami, świat widziany jest z jego perspektywy.</p>
+<p>Autor <em>Raportu z oblężonego Miasta</em> używa języka poetyckiego, bogatego w środki stylistyczne. W przeciwieństwie do Nowakowskiego Herbert nie posługuje się konkretem, a wręcz przeciwnie - chętnie wykorzystuje aluzje i niedopowiedzenia. <em>Raport z oblężonego miasta </em>wydaje się tekstem o wymowie uniwersalnej, dotyczy nie tylko stanu wojennego, lecz także wszelkich innych sytuacji okupacji. </p>
+<p> </p>
+<p>b) Słowa z wiersza Herberta charakteryzują również opowiadanie <em>Stan wojny</em>. Tekst ma charakter relacji z konkretnych wydarzeń. Nowakowski unika rozbudowanych opisów, dygresji i komentarzy. Narracja jest przezroczysta. Autor skupia się na zachowaniach bohaterów, a nie opisywaniu ich osobowości, uczuć, przekonań. </p>
+<p> </p>
+<p>c) Osoba mówiąca w utworze Herberta dostrzega powtarzalność historii. Brak konkretnie określonego czasu i miejsca wskazuje, że stan wojenny był jedną z wielu sytuacji konfliktu czy oblężenia wydarzających się w różnych punktach czasowych i przestrzennych. </p>
+<p>Wyrażenie opinii - część indywidualna zadania</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Archiwalne zdjęcia ze stanu wojennego przedstawiają żołnierzy, którzy, podobnie jak w opowiadaniu Nowakowskiego, zbierają się wokół koksownika, by ogrzać ręce. W tle dostrzec można choinki umieszczone na czołgach. Na jednej z fotografii wojskowi zajmują się jej ubieraniem. Autor <em>Stanu wojny </em>kreuje podobne wizerunki funkcjonariuszy - przedstawia ich nie jako narzędzia w rękach władzy totalitarnej, lecz jako zwykłych ludzi. Dokuczają im warunki atmosferyczne, odczuwają zimno. Ich człowieczeństwo na fotografiach podkreślone jest dodatkowo przez gest strojenia drzewka bożonarodzeniowego. Żołnierze, tak jak inni obywatele, obchodzą święta, celebrują polskie tradycje.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Na zdjęciu Chrisa Niedenthala przedstawione jest kino Moskwa w Warszawie wraz z wiszącym na nim banerem informującym o wyświetlaniu filmu "Czas Apokalipsy". Przed budynkiem stoi czołg, z którego wychodzą żołnierze. Elementem wiążącym fotografię i opowiadanie Marka Nowakowskiego jest przede wszystkim napis umieszczony na fasadzie budowli. Wskazuje on na katastrofalny wymiar wydarzeń rozgrywających się w Polsce od grudnia 1981 roku. Zawiera w sobie przepowiednię - apokalipsa to w judaizmie proroctwo końca świata. Podobnie odczytywać można słowa staruszki z teksu Nowakowskiego - widzi ona na śniegu krew, która jeszcze nie została przelana.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br>

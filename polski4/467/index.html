@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Kontekst historyczny i polityczny</strong></p>
+<p>W latach 1945-1989 szczególnie duży wpływ na kształt rzeczywistości miała rywalizacja między blokiem komunistycznym oraz demokratycznym. Europa została podzielona żelazną kurtyną, pojawiło się napięcie na polu gospodarki, polityki i ideologii (zimna wojna). Sytuacja zmieniła się jednak w 1989 roku, kiedy doszło do załamania komunizmu. Państwa bloku sowieckiego uzyskały niezależność (Jesień Ludów) i możliwa stała się integracja z Zachodem (np. poprzez wstąpienie do UE czy NATO). Ważnym momentem w dziejach stał się także atak na World Trade Center, czyli początek wojny z terroryzmem. </p>
+<p>Z kolei w Polsce po II wojnie światowej doszło do wielkiej migracji ludności. Wywołały ją zmiany terytorialne. Władzę zaczęli zyskiwać komuniści. W związku z tym upaństwowiono gospodarkę oraz ograniczono swobody obywatelskie, rozbudowano zaś aparat kontroli. W systemie politycznym dominująca pozycję zyskała Polska Zjednoczona Partia Robotnicza. Pogarszająca się sytuacja bytowa obywateli doprowadziła do protestów. Chociaż władza starała się stłumić wystąpienia, to ostatecznie w 1980 roku powstał związek zawodowy NSZZ "Solidarność". Jego członkowie domagali się zmian o charakterze politycznym. W odpowiedzi władze wprowadziły stan wojenny, jednak kryzys gospodarczy zmusił komunistów do zmiany postawy. W efekcie symbolicznym zakończeniem komunizmu stały się częściowo wolne wybory - wynik obrad Okrągłego Stołu. Sytuacja gospodarcza była jednak dramatyczna, co doprowadziło do uchwalenia planu Balcerowicza i poprawy poziomu życia. Transformacja ustrojowa ożywiła politykę, możliwe stały się demokratyczne wybory. Ostatecznie Polska stała się członkiem NATO i UE. </p>
+<p> </p>
+<p><strong>Kontekst społeczny </strong></p>
+<p>Okoliczności historyczno-polityczne znacząco wpłynęły na odmienne procesy kulturowe w państwach komunistycznych i demokratycznych. Te pierwsze były izolowane, tłumiono w nich jakiekolwiek przejawy buntu. Dopiero po śmierci Stalina doszło do odwilży. Mimo tego w 1956 roku brutalnie stłumiono węgierskie powstanie, zaś komuniści nadal sprzeciwiali się próbom demokratyzacji życia, co zaowocowało interwencją państw Układu Warszawskiego i przerwaniem Praskiej Wiosny. Ostatecznie jednak zaczęła się kształtować demokratyczna opozycja oraz wytworzył się tzw. drugi obieg, a ostatecznie - w wyniku Jesieni Ludów - doszło do upadku ZSRR. Z kolei na Zachodzie po II wojnie światowej istotny element życia społecznego stanowiła walka o prawa człowieka ukoronowana przyjęciem <em>Powszechnej deklaracji praw człowieka</em>. W państwa demokratycznych wykształciło się społeczeństwo otwarte, doszło też do sprzeciwu wobec wojny wietnamskiej. Ważnym zjawiskiem była takze rewolucja seksualna oraz rozwój feminizmu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowe utwory, w których można dostrzec wpływ współczesnych idei filozoficznych:</p>
+<ul>
+<li>egzystencjalizm -&gt; <em> Dżuma</em>, Albert Camus;   </li>
+<li>personalizm -&gt; <em>Który skrzywdziłeś</em>, Czesław Miłosz;</li>
+<li>strukturalizm -&gt;<em> Namuzowywanie</em>, Miron Białoszewski;</li>
+<li>semiotyka -&gt; <em>Imię róży</em>, Umberto Eco;</li>
+<li>postmodernizm -&gt; J<em>eśli zimową nocą podróżny,</em> Italo Calvino.</li>
+</ul>
+<p> </p>
+<p>Ocena wpływu idei - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe kierunki:</p>
+<table border="1" style="border-collapse: collapse; width: 657px; height: 922px;">
+<tbody>
+<tr style="height: 33px;">
+<td style="background-color: #80cbc4; text-align: center; width: 205.375px; height: 33px;"><strong>Kierunek</strong></td>
+<td style="background-color: #80cbc4; text-align: center; width: 226.375px; height: 33px;"><strong>Cechy </strong></td>
+<td style="background-color: #80cbc4; text-align: center; width: 215.25px; height: 33px;"><strong>Przykład </strong></td>
+</tr>
+<tr style="height: 64px;">
+<td style="width: 205.375px; height: 64px; text-align: center;">ekspresjonizm abstrakcyjny </td>
+<td style="width: 226.375px; height: 64px; text-align: left;">
+<ul>
+<li>odwołuje się do abstrakcyjnej treści;</li>
+<li>wykorzystuje techniki automatyczne (dripping, taszyzm);</li>
+<li>wyróżnia się spontanicznością działania;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 64px; text-align: center;"><em>Numer 7</em>, Pollock</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">neodadaizm</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>swoboda artystyczna;</li>
+<li>częste stosowanie kolażu i fotomontażu;</li>
+<li>nawiązywanie do osiągnieć dadaistów;</li>
+<li>ważna rola fantazji;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Retroactive</em>, Rauschenberg</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">minimalizm</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>zastosowanie oszczędnych form;</li>
+<li>ograniczenie palety barw;</li>
+<li>prostota;</li>
+<li>geometryzacja;</li>
+<li>monochromatyczność;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Roaring forty</em>, Andre </td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">nowy realizm</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>ukazywanie pewnych elementów rzeczywistości;</li>
+<li>wykorzystywanie zużytych przedmiotów;</li>
+<li>zainteresowanie życiem codziennym;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Kichka's Breakfast I,</em> Spoerri</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">street art</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>dotyczy przestrzeni publicznej;</li>
+<li>porusza aktualne problemy;</li>
+<li>często przyjmuje formę graffiti;</li>
+<li>wykorzystuje humor, lekką formę;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Dziecko z bombą</em>, Banksy</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">hiperrealizm</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>realistyczne odwzorowanie szczegółów;</li>
+<li>fotograficzna dokładność przedstawienia;</li>
+<li>obiektywizm;</li>
+<li>gloryfikacja rzeczywistości;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Budki telefoniczne</em>, Estes</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">pop-art</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>odwołuje się do kultury masowej;</li>
+<li>wykorzystuje kolaż;</li>
+<li>intensywna kolorystka, częste kontrasty;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;"><em>Dyptyk Marilyn</em>, Warhol</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 205.375px; height: 33px; text-align: center;">postmodernizm</td>
+<td style="width: 226.375px; height: 33px; text-align: left;">
+<ul>
+<li>brak spójności;</li>
+<li>eklektyzm;</li>
+<li>zainteresowanie popkulturą;</li>
+<li>intertekstualny charakter dzieła;</li>
+<li>niejednoznaczność interpretacyjna;</li>
+</ul>
+</td>
+<td style="width: 215.25px; height: 33px; text-align: center;">instalacja <em>Sztuka konsumpcyjna</em>, Natalia LL</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Postmodernizm, jako nurt, dotyczy różnych dziedzin, np. kultury, filozofii, literatury. Cechuje się tym, że zrywa z regułami modernizmu. Staje się połączeniem odmiennych elementów, konwencji, a także kultur (masowej i wysokiej). Przejawia się też w licznych parafrazach czy cytatach. W odróżnieniu od modernizmu, nawiązującego do tradycji, prezentuje rzeczywistość w rozbity, niejednolity sposób, rezygnuje z wielkich narracji. Bardzo często wykorzystuje za to intertekstualność lub ironię. Wyraża przy tym zwątpienie w postęp cywilizacyjny oraz wyczerpanie dotychczasowych form czy konwencji. Zmusza też odbiorcę do nowego spojrzenia na dzieło.</p>
+<p> </p>
+<p>Odwołanie się do przykładów - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowe rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 664px; height: 459px;">
+<tbody>
+<tr style="height: 54px;">
+<td style="background-color: #aed581; text-align: center; height: 54px; width: 216.844px;"><strong>Pokolenie poetyckie debiutujące po 1945 r. </strong></td>
+<td style="background-color: #aed581; text-align: center; height: 54px; width: 212.609px;"><strong>Założenia</strong></td>
+<td style="background-color: #aed581; text-align: center; height: 54px; width: 224.547px;"><strong>Przedstawiciele</strong></td>
+</tr>
+<tr style="height: 28px;">
+<td style="width: 216.844px; text-align: center; height: 28px;">pokolenie "Współczesności" (pokolenie '56)</td>
+<td style="width: 212.609px; text-align: left; height: 28px;">
+<ul>
+<li>zainteresowanie brzydotą i kalectwem;</li>
+<li>bunt przeciwko dotychczasowej hierarchii wartości;</li>
+<li>szyderstwo;</li>
+<li>zróżnicowanie podejmowanych tematów;</li>
+<li>różnorodność formalna</li>
+</ul>
+</td>
+<td style="width: 224.547px; text-align: left; height: 28px;">
+<ul>
+<li>Andrzej Bursa;</li>
+<li>Miron Białoszewski;</li>
+<li>Zbigniew Herbert;</li>
+<li>Halina Poświatowska;</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 28px;">
+<td style="width: 216.844px; text-align: center; height: 28px;">Nowa Fala (pokolenie '68 lub '70)</td>
+<td style="width: 212.609px; text-align: left; height: 28px;">
+<ul>
+<li>krytyka rzeczywistości;</li>
+<li>poezja jako poszukiwanie prawdy;</li>
+<li>zainteresowanie życiem społecznym oraz politycznym;</li>
+<li>kompromitowanie języka typowego dla propagandy;</li>
+</ul>
+</td>
+<td style="width: 224.547px; text-align: left; height: 28px;">
+<ul>
+<li>Ewa Lipska;</li>
+<li>Adam Zagajewski;</li>
+<li>Ryszard Krynicki;</li>
+<li>Stanisław Barańczak;</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 28px;">
+<td style="width: 216.844px; text-align: center; height: 28px;">Pokolenie "bruLionu"</td>
+<td style="width: 212.609px; text-align: left; height: 28px;">
+<ul>
+<li>intertekstualizm;</li>
+<li>bunt przeciwko dawnym autorytetom;</li>
+<li>negowanie martyrologii, dydaktyzmu;</li>
+<li>podkreślanie znaczenia indywidualizmu;</li>
+<li>prowokacyjny charakter poezji;</li>
+<li>obnażanie wzorców obyczajowych lub patriotycznych;</li>
+</ul>
+</td>
+<td style="width: 224.547px; text-align: left; height: 28px;">
+<ul>
+<li>Marcin Świetlicki;</li>
+<li>Jacek Podsiadło;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowe podobieństwa:</p>
+<ul>
+<li>poeci są bacznymi obserwatorami codzienności; </li>
+<li>zwyczajnym elementom nadają symboliczne znaczenia;</li>
+<li>codzienność staje się dla nich źródłem uniwersalnej refleksji na temat człowieka i jego miejsca w świecie;</li>
+<li>łączy ich humor oraz zdystansowanie względem świata;</li>
+<li>chętnie zestawiają ze sobą przeciwstawne sfery.</li>
+</ul>
+<p> </p>
+<p>Przykładowe różnice:</p>
+<table border="1" style="border-collapse: collapse; width: 587px; height: 243px;">
+<tbody>
+<tr>
+<td style="background-color: #adeaea; text-align: center; width: 290px;"><strong>Codzienność u Szymborskiej </strong></td>
+<td style="background-color: #adeaea; text-align: center; width: 290px;"><strong>Codzienność u Białoszewskiego</strong></td>
+</tr>
+<tr>
+<td style="width: 290px; text-align: center;">Poetka do opisu codzienności wykorzystuje zazwyczaj paradoks, ironię, metafory, personifikację.</td>
+<td style="width: 290px; text-align: center;">Białoszewski chętniej przeprowadza eksperymenty na języku - mają one charakter np. słowotwórczy. Pojawiają się też neologizmy.</td>
+</tr>
+<tr>
+<td style="width: 290px; text-align: center;">Liczne odwołania do rzeczy, konkretnych sytuacji, kultury.</td>
+<td style="width: 290px; text-align: center;">Liczne odwołania do rzeczy - związanych z codziennymi czynnościami lub rozrywką.</td>
+</tr>
+<tr>
+<td style="width: 290px; text-align: center;">Poetka wykorzystuje codzienność, by przedstawić refleksję na temat losu jednostki czy możliwości poznania.</td>
+<td style="width: 290px; text-align: center;">Poeta dąży do sakralizacji codzienności, wyraża nieustanny zachwyt.</td>
+</tr>
+<tr>
+<td style="width: 290px; text-align: center;">Muzyczność w ukazaniu codzienności nie ma takiego znaczenia.</td>
+<td style="width: 290px; text-align: center;">Ważna jest muzyczność w przedstawieniu realiów. </td>
+</tr>
+<tr>
+<td style="width: 290px; text-align: center;">Wątki religijne nie są tak silne obecne.</td>
+<td style="width: 290px; text-align: center;">W ukazaniu codzienności ważne są wątki religijne.</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowo (na podstawie wybranych tekstów): </p>
+<table border="1" style="border-collapse: collapse; width: 664px; height: 524px;">
+<tbody>
+<tr style="height: 55px;">
+<td style="background-color: #80cbc4; text-align: center; height: 55px; width: 328.5px;"><strong>Utwór</strong></td>
+<td style="background-color: #80cbc4; text-align: center; height: 55px; width: 328.5px;"><strong>Relacja człowieka współczesnego z Bogiem</strong></td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 328.5px; height: 45px; text-align: center;"><em>brama</em>, Tadeusz Różewicz</td>
+<td style="width: 328.5px; height: 45px; text-align: center;">Wiersz Tadeusza Różewicza wskazuje na kryzys, który dotyka współczesnego człowieka. Jest on naznaczony nie tylko wojenną traumą, wpływają na niego również współczesne realia życia. Sfera <em>sacrum</em> traci swój wyjątkowy charakter, upodabnia się do doczesności. Z tego też powodu Bóg przestaje być niejako obecny w życiu jednostki. Zaświaty zaś ulegają "demontażowi", stają się puste. Świadczy to o zaniku znaczenia sfery duchowej w życiu współczesnego człowieka. Nie jest ona ani źródłem pociechy, ani nie umożliwia kontaktu ze Stwórcą.</td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 328.5px; height: 45px; text-align: center;"><em>bez</em>, Tadeusz Różewicz</td>
+<td style="width: 328.5px; height: 45px; text-align: center;">Utwór Różewicza wskazuje na niejednoznaczną relację człowieka i Boga. Podmiot liryczny jest rozczarowany milczeniem Pana, "złego ojca". Dogłębnie odczuwa tęsknotę za Nim, ponieważ kiedyś ich relacja była silniejsza. Próbuje zrozumieć przyczyny tego stanu rzeczy. Z tego też powodu oskarża Boga o opuszczenie. Jednocześnie szuka winy w sobie, gdyż w pewnym momencie życia zapomniał o Stwórcy, czuje się ukarany za swą pychę. Odejście Ojca to źródło nieustannego cierpienia, co podkreśla zakończenie: "życie bez boga jest możliwe / życie bez boga jest niemożliwe". Chociaż osoba mówiąca nadal egzystuje, to nic nie może zapełnić pustki wywołanej utratą kontaktu z Bogiem. </td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 328.5px; height: 45px; text-align: center;"><em>Widokówka z tego świata</em>, Stanisław Barańczak </td>
+<td style="width: 328.5px; height: 45px; text-align: center;">Wiersz Barańczaka wyraża rozterki egzystencjalne człowieka, który nieustannie mierzy się ze skomplikowaną, niejednoznaczną rzeczywistością. Poszukuje kontaktu ze Stwórcą, ponieważ czuje się osamotniony, dostrzega słabość ludzkości. Jednocześnie osoba mówiąca ma nieco ironiczny stosunek do Pana. Choć On stworzył człowieka, to w pewnym momencie zostawił swe dzieło, które jest zdane tylko na siebie. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowo (na podstawie wybranych tekstów z podręcznika):</p>
+<p>Postawy moralistyczne w twórczości Stanisława Barańczaka odnoszą się do sytuacji funkcjonowania w systemie totalitarnym. Poeta zdaje się zadawać pytanie: jak pozostać wiernym sobie w sytuacji ograniczenia wolności? Odpowiedzią jest bunt. W utworze <em>Tłum, który tłumi i tłumaczy </em>Barańczak rozpracowuje mechanizm stadnego myślenia, zwracając uwagę na fakt, że udział większości legitymizuje nawet negatywne zachowania, a ludzie w grupie dopuszczają się zachowań, na które nie odważyliby się w pojedynkę. Sprzeciw wobec ślepego podążania za tłumem i branie odpowiedzialności za własne czyny stanowią klucz do zachowania moralności. Podobna refleksja zawarta jest w utworze <em>Wypełnić czytelnym pismem. </em>Niepokorność podmiotu lirycznego sugerują takie pytania jak: "[...] czy żywi / i czym żywi nieufność? skąd czerpie / środki utrzymania się w ryzach / nieposłuszeństwa?". Zachowanie moralności w reżimie łączy się więc nierozerwalnie z nieposłuszeństwem wobec niego.</p>
+<p>Podobne zagadnienie jest obecne w utworze Miłosza pt. <em>Który skrzywdziłeś </em>- to swoista deklaracja etyczna. Podmiot liryczny odwołuje się bowiem do relacji kata i ofiary. Jednoznacznie staje po stronie skrzywdzonego człowieka. Nie ulega więc złu czy konformizmowi. Jednocześnie krytykuje postawę ludzi, którzy stają się pochlebcami tyrana, starają się zdobyć jego przychylność. Osoba mówiąca nie oszczędza także sprawującego władzę. Nie wyraża zgody na krzywdę zwykłego człowieka i niesprawiedliwość, kolejne zbrodnie. Zamiast tego przeciwstawia się rzeczywistości, wprost podważa władzę oraz jej wartość. Uważa nawet, że lepsza byłaby śmierć, nawet hańbiąca, niż taka postawa. Godność i sprawiedliwość to bowiem kluczowe wartości, które zdaniem mówiącego, należy bronić za wszelką cenę. </p>
+<p>Z kolei Zbigniew Herbert zachęca do tego, aby pozostawać człowiekiem, który jest wierny swym zasadom moralnym - mimo przeciwności czy niesprzyjających okoliczności dziejowych. Najpełniej postawa moralistyczna ujawnia się w<em> Przesłaniu Pana Cogito</em>. W utworze tym poeta prezentuje zbiór nakazów uwarunkowanych europejską spuścizną kulturową oraz etyką chrześcijańską. Podmiot liryczny przypomina o tym, że w każdych okolicznościach należy zachować godność. Trzeba zawsze być głosicielem prawdy - odważnym i zdeterminowanym, a jednocześnie pokornym, ponieważ "[...] czyż nie było lepszych". Nie można jednak przy tym zapominać o tradycji, która stanowi źródło nakazów moralnych i wzmacnia wolę właściwego postępowania. </p>
+<p>Postawa moralistyczna u Rymkiewicza jest zaś przedstawiona w kontekście relacji jednostki ze światem. Z tego też powodu poeta kieruje swą uwagę w stronę przedstawicieli świata natury - drzew czy kotów. Sugeruje, że człowiek powinien żyć w z nimi zgodzie, szanować ich mądrość. Kluczowe jest zaakceptowanie uniwersalnych praw rządzących światem oraz przemijania - wpisanego w doczesną egzystencję. Można więc tu dostrzec postawę przepełnioną pokorą oraz fascynacją naturą: "Te moje wiersze nic nie znaczą / Ale czy coś ma tu znaczenie / Koty i brzozy po mnie płaczą / W domu ktoś mieszka jakieś cienie". </p>
+<p>Zagadnienie postawy moralistycznej uobecnia się również w twórczości Tadeusza Różewicza, a często dotyczącej sytuacji człowieka, który doświadczył koszmaru wojny. Poeta wskazuje na to, jakim wyzwaniem staje się powrót do zwykłego życia, kiedy na nowo trzeba przywrócić słowom i zjawiskom ich właściwy sens. Moralna postawa przejawia się ponadto w akceptacji świata i zrozumieniu, że każdy ma swoje przeznaczenie. Nadmierny dydaktyzm nie jest tym samym wskazany, ponieważ niczego nie wnosi. </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przykładowo:</p>
+<p>Twórczość Szymborskiej, Miłosza i Herberta jest niejednokrotnie uważana za przykład poezji intelektualnej. Jak wskazuje sama nazwa, zalicza się do niej utwory liryczne, które odwołują się do intelektu, rozumu, podlegają rygorowi formalnemu. Właściwości te można dostrzec w dziełach wymienionych twórców. U Szymborskiej dominuje precyzja wypowiedzi oraz konkret, który prowadzi do uniwersalnych, filozoficznych rozważań na temat natury człowieka czy jego miejsca w rzeczywistości. Poetka chętnie wykorzystuje ironię, paradoks, element zaskoczenia (jak np. w <em>Nienawiści</em>), natomiast rezygnuje z wizyjności czy nadmiaru środków lirycznych. Również twórczość Miłosza jest zintelektualizowana, bardzo precyzyjna. Poeta ten chętnie porusza zagadnienia związane z moralnością, etyką, postępowaniem człowieka w określonych okolicznościach (<em>Który skrzywdziłeś</em>). Intelektualizm ujawnia się też w strukturze jego wierszy. Miłosz chętnie bowiem nawiązuje do formy traktatu, budowa utworów ma logiczny oraz uporządkowany charakter. Poeta często wykorzystuje również chwyty retoryczne. Niektóre cechy typowe dla twórczości Szymborskiej i Miłosza można również odnaleźć w poezji Herberta. Ona również cechuje się oszczędnością języka, precyzją w wyrażeniu myśli, czego przykładem jest <em>Przesłanie Pana Cogito</em>. Twórca podkreśla znaczenie rozumu, ale również zasad etycznych, którymi powinien kierować się każdy człowiek. </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Przykładowo (na podstawie wybranych tekstów z podręcznika):</p>
+<p>W <em>Smutnym młodzieńcu</em> Baliński aktualizuje przesłanie fragmentu Ewangelii wg św. Marka, wzbogacając je o nowe znaczenia. Początkowo bohater liryczny zapiera się, iż znajduje się w zupełnie innej sytuacji niż jego biblijny pierwowzór ("Nie mam nic do oddania i nic do dzielenia"). Pod wpływem nietypowej prośby Chrystusa uzmysławia sobie, że - choć nie dysponuje żadnym materialnym bogactwem - opiera się przed oddaniem wspomnień. Stawiając znak równości między bohaterem wiersza a młodzieńcem z Ewangelii, Baliński zwraca uwagę na uniwersalny charakter tradycji judeochrześcijańskiej, która zaskakująco trafnie oddaje przywiązanie XX-wiecznych emigrantów do mnemotopicznej (ocalonej w pamięci) ojczyzny.</p>
+<p><em>Madonna z lwem</em> Herberta również wykorzystuje popularne biblijne tropy (Maria, osiołek, cieśla), lecz te łączą się na zasadzie poetyckiego kolażu z zaskakującymi, znoszącymi patos lub absurdalnymi obrazami ("na księżycu tłustym jak karp / i błyszczącym jak talerz golibrody"). Bogactwo stylów i symboli zachęca odbiorcę do odkrywania ukrytych sensów, prowokuje do refleksji oraz intelektualnego wysiłku. W ostatniej strofie poeta wychodzi naprzeciw czytelniczym przyzwyczajeniom - nagromadzenie motywów okazuje się zwyczajną grą językową, literackim eksperymentem na tekście źródłowym. Ironiczna puenta: "Ten lew [...] / wszystko bierze poważnie / pod każdym drzewem węszy symbole" trafnie ilustruje stosunek autora do tradycji biblijnej - Herbert prowadzi z nią artystyczny dialog w ramach poezji "wyzwolonej wyobraźni".</p>
+<p>Również Miron Białoszewski decyduje się na wejście w dialog z dotychczasową tradycją literacką. Chociaż w jego twórczości są obecne motywy religijne, to przetwarza je w nietypowy sposób. Decyduje się bowiem na nieustanne uświęcanie codzienności i sprowadzanie sfery <em>sacrum</em> do życia codziennego. W <em>Podłogo, błogosław!</em>, utworze będącym pochwałą tak banalnej podłogi, porzuca zasady klasycznej twórczości, kultury wysokiej. Zamiast tego stosuje neologizmy, elementy mowy potocznej, za pomocą których oddaje dysharmonię świata. Odkrywa przy tym nieoczywiste piękno codziennosci, jako źródła artystycznej inspiracji.  </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p><span style="font-weight: 400;">Przykładowo (na podstawie utworów zamieszczonych w podręczniku):</span></p>
+<p><span style="font-weight: 400;">Polska literatura emigracyjna jest wewnętrznie zróżnicowana nie tylko ze względu na czas opuszczenia granic Polski przez jej twórców, lecz także stosunek do przebywania na obczyźnie, podejmowaną problematykę czy w końcu zastosowane formalne rozwiązania</span></p>
+<p><span style="font-weight: 400;">Tematyka utworów autorów przebywających poza granicami Polski często bezpośrednio lub pośrednio związana jest z ich doświadczeniem emigracyjnym. Szczególne znaczenie w poezji emigracyjnej zdają się pełnić niematerialne pamiątki po ojczyźnie - wspomnienia. Problem ten podnoszą Stanisław Baliński w utworze </span><em><span style="font-weight: 400;">Smutny młodzieniec </span></em><span style="font-weight: 400;">oraz Kazimierz Wierzyński w </span><em><span style="font-weight: 400;">Kufrze. </span></em><span style="font-weight: 400;">Obaj podkreślają z jednej strony skromność dobytku imigrantów, z drugiej - głębokie przywiązanie do zakorzenionych w pamięci obrazów ojczyzny. Uciekinierzy z Polski zdają się nigdy nie osiedleni, przemieszczając się z całym swym materialnym, a przede wszystkim niematerialnym bagażem, nie mogąc znaleźć ukojenia. Portret Polaka-tułacz kreuje również Czesław Miłosz w utworze </span><em><span style="font-weight: 400;">Moja wierna mowo</span></em><span style="font-weight: 400;">, skupiając się na stosunku poety na obczyźnie do rodzimego języka. </span></p>
+<p><span style="font-weight: 400;">Janusz Głowacki w dramacie </span><em><span style="font-weight: 400;">Antygona w Nowym Jorku </span></em><span style="font-weight: 400;">przedstawia losy pochodzących z różnych części świata bezdomnych. Na problem migracji patrzy więc z szerokiej, a nie jednostkowej, perspektywy, zwracając uwagę na uniwersalność doświadczeń tych, którzy opuścili swoje ojczyzny w poszukiwaniu lepszego życia. Przedmiotem jego zainteresowania jest nie tylko przeszłość emigrantów, lecz przede wszystkim - ich codzienne funkcjonowanie. Podobną perspektywę przyjmuje w swych emigracyjnych wierszach Stanisław Barańczak. Na sytuację w kraju, w którym się znalazł, patrzy okiem przybysza-obserwatora. W utworze </span><em><span style="font-weight: 400;">Drogi kąciku porad </span></em><span style="font-weight: 400;">krytycznie odnosi się do konsumpcjonizmu i płytkości społeczeństw wysokorozwiniętych. Cel podróży, podobnie jak u Głowackiego, nie jest wyidealizowaną ziemią obiecaną, lecz krajem borykającym się z własnymi problemami.</span></p>
+<p><span style="font-weight: 400;">Powtarzającym się zjawiskiem w poezji emigracyjnej jest powracanie do tradycji lirycznej z epok wcześniejszych, np. klasycyzmu czy romantyzmu. Takie tendencje zauważyć można np.  w twórczości Stanisława Balińskiego (</span><em><span style="font-weight: 400;">Monument</span></em><span style="font-weight: 400;">) Czesława Miłosza (</span><em><span style="font-weight: 400;">Ars poetica?</span></em><span style="font-weight: 400;">) czy Zbigniewa Herberta. Poeci czerpią z tradycji literackiej nie tylko w kwestii motywów i tematyki, lecz przede wszystkim formy. Ich utwory powielają klasyczne zasady wersyfikacyjne, są budowane regularnie, z zachowaniem jednostajnego rytmu. Często pojawiają się w nich rymy i znaki interpunkcyjne. Brak form eksperymentalnych można wyjaśnić pragnieniem odniesienia się twórców emigracyjnych do tego, co im znane i bliskie. Poprzez zastosowanie klasycznych wzorców  wskazują, że ich poezja zwraca się raczej ku przeszłości, niż w przyszłość. </span></p>
+<p><br/><br/></p><br><a style="color:red; font-size:25px;">Zadanie 15</a><br>
+<p><strong>Postawa wyprostowana</strong> - postawa ta wiąże się ściśle z dochowaniem wierności wyznawanym przez siebie zasadom. Polega także na zachowaniu godności w każdych okolicznościach. Odniesienie do niej można odnaleźć w utworze Zbigniewa Herberta, pt. <em>Przesłanie Pana Cogito</em>. Utwór ten wskazuje na to, że trzeba być nieugiętym nawet w najtrudniejszym czasie i zawsze należy głosić prawdę. Człowiek wybierający postawę wyprostowaną jest odważny, zdeterminowany, ale też pełen pokory. Nie obawia się poświęcenia w imię najwyższych wartości. </p>
+<p> </p>
+<p><strong>Konformizm</strong> - postawa, która polega na tym, że jednostka rezygnuje ze swoich poglądów, systemu wartości na rzecz bezkrytycznego dostosowania się do norm panujących w określonej grupie społecznej.  Takie zachowanie reprezentują anonimowe osoby z wiersza Czesława Miłosza pt. <em>Który skrzywdziłeś. </em>Ignorują one zło dokonywane przez tyrana i wręcz zabiegają o jego przychylność, ponieważ troszczą się wyłącznie o swoje dobro. Z tego powodu podmiot liryczny określa ich mianem "gromady błaznów". </p>
+<p> </p>
+<p><strong>Konsumpcjonizm</strong> - postawa charakteryzująca się nadmiernym skupieniem na gromadzeniu dóbr materialnych i traktowaniu ich jako wyznacznika jakości życia. Jej pojawienie się związane jest z rozwojem kultury masowej, kapitalizmem, boomem gospodarczym po drugiej wojnie światowej. Stanisław Barańczak w utworze <em>Drogi kąciku porad</em> komentuje rzeczywistość, jaką zastał na emigracji w Stanach Zjednoczonych. Społeczeństwo konsumpcyjne zdaje się nie zwracać uwagi na krzywdę ludzką, troszczą się raczej o własną wygodę i wrażenia estetyczne. Udzielane w tytułowym telewizyjnym kąciku porad rady są trywialne, ogólnikowe. Postawa konsumpcjonizmu, charakteryzująca gospodarki zachodnie, oceniana jest więc skrajnie negatywnie - jako pozbawiona wartości i płytka.</p>
+<p> </p>
+<p><strong>Indywidualizm</strong> - postawa, która przejawia się w tym, że ktoś jest bardzo niezależny, postępuje w zgodzie ze swoimi zasadami, które niekoniecznie muszą być uznane przez ogół. Postawa ta jest obecna w kreacji podmiotu lirycznego z wiersza Mirona Białoszewskiego, <em>Podłogo, błogosław!</em>. Osoba mówiąca - w przeciwieństwie do innych - jest zafascynowana codziennością, nadaje jej sakralny wymiar. Indywidualizm przejawia się także w języku, który wykorzystuje gry językowe czy swobodne skojarzenia. </p><br><a style="color:red; font-size:25px;">Zadanie 16</a><br>
+<p><span style="font-weight: 400;">Na podstawie utworów zamieszczonych w podręczniku:</span></p>
+<p><span style="font-weight: 400;">Mianem poetów lingwistycznych określa się takich twórców, którzy w centrum swoich utworów stawiają język. Przekształcenia w jego obrębie i nietypowe skojarzenia prowadzą do odkrywania zaskakujących, ukrytych znaczeń. Za prekursora poezji lingwistycznej w Polsce uważa się Mirona Białoszewskiego. W utworze </span><em><span style="font-weight: 400;">namuzowywanie </span></em><span style="font-weight: 400;">wykorzystuje on możliwości języka w zakresie słowotwórstwa, by opisać proces twórczej kreacji. Użycie neologizmów zmusza odbiorcę do intelektualnego pochylenia się nad tekstem i głębszej analizy tegoż. To z kolei prowadzi go do refleksji nad procesem zarówno pisania, jak i odczytywania znaczeń. Poezja Mirona Białoszewskiego zdaje się wypływać z zachwytu nad  tym, co zwykłe, codzienne, a przez to niedostrzegane, w tym - nad językiem i nieograniczonością jego przekształceń. Kreatywne wykorzystanie gramatyki i tworzenie nowych słów pozwala dokładniej oddać zamysł poety, jak gdyby istniejący system nie był wystarczającym narzędziem do uchwycenia rzeczywistości.</span></p>
+<p><span style="font-weight: 400;">Inną formę przybiera poezja lingwistyczna w wykonaniu Stanisława Barańczaka. Skupienie poety na języku ma raczej na celu demaskację jego niedoskonałości. W utworze </span><em><span style="font-weight: 400;">Tłum, który tłumi i tłumaczy </span></em><span style="font-weight: 400;">uwaga czytelnika zostaje zwrócona na nielogiczność semantyczną - wyrazy, które brzmią podobnie mają niepowiązane ze sobą znaczenia. Barańczak wykorzystuje ten paradoks, by wypunktować własności tytułowego tłumu - anonimowość, bierność, brak odpowiedzialności czy skłonność do podążania za większością. Z kolei w tekście <em>Wypełnić c</em></span><em><span style="font-weight: 400;">zytelnym pismem </span></em><span style="font-weight: 400;">autor skupia się na innym aspekcie języka - stylu urzędowym. Zastosowanie  formuł kojarzących się z treścią ankiet  służy odkryciu przed odbiorcą fałszu komunistycznej nowomowy. Nietypowe zestawienia utartych zdań z formularza z metaforycznymi pytaniami retorycznymi prowadzi do refleksji na temat stanu człowieka żyjącego w systemie totalitarnym.</span></p><br><a style="color:red; font-size:25px;">Zadanie 17</a><br>
+<p><span style="font-weight: 400;">Przykładowo (na podstawie fragmentów lektur zamieszczonych w podręczniku):</span></p>
+<p><span style="font-weight: 400;">Władze w systemie totalitarnym dokonują zniewolenia społeczeństwa na wiele sposobów. Jednym z nich jest sterowanie językiem i pamięcią zbiorową, jak przedstawił to George Orwell w </span><em><span style="font-weight: 400;">Roku 1984. </span></em><span style="font-weight: 400;">Twórcy opisanego tam totalitaryzm, tzw. angsocu dokonali szeroko zakrojonych zmian w systemie językowym używanym przez obywateli Oceanii. Ze słowników usunięto słowa mogące wyrażać nastroje niezgodne z tymi akceptowanymi przez władze. Nazwy niewygodnych dla partii wartości, takich jak honor czy wolność, nie otrzymały swoich odpowiedników w nowomowie. Społeczeństwo nie miało więc możliwości obalenia reżimu, nie było bowiem w stanie mówić, a nawet myśleć o innej rzeczywistości niż ta, w której funkcjonuje. </span></p>
+<p><span style="font-weight: 400;">Podobne zadanie spełniało manipulowanie faktami z przeszłości, systemowo prowadzone przez Ministerstwo Prawdy. Dokonywano zmian w archiwizowanych tekstach prasowych i treści literatury tak, by dopasować wydarzenia z przeszłości do panującej obecnie narracji. Osoby zagłębiające się więc w historię Oceanii zapoznawałaby się z faktami korzystnymi z punktu widzenia rządzących. Niekonsekwencja w poglądach głoszonych przez partię miała nie zostać nigdy wykryta. Zniewolenie miało więc poniekąd charakter tajny, ludzie nie zdawali sobie bowiem sprawy z niesprawiedliwości, która ich dotyka. Nie byli świadomi faktu, że władza steruje tym w jaki sposób postrzegają rzeczywistość. Zniewolenie poprzez sterowanie językiem i pamięcią zbiorową (manipulowanie faktami z przeszłości) </span></p>
+<p><span style="font-weight: 400;">Zniewolenie społeczeństwa przekłada się na sposób widzenia rzeczywistości. Tadeusz Konwicki w </span><em><span style="font-weight: 400;">Małej apokalipsie </span></em><span style="font-weight: 400;">opisuje Warszawę jako miejsce ponure, zaniedbane, brudne. Pałac Kultury, budzący niegdyś postrach symbol epoki stalinizmu, w czasach powieści popada w ruinę; rodzi raczej obrzydzenie niż nienawiść. Można przyjąć więc, że i stosunek społeczeństwa do reżimu uległ zmianie. Ludzie przyzwyczaili się do ograniczeń systemu totalitarnego i nauczyli funkcjonowania w nim. Kolejne pokolenia wkraczają dorastają i wkraczają w dorosłość, nie znając życia w państwie demokratycznym. Ograniczenie praw obywateli zdaje się nie być tak ewidentne, jak przed laty, Konwicki określa je mianem “przezroczystego zniewolenia”. Pragnienie osobistej wolności zastąpione zostaje przez pobudki materialne, chęć wybicia się, ambicje. Narrator zauważa, że, począwszy od drugiej wojny światowej, degradacji ulegają takie wartości jak honor i godność. Romantyczne pragnienie walki narodowowyzwoleńczej zastąpione zostało przez marazm i apatię. Misja głównego bohatera jest więc groteskową próbą wzbudzenia w społeczeństwie ducha narodu.</span></p><br><a style="color:red; font-size:25px;">Zadanie 18</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 19</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 20</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Cechy reportażu literackiego (na podstawie zamieszczonych w podręczniku fragmentów <em>Podróży z Herodotem</em>):</p>
+<ul>
+<li>aktualna lub uniwersalna problematyka ("W miarę podróży nabierałem przeświadczenia o deprymującej beznadziei tego, co robię, o niemożności poznania i zrozumienia kraju, w którym jestem."); </li>
+<li>szczególna rola autora polegająca na uczestnictwie w opisywanych zdarzeniach ("Coś powiedział do mnie, czego nie zrozumiałem.");</li>
+<li>autentyczność i sprawozdawczość ("Ubrani są różnie, w zależności od funkcji i rangi: od złocistych turbanów spiętych drogimi kamieniami po proste dhoti [...].")</li>
+<li>dokumentalizm ("[...] cały okręg Górnego Karabachu, który jest ormiańską enklawą na terytorium Azerbejdżanu, był otoczony przez oddziały Armii Czerwonej i milicji azerbejdżańskiej.");</li>
+<li>łączenie obiektywizmu i subiektywizmu ("Stare Delhi! Jego wąskie ulice w kurzu, w upiornym upale, w duszącym zapachu tropikalnej fermentacji.");</li>
+<li>plastyczność opisu ("Tłum kamerdynerów, lokajów, kelnerów, służących i szatnych, specjalistów od parzenia herbaty i lukrowania ciastek, prasowaczy i gońców, tępicieli moskitów i pająków [...].");</li>
+<li>funkcja estetyczna ("Bez pamięci nie można żyć, ona przecież wynosi człowieka ponad świat zwierząt, stanowi postać jego duszy, a zarazem jest tak zawodna, nieuchwytna, zdradliwa.");</li>
+<li>swoboda kompozycyjna ("Na ten szczegół od razu zwróciłem uwagę, ponieważ na punkcie butów mam lekkiego fioła. Wziął się on jeszcze z czasów wojny, z lat okupacji. Pamiętam, że zbliżała się zima roku 1942, a ja nie miałem butów.") i stylistyczna ("Broń Boże poprosić kogoś, kto prasuje koszulę, żeby przyszył mi do niej guzik.").</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 21</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Wybrane cechy gatunkowe eseju literackiego na podstawie fragmentów "Sieny" Zbigniewa Herberta:</p>
+<ul>
+<li>swoboda kompozycyjna przy jednoczesnym zachowaniu spójności wywodu oraz literackiej dyscypliny ("Wielu historyków sztuki twierdzi, że...", "Na obronę sieneńskiego Il Duomo można przytoczyć wiele argumentów.");</li>
+<li>indywidualizm w zakresie formy (dygresje, np. "Przymykam oczy, aby przypomnieć sobie Chartres."), stylu ("Dawniej znajdowały się tutaj <em>Trzy Gracje</em>, ale któryś z duchownych, zgorszony ich piękną golizną, odesłał je do muzeum.") oraz sposobu argumentacji ("Plany, przenikające się perspektywy, architektura i pejzaż tworzą doskonale zharmonizowaną zamkniętą całość.");</li>
+<li>bogactwo środków poetyckich ("Katedra [...] jest jak wzniesiony w górę biało-czarny herb miasta i jak śpiew, który wzlatuje i spada kaskadą rzeźb, lazurowych łuków i złotych gwiazd.") oraz retorycznych ("Na czym polega istota gotyku? Czy jest to zasada konstrukcji, czy też styl, a więc zasada estetyczna?");</li>
+<li>subiektywny ton wypowiedzi ("Mamy wrażenie, że znajdujemy się pod krytym portykiem, otoczeni przez wszystkie wspaniałości szczęścia i sztuki [...].");</li>
+<li>erudycyjność ("Trzy portale wieńczą pełne łuki, a tympanony bez rzeźb są w istocie romańskie.").</li>
+</ul>
+<p> </p>
+<p>Druga część zadania - indywidualna </p><br>

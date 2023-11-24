@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="height: 240px; width: 913px; border-collapse: collapse; text-align: center; border-color: #9ACD32;">
+<tbody>
+<tr>
+<td style="width: 301px;"><strong>Verb</strong> (czasownik)</td>
+<td style="width: 301px;"><strong>Noun</strong> (rzeczownik)</td>
+<td style="width: 301px;"><strong>Adjective</strong> (przymiotnik)</td>
+</tr>
+<tr>
+<td style="width: 301px;">
+<p>create (tworzyć) </p>
+<p>develop (rozwinąć)</p>
+<p>interact (nawiązać kontakt, oddziaływać na siebie, współpracować)</p>
+<p>predict (przewidywać)</p>
+</td>
+<td style="width: 301px;">
+<p>communication (komunikacja)</p>
+<p>critic (krytyk)</p>
+<p>secret (tajemnica)</p>
+<p>silence (cisza)</p>
+</td>
+<td style="width: 301px;">
+<p>intelligent (inteligentny)</p>
+<p>secret (sekretny)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Uwaga! Pozostałą część zadania należy wykonać samodzielnie.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. B</p>
+<p><strong>Fragment w tekście:</strong> "Anything that the user 'messages' from the brain to the facial muscles can be picked up by the headset, so if you want to find out what the weather will be like tomorrow, you can mouth the question 'Weather tomorrow?' and the headset will respond by giving you a weather forecast through a small earphone." - Wszystko, co użytkownik "wysyła" z mózgu do mięśni twarzy może zostać odebrane przez zestaw słuchawkowy, więc jeśli chcesz się dowiedzieć, jaka będzie jutro pogoda, możesz bezgłośnie powiedzieć "Pogoda jutro?", a zestaw odpowie przedstawiając prognozę pogody przez małą słuchawkę. </p>
+<p>2. D</p>
+<p><strong>Fragment w tekście:</strong> "Musk is predicting that in a few years, we will be able to implant tiny electronic devices in the brain which will merge machine and human (...)." - Musk przewiduje, że w ciągu kilku lat będziemy zdolni wszczepić do mózgu malutkie urządzenie elektroniczne, które połączy maszynę z człowiekiem (...). </p>
+<p>3. C</p>
+<p><strong>Fragment w tekście:</strong> "Tech experts are convinced such devices and implants will be in general use within the next decade." - Eksperci od technologii są przekonani, że takie urządzenia i implanty będą powszechnie używane w ciągu najbliższej dekady. </p>
+<p>4. D</p>
+<p><strong>Fragment w tekście:</strong> "(...) you will be communicating with other people only through your thoughts." - (...) będziemy się komunikować z innymi wyłącznie za pomocą myśli. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. The writer uses the example of films to make the topic of the text more familiar and to help the readers imagine the situation. He or she might also refer to films to emphasise how state-of-the-art the idea is.  </p>
+<p>2. A user of AlterEgo would think about what he/she wants to look up and then mouth the key phrases. </p>
+<p>3. Elon Musk is currently developing an implant that will enable people to connect to different devices by use of thoughts only. </p>
+<p>4. An implant will be embedded into a person's brain and it will connect to other electronic devices and read the person's thoughts.</p>
+<p>5. Thanks to mind-reading technology, people will no longer need to use writing or speech to communicate. </p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>1. Autor używa przykładu filmów, żeby zaznajomić czytelnika z tematem tekstu i pomóc mu wyobrazić sobie sytuację. Może też odnosić się do filmów, żeby podkreślić jak nowatorski jest ten pomysł. </p>
+<p>2. Użytkownik AlterEgo pomyślałby o tym, co chce wyszukać i następnie bezgłośnie wypowiedziałby słowa kluczowe.</p>
+<p>3. Elon Musk pracuje obecnie nad implantem, który sprawi, że ludzie będą zdolni łączyć się z innymi urządzeniami wyłącznie za pomocą myśli.</p>
+<p>4. Implant będzie wszczepiony do mózgu człowieka i połączy się z innymi urządzeniami elektronicznymi oraz będzie czytał jego myśli. </p>
+<p>5. Dzięki technologii czytającej w myślach ludzie nie będą musieli już używać pisma ani mowy, żeby się komunikować. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. merge (łączyć, scalać) </p>
+<p>2. link up (łączyć)</p>
+<p>3. making strides (robić postęp)</p>
+<p>4. artificial (sztuczny)</p>
+<p>5. picked up (odebrany, otrzymany)</p>
+<p>6. enhancing (zwiększający, poprawiający)</p>
+<p>7. wearable (możliwy do noszenia)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. secret</p>
+<p>(Wierzysz w <strong>sekretne</strong> projekty dotyczące najnowocześniejszej technologii, które są trzymane w tajemnicy przed społeczeństwem?) </p>
+<p>2. enhancing</p>
+<p>(Czy rozwój technologii rzeczywiście <strong>poprawia</strong> jakość naszego życia, czy robi więcej szkody niż dobrego?)</p>
+<p>3. pick up</p>
+<p>(Czy ludzie naprawdę odbierają sygnały z innych planet, czy to oszustwo?)</p>
+<p>4. merge</p>
+<p>(Jeśli technologia i sport <strong>scalą się</strong>, czy takie połączenie będzie dobre dla sportowej rywalizacji?)</p>
+<p>5. wearable</p>
+<p>(Co jest ważniejsze w przypadku urządzeń, <strong>które się nosi</strong>, wzór czy funkcjonalność?)</p>
+<p>6. communication</p>
+<p>(Czy mowa pozostanie głównym sposobem <strong>komunikacji</strong> w najbliższej przyszłości?)</p>
+<p>7. strides</p>
+<p>(Która dziedzina nauki zrobi największy <strong>postęp</strong> w ciągu najbliższych dwóch dekad?)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Oboje autorzy uważają, że pseudonim pozwala na zachowanie anonimowości w przestrzeni publicznej. Bartek Czartoryski powołuje się na przykłady znanych twórców, którzy - nierzadko za namową wydawców - skutecznie zataili przed czytelnikiem swą prawdziwą tożsamość. Niektórzy starali się w ten sposób spopularyzować książkę napisaną przez kobietę (J.K. Rowling) lub odseparować karierę literacką od innej działalności zawodowej (John le Carré), inni pragnęli doświadczyć ponownego debiutu (Robert Gilbraith, Richard Bachman, Ove Løgmansbø), a jeszcze inni najzwyczajniej wstydzili się swego dzieła (Aleksander Głowacki).</p>
+<p>Podobną funkcję do fikcyjnych nazwisk pisarzy pełnią pseudonimy internetowe. Alina Naruszewicz-Duchlińska uważa je za doraźne, niewiążące formy identyfikacji danego użytkownika ("[...] nick w danym momencie spełnia właściwe zadanie, wyróżniając swego twórcę i nosiciela [...] z grona innych internautów."). Nicki mogą być wielokrotnie dostosowywane w zależności od indywidualnych potrzeb internautów, zapewniając przy tym niemal całkowitą anonimowość. Wiedzą o tym autorzy kontrowersyjnych lub prowokacyjnych wypowiedzi, którzy z obawy przed negatywnymi konsekwencjami swych działań regularnie zmieniają wirtualną tożsamość, w pewnym sensie "<em>stwarzając </em>siebie na nowo".</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Stwierdzenie Aliny Naruszewicz-Duchlińskiej - dotyczące kreowania osobowości za pomocą nicków - może również odnosić się do pseudonimów używanych przez twórców literatury, choć to niezwykle rzadkie zjawisko. Zazwyczaj fikcyjne nazwiska służą doraźnym, ściśle pragmatycznym celom wydawniczym - po ujawnieniu prawdziwej tożsamości autorów dezaktualizują się i tracą autentyzm. Rzadko zdarza się, że pseudonim daje początek barwnej, złożonej osobowości, swoistemu alter ego pisarza. Tak było w przypadku Stephena Kinga, którego szczególna więź z Richardem Bachmanem stała się tematem jednej z książek ("Aż szkoda, że mało kto, jak King, postanowił się z tym zmierzyć na kartach swoich książek, pociągnąć to dalej, zrobić istną opowieść z opowieści.").</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Część indywidualna</p>
+<p> </p>
+<p>b) Określenia "sekretne tożsamości" oraz "<em>konspiracyjna </em>tożsamość" odnoszą się do podstawowej funkcji pseudonimu, polegającej na zapewnieniu danej osobie trwałej lub doraźnej anonimowości.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>a) Środki poetyckie nadające utworowi charakter eksperymentu lingwistycznego:</p>
+<ul>
+<li>onomatopeiczne parentezy - wyrażenia lub zdania wtrącone w nawias ("odchrząknięcie", "bulgot z karafki");</li>
+<li>elipsy, których znaczenia nie można zrekonstruować na podstawie kontekstu ("[...] w epoce / ciągłych wysiłków na rzecz");</li>
+<li>przerzutnie, nieuzasadniona interpunkcja ("[...] z tego / trzeba sobie [...] zdać z całą jasnością. / Sprawę.");</li>
+<li>antonimy naśladujące mowę potoczną ("nieprawda");</li>
+<li>zaburzone związki składniowe ("[...] w / epoce narastających i zaostrzających się i tak dalej [...], nieprawda. Konfliktów.");</li>
+<li>rozbicie poszczególnych wyrazów na dwie części ("e [...] poce");</li>
+<li>paronomazje, wielosłowie ("[...] i ja bym tu podkreślił, / [...] że na tej podstawie zostaną / nakreślone perspektywy, wykreślane będą / zdania, które nie podkreślają dostatecznie, oraz / przekreślone zostaną [...] rachuby");</li>
+<li>polisemie ("Skoro nie widzę, widzę, że będę wyrazicielem");</li>
+<li>powtórzenia ("[...] taka / jest prawda, nieprawda, / i innej prawdy nie ma.");</li>
+<li>slogany ("żyjemy w określonej epoce").</li>
+</ul>
+<p> </p>
+<p>b) Wykreowany w<em> Określonej epoce </em>Barańczaka obraz świata wydaje się chaotyczny, niespójny i groteskowy - jako taki znajduje odzwierciedlenie w bełkotliwym, pozbawionym sensu monologu osoby mówiącej. Język utworu w karykaturalny sposób nawiązuje do totalitarnej nowomowy, mającej na celu narzucenie odbiorcy arbitralnej (niepodlegającej dyskusji) wizji rzeczywistości ("[...] taka / jest prawda, nieprawda, / i innej prawdy nie ma."). Wiersz Barańczaka trafnie opisuje realia PRL-u - ówczesne władze komunistyczne świadomie manipulowały obywatelami, przedkładając wartościujący aspekt komunikatu nad jego znaczenie. W świecie ukształtowanym przez język propagandy fakty nie były tak istotne jak ich określona interpretacja, na co wskazuje pozbawione sensu - lecz opiniotwórcze - przemówienie podmiotu lirycznego, najprawdopodobniej rzecznika partii rządzącej ("[...] wykreślane będą / zdania, które nie podkreślają dostatecznie").</p><br>

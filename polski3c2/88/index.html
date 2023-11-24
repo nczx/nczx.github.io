@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Pocz¹tkowo Mochnacki wybiera muzykê, któr¹ mo¿na okreœliæ jako subteln¹, optymistyczn¹, przepe³nion¹ piêknem, poniewa¿ byæ mo¿e odpowiada ona upodobaniom s³uchaczy. Z ka¿dym jednak kolejnym momentem staje siê coraz smutniejsza. Pewne za³amanie oraz zmianê brzmienia sugeruje fragment: "I nagle siê rozp³aka³ po klawiszach sztajer / [...] / Jakieœ myœli chce straszne wyrzuciæ z pamiêci". Szmer na sali oraz bolesne wspomnienia sprawiaj¹, i¿ wirtuoz pogr¹¿a siê w swych myœlach - one zaœ znajduj¹ swe odzwierciedlenie w muzyce. Kojarzy siê ona z walkami Polaków, natomiast zgromadzonym wydaje siê, i¿ s³ysz¹ dzwonienie ostróg. Kolejne melodie przywo³uj¹ czyny polskich wojsk oraz tradycjê szlacheck¹, wyró¿niaj¹ siê intensywnoœci¹ oraz si³¹, prowadz¹ do nieuchronnego fina³u. Oniemia³a sala obserwuje Mochnackiego, który ostatecznie zatrzaskuje wieko klawikordu. Jego zachowanie budzi pop³och wœród s³uchaczy, poniewa¿ nie wytrzymuj¹ napiêcia: "[...] Uciekaæ! Krew pachnie w tej sali!!!". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>Na pocz¹tku Mochnacki zdaje siê byæ niepewny - ostro¿nie próbuje akordów. Dog³êbnie odczuwa te¿ dystans, który dzieli go od widowni, jej obcoœæ. Bohater zachowuje spokój, stara siê sw¹ gr¹ zadowoliæ odbiorców. W pewnym momencie dochodzi jednak do swoistego za³amania, zmiany emocji: "I nagle siê rozp³aka³ po klawiszach sztajer". Od tego momentu Mochnacki ulega swym wspomnieniom, têsknocie. Popada w rozgor¹czkowanie, zdaje siê wrêcz oddawaæ brzmieniom, które przejmuj¹ nad nim kontrolê. Roztacza przed s³uchaczami bogactwo treœci: "Wiêc do basu ucieka i têpo wen t³ucze, / Po tym tañcu szalonym niech rêce przep³ucze, / Z tych czerwonych, dusz¹cych ró¿ otrz¹sa p³atki". Zatraca siê w muzyce, która staje siê Ÿród³em zruszenia, lecz tak¿e przywo³uje na myœl obrazy z historii oraz tradycji Polski: "I wali, wali w basie murem Saragossy"; "Zatrzymali siê wszyscy w srebrzystych kontuszach". Gra wywo³uje w Mochnackim smutek i ¿al. Przez to w finale, pod wp³ywem silnych emocji, wrêcz gubi tony i ostatecznie zatrzaskuje wieko. Ta gradacja uczuæ podkreœla intensywnoœæ doznañ bohatera - przesz³oœæ znajduje swe odbicie w muzyce, ona zaœ odzwierciedla jego stan ducha oraz rozterki. Zabieg ten buduje tak¿e narastaj¹ce napiêcie - a¿ do dramatycznego gestu Mochnackiego. Ucina on w gwa³towny sposób grê mê¿czyzny, ale tak¿e ci¹g nieporozumieñ ze s³uchaczami, których oczekiwania s¹ sprzeczne ze stanem ducha bohatera.      </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>a) <span style="text-decoration:underline;">epitety - podkreœlenie</span></p>
+<p><strong>metafory - pogrubienie</strong></p>
+<p> </p>
+<p><em><strong>Rozpêdzi³ <span style="text-decoration:underline;">blade</span> palce œwiergotem <span style="text-decoration:underline;">w wiolinie</span></strong></em></p>
+<p><em>I <strong><span style="text-decoration:underline;">ma³y, smutny</span> strumieñ spod rêki mu p³ynie.</strong> </em></p>
+<p><em>Raz w raz <strong>rosa po <span style="text-decoration:underline;">bia³ej</span> pryska klawiaturze</strong></em></p>
+<p><em>I raz po raz <strong>w wiolinie kwitn¹ <span style="text-decoration:underline;">polne</span> ró¿e.</strong></em></p>
+<p>Zastosowane epitety i metafory przyczyniaj¹ siê do ukonkretnienia obrazu gry Mochnackiego. Zostaje jej nadane szczególne znaczenie, poniewa¿ kreuje ona now¹ rzeczywistoœæ. Muzyka zyskuje niezwyk³y status - oddzia³uje na zmys³y, a przy tym odzwierciedla prze¿ycia i emocje bohatera tekstu. U¿yte œrodki wyrazu sugeruj¹ tym samym subtelnoœæ oraz melancholijny charakter dŸwiêków, swoist¹ kameralnoœæ. Wra¿enie to pog³êbia odniesienie do strumyka oraz œwiata natury, wywo³uje wra¿enie harmonii. </p>
+<p> </p>
+<p> </p>
+<p>b) <strong>antropomorfizacje - pogrubienie </strong></p>
+<p> </p>
+<p><em>Ostrog¹ spi¹³ melodiê, a <strong>akompaniament</strong></em></p>
+<p><em><strong>Szaleje, krzyczy w basie, roœnie w straszny zamêt - </strong></em></p>
+<p><em><strong>Ku sali bagnetami ju¿ mierzy</strong>, ju¿ blisko - </em></p>
+<p><em>I ton jeden uparcie wybija - nazwisko!!!</em></p>
+<p>Antropomorfizacja polega na nadaniu akompaniamentowi cech typowych dla ludzi. Tym samym poeta zdaje siê mu nadawaæ autonomiê, uniezale¿nia go od artysty, co wp³ywa na oryginalnoœæ przedstawienia i uwypukla jego specyfikê. Metafora "ostrog¹ spi¹³ melodiê" podkreœla z kolei si³ê brzmieñ. S¹ one dzikie, nieokie³znane - wymagaj¹ wiêc pewnego ograniczenia, podporz¹dkowania. Tym samym graj¹cy staje siê niczym jeŸdziec, który musi przej¹æ kontrolê nad narowistym koniem. Zastosowane œrodki jêzykowe zaznaczaj¹ gwa³townoœæ oraz si³ê dŸwiêków, która wywo³uje wra¿enie chaosu. Akompaniament zostaje wrêcz przedstawiony jako wojownik kieruj¹cy bagnet w stronê s³uchaczy, co wzmacnia poczucie niepokoju, napiêcia.</p>
+<p> </p>
+<p>c) Fragmenty te odwo³uj¹ siê do przeciwnych brzmieñ. W pierwszym z nich dominuj¹ ³agodne, harmonijne oraz niezbyt intensywne brzmienia. Z kolei w drugim wzrasta ich si³a, nieporz¹dek. S¹ one wrêcz dzikie oraz dominuj¹ce, wywo³uj¹ te¿ inne odczucia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Mochnacki poprzez swoj¹ grê przywo³uje okreœlone obrazy oraz sceny z historii Polski. Wa¿nym elementem jego wyst¹pienia staj¹ siê tak¿e tradycja walki. Bohater zdaje siê o¿ywiaæ wspomnienia, powo³ywaæ je do ¿ycia, przez co oddzia³uj¹ one na s³uchaczy. Jego dzia³ania nie s¹ tylko Ÿród³em doznañ estetycznych, lecz równie¿ ukazuj¹ prze¿ycia i wewnêtrzne rozterki: "Jakieœ myœli chce straszne wyrzuciæ z pamiêci, / Do piersi jak¹œ bia³¹ przytuli³ pierœ dr¿¹c¹". Wspomnienia minionych chwil, têsknota, mi³oœæ tym samym przez moment nale¿¹ do teraŸniejszoœci, nie s¹ tylko cieniem odleg³ych czasów. W muzyce Mochnackiego zamyka siê opowieœæ o d¹¿eniach narodu:</p>
+<p><em>I wali, wali w basie murem Saragossy,</em></p>
+<p><em>Oszala³ych Hiszpanów wyciem, darciem, jêkiem</em></p>
+<p><em>i Znów wraca ku górze za³zawionym dŸwiêkiem -</em></p>
+<p><em>W mazurze - nie - w mazurku id¹ wszystkie pary,</em></p>
+<p><em>By ca³¹ klawiaturê owin¹æ w sztandary.</em></p>
+<p><em>Zatrzymali siê wszyscy w srebrzystych kontuszach,</em></p>
+<p><em>A klawikord im ducha rozp³omienia w duszach</em></p>
+<p><em>I wzd³u¿ d³ugich szeregów przewija pas lity,</em></p>
+<p><em>Tysi¹c g³ów podgolonych podnosi w b³êkity. </em></p>
+<p>W tym fragmencie poeta odnosi siê przede wszystkim do obecnoœci rodaków w wojskach napoleoñskich, tradycji mazura oraz dziedzictwa Polski szlacheckiej. Muzyka wykracza poza swoje typowe funkcje, poniewa¿ staje siê stra¿nikiem pamiêci, a jednoczeœnie pozwala Mochnackiemu na uzewnêtrznienie swych prze¿yæ. Tym samym gra bohatera jest ¿ywa, przepe³niona emocjami, przy tym prowadzi do na³o¿enia siê dwóch rzeczywistoœci: minionej i teraŸniejszej. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Muzycznoœæ utworu literackiego polega na tym, ¿e pewne zjawiska typowe dla dzie³ muzycznych mo¿na przypisaæ tak¿e tekstom literackim; opiera siê wiêc ona na zauwa¿alnym zwi¹zku miêdzy tymi dziedzinami. Poprzez odpowiedni¹ strukturê, wykorzystane œrodki artystyczne, regularnoœæ budowy itd. literatura zyskuje konkretne walory brzmieniowe. Zabieg ten ponadto pozwala na zaakcentowanie zwi¹zków literatury ze œwiatem muzyki, a wiêc œwiadczy o korespondencji sztuk. Ponadto wzmacnia oddzia³ywanie tekstu na zmys³y czytelnika i pog³êbia jego odbiór. Muzycznoœæ mo¿e tak¿e wp³ywaæ na nastrojowoœæ, kreowaæ odpowiedni¹ atmosferê lub te¿ wspó³graæ z treœci¹ dzie³a. </p>
+<p> </p>
+<p>Przejawy muzycznoœci wiersza:</p>
+<ul>
+<li>onomatopeje -&gt; "œwiergotem", "rykn¹³";</li>
+<li>sta³a liczba sylab w wersach -&gt; trzynastozg³oskowiec;</li>
+<li>obecnoœæ rymów parzystych -&gt; <em>wiolinie - p³ynie, p³atki - zagadki</em>;</li>
+<li>tematyka dzie³a -&gt; opis gry Mochnackiego;</li>
+<li>zainteresowanie cechami dŸwiêku -&gt; "I znów wraca ku górze za³zawionym dŸwiêkiem"</li>
+<li>terminologia muzyczna -&gt; "[...] Ju¿ jest w basie [...]";</li>
+<li>metaforyka odwo³uj¹ca siê do w³aœciwoœci dŸwiêku -&gt; "I nagle siê rozp³aka³ po klawiszach sztajer";</li>
+<li>anafory nadaj¹ce rytm -&gt; "Po martwej, g³upiej strunie, po fijo³ków woni, / Po czyichœ smutnych oczach, jakiejœ bia³ej d³oni".</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Emocje zwi¹zane z muzyk¹ Chopina sugeruje przede wszystkim kolorystyka obrazu oraz reakcja s³uchaczki. Dominuj¹ zasadniczo ciemne barwy (czerñ, granat, br¹z), które wprowadzaj¹ podnios³y oraz powa¿ny nastrój. Kluczowe s¹ jednak uczucia widoczne na twarzy towarzysz¹cej artyœcie kobiety. Osoba opieraj¹ca siê o fortepian zdaje siê byæ zafascynowana, zamyœlona, pogr¹¿ona w œwiecie wewnêtrznych prze¿yæ. Ca³a jej uwaga skupia siê na muzyku, który sw¹ gr¹ mo¿e przenosiæ j¹ do innej rzeczywistoœci, wywo³ywaæ g³êbokie wzruszenie. Sugeruje to obecnoœæ tajemniczych postaci: pary pogr¹¿onej w poca³unku oraz zakapturzonego cz³owieka - zdaj¹ siê byæ oni przywo³ani przez dŸwiêki fortepianu. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+Indywidualne<br>

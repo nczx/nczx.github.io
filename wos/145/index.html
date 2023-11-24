@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>a) Informacje z tekstu, które wskazują na to, że dotyczy on konstruktywnego wotum nieufności:</p>
+<ul>
+<li>"wniosek o wyrażenie wotum nieufności Radzie Ministrów" i jednoczesne "wybranie pana Grzegorza Schetyny na Prezesa Rady Ministrów", czyli mamy spełnione dwa warunki związane z instytucją konstruktywnego wotum nieufności, czyli wniosek o odwołanie rządu, przy jednoczesnym zaproponowaniu i wyłonieniu nowego przez większość parlamentu kandydata na nowego premiera (w tym przypadku chodzi o Grzegorza Schetynę).</li>
+</ul>
+<p> </p>
+<p>b) Sejm RP nie wyraził wotum nieufności wobec rządu, ponieważ aby można było zastosować tę instytucję, to musi wyrazić na nią zgodę większość ustawowej liczby posłów, czyli co najmniej 231, zaś wyniki głosowania przedstawione w tekście wskazują, że za tym wotum nieufności głosowało 168 posłów, czyli zabrakło 63 głosów, aby uchwalić wotum nieufności wobec rządu Beaty Szydło.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Konstruktywne wotum nieufności</span></strong> polega na tym, że część parlamentarzystów, którzy występują z wnioskiem o wotum nieufności, jednocześnie zgłasza swojego kandydata na premiera. W przytoczonym fragmencie tekstu jest zaś mowa o tym, że głosowanie dotyczyło nie tylko wyrażenia wotum nieufności wobec Beaty Szydło (będącej w chwili głosowania Prezes Rady Ministrów), ale też wybrania nowym Prezesem Rady Ministrów Grzegorza Schetyny.</p>
+<p><strong>b)</strong></p>
+<p><strong><span style="text-decoration: underline;">Sejm RP nie wyraził wotum nieufności wobec rządu, ponieważ było do tego potrzebnych 231 głosów</span></strong>. Tylu posłów jednak nie zagłosowało za tym wnioskiem. Za wyrażeniem wotum nieufności Radzie Ministrów kierowanej przez Prezes Rady Ministrów Beatę Szydło i wybraniem na Prezesa Rady Ministrów Grzegorza Schetyny zagłosowało 168 posłów. Przeciw było natomiast 239 posłów (dodatkowo, 17 posłów wstrzymało się od głosu, a 36 nie głosowało).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Rządowi mniejszościowemu trudniej jest realizować swoje zamierzenia, ponieważ proponowane przez niego rozwiązania mogą być  sukcesywnie odrzucane przez większość parlamentarną. Takiemu rządowi trudno np. złożyć projekt ustawy, która wejście w życie, bowiem nie posiadając wsparcia parlamentu nie zostanie on przegłosowany. Tym samym rząd nie będzie mógł przeprowadzić reform, jeśli jego projekty będą odrzucane przez Sejm RP. </p>
+<p>Ponadto może dochodzić  do trudności w powołaniu rządu, np. w 2004 r.,  rząd Marka Belki nie uzyskał wotum zaufania w pierwszym konstytucyjnym kroku powoływania rządu. Z kolei w drugim kroku Sejm nie zgłosił żadnego kandydata na stanowisko premiera, dlatego w trzecim kroku konstytucyjnym - prezydent Rzeczypospolitej, Aleksander Kwaśniewski ponownie powołał na urząd premiera - Marka Belkę oraz wskazanym przez niego ministrów. Rząd ten nie miał poparcia większości parlamentarzystów. W skład tego rządu wchodzili przedstawiciele następujących partii: Sojuszu Lewicy Demokratycznej, Unii Pracy, Unii Lewicy, Socjaldemokracji Polski. Z kolei przedstawicielstwa w rządzie nie miały następujące partie: Platformy Obywatelskiej, Prawa i Sprawiedliwości, Polskiego Stronnictwa Ludowego, Samoobrony Rzeczypospolitej Polskiej, Ligi Polskiej Rodzin, koła Stronnictwa Konserwatywno-Ludowego, Ruchu Katolicko-Narodowego Domu Ojczystego, Polskiego Bloku Ludowego, Porozumienia Polskiego oraz ruchu Odbudowy Polski. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Rząd mniejszościowy to gabinet w systemie parlamentarnym (ewentualnie w systemie parlamentarno-gabinetowym), który nie dysponuje poparciem większości członków parlamentu. Taki rząd może się spotykać z trudnościami w realizowaniu swojego programu, ponieważ napotyka zwykle problemy z uzyskiwaniem akceptacji posłów dla przedkładanych przez siebie projektów ustaw. Zmuszony jest do prowadzenia długich i nierzadko skomplikowanych negocjacji z różnymi klubami parlamentarnymi w celu zyskania poparcia. Rządy mniejszościowe w praktyce nie mają więc dużych szans na wprowadzenie bardziej zdecydowanych reform. Rząd mniejszościowy może ponadto mieć utrudnione zadanie już na etapie powołania rządu, do czego potrzebne jest uzyskanie wotum zaufania. Bez wsparcia ze strony większości parlamentarnej nie zawsze okazuje się to wykonalne.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>a) <span style="text-decoration: underline;"><strong>Instytucje i organy podlegające wojewodzie to:</strong></span></p>
+<ul>
+<li>Wojewódzki Inspektor Nadzoru Budowlanego, </li>
+<li>Komendant Wojewódzki Państwowej Straży Pożarnej, </li>
+<li>Wojewódzki Zespół Zarządzania Kryzysowego. </li>
+</ul>
+<p> </p>
+<p>b) <span style="text-decoration: underline;"><strong>Zamieszczony fragment artykułu dotyczy następujących obszarów działań wojewody:</strong></span></p>
+<ul>
+<li>zapewniania współdziałania wszystkich organów administracji rządowej oraz samorządowej działających w danym województwie, </li>
+<li>kierowanie działalnością wyżej wymienionych podmiotów w zakresie zapobiegania zagrożeniu życia, zdrowia lub mienia oraz zagrożeniom związanym ze stanem środowiska, bezpieczeństwa państwa i utrzymaniem porządku.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Instytucjami i organami podległymi wojewodzie, o jakich wspomniano w przytoczonym fragmencie tekstu, są:</span></strong></p>
+<ul>
+<li>Wojewódzki Inspektor Nadzoru Budowlanego, </li>
+<li>Komendant Wojewódzki Państwowej Straży Pożarnej, </li>
+<li>Wojewódzki Zespół Zarządzania Kryzysowego. </li>
+</ul>
+<p><strong>b)</strong></p>
+<p>Zamieszczony fragment artykułu nawiązuje do takich obszarów działań wojewody, jak koordynowanie współdziałania organów administracji rządowej i samorządowej z terenu województwa, a także kierowanie ich pracami w celu zapobiegania zagrożeniu życia, zdrowia lub mienia i niebezpieczeństwom związanym ze stanem środowiska naturalnego, bezpieczeństwem państwa i utrzymaniem porządku publicznego.</p><br>

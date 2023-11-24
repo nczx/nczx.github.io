@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Rozwi¹zanie poni¿ej: </p>
+<table border="1" style="border-collapse:collapse;width:685px;height:474px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:225px;"><strong>Warstwa znaczeniowa</strong></td>
+<td style="background-color:#aed581;text-align:center;width:225px;"><strong>Warstwa dŸwiêkowa</strong></td>
+<td style="background-color:#aed581;text-align:center;width:225px;"><strong>Warstwa graficzna</strong></td>
+</tr>
+<tr>
+<td style="width:225px;text-align:center;">
+<p>czêœæ I (strofy 1-8)</p>
+<p>sylwester, bal, zabawa, tañcz¹ce pary</p>
+</td>
+<td style="width:225px;text-align:center;">wiersz sylabotoniczny, rytm naœladuj¹cy taniec, dok³adne rymy: <em>abab</em>
+</td>
+<td style="width:225px;text-align:center;">Czcionka tradycyjna, prosta</td>
+</tr>
+<tr>
+<td style="width:225px;text-align:center;">
+<p>czêœæ II (strofy 9-14)</p>
+<p>katastroficzna wizja przysz³oœci, œmieræ, niewola, cierpienie</p>
+<p> </p>
+</td>
+<td style="width:225px;text-align:center;">wiersz sylabiczny, który w koñcowych strofach zostaje zaburzony mniej regularnymi strofami (np. kolejno 12, 12, 12, 9), rytm oddaje niepokoj¹cy charakter wizji, dok³adne rymy: <em>abbc</em> </td>
+<td style="width:225px;text-align:center;">Czcionka tradycyjna, pochy³a</td>
+</tr>
+<tr>
+<td style="width:225px;text-align:center;">
+<p>czêœæ III (strofy 15-16)</p>
+<p>powrót do balu, zabawa, poranek </p>
+<p> </p>
+</td>
+<td style="width:225px;text-align:center;">wiersz sylabotoniczny, rytm naœladuj¹cy taniec, dok³adne rymy: <em>abab </em>
+</td>
+<td style="width:225px;text-align:center;">Czcionka tradycyjna, prosta</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Rozwi¹zanie poni¿ej: </p>
+<table border="1" style="border-collapse:collapse;width:762px;height:741px;">
+<tbody>
+<tr style="height:29px;">
+<td style="background-color:#aed581;text-align:center;height:29px;width:377.5px;"><strong>Przyk³ad</strong></td>
+<td style="background-color:#aed581;text-align:center;height:29px;width:377.5px;"><strong>Obrazowanie poetyckie</strong></td>
+</tr>
+<tr style="height:85px;">
+<td style="width:377.5px;text-align:center;height:85px;"><em>I œwiecznik ko³uj¹c odp³ywa w g³¹b sal.</em></td>
+<td style="width:377.5px;text-align:center;height:85px;">Metafora, która podkreœla efekt wirowania przestrzeni i sposób tañczenia walca "po kole".</td>
+</tr>
+<tr style="height:40px;">
+<td style="width:377.5px;text-align:center;height:40px;"><em>I kr¹¿¹ w zmru¿one swe oczy wpatrzeni</em></td>
+<td style="width:377.5px;text-align:center;height:40px;">Epitety wzmacniaj¹ plastycznoœæ przedstawienia, ukonkretniaj¹ rzeczywistoœæ.</td>
+</tr>
+<tr style="height:57px;">
+<td style="width:377.5px;text-align:center;height:57px;"><em>Sto luster odbija snuj¹cy siê bal.</em></td>
+<td style="width:377.5px;text-align:center;height:57px;">Hiperbola akcentuje pog³êbienie przestrzeni (poprzez odbicie w lustrach) oraz rozmach balu.</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>Ju¿ lustra dŸwiêk walca powoli obraca.</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">O¿ywienie wp³ywa na nastrojowoœæ przedstawienia: muzyka zdaje siê mieæ magiczny charakter.</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>Szk³o ramion, czerñ ramion, biel ramion i r¹k.</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Powtórzenie zwraca uwagê na pojawiaj¹ce siê kilka razy s³owo przy jednoczesnej zmianie tego, czego dotyczy (lustro, mê¿czyzna, kobieta).</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>A jedwab szeleœci o nagoœæ, ach cyt...</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Wyraz dŸwiêkonaœladowczy oddaje subtelny odg³os jedwabiu ocieraj¹cego siê o cia³o, co przyczynia siê do zbudowania zmys³owego nastroju.</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>I szepty, wo³anie i zawrót, i rytm.</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Wyliczenie wp³ywa na rytmicznoœæ wypowiedzi, przez co wywo³uje ona skojarzenia z rytmem tañca. Jednoczeœnie pozwala to na skondensowane wyra¿enie dynamiki ruchów oraz atmosfery balu.</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>I oczy, i usta, i wrzawa, i œmiech.</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Elipsa pozwala na zwiêz³e wyra¿enie myœli, a jednoczeœnie zachêca odbiorcê do dopowiedzenia sobie brakuj¹cej treœci.</td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>I py³y ró¿owe jak p³atki jab³oni</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Porównanie wydobywa cechy py³u: jego kolor, podobieñstwo do kwiatów jab³oni oraz delikatnoœæ. </td>
+</tr>
+<tr style="height:29px;">
+<td style="width:377.5px;text-align:center;height:29px;"><em>I pióra, i per³y w hucz¹cej przestrzeni</em></td>
+<td style="width:377.5px;text-align:center;height:29px;">Instrumentacja g³oskowa nadaje utworowi szczególne walory brzmieniowe, wi¹¿e siê z treœci¹ utworu, w którym pojawi siê muzyka. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Na rytmicznoœæ wiersza, oddaj¹c¹ rytm walca, wp³yw maj¹ m.in.:</p>
+<ul>
+<li>sta³a liczba wersów w strofach (kolejno: 12, 11, 12, 11);</li>
+<li>powtórzenia ("I szepty, wo³anie i zawrót, i rytm");</li>
+<li>anafory ("I œwiecznik ko³uj¹c odp³ywa w g³¹b sal, / I patrz: sto œwieczników we mg³ach siê zatacza");</li>
+<li>regularne wystêpowanie rymów kryzowych (<em>abab</em>);</li>
+<li>sta³a liczba wersów w strofie (4).</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Kompozycja klamrowa w utworze Mi³osza przede wszystkim scala tekst, by stanowi³ spójn¹ ca³oœæ. Wprowadza dwie p³aszczyzny czasu (teraŸniejszoœæ, wieczór sylwestrowy; wizja przysz³oœci) oraz dwoist¹ strukturê rzeczywistoœci (realn¹ i profetyczn¹, katastroficzn¹), któr¹ wyraziœcie rozgranicza. Zabieg ten ponadto wskazuje na relacjê zachodz¹c¹ miêdzy tymi warstwami. Opiera siê ona na przejœciu od zabawy sylwestrowej do opisu nadchodz¹cych wypadków, które jeszcze nie zaistnia³y. Zastosowanie klamry sugeruje powrót ze œwiata wizji do balu sylwestrowego. Sytuacja na pocz¹tku i koñcu wiersza jest taka sama, przez co zostaje oddany charakter widzenia - dzieje siê ono jakby poza czasem. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>ZapowiedŸ przysz³oœci pojawia siê w zwrotce:</p>
+<p><em>Rok dziewiêæset dziesiêæ. Ju¿ bij¹ zegary, </em></p>
+<p><em>Lat cicho w klepsydrach przes¹cza siê piach.</em></p>
+<p><em>A¿ przyjdzie czas gniewu, dope³ni¹ siê miary</em></p>
+<p><em>I krzakiem ognistym œmieræ stanie we drzwiach. </em></p>
+<p> </p>
+<p>Proroctwo zostaje zasygnalizowane za pomoc¹ odpowiednich form czasowników. Wskazuj¹ na wydarzenia, które dopiero maj¹ zaistnieæ w bli¿ej nieokreœlonej przysz³oœci. Znacz¹ce staje siê tak¿e obrazowanie biblijne, nawi¹zuj¹ce do Apokalipsy i Ksiêgi Wyjœcia. Sugeruje ono koniec rzeczywistoœci znanej cz³owiekowi oraz czas s¹du ("dzieñ gniewu), rozliczenia istoty ludzkiej. Z kolei "krzak ognisty" wywo³uje skojarzenia z krzewem gorej¹cym - jako symbolem mocy starotestamentowego oraz surowego Boga. Odniesienia te nadaj¹ wiêc utworowi uniwersaln¹ wymowê, ale podkreœlaj¹ przy tym grozê i nieuchronnoœæ nadchodz¹cych zdarzeñ.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Poeta we fragmencie opisuj¹cym katastrofê przedstawia rozleg³e lodowe pole w czasie nocy. Jest to nieprzyjazna, zimna przestrzeñ, której pustkê zak³óca biegn¹cy t³um - nie mo¿na jednak us³yszeæ odg³osów wydawanych przez ludzi ("[...] wœród œmiertelnej wrzawy / Której nie s³yszysz, odgadujesz z ust"). Nastêpnie poeta zaznacza bezmiar przestrzeni - staje siê ona niemym œwiadkiem brutalnych zdarzeñ oraz zag³ady. Pierwsze promienie s³oñca oœwietlaj¹ zaœ cia³a zamordowanych. Kolejny obraz poetycki ukazuje pokryt¹ lodem rzekê, wzd³u¿ jej brzegu ci¹gn¹ "[...]  niewolnicze [...] pochody". Ponur¹ atmosferê tej sytuacji wzmacnia kolorystyka otoczenia oraz jej przygnêbiaj¹cy charakter: sine chmury, czarna woda, czerwone s³oñce. Nastêpnie podmiot liryczny zwraca uwagê na jednego z uczestników pochodu - jest to syn jednej z uczestniczek balu. Chocia¿ krwawi, niewola powoduje, i¿ jest "[...] ma³pio uœmiechniêty".</p>
+<p>W tym opisie katastrofy mo¿na dostrzec zastosowanie elementów typowych dla techniki filmowej. Przede wszystkim przedstawienie zdaje siê oddawaæ specyfikê kamery oraz zmiany ujêæ. Ka¿da strofa stanowi zasadniczo tak¿e oddzielny obraz (kadr). Podmiot liryczny odwo³uje siê do szerokiego ujêcia czy planu ogólnego, w obrazowy sposób opisuje równie¿ przestrzeñ i to, co siê dzieje: "Lodowe pole w brzasku ¿ó³tej zorzy / W nagle rozdartej nocy siê otworzy". Z kolei skojarzenia z przybli¿eniem kamery, jej dynamiczn¹ prac¹, wywo³uje skupienie siê na jednej osobie z t³umu; nastêpuje przejœcie od ogó³u do detalu: "Patrz, to twój syn. Policzek przeciêty / Krwawi, on idzie, ma³po uœmiechniêty". Kluczowe staje siê tak¿e zainteresowanie aspektami, które s¹ wa¿ne w technice filmowej, np. kolorystyk¹ i efektami wizualnymi ("Dymi¹ce s³oñce rzuca ranny kurz", "[...] czarne wody"), detalami ("[...] b³ysk bata"), dŸwiêkiem lub jego brakiem ("T³umy biegn¹ce wœród œmiertlenej wrzawy, / Której nie s³yszysz, odgadujesz z ust").</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Zwrotki zawieraj¹ce wnioski na temat sytuacji cz³owieka wobec cierpienia:</p>
+<p><em>Rozumiesz. Jest taka cierpienia granica,</em></p>
+<p><em>Za któr¹ siê uœmiech pogodny zaczyna, </em></p>
+<p><em>I mija tak cz³owiek, i ju¿ zapomina,</em></p>
+<p><em>O co mia³ walczyæ i po co.</em></p>
+<p> </p>
+<p><em>Jest takie olœnienie w bydlêcym spokoju,</em></p>
+<p><em>Gdy patrzy na chmury i gwiazdy, i zorze,</em></p>
+<p><em>Choæ inni umarli, on umrzeæ nie mo¿e</em></p>
+<p><em>I wtedy powoli umiera.</em></p>
+<p> </p>
+<p>Przyk³adowo:</p>
+<p>Strofy te opisuj¹ wp³yw cierpienia na jednostkê oraz jej ¿ycie duchowe. Po przekroczeniu pewnej granicy cz³owiek przestaje odczuwaæ ból, zaczyna siê z nim godziæ. W tej sytuacji popada w obojêtnoœæ, marazm, traci wolê, by odmieniæ swój los, walczyæ o coœ. Nie pamiêta ju¿ o wartoœciach, które kiedyœ by³y dla niego kluczowe. Zniewolenie to dotyczy tak¿e umys³u cz³owieka, poniewa¿ traci on zdolnoœæ krytycznego rozpoznawania rzeczywistoœci. Zamiast tego zyskuje "bydlêcy spokój", który jest bezrefleksyjny pozbawiony jakichkolwiek silnych emocji. Sama zaœ niewola ducha koñczy siê powoln¹ œmierci¹. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Noc sylwestrowa to przede wszystkim czas beztroskiej zabawy, zapomnienia o historii czy problemach. Stanowi zwieñczenie roku, a jednoczeœnie zapowiedŸ czegoœ nowego. Z tego te¿ powodu staje siê czasem rozliczenia, formu³owania postanowieñ, wi¹¿e siê te¿ z nadziej¹ oraz oczekiwaniem na to, co przyniesie nadchodz¹cy rok. Wybór tego czasu w wierszu Mi³osza nie jest przypadkowy. Prze³omowy moment niejako umo¿liwia poznanie przysz³ych wydarzeñ, zajrzenie w przysz³oœæ - nak³adaj¹ siê wtedy na siebie dwie rzeczywistoœci, dwie p³aszczyzny czasowe. Jednoczeœnie zabieg ten sprawia, i¿ z pozoru beztroska zabawa zostaje naznaczona zbli¿aj¹c¹ siê tragedi¹. Chocia¿ w koñcowej czêœci utworu nastêpuje powrót do tañcz¹cych par, postrzega siê tê sytuacjê w ju¿ nieco inny sposób. Ma siê bowiem œwiadomoœæ, i¿ katastrofa jest nieuchronna, zaœ radoœæ - krucha. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>. </p><br>

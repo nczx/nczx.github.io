@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Pierwsza strofa utworu wprowadza podstawowe dane na temat podmiotu lirycznego oraz jego sytuacji ¿yciowej. Ma charakter informacyjny, a jednoczeœnie zarysowuje kontekst wyznania. Okazuje siê, ¿e "ocalonym" jest m³ody, 24-letni mê¿czyzna, który prze¿y³ wojnê. Zawarte w tej czêœci wiadomoœci s¹ kluczowe, aby zrozumieæ sens dalszej wypowiedzi osoby mówi¹cej, a przy tym uzasadniaj¹ te¿ jej postawê ¿yciow¹. Podmiot liryczny - mimo ocalenia - nie odczuwa bowiem radoœci czy ulgi. Jest wrêcz przeciwnie: tragiczne doœwiadczenia powoduj¹, i¿ pojêcia, wartoœci trac¹ swój dotychczasowy sens: "To s¹ nazwy puste i jednoznaczne: / cz³owiek i zwierzê / mi³oœæ i nienawiœæ". Wojna powoduje kryzys wartoœci, upadek moralnoœci i cz³owieczeñstwa. Z tego powodu osoba mówi¹ca jest zagubiona, poniewa¿ trudne doœwiadczenia trwale wp³ywaj¹ na jej psychikê: "Cz³owieka tak siê zabija jak zwierzê / widzia³em: furgony por¹banych ludzi". Jej cierpienie wynika z tego, i¿ pragnie odzyskaæ harmonijn¹ wizjê œwiata, przywróciæ s³owom ich w³aœciwe znaczenia - potrzebuje jednak pomocy "nauczyciela i mistrza", który uporz¹dkuje chaotyczn¹ rzeczywistoœæ i przywróci g³êbiê cz³owieczeñstwa. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podmiot liryczny zestawia i uto¿samia z sob¹ pojêcia, które stanowi¹ swe przeciwieñstwo, ale jednoczeœnie wi¹¿¹ siê z uniwersalnymi doœwiadczeniami cz³owieka. S¹ to przede wszystkim nazwy wartoœci lub uczuæ ("mi³oœæ i nienawiœæ", "cnota i wystêpek", "prawda i k³amstwo", "piêkno i brzydota", "mêstwo i tchórzostwo"), zjawisk "(ciemnoœæ i œwiat³o") oraz te¿ istot ¿yj¹cych ("cz³owiek i zwierzê", "wróg i przyjaciel"). Wymieniane elementy ³¹czy spójnik "i", który œwiadczy o tym, i¿ staj¹ siê one wzglêdem siebie równorzêdne. Zabieg ten wskazuje na rozmycie siê sensu s³ów, poniewa¿ trac¹ swe pierwotne znacznie, przypominaj¹ wiêc o degradacji rzeczywistoœci, w której nie mo¿na odró¿niæ mi³oœci i nienawiœci czy wroga oraz przyjaciela. Podmiot liryczny przytacza wiêc te przyk³ady, aby potwierdziæ swoje zdanie wyra¿one s³owami: "Pojêcia s¹ tylko wyrazami". W ten sposób podkreœla tak¿e chaos nowej rzeczywistoœci oraz utratê podstawowych punktów odniesienia w ¿yciu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Podmiot liryczny opowiada o swych doœwiadczeniach za pomoc¹ poetyki œciœniêtego gard³a. Mimo powa¿nego i trudnego tematu osoba mówi¹ca prezentuje swe prze¿ycia w niemal beznamiêtny sposób, który przypomina sprawozdanie: "Mam dwadzieœcia cztery lata / ocala³em / prowadzony na rzeŸ". Jej wypowiedŸ jest zwiêz³a, konkretna i rzeczowa, skupia siê wy³¹cznie na najwa¿niejszych elementach. Sposób formu³owania myœli kontrastuje z tematyk¹ wiersza. Opowieœæ osoby mówi¹cej jest pozbawiona ozdobnoœci, ró¿norodnych œrodków artystycznego wyrazu, gwa³townych emocji czy wylewnoœci. Zamiast patosu mo¿na dostrzec wy³¹cznie precyzyjne relacjonowanie faktów: "widzia³em: / furgony por¹banych ludzi". Jest ono jednak pozbawione oceny wypowiadaj¹cego siê. Na ascetyczn¹ formê dzie³a wp³ywa tak¿e ograniczenie liczby s³ów do tych kluczowych oraz rezygnacja z interpunkcji oraz klasycznej formy wiersza. Poetyka œciœniêtego gard³a, przejawiaj¹ca siê w ukszta³towaniu formy i treœci wiersza, odzwierciedla wiêc prze¿ycia podmiotu lirycznego, rozpad znanego mu œwiata. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Przymierze Abrahama z Bogiem zostaje zawarte, gdy bohater ma dziewiêædziesi¹t lat. Wtedy to Bóg oferuje mu liczne potomstwo oraz to, ¿e stanie siê ojcem narodów i otrzyma dla przysz³ych pokoleñ kraj. Ponadto Bóg mówi, i¿ bêdzie to wieczne przymierze, które potwierdz¹ wyznaczeni potomkowie Abrahama. Umowa ta zostaje potwierdzona po próbie, jakiej doœwiadcza patriarcha. Pan nakazuje mu bowiem z³o¿enie w ofierze syna Izaaka, zaœ Abraham nie sprzeciwia siê woli Boga. W efekcie otrzymuje b³ogos³awieñstwo oraz potwierdzenie licznego potomstwa. Nowe Przymierze jest z kolei zwi¹zane z Chrystusem i stanowi obietnicê dla ca³ej ludzkoœci. Œmieræ na krzy¿u ma byæ bowiem Ÿród³em odkupienia oraz odnowienia relacji miêdzy Panem a ludem.</p>
+<p> </p>
+<p>b) </p>
+<table border="1" style="border-collapse:collapse;width:569px;height:552px;">
+<tbody>
+<tr style="height:57px;">
+<td style="background-color:#c8e6c9;text-align:center;width:279.013px;height:57px;"><strong>Izaak</strong></td>
+<td style="background-color:#c8e6c9;text-align:center;width:282.987px;height:57px;"><strong>Podmiot liryczny w wierszu</strong></td>
+</tr>
+<tr style="height:30px;">
+<td colspan="2" style="width:565px;height:30px;background-color:#e8f5e9;text-align:center;"><strong>Podobieñstwa</strong></td>
+</tr>
+<tr style="height:30px;">
+<td colspan="2" style="width:565px;height:30px;">
+<ul>
+<li>s¹ to m³odzi mê¿czyŸni;</li>
+<li>staj¹ siê ofiarami;</li>
+<li>zostaj¹ ocaleni od œmierci;</li>
+<li>ostatecznie zamiast nich ktoœ inny staje siê ofiar¹;</li>
+</ul>
+</td>
+</tr>
+<tr style="height:30px;">
+<td colspan="2" style="width:565px;height:30px;background-color:#e8f5e9;text-align:center;"><strong>Ró¿nice</strong></td>
+</tr>
+<tr style="height:31px;">
+<td style="width:279.013px;height:31px;text-align:center;">ofiara z Izaaka ma wymiar sakralny </td>
+<td style="width:282.987px;height:31px;text-align:center;">ofiara zwi¹zana z podmiotem nie ma wymiaru religijnego, wynika z wojennych okolicznoœci</td>
+</tr>
+<tr style="height:32px;">
+<td style="width:279.013px;height:32px;text-align:center;">jego poœwiêcenie ma g³êbszy sens, poniewa¿ stanowi sprawdzian wiary dla Abrahama</td>
+<td style="width:282.987px;height:32px;text-align:center;">jego doœwiadczenia wynikaj¹ z przypadku</td>
+</tr>
+<tr style="height:30px;">
+<td style="width:279.013px;height:30px;text-align:center;">Izaak ¿yje w œwiecie, w którym objawia siê Bóg</td>
+<td style="width:282.987px;height:30px;text-align:center;">podmiot liryczny nie dostrzega obecnoœci Pana </td>
+</tr>
+<tr style="height:31px;">
+<td style="width:279.013px;height:31px;text-align:center;">zamiast Izaaka ofiar¹ staje siê baran</td>
+<td style="width:282.987px;height:31px;text-align:center;">ocalenie osobie mówi¹cej zapewnia œmieræ innego cz³owieka </td>
+</tr>
+<tr style="height:52px;">
+<td style="width:279.013px;text-align:center;height:52px;">ofiara z Izaaka nie jest przejawem z³a, lecz potwierdza bogobojnoœæ Abrahama </td>
+<td style="width:282.987px;text-align:center;height:52px;">sytuacja podmiotu lirycznego wi¹¿e siê ze z³em i wojennym okrucieñstwem </td>
+</tr>
+<tr style="height:52px;">
+<td style="width:279.013px;text-align:center;height:52px;">z³o¿yæ ofiarê z Izaaka ma bliska mu osoba - ojciec</td>
+<td style="width:282.987px;text-align:center;height:52px;">œmieræ, której unikn¹³ mówi¹cy, zosta³aby zadana przez byæ mo¿e nieznanego mu cz³owieka </td>
+</tr>
+<tr style="height:35px;">
+<td style="width:279.013px;text-align:center;height:35px;">nie zostaj¹ ukazane przemyœlenia, prze¿ycia Izaaka</td>
+<td style="width:282.987px;text-align:center;height:35px;">podmiot liryczny relacjonuje rozpad œwiata wartoœci, wp³yw ocalenia na swe ¿ycie </td>
+</tr>
+<tr>
+<td style="width:279.013px;text-align:center;">sytuacja Izaaka prowadzi do odnowienia przymierza Abrahama i Boga</td>
+<td style="width:282.987px;text-align:center;">z sytuacj¹ podmiotu nie wi¹¿¹ siê pozytywne skutki, poniewa¿ odczuwa duchow¹ pustkê </td>
+</tr>
+</tbody>
+</table><br>

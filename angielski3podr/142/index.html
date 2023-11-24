@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. know </p>
+<p>2. are</p>
+<p><strong>Uzasadnienie:</strong> czasowników statycznych (<em>know </em>- wiedzieć, <em>to be </em>- być) opisujących obecną sytuację używamy w czasie <em>present simple</em>.</p>
+<p>3. I never eat</p>
+<p><strong>Uzasadnienie:</strong> do opisania regularnie wykonywanych czynności (<em>never</em> - nigdy) używamy czasu <em>present simple</em>.</p>
+<p>4. I drink</p>
+<p><strong>Uzasadnienie:</strong> do opisania regularnie wykonywanych czynności (<em>a day</em> - dziennie) używamy czasu <em>present simple</em>.</p>
+<p>5. I'm relaxing</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>at the moment</em> - w tej chwili) używamy czasu <em>present continuous</em> (am/are/is + czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. already </p>
+<p><strong>Uzasadnienie</strong>: przysłówka <em>already </em>(już) używamy w czasie <em>present perfect </em>(<em>have/has + past participle</em>) w zdaniach twierdzących i pytaniach. </p>
+<p>2. never</p>
+<p> <strong>Uzasadnienie</strong>: przysłówka <em>never </em>(nigdy) używamy w czasie <em>present perfect</em>, by mówić o doświadczeniach życiowych.</p>
+<p>3. since</p>
+<p><strong>Uzasadnienie</strong>: przyimka <em>since </em>(od) używamy w czasie <em>present perfect</em>, aby powiedzieć, od jakiego momentu trwa jakiś stan.</p>
+<p>4. sometimes</p>
+<p><strong>Uzasadnienie</strong>: przysłówka <em>sometimes </em>(czasami) używamy w czasie <em>present simple</em>, by mówić o rutynie.</p>
+<p>5. for the time being</p>
+<p><strong>Uzasadnienie</strong>: przysłówka <em>for the time being </em>(na razie) używamy w czasie <em>present continuous</em>, by opisać tymczasową czynność.</p>
+<p><s class="odr-strikethrough">always</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. has always liked </p>
+<p><strong>Uzasadnienie:</strong> do opisania życiowych doświadczeń (<em>always </em>- zawsze) używamy czasu <em>present perfect</em>. </p>
+<p>2. is having</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>at the moment</em> - w tej chwili) używamy czasu <em>present continuous</em>.</p>
+<p>3. Have you eaten</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czynność, która powinna zostać do tej pory wykonana (<em>yet </em>- już) używamy czasu <em>present perfect.</em></p>
+<p>4. does he make</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o częstotliwość wykonywanych czynności (<em>how often</em> - jak często) używamy czasu <em>present </em><em>simple</em> (w pytaniach: do/does + osoba + bezokolicznik.).</p>
+<p>5. haven't drunk</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności, która powinna zostać do tej pory wykonana (<em>yet </em>- jeszcze) używamy czasu <em>present perfect</em>.</p>
+<p>6. is she sitting</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czynność wykonywaną w danym momencie używamy czasu <em>present </em><em>continuous</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. A  </p>
+<p>(X: Co robisz?</p>
+<p>Y: <strong>Rozciągam mięśnie.</strong></p>
+<p>X: Dobry pomysł. Twoje postura nigdy nie jest prawidłowa.) </p>
+<p><br/>2. C</p>
+<p>(X: Dlaczego nie zjadłeś żadnego naleśnika?</p>
+<p>Y: <strong>Mają dużo cukru.</strong></p>
+<p>X: Starasz się dbać o formę?)<br/><br/></p>
+<p>3. A</p>
+<p>(X: Czy jadasz owoce morza?</p>
+<p>Y: <strong>Zazwyczaj nie, ale to pachnie naprawdę nieźle.</strong></p>
+<p>X: Dobrze, w takim razie nałożę ci małą porcję.)</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1:</p>
+<p>a. is going to land  </p>
+<p>b. will land</p>
+<p><strong>Uzasadnienie:</strong> do przewidywania przyszłości na podstawie naszej wiedzy używamy konstrukcji <em>be going to</em>. Nadzieje odnośnie przyszłości wyrażamy za pomocą <em>will</em>.</p>
+<p><br/>2:</p>
+<p>a. are going to go</p>
+<p>b. goes</p>
+<p><strong>Uzasadnienie:</strong> do przewidywania przyszłości na podstawie naszej wiedzy używamy konstrukcji <em>be going to</em>. W I trybie warunkowym używamy następującej konstrukcji: <em>if + present simple, will + </em>bezokolicznik. W czasie <em>present simple </em>dla osób <em>she, he, it</em> dodajemy do czasownika -s. </p>
+<p><br/>3:</p>
+<p>a. don't book</p>
+<p>b. won't book</p>
+<p><strong>Uzasadnienie:</strong> w I trybie warunkowym używamy następującej konstrukcji: <em>if + present simple, will + </em>bezokolicznik. Przeczenia w <em>present simple </em>tworzymy za pomocą <em>don't/doesn't </em>oraz czasownika głównego w bezokoliczniku. Do opisania decyzji podjętej w chwili mówienia używamy <em>will</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. will die </p>
+<p><strong>Uzasadnienie:</strong> do opisania ogólnych faktów na temat przyszłości używamy <em>will.</em> </p>
+<p>2. are going to go sightseeing</p>
+<p><strong>Uzasadnienie:</strong> do opisania czyichś zamiarów używamy konstrukcji <em>be going to</em>.  </p>
+<p>3. will go</p>
+<p><strong>Uzasadnienie:</strong> do opisania decyzji podjętej w chwili mówienia używamy <em>will.</em></p>
+<p>4. is going to be</p>
+<p><strong>Uzasadnienie:</strong> do przewidywania przyszłości na podstawie naszej wiedzy lub dowodów używamy konstrukcji <em>be going to</em>.</p>
+<p>5. invent</p>
+<p><strong>Uzasadnienie:</strong> I tryb warunkowy, konstrukcja: <em>if/when + present simple, will + </em>bezokolicznik. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. A</p>
+<p><strong>Uzasadnienie:</strong> do opisania decyzji podjętej w chwili mówienia używamy <em>will.</em> </p>
+<p>2. C</p>
+<p><strong>Uzasadnienie:</strong> do przewidywania przyszłości na podstawie tego, co widzimy używamy konstrukcji <em>be going to.</em> </p>
+<p>3. B</p>
+<p><strong>Uzasadnienie:</strong> I tryb warunkowy; konstrukcja: <em>will + </em>bezokolicznik, <em>when/if + present simple. </em></p>
+<p>4. A</p>
+<p><strong>Uzasadnienie:</strong> do opisania czyichś zamiarów używamy konstrukcji <em>be going to.</em> </p><br>

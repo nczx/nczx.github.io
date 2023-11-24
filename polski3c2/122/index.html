@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W sensie dos³ownym tytu³ wiersza oznacza po prostu rzemieœlników, którzy tworz¹ rozmaite elementy z drewna w konstrukcjach budowlanych. S¹ wiêc to zwykli ludzie, pogr¹¿eni w mozolnej pracy. W sensie metaforycznym tytu³ mo¿na odczytywaæ przez pryzmat dzia³alnoœci poety. Podobnie jak cieœla wykorzystuje on materia³ (s³owo), aby dostosowaæ go do swoich potrzeb, nadaæ mu upragniony kszta³t. Jego dzia³ania tak¿e s¹ naznaczone trudem, zmaganiem siê z kapryœnym jêzykiem. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowe rozwi¹zanie:</p>
+<table border="1" style="border-collapse:collapse;width:648px;height:545px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:320.5px;height:17px;"><strong>Fragment</strong></td>
+<td style="background-color:#aed581;text-align:center;width:320.5px;height:17px;"><strong>Krótkie omówienie </strong></td>
+</tr>
+<tr style="height:77px;">
+<td style="width:320.5px;text-align:center;height:77px;">
+<p><em>bry³y graniaste, belki kanciaste,</em></p>
+<p><em>walce toczone, kule dr¹¿one</em></p>
+</td>
+<td style="width:320.5px;text-align:center;height:77px;">Przytoczone formy wywo³uj¹ skojarzenia z kubizmem, który d¹¿y³ do uproszczenia bry³. Wskazuj¹ tak¿e na bogactwo wytworów cz³owieka, ró¿norodnoœæ jego dzie³.  </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:320.5px;text-align:center;height:17px;"><em>rytmiczne, dêbowe Ojce</em></td>
+<td style="width:320.5px;text-align:center;height:17px;">Poeta staje siê niczym Bóg. Zespala siê ze swym dzie³em, które stanowi wynik jego twórczego wysi³ku. </td>
+</tr>
+<tr style="height:108px;">
+<td style="width:320.5px;text-align:center;height:108px;">
+<p><em>Poczêci w ¿ywocie kuli, </em></p>
+<p><em>rozpiêci na ¿y³ach linij</em></p>
+<p><em>rozciêci promieñmi bólu.</em></p>
+</td>
+<td style="width:320.5px;text-align:center;height:108px;">Poeta wykazuje œcis³y zwi¹zek ze swym dzie³em, poniewa¿ pe³ni funkcjê jego konstruktora, a wrêcz ojca. Proces tworzenia to nie tylko jednak œcis³e zaplanowanie, ale równie¿ trud zwi¹zany z aktem kreacji. Cierpienie tym samym staje siê Ÿród³em piêkna, dzie³o i autor zaœ wzajemnie na siebie oddzia³uj¹. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:320.5px;text-align:center;height:17px;"><em>[...] mordêdze bez koñca</em></td>
+<td style="width:320.5px;text-align:center;height:17px;">Akt tworzenia poezji, w przeciwieñstwie do pracy cieœli, ma trwa³y charakter. Jest niejednokrotnie mêcz¹cy, ale nie tylko wybranego momentu - definiuje bowiem ¿ycie pisz¹cego. </td>
+</tr>
+<tr style="height:235px;">
+<td style="width:320.5px;text-align:center;height:235px;">
+<p><em>Zbieg³y siê, zbieg³y:</em></p>
+<p><em>pêkniêcia ciêæ, krzywizny,</em></p>
+<p><em>zagiêcia</em><em> lin, blizny,</em></p>
+<p><em>rozdarte ³uki, starte znaki,</em></p>
+<p><em>zygzaki, ciêciwy,</em></p>
+<p><em>z³amane, sfalowane,</em></p>
+<p><em>krzywe - </em></p>
+</td>
+<td style="width:320.5px;text-align:center;height:235px;">Opis efektu pracy cieœli mo¿na odnieœæ tak¿e do procesu tworzenia dzie³a poetyckiego. Stanowi ono rezultat dzia³añ artysty, który wykorzystuje rozmaite œrodki wyrazu, w³asne doœwiadczenia, uczucia, niedoskona³oœci, by stworzyæ poezjê. Wszystko to ³¹czy siê ze sob¹ w ca³oœæ. </td>
+</tr>
+<tr style="height:140px;">
+<td style="width:320.5px;text-align:center;height:140px;">
+<p><em>Spiêtrza siê, wzdyma od nowa,</em></p>
+<p><em>zaklête wnêtrze roztula</em></p>
+<p><em>œlepa, potworna budowa:</em></p>
+<p><em>KULA.</em></p>
+</td>
+<td style="width:320.5px;text-align:center;height:140px;">Efekt dzia³añ przynosi doskona³oœæ, wytwór, który zdaje siê przynosiæ nowe sensy, ¿yæ swoim ¿yciem. Jednoczeœnie budzi on pewn¹ grozê oraz niepewnoœæ - podobnie jak poezja mo¿e wywo³ywaæ odmienne wra¿enia i sugerowaæ ró¿norodne treœci. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Wyra¿enie "dêbowe Ojce" wskazuje na zale¿noœæ, która zachodzi miêdzy cieœl¹ (poet¹) a drewnem (s³owem). Sugeruje bowiem nierozerwaln¹ wiêŸ: pracuj¹cy - niczym Bóg - staje siê Ÿród³em ¿ycia, nadaje okreœlon¹ formê materii. W ten sposób zyskuje ona pe³niê oraz konkretny kszta³t, a tak¿e funkcjê. Okreœlenie to przypomina równie¿ o tym, i¿ wytwór to swoiste dziedzictwo autora. Cz³owiek i jego dzie³o w pewien sposób siê jednocz¹, poniewa¿ wzajemnie na siebie oddzia³uj¹; cz¹stka myœli istoty ludzkiej jest obecna w uformowanej przez niego materii lub s³owie.  </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Kula ma bogat¹ symbolikê w kulturze. Oznacza bowiem doskona³oœæ i pe³niê, ale tak¿e prawid³owoœæ, piêkno czy obecnoœæ Boga. Mo¿e tak¿e symbolizowaæ model kosmosu oraz przestrzeñ, w której tocz¹ siê losy cz³owieka. Jednoczeœnie czêsto uto¿samia siê j¹ ze Ÿród³em wszystkich bytów. Kula w kulturze to tak¿e symbol kruchoœci ¿ycia oraz przemijania. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Utwór Przybosia sk³ada siê z dziesiêciu strof, które maj¹ ró¿n¹ iloœæ wersów. Tylko w œrodkowej czêœci mo¿na dostrzec pewn¹ regularnoœæ, poniewa¿ wystêpuj¹ tam strofy o tej samej iloœci wersów (kolejno w ca³ym tekœcie: 8, 2, 3, <strong>4, 4, 4,</strong> 7, 2, 9, 4). Takie zró¿nicowanie strof ma g³êbszy sens, gdy¿ w pewien sposób oddaje rytm oraz dynamikê pracy cieœli. Pocz¹tek utworu przedstawia w opisowy sposób pracuj¹cych, zawiera pe³ne zdania. Rozpoczêcie jednak w³aœciwej pracy ("Warknie ko³owrót rozkuty") wp³ywa na kszta³t wiersza, poniewa¿ zaczynaj¹ dominowaæ krótkie wersy, a w nich - wyliczenia kolejnych elementów. Tym samym graficzny kszta³t dzie³a dodatkowo wywo³uje skojarzenie z ciêciem drzewa pi³¹, oddaje intensywnoœæ pracy:</p>
+<p><em>Warknie ko³owrót rozkuty,</em></p>
+<p><em>wznios¹ siê szczerbate skluty,</em></p>
+<p><em>run¹ schryp³ymi zamachy</em></p>
+<p><em>w sklepienia,</em></p>
+<p><em>liny,</em></p>
+<p><em>stalowe spiny,</em></p>
+<p><em>gmachy. </em></p>
+<p>Oprócz typowych znaków interpunkcyjnych, wyznaczaj¹cych kolejne zdania (kropka) oraz wprowadzaj¹cych wyliczenia (przecinek, dwukropek) lub wtr¹cenia (przecinek) pojawiaj¹ siê tak¿e dodatkowe. Mo¿na tutaj wyró¿niæ dwa typy kresek. Pierwszy to dywizy ("krê¿ele-leje", "na-prze-mianê"), za pomoc¹ których poeta tworzy z³o¿enia oraz neologizmy. Drugim jest zaœ pó³pauza - "kliny klaszcz¹ce, krê¿ele-leje – – –", "krzywe –". Jej obecnoœæ w takiej postaci sugeruje pewne niedopowiedzenia, które czytelnik musi uzupe³niæ swoj¹ wyobraŸni¹. Mo¿e tak¿e byæ znakiem elipsy, czyli pominiêcia pewnego elementu tekstu w celu dynamizacji wypowiedzi oraz skondensowania znaczeñ. Nieprzypadkowo tak¿e Przyboœ zapisuje jeden z wyrazów wielk¹ liter¹ ("KULA"). Podkreœla to jego znaczenie, poniewa¿ wytwór ten stanowi ostateczne, doskona³e dzie³o cieœli, a jednoczeœnie - podsumowanie ca³ego dzia³ania. Zabieg ten odnosi siê tak¿e do s³ów z przedostatniego wersu: "[...] potworna budowa". Akcentuje bowiem onieœmielaj¹c¹ potêgê wytworu, pewn¹ grozê, któr¹ wywo³uje. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>W utworze dominuj¹:</p>
+<ul>
+<li>metafory -&gt; "Poczêci w ¿ywocie kuli, / rozpiêci na ¿y³ach linij, / rozciêci promieñmi bólu", "rytmiczne, dêbowe Ojce", "kurcz¹ ³ykowe musku³y, / które spoid³a sku³y"; </li>
+<li>wyliczenia oraz epitety -&gt; "klocki odête, sto¿ki œciête, / bry³y graniaste, belki kanciaste, / walce toczone , kule dr¹zone, / kliny klaszcz¹ce, krê¿ele-leje - - - "; "Prê¿¹ siê w zworze sêkatej / niezdarne d³oni kwadraty, / klekoc¹ zwarte przeguby, / wierc¹ siê wœciekle kad³uby"; "Warknie ko³owrót rozkuty, / wznios¹ siê szczerbate skluty, / run¹ schryp³ymi zamachy / w sklepienia, / liny, stalowe spiny, / gmachy"; "pêkniêcia ciêæ, krzywizny, / zagiêcia lin, blizny, / rozdarte ³uki, starte znaki, / zygzaki, ciêciwy, / z³amane, sfalowane, / krzywe -";</li>
+<li>hiperbole -&gt; "klekoc¹ zwarte przeguby, / wierc¹ siê wœciek³e kad³uby"; "Opak mordêdze bez koñca / nie pêknie przestrzenna cela"; "œlepa, potworna budowa: / KULA". </li>
+</ul>
+<p> </p>
+<p>Zastosowane œrodki wzmacniaj¹ sugestywnoœæ przedstawienia oraz intensywnoœæ procesu tworzenia - nie tylko jego piêkno, ale te¿ sam trud. Najpe³niej oddaj¹ wiêc wizjê artysty. Zaznaczaj¹ przy tym dynamikê i dramatyzm przedstawionej sytuacji oraz prowadz¹ do nadania jej szczególnego sensu - uwznioœlenia. Ponadto nale¿y zauwa¿yæ, i¿ umo¿liwiaj¹ one kondensacjê treœci, poniewa¿ dzie³o mo¿na rozpatrywaæ na dwóch p³aszczyznach: dos³ownej oraz przenoœnej. W ten sposób utwór staje siê swoist¹ zagadk¹ dla czytelnika. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br>

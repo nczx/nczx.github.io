@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>1. Molly hates travelling and Emily loves it.</p>
+<p> </p>
+<p><strong>Na pozostałe pytania należy odpowiedzieć samodzielnie.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. employment prospects</p>
+<p><strong>Fragment w tekście:</strong> "This will strengthen your CV and, as many students find, could help you to launch your future professional career." - To ulepszy twoje CV i, jak zauważa wielu uczniów, może pomóc ci rozpocząć w przyszłości karierę zawodową. </p>
+<p>2. stay away from</p>
+<p><strong>Fragment w tekście:</strong> "(...) but I was determined to avoid the really touristy destinations, so I ended up in Pavia for a year." - (...) ale byłem zdeterminowany do tego, żeby uniknąć turystycznych miejsc, więc skończyłem w Pavii na rok.</p>
+<p>3. special training</p>
+<p><strong>Fragment w tekście:</strong> "I started by getting the teaching qualification which the programme offered." - Zaczęłam od zdobycia kwalifikacji do nauczania, które były w ofercie programu.</p>
+<p>4. people</p>
+<p><strong>Fragment w tekście:</strong> "My idea was to experience a really different country and to help people." - Moim pomysłem było poznanie naprawdę innego kraju i pomoc ludziom.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście:</strong> "My idea was to experience a really different country and to help people." - Moim pomysłem było poznanie zupełnie innego kraju i pomoc ludziom. </p>
+<p>2. C</p>
+<p><strong>Fragment w tekście:</strong> "I started by getting the teaching qualification which the programme offered." - Zaczęłam od zdobycia kwalifikacji do nauczania, które były w ofercie programu.</p>
+<p>3. B</p>
+<p><strong>Fragment w tekście:</strong> "It pushed me out of my comfort zone and I was constantly being challenged." - Wypchnęło mnie to z mojej strefy komfortu i cały czas miałem do spełnienia nowe wyzwania.</p>
+<p>4. A</p>
+<p><strong>Fragment w tekście:</strong> "A programme that gives you the chance to study or work abroad helps you to gain independence and learn new things while getting more experience in a totally different environment. This will strengthen your CV and, as many students find, could help you to launch your future professional career." - Program, który daje szansę studiować albo pracować za granicą pomaga zdobyć niezależność i nauczyć się nowych rzeczy przy jednoczesnym zdobywaniu doświadczenia w zupełnie innym środowisku. To ulepszy twoje CV oraz, jak zauważają studenci, w przyszłości może pomóc w rozpoczęciu kariery zawodowej.</p>
+<p>5. B</p>
+<p><strong>Fragment w tekście:</strong> "The language classes in particular were hard work, but I've realised now that it's paid off. I was watching a film in Italian recently, and I could follow it all without subtitles!" - Lekcje języka były szczególnie trudne, ale teraz widzę, że się opłaciły. Oglądałem ostatnio film po włosku i rozumiałem wszystko bez napisów!</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. went abroad </p>
+<p>2. the majority of </p>
+<p>3. university</p>
+<p>4. six months</p>
+<p>5. a housing project</p>
+<p> </p>
+<p><strong>Tłumaczenie (odpowiedniki wstawionych słów zostały pogrubione):</strong></p>
+<p>Artykuł przedstawia świadectwo młodych osób, które <strong>wyjechały za granicę</strong> żeby tam studiować albo pracować przez dłuższy czas. Główny powód, dla którego ludzie podejmują taką decyzję to fakt, że <strong>większość</strong> tych, którzy mają takie doświadczenie zdobywa lepszą pracę w stosunkowo krótszym czasie. Istnieje szeroki wybór czynności, którymi możesz się zająć. Na przykład, jeden chłopiec <strong>studiował</strong> we Włoszech, a dziewczyna uczyła języka angielskiego w Tajlandii <strong>przez sześć miesięcy</strong>. Jeszcze jednym przykładem jest chłopak, który pomagał innym współtworząc <strong>projekt mieszkaniowy</strong> gdzieś w Południowej Afryce. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. broaden your horizons</p>
+<p>(mieć więcej możliwości i wyborów - poszerzać horyzonty) </p>
+<p>2. gain skills</p>
+<p>(mieć więcej zdolności- zdobyć umiejętności)</p>
+<p>3. comfort zone</p>
+<p>(sytuacja albo miejsce, w którym czujesz się zrelaksowany/a - strefa komfortu)</p>
+<p>4. enrolling</p>
+<p>(zapisanie czyjegoś nazwiska na oficjalnej liście uczestników - zapisanie się)</p>
+<p>5. challenged</p>
+<p>(testować czyjeś umiejętności i zdolności - rzucać wyzwanie)</p>
+<p>6. strengthen</p>
+<p>(sprawiać, że coś staje się mocniejsze - wzmacniać)</p>
+<p>7. venture out</p>
+<p>(zrobić coś ryzykownego - odważyć się wyjść z domu)</p>
+<p>8. enriching </p>
+<p>(ulepszający - wzbogacający)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. enriching, strengthened</p>
+<p>(Udzielanie się dla Greenpeace latem było nie tylko <strong>wzbogacającym</strong> doświadczeniem, ale też <strong>wzmocniło</strong> moje CV.) </p>
+<p>2. challenged, enrolled</p>
+<p>(Po tym jak zajęcia komputerowe nie <strong>stanowiły</strong> dla mnie wystarczającego <strong>wyzwania</strong>, <strong>zapisałem/am się</strong> na dodatkowy kurs informatyczny.)</p>
+<p>3. comfort zone, venture out</p>
+<p>(Jeśli chciałbyś/chciałabyś zostać wypchnięty/a ze swojej <strong>strefy komfortu</strong> i <strong>wybrać się</strong> ze mną w podróż po Azji, bądźmy w kontakcie!)</p>
+<p>4. gained, broadened </p>
+<p>(Po roku na statku wycieczkowym Marcus <strong>zdobył</strong> wiele nowych umiejętności i <strong>poszerzył</strong> swoje horyzonty.)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

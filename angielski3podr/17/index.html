@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. I regularly read your blog and wonder if you could help me. </p>
+<p>(Regularnie czytam twojego bloga i zastanawiam się, czy mógłbyś/mogłabyś mi pomóc.)</p>
+<p><strong>Uzasadnienie</strong>: używamy przymiotnika dzierżawczego przed rzeczownikiem <em>blog</em>. Używamy spójnika <em>if </em>(czy) po czasowniku <em>wonder</em> (zastanawiać się). Zaimek osobowy <em>I </em>(ja) wstawiamy w formie dopełnienia (<em>me </em>- mnie). </p>
+<p><br/>2. I have a problem which is related to my ex, who acts very rudely towards me.</p>
+<p>(Mam problem, który jest związany z moim byłym/moją byłą, który/a zachowuje się wobec mnie bardzo ordynarnie.)</p>
+<p><strong>Uzasadnienie</strong>: tworzymy zdanie przydawkowe definiujące (bez przecinków) za pomocą zaimka <em>which</em> oraz niedefiniujące (oddzielone przecinkiem) za pomocą zaimka <em>who</em>.</p>
+<p><br/>3. My dad hardly has time for me anymore.</p>
+<p>(Mój tata już prawie w ogóle nie ma dla mnie czasu.)</p>
+<p><strong>Uzasadnienie</strong>: używamy czasownika <em>have </em>w odpowiedniej formie. <em>Have time for somebody </em>- mieć dla kogoś czas.<br/><br/></p>
+<p>4. It feels like no one can understand me.</p>
+<p>(To takie uczucie, jak gdyby nikt nie potrafił mnie zrozumieć.)</p>
+<p><strong>Uzasadnienie</strong>: używamy czasownika <em>feel</em> w czasie <em>present simple </em>(dodajemy końcówkę -s dla osób <em>she, he, it</em>). Zaimek osobowy <em>I </em>(ja) wstawiamy w formie dopełnienia (<em>me </em>- mnie).</p>
+<p><br/>5. We used to talk about everything, but now they don't have time for me.</p>
+<p>(Dawniej rozmawialiśmy o wszystkim, ale teraz nie mają dla mnie czasu.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>used to </em>+ bezokolicznik, aby mówić o dawnych stanach i nawykach. Tworzymy przeczenie w czasie <em>past simple</em> za pomocą czasownika posiłkowego <em>don't</em>. </p>
+<p><br/>6. What should I do to make her stop?</p>
+<p>(Co powinienem zrobić, żeby przestała?)</p>
+<p><strong>Uzasadnienie</strong>: tworzymy zdanie okolicznikowe celu za pomocą słówka <em>to </em>(żeby). Zaimek osobowy <em>she </em>(ona) wstawiamy w formie dopełnienia (<em>her</em>), aby poprawnie użyć konstrukcji <em>make somebody do something </em>- sprawić, by ktoś coś zrobił.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<table border="1" style="height: 219.182px; width: 621px; text-align: center; border-collapse: collapse; border-color: rgb(0, 230, 111);">
+<tbody>
+<tr style="height: 16.4545px;">
+<td colspan="2" style="background-color: rgb(7, 78, 40); width: 593.227px; height: 16.4545px; vertical-align: middle;">
+<p><span style="color: rgb(255, 255, 255);"><strong>Informal linkers </strong>(nieformalne wyrazy łączące)</span></p>
+</td>
+</tr>
+<tr style="height: 94.3636px;">
+<td style="background-color: rgb(204, 255, 229); width: 296.932px; height: 94.3636px; vertical-align: middle;">
+<p><span style="color: rgb(31, 191, 144);"><strong>To give more detail about a topic</strong></span></p>
+<p>(żeby podać więcej szczegółów na dany temat)</p>
+</td>
+<td style="background-color: rgb(204, 255, 229); width: 296.295px; height: 94.3636px; vertical-align: middle;">
+<p><span style="color: rgb(31, 191, 144);"><strong>To change topic</strong></span></p>
+<p>(żeby zmienić temat)<br/><br/></p>
+</td>
+</tr>
+<tr style="height: 108.364px;">
+<td style="width: 296.932px; height: 108.364px;">
+<p><em>So, ...</em> (A więc...)</p>
+<p>I mean, ... (To znaczy...) </p>
+<p>Basically, ... (Generalnie...)</p>
+</td>
+<td style="width: 296.295px; height: 108.364px;">
+<p><em>Anyway, ...</em> (W każdym razie...)</p>
+<p>To be honest, ... (Jeśli mam być szczery/a...)</p>
+<p>Well, ... (Cóż...)</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. Basically </p>
+<p>2. Anyway</p>
+<p>3. To be honest</p>
+<p>4. Well</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Droga Sally,</p>
+<p>zastanawiam się, czy możesz mi pomóc z pewnym problemem.</p>
+<p><strong>Generalnie</strong> moja siostra zawsze pożycza sobie moje rzeczy, nawet bez pytania. To znaczy, nie mam nic przeciwko dzieleniu się z nią, ale uważam, że powinna najpierw zapytać!</p>
+<p><strong>W każdym razie</strong>, chciałabym się dowiedzieć, jak porozmawiać z siostrą bez rozzłoszczenia jej. <strong>Jeśli mam być szczera</strong>, to chyba czuję się z tym źle, bo jestem starsza, w związku z czym muszę dawać dobry przykład.</p>
+<p><strong>Cóż</strong>, to by było na tyle o moim problemie. Nie mogę się doczekać, aż posłucham Twojego podcastu!</p>
+<p>Pozdrawiam</p>
+<p>Laila</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Notes organised into paragraphs:</strong></p>
+<p>(notatki podzielone na akapity)</p>
+<p><br/>1. Reason for writing: my friend and I used to be on great terms but it has changed.</p>
+<p>(Powód, dla którego piszę: mój przyjaciel/moja przyjaciółka i ja świetnie się kiedyś dogadywaliśmy, ale to się zmieniło.) </p>
+<p><br/>2. Introduction into the situation: basically, we get into fights all the time and we rarely ever hang out anymore.</p>
+<p>(Wprowadzenie do sytuacji: generalnie cały czas wdajemy się w sprzeczki i już prawie wcale nie spędzamy ze sobą czasu.)</p>
+<p>Reasons for it: we got into this big argument two months ago and our relationship hasn't been the same since.</p>
+<p>(Powody: mieliśmy taką dużą kłótnię dwa miesiące temu i od tamtej pory nasza relacja nie jest taka sama.)</p>
+<p><br/>3. More details: the argument was about where we're going to university. We were supposed to study in the same city but we couldn't agree on one place.</p>
+<p>(Więcej szczegółów: kłótnia była o tym, gdzie pójdziemy na uniwersytet. Mieliśmy/Miałyśmy studiować w tym samym mieście, ale nie mogliśmy/mogłyśmy zgodzić się na jedno miejsce.)</p>
+<p><br/>4. Concluding phrase: That's enough about my problem. I'm looking forward to watching your vlog!</p>
+<p>(Wyrażenie kończące: To by było na tyle o moim problemie. Nie mogę się doczekać, aż obejrzę Twojego vloga!)</p>
+<p>Closing greeting: All the best</p>
+<p>(Kończący zwrot: Pozdrawiam)</p>
+<p> </p>
+<p><strong>Email: </strong></p>
+<p><em>Dear Casey,</em></p>
+<p><em>I decided to write to you because I think the advice you give on your vlog is very helpful</em>. I wonder if you could help me with my problem. </p>
+<p>My friend and I used to be on great terms but it has changed. Basically, we get into fights all the time and we rarely ever hang out anymore. We got into this big argument two months ago and our relationship hasn't been the same since.</p>
+<p>The argument was about where we're going to university. We were supposed to study in the same city but we couldn't agree on one place. I can't just choose whatever I want, my parents have to support it too. My friend just doesn't get it. To be honest, I don't know how to talk to him/her.</p>
+<p>Well, that's enough about my problem. I'm looking forward to watching your vlog!</p>
+<p>All the best,</p>
+<p>XYZ</p>
+<p><br/>(Liczba słów: 149)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Drogi/a Casey,</p>
+<p>postanowiłem/am do Ciebie napisać, ponieważ uważam, że rady, których udzielasz w swoich vlogach są bardzo pomocne. Zastanawiam się, czy mógłbyś/mogłabyś mi pomóc z moim problemem.</p>
+<p>Kiedyś mój przyjaciel / moja przyjaciółka i ja świetnie się dogadywaliśmy/łyśmy, ale to się zmieniło. W zasadzie cały czas się kłócimy i rzadko spędzamy ze sobą czas. Dwa miesiące temu wdaliśmy/wdałyśmy się w wielką kłótnię i od tego czasu nasza relacja nie jest już taka sama.</p>
+<p>Kłótnia dotyczyła tego, gdzie idziemy na uniwersytet. Mieliśmy/Miałyśmy studiować w tym samym mieście, ale nie mogliśmy/mogłyśmy się zgodzić na jedno miejsce. Nie mogę sobie wybrać, co tylko chcę, moi rodzice też muszą to popierać. Mój przyjaciel / Moja przyjaciółka po prostu tego nie rozumie. Szczerze mówiąc, nie wiem jak z nim/nią rozmawiać.</p>
+<p>Cóż, to tyle o moim problemie. Z niecierpliwością czekam, aby obejrzeć Twojego vloga!</p>
+<p>Pozdrawiam</p>
+<p>XYZ</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I rarely ever read advice columns or websites because I prefer asking my friends for advice. I guess their authors can offer helpful suggestions but it's up to the person to decide.</p>
+<p>(Rzadko zdarza mi się czytać kolumny lub strony internetowe z poradami, ponieważ wolę pytać o radę moich przyjaciół. Domyślam się, że ich autorzy mogą oferować pomocne sugestie, ale decyzja należy do danej osoby.)</p>
+<p><br/><strong>Advantages: </strong>(zalety)</p>
+<p>• The advice is based on facts, not someone's opinions. People you know might give you advice based on what they think about you or the people involved.</p>
+<p>(Porady są oparte na faktach, a nie na czyichś opiniach. Ludzie, których znasz, mogą udzielić ci rady w oparciu o to, co myślą o tobie lub o osobach zaangażowanych.)</p>
+<p><br/>• Authors of advice columns are usually experienced and mature. Their advice is usually helpful and responsible.</p>
+<p>(Autorzy rubryk poradniczych są zazwyczaj doświadczeni i dojrzali. Ich rady są zazwyczaj pomocne i odpowiedzialne.)<br/><br/></p>
+<p>• Asking for advice from such sources is usually anonymous. You can be honest and not be afraid of being judged.</p>
+<p>(Zwracanie się o radę do takich źródeł jest zazwyczaj anonimowe. Można być szczerym i nie obawiać się osądzenia.)</p>
+<p> </p>
+<p><strong>Disadvantages: </strong>(wady)</p>
+<p>• Authors of advice columns can work only on limited information. They don't know the whole story unless you give it to them. This can influence their judgement.</p>
+<p>(Autorzy kolumn poradniczych mogą pracować jedynie na podstawie ograniczonej ilości informacji. Nie znają całej historii, chyba że im ją podasz. To może wpływać na ich osąd.)<br/><br/></p>
+<p>• They don't know you personally so the advice might be very general instead of specific.</p>
+<p>(Nie znają cię osobiście, więc porady mogą być bardzo ogólne, a nie konkretne.)</p>
+<p><br/>• You usually can't ask follow-up questions or clarify anything. Simply talking to someone in real life might produce more accurate solutions.</p>
+<p>(Zazwyczaj nie można zadać dodatkowych pytań ani niczego wyjaśnić. Zwykła rozmowa z kimś w prawdziwym życiu może doprowadzić do bardziej trafnych rozwiązań.)</p><br>

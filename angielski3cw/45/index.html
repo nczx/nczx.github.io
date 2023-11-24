@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź:  </strong></p>
+<p>South Africa</p>
+<p><strong>Fragment tekstu: </strong>"I spent three months volunteering on a nature conservation project in South Africa." - Spędziłam trzy miesiące na wolontariacie w projekcie ochrony przyrody w Południowej Afryce.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Wydarzenia a-e ułożone chronologicznie: </strong></p>
+<p>d - <strong>1</strong></p>
+<p>(Ukończyła szkołę.) </p>
+<p>b - <strong>2</strong></p>
+<p>(Pracowała jako kelnerka.)</p>
+<p><strong>Fragment w tekście: (d, b) </strong>"When I finished school, I decided that, before I went to university, I would have a gap year. (...) Before that, I had to find work to fund my travelling. I worked in a local cafe as a waitress (...)." - Kiedy skończyłam szkołę, postanowiłam, że zanim pójdę na studia, zrobię sobie rok przerwy w nauce. (...) Przed tym musiałam znaleźć pracę, aby sfinansować moje podróże. Pracowałam w miejscowej kawiarni jako kelnerka (...).</p>
+<p>e - <strong>3</strong></p>
+<p>(Zaczęła pracę jako wolontariuszka.)</p>
+<p><strong>Fragment w tekście: </strong>"I spent three months volunteering on a nature conservation project in South Africa." - Spędziłam trzy miesiące na wolontariacie w projekcie ochrony przyrody w Południowej Afryce.</p>
+<p>c - <strong>4</strong></p>
+<p>(Pomogła zbudować drogę.)</p>
+<p><strong>Fragment w tekście: </strong>"There were many other highlights, but one of my proudest moments was helping to build a 1.7 km road." - Było wiele innych ważnych wydarzeń, ale jednym z moich najbardziej satysfakcjonujących momentów była pomoc w budowie drogi liczącej 1,7 km.</p>
+<p>a - <strong>5</strong></p>
+<p>(Poszła na uniwersytet.)</p>
+<p><strong>Fragment w tekście: </strong>"I've grown so much in one year, and I now feel much better prepared for university than if I had gone there straight from school." - Tak bardzo rozwinęłam się w ciągu jednego roku i czuję się teraz o wiele lepiej przygotowana do studiów, niż gdybym poszła tam prosto ze szkoły.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. C </p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje pracę Keelie jako kelnerki, dlatego pasującą kontynuacją jest komentarz na jej temat w zdaniu C: "To była dobra praca i zarobiłam w niej dużo pieniędzy". </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje wolontariat Keelie w Afryce, dlatego pasującą kontynuacją jest zdanie A, które podaje na ten temat więcej informacji: "Czasami byłam w terenie od świtu do zmierzchu".</p>
+<p>3. E</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje budowę drogi w ramach wolontariatu, dlatego pasującą kontynuacją jest komentarz na jej temat w zdaniu E: "Była trochę wyboista, ale była nasza!"</p>
+<p>4. B</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką jest podsumowaniem na temat roku przerwy w nauce Keelie, dlatego pasującą kontynuacją jest zdanie B: "Rok przerwy w nauce nie jest dla każdego, ale dla mnie, było to wspaniałe doświadczenie".</p>
+<p><s class="odr-strikethrough">D</s></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Most people have a gap year before starting university or their first job.  </p>
+<p><strong>Fragment w tekście: </strong>"A gap year is a period of time taken out by students, most often before starting university or their first job." - Rok przerwy w nauce to okres spędzony przez  uczniów, najczęściej przed rozpoczęciem studiów lub pierwszej pracy.</p>
+<p>2. She prepared by working in a local cafe as a waitress.</p>
+<p><strong>Fragment w tekście: </strong>"I worked in a local cafe as a waitress and lived at home so I could save as much as possible." - Pracowałam w miejscowej kawiarni jako kelnerka i mieszkałam w domu, żeby zaoszczędzić jak najwięcej pieniędzy.</p>
+<p>3. She chose that project because she could work with experienced guides and see the benefits of her work while she was there.</p>
+<p><strong>Fragment w tekście: </strong>"I researched various opportunities, but on the one I chose, you could work with experienced guides and see the benefits of your work while you were there, which was important to me." - Rozważałam różne możliwości, ale przy tej, którą wybrałam, można było pracować z doświadczonymi przewodnikami i oglądać korzyści ze swojej pracy podczas pobytu, co było dla mnie ważne.</p>
+<p>4. The best thing about building the road was adding it to the map and driving along it.</p>
+<p><strong>Fragment w tekście: </strong>"It took a few weeks, and it was most rewarding when we added the road to the map and drove along it." - Zajęło nam to kilka tygodni, a największą satysfakcję sprawiało, gdy dodaliśmy drogę na mapie i przejechaliśmy po niej.</p>
+<p>5. Keelie thinks that interpersonal skills and learning to budget carefully will be helpful during her studies.</p>
+<p><strong>Fragment w tekście: </strong>"I also developed new skills, such as interpersonal skills and learning to budget carefully, which I'll be using during my degree and afterwards." - Rozwinęłam również nowe zdolności, takie jak umiejętności interpersonalne i opanowanie rozważnego gospodarowania budżetem, które będę wykorzystywać podczas studiów i po ich ukończeniu.</p><br>

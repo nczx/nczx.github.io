@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>1.  D</p>
+<p>2. A</p>
+<p>3. B</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1017px; height: 212px;">
+<tbody>
+<tr style="height: 70px;">
+<td style="background-color: #00cc33; width: 215.075px;"><strong>(1) </strong>liczebność wynosząca co najmniej 3 osoby</td>
+<td style="background-color: #ccff99; width: 795.525px;"><strong>(D) </strong>Wśród moich znajomych ustalenie czegoś w dwie osoby zazwyczaj nie jest trudne. Kiedy jednak spotykamy się w większym gronie, prawie zawsze musimy głosować, bo inaczej nie możemy się dogadać. A wtedy jedna z osób podporządkowuje się reszcie, mimo że nie jest z tego zadowolona...</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #00cc33; width: 215.075px;"><strong>(2) </strong>poczucie wspólnej tożsamości łączące członków</td>
+<td style="background-color: #ccff99; width: 795.525px;"><strong>(A) </strong>Ja i moje koleżanki jesteśmy do siebie bardzo podobne. Wszystkie wybrałyśmy tę samą szkołę, słuchamy tej samej muzyki, lubimy razem jeździć rowerami i odpoczywać na plaży... Czuję, że tworzymy naprawdę zgraną paczkę!</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #00cc33; width: 215.075px;"><strong>(3) </strong>wewnętrzna struktura (role odgrywane przez członków)</td>
+<td style="background-color: #ccff99; width: 795.525px;"><strong>(B) </strong>W sumie nie wiem, dlaczego tak jest, ale wśród moich kolegów najlepsze pomysły na wspólne spędzanie wolnego czasu ma zawsze Arek, gdy jednak musimy ustalić jakieś szczegóły, to i tak wszyscy słuchamy Tomka. Ciężko go przekonać, że nie ma racji, a tak naprawdę to się go chyba nawet trochę boimy...</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>-&gt; </em></strong><span style="text-decoration: line-through;"><strong>(C) </strong>Na początku liceum bałam się, że stracę swoją paczkę przyjaciół, z którą trzymam się od podstawówki. Ale okazało się, że choć w nowej klasie szybko znalazłam nowe koleżanki i nowych kolegów, to po lekcjach wciąż najczęściej spotykam się ze starymi znajomymi.</span></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe grupy społeczne, do których możesz należeć:</strong></span></p>
+<ul>
+<li>rodzina, </li>
+<li>grupa sąsiedzka,  </li>
+<li>szkoła, </li>
+<li>klasa, </li>
+<li>drużyna sportowa, </li>
+<li>stowarzyszenie, </li>
+<li>koło naukowe.
+<p> </p>
+</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Rolą społeczną</strong></span> jest zbiór społecznych oczekiwań, jakie żywi się względem jednostki, jednocześnie przypisując jej pewne obowiązki i przywileje. Owe oczekiwania, obowiązki i przywileje, jakie wiąże się z jednostką, wynikają z zajmowanej przez nią pozycji w grupie i społeczeństwie.</p>
+<p>Każda jednostka pełni jednocześnie wiele ról społecznych. Na przykład:</p>
+<p>- rolę ucznia (z którą wiąże się to, że oczekuje się od niej chodzenia do szkoły, systematycznego uczenia się i kulturalnego zachowania, w szczególności w szkole i podczas zajęć),</p>
+<p>- rolę dziecka (a więc syna lub córki, w związku z którą oczekuje się od jednostki pomocy dla swych rodziców i okazywania im szacunku),</p>
+<p>- rolę przyjaciela (z którą wiąże się to, że oczekuje się od niej bycia wsparciem w trudnych chwilach),</p>
+<p>- rolę uczestnika koła naukowego (z którą wiąże się to, że oczekuje się od niej zaangażowania w jego działalność i pogłębiania swej wiedzy oraz wykonywania zleconych zadań).</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Stąd proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><strong><span style="text-decoration: underline;">Grupa społeczna</span></strong> to zbiorowość, która składa się z co najmniej trzech osób, a które są połączone więziami wynikającymi na przykład z działania we wspólnym celu i mają świadomość przynależności do tej zbiorowości i identyfikują się z nią.</p>
+<p><strong><span style="text-decoration: underline;">Każda jednostka należy zazwyczaj do wielu różnych grup społecznych</span></strong>. Młody człowiek, na przykład uczeń szkoły średniej, jest zwykle członkiem takich grup społecznych, jak między innymi: rodzina, klasa szkolna, szkoła, kółko naukowe, drużyna sportowa, krąg przyjaciół, koło zainteresowań, stowarzyszenie młodzieżowe czy harcerstwo.</p>
+<p>Z uczestniczeniem w grupie społecznej wiąże się wypełnianie określonej <strong><span style="text-decoration: underline;">roli społecznej</span></strong>. Rolą społeczną jest zbiór oczekiwań wobec jednostki, jaki wiąże się z posiadaniem określonego statusu społecznego. Każdy człowiek gra w swoim życiu - często równocześnie - wiele różnych ról społecznych, a między niektórymi z nich może zachodzić tzw. <strong><span style="text-decoration: underline;">konflikt ról (trudności w ich pogodzeniu)</span></strong>. </p>
+<p>Z każdą rolą społeczną wiążą się nieco inne oczekiwania. Przykładowo, od kogoś, kto pełni rolę społeczną przyjaciela wymaga się, że będzie pomocny, życzliwy i wierny. Ktoś, kto pełni rolę ucznia, musi być pilny w nauce i obowiązkowy. Natomiast ktoś pełniący rolę syna bądź córki powinien szanować swych rodziców i wspierać ich.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Przykłady grup społecznych, w których pożądana jest postawa konformistyczna</span>:</strong> </p>
+<ul>
+<li>wojsko - mamy tutaj do czynienia z rygorem i zdyscyplinowaniem, które wymuszają postawy konformistyczne,</li>
+<li>parafia - jej członkowie cechują się szczególną obyczajowością, moralnością oraz zasadami religijnym, dlatego też postępują oni zgodnie z określonymi wyznacznikami, nie podejmują działań sprzecznych z nimi,</li>
+<li>urzędnicy danego działu administracji - postępują zgodnie z prawem oraz zasadami etyki urzędniczej, dlatego ich postawy są konformistyczne.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Przykłady grup społecznych, w których ceni się nonkonformizm:</strong></span></p>
+<ul>
+<li>skinhead'zi, </li>
+<li>organizacja pożytku publicznego sprzeciwiająca się władzy publicznej, </li>
+<li>gang, </li>
+<li>subkultura młodzieżowa.</li>
+</ul>
+<p>Powyższe grupy dążą do zamanifestowania czegoś (np. skinhead'zi chcą wyróżnić się z tłumu, zamanifestować swoje poglądy, swój styl życia) lub osiągnięcia określonych korzyści, które stoją w konflikcie z interesami innych podmiotów (np. organizacje pozarządowe zazwyczaj działają w obszarach niedoinwestowanych przez władze, dlatego też ich postawa powinna być nastawiona na dążenie do uzyskania określonych korzyści i celów, a nie poddania się woli np. rządzących).</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><em>-&gt; </em></strong><strong><span style="text-decoration: underline;">Postawa konformistyczna</span></strong> polega na podporządkowaniu się wartościom, poglądom, zasadom i normom postępowania obowiązującym w danej grupie społecznej. Postawy konformistycznej oczekuje się na przykład w takich organizacjach i instytucjach, jak wojsko, policja czy więzienie. Wyłamywanie się z panujących zasad miałoby negatywny wpływ na ich funkcjonowanie.</p>
+<p><strong><em>-&gt; </em></strong><strong><span style="text-decoration: underline;">Postawa nonkonformistyczna</span></strong> polega na byciu krytycznym wobec zastanych norm, zasad, zachowań i grupowych reguł postępowania. Postawy nonkonformistycznej oczekuje się na przykład od członków grup artystycznych, niekiedy od naukowców w zespołach badawczych (aby byli kreatywni, muszą niekiedy zanegować utarte rozwiązania) czy wśród przedstawicieli grup młodzieżowych.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Słowa Boba Dylana wskazują, że każdy człowiek jest jedyny i niepowtarzalny, ponieważ charakteryzuje się niepowtarzalnym wyglądem, głosem, zdolnościami, przekonaniami i upodobaniami. Ludzie różnią się między sobą. Ubierają się inaczej, słuchają innej muzyki, mają odmienne gusta. Drugiego też, takiego samego człowieka nigdy nie było, nie ma i nie będzie. Dlatego też sprzeciwiał się on zaszufladkowaniu ludzi, bowiem było to zjawisko, które związane jest z ograniczaniem możliwości rozwojowych danej osoby na rzecz narzucenia jej jednolitych wzorców zachowania. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Słowa Boba Dylana: <strong><span style="text-decoration: underline;">'Za kogokolwiek mnie uważacie, nie jestem tą osobą'</span></strong> można interpretować jako swoiste wezwanie do tego, by zbyt pochopnie nie oceniać ludzi i nie dokonywać ich szufladkowania. Każdy człowiek jest bowiem niepowtarzalnym indywiduum, z całym bogactwem bardzo złożonych przeżyć, poglądów, odczuć, problemów i cech charakteru. Tzw. pierwszy rzut oka, pobieżne przyjrzenie się komuś, nie mówi wiele o danej jednostce. Patrząc na inną osobę, widzimy przede wszystkim jej zewnętrzne zachowania, które odsłaniają jedynie znikomą część prawdy o niej. Nie mamy zaś sposobu, by dotrzeć do jej wnętrza, nie wiemy, co ta osoba czuje, jakie są jej marzenia, plany, tęsknoty i najskrytsze myśli. Wiele z tych ostatnich musi zresztą z konieczności pozostać niewypowiedzianymi, ponieważ nie wszystko, co człowiek odczuwa i myśli, można ująć w słowa. Czasami najważniejsze jest zaś to, co niewypowiedziane. Dlatego ludzi nie powinno się pochopnie szufladkować i kategoryzować. W ocenianiu innych osób warto jest zachować powściągliwość.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Działania opisane w tekście miały skłaniać jednostki do przyjęcia postawy konformistycznej, bowiem władze państwowe instrumentami manipulacyjnymi doprowadzały jednostki do uległości wobec państwa oraz jego władzom. Co więcej wypowiadanie przysięgi przez ludzi prowadziło do tego, że byli oni zobligowani do jej wypełnienia ze względu na tak zwane "słowo honoru".</p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>b) Przykłady z historii Polski:</strong></span></p>
+<ul>
+<li>funkcjonowanie Polskiej Zjednoczonej Partii Robotniczej w okresie PRL, </li>
+<li>okupacja niemiecka oraz sowiecka - okupanci zmuszali społeczeństwo polskie do bezwzględnego posłuszeństwa.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Postawa konformistyczna</span></strong> wiąże się z podporządkowaniem się wartościom, poglądom, wzorcom zachowania, zasadom i normom postępowania, które są dominujące w danej grupie społecznej. W tekście przytoczono działania, które miały wśród członków społeczeństwa (zwłaszcza tych niepokornych) wymuszać uległość wobec władzy. Zatem były to działania, które miały na celu skłonienie jednostek do przyjęcia postawy konformistycznej.</p>
+<p><strong>b)</strong></p>
+<p>Przykładem próby wymuszania na społeczeństwie bezwzględnego posłuszeństwa przez organy państwowe, jaka miała miejsce w historii Polski, może być na przykład działanie Armii Czerwonej, której oddziały po wkroczeniu na ziemie polskie 17 września 1939 roku prześladowały ludność polską, mordowały wziętych do niewoli polskich oficerów, żołnierzy, policjantów i funkcjonariuszy Korpusu Ochrony Pogranicza, a także usuwały z przestrzeni publicznej polskie symbole narodowe, chcąc wywrzeć na dotychczasowych obywatelach polskich presję, aby stali się ulegli wobec Związku Socjalistycznych Republik Radzieckich.</p><br>

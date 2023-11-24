@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. thrive = 6. become happy and healthy</p>
+<p>(prosperować, dobrze się rozwijać, rosnąć = stać się szczęśliwym i zdrowym) </p>
+<p>2. setbacks = 7. problems</p>
+<p>(komplikacje = problemy)</p>
+<p>3. humiliate = 10. feel embarrassed and ashamed </p>
+<p>(ośmieszać = czuć się zakłopotanym i zawstydzonym)</p>
+<p>4. bounced back = 9. recover</p>
+<p>(pozbierać się, dojść do siebie = dojść do siebie, wrócić do zdrowia)</p>
+<p>5. keep on track = 11. act in a way that will result in their success</p>
+<p>(trzymać się wytycznych = działać w sposób, który pozwoli odnieść sukces)</p>
+<p>8. think carefully about = 12. reflect on</p>
+<p>(starannie przemyśleć = zastanawiać się nad)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>C</p>
+<p><strong>Uzasadnienie:</strong> Tekst prezentuje różne umiejętności, które obóz sportowy pozwoli doskonalić. Umiejętności te sprawdzą się również w innych dziedzinach życia, o czym jest mowa w każdym akapicie. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. E</p>
+<p><strong>Fragment w tekście:</strong> "Resilience, which is the ability to recover after disappointments and difficult experiences, is perhaps the most important quality you can learn." - Odporność, czyli umiejętność dojścia do siebie po rozczarowaniach i trudnych doświadczeniach, to być może najważniejsza wartość, której można się nauczyć. </p>
+<p>2. C</p>
+<p><strong>Fragment w tekście:</strong> "(...) the best teams thrive on good communication, whether it's negotiating, discussing mistakes and strategies, or giving feedback together as a group." - (...) najlepsze drużyny rozwijają się dzięki komunikacji, mogą to być negocjacje, dyskusje o błędach i strategiach czy udzielanie informacji zwrotnej.</p>
+<p>3. G</p>
+<p><strong>Fragment w tekście:</strong> "You can't do well in sport if you don't respect other people. Any team sport requires an environment where everyone can enjoy themselves and know that their opinions will be taken seriously." - Nie możesz dobrze radzić sobie w sporcie, jeśli nie szanujesz innych. Każdy sport drużynowy wymaga środowiska, w którym wszyscy dobrze się czują i wiedzą, że ich opinie będą traktowane poważnie.</p>
+<p>4. A</p>
+<p><strong>Fragment w tekście:</strong> "It's easy to be distracted by what's happening around you or by your own problems, but when you train or play a game, you have to concentrate and ignore other things." - Łatwo jest dać się rozproszyć tym, co dzieje się dookoła, albo własnymi problemami, ale kiedy trenujesz albo rozgrywasz mecz, musisz się skupić i ignorować inne rzeczy.</p>
+<p>5. H</p>
+<p><strong>Fragment w tekście:</strong> "Another important aspect of sport is the ability to give, take and follow instructions, which is a skill that is equally important in later life (...)" - Kolejny ważny aspekt sportu to dawanie, wysłuchiwanie i stosowanie się do zasad - umiejętność równie ważna w późniejszym życiu (...)</p>
+<p>6. B</p>
+<p><strong>Fragment w tekście:</strong> "A necessary part of sport is setting realistic long- and short-term goals." - Niezbędną częścią sportu jest ustanawianie realistycznych krótko i długoterminowych celów. </p>
+<p><strong>The extra headings are D and F.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. The word links the ideas that in both sport and work life the ability to recover after failure is crucial.</p>
+<p>(To słowo łączy teorie mówiące, że zarówno w sporcie jak i w życiu zawodowym zdolność dojścia do siebie po porażce jest istotna.) </p>
+<p>2. The two key skills are resilience and setting objectives. </p>
+<p>(Dwie kluczowe umiejętności to odporność i wytyczanie celów.)</p>
+<p><strong>Fragment w tekście:</strong> "Resilience, which is the ability to recover after disappointments and difficult experiences, is perhaps the most important quality you can learn. (...) A necessary part of sport is setting realistic long- and short-term goals." - Odporność, czyli umiejętność dojścia do siebie po rozczarowaniach i trudnych doświadczeniach, to być może najważniejsza wartość, której można się nauczyć. (...) Niezbędną częścią sportu jest ustanawianie realistycznych krótko i długoterminowych celów. </p>
+<p>3. Mixed-gender sports help to provide diverse environment in which everyone feels accepted and respected.</p>
+<p>(Sporty koedukacyjne pomagają zapewnić zróżnicowane środowisko, w którym wszyscy czują się akceptowani i szanowani.)</p>
+<p><strong>Fragment w tekście:</strong> "Any team sport requires an environment where everyone can enjoy themselves and know that their opinions will be taken seriously. Our mixed-gender sports help to encourage such an attitude" - Każdy sport drużynowy wymaga środowiska, w którym wszyscy dobrze się czują i wiedzą, że ich opinie będą traktowane poważnie. Nasze sporty koedukacyjne pomagają promować takie podejście. </p>
+<p>4. Doing sport requires you to concentrate on the game or training and forget about other things. Similarly, in working environment, you will be more focused on work and less likely to get distracted thanks to being active. </p>
+<p>(Uprawianie sportu wymaga skupienia na meczu czy treningu i zapomnienia o innych rzeczach. Podobnie, w środowisku pracy dzięki aktywności fizycznej będziesz bardziej skoncentrowany/a na zadaniach do wykonania i mniej podatny/a na dekoncentrację.)</p>
+<p><strong>Fragment w tekście: </strong>"It's easy to be distracted by what's happening around you or by your own problems, but when you train or play a game, you have to concentrate and ignore other things. The ability to do this will help you keep on track with work." - Łatwo jest dać się rozproszyć tym, co dzieje się dookoła, albo własnymi problemami, ale kiedy trenujesz albo rozgrywasz mecz, musisz się skupić i ignorować inne rzeczy. Ta umiejętność pomoże ci trzymać się wytycznych w pracy.</p>
+<p>5. The ability to cooperate with others is the most important. </p>
+<p>(Najważniejsza jest umiejętność współpracy z innymi.)</p>
+<p><strong>Fragment w tekście: </strong>"Another set of skills needed all relate to cooperation between team members. These include problem-solving strategies and how to resolve conflict in a peaceful and positive way. These are all teamwork skills which are extremely useful in most working environments as well as team sports." - Kolejny potrzebny zestaw umiejętności, spośród których wszystkie dotyczą współpracy między członkami drużyny. Są to na przykład strategie rozwiązywania problemów i wiedza, jak rozwiązać konflikt w pokojowy i pozytywny sposób. Te wszystkie strategie pracy w grupie są niezwykle przydatne w większości środowisk pracy jak i sportach drużynowych.</p>
+<p>6. The author's intention is to advertise sports camps by presenting how they can help the participants to develop some skills needed in both sport and working environment. </p>
+<p>(Intencją autora jest zareklamowanie obozów sportowych poprzez pokazanie, jak mogą one pomóc uczestnikom rozwinąć umiejętności potrzebne zarówno w sporcie jak i w środowisku pracy.)</p>
+<p><strong>Fragment w tekście: </strong>"At our acclaimed sports camps, your talent isn't the only thing that will benefit - your future career will, too. Here are just some skills you'll develop that can empower you and help you on the road to success in any job." - Na naszych cieszących się popularnością obozach sportowych, talent nie jest jedynym, co udoskonalisz - stanie się to także z twoją przyszłą karierą. Oto zaledwie kilka umiejętności, które rozwiniesz, co doda ci wiary we własne siły i pomoże w drodze do sukcesu w każdej pracy.</p><br>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Na charakter relacji łączącej rodziców i Bohatera wskazuje język wypowiedzi. Słowa wypowiadane przez Matkę i Ojca wskazują na dręczące ich poczucie bezradności dotyczące wychowania syna czy też troskę. Są rozczarowani jego biernością, niechęcią do wzięcia odpowiedzialności za swoje życie: "Co z niego wyrośnie, jak będzie się tak długo wylegiwał". Cały czas go pouczają, nakazują mu stereotypowe postępowanie zgodne z tym, co uważają za odpowiednie: "Nie trzymaj rak pod kołdrą, to brzydko i niezdrowo". Chociaż jest dorosłym człowiekiem, to jednocześnie cały czas traktują go jak małe dziecko, na co wskazuje zastosowane słownictwo ("Chłopcze!"; Siedmioletni chłopiec..."). Dochodzi więc do infantylizacji, która oddziałuje również na język Bohatera. Liczne zdrobnienia ("tatusiu"), prosta składnia zdań i ograniczone słownictwo są typowe dla dziecka. Z kolei wypowiedzi Ojca sugerują surowość względem syna ("Zerżnę mu skórę!"), pewien dystans przejawiający się w oficjalnym charakterze polecenia: "Wstań, kiedy ojciec do ciebie mówi!". Natomiast słowa Matki świadczą o protekcjonalności: "Jak śmiesz do ojca... Nie poznaję cię, dziecko". Można więc stwierdzić, że relacja ta opiera się na dość szablonowych zwrotach, jest pozbawiona głębszego zainteresowania odbiorcą. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Wypowiedź Bohatera ("Wprawdzie nie mam kawy, filiżanek i pieniędzy, ale od czego jest nadrealizm, metafizyka poetyka snów?") ma metatekstowy charakter. Stanowi bowiem fragment dzieła Różewicza, ale nie dotyczy bezpośrednio ukazanych wydarzeń, lecz komentuje sam tekst, zwraca uwagę na jego konstrukcję. Zaznaczone w ten sposób zostają reguły teatralnej rzeczywistości. Jest to także wypowiedź dotycząca samego aktu mowy oraz pojęć wpływających na zmianę sytuacji.</p>
+<p>Metatekstowa wypowiedź stanowi nieco ironiczny komentarz Bohatera do tego, w jaki sposób może rozwiązać problem braku kawy. Świadczy również o jego dystansie względem rzeczywistości. Można ponadto stwierdzić, iż zabieg ten wpisuje się w tradycję teatru absurdu oraz koncepcji antydramatu. Postać zyskuje bowiem samoświadomość, dostrzega umowność rzeczywistości teatralnej. Jej słowa przełamują typowe dla dramatu konwencje, obnażają je. Świadczą również o tym, że to bohater, niczym autor, kształtuje znaną sobie rzeczywistość za pomocą środków typowych dla twórcy dramatu. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe uzasadnienie tezy:</p>
+<ul>
+<li>Zetknięcie się z drugim człowiekiem wymusza na jednostce odwołanie się do pewnych konwencji typowych np. dla rodziców i syna. Jest to próba przyprawienia postaci gombrowiczowskiej gęby. Bohaterowi zostaje bowiem narzucone zachowanie i słownictwo typowe dla dziecka - dorosły człowiek zostaje potraktowany jako niedojrzała jednostka. Sama zaś relacja rodziców i syna to gra, w której pojawiają się stereotypowe formuły, nakazy, brakuje autentycznego dialogu.</li>
+<li>Przyprawienie pupy w podanym fragmencie to nie tylko infantylizacja Bohatera w czasie konfrontacji z rodzicami. W tej sytuacji dorosły człowiek staje się niczym dziecko, które odpowiada za swe występki przed dorosłymi. Formą upupienia jest także pojawienie się Nauczyciela. Przybywa tylko po to, by przeprowadzić spóźniony egzamin dojrzałości Bohatera. Jest to kolejna próba wtrącenia postaci w niedojrzałość. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>a) Pan z Przedziałkiem to przykład osobowości konformistycznej. Sposób opisu podkreśla przede wszystkim, że jest jednostką przesadnie ugrzecznioną. Jego nadmierne ułożenie akcentują słowa: "Można powiedzieć, że uczesany jest od wewnątrz [...]". Sugerują one wewnętrzne uporządkowanie bohatera, wyzbycie się tego, co można uznać za wady lub niekulturalne zachowanie, by przypodobać się otoczeniu. Wrażenie to pogłębia stwierdzenie: "Nie ma zębów, ma tylko język". Motyw zębów bardzo często ujawnia się we frazeologizmach i zazwyczaj sugeruje silne emocje, złość, niezgodę na coś. Brak zębów w tym kontekście oznacza zaś brak skłonności do gwałtownych reakcji, okazywania swego niezadowolenia. Pan z Przedziałkiem nie jest natomiast pozbawiony języka. Komentarz Grubasa ("Liże") świadczy o tym, że to człowiek, który chętnie schlebia innym, jest potulny oraz bezkrytyczny. Z kolei wypowiedź Bohatera dostarcza więcej informacji na temat tego, kim jest Pan z Przedziałkiem. Zostaje on określony mianem literata, nadmiernie usłużnego względem innych ludzi. Sposób jego przedstawienia ("Czuję obcego... czuję wazelinę, lakier, bździnę i literaturę") nie wywołuje pozytywnych skojarzeń, natomiast uwypukla raczej odstręczający charakter tej postaci.</p>
+<p> </p>
+<p>b) Część indywidualna</p>
+<p> </p>
+<p>c) Groteskowość Pana z Przedziałkiem polega na tym, że pewne jego cechy czy właściwości ulegają przejaskrawieniu. Dorosły mężczyzna, a przy tym literat, zostaje przedstawiony jako pokorne zwierzę, które stara się zdobyć aprobatę swego pana. W ten sposób autor podkreśla konformizm postaci oraz jej brak własnego zdania, potulność. Zabieg ten uwypukla śmieszność bohatera, wręcz zatracającego swe człowieczeństwo.</p>
+<p>Groteska nie tylko przyczynia się do efektu komicznego pozwala także na satyryczne przedstawienie przesadnie uniżonego literata. W ten sposób staje się on reprezentantem pewnego typu ludzi. Ponadto groteska świadczy o deformacji rzeczywistości, jej absurdalnym wymiarze, co współgra z założeniami teatru absurdu. W symboliczny sposób pozwala na wyrażenie refleksji dotyczącej upadku wartości, ale także społeczeństwa niezdolnego do krytycznego spojrzenia na rzeczywistość. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Różewicz przede wszystkim uwypukla, wyjaskrawia pewne cechy swych bohaterów, przez co sprawiają groteskowe wrażenie, jak np. Pan z Przedziałkiem. W ten sposób zostaje wyrażona niezbyt optymistyczna refleksja na temat ludzi oraz kształtu rzeczywistości, w której funkcjonują. Czasem w kreacjach postaci autor wykorzystuje pewne schematy czy też stereotypy narzucające postaciom wzorce zachowania lub wypowiedzi (np. rozmowa Bohatera z Matką i Ojcem). </p>
+<p>Kluczowym zabiegiem artystycznym staje się jednak podkreślenie dezintegracji postaci, czyli jej rozpadu, utraty poczucia integralności. Wskazuje na to kreacja Bohatera - jego tożsamość nie jest stała, w pełni ukształtowana. Przestrzeń, w której funkcjonuje, chociaż to pokój, przypomina raczej ulicę, gdyż przechodzą tam różni ludzie. Również wydarzenia, czy spotkania nie układają się w logiczny, uzasadniony ciąg, lecz zdają się przypadkowe - niczym swobodnie ułożone fiszki w kartotece. Dezintegracja jest jednak nie tylko obecna w najbliższym otoczeniu Bohatera, ale dotyka także jego psychiki. Postać ta pozostaje nieokreślona -  nie opisano jej wieku, wyglądu, zajęcia; może być każdym i nikim. Osobowość ulega rozpadowi: raz jest dorosłym mężczyzną, dyrektorem, zaś po chwili staje się dzieckiem ("A Tatuś dłubał w nosie, podejrzałem tatusia..."), którego postępowanie budzi dezaprobatę rodziców: "Jak śmiesz do ojca... Nie poznaję cię, dziecko". Cały czas zmieniają się także role Bohatera, on sam zaś jest pozbawiony woli działania, nie szuka celu dla swej egzystencji, brakuje mu motywacji. Dezintegrację sugerują także koszmary mężczyzny dotyczące wojny - świadczą o wpływie tych doświadczeń na psychikę postaci: "Stój! Stój! Kto idzie? Stój, bo strzelam! Halt!". Rozpad tożsamości bohatera odpowiada jednocześnie kondycji świata. Zjawisko to można dostrzec także w sobie Pana z Przedziałkiem - choć to dorosły literat, staje się psem, który pragnie się każdemu przypodobać. Również Chór Starców traci swą integralność, gdyż nie pełni roli tradycyjnie mu przypisanej. Zamiast tego recytuje słowa pozbawione głębszego sensu, nie potrafi skutecznie się porozumieć. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowe elementy realistyczne:</p>
+<ul>
+<li><em>Miejsce jest jedno. Dekoracja jedna. Wystarczy, jeśli w ciągu tych godzin przestawi się krzesło.</em></li>
+<li><em>Przez otwarte drzwi przechodzą [...] ludzie. </em></li>
+<li><em>Wchodzą rodzice Bohatera. Zatroskani. Ojciec spogląda na zegarek. </em></li>
+<li><em>W wymiętych, trochę znoszonych garniturach. Jeden z nich w kapeluszu.</em></li>
+<li><em>Gruby uśmiechnięty, wyciąga kość z kieszeni i rzuca ją pod stół.</em></li>
+<li><em>Bohater i Pan z Przedziałkiem popijają w skupieniu kawę.</em></li>
+</ul>
+<p> </p>
+<p>Przykładowe elementy ironiczne:</p>
+<ul>
+<li><em>Wiele osób biorących udział w tej historii nie odgrywa tu większej roli, te, które mogą odgrywać główne role, często nie dochodzą do głosu lub mają mało do powiedzenia.</em></li>
+<li><em>Można powiedzieć, że uczesany jest od wewnątrz.</em></li>
+</ul>
+<p> </p>
+<p>Przykładowe elementy groteskowe:</p>
+<ul>
+<li><em>"Bohaterem" sztuki jest człowiek bez określonego dokładniej wieku, zajęcia i wyglądu.</em></li>
+<li><em>Wygląda to tak, jakby przez pokój Bohatera przechodziła ulica.</em></li>
+<li><em>Starcy poruszają się niemrawo. Tekst natomiast recytują  wyraźnie, dźwięcznie, młodzieńczymi głosami. </em></li>
+<li><em>Pan ten obchodzi na czworakach cały pokój. Obwąchuje nogi stołu, krzesło, zagląda pod łóżko...</em></li>
+</ul>
+<p> </p>
+<p>Połączenie elementów ironicznych, realistycznych i groteskowych wzmacnia absurdalną atmosferę dzieła, wiąże się także z wykorzystaniem konwencji onirycznej, a przy tym pozwala na złamanie konwencji teatralnych. Wskazuje także na sytuację człowieka oraz charakter przedstawionej rzeczywistości, która jest niespójna, pozbawiona zasad logiki. Zabieg ten odzwierciedla dezintegrację świata - dotyka ona także samego Bohatera. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br>

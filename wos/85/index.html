@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) <span style="text-decoration: underline;"><strong>Czas kampanii wyborczej</strong></span> sprzyja nieetycznemu wykorzystywaniu mediów społecznościowych, ponieważ jest to okres wzmożonej aktywności polityków oraz ich sztabów politycznych. Ich chęć zdobycia władzy jest na tyle silna, że za wszelką cenę oraz wszelkimi możliwymi sposobami próbują oni przekonać potencjalnych wyborców do swojej kandydatury. Co więcej wykorzystują oni mechanizmy manipulacyjne w celu przekonania do siebie wyborców i jednocześnie sprowokowania swoich kontrkandydatów, aby ci utracili poparcie wyborcze. </p>
+<p> </p>
+<p>b) Funkcjonowanie politycznego <span style="text-decoration: underline;"><strong>"czarnego rynku" w przestrzeni internetu</strong></span> polega na wykorzystywaniu narzędzi internetowych do manipulowania potencjalnymi wyborcami. Ten "czarny rynek" związany jest z kupowaniem zaangażowania użytkowników w sieci poprzez m.in. zamawianie przez sztaby wyborcze <em>fake news'ów</em> w celu "zdyskredytowania przeciwnika politycznego". W sieci kupowany jest również zorganizowany trolling (tzw. kampanie nienawiści) oraz do wywoływania sztucznego zainteresowania wykorzystywane są boty, które podszywają się za prawdziwych użytkowników. </p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>c) Zasady, którymi powinny się kierować osoby obserwujące kampanię wyborczą w internecie:</strong></span></p>
+<ul>
+<li>Pamiętaj, że nie wszystko co zostało przedstawione w sieci jest prawdą. - Jest to bardzo istotna reguła postępowania w sieci, ponieważ ze względu na ilość treści w niej udostępnianych może dochodzić nie tylko do zjawiska dezinformacji, ale również do przekłamywania rzeczywistości, co stanowi zagrożenie dla funkcjonowania nie tylko pojedynczych jednostek, ale również i całego społeczeństwa. </li>
+<li>Nie wchodź w dyskusje z tzw. trollami, czyli jednostkami, które chcą wywołać sztuczne i bezproduktywne rozmowy na forach w celu podburzania nastrojów. - Jest to bardzo ważna reguła, ponieważ chroni ona użytkowników sieci przed utratą własnego czasu oraz przed wzburzeniem emocjonalnym. Po prostu szkoda własnego czasu dla trolli. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Czas kampanii wyborczej sprzyja nieetycznemu wykorzystaniu mediów społecznościowych, ponieważ jest okresem wyjątkowo napiętym, w którym partie polityczne i kandydaci rywalizują o władzę. Władza jest zaś jednym z tych dóbr, o które ludzie szczególnie usilnie zabiegają. Okres poprzedzający wybory, jak również same wybory, są też czymś nad wyraz emocjonującym. Kandydaci i ugrupowania uciekają się więc do różnych chwytów, w tym takich, jak dezinformacja, kampanie nienawiści i oczerniania oraz agresywne nakłanianie do udzielenia im poparcia. Gra toczy się zwykle o wysoką stawkę, ponieważ z władzą wiążą się prestiż, wpływy, popularność i pieniądze.</p>
+<p><strong>b)</strong></p>
+<p>Polityczny 'czarny rynek' w przestrzeni internetowej to miejsce, w którym rywalizujące o władzę ugrupowania, jak też poszczególni kandydaci, mogą zamawiać i nabywać (najczęściej za pieniądze) określone działania, korzystne z własnego punktu widzenia. Mogą na takim 'czarnym rynku' na przykład kupować boty dające poparcie na portalach społecznościowych czy akcje oczerniania przeciwników politycznych.</p>
+<p><strong>c)</strong></p>
+<p>Osoby, które za pośrednictwem źródeł internetowych śledzą kampanię wyborczą, powinny przede wszystkim zachowywać daleko posuniętą ostrożność i dystans. Powinny pamiętać o tym, że nie wszystko, co przeczytają w sieci, będzie prawdą. Nie powinny również zakładać, że informacje są prawdziwe tylko dlatego, iż szybko się rozprzestrzeniają. Nie powinny ponadto dawać się podpuszczać osobom, które w sieci prowokują do przemocy słownej i podburzają nastroje, na przykład poprzez trolling. Powinny pamiętać, że jednym z poważniejszych zagrożeń współczesnych portali społecznościowych jest dezinformacja. Dlatego warto, aby zachowywały zdrowy rozsądek i krytyczne myślenie.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>To zadanie ma charakter indywidualny. Sam/a musisz je wykonać.</strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Poniżej przedstawiono elementy kampanii wyborczej, które możesz wykorzystać przy opracowywaniu materiałów wyborczych</strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Kampania wyborcza</strong></span> -  jest to ogół środków masowego przekazu, które wykorzystywane są  przez specjalistów od marketingu politycznego w celu promowania  kandydatury danego polityka lub partii politycznej podczas określonych wyborów. Kampania wyborcza rozpoczyna się z dniem ogłoszenia postanowienia Głowy Państwa o zarządzeniu wyborów i ulega zakończeniu na 24 godziny przed dniem wyborów. W  przypadku dobrze prowadzonej kampanii wyborczej bardzo ważne jest <span style="text-decoration: underline;"><strong>hasło wyborcze</strong></span> <strong>- </strong>to jeden z elementów kampanii wyborczej. Stanowi ono syntezę tematu danej kampanii. Jego celem jest przekazanie odbiorcom zamysłu podmiotu prowadzącego kampanię wyborczą. Hasło wyborcze ma za zadane przemówić do odbiorcy i zachęcić go do zagłosowania na partię, która podpisuje się pod danym hasłem.</p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe sposoby prowadzenia kampanii wyborczej:</strong></span></p>
+<ul>
+<li>Funkcjonowanie politycznego <strong>"czarnego rynku" w przestrzeni internetu</strong> polega na wykorzystywaniu narzędzi internetowych do manipulowania potencjalnymi wyborcami. Ten "czarny rynek" związany jest z kupowaniem zaangażowania użytkowników w sieci poprzez m.in. zamawianie przez sztaby wyborcze <em>fake news'ów</em> w celu "zdyskredytowania przeciwnika politycznego". W sieci kupowany jest również zorganizowany <em>trolling</em> (tzw. kampanie nienawiści) oraz do wywoływania sztucznego zainteresowania wykorzystywane są boty, które podszywają się za prawdziwych użytkowników. </li>
+<li><strong>Stosowanie efektu aureoli</strong> - próba budowy wizerunku kandydata danej kampanii wyborczej poprzez ukazanie jednej jej pozytywnej cechy, a następnie budowanie wokół niej kolejnych, ale już niekoniecznie prawdziwych cech. </li>
+<li><strong>Stosowanie taktyki bumerangu</strong> - może do niego dochodzić w sytuacjach, gdy podczas kampanii wyborczej sztab danego kandydata próbuje zwrócić uwagę opinii publicznej na dany problem, który <em>de facto</em> odbija się rykoszetem w stronę ich kandydata. </li>
+<li><strong>Wykorzystywanie techniki diabelskiej</strong> - czyli przypisanie kontrkandydatowi negatywnej cechy, a następnie budowanie wokół niej kolejnych, ale już niekoniecznie prawdziwych, negatywnych cech. </li>
+<li><strong>Wykorzystanie efektu odbitego blasku </strong>- która wiąże się z wykorzystywaniem sławy oraz popularności danej osoby w celu promowania kandydata startujące w wyborach, np. w tym celu można wykorzystać poparcie aktorów, celebrytów, sportowców, itd.</li>
+</ul>
+<p>Funkcjonowanie politycznego <strong>"czarnego rynku" w przestrzeni internetu</strong> polega na wykorzystywaniu narzędzi internetowych do manipulowania potencjalnymi wyborcami. Ten "czarny rynek" związany jest z kupowaniem zaangażowania użytkowników w sieci poprzez m.in. zamawianie przez sztaby wyborcze <em>fake news'ów</em> w celu "zdyskredytowania przeciwnika politycznego". W sieci kupowany jest również zorganizowany trolling (tzw. kampanie nienawiści) oraz do wywoływania sztucznego zainteresowania wykorzystywane są boty, które podszywają się za prawdziwych użytkowników. <strong>Czas kampanii wyborczej</strong> sprzyja nieetycznemu wykorzystywaniu mediów społecznościowych, ponieważ jest to okres wzmożonej aktywności polityków oraz ich sztabów politycznych. Ich chęć zdobycia władzy jest na tyle silna, że za wszelką cenę oraz wszelkimi możliwymi sposobami próbują oni przekonać potencjalnych wyborców do swojej kandydatury. Co więcej wykorzystują oni mechanizmy manipulacyjne w celu przekonania do siebie wyborców i jednocześnie sprowokowania swoich kontrkandydatów, aby ci utracili poparcie wyborcze. </p>
+<p><span style="text-decoration: underline;"><strong>Zasady, którymi powinny się kierować osoby obserwujące kampanię wyborczą w internecie:</strong></span></p>
+<ul>
+<li>Pamiętać, że nie wszystko co zostało przedstawione w sieci jest prawdą. - Jest to bardzo istotna reguła postępowania w sieci, ponieważ ze względu na ilość treści w niej udostępnianych może dochodzić nie tylko do zjawiska dezinformacji, ale również do przekłamywania rzeczywistości, co stanowi zagrożenie dla funkcjonowania nie tylko pojedynczych jednostek, ale również i całego społeczeństwa. </li>
+<li>Nie wchodzić w dyskusje z tzw. trollami, czyli jednostkami, które chcą wywołać sztuczne i bezproduktywne rozmowy na forach w celu podburzania nastrojów. - Jest to bardzo ważna reguła, ponieważ chroni ona użytkowników sieci przed utratą własnego czasu oraz przed wzburzeniem emocjonalnym. Po prostu szkoda własnego czasu dla trolli. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p>Materiały wyborcze, takie jak spoty, ulotki i hasła wyborcze, zazwyczaj przedstawiają kandydatów, ich programy i idee. Składają się one z różnych elementów, takich jak zdjęcia, nagrania wideo, slogany i wizualizacje. Ich twórcy najczęściej starają się przedstawić promowane partie polityczne w możliwie najbardziej korzystnym świetle, zaś reklamowanych kandydatów jako kompetentnych, uczciwych, rzetelnych, interesujących się sprawami społecznymi, otwartych, energicznych, silnych i odpowiedzialnych.</p>
+<p>Atrakcyjność i skuteczność tych materiałów zależy od wielu czynników, takich jak ich jakość, wiarygodność, spójność i dopasowanie do odbiorców. Dobrze zaprojektowane i zrozumiałe materiały wyborcze, które odzwierciedlają potrzeby i wartości wyborców, mogą być skuteczne w przekonywaniu ich do głosowania na danego kandydata lub partię. Jednocześnie, niskiej jakości, mylące lub kontrowersyjne materiały wyborcze mogą zniechęcić wyborców i przeciwdziałać celom kampanii wyborczej.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Pierwsza część zadania ma charakter indywidualny. Sam/a musisz je zrobić. Poniżej zostały przedstawione przyczyny różnic między wynikiem sondaży a wynikami wyborów.</span></strong></p>
+<p><span style="text-decoration: underline;"><strong>Sondaż</strong></span> to badanie opinii publicznej za pomocą wybranego narzędzia np. ankiety lub wywiadu. Sztaby wyborcze poszczególnych kandydatów mają możliwość manipulowania wynikami sondaży poprzez odpowiednie sformułowanie pytań badawczych, co przekłada się na wynik uzyskany przez poszczególnych kandydatów. Z takim manipulowaniem sondażami wyborczymi mieliśmy do czynienia w 2015 r. podczas wyborów prezydenckich. </p>
+<p><span style="text-decoration: underline;"><strong>Podane w opinii publicznej informacje sondażowe mogły istotnie wpłynąć na ostateczne wyniki głosowania w 2015 r.</strong></span>, ponieważ w I turze wyborów prezydenckich mieliśmy do czynienia z bardzo niską frekwencją wyborczą. Prawdopodobnie wyborcy nie zdecydowali się pójść na wybory, ponieważ wierząc w wyniki sondażowe uważali, że ich głos nic nie zmieni, np. zwolennicy kandydatury Bronisława Komorowskiego nie poszli głosować, ponieważ uważali, że przecież ich kandydat ma bardzo dużą przewagę nad rywalami, więc ich głos nie ma znaczenia w tych wyborach. Z kolei część wyborców np. Pawła Kukiza uważała, że ich kandydat ma tak małe poparcie (według sondażów ok 2-7%), że oddanie na niego głosu byłoby jego tzw. "zmarnowaniem", zaś jak pokazały wyniki I tury wyborów, Paweł Kukiz miał poparcie na poziomie 20,8%. Tym samym sondaże mają ogromny wpływ na frekwencję wyborczą, a nawet wynik wyborów, dlatego są one chętnie wykorzystywane przez poszczególnych kandydatów w ich kampaniach wyborczych.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><em>Zadanie ma charakter indywidualny, ponieważ trzeba odnieść rozwiązanie do ostatnich wyborów parlamentarnych, jakie odbyły się w Polsce. Aktualnie (wedle stanu na pierwszą połowę 2023 roku) ostatnimi wyborami parlamentarnymi, jakie przeprowadzono w Polsce, były wybory parlamentarne z jesieni 2019 roku.</em></p>
+<p><strong><em>-&gt;</em> </strong><em>W wyborach parlamentarnych z 13 października 2019 roku zwyciężyło Prawo i Sprawiedliwość, uzyskując w wyborach do Sejmu RP 43,59% głosów, co przełożyło się na 235 mandatów poselskich dla tego ugrupowania. Drugi wynik osiągnęła Koalicja Obywatelska, z 27,40% oddanych na nią głosów (otrzymując 134 mandaty). Trzeci w wyborach był Sojusz Lewicy Demokratycznej, który uzyskał 12,56% głosów (49 mandatów). Dalsze miejsce zajęło Polskie Stronnictwo Ludowe z 8,55% głosów i 30 mandatami. Konfederacja Wolność i Niepodległość uzyskała 6,81% głosów, co przełożyło się 11 mandatów poselskich dla tego ugrupowania. Mniejszość Niemiecka wprowadziła do Sejmu RP 1 posła, uzyskując 0,17% głosów.</em></p>
+<p><strong><em>-&gt;</em></strong><em> Wyniki sondażu przedwyborczego opublikowane 30 sierpnia 2019 roku wskazywały, że największym poparciem respondentów cieszyło się Prawo i Sprawiedliwość, które w wyborach uzyskałoby 47% głosów poparcia. Na drugim miejscu w sondażu uplasowała się Koalicja Obywatelska, na którą swój głos chciało oddać 19% ankietowanych. Trzeci był Sojusz Lewicy Demokratycznej, na który oddanie głosu deklarowało 9% wyborców. Na Polskie Stronnictwo Ludowe - jak wynikało z sondażu - głosować chciało 6% badanych. Natomiast oddanie głosu na Konfederację deklarowało 2% ankietowanych.</em></p>
+<p><strong><em>-&gt;</em></strong><em> Z powyższego wynika, że oficjalne i ostateczne wyniki wyborów parlamentarnych z 13 października 2019 roku różniły się względem tego, co przedstawiał sondaż opublikowany pod koniec sierpnia 2019 roku. Zasadniczo wszystkie ugrupowania polityczne, które znalazły się w Sejmie RP (poza Prawem i Sprawiedliwością), uzyskały ostatecznie lepsze wyniki, niż przewidywał to sondaż. Można więc uznać, że większość ugrupowań było niedoszacowanych. Trzeba jednak zaznaczyć, że sondaż poprawnie przewidział zwycięzcę wyborów, tj. partię Prawo i Sprawiedliwość. W wyborach uzyskała ona jednak mniejsze poparcie, niż przewidywał to sondaż przeprowadzony przez Centrum Badania Opinii Społecznej (CBOS).</em></p>
+<p><strong><em>-&gt;</em></strong><em> Przyczyny różnic występujących między badaniami opinii i rezultatami wyborów mogą wynikać przede wszystkim z tego, że każde badanie statystyczne obarczone jest pewnym stopniem błędu statystycznego, którego ryzyko jest tym większe, im mniejsza jest tzw. próba statystyczna (liczba osób, na jakiej przeprowadza się badanie). Ponadto warto zauważyć, że sondaż wykonywany jest wcześniej, zaś wybory ostatecznie odbywają się po jakimś czasie. Preferencje wyborców mogą więc w tym czasie ulec zmianie. Dodatkowo, istnieje prawdopodobieństwo, że nie wszyscy ankietowani wypowiadają się na potrzeby sondażu szczerze. Czasami z jakichś względów nie chcą ujawniać swoich rzeczywistych preferencji wyborczych, zwłaszcza jeśli dotyczą one ugrupowań uznawanych przez popularne media za kontrowersyjne. Niektórzy badani mogą zaś robić sobie zwyczajne żarty i nie wyjawiać prawdy odnośnie tego, na kogo zamierzają zagłosować i czy w ogóle planują pójść na wybory. Na wynik sondażu wpływ ma też zastosowana metodologia badania i dobór próby statystycznej. Nie jest też bez znaczenia, na czyje zlecenie zostaje wykonany sondaż. Jeśli zamawia go instytucja publiczna, to zachodzi ryzyko, że okaże się on przychylny dla partii będącej przy władzy. Obiektywność sondażu może być również zaburzona, kiedy wykonywany jest on na zlecenie konkretnej partii politycznej.</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">a) Przykładowa nazwa komitetu:</span></strong></p>
+<ul>
+<li>Ruch Obywatelski, </li>
+<li>Wolność i Równość,  </li>
+<li>Demokraci, </li>
+<li>Uczciwość i praca. </li>
+</ul>
+<p><span style="text-decoration: underline;">b) <strong>Etapy zarejestrowania ugrupowania na liście wyborczej:</strong></span></p>
+<ul>
+<li>Należy utworzyć komitet wyborczy. W przypadku partii politycznej rolę komitetu wyborczego pełni organ partii, który został upoważniony do jej reprezentowania na zewnątrz.</li>
+<li>Wyżej wymieniony organ partii politycznej zawiadamia właściwy organ wyborczy o utworzeniu komitetu i o zamiarze samodzielnego zgłaszania kandydatów oraz o powołaniu pełnomocnika wyborczego i pełnomocnika finansowego.</li>
+<li>Wydanie przez właściwy organ wyborczy powiadomienia o przyjęciu zawiadomienia.</li>
+<li>W czasie ogłoszonym przez właściwy organ wyborczy partie polityczne mogą zgłaszać swoich kandydatów na listy wyborcze, po uzyskaniu przez nich odpowiedniej liczby poparcia (liczba ta uzależniona jest od rodzaju wyborów, np. w przypadku kandydatów na senatora wynosi ona 2000 podpisów).</li>
+<li>Rejestracja kandydata we właściwym organie wyborczym.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Dalsza część ma charakter indywidualny. Sam/a musisz ją wykonać.</strong></span></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny i wymaga odwołania się do własnej kreatywności. Dlatego proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><strong>a)</strong></p>
+<p>Współcześnie partie polityczne nie zawsze obierają za swoje nazwy sformułowania, w których występuje słowo: 'partia'. W nazwach partii politycznych często pojawiają się takie określenia, jak na przykład: 'unia', 'związek', 'sojusz', 'konfederacja', 'ruch', 'platforma', 'stowarzyszenie' czy 'obóz'. Generalnie, nazwa partii politycznej powinna być łatwa do zapamiętania, a dobrze, aby w jakiś sposób nawiązywała do ideałów ugrupowania.</p>
+<p>Przykładową nazwą partii może być:</p>
+<p><em><strong>-&gt; <span style="text-decoration: underline;">RUCH NA RZECZ SPRAW SPOŁECZNYCH (RnRSS)</span></strong></em></p>
+<p><strong>b)</strong></p>
+<p>Aby zarejestrować swoje ugrupowanie polityczne na liście wyborczej, należy:</p>
+<ol>
+<li>Utworzyć komitet wyborczy. Przy czym w przypadku partii politycznej komitetem wyborczym jest organ partii, który może reprezentować jej interesy na zewnątrz.</li>
+<li>Zawiadomić za pośrednictwem wskazanego organu partii stosowny organ wyborczy o utworzeniu komitetu i o planie samodzielnego zgłaszania kandydatów, jak również o powołaniu pełnomocnika wyborczego i pełnomocnika finansowego.</li>
+<li>Otrzymać od właściwego organu wyborczego powiadomienie o tym, że przyjął on zawiadomienie organu partii o utworzeniu komitetu wyborczego.</li>
+<li>Zgłosić w odpowiednim czasie - wskazanym przez właściwy organ wyborczy - swoich kandydatów na listy wyborcze, po wcześniejszym uzyskaniu przez nich poparcia, poświadczonego stosowną liczbą podpisów (liczba ta jest różna w zależności od danego typu wyborów).</li>
+<li>Zarejestrować kandydata we właściwym organie wyborczym.</li>
+</ol>
+<p><strong>c)</strong></p>
+<p>Przykładowy program wyborczy i najważniejsze postulaty partii politycznej <span style="text-decoration: underline;"><em><strong>RUCH NA RZECZ SPRAW SPOŁECZNYCH (RnRSS):</strong></em></span></p>
+<ul>
+<li>wzmocnienie bezpieczeństwa zewnętrznego Polski poprzez uczynienie z niej państwa neutralnego na arenie międzynarodowej,</li>
+<li>podniesienie pensji minimalnej do 15 tysięcy złotych miesięcznie (netto), przy jednoczesnym zapisaniu w <em>Konstytucji RP </em>prawa zakazującego spekulacji, tj. podnoszenia cen towarów i usług,</li>
+<li>całkowite zlikwidowanie bezrobocia poprzez podjęcie działań mających na celu ożywienie gospodarki,</li>
+<li>zapewnienie każdemu obywatelowi nie tylko godnych warunków płacy, ale i pracy, tak aby praca dla każdego stała się przyjemnością i okazją do samorealizacji,</li>
+<li>wprowadzenie dla wszystkich bezpłatnej opieki zdrowotnej, w tym stomatologicznej, na najwyższym poziomie,</li>
+<li>promowanie miłości, życzliwości, empatii, solidarności i współpracy,</li>
+<li>podejmowanie działań na rzecz ochrony środowiska naturalnego i dziedzictwa historycznego,</li>
+<li>umożliwienie każdemu prowadzenia satysfakcjonującego życia rodzinnego, bez ingerencji w prywatność jednostek,</li>
+<li>stawianie na nagradzanie obywateli (sankcje pozytywne), a nie ich karanie (sankcje negatywne).</li>
+</ul>
+<p>Realizację programu wyborczego i najważniejszych postulatów partii <span style="text-decoration: underline;"><em><strong>RUCH NA RZECZ SPRAW SPOŁECZNYCH (RnRSS)</strong></em></span> umożliwią:</p>
+<ul>
+<li>zlikwidowanie niepotrzebnych wydatków (na wojsko, policję i sądownictwo),</li>
+<li>uwolnienie kreatywności i przedsiębiorczości jednostek, poprzez stawianie na sankcje pozytywne, a nie sankcje negatywne,</li>
+<li>odpowiednie wykorzystanie potencjału każdego obywatela.</li>
+</ul>
+<p><strong>d)</strong></p>
+<p><em><strong>-&gt;</strong> <span style="text-decoration: underline;">Przykładowe krótkie wystąpienie, którego celem jest przekonanie do zagłosowania na <strong>RUCH NA RZECZ SPRAW SPOŁECZNYCH (RnRSS):</strong></span></em></p>
+<p><em>Drodzy Wyborcy, Panie i Panowie, szanowne Obywatelki i szanowni Obywatele!</em></p>
+<p><em>Zwracam się do Was z prośbą o oddanie głosu na Ruch na Rzecz Spraw Społecznych (RnRSS), ponieważ zagłosowanie na moje ugrupowanie jest jednocześnie oddaniem głosu na swoją lepszą przyszłość i zapewnienie dobrobytu całemu społeczeństwu. Moja partia nie jest tylko kolejną zwykłą partią polityczną, która nic nie jest w stanie zrobić. Ruch na Rzecz Spraw Społecznych chce całkowicie zmienić oblicze polityki i państwa, zmieniając jakość stosunków społecznych. Zamiast marnej wegetacji proponujemy wszystkim obywatelom dobrobyt i szczęście. Wiemy, jak to zrobić. Co więcej, jest to bardzo proste. Wystarczy tylko uwierzyć w ludzi, dać im szansę rozwoju, a wszystko ułoży się najlepiej, jak tylko może. Jako przewodniczący Ruchu na Rzecz Spraw Społecznych nie mogę obiecać Wam niestworzonych rzeczy. Nie zagwarantuję Wam nieśmiertelności ani szczęścia po kres wszechświata. Mogę Wam jednak zaoferować godne, radosne i dostatnie życie w atmosferze wolności, życzliwości i miłości, bez podziałów, barier i nędzy. Wystarczy tylko dać władzę mojemu ugrupowaniu, a sprawimy, że oblicze kraju się odmieni. Sprawy społeczne i ludzkie są właśnie tym, co mnie i moich ludzi najbardziej obchodzi. Szanowni Państwo, w nadchodzących wyborach zagłosujcie dla siebie, swoich dzieci, wnuków i prawnuków. Wybierzcie Ruch na Rzecz Spraw Społecznych.</em></p>
+<p><em>Dziękuję za uwagę!</em></p><br>

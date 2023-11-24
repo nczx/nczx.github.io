@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykłady form charakterystycznych dla języka urzędowego:</p>
+<ul>
+<li><em>wypełnić czytelnym pismem;</em></li>
+<li><em>tak, nie, niepotrzebne skreślić; </em></li>
+<li><em>z kim się styka [...];</em></li>
+<li><em>krewni za granicą [...];</em></li>
+<li><em>[...] skąd czerpie / środki utrzymania [...];</em></li>
+<li><em>[...] czy jest / posiadaczem majątku [...];</em></li>
+<li><em>stan cywilnej [...].</em></li>
+</ul>
+<p> </p>
+<p>Przykłady form charakterystycznych dla języka literackiego:</p>
+<ul>
+<li>[...] <em>styka się / powierzchnią mózgu  [...];</em></li>
+<li><em>[...] krewni za granicą / skóry [...];</em></li>
+<li><em>[...] czym żywi nieufność? [...];</em></li>
+<li><em>[...] środki utrzymania się w ryzach / nieposłuszeństwa?</em></li>
+<li><em>[...] majątku / trwałego lęku [...];</em></li>
+<li><em>stan cywilnej odwagi? [...].</em></li>
+</ul>
+<p>Niejednorodność stylistyczna skłania czytelnika do skupienia się na języku utworu. Za jej pomocą budowana jest parodystyczna umowa utworu, wyśmiewającego formalizm czasów PRL-u. Skontrastowanie urzędowych formułek z poetyckimi rozważaniami o sprawach intymnych wskazują na niebezpieczne przenikanie się dwóch sfer - publicznej i prywatnej.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo: </p>
+<p><img alt="" height="1044" src="./data/1286582-0.jpg" width="738"/></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo (należy wybrać dwie odpowiedzi):</p>
+<ul>
+<li><em>gdzie, kiedy, po co, dla kogo żyje? - </em>pytanie to rozpoczyna się od wyliczenia pytań, które można usłyszeć w trakcie  przesłuchania (gdzie, kiedy, po co). Ostatnia z poruszonych kwestii (dla kogo) wprowadza element filozoficznych rozważań nad sensem istnienia i znaczeniem kontaktu z drugim człowiekiem.</li>
+<li><em>z kim się styka powierzchnią mózgu? - </em>zastosowano kontaminację kilku utartych zwrotów i związków frazeologicznych: <em>stykać się z czymś, stykać się powierzchnią (np. skóry)</em>. Połączono ją z zaskakującym w tym kontekście słowem <em>mózg</em>.</li>
+<li><em>krewni za granicą skóry? - </em>w przypadku tym użyto pytania o rodzinę przebywającą za granicą właściwego dla kwestionariusza lub przesłuchania w połączeniu z metaforycznym wyrażeniem <em>granica skóry, </em>oznaczającego kogoś innego niż podmiot liryczny, znajdującego się w świecie poza nim.</li>
+<li><em>czy jest posiadaczem majątku trwałego lęku? - </em>początek pytania napisany jest językiem urzędowym, wyraz <em>trwały </em>łączy się już jednak ze słowem <em>lęk</em>, co wskazuje na egzystencjalny wydźwięk całego wyrażenia.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Na podstawie utworu Stanisława Barańczaka <em>Wypełnić czytelnym pismem</em> można stwierdzić, że jednostka w państwie totalitarnym poddawana jest nieustannej inwigilacji. Zainteresowanie organów władzy dotyczy nie tylko podstawowych danych personalnych, które można znaleźć w większości kwestionariuszy, lecz także kwestii głęboko intymnych, takich jak związki emocjonalne z innymi ("[...] z kim jest zbieżny / częstotliwością pulsu?") czy bliskie przesłuchiwanemu przekonania i prądy umysłowe ("[...] z kim się styka  / powierzchnią mózgu?"). </p>
+<p>Władza totalitarna zdaje się osaczać jednostkę, doprowadzając do jej izolacji od reszty społeczeństwa. W utworze wielokrotnie wskazuje się na dojmującą samotność ankietowanego, np. "[...] krewni za granicą skóry? (tak, nie); dlaczego <em>nie</em>? (uzasadnić)", jego zły stan psychiczny, skutkujący poszukiwaniem pomocy u specjalistów ("[...] czy korzysta z telefonu zaufania?"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Dwa ostatnie pytania wiersza są nie tylko podsumowaniem kondycji jednostki próbującej funkcjonować w systemie totalitarnym, ale także dramatyczną prognozą na przyszłość. Końcowe punkty kwestionariusza dotyczą chęci posiadania dzieci. Oczywistym wydaje się, że odpowiedź będzie przecząca, ankietowany nie ma wręcz możliwości wyboru - ostatnie pytanie brzmi: "dlaczego  / <em>nie</em>". Jednostka żyjąca w ciągłej inwigilacji i osamotnieniu wybiera bezdzietność, by nie zmuszać swoich potomków do egzystencji w skrajnie depresyjnym, nieprzyjaznym środowisku państwa totalitarnego. Odarcie z intymności ogranicza możliwość poznania i zbliżenia się do drugiego człowieka na tyle, by stworzyć z nim bezpieczny dom dla dziecka. Świat, w którym żyją adresaci kwestionariusza z wiersza, nie stwarza żadnych perspektyw dla kolejnego pokolenia.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Z wiersza wyłania się tragiczny obraz losu ludzi żyjących w PRL-u. Pozbawiono ich prywatności, każdy ruch kontrolowany jest przez organy państwa, gromadzącego nawet intymne informacje o swoich obywatelach. Wrażenie ciągłej inwigilacji potęguje w nich uczucie niepokoju, wpływa negatywnie na stan psychiczny. Nieustannie towarzyszy im lęk. Poczucie beznadziei objawia się w pytaniach o sens narodzin i życia.</p>
+<p>Sytuacja ta ma negatywny wpływ na kondycję związków międzyludzkich. Poczucie bycia kontrolowanym sprawia, że jednostka musi ostrożnie decydować, z kim wchodzi w bliższe relacje. Ludzie zmuszani są do wyboru między najbliższymi, a pracą, karierą czy nawet - wolnością. To zaś wzmaga uczucie samotności, wyizolowania od reszty społeczeństwa, pogłębiając zapaść psychiczną. Dylematem egzystencjalnym staje się pragnienie posiadania potomstwa, towarzyszy mu bowiem uczucie skazywania własnych dzieci na życie pod ciągłą kontrolą. Z tego powodu ludzie rezygnują z planów zakładania rodzin. </p>
+<p> </p>
+<p>Przygotowanie wypowiedzi - część indywidualna zadania</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne</p><br>

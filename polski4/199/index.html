@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Sytuację liryczną przedstawioną w wierszu Szymborskiej można rozpatrywać w płaszczyźnie dosłownej oraz przenośnej. W tej pierwszej utwór staje się wypowiedzią aktorki - bierze ona udział w przedstawieniu, do którego nie jest przygotowana, nie zna nawet swojej roli. Z tego też powodu odczuwa niepokój i tremę, gdyż nie miała czasu na odpowiednie przygotowanie się. Okoliczności te odbierają jej bowiem naturalność, możliwość zaprezentowania swego kunsztu. Przeraża ją myśl o tym, że uczestniczy w premierze i nie ma szansy na przećwiczenie roli. W płaszczyźnie przenośnej ukazana sytuacja liryczna dotyczy losu człowieka - aktora. Życie staje się swoistym spektaklem, jednak jednostka nie ma okazji, by się do niego przygotować. Z tego powodu jest skazana na ciągłą improwizację wywołującą rozżalenie. Każdy gest, każde słowo staje się czymś ostatecznym i ukazanym na scenie. Człowiek jest więc skazany na niepewność, gdyż nie może zaplanować swego wystąpienia, ma świadomość, iż nie może liczyć na próbę czy powtórzenie sceny. Jego los zdaje się przesądzony. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Nawiązaniem do toposu<em> theatrum mundi</em> jest przede wszystkim przedstawiona w utworze sytuacja liryczna. W wierszu podmiot liryczny zostaje niejako zmuszony do występu na scenie bez jakiegokolwiek przygotowania. Jego sytuację można bezpośrednio odnieść do ludzkiej egzystencji, w której także nie ma czasu na odpowiednie przygotowanie się do kolejnych sytuacji. Ponadto człowiek w swoim życiu również przyjmuje określone maski lub wzory zachowań, dopasowane do okoliczności. Upodabnia się w ten sposób do aktora, a jego teatrem staje się świat.</p>
+<p>Taką wizję rzeczywistości w wierszu Szymborskiej wzmacnia słownictwo nawiązujące do teatralnych realiów. Poetka ukazuje bowiem życie jako "Przedstawienie bez próby". Sformułowanie to w bezpośredni sposób akcentuje niemożność przygotowania się do egzystencji, wyjątkowość, ale też jej jednorazowość. Niepokój podmiotu lirycznego potęguje świadomość tego, że nie zna swojej roli. Jest to dość zaskakująca i trudna sytuacja - w teatrze zazwyczaj odbywają się próby, zaś aktorzy mają czas, by poznać scenariusz i zapoznać się ze swoimi bohaterami. Stwierdzenie "Nie znam roli, która gram." podkreśla paradoks sytuacji podmiotu lirycznego: bez wystarczającej wiedzy musi wystąpić na scenie, podjąć pewne wyzwanie. Dopiero w trakcie życia może zastanawiać się nad jego sensem ("O czym jest sztuka, / zgadywać muszę wprost na scenie."), na bieżąco dostosowywać się do sytuacji. Błyskawiczny ciąg wydarzeń staje się źródłem zmęczenia osoby mówiącej, ponieważ zmusza ją do improwizacji. Tę sytuację z desek teatru można bezpośrednio odnieść do ludzkiego życia, gdyż nie można go zaplanować, czasem zaś same wydarzenia zdają się porywać istotę ludzką, oszołomioną tempem tego, co ją spotyka. Nawiązania do rzeczywistości teatralnej ujawniają się także w słowach: "Moje instynkty to amatorszczyzna. / Trema, tłumacząc mnie, tym bardziej upokarza." Świadczą o tym, iż człowiek nie jest profesjonalnie przygotowany do życia - staje się to przyczyną jego niepokoju, czy tremy. Upokarza ona jednostkę, ponieważ wskazuje na jej bezradność, niemożność opanowania rzeczywistości. Człowiek nie ma możliwości przećwiczenia swej roli ("Gdyby choć jedną środę przećwiczyć zawczasu") - wszystko dzieje się tu i teraz. Jest rzucony w wir wydarzeń - bez możliwości odetchnięcia czy przemyślenia tego, co się dzieje. Stan ten również odzwierciedla metaforyka związana z teatrem - sugeruje istnienie siły wyższej, wpływającej na los jednostki: "A tu już piątek nadchodzi z nie znanym mi scenariuszem.", "bo nawet mi nie dano odchrząknąć za kulisami.". Elementy rzeczywistości stają się rekwizytami w przedstawieniu. Ich solidność świadczy o ich realności, ale także o tym, że sztuka (życie) jest prawdziwa, nie stanowi próby czy prowizorycznego przedstawienia. W ten sposób wzrasta jej ranga. Uwypukla ją również świadomość, że to premiera - pierwszy oficjalny pokaz. Jest to dodatkowe źródło presji. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>a) Osoba mówiąca dogłębnie odczuwa swoje nieprzygotowanie. Jej rolę aktorską można rozpatrywać nie tyko w dosłownym, ale też w przenośnym znaczeniu. Występuje bowiem w teatrze życia. Z tego powodu zdaje się zagubiona, oszołomiona koniecznością zagrania bez jakiejkolwiek próby. Sytuacja ta budzi jej niezadowolenie, gdyż staje się źródłem presji wynikającej z różnych powodów: "Kiepsko przygotowana do zaszczytu życia, / narzucone mi tempo akcji znoszę z trudem. / Improwizuję choć brzydzę się improwizacją". Jej odczucia  odzwierciedlają wyrazy oceniające oraz nacechowane emocjonalnie, np. "Kiepsko przygotowana [...]", "[...] brzydzę się improwizacją", "[...] zatrąca zaściankiem", "Moje instynkty to amatorszczyzna", "[...] odczuwam jako okrutne", "oto żałosne skutki [...]". Sytuacja ukazana w utworze jest dla osoby mówiącej źródłem bolesnych rozterek, ponieważ uwypukla jej brak przygotowania, niemożność właściwego odegrania swej roli. Podmiot liryczny czuje się niezręcznie, ma świadomość, że w pełni odpowiada za swe decyzje - bez możliwości ich ponownego, tym razem właściwego, wyboru. Jednocześnie wykazuje się ironicznym podejściem do znanej mu rzeczywistości. Ma bowiem świadomość, że los człowieka zależy od niezależnych sił, które wpływają na jego życie. Ironia osoby mówiącej łagodzi powagę podejmowanego tematu, ale wskazuje takze na jej przenikliwość i zdystansowanie względem świata: "Kiepsko przygotowana do zaszczytu życia". </p>
+<p> </p>
+<p>b) Przykładowo:</p>
+<ul>
+<li>"Przedstawienie bez próby" -&gt; Ludzka egzystencja stanowi spektakl, w którym człowiek odgrywa pewną rolę. Nie może jednak się do tego przygotować, ponieważ to niepowtarzalne przedstawienie, które wymaga improwizacji. </li>
+<li>"Nie znam roli, która gram"; "O czym jest sztuka, / zgadywać muszę wprost na scenie." -&gt; Człowiek niejako podlega sile wyższej, która determinuje jego sytuację. Z tego też powodu zostaje rzucony w wir wydarzeń, nie ma do końca wpływu na swą sytuację. </li>
+<li>"narzucone mi tempo akcji znoszę z trudem" -&gt; Istota ludzka staje się marionetką w teatrze świata. Nie może bowiem zmienić biegu wydarzeń, musi radzić sobie z błyskawicznie zmieniającym się realiami.</li>
+<li>"Improwizuję, choć brzydzę się improwizacją"; "Trema, tłumacząc mnie, tym bardziej upokarza" -&gt; Podmiot liryczny odczuwa swoje zagubienie oraz niezgrabność. Wolałby mieć czas na przygotowanie się do życia czy podejmowanych decyzji. Uważa przy tym, że żadne okoliczności łagodzące nie poprawiają jego sytuacji ani go nie tłumaczą. </li>
+<li>A tu już piątek nadchodzi z nie znanym mi scenariuszem"; "bo nawet mi nie dano odchrząknąć za kulisami" -&gt; Rzeczywistość cały czas się zmienia przynosi człowiekowi rozmaite wyzwania, z którymi musi się zmierzyć. Nie ma czasu na zastanowienie czy przygotowanie się do tego, co nastąpi.</li>
+<li>"Stoję wśród dekoracji i widzę, jak są solidne. / Uderza mnie precyzja wszelkich rekwizytów." -&gt; Prowizoryczność jest złudna. Ostatecznie okazuje się, iż na scenie wszystko dzieje się naprawdę. </li>
+</ul>
+<p> </p>
+<p>c) Sformułowanie "okoliczności łagodzące" w kontekście winy i kary sugeruje, iż istnieją argumenty, które mogą posłużyć obronie podmiotu lirycznego. Być może pozwalają na usprawiedliwienie jego niezręczności, tremy. W opinii osoby mówiącej wcale jednak jej nie pomagają, ponieważ postrzega je jako coś okrutnego. Taka refleksja sugeruje uwikłanie człowieka, który jest zależny od innych czynników, ale przy tym sam odpowiada za swoje czyny czy decyzje. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Wstręt osoby mówiącej do aktu improwizacji może wynikać z kilku powodów. Przede wszystkim odbiera osobie mówiącej poczucie stabilności, przewidywalność kolejnych wypadków. Podmiot liryczny traci więc bezpieczeństwo i kontrolę nad sytuacją: "Nie znam roli, którą gram. / Wiem tylko, że jest moja, niewymienna". Nie może się przygotować, przez co zapewne cierpi jego ambicja. Ponadto improwizacja cechuje się niedoskonałością, ponieważ tylko od aktora zależy, czy będzie intrygująca, czy nieudana. Z tego też powodu osoba mówiąca dogłębnie odczuwa swe poniżenie, co wywołuje w niej irytację: "Okoliczności łagodzące odczuwam jako okrutne". Ta nieprzewidywalność, szybkie tempo nie pozwalają podmiotowi na ochłonięcie i zebranie myśli. Zderza się z tym, nad czym nie może zapanować - z nieznanym. Jednocześnie brzydzenie się improwizacją wynika ze świadomości, iż nie można jej poprawić lub powtórzyć. Nie jest więc czymś pożądanym przez wypowiadającą się, ponieważ powstaje pod wpływem chwili, a nie przemyślanego planu.  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Utwór kończy puenta: "I cokolwiek uczynię, / zamieni się na zawsze w to, co uczyniłam". Słowa te bezpośrednio odnoszą się do kondycji człowieka, który staje się aktorem na scenie świata. Podkreślają one nieubłagalny upływ czasu uniemożliwiający człowiekowi odpowiednie przygotowanie się do życia czy danej sytuacji - jest to bowiem "Przedstawienie bez próby". Wszystko co się dzieje nie podlega jakimkolwiek poprawkom - wywołuje to bezradność jednostki. Zyskuje ona bowiem świadomość, iż każde zachowanie w teraźniejszości jest już przeszłością. Być może sytuacja ta skutkuje narastającym poczuciem presji, gdyż osoba mówiąca zyskuje świadomość nieodwołalności swych działań. Jest bowiem za nie w pełni odpowiedzialna. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br>

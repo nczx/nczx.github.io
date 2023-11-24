@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Mowa zależna (reported speech) to relacjonowanie czyichś słów, którą zazwyczaj wprowadzamy używając czasownika <em>tell</em> lub <em>say.</em> Po <em>say</em> nie używamy dopełnienia (osoby, do której się mówi), natomiast po czasowniku <em>tell</em> dopełnienie występuje.</strong></p>
+<p><strong>Zamieniając mowę niezależną, przesuwamy każdy czas "o jeden do tyłu". Czas <em>past perfect</em> jest wyjątkiem - pozostaje bez zmian.</strong></p>
+<p style="padding-left: 40px;"><strong><em>present simple → past simple</em></strong></p>
+<p style="padding-left: 40px;"><strong><em>present continuous → past continuous</em></strong></p>
+<p style="padding-left: 40px;"><em><strong>present perfect → past perfect </strong></em></p>
+<p style="padding-left: 40px;"><strong><em>past simple → past perfect</em></strong></p>
+<p style="padding-left: 40px;"><strong><em>will → would</em></strong></p>
+<p style="padding-left: 40px;"><strong><em>must → had to</em></strong></p>
+<p><strong><br/>Określenia odnoszące się do mówiącej osoby (zaimki <em>I/we</em>) zmieniają się w określenia w trzeciej osobie. Zaimki odnoszące się do osoby, do której ktoś mówi (zaimek <em>you</em>) mogą zmienić się w określenia w trzeciej albo pierwszej osobie.</strong></p>
+<p><strong>Zmieniamy też określenia czasu, które mają różne znaczenie w zależności od kontekstu, np.:</strong></p>
+<p style="padding-left: 40px;"><em><strong>tomorrow</strong></em><strong> (jutro) </strong><em><strong>→ the next day </strong></em><strong>(kolejnego dnia);</strong></p>
+<p style="padding-left: 40px;"><em><strong>yesterday</strong></em><strong> (wczoraj) <em>→ the day before </em>(poprzedniego dnia).</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. that he hadn't played chess online before  </p>
+<p>3. that they had downloaded a new game</p>
+<p>4. that playing games online could be addictive</p>
+<p>5. that they would go and buy the new model the next day</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. (przykład)</p>
+<p>2. She told me not to be late because Jen would be nervous. </p>
+<p><strong>Uzasadnienie</strong>: zdania w trybie rozkazującym relacjonujemy w mowie zależnej za pomocą konstrukcji <em>tell somebody (not) to do something </em>(powiedzieć komuś, by coś zrobił / czegoś nie robił). </p>
+<p>3. She said that Jen was quite tall, and she had long blond hair.</p>
+<p><strong>Uzasadnienie</strong>: w mowie zależnej czas <em>present simple </em>zmienia się na czas <em>past simple</em>.</p>
+<p>4. She said Jen had had a long journey, so she would probably look tired.</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple </em>zmienia się na <em>past perfect</em>; <em>will </em>zmienia się na <em>would</em>.</p>
+<p>5. She asked if/whether I could call her when I've found her.</p>
+<p><strong>Uzasadnienie</strong>: w pytaniach w mowie zależnej stosujemy zasadę następstwa czasów (tu: <em>can → could</em>) i zmieniamy szyk na ten zdania twierdzącego (tu: podmiot + czasownik modalny + bezokolicznik). Pytania typu tak/nie wprowadzamy za pomocą spójnika <em>if/whether</em> (czy). Czasowe zdania podrzędne zazwyczaj nie zmieniają się w mowie zależnej.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. she, the previous day</p>
+<p><strong>Uzasadnienie:</strong> jest to wypowiedź Francis, dlatego pierwszy zaimek osobowy musi odnosić się do niej (<em>she</em>). W mowie zależnej okolicznik <em>yesterday </em>(wczoraj) zamieniamy na <em>the previous day </em>(poprzedniego dnia). </p>
+<p>2. to help, told</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>offer</em> (zaoferować) używamy bezokolicznika z <em>to.</em> Czasownikiem, po którym uwzględniamy dopełnienie (osobę, do której się mówi) jest <em>tell.</em></p>
+<p>3. she, two years before</p>
+<p><strong>Uzasadnienie:</strong> w drugim zdaniu zaimek odnosi się do osoby, która jest autorką wypowiedzi, dlatego wybieramy zaimek, który się do niej odnosi (<em>she</em>). W mowie zależnej wyrażenie <em>two years ago</em> (dwa lata temu) zamieniamy na <em>two years before </em>(dwa lata wcześniej).</p>
+<p>4. suggested, should</p>
+<p><strong>Uzasadnienie:</strong> czasownikiem, po którym może wystąpić zdanie zaczynające się od <em>that,</em> jest <em>suggest.</em> W takim zdaniu może wystąpić czasownik modalny <em>should.</em></p>
+<p>5. would, us</p>
+<p><strong>Uzasadnienie:</strong> w mowie zależnej <em>will</em> zamienimy na <em>would. </em>Przekształcamy też zaimek, bo zmienia się punkt widzenia (<em>us - </em>nas).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. not to start the test </p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy zdanie rozkazujące w mowie zależnej za pomocą czasownika <em>tell</em>, stawiamy po nim dopełnienie i bezokolicznik z <em>to</em>. W formie przeczącej, <em>not </em>stawiamy przed <em>to</em>. </p>
+<p>2. suggested that I should use</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>suggest + that + </em>podmiot + <em>should </em>+ bezokolicznik.</p>
+<p>3. to give him</p>
+<p><strong>Uzasadnienie:</strong> kiedy wprowadzamy zdanie rozkazujące w mowie zależnej za pomocą czasownika <em>ask </em>(prosić), stawiamy po nim bezokolicznik z <em>to</em>. </p>
+<p>4. he would meet us </p>
+<p><strong>Uzasadnienie:</strong> to zdanie odnosi się do przyszłości, dlatego w bezpośredniej wypowiedzi musiał zostać użyty czas <em>future simple</em>. W mowie zależnej zmieni się on na konstrukcję <em>would </em>+ bezokolicznik.</p>
+<p>5. had done</p>
+<p><strong>Uzasadnienie:</strong> to zdanie opisuje czynność, która została wykonana w niedawnej przeszłości, a jej skutki są nadal widoczne, dlatego w bezpośredniej wypowiedzi musiał zostać użyty czas <em>present perfect</em>. W mowie zależnej zmieni się on na <em>past perfect</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Pytania w mowie zależnej wprowadza się za pomocą czasownika <em>ask </em>(zapytać).</strong></p>
+<p><strong>Jeśli odpowiedzią na to pytanie jest "tak" albo "nie", stawiamy przed pytaniem <em>if</em> albo <em>whether</em> (<em>czy</em>). </strong></p>
+<p><strong>Pytania w mowie zależnej mają szyk zdania twierdzącego - po <em>if/whether</em> albo zaimku/zwrocie pytającym występuje podmiot, a po nim czasownik. Nie stosujemy też czasowników posiłkowych <em>do / does /</em> <em>did</em>. Przykład:</strong></p>
+<p style="padding-left: 40px;"><em><strong>'<span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Can you</span> help me?' Joe asked. → Joe asked if <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I could</span> help him.</strong></em></p>
+<p style="padding-left: 40px;"><em><strong>'When <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">did you finish</span> it?' Mary asked. → Mary asked when <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I finished</span> it.</strong></em></p>
+<p><strong>Zamieniając pytania w mowie niezależnej, zmienia się czas na "jeden do tyłu", tak jak w zdaniach twierdzących (np. <em>past simple → past perfect</em>). Zmieniają się też zaimki, żeby w odpowiedni sposób odnosiły się do osób mówiących i adresatów wypowiedzi, a także określenia czasu i miejsca, żeby odnosiły się do nich z perspektywy przyszłości.</strong></p>
+<hr/>
+<p> </p>
+<p>1. wanted  </p>
+<p>2. we had finished</p>
+<p>3. I had put</p>
+<p>4. he had decided</p>
+<p>5. they wanted</p>
+<p>6. had to</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Pytania w mowie zależnej mają szyk zdania twierdzącego. Stosujemy też zasadę następstwa czasów.</strong></p>
+<p style="padding-left: 40px;"><em><strong>'<span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Can you</span> help me?' Joe asked. → Joe asked if <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I could</span> help him.</strong></em></p>
+<p style="padding-left: 40px;"><em><strong>'When <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">did you finish</span> it?' Mary asked. → Mary asked when <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I finished</span> it.</strong></em></p>
+<p><strong><br/>Zamieniając pytania w mowie zależnej na pytania bezpośrednie, należy odwrócić ten proces.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. Where did you work before you came to our school? </p>
+<p><strong>Uzasadnienie</strong>: <em>past perfect → past</em> simple. Szyk pytający: <em>did </em>+ podmiot + bezokolicznik. </p>
+<p>3. Where do you think you will be living in ten years' time?</p>
+<p><strong>Uzasadnienie</strong>: <em>past simple → present simple. </em>Szyk pytający: <em>do/does </em>+ podmiot + bezokolicznik. Zdanie podrzędne zachowuje szyk zdania twierdzącego; <em>would → will</em>.</p>
+<p>4. Do you know how to play chess?</p>
+<p><strong>Uzasadnienie</strong>: <em>past simple → present simple</em>. Szyk pytający: <em>do/does </em>+ podmiot + bezokolicznik.</p>
+<p>5. What's your favourite subject?</p>
+<p><strong>Uzasadnienie</strong>: <em>past simple → present simple</em>. Szyk pytający z czasownikiem <em>to be</em>: forma osobowa <em>to be </em>(<em>am / is / are</em>) + dopełnienie.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Pytania w mowie zależnej wprowadza się za pomocą czasownika <em>ask </em>(zapytać).</strong></p>
+<p><strong>Jeśli odpowiedzią na to pytanie jest "tak" albo "nie", stawiamy przed pytaniem <em>if</em> albo <em>whether</em> (<em>czy</em>). </strong></p>
+<p><strong>Pytania w mowie zależnej mają szyk zdania twierdzącego - po <em>if/whether</em> albo zaimku/zwrocie pytającym występuje podmiot, a po nim czasownik. Nie stosujemy też czasowników posiłkowych <em>do / does /</em> <em>did</em>. Przykład:</strong></p>
+<p style="padding-left: 40px;"><em><strong>'<span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Can you</span> help me?' Joe asked. → Joe asked me if <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I could</span> help him.</strong></em></p>
+<p style="padding-left: 40px;"><em><strong>'When <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">did you finish</span> it?' Mary asked. → Mary asked me when <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">I finished</span> it.</strong></em></p>
+<p><strong>Zamieniając pytania w mowie niezależnej, zmienia się czas na "jeden do tyłu", tak jak w zdaniach twierdzących (np. <em>past simple → past perfect</em>). Zmieniają się też zaimki, żeby w odpowiedni sposób odnosiły się do osób mówiących i adresatów wypowiedzi, a także określenia czasu i miejsca, żeby odnosiły się do nich z perspektywy przyszłości.</strong></p>
+<hr/>
+<p> </p>
+<p>1. where I was going to stay</p>
+<p><strong>Uzasadnienie</strong>: <em>am / is / </em><em>are going to → was / were going to</em>. </p>
+<p>2. what I was doing later</p>
+<p><strong>Uzasadnienie</strong>: <em>present continuous → past continuous.</em></p>
+<p>3. me which musical instrument I could play</p>
+<p><strong>Uzasadnienie</strong>: <em>can → could.</em></p>
+<p>4. if/whether we had ever watched <em>Doctor Who</em></p>
+<p><strong>Uzasadnienie</strong>: <em>present perfect → past perfect.</em></p>
+<p>5. if/whether we had enjoyed our meal</p>
+<p><strong>Uzasadnienie</strong>: <em>past simple → past perfect.</em></p>
+<p>6. how long it took me to get to work </p>
+<p><strong>Uzasadnienie</strong>: <em>present simple → past simple</em>.</p><br>

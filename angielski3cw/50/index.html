@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. No, she isn't. She's going to university in September. </p>
+<p>2. She wants to study economics.</p>
+<p><strong>Fragment w tekście</strong>: (1, 2) "I have just finished my final school exams and I am hoping to go to university in September to study economics." - Właśnie skończyłam ostatnie egzaminy szkolne i mam nadzieję, że we wrześniu pójdę studiować ekonomię na uniwersytecie.</p>
+<p>3. She plays basketball and tennis. </p>
+<p><strong>Fragment w tekście</strong>: "(...) I have represented my school at basketball and tennis." - (...) reprezentowałam swoją szkołę w koszykówce i tenisie.</p>
+<p>4. She helped her younger siblings with their schoolwork.</p>
+<p><strong>Fragment w tekście</strong>: "I also have two younger siblings who I sometimes help with schoolwork." - Mam też dwójkę młodszego rodzeństwa, któremu czasem pomagam w nauce.</p>
+<p>5. She describes herself as patient and sociable.</p>
+<p><strong>Fragment w tekście</strong>: "I am patient and sociable (...)." - Jestem cierpliwa i towarzyska (...)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. (przykład)</p>
+<p>2. want</p>
+<p><strong>Fragment w tekście:</strong> "(...) and I want to apply for a place on your scheme." - (...) i chcę ubiegać się o miejsce w waszym programie. </p>
+<p>3. like you to</p>
+<p><strong>Fragment w tekście:</strong> "I would also like you to send me more details (...)." - Chciałabym również, aby przesłali mi Państwo więcej szczegółów (...).</p>
+<p>4. I'm going to</p>
+<p><strong>Fragment w tekście:</strong> "Firstly, I'm going to tell you something about myself." - Najpierw opowiem coś o sobie.</p>
+<p>5. Now</p>
+<p><strong>Fragment w tekście:</strong> "Now my questions, could you tell me (...)?" - Teraz moje pytania, czy mogliby Państwo powiedzieć mi (...)?</p>
+<p>6. I'm waiting for your answer</p>
+<p><strong>Fragment w tekście:</strong> "Thank you very much for your help. I'm waiting for your answer." - Dziękuję bardzo za pomoc. Czekam na odpowiedź.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>Pytania pośrednie to takie, które nie zawierają grzecznościowego zwrotu na początku. </strong></p>
+<p><strong>Zaczynają się od zaimka pytającego lub czasownika posiłkowego. Stosujemy w nich standardowy szyk pytający (czasownik posiłkowy + podmiot + czasownik główny, lub czasownik <em>to be</em> + podmiot + przymiotnik). </strong></p>
+<p><strong>Porównaj: </strong></p>
+<p style="padding-left: 40px;"><strong><em>Can I ask where these programmes <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">are based</span>? → Where <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">are</span> these programmes <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">based</span>? </em></strong></p>
+<p style="padding-left: 40px;"><strong><em>Could you tell me how long they <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">last</span> for? </em> <em>→ How long <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">do</span> they <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">last</span> for?</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. are the volunteer programmes based  </p>
+<p>2. it possible to choose which location to work in</p>
+<p>3. long do the volunteers programmes last for</p>
+<p>4. sort of accommodation are the volunteers given whilst working on the programme</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Pytania pośrednie tworzymy, zaczynając zdanie od zwrotu grzecznościowego, np. <em>Could you tell me</em> (czy mógłbyś/mogłabyś mi powiedzieć), <em>I would like to know</em> (chciał(a)bym wiedzieć), <em>Do you know</em> (czy wiesz).</strong></p>
+<p><strong>Po zwrocie wprowadzającym stawiamy zaimek albo zwrot pytający, jeśli jest to pytanie szczegółowe, np.: </strong></p>
+<p style="padding-left: 40px;"><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">How long</span> does it last? → Do you know <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">how long</span> it lasts?</em> </strong></p>
+<p><strong>Używamy spójnika <em>if </em>lub <em>whether </em>(czy), jeśli jest to pytanie typu tak/nie, np.:</strong></p>
+<p style="padding-left: 40px;"><strong><em>Does she often come here? → I'd like to know <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">if/whether</span> she often comes here. </em></strong></p>
+<p><br/><strong>Po zaimku pytającym lub spójniku następuje główna część pytania. Występuje tu szyk zdania twierdzącego (podmiot + czasownik). W czasach typu <em>simple</em> oznacza to także brak czasowników posiłkowych (<em>do/does, did</em>) i czasownik w formie osobowej.</strong></p>
+<p><strong>Przykłady:</strong></p>
+<p style="padding-left: 40px;"><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Does</span> Brian <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">like</span> this type of music? → I wonder if Brian <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">likes</span> this type of music.</em></strong></p>
+<p style="padding-left: 40px;"><strong><em>When <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">did</span> they <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">meet</span>? → Do you know when they <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">met</span>?</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. when the volunteer programme starts  </p>
+<p>2. if/whether you arrange accommodation for volunteers</p>
+<p>3. how much the volunteer programme costs</p>
+<p>4. if/whether volunteers get any free time while on the programme</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Dear Sir or Madam,</p>
+<p>I am writing in response to your advertisement for volunteer programmes. Given my interests and experience, I feel that I am the right candidate and I would like to apply for the position on your scheme. I would also be grateful if you could answer some of my questions.</p>
+<p>Firstly, let me provide some information about myself. I have been interested in helping the environment and doing sports since I was a small child. I have participated in and helped organise several green events. Once a week, I offer my assistance in our local community centre. I have also represented my school at basketball and handball. I am a very sociable and patient person. I am prepared to work in every programme you offer because I am a fast learner.</p>
+<p>As for my questions, could you describe what the work involves? I would be grateful if you could tell me more about the responsibilities. Secondly, I would like to know what sort of accommodation your organisation offers. I would be happy to share a space with other volunteers so that I can get to know them better.</p>
+<p>Thank you for very much for your help. I look forward to hearing from you.</p>
+<p>Yours faithfully,</p>
+<p>XYZ </p>
+<p><br/>(Liczba słów: 208)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Szanowni Państwo,</p>
+<p>piszę w odpowiedzi na Państwa ogłoszenie dotyczące programów dla wolontariuszy. Biorąc pod uwagę moje zainteresowania i doświadczenie, uważam, że jestem odpowiednim/ą kandydatem/ką i chciał(a)bym ubiegać się o stanowisko w Państwa programie. Był(a)bym również wdzięczny/a za odpowiedź na kilka moich pytań.</p>
+<p>Po pierwsze, chciał(a)bym opowiedzieć trochę o sobie. Od najmłodszych lat interesuję się ochroną środowiska i sportem. Brałem/am udział w kilku ekologicznych imprezach i pomagałem/am w ich organizacji. Raz w tygodniu oferuję swoją pomoc w naszym lokalnym domu kultury. Reprezentowałem/am również moją szkołę w koszykówce i piłce ręcznej. Jestem bardzo towarzyską i cierpliwą osobą. Jestem gotowy/a do pracy w każdym oferowanym programie, ponieważ szybko się uczę.</p>
+<p>Jeśli chodzi o moje pytania, czy mogliby Państwo opisać, na czym polega ta praca? Był(a)bym wdzięczny, gdyby mogli Państwo opowiedzieć mi więcej o obowiązkach. Po drugie, chciał(a)bym dowiedzieć się, jaki rodzaj zakwaterowania oferuje Państwa organizacja. Z przyjemnością będę dzielić przestrzeń z innymi wolontariuszami, aby móc ich lepiej poznać.</p>
+<p>Bardzo dziękuję za pomoc. Z niecierpliwością czekam na odpowiedź.</p>
+<p>Z poważaniem</p>
+<p>XYZ</p><br>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Na podstawie danych przedstawionych na wykresie należy wskazać, że  bardzo wysoki jest poziom zagrożenia młodych ludzi takimi używkami jak: alkohol (od ok. 82 do ok. 94% respondentów w wieku 11-15 lat próbowały kiedykolwiek tej używki), papierosy (od ok. 52% do ok. 59%) oraz dopalacze (ok. 49% ankietowanych w wieku 11-15 próbowało tej używki). Młodzież w Polsce narażona jest również na zagrożenia związane z: zażywaniem marihuany (od ok. 10% do ok. 25% respondentów miało z nią do czynienia), leków uspokajających/nasennych (od ok. 19% do ok. 15%), substancji wziewnych (od ok. 9% do ok. 11%). Zagrożenia te stają się jeszcze bardziej niebezpieczne, gdy zdamy sobie sprawę, że duża część respondentów wskazała, że ma niski poziom wsparcia ze strony rodziców (33,9% ankietowanych uznało, że ma małe wsparcie od rodziców, 27,4%, że owo wsparcie jest na średnim poziomie, a 38,7%, że na wysokim) oraz rówieśników (47,1% respondentów uważało, że ma niski poziom wsparcia od strony rówieśników, 29,9 oceniło ów poziom na średni, zaś 23% na wysoki). Tym samym czując się osamotnionym, młodzi ludzie mogą popadać w uzależnienie od używek. Młodzież w Polsce spotka się również z zagrożeniem wynikającym z ubóstwa. Badania ankietowe wskazują, że od 30 do 20% ankietowanych żyje bardzo biednie lub skromnie, co ma również ogromy wpływ na brak perspektyw dzieci wywodzących się z tych rodzin oraz na popadanie przez nie w kłopoty. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Na podstawie przedstawionych danych można stwierdzić, że młodzież w Polsce spotyka się z bardzo różnymi zagrożeniami, wśród których bardzo poważne jest już chociażby to, iż <strong><span style="text-decoration: underline;">spory odsetek osób deklaruje, iż żyje bardzo biednie lub skromnie</span></strong>. Choć od 2013 roku osób żyjących bardzo biednie lub skromnie jest coraz mniej, to jednak wciąż ich odsetek pozostaje na wysokim poziomie. W 2018 roku takich osób było około 20%. Warto zaś pamiętać, że bieda poważnie ogranicza szanse życiowe.</p>
+<p><strong><span style="text-decoration: underline;">Młodzież w wieku 11-15 lat często deklaruje też, że otrzymuje mało wsparcia ze strony rówieśników</span></strong>. 47,1% osób w wieku 11-15 lat oznajmiło na potrzeby badania, że poziom wsparcia ze strony rówieśników jest w ich przypadku niski, a dalsze 29,9% wskazało, iż jest on średni. <strong><span style="text-decoration: underline;">33,9% ankietowanych osób w wieku 11-15 lat sądzi natomiast, że otrzymuje zaledwie niskie wsparcie ze strony swoich rodziców</span></strong>. Wsparcie, nie tylko finansowe, ale też emocjonalne i duchowe, jest zaś bardzo ważne, zwłaszcza kiedy człowiek znajduje się w trudnych okolicznościach. Osamotnienie i brak pomocy są więc poważnymi zagrożeniami dla człowieka, które mogą spowodować na przykład popadnięcie jednostki w depresję.</p>
+<p>Wreszcie, jak wynika z przytoczonych statystyk, <strong><span style="text-decoration: underline;">osoby młode są również narażone na uzależnienia od różnego rodzaju używek</span></strong>. W latach 1995-2015 stale ponad 80% ankietowanych w wieku 15-16 lat deklarowało, że kiedykolwiek miało kontakt z <strong><span style="text-decoration: underline;">alkoholem</span></strong>. Ponad 50% młodych ludzi w tym wieku (w szczytowym pod tym względem okresie ponad 70%) używało zaś <strong><span style="text-decoration: underline;">papierosów</span></strong>. Dodatkowo, od mniej więcej 2011 roku pojawił się problem używania przez młodzież tzw. <strong><span style="text-decoration: underline;">dopalaczy</span></strong>, tak iż w latach 2011-2015 blisko 50% ankietowanych w wieku 15-16 lat deklarowało, że miało z nimi kontakt. W przedziale czasowym od 1995 do 2015 roku wzrósł też odsetek młodych ludzi deklarujących używanie <strong><span style="text-decoration: underline;">marihuany</span></strong>. Początkowo z marihuany korzystało kiedykolwiek około 10% osób w wieku 15-16 lat, zaś w 2015 roku około 26%. Nieco mniejszy odsetek osób w wieku 15-16 lat miewa natomiast kontakt z <strong><span style="text-decoration: underline;">lekami uspokajającymi/nasennymi</span></strong>, gdyż problem ten dotyczy niespełna 20% młodych ludzi. Około 10% młodzieży w wieku 15-16 lat przynajmniej raz miało natomiast kontakt z używaniem <strong><span style="text-decoration: underline;">substancji wziewnych</span></strong>.</p>
+<p>Reasumując, należy więc stwierdzić, że zagrożeniem dla polskiej młodzieży są nie tylko bieda, za którą idzie zmniejszenie szans życiowych, w tym edukacyjnych, ale też poczucie osamotnienia wynikające z braku należytego wsparcia ze strony rówieśników i rodziców. Poważnym zagrożeniem dla młodych ludzi w Polsce, negatywnie wpływającym na zdrowie fizyczne i psychiczne, mogą być też używki, w tym przede wszystkim najpopularniejsze, takie jak alkohol, papierosy, a w ostatnich latach także dopalacze.</p><br>

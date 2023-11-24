@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podczas podróży samolotem autor wydaje się pełen optymizmu ("Łagodny kolor jej stroju sugerował, że czeka nas spokojny, przyjemny lot."), odczuwa silną motywację do pracy oraz głód wiedzy ("Czułem, że nie zmrużę oka, więc sięgnąłem do torby i wyjąłem książkę, którą Tarłowska dała mi na drogę. [...] Takie grube książki wyglądają zachęcająco, są jak zaproszenie do suto zastawionego stołu."). Widok z okna samolotu skłania Kapuścińskiego do melancholijnej refleksji nad ogromem wszechświata ("Patrząc przez okienko, pierwszy raz widziałem tak wielki obszar naszej planety. Jest to widok, który może nasuwać myśl o nieskończoności świata.").</p>
+<p>W czasie dalszej podróży autor doświadcza wielu intensywnych wrażeń i emocji, takich jak:</p>
+<ul>
+<li>bezsilność, wyobcowanie ("Stałem mokry od potu, bezradny w tym dziwnym i obcym miejscu.");</li>
+<li>dezorientacja ("[...] rozglądałem się, zastanawiałem się - co dalej? Byłem zupełnie nieprzygotowany do tej podróży.");</li>
+<li>dyskomfort spowodowany szokiem kulturowym, poczucie winy, niechęć wobec obcych zwyczajów ("Natomiast prawdziwe zderzenie cywilizacji nastąpiło w godzinę później, kiedy wyszedłem z hotelu. [...] Mnie natomiast myśl, że będę siedział wygodnie rozparty w rikszy, którą ciągnie głodny, słaby, ledwie dyszący chudzielec, napawała najwyższym wstrętem, oburzeniem, zgrozą.");</li>
+<li>satysfakcja ("Szedłem, nie odwracając głowy, nieczuły, nieustępliwy, dumny, że nie dałem się wmanewrować w rolę pijawki żerującej na ludzkim pocie.");</li>
+<li>ciekawość, zdziwienie ("Co te liście kryją? Żebrak pokazujący, że skóra na brzuchu przylgnęła mu do kręgosłupa - ale czy to możliwe, prawdopodobne, wyobrażalne?");</li>
+<li>lęk ("[...] podnoszą lament tak straszny, tak przejmujący, że cierpnie skóra.");</li>
+<li>współczucie, solidarność z tubylcami, nostalgia ("Teraz, kiedy zobaczyłem, że w Indiach miliony nie mają butów, odezwało się we mnie jakieś uczucie wspólnoty, pobratymstwa z tymi ludźmi, a czasem nawet ogarniał mnie nastój, jaki odczuwamy, wracając do domu dzieciństwa.");</li>
+<li>pesymizm, zniechęcenie ("W miarę tej podróży nabierałem przeświadczenia o deprymującej beznadziei tego, co robię, o niemożności poznania i zrozumienia kraju, w którym jestem.").</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Kapuściński nie zachowuje się w Indiach jak sahib, gdyż nie pozwala mu na to bariera kulturowa ("Natomiast prawdziwe zderzenie cywilizacji nastąpiło [...], kiedy wyszedłem z hotelu."). Autor, wychowany w duchu europejskiego humanizmu i nieprzywykły do ścisłej hierarchii społecznej, uważa pracę rykszarzy za uwłaczającą oraz niesprawiedliwą. Choć szczerze im współczuje, rezygnuje z ich usług głównie ze względu na własne uczucia. Myśl o wejściu w rolę zamożnego pana wywołuje w Kapuścińskim dyskomfort oraz poczucie winy ("[...] myśl, że będę siedział wygodnie rozparty w rikszy, którą ciągnie głodny, słaby, ledwie dyszący chudzielec, napawała mnie najwyższym wstrętem, oburzeniem grozą."). Nawet po uświadomieniu sobie, że odmawiając rykszarzom, w istocie pozbawia ich szansy na zarobek, pozostaje nieprzejednany ("Przecież liczyli na mnie, byłem ich jedyną szansą, jedyną nadzieją bodaj na miskę ryżu."). Czuje dumę, postępując w zgodzie z własnymi przekonaniami ("Szedłem, nie odwracając głowy, nieczuły, nieustępliwy, dumny, że nie dałem się wmanewrować w rolę pijawki żerującej na ludzkim pocie."). Brak porozumienia między Kapuścińskim a zaskoczonymi rykszarzami należy uznać za przejaw szoku kulturowego ("Zdumieni, nie mogli pojąć, o co mi chodzi, nie mogli mnie zrozumieć."). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Autor opisuje Indie jako kraj o bogatej, lecz niezrozumiałej kulturze, pod pewnymi względami godzącej w jego własne przekonania. Ponieważ poznaje ją z perspektywy Europejczyka, wiele zwyczajów wywołuje w nim szok, oburzenie lub żal, co z kolei utrudnia komunikację z tubylcami ("Zdumieni, nie mogli pojąć, o co mi chodzi, nie mogli mnie zrozumieć."). Szczególną uwagę Kapuściński zwraca na hinduską strukturę społeczną, w której każdy odgrywa ściśle określoną rolę, a wyższość jednego człowieka nad innym postrzega się jako naturalny porządek rzeczy ("[...] zauważyłem już, że do każdego rodzaju przedmiotu i czynności przypisany jest inny człowiek i że człowiek ów czujnie pilnuje swojej roli i miejsca - na tym polega równowaga tego społeczeństwa."). Widać to wyraźnie na przykładzie relacji pan-sługa. Autor ze zdziwieniem odkrywa, że człowiek zamożny niemal w każdej dziedzinie życia polega na licznych służących, z których każdy wykonuje konkretną, czasem pozornie błahą czynność ("A więc kto inny przynosi rano herbatę, kto inny czyści buty, jeszcze inny pierze koszule, zupełnie inny zamiata pokój - i tak w nieskończoność."). Będąc przyzwyczajonym do samodzielności, Kapuściński uważa taki porządek za absurdalny ("Broń Boże poprosić kogoś, kto prasuje koszulę, żeby przyszył mi do niej guzik."). Co więcej, nie akceptuje relacji społecznych opartych na wyzysku najuboższych, dlatego odmawia skorzystania z usług rikszarzy. ("[...] myśl, że będę siedział wygodnie rozparty w rikszy, którą ciągnie głodny, słaby, ledwie dyszący chudzielec, napawała najwyższym wstrętem, obrzydzeniem, grozą."). Autora nie przekonuje nawet świadomość, że jego szlachetny upór nie poprawi niczyjej sytuacji ani tym bardziej nie zmieni porządku obwarowanego wielowiekową tradycją ("Przecież liczyli na mnie, byłem ich jedyną szansą, jedyną nadzieją bodaj na miskę ryżu. Szedłem, nie odwracając głowy, nieczuły, nieustępliwy, dumny, że nie dałem się wmanewrować w rolę pijawki żerującej na ludzkim pocie.").</p>
+<p>Mimo oczywistych różnic autor dostrzega cechę wspólną Hindusów - każdy z nich, niezależnie od zajęcia czy statusu społecznego, z przyczyn religijnych zdejmuje obuwie przed wejściem do budynku ("Jedni chodzą w jedwabiach, wyszywanych pasach i mają błyszczące epolety, inni noszą zwykłe koszule i białe kaftany. Jedno jest wspólne - wszyscy chodzą boso."). Widok dziesiątek bosych stóp, dla tubylców zupełnie naturalny, w Kapuścińskim budzi litość, przypomina mu bowiem czasy wojny, gdy buty były luksusem, na który mogli sobie pozwolić nieliczni ("Na ten szczegół zwróciłem uwagę, ponieważ na punkcie butów mam lekkiego fioła. Wziął się on jeszcze z czasów wojny, z lat okupacji. Pamiętam, że zbliżała się zima roku 1942, a ja nie miałem butów."). Dłuższy pobyt w Indiach uświadamia autorowi, że nigdy nie będzie w stanie w pełni zrozumieć obcej cywilizacji, czuje się przytłoczony jej ogromem ("W miarę tej podróży nabierałem przeświadczenia o deprymującej beznadziei tego, co robię, o niemożności poznania i zrozumienia kraju, w którym jestem. Indie są tak wielke! Jak opisać coś, co, jak mi się wydawało, nie ma granic, nie ma końca?"). </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Kapuściński wprowadza do fragmentu motyw autobiograficzny, by uzasadnić swe poruszenie brakiem obuwia wśród Hindusów ("Na ten szczegół od razu zwróciłem  uwagę, ponieważ na punkcie butów mam lekkiego fioła. Wziął się on jeszcze z czasów wojny, z lat okupacji."). W ten sposób udowadnia, że życiowe doświadczenia w znacznym stopniu kształtują wrażliwość oraz światopogląd jednostki, a ludzie wywodzący się z różnych kręgów kulturowych mogą postrzegać dane zjawisko w zupełnie inny sposób. Z tego właśnie powodu Kapuściński, który doświadczył niegdyś skrajnego ubóstwa, współczuje Hindusom ("Teraz, kiedy zobaczyłem, że w Indiach miliony nie mają butów, odezwało się we mnie jakieś uczucie wspólnoty, pobratymstwa z tymi ludźmi, a czasem nawet ogarniał mnie nastrój, jaki odczuwamy, wracając do domu dzieciństwa."), choć z ich perspektywy brak obuwia wydaje się zupełnie naturalny, ma ponadto znaczenie religijne. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowa odpowiedź:<br/>Herodot, podobnie jak większość współczesnych mu ludzi, miał świadomość nietrwałości wspomnień - niezwykle ważnego aspektu człowieczeństwa oraz tożsamości jednostki ("Bez pamięci nie można żyć, ona przecież wynosi człowieka ponad świat zwierząt, stanowi postać jego duszy, a zarazem jest tak zawodna, nieuchwytna, zdradliwa."). Z obawy przed ich utratą nieustannie ćwiczył swój umysł, rozmawiając z ludźmi, słuchając ich opowieści i próbując je zapamiętać ("Żeby więc dotrzeć do tego, co zapamiętane, trzeba dojść do człowieka [...], usiąść razem i wysłuchać, co nam powie, wysłuchać, zapamiętać, może zapisać."). Wynika stąd, iż w starożytności wyłączną odpowiedzialność za podtrzymanie pamięci ponosił człowiek ("W świecie Herodota niemal jedynym depozytariuszem pamięci był człowiek [...]."), inaczej niż we współczesnym świecie - oferującym niemal nieograniczony dostęp do przeróżnych nośników danych, zwłaszcza analogowych oraz cyfrowych ("Wszystko [...] na wyciągniecie ręki - encyklopedie, podręczniki, słowniki, kompendia. Biblioteki i muzea, antykwariaty i archiwa. Taśmy dźwiękowe i filmowe. Internet."). W rezultacie zjawisko cywilizacyjne, które Kapuściński nazywa "obsesją pamięci", przestało być aktualne, a sama ludzkość, w wielu dziedzinach życia polegająca na zaawansowanej technologii, zaniedbała pierwotną dyscyplinę umysłu ("Człowiek współczesny nie troszczy się o własną pamięć, ponieważ żyje otoczony pamięcią zmagazynowaną.").</p><br>

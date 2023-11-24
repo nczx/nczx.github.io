@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Przyk³adowo:</p>
+<p>Nie podoba mi siê ten kolor. Jest nijaki - jak dla jakichœ szarych myszek. Mia³am go, ale nie kupiê wiêcej, bo mi wyszed³ nudny br¹z. Strata pieniêdzy. Wolê farbê numer osiem, bo to nie jest to taki jasny blond jak na zdjêciu. </p>
+<p> </p>
+<p>Pozosta³a czêœæ zadania - indywidualna </p><br><a style="color:red; font-size:25px;">Z pytajnikiem...</a><br>
+<table border="1" style="border-collapse:collapse;width:737px;height:274px;">
+<tbody>
+<tr style="height:35px;">
+<td style="background-color:#aed581;text-align:center;width:241.875px;height:35px;"><strong>Zdanie</strong></td>
+<td style="background-color:#aed581;text-align:center;width:241.863px;height:35px;"><strong>Na czym polega b³¹d?</strong></td>
+<td style="background-color:#aed581;text-align:center;width:243.262px;height:35px;"><strong>Z czego mo¿e wynikaæ? </strong></td>
+</tr>
+<tr style="height:70px;">
+<td style="width:241.875px;text-align:center;height:70px;">
+<span style="text-decoration:underline;">Jedz¹c</span> obiad, zgas³o œwiat³o.</td>
+<td style="width:241.863px;text-align:center;height:70px;">Nie nale¿y stosowaæ konstrukcji z imies³owem, poniewa¿ w zdaniu s¹ dwaj ró¿ni wykonawcy czynnoœci. </td>
+<td style="width:243.262px;text-align:center;height:70px;">brak znajomoœci regu³ dotycz¹cych tworzenia imies³owów</td>
+</tr>
+<tr style="height:52px;">
+<td style="width:241.875px;text-align:center;height:52px;">Mam pytanie <span style="text-decoration:underline;">odnoœnie</span> jednej rzeczy. </td>
+<td style="width:241.863px;text-align:center;height:52px;">"Odnoœnie" to zapo¿yczenie z jêzyka rosyjskiego, które jest uznawane z niepoprawne. </td>
+<td style="width:243.262px;text-align:center;height:52px;">nieœwiadomoœæ zapo¿yczenia, popularnoœæ tego zwrotu w komunikacji codziennej </td>
+</tr>
+<tr style="height:35px;">
+<td style="width:241.875px;text-align:center;height:35px;">Rozegraliœmy ju¿ piêæ <span style="text-decoration:underline;">meczy</span>. </td>
+<td style="width:241.863px;text-align:center;height:35px;">Jest to b³êdna odmiana wyrazu "mecze". </td>
+<td style="width:243.262px;text-align:center;height:35px;">nieznajomoœæ norm jêzykowych</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:241.875px;text-align:center;height:35px;">
+<span style="text-decoration:underline;">Siódmy</span> zmys³ ciê nie zawodzi.</td>
+<td style="width:241.863px;text-align:center;height:35px;">Dochodzi do naruszenia ³¹czliwoœci wyrazów.  </td>
+<td style="width:243.262px;text-align:center;height:35px;">nieznajomoœæ zwi¹zków frazeologicznych</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:241.875px;text-align:center;height:17px;">Zawo³aj <span style="text-decoration:underline;">Bruna</span> na kolacjê.</td>
+<td style="width:241.863px;text-align:center;height:17px;">Nie zostaje uwzglêdniony temat rozszerzony, przez co wyraz jest b³êdnie odmieniony. </td>
+<td style="width:243.262px;text-align:center;height:17px;">niewiedza na temat odmiany imion zakoñczonych na <em>-o</em>, kierowanie siê krótsz¹, potocznie u¿ywan¹ form¹</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:241.875px;text-align:center;height:17px;">Zrozum, ¿e <span style="text-decoration:underline;">Ci</span> ludzie te¿ pracuj¹!</td>
+<td style="width:241.863px;text-align:center;height:17px;">Wielka litera w podanym wyrazie nie ma uzasadnienia, poniewa¿ zaimek zostaje b³êdnie zinterpretowany. Nie jest on osobowy, lecz wskazuj¹cy. </td>
+<td style="width:243.262px;text-align:center;height:17px;">niedostosowanie zasad jêzykowych do kontekstu </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna</p><br>

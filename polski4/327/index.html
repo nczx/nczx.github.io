@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Skomplikowana, bogata struktura eseju Herlinga-Grudzińskiego świadczy o wysokiej erudycji autora. Pisarz posiada rozległą wiedzę w dziedzinie literatury. Dostrzega połączenia między różnymi tekstami kultury powstającymi na przestrzeni dziejów i dokonuje błyskotliwych porównań między nimi. Taki sposób pisania zmusza czytelnika do wnikliwej lektury eseju. Zaprezentowane konteksty niejako rozszerzają przestrzeń dzieła, sprawiają, że zawiera się w nim poniekąd również treść przywoływanych utworów.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Gustaw Herling-Grudziński w podejściu księdza Sadzika do kwestii cierpienia dostrzega podobieństwo do refleksji wypływających z <em>Dżumy </em>Alberta Camusa. Jego wnioski wypływają szczególnie z obserwacji zależności między laickim a katolickim rozumieniem świętości. Autor zdaje się uważać, że podejście Sadzika do cierpienia znajduje się na styku tych dwóch światopoglądów. Wrażliwość na cudzą krzywdę, którą okazywał zmarły ksiądz, podobna jest do tej, którą wyraża bohater <em>Dżumy </em>Tarrou w słowach: "[...] każdy proboszcz wiejski, który odwiedza swoich parafian [...] rozumuje tak jak ja. Będzie się [...] starał ulżyć ludzkiemu cierpieniu, zanim spróbuje wykazać jego zalety". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Gustaw Herling-Grudziński wykorzystuje sylwetki ludzi przedstawionych w <em>Dżumie </em>Alberta Camusa jako przykłady uniwersalnych postaw ludzkich w obliczu cierpienia. Losy ojca Paneloux, Tarrou czy doktora Rieu mogą być interpretowane nie tylko jako jednostkowa historia, stanowią także dosłowną warstwę przypowieści o pochodzeniu zła. Utwór może być traktowany jako swoista wykładnia moralności, uczy bowiem, jak w obliczu wielkiej katastrofy odnaleźć swoje człowieczeństwo. O uniwersalności powieści świadczy między innymi fakt, że eseista odnosi je do doświadczeń księdza Józefa Sadzika, dostrzegając analogię między jego sposobem radzenia sobie z dotykającym go cierpieniem.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Gustaw Herling-Grudziński twierdzi, że w opowieści o doświadczanym przez Boga mężczyźnie ukryte są uniwersalne prawdy, bliskie także niewierzącym. Zdaniem autora, posiłkującego się wstępem do Księgi Hioba autorstwa księdza Sadzika, najważniejszym zagadnieniem tej biblijnej księgi jest godność ludzka w obliczu cierpienia. W jej tekście nie sposób znaleźć odpowiedzi na pytanie o przyczyny cierpienia, zawarta jest w nim natomiast lekcja postępowania w sytuacji kryzysu. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Według Gustawa Herlinga-Grudzińskiego oryginalność odczytania Księgi Hioba przez księdza Sadzika zawarta jest w zmianie zdania w kwestii problematyki tekstu. Na podstawie własnych doświadczeń duchowny dochodzi do wniosku innego niż wcześniejszy interpretatorzy Biblii. Zauważa, że celem opowieści o Hiobie nie jest wyjaśnienie pochodzenia i znaczenia cierpienia w życiu człowieka. Co więcej, stwierdza, że "cierpienia nie można pojąć ani wytłumaczyć". Prawdziwą wartość biblijnej historii dostrzega w tym, jak jej bohater reaguje na ból, z którym musi się mierzyć. Gustaw Herling-Grudziński zauważa, że tak nowatorska wykładnia otwiera szerokie pole interpretacji figury Hioba, w tym porównanie go z innym bohaterem starożytnych tekstów - Syzyfem.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Centralny punkt eseju stanowi biblijna Księga Hioba, a szczególnie - wstęp do niej autorstwa księdza Józefa Sadzika. Jego treść Gustaw Herling-Grudziński zestawia z dwoma tekstami Alberta Camusa: <em>Dżumą </em>oraz <em>Mitem Syzyfa. </em>Ten ostatni odwołuje się z kolei do starożytnego mitu. Autor porównuje więc ze sobą nie tylko dwa teksty z najdawniejszej tradycji literackiej, ale także  - ich współczesne odczytania. Za każdym z nich stoją inne koncepcje pojmowania świata. Wstęp Sadzika osadzono w chrześcijańskim postrzeganiu rzeczywistości, a figura Boga jest w nim prominentna. Utwór Camusa z kolei nawiązuje do filozofii egzystencjalizmu, w swojej ateistycznej odmianie przeczącej istnieniu sił wyższych kierujących życiem ludzkim. Analogie, które buduje Gustaw Herling-Grudziński są więc wielowarstwowe.</p><br>

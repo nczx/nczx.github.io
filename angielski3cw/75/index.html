@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. rob, robbery, steal </p>
+<p>(Dwóch rabusiów próbowało wczoraj wieczorem <strong>obrabować</strong> bank, ale nie udało im się to, ponieważ bank był już zamknięty. Do próby <strong>napadu</strong> doszło o godzinie 16:00. Policjantka nabrała podejrzeń po tym, jak zobaczyła dwóch mężczyzn w maskach i próbujących otworzyć drzwi. Para miała zamiar <strong>ukraść</strong> tysiące funtów.) </p>
+<p>2. shoplifter, arrested, shoplifting</p>
+<p>(Policjant pomógł <strong>sklepowej złodziejce</strong>, która próbowała okraść supermarket. Kobieta została <strong>aresztowana</strong> za próbę zabrania żywności o wartości około 20 funtów. Kiedy policjant odkrył, że <strong>kradła w sklepie</strong>, ponieważ nie miała pieniędzy i była głodna, zapłacił za jedzenie.) </p>
+<p>3. burglar, victim, murderer, guilty, burglary</p>
+<p>(<strong>Włamywaczka</strong>, która planowała kradzież telewizora i komputera z pewnego domu, przeżyła niemiłą niespodziankę, gdy natknęła się na coś, co jak sądziła, było <strong>ofiarą</strong> morderstwa. Martwe "ciało" leżało na podłodze w kuchni, a "<strong>morderca</strong>" trzymał nóż. Okazało się, że właściciele domu tylko udawali i nikt nie zginął, ale kobieta zdążyła zadzwonić na policję zanim się zorientowała! Później przyznała się do <strong>winy</strong> za próbę <strong>włamania</strong>.) </p>
+<p>4. smuggler, thief</p>
+<p>(<strong>Przemytnika</strong>, który próbował nielegalnie wywieźć kilka węży z Tajlandii w torbie, zatrzymał <strong>złodziej</strong>, który ukradł tę torbę. Kiedy ją otworzył, węże próbowały się wydostać!) </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. links </p>
+<p>(Unikaj klikania w <strong>linki</strong> i otwierania załączników, chyba że znasz i ufasz osobie wysyłającej wiadomość.) </p>
+<p>2. mail</p>
+<p>3. scams</p>
+<p><strong>Uzasadnienie (2-3)</strong>: <em>junk mail </em>- niechciane reklamy; <em>phishing scam </em>- próba wyłudzenia informacji.</p>
+<p>4. cyber bullying</p>
+<p>(Jeśli ty, albo ktoś kogo znasz, padł ofiarą <strong>cyberprzemocy</strong>, powiedz o tym dorosłemu i zgłoś to.)</p>
+<p>5. details</p>
+<p>6. conmen</p>
+<p>(Nigdy nie podawaj nikomu swojego hasła ani innych <strong>danych</strong> logowania. Jesteśmy ostrożni żeby nie zdradzić ich oszustom i <strong>naciągaczom</strong>, ale nawet podanie ich znajomym może spowodować problemy. Bądźcie bezpieczni - nie pozwólcie, by ktoś was nabrał!)</p>
+<p><s class="odr-strikethrough">hackers</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. had phoned, had phoned, wouldn't have been </p>
+<p>2. hadn't forgotten, hadn't forgotten, could have checked</p>
+<p><strong>Uzasadnienie (1-2)</strong>: konstrukcja <em>I wish/If only + past perfect </em>(<em>had + past participle</em>), aby wyrazić żal odnośnie przeszłości. III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect; would have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. didn't have, didn't have, could</p>
+<p>4. had, had, could</p>
+<p><strong>Uzasadnienie (3-4)</strong>: konstrukcja <em>I wish/If only + past simple</em>, aby wyrazić żal odnośnie stanu w teraźniejszości. II tryb warunkowy, by mówić o nierealnej sytuacji w teraźniejszości/przyszłości: <em>if + past simple, would/could + </em>bezokolicznik. Przeszła forma czasownika modalnego <em>can</em> może tutaj zastąpić czasownik posiłkowy <em>would</em>.</p>
+<p>5. was/were, was/were, would be</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>I wish + past simple</em>, aby wyrazić żal odnośnie stanu w teraźniejszości. II tryb warunkowy, by mówić o nierealnej sytuacji w teraźniejszości/przyszłości: <em>if + past simple, would + </em>bezokolicznik. W trybie <em>unreal past </em>(przeszłości nierzeczywistej) możemy wyjątkowo użyć formy <em>were </em>z osobami <em>I, she, he, it</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. bulletin</p>
+<p><strong>Uzasadnienie</strong>: <em>news bulletin </em>- wiadomości.</p>
+<p>2. smuggled</p>
+<p><strong>Uzasadnienie</strong>: <em>smuggle something onto a ship </em>- przemycić coś na statek. </p>
+<p>3. had been sailing </p>
+<p>4. was discovered</p>
+<p><strong>Uzasadnienie (3-4)</strong>: (3) opis czynności trwającej nieprzerwanie aż do innego wydarzenia z przeszłości = <em>past perfect continuous </em>(<em>had been + </em>czasownik z -ing); (4) konstrukcja w stronie biernej, bo podmiot (<em>the bird </em>- ptak) nie jest tutaj wykonawcą czynności (<em>discover </em>- odkrywać).</p>
+<p>5. had found </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>if only + past perfect </em>(<em>had + past participle</em>), aby wyrazić żal odnośnie przeszłości.</p>
+<p>6. have to</p>
+<p><strong>Uzasadnienie</strong>: 0 tryb warunkowy, by opisać ogólną zasadę działania czegoś. W obu częściach zdania używamy czasu <em>present simple</em>.</p>
+<p>7. would have been</p>
+<p><strong>Uzasadnienie</strong>: III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle</em>.</p>
+<p>8. who</p>
+<p><strong>Uzasadnienie</strong>: aby wprowadzić dodatkowe informacje o jakiejś osobie, używamy zaimka względnego <em>who </em>(który/a).</p>
+<p>9. will be going </p>
+<p><strong>Uzasadnienie</strong>: opis czynności, która będzie w trakcie w określonym momencie w przyszłości = czas <em>future continuous </em>(<em>will be + </em>czasownik z -ing).</p>
+<p>10. will be given</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja w stronie biernej, bo podmiot (<em>the bird </em>- ptak) nie jest tutaj wykonawcą czynności (<em>give back </em>- oddawać).</p>
+<p>11. might</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>might have + past participle</em>, by spekulować odnośnie przeszłości i powiedzieć, że coś mogło się wydarzyć. </p>
+<p>12. explore</p>
+<p><strong>Uzasadnienie</strong>: <em>explore the world </em>- odkrywać świat.</p><br>

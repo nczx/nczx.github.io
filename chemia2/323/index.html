@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 64</a><br>
+<p>a) <span style="text-decoration: underline;"><em><strong> fluorometan </strong></em></span></p>
+<p>b) <span style="text-decoration: underline;"><em><strong> tetrachlorometan </strong></em></span></p>
+<p>c)  <span style="text-decoration: underline;"><em><strong> bromoetan </strong></em></span></p>
+<p>d) <span style="text-decoration: underline;"><em><strong> 2-chloropropan </strong></em></span></p>
+<p>e) <span style="text-decoration: underline;"><em><strong> 1,2-dibromoetan </strong></em></span></p>
+<p>f) <span style="text-decoration: underline;"><em><strong> trijodometan </strong></em></span></p>
+<p>g) <span style="text-decoration: underline;"><em><strong> chloroeten </strong></em></span></p>
+<p>h) <span style="text-decoration: underline;"><em><strong> 1,1,2,2-tetrafluoroeten </strong></em></span></p>
+<p>i) <span style="text-decoration: underline;"><em><strong> chlorobenzen </strong></em></span></p>
+<p>j) <span style="text-decoration: underline;"><em><strong> bromofenylometan </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 65</a><br>
+<p>a)</p> <p> <math-expr expr="CH_3-#C_(#(Br)^(|))H-CH_3" syntax="text"></math-expr>   </p> <p><br/>b) </p> <p> <math-expr expr="CH_3-#C_(#(Br)^(|))H-#C^(#(Cl)_(|))H-CH_3" syntax="text"></math-expr>   </p> <p><br/>c) </p> <p> <math-expr expr="#C^(#(Br)_(|))H_2-CH(CH_3)-CH_3" syntax="text"></math-expr>   </p> <p><br/>d)</p> <p> <math-expr expr="CH_2=CH-#C^(#(Cl)_(|))H_2" syntax="text"></math-expr>   </p> <p><br/>e)</p> <p> <math-expr expr="CH_3-#C_(#(Br)^(|))=#C^(#(Br)_(|))-CH_3" syntax="text"></math-expr>   </p> <p><br/>f)</p> <p><img alt="" height="75" src="./data/936533-0.jpg" width="107"/></p> <p><br/>g)</p> <p><img alt="" height="100" src="./data/936533-1.jpg" width="87"/></p><br><a style="color:red; font-size:25px;">Zadanie 66</a><br>
+<p>Wzór tego związku możemy zapisać jako C<sub>x</sub>H<sub>y</sub>I<sub>z</sub>. Zaczynamy od obliczenia zawartości procentowej jodu:</p> <p> <math-expr expr="%I=100%-15,4%-3,2%=81,4%" syntax="text"></math-expr>   </p> <p>Masa molowa węgla to 12 g/mol, wodoru 1 g/mol, zaś jodu 127 g/mol. Liczymy wartości indeksów <em>x, y </em>oraz <em>z</em>. </p> <p> <math-expr expr="x*12\ g/(mol)=(15,4%*156\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='x*12\ \ g/(mol)=24\ \ g/(mol)\ \ \ "/":12\ \ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=2" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="y*1\ \ g/(mol)=(3,2%*156\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='y*1\ \ g/(mol)=5\ g/(mol)\ \ \ "/":1\ \ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="y=5" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="z*127\ g/(mol)=(81,4%*156\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='z*127\ g/(mol)=127\ g/(mol)\ \ \ "/":127\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="z=1" syntax="text"></math-expr>   </p> <p><strong>Wzór rzeczywisty tego związku to  <math-expr expr="bb(C_2H_5I)." syntax="text"></math-expr>     </strong></p><br><a style="color:red; font-size:25px;">Zadanie 67</a><br>
+<p>Prawidłowa kolejność zgodnie z rosnącą temperaturą wrzenia:</p> <p> <math-expr expr="C_3H_7F," syntax="text"></math-expr>    <math-expr expr="C_3H_7Cl,\ C_3H_7Br,\ C_3H_7I" syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 68</a><br>
+<p>Prawidłowa kolejność zgodnie z malejącą temperaturą wrzenia:</p> <p> <math-expr expr="C_4H_9Cl," syntax="text"></math-expr>    <math-expr expr="C_3H_7Cl,\ C_2H_5Cl,\ CH_3Cl" syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 69</a><br>
+<p>a) <span style="text-decoration: underline;"><em><strong> 2,2-dimetylobutan-1-ol </strong></em></span></p>
+<p>b) <span style="text-decoration: underline;"><em><strong> propan-2-ol </strong></em></span></p>
+<p>c)  <span style="text-decoration: underline;"><em><strong> etano-1,2-diol </strong></em></span></p>
+<p>d) <span style="text-decoration: underline;"><em><strong> pentan-2-ol </strong></em></span></p>
+<p>e) <span style="text-decoration: underline;"><em><strong> pentan-3-ol </strong></em></span></p>
+<p>f) <span style="text-decoration: underline;"><em><strong> fenylometanol </strong></em></span></p>
+<p>g) <span style="text-decoration: underline;"><em><strong> 2-metylopropan-2-ol </strong></em></span></p>
+<p>h) <span style="text-decoration: underline;"><em><strong> propano-1,2,3-triol </strong></em></span></p><br>

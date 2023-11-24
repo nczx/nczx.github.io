@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. ear</p>
+<p>(Jenny ma przekłute <strong>ucho</strong>/ plecy/ brzuch.) </p>
+<p>2. wrist</p>
+<p>( Ładna jest ta bransoletka na twoim nosie/ łokciu/ <strong>nadgarstku</strong>.)</p>
+<p>3. cheeks</p>
+<p>(Jej <strong>policzki</strong>/ ramiona/ kolana robią się czerwone, kiedy jest zawstydzona.)</p>
+<p>4. spine</p>
+<p>(Uszkodzisz sobie klatkę piersiową/ kość/ <strong>kręgosłup</strong> podnosząc takie ciężary.)</p>
+<p>5. toes</p>
+<p>(W tych butach nie ma wystarczająco dużo miejsca na moje <strong>palce u nóg</strong>/ palce/ mięśnie.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. ankle</p>
+<p>(Skręciłem/am <strong>kostkę</strong> kiedy poślizgnąłem/poślizgnęłam się n mokrych kamieniach.) </p>
+<p>2. head</p>
+<p>(Kiedy się przewróciłem/am byłem/am cały/a w błocie od stóp do <strong>głów</strong>.) </p>
+<p>3. feet</p>
+<p>(Moja siostra ma taki sam rozmiar <strong>stopy</strong> jak ja, więc mogę pożyczać jej buty, kiedy mi na to pozwala.)</p>
+<p>4. leg</p>
+<p>(Zawsze płacimy w samolocie za miejsce z dodatkową przestrzenią na <strong>nogi</strong>.)</p>
+<p>5. blood </p>
+<p>(Niektórzy uważają, że rodzina królewska ma błękitną <strong>krew</strong>, ale ja sądzę, że jest czerwona, jak każda inna.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. intestines, intestine</p>
+<p>(<strong>Jelita</strong> to długie rurki, które transportują resztki jedzenia z żołądka. Inną nazwą <strong>jelita</strong> jest kiszka.) </p>
+<p>2. slender, slender</p>
+<p>(Ktoś, kto jest <strong>szczupły</strong> jest dosyć mały i chudy. <strong>Lekka</strong> przewaga w wyścigu albo innych zawodach oznacza, że nie ma dużej różnicy pomiędzy współzawodnikami.)</p>
+<p>3. Moles, Moles</p>
+<p>(<strong>Krety</strong> to małe brązowe zwierzęta, żyjące pod ziemią. <strong>Pieprzyki</strong> na skórze pojawiają się, kiedy komórki skóry rozwijają się w grupie, zamiast rozprzestrzeniać się równomiernie.)</p>
+<p>4. knuckles, knuckle, knuckles</p>
+<p>(<strong>Knykcie</strong> to stawy na początku palców. Jazda <strong>mrożąca krew w żyłach</strong> to taka, która jest bardzo straszna. Trzymasz się siedzenia tak mocno, że twoje <strong>knykcie</strong> zmieniają kolor.)</p>
+<p>5. liver, liver</p>
+<p>(<strong>Wątroba</strong> odgrywa kluczową rolę w oczyszczaniu krwi, rozkładając tłuszcze i pomagając w trawieniu. Pierwszy udany przeszczep <strong>wątroby</strong> odbył się w 1967 roku.) </p>
+<p>6. lean, lean</p>
+<p>(Jeśli o mięsie mówi się, że jest <strong>chude</strong>, oznacza to, że ma mało tłuszczu albo nie ma go wcale. O kimś szczupłym również można powiedzieć, że jest <strong>chudy</strong>.) </p>
+<p>7. kidney, kidney</p>
+<p>(<em>kidney bean</em> to po polsku po prostu fasola czerwona.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. bladder </p>
+<p>2. scar</p>
+<p>3. birthmark</p>
+<p>4. palm</p>
+<p>5. veins, pancreas, lungs</p>
+<p>6. obese</p>
+<p>7. joints</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. X: Chce mi się siusiu.</p>
+<p>Y: Znowu! Masz słaby <strong>pęcherz</strong>!</p>
+<p>2. X: Tę <strong>bliznę</strong> mam odkąd próbowałem/am pozbierać potłuczone szkło i skaleczyłem/am się.</p>
+<p>Y: Bolało?</p>
+<p>3. X: Od jak dawna masz to <strong>znamię</strong>?</p>
+<p>Y: Odkąd się urodziłem/am.</p>
+<p>4. X: Pokaż mi swoją <strong>dłoń</strong>.</p>
+<p>Y: Żebyś przepowiedział/a mi przyszłość? Nie wierzę w takie rzeczy.</p>
+<p>5. X: Powtórzyłeś/aś biologię?</p>
+<p>Y: Tak, <strong>żyły</strong> transportują krew, <strong>trzustka</strong> wspomaga układ trawienny, a <strong>płuc</strong> używamy do oddychania.</p>
+<p>6. X: Kiedyś pobrałem/am aplikację do sprawdzania wagi. Dowiedziałem/am się, że nie tylko mam nadwagę, ale jestem <strong>otyły/a.</strong></p>
+<p>Y: Co zrobiłeś/aś</p>
+<p>X: Odinstalowałem/am ją. </p>
+<p>7. X: Bolą mnie <strong>stawy</strong> - kolana, łokcie, nadgarstki, wszystko. </p>
+<p>Y: Kapsaicyna może pomóc. Znajdziesz ją w papryczce czili. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. assistants</p>
+<p>(Dlaczego ludzie mają wirtualnych pracowników/ <strong>asystentów</strong>/ obserwujących do gaszenia i zapalania świateł?) </p>
+<p>2. appliances</p>
+<p>(No właśnie! Nie mogę zrozumieć, po co ludziom domowe <strong>sprzęty</strong>/ implanty/ gospodarze połączone z Internetem.)</p>
+<p>3. cutting-edge</p>
+<p>(Mam <strong>nowatorską</strong> lodówkę jak ta. Podpowiada mi, co kupić, kiedy się kończy.)</p>
+<p>4. -fashioned</p>
+<p>(Mogłeś/aś użyć <strong>staroświeckiej</strong> metody - takiej jak patrzenie!)</p>
+<p>5. scars</p>
+<p>6. birthmark</p>
+<p>(Ok, ale czasem jest to niezbędne, na przykład pozbywanie się <strong>blizn</strong>/ pieprzyków/ knykci po ciężkim urazie albo dużego/dużej trzustki/ nerki/ <strong>znamiona</strong>, które może sprawić, że ktoś czuje się niepewnie.)</p>
+<p>7. joints</p>
+<p>(Tylko kolana? Masz szczęście. Wszystkie moje <strong>stawy</strong> bolą. Jestem na liście oczekujących na operację. Za rok o tej porze nadal będę czekać.)</p><br>

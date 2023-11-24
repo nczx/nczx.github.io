@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Z treści zadania wiemy, że rzucamy <strong>trzy</strong> razy kostką.</p> <p>Otrzymane kolejno liczby oczek tworzą liczbę trzycyfrową.</p> <p>Wiemy, że rzucając kostką możemy otrzymać jedną liczbę ze zbioru <strong>{1, 2, 3, 4, 5, 6}</strong>, zatem  <br/>rzucając trzy razy kostką za każdym razem mamy <strong>6</strong> możliwości wyrzucenia liczby oczek, więc <br/>wszystkich liczb trzycyfrowych utworzonych z liczb wyrzuconych oczek na kostce <br/>mamy łącznie:</p> <p><span> <math-expr expr="6*6*6=216" syntax="text"></math-expr> </span> </p> <hr/> <p><span style="text-decoration:underline;">Sprawdzamy, ile wśród możliwych wyników jest liczb parzystych.</span></p> <p>Aby liczba trzycyfrowa była parzysta, to cyfrą jedności musi być cyfra parzysta. <br/>Zatem za trzecim razem w rzucie kostką musimy otrzymać liczbę oczek <strong>2 </strong>lub <strong>4</strong> lub <strong>6</strong>. <br/>Wobec tego liczb trzycyfrowych spełniających warunki zadana, które są parzyste mamy łącznie:</p> <p><span> <math-expr expr="6*6*3=108" syntax="text"></math-expr> </span> </p> <hr/> <p><span style="text-decoration:underline;">Sprawdzamy, ile wśród możliwych wyników jest liczb większych od <strong>500</strong>.</span></p> <p>Aby liczba trzycyfrowa była większa od <strong>500</strong>, to jej cyfrą setek musi być cyfra <strong>5</strong> lub <strong>6</strong>.</p> <p>Wobec tego liczb trzycyfrowych spełniających warunki zadania, które są większe od <strong>500</strong> mamy łącznie:</p> <p><span> <math-expr expr="2*6*6=72" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Liczby czterocyfrowe możemy utworzyć z cyfr ze zbioru <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong> pamiętając, że<br/>cyfrą tysięcy nie może być cyfra <strong>0</strong>.</p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Jeżeli pierwsza cyfra (cyfra tysięcy) jest nieparzysta, to może być to liczba ze zbioru  <strong>{1, 3, 5, 7, 9}</strong>. <br/>Natomiast pozostałe cyfry muszą być parzyste, więc wybieramy je ze zbioru <strong>{0, 2, 4, 6, 8}</strong>.</p>
+<p>W związku z powyższym liczb czterocyfrowych spełniających warunki zadania mamy łącznie:</p>
+<p><math-expr expr="5*5*5*5=625" syntax="text"></math-expr>   </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Jeżeli pierwsza i druga cyfra (cyfra tysięcy i cyfra setek) jest parzysta, to cyfrą tysięcy może być <br/>liczba ze zbioru <strong>{2, 4, 6, 8}</strong>, natomiast cyfrą setek może być cyfra ze zbioru <strong>{0, 2, 4, 6, 8}</strong>. <br/>Natomiast pozostałe cyfry muszą być nieparzyste, więc wybieramy je ze zbioru <strong>{1, 3, 5, 7, 9}</strong>.</p>
+<p>W związku z powyższym liczb czterocyfrowych spełniających warunki zadania mamy łącznie:</p>
+<p><math-expr expr="4*5*5*5=500" syntax="text"></math-expr></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Liczby sześciocyfrowe możemy utworzyć z cyfr ze zbioru <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong> pamiętając, że<br/>pierwszą cyfrą nie może być cyfra <strong>0</strong>.</p> <hr/> <p><strong>a)</strong></p> <p>Jeżeli pierwsza i ostatnia cyfra są takie same, to może być to cyfra ze zbioru  <strong>{1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>. <br/>Czyli pierwszą cyfrę wybieramy na <strong>9</strong> sposobów (pierwszą cyfrą nie może być <strong>zero</strong>), natomiast ostatnią cyfrę <br/>wybieramy na <strong>1</strong> sposób (bo musi być to ta sama cyfra, która jest na pierwszym miejscu).</p> <p>W związku z powyższym liczb sześciocyfrowych spełniających warunki zadania mamy łącznie:</p> <p><span> <math-expr expr="9*10*10*10*10*1=90\ 000" syntax="text"></math-expr> </span>   </p> <hr/> <p><strong>b)</strong></p> <p>Jeżeli pierwsza i druga cyfra są takie same, to może być to cyfra ze zbioru <strong>{1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>. <br/>Czyli pierwszą cyfrę wybieramy na <strong>9</strong> sposobów (pierwszą cyfrą nie może być <strong>zero</strong>), natomiast drugą cyfrę <br/>wybieramy na <strong>1</strong> sposób (bo musi być to ta sama cyfra, która jest na pierwszym miejscu). </p> <p>Jeżeli ostatnie dwie cyfry (piąta i szósta cyfra) są takie same, to może być to cyfra ze zbioru<br/><strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>. Czyli piątą cyfrę wybieramy na <strong>10</strong> sposobów, natomiast szóstą cyfrę <br/>wybieramy na <strong>1</strong> sposób (bo musi być to ta sama cyfra, która jest na piątym miejscu). </p> <p>W związku z powyższym liczb sześciocyfrowych spełniających warunki zadania mamy łącznie:</p> <p><span> <math-expr expr="9*1*10*10*10*1=9\ 000" syntax="text"></math-expr> </span>   </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Należy ustalić, ile jest liczb <strong>czterocyfrowych</strong>, które spełniają podany warunek.</p> <p>Liczby tworzymy z cyfr ze zbioru <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>.</p> <hr/> <p><strong>a)</strong></p> <p>Cyfra dziesiątek jest większa o <strong>4</strong> od cyfry jedności.</p> <p>Aby cyfra dziesiątek była większa od cyfry jedności o <strong>4</strong>, to cyfrą jedności musi być cyfra<br/>należąca do zbioru  <strong>{0, 1, 2, 3, 4, 5}</strong>, bo jeśli cyfrą jedności będzie cyfra większa od <strong>5</strong>, to <br/>cyfra dziesiątek będzie liczbą większą od <strong>10</strong>, co prowadzi do sprzeczności.</p> <p>Wobec tego cyfrę tysięcy możemy wybrać na <strong>9</strong> sposobów, cyfrę setek możemy wybrać na <strong>10</strong> sposobów, <br/>natomiast cyfrę jedności możemy wybrać na <strong>6</strong> sposobów, a cyfrę dziesiątek na <strong>1</strong> sposób (jest ona <br/>uzależniona od wyboru cyfry jedności).</p> <p>Wnioskujemy, że wszystkich liczb czterocyfrowych spełniających warunki zadania mamy łącznie:</p> <p><span> <math-expr expr="9*10*1*6=540" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Cyfra dziesiątek jest o <strong>2 </strong>mniejsza od cyfry jedności.</p> <p>Aby cyfra dziesiątek była mniejsza od cyfry jedności o <strong>2</strong>, to cyfrą jedności musi być cyfra<br/>należąca do zbioru <strong>{2, 3, 4, 5, 6, 7, 8, 9}</strong>, bo jeśli cyfrą jedności będzie cyfra mniejsza od <strong>2</strong>, to <br/>cyfra dziesiątek będzie liczbą mniejsza od <strong>0</strong>, co prowadzi do sprzeczności.</p> <p>Wobec tego cyfrę tysięcy możemy wybrać na <strong>9</strong> sposobów, cyfrę setek możemy wybrać na <strong>10</strong> sposobów, <br/>natomiast cyfrę jedności możemy wybrać na <strong>8</strong> sposobów, a cyfrę dziesiątek na <strong>1</strong> sposób (jest ona <br/>uzależniona od wyboru cyfry jedności).</p> <p>Wnioskujemy, że wszystkich liczb czterocyfrowych spełniających warunki zadania mamy łącznie:</p> <p><span> <math-expr expr="9*10*1*8=720" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>a)</strong></p> <p>Liczby tworzymy z cyfr należących do zbioru <strong>{0, 1, 2, 3, 4, 5 6, 7, 8, 9}</strong>.</p> <p>Obliczamy, ile jest liczb trzycyfrowych podzielnych przez <strong>5</strong>.</p> <p>Aby liczba była podzielna przez <strong>5</strong>, to jej cyfrą jedności musi być cyfra <strong>5</strong> lub <strong>0</strong>, wobec tego <br/>cyfrę jedności możemy wybrać na <strong>2</strong> sposoby.</p> <p>Cyfrą setek nie może być cyfra <strong>0</strong>, więc cyfrę setek możemy wybrać na <strong>9</strong> sposobów.<br/>Natomiast cyfrę dziesiątek możemy wybrać na <strong>10</strong> sposobów.</p> <p>Wszystkich liczb trzycyfrowych podzielnych przez <strong>5</strong> mamy łącznie:</p> <p><span> <math-expr expr="9*10*2=180&lt; 200" syntax="text"></math-expr> </span></p> <p>co należało uzasadnić. </p> <hr/> <p><strong>b)</strong></p> <p>Obliczamy, ile jest liczb pięciocyfrowych podzielnych przez <strong>5</strong>, w których zapisie mogą <br/>występować cyfry <strong>0, 1, 2, 3, 4, 5</strong>.</p> <p>Aby liczba była podzielna przez <strong>5</strong>, to jej cyfrą jedności musi być cyfra <strong>5</strong> lub <strong>0</strong>, wobec tego <br/>cyfrę jedności możemy wybrać na <strong>2</strong> sposoby.</p> <p>Cyfrą dziesiątek tysięcy nie może być cyfra <strong>0</strong>, więc cyfrę dziesiątek tysięcy możemy <br/>wybrać na <strong>5</strong> sposobów. Cyfrę tysięcy, setek i dziesiątek możemy wybrać na <strong>6</strong> sposobów.</p> <p>Wszystkich liczb pięciocyfrowych spełniających warunki zadania mamy łącznie:</p> <p><span> <math-expr expr="5*6*6*6*2=2160&gt; 2000" syntax="text"></math-expr> </span></p> <p>co należało uzasadnić. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>a)</strong></p> <p>Korzystając z drzewa przedstawionego obok treści zadania wnioskujemy, że możliwe wyniki doświadczenia <br/>polegającego na trzykrotnym rzucie monetą, to:  </p> <p><strong>(o, o, o)</strong>, <strong>(o, o, r)</strong>, <strong>(o, r, o)</strong>,<strong> (o, r, r)</strong>, <strong>(r, o, o)</strong>, <strong>(r, o, r)</strong>, <strong>(r, r, o)</strong>, <strong>(r, r, r)</strong></p> <hr/> <p><strong>b)</strong></p> <p><span style="text-decoration:underline;">Za każdym razem możemy wyrzucić orła albo reszkę, więc możemy dostać wynik na <strong>2</strong> sposoby.</span></p> <p>Jeżeli pięć razy rzucimy monetą, to możliwych wyników mamy łącznie:</p> <p><span> <math-expr expr="2*2*2*2*2=2^5=32" syntax="text"></math-expr> </span>  </p> <p>Jeżeli dziesięć razy rzucimy monetą, to możliwych wyników mamy łącznie:</p> <p><span> <math-expr expr="2^10=1024" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>W urnie są trzy kule oznaczone numerami <strong>1, 2 i 3</strong>. Trzykrotnie wyciągamy kulę, zapisujemy <br/>jej numer i <span style="text-decoration:underline;">zwracamy</span> ją do urny.</p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Rysujemy drzewo ilustrujące wszystkie możliwe wyniki doświadczenia.  </p>
+<p><img alt="" height="358" src="./data/1155090-0.jpg" width="1131"/></p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Liczby parzyste, to liczby, których cyfra jedności jest cyfrą parzystą.</p>
+<p>Zatem w przypadku tego doświadczenia liczbami parzystymi są liczby, których <br/>cyfrą jedności jest cyfra <strong>2</strong>.</p>
+<p>Z drzewa odczytujemy, że w wyniku doświadczenia możemy otrzymać <strong>9</strong> liczb <br/>parzystych (są to liczby: <strong>112, 122,</strong> <strong>132, 212, 222, 232, 312, 322, 332</strong>).</p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Liczby podzielne przez <strong>6</strong>, to liczby, które są podzielne przez <strong>3</strong> (suma jej cyfr jest podzielna przez <strong>3</strong>) <br/>i <strong>2</strong> (jest to liczba parzysta).</p>
+<p>Z drzewa odczytujemy, że w wyniku doświadczenia możemy otrzymać <strong>3</strong> liczby podzielne <br/>przez <strong>6</strong> (są to liczby:<strong>132, 222, 312</strong>).</p><br>

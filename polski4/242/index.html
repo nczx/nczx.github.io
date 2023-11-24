@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Elementy składające się na tradycyjny topos idylli:</p>
+<ul>
+<li>wiosna;</li>
+<li>zieleń;</li>
+<li>nektar; </li>
+<li>drzewa;</li>
+<li>kwiaty oraz ich zapach;</li>
+<li>poranek;</li>
+<li>ptaki;</li>
+<li>kochankowie;</li>
+<li>słońce;</li>
+<li>łąki;</li>
+<li>zielone liście i trawy;</li>
+<li>gaj;</li>
+<li>Voluptas;</li>
+<li>Iuventus;</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Mianem "struktury toposu" można określić zbiór elementów, które go tworzą. Są to np. nie tylko przedstawiciele świata natury (np. kwiaty, trawy, łąki, ptaki), ale także kolory (zieleń) czy zjawiska (poranek, światło słońca). Znaczenie toposu wiąże się zaś z sensem, wartościami, jakie reprezentuje. Zmiana znaczenia toposu wpływa także na przekształcenie w obrębie jego struktury, ponieważ wymusza zastąpienie jednych elementów innym, np. o przeciwnych właściwościach.   </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zdanie to wskazuje na przemianę w obrębie toposu. Topos idylliczny to taki, który odwołuje się do beztroskiego życia oraz wybranych elementów przyrody. Mogą to być na przykład zielone drzewa, łąki, śpiewające ptaki, słońce, a więc wszystko, co buduje optymistyczną i radosną wizję świata. Przekształcenie jednak tych elementów w ich przeciwieństwa zmienia charakter toposu - beztroska i szczęście zamieniają się w smutek oraz poczucie przemijania. Tym samym kluczowa staje się elegijność rozumiana jako żałoba. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowe zdania zbudowane paralelnie:</p>
+<ul>
+<li><em>Kiedy zrodziło się i ukształtowało to marzenie? Kiedy pora smutku i łez - a porą smutku i łez była jesień jeszcze dla autora "Chanson d'automne", Verlaine'a - stała się pora pełną słodyczy? Kiedy zapomniane zostało marzenie o wiecznej wiośnie?  </em></li>
+<li><em>Takie krajobrazy, mgliste lub oświecone bladym słońcem jesieni, krajobrazy krajobrazy na granicy dnia i nocy, października i grudnia [...], przywołują wówczas - wówczas lub nawet nieco wcześniej - prawie wszyscy poeci europejscy. [...] Takie krajobrazy stają się [...] tłem idyllicznych scen rozgrywających się w idyllicznym ogrodzie.</em></li>
+<li><em>O poranku najpiękniej śpiewały ptaki i najpiękniej pachniały kwiaty. O poranku budzili się i rozstawali kochankowie.</em></li>
+<li><em>Wiosenną zieleń liści i trawy zastąpili purpura i złotem jesieni. Światło poranku zastąpili światłem księżyca lub światłem wieczornej zorzy.</em></li>
+<li><em>Wystarczy, by zielone drzewo stało się drzewem ogołoconym z liści, a znaczenie toposu ulegnie natychmiastowej zmianie. Wystarczy, by śpiewające ptaki stały się ptakami umilkłymi, a cały topos zacznie natychmiast znaczyć inaczej, niż znaczył potąd.</em></li>
+<li><em>"Hortus deliciarum" stał się ogrodem smutku. "Jardin d'amour" stał się ogrodem łez i tęsknoty. Topos idylliczny stał się toposem elegijnym.</em></li>
+</ul>
+<p> </p>
+<p>Zastosowane przez autora zadania paralelne nie tylko porządkują wywód i wzbogacają jego formę, a przy tym wpływają na rytmiczność. Ponadto służą podkreśleniu różnic lub podobieństw łączących zestawione zjawiska. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Podkreślony akapit bezpośrednio nawiązuje do treści poprzedniego. Pierwszy odwołuje się bowiem do zmiany związanej ze sposobem kształtowania ogrodu. W drugim akapicie zostają postawione pytania, które poszerzają refleksję, gdyż dotyczą sposobu kształtowania idylli. Autor wskazuje w ten sposób na kwestię budzącą jego szczególne zainteresowanie: jest nią moment, kiedy doszło do zmiany w sposobie prezentowania tego zjawiska. Akapit ten zapowiada więc dalszą treść wywodu, stanowi wstęp do szczegółowych rozważań. </p><br>

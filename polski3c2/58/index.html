@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>Kreacjonizm Boles³awa Leœmiana polega na tym, i¿ poeta nie ukazuje w swej twórczoœci œwiata w mimetyczny sposób. Zamiast tego kreuje on swoj¹ wizjê rzeczywistoœci, która odzwierciedla wra¿liwoœæ i wyobraŸniê twórcy. Jest ona niezwyk³a, tajemnicza, ³¹czy w sobie pierwiastki realne oraz fantastyczne. W œwiecie Leœmiana mo¿liwe staj¹ siê cudowne metamorfozy (np. drewniana figura Chrystusa, która wyrusza w droga z kalekim ¿o³nierzem) oraz spotkania z tajemniczymi istotami (konfrontacja Bajda³y z Dusio³kiem). Œwiat ten ma uniwersalny i ahistoryczny charakter: jest bli¿ej nieokreœlony, mo¿e byæ wszêdzie i nigdzie: "W zwiewnych nurtach kostrzewy, na leœnej polanie, / Gdzie siê las upodabnia ³¹ce niespodzianie". W rzeczywistoœci wykreowanej przez wspomnianego poetê znacz¹ce miejsce zajmuje natura. To odrêbny byt, nie tylko œwiadek zdarzeñ, ale przede wszystkim niepowstrzymana si³a, która zyskuje boskie cechy. Jest wszechobecna, ma tak¿e moc sprawcz¹, gdy¿ oddzia³uje na cz³owieka. Œwiadcz¹ o tym na przyk³ad zabiegi demona zieleni, przez które wêdrowiec "[...] bieg³ wybrze¿ami coraz innych œwiatów, / Odcz³owieczaj¹c dusze i oddech wœród kwiatów". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>W wierszach Boles³awa Leœmian cz³owiek jawi siê jako istota, która d¹¿y do poznania tajemnic œwiata. Chce ona przekroczyæ pewne granice i mimo swych ograniczeñ - wkroczyæ w inn¹ rzeczywistoœæ, aby zaspokoiæ sw¹ ciekawoœæ. Taka sytuacja jest g³ównym tematem <em>Topielca</em>:</p>
+<p style="font-weight:400;"><em>A¿ zabrn¹³ w takich jagód rozdzwonione dzbany.</em></p>
+<p style="font-weight:400;"><em>W tak¹ zamrocz paproci, w takich cisz kurhany,</em></p>
+<p style="font-weight:400;"><em>W taki bezœwiat zaroœli, w taki bez brzask g³uchy,</em></p>
+<p style="font-weight:400;"><em>W takich szumów ostatnie kêdyœ zawieruchy,</em></p>
+<p style="font-weight:400;"><em>¯e le¿y oto martwy w stu wiosen bezdeni,</em></p>
+<p><em>Cienisty, jak bór w borze - topielec zieleni.</em></p>
+<p>Rzeczywistoœæ wykreowana przez Leœmiana niejako zachêca cz³owieka do refleksji na uniwersalne tematy (pytanie Bajda³y o Ÿród³o z³a). Odczuwa on tak¿e ci¹g³e napiêcie miêdzy sw¹ egzystencj¹ a pokus¹ unicestwienia (co uwidacznia siê w <em>Œwidrydze i Midrydze</em>). W utworach poety silnie zaznaczaj¹ siê zwi¹zki istoty ludzkiej ze œwiatem natury. Nie tylko pragnie ona zg³êbiæ jej tajemnice, poznaæ istotê, lecz równie¿ traktuje j¹ jako Ÿród³o doœwiadczeñ zmys³owych, a zarazem narzêdzie rozkoszy (*** [<em>W malinowym chruœniaku, przed ciekawych wzrokiem...</em>]. Szczególne zainteresowanie Leœmiana budz¹ ponadto osoby cierpi¹ce, kalekie, poniewa¿ poprzez sw¹ niedoskona³oœæ odkrywaj¹ one istotê egzystencji, jej harmoniê. Ich ból sprawia, ¿e kieruj¹ sw¹ uwagê w stronê sfery duchowej, a tym samym zdobywaj¹ m¹droœæ ¿yciow¹. Te doœwiadczenia ³¹cz¹ u³omnych z Chrystusem - podobnie jak on s¹ odrzuceni przez spo³eczeñstwo. Z tego te¿ powodu bliska jest im idea Boga niepozbawionego s³aboœci - bliskiego, a zarazem ludzkiego, poniewa¿ potrafi on zrozumieæ cz³owieka. Taka jest relacja tytu³owego bohatera i Jezusa w utworze<em> ¯o³nierz</em>:</p>
+<p><em>Pójdziemy nieroz³¹cznie, bo wspólna nam droga, </em></p>
+<p><em>Bêdzie nieco cz³owieka, bêdzie nieco Boga. </em></p>
+<p><em>Podzielimy siê mêk¹ - podzielnaæ jest mêka! - </em></p>
+<p><em>Wszak ta sama nas ludzka skoœlawi³a rêka.</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Sensualizm w utworze Boles³awa Leœmiana pt. <em>*** [W malinowym chruœniaku, przed ciekawych wzrokiem...]</em> wi¹¿e siê œciœle ze sposobem kreacji rzeczywistoœci. Zostaje ona bowiem ukazana przez pryzmat prze¿yæ i doœwiadczeñ podmiotu lirycznego, który na ³onie natury spotyka siê ze sw¹ kochank¹. W tej subiektywnej wizji kluczowe znaczenie zyskuje to, co mo¿na poczuæ dziêki zmys³om, cielesnoœæ doznañ bohaterów dzie³a. Wiersz odwo³uje siê bowiem do prawie wszystkich zmys³ów cz³owieka (z wyj¹tkiem smaku):</p>
+<ul>
+<li>wzroku -&gt; "Rdzawe guzy na s³oñcu wygrzewa³ liœæ chory";</li>
+<li>s³uchu -&gt; "B¹k z³oœnik hucza³ basem [...]";</li>
+<li>wêchu -&gt; "Owoce, przepojone woni¹ twego cia³a";</li>
+<li>dotyku -&gt; "¯eœ dotknê³a mi warg¹ spoconego czo³a". </li>
+</ul>
+<p> </p>
+<p>Poeta tworzy zmys³owoœæ przedstawienia za pomoc¹ nastêpuj¹cych œrodków:</p>
+<ul>
+<li>epitety -&gt; "Rdzawe guzy";</li>
+<li>metafory -&gt; "Z³achmania³ych pajêczyn skrzy³y siê wisiory";</li>
+<li>onomatopeje -&gt; "hucza³";</li>
+<li>porównania -&gt; "B¹k z³oœnik hucza³ basem, jakby straszy³ kwiaty";</li>
+<li>synestezja -&gt; "A szept nasz tylko wówczas nacicha³ w ich woni". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>Leœmian w swej twórczoœci bardzo chêtnie odwo³uje siê do kultury ludowej. Inspiracje te s¹ obecne na wielu p³aszczyznach. Jedn¹ z nich jest jêzyk utworów - doœæ prosty, stylizowany na ludowy. S¹ w nim obecne s³owa czy zawo³ania typowe dla ludu, jak np. w <em>Dusio³ku</em>: "O, rety - olaboga!", "A zad tyli, co kwoka, kiedy znosi jajo. / Milcz, gêbo niepos³uszna, bo dziewki wy³aj¹!". Zainteresowanie poety wspomnianym typem kultury przejawia siê równie¿ w wyborze gatunku. Ballada bowiem pozwala mu na ukazanie ludowego sposobu widzenia œwiata - z ca³¹ jego niejednoznacznoœci¹, która staje siê Ÿród³em filozoficznych rozwa¿añ. <em>Dusio³ek</em>, jako przyk³ad tego gatunku, ³¹czy wiêc w sobie cechy liryki (nastrojowoœæ), epiki (fabu³a) i dramatu (monolog).</p>
+<p>Zainteresowanie kultur¹ ludow¹ zaznacza siê szczególnie w treœci utworów lirycznych Leœmiana. Bardzo chêtnie wybiera on na g³ównego bohatera prostego cz³owieka: jest nim nie tylko Bajda³a, ale tak¿e ¿o³nierz, który okaleczony wraca w rodzinne strony lub Œwidryga i Midryga - "dwaj opoje". Pojawiaj¹ siê tak¿e zwierzêta gospodarskie: np. szkapa i wó³. Znacz¹cy elementem rzeczywistoœci w dzie³ach poety jest przestrzeñ. Leœmian chêtnie przedstawia postaci na tle tajemniczego, ale te¿ potê¿nego œwiata natury, odwo³uje siê do miejsc zwi¹zanych z ¿yciem na wsi: leœna polana w <em>Topielcu</em>, ³¹ka w <em>Œwidrydze i Midrydze. </em>W swych utworach koncentruje siê na zwi¹zkach cz³owieka z otaczaj¹c¹ go przyrod¹, która zdaje siê go kusiæ i zachêcaæ do przekroczenia granic poznania.</p>
+<p>Atmosferê niesamowitoœci buduj¹ tak¿e motywy charakterystyczne dla ludowych wierzeñ i opowieœci. Z tego te¿ powodu œwiat poetycki Leœmiana zaludniaj¹ fantastyczne i zagadkowe istoty. Jest ni¹ Po³udnica, zapraszaj¹ca Œwidrygê i Midrygê do tañca, a tak¿e Dusio³ek czy "demon zieleni". Twórca odwo³uje siê tak¿e do motywu odmieñca: jego przyk³ad to nie tylko wspomniany Dusio³ek, lecz równie¿ okaleczony ¿o³nierz, który doœwiadcza odrzucenia przez bliskich. Taka kreacja pozwala na ods³oniêcie prawdy o cz³owieku i zachêca do refleksji na temat niedoskona³ej rzeczywistoœci. W swych wierszach Leœmian decyduje siê tak¿e na rekonstrukcjê sposobu postrzegania rzeczywistoœæ przez lud. Jawi siê ona jako niejednoznaczna, tajemnicza, o czym œwiadczy chocia¿by przemiana bohatera <em>Topielca</em>. Warto równie¿ wspomnieæ o <em>¯o³nierzu</em>. Stanowi on refleksjê na temat niedoskona³oœci, która jednoczeœnie staje siê si³¹ cz³owieka, poniewa¿ pozwala mu na doœwiadczenie pe³ni cz³owieczeñstwa. Artysta proponuje tak¿e oryginaln¹ wizjê Boga - bliskiego cz³owiekowi, ale naznaczonego s³aboœci¹. Z kolei <em>Dusio³ek</em> stawia odwieczne pytanie na temat istoty z³a, zaœ <em>Œwidryga i Midryga</em> przypomina o dualizmie œwiata, a jednoczeœnie pewnej zale¿noœci miêdzy ¿yciem a œmierci¹. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Humor oraz groteska to istotne sk³adniki poetyckiej wizji rzeczywistoœci u Leœmiana. Ich obecnoœæ ujawnia siê na przyk³ad w utworze pt. <em>Dusio³ek</em>. Groteskowym elementem w nim jest bez w¹tpienia tytu³owa zmora: dziwaczna, z³o¿ona z niepasuj¹cych do siebie elementów:</p>
+<p><em>Pysk mia³ z ¿abia œlimaczy -</em> <em>(¯e te¿ taki ¿yæ raczy!) -</em> <em>A zad tyli, co kwoka, kiedy znosi jajo.</em> <em>Milcz, gêbo niepos³uszna, bo dziewki wy³aj¹!</em>   <em>Ogon mia³ ci z rzemyka,</em> <em>Podogonie zaœ z ³yka.</em></p>
+<p>Groteska pozwala na ukazanie œwiata jako przestrzeni niejednoznacznej, w której do g³osu dochodz¹ sprzecznie pierwiastki. Z tego te¿ powodu rzeczywistoœæ staje siê nieuchwytna, wymyka siê definicjom oraz pewnym ocenom. Elementy groteskowe umo¿liwiaj¹ tak¿e zaznaczenie specyficznej sytuacji cz³owieka, który mierzy siê z dziwnoœci¹ czy tajemnicami œwiata. Innym jej przejawem w dziele Leœmiana jest tak¿e po³¹czenie odmiennych wra¿eñ: grozy i komizmu, które wywo³uje potencjalne spotkanie z Dusio³kiem.</p>
+<p>Komizm z kolei niejako ³agodzi ciê¿ar pytania o charakterze filozoficznym, które zadaje bohater utworu: "Nie doœæ ci, ¿eœ potworzy³ mnie, szkapê i wo³ka, / Jeszczeœ musia³ takiego zmajstrowaæ Dusio³ka?". Innym przejawem humoru s¹ tak¿e zarzuty, jakie Bajda³a stawia swoim zwierzêcym towarzyszom: oskar¿a ich bowiem o brak reakcji. Tym samym komizm zyskuje g³êbsze znaczenie, poniewa¿ w bezpretensjonalny sposób zachêca odbiorcê do g³êbszej refleksji, sygnalizuje uniwersalnoœæ podejmowanego zagadnienia. Wskazuje tak¿e na dwoistoœæ œwiata, w którym momenty grozy i powagi wystêpuj¹ obok tych ¿artobliwych. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Oryginalnoœæ jêzyka poezji Leœmiana polega na tym, i¿ poeta œmia³o eksperymentuje z jêzykiem, wykorzystuje funkcjonuj¹ce s³owa, aby nadaæ im dodatkowe sensy lub na ich podstawie stworzyæ zupe³nie nowe pojêcia. Nowatorstwo artysty wi¹¿e siê przede wszystkim ze s³owotwórstwem, które odzwierciedla wyobraŸniê pisarza oraz umo¿liwia precyzyjne wyra¿enie sensu jego utworów. Szczególn¹ rolê odgrywaj¹ wiêc neologizmy - nowe elementy jêzykowe. Dziêki nim poeta mo¿e w ciekawy sposób podkreœliæ brak czegoœ ("W taki bezœwiat zaroœli, w taki bezbrzask g³uchy"), nazwaæ nowe rzeczy lub czynnoœci ("[...] ¿eœ potworzy³ mnie [...]"), zaakcentowaæ dynamizm zachodz¹cych zjawisk ("Kto tam z nocy na pó³noc w burzê i zawieje / Tak bardzo cz³owieczeje i tak bo¿yœcieje?") . Neologizmy pozwalaj¹ tak¿e na wyra¿enie prawdy o ukazanej rzeczywistoœci - tajemniczej, niejednoznacznej, ulegaj¹cej ci¹g³ym metamorfozom. Jednoczeœnie podkreœlaj¹ jej niezwyk³y status, poniewa¿ realnoœæ ³¹czy siê z niesamowitoœci¹: "Ale daremny by³ ich trud, daremny ramion sprzêg i usi³! / Oddali cia³a swe na strwon owemu snowi, co ich kusi³!". Istotne s¹ równie¿ tautologie, które powielaj¹ lub wykluczaj¹ dane znaczenia. Ich obecnoœæ zaznacza np. intensywnoœæ okreœlonych zjawisk: Cienisty, jak bór w borze [...]", buduje poetyckoœæ wizji.</p>
+<p>Twórczoœæ Boles³awa Leœmiana stanowi niew¹tpliwe wyzwanie dla t³umaczy jego poezji na jêzyki obce. Przyczyn¹ tej sytuacji s¹ ró¿nice wystêpuj¹ce miêdzy jêzykiem polskim a pozosta³ymi - inne zasady gramatyczne, s³ownictwo, sk³adnia itd. Przede wszystkim jednak komplikacje wynikaj¹ ze specyficznego ukszta³towania wypowiedzi poetyckiej Leœmiana, w której dominuj¹ eksperymenty jêzykowe, neologizmy, s³owa o niejednoznacznym sensie. Z tego te¿ powodu nowe twory jêzykowe bardzo trudno przet³umaczyæ w taki sposób, aby zachowaæ ich w³aœciwoœci oraz znaczenia wynikaj¹ce z budowy. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Utwory Leœmiana, w których mo¿na dostrzec wykorzystanie konwencji baœniowej to przyk³adowo<em> Dziewczyna</em> oraz <em>Dusio³ek. </em>Charakterystyczne cechy tych dzie³ to bowiem m.in.: </p>
+<ul>
+<li>bli¿ej nieokreœlony czas i miejsce zdarzeñ;</li>
+<li>bohaterowie, którzy przekraczaj¹ granice poznania,</li>
+<li>obecnoœæ postaci fantastycznych (np. Dusio³ka);</li>
+<li>cudowne, niezwyk³e wydarzenia (np. samodzielna praca m³otów w <em>Dziewczynie</em>);</li>
+<li>wystêpowanie typowych motywów (np. wêdrówki, muru, pracy, z³a). </li>
+</ul>
+<p>Wykorzystanie konwencji baœniowej pozwala autorowi na stworzenie antybaœniowej wizji rzeczywistoœci. W ten sposób poeta zaznacza niejednoznacznoœæ œwiata, który wymyka siê jakimkolwiek os¹dom. Nie istnieje w nim prosty podzia³ na dobro i z³o, nie zawsze te¿ na koñcu dobro zostaje nagrodzone, a z³o - ukarane. Realia s¹ o wiele bardziej skomplikowane, co potwierdza pytanie Bajda³y o przyczynê z³a czy te¿ ostateczne zniszczenie muru przez m³oty, które wcale nie pozwala na osi¹gniêcie celu. Z tego te¿ powodu œwiat jawi siê jako tajemnica, zjawisko niepokoj¹ce, gdy¿ cz³owiek nie mo¿e rozpoznaæ go za pomoc¹ rozumu lub zmys³ów. Wykorzystanie pewnej konwencji w celu stworzenia antybaœniowego obrazu rzeczywistoœci œwiadczy równie¿ o grze Leœmiana z utrwalonymi w tradycji motywami. Poeta reinterpretuje baœniowy sposób postrzegania œwiata, wzbogaca go o nowe treœci. One z kolei stanowi¹ Ÿród³o uniwersalnej refleksji na temat relacji cz³owieka z jego otoczeniem, sfer¹ duchow¹. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br>

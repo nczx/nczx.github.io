@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Dany jest sześcian ścięty o krawędzi długości <strong>1 cm</strong>. </p> <p>Naszkicujmy jedną ścianę tego sześcianu:  </p> <p><img alt="" height="306" src="./data/1212662-0.jpg" width="342"/></p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na długość przekątnej kwadratu</span> mamy:</p> <p><span> <math-expr expr="xsqrt2=1 \ \ \ |:sqrt2" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr='x = sqrt2/2 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Z narożników sześcianu wycięto ostrosłupy i otrzymano sześcian ścięty. Naszkicujmy wycięty ostrosłup:</p> <p><img alt="" height="406" src="./data/1212662-1.jpg" width="386"/></p> <p>Odcinek <strong>2x</strong> stanowi <strong><sup>2</sup>/<sub>3</sub></strong> długości wysokości trójkąta równobocznego <strong>ABC</strong>. Korzystając ze <span style="text-decoration: underline;">wzoru na długość wysokości trójkąta równobocznego</span> mamy:</p> <p><span> <math-expr expr="2x=2/3h = 2/3*sqrt3/2 = sqrt3/3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta<strong> AOS</strong> mamy: </p> <p><span> <math-expr expr="H^2 + (sqrt3/3)^2 = (sqrt2/2)^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="H^2 + 1/3 = 1/2" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="H^2 = 3/6 - 2/6" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="H^2=1/6 \ \ \ ^^ \ \ \ H&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='H = sqrt6/6 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <strong>objętość</strong> tego ostrosłupa. Mamy:</p> <p><span> <math-expr expr='V_("o") = 1/3 * P_Delta * H = 1/3 * sqrt3/4 * sqrt6/6 =sqrt18/72 = (3sqrt2)/72 = ul sqrt2/24 \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Obliczmy <strong>objętość</strong> sześcianu. Mamy:</p> <p><span> <math-expr expr='V_("sz")= (sqrt2/2 + sqrt2/2 + 1)^3 = (sqrt2+1)^3 = ldots' syntax="text"></math-expr> </span>  </p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru skróconego mnożenia na sześcian sumy</span> mamy:</p> <p><span> <math-expr expr='ldots=2sqrt2 + 3*2 + 3*sqrt2 + 1 = ul(  ( 5sqrt2 + 7) \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <strong>objętość sześcianu ściętego</strong>. Mamy:</p> <p><span> <math-expr expr='V=V_("sz") - 8V_("o") = 5sqrt2+7 -8*sqrt2/24 = 5sqrt2+7 -sqrt2/3  =' syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='=(15sqrt2)/3+7 - sqrt2/3= (14sqrt2)/3 + 7 = ul(ul(  7(1+2/3 sqrt2) ["cm"^3]' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Dany jest sześcian o krawędzi długości <strong>3 cm</strong>. Z tego sześcianu odcinamy narożniki i otrzymujemy sześcian ścięty. </p> <p>Naszkicujmy jedną ścianę tego sześcianu. Mamy:  </p> <p><img alt="" height="325" src="./data/1212681-0.jpg" width="357"/></p> <p>Długość krawędzi sześcianu ściętego wynosi <strong>3-2x</strong>. Musi być to wielkość dodatnia, czyli:</p> <p><span> <math-expr expr="3-2x&gt;0" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="-2x&gt; -3 \ \ \ |:(-2)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="x&lt; 3/2" syntax="text"></math-expr> </span>    </p> <p>Otrzymany w narożniku trójkąt musi spełniać warunek istnienia trójkąta. Mamy zatem:</p> <p><span> <math-expr expr="x+x&gt; 3-2x" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="4x &gt; 3 \ \ \ |:4" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x &gt; 3/4" syntax="text"></math-expr> </span>       </p> <p>Zatem ostatecznie otrzymujemy:</p> <p><span> <math-expr expr="ul(ul( x in (3/4, \ 3/2) ))" syntax="text"></math-expr> </span>  </p> <hr/> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> mamy: </p> <p><span> <math-expr expr="x^2 + x^2 = (3-2x)^2" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="2x^2 = 9 - 12x + 4x^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="2x^2 - 12x + 9 =0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="Delta = (-12)^2 -4*2*9 = 144 - 72 = 72" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="sqrtDelta = sqrt72 = sqrt(36*2) = 6sqrt2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x_1 = (12-6sqrt2)/4 = (6-3sqrt2)/2 approx 0,88" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x_2 = (12+6sqrt2)/4 =(6+3sqrt2)/2 approx 5,12" syntax="text"></math-expr> </span>  </p> <p>Zauważmy, że <strong>x<sub>1</sub></strong> jest <span style="text-decoration: underline;">sprzeczne</span> z założeniem, zatem ostatecznie mamy:</p> <p><span> <math-expr expr="ul( x=(6-3sqrt2)/2 )" syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <span style="text-decoration: underline;">długość krawędzi tego sześcianu ściętego</span>. Mamy: </p> <p><span> <math-expr expr='3-2x = 3 - 2*(6-3sqrt2)/2 = 3 - (6-3sqrt2) = 3 - 6 + 3sqrt2  =ul(ul( 3(sqrt2-1) \ ["cm"]' syntax="text"></math-expr> </span>  </p><br>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. B  </p>
+<p>2. D</p>
+<p>3. E</p>
+<p>4. A</p>
+<p><s class="odr-strikethrough">C</s></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. C </p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje włamanie do domu, dlatego pasującą kontynuacją jest zdanie C, które podaje jego stan po tym fakcie: "Ale nie został uszkodzony ani zdemolowany". </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje reakcję podpalacza na swoje zdjęcie opublikowane przez policję, dlatego pasującą kontynuacją jest zdanie A: "Napisał do nich wiadomość, w której wyjaśniał, co jest z nim nie tak".</p>
+<p>3. E</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje wiadomość przestępcy w mediach społecznościowych, dlatego pasującą kontynuacją jest zdanie E: "Wspomniał też, że przebywa w pobliżu swojego domu".</p>
+<p>4. D</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje, jak kasjerka w banku rozpoznała mężczyznę, który przyszedł go obrabować, dlatego pasującą kontynuacją jest zdanie D: "Przyszedł tam, żeby poinformować ich w zmianie swojego adresu".</p>
+<p><s class="odr-strikethrough">B</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. while/when I was running </p>
+<p><strong>Uzasadnienie:</strong> drugie zdanie opisuje krótkie wydarzenie, które odbyło się w trakcie wykonywania dłuższej czynności, dlatego powinno składać się z czasu <em>past simple</em> i <em>past continuous</em>. Podanego wyrazu można użyć do uzupełnienia czasu <em>past continuous</em> (<em>was/were</em> + czasownik z -ing). Spójnikiem, który poprzedza ten czas jest <em>while</em> lub <em>when</em>. </p>
+<p>2. was the law passed</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja w stronie biernej w czasie <em>past simple. </em>Tutaj używamy szyku pytającego: <em>was/were</em> + podmiot + <em>past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. I were you</p>
+<p><strong>Uzasadnienie:</strong> drugie zdanie opisuje wyobrażoną sytuację, co można wyrazić za pomocą II trybu warunkowego. Podanego wyrazu można użyć do opisania warunku (<em>if</em> + <em>past simple</em>).</p>
+<p>4. accused him of</p>
+<p><strong>Uzasadnienie:</strong> <em>accuse somebody of something </em>- oskarżyć kogoś o coś. Czas <em>past simple </em>tak jak w zdaniu wyjściowym.</p>
+<p>5. wish I had told</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>I wish + past perfect</em>, aby wyrazić żal odnośnie przeszłości.</p>
+<p>6. I will have finished</p>
+<p><strong>Uzasadnienie:</strong> drugie zdanie opisuje czynność, która zakończy się przed pewnym momentem w przeszłości, dlatego należy użyć czasu <em>future perfect</em> (<em>will have</em><strong> </strong>+ <em>past participle</em>).</p><br>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Pierwszy z utworów odwo³uje siê do kobiecej perspektywy oraz wp³ywu obozu na los bohaterki. Mimo ocalenia nadal jest naznaczona przez tragiczn¹ przesz³oœæ, stara sobie zrekompensowaæ prze¿yt¹ traumê: "Ona siê bardzo drogo ubiera / bo raz ju¿ sta³a nago". Zdaje siê jednak, i¿ ¿adne dzia³ania nie przynosz¹ jej ukojenia, co podkreœla gorzk¹ wymowê dzie³a: "I mo¿e tylko szara ziemia / bêdzie w stanie pokryæ / jej nagoœæ?". Anonimowa bohaterka uosabia w ten sposób los wielu kobiet, które nawet po wyzwoleniu musz¹ mierzyæ siê z ranami w psychice, odbudow¹ poczucia godnoœci. Z kolei w drugim utworze wypowiada siê ju¿ zbiorowoœæ, zmienia siê tak¿e punkt widzenia. W wierszu <em>Ona </em>kobieta zostaje przedstawiona przez pewnego obserwatora, natomiast w <em>Egzaminie z Zag³ady</em> g³os zostaje w pe³ni oddany ocalonym - utwór staje siê wiêc wyznaniem i œwiadectwem. Stanowi tak¿e refleksjê na temat ich niepokojów i odmiennych sposobach postrzegania Holocaustu. Takie kreacje podmiotu lirycznego w wiarygodny i przejmuj¹cy sposób pozwalaj¹ na wyra¿enie doœwiadczeñ ocala³ych. Nie ma w nich patosu, natomiast w oryginalny sposób odzwierciedlaj¹ wp³yw doœwiadczeñ na dalsze ¿ycie ofiar oraz próby zachowania pamiêci o Zag³adzie.</p>
+<p>W wierszu <em>Ona</em> dominuj¹ czasowniki czasie teraŸniejszym ("ubiera", "kupuje"). Wprowadzaj¹ konkretn¹ perspektywê, która nie odwo³uje siê bezpoœrednio do przesz³oœci, jednak jest ni¹ naznaczona. Wprowadzenie czasowników w czasie teraŸniejszym zapewnia wra¿enie naocznoœci, jakby odbiorca tekstu by³ œwiadkiem zachowania bohaterki. Z kolei w drugim z utworów dominuj¹ czasowniki w czasie teraŸniejszym ("Jesteœmy", "nie zaciera") oraz przysz³ym ("zapadnie", "stan¹ siê"). Pozwala to na zarysowanie aktualnej sytuacji ofiar oraz wskazanie ich przypuszczeñ dotycz¹cych tego, co nast¹pi po ich œmierci. Poszerza to perspektywê oraz podkreœla uczucia ocala³ych, ich niepokój. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Tytu³owa "ona" to anonimowa kobieta, która by³a wiêŸniark¹ w obozie koncentracyjnym. Chocia¿ prze¿y³a pobyt w obozie, nie mo¿e zapomnieæ o swoich prze¿yciach. Nawet po odzyskaniu wolnoœci ca³y czas nosi brzemiê trudnych doœwiadczeñ. Próby zapomnienia o tym, powrotu do normalnoœci, s¹ jednak skazane na niepowodzenie. Z kolei w drugim wierszu g³os zostaje oddany zbiorowoœci by³ych wiêŸniów. Maj¹ œwiadomoœæ, ¿e ich ¿ycie siê koñczy, wyra¿aj¹ pragnienie utrwalenia tego, co ich spotka³o, a przy tym zachowania pamiêci o zmar³ych. Nie chc¹ popaœæ w zapomnienie. Postacie z wierszy Amiel to bez w¹tpienia "osmaleni". Ich egzystencjê definiuje bowiem pobyt w obozie zag³ady. Cierpienie i krzywda pozostaj¹ mimo up³ywu czasu wci¹¿ obecne i nadal wp³ywaj¹ na psychikê ocalonych. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Tytu³ utworu mo¿na odczytaæ na ró¿ne sposoby. Jeden z nich wi¹¿e siê bezpoœrednio z treœci¹ dzie³a, w którym pojawiaj¹ siê s³owa: "I moja wnuczka mówi - mam egzamin z Zag³ady". S³owo "egzamin" zyskuje wiêc dos³owny sens, poniewa¿ odnosi siê do oficjalnego sprawdzenia wiedzy z okreœlonej dziedziny. W tym ujêciu Holocaust staje siê jednym z wydarzeñ z przesz³oœci, o którym naucza siê w szko³ach. Sugeruje to równie¿ sposób narracji o tej tragedii - wyzbyty uczuæ, odwo³uj¹cy siê do faktów. Tytu³ wiersza mo¿na jednak tak¿e odczytaæ w bardziej metaforyczny sposób, je¿eli egzamin oznacza sprawdzenie wartoœci czegoœ w danej sytuacji. Wtedy to weryfikacji zostaje poddany stosunek ludzi do sposobu mówienia o Holokauœcie: czy potrafi¹ zrozumieæ ofiary i pozwalaj¹ im na wyra¿enie tragicznych doœwiadczeñ, wyci¹gaj¹ wnioski z tych wydarzeñ, czy te¿ s¹ obojêtni wzglêdem odchodz¹cych œwiadków. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Obowi¹zkiem ocalonych z Zag³ady jest pamiêæ o tragicznych wydarzeniach. S¹ osobami, do których nale¿y pozostawienie po sobie œwiadectwa, wyartyku³owanie prze¿yæ oraz emocji, by pozosta³y ¿ywe, nie zmieni³y siê tylko w daty czy historiê. Ich odpowiedzialnoœæ jest szczególna przez to, ¿e staj¹ siê g³osem ofiar obozowej rzeczywistoœci. Konieczne jest równie¿ dokonanie "porachunków z cz³owiekiem i Bogiem", rozliczenie bolesnej przesz³oœci. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Amiel zwraca przede wszystkim uwagê na poczucie wstydu, wywo³anego obna¿eniem wiêŸniarki przed oprawcami - kluczowa jest cielesnoœæ. Nagoœæ staje siê form¹ upokorzenia oraz odebrania godnoœci i podmiotowoœci bohaterki: "Ona siê bardzo drogo ubiera / bo raz ju¿ sta³a nago / przed palcem posy³aj¹cym / j¹ na lewo". Z tego te¿ powodu by³a wiêŸniarka po odzyskaniu wolnoœci stara siê zrekompensowaæ sobie traumatyczne prze¿ycie za pomoc¹ ci¹g³ego kupowania drogich ubrañ, by ju¿ nigdy wiêcej nie doœwiadczyæ swego obna¿enia. Drugi aspekt kobiecego doœwiadczenia Holocaustu to próba odciêcia siê od przesz³oœci, zapomnienia o niej - nawet poprzez maskowanie widocznych znaków (wytatuowany numer). Bohaterka pragnie w ten sposób odzyskaæ kontrolê nad swoim cia³em, ukryæ to, co jest pozosta³oœci¹ po pobycie w obozie. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>a) Nagoœæ staje siê narzêdziem upokorzenia kobiet g³ównie ze wzglêdu na ich kulturowy wizerunek. Cia³o jest dla nich wa¿ne, poniewa¿ wi¹¿e siê z poczuciem wartoœci oraz godnoœci¹, zaœ troska o niego stanowi wa¿ny element kobiecej to¿samoœci. Nagoœæ jako element represji narusza wiêc intymn¹ i wa¿n¹ dla kobiet sferê, przyczynia siê do ich zhañbienia oraz odbiera godnoœæ.</p>
+<p> </p>
+<p>b) Ubrania maj¹ dla dla wiêŸniów pozytywne lub negatywne znaczenie - w zale¿noœci od sytuacji i tego, jakie s¹. Pasiaki prowadz¹ do degradacji ludzi, którzy staj¹ siê anonimowi. Odbieraj¹ im godnoœæ oraz podmiotowoœæ, podkreœlaj¹ nierównoœæ w relacji miêdzy wiêŸniami a nazistami maj¹cymi pe³n¹ w³adzê nad ¿yciem ofiar. Ubrania mog¹ byæ równie¿ si³¹ buduj¹ca, przywracaj¹c¹ indywidualizm czy nadziejê. Drobnie czynnoœci, dodatki do ubrania przypominaj¹ o dawnej egzystencji, ale pomagaj¹ tak¿e w walce o prze¿ycie. </p>
+<p> </p>
+<p>c) Bohaterka wiersza Amiel to kobieta ocala³a z Zag³ady. W obozie doœwiadcza upokorzenia, zostaje zbrukana: "bo raz ju¿ sta³a nago / przed palcem posy³aj¹cym / j¹ na lewo". Sytuacja ta oddzia³uje na dalsze losy kobiety, poniewa¿ ju¿ jako wolny cz³owiek ca³y czas stara siê zrekompensowaæ sobie traumatyczne doœwiadczenie. Sposobem na to staje siê na³ogowe kupowanie drogich ubrañ. Staj¹ siê one form¹ ochrony, zapewniaj¹ jej to, co odebrano jej w obozie, przywracaj¹ godnoœci i podmiotowoœæ. Jednoczeœnie pozwalaj¹ na maskowanie numeru wytatuowanego na ciele bohaterki, a wiêc zapewniaj¹ namiastkê powrotu do dawnego ¿ycia. </p>
+<p>Interpretacja zachowana bohaterów u Borowskiego - czêœæ indywidualna</p>
+<p> </p>
+<p>d) Czêœæ indywidualna - porównanie tekstów z lektur¹</p><br>

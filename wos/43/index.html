@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Zjawisko nierówności szans społecznych może być pogłębiane przez następujące czynniki:</strong></span></p>
+<ul>
+<li>ubóstwo,</li>
+<li>czynniki ekonomiczne, np. wielkość dochodów, </li>
+<li>czynniki kulturowe, np. dostęp do środków edukacyjnych, </li>
+<li>czynniki ogólnospołeczne, </li>
+<li>czynniki biologiczne.</li>
+</ul>
+<p>Nierówny podział dóbr w społeczeństwie, który ma miejsce pomiędzy poszczególnymi grupami społecznymi nazywamy nierównościami społecznymi. Mają one silny związek z <span style="text-decoration: underline;"><strong>nierównością szans życiowych</strong></span>, ponieważ wraz ze wzrostem cywilizacyjnym w danych społecznościach rosną szanse ich członków na uzyskanie większej ilości dóbr. Posiadanie przez dane jednostki znacznej ilości dóbr materialnych i niematerialnych umożliwia im uplasowanie się w grupie, która ma większe szanse życiowe na uzyskanie lepszego statusu społecznego, np. posiadanie wpływowych rodziców pozwala ich dzieciom na uzyskanie wysokich stanowisk oraz wejście do kręgu elity. Z kolei brak wystarczającej liczby wykwalifikowanych lekarzy i sprzętu medycznego powoduje, że ograniczane są szanse na dobre zdrowie w społeczeństwie.</p>
+<p><strong>Grupy ludności, których w głównej mierze dotykają nierówności szans życiowych:</strong></p>
+<ul>
+<li>osoby wywodzące się z biednych rodzin, </li>
+<li>osoby uzależnione od środków, np. psychoaktywnych, alkoholu, itd., </li>
+<li>dzieci z domów dziecka, </li>
+<li>osoby niepełnosprawne.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Wiele czynników może pogłębiać problem nierówności szans życiowych wśród młodzieży, w tym: brak dostępu do odpowiedniej edukacji, bieda, niestabilne rodziny, rasa, pochodzenie etniczne, miejsce zamieszkania, niepełnosprawność, problemy zdrowotne, brak możliwości zatrudnienia i brak wsparcia ze strony rządu.</p>
+<p>Nierówność szans życiowych dotyczy w szczególności młodzieży z ubogich rodzin, młodzieży z niepełnosprawnościami, młodzieży pochodzącej z mniejszości etnicznych oraz młodzieży z terenów wiejskich. Przykładowo, pogłębiać nierówności szans życiowych może tzw. wykluczenie komunikacyjne. Osoby z ośrodków oddalonych od dużych miast, gdzie są większe szanse na znalezienie zatrudnienia, znajdują się niekiedy w gorszej sytuacji, niż osoby z wielkich ośrodków miejskich.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykłady stygmatyzacji w życiu społecznym:</strong></span> </p>
+<ul>
+<li>traktowanie osób psychicznie chorych za zagrożenie, </li>
+<li>uznanie danej osoby przypadkowo za nieletniego przestępcę, może doprowadzić do tego, że taka osoba zacznie zachowywać się jak przestępca.</li>
+</ul>
+<p><strong>Stygmatyzacja</strong> negatywnie wpływa na relacje stygmatyzowanej jednostki z jej otoczeniem, ponieważ osoba taka może czuć obsesyjny niepokój, a nawet może dojść do wyparcia jej przynależności do danej grupy społecznej. Ponadto taka osoba może stać się wycofana, przez co jej pasywność należy uznać za przyjęty przez nią sposób przetrwania. Stygmatyzowana osoba może również wykazywać agresję przeciwko własnej grupie oraz szeregiem uprzedzeń wobec innych grup. Stygmatyzacja prowadzi do zmniejszenia pozycji danej osoby w grupie społecznej, jej odrzucenia, obniżenia poczucia własnej wartości, co w konsekwencji prowadzi do wyuczonej bezradności, a nawet do <strong>efektu Golema</strong>, czyli osoba stygmatyzowana zaczyna przejawiać cechy, które jej przypisuje społeczeństwo. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Stygmatyzacja</span></strong> to negatywne postrzeganie i ocena osób lub grup społecznych na podstawie ich różnic, takich jak rasa, płeć, orientacja seksualna, niepełnosprawność czy religia.</p>
+<p>Przykłady stygmatyzacji w życiu społecznym to między innymi: dyskryminacja ze względu na orientację seksualną, niepełnosprawność fizyczną, rasizm i seksizm.</p>
+<p>Stygmatyzacja może mieć poważne negatywne skutki dla napiętnowanej jednostki, takie jak ograniczenie możliwości zawodowych, izolacja społeczna i pogorszenie jakości życia. Może również powodować ból i cierpienie emocjonalne oraz pogorszenie samooceny. Wszystko to może prowadzić do powstania barier w relacjach napiętnowanej (stygmatyzowanej) jednostki z otoczeniem i utrudnienia budowania trwałych i zdrowych więzi społecznych.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Stereotyp</strong></span> to wyobrażenie o kimś lub o czymś, utrwalone w świadomości dużej grupy osób i niełatwo poddające się zmianom, nie zawsze przy tym zgodne z rzeczywistością. Zarówno stereotypy pozytywne, jak i negatywne niosą za sobą określone konsekwencje. Należy zauważyć, że pozytywne stereotypy np. w stosunku do danych pracowników mogą doprowadzić do obniżenia ich zdolności do pracy, a także mogą one obniżać ich motywację do pracy, ponieważ osoby te mogą bazować na dobrej opinii o nich.</p>
+<p><span style="text-decoration: underline;"><strong>Pozytywny stereotyp</strong></span> na temat danej grupy osób może również prowadzić do zwiększania poziomu stresu u członków określonej społeczności, co może skutkować nawet powstaniem objawów depresji. Tym samym pozytywne stereotypy mogą mieć podobne skutki, jak skutki negatywne, bowiem mogą one prowadzić do załamania się jednostki poddawanej stereotypizacji. Niemniej należy również zauważyć, że skutki negatywnych stereotypów mają silniejsze oddziaływanie na jednostkę, bowiem mogą one prowadzić do jej wyobcowania ze społeczności. </p>
+<p><span style="text-decoration: underline;"><strong>Negatywny stereotyp</strong></span>, czyli taki, który stanowi nieprawdziwe i uproszczone przeświadczenie kreuje wizerunek danego państwa, co w konsekwencji w nieprawidłowy sposób wpływa na relacje z danym narodem, m.in. w Europie został stworzony stereotyp Polaka alkoholika, z którym współcześnie trudno nam walczyć, ponieważ Polonia musi własnym przykładem, niejako pracą organiczną świadczyć, że ów wizerunek jest nieprawdziwy. Tego rodzaju stereotypy są przyczyną przejawów nietolerancji i utrudnień w zakresie budowania poprawnych relacji międzynarodowych. Z kolei stereotypy pozytywne nie doprowadzają do wyobcowania danego narodu na arenie międzynarodowej, ale podobnie jak stereotypy negatywne prowadzą dane jednostki lub narody do budzenia się u nich złości, agresji oraz depersonalizacji, bowiem nie chcą być one postrzegane w nieprawdziwy dla nich sposób. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Stereotyp</span></strong> to przekonanie podzielane zbiorowo, przez jakąś grupę ludzi, które zawiera uproszczone przeświadczenie odnośnie genezy jakichś zjawisk lub cech pewnych rzeczy, osób czy grup społecznych. Stereotypy bazują na generalizowaniu. Stąd zawierają uproszczenia. Wyróżnia się przy tym stereotypy pozytywne, negatywne i neutralne.</p>
+<p>Przy czym <strong><span style="text-decoration: underline;">pozytywne stereotypy także mogą powodować negatywne skutki</span></strong>. Mogą one prowadzić do utrwalania barier i nierówności społecznych, a także powodować presję i niepokój u osób, które nie przystają do tych stereotypów. Ponadto, pozytywne stereotypy mogą również prowadzić do nieuzasadnionego założenia, że osoby z pewnych grup społecznych mają takie same cechy. Wszystkie stereotypy, zarówno pozytywne jak i negatywne, ograniczają nasze postrzeganie i zrozumienie innych ludzi i są potencjalnie szkodliwe dla społeczności.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Na podstawie danych przedstawionych na wykresach (s. 41) należy stwierdzić, że ponad połowa osób ankietowanych cechowała się poczuciem, że w danym czasie lub z danej przyczyny byli oni w jakiś sposób dyskryminowani lub ich grupa społeczna była narażona na dyskryminację (29,4% ankietowanych uważało, że zdarzyło się, że byli gorzej potraktowani w danej sytuacji we względu na określone przyczyny; 27% uważało, że należy do grupy, która ogólnie rzecz biorąc jest w Polsce narażona na dyskryminację ze względu na wymienione cechy; 3,9% uważało, że uznaje się za osobę przynależącą do grupy, która jest w Polsce dyskryminowana, gorzej traktowana niż inne grupy w naszym kraju). Porównując te wyniki z wynikami tych samych badań przeprowadzonych w innych krajach (Wielka Brytania, Izrael, Francja, Niemcy, Portugalia) należy wskazać, że poziom poczucia możliwości bycia dyskryminowanym w Polsce jest dużo niższy w naszym kraju niż w Izraelu, Wielkiej Brytanii oraz we Francji. Wynik dotyczący pytania na temat poczucia, że dana grupa (do której przynależy respondent) jest dyskryminowana, gorzej traktowana od innych grup w danym kraju był porównywalny w Polsce i w Niemczech. </p>
+<p>Szczegółowe badania na temat czynników sprawiających, że dane grupy czują się dyskryminowane w Polsce uwidaczniają, że w 2011 r. był niski odsetek respondentów czujących się dyskryminowanymi ze względu na: wiek (12%), płeć (10%), poglądy polityczne (9%), bycie osobą ubogą (9%), niepełnosprawność (8%), orientację seksualną (7%), wyznanie katolickie (7%), posiadanie małego dziecka - do 3 lat (6%), posiadanie starszego dziecka - do 14 lat (4%), posiadanie rodziny wielodzietnej (2%), wyznanie inne niż katolickie (1%), pochodzenie inne niż polskie (0,3%). Z kolei te same badania przeprowadzone w 2018 r. wykazały, że doszło do zmniejszenia odsetka osób, które uważają, że należą do grup narażonych w Polsce na dyskryminację ze względu na: wiek (9%, czyli spadek o 3 punkty procentowe), orientację seksualną (6%, czyli spadek o 1 pkt procentowy), wyznanie lub przekonanie religijne (5%, czyli spadek o 3 pkt procentowe, bo w 2011 r. 7% osób czuło dyskryminowanych ze względu na wiarę katolicką oraz 1% ze względu na na wyznanie inne niż katolickie), złą sytuację materialną (5%, czyli spadek o 4 pkt procentowe), niepełnosprawność (4%, czyli spadek o 4 pkt procentowe), płeć (4%, czyli spadek o 6 pkt procentowych), rodzicielstwo (3%, czyli spadek o 7 pkt procentowych, ponieważ w 2011 r. 6% respondentów czuło się dyskryminowanych ze względu na posiadanie dziecka do 3 lat oraz 4% ze względu na posiadanie dziecka w wieku 3-14 lat). Jednak nastąpił również wzrost odsetka respondentów, którzy czuli się dyskryminowani ze względu na rasę, pochodzenie etniczne oraz narodowość (12% w 2018 r., zaś 0,3% w 2011, czyli doszło do wzrostu na poziomie 11,7 pkt procentowych). </p>
+<p><span style="text-decoration: underline;"><strong>Poziom subiektywnego poczucia dyskryminacji</strong></span> wśród mieszkańców Polski może mieć istotny wpływ na jakość ich życia społecznego, ponieważ tego rodzaju odczucia prowadzą do wyobcowania społecznego. Osoby czujące się dyskryminowane niedobrze czują się w danej społeczności, nie potrafią one normalnie w niej funkcjonować, bowiem jest to im uniemożliwiane przez to, że otrzymują bodźcie ze strony innych członków społeczności, że nie są tacy jak oni, że są "odmieńcami" i nie pasują do nich. Takie poczucie u osób dyskryminowanych prowadzi do tego, że jakość ich funkcjonowania w obszarze życia społecznego jest niska. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Subiektywne poczucie dyskryminacji wśród jednostek może mieć negatywny wpływ na jakość ich życia. Jednostki, które mają poczucie, że są z jakichś względów dyskryminowane lub zagrożone dyskryminacją, mogą mieć problemy z nawiązywaniem kontaktów społecznych, jak też mogą czuć się izolowane i wykluczane ze społeczeństwa, przez co może spadać poziom ich zainteresowania sprawami publicznymi. </p>
+<p>Jeśli chodzi o Polskę, to dane z wykresów pokazują, że 1,6% respondentów w roku poprzedzającym badanie, tj. w 2014 roku, faktycznie było z jakichś względów dyskryminowanych. Więcej, bo 3,9% ankietowanych, wskazało, że uznają się za osoby należące do grup, które są w Polsce dyskryminowane lub z jakichś względów gorzej traktowane. Znacznie więcej, bo blisko 30% respondentów, uznaje zaś, że w swoim życiu zdarzyło się im w jakichś okolicznościach paść ofiarami dyskryminacji lub ogólnie rzecz biorąc, należą do grupy, która może być narażona na dyskryminację ze względu na narodowość, wygląd, przekonania czy z jakichś innych powodów.</p>
+<p>Warto jednak dodać, że mimo iż część Polaków deklaruje bycie zagrożonymi dyskryminacją, to jednak na mniejszą skalę, niż na przykłąd Niemcy, Francuzi czy Brytyjczycy.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązaniu 1.:</strong></p>
+<p>Na podstawie danym przedstawionych w tabeli należy wskazać, że problem nierówności płac kobiet i mężczyzn dotyczy w takim samym stopniu wszystkich państw wspólnoty, ponieważ zarówno w państwach "Starej Unii" - np. Austria (21,7%), Niemcy (22%), jak i w państwach "Nowej Unii" - np. Czechy (22,5%), Estonia (26,9%) występuje wysoka średnia różnica (w procentach) pomiędzy płacą kobiet oraz mężczyzn. Jednocześnie w niektórych państwach "Starej Unii" - np. Włochy (5,5%), Belgia (6,5%) oraz "Nowej Unii" - np. Rumunia (5,8%), Polska (7,7%) występuje mała średnia różnica pomiędzy płacą kobiet i mężczyzn. Tym samym status ("nowe", "stare") państw członkowskich Unii Europejskiej nie ma znaczenia w przypadku oceny różnicy w płacach kobiet i mężczyzn.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>'Stare' kraje Unii Europejskiej, to te, które albo należą do grona jej założycieli, jak Francja, Niemcy, Włochy, Luksemburg, Belgia i Holandia, albo dołączyły do niej kilka dekad temu, jeszcze w XX wieku, jak przykładowo Irlandia czy Hiszpania. 'Nowe' kraje UE to zaś te, które dołączyły do tej organizacji już w XXI wieku, jak między innymi Polska, Czechy, Słowacja, Słowenia, Litwa, Łotwa, Estonia, Węgry, Malta, Cypr, Rumunia, Bułgaria i Chorwacja. </p>
+<p>Jak wynika z danych przedstawionych w tabeli, kwestia nierówności płac kobiet i mężczyzn dotyczy zarówno 'starych' krajów UE, jak i 'nowych' jej członków. Można uznać, że problem ten dotyczy w podobnym stopniu wszystkich państw wspólnoty. Aczkolwiek największa średnia różnica między stawkami godzinowymi za pracę otrzymywanymi przez kobiety i mężczyzn dotyczy Estonii, czyli 'nowego' kraju UE, gdzie wynosi 26,9%. Jednak w Niemczech, czyli w jednym ze 'starych' krajów UE, średnia różnica to 22%. W Polsce, czyli w jednym z 'nowych' krajów UE, wynosi ona 7,7%, co oznacza, że jest mniejsza niż nie tylko w Niemczech, ale też takich innych 'starych' krajach UE, jak Austria, Hiszpania, Szwecja i Irlandia.  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Rysunek ilustruje zasadę przychylności wobec "swoich", ponieważ dwaj Irokezi śmieją się z człowieka ubranego w garnitur oraz trzymającego aktówkę w ręce. Słowa wypowiadane przez jednego z irokezów wskazują, że obaj koledzy bardziej lubią członków swojej grupy niż innych i dlatego przypisują sobie pozytywne cechy (z tego też względu ubiór przechodnia ich śmieszy).</p>
+<p>b) Z sytuacji ukazanej na rysunku wynika, że postrzeganie "obcych" przez "swoich" jest zazwyczaj bardzo:</p>
+<p><span style="text-decoration: underline;"><strong>D. subiektywne.</strong></span></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Zamieszczony rysunek satyryczny ilustruje zasadę przychylności wobec 'swoich', ponieważ ukazane są na nim dwie osoby z charakterystycznymi irokezami na swych głowach, identyfikujące się z jedną subkulturą, które śmieją się z trzeciej osoby, odbiegającej od nich swym wyglądem (mającej garnitur i neseser). Osoby te uważają za 'normalne' to, co dotyczy ich grupy. Natomiast kogoś spoza swojej grupy traktują jako 'obcego', a być może też dziwnego. Związane jest to z tym, że ludzie lubią na ogół tych, którzy są do nich podobni i posiadają zbliżone cechy. Wobec pozostałych odczuwają chłodny dystans, a nierzadko nawet lekceważenie.</p>
+<p><strong>b)</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #ff2400;"><strong>Zdanie</strong></td>
+<td style="background-color: #ff2400;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr>
+<td style="background-color: #cfb53b;">Z sytuacji ukazanej na rysunku wynika, że postrzeganie 'obcych' przez 'swoich' jest zazwyczaj bardzo...</td>
+<td style="background-color: #cfb53b;">...subiektywne. <strong>[D]</strong></td>
+</tr>
+</tbody>
+</table><br>

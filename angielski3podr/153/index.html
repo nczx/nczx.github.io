@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">2.3</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Rozwiązanie I </strong></p>
+<p>This is a poster for a film titled <em>Save the Last Dance</em>. There are two photos side by side which show the characters. On the left, there is a man and a woman who are hugging and laughing. I think they might be in love. They seem very happy together. Perhaps the film is about their love story. On the right, there is a girl dancing. She's alone but it looks like she's involved in what she's doing. I think she might be practising for a dance competition. Dancing must be her hobby.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Jest to plakat do filmu pod tytułem <em>W rytmie hip hopu</em>. Są to dwa zdjęcia obok siebie, które przedstawiają bohaterów. Po lewej stronie jest mężczyzna i kobieta, którzy przytulają się i śmieją. Wydaje mi się, że mogą być zakochani. Wyglądają na bardzo szczęśliwych razem. Być może film jest o ich historii miłosnej. Po prawej stronie jest dziewczyna, która tańczy. Jest sama, ale wygląda na to, że jest zaangażowana w to, co robi. Myślę, że może ćwiczy do konkursu tanecznego. Taniec to zapewne jej hobby.</p>
+<p> </p>
+<p><br/><strong>Rozwiązanie II </strong></p>
+<p>This is a poster for a film titled <em>Footloose</em>. The poster is a clip from the film. It shows people dancing at a party. In the foreground, there is a boy and a girl who are dancing next to each other. I think they're the main characters. In the background, there are lots of other people too. They might be their friends from school. The people in this poster look like they're having fun. They're relaxed and it seems like they're enjoying themselves at the party. </p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Jest to plakat do filmu pod tytułem <em>Footloose.</em> Na plakacie znajduje się klip z filmu. Przedstawia on ludzi tańczących na imprezie. Na pierwszym planie jest chłopak i dziewczyna, którzy tańczą obok siebie. Wydaje mi się, że to główni bohaterowie. W tle jest też wiele innych osób. Mogą to być ich przyjaciele ze szkoły. Ludzie na tym plakacie wyglądają, jakby dobrze się bawili. Są zrelaksowani i wygląda na to, że podoba im się na tej imprezie.</p><br><a style="color:red; font-size:25px;">3.2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. This photo might be an abstract painting. It also could be a close-up picture of something found in nature. </p>
+<p>(To zdjęcie może być obrazem abstrakcyjnym. Może też być zbliżeniem czegoś, co można znaleźć w naturze.)</p>
+<p><br/>2. This could be a photo of a weird plant or some tiny rocks. It also might have been taken underwater. Or it could be just a close-up of frozen food, such as peas.</p>
+<p>(Może to być zdjęcie dziwnej rośliny lub jakichś malutkich kamieni. Mogło też zostać zrobione pod wodą. Albo może to być po prostu zbliżenie na mrożone jedzenie, takie jak groszek.)</p>
+<p><br/>3. This might be a close-up of a fish tail. Or it could be a photo of a flower petal. Its colour is incredible, so it might have been the reason why this picture was taken.</p>
+<p>(Może to być zbliżenie na ogon ryby. Albo może to być zdjęcie płatka kwiatu. Jego kolor jest niesamowity, więc być może to właśnie on był powodem wykonania tego zdjęcia.)</p><br><a style="color:red; font-size:25px;">4.1</a><br>
+<p>Indywidualne</p><br>

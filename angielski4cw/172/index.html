@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>8.1. B</p>
+<p><strong>Uzasadnienie</strong>: <em>be short of money</em> - mieć mało pieniędzy. </p>
+<p>8.2. D</p>
+<p><strong>Uzasadnienie</strong>: <em>reception</em> - przyjęcie weselne. </p>
+<p>8.3. B</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przymusu - <em>have/has to</em> + bezokolicznik. </p>
+<p>8.4. C</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z obecnej sytuacji - <em>wish + past simple</em>. </p>
+<p>8.5. A</p>
+<p><strong>Uzasadnienie</strong>: <em>hilarious</em> - przezabawny.</p>
+<p>8.6. D</p>
+<p><strong>Uzasadnienie</strong>: zaimek względny <em>whose</em> wskazuje na czyjeś posiadanie, przynależność. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>9.1. point</p>
+<p><strong>Uzasadnienie</strong>: <em>the point of sth</em> - cel czegoś; <em>score a point</em> - zdobyć punkt (w grze); <em>get to the point</em> - dojść do (jakiegoś) momentu. </p>
+<p>9.2. cross</p>
+<p><strong>Uzasadnienie</strong>: <em>cross the road</em> - przejść na drugą stronę ulicy; <em>cross the border</em> - przekroczyć granicę; <em>the roads cross</em> - ulice przecinają się. </p>
+<p>9.3. beat</p>
+<p><strong>Uzasadnienie</strong>: <em>beat sb at sth</em> - pokonać kogoś w czymś; <em>beat carpets</em> - trzepać dywany; <em>beat a record</em> - pobić rekord.</p>
+<p>9.4. stand</p>
+<p><strong>Uzasadnienie</strong>: <em>stand in a queue</em> - stać w kolejce;<em> can't stand</em> - nie móc znieść; <em>stand out</em> - wyróżniać się. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>10.1. managed to pass</p>
+<p><strong>Uzasadnienie</strong>: <em>manage</em> + bezokolicznik z <em>to</em>. </p>
+<p>10.2. wouldn't have signed </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej niedoszłe przeszłe następstwa - trzeci tryb warunkowy. </p>
+<p>10.3. conducting a great deal </p>
+<p><strong>Uzasadnienie</strong>: <em>despite</em> + czasownik z -<em>ing</em>; <em>a great deal</em> - duża ilość.</p>
+<p>10.4. is time we went</p>
+<p><strong>Uzasadnienie</strong>: życzenie dotyczące teraźniejszości lub bliskiej przyszłości - konstrukcja <em>It's (high) time</em> + rzeczownik/zaimek + <em>past simple</em>. </p><br>

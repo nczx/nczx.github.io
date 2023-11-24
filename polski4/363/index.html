@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Odtworzenie początków cerkwi jest dla narratora sposobem na utrwalenie pamięci o niej. Uważa, że opowiedzenie historii o jej początkach umiejscawia ją w konkretnym miejscu i czasie, a tym samym - upamiętnia ją i jej twórców. Mówi: "Potrzeba porządku, nazwy skutku i przyczyny dotyczy również imaginacji". Wymyślona przez niego historia o powstaniu świątyni, chociaż oparta na szczątkowych przesłankach, obdarza cerkiew osobowością, nadaje tożsamość jej budowniczym.</p>
+<p> </p>
+<p>b) W przedmiotach narrator dostrzega widome symbole przeszłych wydarzeń. Dobra materialne przywołują wspomnienie tworzących i używających ich ludzi. Stanowią źródło informacji o nieistniejącym już często świecie. Dla opowiadającego stanowią pobudzający wyobraźnię artefakt, na kanwie którego można snuć historie o jego losach.</p>
+<p> </p>
+<p>c) Budowanie świątyni spowodowane jest potrzebą kontaktu ze światem niematerialnym. Jej powstanie tworzy osobną przestrzeń, w której dochodzi do spotkania Boga i człowieka. Narrator mówi: "Fragment świata został ze świata wyjęty, uniesiony w inną dziedzinę. Jak prorok Eliasz z lewej strony ikonostasu". Jest to odwołanie do starotestamentowej historii Eliasza, którego wicher porwał z ziemi do nieba, a którego powtórnego przyjścia oczekują żydzi. </p>
+<p> </p>
+<p>d) Narrator nie podziela entuzjazmu co do planów odbudowy świątyni, uważa bowiem, że "[...] miejsca nie można przenieść". Przewiezienie budulca cerkwi i odtworzenie jej konstrukcji w innym miejscu nie jest w stanie przenieść atmosfery w niej panującej. Osoba mówiąca twierdzi, że nie tylko materia, ale i zjawiska niematerialne składają się na tożsamość budowli, te drugie na stałe przywiązane są do przestrzeni, w której ona powstawała. Z tego powodu narrator trwa w przekonaniu, że cerkiew nie opuściła w całości swego pierwotnego miejsca, choć fizycznie już jej tam nie ma.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Dialog z turystą służy pokazaniu różnic między postrzeganiem losów cerkwi przez przypadkową osobę a kogoś, kto jest z nią emocjonalnie związany. Dla tego pierwszego świątynia jest jednym wielu zabytków odwiedzanych w trakcie podróży. Nie widzi jej, posiłkuje się jedynie wskazówkami dostarczanymi przez narratora. Przeniesienie cerkwi do skansenu oznacza dla turysty szansę na zakonserwowanie jej dla przyszłych pokoleń, jest więc pełen entuzjazmu dla tej inicjatywy. </p>
+<p>Narrator z kolei spędzał w świątyni większość swojego dnia, miał więc dużo czasu na studiowanie jej sekretów. Dzięki temu jest w stanie opisać ją w drobnych detalach z pamięci, choć rzeczywista konstrukcja została przeniesiona. W miejscu, które po niej pozostało, narrator wciąż czuje jej obecność, jak gdyby po metaforycznym ciele budowli pozostała dusza. Na pytania turysty odpowiada lakonicznie. Zdaje się zirytowany podejściem mężczyzny, próbującego uchwycić atmosferę miejsca na zdjęciach. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Porównanie pustego miejsca do płatka zdartej skóry jest przykładem opisywania świata jako żywego organizmu. Stasiuk zdaje się dostrzegać w nieożywionych przedmiotach cechy stworzeń. Portretuje je nadając im cech fizjologicznych. Zarówno miejsce, w którym stała cerkiew, jak i sama budowla zdają się oddychać, rosnąć, starzeć i rozkładać się jak tkanka ludzka czy zwierzęca. Stasiuk oddziela ponadto wyraźnie metaforyczne ciało świątyni od jej duszy - to pierwsze przeniesione zostaje do skansenu, drugie zaś pozostaje na pierwotnym miejscu.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>O pracy konserwatorów narrator mówi: "Za pomocą chemikaliów o ostrej nieprzyjemnej woni zatrzymywali rozkład. W sierpniowym upale wszystko cuchnęło jak jakiś szpital. Potem zawijali belki w specjalne materiały i ładowali na samochody niczym mumie." Wykonywane przez nich działania porównuje więc do konserwacji zwłok. Paradoksalnie, ich zadaniem jest ocalenie cerkwi od dalszego zniszczenia, danie jej nowego życia. Tymczasem narrator ma wrażenie jakby przygotowywali oni świątynię do ostatecznego odejścia, stwierdza: "przynieśli ze sobą zapach śmierci".</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W podkreślonych akapitach narrator rozważa problem zapisywania się wydarzeń z przeszłości w pamięci ludzi. Zauważa, że pewne punkty w historii ludzkości mają ustalone konkretne daty. Stają się one podstawą spójnych narracji historycznych, dzięki czemu wiedza o nich przekazywana jest z pokolenia na pokolenie. Niektóre zdarzenia umykają jednak precyzyjnemu umiejscowieniu chronologicznemu. Należy do nich wybudowanie cerkwi. Istnieje więc ona niejako poza czasem. Tajemnica momentu jej powstania skłania autora do snucia domysłów, wypełniania pustych przestrzeni w narracji o świątyni. Zabiegi te sprawiają, że wydaje się ona konstrukcją na poły boską i baśniową, funkcjonującą poza kategoriami ziemskiego życia.</p><br>

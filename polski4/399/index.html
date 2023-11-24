@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Za pomocą podanych przykładów zilustrowano zjawiska:</p>
+<ul>
+<li>wiralności; </li>
+<li>dezinformacji (fake newsów);</li>
+<li>bańki informacyjnej.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 489px; height: 251px;">
+<tbody>
+<tr style="height: 62px;">
+<td style="background-color: #99ccff; text-align: center;"><strong>Zjawisko</strong></td>
+<td style="background-color: #99ccff; text-align: center;"><strong>Sposoby manipulacji informacjami i opinią publiczną</strong></td>
+</tr>
+<tr style="height: 93px;">
+<td style="width: 241px; height: 93px; text-align: center;">dezinformacja</td>
+<td style="width: 241px; height: 93px; text-align: center;">
+<p>rozprzestrzenianie fake newsów za pośrednictwem botów lub farm trolli</p>
+<p>fabrykowanie dowodów</p>
+<p>wprowadzanie odbiorców w błąd na korzyść autorów dezinformacji</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 241px; height: 18px; text-align: center;">postprawda</td>
+<td style="width: 241px; height: 18px; text-align: center;">
+<p>szum informacyjny (niemożność odróżnienia prawdy od fałszu)</p>
+<p>zaburzenie komunikacji społecznej oraz decyzyjności poszczególnych organów władzy</p>
+<p>stronnicza (powodowana sympatią lub niechęcią) ocena zdarzeń, zjawisk, osób </p>
+<p>szerzenie niezgody wśród obywateli</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 241px; height: 18px; text-align: center;">bańka informacyjna</td>
+<td style="width: 241px; height: 18px; text-align: center;">
+<p>stosowanie algorytmów służących personalizacji treści odbieranych przez użytkownika</p>
+<p>tworzenie iluzji rzeczywistości, w której dominuje określony typ wartości lub przekonań</p>
+<p>ograniczenie odbiorcom dostępu do alternatywnych źródeł wiedzy o świecie</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 241px; height: 18px; text-align: center;">wiralność</td>
+<td style="width: 241px; height: 18px; text-align: center;">
+<p>promocja określonych (często szkodliwych) treści za pośrednictwem użytkowników</p>
+<p>zachęta do bezrefleksyjnego powielania atrakcyjnych (lub sensacyjnych), lecz niesprawdzonych informacji</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>O tym, że wpis jest fake newsem, świadczą:</p>
+<ul>
+<li>emocjonalny, sensacyjny ton wypowiedzi, sygnalizowany nagromadzeniem wykrzykników ("[...] chemtrailsy utrzymują się kilka godzin a nawet dni!!!") oraz apostrofami ("Nie dajmy się truć!");</li>
+<li>chwytliwe zdanie wprowadzające w problem ("Na naszym niebie jest coraz więcej smug chemicznych!");</li>
+<li>odwołania do negatywnych emocji odbiorcy, próba wywołania paniki ("Nie dajcie sobie wmówić, że to jest nieszkodliwe!");</li>
+<li>błędy interpunkcyjne ("Normalne smugi znikają w kilka minut a chemtrailsy utrzymują się kilka godzin a nawet dni!!!")</li>
+<li>niemożliwe do zweryfikowania dane o ogólnym, nieprecyzyjnym charakterze ("Niezależne badania wykazują...", "Wszystkie rządy o tym wiedzą...");</li>
+<li>brak odniesień do źródeł informacji.</li>
+</ul><br>

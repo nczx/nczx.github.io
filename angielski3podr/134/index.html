@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Advantages: </strong>(zalety)</p>
+<p>1. Music festivals allow you to discover new music and find new favourite artists.</p>
+<p>(Festiwale muzyczne pozwalają odkryć nową muzykę i znaleźć nowych ulubionych artystów.) </p>
+<p>2. Many music festivals help local musicians advance their careers.</p>
+<p>(Wiele festiwali muzycznych pomaga lokalnym muzykom w rozwoju ich kariery.)</p>
+<p>3. They are good for the local economy. People can make money through ticket sales, accommodations, or food.</p>
+<p>(Są one dobre dla lokalnej gospodarki. Ludzie mogą zarabiać pieniądze dzięki sprzedaży biletów, zakwaterowaniu lub jedzeniu.)</p>
+<p>4. These events bring people together. This can help strengthen bonds within communities and create beautiful memories.</p>
+<p>(Wydarzenia te łączą ludzi. Może to pomóc wzmocnić więzi w społecznościach i stworzyć piękne wspomnienia.)<br/><br/></p>
+<p><strong>Disadvantages:</strong> (wady)</p>
+<p>1. Loud music and large crowds can lead to high noise levels. This can be bad for nearby residents and wildlife.</p>
+<p>(Głośna muzyka i duże tłumy mogą prowadzić do wysokiego poziomu hałasu. To może być złe dla pobliskich mieszkańców i dzikich zwierząt.)</p>
+<p>2. Music festivals can generate lots of waste, pollution, and damage to local ecosystems.</p>
+<p>(Festiwale muzyczne mogą generować wiele odpadów, zanieczyszczeń i szkód w lokalnych ekosystemach.)</p>
+<p>3. Having crowds of people in one place increases the risk of accidents or incidents.</p>
+<p>(Obecność tłumów ludzi w jednym miejscu zwiększa ryzyko wystąpienia wypadków lub incydentów.)</p>
+<p>4. Tickets, transport, accommodations, and food at music festivals can be expensive. This makes these events inaccessible to some people.</p>
+<p>(Bilety, transport, noclegi i jedzenie na festiwalach muzycznych mogą być drogie. To sprawia, że te wydarzenia są niedostępne dla niektórych osób.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Text D (Który tekst jest o tym, że ten festiwal prawie przestał istnieć?)</p>
+<p><strong>Fragment w tekście</strong>: "After several years 'on the road', the festival seemed to have run its course by 1997, but it burst back to life in 2003 as a fixed festival in Chicago." - Po kilku latach "na trasie", w 1997 roku festiwal zdawał się dobiegać końca, ale w 2003 roku powrócił do życia jako stały festiwal w Chicago. </p>
+<p><br/>2. Text A (... ten festiwal jest nie tylko dla młodych?)</p>
+<p><strong>Fragment w tekście</strong>: "(...) there is other entertainment available - even activities for kids, as many people who came to the festival as carefree teenagers still enjoy attending, now with families of their own." - (...) dostępne są też inne rozrywki - nawet zajęcia dla dzieci, ponieważ wiele osób, które przybyły na festiwal jako beztroskie nastolatki, nadal chętnie w nim uczestniczy, mając już własne rodziny.</p>
+<p><br/>3. Text B (... podczas festiwalu doszło do problemów z publicznością?)</p>
+<p><strong>Fragment w tekście</strong>: "Although this has helped the festival remain relevant, it has led to a number of clashes between fans of rival music forms, giving it a less family-oriented reputation than other festivals." - Chociaż pomogło to w podtrzymaniu festiwalu przy życiu, doprowadziło do wielu starć między fanami rywalizujących form muzycznych, dając mu mniej rodzinną reputację w porównaniu do innych festiwali.</p>
+<p><br/>4. Text C (... kontrakty powstrzymują artystów przed występowaniem gdzie i kiedy chcą?)</p>
+<p><strong>Fragment w tekście</strong>: "Controversially, acts appearing here are prohibited from playing at other concerts in the area for several months before and after the festival (...)." - Co kontrowersyjne, występujące tu zespoły mają zakaz grania na innych koncertach w okolicy przez kilka miesięcy przed i po festiwalu (...).</p>
+<p><br/>5. Text D (... festiwal nie nazywa się od miejsca, w którym się odbywa?)</p>
+<p><strong>Fragment w tekście</strong>: "Lollapalooza was the brainchild of Perry Farrell, the leader of the band Jane's Addiction. Its name comes from an antiquated expression meaning 'an extraordinary or unusual thing' (...)." - Lollapalooza była pomysłem Perry'ego Farrella, lidera zespołu Jane's Addiction. Jej nazwa pochodzi od antycznego wyrażenia oznaczającego "rzecz nadzwyczajną lub niezwykłą" (...).</p>
+<p><br/>6. Text A (... trzeba być szybkim, jeśli chce się kupić bilet?)</p>
+<p><strong>Fragment w tekście</strong>: "Nowadays, tickets for the whole three days cost hundreds of pounds and sell out online in minutes." - Obecnie bilety na całe trzy dni kosztują setki funtów i wyprzedają się w Internecie w ciągu kilku minut.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1 - rival</p>
+<p>(przeciwny, konkurujący - <strong>rywalizujący</strong>)  </p>
+<p>2 - antiquated</p>
+<p>(bardzo staromodny - <strong>antyczny</strong>)</p>
+<p>3 - carefree</p>
+<p>(bez zmartwień - <strong>beztroski</strong>)</p>
+<p>4 - well-rewarded</p>
+<p>(dobrze opłacony - <strong>dobrze wynagrodzony</strong>)</p>
+<p>5 - unique</p>
+<p>(zupełnie inny niż wszystko inne - <strong>unikalny</strong>)</p>
+<p>6 - relevant</p>
+<p>(znaczący - <strong>istotny</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Lower Keys Underwater Music Festival.  </p>
+<p>2. July 11, from 10 a.m. to 2 p.m.</p>
+<p>3. Musicians pretending to play musical instruments underwater.</p>
+<p>4. It's possible thanks to the special speakers which are lowered under the surface of the water.</p>
+<p>5. It's The United States' only extensive shallow water coral reef.</p>
+<p>6. Six metres.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. The most important music festival in my country is the Open'er Festival. It's held every year in Gdynia. Artists from all over the world appear on the stage.</p>
+<p>(Najważniejszym festiwalem muzycznym w moim kraju jest Open'er Festival. Odbywa się on co roku w Gdyni. Na scenie pojawiają się artyści z całego świata.)</p>
+<p><br/>2. Sometimes people complain about the artists and say that there are too few popular bands. But it's just a matter of personal preference. Some people also say the tickets are expensive, but I'm not sure I agree. One ticket usually allows you to see more than one concert.</p>
+<p>(Czasami ludzie narzekają na artystów i mówią, że jest za mało popularnych zespołów. Ale to tylko kwestia osobistych preferencji. Niektórzy mówią też, że bilety są drogie, ale nie jestem pewny/a, czy się z tym zgadzam. Jeden bilet zazwyczaj pozwala zobaczyć więcej niż jeden koncert.)</p><br>

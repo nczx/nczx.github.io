@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Opowiadanie <em>Mój przyjaciel nieznajomy</em> dotyczy takich problemów jak:</p>
+<ul>
+<li>dosłowne oraz metaforyczne zniewolenie jednostki;</li>
+<li>obojętność i znieczulica społeczna;</li>
+<li>wybory moralne i ich konsekwencje;</li>
+<li>odpowiedzialność za cudze życie.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podkreślone zdania są zapisem wewnętrznych rozważań narratora opowiadania. Wpływają one na decyzje podejmowane przez bohatera. W pierwszym z fragmentów rozważa kwestię podobieństwa między sobą - uwięzionym w państwie totalitarnym - a gołębiem niemogącym wydostać z się z piwnicy. To budzi w nim potrzebę wyswobodzenia ptaka. Druga refleksja dotyczy niekończącego się cyklu życia i śmierci, którego częścią jest również gołąb. Myśl ta skłania narratora do porzucenia planu uratowania zwierzęcia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Pytania pojawiające się w kluczowych miejscach opowiadania mają charakter retoryczny. Są świadectwem toku myślenia bohatera, swoistym przełomem w jego dotychczasowym wnioskowaniu. Stanowią moment zatrzymania akcji. Na podstawie udzielonych sobie odpowiedzi mężczyzna podejmuje dalsze decyzje. Za ich pomocą narrator włącza do swoich refleksji również czytelnika, zmuszając go do zastanowienia się najpierw nad kwestią zniewolenia, następnie zaś - nieuchronności śmierci. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Środki stylistyczne wzmacniające opis trudnego położenia gołębia (należy wybrać dwa środki):</p>
+<ul>
+<li>instrumentacja głoskowa - "[...] furkot, furia, parcie i trzepot";</li>
+<li>personifikacja - "[...] zbliżył się do tej dziury i powodowany jakimś, wydawało mu się, dobrym interesem, w nią wlazł";</li>
+<li>epitet - "nieruchomość piór", "posępne, nieruchome nastroszenie".</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Cytat z <em>Hamleta </em>Williama Shakespeare'a można odczytywać jako ironię. Narrator powołuje się na autorytet jednego z największych dramaturgów wszech czasów, by usprawiedliwić swoją w istocie błahą decyzję o nieingerowaniu w losy gołębia. Patos słów Hamleta wypowiedzianych w momencie kluczowym dla rozwoju akcji dramatu zestawiony jest tu z codziennością sytuacji, w której znalazł się główny bohater opowiadania. Czyn, od którego dokonania odstępuje mężczyzna, w jego myślach nabiera znaczenia egzystencjalnego, choć w rzeczywistości jest mało znaczący.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Tytuły opowiadań Mrożka mają charakter ironiczny, ich adekwatność w opisywaniu zdarzeń przedstawionych w treści opowiadania jest tylko pozorna. </p>
+<p>We <em>Współczuciu </em>rozważany jest problem reakcji jednostki na cudze cierpienie. Przewrotnie, bohaterów cieszy nieszczęście innych ludzi, sprawia bowiem, że mogą poczuć się lepiej z własnymi kłopotami. Wysłuchują życiowych doświadczeń rozmówców nie po to, by okazać im współczucie, lecz by się dowartościować.</p>
+<p>Tytuł <em>Mój przyjaciel nieznajomy </em>zdaje się wskazywać na zażyłą relację między narratorem a drugim bohaterem opowiadania - gołębiem. Choć mężczyzna współczuje ptakowi uwięzienia, nie pomaga mu, wydaje mu się to zbyt kłopotliwe i pracochłonne. Napotkane w czasie spaceru zwierzę nie jest więc traktowane jak przyjaciel.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Zakończenie utworu wskazuje na moralne konsekwencje zachowania narratora. Spotkanie diabła w stroju zwykłego przechodnia na ulicy wskazuje na powszechność zła, jego obecność w codziennych, pozornie nieznaczących wyborach dokonywanych przez jednostki. Szatan wydaje się znajomy, zachowuje przyjaźnie w stosunku do bohatera,  jakby "[...] byli wspólnikami [...] w jakimś poufnym, publicznie niejawnym [...] interesie". W momencie podjęcia decyzji o pozostawieniu gołębia na pewną śmierć, narrator przeszedł na stronę zła.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykłady literackich realizacji motywu uwięzienia (do wyboru):</p>
+<ul>
+<li>mitologiczny Prometeusz;  </li>
+<li><em>Inny świat </em>Gustawa Herlinga Grudzińskiego;</li>
+<li>zbiór opowiadań Pożegnanie<em> z Marią</em> Tadeusza Borowskiego;</li>
+<li><em>Dziady cz. III </em>Adama Mickiewicza;</li>
+<li><em>Zbrodnia i kara </em>Fiodora Dostojewskiego;</li>
+<li><em>Wieża </em>Gustawa Herlinga-Grudzińskiego;</li>
+<li><em>Dżuma </em>Alberta Camusa.</li>
+</ul>
+<p> </p>
+<p>Omówienie przykładów realizacji i symbolów  - część indywidualna zadania</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Na podstawie opowiadań <em>Współczucie </em>i <em>Mój przyjaciel nieznajomy </em>można stwierdzić, że Sławomir Mrożek krytycznie ocenia kondycję współczesnego społeczeństwa. Dostrzega postępujący zanik empatii i współczucia. W jego ocenie ludzie troszczą się przede wszystkim o własne dobro i wygodę, nie zwracając uwagi na stan drugiego człowieka. Cudze nieszczęścia wykorzystywane są jako sposób na dowartościowanie się. Jak przedstawiono to we <em>Współczuciu</em>, problemy bliźnich nie są powodem do smutku, lecz satysfakcji wynikającej z przekonania o własnej wyższości. Ludzkie odruchy są tłumione. Bohater <em>Mojego przyjaciela nieznajomego </em>rezygnuje z próby pomocy uwięzionemu gołębiowi, obawia się bowiem o swoje dobre imię, nie chce narażać się na niedogodności. Skutecznie przekonuje samego siebie do działania niezgodnego z kodeksem moralnym, lecz wygodniejszego. Zło świata współczesnego kryje się więc nie w wielkich zbrodniach, lecz małych, codziennych, pozornie nieznaczących działaniach.</p><br>

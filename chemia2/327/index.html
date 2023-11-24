@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 98</a><br>
+<p>Podczas przeprowadzania próby Tollensa, w probówce zawierającej propanal, uczeń zaobserwował wytrącenie się metalicznego srebra na ściankach probówki. W probówce z propanonem nie było zaś widocznych efektów reakcji. </p> <p>Podczas próby Trommera,  w probówce zawierającej propanal, uczeń zaobserwował wytrącenie ceglastoczerwonego osadu. W probówce z propanonem zaś pojawił się czarny osad. </p> <p>Uzasadnienie: Aldehydy w przeciwieństwie do ketonów posiadają właściwości redukujące.</p> <p>Równania reakcji:</p> <p>- próba Tollensa:</p> <p style="padding-left:30px;">- propanal:  <math-expr expr="CH_3CH_2CHO+Ag_2O#(-&gt;)^(T,\ NH_(3\ (aq)))CH_3CH_2COOH+2\ Agdarr" syntax="text"></math-expr>   </p> <p style="padding-left:30px;">- propanon:  <math-expr expr='CH_3COCH_3+Ag_2O#(-&gt;)^(T,\ NH_(3\ (aq)))"reakcja nie zachodzi"' syntax="text"></math-expr>   </p> <p><br/>- próba Trommera:</p> <p style="padding-left:30px;">- propanal:  <math-expr expr="CH_3CH_2CHO+2\ Cu(OH)_2+OH^(-)#(-&gt;)^(T)CH_3CH_2COOH+Cu_2Odarr+3\ H_2O" syntax="text"></math-expr>   </p> <p style="padding-left:30px;">- propanon:  <math-expr expr="Cu(OH)_2#(-&gt;)^(T)CuOdarr+H_2O" syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 99</a><br>
+<p>Zaczynamy od przekształcenia wzoru na stężenie procentowe:</p> <p> <math-expr expr="C_p=m_s/m_r*100%\ \ \ =&gt;\ \ \ m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p><br/>Stężenie roztworu otrzymanego przez zmieszanie innego roztworu z wodą można wyrazić jako:</p> <p> <math-expr expr="C_(p_2)=m_(s_1)/(m_(r_1)+m_(H_2O))*100%" syntax="text"></math-expr>   </p> <p><br/>Podstawiamy do tego wyznaczony wcześniej wzór na masę substancji:</p> <p> <math-expr expr="C_(p_2)=((C_(p_1)*m_(r_1))/(100%))/(m_(r_1)+m_(H_2O))*100%" syntax="text"></math-expr>   </p> <p><br/>Masę wody w równaniu możemy zastąpić przekształconym wzorem na gęstość:</p> <p> <math-expr expr="d=m/V\ \ \ -&gt;\ \ \ m=d*V" syntax="text"></math-expr>   </p> <p>i otrzymujemy:</p> <p> <math-expr expr="C_(p_2)=((C_(p_1)*m_(r_1))/(100%))/(m_(r_1)+d_(H_2O)*V_(H_2O))*100%" syntax="text"></math-expr>   </p> <p><br/>Podstawiamy dane z zadania i liczymy objętość wody:</p> <p> <math-expr expr='5%=((40%*100\ g)/(100%))/(100\ g+1\ g/(cm^3)*V_(H_2O))*100%\ \ \ "/":100%' syntax="text"></math-expr>   </p> <p> <math-expr expr='0,05=(40\ g)/(100\ g+1\ g/(cm^3)*V_(H_2O))\ \ \ "/"*(100\ g+1\ g/(cm^3)*V_(H_2O))' syntax="text"></math-expr>   </p> <p> <math-expr expr='5\ g+0,05\ g/(cm^3)*V_(H_2O)=40\ g\ \ \ "/"-5\ g' syntax="text"></math-expr>     </p> <p> <math-expr expr='0,05\ g/(cm^3)*V_(H_2O)=35\ g\ \ \ "/":0,05\ g/(cm^3)' syntax="text"></math-expr>   </p> <p> <math-expr expr="V_(H_2O)=700\ cm^3" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Do formaliny należy dodać 700 cm<sup>3</sup> wody.</strong>        </p><br><a style="color:red; font-size:25px;">Zadanie 100</a><br>
+<p>Ustalamy stosunek ilościowy, w oparciu o stosunek masowy, atomów w tym związku i wyprowadzamy wzór elementarny C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>. Masa atomowa węgla to 12 u, wodoru 1 u, zaś tlenu 16 u.</p> <p> <math-expr expr="m_x:m_y:m_z=15:2:2" syntax="text"></math-expr>    </p> <p> <math-expr expr="[x*12]\ :\ [y*1]\ :\ [z*16]=15:2:2" syntax="text"></math-expr>    </p> <p>Możemy to rozbić na części jako:</p> <p> <math-expr expr="x*12=15\ \ \ \ \ \ \ \ \ \ y*1=2\ \ \ \ \ \ \ \ \ \ z*16=2" syntax="text"></math-expr>   </p> <p>Z tego wyliczamy wartości <em>x</em>,<em> y </em>oraz <em>z</em>:</p> <p> <math-expr expr='x*12=15\ \ "/":12\ \ \ \ \ \ \ \ \ \ y*1=2\ \ "/":1\ \ \ \ \ \ \ \ \ \ z*16=2\ \ "/":16' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=1,25\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y=2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z=0,125" syntax="text"></math-expr>     </p> <p>Podstawiamy to do stosunku ilościowego <em>x</em>:<em>y</em>:<em>z</em> i otrzymujemy:</p> <p> <math-expr expr="x:y:z=1,25:2:0,125=10:16:1" syntax="text"></math-expr>   </p> <p><strong>Wzór elementarny oraz rzeczywisty tego związku to <math-expr expr="bb(C_(10)H_(16)O)." syntax="text"></math-expr>    </strong></p><br><a style="color:red; font-size:25px;">Zadanie 101</a><br>
+<p>1.  <math-expr expr="CH_3-CH_2-CH_2-CH_2-COOH" syntax="text"></math-expr>   - <span style="text-decoration: underline;"><em><strong> kwas pentanowy </strong></em></span></p> <p>2.   <math-expr expr="CH_3-CH_2-CH(CH_3)-COOH" syntax="text"></math-expr>   - <span style="text-decoration: underline;"><em><strong> kwas 2-metylobutanowy </strong></em></span></p> <p>3.  <math-expr expr="CH_3-CH(CH_3)-CH_2-COOH" syntax="text"></math-expr>   - <span style="text-decoration: underline;"><em><strong> kwas 3-metylobutanowy </strong></em></span></p> <p>4.  <math-expr expr="CH_3-C(CH_3)_2-COOH" syntax="text"></math-expr>   - <span style="text-decoration: underline;"><em><strong> kwas 2,2-dimetylopropanowy </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 102</a><br>
+<p>Ustalamy stosunek ilościowy, w oparciu o stosunek masowy, atomów w tym kwasie i wyprowadzamy wzór elementarny C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>. Masa molowa węgla to 12 g/mol, wodoru 1 g/mol, zaś tlenu 16 g/mol.</p> <p> <math-expr expr="m_x:m_y:m_z=6:1:4" syntax="text"></math-expr>    </p> <p> <math-expr expr="[x*12]\ :\ [y*1]\ :\ [z*16]=6:1:4" syntax="text"></math-expr>    </p> <p>Możemy to rozbić na części jako:</p> <p> <math-expr expr="x*12=6\ \ \ \ \ \ \ \ \ \ y*1=1\ \ \ \ \ \ \ \ \ \ z*16=4" syntax="text"></math-expr>   </p> <p>Z tego wyliczamy wartości <em>x</em>,<em> y </em>oraz <em>z</em>:</p> <p> <math-expr expr='x*12=6\ \ "/":12\ \ \ \ \ \ \ \ \ \ y*1=1\ \ "/":1\ \ \ \ \ \ \ \ \ \ z*16=4\ \ "/":16' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=0,5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y=1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z=0,25" syntax="text"></math-expr>     </p> <p>Podstawiamy to do stosunku ilościowego <em>x</em>:<em>y</em>:<em>z</em> i otrzymujemy:</p> <p> <math-expr expr="x:y:z=0,5:1:0,25=2:4:1" syntax="text"></math-expr>   </p> <p>Wzór elementarny tego kwasu to C<sub>2</sub>H<sub>4</sub>O.</p> <p>Liczymy wzór rzeczywisty:</p> <p> <math-expr expr="m_((C_2H_4O)_n)=88\ g/(mol)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_((C_2H_4O)_n)=n*m_(C_2H_4O)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_((C_2H_4O)_n)=n*(2*m_C+4*m_H+m_O)" syntax="text"></math-expr>   </p> <p> <math-expr expr="88=n*(2*12+4*1+16)" syntax="text"></math-expr>   </p> <p> <math-expr expr='88=n*44\ \ \ "/":44' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=2" syntax="text"></math-expr>   </p> <p><strong>Wzór rzeczywisty tego kwasu karboksylowego to  <math-expr expr="bb(C_4H_8O_2)." syntax="text"></math-expr>    </strong>      </p><br><a style="color:red; font-size:25px;">Zadanie 103</a><br>
+<p>a)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas butanowy </strong></em></span></p>
+<p>-nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas masłowy </strong></em></span></p>
+<p><br/>b)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas metanowy </strong></em></span></p>
+<p>-nazwa zwyczajowa:  <span style="text-decoration: underline;"><em><strong> kwas mrówkowy </strong></em></span></p>
+<p><br/>c)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas pentanowy </strong></em></span></p>
+<p>-nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas walerianowy </strong></em></span></p>
+<p><br/>d)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas etanowy </strong></em></span></p>
+<p>-nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas octowy </strong></em></span></p>
+<p><br/>e)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas propanowy </strong></em></span></p>
+<p>-nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas propionowy </strong></em></span></p>
+<p><br/>f)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas benzenokarboksylowy </strong></em></span></p>
+<p>-nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas benzoesowy </strong></em></span></p>
+<p><br/>g)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas 2,2-dimetylopropanowy </strong></em></span></p>
+<p><br/>h)</p>
+<p>-nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas 2-metylopropanowy </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 104</a><br>
+<p>Kwasy mocniejsze z danej pary:</p> <p>a)  <math-expr expr="HCOOH" syntax="text"></math-expr>   </p> <p>b)  <math-expr expr="HCOOH" syntax="text"></math-expr>   </p> <p>c)   <math-expr expr="CH_3COOH" syntax="text"></math-expr>   </p> <p>d)  <math-expr expr="CH_3COOH" syntax="text"></math-expr>   </p> <p>e)  <math-expr expr="CH_3COOH" syntax="text"></math-expr>    </p> <p>f)  <math-expr expr="HCl" syntax="text"></math-expr>   </p> <p>g)  <math-expr expr="CH_3COOH" syntax="text"></math-expr>         </p> <p><br/><em>Uzasadnienie punktów a-d oraz g: Moc kwasów karboksylowych maleje wraz z wydłużaniem łańcucha węglowego.</em></p> <p><em>Uzasadnienie punktu e: Kwas węglowy jest słaby i nietrwały, samorzutnie ulega rozpadowi na tlenek węgla(IV) i wodę. Jest wypierany ze swoich soli przez kwas octowy, co widać chociażby po rozpuszczaniu skał wapiennych (zbudowanych z węglanu wapnia) poprzez działanie octem.</em></p> <p><em>Uzasadnienie punktu f: Kwas chlorowodorowy jest jednym z najmocniejszych kwasów nieorganicznych, zdecydowanie mocniejszym niż wszystkie kwasy organiczne.</em></p><br><a style="color:red; font-size:25px;">Zadanie 105</a><br>
+<p>a) kolejność zgodnie z rosnącą rozpuszczalnością:</p> <p> <math-expr expr="C_(15)H_(31)COOH,\ CH_3CH_2COOH,\ CH_3COOH,\ HCOOH" syntax="text"></math-expr>   </p> <p><em>wyjaśnienie: Rozpuszczalność kwasów karboksylowych w wodzie maleje wraz z wydłużaniem łańcucha węglowego.</em></p> <p><br/>b) kolejność zgodnie z malejącą temperaturą wrzenia:</p> <p> <math-expr expr="C_(15)H_(31)COOH,\ CH_3CH_2COOH,\ CH_3COOH,\ HCOOH" syntax="text"></math-expr>   </p> <p><em>wyjaśnienie: Wraz ze wzrostem masy cząsteczkowej kwasów karboksylowych wzrasta ich temperatura wrzenia.</em></p><br>

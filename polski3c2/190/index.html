@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) "Trójk¹t nieba" sugeruje nadanie przestrzeni sztuki szczególnego znaczenia. Staje siê ona bowiem symbolicznym odzwierciedleniem kosmosu, znajduje siê niejako w centrum i to w niej ogniskuj¹ siê wszystkie elementy rzeczywistoœci. Ponadto "trójk¹t nieba" wywo³uje skojarzenia ze sfer¹ <em>sacrum </em>oraz poœrednio <em>-</em> z opatrznoœci¹ Bo¿¹. </p>
+<p> </p>
+<p>b) Synteza sztuk polega na ³¹czeniu elementów typowych dla ró¿nych dziedzin sztuki. W didaskaliach mo¿na dostrzec zatem scalenie tego, co typowe m.in.: dla malarstwa ("kotar¹ wiœniowego koloru", "œciany szarej"), rzeŸby ("pieñ wysch³ego pokrêconego drzewa") oraz muzyki ("huk samochodów [...] i ryki syren fabrycznych").</p>
+<p> </p>
+<p>c) Usytuowanie warsztaty na wzgórzu, podobnie jak "trójk¹t nieba" nadaje temu miejscu oraz bohaterom uniwersalny charakter. Budynek ten znajduje siê ponad miastem i dolin¹, jest najwa¿niejszym punktem, który koncentruje na sobie uwagê. Zabieg ten przyczynia siê tak¿e niejako do wyró¿nienia bohaterów - przestaj¹ byæ konkretnymi jednostkami, a uosabiaj¹ pewne postawy oraz pogl¹dy. Staj¹ siê wiêc ponadczasowi. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowe rozwi¹zanie (na podstawie fragmentów z podrêcznika):</p>
+<p>a) W przytoczonym fragmencie wystêpuj¹ cztery postaci. Pierwsza z nich to Sajetan, który w swych wypowiedziach krytykuje panów, wyra¿a swoje niezadowolenie wynikaj¹ce z w³asnej sytuacji ¿yciowej. Jego zachowanie cechuje: przechodzi bowiem p³ynnie od irytacji i gniewu, wywo³anego zale¿noœciami spo³ecznymi, a¿ po p³acz oraz poczucie bezradnoœci. Jest momentami wrêcz rozgor¹czkowany, niespokojny. Jego reakcje okreœlaj¹ przede wszystkim didaskalia odnosz¹ce siê do wykonywanych czynnoœci ("wali m³otem w co popad³o"), sposobu mówienia ("przerywa", "gwa³townie"). Œwiadcz¹ tak¿e o emocjach bohatera: "Zanosi siê p³aczem.", "Œmieje siê dziko." Niezwykle specyficzny jest równie¿ jêzyk wypowiedzi szewca. Sajetan wyra¿a uniwersalne prawdy na temat znanej mu rzeczywistoœci, jednak czyni to za pomoc¹ z³¹czenia sprzecznych pierwiastków, np. zestawienia patosu i przyziemnoœci: "Kona ona ludzkoœæ pod gniotem cielska gnij¹cego [...]". Sposób mówienia szewca jest niezwykle ekspresyjny, wyra¿a stosunek emocjonalny bohatera do poruszanych zagadnieñ, o czym œwiadcz¹ liczne powtórzenia oraz wykrzyknienia: "A i ja te¿ mogê nowy fason wymyœliæ, chocia¿ to ju¿ nie to - nie. Nie to! nie to!". Wypowiedzi tej postaci przypominaj¹ swoist¹ hybrydê, poniewa¿ wykorzystuje on elementy typowe dla stylu potocznego ("bydlêce œcierwa"), naukowego ("epifenomenami"), a nawet poetyckiego - w postaci neologizmów ("zacygarzone"). </p>
+<p>Sajetanowi towarzysz¹ I Czeladnik oraz II Czeladnik. Ich zachowanie jest bardziej wywa¿one ni¿ Sajetana, chocia¿ tak¿e wyra¿aj¹ niezadowolenie ze swej sytuacji ¿yciowej oraz postawy panów, ujawniaj¹ swe emocje. Przytoczony fragment nie zawiera informacji na temat ich wygl¹du, jednak didaskalia okreœlaj¹ sposób, w jaki mówi¹ ("domyœlnie", "[...] nikt go nie zachêca; mówi jednak" "[...] krzyczy z rozpacz¹") oraz czynnoœci ("robi z wœciek³oœci¹ olbrzymi, nienaturalnie wielki but oficerski [...]"). Bohaterowie ci troszcz¹ siê o swego majstra, wyra¿aj¹ równie¿ swe refleksje na temat uprzywilejowanej pozycji panów oraz rozpaczliw¹ niechêæ wzglêdem swego losu: "Ja nie chcê pracowaæ za tak¹ flotê!". Ich jêzyk, podobnie jak w przypadku Sajetana, stanowi po³¹czenie rozmaitych elementów, które nie zawsze do siebie pasuj¹, przez co wywo³uj¹ poczucie dysonansu. S¹ bowiem obecne wulgaryzmy ("[...] ta sakra ich suka [...]", ale tak¿e bardziej wyszukane s³ownictwo ("schizoidalna psychologia", "unikaty osobowego przejawu"). Kwestie czeladników, w których pewne wyra¿enia s¹ niezgodne z normami jêzykowymi, wywo³uj¹ r.ównie¿ skojarzenia z mow¹ ludzi z nizin spo³ecznych, niewykszta³conych ("jezdem"), zaœ inne - z gwar¹ ludow¹ ("[...] to ino m¹t na œwiecie czyni [...]".  </p>
+<p>Ostatni bohater to prokurator Scurvy, który zostaje przedstawiony jako wyrafinowany - pod wzglêdem ubioru - mê¿czyzna. Ma na sobie strój ¿akietowy, zaœ jego uzupe³nienie stanowi¹ dodatki: jasne rêkawiczki, cylinder, parasol. Jawi siê on jako opanowany cz³owiek, który postrzega szewców w pogardliwy sposób, na co wskazuje uœmieszek, ale tak¿e zimny ton g³osu. Jego sposób wypowiedzi jest pozornie neutralny, bardziej wywa¿ony ni¿ ten typowy dla pozosta³ych postaci, chocia¿ na stosunek do rozmówców wskazuje fragment: "Mo¿ecie iœæ i zdechn¹æ sobie pod p³otem". W jego wypowiedzi mo¿na dostrzec przy tym brak wyrazistego ³¹cznia odmiennych konwencji stylistycznych.</p>
+<p> </p>
+<p>b) Przyk³adowe wyrazy:</p>
+<table border="1" style="border-collapse:collapse;width:729px;height:339px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:178.738px;"><strong> Neologizmy</strong></td>
+<td style="background-color:#aed581;text-align:center;width:178.738px;"><strong>Kolokwializmy</strong></td>
+<td style="background-color:#aed581;text-align:center;width:178.738px;"><strong>Terminy naukowe</strong></td>
+<td style="background-color:#aed581;text-align:center;width:179.788px;"><strong>Wyrazy ekspresywne</strong></td>
+</tr>
+<tr>
+<td style="width:178.738px;">
+<ul>
+<li><em>zacygarzone;</em></li>
+<li><em>wyosobliwiaæ;</em></li>
+<li><em>wyhyrniejszym;</em></li>
+<li><em>wyhyrma;</em></li>
+</ul>
+</td>
+<td style="width:178.738px;">
+<ul>
+<li><em>gadaæ;</em></li>
+<li><em>brachu;</em></li>
+<li><em>Hej!;</em></li>
+<li><em>wierciæ [..] otworki w metafizycznych pêpkach;</em></li>
+<li><em>spasione brzuchy;</em></li>
+<li><em>ból w kiszkach;</em></li>
+<li><em>we ³bie;</em></li>
+<li><em>¿arcie ¿reæ;</em></li>
+<li><em>rzygu;</em></li>
+<li><em>frajer;</em></li>
+<li><em>zdechn¹æ sobie pod p³otem;</em></li>
+<li><em>Kanalia!</em></li>
+</ul>
+</td>
+<td style="width:178.738px;">
+<ul>
+<li><em>epifenomenami;</em></li>
+<li><em>naczelnych stanowiskach kontrolnych;</em></li>
+<li><em>unikaty osobowego przejawu;</em></li>
+<li><em>feuda³ów;</em></li>
+<li><em>schizoid;</em></li>
+<li><em>œwiêtokradztwo;</em></li>
+</ul>
+</td>
+<td style="width:179.788px;">
+<ul>
+<li><em>wstrêtne;</em></li>
+<li><em>cielska;</em></li>
+<li><em>smrodliwe;</em></li>
+<li><em>bydlêce œcierwa;</em></li>
+<li><em>brzuchacze;</em></li>
+<li><em>smrodliwej, beznadziejnej [...] mêce;</em></li>
+<li><em>psiamaæ;</em></li>
+<li><em>dranie;</em></li>
+<li><em>bidny;</em></li>
+<li><em>ta sakra ich suka;</em></li>
+<li><em>lafiryndy;</em></li>
+<li><em>œcierwo pod³e;</em></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Zastosowane elementy buduj¹ specyficzn¹ wizjê rzeczywistoœci, która przybiera absurdalny i groteskowy charakter. Przyczyn¹ tego jest po³¹czenie odmiennych konwencji stylistycznych - w ten sposób wytwarza siê karykaturalna wizja rzeczywistoœci. W niej to tym samym dochodzi do odwrócenia dotychczasowego porz¹dku, wszystko zdaje siê ze sob¹ mieszaæ i byæ pozbawione logiki. Zabieg ten buduje nie tylko atmosferê dzie³a, ale tak¿e sugeruje pewien kryzys, który ca³y czas towarzyszy bohaterom; ponadto stanowi realizacjê za³o¿eñ Czystej Formy. Od wypowiedzi postaci ró¿ni siê jednak nieco jêzyk didaskaliów, w którym nie zaznaczaj¹ siê tak wyraŸne zestawienia sprzecznych konwencji czy estetyk. Charakteryzuje siê on wykorzystaniem rozmaitych œrodków artystycznego wyrazu (np. epitetów, wyrazów dŸwiêkonaœladowczych, porównañ), które w plastyczny sposób okreœlaj¹ przestrzeñ wydarzeñ lub opisuj¹ zachowania i reakcje postaci.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p> </p>
+<p>a) Przytoczone zawo³ania s¹ typowe dla Sajetana i Scurvy'ego, wp³ywaj¹ na ich sposób postrzegania przez otoczenie. Wywo³uj¹ bowiem irytacjê II Czeladnika. Mo¿na stwierdziæ, i¿ okrzyk "Hej!" s³u¿y podtrzymaniu kontaktu, byæ mo¿e jest wypowiadany tak¿e wtedy, gdy Sajetan nie wie ju¿ co powiedzieæ. Ponadto kieruje uwagê innych ludzi na bohatera. Z kolei "hehe" prokuratora zdaje siê sugerowaæ jego niepewnoœæ oraz nerwowoœæ w relacji z szewcami. Tratuje ich bowiem protekcjonalnie i z pogard¹. </p>
+<p> </p>
+<p>b) Wypowiedzi Sajetana maj¹ charakter krytyczny wzglêdem znanej mu rzeczywistoœci. Bohater w niezwykle ekspresyjny sposób odnosi siê do panuj¹cych nierównoœci, one zaœ budz¹ jego gniew i irytacjê, wiêc szewcy uzewnêtrznia swe odczucia: "Kona ona ludzkoœæ pod gniotem cielska gnij¹cego, z³oœliwego nowotwora kapita³u, na którym, na którym, nikiej putryfakcyjne owe b¹ble, faszystowskie rz¹dy powstaj¹ i pêkaj¹, puszczaj¹c smrodliwe gazy [...]". S³owa Sajetana zyskuj¹ tak¿e deklaratywny, ¿yczeniowy charakter, poniewa¿ bohater pragnie zyskaæ przywileje panów, a tak¿e wp³yn¹æ na kszta³t nowej rzeczywistoœci, by sta³a siê lepsza. Z kolei wypowiedzi prokuratora, bardziej stonowane i wywa¿one, maj¹ impresywny charakter. Scurvy bowiem w bezpoœredni sposób pozbawia szewców nadziei, przypominaj¹c im o tym, ¿e nie mog¹ wyzwoliæ siê z rutyny swej egzystencji, zaœ podzia³y spo³eczne zawsze bêd¹ istnieæ.</p>
+<p> </p>
+<p>c) Bohaterowie przyjmuj¹ wobec siebie wrogie oraz nieufne postawy. Scurvy ma doœæ pogardliwy stosunek wzglêdem szewców, poniewa¿ nie do koñca rozumiej¹ pewne mechanizmy przemian. Dostrzega tak¿e przepaœæ dziel¹c¹ panów i lud: "Nie - zawsze bêd¹ dyrektorzy i urzêdnicy wy¿si, którzy bêd¹ musieli nawet co innego jeœæ ni¿ majstrzy w fabrykach, bo praca umys³owa wymaga innych sk³adników mózgu - mózgu i jedzenia". Nie przejmuje siê losem szewców, stwierdza te¿: "Wyzwolenie jest tylko przez pracê" - lekcewa¿y ich. Z kolei Sajetan zwraca siê do prokuratora w bezpoœredni sposób. Dostrzega jego pod³oœæ oraz niegodziwoœæ, poniewa¿ reprezentuje on warstwê, która wykorzystuje szewców.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Bohater ma ironiczny stosunek do Wolnej Wszechnicy Robotniczej. Wskazuje na to jego komentarz, wykorzystuj¹cy grê jêzykow¹: "Oj wolna ona, wolna - raczej rozwolniona jest ta nasza Wszechnica". I Czeladnik w ten sposób zaznacza swój dystans oraz krytyczny stosunek. Dostrzega bowiem ¿e wp³yw dzia³aczy instytucji z ca³¹ pewnoœci¹ nie jest pozytywny. Dla wyrazistego przedstawienia swego stosunku do Wszechnicy bohater odwo³uje siê do metaforyki i epitetów opieraj¹cych siê na skojarzeniach fizjologicznych: "[...] a na nas to tê biegunkê umys³ow¹ puszczaj¹, aby nas jeszcze gorzej zatumaniæ [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>"Schizoid" to osoba, która potrafi prze¿yæ wiêcej, wykazuje zainteresowanie czymœ wiêcej ni¿ codziennoœci¹, pogr¹¿a siê w œwiecie rozwa¿añ. Z kolei "pyknik" nie ma takich d¹¿eñ. Najwa¿niejsze jest dla niego tylko zaspokojenie podstawowych potrzeb, komfort ¿ycia: "Ma se radio, ma se stylo, ma se kino, ma se daktylo, ma se brzucho i nieœmierdz¹ce, nieciekn¹ce ucho, ma se syæko jak siê patrzy - czego mu trza?". Jego ocena nie jest zbyt pozytywna: "A sam w sobie jest œcierwo pod³e, guano pogodne, przebrzyd³e". </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Niechêæ szewców do panów przejawia siê w ich ironicznych oraz pogardliwych komentarzach na temat uprzywilejowanej warstwy. Bohaterowie s¹ rozgoryczeni nierównoœciami spo³ecznymi oraz postaw¹ panów, których egzystencja jest spokojna i komfortowa. Trud szewców przynosi im korzyœci, czuj¹ siê ponadto od nich lepsi: "Mo¿e ludzie to tylko oni - a my tylko bydlêce  œcierwa, z takimi wiecie, Panie Œwiêty, epifenomenami, by siê jeszcze gorzej mêczyæ i na ich uciechê skowytaæ".Sajetan jest przekonany o tym, i¿ panowie s¹ przyczyn¹ degradacji ¿yciowej: "A oni myœl¹ tak na pewno, brzuchacze zacygarzone, ociekaj¹ce takim œliskim koktejlem z ichniej rozkoszy i naszej smrodliwej, beznadziejnej w swej mêce". Mas tak¿e œwiadomoœæ, ¿e istniej¹ca "machina spo³eczna" powoduje, i¿ praca bêdzie nieskoñczona. Z kolei II Czeladnik postrzega panów jako Ÿród³o cierpienia. Ich pró¿noœæ, skupienie na metafizycznych odczuciach nie ma jednak pozytywnego wp³ywu na mniej uprzywilejowane warstwy, a wrêcz niszczy je: "[...] to s¹ te rzeczy, ta sakra ich suka, œlachcickie odpadki, co oni nazywaj¹ swymi metafizycznymi prze¿yciami. £echc¹ sobie nimi spasione brzuchy, a ka¿dy taki ³echt nasyconego bydlaka to nasz ból w kiszkach". Panowie ponadto d¹¿¹ do omamienia szewców, podporz¹dkowania ich umys³ów, co podkreœla dosadna metaforyka: "[...] a na nas to tê biegunkê umys³ow¹ puszczaj¹, aby nas jeszcze gorzej zatumaniæ, ni¿ to chcia³y wszelkie religianty na us³ugach feuda³ów i ciê¿kiego siê przemys³u wyg³upiaj¹ce". Szewcy zdaj¹ siê tak¿e zazdroœciæ panom mo¿liwoœci, jakie daje im ich sytuacja: dostatnia egzystencja ³¹czy siê bowiem tak¿e z potencjalnym rozwojem duchowym: "Ja bym chcia³ [...]  w ich pierzynach spaæ, ichnie ¿arcie ¿reæ a¿ do twardego rzygu, a potem ichnim duchem od zaœwiatów siê zach³ysn¹æ [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Katastroficzny charakter s³ów Sajetana przejawia siê w ich pesymizmie. Bohater negatywnie wypowiada siê na temat otaczaj¹cej go rzeczywistoœci, dostrzega jej nieuchronny upadek oraz kryzys cywilizacji: "Kona ona ludzkoœæ pod gniotem cielska gnij¹cego, z³oœliwego nowotwora kapita³u, na którym, nikiej putryfakcyjne owe b¹ble, faszystowskie rz¹dy powstaj¹ i pêkaj¹, puszczaj¹c smrodliwe gazy zagni³ej w sobie, w sosie w³asnym, bezosobowej ci¿by ludzkiej". Bohater jest równie¿ œwiadomy tego, i¿ cz³owiek zatraca swój indywidualizm i wyj¹tkowoœæ, jego miejsce zajmuje zaœ ujednolicony oraz przeciêtny t³um. W s³owach Sajetana mo¿na tak¿e dostrzec echa filozofii Fromma, która staje siê wa¿nym puntem odniesienia dla Witkiewicza. Bohater podobnie jak niemiecki myœliciel dostrzega osamotnienie, bezsilnoœæ cz³owieka, który doœwiadcza wyczerpania siê relacji miêdzyludzkich, pustki duchowej: "Ju¿ nic gadaæ nie trzeba. Wszystko jest wygadane do cna". W ten sposób <em>Szewcy</em> niejako odzwierciedlaj¹ egzystencjalne rozterki autora wywo³ane ówczesnym kryzysem kultury europejskiej oraz rozkwitem totalitaryzmu. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br>

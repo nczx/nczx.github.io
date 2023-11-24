@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. A</p>
+<p>(X: Co planujesz zrobić podczas swojego roku przerwy od nauki?</p>
+<p>Y: Jeszcze nie postanowiłem/am.</p>
+<p>X: <strong>Lepiej żebyś sz</strong><strong>ybko się zdecydował/a!</strong>) <strong><br/><br/></strong>2. A</p>
+<p>(X: Susan planuje odejść z firmy.</p>
+<p>Y: <strong>Trudno mi w to uwierzyć.</strong></p>
+<p>X: Cóż, sama mi to powiedziała.)<br/><br/>3. C</p>
+<p>(X: Jak minęła ci wycieczka do Brazylii?</p>
+<p>Y: Cały czas czułem/am się chory/a, więc nie było zbyt fajnie.</p>
+<p>X: <strong>Przykro mi to słyszeć!</strong>)<strong><br/><br/></strong>4. B</p>
+<p>(X: Czy oddzwoniłeś/aś do pana Browna?</p>
+<p>Y: Próbowałem/am, ale nie mogłem/am się połączyć.</p>
+<p>X: Przepraszam. <strong>Musiałem/am źle zapisać numer.</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. C</p>
+<p>(X: <strong>Jedziesz z nami na wakacje?</strong></p>
+<p>Y: Jeszcze nie postanowiłem/am. Zależy ile wolnego będę mógł/mogła wziąć.) <br/><br/>2. B</p>
+<p>(X: Jak ci idzie robienie zakupów na wakacje?</p>
+<p>Y: Ledwo zacząłem/zaczęłam.</p>
+<p>X: <strong>Cóż, zostało jeszcze sporo czasu</strong>.)<strong><br/><br/></strong>3. A</p>
+<p>(X: Twoje włosy wyglądają inaczej. Co z nimi zrobiłeś/aś?</p>
+<p>Y: <strong>Sam/a je sobie obciąłem/obcięłam.</strong></p>
+<p>X: Na twoim miejscu następnym razem poszedłbym/poszłabym do fryzjera.)<br/><br/>4. B</p>
+<p>(X: Chciał(a)bym poprosić dwie kawy na wynos.</p>
+<p>Y: <strong>Jakie to mają być kawy?</strong></p>
+<p>X: Jedna latte i jedna cappuccino, poproszę.)</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. I'm afraid/worried (that)</p>
+<p>(X: Czy jesteś już gotowy/a, by w przyszłym roku wyjechać na studia do Oxfordu?</p>
+<p>Y: <strong>Obawiam/Martwię się, że</strong> mogą mnie nie przyjąć.</p>
+<p>X: Tak się raczej nie stanie!) </p>
+<p><br/>2. long was your flight</p>
+<p>(X: Jak <strong>długi był twój lot</strong>?</p>
+<p>Y: Trwał około sześciu godzin.</p>
+<p>X: Wow, musiało ci się dłużyć w samolocie!)</p>
+<p><br/>3. She should have listened</p>
+<p>(X: Pam mówi, że nie jest zadowolona ze swojego nowego mieszkania.</p>
+<p>Y: Ostrzegaliśmy ją, że to nie jest dobry pomysł. <strong>Powinna była nas posłuchać</strong>!)</p>
+<p><br/>4. single or a return</p>
+<p>(X: Chciał(a)bym kupić bilet do Glasgow.</p>
+<p>Y: Woli pan/i <strong>bilet w jedną czy w obie strony</strong>?</p>
+<p>X: W jedną, proszę.)</p>
+<p><br/>5. Not at all. / Go ahead.</p>
+<p>(X: Masz coś przeciwko, jeśli zamknę okno?</p>
+<p>Y: <strong>Nie ma sprawy. / Nie krępuj się.</strong></p>
+<p>X: Dziękuję. Strasznie tu zimno.) </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. Shall we have some / Would you like some</p>
+<p>(X: <strong>Zjemy / Chciał(a)byś</strong> na obiad naleśniki?</p>
+<p>Y: Wolał(a)bym raczej jedną z twoich truskawkowych babeczek.) </p>
+<p><br/>2. are you interested in</p>
+<p>(X: Szukam informacji o pewnych zajęciach pozalekcyjnych.</p>
+<p>Y: Rozumiem. Które z nich <strong>cię interesują</strong>?</p>
+<p>X: Kurs produkcji muzycznej.)<br/><br/></p>
+<p>3. What should I do</p>
+<p>(X: Mógłbyś mi coś doradzić? Moja mama jest na mnie zła. <strong>Co powinienem/powinnam zrobić</strong>?</p>
+<p>Y: Może powinieneś/powinnaś spróbować przeprosić?)</p>
+<p><br/>4. Shall/Should I mix</p>
+<p>(X: Mógłbyś/Mogłabyś wyjąć z lodówki trzy jajka?</p>
+<p>Y: <strong>Mam / Powinienem/Powinnam je wymieszać</strong> z mąką?</p>
+<p>X: Tak, proszę.)<br/><br/></p>
+<p>5. you enjoy</p>
+<p>(X: <strong>Podobał ci się</strong> koncert?</p>
+<p>Y: Tak, był absolutnie niesamowity!)</p><br>

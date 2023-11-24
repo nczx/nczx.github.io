@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>Megan opts for picture 2 and Paul likes picture 3 more. Eventually, Megan chooses picture 2.</p>
+<p>(Megan stawia na obrazek 2 a Paul woli obrazek 3. Ostatecznie Megan wybiera obrazek 2.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. believe </p>
+<p>2. opt</p>
+<p>3. option</p>
+<p>4. choice</p>
+<p>5. for</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. none of </p>
+<p>of tea</p>
+<p>(Przykro mi, ale<strong> żadne z</strong> tych miejsc nie przemawia do mnie. To po prostu nie <strong>moja bajka</strong>.) </p>
+<p>2. Frankly speaking</p>
+<p>opt for</p>
+<p>(<strong>Szczerze mówiąc</strong> nie jestem fanem/fanką mięsa, więc jeśli miałbym/miałabym wybrać jedno menu, <strong>postawiłbym/ postawiłabym na</strong> to wegańskie.)</p>
+<p>3. is definitely </p>
+<p>pick it </p>
+<p>(Antykonsumpcjonizm <strong>jest zdecydowanie</strong> interesującym tematem, ale nie <strong>wybrałbym/wybrałabym go</strong> na okładkę.)</p>
+<p>4. As regards</p>
+<p>the best</p>
+<p>(<strong>Jeśli chodzi o</strong> miejsce ceremonii, park jest prawdopodobnie <strong>najlepszym</strong> wyborem.)</p>
+<p>5. in favour</p>
+<p>is definitely</p>
+<p>(Kolejny argument <strong>za</strong> pierwszą opcją to nasz ograniczony budżet. Kupowanie w sklepach z używaną odzieżą <strong>jest zdecydowanie</strong> najtańsze.)</p>
+<p>6. my firm </p>
+<p>you compare </p>
+<p>(Jest to<strong> moje głębokie</strong> przekonanie, że promowanie przez celebrytów to dużo lepsza strategia niż lokowanie produktu. Jeśli <strong>porównamy</strong> obydwie opcje okazuje się, że ta pierwsza jest zdecydowanie bardziej wpływowa.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

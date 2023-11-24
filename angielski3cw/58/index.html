@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. (przykład)</p>
+<p>2. sea levels </p>
+<p>(podnoszący się <strong>poziom mórz</strong>) </p>
+<p>3. ice caps </p>
+<p>(topniejące <strong>czapy lodowe</strong>)</p>
+<p>4. hunting </p>
+<p>(nielegalne <strong>polowania</strong>)</p>
+<p>5. <strong>✓</strong> </p>
+<p>(wycieki ropy)</p>
+<p>6. eruptions </p>
+<p>(wybuchy <strong>wulkanów</strong>)</p>
+<p>7. waste </p>
+<p>(toksyczne <strong>odpady</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1 - <strong>d</strong></p>
+<p>(zamieć - Intensywne opady śniegu połączone z mocnym wiatrem.)  </p>
+<p>2 - <strong>f</strong></p>
+<p>(susza - Brak deszczu przez długi czas.)</p>
+<p>3 - <strong>b</strong></p>
+<p>(lawina - Śnieg szybko spadający ze zbocza góry.)</p>
+<p>4 - <strong>e</strong></p>
+<p>(tsunami - Bardzo duże fale wywołane podwodnym trzęsieniem ziemi.)</p>
+<p>5 - <strong>a</strong></p>
+<p>(tornado - Kolumna powietrza obracająca się bardzo szybko podczas przemieszczania się.)</p>
+<p>6 - <strong>c</strong></p>
+<p>(smog - Rodzaj mgły wywołany przez zanieczyszczenie powietrza.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. quality </p>
+<p><strong>Uzasadnienie</strong>: <em>air quality </em>- jakość powietrza. </p>
+<p>2. smog</p>
+<p><strong>Uzasadnienie</strong>: <em>thick smog </em>- gęsty smog.</p>
+<p>3. pollution</p>
+<p><strong>Uzasadnienie</strong>: <em>air pollution </em>- zanieczyszczenie powietrza.</p>
+<p>4. fuel</p>
+<p><strong>Uzasadnienie</strong>: <em>fossil fuel </em>- paliwo kopalne. Zaimek wskazujący przed luką (<em>this </em>- to) oraz forma czasownika po luce (<em>is</em> - jest) wskazuje na konieczność użycia liczby pojedynczej.</p>
+<p>5. rain</p>
+<p><strong>Uzasadnienie</strong>: <em>acid rain </em>- kwaśny deszcz.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. emissions, disaster </p>
+<p>(Niektórzy mówią, że energia jądrowa zmniejszy naszą <strong>emisję</strong> dwutlenku węgla.</p>
+<p>- Być może, ale co jeśli dojdzie do <strong>katastrofy</strong> jądrowej?)</p>
+<p><br/>2. greenhouse, layer</p>
+<p>(Efekt <strong>cieplarniany</strong> sprawia, że nasza planeta robi się cieplejsza.</p>
+<p>- Tak, a dziury w <strong>warstwie</strong> ozonowej pozwalają niebezpiecznym promieniom ultrafioletowym docierać do powierzchni Ziemi.)</p>
+<p><br/>3. extinct, habitats</p>
+<p>(Dlaczego wylesianie prowadzi do <strong>wymierania </strong>gatunków?</p>
+<p>- Tracą swoje naturalne <strong>siedliska</strong> i nie są w stanie zdobywać pożywienia.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. eruption </p>
+<p>(To niesamowite, że <strong>wybuch</strong> wulkanu na Islandii był w stanie wpłynąć na loty w całej Europie.) </p>
+<p>2. Recycle</p>
+<p>(Nie wyrzucaj tego papieru do kosza. <strong>Poddaj</strong> go <strong>recyklingowi</strong>!)</p>
+<p>3. illegal</p>
+<p>(Uważaj, gdzie chodzisz na ryby. Za <strong>nielegalne</strong> łowienie ryb w tym kraju można zostać ukaranym grzywną.)</p>
+<p>4. renewable</p>
+<p>(Energia słoneczna i wiatrowa to najbardziej znane formy energii <strong>odnawialnej</strong>.)</p>
+<p>5. global</p>
+<p>(Musimy zmienić nasz styl życia, aby zatrzymać <strong>globalne</strong> ocieplenie.)</p>
+<p>6. endangered</p>
+<p>(Tygrysy są zarówno niebezpiecznym, jak i <strong>zagrożonym</strong> zwierzęciem.)</p><br>

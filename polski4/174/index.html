@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe argumenty (forma i treść są zgodne z tytułem):</p>
+<p>1. W utworze zostaje przedstawiona sytuacja w oblężonym mieście. -&gt; "jeśli stracimy ruiny nie pozostanie nic" </p>
+<p>2. Podmiot liryczny wylicza kolejne zdarzenia, przedstawia fakty bez komentarza. -&gt; np. opis zdarzeń z tygodnia;</p>
+<p>3. Opis jest rzeczowy. -&gt; "środa: rozmowy o zawieszeniu broni nieprzyjaciel internował posłów"</p>
+<p>4. Piszący przedstawia różne aspekty oblężenia -&gt; np. zaprezentowanie sytuacji dzieci, relacji z sojusznikami, malejącej liczby ludności</p>
+<p> </p>
+<p>Przykładowe argumenty (forma i treść nie są zgodne z tytułem):</p>
+<p>1. Wiersz Herberta nie ma uporządkowanej struktury - fakty mieszają się w nim z odczuciami podmiotu lirycznego; struktura jest swobodna. -&gt; "synowie są bez winy zasługują na wdzięczność więc jesteśmy wdzięczni / nie przeżyli długiego jak wieczność oblężenia / ci których dotknęło nieszczęście są zawsze samotni / obrońcy dalajlamy Kurdowie afgańscy górale"</p>
+<p>2. Tekst nie zawiera niezbędnych oraz podstawowych danych. -&gt; "mam być dokładny lecz nie wiem kiedy zaczął się najazd / przed dwustu laty w grudniu wrześniu może wczoraj o świcie"</p>
+<p>3. W dziele ujawnia się osoba pisząca raport, tekst nie jest więc bezstronny, neutralny. -&gt; "wieczorem lubię wędrować po rubieżach Miasta"</p>
+<p>4. W wierszu pojawiają się nie tylko fakty, ale też metaforyczne obrazy. -&gt; "on będzie niósł Miasto w sobie po drogach wygnania"</p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>Osoba mówiąca w wierszu jest wiekowa, a przez to niezdolna do walki. Z tego też powodu staje się kronikarzem, który spisuje historię oblężenia; czasem jedna wątpi w sens swego zadania ("zapisuję - nie wiadomo dla kogo [...]"). Stara się on w obiektywny sposób przedstawić wydarzenia, jednak dogłębnie odczuwa monotonię kolejnych tygodniu, które nie przynoszą rozwiązania trudnej sytuacji. Kronikarz żyje w ciągłym zagrożeniu, ponieważ cały czas dookoła miasta znajdują się wrogie siły. Jednocześnie dostrzega ironię historii, ponieważ do oblężenia przyczynili się ojcowie obecnych sprzymierzeńców. Kronikarz jest przekonany o samotności mieszkańców i tym, że nikt nie potrafi ich zrozumieć. Zauważa wszechobecną śmierć, chociaż czuje również, że "[...] obrona trwa i będzie trwała do końca". Sądzi, że pamięć o Mieście zachowa ostatnia żyjąca osoba. Odczuwa gorycz, ponieważ ma świadomość doświadczonej zdrady oraz cierpienia. Dlatego też na końcu mówi: "i tylko sny nasze nie zostały upokorzone". </p>
+<p>W opisie oblężenia zaskakujące może być to, że nie jest ono bliżej określone. Niewiele wiadomo na temat okoliczności okupacji czy relacji Miasta ze sprzymierzeńcami. Nietypowe jest również to, iż trudno określić, jak długo ono trwa - zdaje się, że stracono poczucie czasu, zaś oblężenie to stały, niezmienny stan - zmieniają się tylko przeciwnicy. </p>
+<p>Podmiot liryczny nie podaje podstawowych informacji, ponieważ prawdopodobnie nie ma wiedzy na ich temat. Chronologia, układ faktów przestają mieć znaczenie, gdyż oblężenie to coś permanentnego: "[...] lecz nie wiem kiedy zaczął się najazd / przed dwustu laty w grudniu wrześniu może wczoraj o świcie". Miasto zdaje się być poza czasem. Zabieg ten sugeruje także wpływ zagrożenia na sposób postrzegania czasu: wydarzenia zacierają się w pamięci, zlewają w jedno, zaś oblężenie staje się jedyną znaną rzeczywistością. Taka forma wypowiedzi podmiotu wpływa także na uniwersalność przesłania. Jest ono ponadczasowe, ponieważ ukazuje ponadczasowe mechanizmy związane z poczuciem osamotnienia i historią. Przez to tekst zyskuje paraboliczny charakter, gdyż ukazuje zjawiska typowe dla wszystkich oblężeń w dziejach ludzkości: czy to osaczenie, czy też powolny upadek Miasta, co prowadzi do głębszej oraz ogólnej refleksji. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zasadniczo można uznać, że kronikarz w czasie oblężenia jest potrzebny. Jego zapiski bowiem stanowią zapis pewnego przełomowego oraz trudnego doświadczenia. Ponadto w ten sposób możliwe staje się zachowanie pamięci o oblężeniu oraz losie mieszkańców, co może być ważne dla przyszłych pokoleń. Stanowi to również formę przestrogi. W wierszu Herberta kronikarz jednak odmienne postrzega swą rolę, ponieważ określa ją mianem "pośledniej". Odczuwa bezsens swego zadania: "zapisuję - nie wiadomo dla kogo - dzieje oblężenia". Mimo tych wątpliwości kontynuuje swą działalność, cierpliwe spisuje dzieje oblężenia, a jednocześnie stara się zachować obiektywizm wypowiedzi. Daje bowiem świadectwo autentycznych wydarzeń czy doświadczeń oblężonych mieszkańców, głosi prawdę. </p><br>

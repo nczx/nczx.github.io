@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. assistants </p>
+<p>2. appliances</p>
+<p>3. outdated</p>
+<p>4. problematic</p>
+<p>5. driverless </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Dla wielu z nas urodzonych na początku XXI wieku intuicyjna, nowatorska technologia jest częścią codziennego życia. Do wykonania niemal każdego zadania służą nam telefony, a wirtualni <strong>asystenci</strong> stają się coraz bardziej popularni. <strong>Urządzenia</strong> domowe stają się mądrzejsze od nas. Życie mogłoby już prawie być nazwane zbyt łatwym. Może to mieć wpływ na niektóre filmy i seriale, które oglądamy. Nie jest przypadkiem to, że są one osadzone w latach 80. albo nawet wcześniej. <strong>Przestarzałe</strong> gadżety, których używali ludzie w tamtych czasach, takie jak telefony stacjonarne, dodają dramaturgii zdarzeniom przedstawionym na ekranie. Łatwo jest znaleźć taksówkę w nocy, kiedy masz w telefonie aplikację odpowiedniej firmy. Bardziej <strong>problematyczne</strong> jest, kiedy musisz najpierw znaleźć działający telefon w miejscu publicznym, odpowiednią ilość monet w portfelu i numer telefonu firmy taksówkarskiej. Być może w przyszłości publiczność w kinie oglądając filmy osadzone w latach 20. XXI wieku powie: "Wow! Oni muszą sami prowadzić samochód! To strasznie dziwne! Wyobrażasz sobie nie mieć <strong>autonomicznego</strong> auta?" </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. sleeplessness </p>
+<p>2. indigestion</p>
+<p>3. consumption</p>
+<p>4. painful </p>
+<p>5. determination</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Jeśli jeszcze nie miałeś/aś złamanego serca, bałagan sprzecznych emocji towarzyszący pierwszemu takiemu wydarzeniu może być szokujący. Może nam dokuczać <strong>bezsenność</strong> skutkująca leżenie bez snu z czarnymi myślami. Możemy cierpieć też na <strong>niestrawność</strong>, nie z powodu złamanego serca, ale dlatego, że w celu poprawy nastroju znacznie zwiększamy <strong>spożycie</strong> przekąsek. Już samo bycie w związku wymaga dużo wysiłku. Dlatego kiedy relacja się kończy,  doświadczenie to może być nieznośnie <strong>bolesne</strong>. Ci, którzy radzą sobie najlepiej to oczywiście jednostki otoczone wspierającymi przyjaciółmi i rodziną, mające <strong>determinację</strong> do poradzenia sobie ze swoim życiem pomimo trudności. Tak więc, do tych, którzy cierpią - powodzenia i nie pozwólcie smutkowi przejąć kontroli nad waszym życiem. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. affordable </p>
+<p>2. insurance</p>
+<p>3. annoying</p>
+<p>4. engagement</p>
+<p>5. dramatic</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>O czym myślisz, kiedy planujesz wakacje? Oczywiście istotne jest zakwaterowanie. Dla większej grupy <strong>osiągalną</strong> opcją jest wynajęcie domu, ale sprawdź dobrze opinie, żeby upewnić się, że inni ludzie na niego nie narzekali. Kolejną sprawą są pieniądze. Wykup <strong>ubezpieczenie</strong> przeciwko wypadkom, kradzieży, opóźnieniom i innym drobnym problemom, które mogą być <strong>denerwujące</strong>, jeśli coś pójdzie nie tak.</p>
+<p>Wybór zakwaterowania będzie zależał od powodu wyjazdu na wakacje. Jeśli jego celem jest uczczenie ważnego wydarzenia, jak na przykład <strong>zaręczyn</strong>, albo jeśli jest to podróż poślubna, będziesz potrzebować czegoś bardziej luksusowego. Mimo wszystko należy się rozejrzeć i być może uda sie złapać prawdziwą okazję. Upewnij się tylko, że powodem niskiej ceny nie jest to, że <strong>niezwykła</strong> sceneria przedstawiona w broszurze przysłonięta będzie deszczami monsunowymi czy huraganami w czasie, kiedy planujesz wyjazd. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. solution </p>
+<p>2. beneficial</p>
+<p>3. satisfaction</p>
+<p>4. sociable</p>
+<p>5. management</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Jedna z cech wspólnych dla ludzi odnoszących niezwykłe sukcesy to umiejętność podjęcia świadomych decyzji na temat tego, jak zacząć dzień. Wstawanie wcześnie może wprawić nas w bardziej optymistyczny nastrój i sprawić, że będziemy gotowi stawiać czoła najbardziej wymagającym zadaniom, które czekają nas w ciągu dnia. Jeśli coś zaprząta ci głowę, jest to dobry czas, żeby się nad tym zastanowić i znaleźć <strong>rozwiązanie</strong>. Rano jesteśmy też pełni energii, więc możemy uporać się z najważniejszymi zadaniami ze świeżym umysłem. Jednak <strong>korzystne</strong> jest również znalezienie czasu na własne zainteresowania. To może być sesja ćwiczeń, pisanie bloga czy medytacja. Takie zajęcia mogą dać nam poczucie <strong>satysfakcji</strong> i niezbędną wewnętrzną siłę, żeby poradzić sobie z resztą dnia. Kolejną wartą zapamiętania rzeczą w trakcie planowania dnia jest fakt, że poranki są idealnym czasem na byciem <strong>towarzyskim/ską</strong>, więc spróbuj zostawić sobie wolną godzinę na spotkanie z przyjaciółmi na kawę czy śniadanie. Jedno jest pewne, jeśli jesteś w stanie zmieścić te wszystkie rzeczy w swoim planie dnia przed pracą czy szkołą, zdecydowanie nie musisz się martwić o zdolności <strong>zarządzania</strong> czasem. </p><br>

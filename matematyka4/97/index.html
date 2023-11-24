@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="width: 564px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 129px;"> <tbody> <tr> <td style="width: 560px;"> <p>Objętość prostopadłościanu o wymiarach <strong>a</strong>, <strong>b</strong>, <strong>c</strong> wyraża się za pomocą wzoru</p> <p><span> <math-expr expr="V=abc" syntax="text"></math-expr> </span>  </p> </td> </tr> </tbody> </table> <p> </p> <p>Dany jest prostopadłościan <strong>P<sub>1</sub></strong> o wymiarach <strong>15 cm ✖ 2 dm ✖ 10 cm</strong>. Wyznaczmy jego objętość. Mamy:  </p> <p><span> <math-expr expr='V_1=15\ "cm" *2\ "dm"*10\ "cm"=15\ "cm"*20\ "cm"*10\ "cm"=3000\ "cm"^3' syntax="text"></math-expr> </span>  </p> <p>Dany jest prostopadłościan <strong>P<sub>2</sub></strong> o wymiarach <strong>0,12 m ✖ 1,2 dm ✖ 22 cm</strong>. Wyznaczmy jego objętość. Mamy:</p> <p><span> <math-expr expr='V_2=0,12\ "m"*1,2\ "dm"*22\ "cm"=12\ "cm"*12\ "cm"*22\ "cm"=3168\ "cm"^3' syntax="text"></math-expr> </span>  </p> <p>Zauważmy, że</p> <p><span> <math-expr expr="V_2&gt;V_1" syntax="text"></math-expr> </span>  </p> <p><strong>Odp.</strong> Większą objętość ma <strong>drugi</strong> prostopadłościan.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="height: 72px; width: 566px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 562px;"> <p>Pole powierzchni całkowitej sześcianu o krawędzi długości <strong>a</strong> jest równe <strong>6a<sup>2</sup></strong>.</p> </td> </tr> </tbody> </table> <p> </p> <table border="1" style="height: 105px; width: 567px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 563px;"> <p>Objętość sześcianu o krawędzi długości <strong>a</strong> wyraża się za pomocą wzoru</p> <p><span> <math-expr expr="V=a^3" syntax="text"></math-expr> </span>  </p> </td> </tr> </tbody> </table> <p> </p> <p>Dany jest sześcian, którego pole powierzchni całkowitej jest równe <strong>1,5 dm<sup>2</sup></strong>. </p> <p>Niech <strong>a</strong> będzie długością krawędzi tego sześcianu.  </p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na pole powierzchni całkowitej sześcian</span>u mamy:</p> <p><span> <math-expr expr="6a^2=1,5 \ \ \ |:6" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="a^2=0,25 \ \ \ ^^ \ \ \ a&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='a=0,5\ ["dm"]' syntax="text"></math-expr> </span>  </p> <p>Obliczmy <strong>objętość</strong> tego sześcianu. Mamy:</p> <p><span> <math-expr expr='V=0,5^3= ul(ul(0,125\ ["dm"^3]))' syntax="text"></math-expr> </span>   </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Pierwszy graniastosłup </strong></p> <p>Na jedno "piętro" składa się <strong>6</strong> kostek. Graniastosłup składa się z <strong>5</strong> pięter.</p> <p>Wyznaczmy jego objętość. Mamy:</p> <p><span> <math-expr expr="V_1=6*5=30" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>Drugi graniastosłup</strong></p> <p>Na jedno "piętro" składa się <strong>10</strong> kostek. Graniastosłup składa się z <strong>5</strong> pięter.</p> <p>Wyznaczmy jego objętość. Mamy:</p> <p><span> <math-expr expr="V_2=10*5=50" syntax="text"></math-expr> </span>  </p><br>

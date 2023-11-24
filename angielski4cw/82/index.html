@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. save </p>
+<p>2. borrow</p>
+<p>3. lend</p>
+<p>4. earn</p>
+<p>5. cash</p>
+<p>6. discounts</p>
+<p>7. card</p>
+<p>8. wallet</p>
+<p>9. pocket</p>
+<p>10. piggy bank</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione)</strong></p>
+<p>Jakie masz podejście do pieniędzy?</p>
+<p>Staram się <strong>oszczędzać</strong> pieniądze, ponieważ chcę kupić dom, a nie chciałam <strong>pożyczać</strong> od rodziny. Bank <strong>pożyczy</strong> mi tylko osiemdziesiąt procent wartości, co oznacza, że będzie mi potrzebne jakieś 40 000 £. W pracy <strong>zarabiam</strong> całkiem dobre pieniądze, ale szybko się rozchodzą. Jedną rzeczą, którą zaczęłam robić jest płacenie za wszystko <strong>gotówką</strong>. Myślę, że to pomaga mi uświadomić sobie, ile wydaję. Szukam też <strong>obniżek</strong> i rabatów w sklepach. </p>
+<p>Płacę <strong>kartą</strong>, bo nie znoszę trzymać monet. Zapełniają cały <strong>portfel</strong> i sprawiają, że jest ciężki i wypchany w kieszeni.  </p>
+<p>Wiem o czym mówisz, Simonie, ale ja mam oddzielną <strong>przegródkę</strong> na monety i trzymam je do parkometrów. Wierz albo nie, ale w domu nadal mam <strong>świnkę skarbonkę</strong>! Mam ją odkąd miałam jakieś pięć lat. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. overdraft (debet) </p>
+<p>2. taking out mortgage (zaciąganie kredytu hipotecznego)</p>
+<p>3. fixed expenses (stałe wydatki)</p>
+<p>4. standing order (zlecenie stałe)</p>
+<p>5. bank transfer (przelew bankowy)</p>
+<p>6. interest rate (stopa procentowa)</p>
+<p>7. average income (średni dochód)</p>
+<p>8. monthly budget (miesięczny budżet)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. stable </p>
+<p>2. ends</p>
+<p>3. debt</p>
+<p>4. utilities</p>
+<p>5. order</p>
+<p>6. average</p>
+<p>7. property</p>
+<p>8. mortgage</p>
+<p>9. current</p>
+<p>10. rates</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Bank poinformował mnie, że nie dostanę karty kredytowej dopóki nie będę <strong>stabilny/a</strong> finansowo. Co to znaczy?</p>
+<p>Y: Udowodnij im, że potrafisz wiązać <strong>koniec</strong> <strong>z końcem</strong> i nie masz tendencji do <strong>zadłużeń</strong>.</p>
+<p>X: Jeśli byłoby to możliwe w moim przypadku, nie potrzebowałbym/potrzebowałabym karty kredytowej! W każdym razie, za jakie <strong>media</strong> płacisz i co robisz, żeby pamiętać o nich we właściwym czasie?</p>
+<p>Y: Gaz, woda, prąd, telefon, wywóz śmieci... i płacę za to wszystko za pomocą <strong>zlecenia</strong> stałego. </p>
+<p>X: Świetnie, a przy okazji, jak ktoś ze <strong>średnią</strong> pensją może pozwolić sobie na kupno <strong>nieruchomości</strong>?</p>
+<p>Y: Dzięki <strong>kredytowi hipotecznemu</strong>. Myślisz, że mają setki tysięcy funtów w banku? </p>
+<p>X: À propos banków, dlaczego trzymasz wszystkie pieniądze na rachunku <strong>bieżącym</strong>, który nie nalicza żadnego oprocentowania?</p>
+<p>Y: Bo <strong>oprocentowanie</strong> jest tak niskie, że nie opłaca się zakładać konta oszczędnościowego. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. transfer some money</p>
+<p>(Chcę <strong>przelać trochę pieniędzy</strong> z mojego konta na konto mojej siostry.) </p>
+<p>2. make payments</p>
+<p>(Do ilu osób miesięcznie <strong>wykonujesz opłaty</strong>?)</p>
+<p>3. monthly budget plan </p>
+<p>(Robię <strong>plan miesięcznego budżetu</strong>, żeby upewnić się, że nie wydaję za dużo.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. affordable</p>
+<p>(Z moją wypłatą nawet najmniejsze mieszkanie jest nie<strong>osiągalne</strong>.) </p>
+<p>2. standing</p>
+<p>(Chciałbym/chciałabym ustalić <strong>stałe</strong> zlecenie na opłatę mediów. Pomożesz mi?)</p>
+<p>3. payments</p>
+<p>(Nie mogę mieć tego telefonu za darmo. Muszę wykonać dwadzieścia cztery <strong>opłaty</strong>, ale są dodane do mojego rachunku, więc nawet ich nie zauważę.)</p>
+<p>4. beaten</p>
+<p>(Ten dom z pewnością znajduje się <strong>na uboczu</strong> (<em>off the beaten track</em>) - najbliższe miasto jest 10 km stąd.)</p>
+<p>5. financially</p>
+<p>(Czy jestem stabilny/a <strong>finansowo</strong>? Tak myślę. Zarabiam i wydaję 1400 £ miesięcznie.)</p><br>

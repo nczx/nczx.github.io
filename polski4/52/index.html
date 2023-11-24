@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Nastrój wiersza można określić jako poważny, ale też tajemniczy, nieco oniryczny. Jest on także przesycony smutkiem, melancholią podmiotu lirycznego, zadumą. Osoba mówiąca tęskni bowiem za ojczyzną, a jednocześnie silnie odczuwa nieubłagalne przemijanie czasu. Wrażenia te potęgują zaś obrazy ze świata natury. </p>
+<p> </p>
+<p>Na nastrój wiersza wpływają następujące zabiegi językowe:</p>
+<ul>
+<li>inwersje -&gt; "Wracam nocą nad staw i nad bluszcze";</li>
+<li>epitety -&gt; "oczy niewygasłe";</li>
+<li>porównania -&gt; "Drzewa próchnem bieleją, jak kości";</li>
+<li>metafory -&gt; "Snem kołuję od gwiazd do poranków";</li>
+<li>personifikacje -&gt; "Woda milczy i oczy zamyka";</li>
+<li>instrumentacja głoskowa -&gt; "A dwa cienie wśród ciemnych kaczeńców / Dotąd szepcą: dobranoc na zawsze...". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Nawiązania muzyczne:</p>
+<ul>
+<li>W tytule utworu pojawia się słowo "romans". Jest to nazwa lirycznej pieśni, która porusza tematykę miłosną.</li>
+<li>Kraj zostaje określony mianem "śpiewnego", czyli przypomina w jakimś sensie śpiew, jest przesiąknięty muzyką.</li>
+<li>Pojawia się także nawiązanie do ballady. Słowo to ma jednak dwa znaczenia. Określa nie tylko utwór epicko-liryczny, który przedstawia niezwykłe i legendarne wydarzenia, ale także utwór muzyczny. Wyróżnia się nastrojowością oraz tekstem o poetyckim charakterze.</li>
+<li>Baliński w swym utworze nawiązuje także do ludowej pieśni z Ukrainy, którą jest dumka: "[...] dumki najłzawsze".</li>
+</ul>
+<p> </p>
+<p>Liczne nawiązania do śpiewu świadczą przede wszystkim o zainteresowaniach poety, wskazują także na połączenie dwóch niezależnych dziedzin artystycznych: literatury z muzyką. Jego podmiot liryczny postrzega rzeczywistość przez pryzmat dźwięków. Buduje to także nastrojowość przedstawienia oraz nostalgię. Nawiązania muzyczne mogą także wskazywać na związki twórczości Balińskiego z ideami romantyzmu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>Podmiot liryczny w utworze Stanisława Balińskiego to bez wątpienia jednostka uczuciowa, bardzo poetycka, wrażliwa, która jest przywiązana do swych ojczystych stron. Cechuje się melancholią, tęskni także za utraconą przestrzenią kształtującą jej tożsamość: "W moim kraju romantycznym, śpiewnym, / Został staw, gdzie ballady nie giną". Ponadto można zauważyć, że osoba mówiąca jest zafascynowana światem natury i jej różnorodnością. Przyroda zdaje się odzwierciedlać przeżycia i refleksje podmiotu, co sugeruje romantyczny sposób jej postrzegania.</p>
+<p>Osoba mówiąca jest także marzycielem, potrafi przekraczać wszelkie bariery: "Wracam nocą nad staw i nad bluszcze". Ma przy tym jednak świadomość, iż pewne tradycje stają się przeszłością, co wynika z przemian zachodzących w rzeczywistości: "Drzewa próchnem bieleją, jak kości, / Woda milczy i oczy zamyka, / Wierna cieniom i pierwszej miłości". Mimo tego nie wyraża skargi, a pozostaje wierna swoim ideom i wartościom, gdyż w ten sposób zachowuje swoją tożsamość. Podmiot liryczny można więc utożsamić z osobą, która należy do przemijającego świata, jest strażnikiem jego porządku. Z tego też powodu można dostrzec podobieństwo osoby mówiącej do samego autora - jako człowieka wyznającego idee romantyzmu. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowe aluzje i nawiązania:</p>
+<ul>
+<li>"romans" -&gt; pojęcie to może być rozumiane nie tylko jako pieśń miłosna, ale także gatunek literacki obecny już w średniowieczu; </li>
+<li>"Został staw, gdzie ballady nie giną, / Opleciony brzeziną powiewną, / Opasany potrójną olszyną" -&gt; nawiązanie do ballad oraz nastrojowość przedstawienia sugerują inspirację romantycznym sposobem obrazowania, który podkreślał tajemniczość przyrody; ponadto ballada to gatunek szczególne popularny w romantyzmie, nawiązujący do ludowych wierzeń;</li>
+<li>"Środkiem stawu, wikliną zarosła, / Stara łódka przepływa bezpiecznie, / Gdzie dwa cienie, krzyżując dwa wiosła / Dotąd myślą, że miłość trwa wiecznie" -&gt; sposób przedstawienia natury jako harmonijnego bytu oraz wprowadzenie tematyki miłosnej można rozpatrywać jako nawiązanie do konwencji sielankowej - w niej to przyroda staje się obiektem tęsknoty i zadumy;</li>
+<li>"Snem kołuję od gwiazd do poranków" -&gt; motyw snu oraz indywidualizmu podmiotu lirycznego, wzniesienia się w przestworza jest obecny w romantyzmie, np. w twórczości Mickiewicza (w <em>Odzie do młodości, Dziadach cz. III</em>);</li>
+<li>"Drzewa próchnem bieleją, jak kości" -&gt; słowa te nawiązują do motywu przemijania charakterystycznego dla barokowej wizji świata;</li>
+<li>nasilenie pierwiastka uczuciowego połączone z przedstawieniem dzikiej natury -&gt; można to rozpatrywać jako aluzję do konwencji sentymentalnej. </li>
+</ul>
+<p> </p>
+<p>Tradycja literacka jest bardzo ważna dla poety, o czym świadczą liczne nawiązana do pewnych epok, konwencji, motywów. Staje się ona dla artysty źródłem, z którego czerpie inspirację i obrazowanie umożliwiające wyrażenie swych przeżyć. Stanowi ważny oraz stały punkt odniesienia, do którego osoba mówiąca nawiązuje - mimo zachodzących w rzeczywistości przemian. Wykorzystanie rozmaitych tradycji świadczy o tym, że poeta odnosi się do nich z szacunkiem, ponieważ wpływają one na jego tożsamość czy wrażliwość. Z tego też powodu wchodzi w dialog z tradycją, nie pozwala na to, by pozostała martwa. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Motywy cieni, usychania, zamierania czy próchna wprowadzają pewne zachwianie z pozoru sielankowej rzeczywistości. Sugerują grozę, która wynika z zetknięcia się z inną rzeczywistością. Cienie wywołują skojarzenia z krainą umarłych lub z czymś, co nieodwołanie przeminęło i zamieniło się we wspomnienie: "Gdzie dwa cienie, oczy niewygasłe, / Dotąd biegną, by spotkać się jeszcze". Stanowią również niematerialną formę trwania. Przede wszystkim jednak są znakiem przemijania oraz śmierci, ciągłych przemian zachodzących w rzeczywistości. Próchniejące drzewo ("Drzewa próchnem bieleją, jak kości") czy też usychanie ("[...] Zieloność zasycha") także wskazują na unicestwienie niektórych form, ich wyczerpanie, co wprowadza nieco pesymistyczną, a przy tym nostalgiczną atmosferę. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Baliński określa swój kraj jako "romantyczny" i "śpiewny". Słowa te sugerują, iż podmiot liryczny reprezentuje romantyczny sposób postrzegania ojczyzny. Z nim zaś wiążą się pewne mitologie narodowe, tradycje oraz idee. Określenie to sugeruje także specyficzny sposób postrzegania rodzimej natury. Staje się ona tajemniczym bytem, który przypomina o pewnych wartościach, a zarazem zapewnia duchowe przeżycia i odzwierciedla stan ducha człowieka. Epitety te mogą więc odwoływać się do rozumienia ojczyzny jako przestrzeni wspólnej dla rodaków, która pozwala na pielęgnowanie pewnych tradycji i kształtuje w ten sposób życie duchowe ludzi. Ono zaś opiera się na romantycznych tradycjach, pielęgnowaniu pamięci czy poczuciu wspólnoty, na co wpływa także twórczość literacka. Ojczyzna staje się więc swoistą ideą, która istnieje w sercach wszystkich Polaków. Jej wizja jest ukształtowana przez romantyzm (przywiązanie do piękna natury, uczuciowość, nostalgiczny sposób opisu).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Motyw natury pełni w wierszu Balińskiego ważną funkcję, co wynika przynajmniej z kilku powodów. Przede wszystkim buduje atmosferę nostalgii i zadumy podmiotu lirycznego będącego strażnikiem romantycznych idei. Wpływa tym samym na nastrojowość przedstawienia oraz intymny nastrój dzieła: "Środkiem stawu tataraki jasne / Pną się w górę ku falistej ścieżce".</p>
+<p>Natura staje się znakiem ojczyzny oraz pewnych wartości, które wiążą się bezpośrednio z romantyzmem: "Został staw, gdzie ballady nie giną". Jest bowiem tajemnicza, uduchowiona, zapewnia człowiekowi dostęp do innej sfery rzeczywistości. Ponadto staje się dla podmiotu lirycznego źródłem refleksji na temat świata i sytuacji życiowej. Osoba mówiąca, rozmyślając na temat ojczystej natury, kreuje siebie na człowieka, który szanuje tradycję, a przy tym zamierza do samego końca stać na jej straży. Świadczy o tym ciągłe powracanie w myślach do znajomych miejsc. Można również stwierdzić, że przyroda sama staje się dziełem literackim, niesie za sobą bogate przenośne sensy oraz ślady ludzkich działań: "[...] I fiołki rumieńców / Toną w stawie, jak dumki najłzawsze".</p>
+<p>Istotne jest także to, że natura nieustannie przypomina o przemijaniu, które jest wpisane w doczesną egzystencję ("Drzewa próchnem bieleją, jak kości"). Refleksja ta bezpośrednio odnosi się do przeżyć osoby mówiącej doświadczającej powolnego rozpadu znanej sobie rzeczywistości. Przyroda współgra więc z duchem podmiotu i subtelnie uwypukla jego sytuację.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Na podstawie wierszy Balińskiego można powiedzieć, iż tułacz to osoba, która przebywa się z dala od swej ojczyzny. Znajduje się więc w obcej sobie przestrzeni. Mimo tego jej serce oraz pamięć są cały czas zwrócone w kierunku ojczyzny - tułacz zachowuje z nią duchową łączność. Jej przejawem jest pielęgnowanie pewnych tradycji czy też nostalgiczne wspominanie piękna rodzimej natury. Tułacz nie zapomina więc o swej tożsamości, co sugeruje także odpowiedź udzielona przez Teda w wierszu <em>Podróżni</em>. Na pytanie w języku angielskim odpowiada bowiem po polsku. </p>
+<p> </p>
+<p>Przedstawienie graficzne - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowo:</p>
+<p>Dramat egzystencjalny i światopoglądowy autora wiersza jest ściśle związany z jego losami oraz systemem wartości, tym, co go ukształtowało. Twórca bowiem dogłębnie odczuwa swa tęsknotę za utraconą ojczyzną. Przepełnia go melancholia, poczucie straty, co ujawnia się także w <em>Romansie wieczornym</em>: "W moim kraju romantycznym, śpiewnym, / Został staw, gdzie ballady nie giną". Ojczyzna żyje we wspomnieniach, jednak powrót do niej pozostaje niemożliwy. Z kolei dramat światopoglądowy wynika ze zmierzchu pewnych wartości czy postaw. Baliński, jako człowiek przywiązany do tradycji klasyków i romantyków, doświadcza rozpadu znanej sobie rzeczywistości - zastępuje ją nowoczesność. Poeta traci więc znane sobie punkty odniesienia, funkcjonuje w obcej sobie rzeczywistości, ale jednocześnie strzeże zanikających tradycji czy wartości.  </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo: </p>
+<table border="1" style="border-collapse: collapse; width: 630px; height: 343px;">
+<tbody>
+<tr style="height: 17px;">
+<td style="background-color: #e0f2f1; text-align: center; width: 311px; height: 17px;"><em><strong>Romans wieczorny</strong></em></td>
+<td style="background-color: #e0f2f1; text-align: center; width: 311px; height: 17px;"><em><strong>Świtezianka</strong></em></td>
+</tr>
+<tr style="height: 17px;">
+<td colspan="2" style="width: 622px; background-color: #c0d9d9; text-align: center; height: 17px;"><strong>Podobieństwa</strong></td>
+</tr>
+<tr style="height: 113px;">
+<td colspan="2" style="width: 622px; height: 113px;">
+<ul>
+<li>bardzo ważnym elementem obrazowania jest świat natury;</li>
+<li>pojawiają się zjawiska fantastyczne lub tajemnicze;</li>
+<li>obraz przyrody buduje nastrój utworu;</li>
+<li>obrazowanie nawiązuje do romantycznej wizji świata - jest on niejednoznaczny, niemożliwy do pojęcia za sprawa umysłu;</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 17px;">
+<td colspan="2" style="width: 622px; background-color: #c0d9d9; text-align: center; height: 17px;"><strong>Różnice</strong></td>
+</tr>
+<tr style="height: 68px;">
+<td style="width: 311px; text-align: center; height: 68px;">Obrazowanie podkreśla melancholię podmiotu lirycznego. Odczuwa on tęsknotę za rodzinnymi stronami. </td>
+<td style="width: 311px; text-align: center; height: 68px;">Obraz przyrody wywołuje przede wszystkim grozę, wzmacnia dydaktyczny charakter utworu, który przypomina o tym, że nie należy łamać przysięgi. </td>
+</tr>
+<tr style="height: 192px;">
+<td style="width: 311px; text-align: left; height: 192px;">
+<p> Poeta wykorzystuje m.in. następujące środki:</p>
+<ul>
+<li>metafora;</li>
+<li>epitet;</li>
+<li>instrumentacja głoskowa;</li>
+<li>paralelizm składniowy;</li>
+<li>porównanie.</li>
+</ul>
+<p> </p>
+</td>
+<td style="width: 311px; text-align: left; height: 192px;">
+<p> W utworze dominują następujące środki:</p>
+<ul>
+<li>wykrzyknienie;</li>
+<li>epitet;</li>
+<li>porównanie;</li>
+<li>anafora;</li>
+<li>powtórzenie. </li>
+</ul>
+</td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 311px; text-align: center; height: 51px;">W utworze występuje więcej elementów ze świata natury, które zyskują sensy symboliczne, sugerują śmierć, przemijanie. </td>
+<td style="width: 311px; text-align: center; height: 51px;">W balladzie elementy świata natury przyczyniają się do ukarania strzelca. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przykłady utworów:</p>
+<ul>
+<li>
+<em>Hymn o zachodzie słońca na morzu </em>Juliusza<em> Słowackiego;</em> </li>
+<li>
+<em>Moja piosnka II </em>Cypriana Kamila Norwida;</li>
+<li>
+<em>W pamiętniku Zofii Bobrówny,</em> Juliusza Słowackiego;</li>
+<li>
+<em>Stepy akermańskie</em> Adama Mickiewicza;</li>
+<li>
+<em>Nic więcej</em> Władysława Broniewskiego. </li>
+</ul>
+<p> </p>
+<p>Przygotowanie wypowiedzi ustnej - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Indywidualne </p><br>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Taniec bohaterów jest bez w¹tpienia dynamiczny, ¿ywio³owy, na co wskazuje wyraziste porównanie: "A nie stêka tak stodo³a pod cepów bijakiem, / Jak ta ³¹ka Ÿgana stop¹ sro¿ej, ni¿ ku³akiem!". Podkreœla ono si³ê, z jak¹ mê¿czyŸni tupi¹ po ziemi, ich zapa³ oraz fantazjê. Œwidryga i Midryga - wraz z dziewczêtami - w pe³ni oddaj¹ siê pl¹som; paralelizmy podkreœlaj¹ podwójnoœæ ukazanej rzeczywistoœci oraz samych dzia³añ postaci: "Wiêc Œwidryga pl¹sa³ z praw¹, wiêc Midryga z lew¹, / Ten obcasem kurz zamiata³, a tamten cholew¹". Zastosowane dodatkowo w tym fragmencie elipsy prowadz¹ do kondensacji treœci, a tak¿e przyspieszenia wypowiedzi. Energiê tañca dwóch par oddaj¹ wyliczenia, poniewa¿ wskazuj¹ one na zmiennoœæ ruchów, dynamikê: "Na odsiebkê, na odkrêtkê i znów na odwrotkê - / Podeptali macierzankê, b³yszczkê i tymotkê!". Samo zaœ wykrzyknienie œwiadczy o emocjonalnoœci wypowiedzi. Œwidryga i Midryga zdaj¹ siê przekraczaæ granicê miêdzy œmierci¹ a ¿yciem, intensywnoœæ ich tañca podkreœla powtórzenie: "Tañcowali a¿ do zdechu i a¿ do upaœci!". Pl¹sy przyczyniaj¹ siê do tego, i¿ bohaterowie zatracaj¹ siê w swych ruchach, ca³y œwiat przestaje dla nich istnieæ. Nie odczuwaj¹ zmêczenia, d¹¿¹ wrêcz do destrukcji: "Konaj ¿ywcem!". S¹ oszo³omieni, popadaj¹ w szaleñstwo, które ostatecznie przyczynia siê do ich œmierci. </p>
+<p> </p>
+<p>wyra¿enie swojego zdania - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Taniec Œwidrygi i Midrygi z Po³udnic¹ to zderzenie dwóch ró¿nych œwiatów, dwóch odmiennych sfer. Mê¿czyŸni to bowiem zwykli œmiertelnicy, którzy nale¿¹ do ziemskiej rzeczywistoœci. Ich partnerk¹ w tañcu staje siê zaœ Po³udnica, czyli z³y duch. Mimo tego bohaterowie chêtnie siê zgadzaj¹ na jej propozycjê. Ich taniec sugeruje wiêc pragnienie zatracenia siê i zapomnienia o ca³ym œwiecie. Jednoczeœnie wyra¿a potrzebê cz³owieka, która wi¹¿e siê z fascynacj¹ œmierci¹, a wrêcz d¹¿eniem do unicestwienia. Mo¿na tak¿e tutaj mówiæ o woli przekraczania wszelakich granic, poniewa¿ potencjalne zagro¿enie zdaje siê byæ kusz¹ce i intryguj¹ce. Taniec z demoniczn¹ kobiet¹ przybli¿a niejako bohaterów do przejœcia miêdzy dwoma œwiatami, staje siê przyczyn¹ ich szaleñstwa i oszo³omienia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>W utworze Leœmiana bardzo wa¿nym elementem przedstawionego œwiata staje siê podwójnoœæ, dualizm rzeczywistoœci, wprowadzaj¹cy do dzie³a elementy baœniowe. Dotyczy to nie tylko g³ównych bohaterów (Œwidrygi i Midrygi), ale tak¿e cudownego rozdwojenia siê Po³udnicy na dwie dziewczyny - tañcz¹ one ze Œwidryg¹ i Midryg¹; choæ s¹ to dwa cia³a, reprezentuj¹ one jedn¹ istotê. Wspomniana podwójnoœæ dotyczy równie¿ konkretnych zjawisk odnosz¹cych siê do ukazanej wizji rzeczywistoœci. Œmieræ staje siê bowiem przeciwwag¹ dla ¿ycia, kultura (taniec postaci) odwrotnoœci¹ natury, zaœ istnienie i œwiat ³¹cz¹ siê z nieistnieniem oraz zaœwiatami - podobnie jak normalnoœæ z szaleñstwem. Taki podzia³ wpisany w funkcjonowanie œwiata wskazuje na jego niejednoznacznoœæ: przeciwstawne elementy przenikaj¹, wrêcz uzupe³niaj¹. Prowokuje on pytania natury filozoficznej na temat istoty rzeczywistoœci, rz¹dz¹cych ni¹ sprzecznych pierwiastków oraz przechodzenia z jednego porz¹dku w drugi. </p>
+<p>Wa¿nym w¹tkiem utworu jest tak¿e cielesnoœæ, która okreœla sposób postrzegania rzeczywistoœci przez cz³owieka, wyznacza jego relacje z innymi elementami œwiata. Z tego te¿ powodu bohaterowie, którzy trac¹ orientacjê przestrzenn¹, zdaj¹ siê zatracaæ jednoczeœnie swoj¹ podmiotowoœæ: "Tak im w oczach opêtanych œwiat siê ca³y miga, / ¯e nie wiedz¹, kto Œwidryga, a kto z nich Midryga?". Znacz¹ca staje siê równie¿ w tym kontekœcie przemiana Po³udnicy: jej podwojenie rodzi pytania na temat istoty tego procesu: czy ma w tej sytuacji dwie dusze, czy te¿ jest jedn¹ osob¹ w dwóch cia³ach. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W utworze Leœmiana reprezentantk¹ œmierci staje siê Po³udnica, zaœ ¿ycia - Œwidryga i Midryga. Ich wspólny taniec œwiadczy o nierozerwalnej wiêzi ³¹cz¹cej te dwa zjawiska - wzajemnie siê uzupe³niaj¹, jedno wynika z drugiego. Wspólne pl¹sy postaci odzwierciedlaj¹ dynamizm egzystencji, która jednak ca³y czas zmierza w kierunku koñca. Z tego te¿ powodu ukazany przez poetê taniec wywo³uje skojarzenia ze œredniowiecznym <em>danse macabre</em> przypominaj¹cym o wszechobecnoœci i uniwersalnym charakterze œmierci. Energiczne, pe³ne zapa³u i mocy ruchy bohaterów, ich zapamiêtanie siê w kolejnych krokach, sugeruj¹, i¿ ¿ycie jest naznaczone pewn¹ fascynacj¹ unicestwieniem. Zdaje siê ono ca³y czas kusiæ i zachêcaæ do tego, aby przekroczyæ granicê miêdzy dwoma œwiatami. Motyw tañca akcentuje wiêc to zmaganie miêdzy pierwiastkiem ¿ycia a œmierci, odwo³uje siê tak¿e do bogatej tradycji kulturowej. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Motyw otch³ani wywo³uje skojarzenia z koñcem, zagro¿eniem, czymœ tajemniczym i nieznajomym. W wierszu Leœmiana bohaterowie, pogr¹¿eni w ¿ywio³owym tañcu, ostatecznie wpadaj¹ do niej:</p>
+<p><em>A¿ wwichrzeni w mrok dwóch trumien, jak dwa b³êdne wióry,</em></p>
+<p><em>Powpadali w otch³añ œmierci nogami do góry! </em>  </p>
+<p>G³êbina mo¿e byæ wiêc interpretowana jako kres doczesnej wêdrówki, czyli œmieræ. Motyw ten sugeruje tak¿e zetkniêcie ze sfer¹ metafizyczn¹, wejœcie w inn¹ rzeczywistoœæ, która jest swoist¹ zagadk¹ i wymyka siê jednoznacznym ocenom. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Taniec bohaterów staje siê dla natury Ÿród³em cierpienia - ze wzglêdu na swoj¹ intensywnoœæ oraz si³ê: "A nie stêka tak stodo³a pod cepów bijakiem, / Jak ta ³¹ka Ÿgana stop¹ sro¿ej, ni¿ ku³akiem!". Wywo³uje niepokój przyrody, gdy¿ prowadzi do jej zniszczenia, zak³óca panuj¹c¹ tam harmoniê. Œwiadczy to o tym, i¿ natura jest bezradna wzglêdem szaleñstwa i zapamiêtania postaci, staje siê ich ofiar¹. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>W utworze Boles³awa Leœmiana bez w¹tpienia obecna jest groteska. Jej przejaw stanowi na przyk³ad przeciwstawny charakter formy oraz tematyki dzie³a, ale przede wszystkim konstrukcja œwiata przedstawionego. W nim to wspó³istniej¹ obok siebie sprzeczne elementy. Bohaterowie bowiem oddaj¹ siê zabawie, jednak towarzyszy jej œmieræ: "Zaskoczy³a ich na s³oñcu Po³udnica blada / I Œwidrydze i Midrydze i tañcowi rada". Taniec ³¹czy siê z szaleñstwem, zaœ groza ze œmiechem. Równie groteskowa zdaje siê byæ przemiana dziewczyny: </p>
+<p><em>U rozdwaja siê po równu, rozszczepia siê ¿wawo </em></p>
+<p><em>Na dwie dziewki, na siostrzane - na lewa i praw¹.</em></p>
+<p> </p>
+<p><em>"Dosyæ cia³a dwoistego mamy tu na ³¹ce!</em></p>
+<p><em>Tañcz¿e z nami po³udniami, dopóki jarz¹ce!</em></p>
+<p> </p>
+<p><em>Jedna dziewka r¹k ma czworo i cztery ma ³ydy!</em></p>
+<p><em>Niechaj upoj¹ nas do reszty twe s³odkie bezwstydy!"</em></p>
+<p>Obecnoœæ groteski w tym utworze lirycznym pozwala na wyra¿enie prawdy o œwiecie, jego tajemniczoœci i dziwnoœci. Sugeruje niejednoznacznoœæ rzeczywistoœci oraz to, ¿e sk³ada siê z przeciwstawnych elementów, które wystêpuj¹ obok siebie. Z tego te¿ powodu œwiat zdaje siê pozostawaæ zagadk¹, gdy¿ nie mo¿na go jednoznacznie zdefiniowaæ. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+Indywidualne<br>

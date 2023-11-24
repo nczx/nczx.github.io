@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Zasada zaufania</strong> </span>ma szczególne znaczenie w przypadku odgrywania roli społecznej urzędnika publicznego, bowiem jeśli obywatele mają wobec niego zaufanie, to wierzą, że wykonuje on poprawnie swoje obowiązki, działa według zasad etycznych przewidzianych dla jego zawodu i jednocześnie chcą z nim współpracować w celu rozwiązania danej sprawy, np. administracyjnej. Brak zaufania do danego urzędnika może prowadzić do bezpodstawnego składania skarg na niego, a także wykłócania się z nim przez petenta podczas załatwiania przez niego danej sprawy w urzędzie. </p>
+<p><span style="text-decoration: underline;"><strong>Zasada pomocy</strong> </span>szczególnie ważna jest w przypadku wypełniania roli społecznej lekarza, policjanta, strażaka, bowiem zawody te związane są z niesieniem pomocy osobom potrzebującym, a więc ratownicy muszą cechować się altruizmem, aby rzetelnie i odpowiedzialnie pomóc osobom potrzebującym. Osoba nie działająca na podstawie zasady pomocy może doprowadzić do mechanicznego obsługiwania osób chorych, cierpiących, co może prowadzić nawet do zanidbań ze strony osób wykonujących daną pracę. </p>
+<p><span style="text-decoration: underline;"><strong>Zasada wzajemności</strong> </span>ważna jest w przypadku roli społecznej związanej z bycie marketingowcem, bowiem wdrożone przez niego działania oparte właśnie na zasadzie wzajemności mają ogromne znaczenie dla uzyskania określonej wielkości sprzedaży przez daną firmę.</p>
+<p><span style="text-decoration: underline;"><strong>Wzajemność</strong> - </span></p>
+<ul>
+<li>jeśli ktoś poczęstuje mnie kanapką w czasie przerwy międzylekcyjnej, to odwdzięczę się jej i poczęstują ją owocami, które miałem przygotowane na II śniadanie,</li>
+<li>jeśli ktoś uśmiechnie się do mnie i powie "dzień dobry", to odwzajemnię uśmiech i odpowiem na przywitanie, </li>
+<li>jeśli ktoś otwiera mi drzwi, to zawsze mu za to podziękuję, </li>
+<li>jeśli ktoś pomaga mi w trudnej sytuacji, to i ja mu pomogę, gdy będzie w potrzebie. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga odwołania się do przykładowych sytuacji z własnego życia. Dlatego proponowane rozwiązanie może stanowić wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne przy samodzielnym opracowaniu odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; <span style="text-decoration: underline;">ZASADA</span></strong></em><strong><span style="text-decoration: underline;"> WZAJEMNOŚCI</span></strong> - reguluje życie społeczne w ten sposób, że stosujące tę zasadę osoby odczuwają wdzięczność lub chęć odwzajemnienia się, kiedy otrzymają coś od innych lub gdy ktoś im w jakiejś sytuacji pomoże. Innymi słowy, w zasadzie tej chodzi o to, żeby być dobrym, pomocnym i uczynnym dla tych, którzy i dla nas tacy są. Przykładowo, jeśli ktoś pożyczy mi książkę, dzięki której lepiej przygotuję się do egzaminu, to w rewanżu również powinienem okazać wsparcie tej osobie. Łamanie zasady wzajemności doprowadziłoby do sytuacji, w której ludzie nie byliby dla siebie życzliwi i pomocni, bo nie mieliby ku temu motywacji.</p>
+<p><strong><em>-&gt; <span style="text-decoration: underline;">ZASADA POMOCY</span></em></strong> - poniekąd jest zbliżona do zasady wzajemności, a wskazuje, że należy w szczególności pomagać osobom słabszym, cierpiącym, samotnym, chorym, niedostosowanym czy niezdolnym do samodzielnego zaspokajania swych potrzeb. Przykładem realizacji zasady pomocy może być wspieranie starszego i samotnego sąsiada, który nie ma siły, by samodzielnie wychodzić codziennie po zakupy. Gdyby nie realizowano zasady pomocy, to świat stałby się jeszcze trudniejszym miejscem do życia dla wszystkich tych, którzy borykają się z rozmaitymi problemami.</p>
+<p><strong><em>-&gt; <span style="text-decoration: underline;">ZASADA ZAUFANIA</span></em></strong> - polega na ufaniu w to, że ludzie, z którymi się stykamy, mają dobre intencje. Przykładowo, kupując leki w aptece ufam, że farmaceuta nie sprzedaje mi trucizny, tylko preperaty, które nie zaszkodzą mojemu zdrowiu i życiu. Gdyby odejść od zasady zaufania całkowicie, to wszyscy w społeczeństwie byliby względem siebie podejrzliwi i brakowałoby chętnych do jakiejkolwiek współpracy, a nawet prostych transakcji handlowych. Skrajna podejrzliwość sprawiłaby, że ludzie nie zawieraliby żadnych znajomości, traktując siebie nawzajem niczym wrogów.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Zadanie ma charakter indywidualny i wymaga przeprowadzenia w swoim środowisku lokalnym ankiety na temat wartości uznawanych przez ludzi za najważniejsze w życiu. Stąd proponowane rozwiązanie może zawierać tylko najogólniejsze wskazówki pomocne do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; <span style="text-decoration: underline;">Przykładowe wartości, jakie ludzie na ogół uznają za najważniejsze w życiu:</span></strong></em></p>
+<ul>
+<li>zdrowie,</li>
+<li>pieniądze,</li>
+<li>bogactwo,</li>
+<li>szczęście,</li>
+<li>miłość,</li>
+<li>poczucie bezpieczeństwa,</li>
+<li>wykształcenie,</li>
+<li>wiedza,</li>
+<li>przyjaźń,</li>
+<li>prestiż,</li>
+<li>piękno,</li>
+<li>umiłowanie ojczyzny,</li>
+<li>mądrość,</li>
+<li>szacunek,</li>
+<li>sprawiedliwość,</li>
+<li>równość.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) </p>
+<p>A.  PRAWDA</p>
+<p>B. FAŁSZ</p>
+<p>C. PRAWDA</p>
+<p> </p>
+<p>b) Poziom zaufania społecznego w Polsce przedstawia się bardzo słabo w porównaniu z innymi krajami, ponieważ Polska ma najmniejszy odsetek osób w wieku, co najmniej 16 lat (ufających innym ludziom w naszym kraju). Tendencja ta jest stała od 2006. W Polsce poziom zaufania waha się na poziomie 16-18%, zaś w Danii wynosi on w granicach 68-70%. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<table border="1" style="border-collapse: collapse; width: 879px; height: 148px;">
+<tbody>
+<tr style="height: 35px;">
+<td style="background-color: #039be5; height: 35px; width: 26.0875px;"><strong>[A]</strong></td>
+<td style="background-color: #81d4fa; height: 35px; width: 758.112px;">W Niemczech i Holandii poziom zaufania społecznego w latach 2006-2014 wzrósł o ponad 5 punktów procentowych.</td>
+<td style="background-color: #7986cb; width: 85.6px;"><strong>[<span style="text-decoration: underline;">PRAWDA</span>]</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #039be5; height: 17px; width: 26.0875px;"><strong>[B]</strong></td>
+<td style="background-color: #81d4fa; height: 17px; width: 758.112px;">W Belgii przedstawiony na wykresie wskaźnik spadł w latach 2006-2014 o mniej niż 5 procent.</td>
+<td style="background-color: #7986cb; width: 85.6px;"><strong>[<span style="text-decoration: underline;">FAŁSZ</span>]</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #039be5; height: 17px; width: 26.0875px;"><strong>[C]</strong></td>
+<td style="background-color: #81d4fa; height: 17px; width: 758.112px;">W 2014 r. w Polsce poziom zaufania społecznego był o ponad połowę mniejszy niż w Danii.</td>
+<td style="background-color: #7986cb; width: 85.6px;"><strong>[<span style="text-decoration: underline;">PRAWDA</span>]</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>b)</strong></p>
+<p><strong>Ta część zadania ma charakter indywidualny, bo wymaga wyrażenia własnej oceny. Stąd proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Jak wynika z przytoczonych danych, poziom zaufania społecznego w Polsce jest niższy niż w pozostałych państwach ujętych w zestawieniu, tj. w Danii, Norwegii, Szwecji, Holandii, Niemczech, Belgii i Słowenii. W latach 2006-2014 odsetek osób w wieku co najmniej 16 lat deklarujących, że ufają innym ludziom nie wyniósł więcej niż 18%. Taki poziom zaufania społecznego wydaje się dość niski, zwłaszcza jeśli porównać go z Danią czy Norwegią, gdzie wynosił 62-70%.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Przykłady metod kontroli społecznej w przypadku norm formalnych:</span></strong> </p>
+<ul>
+<li>kontrola przeprowadzona przez policję, np. w przypadku naruszenia normy mówiącej o konieczności zachowania określonej prędkości w danym miejscu, </li>
+<li>kontrola ze strony Urzędu Skarbowego w zakresie prawidłowego opłacenia podatku.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Przykłady metod kontroli społecznej w przypadku norm nieformalnych:</strong></span></p>
+<ul>
+<li>zaprowadzenie ostracyzmu wobec osoby naruszającej normy społeczne, </li>
+<li>niewchodzenie w relacje koleżeńskie i partnerskie przez członków danej grupy z osobą, która narusza normy nieformalne. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Przez <strong><span style="text-decoration: underline;">kontrolę społeczną</span></strong> rozumie się mechanizmy, które wytwarza społeczeństwo, aby pilnować, czy jednostki przestrzegają formalnych (prawnych) i nieformalnych (pozaprawnych) norm społecznych.</p>
+<p><strong><span style="text-decoration: underline;">Przykładami metod kontroli społecznej w wypadku norm formalnych (prawnych) mogą być:</span></strong></p>
+<p>- prowadzenie przez prokuraturę śledztwa, aby sprawdzić, czy dany czyn posiada znamiona przestępstwa, a następnie ewentualnie wnieść akt oskarżenia do sądu,</p>
+<p>- interwencja dokonana przez policję w odniesieniu do jednostki, która zakłócała porządek publiczny i zagrażała bezpieczeństwu innych osób.</p>
+<p><strong><span style="text-decoration: underline;">Przykładami metod kontroli społecznej w wypadku norm nieformalnych (pozaprawnych) mogą być:</span></strong></p>
+<p>- okazywanie lekceważenia wobec członka społeczności lokalnej, który naruszył ważne dla tej społeczności normy obyczajowe,</p>
+<p>- napiętnowanie członka danej wspólnoty wyznaniowej, który nie dochowywał reguł religijnych ważnych dla owej wspólnoty.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Społeczeństwo</strong> - duża grupa ludzi, którzy mieszkają na wspólnym terytorium, podlegają tej samej władzy, są połączeni rozmaitymi więziami i dostrzegają swoją odrębność od innych takich grup. Z kolei g<strong>rupa społeczna</strong> - to przynajmniej trzy osoby trwale ze sobą powiązane, które wyznają podobne wartości i dążą do tych samych lub zbliżonych celów.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Społeczność</span></strong> to ludność, którą łączy to, że wspólnie bierze udział w określonej dziedzinie życia społecznego. Przykładowo, uczniowie, nauczyciele i inni pracownicy szkoły współtworzą społeczność szkolną, piłkarze, trenerzy i inni pracownicy klubu piłkarskiego współtworzą społeczność konkretnego klubu piłkarskiego, zaś mieszkańcy jednej miejscowości uczestniczą wspólnie w tej samej społeczności lokalnej.</p>
+<p>Z kolei <strong><span style="text-decoration: underline;">grupa społeczna</span></strong> to co najmniej trzy osoby, których łączą bardziej bezpośrednie więzi, wynikające na przykład ze wspólnych zainteresowań (jak w przypadku członków konkretnego koła naukowego) lub z silnego poczucia przynależności (jak w przypadku rodziny).</p>
+<p>Jak wynika z powyższego, <strong><span style="text-decoration: underline;">grupa społeczna odznacza się silniejszymi i głębszymi relacjami między swymi członkami, aniżeli ma to miejsce w wypadku społeczności</span></strong>.</p><br>

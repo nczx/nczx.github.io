@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Osoba mówi¹ca w utworze ukazuje czas za pomoc¹ personifikacji: "[...] Czas, krawiec kulawy, / z chiñskim w¹sem, suchotnik ¿wawy". Okreœla go tak¿e mianem "z³ego krawca", poniewa¿ nie pozwala on podmiotowi lirycznemu na wybór wymarzonego materia³u, jest surowy i zasadniczy.</p>
+<p> </p>
+<table border="1" style="border-collapse:collapse;width:571px;height:425px;">
+<tbody>
+<tr style="height:61px;">
+<td style="background-color:#aed581;text-align:center;height:61px;width:183px;"><strong>Œrodek artystyczny</strong></td>
+<td style="background-color:#aed581;text-align:center;height:61px;width:183px;"><strong>Przyk³ad</strong></td>
+<td style="background-color:#aed581;text-align:center;height:61px;width:193px;"><strong>Funkcja </strong></td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">epitet</td>
+<td style="width:183px;height:31px;text-align:center;"><em>suchotnik ¿wawy</em></td>
+<td style="width:193px;height:31px;text-align:center;">okreœlenie cech danego elementu, ukonkretnienie przedstawienia</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">wyliczenie</td>
+<td style="width:183px;height:31px;text-align:center;"><em>Czarne, bure, zielone i weso³e w kratki</em></td>
+<td style="width:193px;height:31px;text-align:center;">zwrócenie uwagi na wyliczane treœci oraz ich bogactwo</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">wykrzyknienie</td>
+<td style="width:183px;height:31px;text-align:center;"><em>Ach! z tego, z tego chcê mieæ sukniê!</em></td>
+<td style="width:193px;height:31px;text-align:center;">wyra¿enie uczuæ podmiotu, nadanie utworowi emocjonalnego wymiaru</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">metafora</td>
+<td style="width:183px;height:31px;text-align:center;"><em>a mnie pokaza³ sukno barwy - czekolady.</em></td>
+<td style="width:193px;height:31px;text-align:center;">nadanie s³owom nowego sensu, zaskoczenie odbiorcy</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">paralelizm</td>
+<td style="width:183px;height:31px;text-align:center;">
+<p><em>zatêczy³o na zgiêciu,</em></p>
+<p><em>zachrzêœci³o w dotkniêciu...</em></p>
+</td>
+<td style="width:193px;height:31px;text-align:center;">zaznaczenie wystêpuj¹cej analogii</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">elipsa</td>
+<td style="width:183px;height:31px;text-align:center;"><em>To sprzedane do nieba  - ca³a sztuka</em></td>
+<td style="width:193px;height:31px;text-align:center;">kondensacja treœci, dynamizacja wypowiedzi</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">porównanie</td>
+<td style="width:183px;height:31px;text-align:center;"><em>coœ b³ys³o jak z³otem</em></td>
+<td style="width:193px;height:31px;text-align:center;">uplastycznienie, wskazanie podobieñstwa miêdzy zestawionymi elementami</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">neologizm</td>
+<td style="width:183px;height:31px;text-align:center;"><em>zatêczy³o</em></td>
+<td style="width:193px;height:31px;text-align:center;">nazwanie nowego zjawiska, precyzyjne wyra¿enie sensu</td>
+</tr>
+<tr style="height:31px;">
+<td style="width:183px;height:31px;text-align:center;">inwersja</td>
+<td style="width:183px;height:31px;text-align:center;"><em>przed oczy mi k³adzie</em></td>
+<td style="width:193px;height:31px;text-align:center;">nadanie wypowiedzi uroczystego tonu</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:183px;text-align:center;height:17px;">powtórzenie</td>
+<td style="width:183px;text-align:center;height:17px;"><em>z tego, z tego</em></td>
+<td style="width:193px;text-align:center;height:17px;">podkreœlenie znaczenia powtórzonych s³ów</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Wielka litera w s³owie "Czas" podkreœla to, ¿e zosta³a temu wyrazowi nadana szczególna ranga: rzeczownik pospolity staje siê nazw¹ w³asn¹. Abstrakcyjne pojêcie zyskuje namacaln¹ postaæ "krawca kulawego". "Czas" pe³ni wiêc funkcjê imienia, co tak¿e uzasadnia wskazan¹ pisowniê.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowe elementy jêzyka potocznego: </p>
+<ul>
+<li>s³ownictwo potoczne lub wartoœciuj¹ce -&gt; "suchotnik", "z³y krawiec", "fuknie";</li>
+<li>wykrzykniki -&gt; "Ach!";</li>
+<li>wystêpowanie powtórzeñ -&gt; "to zgrzebne szare p³ótno, to znów at³as g³adki";</li>
+<li>nieregularna oraz nieskomplikowana sk³adnia -&gt; "z tego, z tego chcê mieæ sukniê!";</li>
+<li>urwanie wypowiedzi -&gt; "Raz - coœ b³ys³o jak z³otem, / zamigota³o zielonym klejnotem, / zatêczy³o na zgiêciu, / zachrzêœci³o na zgiêciu...". </li>
+</ul>
+<p> </p>
+<p>Zastosowane elementy jêzyka potocznego podkreœlaj¹ uniwersalnoœæ podejmowanego zagadnienia. Poetka nie opisuje czasu w podnios³y i patetyczny sposób, lecz przedstawia go jako nieod³¹czny element codziennoœci oraz egzystencji ka¿dego cz³owieka. Tym samym to pojêcie zostaje strywializowane, traci sw¹ grozê i tajemniczoœæ. Z tego powodu utwór Pawlikowskiej-Jasnorzewskiej zdaje siê oswajaæ czas, na co wp³ywa przystêpnoœæ jêzyka. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Materia³y prezentowane przez krawca zyskuj¹ w wierszu Pawlikowskiej-Jasnorzewskiej przenoœne sensy. Oznaczaj¹ bowiem rozmaite chwile, zdarzenia i sytuacje w ¿yciu cz³owieka, które staj¹ siê Ÿród³em ró¿norodnych emocji czy odczuæ. Skrawki "Czarne, bure" wywo³uj¹ skojarzenia z trudnoœciami, cierpieniem, byæ mo¿e tak¿e z ¿a³ob¹ czy œmierci¹. Podobnie jest w przypadku "zgrzebnego szarego p³ótna" - przywodzi na myœl monotoniê codziennoœci, rutynê. Materia³y te przypominaj¹ wiêc o mniej przyjemnych aspektach doczesnej egzystencji. Z kolei skrawki "zielone i weso³e w kratki" oraz "at³as g³adki" symbolizuj¹ radosne momenty ¿ycia, równie¿ jego piêkno i harmoniê. Ostatecznie jednak Czas proponuje bohaterce "sukno barwy - czekolady". £¹cz ono w sobie gorycz istnienia, ale tak¿e niew¹tpliw¹ s³odycz. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Okrzyk bohaterki ujawnia jej pragnienie dotycz¹ce egzystencji. Podmiot liryczny jest bowiem zafascynowany piêknym materia³em, który staje siê w wierszu symbolem szczêœliwych i przyjemnych chwil: "Raz - coœ b³ys³o jak z³otem, / Zamigota³o zielonym klejnotem, / zatêczy³o na zgiêciu, / zachrzêœci³o w dotkniêciu". Jego wyj¹tkowoœæ oraz urodê podkreœlaj¹ wykorzystane w opisie œrodki: porównanie ("Raz - coœ b³ys³o jak z³otem"), wyliczenie ("Zamigota³o zielonym klejnotem, / zatêczy³o na zgiêciu, / zachrzêœci³o w dotkniêciu"), epitet ("zielonym klejnotem") oraz neologizm ("zatêczy³o"). Osoba mówi¹ca marzy wiêc o ¿yciu pozbawionym trudnoœci, w którym wszystko dzieje siê zgodnie z jej wol¹. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Utwór Marii Pawlikowskiej-Jasnorzewskiej zamyka metafora: </p>
+<p><em>To rzek³szy, schwa³ prêdko próbkê do szuflady,</em></p>
+<p><em>a mnie pokaza³ sukno barwy - czekolady. - -</em></p>
+<p>Wskazuje ona na sytuacjê cz³owieka, który nie mo¿e sobie zagwarantowaæ, ¿e w jego ¿yciu bêd¹ tylko przyjemne chwile. Nie ma on tak¿e mo¿liwoœci, by w pe³ni zaplanowaæ sw¹ egzystencjê. Zamiast wymarzonego materia³u Czas oferuje wiêc osobie mówi¹cej sukno w kolorze czekolady. Skrawek ten zyskuje symboliczne znaczenie. Jego ciemny kolor wywo³uje skojarzenia ze smutkiem oraz trudnymi doœwiadczeniami. Z drugiej jednak strony czekoladowa barwa kojarzy siê ze s³odycz¹ i przyjemnoœci¹. Tym samym krawiec zdaje siê przypominaæ podmiotowi lirycznemu, ¿e w ¿ycie ka¿dego cz³owieka s¹ wpisane chwile radoœci, lecz tak¿e przygnêbienia. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br>

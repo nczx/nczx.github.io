@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Zdania prawdziwe:</strong> </span></p>
+<p><strong>B.</strong> Ojczyzna to dla danej osoby kraj urodzenia lub zamieszkania albo państwo, z którego pochodzą jej przodkowie. </p>
+<p><strong>D.</strong> Wszystkie osoby należące do Polonii są imigrantami. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1012px; height: 106px;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="width: 1008.4px; height: 17px; background-color: #9575cd;"><span style="text-decoration: underline;"><strong>Zdania prawdziwe</strong></span></td>
+</tr>
+<tr style="height: 56px;">
+<td style="background-color: #d1c4e9; width: 1008.4px; height: 56px;"><strong>[B] </strong>Ojczyzna to dla danej osoby kraj urodzenia lub zamieszkania albo państwo, z którego pochodzą jej przodkowie.</td>
+</tr>
+<tr style="height: 61px;">
+<td style="background-color: #d1c4e9; width: 1008.4px; height: 61px;"><strong>[D] </strong>Wszystkie osoby należące do Polonii są imigrantami.</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Przykładowe rozwiązanie</span></strong></p>
+<p>Współcześnie obserwujemy kryzys rodziny, który polega na tym, że coraz częściej dochodzi do rozbicia dużej ilości rodzin.  Coraz częściej rodziny budują swoje fundamenty nie na wartościach, ale na karierze. Prowadzi to do zaniku tradycyjnych funkcji rodziny (np. wychowawczych, prokreacyjnych, kulturowych). Dochodzi do rozluźnienia więzi między rodzicami i ich potomstwem. Rodziny dążąc do zaspokojenia coraz bardziej wymagających potrzeb ekonomicznych, zatracają wartości, na których zostały zbudowane. Kryzys rodzin spowodowany jest również po części kryzysem ekonomicznym oraz moralnym. </p>
+<p>Współczesna polska rodzina odbiega od tradycyjnego modelu rodziny. Zmienił się sposób myślenia o roli rodziny w społeczeństwie oraz charakter i rola jej poszczególnych członków. Współczesny wzorzec polskiej rodziny jest spójny ze wzorcem rodziny zachodnioeuropejskiej. Obecnie panuje powszechne przekonanie, że związek małżeński powinien opierać się na partnerstwie, zaś kobieta i mężczyzna wspólnie mają podejmować decyzje w poszczególnych sprawach. Coraz częściej dochodzi do tego, że rodzice mają tylko jedno lub dwoje dzieci, ponieważ proces wychowywania jest męczący i absorbujący dla nich, więc istnieje pogląd, że lepiej wychowywać małą liczbę potomstwa. Coraz częściej Polacy odchodzą od tradycyjnych wartości rodzinnych na rzecz zdobycia dobrego wykształcenia oraz rozwój zawodowy. Współcześnie coraz częściej członkowie rodziny odwracają się od siebie i nie stanowią dla siebie oparcia. Według danych statystycznych rośnie liczba rozwodów w Polsce, a tym samym odsetek rozpadających się rodzin. W 1950 r. w Polsce miało miejsce 11 tysięcy rozwodów, zaś w 2015 r. ponad 67 tysięcy razy sąd orzekł rozpad małżeństwa. Ponadto w ostatnich latach jest bardzo niska liczba urodzeń, co wskazuje, że małżeństwa oddają się pracy zawodowej lub wzmożonej edukacji niż rodzeniu i wychowywaniu dzieci. </p>
+<p><span style="text-decoration: underline;"><strong>Wniosek:</strong> </span>Odchodzenie od tradycyjnych wzorców życia sprzyja rozpadowi rodziny.</p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe problemy współczesnej rodziny to:</strong></span></p>
+<ul>
+<li><strong>UZALEŻNIENIE OD ALKOHOLU I NARKOTYKÓW</strong> - w Polce z roku na rok wzrasta liczba osób uzależnionych od środków odurzających, niestety wśród nich znajdują się także nieletni. Alkoholizm i narkomania zwiększają przestępczość oraz patologie społeczne.</li>
+<li><strong>UZALEŻNIENIE OD INTERNETU</strong> - jak wynika z badań przeprowadzonych przez CBOS w Polsce jest już około 100 tys. osób uzależnionych od internetu, a kolejnych 750 tys. jest na ten problem poważnie narażonych. Problem najczęściej dotyka dzieci oraz osoby młode.</li>
+<li><strong>NIETRWAŁOŚĆ INSTYTUCJI MAŁŻEŃSTWA</strong> - z roku na rok mamy do czynienia ze zwiększeniem się  liczby rozwodów oraz niestabilnością małżeństw, których małżonkowie są zabiegani i poświęcają się pracy, na czym cierpią ich relacji rodzinne. </li>
+<li><strong>GŁÓD</strong> - we współczesnej Polsce głoduje bardzo wiele ludzi. Problem ten dotyka także dzieci. Wiele rodzin w Polsce żyje na granicy ubóstwa. Bezrobocie, niskie wykształcenie oraz niepełne, patologiczne rodziny są najpoważniejszymi czynnikami generującymi ubóstwo. Rodziny żyjące w ubóstwie mają problemy z zabezpieczeniem podstawowych potrzeb dzieci. Wzrasta także obojętność polskiego społeczeństwa na biedę innych.</li>
+<li><strong>MIGRACJE</strong> - , które powodują, że jeden z rodziców lub obydwoje wyjeżdżą za granicę w celach zarobkowych, co może prowadzić nawet do tzw. eurosieroctwa,</li>
+<li><strong>BRAK WARTOŚCI</strong> - we współczesnym świecie mamy do czynienia z nieuznawaniem przez młodych ludzi szeregu wartości tradycyjnych, co prowadzi do zakładania przez nich rodzin w późnym wieku oraz nieposiadaniem przez nich dzieci lub posiadaniem tylko jednego potomka.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, ponieważ wymaga wyrażenia własnego stanowiska. Dlatego proponowane rozwiązanie może stanowić wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Można wyróżnić wiele kwestii, które uznaje się za problemy współczesnych rodzin. Przykładowo, można wśród nich wskazać: bezrobocie, trudne położenie ekonomiczne, przemoc w rodzinie, alkoholizm, narkomanię, pracoholizm rodziców, złe zachowanie dzieci, odczuwanie samotności przez członków rodziny czy nadmiar traumatycznych wydarzeń występujących w rodzinie (na przykład przedwczesna śmierć członka rodziny bądź ciężka choroba kogoś z rodziny). Wszystkie tego typu kwestie utrudniają funkcjonowanie rodziny i nierzadko uniemożliwiają osiągnięcie tego, co nazywamy szczęściem rodzinnym. </p>
+<p>Jeśli jednak należy wskazać dwa najważniejsze problemy współczesnych rodzin, to można w tym celu wytypować <strong><span style="text-decoration: underline;">bezrobocie</span></strong> oraz <strong><span style="text-decoration: underline;">trudne położenie ekonomiczne</span></strong>. To drugie często wynika z pierwszego, ale niekoniecznie, ponieważ współcześnie jesteśmy świadkami bardzo dużych dysproporcji dochodowych między ludźmi w obrębie tego samego społeczeństwa. W niektórych branżach zarobki są bardzo niskie, tak iż nie pozwalają na godne przeżycie, a tym bardziej utrzymanie rodziny, podczas gdy w innych zarabia się dużo. Dlatego czasami z trudnym położeniem ekonomicznym borykają się również te jednostki, które mają pracę. Niemniej jednak trwały brak zatrudnienia, tj. bezrobocie, może rodzić u jednostki w jeszcze większym stopniu obniżenie poczucia własnej wartości, frustrację, nerwicę, a nawet depresję.</p>
+<p>Bezrobocie i trudne położenie ekonomiczne można uznać za główne problemy współczesnych rodzin, ponieważ inne trudności, jak na przykład przemoc w rodzinie, ostre kłótnie, alkoholizm, narkomania czy brak możliwości zapewnienia dzieciom dobrych warunków do nauki, okazują się negatywnymi następstwami braku odpowiednich środków finansowych, a te z kolei są pokłosiem bezrobocia i trudnego położenia ekonomicznego.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Elementy związane z przynależnością do narodu:</strong></span> </p>
+<p>A. wspólne pochodzenie i historia</p>
+<p>B. mówienie tym samym językiem</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 756px; height: 123px;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="width: 752.4px; height: 17px; background-color: #ffa726;"><span style="text-decoration: underline;"><strong>Elementy związane z przynależnością do narodu</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffe0b2; height: 17px; width: 752.4px;"><strong>[A] </strong>wspólne pochodzenie i historia</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffe0b2; height: 17px; width: 752.4px;"><strong>[B] </strong>mówienie tym samym językiem</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffe0b2; height: 17px; width: 752.4px;"><strong>[E] </strong>miłość i szacunek do ojczyzny</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong><em>-&gt; </em></strong><em>Wedle najbardziej rozpowszechnionej definicji naród to zbiorowość, na którą składają się ludzie, którzy połączeni są wspólnymi pochodzeniem, tradycją oraz kulturą. Członkowie narodu często mówią też tym samym językiem i zamieszkują na terenie jednego państwa, ale posiadanie własnej państwowości nie jest koniecznym elementem do istnienia narodu. Wiadomo bowiem, że istnieją narody bez własnego państwa. Przykładowo, Polska przez 123 lata zaborów nie miała własnej państwowości, a mimo to trwał wówczas naród polski.</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Elementy dziedzictwa narodowego Polaków:</strong></span> </p>
+<ul>
+<li>idee, </li>
+<li>obyczaje, </li>
+<li>zabytki, </li>
+<li>utwory literackie.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe trzy elementy należące do dziedzictwa narodowego Polaków:</strong></span></p>
+<ul>
+<li>Zamek Królewski na Wawelu w Krakowie,</li>
+<li><em>Pan Tadeusz </em>Adama Mickiewicza,</li>
+<li>Stare Miasto w Warszawie.</li>
+</ul>
+<p><img alt="" height="175" src="./data/647011-0.jpg" width="312"/></p>
+<p><img alt="" height="495" src="./data/647011-1.jpg" width="311"/></p>
+<p><img alt="" height="233" src="./data/647011-2.jpg" width="311"/></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Państwo realizuje funkcję porządkową poprzez:</strong></span>  </p>
+<ul>
+<li>funkcjonowanie sądów (każdy może złożyć do sądu lub prokuratury wniosek - np. o możliwości popełnienia przestępstwa - jeśli uważa, że jego prawa zostały naruszone), </li>
+<li>funkcjonowanie policji oraz dbanie przez nią o porządek i bezpieczeństwo (policjanci zabezpieczają imprezy masowe oraz interweniują w indywidualnych sprawach, gdy zagrożone jest czyjeś bezpieczeństwo lub mienie). </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Funkcja porządkowa państwa wiąże się z wymuszaniem na obywatelach przestrzegania obowiązującego prawa oraz z dbaniem o ład i bezpieczeństwo</span></strong>. Państwo realizuje funkcję porządkową między innymi poprzez prowadzenie i utrzymywanie instytucji <strong><span style="text-decoration: underline;">prokuratury</span></strong>, która zajmuje się wykrywaniem i ściganiem przestępstw, a także poprzez utrzymywanie <strong><span style="text-decoration: underline;">policji</span></strong>, która ma przeciwdziałać czynom niezgodnym z prawem.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Gdyby organy państwa nie realizowały funkcji zewnętrznych, to doszłoby to zamknięcia się danego kraju na kontakty zewnętrzne. Tego rodzaju zachowanie byłoby bardzo niebezpieczne, ponieważ państwo straciłoby sojuszników, którzy mogliby je wesprzeć w przypadku zaatakowania go przez nieprzyjaciela. Ponadto brak kontaktów z innymi państwami doprowadziłby do ograniczenia kontaktów handlowych, zmniejszenia popytu na towary krajowe, zmniejszenia asortymentu w odizolowanym państwie oraz stagnacji gospodarczej. Jeśli państwo nie wypełniałoby poprawnie swoich funkcji zewnętrznych, to i jego obywatele mieliby utrudniony dostęp do wchodzenia ze swoimi produktami na rynki międzynarodowe, ze swobodnym przekraczaniem granicy państwowej. Słabość państwa w zakresie realizacji przez nie funkcji zewnętrznej, polegającej na obronie granic, wpływa na jego osłabienie militarne i słabość w zakresie zapewnienia bezpieczeństwa terytorium państwa. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej oceny. Stąd proponowane rozwiązanie może stanowić wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p><strong><span style="text-decoration: underline;">Funkcje zewnętrzne państwa polegają na prowadzeniu przez państwo polityki międzynardowej (dyplomacji) i bronieniu granic (integralności terytorialnej)</span></strong>. Gdyby państwo nie realizowało funkcji zewnętrznych, to jego obywatele byliby narażeni na stanie się ofiarami ataków ze strony obcych agresorów. <strong><span style="text-decoration: underline;">Bez skutecznej dyplomacji oraz armii państwo mogłoby zostać zaatakowane przez wroga</span></strong>, a ten mógłby wyrządzać szkody również ludności cywilnej i gospodarce. Należyte realizowanie przez państwo funkcji zewnętrznych jest więc jednym z warunków niezbędnych do tego, by obywatele państwa mogli żyć bezpiecznie i odpowiednio się rozwijać.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Ustrój demokratyczny daje obywatelom następujące korzyści:</strong> </p>
+<ul>
+<li>obywatele mają wpływ na funkcjonowanie państwa, </li>
+<li>w ustroju demokratycznym ludzie mają zagwarantowaną wolność słowa oraz wyznania, </li>
+<li>obywatele mają możliwość odwołania się od decyzji wydanej w ich sprawie przez organy państwowe, </li>
+<li>ustrój ten gwarantuje wolność rynkową, </li>
+<li>mogą oni brać czynny udział w życiu publicznym,</li>
+<li>obywatele posiadają prawa polityczne oraz ekonomiczno-społeczne, </li>
+<li>w ramach tego ustroju szanowane są mniejszości narodowe, </li>
+<li>dobra obywateli chronione są prawem, </li>
+<li>wszyscy ludzie są równi wobec prawa, </li>
+<li>w państwie działają niezależne media, </li>
+<li>władza państwowa nie może narzucać obywatelom określonego sposobu myślenia. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Ustrój demokratyczny obowiązuje współcześnie w większości rozwiniętych państw świata. <strong><span style="text-decoration: underline;">Demokracja jest ustrojem, w którym obywatele sprawują władzę bezpośrednio lub za pośrednictwem wybranych przez siebie przedstawicieli</span></strong>, lecz każdorazowo mają udział w sprawowaniu rządów. Stąd demokrację określa się w skrócie jako <strong><span style="text-decoration: underline;">rządy ludu (ludowładztwo)</span></strong>.</p>
+<p><strong><span style="text-decoration: underline;">Zaletą ustroju demokratycznego jest to, że obywatele mogą decydować o sprawach własnego państwa</span></strong>. Demokracja wiąże się też z licznymi swobodami obywatelskimi, w tym z <strong><span style="text-decoration: underline;">wolnością słowa</span></strong>. Obywatele w ustroju demokratycznym mogą więc swobodnie wyrażać swoje poglądy i na wiele sposobów wpływać na rządzących (między innymi poprzez udział w procedurze wyborczej czy poprzez ewentualne krytykowanie wybranych poczynań rządzących). <strong><span style="text-decoration: underline;">W demokracji legalnie może działać opozycja</span></strong>, a dodatkowo <strong><span style="text-decoration: underline;">współczesne demokracje chronią też istotne interesy mniejszości</span></strong>. W ustroju demokratycznym <strong><span style="text-decoration: underline;">chronione są podstawowe prawa człowieka</span></strong>, a wszystkich obywateli uważa się za równych wobec prawa. Poszanowanie wolności człowieka sprawia, że funkcjonować mogą <strong><span style="text-decoration: underline;">niezależne media</span></strong>, a obywatele mogą cieszyć się daleko posuniętą swobodą w zakresie działalności gospodarczej.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Preambuła Konstytucji RP odwołuje się do następujących wartości:</strong> </p>
+<ul>
+<li>suwerenności Polski - "możliwość suwerennego (...) stanowienia o jej losie",</li>
+<li>demokracji - "demokratycznego stanowienia o jej losie", </li>
+<li>historii - "wdzięczni naszym przodkom za ich pracę, za walkę o niepodległość okupioną ogromnymi ofiarami (...) pomni gorzkich doświadczeń z czasów, gdy podstawowe wolności i prawa człowieka były w naszej Ojczyźnie łamane",</li>
+<li>kultury - "za kulturę zakorzenioną w chrześcijańskim dziedzictwie Narodu",</li>
+<li>do religii, do chrześcijaństwa - "w chrześcijańskim dziedzictwie Narodu",</li>
+<li>ogólnoludzkich - "ogólnoludzkich wartości", np. prawdy, piękna, dobra, uczciwości, itp.</li>
+<li>tradycji - "do najlepszych tradycji Pierwszej i Drugiej Rzeczypospolitej", </li>
+<li>ponadtysiącletniego dorobku - "co cenne z ponadtysiącletniego dorobku",</li>
+<li>więzów wspólnoty - "złączeni więzami wspólnoty z naszymi rodakami rozsianymi po świecie",</li>
+<li>wolności i sprawiedliwości - "prawa podstawowe dla państwa oparte  na poszanowaniu wolności i sprawiedliwości",</li>
+<li>współdziałania władz,</li>
+<li>dialogu społecznego, </li>
+<li>zasady pomocniczości.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 545px; height: 584px;">
+<tbody>
+<tr style="text-align: center;">
+<td style="width: 541.4px; background-color: #cc3399;"><span style="text-decoration: underline;"><strong>Wartości, do których odwołuje się preambuła <em>Konstytucji RP:</em></strong></span></td>
+</tr>
+<tr>
+<td style="width: 541.4px; background-color: #ffccff;">
+<ul>
+<li>suwerenność i możliwość demokratycznego stanowienia o własnych sprawach,</li>
+<li>wiara w Boga,</li>
+<li>prawda, sprawiedliwość, dobro i piękno,</li>
+<li>równość wobec prawa,</li>
+<li>dobro wspólne,</li>
+<li>powszechnie wyznawane wartości ogólnoludzkie,</li>
+<li>praca i dorobek przeszłych pokoleń Polaków,</li>
+<li>walka o niepodległość,</li>
+<li>chrześcijańskie dziedzictwo,</li>
+<li>najlepsze tradycje I i II Rzeczypospolitej,</li>
+<li>troska o przyszłe pokolenia,</li>
+<li>ponad tysiącletni dorobek Polski i Polaków,</li>
+<li>więzi wspólnoty z diasporą polską rozsianą po świecie,</li>
+<li>dobro całej ludzkości,</li>
+<li>podstawowe wolności i prawa człowieka,</li>
+<li>rzetelność i sprawność działania instytucji publicznych,</li>
+<li>współdziałanie władz i dialog społeczny,</li>
+<li>poszanowanie sumienia,</li>
+<li>zasada pomocniczości,</li>
+<li>przyrodzona godność człowieka,</li>
+<li>solidarność międzyludzka,</li>
+<li>praworządność,</li>
+<li>dobro III Rzeczypospolitej.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 541.4px; background-color: #ff66ff;"><strong><em>-&gt; </em></strong><em><span style="text-decoration: underline;">Preambuła</span> to wstęp do aktu prawnego, zazwyczaj mającego istotne znaczenie polityczne, który opisuje okoliczności jego powstania i główne cele, jakie przyświecały jego twórcom.</em></td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Struktura samorządu w Polsce wygląda następująco:</strong></span> </p>
+<ul>
+<li><strong>samorząd gminny, </strong></li>
+<li><strong>samorząd powiatowy, </strong></li>
+<li><strong>samorząd wojewódzki.</strong></li>
+</ul>
+<p>W poniższej tabeli przedstawiono organy poszczególnych samorządów:</p>
+<table width="0">
+<tbody>
+<tr>
+<td style="background-color: #ffcc66;" width="152">
+<p><strong>Jednostka samorządu terytorialnego</strong></p>
+</td>
+<td style="background-color: #ffcc66;" width="180">
+<p><strong>Organ stanowiący</strong></p>
+</td>
+<td style="background-color: #ffcc66;" width="217">
+<p><strong>Organ wykonawczy</strong></p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ff9966;" width="152">
+<p><strong>Gmina</strong></p>
+</td>
+<td width="180">
+<p>rada gminy</p>
+</td>
+<td width="217">
+<p>wójt, burmistrz, prezydent</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ff9966;" width="152">
+<p><strong>Powiat</strong></p>
+</td>
+<td width="180">
+<p>rada powiatu</p>
+</td>
+<td width="217">
+<p>zarząd powiatu</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ff9966;" width="152">
+<p><strong>Województwo</strong></p>
+</td>
+<td width="180">
+<p>sejmik województwa</p>
+</td>
+<td width="217">
+<p>zarząd województwa</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Poniższa tabela przedstawia strukturę samorządu terytorialnego w Polsce:</span></strong></p>
+<table border="1" style="border-collapse: collapse; width: 643px; height: 180px;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #f9a825; height: 17px; width: 193.75px;"><span style="text-decoration: underline;"><strong>Jednostka samorządu</strong></span></td>
+<td style="background-color: #f9a825; height: 17px; width: 199.488px;"><span style="text-decoration: underline;"><strong>Organ stanowiący</strong></span></td>
+<td style="background-color: #f9a825; height: 17px; width: 240.562px;"><strong><span style="text-decoration: underline;">Organ wykonawczy</span></strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffff00; height: 17px; width: 193.75px;">Gmina</td>
+<td style="background-color: #ffecb3; height: 17px; width: 199.488px;">Rada gminy</td>
+<td style="background-color: #eeff41; height: 17px; width: 240.562px;">Wójt, burmistrz, prezydent miasta</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffff00; height: 17px; width: 193.75px;">Powiat ziemski</td>
+<td style="background-color: #ffecb3; height: 17px; width: 199.488px;">Rada powiatu</td>
+<td style="background-color: #eeff41; height: 17px; width: 240.562px;">Zarząd powiatu (ze starostą)</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffff00; height: 17px; width: 193.75px;">Miasto na prawach powiatu</td>
+<td style="background-color: #ffecb3; height: 17px; width: 199.488px;">Rada miasta</td>
+<td style="background-color: #eeff41; height: 17px; width: 240.562px;">Prezydent miasta</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffff00; height: 17px; width: 193.75px;">Województwo</td>
+<td style="background-color: #ffecb3; height: 17px; width: 199.488px;">Sejmik województwa</td>
+<td style="background-color: #eeff41; height: 17px; width: 240.562px;">Zarząd województwa (z marszałkiem województwa)</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Teoria trójpodziału władz</strong> stworzona przez francuskiego prawnika Monteskiusza, jest aktualna do dnia dzisiejszego, ponieważ stanowi najsprawiedliwszy model funkcjonowania państwa. Teoria trójpodziału władz jest przeciwwagą wobec tyranii i rządów absolutnych, tak mocno krytykowanych przez Monteskiusza. Według oświeceniowego myśliciela w każdym państwie powinna funkcjonować władza ustawodawcza (parlament), wykonawcza (monarcha) oraz sądownicza (sprawowana przez niezależne sądy). Monteskiuszowska koncepcja trójpodziału władz zyskała uznanie już w XVIII wieku. Została wyrażona w  <em>Deklaracji Praw Człowieka i Obywatela</em>, konstytucji Stanów Zjednoczonych, <em>Konstytucji 3 maja</em> oraz pierwszej konstytucji francuskiej. Obecnie jest to najbardziej rozpowszechniony system sprawowania władzy na świecie.</p>
+<p><span style="text-decoration: underline;"><strong>Trójpodział władzy w Polsce polega na jej podziale na:</strong></span></p>
+<ul>
+<li><strong>władzę ustawodawczą</strong> - uchwala ona prawo (<strong>Sejm</strong> oraz <strong>Senat</strong>).</li>
+<li><strong>władzę wykonawczą</strong> - wprowadza w życie uchwalone prawo, rządzi państwem (<strong>Prezydent Rzeczypospolitej Polskiej</strong>, <strong>Rada Ministrów</strong>).</li>
+<li><strong>władzę sądowniczą</strong> - sądzi za nieprzestrzeganie uchwalonego prawa (<strong>Sądy</strong> i <strong>Trybunały</strong>).</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Zasada trójpodziału władzy</span></strong> jest jedną z fundamentalnych zasad typowych dla współczesnych demokracji, którą zawarto również w <em>Konstytucji RP</em>. <strong><span style="text-decoration: underline;">Wedle tej zasady władza nie jest skupiona w jednym ośrodku, lecz jest rozdzielona pomiędzy organy władzy ustawodawczej, wykonawczej i sądowniczej</span></strong>. Zgodnie z regułą trójpodziału władzy, inny ośrodek stanowi prawo, inny odpowiada za jego wykonywanie, a jeszcze inny rozstrzyga o tym, czy prawo jest przestrzegane i czy podejmowane przez obywateli (w tym przez rządzących) działania są legalne. </p>
+<p>Zgodnie z zasadą trójpodziału władzy organami władzy ustawodawczej są w Polsce <strong><span style="text-decoration: underline;">sejm i senat (parlament)</span></strong>, władzę wykonawczą sprawują <strong><span style="text-decoration: underline;">prezydent i odpowiedzialna przed parlamentem Rada Ministrów (rząd)</span></strong>, zaś władza sądownicza należy do <strong><span style="text-decoration: underline;">niezależnych sądów i trybunałów</span></strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Rozwiązanie zadania:</strong></span>{premium<img alt="" height="251" src="./data/1186107-0.jpg" width="1230"/></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 888px; height: 136px;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #ff5722; height: 17px; width: 167.312px;"><strong><span style="text-decoration: underline;">Pojęcie</span></strong></td>
+<td style="background-color: #ff5722; height: 17px; width: 714.287px;"><strong><span style="text-decoration: underline;">Właściwe wyjaśnienie pojęcia</span></strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffccbc; height: 17px; width: 167.312px;"><strong>(A) </strong>Patriotyzm</td>
+<td style="background-color: #ffccbc; height: 17px; width: 714.287px;"><strong>(3) </strong>Oznacza miłość do ojczyzny połączoną z troską o dobro własnego narodu.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffccbc; height: 17px; width: 167.312px;"><strong>(B) </strong>Tożsamość narodowa</td>
+<td style="background-color: #ffccbc; height: 17px; width: 714.287px;"><strong>(1) </strong>Polega na tym, że przedstawiciele danej narodowości mają świadomość tego, że łączą ich z narodem konkretne więzi.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffccbc; height: 17px; width: 167.312px;"><strong>(C) </strong>Narodowość</td>
+<td style="background-color: #ffccbc; height: 17px; width: 714.287px;"><strong>(2) </strong>Jest to indywidualne poczucie przynależności do danego narodu.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>-&gt; </em></strong><span style="text-decoration: line-through;"><strong>(4) </strong>Składa się z elementów związanych z dziejami danego narodu.</span></p><br>

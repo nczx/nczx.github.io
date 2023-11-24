@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Narrator ró¿ni siê tym, i¿ w przeciwieñstwie do swych rówieœników nie postrzega siebie jako dojrza³ej jednostki. Nie potrafi zaznaczyæ w zdecydowany sposób swej to¿samoœci, cechuje go wewnêtrzne rozdarcie. Z tego te¿ powodu jego równolatkowie nie darz¹ go zaufaniem czy sympati¹, poniewa¿ ich sytuacja ¿yciowa jest bardziej ustabilizowana: zak³adaj¹ rodziny, spe³niaj¹ siê w ¿yciu zawodowym. Narrator zaœ nie umie jednoznacznie okreœliæ swego statusu, nie wie nawet do koñca, kim jest, co budzi widoczne zak³opotanie otoczenia.</p>
+<p> </p>
+<p>Ocena bohatera - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Pimko w przytoczonym fragmencie zostaje ukazany jako typowy belfer. Nie znosi jakiegokolwiek sprzeciwu - od razu zaznacza swoj¹ przewagê nad narratorem, zmusza go do zaakceptowania niechcianego towarzystwa: "[...] rzuci³em siê na moje teksty zakrywaj¹c je ca³ym cia³em, lecz on usiad³, wobec czego i ja musia³em usi¹œæ [...]". Jest autorytarny w swych dzia³aniach, przyjmuje rolê mentora, jednak nie liczy siê z odczuciami drugiej osoby, poniewa¿ bez jej zgody zamierza poprawiæ tekst. Ponadto profesor pob³a¿liwie, a nawet z pewnym lekcewa¿eniem, traktuje narratora: "Cip, cip, cip, autor!". Na jego okrzyk ("Ja! Duch! Nie autorek! Duch! Sam ¿ywy! ja! [...]") zaczyna go przepytywaæ z wiedzy szkolnej, zadaje te¿ pytanie, na które tylko on zna odpowiedŸ. Jest wiêc pe³en wy¿szoœci.</p>
+<p>Forma nauczyciela znacz¹co wp³ywa na zachowanie i samopoczucie bohatera, poniewa¿ umieszcza go w pewnych ramach, z których z nie mo¿e siê wydobyæ. Odbiera mu mo¿liwoœæ dzia³ania, sprzeciwienia siê profesorowi. Narrator czuje siê niczym ma³e oraz infantylne dziecko: "[...] noga sta³a siê nó¿k¹, rêka - r¹czk¹, osoba - osóbk¹, istota - istotk¹, dzie³o - dzie³kiem [...]". Postawa profesora przyczynia siê wiêc do tego, i¿ zapiski bohatera trac¹ sw¹ wartoœæ, s¹ pozbawione znaczenia. Pimko karmi siê niedojrza³oœci¹ swego rozmówcy i w ten sposób zwiêkszaæ sw¹ si³ê. Chocia¿ narrator próbuje zrobiæ coœ irracjonalnego (okrzyk), bardzo szybko zostaje ponownie wt³oczony w formê ucznia - za pomoc¹ serii pytañ, które sprawdzaj¹ jego wiedzê. Bohater czuje siê nieswojo w towarzystwie nauczyciela, jest zaskoczony pytaniami, oszo³omiony ca³¹ sytuacj¹: "Co siê dzieje? Bo¿e!". Ostatecznie ogarnia go czysta nienawiœæ i potrzeba odegrania siê na belfrze: "[...] trafiæ nauczyciela w sam nos papierow¹ kulk¹". Jest jednak bezradny, poniewa¿ osacza go forma ucznia, przed któr¹ nie mo¿e uciec. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Konfrontacja Józia z samym sob¹ sugeruje dojœcie do g³osu treœci nieuœwiadomionych, które narrator wypiera z pamiêci. W scenie tej niepoznane do tej pory ¿ycie psychiczne niejako manifestuje swoj¹ obecnoœæ. Dochodzi te¿ do zasadniczego starcia trzech sfer psychiki: id, ego, superego, które akcentuje rozdarcie Józia. Ta pierwsza ze sfer wi¹¿e siê z poczuciem nieokreœlonoœci g³ównego bohatera. Mimo swojego wieku nadal nie zna swej to¿samoœci, postrzega siebie niczym niedojrza³e dziecko - zasadniczo dzia³a ono w zgodzie z popêdami i impulsami, ma subiektywny sposób postrzegania rzeczywistoœci. Id wi¹¿e siê tak¿e z nieœwiadomoœci¹, która jest Ÿród³em rozterek bohatera: "Gdy¿ na jawie by³em równie nieustalony, rozdarty - jak we œnie". Ego z kolei przejawia siê w rozpoznaniu swych relacji z otoczeniem oraz jasnym okreœleniu swej sytuacji: "Przeszed³em niedawno Rubikon nieuniknionego trzydziestka, min¹³em kamieñ milowy, z metryki, z pozorów wygl¹da³em na cz³owieka dojrza³ego, a jednak nie by³em nim - bo czym¿e by³em?".</p>
+<p>Kluczowe w tej scenie staje siê jednak superego, czyli uznane wartoœci moralne i idea³y, które zostaj¹ uwewnêtrznione. Narrator odczuwa bowiem silne naciski otoczenia ¿¹daj¹cego od bohatera jasnego okreœlenia swej to¿samoœci, doroœniêcia do okreœlonych ról spo³ecznych: "[..] ju¿ od dawna usi³owa³y na mnie wp³ywaæ, abym siê ustabilizowa³ jako ktoœ, a wiêc adwokat albo jako biuralista [...]". Jego niechêæ budzi œwiadomoœæ tego, i¿ cz³owiek ca³y czas jest postrzegany przez pryzmat drugiej jednostki, nigdy nie jest samoistny i wolny. Œwiat ogranicza go, zmusza do zachowywania siê zgodnie z pewnymi schematami czy konwencjami. Z tego te¿ powodu konfrontacja ze sob¹ silnie oddzia³uje na Józia, poniewa¿ to, co pozostawa³o w sferze nieœwiadomoœci zostaje ujawnione. Narrator musi siê zmierzyæ ze sob¹ - jako istot¹ zawieszon¹ miêdzy swoimi d¹¿eniami a wp³ywem otoczenia: "Nie, to wcale nie ja! To coœ przypadkowe, coœ obcego, narzuconego, jakiœ kompromis miêdzy œwiatem zewnêtrznym a wewnêtrznym, to wcale nie moje cia³o". Sytuacja ta wywo³uje wstrz¹s, ale prowadzi tak¿e Józia do swoistego oczyszczenia, buntu, poniewa¿ pragnie on samodzielnie okreœliæ swój kszta³t. Analiza siebie tym samym umo¿liwia bohaterowi zdiagnozowanie swych odczuæ oraz przyjêcie zdecydowanej postawy, samookreœlenia siê: "Niech kszta³t mój rodzi siê ze mnie, niech nie bêdzie zrobiony mi!". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Na rysunku ze s. 104 podręcznika została ukazana sytuacja, w której doszło do złamania przepisów z artykułów Konstytucji RP o numerach: </strong></span></p>
+<p>B. 2 i 7.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #990099;"><strong>Zdanie</strong></td>
+<td style="background-color: #990099;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #9966cc;">Na rysunku ze s. 104 podręcznika została ukazana sytuacja, w której doszło do złamania przepisów z artykułów <em>Konstytucji RP</em> o numerach:</td>
+<td style="background-color: #9966cc;">...2 i 7. <strong>[B]</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td colspan="2" style="width: 50%; height: 17px; background-color: #cc99cc;">
+<p>Artykuł 2 <em>Konstytucji RP</em>: 'Rzeczpospolita Polska jest demokratycznym państwem prawnym, urzeczywistniającym zasady sprawiedliwości społecznej'.</p>
+<p>Artykuł 7 <em>Konstytucji RP</em>: 'Organy władzy publicznej działają na podstawie i w granicach prawa'.</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Między populizmem a demagogią istnieje następująca różnica:</strong> </p>
+<ul>
+<li>demagodzy składają swoim wyborcom nierealne obietnice w celu uzyskania władzy, zaś populiści sprzeciwiają się wartościom istniejącym w ramach danych struktur społecznych, bowiem chcą oni doprowadzić do zlikwidowania danego ustroju politycznego. </li>
+</ul>
+<p> </p>
+<p><strong>Populizm oraz demagogia</strong> mają niebezpieczny wpływ na funkcjonowanie państwa, ponieważ populizm przyjmuje on za podstawę swego rodzaju "monopol na prawdę", który jest w posiadaniu ludu. Dlatego też partie populistyczne nawet, jeśli uczestniczą w walce wyborczej w zakresie uzyskania władzy, to nie traktują tego procederu jako elementu demokratycznego państwa prawa, lecz jako element dojścia do władzy. Partie populistyczne cechują się przekonaniem o swojej nieumyślności, co więcej mogą one uważać, że skoro sprawują one władzę na gruncie woli ludu, to niepotrzebne jest funkcjonowanie innych partii (grozi to zniszczeniem pluralizmu władzy). Z kolei demagogia może doprowadzić do dojścia do władzy ludzi niekompetentnych, nieposiadających odpowiedniej wiedzy, lecz umiejących ładnie i dyplomatycznie prowadzić dyskusję oraz przekonywać ludzi do swoich racji. Populiści podważają podstawowe wartości demokracji, czyli wolność, równość, pluralizm oraz tolerancję, a na ich miejsce stosuje wartości konfliktogenne (np. ksenofobię). </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Demagogia</span></strong> i <strong><span style="text-decoration: underline;">populizm</span></strong> to dwa zjawiska polityczne, które często się łączą, a nazwy te czasem są stosowane zamiennie, ale mają swoje odrębne znaczenia.</p>
+<p><strong><span style="text-decoration: underline;">Demagogia</span></strong> to sposób prowadzenia debaty publicznej, w którym retoryka i argumentacja polityczna są skierowane do emocji i zdają się przekonywać bardziej niż fakty i rozsądek. Demagogowie często wykorzystują prostolinijne, czarno-białe myślenie, obietnice nierealistyczne lub niemożliwe do spełnienia, a także wykorzystują techniki retoryczne, takie jak argumentację <em>ad hominem</em>, czyli atakowanie przeciwników, zamiast krytykowania ich argumentów.</p>
+<p>Z drugiej strony, <strong><span style="text-decoration: underline;">populizm</span></strong> to polityczna strategia, która polega na wykorzystaniu społecznego niezadowolenia w celu zdobycia poparcia i władzy. Populiści skupiają się na problemach i emocjach społecznych, takich jak ubóstwo, nierówność, migracje, bezrobocie i korupcja, a także obiecują proste rozwiązania, które są rzeczywiście niewykonalne lub niebezpieczne dla demokracji. Populiści często kreują wrogów i wykorzystują kulturowe lub etniczne różnice w celu pogłębiania podziału społeczeństwa i zjednoczenia swoich zwolenników.</p>
+<p>Zjawiska te są groźne dla demokracji, ponieważ obie strategie wykorzystują emocje, nieuporządkowane myślenie i lęk przed niepewną przyszłością, co może prowadzić do podziałów społecznych, wzrostu nienawiści i dezinformacji, a także do osłabienia instytucji demokratycznych. Demagogia i populizm często prowadzą do ograniczenia wolności słowa, wolności prasy i innych podstawowych praw obywatelskich, co jest niezbędne dla funkcjonowania demokracji.</p>
+<p>W związku z tym, w demokracji ważne jest, aby wybierać przywódców, którzy kierują się faktami, rozsądkiem i są zdolni do komunikacji z różnymi grupami społecznymi, a także by wspierać instytucje i wartości demokratyczne, takie jak wolność słowa, równość, tolerancja i rządy prawa.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Nepotyzm</strong> - obsadzanie wyższych stanowisk swoimi krewnymi oraz bliskimi znajomymi.</p>
+<p><strong>Klientelizm</strong> - zjawisko popierania przez osoby zamożne osób, które świadczą dla nich usługi. </p>
+<p>Nepotyzm i klientelizm uznawane są za zjawiska patologiczne, ponieważ przyczyniają się do obniżenia kultury politycznej danego kraju, obniżają możliwości dojścia do władzy lub zatrudnienia na wysokich stanowiskach osób dobrze wykształconych na rzecz znajomych i rodziny. Zjawiska te mogą stanowić przyczynę degradacji życia społecznego i politycznego w danym państwie. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Nepotyzm</span></strong> i <strong><span style="text-decoration: underline;">klientelizm</span></strong> to zjawiska związane z przyznawaniem stanowisk, kontraktów lub innych korzyści na podstawie osobistych relacji, a nie na podstawie kompetencji, umiejętności czy zasług.</p>
+<p><strong><span style="text-decoration: underline;">Nepotyzm</span></strong> odnosi się do preferowania krewnych lub bliskich znajomych w procesie rekrutacji lub awansu w pracy. Z kolei <strong><span style="text-decoration: underline;">klientelizm</span></strong> dotyczy preferowania ludzi z własnego kręgu lub grupy, z którymi łączy nas jakaś wspólna więź (na przykład etniczna, polityczna czy religijna).</p>
+<p><strong><span style="text-decoration: underline;">Oba te zjawiska uznaje się za patologiczne, ponieważ powodują nierówności społeczne, ograniczają mobilność społeczną, prowadzą do powstawania elit odizolowanych od reszty społeczeństwa i wpływają na spadek jakości usług i decyzji</span></strong>. Wprowadzają one także nieuczciwą konkurencję i mogą wpłynąć negatywnie na rozwój społeczny i gospodarczy.</p>
+<p><strong><span style="text-decoration: underline;">W systemach, gdzie dominują nepotyzm i klientelizm, ludzie często nie mają szans na sukces bez korzystania z protekcji i poparcia silnych ludzi lub grup</span></strong>. Ci, którzy nie mają takich powiązań, są pomijani i nie mają możliwości zdobycia doświadczenia i awansu, nawet jeśli są bardziej zdolni i wykwalifikowani. Dlatego uznaje się te zjawiska za patologiczne, ponieważ <strong><span style="text-decoration: underline;">hamują one rozwój społeczeństwa i wprowadzają niesprawiedliwość w jego strukturach</span></strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Poniższe informacje możesz wykorzystać do przygotowania prezentacji na temat korupcji</strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Korupcja</strong></span> jest zjawiskiem polegającym na wykorzystywaniu władzy lub sprawowanej funkcji do czerpania korzyści materialnych lub osobistych. Korupcję należy rozpatrywać w dwóch płaszczyznach, czyli w ujęciu osoby przyjmującej korzyść materialną lub osobistą (<strong>tzw. korupcja bierna</strong>) albo w kontekście osoby udzielającej tego rodzaju korzyści innemu podmiotowi (<strong>tzw. korupcja czynna</strong>). Ze względu na formę wyróżniamy: korupcję majątkową (uzyskanie przez daną osobę prezentów, pieniędzy lub podpisanie przez nią umowy, która gwarantuje jej uzyskiwane w przyszłości określonych zysków) i korupcję osobistą (uzyskanie niematerialnych korzyści przez osobę biorącą "łapówkę"). </p>
+<p><span style="text-decoration: underline;"><strong>Korupcja powoduje następujące skutki dla państwa oraz obywateli:</strong></span></p>
+<ul>
+<li>podważa zaufanie obywateli do państwa i do demokracji, </li>
+<li>nieumiejętność zlikwidowania korupcji przez państwo może spowodować, że do władzy dojdą populiści, którzy będą rządzić przy nieposzanowaniu zasad funkcjonowania państwa prawa, </li>
+<li>skorumpowani urzędnicy mogą wydawać decyzje szkodzące dobru wspólnemu i narażające Skarb Państwa na stratę, </li>
+<li>korupcja grozi monopolizacji sfery gospodarczej danego państwa, </li>
+<li>korupcja może doprowadzić do upadku mechanizmów wolnej konkurencji. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; <span style="text-decoration: underline;">PRZYKŁADOWE WSKAZÓWKI DO SAMODZIELNEGO OPRACOWANIA TEMATU DLA TZW. AFERY RYWINA</span></strong></em></p>
+<p><strong>a)</strong></p>
+<p>Korupcja to nadużywanie władzy lub zaufania w celu uzyskania nieuczciwej korzyści, najczęściej finansowej. Może to obejmować przyjmowanie łapówek, przekupywanie, nepotyzm, wyłudzanie pieniędzy lub innych form korzyści, które nie są zgodne z prawem lub etyką.</p>
+<p>Korupcja jest powszechnie uznawana za poważny problem w wielu krajach na całym świecie. Może prowadzić do zniekształcenia gospodarki, nierówności społecznych, a także do pogorszenia jakości życia obywateli. Walka z korupcją jest ważnym celem wielu rządów i organizacji społecznych.</p>
+<p>Znanym przykładem dokonania próby korupcji w Polsce jest tzw. afera Rywina, która dotyczyła wydarzeń z 2002 roku, a w 2003 roku na szerszą skalę zaczęły nią interesować się media, choć już we wrześniu 2002 roku dziennikarze Robert Mazurek i Igor Zalewski przekazali na jej temat pierwsze informacje na łamach tygodnika 'Wprost' (jednak publikacja przeszła wówczas bez echa). Opinia publiczna żyła aferą Rywina głównie w latach 2003-2004, kiedy pracowała poświęcona jej zbadaniu sejmowa komisja śledcza.</p>
+<p>Tłem afery były rządowe prace z początku 2002 roku nad nowym kształtem ustawy o radiofonii i telewizji, w której miał znaleźć się zapis o tym, że firma posiadająca ogólnopolski dziennik nie może jednocześnie być właścicielem stacji telewizyjnej. Przepis ten okazywał się niekorzystny dla spółki Agora, która była właścicielem 'Gazety Wyborczej' - jednego z największych ogólnopolskich dzienników - a zarazem planowała nabycie udziałów w telewizji Polsat. Z tego względu zarząd Agory starał się o usunięcie z projektu ustawy niekorzystnego dla siebie zapisu.</p>
+<p>Do propozycji korupcyjnej doszło, kiedy w lipcu 2002 roku Lew Rywin spotkał się z pełniącą funkcję prezesa Agory Wandą Rapaczyńską, a następnie z redaktorem naczelnym 'Gazety Wyborczej' - Adamem Michnikiem. Wspomniany Rywin w zamian za wprowadzenie oczekiwanych przez Agorę zmian w ustawie oczekiwał 17,5 miliona dolarów dla osób, które reprezentował, a dla siebie stanowiska prezesa Polsatu<sup class="reference"></sup>. Rywin obiecywał, że wesprze Agorę w zabieganiu o usunięcie z ustawy niekorzystnego dla niej zapisu. Michnik rozmowę z Rywinem nagrał, po czym udał się do kancelarii premiera, gdzie doszło do spotkania między nim, ówczesnym premierem Leszkiem Millerem i Rywinem. Początkowo ani Michnik, ani Miller nie ujawnili złożenia propozycji korupcyjnej przez Rywina. Dopiero na przełomie 2002 i 2003 roku sprawa nabrała rozgłosu, gdy na łamach 'Gazety Wyborczej' problem opisał Paweł Smoleński, a także gdy upubliczniono zapis rozmowy Michnika z Rywinem.</p>
+<p><strong>b)</strong></p>
+<p>Afera Rywina nie została do końca wyjaśniona, ale jako że miała miejsce na styku światów biznesu, mediów i polityki, to odbiła się szerokim echem w opinii publicznej, a także doprowadziła do przetasowań na polskiej scenie politycznej. Wskutek afery poważnie spadła popularność Sojuszu Lewicy Demokratycznej i Unii Pracy, czyli partii politycznych, które były wówczas u władzy. W szczególności spadło zaufanie do premiera Leszka Millera, którego wiązano z przebiegiem afery. Spadła również popularność w zasadzie wszystkich osób publicznych, które były w jakikolwiek sposób uwikłane w aferę, w tym nawet ówczesnego prezydenta Polski - Aleksandra Kwaśniewskiego. Wśród społeczeństwa utrwalił się zaś obraz Polski jako kraju skorumpowanego. Afera Rywina mogła więc zniechęcać ludzi do poważniejszego zainteresowania sprawami publicznymi.</p>
+<p><strong>c)</strong></p>
+<p>Korupcja to zjawisko, w którym osoby zajmujące stanowiska publiczne lub osoby działające w sektorze prywatnym używają swojej władzy lub wpływów w celu uzyskania korzyści osobistych. Negatywny wpływ korupcji na życie publiczne jest znaczący i dotyka zarówno społeczeństwo, jak i instytucje rządowe.</p>
+<p>Oto kilka sposobów, w jakie korupcja wpływa na życie publiczne:</p>
+<ol>
+<li>
+<p>Złamanie zasad demokracji - korupcja może skutecznie podkopać zasady demokracji poprzez manipulowanie wynikami wyborów, co prowadzi do niesprawiedliwych rządów.</p>
+</li>
+<li>
+<p>Brak równości szans - korupcja faworyzuje tylko nieliczną grupę ludzi, którzy mają pieniądze i wpływy, a reszta społeczeństwa pozostaje na marginesie. W ten sposób ogranicza się równość szans i przyczynia się do powstawania nierówności społecznych.</p>
+</li>
+<li>
+<p>Brak sprawiedliwości - korupcja może skutecznie utrudnić działania wymiaru sprawiedliwości, ponieważ osoby korumpujące mogą łatwo unikać odpowiedzialności za swoje czyny, a osoby bez pieniędzy lub wpływów nie są w stanie znaleźć odpowiedniego wsparcia w systemie sądowniczym.</p>
+</li>
+<li>
+<p>Niski poziom zaufania społecznego - korupcja prowadzi do zmniejszenia zaufania do instytucji rządowych i do innych ludzi. Ludzie zaczynają tracić wiarę w instytucje publiczne i w procesy demokratyczne, co prowadzi do podziałów społecznych i braku zaangażowania obywateli w życie publiczne.</p>
+</li>
+<li>
+<p>Problemy gospodarcze - korupcja prowadzi do powstawania niesprawiedliwie funkcjonujących rynków, które nie są skuteczne w przyciąganiu inwestycji, a to z kolei prowadzi do powstania problemów gospodarczych, takich jak ubóstwo i brak zatrudnienia.</p>
+</li>
+<li>
+<p>Utrudnienie rozwoju społecznego - korupcja hamuje rozwój społeczny, ponieważ władze publiczne nie są w stanie realizować swoich celów, a środki finansowe przeznaczone na rozwój są wykorzystywane w nieuczciwy sposób.</p>
+</li>
+</ol>
+<p>Wszystkie te negatywne skutki korupcji mogą wpłynąć na życie publiczne w bardzo poważny sposób i prowadzić do kryzysów politycznych i społecznych. Dlatego walka z korupcją jest tak ważna dla zapewnienia uczciwych i sprawiedliwych rządów, a także dla zapewnienia równości i wolności obywatelom.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Coraz mniej ludzi uczestniczy w życiu publicznym, ponieważ tracą oni zaufanie do polityków. Niemalże codziennie media przekazują nam informacje na temat różnego rodzaju zachowań w świecie polityki, które uchodzą za amoralne, np. korupcja, kłamstwa, prowadzenie gierek politycznych. Tym samym kształtowany jest negatywny obraz polityki, niezachęcający do uczestnictwa w nim.  </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Stąd proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Być może faktycznie coraz mniej obywateli uczestniczy w życiu publicznym, ale nie jest też tak, jakoby zainteresowanie sprawami publicznymi malało drastycznie i spadało do zera. Wielu ludzi przejmuje się tym, co dzieje się w polityce, czy to lokalnej, czy krajowej, czy zagranicznej. Świadczy o tym chociażby to, jak wiele osób wypowiada się na tematy polityczne, społeczne, gospodarcze czy kulturalne w mediach społecznościowych, na blogach lub w komentarzach do artykułów opisujących bieżące wydarzenia. Część osób może tracić jednak zainteresowanie sprawami publicznymi, ponieważ odnoszą wrażenie, że niewiele mogą zrobić, a ich opinie czy nawet głosy w wyborach niewiele znaczą. Do zainteresowania sprawami publicznymi mogą zniechęcać chociażby takie negatywne zjawiska, jak korupcja, nepotyzm, klientelizm, kłamliwość polityków, brak wywiązywania się z przedwyborczych obietnic czy przestępstwa z udziałem przedstawicieli zawodów zaufania społecznego.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Negatywne zjawisko opisane w tekście to:</strong></span> </p>
+<p>B. korupcja.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #ffcc00; width: 50.4332%;"><strong>Zdanie</strong></td>
+<td style="background-color: #ffcc00; width: 49.4801%;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffcc66; width: 50.4332%;">Negatywne zjawisko opisane w tekście to...</td>
+<td style="background-color: #ffcc66; width: 49.4801%;">...korupcja <strong>[B]</strong></td>
+</tr>
+</tbody>
+</table><br>

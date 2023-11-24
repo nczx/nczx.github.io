@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Osoba mówi¹ca w tekœcie to wra¿liwy obserwator górskiej rzeczywistoœci: "S³yszê: / Kamienuje tê przestrzeñ niewybuch³y huk ska³". Podmiot liryczny opowiada nie tylko o groŸnej naturze - zapowiedzi tragedii - lecz tak¿e niejako uto¿samia siê z bohaterk¹. W ten sposób odtwarza ostatnie momenty jej ¿ycia. Ze wzglêdu na emocjonalny stosunek wzglêdem zmar³ej osobê mówi¹c¹ mo¿na równie¿ powi¹zaæ z samym poet¹. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podmiot liryczny relacjonuje okolicznoœci œmierci taterniczki. Opisuje bowiem chwilê, w której czekan odpada od zag³êbienia w skale, a dziewczyna spada. Potwierdza to nastêpuj¹cy fragment, który oddaje prze¿ycia bohaterki i œwiadomoœæ nadchodz¹cej tragedii:</p>
+<p><em>To zgrzyt</em></p>
+<p><em>czekana</em></p>
+<p><em>okrzesany z echa,</em></p>
+<p><em>to tylko ca³y twój œwiat</em></p>
+<p><em>skurczony w mojej garœci na obrywie g³azu;</em></p>
+<p><em>to - gwa³townym uderzeniem serca powalony szczyt.</em></p>
+<p><em>Na rozpacz - jak¿e go ma³o!</em></p>
+<p><em>A groza - wygórowana!</em></p>
+<p> </p>
+<p><em>Jak lekko</em></p>
+<p><em>turniê zawis³¹ na rêkach</em></p>
+<p><em>utrzymaæ i nie paœæ,</em></p>
+<p><em>gdy</em></p>
+<p><em>w oczach przewraca siê obna¿ona ziemia</em></p>
+<p><em>do góry dnem krajobrazu</em></p>
+<p><em>niebo str¹caj¹c w przepaœæ!</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zastosowane oksymorony ³¹cz¹ w sobie odmienne doznania. S³owa "Niewybuch³y huk ska³" wprowadza napiêcie i niespokojne oczekiwanie na katastrofê. Zaznacza bowiem potencjaln¹ energiê, która tylko czeka na uwolnienie, a jednoczeœnie mo¿e staæ siê Ÿród³em zag³ady i zniszczenia. Podobnie "gromobicie ciszy" sugeruje z³owrog¹ atmosferê, ale tak¿e sprzeczny charakter górskiej natury. Jej pozorna harmonia ³atwo zamienia siê w œmiertelne niebezpieczeñstwo. Oksymorony te podwa¿aj¹ wiêc sielankowy wizerunek gór jako miejsca piêknego i przyjaznego, stanowi¹ zapowiedŸ nieuchronnej tragedii i buduj¹ niejednoznaczny obraz przestrzeni. Wra¿enia te potêguje metafora "wrzask wody obdzieranej siklaw¹ z ³o¿yska". Woda, przedstawiona niczym cz³owiek, jest poddana wielkiemu cierpieniu, przemoc¹ zostaje wyrwana ze swego naturalnego otoczenia. Fragment ten akcentuje surow¹ wizjê rzeczywistoœci oraz zwi¹zan¹ z tym mêkê. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W utworze przedstawiony zostaje punkt widzenia taterniczki w ostatnich chwilach jej ¿ycia. Samotny zgrzyt czekana staje siê zapowiedzi¹ nadci¹gaj¹cej tragedii. W tym momencie rzeczywistoœæ znana kobiecie ulega drastycznemu zawê¿eniu, poniewa¿ rozpoczyna siê walka o przetrwanie: "to tylko ca³y twój œwiat / skurczony w mojej garœci na obrywie g³azu". Naturalny porz¹dek ulega zaburzeniu, poniewa¿ to taterniczka zdaje siê podtrzymywaæ turniê - zmienia siê tym samym perspektywa postrzegania dramatycznej sytuacji, fragment ten akcentuje te¿ wysi³ek bohaterki. Kulminacj¹ staj¹ siê s³owa: "gdy / w oczach przewraca siê obna¿ona ziemia / do góry dnem krajobrazu, / niebo str¹caj¹c w przepaœæ!". Oddaj¹ one wra¿enia spadaj¹cej oraz odwrócenie perspektywy: kobieta spada g³ow¹ w stronê ziemi, przez co niebo zdaje siê znikaæ w przepaœci. Sugeruj¹ równie¿ zachwianie naturalnego porz¹dku œwiata, co wi¹¿e siê z tragiczn¹ œmierci¹ bohaterki. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="border-collapse:collapse;width:703px;height:490px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:230.988px;height:17px;"><strong>Œrodek</strong></td>
+<td style="background-color:#aed581;text-align:center;width:230.988px;height:17px;"><strong>Przyk³ad </strong></td>
+<td style="background-color:#aed581;text-align:center;width:231.025px;height:17px;"><strong>Omówienie </strong></td>
+</tr>
+<tr style="height:105px;">
+<td style="width:230.988px;text-align:center;height:105px;">epitety</td>
+<td style="width:230.988px;text-align:center;height:105px;"><em>przestraszonym spojrzeniem </em></td>
+<td style="width:231.025px;text-align:center;height:105px;">Wskazany epitet odzwierciedla strach oraz obawy podmiotu lirycznego. Rzeczywistoœæ jawi siê w ten sposób jako niebezpieczna oraz nieprzyjazna.</td>
+</tr>
+<tr style="height:140px;">
+<td style="width:230.988px;text-align:center;height:140px;">personifikacje</td>
+<td style="width:230.988px;text-align:center;height:140px;"><em>To - wrzask wody obdzieranej siklaw¹ z ³o¿yska</em></td>
+<td style="width:231.025px;text-align:center;height:140px;">Przytoczona personifikacja oddaje cierpienie oraz rozpacz. Woda zostaje bowiem ukazana jako cz³owiek pogr¹¿ony w bólu, który dodatkowo jest wyrywany ze swego naturalnego œrodowiska. Wp³ywa to na tragizm jej sytuacji.</td>
+</tr>
+<tr style="height:70px;">
+<td style="width:230.988px;text-align:center;height:70px;">oksymorony</td>
+<td style="width:230.988px;text-align:center;height:70px;"><em>gromobicie ciszy</em></td>
+<td style="width:231.025px;text-align:center;height:70px;">Oksymoron sugeruje poczucie grozy oraz niepokoju. Cisza ta zdaje siê znacz¹ca, stanowi zapowiedŸ tragicznych zdarzeñ. </td>
+</tr>
+<tr style="height:140px;">
+<td style="width:230.988px;text-align:center;height:140px;">wykrzyknienia</td>
+<td style="width:230.988px;text-align:center;height:140px;"><em>Na rozpacz - jak¿e go ma³o! </em></td>
+<td style="width:231.025px;text-align:center;height:140px;">Wykrzyknienie oddaje silne emocje osoby mówi¹cej, jej stosunek do ukazanej sytuacji. Œwiadczy ponadto o niedowierzaniu i bezsilnoœci podmiotu lirycznego, który nie mo¿e zaakceptowaæ tragicznej œmierci kobiety.  </td>
+</tr>
+<tr style="height:123px;">
+<td style="width:230.988px;text-align:center;height:123px;">metafory</td>
+<td style="width:230.988px;text-align:center;height:123px;"><em>Nie pomieszczê twojej œmierci w granitowej trumnie Tatr. </em></td>
+<td style="width:231.025px;text-align:center;height:123px;">Zastosowana metafora zaznacza rezygnacjê oraz smutek podmiotu. Œmieræ taterniczki jest dla niego trudna do zaakceptowania, staje siê Ÿród³em niewyobra¿alnego i sta³ego cierpienia. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:230.988px;text-align:center;height:17px;">elipsa</td>
+<td style="width:230.988px;text-align:center;height:17px;"><em>A groza - wygórowana!</em></td>
+<td style="width:231.025px;text-align:center;height:17px;">Elipsa prowadzi do kondensacji treœci. Zdaje siê zawieraæ w sobie ogrom bólu oraz innych prze¿yæ osoby mówi¹cej, która wrêcz ca³y czas prze¿ywa tragediê. </td>
+</tr>
+</tbody>
+</table>
+<p>Stwierdzenie, ¿e w wierszu Przyboœ pos³u¿y³ siê ekwiwalentyzowaniem uczuæ, mo¿na uznaæ za trafne. Podmiot liryczny w utworze nie wyra¿a bowiem wprost swoich uczuæ czy prze¿yæ. Zamiast tego wykorzystane zostaj¹ elementy pejza¿u górskiego, które wyraziœcie sugeruj¹ okreœlone stany emocjonalne i psychiczne. Tym samym doznania osoby mówi¹cej s¹ ukazane w poœredni sposób. Subiektywna metoda przedstawienia rzeczywistoœci œwiadczy o odczuwalnej grozie, niepokoju i smutku. Doznania te potêguje nieprzyjazna natura, która odzwierciedla cierpienie istoty ludzkiej. Bogactwo metafor, epitetów, personifikacji staje siê w ten sposób odpowiednikiem konkretnych uczuæ doœwiadczanych przez osobê mówi¹c¹, a tak¿e swoist¹ zagadk¹ dla odbiorcy, któr¹ musi samodzielnie rozwik³aæ. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Sposób ukazania natury w wierszu Przybosia w niczym nie przypomina jej pozytywnego wizerunku, jaki utrwali³ siê w wierszach polskich poetów. Góry bowiem przestaj¹ byæ przyjazn¹ dla cz³owieka przestrzeni¹, która zapewnia ukojenie, zachwyt, mo¿liwoœæ lepszego poznanie siebie. Zamiast tego przyroda zostaje przedstawiona jako niebezpieczny oraz bezlitosny ¿ywio³. Wywo³uje napiêcie oraz poczucie wyobcowania, co wi¹¿e siê z jej swym surowym charakterem: "To - wrzask wody obdzieranej siklaw¹ z ³o¿yska / i / gromobicie ciszy". Zestawienie natury i istoty ludzkiej podkreœla kruchoœæ cz³owieka, poniewa¿ nie ma on szans w starciu z górami: jego egzystencja jest znikoma wobec si³y przyrody. Ta relacja jest wiêc pozbawiona harmonii i poczucia bezpieczeñstwa, stanowi raczej nierówne starcie si³, które koñczy siê klêsk¹ cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br>

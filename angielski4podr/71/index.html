@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. figured out (rozgryzłeś/aś)</p>
+<p>(Czy odkryłeś/aś jak używa się przybliżenia w twoim aparacie?) </p>
+<p>2. get (the message) across (sprawiają, że wiadomość jest zrozumiała)</p>
+<p>(W reklamie często przekazują wiadomość za pomocą humoru.)</p>
+<p>3. interpret (interpretować)</p>
+<p>(Uczyliśmy się, jak rozpracować znaczenie współczesnej sztuki.)</p>
+<p>4. captures (oddaje)</p>
+<p>(Jego najnowszy autoportret jest niesamowity - naprawdę dobrze wyraża jego uczucia w stosunku do pracy.)</p>
+<p>5.  illustrate (zilustrować)</p>
+<p>(Narysuj diagram, żeby wyjaśnić, co masz na myśli!)</p>
+<p>6. rejected (odrzucona)</p>
+<p>(Teoria historyka sztuki na temat pochodzenia tego dzieła nie została zaakceptowana przez innych ekspertów.)</p>
+<p>7. highlight (podkreślić)</p>
+<p>(Wybrałem/am ten obraz, żeby podkreślić wagę dobrej komunikacji.)</p>
+<p>8. criticise (krytykować)</p>
+<p>(Myślisz, że ludzie powinni mówić negatywne rzeczy o pracy artystów w Internecie?)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. illustrate</p>
+<p>(Prezentacja Molly była bardzo dobra. Użyła infografik, żeby <strong>zilustrować</strong> rezultaty jej badań.) </p>
+<p>2. gets, across</p>
+<p>(To bardzo mocny obraz. Z pewnością <strong>sprawia, że wiadomość jest zrozumiała</strong>.)</p>
+<p>3. figured out</p>
+<p>(Czy ktoś <strong>rozpracował</strong> znaczenie jego posta zanim je wyjaśnił?)</p>
+<p>4. criticise</p>
+<p>(Nie <strong>krytykuj</strong> mnie, kiedy zachowujesz się w dokładnie taki sam sposób!)</p>
+<p>5. interpreting</p>
+<p>(<strong>Interpretują</strong> to prawo w sposób, w jaki nigdy nie robiono tego wcześniej.)</p>
+<p>6. captured</p>
+<p>(Wypadek został <strong>uchwycony</strong> w filmie obiecującego/obiecującej fotografa/fotografki z Leeds.)</p>
+<p>7. rejected</p>
+<p>(Eksperci zawsze <strong>odrzucali</strong> te teorie, ponieważ nie ma dowodów, żeby je potwierdzić.)</p>
+<p>8. appeal to</p>
+<p>(Nie sądzę, żeby ten nowoczesny styl <strong>spodobał się</strong> widzom, którzy cenią sztukę klasyczną.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Sam was the only friend who <strong>stuck up for</strong> me during the argument.</p>
+<p>(Sam  był jedynym przyjacielem, który <strong>stanął w mojej obronie</strong> w trakcie kłótni.) </p>
+<p>2. OK, I think we need to<strong> move on</strong> now.</p>
+<p>(Dobrze, myślę, że musimy teraz <strong>przejść dalej</strong>.)</p>
+<p>3. We agreed not to tell Danny, as he wouldn't <strong>keep it to himself</strong>. </p>
+<p>(Zgodziliśmy się nie mówić Danny'emu, bo nie <strong>zachowałby tego dla siebie</strong>.)</p>
+<p>4. Have you ever <strong>owned up</strong> when you told a lie?</p>
+<p>(<strong>Przyznałeś/aś się</strong> kiedykolwiek, kiedy skłamałeś/aś?)</p>
+<p>5. When I'm chatting with my friends, my boyfriend has a bad habit of <strong>butting in</strong>.</p>
+<p>(Kiedy rozmawiam z przyjaciółmi, mój chłopak ma zły nawyk <strong>wtrącania się</strong>.)</p>
+<p>6. If you could <strong>open up</strong> more, it would make you feel much better.</p>
+<p>(Jeśli mógłbyś/mogłabyś bardziej <strong>się otworzyć</strong>, pozwoliłoby ci to czuć się zdecydowanie lepiej.)</p>
+<p>7. If you have a moment, I'd like to <strong>bounce</strong> some alternatives <strong>off</strong> you. </p>
+<p>(Jak będziesz miał/a chwilę, Chciałbym/chciałabym <strong>przedyskutować z</strong> tobą pewne alternatywy.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. figure out </p>
+<p>2. interpret</p>
+<p>3. reject</p>
+<p>4. highlight</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

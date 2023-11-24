@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Szczególna rola rodziny w życiu człowieka polega na tym, że stanowi ona <strong>podstawową komórkę społeczną</strong>, w której młody człowiek przechodzi <strong>pierwszy proces socjalizacji</strong>. Rodzina stanowi <strong>fundament wychowania człowieka</strong>, daje mu <strong>podwaliny kodeksu wartości oraz etycznego postępowania</strong>. Rodzina to również wspólnota, w której każdy z jej członków może znaleźć pomoc i bezinteresowne wsparcie. Proces socjalizacji zachodzi przez całe życie, ponieważ od  urodzenia dziecko podlega socjalizacji tzw. pierwotnej. Podczas tego rodzaju socjalizacji dzieci przyswajają różne wzorce zachowań poprzez obserwację otoczenia i jego naśladowanie.<strong> Co więcej obserwowane przez dzieci zachowania, w pewnym momencie stają się dla nich normami. </strong>Szczególną rolę w tym zakresie odgrywa rodzina oraz zespół bodźców, które wpływają na młodego człowieka. To właśnie podstawowe środowisko rodzinne ma szczególny wpływ na <strong>proces socjalizacji pierwotnej</strong>. To właśnie rodzina stanowi <strong>fundament wychowania człowieka</strong>, daje mu <strong>podwaliny kodeksu wartości oraz etycznego postępowania</strong>. Niemniej z tekstu wynika, że równie silny wpływ na dzieci w procesie socjalizacji pierwotnej mają mass media, które prezentują różnego rodzaju obrazy. To właśnie owe obrazy kształtują u dzieci obraz, na którym mogą się one wzorować w zakresie funkcjonowania w danym środowisku.</p>
+<p>Wraz z rozwojem dziecka, napotyka ono na swojej drodze różne osoby, czyli członków społeczeństwa, którzy oddziałują na jego zachowanie, a tym samym przechodzi ono <strong>proces wtórnej socjalizacji</strong>. Trwanie tego procesu obejmuje wchodzenie danej jednostki do nowych grup społecznych i trwa ona do końca życia danej osoby. To właśnie w stosunku do poszczególnych grup społecznych, jednostki oceniają swoją pozycję w społeczeństwie. To właśnie od tych grup, ludzie czerpią postawy, normy oraz wartości, które to są akceptowalne przez nich samych. Tego rodzaju grupy odniesienia działają na podstawie relacji konformistycznych oraz chęci wyróżnienia się poszczególnych jednostek z danej grupy. Jednostki należące do danej grupy odniesienia działają na zasadzie podporządkowania się przyjętym w ich ramach normom, np. osoba będąca członkiem Kościoła Katolickiego powinna działań według jego zasad, czyli przestrzegać Dekalogu i podążać za nauczaniem duchownych. <strong>Grupy odniesienia</strong>, do których jednostka nie należy również w pewien sposób oddziałują na nią, ponieważ dana osoba poprzez niechętną postawę wobec działania danej grupy jednostki również w określony sposób identyfikuje się ze społeczeństwem. Uznawanie pewnych grup za negatywne grupy odniesienia stanowi jednocześnie odrzucenie określonych postaw. Niewątpliwie większe znaczenie w procesie socjalizacji mają grupy odniesienia pozytywnego, które bezpośrednio, jak i pośrednio wpływają na zachowania należących do nich członków. Zarówno grupy pozytywnego, jak i negatywnego oddziaływania mają swój wpływ na socjalizację jednostki, bowiem skłaniają one ją do przyjmowania określonych postaw, wartości, celów czy form działania.</p>
+<p><strong>Dlatego też  człowiek od dnia narodzin aż do dnia śmierci podlega wpływom innych jednostek, a tym samym cały czas przechodzi od proces socjalizacji, który związany jest z wzrastaniem jednostki do życia na łonie społeczeństwa. </strong></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej oceny. Stąd proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p><strong><span style="text-decoration: underline;">Socjalizacja</span></strong> to proces przekazywania norm, wartości i zachowań społecznych przez rodzinę, szkołę i inne instytucje społeczne, dzięki któremu jednostka przystosowuje się do życia w danej społeczności. Wszystkie wskazane grupy i instytucje, tj. rodzina, szkoła, rówieśnicy, mass media, sąsiedzi czy wspólnoty religijne oddziałują na uspołecznienie młodego człowieka, w tym na przykład ucznia szkoły średniej i nastolatka. Dla człowieka w tym wieku <strong><span style="text-decoration: underline;">szczególnie doniosłe okazują się jednak grupa rówieśnicza, szkoła i mass media</span></strong>. Młody człowiek zawiera przyjaźnie i spędza wiele czasu w gronie swych rówieśników. Niektórzy z nich są dla niego wzorami postępowania i punktami odniesienia. Ważna jest też szkoła, rozumiana jako cała społeczność szkolna, w której oddziałują na niego nie tylko nauczyciele i inni pracownicy szkoły, ale też koledzy i koleżanki z klasy oraz innych grup. Wreszcie współcześnie duży wpływ, zwłaszcza jeśli chodzi o lansowanie określonych wzorców kulturowych, mają mass media, a w szczególności <strong><span style="text-decoration: underline;">Internet i media społecznościowe</span></strong>.</p><br>

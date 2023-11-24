@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse: collapse; width: 414px; height: 272px; border-width: 1px; border-spacing: 5px; border-color: #221E78;">
+<tbody>
+<tr>
+<td style="width: 191.406px; background-color: rgb(178, 194, 255); text-align: center; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);"><strong>Adding information</strong><br/>(dodawanie informacji)</td>
+<td style="width: 215.594px; background-color: rgb(178, 194, 255); text-align: center; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);"><strong>Contrasting information</strong><br/>(porównywanie informacji)</td>
+</tr>
+<tr>
+<td style="width: 191.406px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>also (także)</p>
+<p>and (i) </p>
+<p>furthermore (ponadto)</p>
+<p>in addition (dodatkowo)</p>
+<p>moreover (co więcej)</p>
+<p>not only ... but also ...<br/>(nie tylko... ale i)</p>
+</td>
+<td style="width: 215.594px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>although (chociaż) </p>
+<p>but (ale)</p>
+<p>however (jednakże)</p>
+<p>nevertheless (jednakże)</p>
+<p>on the other hand<br/>(z drugiej strony)</p>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. Although  </p>
+<p>2. In addition/Furthermore/Moreover</p>
+<p>3. On the other hand</p>
+<p>4. In addition/Furthermore/Moreover</p>
+<p>5. However/Nevertheless</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Czy hakerzy powinni trafić do więzienia, jeśli nie używają swoich umiejętności do kradzieży?</p>
+<p><strong>Chociaż</strong> niektórzy hakerzy są przestępcami, inni używają hakowania do innych celów. To, co robią jest nielegalne, ale czy więzienie jest zawsze odpowiednią karą? Są argumenty na poparcie każdej ze stron.</p>
+<p>Jednym argumentem za karą więzienia jest to, że zniechęci ona innych ludzi do popełnienia tych samych przestępstw. Hakerzy porządnie by się zastanowili, gdyby myśleli, że na pewno grozi im kara więzienia, jeśli zostaną złapani. <strong>Dodatkowo/Ponadto/Co więcej,</strong> nawet jeśli hakerzy nie wykorzystują swoich umiejętności do kradzieży, mogą powodować poważne problemy, specjalnie lub przez przypadek. Mimo że może im się wydawać, że ujawniają wykroczenia lub tajemnice rządowe, mogą przekazać wrogom naszego kraju istotne informacje, które naruszą nasze bezpieczeństwo.</p>
+<p><strong>Z drugiej strony</strong>, mogą istnieć uzasadnione powody, dla których hakerzy włamują się do systemów komputerowych. Niektórzy są niczym dziennikarze śledczy, wykorzystując każdą możliwą okazję, by odkryć prawdę. <strong>Dodatkowo/Ponadto/Co więcej, </strong>często obnażają oni słabości w systemach zabezpieczeń komputerowych, które mogłyby być o wiele bardziej niebezpieczne dla bezpieczeństwa narodowego, gdyby nikt o nich nie wiedział. Hakerzy to często jedni z najbardziej uzdolnionych użytkowników komputerowych w całym społeczeństwie i byłoby korzystniej zatrudniać ich na posadach związanych z cyberbezpieczeństwem niż wsadzać ich do więzienia.</p>
+<p>Podsumowując, istnieją argumenty przemawiające za uwięzieniem hakerów, takie jak odstraszanie innych od popełniania podobnych przestępstw. <strong>Jednak/Jednakże</strong> hakerzy często obnażają słabości w istotnych systemach bezpieczeństwa. Jeśli włamią się do sieci tylko po to, by pokazać, że jest to możliwe, myślę, że powinno się ich chwalić, a nie karać.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. others from committing the same crimes </p>
+<p><strong>Fragment w tekście: </strong>"(...) put other people off committing the same crimes." - (...) odstraszanie innych ludzi od popełniania tych samych przestępstw. </p>
+<p>2. serious problems</p>
+<p><strong>Fragment w tekście: </strong>"(...) they could cause serious problems, deliberately or accidentally." - (...) mogą umyślnie lub przypadkowo spowodować poważne problemy.</p>
+<p>3. the country's enemies</p>
+<p><strong>Fragment w tekście: </strong>"(...) they may give our country's enemies vital information that would weaken our security." - (...) mogą przekazywać wrogom naszego kraju istotne informacje, które osłabiłyby nasze bezpieczeństwo.</p>
+<p>4. out the truth</p>
+<p><strong>Fragment w tekście: </strong>"Some hackers are like investigative journalists, using every opportunity they can to find out the truth." - Niektórzy hakerzy są jak dziennikarze śledczy, wykorzystujący każdą okazję do wyjawienia prawdy.</p>
+<p>5. with computer security systems</p>
+<p><strong>Fragment w tekście: </strong>"In addition, they often expose weaknesses in computer security systems (...)." - Dodatkowo często obnażają słabości w systemach zabezpieczeń komputerowych (...).</p>
+<p>6. employed in cyber security roles</p>
+<p><strong>Fragment w tekście: </strong>"(...) it would be more useful to employ them in cyber security roles than to jail them." - (...) bardziej użyteczne byłoby zatrudnianie ich na stanowiskach związanych z cyberbezpieczeństwem, niż zamykanie w więzieniach.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Argumenty za:</p>
+<p>• powstrzymują <strong>innych przed popełnianiem podobnych przestępstw </strong></p>
+<p>• mogą powodować <strong>poważne problemy </strong></p>
+<p>• pomagają <strong>wrogom danego kraju </strong></p>
+<p><br/>Argumenty przeciw:</p>
+<p>• <strong>wyjawiają prawdę</strong></p>
+<p>• pokazują problemy <strong>z komputerowymi systemami bezpieczeństwa </strong></p>
+<p>• powinni być <strong>zatrudnieni na posadach związanych z cyberbezpieczeństwem</strong></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. Furthermore  </p>
+<p>2. On the other hand</p>
+<p>3. However<br/><br/><strong>Tłumaczenie:</strong></p>
+<p>Patrzenie na sztukę uliczną czyni ludzi szczęśliwszymi i jest o wiele przyjemniejsze dla oka niż pusta ściana. <strong>Co więcej</strong>, jest to świetny sposób na bycie kreatywnym. <strong>Z drugiej strony</strong>, ludzie powinni mieć możliwość wyboru tego, co widzą, a sztuka uliczna to uniemożliwia. <strong>Jednak</strong> nadal uważam, że to dobra rzecz.<br/><br/></p>
+<p>4. Also,</p>
+<p>5. although</p>
+<p>6. Nevertheless<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Nie, nie i nie! Całkowicie niszczy własność ludzi. <strong>Ponadto </strong>zalegalizowanie tego odebrałoby właścicielom swobodę pozostawienia ich własności bez zdobień. Większość sztuki ulicznej jest brzydka, <strong>chociaż </strong>zgadzam się, że istnieją też interesujące dzieła. <strong>Niemniej jednak</strong> nie powinno się tego legalizować.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Although art is generally regarded as something positive, not everybody agrees on the topic of graffiti. Should it be legal? There are arguments for and against this position.</p>
+<p>One argument for legalising graffiti is that it can promote creativity and self-expression. It allows artists to share their unique perspectives with the public and it gives life to otherwise uninteresting spaces. Moreover, this decision could reduce vandalism. When artists have the opportunity to express themselves legally, they may be less tempted to destroy private property.</p>
+<p>On the other hand, making graffiti legal may increase the number of objectively bad or offensive artworks. Not all graffiti is aesthetically pleasing, and some may contain inappropriate content. This could negatively impact public spaces and harm the overall image of a city or neighbourhood. In addition, the act of legalising graffiti might be difficult in practice. Authorities would need clear guidelines to maintain a balance between artistic freedom and public order.</p>
+<p>To sum up, legalising graffiti in public places has both advantages and disadvantages. While it can encourage creativity and prevent vandalism, it also carries the risk of unattractive and offensive artwork. Finding a balance between artistic expression and maintaining public spaces will require careful regulation and community involvement.</p>
+<p><br/>(Liczba słów: 204)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Chociaż sztuka jest ogólnie uważana za coś pozytywnego, nie wszyscy zgadzają się w kwestii graffiti. Czy powinno być legalne? Istnieją argumenty za i przeciw takiemu stanowisku.</p>
+<p>Jednym z argumentów za legalizacją graffiti jest to, że może ono promować kreatywność i wyrażanie siebie. Pozwala artystom dzielić się z publicznością swoimi unikalnymi perspektywami i ożywia nieciekawe przestrzenie. Co więcej, decyzja ta może ograniczyć wandalizm. Gdy artyści mają możliwość legalnego wyrażania siebie, mogą być mniej skłonni do niszczenia własności prywatnej.</p>
+<p>Z drugiej strony, legalizacja graffiti może zwiększyć liczbę obiektywnie złych lub obraźliwych dzieł sztuki. Nie wszystkie graffiti są estetyczne, a niektóre mogą zawierać nieodpowiednie treści. Może to negatywnie wpłynąć na przestrzeń publiczną i zaszkodzić ogólnemu wizerunkowi miasta lub dzielnicy. Ponadto zalegalizowanie graffiti może być trudne w praktyce. Władze potrzebowałyby jasnych wytycznych, aby zachować równowagę między wolnością artystyczną a porządkiem publicznym.</p>
+<p>Podsumowując, legalizacja graffiti w miejscach publicznych ma zarówno zalety, jak i wady. Chociaż może zachęcać do kreatywności i zapobiegać wandalizmowi, niesie ze sobą również ryzyko nieatrakcyjnych i obraźliwych dzieł sztuki. Znalezienie równowagi między ekspresją artystyczną a utrzymaniem przestrzeni publicznej będzie wymagało starannej regulacji prawnej i zaangażowania społeczności.</p><br>

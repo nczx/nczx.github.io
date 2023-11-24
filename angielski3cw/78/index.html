@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. hit</p>
+<p><strong>Uzasadnienie</strong>: <em>hit the snooze button </em>- wcisnąć przycisk drzemki. </p>
+<p>2. lead</p>
+<p><strong>Uzasadnienie</strong>: <em>lead a healthy lifestyle </em>- prowadzić zdrowy styl życia.</p>
+<p>3. out</p>
+<p><strong>Uzasadnienie</strong>: <em>eat out </em>- jeść na mieście.</p>
+<p>4. out</p>
+<p><strong>Uzasadnienie</strong>: <em>help somebody out </em>- pomóc komuś.</p>
+<p>5. mess, up</p>
+<p><strong>Uzasadnienie</strong>: <em>be a mess </em>- być zabałaganionym; <em>tidy up </em>- sprzątać.</p>
+<p>6. organised</p>
+<p><strong>Uzasadnienie</strong>: <em>well organised </em>- dobrze zorganizowany/a.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. rush/hurry </p>
+<p><strong>Uzasadnienie</strong>: <em>be in a rush/hurry </em>- spieszyć się. </p>
+<p>2. in</p>
+<p><strong>Uzasadnienie</strong>: <em>have a quiet night in </em>- spędzić wieczór w domowym zaciszu. </p>
+<p>3. out</p>
+<p><strong>Uzasadnienie</strong>: <em>stay out late </em>- przebywać do późna poza domem. </p>
+<p>4. Chill</p>
+<p><strong>Uzasadnienie</strong>: <em>chill out </em>- zrelaksować się. </p>
+<p>5. over</p>
+<p><strong>Uzasadnienie</strong>: <em>invite somebody over </em>- zaprosić kogoś do siebie.</p>
+<p>6. up</p>
+<p><strong>Uzasadnienie</strong>: <em>catch up on something </em>- nadrobić zaległości w czymś.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi w punktach 3-6 zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. going to chill out  </p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy konstrukcję <em>be going to</em> użytą w zdaniu wyjściowym, która wyraża plany i zamiary. <em>Relax = chill out </em>(zrelaksować się.) </p>
+<p>2. should feed your</p>
+<p><strong>Uzasadnienie</strong>: używamy czasownika modalnego ze zdania wyjściowego, aby wyrazić powinność. <em>Give food to your dog</em> (dać jedzenie psu) <em>= feed your dog </em>(nakarmić swojego psa). </p>
+<p>3. have a lie-in</p>
+<p>(Zdanie 1: Zamierzam jutro zostać dłużej w łóżku.</p>
+<p>Zdanie 2: Zamierzam jutro <strong>poleżeć sobie w łóżku.</strong>)</p>
+<p>4. invite someone over</p>
+<p>(Zdanie 1: Czemu nie poprosisz kogoś, by cię odwiedził?</p>
+<p>Zdanie 2: Czemu<strong> nie zaprosis</strong><strong>z</strong> <strong>kogoś</strong><strong> do siebie</strong>?)</p>
+<p>5. stay out late</p>
+<p>(Zdanie 1: Nigdy nie wracasz wcześnie do domu.</p>
+<p>Zdanie 2: Zawsze <strong>przebywasz poza domem do późna</strong>.) </p>
+<p>6. going to turn in early</p>
+<p>(Zdanie 1: Jestem wyczerpany/a. Zamierzam położyć się do łóżka.</p>
+<p>Zdanie 2: Jestem wyczerpany/a. <strong>Zamierzam wcześnie się położyć</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. a </p>
+<p>(Jeśli masz bogate życie towarzyskie, oznacza to, że <strong>często wychodzisz na miasto</strong>.) </p>
+<p>2. c</p>
+<p>(Osoba, która prowadzi mało aktywny tryb życia, <strong>mało ćwiczy</strong>.)</p>
+<p>3. c</p>
+<p>(Ktoś, kto pragnie się zrelaksować prawdopodobnie pragnie <strong>ciszy i spokoju</strong>.)</p>
+<p>4. b</p>
+<p>(Osoba, która wiedzie gorączkowe życie, <strong>zawsze się gdzieś spieszy</strong>.)</p>
+<p>5. a</p>
+<p>(Najlepsze określenie na kogoś, kto wiedzie nocny tryb życia, to <strong>nocny marek</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. hectic  </p>
+<p>2. social </p>
+<p>3. catch</p>
+<p>4. nocturnal</p>
+<p>5. chill</p>
+<p>6. sleep</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Cześć!</p>
+<p>Przepraszam, że nie pisałem przez jakiś czas, ale to był bardzo <strong>chaotyczny </strong>tydzień. Miałem trzy egzaminy, treningi sportowe, a moja siostra miała urodziny. Moje zwykle bogate życie <strong>towarzyskie</strong> nie istnieje. Nie miałem nawet czasu, by <strong>nadrobić </strong>zaległości w czytaniu. </p>
+<p>Przez większość dni trenowałem do około 19:00, a następnie po kolacji powtarzałem materiał. Czasami kładę się spać około 2:00 nad ranem. Można powiedzieć, że prowadzę <strong>nocny </strong>tryb życia, ale nadal muszę wstawać wcześnie do szkoły, więc nie śpię przez cały dzień!</p>
+<p>Nie mogę się doczekać weekendu. Zamierzam <strong>zrelaksować </strong>się na kanapie w piątek i <strong>pospać </strong>sobie do południa w sobotę. Może spotkamy się po południu, gdy już dojdę do siebie. </p>
+<p>Teraz muszę wracać do pracy.</p>
+<p>Jack</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1 - b </p>
+<p><strong>Uzasadnienie</strong>: <em>crash out </em>(paść ze zmęczenia) ≈ <em>fall into a deep sleep </em>(zapaść w głęboki sen). </p>
+<p>2 - e</p>
+<p><strong>Uzasadnienie</strong>: <em>perk somebody up </em>(ożywić kogoś) ≈ <em>make someone feel more awake </em>(rozbudzić kogoś).</p>
+<p>3 - a</p>
+<p><strong>Uzasadnienie</strong>: <em>squeeze something in </em>(wcisnąć coś w grafik) ≈ <em>find time for something in a busy schedule </em>(znaleźć na coś czas w napiętym grafiku).</p>
+<p>4 - d</p>
+<p><strong>Uzasadnienie</strong>: <em>doze off </em>(odpływać) ≈ <em>fall asleep for a short time </em>(zasnąć na krótko).</p>
+<p>5 - c</p>
+<p><strong>Uzasadnienie</strong>: <em>freshen up </em>(odświeżyć się) ≈ <em>quickly clean oneself and maybe change clothes </em>(szybko się umyć i ewentualnie przebrać).</p><br>

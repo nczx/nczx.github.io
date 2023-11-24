@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika):</p>
+<p>Autorka podważa wiarygodność szkoły psychologicznej Andrewsa poprzez:</p>
+<ul>
+<li>konfrontację optymistycznych oczekiwań bohatera ("Polska to kraj inteligentnych ludzi. Chodziło o to, żeby zasiać ziarno i wrócić do domu po tygodniu.") z bezkompromisową rzeczywistością PRL-u ("Profesor z rozpaczą pomyślał o swoim londyńskim gabinecie, o książkach i cieple elektrycznego kominka.");</li>
+<li>ukazanie technik interpretacji symboli jako aroganckich i nieudolnych prób zrozumienia zasad rządzących światem ("Wrona w systemie znaczeń onirycznych jego szkoły reprezentowała zmianę, coś nowego, dobrego [...]."); </li>
+<li>ujawnienie nieprzydatności wiedzy o ludzkim umyśle w zetknięciu z obcym kontekstem historycznym ("[...] może to jest sen, może to jest jakiś dziwny stan świadomości spowodowany zmęczeniem, lotem, pogodą czy kto tam wie jeszcze. Jego szkoła psychologiczna znała takie fenomeny.");</li>
+<li>ironiczną kreację postaci profesora, który - mimo wysokiej samoświadomości oraz bogatego doświadczenia w diagnozie psychologicznej - zachowuje się irracjonalnie ("Miał wrażenie, że bierze udział w religijnym rytuale. [...] <em>Żywą czy na miejscu?</em>, te powtarzane słowa hipnotyzowały go. Zapragnął nagle włączyć się w tę okrutną powtarzalność i odejść z martwą rybą w siatce, jak wszyscy."), a z czasem zaczyna kwestionować swą poczytalność ("Mam epizod psychotyczny. Coś mi się stało niedobrego.").</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika):</p>
+<p>Profesor Andrews jest Anglikiem z polskimi korzeniami ze strony dziadka ("Jego dziadek urodził się w Lodz."). Powierzchowną wiedzę o Polsce bohater czerpie głównie z opowieści krewnych ("[...] uświadomił sobie, że to jest ten słynny <em>borszcz</em>, o którym wciąż mówił jego dziadek.") lub zwięzłych instrukcji przełożonych ("[...] powiedziano mu, że grudzień w Polsce jest wyjątkowo mroźny i nieprzyjemny."). Ponadto naiwnie wierzy w obiegowe opinie na temat Polaków, rzekomo oczytanych i skorych docenić myśl szkoły psychologicznej Andrewsa ("Polska to kraj inteligentnych ludzi. Chodziło o to, żeby zasiać ziarno i wrócić do domu po tygodniu. Zostawić im książki, czytają przecież po angielsku, więc jakże się będą mogli oprzeć autorytetowi Założyciela.").</p>
+<p>Ludzie, których profesor spotyka w Warszawie, zwłaszcza w przestrzeni publicznej, wydają mu się "poważni, spięci, jakby niewyspani". Choć Andrews określa ich mianem "najbardziej ponurego narodu świata", wkrótce zaczyna dążyć do tego, by stać się częścią ich osobliwej wspólnoty. Zmiana zachowania profesora zdaje się wynikać z przytłaczającej samotności oraz poczucia nieokreślonego zagrożenia.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika):</p>
+<p>Sytuacja, w której znalazł się profesor, tak bardzo odbiega od zasad panujących w angielskim społeczeństwie, że do jej zrozumienia konieczna jest znajomość realiów PRL-u. Bohater nie dysponuje taką wiedzą, dlatego niemal każdy element polskiej rzeczywistości wydaje mu się irracjonalny, jak gdyby wyjęty ze snu ("[...] może to jest sen, może to jest jakiś dziwny stan świadomości spowodowany zmęczeniem, lotem, pogodą czy kto tam wie jeszcze."). Profesor niejednokrotnie czuje się zagubiony i sfrustrowany. Nie podejrzewa, że niedziałające telefony są skutkiem ingerencji rządu w życie obywateli ("Telefon był popsuty, ale przecież pamiętał, że brodaty narzeczony wczoraj z niego dzwonił. Ogarnęła go wściekłość."), a jednolita, posępna architektura ma wyrażać potęgę panującego ustroju politycznego ("Nie wiedział, który z bloków jest jego blokiem."). Profesor Andrews, który nigdy nie musiał troszczyć się o zaspokojenie podstawowych potrzeb materialnych, nie rozumie ponadto, jak działa reglamentacja żywności ("Dziwił się sobie, że tak dużo myślał o jedzeniu [...] - był przyzwyczajony, że myśli rozsiadały się w nim jak w wygodnych kanapach, kształtne idee, abstrakcyjne pojęcia."). Wobec tego widok podenerwowanych ludzi, stojących w długich kolejkach po wybrane produkty, wywołuje w nim zdziwienie oraz nieuzasadniony lęk ("Ludzie milczeli złowrogo. Byli poważni, spięci, jakby niewyspani. Przytupywali. Najbardziej ponury naród świata."). </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika):</p>
+<p>Fragmenty opisujące wędrówkę profesora po Warszawie:</p>
+<ul>
+<li>"Po godzinie błądzenia między blokami (wydawały się takie same) znalazł wreszcie inny telefon, ale zdał sobie sprawę, że nie ma polskich monet. Ruszył w poszukiwaniu miejsca, gdzie mógłby je rozmienić, ale jedyny mały sklepik, jaki znalazł, wyglądał na całkowicie opuszczony." </li>
+<li>"Postanowił wracać i zrozumiał, że się zgubił. Nie wiedział, który z bloków jest jego blokiem. Nie pamiętał adresu.";</li>
+<li>"Zobaczył jakąś parę staruszków idących pod rękę i ruszył w ich stronę. Ale o co ich zapyta i w jakim języku? Minęli go, patrząc w inną stronę.";</li>
+<li>"Błądził między domami, coraz bardziej zmarznięty i zrozpaczony.";</li>
+<li>"Nawet nie wiedział, kiedy zrobiło się ciemno. Trafił jakimś cudem na czołg, przy którym teraz płonął wesoło ogień w metalowym koszu."</li>
+<li>"Poczuł jakiś atawistyczny lęk i wycofał się szybko w ciemny park, ale dzięki temu czołgowi udało mu się zlokalizować swój blok - pamiętał widok z okna".</li>
+</ul>
+<p> </p>
+<p>Architektura socrealistyczna, przejawiająca się surowością oraz jednolitością stylu, upodabnia Warszawę do labiryntu. Bohater z łatwością gubi się w gąszczu identycznych budynków, czuje się bezradny, obcy i samotny. Choć spotyka w okolicy mieszkańców, nie może liczyć na ich pomoc ze względu na barierę językową oraz fakt, że zwyczajnie nie dostrzegają jego obecności. Profesor nie może również skorzystać z telefonu, ponieważ nie posiada polskich monet - te próbuje pozyskać w pobliskim sklepie, który okazuje się jednak opustoszały. Wkrótce zapada zmrok, niemal całkowicie grzebiąc nadzieje bohatera na wydostanie się ze złowrogiego miasta-labiryntu. Ciemność rozświetla jedynie blask wojskowego koksownika, który niczym mityczna nić Ariadny ratuje Andrewsa z opresji, wskazując mu drogę powrotną do mieszkania. Zbawienna rola światła jest jednak pozorna - przy piecu grzeją się bowiem żołnierze, ponadto nieopodal stoi czołg. Fakt, iż bohater zawdzięcza ratunek symbolom komunistycznego reżimu, zdaje się zapowiadać nowe zagrożenie, z perspektywy obcokrajowca trudne do zdefiniowania, lecz odczuwalne instynktownie.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Profesor Andrews czuje się w Polsce zagubiony, doskwiera mu samotność. Zły nastrój bohatera wynika nie tylko z bariery językowej, ale przede wszystkim z nieznajomości surowych, nierzadko groteskowych realiów PRL-u. By na moment przestać być obcym i dołączyć do ludzkiej wspólnoty, profesor staje w kolejce po karpia, a następnie kupuje choinkę. Uczestnictwo w obserwowanych rytuałach daje bohaterowi namiastkę bezpieczeństwa, pozwala mu wtopić się w tłum ("[...] wyglądał tak samo jak wszyscy. Sprawiło mu to nagłą radość.").</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Profesor Andrews odkrywa, że sytuacja egzystencjalna ryby przypomina jego własną ("Patrzyli sobie w oczy z tą rybą. Było to przerażające i przyjemne zarazem, pełne sensu i jednocześnie absurdalne."). Podobnie jak zwierzę został uwięziony w nieprzyjaznym, obcym środowisku, którego w żaden sposób nie jest w stanie zrozumieć ("Ach, zostać w tej maleńkiej łazience, w brzuchu wielkiego bloku, w środku wielkiego mroźnego miasta, być pozbawionym słów, nie rozumieć i nie być rozumianym."). Nie potrafi nawiązać kontaktu ze światem, ponieważ posługuje się obcym językiem - co wydaje się równoznaczne z rybim milczeniem ("[...] grubymi wargami wypowiadała jakieś niesłyszalne słowa."). Zarówno bohater, jak i zwierzę przejawiają wprawdzie oznaki życia ("Ryba żyła, poruszała się [...]."), lecz jest ono jedynie pozorem istnienia, prowadzącym do nieuchronnej śmierci. Ryba nie wie, że zostanie wkrótce zabita, a następnie zjedzona - podobnie jak Andrews nie pojmuje mechanizmów reżimu totalitarnego.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Jaką niepewność wyraża?</p>
+<p>Przykładowa odpowiedź:</p>
+<p>Pytaniem: "Ziwo czy na miescu?" Andrews zdaje się wyrażać niepewność, czy zdoła bezpiecznie wrócić do domu. Choć bohater nie wie, co znaczą wypowiedziane przez niego słowa, domyśla się, że mają związek z ciążącym na człowieku wyrokiem - podobnie jak na stoisku z karpiami przesądzały o życiu lub śmierci ryb.</p>
+<p>Polak, zaniepokojony złym stanem psychicznym profesora, postanawia pokrzepić go odpowiedzią nacechowaną pozytywnie: "Żywą". W ten sposób żegna się z Anglikiem, życząc mu wszelkiej pomyślności.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika): </p>
+<table border="1" style="border-collapse: collapse; width: 499px; height: 1579px;">
+<tbody>
+<tr style="height: 63px;">
+<td style="background-color: #99ccff; text-align: center; height: 63px; width: 113.787px;"><strong>Element miejskiej przestrzeni</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 63px; width: 156.45px;"><strong>Charakterystyka</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 63px; width: 219.562px;"><strong>Cytaty</strong></td>
+</tr>
+<tr style="height: 165px;">
+<td style="width: 113.787px; height: 165px; text-align: center;">pogoda</td>
+<td style="width: 156.45px; height: 165px; text-align: center;">przygnębiająca, nieprzyjazna</td>
+<td style="width: 219.562px; height: 165px; text-align: center;">
+<p>"[...] powiedziano mu, że grudzień w Polsce jest wyjątkowo<br/>mroźny i nieprzyjemny."</p>
+<p>"Nawet śnieg wydawał się szary. Słońce świeciło nieprzekonująco."</p>
+</td>
+</tr>
+<tr style="height: 130px;">
+<td style="width: 113.787px; height: 130px; text-align: center;">ulice</td>
+<td style="width: 156.45px; height: 130px; text-align: center;">ponure, groźne, niepokojące</td>
+<td style="width: 219.562px; height: 130px; text-align: center;">
+<p>"smutne, rozwlekłe przestrzenie"</p>
+<p>"Na ulicy stał czołg. Profesor Andrews otworzył okno, tak niesamowity był to widok."</p>
+<p>"Przy czołgu kręciły się maleńkie<br/>sylwetki, niewątpliwie żołnierze."</p>
+</td>
+</tr>
+<tr style="height: 130px;">
+<td style="width: 113.787px; height: 130px; text-align: center;">wnętrza budynków mieszkalnych</td>
+<td style="width: 156.45px; height: 130px; text-align: center;">niezwykle ciasne, źle zaprojektowane</td>
+<td style="width: 219.562px; height: 130px; text-align: center;">
+<p>"Korytarz był tak mały, że nie mieścili się tam we trójkę."</p>
+<p>"[...] zobaczył w wannie wielką pływającą rybę. [...] Nad wanną suszyło się pranie."</p>
+</td>
+</tr>
+<tr style="height: 141px;">
+<td style="width: 113.787px; height: 141px; text-align: center;">osiedla </td>
+<td style="width: 156.45px; height: 141px; text-align: center;">jednolite, pozbawione wyrazu </td>
+<td style="width: 219.562px; height: 141px; text-align: center;">"Profesor podszedł do okna i zobaczył przestrzeń poznaczoną równymi bryłami budynków. Wszystkie miały ten sam kolor - szarego, rozbielonego nieba."</td>
+</tr>
+<tr style="height: 232px;">
+<td style="width: 113.787px; height: 232px; text-align: center;">sklepy</td>
+<td style="width: 156.45px; height: 232px; text-align: center;">źle zaopatrzone lub nieczynne</td>
+<td style="width: 219.562px; height: 232px; text-align: center;">
+<p>"[...] jedyny mały sklepik, jaki znalazł, wyglądał na całkowicie opuszczony."</p>
+<p>"Ten sklep był inny. Były tam tylko butelki z jasnym płynem, może wódką, i słoiczki z musztardą."</p>
+<p>"A teraz pamięć profesora zajął obraz sklepu za kratami z półkami pełnymi towarów."</p>
+</td>
+</tr>
+<tr style="height: 200px;">
+<td style="width: 113.787px; height: 200px; text-align: center;">kramy, stoiska z towarami</td>
+<td style="width: 156.45px; height: 200px; text-align: center;">zatłoczone</td>
+<td style="width: 219.562px; height: 200px; text-align: center;">
+<p>"Zatrzymał się przy blaszanych stołach ustawionych wprost na chodniku, przed którymi ludzie posłusznie stali w ogonku."</p>
+<p>"Pod jego blokiem na parkingu sprzedawano bożonarodzeniowe choinki. Ustawiła się do nich kolejka, ale dużo mniejsza niż tamta."</p>
+</td>
+</tr>
+<tr style="height: 182px;">
+<td style="width: 113.787px; height: 182px; text-align: center;">mieszkańcy</td>
+<td style="width: 156.45px; height: 182px; text-align: center;">zdystansowani, niespokojni</td>
+<td style="width: 219.562px; height: 182px; text-align: center;">
+<p>"Ludzie milczeli złowrogo. Byli poważni, spięci, jakby niewyspani. Przytupywali. Najbardziej ponury naród świata."</p>
+<p>"Tamten stał i patrzył uważnie na jego usta. Jego twarz nic nie wyrażała."</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Warszawa jawi się w opowiadaniu Tokarczuk jako wyjątkowo ponure, wręcz złowrogie miejsce. Atmosferę niepokoju i zagrożenia tworzy nie tylko obecność wojska na ulicach, ale również niedostatek towarów sklepowych, zmuszający mieszkańców do nieustannej walki o przetrwanie. Brzydota budynków budzi odrazę, a ciasne, niepraktyczne pomieszczenia niewiele różnią się od więzień. </p>
+<p>Tworząc negatywny obraz stolicy, autorka ilustruje różne aspekty życia w PRL-u: rządową inwigilację, cenzurę, łapanki, donosy czy niedostatek towarów pierwszej potrzeby. Reżim komunistyczny skutecznie dążył do zaszczucia mieszkańców, złamania ich woli - co widać na przykładzie spotkanych przez profesora Andrewsa przechodniów. Warszawską panoramę, surową i odstręczającą, można uznać za projekcję przeżyć wewnętrznych bohatera, który wkrótce sam zaczyna odczuwać skutki politycznej opresji.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowa odpowiedź (na podstawie fragmentu z podręcznika):</p>
+<p>Tokarczuk przedstawia miasto jako niegościnne miejsce, przytłaczające brzydotą, licznymi problemami społeczno-gospodarczymi oraz ścisłą ingerencją władz w życie obywateli. Architektura socrealistyczna - pozbawiona wyrazu, niezgrabna i surowa - dezorientuje, kształtując miejską rzeczywistość na wzór labiryntu ("Postanawiał wracać i zrozumiał, że się zgubił. Nie wiedział, który z bloków jest jego blokiem."). Uwięziony w nim profesor Andrews zmienia się nie do poznania. Mimo bogatej wiedzy psychologicznej doświadcza załamania nerwowego, zaczyna przejawiać nieracjonalne ("Zapragnął nagle włączyć się w tę okrutną powtarzalność i odejść z martwą rybą jak wszyscy.") lub infantylne zachowania ("Przytulił się do niego jak dziecko. Szlochał."). Wydaje się, iż miasto obudziło w bohaterze pierwotne, nigdy wcześniej nieuświadomione instynkty ("Poczuł jakiś atawistyczny lęk [...].").</p>
+<p>Podróż Andrewsa po Warszawie przypomina tułaczkę. Choć bohater błądzi głównie w przestrzeni, jego zagubienie dotyczy również kontaktów interpersonalnych. Ludzie, których spotyka, wydają mu się obcy i nieczuli ("Byli poważni, spięci, jakby niewyspani."), w dodatku posługują się niezrozumiałym dla Andrewsa językiem, zatem zacieśnienie jakichkolwiek więzi wydaje się niemożliwe ("Nie mówił po angielsku, przez co wydał mu się ponury."). Zwiedzając różne zakątki PRL-owskiej Warszawy, profesora doświadcza skrajnych emocji, takich jak zdziwienie, lęk, ciekawość, wstręt czy frustracja. Pod ich wpływem doświadcza stopniowej, lecz gruntownej przemiany wewnętrznej, przede wszystkim jednak przewartościowuje swą obszerną wiedzę psychologiczną ("[...] może to jest sen, może to jest jakiś dziwny stan świadomości spowodowany zmęczeniem, lotem, pogodą czy kto tam wie jeszcze."). Podróż służbowa do Polski, według przewidywań bohatera mająca przebiegać szybko i sprawnie, w rzeczywistości staje się dla niego próbą człowieczeństwa oraz pouczającą wyprawą w głąb własnej psychiki.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Aluzję do <em>Boskiej komedii</em> Tokarczuk zawarła w słowach: "Od razu zobaczył swoją Beatrycze - stała przy wyjściu, trzymając przed sobą kartkę z jego nazwiskiem i imieniem." Nazywając swą przewodniczkę imieniem ukochanej Dantego, profesor wyraża swe obawy związane z wizytą w obcym, nieprzyjaznym kraju, przypominającym piekło z wizji włoskiego poety. Bohater powierza Polce swe bezpieczeństwo, podobnie jak Dante pokładał ufność w nadprzyrodzonej protekcji Wergiliusza oraz Beatrycze. Moment, w którym "Gosha" nieoczekiwanie opuszcza Andrewsa, niejako przypieczętowuje jego los, zapowiadając żmudną, niebezpieczną tułaczkę - zarówno w przestrzeni, jak również w głąb własnej psychiki. Utożsamiając Polskę z dantejskim piekłem, Tokarczuk podkreśla grozę życia w PRL-owskiej rzeczywistości. Jednocześnie nadaje jej sakralny charakter, przejawiający się zwłaszcza w rytualizacji codzienności ("Miał wrażenie, że bierze udział w religijnym rytuale. Zabijanie ryby.").</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zadanie indywidualne</p><br>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Wojna bez w¹tpienia odcisnê³a swe piêtno na ówczesnej sztuce i sytuacji artystów, choæ jej wp³yw by³ ró¿ny w poszczególnych krajach. Pañstwa uczestnicz¹ce w konflikcie wykorzystywa³y propagandowy aspekt twórczoœci. Kultura wizualna (komiks, grafika, reklamowa, kino, fotografia) s³u¿y³a zachêceniu obywateli do walki, a przy tym ukazywa³a w negatywnym œwietle wrogów lub te¿ dokumentowa³a toczone walki. W Polsce plakaty i napisy na murach wyra¿a³y opór wzglêdem okupanta, podtrzymywa³y niez³omnoœæ ducha, sama zaœ sztuka odzwierciedla³a ówczesn¹ sytuacjê polityczn¹. Dominowa³y dzie³a okolicznoœciowe. Graffiti oraz karykatury wyœmiewa³y nazistów i prowadzi³y do ich umniejszenia, pomaga³y znosiæ Polakom trudy okupacji. Wp³yw lat wojennych bardzo czêsto ujawnia³ siê w póŸniejszych dzie³ach, które poruszaj¹ temat przemocy, œmieræ, okrucieñstwa (np. twórczoœæ Linkego, Wróblewskiego). Z kolei w sztuce amerykañskiej i brytyjskiej ujawni³o siê kilku wybitnych artystów (Bacon, Pollock) - odwo³ywali siê do wczeœniejszych pr¹dów. Podobnie we Francji twórcy mogli nawi¹zywaæ do rozpowszechnionych wczeœniej kierunków, nie mieli trudnoœci w wystawaniu prac w prywatnych galeriach. </p>
+<p>Wojna zahamowa³a rozwój muzyki. Mimo tego niektóre dzie³a odwo³ywa³y siê do ówczesnych tragicznych zdarzeñ (symfonia Szostakowicza). Polscy muzycy najczêœciej grali w kawiarniach, by zarobiæ na ¿ycie, ale tworzyli te¿ kameralne czy symfoniczne utwory. Wa¿n¹ funkcjê pe³ni³y dzie³a o charakterze patriotycznym.</p>
+<p>Wojna nie wp³ynê³a wy³¹cznie w negatywny sposób na kinematografiê amerykañsk¹, poniewa¿ powsta³y wtedy wybitne dzie³a (<em>Obywatel Kane, Sokó³ maltañski, Casablanca</em>). Z kolei w Europie liczba ta by³a mniejsza, zaœ w Polsce kinematografia praktycznie nie istnia³a - ze wzglêdu na zarz¹dzenia okupanta. </p>
+<p>Los teatrów by³ uzale¿niony od kraju, w którym istnia³y. Na przyk³ad we Francji dzia³a³y bez wiêkszych zak³óceñ, wystawiano sztuki tamtejszych dramaturgów. Z kolei na polskich ziemiach funkcjonowa³o zaledwie kilka scen zaakceptowanych przez nazistów. Aktorzy jednak czêsto je bojkotowali. Kwit³o jednak konspiracyjne wystawianie sztuk. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zdjêcie przedstawia szeœciu ¿o³nierzy, którzy na wyspie Iwo Jima stawiaj¹ flagê Stanów Zjednoczonych. Miejsce to zyskuje symboliczne znaczenie, poniewa¿ w trakcie kampanii na Pacyfiku toczy³y siê o nie za¿arte walki, by³o kluczowe tak¿e ze wzglêdów strategicznych. Zwalczenie oporu Japoñczyków umo¿liwi³o ¿o³nierzom wkroczenie na japoñskie wyspy macierzyste. Zdobycie Iwo Jimy jest wiêc wa¿nym momentem w czasie kampanii; jednoczeœnie wi¹¿e siê ono z ogromnym poœwiêceniem po obu stronach konfliktu. Symbolika zdjêcia wynika z jego historii, ale tak¿e z reprezentowanych przez ni¹ wartoœci. Stanowi bowiem pochwa³ê mêstwa, odwagi, determinacji amerykañskich ¿o³nierzy. Wskazuje tak¿e na ich silny patriotyzm, co odzwierciedla zatykana przez nich flaga. Zdjêcie symbolizuje tak¿e dumê i podziw, poniewa¿ ukazuje zwyciêstwo walcz¹cych. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br>

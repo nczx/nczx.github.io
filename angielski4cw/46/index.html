@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. food poisoning (zatrucie pokarmowe)</p>
+<p><strong>Tłumaczenie:</strong> Myślę, że złapałem/am to w restauracji. Zauważyłem/am, że kurczak był trochę niedogotowany, ale mimo to go zjadłem/am - a potem cierpiałem/am! </p>
+<p>2. disability (niepełnosprawność)</p>
+<p><strong>Tłumaczenie:</strong> Niektórzy ludzie myślą, że, ponieważ jeżdżę na wózku, coś jest nie tak z moją głową. Nie mogę ruszać nogami, ale mój umysł działa bez zarzutu!</p>
+<p>3. immune system (system immunologiczny)</p>
+<p><strong>Tłumaczenie:</strong> Kiedy tylko w szkole wszyscy chorują, ja mam pewność, że się nie zarażę. Moje ciało wydaje się być zdolne do zwalczania przeziębień i gryp.</p>
+<p>4. allergic reaction (reakcja alergiczna)</p>
+<p><strong>Tłumaczenie:</strong> Po zjedzeniu jabłka zauważyłem/am swędzenie języka. Nie było to bardzo poważne, ale sądzę, że to sposób, w który moje ciało komunikuje, że nie powinienem/powinnam tego jeść.</p>
+<p>5. sleeplessness</p>
+<p><strong>Tłumaczenie:</strong> Próbowałem/am wszystkiego - liczenia owiec, robienia wieczornych ćwiczeń, czytania książki w łóżku, unikania kawy - ale nadal jestem rozbudzony/a o trzeciej w nocy. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. diet </p>
+<p>2. binge</p>
+<p>3. sedentary</p>
+<p>4. civilisation</p>
+<p>5. ailments </p>
+<p>6. diabetes</p>
+<p>7. respiratory</p>
+<p>8. cardiovascular</p>
+<p>9. life- threatening</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Czy dołuje cię nowoczesny świat?</p>
+<p>Czy stosujesz <strong>dietę</strong> zachodnią, pełną cukru, tłuszczu i dodatków?</p>
+<p>Czy <strong>objadasz</strong> <strong>się</strong> czipsami, czekoladą i innymi przekąskami, żeby poprawić sobie humor?</p>
+<p>Czy prowadzisz <strong>siedzący</strong> tryb życia - cały dzień siedzisz przy biurku, a wieczorem przed telewizorem?</p>
+<p>Jeśli odpowiedzi na te pytania brzmią 'Tak', przyjdź do Clean Living Centre.</p>
+<p>Wiele problemów, które nas dotykają to tak zwane choroby <strong>cywilizacyjne</strong>. To mogą być niegroźne <strong>dolegliwości</strong>, które po prostu sprawiają, że jesteśmy zmęczeni, zestresowani czy mamy lekką nadwagę, ale mogą też mieć dużo poważniejsze skutki, jak na przykład <strong>cukrzyca</strong> typu 2, która spowodowana jest nadmiernym spożyciem niezdrowej żywności. Ta lista może też obejmować choroby <strong>oddechowe</strong>, ponieważ palimy, wdychamy spaliny czy po prostu nie mamy wystarczająco dużo ruchu, podobnie jak choroby <strong>naczyniowe</strong>, których przyczyną jest zbyt duża ilość jedzenia i zbyt mała ilość ruchu, co blokuje nasze tętnice i wymusza większą pracę serca. </p>
+<p>W Clean Living Centre łączymy świeże powietrze, zdrową dietę i aktywny tryb życia w celu pokonania tych problemów. Ale pamiętaj, że kiedy już nas opuścisz musisz kontynuować ten tryb życia, żeby nie dopuścić do rozwoju chorób <strong>zagrażających życiu</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. chronic</p>
+<p>(<strong>Przewlekła</strong> choroba to taka, która jest bardzo poważna i nieuleczalna oraz, której często można zapobiec tylko poprzez zmianę diety i stylu życia.) </p>
+<p>2. Hypertension</p>
+<p>(<strong>Nadciśnienie</strong> to inna nazwa wysokiego ciśnienia krwi.)</p>
+<p>3. lifestyle</p>
+<p>(Choroba <strong>cywilizacyjna</strong> to problem spowodowany stylem życia.)</p>
+<p>4. Anxiety</p>
+<p>(<strong>Niepokój</strong> to inna nazwa poczucia zmartwienia i stresu.)</p>
+<p>5. Acne</p>
+<p>(<strong>Trądzik</strong> oznacza wypryski pojawiające się na twarzy i czasem na plecach, zazwyczaj w okresie nastoletnim.)</p>
+<p>6. peptic</p>
+<p>(Wrzód <strong>trawienny</strong> to rana na błonie śluzowej żołądka. Nie jest spowodowana ostrym jedzeniem, ale może ono zintensyfikować ból.)</p>
+<p>7. Mental</p>
+<p>(Problemy <strong>psychiczne</strong> to problemy głowy.)</p>
+<p>8. cell</p>
+<p>(<strong>Komórka</strong> to najmniejsza jednostka, która może żyć samodzielnie; komórki znajdują się w każdym żywym organizmie.)</p>
+<p>9. autoimmune</p>
+<p>(Choroba <strong>autoimmunologiczna</strong> występuje wtedy, kiedy mechanizmy obronne twojego ciała przez pomyłkę atakują twój organizm.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. limit </p>
+<p>2. condition</p>
+<p>3. shape</p>
+<p>4. sedentary</p>
+<p>5. goal</p>
+<p>6. ailments</p>
+<p>7. civilisation</p>
+<p>8. diet</p>
+<p>9. cardiovascular</p>
+<p>10. diabetes</p>
+<p><strong>The two extra words are: lifestyle and respiratory.</strong></p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione): </strong></p>
+<p>X: Możemy się na chwilę zatrzymać? Padam z nóg. Kiedy mówiłeś/aś, że powinniśmy <strong>zmusić się do wielkiego</strong> <strong>wysiłku </strong>(push ourselves to the limit), nie sądziłem/am, że traktujesz to dosłownie.</p>
+<p>Y: Nie masz <strong>kondycji</strong>. Powinieneś/powinnaś nabrać <strong>formy</strong>. To przez twój <strong>siedzący</strong> tryb życia. Kiedy ostatnio ćwiczyłeś/aś?</p>
+<p>X: W piątek biegłem/am na autobus, ale nie zdążyłem/am. </p>
+<p>Y: Więc poszedłeś/poszłaś do pracy pieszo? Dobra robota. </p>
+<p>X: Nie, zaczekałem/am na kolejny autobus. Obok przystanku jest fajna kawiarnia. Zjadłem/am tam pyszne ciastko. </p>
+<p>Y: Musisz wyznaczyć sobie <strong>cel</strong>. Oto pierwszy: 10 km spaceru i 500 m wspinaczki. Każdy może to zrobić.</p>
+<p>X: Nie ze wszystkimi <strong>dolegliwościami</strong>, na które cierpię - ból kolan, problemy z plecami, bolące stopy, słabe stawy skokowe...</p>
+<p>Y: Wszystko spowodowane chorobami <strong>cywilizacyjnymi</strong> i twoją zachodnią <strong>dietą</strong> - ciastko z rana! Masz szczęście, że nie masz problemów <strong>krążeniowych</strong> albo <strong>cukrzycy</strong> typu 2. </p>
+<p>X: Mamy jakieś kanapki?</p>
+<p>Y: Nie, ale mamy surowe marchewki i możemy zjeść obiad kiedy już dotrzemy do hostelu. </p>
+<p>X: Surowe marchewki? Nigdy mi się to nie uda!</p><br>

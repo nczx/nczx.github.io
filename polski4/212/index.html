@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Koncept wiersza Poświatowskiej opiera się na oryginalnym i zaskakującym sposobie przedstawienia życia. Nie jest ono abstrakcyjnym pojęciem, lecz zostaje upersonifikowane. Podmiot liryczny przedstawia je jako człowieka, kochanka, na którego odejście nie może się zgodzić: "gdy życie odchodzi ode mnie / przywieram do niego / mówię - życie / nie chodź jeszcze". Zabieg ten wprowadza ponadto pewną niejednoznaczność, umożliwia różnorodne odczytania tekstu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>W przytoczonym utworze gra słów dotyczy przede wszystkim "życia", które w wierszy zyskuje podwójny sens. Z jednej strony można je rozumieć dosłownie. Wtedy podmiot liryczny wyraża swoją miłość do egzystencji, chce się nią jak najdłużej nacieszyć - zwłaszcza w obliczu nadchodzącej śmierci. Z drugiej jednak strony "życiem" może stać się ukochany człowiek, z którym podmiot liryczny nie wyobraża sobie rozstania. Wtedy śmierć dotyczy straconego uczucia, które do tej pory nadawało sens, było ważnym aspektem.  Taka gra słów wpływa na wieloznaczność odczytania utworu, jego niejednoznaczność. Ponadto sugeruje nierozerwalną zależność łączącą miłość, śmierć oraz życie, co nadaje dziełu uniwersalny charakter. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Krzyk podmiotu może wyrażać rozmaite emocje osoby mówiącej. Przede wszystkim sugeruje sprzeciw względem odejścia życia: "zawsze kiedy chcę żyć krzyczę / gdy życie odchodzi ode mnie". Osoba mówiąca buntuje się przeciwko osamotnieniu, pragnie za wszelką cenę zatrzymać życie. Świadczy to o jej desperacji, ale także sile, gdyż nie zamierza się poddawać. Ponadto być może krzyk wyraża cierpienie, ból i niepokój wywołane wspomnianą sytuacją lub też jest ostatecznym przejawem bezradności podmiotu lirycznego: "wieszam mu się na szyi / krzyczę", próbą zwrócenia uwagi na swe przeżycia. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Puenta utworu zawiera się w wersie: "umrę jeśli odejdziesz". Tragizm sytuacji podmiotu lirycznego polega więc na tym, że nie może on samodzielnie istnieć. Bez życia (czy też ukochanego człowieka) jest skazany na odejście ze świata. Nie może już więc czerpać z niego przyjemności, doświadczać go w różnych aspektach. Chociaż nie godzi się na rozłąkę, to nie wiadomo czy starania osoby mówiącej przynoszą pożądany efekt, poprawiają jej sytuację. Z kolei paradoks przejawia się w wewnętrznej sprzeczności tych słów, stanowiących w pewien sposób szantaż emocjonalny. Jeżeli za odbiorcę uzna się życie, to i tak jego utrata przyczynia się do końca podmiotu lirycznego. Postawiony warunek nie ma tym samym sensu, ponieważ rozwiązanie sytuacji pozostaje jedno. Z kolei utożsamienie adresata z ukochanym mężczyzną staje się paradoksem w tym znaczeniu, iż rozstanie z ukochaną osobą prowadzi do zaskakujących konsekwencji. Okazuje się, że życie bez wybranka nie jest możliwe. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p><em>Danse macabre </em> to motyw obecny szczególnie w średniowiecznej sztuce. Wiązał się on z przedstawieniem korowodu, do którego należeli przedstawiciele różnych grup społecznych, prowadzonego przez kościotrupa. Taki sposób przedstawienia wyrażał prawdę na temat ulotności doczesnej egzystencji oraz wskazywał na równość wszystkich ludzi w obliczu końca życia.</p>
+<p>Halina Poświatowska w swym utworze reinterpretuje wspominany motyw, czyli  odczytuje go na nowo, dopisuje do niego dodatkowe znaczenia. Przede wszystkim ujmuje go w kameralny sposób, gdyż korowód zastępuje podmiot liryczny oraz jego wybranek, metafora życia lub utraconej miłości. <em>Danse macabre</em> to niejako taniec, w którym życie łączy się w nierozerwalny sposób ze śmiercią oraz miłością. Poetka wskazuje tym samym na występującą między tymi zjawiskami zależność, ale także ulotność ludzkiej egzystencji. Jednocześnie sugeruje zasadniczo niezgodę na odejście, narastające poczucie buntu osoby mówiącej, która czyni wszystko, by zatrzymać przy sobie to, co uznaje za cenne. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>a) Podmiot liryczny w wierszu Poświatowskiej jest zdesperowany. Wyraża głębokie przywiązanie do życia, przez co nie może się zgodzić na jego odejście: "przywieram do niego / mówię - życie / nie odchodź jeszcze". Słowa te sugerują, iż osoba mówiąca chce jeszcze zasmakować egzystencji, nie godzi się na jej koniec. Czyni wszystko, by zatrzymać przy sobie życie. Jest zrozpaczona, ale przy tym zdeterminowana: "wieszam mu się na szyi / krzyczę". Z kolei podmiot liryczny w wierszu Tuwima przejawia optymistyczną postawę. Nie obawia się bowiem rozstania z życiem, zamiast tego czerpie przyjemność z każdej chwili czy doświadczenia. Całym sobą chłonie rzeczywistość: "Rozprężę szeroko ramiona, / Nabiorę w płuca porannego wiewu". Egzystencja stanowi dla niego źródło niewyczerpanej radości. Być może powodem takiej postawy jest to, iż osoba mówiąca nie odczuwa jakiegokolwiek zagrożenia, nie dotyka jej bezpośrednio możliwość utraty życia.</p>
+<p> </p>
+<p>b) Krzyk w wierszu Poświatowskiej wyraża niezgodę i bunt podmiotu lirycznego. Sygnalizuje silne uczucia, które ogarniają osobę mówiącą, umożliwia ich uzewnętrznienie. Ponadto być może ma za zadanie zwrócenie uwagi życia na podmiot liryczny, przekonanie go do pozostania. Z kolei w wierszu Tuwima pełni odmienną funkcję. Chociaż też pozwala na wyrażenie emocji podmiotu lirycznego, to sugeruje zupełnie inne odczucia. Umożliwia bowiem zaprezentowanie euforii i zadowolenia wypowiadającego się. Życie bowiem zapewnia mu radość oraz pogodę ducha: "- Jakie to szczęście, że krew jest czerwona!". </p><br>

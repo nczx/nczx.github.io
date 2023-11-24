@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. F</p>
+<p><strong>Fragment w tekście:</strong> "Meeting other cyclists was brilliant and I got some great tips for local routes to try out." - Spotkanie innych rowerzystów było wspaniałe i dostałem kilka świetnych podpowiedzi co do lokalnych tras do wypróbowania. </p>
+<p>2. E</p>
+<p><strong>Fragment w tekście:</strong> "I've made friends from all over the world, learnt new skills and worked alongside scientific researches to help conserve the rainforest." - Zaprzyjaźniłam się z ludźmi z różnych stron świata, nauczyłam się nowych umiejętności i pracowałam razem z naukowcami w celu ochrony lasu deszczowego. </p>
+<p>3. D</p>
+<p><strong>Fragment w tekście:</strong> "After just a few days in Barcelona, I felt completely at home in the city, and could get around easily on foot and by public transport tanks to my outstanding host Carmina." - Już po kilku dniach w Barcelonie czułam się zupełnie jak w domu i z łatwością poruszałam się po mieście pieszo i publicznymi środkami transportu dzięki mojej wyjątkowej gospodyni, Carminie. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. F</p>
+<p><strong>Fragment w tekście:</strong> "I'd definitely do it again." - Zdecydowanie zrobiłbym to znowu. </p>
+<p>2. A, C</p>
+<p><strong>Fragment w tekście A:</strong> "(...) who are willing to host touring cyclists and provide free accommodation for them." - (...) którzy są chętni przyjąć rowerzystów i zapewnić im darmowy nocleg. </p>
+<p><strong>Fragment w tekście C:</strong> "(...) with almost half a million hosts offering free accommodation in 200,000 cities around the world." - (...) z ponad pół milionem gospodarzy oferującymi darmowe zakwaterowanie w 200 000 miast na całym świecie.</p>
+<p>3. E</p>
+<p><strong>Fragment w tekście:</strong> "After just a few days in Barcelona, I felt completely at home in the city, and could get around easily on foot and by public transport tanks to my outstanding host Carmina." - Już po kilku dniach w Barcelonie czułam się zupełnie jak w domu i z łatwością poruszałam się po mieście pieszo i publicznymi środkami transportu dzięki mojej wyjątkowej gospodyni, Carminie.</p>
+<p>4. C</p>
+<p><strong>Fragment w tekście:</strong> "(...) with almost half a million hosts offering free accommodation in 200,000 cities around the world. Hosts will often help visitors to discover the famous sites and less well-known places so they can soak up the local atmosphere." - (...) z ponad pół milionem gospodarzy oferującymi darmowe zakwaterowanie w 200 000 miast na całym świecie. Gospodarze często pomogą odwiedzającym odkryć zarówno znane miejsca, jak i te mniej znane, żeby mogli chłonąć lokalną atmosferę.</p>
+<p>5. E </p>
+<p><strong>Fragment w tekście:</strong> "My two-week stay in Peru has been life-changing. I've made new friends from all over the world, learnt new skills (...). It was a chance to get out of my comfort zone and be challenged and, at the same time, know that my work has contributed to something meaningful (...)" - Mój dwutygodniowy pobyt w Peru zmienił moje życie. Poznałam nowych przyjaciół z całego świata, nauczyłam się nowych umiejętności (...). To dało mi szansę na wyjście ze strefy komfortu, sprostanie wyzwaniom i jednocześnie zrozumienie, że moja praca przyczyniła się do czegoś ważnego.</p>
+<p>6. B</p>
+<p><strong>Fragment w tekście:</strong> "PodVolunteer have a wide range of overseas projects, such as conservation or community development (...). You'll also have free time to wander around and explore the area while you're there." - PodVolunteer ma szeroki wybór zagranicznych projektów takich jak ochrona przyrody czy rozwój społeczności (...). Będziesz też mieć czas wolny na wędrówki i odkrywanie okolicy podczas pobytu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. F - this article presents different ways of spending holidays without spending much money, but it doesn't name any possible dangers of travelling.</p>
+<p>(Ten artykuł pokazuje różne sposoby spędzania wakacji bez konieczności wydawania dużej ilości pieniędzy, jednak nie przedstawia żadnych możliwych zagrożeń wiążących się z podróżowaniem.)</p>
+<p><strong>Fragment w tekście:</strong> "We're looked into how young people can have a holiday that fits their budget and here are some ideas." - Przyjrzeliśmy się temu jak młodzi ludzie mogą spędzić wakacje, które mieszczą się w ich budżecie i oto kilka pomysłów. </p>
+<p>2. F </p>
+<p><strong>Fragment w tekście:</strong> "There are more than 100,000 members in over 160 countries." - Jest tam więcej niż 100 000 członków w ponad 160 krajach.</p>
+<p>3. F</p>
+<p><strong>Fragment w tekście:</strong> "PodVolunteer have a wide range of overseas projects, such as conservation or community development, that you can join for as little as one week." - PodVolunteer ma szeroki wybór zagranicznych projektów takich jak ochrona przyrody czy rozwój społeczności, do których możesz dołączyć na co najmniej tydzień. </p>
+<p>4. T</p>
+<p><strong>Fragment w tekście:</strong> "I got a real insight into local culture and the best places to visit - places that aren't in any guidebook." - Poznałam od środka lokalną kulturę i najlepsze miejsca - te, których nie ma w żadnym przewodniku. </p>
+<p>5. F</p>
+<p><strong>Fragment w tekście:</strong> "(...) much better than lying on a beach somewhere!" - (...) zdecydowanie lepiej niż leżeć gdzieś na plaży!</p>
+<p>6. T</p>
+<p><strong>Fragment w tekście:</strong> "Meeting other cyclists was brilliant and I got some great tips for local routes to try out." - Spotkanie innych rowerzystów było wspaniałe i dostałem kilka świetnych podpowiedzi co do lokalnych tras do wypróbowania.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. All three types of holiday provide you with an enriching experience and broaden your horizons.</p>
+<p>(Wszystkie trzy rodzaje wakacji zapewniają wzbogacające doświadczenie i poszerzają horyzonty.) </p>
+<p>2. You should check out his/her profile.</p>
+<p>(Powinieneś/powinnaś sprawdzić jej/jego profil.)</p>
+<p>3. You can wander around and explore the area you are in. </p>
+<p>(Możesz spacerować odkrywać okolicę, w której się znajdujesz.)</p>
+<p>4. She travelled on foot and by public transport. </p>
+<p>(Podróżowała pieszo i komunikacją miejską.)</p>
+<p>5. The author's intention is to present interesting and cheap ways of spending holiday. </p>
+<p>(Intencją autora jest przedstawienie ciekawych i tanich sposobów spędzania wakacji.)</p><br>

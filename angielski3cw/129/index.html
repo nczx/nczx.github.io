@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. thought the film was fascinating / was fascinated by the film</p>
+<p>(Zdanie 1: Chociaż film wydał mi się fascynujący, nie jestem pewny/a, czy go zrozumiałem/am.</p>
+<p>Zdanie 2: Chociaż <strong>myślałem/am, że film był fascynujący / byłem/am zafascynowany/a filmem</strong>, nie jestem pewny/a, czy go zrozumiałem/am.) <br/><br/>2. give me a hand with</p>
+<p><strong>Uzasadnienie</strong>: <em>help somebody with something = </em><em>give somebody a hand with something </em>(pomóc komuś z czymś).<br/><br/>3. apologise for interrupting you</p>
+<p><strong>Uzasadnienie</strong>: <em>apologise for doing something </em>- przepraszać za zrobienie czegoś. <br/><br/>4. had tried three times</p>
+<p><strong>Uzasadnienie</strong>: czynność zakończona przed innym wydarzeniem w przeszłości, dlatego należy użyć czasu <em>past perfect </em>(<em>had + past participle</em> - III kolumna w tabeli lub końcówka <em>-ed</em>).<br/><br/>5. is a region where</p>
+<p>(Zdanie 1: Przez lata na tym obszarze dochodziło do wielu konfliktów.</p>
+<p>Zdanie 2: To <strong>jest obszar, gdzie</strong> przez lata dochodziło do wielu konfliktów.)<br/><br/>6. have nothing in common / don't have anything in common</p>
+<p>(Zdanie 1: Sophie i ja jesteśmy całkowitymi przeciwieństwami.</p>
+<p>Zdanie 2: Sophie i ja <strong>nie mamy ze sobą nic wspólnego</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. is the owner of </p>
+<p>(Zdanie 1: Mary posiada firmę, która projektuje i instaluje szklarnie.</p>
+<p>Zdanie 2: Mary <strong>jest właścicielką</strong> firmy, która projektuje i instaluje szklarnie.) <br/><br/>2. if I was watching</p>
+<p><strong>Uzasadnienie</strong>: pytanie w mowie zależnej. Jest to pytanie ogólne (tak/nie), dlatego używamy spójnika <em>if </em>(czy). Przestawiamy czas o jeden do tyłu: <em>present continuous → past continuous</em>. Stosujemy szyk zdania twierdzącego (tu: podmiot + czasownik posiłkowy + czasownik główny).<br/><br/>3. Would you like</p>
+<p><strong>Uzasadnienie</strong>: oferty możemy wyrazić za pomocą pytania z wyrażeniem <em>would like </em>(chciał(a)byś). <br/><br/>4. had our groceries delivered</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>have something done</em>, by mówić o zleconych czynnościach. Czas <em>past simple</em> tak jak w zdaniu wyjściowym. <br/><br/>5. was definitely going to apply</p>
+<p>(Zdanie 1: "Zdecydowanie planuję ubiegać się o stypendium" - powiedziała Cassie.</p>
+<p>Zdanie 2: Cassie powiedziała, że <strong>zdecydowanie zamierza ubiegać się</strong> o stypendium.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>be going to </em>dla planów i zamiarów w czasie przeszłym, bo w mowie zależnej przestawiamy czas o jeden do tyłu.<br/><br/>6. on the way to</p>
+<p>(Zdanie 1: Sarah upadła i skręciła kostkę, kiedy szliśmy do naszego hotelu.</p>
+<p>Zdanie 2: Sarah upadła i skręciła kostkę <strong>po drodze do </strong>naszego hotelu.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. take off due to </p>
+<p><strong>Uzasadnienie</strong>: czasownik w bezokoliczniku tak jak w zdaniu wyjściowym, bo poprzedza go czasownik posiłkowy <em>did not</em>. <em>Because of = due to </em>(z powodu). </p>
+<p>2. were too few people</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>there were </em>+ rzeczownik w liczbie mnogiej. Używamy przysłówka <em>too </em>(zbyt) razem z określnikiem <em>few </em>(niewielu), by oddać sens zdania wyjściowego.</p>
+<p>3. if you saw</p>
+<p><strong>Uzasadnienie</strong>: pytanie pośrednie, czyli po zwrocie wprowadzającym używamy spójnika (tu: <em>if </em>- czy, bo jest to pytanie typu tak/nie), a następnie szyk zdania twierdzącego (tu: podmiot + czasownik główny w <em>past simple</em>).</p>
+<p>4. denied having anything to do</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>deny doing something </em>(zaprzeczać, że coś się zrobiło). Nie możemy użyć zaimka ze zdania wyjściowego, ponieważ sam czasownik <em>deny </em>ma znaczenie negatywne. Zamiast niego używamy zaimka <em>anything</em>, którego możemy używać w przeczeniach lub w obecności innych wyrazów o znaczeniu negującym (np. <em>never </em>- nigdy).</p>
+<p>5. must have told</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>must have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -<em>ed</em>), by wyrazić pewność odnośnie jakiegoś wydarzenia z przeszłości.</p>
+<p>6. hasn't been working</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect continuous</em>, aby opisać niezakończoną czynność, która trwa od pewnego momentu w przeszłości aż do teraz.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. should be delivered </p>
+<p><strong>Uzasadnienie</strong>: strona bierna z czasownikiem modalnym. Tutaj: <em>should + be +</em> czasownik główny w formie <em>past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka <em>-ed</em>). <br/><br/>2. me if I was sure</p>
+<p><strong>Uzasadnienie</strong>: pytanie w mowie zależnej. Używamy dopełnienia po czasowniku <em>ask </em>(pytać) oraz spójnika <em>if </em>(czy), aby wprowadzić pytanie ogólne (tak/nie). Czas <em>present simple </em>(<em>are</em>) zmieni się na czas <em>past simple </em>(<em>was</em>). Szyk zdania twierdzącego: podmiot + czasownik <em>to be</em> + dopełnienie.<br/><br/>3. any way I can</p>
+<p>(Zdanie 1: Czy jest coś, co mogę zrobić, żeby ci pomóc?</p>
+<p>Zdanie 2: Czy <strong>mogę w jakiś sposób</strong> pomóc?)<br/><br/>4. day trip was all</p>
+<p>(Zdanie 1: Chciałem/am spędzić trochę więcej czasu w Brighton, ale mogliśmy tam pojechać tylko na jeden dzień.</p>
+<p>Zdanie 2: Chciałem/am spędzić trochę więcej czasu w Brighton, ale <strong>jednodniowa wycieczka to było wszystko</strong>, na co starczyło nam czasu.)<br/><br/>5. has not lived in this</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect simple</em>, aby opisać stan, który trwa od jakiegoś czasu (<em>for five years </em>- od pięciu lat).<br/><br/>6. gets on my nerves</p>
+<p>(Zdanie 1: Uważam, że Daniel jest naprawdę irytujący.</p>
+<p>Zdanie 2: Daniel naprawdę <strong>działa mi na nerwy</strong>.)</p><br>

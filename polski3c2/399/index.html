@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe cechy reporta¿u:</p>
+<ul>
+<li>przedstawia autentyczne wydarzenia -&gt; Tochman w swym tekœcie ukazuje skutki wojny w Jugos³awii; </li>
+<li>wi¹¿e siê z uczestnictwem autora w przedstawionej sytuacji lub zaprezentowaniem relacji innych osób -&gt; autor udaje siê do by³ej Jugos³awii i przedstawia relacjê bohaterki zajmuj¹cej siê ekshumacj¹ zw³ok; </li>
+<li>porusza rozmait¹ tematykê (np. reporta¿ wojenny, podró¿niczy, obyczajowy) -&gt; jest to reporta¿ wojenny;</li>
+<li>wykorzystuje rozmaite techniki obrazowania typowe dla literatury piêknej - chocia¿ narracja Tochmana jest bardzo oszczêdna, to pisz¹cy wykorzystuje np. makabreskê, ironiê, zwiêz³¹ charakterystykê Ewy Klonowski;</li>
+<li>najwa¿niejszy w reporta¿u staje siê bohater oraz problem -&gt; w reporta¿u zostaje ukazany problem rozliczenia siê z wojennymi zbrodniami, bohaterem staj¹ siê zaœ rodziny, ofiary oraz antropolo¿ka. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Jêzyk relacji Tochmana jest niezwykle oszczêdny i precyzyjny. Autor wykorzystuje przede wszystkim krótkie akapity, przytacza te¿ dialog z nielicznymi komentarzami narratora. Nie prezentuje równie¿ swego stanowiska ani nie wyra¿a ¿adnych ocen, dziêki czemu czytelnik mo¿e wysnuæ w³asne wnioski - ma w tym pe³n¹ swobodê. W relacji Tochmana dominuj¹ krótkie zdania. Wœród nich bardzo czêsto pojawiaj¹ siê:</p>
+<ul>
+<li>równowa¿niki zdañ -&gt; "I kartka z wydrukowanym na komputerze du¿ym imieniem"; "Czêœæ cia³a (<em>body parts</em>)"; "¯adnych koœci"; </li>
+<li>zdania pojedyncze -&gt; Salê teatraln¹ w wiejskim domu kultury otwiera siê raz w tygodniu - w czwartek"; "Na br¹zowej terakocie u³o¿ono ubrania"; "Rzadko jest to kompletny strój";</li>
+<li>zdania z³o¿one -&gt; "Wierz¹, ¿e w³aœnie tu wyjaœni¹ swoj¹ sprawê."; Wiêziono tam prawie samych mê¿czyzn, choæ by³y i kobiety"; "Wchodz¹, zatykaj¹ nosy.";</li>
+<li>nieliczne zdania wielokrotnie z³o¿one -&gt; "Do sali teatralnej zg³aszaj¹ siê bliscy zaginionego, którzy maj¹ powody przypuszczaæ, ¿e osiem lat temu trafi³ do Omarskiej."; "M³odzi ludzie z siedmioletni¹ dziewczynk¹, którzy niedaleko sceny tak d³ugo przygl¹daj¹ siê ubraniu KV 22B, wo³aj¹ kogoœ, kto prowadzi identyfikacjê". </li>
+</ul>
+<p>Tekst wyró¿nia siê tak¿e tym, i¿ jest pozbawiony wyra¿eñ wartoœciuj¹cych, ponadto Tochman nie d¹¿y do tego, aby by³ on nasycony œrodkami stylistycznymi, ozdobny. Zamiast tego pisarz wykorzystuje przede wszystkim konkretne pojêcia, co wp³ywa na surowoœæ reporta¿u - skupia siê on tylko na tym, co widzi lub s³yszy sam twórca. Zabieg ten powoduje, i¿ osoba autora nie przes³ania problematyki tekstu ani bohaterów, zaœ oszczêdnoœæ jêzyka zapobiega patosowi, pozwala na wybrzmienie cierpienia ludzi oraz skutków wojny. W ten sposób czytelnik bezpoœrednio musi zmierzyæ siê z bolesn¹ prawd¹, która nie jest w ¿aden sposób z³agodzona - reporta¿ wiêc silniej na niego oddzia³uje. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a)/c) Podobieñstwo pracy Klonowski i Edelmana polega przede wszystkim na tym, i¿ w centrum ich zainteresowania znajduje siê cz³owiek oraz jego organizm. Edelman jako kardiolog ratuje ludzkie ¿ycia, umo¿liwia swym pacjentom przed³u¿enie egzystencji lub tez godne, pozbawione cierpienia odejœcie z tego œwiata. Troska o drugiego cz³owieka stanowi dla niego misjê, ale wp³ywa tak¿e na rodziny pacjentów, poniewa¿ dziêki lekarzowi mog¹ cieszyæ siê jeszcze obecnoœci¹ krewnych. Równie¿ w pracy Klonowski kluczowy staje siê drugi cz³owiek, gdy¿ ofiarom przywraca godnoœæ i podmiotowoœæ, zaœ ich rodzinom pomaga w poznaniu losów krewnych. W ten sposób mog¹ zamkn¹æ pewien rozdzia³ w ¿yciu, po¿egnaæ siê z bliskimi i odzyskaæ spokój. Jednoczeœnie dzia³ania bohaterki pozwalaj¹ na zachowanie pamiêci oraz uczczenie zamordowanych czy te¿ wymierzenie sprawiedliwoœci. </p>
+<p> </p>
+<p>b) Wartoœci wa¿ne dla Edelmana:</p>
+<ul>
+<li>¿ycie;</li>
+<li>godnoœæ;</li>
+<li>aktywna postawa;</li>
+<li>determinacja;</li>
+<li>spokój.</li>
+</ul>
+<p> </p>
+<p>Wartoœci wa¿ne dla Klonowski:</p>
+<ul>
+<li>godnoœæ;</li>
+<li>sprawiedliwoœæ;</li>
+<li>nauka;</li>
+<li>prawda;</li>
+<li>empatia.</li>
+</ul><br>

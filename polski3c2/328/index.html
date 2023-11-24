@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Tytu³ utworu odnosi siê bezpoœrednio do relacji, jaka ³¹czy podmiot liryczny z jego wybrank¹. Jednoczeœnie nazwa ta podkreœla tragizm mi³oœci, poniewa¿ jest "bez jutra". Oznacza to przekonanie o tym, i¿ kochankowie s¹ pozbawieni nadziei na wspóln¹ przysz³oœæ i szczêœliwe zakoñczenie - niepewnoœæ ta wynika z nieprzyjaznych realiów wojennych. Bohaterowie nie wiedz¹ bowiem, czy uda im siê prze¿yæ trudne czasy. Tym samym tytu³ wp³ywa na odczytanie utworów, poniewa¿ sugeruje pewien pesymizm i niemo¿noœæ przezwyciê¿enia losu. W ten sposób przytoczony wiersz staje siê zapisem uczucia ³¹cz¹cego bohaterów, pozwala na jego utrwalenie - mimo przeczucia zagro¿enia i katastrofy. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo: </p>
+<table border="1" style="border-collapse:collapse;width:700px;height:611px;">
+<tbody>
+<tr style="height:27px;">
+<td style="background-color:#aed581;text-align:center;width:346.5px;height:27px;"><strong>Fragment</strong></td>
+<td style="background-color:#aed581;text-align:center;width:346.5px;height:27px;"><strong>Interpretacja</strong></td>
+</tr>
+<tr style="height:27px;">
+<td style="width:346.5px;text-align:center;height:27px;"><em>Mój sen œmiertelny [...] </em></td>
+<td style="width:346.5px;text-align:center;height:27px;">Okreœlenie snu mianem "œmiertelnego" wprowadza pewn¹ dwuznacznoœæ. Przestaje on byæ tylko forma ucieczki od rzeczywistoœci, ale zostaje skojarzony ze œmierci¹. Sugeruje to jej wszechobecnoœæ w ¿yciu bohaterów - realia wojenne wkraczaj¹ nawet w sferê snu.</td>
+</tr>
+<tr style="height:27px;">
+<td style="width:346.5px;text-align:center;height:27px;"><em>rozdziela cienie cia³ od lêku.</em></td>
+<td style="width:346.5px;text-align:center;height:27px;">Metafora ta zaznacza prze¿ycia oraz sytuacjê bohaterów. Wojna sprawia, ¿e ich egzystencja nie jest pe³na, poniewa¿ nie mog¹ w pe³ni cieszyæ siê ¿yciem, zaœ ca³y czas towarzyszy im lêk.</td>
+</tr>
+<tr style="height:27px;">
+<td style="width:346.5px;text-align:center;height:27px;"><em>Mówimy szeptem krwi ³agodnej</em></td>
+<td style="width:346.5px;text-align:center;height:27px;">Krew w poœredni sposób przypomina o okrucieñstwie i œmierci. Sam szept sugeruje zaœ poczucie zagro¿enia, niemo¿noœæ wyra¿ania wprost swoich myœli. </td>
+</tr>
+<tr style="height:213px;">
+<td style="width:346.5px;text-align:center;height:213px;">
+<p><em>i trwogi tyle, co zakrzep³a</em></p>
+<p><em>wyryje w twarzy ³za jak z ognia</em></p>
+<p><em>i g³osu w nas, co wydaæ mo¿e</em></p>
+<p><em>w kielichu warg jêzyka ostrze</em></p>
+</td>
+<td style="width:346.5px;text-align:center;height:213px;">Fragment ten obrazowo ukazuje koszmar wojennych doznañ. Przejawia siê on przede wszystkim w trwodze, niepewnoœci oraz cierpieniu wywo³anym wszechobecn¹ destrukcj¹. Z kolei "jêzyka ostrze" mo¿e sugerowaæ wyra¿enie skargi i bólu.  </td>
+</tr>
+<tr style="height:27px;">
+<td style="width:346.5px;text-align:center;height:27px;"><em>[...] szmer ciemnoœci [...]</em></td>
+<td style="width:346.5px;text-align:center;height:27px;">Ciemnoœæ mo¿e symbolizowaæ wojenne doœwiadczenia, które stanowi¹ przeciwwagê dla harmonijnej wizji rzeczywistoœci. Mrok bowiem przypomina o z³u i niebezpieczeñstwie. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Motyw snu wprowadza do utworu oniryzm oraz odrealnienie sytuacji - w sferze tej w pe³ni realizuj¹ siê uczucia oraz pragnienia kochanków. Stan ten ma dwoisty charakter. Z jednej strony zapewnia bezpieczn¹ przestrzeñ oraz poczucie bezpieczeñstwa i harmonii. Buduje intymn¹ atmosferê. Jest równie¿ form¹ ucieczki od okrutnej rzeczywistoœci, pozwala na zapomnienie o wojennych realiach egzystencji. Tylko w ten sposób bohaterowie mog¹ skupiæ siê na ³¹cz¹cej ich mi³oœci. Z drugiej zaœ strony sen - jako zjawisko poœrednie miêdzy ¿yciem a œmierci¹ - sugeruje pewne poczucie zagro¿enia i niepewnoœci, co podkreœlaj¹ metafory ("sen œmiertelny", "gdzie d³oñ pierzasta jak z igliwia / rozdziela cienie cia³ od lêków").  </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zakochani zostali przedstawieni jako osoby, które wy³¹cznie poza dos³ownym wymiarem rzeczywistoœci mog¹ cieszyæ siê sob¹. Podmiot liryczny podkreœla piêkno swej wybranki, jest zafascynowany jej powierzchownoœci¹. Sposób jej sportretowania wskazuje na niezwyk³¹ wra¿liwoœæ mówi¹cego: "puszysta w³osów twoich per³a / jak promieñ kr¹g³y w poœciel sp³ywa". Ponadto kontakt z dziewczyn¹ sprawia, i¿ podmiot mo¿e na moment zapomnieæ o wojennych doœwiadczeniach; ukochana przynosi wiêc ukojenie: "gdzie d³oñ pierzasta jak z igliwia / rozdziela cienie cia³ od lêku". Kochankowie s¹ wzajemnie w siebie ws³uchani, ich relacja staje siê dla bohaterów Ÿród³em harmonii i spokoju. Uczucie to pozwala im na przeniesienie siê w inny œwiat i doœwiadczenie szczêœcia. Mi³oœæ pozwala wiêc na zyskanie pe³ni cz³owieczeñstwa i ucieczkê od tego, co okrutne. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Utwór wyra¿a przede wszystkim pragnienie kochanków, aby chocia¿ na moment zapomnieæ o trudnych doœwiadczeniach. Z tego te¿ powodu sen czy marzenia staj¹ siê bezpieczn¹ sfer¹, która zapewnia spe³nienie i pozwala na rozkwit uczucia: "Mój sen œmiertelny cia³em spe³niasz / i s³owem p³ochym w œnie poczêtym". W tej alternatywnej rzeczywistoœci bohaterowie mog¹ cieszyæ siê piêkn¹ i harmonijn¹ rzeczywistoœci¹, odleg³¹ od wojennych realiów ¿ycia czy œmierci. Podkreœla to ostatnia strofa, poniewa¿ rzeczywistoœæ duchowa zapewnia to, co zostaje utracone podczas wojny. Tylko zamkniête powieki zapewniaj¹ powrót do przyjaznej natury, przywo³uj¹ bowiem pozytywne wspomnienia. One z kolei daj¹ wiarê i ukojenie: "Bo tyle tylko wiary w pieœni, / ile obrazu pod powiek¹ / ziemi odbitej ostatecznie". </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Motyw krwi wprowadza do utworu dwa znaczenia, które wi¹¿¹ siê z przeciwstawnymi zjawiskami w ¿yciu cz³owieka: z ¿yciem oraz œmierci¹. S³owa "Mówimy szeptem krwi ³agodnej" mog¹ bowiem odnosiæ siê do egzystencji kochanków, ich ci¹g³ego trwania mimo niesprzyjaj¹cych okolicznoœci. Sama zaœ czerwieñ krwi wywo³uje skojarzenia z intensywnoœci¹ tego uczucia, tak¿e po¿¹daniem. Sposób jej przedstawienia wskazuje przy tym na siln¹ wiêŸ ³¹cz¹c¹ zakochanych, która zyskuje wymiar duchowy i prowadzi do zespolenia bohaterów. Wzmianka na temat mowy "szeptem krwi ³agodnej" mo¿e jednak tak¿e nawi¹zywaæ do wojennych realiów ¿ycia. Przypomina wtedy o wszechobecnoœci œmierci i cierpieniu wynikaj¹cym z konfliktu. Wtedy to ból i œmieræ staj¹ siê jedynym jêzykiem znanym cz³owiekowi, kszta³tuj¹ ca³okszta³t jego egzystencji. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przywo³ana w utworze natura bez w¹tpienia kontrastuje z okrutnymi realiami ("i trwogi tyle, co zakrzep³a / wyryje w twarzy ³za jak z ognia"). Przyroda jest bowiem harmonijna, koi zmys³y: "i obudzimy siê s³uchaj¹c / szelestu chmur i grania wody". Odzwierciedla wiêc dotychczasowy ³ad rzeczywistoœci, który nie zosta³ naruszony przez okrucieñstwo wojny. Jednoczeœnie jej wspomnienie pozwala na zachowanie cz³owieczeñstwa oraz nadziei: "Bo tyle tylko wiary w pieœni, / ile obrazu pod powiek¹ / ziemi odbitej ostatecznie". Natura zostaje przywo³ana tak¿e po to, aby wskazaæ na swoisty paradoks i tragizm sytuacji kochanków. Przyroda bowiem przestaje nale¿eæ do rzeczywistoœci, mo¿na siê z ni¹ zetkn¹æ tylko w marzeniach (snach). Wskazuje to na degradacjê œwiata - natura staje siê czymœ niespotkanym, nieprzystaj¹cym do wojennych realiów. Tylko wiêc w sferze duchowej cz³owiek na nowo mo¿e siê z ni¹ zjednoczyæ, co wskazuje na dramatyzm jego sytuacji. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Rozwi¹zanie poni¿ej: </p>
+<p> </p>
+<table border="1" style="border-collapse:collapse;width:715px;height:536px;">
+<tbody>
+<tr style="height:36px;">
+<td style="background-color:#aed581;text-align:center;height:36px;width:235.578px;"><strong> Œrodek wyrazu artystycznego</strong></td>
+<td style="background-color:#aed581;text-align:center;height:36px;width:234.25px;"><strong>Przyk³ad z tekstu</strong></td>
+<td style="background-color:#aed581;text-align:center;height:36px;width:235.172px;"><strong>Funkcja</strong></td>
+</tr>
+<tr style="height:100px;">
+<td style="width:235.578px;text-align:center;height:100px;">porównanie</td>
+<td style="width:234.25px;text-align:center;height:100px;">
+<p><em>puszysta w³osów twoich per³a</em></p>
+<p><em>jak promieñ kr¹g³y w poœciel sp³ywa</em></p>
+</td>
+<td style="width:235.172px;text-align:center;height:100px;">Porównanie wydobywa podobieñstwo miêdzy zestawionymi elementami. Podkreœla piêkno adresatki wypowiedzi.  </td>
+</tr>
+<tr style="height:81px;">
+<td style="width:235.578px;text-align:center;height:81px;">epitet</td>
+<td style="width:234.25px;text-align:center;height:81px;">
+<p><em>sen œmiertelny</em></p>
+<p><em>planety ma³e</em></p>
+</td>
+<td style="width:235.172px;text-align:center;height:81px;">Epitety ukonkretniaj¹ dane zjawiska. Wp³ywaj¹ na plastycznoœæ i wyrazistoœæ przedstawienia. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">metafora</td>
+<td style="width:234.25px;text-align:center;height:18px;"><em>Mój sen œmiertelny cia³em spe³niasz</em></td>
+<td style="width:235.172px;text-align:center;height:18px;">Metafora nadaje wyrazom nowe, nieoczywiste znaczenia. Podkreœla odrealnienie sytuacji oraz jej oniryczny charakter. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">powtórzenie</td>
+<td style="width:234.25px;text-align:center;height:18px;">
+<p><em>[...] niech w nas p³ynie,</em></p>
+<p><em>niech niesie [...] </em></p>
+</td>
+<td style="width:235.172px;text-align:center;height:18px;">Wyp³ywa na rytmicznoœæ fragmentu, akcentuje tak¿e wolê i ¿yczenie osoby mówi¹cej. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">apostrofa</td>
+<td style="width:234.25px;text-align:center;height:18px;"><em>[...] cia³em spe³niasz</em></td>
+<td style="width:235.172px;text-align:center;height:18px;">Apostrofa wskazuje na adresata wypowiedzi, wprowadza podnios³y oraz uroczysty nastrój.</td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">inwersja</td>
+<td style="width:234.25px;text-align:center;height:18px;"><em>w kielichu warg jêzyka ostrze</em></td>
+<td style="width:235.172px;text-align:center;height:18px;">Ubogaca warstwê brzmieniow¹ tekstu. Ponadto s³u¿y zwróceniu uwagi na sens poszczególnych wyrazów. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">onomatopeja</td>
+<td style="width:234.25px;text-align:center;height:18px;"><em>szmer</em></td>
+<td style="width:235.172px;text-align:center;height:18px;">Równie¿ wzmacnia aspekt brzmieniowy wiersza. Wp³ywa na nastrojowoœæ przedstawienia.</td>
+</tr>
+<tr style="height:18px;">
+<td style="width:235.578px;text-align:center;height:18px;">instrumentacja g³oskowa</td>
+<td style="width:234.25px;text-align:center;height:18px;">
+<p><em>i s³owem p³ochym w œnie poczêtym;</em></p>
+<p><em>puszysta w³osów twoich per³a</em></p>
+</td>
+<td style="width:235.172px;text-align:center;height:18px;">Wp³ywa na wartoœæ semantyczn¹ fragmentu, pozwala na uwydatnienie np. poczucia niepokoju. Wynika to z nagromadzenia g³oski "p".</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br>

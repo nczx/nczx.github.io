@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podmiot liryczny to osoba naznaczona wojennym doœwiadczeniem. Choæ jest m³oda, poœwiêca swe ¿ycie walce za ojczyznê. Sw¹ wypowiedŸ kieruje do "potomnego", bli¿ej nieokreœlonej osoby, która bêdzie ¿yæ ju¿ w zupe³nie innych warunkach. Mimo wiêc doœwiadczanej tragedii i katastrofy kieruje swe myœli w przysz³oœæ, wyra¿a przy tym doœwiadczenia typowe dla swego pokolenia. Podmiot liryczny mo¿na uto¿samiæ z Gajcym. Przede wszystkim podmiot liryczny ³¹czy w sobie dwie role: poety i ¿o³nierza. Jego sytuacja jest wiêc to¿sama z losem autora, który jako m³ody cz³owiek bierze udzia³ w powstaniu warszawskim, a przy tym pozostaje wra¿liw¹ jednostk¹ opisuj¹c¹ w oryginalny sposób rzeczywistoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podmiot liryczny przede wszystkim dostrzega znu¿enie ludzi. Przestaj¹ dostrzegaæ piêkno i harmoniê otaczaj¹cego ich œwiata, zdaj¹ siê ¿yæ w ci¹g³ym napiêciu, byæ mo¿e w gniewie czy nienawiœci: "nosz¹ swe rêce zaciœniête / przy cia³ach sennych i nad g³ow¹ / nie widz¹c planet nieforemnych". W ich los wpisana jest œmieræ oraz zag³ada zwi¹zana z poœwiêceniem siê w imiê wy¿szych wartoœci, co sugeruj¹ s³owa: "A blisko - mur omsza³y chroni / spokoju tych, co d³oni wierz¹c / i mi³oœæ mierz¹c ostrzem broni / upadli w piasek twarz¹ szczer¹". Ludzie dooko³a podmiotu lirycznego malej¹ wobec wojennych realiów, s¹ bezradni, przepe³nia ich ¿al. Zostaj¹ im odebrane pozytywne wartoœci (harmonia, piêkno, dobro). Ponadto spokojna i harmonijna egzystencja zostaje zamieniona na rozlew krwi. Przyczynia siê to do zniszczenia ich cz³owieczeñstwa, duchowej pustki: "I nigdy ust nie zmieni w skrzypce, / a oczu w œwiat³o. [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo: </p>
+<table border="1" style="border-collapse:collapse;width:711px;height:671px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:352px;height:17px;"><strong>Przyk³adowy fragment </strong></td>
+<td style="background-color:#aed581;text-align:center;width:352px;height:17px;"><strong>Interpretacja</strong></td>
+</tr>
+<tr style="height:108px;">
+<td style="width:352px;text-align:center;height:108px;">
+<p><em>[...] Oto œwiat,</em></p>
+<p><em>w którym struchla³ym krokiem mierzê</em></p>
+<p><em>ziemiê kulist¹ ponoæ. [...]</em></p>
+</td>
+<td style="width:352px;text-align:center;height:108px;">Podmiot liryczny ¿yje w nieprzyjaznej rzeczywistoœci. Traci ona swój harmonijny wymiar. Budzi w osobie mówi¹cej tylko niepokój, poniewa¿ musi siê nieustannie mierzyæ z wojennymi realiami. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:352px;text-align:center;height:17px;"><em>Niewiele wiem jak ty zapewne:</em></td>
+<td style="width:352px;text-align:center;height:17px;">Podmiot liryczny zachowuje pokorê. Jest œwiadomy tego, i¿ m³odoœæ nie zapewnia mu wielu doœwiadczeñ typowych dla jednostki dojrza³ej. </td>
+</tr>
+<tr style="height:266px;">
+<td style="width:352px;text-align:center;height:266px;">
+<p><em>Jedna jest ziemia, która niesie</em></p>
+<p><em>ciebie i mnie, i jedna m³odoœæ;</em></p>
+<p><em>w niej nauczony lêku - piêœci</em></p>
+<p><em>wznosi³em krn¹brne ponad g³ow¹</em></p>
+<p><em>i w szczêk ¿elaza zas³uchany</em></p>
+<p><em>mija³em dzieñ po dniu jak krzy¿e</em></p>
+<p><em>jak ty - podniesiesz na mnie kamieñ</em></p>
+<p><em>lub rzucisz z wzgard¹ ziemi grudê.</em></p>
+</td>
+<td style="width:352px;text-align:center;height:266px;">Tragizm losu osoby mówi¹cej przejawi¹ siê w tym, ¿e m³odoœæ nie jest dla niej czasem kszta³towania swojej to¿samoœci czy poznawania œwiata. Zamiast tego ¿yje ona w ci¹g³ym lêku, uczestniczy w walce i rozlewie krwi, wyzbywa siê wra¿liwoœci oraz uczuæ. Œmieræ staje siê dla podmiotu lirycznego codziennoœci¹. Tragiczne doœwiadczenia zmuszaj¹ go do zastanowienia siê, jak jego wybory bêd¹ postrzegane przez przysz³e pokolenia. Z tego te¿ powodu obawia siê, i¿ jego decyzje spotkaj¹ siê z niezrozumieniem, pogard¹. </td>
+</tr>
+<tr style="height:140px;">
+<td style="width:352px;text-align:center;height:140px;">
+<p><em>Kocha³em tak jak ty zapewne,</em></p>
+<p><em>ale mi serca dano sk¹po</em></p>
+<p><em>na mi³oœæ moj¹ niepotrzebn¹,</em></p>
+<p><em>bowiem stawa³y nad epok¹,</em></p>
+<p><em>której imiona dajesz teraz</em></p>
+<p><em>olbrzymia œmieræ i przera¿enie. </em></p>
+</td>
+<td style="width:352px;text-align:center;height:140px;">Osoba mówi¹ca zauwa¿a, ¿e jej ¿ycie jest przesi¹kniête œmierci¹ i strachem. Z tego te¿ powodu na znaczeniu trac¹ jej uczucia, poniewa¿ okrutna rzeczywistoœæ nie pozwala na ich pielêgnacjê czy rozwój. W ten sposób zostaje jej odebrana cz¹stka cz³owieczeñstwa. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:352px;text-align:center;height:17px;">
+<p><em>I ta jest wiedza we mnie mocna</em></p>
+<p><em>i ten jest tylko chudy œpiew:</em></p>
+<p><em>fujark¹ by³ mi grom i pocisk</em></p>
+<p><em>i ogieñ barwi³ krzepko sen. </em></p>
+</td>
+<td style="width:352px;text-align:center;height:17px;">Ka¿dy aspekt ¿ycia osoby mówi¹cej podlega wojennym prze¿yciom. To one kszta³tuj¹ to¿samoœæ i ducha wypowiadaj¹cego siê. W ¿adnym momencie nie mo¿e zaznaæ ukojenia czy spokoju ducha. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>W opisie tym dominuje przede wszystkim smutek oraz melancholia, przera¿enie brutalnym œwiatem. Podmiot liryczny jest œwiadomy wp³ywu wojny na swoje ¿ycie. Przepe³nia go cierpienie, poniewa¿ wojna nie pozwala mu na kszta³towanie swej to¿samoœci czy beztroskie poznawanie œwiata. Zamiast tego odczuwa bezradnoœæ, ale w pewien sposób godzi siê ze swym losem. Jego niepokój, niepewnoœæ wi¹¿¹ siê jednak z tym, i¿ nie wie, jak jego postawê oceni¹ przysz³e pokolenia. </p><br>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe znaczenie kluczowych słów: </p>
+<table border="1" style="border-collapse: collapse; width: 392px; height: 306px;">
+<tbody>
+<tr style="height: 27px;">
+<td style="background-color: #80cbc4; text-align: center;"><strong>Wyraz</strong></td>
+<td style="background-color: #80cbc4; text-align: center;"><strong>Symbolika</strong></td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">kot</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">tajemnica, magia, zmysłowość, metafizyka</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">brzoza</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">życie, początek, oś świata, śmierć</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">wierzba</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">smutek, stałość, siły witalne </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">dom</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">trwałość, bezpieczeństwo, schronienie</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">piwnica</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">podświadomość, tajemnica </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">czarna chusta</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">smutek, żałoba </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">taniec</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">odrodzenie, przemiana, śmierć, żałoba</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 192.5px; height: 27px; text-align: center;">cień</td>
+<td style="width: 192.5px; height: 27px; text-align: center;">przemijanie, śmierć</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Przykładowa interpretacja:</p>
+<p>Utwór Rymkiewicza porusza temat relacji człowieka ze światem oraz przemijania, które jest nieodłącznym elementem ludzkiej egzystencji. W wierszu świat natury zyskuje szczególny status. Świadczy o tym chociażby sposób ukazania kotów. W tradycji są one postrzegane jako tajemnicze istoty, mające kontakt ze sferą metafizyczną. Z kolei w utworze stają się autorami: "Koty pisały moje wiersze / Piosenki ody tarantele", wiedzą więcej niż podmiot liryczny. Zaznacza się tutaj rozdźwięk między niezmiennym światem natury, a człowiekiem doświadczającym śmierci: "Koty pisały co tam chciały / Ja umierałem po kryjomu / Brzozy i wierzby im szumiały / Teraz wychodzą z mego domu". Można wywnioskować, że drzewa nie tylko przypominają o sile, niezmienności natury, ale stają się znakiem śmierci. Również pustka panująca w domu czy piwnicy sugeruje kres życia. Przestrzeń ta wywołuje zazwyczaj pozytywne skojarzenia z rodziną, poczuciem bezpieczeństwa, w tym kontekście zaś symbolizuje raczej brak, odejście. Take odczytanie zdaje się potwierdzać motyw czarnej chusty - znaku żałoby. Również taniec kotów można rozpatrywać jako powiązany ze śmiercią, chociaż wskazuje też na przemianę podmiotu lirycznego, który żegna się z doczesnością. Tym samym wiersz zdaje się przypominać o tym, że egzystencja człowieka - w przeciwieństwie do świata natury - jest niezwykle krucha, podlega on biologicznym procesom. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Osoba mówiąca zdaje się być ściśle związana ze światem natury. Świadczy już o tym sam tytuł dzieła oraz odniesienia do niektórych elementów przyrody - znaczących dla podmiotu lirycznego. Szczególnym szacunkiem wypowiadająca się osoba darzy koty - są one pełnoprawnymi bohaterami wiersza, którym zostaje przypisana szczególna rola. Stają się bowiem autorami, mają dostęp do sfery zamkniętej dla człowieka: "Koty pisały moje wiersze / Piosenki ody tarantele / Bo miały horyzonty szersze". Tym samym zwierzęta te to niejako rzecznicy metafizyki, wyróżnia je siła twórcza. Ponadto podmiot liryczny nadaje im cechy ludzkie ("Koty tańczyły wokół domu / Tango bolero charlestona"), postrzega jako domowników. Na szczególną relację łączącą osobę z naturą wskazuje także przedstawienie wierzb i brzóz. Drzewa są wiernym towarzyszami osoby mówiącej, ponadto cierpią po śmierci podmiotu lirycznego, co świadczy o zażyłym związku emocjonalnym, poczuciu wspólnoty człowieka i przyrody. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Według autora tekstu Rymkiewicza fascynuje przede wszystkim niepowtarzalny charakter istnienia kotów. Ludzie w przeciwieństwie do tych zwierząt cały czas cierpią z powodu swej jednostkowości, niepowtarzalności, ponieważ brakuje im złączenia z całością. Z kolei kot akceptują ten stan rzeczy i czerpią z niego przyjemność. Są szczęśliwe z tego powodu, iż same dla siebie - jako jednostka - stają się kluczowym punktem odniesienia. Doceniają więc swoją osobność czy ten specyficzny status istnienia. </p>
+<p> </p>
+<p>b) Wyrażenie swojego zdania - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Tytuł obrazu brzmi <em>Lato. Kot na balustradzie</em>. Sugeruje on, iż artysta skupia się na pojedynczym przedstawicieli świata udomowionych drapieżników, by za jego pomocą oddać atmosferę letniego czasu. Tytułowy kot staje się niejako reprezentantem wybranej pory roku, a jednocześnie funkcjonuje w jej obrębie. Pozornie banalna scena staje się tematem malarskim, ponieważ artysta odkrywa jej piękno i niejednoznaczność. Wrażenie to buduje ciepła kolorystyka (przede wszystkim żółcie i brązy) wzbogacona czernią. Nie tylko buduje ona klimat letniego, leniwego dnia, lecz także wskazuje na harmonię łącząca kota z otaczającym go światem, którego jest bacznym obserwatorem. Artysta docenia także piękno kociego futra, na co wskazuje staranne zróżnicowanie jego kolorystki oraz ciemniejszych pręg. Również gra światła służy skontrastowaniu ciała kota z nieco jaśniejszym tłem, a także podkreśla subtelność linii jego sylwetki. Nie bez znaczenia jest również statyczna kompozycja dzieła. Kot, umieszczony w centrum dzieła, staje się głównym bohaterem. Zostaje przedstawionych w chwili relaksu lub też kontemplacji - leży na balustradzie, tylko jego ogon i tylna noga tworzą linię pionową. W ujęciu artysty nabiera on mistycznego charakteru, ponieważ przypomina zamyślonego i tajemniczego mędrca mającego dostęp do nieznanych człowiekowi sfer.</p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. T</p>
+<p><strong>Fragment w tekście:</strong> "The world is facing some serious problems. <em>Science Today</em> looks at four innovations that could help." - Świat zmaga się z poważnymi problemami. <em>Science Today</em> przygląda się czterem innowacjom, które mogą pomóc. </p>
+<p>2. F - the innovation described in paragraph 5 is in use</p>
+<p><strong>Fragment w tekście:</strong> "The coffee waste is converted into biofuel to power buses, and biomass pellets which can be used to heat buildings. Coffee 'coal' is used for barbecues and coffee 'logs' to burn on open fires. Bio-bean promotes a sustainable use of waste resources and the company hopes to expand." - Resztki kawy są przetwarzane w biopaliwo do zasilania autobusów i pelet biomasowy, którego można użyć do ogrzewania budynków. 'Węgiel' kawowy jest używany do grilla, a kawowe 'kłody' do palenia ognisk. Bio-bean promuje zrównoważone zużycie zasobów pochodzących od odpadów, ponadto firma ma nadzieję na dalszy rozwój.</p>
+<p>3. T</p>
+<p><strong>Fragment w tekście:</strong> "A Spanish company, Forward Thinking Architecture, has designed a 24m-tall three-level 'Smart Floating Farm' (...) - Hiszpańska firma, Forward Thinking Architecture, zaprojektowała 24 metrową trzypoziomową 'Inteligentną Dryfującą Farmę'. </p>
+<p>4. T</p>
+<p><strong>Fragment w tekście:</strong> "Will coffee power replace other conventional fuels? (...) The coffee waste is converted into biofuel to power buses, and biomass pellets which can be used to heat buildings. - Czy energia z kawy zastąpi tradycyjne paliwa? (...) Resztki kawy są przetwarzane w biopaliwo do zasilania autobusów i pelet biomasowy, którego można użyć do ogrzewania budynków.</p>
+<p>5. F</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. B</p>
+<p><strong>Uzasadnienie:</strong> następujące zdanie z 2 akapitu tekstu: "Urządzenie ma mikrobowe ogniwo paliwowe (MFC), czyli mały, sztuczny żołądek, który trawi szkodliwe bakterie i produkuje elektrony." łączy się z fragmentem B: "One następnie zapewniają maszynie energię, żeby poruszała się dalej i wykonywała swoją pracę."  </p>
+<p>2. E</p>
+<p><strong>Uzasadnienie:</strong> fragment F: "Obecnie ta technologia wymaga użycia zaawansowanego sprzętu, co sprawia, że jest nierealna do wykorzystania na co dzień." łączy się z ostatnim zdaniem akapitu 3: "Jednakże naukowcy robią ogromne postępy w tej dziedzinie i w przyszłości 'odciski mózgu' będą weryfikowały użytkowników wszędzie". </p>
+<p>3. A</p>
+<p><strong>Uzasadnienie:</strong> następujące zdanie z akapitu 4: "Ryby żywią się roślinami, które spadają ze środkowej warstwy." łączy się z fragmentem A: "Tutaj uprawia się je w wodzie, zawierającej niezbędne składniki odżywcze."</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie:</strong> fragment C: "Firma oferuje też dwa nowe produkty." łączy się ze zdaniem po luce: "'Węgiel' kawowy jest używany do grilla, a kawowe 'kłody' do palenia ognisk."</p>
+<p> </p>
+<p><strong>The extra sentence is D.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. to drink water </p>
+<p>2. unnecessary</p>
+<p>3. in rural</p>
+<p>4. fish and vegetables</p>
+<p>5. tenth</p>
+<p> </p>
+<p><strong>Tłumaczenie tekstu (wstawione słowa pogrubiono):</strong></p>
+<p>Artykuł przygląda się nowym technologiom, które mogą ulepszyć nasze życie. Row-bot został skonstruowany, <strong>żeby pić</strong> zanieczyszczoną <strong>wodę</strong>. "Odcisk mózgu" może oznaczać, że pewnego dnia hasła zabezpieczające dane staną się <strong>niepotrzebne</strong>. Coraz mniej ludzi mieszka dziś <strong>na wiejskich</strong> obszarach, a dryfujące farmy zaopatrzą mieszkańców miast zarówno w <strong>ryby</strong> jak <strong>i warzywa</strong>. Na koniec, 50 000 ton resztek kawy przetwarzanej przez Bio-bean to zaledwie<strong> jedna dziesiąta</strong> ogółu resztek po kawie. Pomyśl tylko ile czystej energii moglibyśmy otrzymywać, jeśli używalibyśmy pozostałych dziewięciu dziesiątych. </p><br>

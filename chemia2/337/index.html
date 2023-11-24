@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 177</a><br>
+<p>a) pentozę z grupą aldehydową przedstawia wzór <span style="text-decoration: underline;"><em><strong> A </strong></em></span></p>
+<p>b) ketoheksozę  przedstawia wzór <span style="text-decoration: underline;"><em><strong> D </strong></em></span></p>
+<p>c) aldoheksozę przedstawia wzór <span style="text-decoration: underline;"><em><strong> C </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 178</a><br>
+<p>Podobieństwa:</p>
+<p>- 6 atomów węgla w łańcuchu </p>
+<p><br/>Różnice:</p>
+<p>- glukoza posiada grupę aldehydową zaś fruktoza ketonową</p><br><a style="color:red; font-size:25px;">Zadanie 179</a><br>
+<p>Klasyfikacja ta jest zasadna z uwagi na fakt, iż glukoza przy pierwszym atomie węgla w swojej cząsteczce posiada grupę aldehydową (jest więc aldehydem), a wszystkie pozostałe atomy węgla są podstawione po jednej grupie hydroksylowej każdy. Podobnie, w cząsteczce fruktozy występuje grupa ketonowa przy drugim atomie węgla (jest ona zatem ketonem), każdy z pozostałych atomów węgla ma podstawioną jedną grupę hydroksylową.</p><br><a style="color:red; font-size:25px;">Zadanie 180</a><br>
+<p>Odróżnienie glukozy i fruktozy przy pomocy prób Trommera i Tollensa jest  <span style="text-decoration: underline;"><em><strong> niemożliwe </strong></em></span>. Jest to spowodowane faktem, że obie te reakcje przebiegają w środowisku zasadowym. W środowisku tym możliwe jest wewnętrzne "migrowanie" atomów wodoru w cząsteczce fruktozy, dzięki czemu może ona tworzyć izomery i przekształcać grupę ketonową w aldehydową. W efekcie, podobnie jak glukoza, posiada właściwości redukujące i daje pozytywny wynik prób Tollensa i Trommera.</p><br><a style="color:red; font-size:25px;">Zadanie 181</a><br>
+<p>Zaczynamy od obliczenia masy glukozy w jej roztworze:</p> <p> <math-expr expr="C_p=m_s/m_r*100%\ \ \ =&gt;\ \ \ m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(C_6H_(12)O_6)=(20%*120\ g)/(100%)=24\ g" syntax="text"></math-expr>   </p> <p><br/>Z podanego równania reakcji  wynika, że stosunek molowy glukozy to wydzielającego się srebra wynosi 1:2. Masa molowa glukozy to 180 g/mol, zaś srebra 108 g/mol. Liczymy ile gramów srebra otrzymamy w wyniku reakcji:</p> <p> <math-expr expr="180\ g_(C_6H_(12)O_6)\ \ -\ \ 2*108\ g_(Ag)" syntax="text"></math-expr>   </p> <p> <math-expr expr="24\ g_(C_6H_(12)O_6)\ \ -\ \ m_(Ag)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(Ag)=(24\ g*2*108\ g)/(180\ g)=28,8\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W reakcji wydzieli się 28,8 g srebra.</strong>   </p><br><a style="color:red; font-size:25px;">Zadanie 182</a><br>
+<p><strong>Opis doświadczenia:</strong></p>
+<p><span style="text-decoration: underline;">Etap 1.</span></p>
+<p>Doświadczenie rozpoczynamy od zmieszania wodnych roztworów CuSO<sub>4</sub> i NaOH.</p>
+<p><span style="text-decoration: underline;">Obserwacje do etapu 1.</span></p>
+<p>W wyniku zachodzącej reakcji, strąca się galaretowaty niebieski osad wodorotlenku miedzi(II).</p>
+<p><br/><span style="text-decoration: underline;">Etap 2.</span></p>
+<p>Otrzymany wodorotlenek miedzi(II) wprowadzamy do probówek z roztworami glicerolu oraz glukozy.</p>
+<p><span style="text-decoration: underline;">Obserwacje do etapu 2.</span></p>
+<p>W obu probówkach następuje roztworzenie wodorotlenku miedzi(II) i powstaje klarowny roztwór o szafirowym zabarwieniu.</p>
+<p><br/><span style="text-decoration: underline;">Etap 3.</span></p>
+<p>Obie probówki poddajemy ogrzewaniu.</p>
+<p><span style="text-decoration: underline;">Obserwacje do etapu 3.</span></p>
+<p>W wyniku ogrzewania obu roztworów widzimy, że w probówkach zachodzą różne reakcje. W probówce zawierającej początkowo roztwór glukozy, wytrąca się pomarańczowy osad, zaś w probówce zawierającej początkowo roztwór glicerolu, wytrąca się czarny osad.</p>
+<p> </p>
+<p><em>Wyjaśnienie: Glukoza w odróżnieniu od glicerolu posiada właściwości redukujące, dzięki czemu w reakcji powstaje tlenek miedzi(I). Ogrzewanie roztworu glicerolu nie powoduje zmiany stopnia utlenienia miedzi i powstaje tlenek miedzi(II).</em></p><br><a style="color:red; font-size:25px;">Zadanie 183</a><br>
+<p>Z podanego równania reakcji widzimy, że stosunek molowy glukozy do tlenu wynosi 1:6. Jeden mol tlenu w warunkach normalnych zajmuje objętość 22,4 dm<sup>3</sup>. Liczymy jaka objętość tlenu się wydzieliła:</p> <p> <math-expr expr='1\ mol_("glukozy")\ \ -\ \ 6*22,4\ dm^3\ _(O_2)' syntax="text"></math-expr>   </p> <p> <math-expr expr='10\ moli_("glukozy")\ \ -\ \ V_(O_2)' syntax="text"></math-expr>   </p> <p> <math-expr expr="V_(O_2)=(10\ moli*6*22,4\ dm^3)/(1\ mol)=1344\ dm^3" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W wyniku fotosyntezy powstało 1344 dm<sup>3</sup> tlenu.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 184</a><br>
+<p>Równanie reakcji:</p> <p> <math-expr expr='C_6H_(12)O_6#(-&gt;)^("drożdże")2\ CH_3CH_2OH+2\ CO_2uarr' syntax="text"></math-expr>   </p> <p><br/>Z równania reakcji wynika, że stosunek molowy glukozy do etanolu wynosi 1:2. Masa molowa etanolu to 46 g/mol.</p> <p> <math-expr expr="1\ mol_(\ C_6H_(12)O_6)\ \ -\ \ 2*46\ g_(\ CH_3CH_2OH)" syntax="text"></math-expr>   </p> <p> <math-expr expr="n_(\ C_6H_(12)O_6)\ \ -\ \ 500\ g_(\ CH_3CH_2OH)" syntax="text"></math-expr>   </p> <p> <math-expr expr="n_(\ C_6H_(12)O_6)=(500\ g*1\ mol)/(2*46\ g)=5,43\ mola" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Przereagowało 5,43 mola glukozy.</strong>   </p><br>

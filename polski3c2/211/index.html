@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Konferansjer ¯or¿ Bengalski zostaje przedstawiony w humorystyczny sposób. Ju¿ sama jego powierzchownoœæ wskazuje na fakt, i¿ nie jest on postaci¹ zas³uguj¹c¹ na szacunek, profesjonaln¹. Podkreœlaj¹ to zastosowane w wyliczeniu epitety oraz porównanie: "[...] têgi, weso³y jak dziecko, g³adko wygolony mê¿czyzna w wymiêtym fraku z nieœwie¿ym gorsem". Jest on naiwny, infantylny ("[...] rozpocz¹³ z dziecinnym uœmiechem [...]"). ród³o komizmu stanowi przede wszystkim charakter postaci oraz sama sytuacja. Bengalski bowiem, choæ pe³ni rolê konferansjera, nie potrafi nawi¹zaæ kontaktu z publicznoœci¹ ani j¹ rozbawiæ, wyró¿nia siê sztucznym entuzjazmem. Jego brak predyspozycji, nieudolnoœæ kontrastuj¹ z magiem oraz fantastycznymi towarzyszami, którzy lepiej radz¹ sobie z widzami, potrafi¹ ich zainteresowaæ. Konferansjer pragnie uchodziæ za bystrego, jednak efekt pozostaje odwrotny. Z tego te¿ powodu hiperbola ("[...] uœmiechn¹³ siê arcym¹drym uœmiechem") ma raczej humorystyczny wydŸwiêk, poniewa¿ bohater odwo³uje siê do czegoœ oczywistego. Jest tak¿e nieustannie oskar¿any przez Fagota o k³amstwo oraz psucie zabawy. Komizm wi¹¿e siê tak¿e z sytuacj¹ Bengalskiego. Nawet po brutalnym oderwaniu g³owy konferansjer wzywa lekarza, p³acze, a ostatecznie obiecuje, ¿e ju¿ nie sk³amie. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Pokaz czarnej magii ujawnia wady zgromadzonej publicznoœci. Przede wszystkim jest ona niecierpliwa, skupiona wy³¹cznie na zaspokojeniu swej potrzeby rozrywki, co zauwa¿a sam Woland: "Ale my tu gadu, gadu, drogi Fagocie, a publicznoœæ zaczyna siê nudziæ". Wyró¿nia siê tak¿e zach³annoœci¹, przywi¹zaniem do wartoœci materialnych, pró¿noœci¹. S¹ one na tyle wa¿ne, ¿e zgromadzeni zdaj¹ siê traciæ rozs¹dek, staraj¹ siê jak najwiêcej zdobyæ dla siebie:</p>
+<p><em>Wówczas Fagot oœwiadczy³, ¿e z powodu spóŸnionej pory magazyn zostanie zamkniêty a¿ do jutrzejszego wieczora dok³adnie za minutê, i na scenie powsta³ niewiarygodny rozgardiasz. Kobiety pospiesznie chwyta³y pantofle bez przymiarki. Jedna wpad³a jak burza za parawan, zdar³a tam z siebie kostium i zaw³adnê³a pierwsz¹ rzecz¹, jaka nawinê³a siê jej pod rêkê - jedwabnym szlafrokiem w wielkie bukiety, oprócz tego zd¹¿y³a porwaæ dwa flakony perfum.</em></p>
+<p>Ponadto publicznoœæ cechuje siê tak¿e okrucieñstwem oraz bezmyœlnoœci¹. Jest lekkomyœlna, poniewa¿ nie zastanawia siê nad konsekwencjami swych s³ów. Przyk³adem takiej sytuacji jest odpowiedŸ jednej z osób na pytanie, co zrobiæ z konferansjerem: "G³owê mu urwaæ!". Brutalna propozycja wskazuje na to, i¿ jej autor jest pozbawiony refleksji, bezwzglêdny i niewra¿liwy - nie przejmuje siê losem Bengalskiego. </p>
+<p>Pokaz magii ujawnia tym samym, ¿e dla ludzi najwa¿niejsze s¹ przyziemne wartoœci. Wœród nich mo¿na wyliczyæ m.in.: zabawê, pieni¹dze, wygl¹d, bogactwo. Zdarzaj¹ siê jednak osoby kieruj¹ce siê mi³osierdziem i wspó³czuciem - jak kobieta, która stanê³a w obronie konferansjera.  </p>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Bu³hakow odwo³uje siê do popularnego w kulturze toposu <em>theatrum mundi</em>. To zgromadzona publicznoœæ staje siê aktorem w spektaklu, który re¿yseruje Woland - odwróceniu ulega jej rola. W ten sposób mag ma mo¿liwoœæ obserwacji postaw i zachowañ ludzi, prowokuje pewne sytuacje, aby sprawdziæ, czy przeszli oni wewnêtrzn¹ przemianê. Autor korzysta z tego toposu, by nadaæ scenie uniwersalny charakter. Publicznoœæ zdaje siê bowiem stanowiæ reprezentacjê ogó³u mieszkañców miasta, odzwierciedla ich cechy czy systemy wartoœci. Skupia wiêc w sobie ogó³ cech czy przywar, a tym samym staje siê Ÿród³em diagnozy spo³eczeñstwa, kumuluje w sobie jego w³aœciwoœci. Topos ten ponadto prowadzi do dekompozycji rzeczywistoœci, ujawnia niskie instynkty, którymi kieruje siê publicznoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Scena pokazu magii jest utrzymana w konwencji groteski. Dochodzi w niej bowiem do po³¹czenia odmiennych, wrêcz niepasuj¹cych do siebie pierwiastków. Œwiadczy o tym ju¿ sama sytuacja przedstawiona w przytoczonym fragmencie. Realistyczne wydarzenie o charakterze rozrywkowym, pokaz magii po³¹czony z jej zdemaskowaniem, zostaje zaburzone przez pojawienie siê fantastycznych postaci. Wprowadzaj¹ one now¹ perspektywê i p³aszczyznê zdarzeñ, poniewa¿ ich dzia³ania s¹ sprzeczne z rozs¹dkiem i prawami natury, niewyt³umaczalne. Wra¿enie to podkreœla tak¿e zestawienie ze sob¹ przeciêtnych ludzi oraz tajemniczych goœci, którzy nie nale¿¹ do tego œwiata. Groteskowy wymiar pokazu magii potêguje tak¿e po³¹czenie elementów komicznych, humorystycznych z groz¹ i makabr¹. Dzieje siê tak w momencie, gdy Behemot odrywa g³owê Bengalskiego. Drastyczna scena zyskuje ostatecznie absurdalnie zabawny rys, kiedy to Bengalski przemawia, co przyczynia siê do roz³adowania napiêcia:</p>
+<p><em>Kot poda³ g³owê Fagotowi, ten podniós³ j¹ za w³osy i ukaza³ publicznoœci, a g³owa krzyknê³a rozpaczliwie na ca³y teatr:</em></p>
+<p><em>- Lekarza!</em></p>
+<p><em>- Bêdziesz jeszcze plót³ duby smalone? - groŸnie zapyta³ p³acz¹c¹ g³owê Fagot.</em></p>
+<p><em>- Ju¿ nie bêdê - wyrzêzi³a g³owa.</em></p>
+<p>Pewna groteskowoœæ ujawnia siê tak¿e w sposobie kreacji bohaterów, ich przerysowaniu. Znudzona publicznoœæ, pragn¹ca wy³¹cznie rozrywki, ostatecznie zamienia siê w oszala³y t³um. Jego obiektem po¿¹dania staj¹ siê eleganckie ubrania i dodatki. Gwa³towna reakcja ludzi ("I w³aœnie wtedy tamy runê³y i kobiety ze wszech stron wdar³y siê na scenê") wynika wiêc zasadniczo z b³ahego powodu. Mianem groteskowych mo¿na tak¿e okreœliæ sposób ukszta³towania wypowiedzi fantastycznych postaci. £¹cz¹ w sobie podnios³oœæ z kolokwialnoœci¹, a dos³ownoœæ z tym, co metaforyczne. Zaznacza siê to najbardziej w kwestiach Fagota, poniewa¿ wywo³uj¹ one poczucie dziwnoœci, niejednorodnoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowo:</p>
+<p>a) W wierszu Morrisona artysta-showman jest autorem spektaklu, co prowadzi do tego, ¿e nie do koñca œwiadomi widzowie wchodz¹ w okreœlone schematy zachowania. W ten sposób artysta niejako odwraca role, przyjmuje tê, któr¹ pierwotnie przypisano publicznoœci: jest œwiadkiem gry zgromadzonych, tworzonego przez nich wystêpu. W pewien sposób usypia ich czujnoœæ - niby eter - kszta³tuje te¿ sytuacjê. Podobn¹ funkcjê w dziele Bu³hakowa pe³ni Woland i z tego powodu mo¿na okreœliæ go mianem showmana. Jego dzia³ania prowokuj¹ bowiem okreœlone reakcje publicznoœci. Mag zaœ je obserwuje - niczym widz w teatrze - wyci¹ga na ich podstawie wnioski. </p>
+<p> </p>
+<p>b) U Bu³hakowa widzom zostaje przypisana aktywna rola, poniewa¿ staj¹ siê aktorami w spektaklu Wolanda. Przyczynia siê to do dekonstrukcji rzeczywistoœci oraz ujawnia faktyczny wizerunek mieszkañców miasta, ich przywary, system wartoœci. U Morrisona w podobny sposób zostaje zarysowana rola widza - jest aktorem. </p>
+<p> </p>
+<p>c) Pokaz czarnej magii ma na celu zapewnienie rozrywki widzom oraz udowodnienie, i¿ jest to zabobon oraz mistyfikacja. Z kolei Morrison wskazuje kilka celów happeningu; s¹ to: zapewnienie rozrywki, pokazanie czegoœ nowego, odnowienie ducha i percepcji, pobudzenie wszystkich zmys³ów. Tym samym wydarzenia te ³¹czy potencjalnie rozrywkowy charakter, zademonstrowanie czegoœ zaskakuj¹cego. Ró¿nica polega jednak na tym, i¿ pokaz magii ostatecznie d¹¿y do tego, aby obna¿yæ wady i pogl¹dy zgromadzonych ludzi, paradoksalnie prowadzi do potwierdzenia istnienia magii. Z kolei Morrison skupia siê bardziej na prze¿yciach publicznoœci, wp³ywie happeningu na ich zmys³y i ducha - jest wiêc to nieco wê¿sza perspektywa. Ró¿nica miêdzy sytuacjami polega tak¿e na tym, i¿ pokaz magii odwo³uje siê do pewnej tajemnicy, tego, co tajemnicze, zaœ happening opiera siê przede wszystkim na relacjach miêdzyludzkich, jest pozbawiony tego pierwiastka. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>a) Obraz ukazuje spo³eczeñstwo przede wszystkim podzielone, silnie skontrastowane. Œrodek dzie³a przedstawia bowiem scenê z ¿ycia klubów. Elegancko odziane kobiety oraz mê¿czyŸni s¹ pogr¹¿eni w beztroskiej zabawie. Korzystaj¹ z uroków ¿ycia: tañcz¹, pal¹ papierosy, spêdzaj¹ czas wœród podobnych sobie ludzi. Ich futra, suknie, dodatki oraz garnitury sugeruj¹ ponadto dostatek oraz wysok¹ pozycjê spo³eczn¹, która zapewnia swobodn¹ egzystencjê. Równie¿ postacie na prawym i lewym skrzydle zdaj¹ siê nale¿eæ do ich rzeczywistoœci, chocia¿ sielanka ta zostaje zaburzona. O trudnych realiach przypominaj¹ bowiem ¿ebracy, byæ mo¿e ludzie okaleczeni w czasie wojny - damy s¹ wzglêdem nich obojêtne, nie dostrzegaj¹ tragedii. Kontrast miêdzy œrodkow¹ czêœci¹ a pozosta³ymi wi¹¿e siê wiêc z tym, ¿e beztroska zabawa zostaje ukazana w szerszej perspektywie: jedni mog¹ siê cieszyæ ¿yciem, inni zaœ w tym samym momencie walcz¹ o przetrwanie. Zabieg ten pozwala artyœcie na wyra¿enie prawdy o rzeczywistoœci i ludziach. Podkreœla bowiem bezdusznoœæ uprzywilejowanych warstw, które korzystaj¹ z ¿ycia, lecz nie przejmuj¹ siê sytuacj¹ cierpi¹cych, s¹ pozbawione wra¿liwoœci. </p>
+<p> </p>
+<p>b) Groteskowoœæ przedstawienia polega na zastosowaniu kontrastów oraz przejaskrawieniu pewnych cech ukazanych postaci. Namalowane kobiety wyró¿niaj¹ siê mocnym makija¿em, bogato zdobionym z³ocistymi sukniami oraz starannymi fryzurami. Kontrastuj¹ wiêc w widoczny sposób z ¿ebrakami, których ubrania s¹ zniszczone, a sytuacja ¿yciowa - o wiele trudniejsza, pozbawiona nadziei. Groteska przejawia siê tak¿e w przesadzonej, nienaturalnej powierzchownoœci bohaterek. Na poczucie dziwnoœci wp³ywa upodobnienie jednej z kobiet do mê¿czyzny, rozci¹gniête lub wyd³u¿one oblicze innych postaci, czy te¿ uwydatnienie brzydoty dam z prawego skrzyd³a dzie³a. Prowadzi to do swoistego odrealnienia sytuacji. Podobne wra¿enia wywo³uje przedstawienie tañcz¹cej rudow³osej kobiety - jej nogi s¹ niezgrabnie wykrzywione, zaœ sam taniec nie ma wdziêku.</p>
+<p> </p>
+<p>c) Czêœæ indywidualna </p><br>

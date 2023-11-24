@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³ady nasycenia tekstu poetyckimi œrodkami wyrazu:</p>
+<ul>
+<li><em>Przynosi³y ze sob¹, a raczej w sobie, pachn¹cy czosnkiem i fosforem œwiat. Pe³no w nim by³o ogromnych lasów podszytych buszuj¹c¹ ciemnoœci¹, gdzie jedynym œwiat³em by³ p³omyk œwiêtojañskiej paproci i ma³e wody scedzone w zag³êbieniu kopyt, racic, pazurów.</em></li>
+<li><em>A w tym œwiecie, coraz wiêkszym z ka¿dym dniem, jakby na podorêdziu przêd¹cym  siê z konopnej i z lnianej k¹dzieli, mia³em swoich przyjació³. Do nich to, jak do dziadków na œliwki, przychodzi³em goœciæ siê wspóln¹ nam ³agodnoœci¹. Zwierzêta, zw³aszcza psy i konie, przyjmowa³y mnie jak bliskiego, podobnego sobie w ka¿dym zakamarku krewniaka, który powolutku zaczyna wyrastaæ na ich patriarchê.</em></li>
+<li><em>A ja w tym czasie kombinowa³em, jakby tu zdj¹æ z nieba pe³ny miesi¹c, aby go osadziæ w tych ga³êzistych rogach, jakie cielak bêdzie mia³ za parê lat.</em></li>
+<li><em>Jedynie zwierzêta by³y dla mnie w tym czasie czymœ w rodzaju ma³ych, czystych wód chodz¹cych na czterech ³apach, w których przegl¹da³em siê od wewn¹trz i na zewn¹trz. S¹dzê, ¿e by³ równie¿ odwrotnie. Zwierzêta przychodzi³y do mnie, aby siê ogrzaæ przy moim drobnym œwiate³ku, wywêszyæ poza moj¹ puszyst¹, jak gryczane pole skór¹, swoich najbli¿szych naszczekuj¹cych we mnie, potrz¹saj¹cych drabiniastym ³bem i ³asz¹cych siê do bliskiej im mojej zwierzêcej samotnoœci.   </em></li>
+<li><em>Zupe³nie siê nie ukrywa³ przede mn¹, jakby przeczuwa³ we mnie blisk¹ mu zwierzêc¹ czystoœæ. I rzadko siê zdarza³o, abym w obecnoœci moich rówieœników wychodzi³ tak daleko z mego cz³owieczego wnêtrza. </em></li>
+</ul>
+<p> </p>
+<p>Obecnoœæ licznych œrodków poetyckiego wyrazu w tekœcie nadaje mu liryczny charakter, zaznacza tak¿e subiektywnoœæ doznañ narratora. Przede wszystkim wp³ywa tak¿e na specyficzn¹ atmosferê dzie³a: tajemnicz¹, niezwyk³¹, która oddzia³uje tak¿e na wyobraŸniê oraz nastrój odbiorcy. Poetyzowanie ods³ania przed czytelnikiem w ten sposób now¹ i oryginaln¹ wizjê rzeczywistoœci, pobudza jego zmys³y. Przypomina tak¿e o tym, ¿e pozornie zwyczajne sytuacje, jeœli siê przyjmie odpowiedni¹ perspektywê, ods³aniaj¹ uniwersalne prawdy o cz³owieku i jego relacji z rzeczywistoœci¹ - niejednoznaczn¹, zagadkow¹. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Obrazowanie biblijne w dziele Tadeusza Nowaka jest zauwa¿alne na ró¿nych p³aszczyznach. Jedn¹ z nich staje siê np. ukszta³towanie wypowiedzi. W przytoczonym fragmencie panuje nastrój powagi i podnios³oœci, na który wp³ywaj¹ np. inwersje ("Pocz¹tkowo zwierzêta przychodzi³y do mnie.", "Za zwierzêtami wychodzi³y z lasu na kocich ³apach ¿elaziste skrzypy"). Pojawia siê tak¿e s³ownictwo typowe dla tekstów biblijnych: "[...] powolutku zaczyna wyrastaæ na ich patriarchê". O tej inspiracji œwiadczy tak¿e fakt, i¿ wiele zdañ rozpoczyna siê spójnikiem ("A w tym œwiecie, coraz wiêkszym z ka¿dym dniem, jakby na podorêdziu przêd¹cym siê z konopnej i z lnianej k¹dzieli, mia³em swoich przyjació³.", "I rzadko siê zdarza³o, abym w obecnoœci moich rówieœników wychodzi³ tak daleko z mego cz³owieczego wnêtrza."), pojawiaj¹ siê te¿ paralelizmy ("Od nich dowiedzia³em siê, ¿e mój ojciec i dziadek, zanim siê stali dla nich patriarchami, przychodzili do akacjowego drzewa uczyæ siê gry na skrzypcach. Od nich te¿ wiem, ¿e u psów uczyli siê pañszczyŸnianej pokory, a u koni ciê¿kiej, jak przerzucanie pagórów w doliny, pracy."). O obrazowaniu biblijnym œwiadcz¹ równie¿ liczne zdania wielokrotnie z³o¿one ("Dlatego nigdy nie mog³em zrozumieæ, dlaczego mnie bito, gdy do izby chcia³em wprowadziæ krowê , a na strych po drabinie wepchn¹æ kozê."), nagromadzenia zaimków ("Pocz¹tkowo zwierzêta przychodzi³y do mnie./ Przynosi³y ze sob¹, a raczej w sobie, pachn¹cy czosnkiem i fosforem œwiat."). Niew¹tpliwym przejawem obrazowania biblijnego staje siê tak¿e bogata metaforyka, która zwyk³ym elementom rzeczywistoœci nadaje nowe sensy.</p>
+<p>Nawi¹zanie do Biblii mo¿na dostrzec tak¿e w samej treœci fragmentu - opisywany œwiat zdaje siê przypominaæ o pierwotnym stanie szczêœliwoœci, który by³ udzia³em Adama i Ewy. Nowak prezentuje bowiem harmonijn¹ wizjê rzeczywistoœci - czystej i niewinnej. W niej to mo¿liwe staje siê uzyskanie jednoœci cz³owieka z natur¹. Œwiadczy o tym na przyk³ad przyjazny stosunek narratora do zwierz¹t. Traktuje je jako równych sobie, a nawet rodzinê: "W tych czasach wielkoœæ zwierz¹t zupe³nie dla mnie nie istnia³a. S¹dzi³em, ¿e wszystkie zwierzêta s¹ podobne do mojego m³odszego rodzeñstwa". Rajski charakter opisywanej rzeczywistoœci potwierdza równie¿ to, i¿ wszystkie stworzenia ¿yj¹ w zgodzie i pokoju, nie dochodzi do jakichkolwiek konfliktów: "[...] liza³y mnie po rêkach, wyciera³y moj¹ twarz szorstkimi jak skoszona ³¹ka jêzorami. I tañczy³y przede mn¹ [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

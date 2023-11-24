@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 19</a><br>
+<p>a)</p>
+<p><img alt="" height="30" src="./data/935358-0.jpg" width="247"/></p>
+<p>b) </p>
+<p><img alt="" height="75" src="./data/935358-1.jpg" width="221"/></p><br><a style="color:red; font-size:25px;">Zadanie 20</a><br>
+<p>Wzory sumaryczne alkenów to:</p> <p> <math-expr expr="C_3H_6," syntax="text"></math-expr>    <math-expr expr="C_5H_(10),\ C_(10)H_(20),\ C_2H_4" syntax="text"></math-expr>   </p> <p>  </p><br><a style="color:red; font-size:25px;">Zadanie 21</a><br>
+<p>Izomerami pentenu są:</p>
+<p>a) 2-metylobut-1-en </p>
+<p>c) 3-metylobut-1-en</p><br><a style="color:red; font-size:25px;">Zadanie 22</a><br>
+<p>Wzór:</p>
+<p><img alt="" height="65" src="./data/935369-0.jpg" width="45"/> </p>
+<p>Liczba elektronów tworzących wiązania - <span style="text-decoration: underline;"><em><strong> 12 </strong></em></span></p>
+<p>Liczba wiązań typu <span style="font-weight: 400;">σ</span> - <em><span style="text-decoration: underline;"><strong> 5 </strong></span></em></p>
+<p>Liczba wiązań typu <span style="font-weight: 400;">𝜋 - <em><span style="text-decoration: underline;"><strong> 1 </strong></span></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 23</a><br>
+<p>a)</p>
+<p><img alt="" height="80" src="./data/935398-0.jpg" width="225"/></p>
+<p><br/>b) </p>
+<p><img alt="" height="85" src="./data/935398-1.jpg" width="348"/></p>
+<p><br/>c)</p>
+<p><img alt="" height="60" src="./data/935398-2.jpg" width="206"/></p>
+<p><br/>d)</p>
+<p><img alt="" height="60" src="./data/935398-3.jpg" width="262"/></p>
+<p><br/>e)</p>
+<p><img alt="" height="55" src="./data/935398-4.jpg" width="193"/></p>
+<p><br/>f)</p>
+<p><img alt="" height="55" src="./data/935398-5.jpg" width="247"/></p>
+<p><br/>g)</p>
+<p><img alt="" height="90" src="./data/935398-6.jpg" width="330"/></p>
+<p><br/>h)</p>
+<p><img alt="" height="85" src="./data/935398-7.jpg" width="251"/></p>
+<p><br/>i)</p>
+<p><img alt="" height="85" src="./data/935398-8.jpg" width="249"/></p><br><a style="color:red; font-size:25px;">Zadanie 24</a><br>
+<p>a) <span style="text-decoration: underline;"><em><strong> but-1-en </strong></em></span></p>
+<p>b)  <span style="text-decoration: underline;"><em><strong> but-2-en </strong></em></span></p>
+<p>c) <span style="text-decoration: underline;"><em><strong> 3-metylopent-2-en </strong></em></span></p>
+<p>d) <span style="text-decoration: underline;"><em><strong> 3,3-dimetylobut-1-en </strong></em></span></p>
+<p>e) <span style="text-decoration: underline;"><em><strong> 2,3-dimetylopent-2-en </strong></em></span></p>
+<p>f) <span style="text-decoration: underline;"><em><strong> 3-etylo-4-metyloheks-3-en </strong></em></span><em>   (wyjaśnienie: dla podstawników znajdujących się przy równoważnych atomach węgla, niższą numerację dostaje ten atom węgla, przy którym jest podstawnik wcześniejszy alfabetycznie. Niepoprawna byłaby zatem nazwa 4-etylo-3-metyloheks-3-en)</em></p>
+<p>g) <span style="text-decoration: underline;"><em><strong> 2,3-dimetylopent-1-en </strong></em></span></p>
+<p>h) <span style="text-decoration: underline;"><em><strong> 2,3-dimetylobut-1-en </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 25</a><br>
+<p>Wzór tego alkenu możemy zapisać jako C<sub>x</sub>H<sub>y</sub>. Zaczynamy od obliczenia zawartości procentowej wodoru:</p> <p> <math-expr expr="%H=100%-85,7%=14,3%" syntax="text"></math-expr>   </p> <p>Masa atomowa węgla to 12 u zaś wodoru 1 u. Liczymy wartości indeksów <em>x </em>oraz <em>y</em>. </p> <p> <math-expr expr="x*12\ u=(85,7%*70\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='x*12\ u=60\ u\ \ \ "/":12\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=5" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="y*1\ u=(14,3%*70\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='y*1\ u=10\ u\ \ \ "/":1\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="y=10" syntax="text"></math-expr>   </p> <p><strong>Wzór rzeczywisty tego związku to  <math-expr expr="bb(C_5H_(10))." syntax="text"></math-expr>    </strong></p><br><a style="color:red; font-size:25px;">Zadanie 26</a><br>
+<p>a)  <math-expr expr="C_4H_8+6\ O_2-&gt;4\ CO_2+4\ H_2O" syntax="text"></math-expr>   </p> <p>b)   <math-expr expr="C_2H_4+2\ O_2-&gt;2\ CO+2\ H_2O" syntax="text"></math-expr>   </p> <p>c)  <math-expr expr="2\ C_3H_6+3\ O_2-&gt;6\ C+6\ H_2O" syntax="text"></math-expr>   </p> <p>d)  <math-expr expr="C_5H_(10)+5\ O_2-&gt;5\ CO+5\ H_2O" syntax="text"></math-expr>       </p><br>

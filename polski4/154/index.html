@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór odwołuje się do momentu po zagładzie świata, ale przed Sądem Ostatecznym, który oddzieli bogobojnych od grzeszników. Ludzie są zebrani na łące, zaś pilnują ich aniołowie. Po eksplozjach zapada cisza, którą przerywa krzyk matki - nie zgadza się na rozdzielenie z dzieckiem. Protestuje również inna kobieta, gdyż nie chce, by opuścił ją wybranek - jeden z aniołów tłumaczy nieporozumienie. Z kolei staruszka cierpi, ponieważ straciła ulubionego kanarka, zaś drwal nie chce oddać swej siekiery - do tej pory zapewniała mu warunki do egzystencji, jest dla niego czymś cennym. Inni, chociaż pozornie się poddają, starają się ukryć w dłoniach drobiazgi, które przypominają im o bliskich osobach. Czekają na sąd -  określi on to, czy będą zbawieni, czy też potępieni. </p>
+<p>Sytuację tę można rozpatrywać w kontekście kulturowym (biblijnym), gdyż nawiązuje do Apokalipsy św. Jana. Opisuje bowiem wizję tego, co wydarzy się po końcu rzeczywistości znanej człowiekowi, odwołuje się także do motywu sąd, który ma oddzielić cnotliwych od grzeszników. Wydarzenia ukazane w wierszu stanowią jednak twórcze przetworzenie biblijnej księgi, ponieważ sytuacja liryczna jest przepełniona dramatyzmem, cierpieniem. Zamiast nadziei na życie wieczne dominuje poczucie strachu i osamotnienia wobec niepojętych zdarzeń. Wiersz <em>U wrót doliny </em>warto także odczytać w kontekście historycznym - zwłaszcza II wojny światowej i Holokaustu. Sytuacja bohaterów wiersza przypomina bowiem los osób, które trafiły do obozów koncentracyjnych, doświadczyły okrucieństwa wojny, rozłąki z bliskim, selekcji. Tamta rzeczywistość także stanowiła koniec dotychczasowego świata, ponieważ była niezrozumiała, zniszczyła harmonijną wizję realiów. Niepokój, zagrożenie, niepewność można także potraktować jako nawiązanie do innych doświadczeń historycznych (zbrodni stalinizmu czy zimnej wojny), ich katastrofalnego dla ludzi wymiaru.</p>
+<p> </p>
+<p>Współczesna interpretacja - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) Opisane wydarzenia mają miejsce po końcu świata, jego zagładzie. Doszło bowiem do apokaliptycznych zdarzeń: "Po deszczu gwiazd". Rzeczywistość znana człowiekowi ulega całkowitemu zniszczeniu, o czym świadczą wersy: "na łące popiołów", "z ocalałego wzgórza". Sami zaś ludzie są zgromadzeni w dolinie. W niej to oczekują na sąd, który zadecyduje o ich losie: "przed ostatecznym podziałem / na zgrzytających zębami / i śpiewających psalmy".</p>
+<p> </p>
+<p>b) W utworze Herberta pojawia się przeciwstawienie doliny, w której gromadzą się ludzie, oraz wzgórza - wskazuje ono na perspektywę przyjętą przez podmiot liryczny. Dolina to motyw obecny w kulturze, także w Biblii - można go odnieść do człowieczej egzystencji i związanych z nią zagrożeń. Jest także symbolem cierpienia, co bezpośrednio koresponduje z sytuacją zagubionych, osamotnionych ludzi, a także Sądu Ostatecznego. Odwołanie się do tej przestrzeni sugeruje tym samym tragizm sytuacji ludzi, którzy tracą wszystko, co im było bliskie. Z kolei wzgórze symbolizuje zbliżenie się do sfery duchowej, połączenie dwóch światów, stałość czy świętość. Jawi się jako coś niedostępnego dla człowieka i przypomina o dawnym świecie, który bezpowrotnie minął. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Osoba mówiąca wchodzi w rolę komentatora, sprawozdawcy przedstawionych zdarzeń. Nie znajduje się jednak w gronie ludzi, lecz z pewnego dystansu opisuje reakcje ludzi i przytacza ich wypowiedzi - pozostaje świadkiem: "z ocalałego wzgórza / można objąć okiem". Jest chłodna, wręcz nieczuła na sytuację śmiertelników, przedstawia ich jako "całe beczące stado dwunogów", co sugeruje bezradność i uległość zgromadzonych, którzy nie wiedzą, co robić. Podmiot liryczny niczym oko kamery wychwytuje w tłumie konkretne jednostki, zmienia też perspektywę: najpierw ogólnie przedstawia tłum, potem skupia się na pojedynczych osobach. Nie wartościuje postaw ludzi, lecz rzeczowo, beznamiętnie ukazuje reakcje: "jest to jak nam wyjaśniają / krzyk matek od których odłączają dzieci / gdyż jak się okazuje / będziemy zbawieni pojedynczo". Wykazuje się jednak ironią, na co wskazują słowa: "aniołowie stróże są bezwzględni / i trzeba przyznać mają ciężką robotę". Jednocześnie wypowiedź osoby mówiącej łączy w sobie styl publicystyczny ("ale dość tych rozważań przenieśmy się wzrokiem") z potocznym ("stare zgarbione chłopisko"). Taka kreacja podmiotu lirycznego uwypukla cierpienie i tragedię oczekujących ludzi. Beznamiętny ton wypowiedzi kontrastuje bowiem z przeżyciami osób, które muszą w osamotnieniu poddać się sądowi. Podkreśla tragizm ich sytuacji - wiąże się ona z rozłąką z ukochanymi istnieniami. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W wierszu zestawiono ze sobą dwa style. Pierwszy z nich jest biblijny. Wiersz odwołuje się bowiem do obrazowania typowego dla Biblii, przywołuje motyw Apokalipsy ("Po deszczu gwiazd / na łące popiołów"). Obecne są w nim także charakterystyczne środki wyrazu, np. metafory ("całe beczące stado [...]"), porównania ("ten głos bije jak źródło żywej wody"), inwersja ("starszy anioł / z uśmiechem tłumaczy nieporozumienie") czy porównanie ("ten głos bije jak źródło żywej wody"), pojęcia związane z Biblią ("aniołowie stróże", "żywa woda").</p>
+<p>W wierszu Herberta można dostrzec także styl publicystyczny. Nadaje on utworowi charakter relacji, reportażu opisującego zachowanie oraz odczucia zgromadzonych w dolinie ludzi, a przy tym wzmacnia dynamizm scen. Łączy on w sobie różne cechy. Odwołuje się bowiem do języka potocznego ("stare zgarbione chłopisko"), ale także stylu artystycznego (różnorodność zastosowanych środków poetyckich). Ponadto ma dość uporządkowaną konstrukcję: najpierw podmiot liryczny opisuje czas przedstawionej sytuacji, następnie ukazuje ogół ludzi, by potem skupić się na konkretnych jednostkach. Typowe dla stylu publicystycznego są również pewne sformułowania ("ale dość tych rozważań przenieśmy się wzrokiem / do gardła doliny [...]", "jest to jak nam wyjaśnia") oraz sugestywność opisu ("po świście eksplozji / po świście ciszy / ten głos bije jak źródło żywej wody"). </p>
+<p>Zestawienie dwóch stylów niejako uaktualnia biblijne treści - Apokalipsa nie jest czymś abstrakcyjnym, lecz staje się faktem, autentycznym doświadczeniem; nie przynosi jednak radości, lecz cierpienie. Jednocześnie zabieg ten nadaje zaskakujący wymiar oczekiwaniu na Sąd Ostateczny, ponieważ wydarzenie to można rozpatrywać w kontekście tragicznych wydarzeń historycznych. Herbert w ten sposób nadaje Apokalipsie nowe znaczenie - jest ona czymś spełnionym, wywołuje skojarzenia z Holokaustem. Wprowadzenie stylu publicystycznego wprowadza oryginalną perspektywę odbioru tej sytuacji, ponieważ relacjonuje ją zdystansowany podmiot liryczny, który oddaje głos zgromadzonym ludziom. Jednocześnie zestawienie stylu publicystycznego z biblijnym podkreśla tragizm sytuacji człowieka, jego osamotnienie w obliczu niepojętych zdarzeń: "ci którzy jak się zdaje / bez bólu poddali się rozkazom / idą spuściwszy głowy na znak pojednania"). </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>"Żywa woda" to termin, który pojawia się w Biblii, ale także w baśniach. W przekazach biblijnych najczęściej symbolizuje Ducha Świętego oraz życie wieczne. Z kolei w baśniach przypisuje się jej niezwykłe właściwości - wskrzesza umarłych, zapewnia nieśmiertelność czy też siłę. W wierszu Herberta pojawia się w porównaniu: "ten głos bije jak źródło żywej wody". Fragment ten podkreśla siłę głosu matek, ich niewyobrażalnego cierpienia, które stanowi wynik rozłąki z potomstwem. Wskazuje na potęgę krzyku rozpaczy, a jednocześnie jego czystość oraz autentyczność. Wynika on bowiem z przeżyć kobiet, wydobywa na zewnątrz ich ból, którego nie można ukoić. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>"Odchodzący" bardzo cierpią z powodu konieczności rozstania. Ich przeżycia wiążą się z różnymi płaszczyznami relacji, ale zawsze ujawnia się w nich niezgoda na taką sytuację. Matki nie chcą tracić swoich dzieci, opuszczać ich: "jest to jak nam wyjaśniają / krzyk matek od których odłączają dzieci". Również kochanka obawia się samotności, nie wyobraża sobie swego losu bez obecności ukochanego mężczyzny, ponieważ cały czas go potrzebuje. Miłość i tęsknota dotyczą nie tylko relacji międzyludzkich. Starsza kobieta opłakuje swojego kanarka, który był jej wiernym towarzyszem w doczesnym życiu. Z kolei drwal nie chce oddać swej siekiery symbolizującej codzienny trud oraz pracę. Jest do niej przywiązany, gdyż towarzyszyła mu przez całe życie. Niektórzy pozornie okazują uległość, jednak także pragną zachować cząstkę swej egzystencji: "ale w zaciśniętych pięściach chowają / strzępy listów wstążki włosy ucięte / i fotografie". Drobne przedmioty nabierają szczególnego znaczenia: przypominają o tym, co ważne dla poszczególnych ludzi, określają ich tożsamość, ale także są przejawem pamięci o dawnym życiu, być może pomagają w zapomnieniu o samotności.</p>
+<p> </p>
+<p>Przykładowe wnioski:</p>
+<ul>
+<li>W obliczu spraw ostatecznych człowiek traci wszystko, co wcześniej było dla niego ważne.</li>
+<li>Pogodzenie się z osamotnieniem jest trudne i wywołuje niezgodę na taką sytuację.</li>
+<li>Człowiek w czasie ziemskiej egzystencji przywiązuje się przede wszystkim do ludzi, zwierząt, pracy - pragnie ukochane istnienia lub zjawiska zachować.</li>
+<li>Istota ludzka stara się zachować przedmioty, które przypominają jej o bliskich, dzięki czemu czuje się mniej samotna. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Słowa "jak się okazuje / będziemy zbawieni pojedynczo" uwypuklają dramat ludzi, którzy oczekują na sąd. Przede wszystkim fragment ten sugeruje utratę jakiejkolwiek nadziei - o ile wcześniej można było wierzyć, że będzie inaczej, o tyle w tym momencie staje się jasne, iż człowiek pozostaje osamotniony w tej niepojętej chwili. W obliczu spraw ostatecznych nie może liczyć na wsparcie czy obecność drugiej osoby. Wszystko, co było dla człowiek ważne w życiu doczesnym, zostaje mu odebrane. Ponadto słowa te sugerują, iż niekoniecznie wszyscy zostaną zbawieni - podkreśla to tragizm ludzkiej sytuacji. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowe aluzje:</p>
+<ul>
+<li>niezwykłe wydarzenia zapowiedzią końca świata -&gt; "Po deszczu gwiazd"; </li>
+<li>spalenie ziemi -&gt; "na łące popiołów";</li>
+<li>obecność aniołów -&gt; "zebrali się wszyscy pod strażą aniołów;</li>
+<li>zgromadzenie się wszystkich ludzi w oczekiwaniu na sąd -&gt; "naprawdę jest ich niewielu / doliczając nawet tych którzy przyjdą / z kronik bajek i żywotów świętych";</li>
+<li>motyw żywej wody -&gt; "ten głos bije jak źródło żywej wody";</li>
+<li>śmierć zwierząt -&gt; "(wszystkie zwierzęta umarły trochę wcześniej);</li>
+<li>sąd nad czynami grzeszników i bogobojnych, który zapewni zbawienie lub potępienie -&gt; "przed ostatecznym podziałem / na zgrzytających zębami / i śpiewających psalmy". </li>
+</ul>
+<p> </p>
+<p>Aluzje te odsyłają czytelnika do tekstu biblijnego, który opisuje koniec doczesnej rzeczywistości znanej człowiekowi. Herbert nadaje jednak apokalipsie nowy wymiar, gdyż nie jest ona radosnym przejściem do życia wiecznego, lecz rozłąką z ukochanymi, która staje się źródłem strachu i osamotnienia. Sposób jej przedstawienia sugeruje związki z doświadczeniem II wojny światowej oraz Holokaustu - ludzie są rozdzielani niczym w obozach, odebrane zostają im prywatne drobiazgi, dochodzi także do selekcji jednostek. Na tej podstawie można stwierdzić, że aluzje te zaznaczają przede wszystkim podobieństwo dramatu wojny do tego, co przedstawiono w Apokalipsie, zagładę świata. Uwypuklają w ten sposób totalny wymiar katastrofy, której nie można się przeciwstawić. </p>
+<p> </p>
+<p>Dzieła sztuki nawiązujące do Apokalipsy:</p>
+<ul>
+<li><em>Sąd Ostateczny</em>, Memling;</li>
+<li><em>Sąd Ostateczny</em>, Bosch;</li>
+<li><em>Wielki dzień Jego gniewu</em>, Martin;</li>
+<li><em>Archanioł Michał walczy ze Smokiem,</em> Fouquet.</li>
+</ul>
+<p> </p>
+<p>Przygotowanie prezentacji - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br>

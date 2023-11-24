@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Powtórzenia pojawiają się głównie w refrenie utworu. Pojawiające się tam słowo <em>jeszcze </em>pełni różnorakie funkcje. W otwierającym tę strofę wersie słowo to odnosi się do teraźniejszości. Wskazuje, że zbiorowy podmiot liryczny wciąż gra w zielone, żyje, ma nadzieję. Takie użycie tego słowa powtarza się w ostatniej strofie refrenów. W jego pierwszej wariacji autor pisze: "My możemy być w kłopocie, ale na rozpaczy dnie / jeszcze nie, długo nie!". Osoba mówiąca ma więc świadomość, że pewnego dnia jej sytuacja może się pogorszyć, moment ten wciąż jednak nie nastąpił. <em>Jeszcze </em>w kolejnych stwierdzeniach odnosi się już do przyszłości. Podmiot liryczny zapowiada, że wyczekiwane wydarzenia nadejdą, mówi: "jeszcze wiosenne deszcze obudzą ruń zieloną", "jeszcze się spełnią nasze piękne dni, marzenia plany". </p>
+<p> </p>
+<p>b) Zastosowanie form liczby mnogiej (<em>nie martwmy się; gramy; nie umieramy)</em> wprowadza poczucie solidarności i wspólnotowości. Zbiorowy podmiot liryczny zdaje się dodawać sobie otuchy własnymi słowami, jest więc jednocześnie nadawcą i adresatem komunikatu. Pojawiające się w utworze czasowniki w liczbie pojedynczej odnoszą się w niektórych przypadkach do osób spoza opisywanej grupy, np. "ktoś wytyka nam co chwilę", tworząc tym samym dychotomię <em>my </em>i <em>oni</em>. </p>
+<p> </p>
+<p>c) Zdrobnienia użyte w trzeciej strofie utworu przywołują, podobnie jak tytułowa gra w zielone, skojarzenia ze szkołą i dzieciństwem. Wprowadzają do utworu uczucia takie jak beztroska, niewinność. Wskazują też na prostotę prawd wyrażonych w refrenie utworu, stają się one niczym skandowana przez uczniów rymowanka. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przywoływanie nazw pór roku, miesięcy i elementów natury ma charakter symboliczny. Wskazuje na cykliczność zjawisk przyrodniczych, a co za tym idzie, także pewnych etapów w życiu człowieka. Jeśli żaden stan nie jest ostateczny, wszystko pozostaje w nieustannym ruchu, również sytuacja społeczeństwa zmieni się, według autora, na lepsze. Obserwacja tego, jak funkcjonuje przyroda, ma być inspiracją dla człowieka, podmiot liryczny mówi na przykład: "bądźmy jak stare wróble, które stracha się nie boją". Znaczące są także przywoływane w refrenie pory roku w słowach: "jeszcze wiosenne deszcze obudzą ruń zieloną / jeszcze zimowe śmiecie na ogniskach wiosny spłoną". Wiosna symbolizuje nowość, radość, żywotność, przebudzenie. Zima natomiast to okres stagnacji, marazmu, kojarzący się z trudem życia, obniżonym nastrojem, emocjonalnym chłodem. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo: </p>
+<ul>
+<li>"jeszcze zimowe śmiecie na ogniskach wiosny spłoną"; </li>
+<li>" [...] jeszcze wzrok nam się pali / jeszcze się nam pokłonią ci, co palcem wygrażali";</li>
+<li>"jeszcze na strychu każdy klei połamane skrzydła". </li>
+</ul>
+<p> </p>
+<p>Uzasadnienie:</p>
+<p>Pierwszy z przywołanych cytatów jest zapowiedzią zmiany, pozbycia się tego, co przestarzałe, szkodliwe, niepotrzebne. Można uznać, że zimowym śmieciem jest panujący w Polsce ustrój, na którego zmianę liczy podmiot liryczny. </p>
+<p>W drugim fragmencie nakreślona została sylwetka wroga podmiotu lirycznego - grupy, która, choć obecnie sprawuje władzę, w przyszłości zostanie rozliczona za swoje czyny. Działacze partyjni stojący ponad resztą społeczeństwa w wolej Polsce zostaną rozliczeni za swoje czyny. </p>
+<p>Odniesienie do Ikara można traktować jako wyraz buntu i pragnienia swobody. Jego połamane skrzydła świadczą zaś o tym, że symbolizowani przez niego ludzie wielokrotnie próbowali sięgnąć po wolność - za pomocą strajków i protestów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Wojciech Młynarski w piosence <em>Jeszcze w zielone gramy </em>dokonuje przekształcenia mitu o Dedalu i Ikarze. W jego wersji młodzieniec przeżywa upadek. Co więcej, planuje powtórny lot i w ukryciu przygotowuje do niego swoje skrzydła. Inne zakończenie znanej opowieści zmienia zupełnie jej wymowę. Ikar nie jest tu utożsamiany z beztroską i nieostrożnością, lecz z nieugiętością, optymizmem i nadzieją. Koresponduje to z dodającym otuchy przekazem całej piosenki.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Ostatnie wersy utworu nawiązują do toposu <em>theatrum mundi (</em>łac. "teatr świata"). Świat widziany jest jako scena, ludzie natomiast podobni są do aktorów wcielających się na przestrzeni swojego życia w różne role. W takiej koncepcji istnienia człowieka jednostka ma ograniczoną władzę nad swoim losem, przychodzi jej jedynie wypełnić wyznaczone zadanie. Takie spojrzenie może mieć również wydźwięk optymistyczny - przejmowanie się przyszłością jest bezcelowe, jeśli nie ma się na nią rzeczywistego wpływu.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo: </p>
+<ul>
+<li>Użyty w zdaniu "jeszcze któregoś rana odbijemy się od ściany" frazeologizm został zastosowany przez Młynarskiego przewrotnie. Zazwyczaj oznacza on bowiem sytuację, w której trafia się na przeszkodę niemożliwą do pokonania. W tym przypadku natomiast odbicie się od ściany wydaje się sytuacją pozytywną, dającą szansę na nowy początek. </li>
+<li>W trzeciej strofie autor przywołuje wyrażenie <em>nie klei się </em>oznaczające sytuację porażki. Twierdzi, że niepowodzenie jest normalne i zdarza się każdemu. Należy się więc do niego przyzwyczaić i nie zamartwiać niepotrzebnie.</li>
+<li>Słowa "bądźmy jak stare wróble, które stracha się nie boją" odnoszą się do wyrażenia <em>stary wróbel </em>opisującego osobę z bogatym bagażem życiowym. Ludzie powinni więc, dzięki swoim wcześniejszym doświadczeniom, nabrać dystansu do tego, co aktualnie ich spotyka.</li>
+<li>Zdanie "jeszcze sól będzie mądra a oliwa sprawiedliwa" odnosi się do dwóch konstruktów. Pierwszy z nich zaczerpnięty jest z biblijnych rozważań o tym, czym posolić sól, jeśli ta "zgłupieje" - przestanie być słona. Kruszec ten stanowi symbol mądrości, siły, trwałości. Druga część zdania odwołuje się do przysłowia <em>oliwa sprawiedliwa zawsze na wierzch wypływa </em>oznaczającego, że prawda zawsze wyjdzie na jaw. Podmiot liryczny przepowiada więc, że pewnego dnia na swoje miejsce wrócą takie wartości jak mądrość i prawda.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Wojciech Młynarski w utworze <em>Jeszcze w zielone gramy </em>łączy różne style i rejestry językowe, czego przykładem jest sposób przedstawienia mitu o Ikarze: </p>
+<p style="padding-left: 60px;"><em>Jeszcze na strychu każdy klei połamane skrzydła </em></p>
+<p style="padding-left: 60px;"><em>i myśli sobie Ikar co już nie raz w dół runął:</em></p>
+<p style="padding-left: 60px;"><em>"Jakby powiało zdrowo, to bym jeszcze raz pofrunął". </em></p>
+<p>W powyższym fragmencie, przez uaktualnienie toposu literackiego, autor zdaje się wskazywać na ciągłość doświadczeń ludzkich. Pragnienie wolności ukazane jest jako wartość uniwersalna, niezmienna od wieków. Mitologiczny młodzieniec bliski jest współczesnym ludziom nie tylko poprzez zachowanie, ale również sposób mówienia, np. użycie kolokwializmów. Młynarski wydobywa więc podobieństwa między tym wzorcami zakorzenionymi w kulturze a codziennością zwykłych ludzi. Zestawienie erudycyjności i potoczności spaja dorobek literacki w całość, wskazuje, że podział między kulturą wysoką a niską nie jest konieczny. Raz jeszcze w utworze wybrzmiewa potrzeba zjednoczenia, wspólnotowości i solidarności. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br>

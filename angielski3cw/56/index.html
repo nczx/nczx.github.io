@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. (przykład)</p>
+<p>2. sooner, better</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>the ... the </em>(im... tym...), w której używamy przymiotników/przysłówków w stopniu wyższym ("im wcześniej tym lepiej"). Aby utworzyć stopień wyższy od przysłówka <em>soon </em>(wcześnie), dodajemy końcówkę -er. Przymiotnik <em>good </em>(dobry) stopniuje się nieregularnie.</p>
+<p>3. more powerful, cheaper</p>
+<p><strong>Uzasadnienie</strong>: obecność spójnika <em>than </em>(niż) wskazuje na fakt, że porównujemy dwie rzeczy, dlatego potrzebujemy przymiotników w stopniu wyższym. Przymiotniki dłuższe (np. <em>powerful </em>- o dużej mocy) stopniujemy za pomocą przysłówka <em>more</em>.</p>
+<p>4. good</p>
+<p><strong>Uzasadnienie</strong>: w konstrukcji <em>as ... as </em>(tak... jak) używamy przymiotnika w stopniu równym.</p>
+<p>5. better value</p>
+<p><strong>Uzasadnienie</strong>: obecność spójnika <em>than</em> wskazuje na fakt, że porównujemy dwie rzeczy, dlatego potrzebujemy przymiotnika w stopniu wyższym. W wyrażeniu <em>good value </em>(warte swojej ceny) tylko jeden wyraz jest przymiotnikiem i ulegnie przekształceniu - drugi wyraz (rzeczownik) pozostaje bez zmian. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. a </p>
+<p>(Czy macie ekologiczne buty?</p>
+<p>- <strong>Cóż, te są wykonane z materiałów pochodzących z recyklingu.</strong>) <br/> </p>
+<p>2. b</p>
+<p> (Ile masz zamiar wydać?</p>
+<p><strong>- Och, im taniej, tym lepiej. Wolał(a)bym nie wydać za dużo.</strong>)<br/><br/></p>
+<p>3. a</p>
+<p>(Czy te papierowe torby są mocne?</p>
+<p>- <strong>Cóż, wystarczają na dłużej niż większość toreb.</strong>)<br/><br/></p>
+<p>4. a</p>
+<p>(Czy ta druga para butów jest lepsza niż ta?</p>
+<p>- <strong>Powiedział(a)bym, że te są lepszej jakości i bardziej ekologiczne niż większość butów.</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. the easier it is  </p>
+<p>2. the better it is</p>
+<p>3. less rubbish</p>
+<p>4. but they also</p>
+<p>5. as often as</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p><strong>X</strong>: Dlaczego musimy sortować nasze śmieci do tak wielu worków? </p>
+<p><strong>Y</strong>: Im więcej worków, <strong>tym łatwiej</strong> poddać je recyklingowi.</p>
+<p><strong>X</strong>: A dlaczego musimy poddawać je recyklingowi?</p>
+<p><strong>Y</strong>: Ponieważ im więcej rzeczy przetwarzamy, <strong>tym lepiej</strong> dla środowiska.</p>
+<p><strong>X</strong>: Dlaczego?</p>
+<p><strong>Y</strong>: Cóż, to oznacza, że <strong>mniej śmieci</strong> trafi na wysypisko.</p>
+<p><strong>X</strong>: Co jest złego w wysypiskach? </p>
+<p><strong>Y</strong>: Nie tylko zabierają dużo miejsca, <strong>ale także</strong> powodują zanieczyszczenia. Toksyczne chemikalia dostają się do gleby, a następnie do wody.</p>
+<p><strong>X</strong>: Dobrze, w takim razie czy możesz mi pomóc?</p>
+<p><strong>Y</strong>: Jasne. Plastik wkładamy do żółtych worków, papier do niebieskich, a szkło do zielonych.</p>
+<p><strong>X</strong>: Wszystkie zielone worki są pełne.</p>
+<p><strong>Y</strong>: Wiem. Nie zbierają ich <strong>tak często jak</strong> innych worków.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. than </p>
+<p>2. less</p>
+<p>3. as</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>as ... as </em>(tak... jak).</p>
+<p>4. better</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>the + </em>stopień wyższy, <em>the </em>+ stopień wyższy (im... tym).</p>
+<p>5. only</p>
+<p>6. also</p>
+<p><strong>Uzasadnienie (5, 6)</strong>: konstrukcja <em>not only ... but also </em>(nie tylko... ale także).</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Co podoba mi się w naszym mieście? Myślę, że najważniejszą rzeczą jest to, że jest bardziej zielone <strong>niż </strong>większość miast tego rozmiaru. Są tu dwa duże parki, a duża część centrum miasta jest wolna od ruchu ulicznego, co oznacza <strong>mniejsze </strong>zanieczyszczenie i czystsze powietrze. Jest tu dobra sieć transportu publicznego z autobusami i tramwajami. Tramwaje nie są <strong>tak </strong>nowoczesne jak autobusy, ale są szybsze, a moim zdaniem im są szybsze, tym <strong>lepiej</strong>, ponieważ nie lubię tracić czasu na podróżowanie. Jest jeszcze jeden powód, dla którego lubię moje miasto. Jest nie <strong>tylko </strong>zielone, ale <strong>także </strong>bardzo przyjazne i bezpieczne. Myślę, że ludzie tutaj są najbardziej przyjaźni na świecie!</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. The easier, the better. </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>the + </em>stopień wyższy, <em>the + </em>stopień wyższy. </p>
+<p>2. Not only is it useful, but it's also cheap.</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>not only ... but also </em>(nie tylko... ale także). Po <em>not only</em> używamy inwersji (czasownik + podmiot).</p>
+<p>3. Paper bags aren't as strong as plastic ones.</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>as ... as </em>(tak... jak), gdzie używamy przymiotnika w stopniu równym.</p>
+<p>4. This car uses up less fuel than that one.</p>
+<p><strong>Uzasadnienie</strong>: używamy spójnika <em>than </em>(niż) oraz przymiotnika w stopniu wyższym, kiedy porównujemy dwie rzeczy.</p>
+<p>5. We need more electric cars.</p>
+<p><strong>Uzasadnienie</strong>: stopniem wyższym od przysłówka <em>many </em>(wiele) jest <em>more </em>(więcej).</p><br>

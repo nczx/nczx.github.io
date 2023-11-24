@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. steady </p>
+<p>2. stayed</p>
+<p>3. illustrates</p>
+<p>4. rise</p>
+<p>5. gradual</p>
+<p>6. is mirrored in </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Właściciele kin są zmartwieni.</p>
+<p>Y: Dlaczego?</p>
+<p>X: Cóż, przed epidemią koronawirusa publiczność kin w Zjednoczonym Królestwie pozostawała na stosunkowo <strong>stabilnym </strong>poziomie. Właściwie w 2018 roku zostało sprzedanych 177 milionów biletów w porównaniu do 157 milionów w 2014 roku, a liczba osób chodzących do kina <strong>pozostała</strong> taka sama w 2019 roku. </p>
+<p>Y: Nie widzę problemu!</p>
+<p>X: Problem nie leży w ogólnej liczbie publiczności kinowej, ale w liczbie nastolatków i młodych dorosłych, którzy wybierają taką formę rozrywki. Spójrz, ten graf <strong>ilustruje</strong>, jak spada procent osób w przedziale wiekowym 15-24. Od 2009 do 2011 roku miał miejsce dosyć wyraźny <strong>wzrost</strong> w tej grupie wiekowej osób chodzących do kina z niewiele ponad 30% do 35%. Jednak potem widoczny był <strong>stopniowy</strong> coroczny spadek aż do ostatniego roku, który obejmuje ankieta, kiedy zaledwie 29% wszystkich osób chodzących do kina stanowiły te w wieku 15-24 lat. Ten spadek w Zjednoczonym Królestwie <strong>ma odzwierciedlenie w</strong> statystykach z USA i Kanady. </p>
+<p>Y: Dlaczego to, czy sprzedają bilety ma znaczenie?</p>
+<p>X: Bo młodzi ludzie przestają mieć w zwyczaju chodzenie do kina i możliwe, że nie będą zabierać tam też swoich dzieci. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. set </p>
+<p>2. observe</p>
+<p>3. decline</p>
+<p>4. upward</p>
+<p>5. dramatically</p>
+<p>6. trend</p>
+<p>7. sharp </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>A więc, jak możemy przyciągnąć młodych ludzi? Oczywiście mają oni inny gust w kwestii filmów niż starsi. To właśnie dlatego widzimy tyle przygód superbohaterów, które skierowane są do odbiorców w wieku 15-25 lat. W tym <strong>zestawie</strong> danych możemy <strong>zaobserwować</strong> różnice w gatunkach preferowanych w różnych grupach wiekowych. Niektóre odkrycia mogą zaskakiwać. Przyjrzyjmy się filmom familijnym i animowanym. W ankiecie były one najbardziej popularne w grupie wiekowej 7-11 lat. Potem nastąpił wyraźny <strong>spadek</strong> liczby oglądających je osób, a najmniej lubiącą ten typ filmów grupą była ta w przedziale 15-24 lat. Wtedy jednak liczba osób oglądających te filmy znów poszła <strong>w górę</strong>, prawdopodobnie dlatego, że osoby z omawianego przedziału wiekowego same zostały rodzicami i zaczęły zabierać swoje dzieci do kin. Interesujące są statystyki dotyczące horrorów. Pięćdziesiąt cztery procent zysków wygenerowanych przez horrory pochodzi od ludzi w wieku 15-24 lat. Potem ich popularność <strong>radykalnie</strong> spada, kiedy te osoby dorastają. W przypadku dramatów można zaobserwować odwrotny <strong>trend</strong>: najchętniej oglądają je osoby w wieku powyżej 44 lat. Na koniec dwa słowa na temat filmów romantycznych. Osiągają szczyt popularności w grupie wiekowej 25-34, potem następuje <strong>wyraźny</strong>, ale nieduży spadek zanim wracają do łask, kiedy starzeją się ich odbiorcy. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. wider trend </p>
+<p>2. noticeable</p>
+<p>3. broader picture</p>
+<p>4. Overall, downwards</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Nawyki związane z chodzeniem do kina</p>
+<p>Przeczytałem/am raport na temat spadku liczby wyjść do kina wśród młodych ludzi. Myślę, że to pokazuje <strong>ogólną tendencję</strong>. Nie chodzą często do kina, nie chodzą na wydarzenia sportowe czy koncerty na żywo i niezbyt często kupują muzykę. Dlaczego? W dzisiejszych czasach wszystko jest takie drogie. </p>
+<p><strong>Zauważalne</strong> jest, że filmy akcji są popularne wśród wszystkich grup wiekowych. Wyciągnijcie z tego więcej i zachęćcie rodziny do wspólnych wyjść. </p>
+<p>Żeby dostrzec <strong>szerszą perspektywę</strong>, musimy przyjrzeć się oglądalności w rejonach miejskich i wiejskich. Publiczny transport staje się coraz gorszy, więc jeśli w okolicy nie ma kina, młodzi ludzie pójdą tylko wtedy, kiedy podwiozą ich rodzice. </p>
+<p><strong>Generalnie</strong> trend dotyczący chodzenia do kina jest <strong>spadkowy</strong>. Nie jest to zaskakujące. Skoro ludzie kupują 50 calowe telewizory i subskrybują platformy streamingowe, po co mieliby iść do kina?</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. In </p>
+<p>2. declined</p>
+<p>3. reflect</p>
+<p>4. among</p>
+<p>5. broader </p>
+<p>6. between</p>
+<p>7. number</p>
+<p>8. observe</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione): </strong></p>
+<p><strong>Na</strong> diagramie widać, że ogólna oglądalność telewizji stopniowo <strong>spadała</strong> od 2010 roku z około 250 minut dziennie do nieco poniżej 200 minut. W 2020 roku miał miejsce mały wzrost, jednak nie <strong>odzwierciedla</strong> to szerszego trendu <strong>wśród</strong> oglądających, a raczej wyjątkową sytuację, kiedy kina i inne źródła rozrywki były zamknięte. Jednak, żeby zobaczyć sytuację w <strong>szerszej</strong> perspektywie, musimy przyjrzeć się różnym grupom wiekowym.  Widzimy wyraźny związek <strong>pomiędzy</strong> wiekiem a nawykami związanymi z oglądaniem. Spadek <strong>ilości</strong> minut, które ludzie poniżej 44 roku życia poświęcali na oglądanie telewizji był zdecydowanie bardziej radykalny niż ogólny ubytek. Właściwie, możemy <strong>zaobserwować</strong>, że oglądalność wśród młodszej publiczności spadła już w 2020 roku. Wydaje się oczywiste, że młodzi ludzie odrzucają telewizję i ciężko jest powiedzieć, co firmy związane z tradycyjną telewizją mogą zrobić, żeby to odwrócić. </p><br>

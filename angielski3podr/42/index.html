@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. characters </p>
+<p>(Pomyśl o ostatniej książce, którą przeczytałeś/aś. Czy podobała ci się? Kim byli jej główni <strong>bohaterowie</strong>?) </p>
+<p>2. author</p>
+<p>(Kto jest <strong>autorem</strong> twojej ulubionej książki (książek)? Jakie tytuły lub serie są obecnie popularne wśród nastolatków?)</p>
+<p>3. novels</p>
+<p>(Wolisz czytać <strong>powieści</strong> czy opowiadania? Dlaczego?)</p>
+<p>4. magazines</p>
+<p>(Czy czytasz jakieś gazety lub <strong>czasopisma</strong>? Dlaczego/Dlaczego nie?)</p>
+<p>5. reviews</p>
+<p>(Gdzie szukasz <strong>recenzji</strong> książek lub filmów, aby pomogły ci zdecydować, które z nich warto przeczytać lub obejrzeć?)</p>
+<p> </p>
+<p><br/><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. The last book I read was <em>Percy Jackson and the Lightning Thief</em> by Rick Riordan. I enjoyed it a lot. Its main characters were Percy, Annabeth and Grover.</p>
+<p>(Ostatnią książką, jaką przeczytałem/am to <em>Percy Jackson i Złodziej Pioruna</em> autorstwa Ricka Riordana. Bardzo mi się podobała. Jej główni bohaterowie to Percy, Annabeth i Grover.)</p>
+<p><br/>2. The author of my favourite books is J. K. Rowling, who wrote the <em>Harry Potter </em>series. I'm not sure which titles are popular among teenagers, I read different types of books, not only what's popular at the time.</p>
+<p>(Autorką moich ulubionych książek jest J. K. Rowling, która napisała serię o Harrym Potterze. Nie jestem pewny/a, które tytuły są popularne wśród nastolatków, czytam różne rodzaje książek, nie tylko to, co jest popularne w danym momencie.)</p>
+<p><br/>3. I prefer to read novels. They're longer so you get to know the world and the characters better.</p>
+<p>(Wolę czytać powieści. Są dłuższe, więc lepiej poznaje się świat i bohaterów.)</p>
+<p><br/>4. Yes, I sometimes read newspapers online. I do it to know what's happening in the world.</p>
+<p>(Owszem, zdarza mi się czytać gazety w sieci. Robię to, żeby wiedzieć, co się dzieje na świecie.)</p>
+<p><br/>5. I look for reviews of books and films on the Internet. I mostly use websites such as lubimyczytac.pl and filmweb.pl.</p>
+<p>(Recenzji książek i filmów szukam w Internecie. Najczęściej korzystam z takich stron jak lubimyczytac.pl i filmweb.pl.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I know Agatha Christie and Harlan Coben. I've read some of Christie's novels, such as <em>And Then There Were None</em>. I haven't read any of Coben's works, but I know a TV series based on his novel.</p>
+<p>I've heard of Sherlock Holmes, but I've never read any books about him. I think I'd like to some day because it's a classic.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Znam Agathę Christie i Harlana Cobena. Czytałem/am kilka powieści Christie, na przykład I nie było już nikogo. Nie czytałem/am żadnego dzieła Cobena, ale znam serial telewizyjny oparty na jego powieści.</p>
+<p>Słyszałem/am o Sherlocku Holmesie, ale nigdy nie czytałem/am żadnych książek o nim. Myślę, że kiedyś będę chciał/a, bo to klasyka. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. printed in magazines </p>
+<p><strong>Fragment w tekście</strong>: "Like most novels back ten, <em>A Study in Scarlet</em> wasn't printed in a book form with chapters but in episodes in a magazine." - Jak większość powieści w tamtych czasach, <em>Studium w Szkarłacie</em> nie zostało wydrukowane w formie książkowej z rozdziałami, ale w odcinkach w czasopiśmie. </p>
+<p>2. didn't like</p>
+<p><strong>Fragment w tekście</strong>: "He wrote a lot, and, in fact, he preferred his other characters to Sherlock Holmes." - Pisał dużo i w zasadzie wolał swoich innych bohaterów od Sherlocka Holmesa.</p>
+<p>3. win a bet</p>
+<p><strong>Fragment w tekście</strong>: "But her first detective story was the result of a bet with her sister, who didn't believe Agatha could write one." - Jednak jej pierwszy kryminał był wynikiem zakładu z siostrą, która nie wierzyła, że Agatha jest w stanie taki napisać.</p>
+<p>4. Harlan Coben</p>
+<p><strong>Fragment w tekście</strong>: "Basically every one of Harlan Coben's thirty-plus thrillers is a worldwide best-seller, and some of his titles have been turned into films and TV series." - W zasadzie każdy z ponad trzydziestu thrillerów Harlana Cobena jest światowym bestsellerem, a niektóre z jego tytułów zostały przekształcone w filmy i seriale telewizyjne.</p>
+<p>5. Harlan Coben</p>
+<p><strong>Fragment w tekście</strong>: "Book critics praise Coben for both his talent for noticing details and his sense of humour." - Krytycy książkowi chwalą Cobena zarówno za talent do zauważania szczegółów, jak i poczucie humoru.</p>
+<p>6. musician</p>
+<p><strong>Fragment w tekście</strong>: "He tried many jobs, working as a stockbroker, then a journalist, before finally following an artistic career as a writer and rock musician." - Próbował wielu zawodów, pracował jako makler giełdowy, potem dziennikarz, aż w końcu podążył za karierą artystyczną jako pisarz i muzyk rockowy.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. A </p>
+<p><strong>Fragment w tekście</strong>: "Doyle was studying medicine when one of his professors impressed him with his gift for observation, logic and deduction so much that he felt it deserved a story." - Doyle studiował medycynę, gdy jeden z jego profesorów zaimponował mu swoim darem obserwacji, logiki i dedukcji tak bardzo, że uznał, iż zasługuje to na opowieść. </p>
+<p>2. D</p>
+<p><strong>Fragment w tekście</strong>: "It actually made him stop and wonder how much violence there was within him. After some soul-searching, though, he decided that it had nothing to do with who he he was." - To sprawiło, że przestał pisać i zastanowił się, jak wiele tkwi w nim przemocy. Po dłuższych rozmyślaniach uznał jednak, że nie ma to nic wspólnego z tym, kim jest.</p>
+<p>3. C</p>
+<p><strong>Fragment w tekście</strong>: "Book critics praise Coben for both his talent for noticing details and his sense of humour." - Krytycy książkowi chwalą Cobena zarówno za talent do zauważania szczegółów, jak i poczucie humoru.</p>
+<p>4. A</p>
+<p><strong>Fragment w tekście</strong>: "Although Arthur Conan Doyle was a master storyteller thanks to fantastic tales his mother told him in childhood, he definitely didn't want to write (...)." - Choć Arthur Conan Doyle był mistrzem tworzenia historii dzięki fantastycznym opowieściom, które w dzieciństwie opowiadała mu matka, zdecydowanie nie chciał pisać (...).</p>
+<p>5. B</p>
+<p><strong>Fragment w tekście</strong>: "During World War I, Christie worked in a hospital pharmacy, which enabled her to write about poisons realistically in her books." - Podczas I wojny światowej Christie pracowała w szpitalnej aptece, co pozwoliło jej pisać realistycznie o truciznach w swoich książkach.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. best-seller </p>
+<p>(książka, która sprzedaje się w wielu egzemplarzach i zarabia mnóstwo pieniędzy - <strong>bestseller</strong>) </p>
+<p>2. tale</p>
+<p>(historia, zwłaszcza o czymś wyobrażonym - <strong>opowieść</strong>)</p>
+<p>3. book critic</p>
+<p>(osoba, która pisze recenzje książek - <strong>krytyk książkowy</strong>)</p>
+<p>4. genre</p>
+<p>(konkretny rodzaj książki, charakteryzujący się określonymi cechami - <strong>gatunek</strong>)</p>
+<p>5. storyteller</p>
+<p>(ktoś, kto jest dobry w opowiadaniu historii - <strong>twórca opowieści</strong>)</p>
+<p>6. classic</p>
+<p>(książka, która jest popularna i wpływa na inne książki - <strong>klasyk</strong>)</p>
+<p>7. plot</p>
+<p>(seria wydarzeń w historii - <strong>fabuła</strong>)</p>
+<p>8. episode</p>
+<p>(część dłuższej historii, przedstawiona osobno w druku albo w telewizji - <strong>odcinek</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. episode </p>
+<p>2. classics</p>
+<p>3. tales</p>
+<p>4. genre</p>
+<p>5. best-sellers</p>
+<p>6. critics</p>
+<p>7. storyteller</p>
+<p>8. plot</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>No dobrze, tak więc odłożyłem ostatnią książkę <em>Sherlocka Holmesa</em>, obejrzałem ostatni <strong>odcinek</strong> serialu o Sherlocku Holmesie z Benedictem Cumberbatchem, i postanowiłem przerzucić się z <strong>klasyków</strong> na współczesne kryminały i thrillery.</p>
+<p><strong>Historie</strong> o śmierci i tajemnicach to mój ulubiony <strong>gatunek</strong>, więc poszukałem trochę i postanowiłem zrecenzować dla Was jeden z <strong>bestsellerów</strong> Patricii Cornwell. Zarówno jej fani, jak i <strong>krytycy</strong> książkowi zgadzają się co do tego, że jest wspaniałą <strong>twórczynią opowieści</strong>, dlatego zeszłej nocy otworzyłem <em>Post mortem</em>, jej debiutancką powieść i pierwszą część z cyklu Kay Scarpetta. Jej <strong>fabuła</strong> opiera się na serii prawdziwych morderstw, więc pomyślałem, że może być bardziej ekscytująca niż zupełna fikcja. I jaka była? Niewiarygodna! Nie mogłem jej odłożyć! Akcja książki toczy się szybko, jest intrygująca, czyli wszystko, czego można wymagać od dreszczowca. Może nawet skończę ją dziś wieczorem i zacznę nową jutro! Pięć gwiazdek!</p><br>

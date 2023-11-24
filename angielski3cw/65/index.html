@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. are going to have our</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>have something done</em>, aby wyrazić, że jakaś czynność została zlecona komuś innemu. Używamy jej razem z użytą w zdaniu wyjściowym konstrukcją <em>be going to</em> wyrażającą plany i zamiary. </p>
+<p>2. had already left</p>
+<p><strong>Uzasadnienie</strong>: czynność, która zakończyła się przed inną czynnością w przeszłości = czas <em>past perfect </em>(<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. as much pollution as</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>not as ... as </em>(nie tak... jak), aby wyrazić różnice między dwoma rzeczami.</p>
+<p>4. up with each</p>
+<p><strong>Uzasadnienie</strong>: <em>make up with each other </em>- pogodzić się ze sobą.</p>
+<p>5. only are the forests suffering</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>not only ... but also </em>(nie tylko... ale i...). Jeśli zdanie zaczyna się od <em>not only</em>, musimy użyć inwersji: czasownik + podmiot.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. performance  </p>
+<p>2. dramatic</p>
+<p>3. eruption</p>
+<p>4. rehearsal</p>
+<p>5. mysterious</p>
+<p>6. disagreement</p>
+<p><s class="odr-strikethrough">enjoy</s>, <s class="odr-strikethrough">real</s></p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p><strong>Występ </strong>muzyki klasycznej przerwany przez katastrofę naturalną</p>
+<p>Londyńska orkiestra trafiła na pierwsze strony gazet po tym, jak <strong>dramatyczna </strong>operacja ratunkowa uratowała ją przed katastrofą.</p>
+<p>Ta orkiestra zgodziła się zagrać na północy Islandii w koncercie, który miał na celu podkreślić problem globalnego ocieplenia. Jednak w dniu koncertu ten obszar nawiedziło trzęsienie ziemi. To doprowadziło też do <strong>wybuchu </strong>wulkanu w tym słynącym z niestabilności geograficznej regionie świata.</p>
+<p>Dyrygent Miles Foreman rozmawiał z dziennikarzami w stolicy, Reykjavik. "Dzień wcześniej mieliśmy naszą <strong>próbę</strong> generalną. Pamiętam, jak patrzyłem na pokryte śniegiem wzgórza i myślałem, jak cudownie spokojne było to miejsce" - powiedział. - "Jest piękne, puste i <strong>tajemnicze</strong> - magiczne miejsce, które wydaje się nie być z tej ziemi. Rano wszystko szło zgodnie z planem, kiedy poczuliśmy, że ziemia się trzęsie. Było trochę <strong>nieporozumień </strong>co do tego, czy koncert powinien się odbyć, a wtedy wybuchł wulkan i to było na tyle. Pół godziny później odlecieliśmy helikopterem".</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. well </p>
+<p><strong>Uzasadnienie:</strong> <em>as well as</em> - a także, jak i. </p>
+<p>2. be</p>
+<p><strong>Uzasadnienie:</strong> używamy czasownika "być" w odpowiedniej formie (<em>be bad for something </em>- źle na coś wpływać). Po czasownikach modalnych używamy bezokolicznika bez <em>to</em>. </p>
+<p>3. which/that</p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o miejscu możemy użyć zaimka <em>which </em>lub <em>that</em>.</p>
+<p>4. such </p>
+<p><strong>Uzasadnienie:</strong> <em>such as </em>- takie jak.</p>
+<p>5. have </p>
+<p><strong>Uzasadnienie:</strong> uzupełniamy lukę czasownikiem posiłkowym czasu <em>present perfect </em>(<em>have/has + past participle</em>). Tutaj chodzi o opis czynności, która wydarzyła się niedawno w bliżej nieokreślonej przeszłości.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>How green is my town? Let me tell you. </em>I have lived in [name of your city/town] all my life. It's small but beautiful because it's surrounded by lots of green areas.</p>
+<p>For some time now it has been trying to be eco-friendly. Firstly, it introduced a recycling program. Now everyone has to segregate their waste. Last month it also opened two community gardens. We can grow our own food without using chemicals.</p>
+<p>But why stop there? My town can do even more to protect the environment! We could use more solar panels and wind turbines to make renewable energy. And if we encourage people to walk, bike, or use public transport, we can reduce pollution from cars.</p>
+<p>I have to say I'm really proud of my hometown. I think it should be an inspiration for others! What do you think? Let me know in the comments. </p>
+<p><br/>(Liczba słów: 144)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Jak zielone jest moje miasto? Pozwólcie, że Wam powiem. Mieszkam w [nazwa miasta] od urodzenia. Jest małe, ale piękne, ponieważ otacza je wiele terenów zielonych.</p>
+<p>Od jakiegoś czasu stara się być przyjazne dla środowiska. Po pierwsze, wprowadzono program recyklingu. Teraz każdy musi segregować swoje odpady. W zeszłym miesiącu otwarto również dwa ogródki społeczne. Możemy uprawiać własną żywność bez użycia chemikaliów.</p>
+<p>Ale dlaczego mielibyśmy na tym poprzestać? Moje miasto może zrobić jeszcze więcej dla ochrony środowiska! Moglibyśmy wykorzystywać więcej paneli słonecznych i turbin wiatrowych do produkcji energii odnawialnej. A jeśli zachęcimy ludzi do chodzenia pieszo, jazdy na rowerze lub korzystania z transportu publicznego, możemy zmniejszyć zanieczyszczenie powodowane przez samochody.</p>
+<p>Muszę przyznać, że jestem naprawdę dumny/a z mojego rodzinnego miasta. Myślę, że powinno być inspiracją dla innych! Co o tym sądzicie? Dajcie znać w komentarzach.</p><br>

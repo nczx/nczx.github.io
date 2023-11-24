@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Subiektywny charakter tej narracji polega na tym, ¿e odbiorca poznaje wydarzenia wy³¹cznie z jednej perspektywy - narratora: "Raz, gdy by³em jeszcze knypkiem ledwie odros³ym od ziemi, ojciec nagle znikn¹³". To on opisuje i ocenia rzeczywistoœæ, interpretuje j¹ przez pryzmat swojej wra¿liwoœci oraz doœwiadczeñ. Z tego powodu wiedza, jak¹ czytelnik zdobywa o ukazanej rzeczywistoœci, jest ograniczona do tego, co pragnie ujawniæ mówi¹cy. Nie mo¿na wiêc do koñca zweryfikowaæ jego s³ów czy ich prawdziwoœci. Zaprezentowane realia s¹ ju¿ bowiem poddane interpretacji narratora, on sam nie zna tak¿e wszystkich faktów, odczuwa w¹tpliwoœci: "Jego znikniêcie by³o nag³e, choæ jak póŸniej mi siê zda³o, nie do koñca, ale zwiastowanie  czegoœ, co jest niepojête, te¿ jest niepojête, wiêc niczego siê nie spodziewa³em". Z tego powodu czytelnik niejako przyjmuje perspektywê wypowiadaj¹cego siê, mo¿e to prowadziæ do uto¿samienia siê z nim. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Narrator w przytoczonym fragmencie wraca pamiêci¹ do czasów dzieciñstwa, wspomina pewne wydarzenia z ówczesnej perspektywy: "Raz, gdy by³em jeszcze knypkiem [...]". Z tego te¿ powodu interpretacja pewnych sytuacji ulega wzbogaceniu, zaœ sam mówi¹cy mo¿e zweryfikowaæ swe wczeœniejsze przekonania. Wprowadza on tak¿e subiektywny punkt widzenia, poniewa¿ przedstawia wszystko przez pryzmat swych spostrze¿eñ oraz wra¿liwoœci. Narrator jest uwa¿nym obserwatorem realiów, który doskonale pamiêta szczegó³y ("Na stole czeka³y wystyg³a herbata, chleb i jajko na twardo."). To osoba silnie zwi¹zana z wiejskim œwiatem, na co wskazuje otoczenie jej domu ("[..] sad jeszcze spa³, jab³ka czeka³y, a¿ wrzesieñ dojrzeje."), zajêcia ("Pogna³em wiêc na pastwisko za wa³em i zostawi³em krowê przy pierwszej kêpie [...]") czy te¿ sam sposób wypowiedzi ("[...] a ledwie przetar³em œlipia [...], "Gruchn¹³ na p³ask du¿ym ko³em, gibn¹³ siê jeszcze [...]".). Mo¿na powiedzieæ, ¿e wa¿n¹ rolê w jego ¿yciu pe³ni ojciec, poniewa¿ narrator poœwiêca mu doœæ du¿o uwagi. Mówi¹cy wyró¿nia siê tak¿e ciekawoœci¹ œwiata oraz pewn¹ odwag¹, gdy¿ rozmawia ze starym, decyduje siê te¿ na samotn¹ wêdrówkê po mieœcie. Ma równie¿ doœæ poetyck¹ naturê -  w pozornie nieznacz¹cych sytuacjach dostrzega magiê i niezwyk³oœæ: "Ale stary dosypa³ do szklanki swojego chichotu, widzia³em jak musuje". O jego doœæ niezwyk³ym statusie œwiadczy równie¿ to, i¿ nale¿y nie tylko do sfery doczesnej, ale zdaje siê przy tym zyskiwaæ dostêp do sfery duchowej. Zgodnie z romantyczn¹ koncepcj¹ dziecko widzi wiêcej ni¿ doros³y. Tak te¿ jest w przypadku narratora: jego sen o ojcu zyskuje dodatkowe sensy, staje siê zapowiedzi¹ tego, co ma nast¹piæ: "¯e twój ojciec, jak ju¿ umrze, zamieszka ci w g³owie".</p>
+<p>Aura tajemnicy otacza wspomnianego ju¿ ojca narratora. Ma to przede wszystkim zwi¹zek z jego pewnym niedookreœleniem oraz zagadkow¹ sytuacj¹, kiedy to znik³ z ¿ycia rodziny na kilka miesiêcy. Jest to symboliczny moment dla jego syna, poniewa¿ staje siê Ÿród³em jego domys³ów. Powrót rodziciela to zaœ moment jego zmartwychwstania, odrodzenia. Prowadzi to do odwrócenia naturalnego porz¹dku: "[...] jakby on urodzi³ siê dla mnie, a nie ja dla niego. Musia³em go w sobie na nowo wychowaæ, utrapieñca, skorunia". Ojciec jawi siê jako osoba doœæ skryta i surowa. Pracuje w zawodówce, jednak stara siê z niej jak najszybciej wróciæ, ma oryginalne podejœcie do ¿ycia: "Nigdy nie bra³ samochodu, nawet w deszcz i œnieg, burcza³, ¿e na pioruñsk¹ szko³ê szkoda mu paliwa". Aurê tajemnicy wzmacnia równie¿ opowieœæ narratora o cudownym ocaleniu ojca, kiedy to zsun¹³ siê na niego ci¹gnik. Istotny w tym kontekœcie staje siê tak¿e sen mówi¹cego - dotycz¹cy dziwacznego pogrzebu rodziciela. Wed³ug starego ma on g³êbszy sens, jest zapowiedzi¹ tego, co nast¹pi.</p>
+<p>Pewn¹ niejednoznacznoœæ mo¿na dostrzec tak¿e w postaci starego - narrator nigdy nie poznaje jego imienia. Jest za to zafascynowany jego odmiennoœci¹: "By³ wielki i szeroki jak wierzba, potê¿niejszy od ojca, nawet od stryja Bogdana, który zawsze wydawa³ mi siê najwiêkszy na œwiecie. Siwe w³osy mia³ przyciête na je¿a - nie zaczesane do ty³u ani na bok, jak to robi¹ staruszkowie, tylko przystrzy¿one w czochrat¹ szczecinê. W jednym uchu mia³ kolczyk. I gdy tylko spostrzeg³em to malutkie z³ote kó³ko, nie widzia³em ju¿ niczego innego. By³o jak klucz do obcego, dziwacznego œwiata". Stary niespodziewanie nawi¹zuje z narratorem kontakt i rozmowê. Wzbudza jego fascynacjê, nie nale¿y tak¿e do znanej mówi¹cemu rzeczywistoœci: "Taki jest zwyczaj. [...] No, mo¿e nie tu, ale tam, sk¹d pochodzê, taki by³". W oczach narratora nabiera niezwyk³ych cech, niczym czarodziej: "Woda smakowa³a pysznie, chichot by³ zupe³nie bez smaku". Wra¿enie to pog³êbia towarzysz¹cy mê¿czyŸnie kot oraz jego zdolnoœæ do interpretacji snu narratora. Nie bagatelizuje wyznania ch³opca, lecz odkrywa przed nim g³êbszy sens tego, co doœwiadczy³ w czasie snu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Pierwszy dzieñ w szkole narrator opisuje przez pryzmat swych zmys³ów - przede wszystkim wzroku, wêchu oraz s³uchu: "W szkole by³o jasno i gwarno, czuæ by³o kurz [...]". Wa¿ne staje siê tak¿e porównanie tej uroczystoœci z czymœ znanym, dziêki czemu mówi¹cy mo¿e okreœliæ swój stosunek emocjonalny: "[...] przypomina³a msze w koœciele, ciekawi³a i nudzi³a zarazem". Narrator przywo³uje detale, które zapisa³y siê w jego pamiêci, np. wygl¹d nauczycielek czy temat wypowiedzi dyrektora. Najwiêcej uwagi poœwiêca jednak innym uczniom, poniewa¿ szczególnie interesuje go poszukiwanie znajomych twarzy: "Z mojej wsi nikogo, ale z s¹siednich wypatrzy³em W³adka Leptucha i ma³ego Robutê [...]". Taki sposób opowiadania mo¿e œwiadczyæ o tym, i¿ rozpoczêcie roku by³o istotnym momentem w ¿yciu narratora, poniewa¿ doœæ dobrze je zapamiêta³. Pobudza bowiem jego pamiêæ i pozwala na sentymentaln¹ podró¿ w przesz³oœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

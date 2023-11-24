@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="height:121px;width:568px;border-collapse:collapse;background-color:#99cccc;border-color:#99CCCC;"> <tbody> <tr style="height:98px;"> <td style="width:564px;height:98px;">Zdarzenia <strong>A, B ⊂ Ω </strong>nazywamy <strong>niezależnymi</strong>, jeśli <strong>P(A∩B)=P(A)·P(B)</strong>.</td> </tr> </tbody> </table> <hr/> <p>Ustawiamy losowo wieżę na jednym z <strong>64</strong> pól szachownicy.</p> <p><strong>A</strong> - wieża została ustawiona w wierszu <strong>1, 2</strong> lub <strong>3</strong></p> <p><strong>B</strong> - wieża została ustawiona w kolumnie <strong>G</strong> lub <strong>H</strong></p> <p>Wiemy, że:</p> <p><span> <math-expr expr="P(A)=24/64=3/8, \ \ \ P(B)=16/64=1/4, \ \ \ P(AnnB)=6/64=3/32" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>C</strong> - wieża została ustawiona w wierszu o numerze nieparzystym</p> <p>Wierszy o numerach nieparzystych mamy łącznie <strong>4</strong>, natomiast wszystkich wierszy jest łącznie <strong>8</strong>, zatem:  </p> <p><span> <math-expr expr="P(C)=4/8=1/2" syntax="text"></math-expr> </span></p> <hr/> <p>Zdarzeniu <strong>B∩C </strong>sprzyja <strong>8 </strong>ustawień wieży (G1, G3, G5, G7, H1, H3, H5, H7).</p> <p>Zatem:</p> <p><span> <math-expr expr="P(BnnC)=8/64=1/8" syntax="text"></math-expr> </span>   </p> <hr/> <p>Zauważmy, że:</p> <p><span> <math-expr expr="P(B)*P(C)=1/4*1/2=1/8=P(BnnC)" syntax="text"></math-expr> </span></p> <p>wobec tego zdarzenia <strong>B</strong> i <strong>C</strong> są niezależne, co należało uzasadnić.</p> <hr/> <p>Zdarzeniu <strong>A∩C </strong>sprzyja <strong>16 </strong>ustawień wieży.</p> <p>Zatem:</p> <p><span> <math-expr expr="P(AnnC)=16/64=1/4" syntax="text"></math-expr> </span>  </p> <hr/> <p>Zauważmy, że:</p> <p><span> <math-expr expr="P(A)*P(C)=3/8*1/2=3/16!=P(AnnC)=1/4" syntax="text"></math-expr> </span> </p> <p>wobec tego zdarzenia <strong>A</strong> i <strong>C</strong> są zależne, co należało uzasadnić. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="height:121px;width:568px;border-collapse:collapse;background-color:#99cccc;border-color:#99CCCC;"> <tbody> <tr style="height:98px;"> <td style="width:564px;height:98px;">Zdarzenia <strong>A, B ⊂ Ω </strong>nazywamy <strong>niezależnymi</strong>, jeśli <strong>P(A∩B)=P(A)·P(B)</strong>.</td> </tr> </tbody> </table> <hr/> <p>Z treści zadania wiemy, że rzucamy raz kostką.</p> <p>Niech <span style="font-weight:400;"><strong>Ω</strong> - zbiór wszystkich możliwych zdarzeń elementarnych, więc:  </span></p> <p><span style="font-weight:400;"><span> <math-expr expr="abs(Omega)=6" syntax="text"></math-expr> </span> </span></p> <p><strong>A</strong> - wypadła nieparzysta liczba oczek </p> <p><strong>B</strong> - wypadła liczba oczek większa od <strong>4</strong></p> <hr/> <p>Nieparzyste liczby oczek, to: <strong>1, 3, 5</strong>, zatem:</p> <p><span> <math-expr expr="P(A)=3/6=1/2" syntax="text"></math-expr> </span></p> <hr/> <p>Liczby oczek większe od <strong>4</strong>, to: <strong>5, 6</strong>, więc:</p> <p><span> <math-expr expr="P(B)=2/6=1/3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Nieparzyste liczby oczek większe od <strong>4</strong>, to: <strong>5</strong>, wobec tego:</p> <p><span> <math-expr expr="P(AnnB)=1/6" syntax="text"></math-expr> </span> </p> <hr/> <p>Zauważmy, że:</p> <p><span> <math-expr expr="P(A)*P(B)=1/2*1/3=1/6=P(AnnB)" syntax="text"></math-expr> </span></p> <p>wnioskujemy, że zdarzenia <strong>A</strong> i <strong>B</strong> są niezależne,<br/>co należało uzasadnić.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="height: 121px; width: 568px; border-collapse: collapse; background-color: #99cccc; border-color: #99CCCC;">
+<tbody>
+<tr style="height: 98px;">
+<td style="width: 564px; height: 98px;">Zdarzenia <strong>A, B ⊂ Ω </strong>nazywamy <strong>niezależnymi</strong>, jeśli <strong>P(A∩B)=P(A)·P(B)</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>Z treści zadania wiemy, że rzucamy dwa razy kostką.</p>
+<p>Niech <span style="font-weight: 400;"><strong>Ω</strong> - zbiór wszystkich możliwych zdarzeń elementarnych, więc:</span></p>
+<p><span style="font-weight: 400;"> <math-expr expr="abs(Omega)=6^2=36" syntax="text"></math-expr>  </span></p>
+<hr/>
+<p><strong>A</strong> - za pierwszym razem wypadła szóstka</p>
+<p><strong>B</strong> - za drugim razem wypadła szóstka</p>
+<p><strong>C</strong> - suma oczek w obydwu rzutach jest większa od <strong>10</strong></p>
+<hr/>
+<p><math-expr expr="A={(6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6) }" syntax="text"></math-expr></p>
+<p><math-expr expr="abs(A)=6" syntax="text"></math-expr></p>
+<p>więc:  </p>
+<p><math-expr expr="P(A)=abs(A)/abs(Omega)=6/36=1/6" syntax="text"></math-expr></p>
+<hr/>
+<p><math-expr expr="B={(1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6) }" syntax="text"></math-expr></p>
+<p><math-expr expr="abs(B)=6" syntax="text"></math-expr></p>
+<p>więc:</p>
+<p><math-expr expr="P(B)=abs(B)/abs(Omega)=6/36=1/6" syntax="text"></math-expr></p>
+<hr/>
+<p><math-expr expr="{\displaystyle {C}={\left\lbrace{\left({5},{6}\right)},\left(6{,}5\right),{\left({6},{6}\right)}\right\rbrace}}"></math-expr></p>
+<p><math-expr expr="{\displaystyle {\left|{{C}}\right|}={3}}"></math-expr></p>
+<p>więc:</p>
+<p><math-expr expr="{\displaystyle {P}{\left({C}\right)}=\frac{{\left|{{C}}\right|}}{{\left|{\Omega}\right|}}=\frac{{}3}{{36}}=\frac{{1}}{{12}}}"></math-expr></p>
+<hr/><hr/>
+<p><strong>a)</strong></p>
+<p>Wiemy, że:</p>
+<p><math-expr expr="{\displaystyle {A}\cap{B}={\left\lbrace{\left(6,{6}\right)}\right\rbrace}}"></math-expr>  </p>
+<p>więc</p>
+<p><math-expr expr="\displaystyle {\left|A\right.}\cap{B}\left|={1}\right."></math-expr></p>
+<p>zatem:</p>
+<p><math-expr expr="P(AnnB)=1/36" syntax="text"></math-expr></p>
+<hr/>
+<p>Zauważmy, że:</p>
+<p><math-expr expr="P(A)*P(B)=1/6*1/6=1/36=P(AnnB)" syntax="text"></math-expr></p>
+<p>zatem zdarzenia <strong>A</strong> i <strong>B</strong> są niezależne.   </p>
+<hr/><hr/>
+<p><strong>b)</strong></p>
+<p>Wiemy, że:</p>
+<p><math-expr expr="{\displaystyle {A}\cap{C}={\left\lbrace{\left(6{,}5\right),\left({6},{6}\right)}\right\rbrace}}"></math-expr>  </p>
+<p>więc</p>
+<p><math-expr expr="\displaystyle {\left|A\right.}\cap{C\left|\right.}={}2"></math-expr></p>
+<p>zatem:</p>
+<p><math-expr expr="\displaystyle {{P}{\left({A}\cap{C}\right)}=\frac{{}2}{{36}}}=\frac{1}{18}"></math-expr></p>
+<hr/>
+<p>Zauważmy, że:</p>
+<p><math-expr expr="{{{\displaystyle {P}{\left({A}\right)}\cdot{P}{\left({\text{C}}\right)}=\frac{{1}}{{6}}\cdot\frac{{1}}{{12}}=\frac{{1}}{72}\ne{P}{\left({A}\cap{\text{C}}\right)}=\frac{{}1}{{}18}}}}"></math-expr></p>
+<p>zatem zdarzenia <strong>A</strong> i <strong>C</strong> są zależne.   </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Z treści zadania wiemy, że losujemy jedna liczbę spośród liczb <strong>1, 2, 3, ..., 100</strong>.</p> <p>Niech <span style="font-weight: 400;"><strong>Ω</strong> - zbiór wszystkich możliwych zdarzeń elementarnych, więc:</span></p> <p><span style="font-weight: 400;"> <span> <math-expr expr="abs(Omega)=((100),(1))=100" syntax="text"></math-expr> </span> </span></p> <hr/> <p><strong>A</strong> - wylosowano liczbę parzystą</p> <p><strong>B</strong> - wylosowano liczbę podzielną przez <strong>5</strong></p> <p><strong>C</strong> - wylosowano liczbę podzielną przez <strong>6</strong></p> <hr/> <p>Liczb parzystych w zbiorze podanych liczb mamy łącznie <strong>50 </strong>(połowa wszystkich liczb), więc:  </p> <p><span> <math-expr expr="abs(A)=50" syntax="text"></math-expr> </span></p> <p>zatem:</p> <p><span> <math-expr expr="P(A)=abs(A)/abs(Omega)=50/100=1/2" syntax="text"></math-expr> </span>   </p> <hr/> <p>Liczby podzielne przez <strong>5</strong>, to: <strong>5, 10, 15, 20, 25, ..., 100</strong>, więc:</p> <p><span> <math-expr expr="abs(B)=100/5=20" syntax="text"></math-expr> </span></p> <p>zatem:</p> <p><span> <math-expr expr="P(B)=abs(B)/abs(Omega)=20/100=1/5" syntax="text"></math-expr> </span></p> <hr/> <p>Liczby podzielne przez <strong>6</strong>, to: <strong>6</strong><strong>, 12, 18, 24, 30, ..., 96</strong>, więc:</p> <p><span> <math-expr expr="abs(C)=16" syntax="text"></math-expr> </span></p> <p>zatem:</p> <p><span> <math-expr expr="P(C)=abs(C)/abs(Omega)=16/100=4/25" syntax="text"></math-expr> </span>   </p> <hr/><hr/> <p><strong>a)</strong></p> <p>Wiemy, że liczby podzielne przez <strong>5 </strong>i zarówno parzyste, to liczby, które mają na końcu <strong>0</strong>, zatem:</p> <p><span> <math-expr expr="abs(AnnB)=10" syntax="text"></math-expr> </span></p> <p>Obliczamy prawdopodobieństwo iloczynu zdarzeń <strong>A</strong> i <strong>B</strong>:</p> <p><span> <math-expr expr="P(AnnB)=10/100=1/10" syntax="text"></math-expr> </span></p> <hr/> <p>Zauważamy, że:</p> <p><span> <math-expr expr="P(A)*P(B)=1/2*1/5=1/10=P(AnnB)" syntax="text"></math-expr> </span></p> <p>zatem zdarzenia <strong>A</strong> i <strong>B</strong> są niezależne.  </p> <hr/><hr/> <p><strong>b)</strong></p> <p>Wiemy, że liczby podzielne przez <strong>6 </strong>i zarówno parzyste, to wszystkie liczby podzielne przez <strong>6</strong>, zatem:</p> <p><span> <math-expr expr="abs(AnnC)=16" syntax="text"></math-expr> </span></p> <p>Obliczamy prawdopodobieństwo iloczynu zdarzeń <strong>A</strong> i <strong>C</strong>:</p> <p><span> <math-expr expr="P(AnnC)=16/100=4/25" syntax="text"></math-expr> </span></p> <hr/> <p>Zauważamy, że:</p> <p><span> <math-expr expr="P(A)*P(C)=1/2*4/25=2/25!=P(AnnC)=4/25" syntax="text"></math-expr> </span></p> <p>zatem zdarzenia <strong>A</strong> i <strong>C</strong> są zależne.  </p> <hr/><hr/> <p><strong>c)</strong></p> <p>Wiemy, że liczby podzielne przez <strong>6 </strong>i zarówno podzielne przez <strong>5</strong>, to wszystkie liczby podzielne przez <strong>30</strong>, zatem:</p> <p><span> <math-expr expr="abs(BnnC)=3" syntax="text"></math-expr> </span></p> <p>Obliczamy prawdopodobieństwo iloczynu zdarzeń <strong>B</strong> i <strong>C</strong>:</p> <p><span> <math-expr expr="P(BnnC)=3/100" syntax="text"></math-expr> </span></p> <hr/> <p>Zauważamy, że:</p> <p><span> <math-expr expr="P(B)*P(C)=1/5*4/25=4/125!=P(BnnC)=3/100" syntax="text"></math-expr> </span></p> <p>zatem zdarzenia <strong>B</strong> i <strong>C</strong> są zależne.  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Założenia:</strong></p> <p><strong>A, B ⊂ Ω</strong>. </p> <p>Zdarzenia <strong>A</strong> i <strong>B</strong> są niezależne, więc:  </p> <p><span> <math-expr expr="P(A)*P(B)=P(AnnB)" syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr="P(B)&gt;0" syntax="text"></math-expr> </span></p> <p><strong><span>Teza:</span></strong></p> <p><span> <math-expr expr="P(A|B)=P(A)" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>Dowód:</strong></p> <p><span> <math-expr expr="P(A|B)=(P(AnnB))/(P(B))=(P(A)*cancel(P(B)))/(cancel(P(B)))=P(A)" syntax="text"></math-expr> </span></p> <p>co należało uzasadnić. </p><br>

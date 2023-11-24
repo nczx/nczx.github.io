@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1 - <strong>C</strong>, orchestra</p>
+<p>(grupa muzyków grająca muzykę klasyczną, np. balet - <strong>orkiestra</strong>) </p>
+<p>2 - <strong>B</strong>, folk band</p>
+<p>(grupa grająca muzykę tradycyjną - <strong>zespół ludowy</strong>)</p>
+<p>3 - <strong>A</strong>, opera</p>
+<p>(historia opowiadana za pomocą śpiewania do muzyki klasycznej, wymagająca od wokalistów bardzo wysokich i niskich tonów - <strong>opera</strong>)</p>
+<p>4 - <strong>D</strong>, musical</p>
+<p>(rodzaj sztuki ze śpiewaniem i tańcem, często oparta o muzykę pop i rockową - <strong>musical</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1 - C  </p>
+<p>2 - B</p>
+<p><br/><strong>Przykładowa odpowiedź na drugie pytanie:</strong></p>
+<p>In the first recording I can hear a group of musicians playing classical music. In the second recording I can hear traditional music.</p>
+<p>(Na pierwszym nagraniu słyszę grupę muzyków grających muzykę klasyczną. Na drugim nagraniu słyszę muzykę tradycyjną.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Poniżej znajduje się tłumaczenie quizu na język polski. </strong></p>
+<hr/>
+<p><br/><strong>Jak ważna jest dla ciebie muzyka?</strong></p>
+<p>1. Co jest dla ciebie najważniejsze w piosence?</p>
+<p style="padding-left: 30px;">a. To powinno być coś, do czego można śpiewać lub tańczyć.</p>
+<p style="padding-left: 30px;">b. To, czy główny/a wokalista/tka ma ciekawy głos.</p>
+<p style="padding-left: 30px;">c. Chwytliwa melodia - chcę coś poczuć, kiedy ją usłyszę. </p>
+<p><br/>2. Na koncercie pewnie</p>
+<p style="padding-left: 30px;">a. staniesz tam, gdzie będziesz mógł/mogła tańczyć i rozmawiać z ludźmi.</p>
+<p style="padding-left: 30px;">b. zwrócisz uwagę, w jaki sposób sala koncertowa wpływa na jakość dźwięku.</p>
+<p style="padding-left: 30px;">c. staniesz na tyłach, bo skakanie i wrzaski do muzyki nie jest w twoim stylu.</p>
+<p><br/>3. Jeśli piosenkarz/piosenkarka lub zespół, który lubisz rozpoczyna trasę koncertową, ty</p>
+<p style="padding-left: 30px;">a. pójdziesz tam i będziesz się dobrze bawić od początku koncertu, nawet jeśli zespół występujący przed koncertem gwiazdy głównej jest słaby.</p>
+<p style="padding-left: 30px;">b. szybko kupisz bilety, zanim się wyprzedadzą.</p>
+<p style="padding-left: 30px;">c. kupisz album koncertowy po trasie (jeśli będzie miał dobre recenzje) - jest to równie dobre, co występ na żywo.</p>
+<p><br/>4. Kiedy twój ulubiony piosenkarz lub piosenkarka wyda nowy singiel, ty</p>
+<p style="padding-left: 30px;">a. szybko uczysz się tekstu piosenki, tak abyś mógł/mogła śpiewać razem z nim/nią.</p>
+<p style="padding-left: 30px;">b. od razu go pobierasz.</p>
+<p style="padding-left: 30px;">c. czekasz, by zobaczyć, czy stanie się hitem, zanim go pobierzesz.</p>
+<p><br/>5. Lubisz piosenkarzy i zespoły, które</p>
+<p style="padding-left: 30px;">a. regularnie urządzają trasy koncertowe i pojawiają się na festiwalach na wolnym powietrzu.</p>
+<p style="padding-left: 30px;">b. nie tylko dostarczają rozrywki, ale i wnoszą coś nowego do świata muzyki.</p>
+<p style="padding-left: 30px;">c. nagrywają twój ulubiony rodzaj muzyki.</p>
+<p><br/>6. Ty</p>
+<p style="padding-left: 30px;">a. lubisz eksperymentować i słuchasz wszystkiego, od opery po artystów ulicznych.</p>
+<p style="padding-left: 30px;">b. znasz wszystkie obecne i klasyczne hity, wliczając ich covery.</p>
+<p style="padding-left: 30px;">c. zwykle słuchasz list odtwarzania swoich znajomych; nie tworzysz własnych.</p>
+<p> </p>
+<p><strong>Uwaga! Rozwiązanie quizu i obliczenie wyniku to zadanie indywidualne.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. touring  </p>
+<p>2. sold out</p>
+<p>3. released</p>
+<p>4. busker</p>
+<p>5. cover versions</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>SUPERGROUP ponownie <strong>w trasie</strong> po Europie!</p>
+<p>Wszystkie bilety na koncert zostały <strong>wyprzedane</strong>!</p>
+<p>Ci z was, którym nie udało się ich zdobyć - będziecie musieli poczekać na album na żywo, który <strong>ukaże się</strong> 24 maja.</p>
+<p>W międzyczasie utalentowany <strong>grajek uliczny</strong>, którego widzicie na tym zdjęciu, wykonuje <strong>covery</strong> hitów SUPERGROUP.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. catchy, along</p>
+<p>(Jakie trzy piosenki z <strong>chwytliwą</strong> melodią zawsze <strong>podśpiewujesz*</strong>?)</p>
+<p><strong>*</strong>podśpiewywać - <em>sing along</em>. </p>
+<p>2. festival</p>
+<p>(Czy byłeś/aś kiedyś na <strong>festiwalu</strong> plenerowym?)</p>
+<p>3. entertaining</p>
+<p>(Które zespoły/piosenkarze są naprawdę dobrzy w <strong>zabawianiu</strong> swoich fanów na koncertach?)</p>
+<p>4. lyrics</p>
+<p>(Czy znasz <strong>teksty</strong> swoich ulubionych piosenek w języku angielskim?)</p>
+<p>5. buskers</p>
+<p>(Dlaczego <strong>grajkowie</strong> grają na ulicach? Żeby zarobić, czy żeby poćwiczyć przed żywą publicznością?)</p>
+<p>6. live</p>
+<p>(Czy uważasz, że większość piosenkarzy/zespołów występuje równie dobrze <strong>na żywo</strong>, co na swoich albumach studyjnych?)</p>
+<p>7. cover versions, recorded</p>
+<p>(Czy wolisz oryginalne wersje klasycznych przebojów, czy współczesne <strong>covery</strong> wykonywane przez współczesnych artystów? Czy potrafisz wymienić kilku artystów, którzy <strong>nagrali</strong> takie piosenki?)</p>
+<p> </p>
+<p> </p>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. I always sing along to songs like <em>Another One Bites The Dust </em>by Queen, <em>Hips Don't Lie </em>by Shakira, and <em>Last Resort </em>by Papa Roach.</p>
+<p>(Zawsze śpiewam razem z piosenkami takimi jak <em>Another One Bites The Dust </em>zespołu Queen, <em>Hips Don't Lie</em> autorstwa Shakiry, and <em>Last Resort </em>zespołu Papa Roach)</p>
+<p><br/>2. Yes, I've been to a couple open-air festivals. The weather usually needs to be good for these events to be successful.</p>
+<p>(Tak, byłem/am na paru festiwalach na wolnym powietrzu. Pogoda zazwyczaj musi być dobra, by takie wydarzenia były sukcesem.)</p>
+<p><br/>3. I've heard that Rammstein is amazing at entertaining their fans at concerts.</p>
+<p>(Słyszałem/am, że Rammstein jest świetny w dostarczaniu swoim fanom rozrywki na koncertach.)</p>
+<p><br/>4. Yes, I know the lyrics to most of my favourite English songs.</p>
+<p>(Tak, znam słowa do większości z moich ulubionych angielskich piosenek.)</p>
+<p><br/>5. I think most buskers try to make some money. But it's possible they simply like what they do and they want to share it with others.</p>
+<p>(Myślę, że większość grajków ulicznych chce zarobić trochę pieniędzy. Ale to możliwe, że po prostu lubią to, co robią i chcą się tym podzielić z innymi.)</p>
+<p><br/>6. No, I feel like it's quite rare for singers or bands to perform live as well as on their studio albums.</p>
+<p>(Nie, wydaje mi się, że to dość rzadkie, by wokaliści lub zespoły występowali na żywo tak samo dobrze, jak na swoich albumach studyjnych.)</p>
+<p><br/>7. It depends on the song. Sometimes modern covers can be better than their original versions, but it's rare. Some artists who have recorded such songs are: Lana del Rey (<em>Doin' Time</em>, a cover of Sublime's song), Twenty One Pilots (<em>Can't Help Falling in Love</em>, a cover of Elvis Presley's classic), or J.Fla (<em>Love of my Life</em>, a cover of Queen's song).</p>
+<p>(Zależy od utworu. Czasami nowoczesne covery potrafią być lepsze niż ich oryginalne wersje, ale to rzadkość. Artyści, którzy nagrali takie piosenki, to między innymi: Lana Del Rey (<em>Doin' Time</em>, cover piosenki zespołu Sublime), Twenty One Pilots (<em>Can't Help Falling in Love</em>, cover klasyku Elvisa Presley'a), lub J. Fla (<em>Love of my Life</em>, cover piosenki Queen).</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I have a few favourite artists and Rammstein is one of them. It's a metal band from Germany. Its lead singer's name is Till Lindemann and he's got an interesting voice. I like their songs because they're very catchy. I always try to look up the lyrics so that I can sing along. They often go on tours and I've heard that they perform as well live as on their studio albums. Their concerts get great reviews. I have a playlist of their songs on my phone and I listen to it when I exercise.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Mam kilku ulubionych artystów i Rammstein jest jednym z nich. Jest to zespół metalowy pochodzący z Niemiec. Jego główny wokalista nazywa się Till Lindemann i ma ciekawy głos. Lubię ich piosenki, ponieważ są bardzo chwytliwe. Zawsze staram się sprawdzać tekst, żeby móc śpiewać razem z nimi. Często jeżdżą w trasy koncertowe i słyszałem/am, że na żywo wypadają równie dobrze jak na swoich albumach studyjnych. Ich koncerty zbierają świetne recenzje. Mam playlistę z ich piosenkami w telefonie i słucham jej podczas ćwiczeń.</p><br>

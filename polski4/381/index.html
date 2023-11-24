@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Herodot, przez Kapuścińskiego uważany za ojca reportażu, niezwykle cenił kontakty z ludźmi ("Więc Herodot wędruje po świecie, spotyka ludzi i słucha tego, co opowiadają. Mówią mu, kim są, opowiadają swoją historię."). Ci byli dla greckiego historyka nie tylko wytrawnymi gawędziarzami, ale przede wszystkim "jedynymi depozytariuszami pamięci". Ich barwne opowieści - przekazywane z pokolenia na pokolenie - nierzadko okazywały się cennym źródłem wiedzy o kulturze lub tradycji danego regionu ("Ludzie siedzą przy ognisku i opowiadają. Potem będzie to nazwane legendami i mitami, ale w chwili kiedy tamci to mówią lub słyszą, wierzą, że jest to najświętsza prawda, najbardziej rzeczywista rzeczywistość."). Poznane treści Herodot zapamiętywał lub przelewał na papier, wierząc, że tylko w taki sposób zdoła ocalić dzieje ludzkości przed zapomnieniem ("To właśnie prawo bezpowrotnego przemijania Herodot doskonale rozumie i chce przeciwstawić się jego niszczycielskiej naturze: <em>żeby dzieje ludzkości z biegiem czasu nie zatarły się w pamięci.")</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Kapuściński definiuje sztukę reportażu jako nawiązywanie kontaktu z ludźmi, by następnie udzielić im głosu i utrwalić w pamięci lub na papierze opowiedziane przez nich historie ("[...] usiąść razem i wysłuchać, co nam powie, wysłuchać, zapamiętać, może zapisać. Tak zaczyna się reportaż, z takiej rodzi się sytuacji."). Misja reportażysty nierzadko wymaga od niego determinacji oraz bezwzględnej gotowości do wyruszenia w podróż, pod wieloma względami przypominającą wywiad środowiskowy ("Żeby dotrzeć więc do tego, co zapamiętane, trzeba dojść do człowieka, a jeżeli mieszka on daleko od nas, trzeba do niego pójść, wyruszyć w drogę [...].").</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Według Kapuścińskiego Herodot spisał <em>Dzieje</em>, aby ocalić historię ludzkości przed zapomnieniem ("[...] żeby dzieje ludzkości z biegiem czasu nie zatarły się w pamięci."). Czynnikiem, który w najwyższym stopniu motywował Greka do szukania kontaktu z ludźmi i wysłuchiwania ich opowieści, była tzw. "obsesja pamięci", czyli właściwa starożytnym świadomość nietrwałości wspomnień ("[...] miał świadomość, że pamięć jest czymś ulotnym, nietrwałym, nawet - złudnym. [...] To właśnie prawo bezpowrotnego przemijania Herodot doskonale rozumie i chce przeciwstawić się jego niszczycielskiej naturze [...].").</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Reporter zaznacza swą obcość za pośrednictwem licznych, silnie zsubiektywizowanych opisów sytuacji, autorefleksji oraz introspekcji. Robi to:</p>
+<ul>
+<li>zaraz po wylądowaniu w New Delhi ("Stałem mokry od potu, bezradny w tym dziwnym i obcym miejscu.");</li>
+<li>w momencie pierwszego kontaktu z tubylcem ("Coś powiedział do mnie, czego nie zrozumiałem. [...] rozglądałem się, zastanawiałem się - co dalej?");</li>
+<li>podczas spaceru ulicami Starego Delhi ("I ten tłum przesuwających się w milczeniu ludzi, ich pojawianie się i znikanie, ich twarze ciemne, wilgotne, anonimowe, zamknięte.");</li>
+<li>w konfrontacji z rykszarzami ("Natomiast prawdziwe zderzenie cywilizacji nastąpiło w godzinę później [...]. Więc kiedy rikszarze rzucili się na mnie [...], zacząłem stanowczo odsuwać ich, ganić i protestować. Zdumieni, nie mogli pojąć, o co mi chodzi, nie mogli mnie zrozumieć.");</li>
+<li>wobec struktury społecznej Indii, opartej na relacji pan-sługa ("Tak, bo zauważyłem już, że do każdego rodzaju przedmiotu i czynności przypisany jest inny człowiek i że człowiek ów czujnie pilnuje swojej roli i miejsca - na tym polega równowaga tego społeczeństwa.");</li>
+<li>za sprawą nowych doświadczeń, odkryć i przemyśleń na temat ogromu poznawanej cywilizacji ("W miarę tej podróży nabierałem przeświadczenia o deprymującej beznadziei tego, co robię, o niemożności poznania i zrozumienia kraju, w którym jestem.").</li>
+</ul>
+<p> </p>
+<p>Poczucie wspólnoty z Hindusami Kapuściński podkreśla, porównując ich zwyczaje z własnymi trudnymi doświadczeniami z dzieciństwa. Współczuje ludziom, którzy z różnych powodów nie noszą obuwia, ponieważ sam doświadczył niegdyś skrajnego ubóstwa w czasie srogich zim ("Teraz, kiedy zobaczyłem, że w Indiach miliony nie mają butów, odezwało się we mnie jakieś uczucie wspólnoty, pobratymstwa z tymi ludźmi, a czasem nawet ogarniał mnie nastrój, jaki odczuwamy, wracając do domu dzieciństwa.").</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 586px; height: 1778px;">
+<tbody>
+<tr style="height: 53px;">
+<td colspan="2" style="background-color: #99ccff; text-align: center; width: 385.188px; height: 53px;"><strong>Rodzaje podróży</strong></td>
+<td rowspan="2" style="background-color: #99ccff; text-align: center; width: 194.413px; height: 105px;"><strong>Cytaty</strong></td>
+</tr>
+<tr style="height: 52px;">
+<td style="background-color: #99ccff; text-align: center; width: 190.15px; height: 52px;"><strong>Dosłownie</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 192.238px; height: 52px;"><strong>W przenośni</strong></td>
+</tr>
+<tr style="height: 393px;">
+<td rowspan="2" style="width: 190.15px; height: 590px; text-align: center;">lot samolotem</td>
+<td style="width: 192.238px; height: 393px; text-align: center;">
+<p>przedsmak obcości, egzotyki (wygląd stewardess, wystrój wnętrza samolotu)</p>
+</td>
+<td style="width: 194.413px; height: 393px; text-align: center;">"W drzwiach [...] witała pasażerów stewardessa ubrana w jasne, pastelowe sari. [...] Miała ręce złożone jak do modlitwy, co było hinduskim gestem powitalnym. Na czole, na wysokości brwi, zobaczyłem namalowaną szminką kropkę, wyrazistą i czerwoną jak rubin. W kabinie poczułem nieznaną mi woń, z pewnością był to zapach jakichś wschodnich kadzideł, hinduskich ziół, owoców i żywic."</td>
+</tr>
+<tr style="height: 197px;">
+<td style="width: 192.238px; height: 197px; text-align: center;">
+<p>zetknięcie się z absolutem, wiecznością</p>
+</td>
+<td style="width: 194.413px; height: 197px; text-align: center;">"Patrząc przez okienko, pierwszy raz widziałem tak wielki obszar naszej planety. Jest to widok, który może nasuwać myśl o nieskończoności świata."</td>
+</tr>
+<tr style="height: 202px;">
+<td style="width: 190.15px; height: 202px; text-align: center;">podróż rykszą</td>
+<td style="width: 192.238px; height: 202px; text-align: center;">symbol wyzysku, nierówności społecznej</td>
+<td style="width: 194.413px; height: 202px; text-align: center;">"Mnie natomiast myśl, że będę siedział wygodnie rozparty w rikszy, którą ciągnie głodny, słaby, ledwie dyszący chudzielec, napawała najwyższym wstrętem, oburzeniem, grozą."</td>
+</tr>
+<tr style="height: 312px;">
+<td style="width: 190.15px; height: 312px; text-align: center;">spacer ulicą</td>
+<td style="width: 192.238px; height: 312px; text-align: center;">konfrontacja z tłumem rozumianym jako zbiór jednostek - o indywidualnych cechach wyglądu, charakteru, własnych tajemnicach</td>
+<td style="width: 194.413px; height: 312px; text-align: center;">"Dzieci ciche, niewydające głosu, jakiś mężczyzna wpatrzony tępo w resztki roweru [...], kobieta sprzedająca coś zawiniętego w zielone liście, ale co? Co te liście kryją? Żebrak pokazujący, że skóra na brzuchu przylgnęła mu do kręgosłupa - ale czy to możliwe, prawdopodobne, wyobrażalne?"</td>
+</tr>
+<tr style="height: 311px;">
+<td style="width: 190.15px; height: 311px; text-align: center;">zejście po schodach prowadzących do rzeki</td>
+<td style="width: 192.238px; height: 311px; text-align: center;">akt pokory, pragnienie duchowego odrodzenia</td>
+<td style="width: 194.413px; height: 311px; text-align: center;">"Inni siedzą w pozycji kwiatu lotosu, wyciągając ręce ku niebu. Sam dół zajmują ci, którzy odprawiają rytuał oczyszczenia - brodzą w rzece, a czasem, na moment, zanurzają się z głową. [...] Cały rytuał wygląda na torturę, ale ona [starsza kobieta] znosi ją bez sprzeciwu, może nawet w ekstazie."</td>
+</tr>
+<tr style="height: 236px;">
+<td style="width: 190.15px; height: 236px; text-align: center;">wędrówka po świecie w celu nawiązania kontaktu z ludźmi</td>
+<td style="width: 192.238px; height: 236px; text-align: center;">otwartość, ciekawość, gotowość do wysłuchania drugiego człowieka</td>
+<td style="width: 194.413px; height: 236px; text-align: center;">"Żeby więc dotrzeć do tego, co zapamiętane, trzeba dojść do człowieka, a jeżeli mieszka on daleko od nas, musimy do niego pójść, wyruszyć w drogę, a kiedy już się spotkamy - usiąść razem i wysłuchać, co nam powie [...]."</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>a) Metaforyczne określenia ognia ("[...] ciepło ognia ożywia myśli, pobudza wyobraźnię."), światła ("Światło ognia przyciąga, spaja grupę, wyzwala w niej dobre energie.") i wody ("Wszystko płynie, ale płynąc, podlega przemianie.") w znacznym stopniu uplastyczniają narrację. Nie tylko silnie oddziałują na wyobraźnię odbiorcy, ale również odsyłają go do kontekstów kulturowych - mitologicznego (związek z postaciami Hestii, Prometeusza) oraz filozoficznego (aluzje do idealizmu platońskiego czy teorii zmienności Heraklita). W rezultacie rozważania Kapuścińskiego, wzbogacone o antyczną topikę, zyskują uniwersalny charakter.</p>
+<p> </p>
+<p>b) Za pomocą elementów języka naukowego, takich jak analityczna składnia ("Nie wiem, czy Herodot dotarł do Indii - zważywszy na problemy komunikacyjne tamtej epoki, wydaje się to mało prawdopodobne, ale nie można tego zupełnie wykluczyć."), liczne cytaty ("<em>Lud Indów jest bezsprzecznie najliczniejszy ze wszystkich znanych nam ludów </em>- stwierdza [...].") czy profesjonalizmy ("depozytariusz", "kompendium"), Kapuściński wprowadza czytelnika w poruszane w książce zagadnienia, w rzetelny sposób tłumaczy mu niuanse obcej kultury. Z kolei wyrażenia potoczne ("tomisko", "broń Boże", "mieć fioła") dynamizują, a także uwiarygadniają relację podróżniczą, która pod wieloma względami przypomina powieść przygodową. Mieszając style, autor nadaje swej książce charakter popularnonaukowy - dzięki temu tekst staje się nie tylko źródłem przydatnej wiedzy o świecie, ale również przyjemną lekturą, zrozumiałą dla przeciętnego odbiorcy.</p>
+<p> </p>
+<p>c) Liczne pytania ("Co te liście kryją?", "Jak opisać coś, co, jak mi się wydawało, nie ma granic, nie ma końca?") subiektywizują wywód, wskazując na niejednoznaczność świata i zachodzących w nim zjawisk, a także zachęcają odbiorcę do samodzielnych refleksji. Cytując Herodota ("<em>Lud Indów jest bezsprzecznie najliczniejszy ze wszystkich znanych nam ludów</em> - stwierdza i mówi następnie o Indiach, ich położeniu, społeczeństwie i jego obyczajach."), Kapuściński stwarza iluzję współuczestnictwa greckiego historyka w podróży do Indii. Co więcej, perspektywa człowieka żyjącego w czasach starożytnych staje się punktem wyjścia do rozważań nad współczesnością, co z kolei pozwala dostrzec uniwersalny charakter omawianych przez autora zagadnień ("To właśnie prawo bezpowrotnego przemijania Herodot doskonale rozumie i chce przeciwstawić się jego niszczycielskiej naturze [...].").</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Zadanie indywidualne</p><br>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. as long as </p>
+<p><strong>Uzasadnienie</strong>: oczywista prawda, zasada - <em>zero conditional</em><em>; as long as </em>(o ile) zamiast<em> if </em>(jeśli). </p>
+<p>2. go to Australia one day </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditional</em>.</p>
+<p>3. should appeal to people</p>
+<p>4. I'll do anything to </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditional</em>.</p>
+<p>5. has been opened </p>
+<p><strong>Uzasadnienie: </strong>sytuacja, w której istotne są widoczne efekty - czas <em>present perfect simple</em>.</p>
+<p>6. is no point in worrying </p>
+<p><strong>Uzasadnienie </strong>wyrażenie <em>there is no point (in) + gerund</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. we are entitled to get </p>
+<p>2. argued with her in-laws</p>
+<p>3. used to meet </p>
+<p>4. had filmed on location </p>
+<p>5. We needn't have booked </p>
+<p>6. would be watched </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>1. is just being prepared </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która dzieje się w trakcie mówienia - czas <em>present continuous</em>. </p>
+<p>2. If I tell you </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditional</em>.</p>
+<p>3. based on novels</p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu przeszłego (<em>based</em>).</p>
+<p>4. Although my parents are busy</p>
+<p><strong>Uzasadnienie</strong>: <em>although</em> + reszta zdania.</p>
+<p>5. were under impression that </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. looking forward to meeting  </p>
+<p>2. to mind his own business</p>
+<p>3. he known about</p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej niedoszłe przeszłe następstwa - <em>third conditional</em>.</p>
+<p>4. unless you finish your thesis</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditional; unless </em>(jeśli nie) zamiast <em>if </em>(jeśli). </p>
+<p>5. she hadn't told </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna, czas <em>past perfect</em>. </p>
+<p>6. could have caused serious </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej niedoszłe przeszłe następstwa - <em>third conditional</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. that she would meet us </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna; <em>would</em> zamiast <em>will</em>.  </p>
+<p>2. who had invited me to </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna; czas <em>past perfect</em> zamiast <em>present perfect</em> lub <em>past simple</em>. </p>
+<p>3. all of us were given</p>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past simple</em>. </p>
+<p>4. didn't need to buy </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku potrzeby - <em>didn't need to</em> + bezokolicznik.</p>
+<p>5. in peak form now </p>
+<p>6. was not allowed to eat </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie, że coś komuś wolno - <em>be allowed to</em> + bezokolicznik. </p><br>

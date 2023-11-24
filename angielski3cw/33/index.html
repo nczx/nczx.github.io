@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. many years ago, an island, in a lighthouse</p>
+<p>(Historia A miała miejsce <strong>wiele lat temu</strong>. Wydarzyła się na <strong>wyspie</strong>. Opowiada o trzech osobach <strong>w latarni morskiej</strong>.) </p>
+<p><strong>Fragment w tekście</strong>: "How could three people suddenly disappear from a tiny remote Scottish island called Eilean Mor? (...) were experienced lighthouse keepers working there. On 15 December 1900, (...)." - Jakim cudem trzy osoby mogły nagle zniknąć z malutkiej, odległej szkockiej wyspy o nazwie Eilean Mor? (...) byli doświadczonymi latarnikami pracującymi w tym miejscu. 15 grudnia 1900 roku (...).</p>
+<p><br/>2. recently, on a beach, animals</p>
+<p>(Historia B miała miejsce <strong>niedawno</strong>. Wydarzyła się <strong>na plaży</strong>. Opowiada o <strong>zwierzętach</strong>.)</p>
+<p><strong>Fragment w tekście</strong>: "In October, dozens of octopuses were seen on a beach in Wales - walking away from the sea!" - W październiku na plaży w Walii zaobserwowano dziesiątki ośmiornic - oddalających się od morza!</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. a lighthouse </p>
+<p><strong>Fragment w tekście</strong>: (A) "When he arrived, he discovered that all three men had completely vanished. The lighthouse was clean, tidy, and well-maintained, and work records done until mid-December." - Kiedy przybył na miejsce, odkrył, że wszyscy trzej mężczyźni całkowicie zniknęli. Latarnia była czysta, schludna i dobrze utrzymana, a zapisy prac dokonywane do połowy grudnia. </p>
+<p>2. on an island</p>
+<p><strong>Fragment w tekście</strong>: (A) "How could three people suddenly disappear from a tiny remote Scottish island called Eilean Mor?" - Jakim cudem trzy osoby mogły nagle zniknąć z malutkiej, odległej szkockiej wyspy o nazwie Eilean Mor?</p>
+<p>3. the beach</p>
+<p><strong>Fragment w tekście</strong>: (B) "In October, dozens of octopuses were seen on a beach in Wales (...)." - W październiku na plaży w Walii zaobserwowano dziesiątki ośmiornic (...).</p>
+<p>4. theories</p>
+<p><strong>Fragment w tekście</strong>: (A, B) "Later, investigators thought a huge wave might have carried the men out to sea. Another theory is that (...). Experts have come up with tree possible reasons." - Później śledczy uznali, że ogromna fala mogła wynieść mężczyzn w morze. Inna teoria głosi, że (...). Eksperci przedstawili trzy możliwe przyczyny. </p>
+<p>5. nobody knows</p>
+<p><strong>Fragment w tekście</strong>: (A) "To this day, nobody knows what happened." - Do dziś nikt nie wie, co się stało. </p>
+<p>6. the weather</p>
+<p><strong>Fragment w tekście</strong>: (A, B) "A substitute lighthouse keeper tried to reach the island, but was delayed until 26 December by bad weather. (...) Alternatively, recent storms might have moved the octopuses onto land and they were trying to get back to the water." - Zastępczy latarnik próbował dotrzeć na wyspę, ale przez złą pogodę dotarł tam z opóźnieniem 26 grudnia. (...) Ewentualnie niedawne burze mogły przenieść ośmiornice na ląd, a te próbowały wrócić do wody. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. inland</p>
+<p>(w kierunku przeciwnym do morza - <strong>w głąb lądu</strong>)  </p>
+<p>2. vanished</p>
+<p><strong>Uzasadnienie</strong>: <em>disappear = vanish </em>(zniknąć).</p>
+<p>3. dozens</p>
+<p>(wiele rzeczy lub ludzi - <strong>dziesiątki, tuziny</strong>)</p>
+<p>4. well-maintained</p>
+<p>(w dobrym stanie - <strong>zadbany</strong>)</p>
+<p>5. substitute</p>
+<p>(ktoś wykonujący tymczasowo czyjąś pracę - <strong>zastępczy</strong>)</p>
+<p>6. delayed</p>
+<p>(wykonany później niż się spodziewano - <strong>opóźniony</strong>)</p>
+<p>7. significantly</p>
+<p>(w sposób, który łatwo zauważyć - <strong>znacznie</strong>)</p><br>

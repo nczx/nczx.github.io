@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 185</a><br>
+<p>Zaczynamy od obliczenia liczby moli fruktozy w roztworze:</p> <p> <math-expr expr="C_m=n/V\ \ \ =&gt;\ \ \ n=C_m*V" syntax="text"></math-expr>   </p> <p> <math-expr expr="n=0,1\ (mol)/(dm^3)*1,2\ dm^3=0,12\ mola" syntax="text"></math-expr>   </p> <p>Masa molowa  fruktozy o wzorze sumarycznym C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> wynosi 180 g/mol.</p> <p>Liczymy masę 0,12 mola fruktozy:</p> <p> <math-expr expr="m=M*n=180\ g/(mol)*0,12\ mola=21,6\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W roztworze znajduje się 21,6 g fruktozy.</strong>   </p><br><a style="color:red; font-size:25px;">Zadanie 186</a><br>
+<p>Glukoza:</p>
+<p><img alt="" height="200" src="./data/938674-0.jpg" width="306"/></p>
+<p><br/>Fruktoza: </p>
+<p><img alt="" height="150" src="./data/938674-1.jpg" width="324"/></p><br><a style="color:red; font-size:25px;">Zadanie 187</a><br>
+<p>Wzór sumaryczny sacharozy to C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>. </p> <p>Masa atomowa węgla to 12 u, wodoru 1 u, zaś tlenu 16 u. Liczymy stosunek masowy:</p> <p> <math-expr expr="m_C:m_H:m_O=[12*12\ u]\ :\ [22*1\ u]\ :\ [11*16\ u]=144:22:176=72:11:88" syntax="text"></math-expr>   </p> <p>Masa cząsteczkowa sacharozy to 342 u. Liczymy skład procentowy:</p> <p> <math-expr expr="%C=(12*12\ u)/(342\ u)*100%=42,1%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%H=(22*1\ u)/(342\ u)*100%=6,4%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%O=(11*16\ u)/(342\ u)*100%=51,5%" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Stosunek masowy pierwiastków w sacharozie to m<sub>C</sub>:m<sub>H</sub>:m<sub>O</sub> = 76:11:88, zaś skład procentowy to 42,1% węgla, 6,4% wodoru oraz 51,5% tlenu.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 188</a><br>
+<p>Sacharoza:</p>
+<p><img alt="" height="120" src="./data/938699-0.jpg" width="289"/></p>
+<p><br/>Maltoza: </p>
+<p><img alt="" height="110" src="./data/938699-1.jpg" width="262"/></p>
+<p><br/>Właściwości redukujące posiada maltoza, ponieważ atom węgla C<sub>1</sub> jednego z jej pierścieni może tworzyć grupę aldehydową.</p><br><a style="color:red; font-size:25px;">Zadanie 189</a><br>
+<p>Masa cząsteczkowa pojedynczej reszty glukozy (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>) wynosi 162 u. Liczymy ilość reszt glukozy w cząsteczce celulozy: </p> <p> <math-expr expr="m_((C_6H_(10)O_5)_n)=n*m_(C_6H_(10)O_5)" syntax="text"></math-expr>   </p> <p> <math-expr expr='1215000\ u=n*162\ u\ \ \ "/":162\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=7500" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Cząsteczka celulozy składa się z 7500 reszt glukozowych.</strong>  </p> <p><br/><em>Uwaga: W odpowiedzi w podręczniku jest błąd. Podany tam wynik zakłada przyjęcie w obliczeniach masy całej cząsteczki glukozy C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> czyli 180 u, jednak jest to założenie błędne w kontekście podanej treści zadania.</em></p><br><a style="color:red; font-size:25px;">Zadanie 190</a><br>
+<p>Sacharoza nie posiada właściwości redukujących, dlatego w pierwszej probówce nie dojdzie do zmiany stopnia utlenienia miedzi z II na I i nie wytrąci się ceglasty osad. Dodanie do roztworu kwasu solnego spowoduje rozłożenie sacharozy na glukozę i fruktozę, które posiadają właściwości redukujące i dzięki temu możliwe jest powstanie osadu tlenku miedzi(I).</p><br><a style="color:red; font-size:25px;">Zadanie 191</a><br>
+<p>Masę molową skrobi możemy zapisać jako <em>n</em><sup><strong> . </strong></sup>162 g/mol. Masa molowa glukozy to 180 g/mol. Z równania reakcji widzimy , że z jednego mola skrobi otrzymujemy <em>n</em> moli glukozy. Liczymy masę otrzymanej glukozy:</p> <p> <math-expr expr='n*162\ g_(\ "skrobi")\ \ -\ \ n*180\ g_(\ "glukozy")' syntax="text"></math-expr>   </p> <p> <math-expr expr='1\ kg_(\ "skrobi")\ \ -\ \ m_(\ "glukozy")' syntax="text"></math-expr>   </p> <p> <math-expr expr='m_(\ "glukozy")=(1\ kg*n*180\ g)/(n*162\ g)=(1000\ g*180\ g)/(162\ g)=1111\ g' syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Otrzymano 1111 g glukozy.</strong>   </p><br><a style="color:red; font-size:25px;">Zadanie 192</a><br>
+<p>Próbkę śmietany należy zakroplić jodyną. Jeżeli pojawi się charakterystyczne granatowe zabarwienie, będzie to świadczyć o obecności skrobi w śmietanie, a zatem o tym, że została ona zagęszczona mąką. Brak granatowego zabarwienia będzie świadczyć o nieużyciu mąki.</p><br><a style="color:red; font-size:25px;">Zadanie 193</a><br>
+<p><strong>Obserwacje:</strong> W obu probówkach następuje roztworzenie osadu wodorotlenku miedzi(II) i powstaje klarowny szafirowy roztwór. W probówce umieszczonej w łaźni wodnej, w wyniku ogrzewania zanika szafirowa barwa roztworu i wytrąca się ceglasty osad.</p>
+<p><br/><strong>Wniosek:</strong>  Glukoza jest związkiem polihydroksylowym o czym świadczy pojawienie się szafirowej barwy roztworu. Działanie wysokiej temperatury "aktywuje" właściwości redukujące tego cukru, co prowadzi do redukcji miedzi z II na I stopień utlenienia i do wytrącenia osadu tlenku miedzi(I) Cu<sub>2</sub>O.</p><br><a style="color:red; font-size:25px;">Zadanie 194</a><br>
+<p>Obliczanie masy laktozy w serku: </p> <p> <math-expr expr="m=(2,9%*250\ g)/(100%)=7,25\ g" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Opakowanie serka o masie 250 g zawiera 7,25 g laktozy.</strong> </p><br>

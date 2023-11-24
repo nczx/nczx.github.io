@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Z treści zadania wiemy, że:</p> <ul> <li>brygada <strong>B<sub>1</sub></strong> wyprodukowała <strong>6%</strong> desek wadliwych</li> <li>brygada <strong>B<sub>2</sub></strong> wyprodukowała <strong>3%</strong> desek wadliwych</li> <li>brygada <strong>B<sub>3</sub></strong> wyprodukowała <strong>3%</strong> desek wadliwych</li> </ul> <p>Połowa desek znajdujących się w magazynie została wyprodukowana przez brygadę <strong>B<sub>3</sub></strong>, a pozostałe <br/>(w tej samej liczbie) przez brygady <strong>B<sub>1 </sub></strong>i <strong>B<sub>2</sub></strong>.</p> <p>Niech  <strong>x</strong> oznacza liczbę desek wyprodukowanych przez każdą z brygad <strong>B<sub>1 </sub></strong>i <strong>B<sub>2</sub></strong>.</p> <p>Zatem jeśli brygada <strong>B<sub>3 </sub></strong>wyprodukowała <strong><sup>1</sup>/<sub>2</sub></strong> desek znajdujących się w magazynie, to każda <br/>z brygad <strong>B<sub>1 </sub></strong>i <strong>B<sub>2 </sub></strong>wyprodukowała:</p> <p><span> <math-expr expr="x=(1-1/2)/2=1/2*1/2=1/4" syntax="text"></math-expr> </span></p> <p>desek znajdujących się w magazynie. </p> <hr/> <p>Niech:</p> <p><strong>A</strong> - wybrana losowo deska jest wadliwa</p> <p><strong>B<sub>1 </sub></strong>- wybrano deskę brygady <strong>B<sub>1</sub></strong></p> <p><strong>B<sub>2</sub></strong> - wybrano deskę brygady <strong>B<sub>2</sub></strong></p> <p><strong>B<sub>3</sub></strong> - wybrano deskę brygady <strong>B<sub>3</sub></strong></p> <p>Obliczamy prawdopodobieństwo zdarzenia <strong>A</strong>:</p> <p><span> <math-expr expr="P(A)=P(B_{1})*P(A|B_{1})+P(B_{2})*P(A|B_{2})+P(B_{3})*P(A|B_{3})=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=1/4*0,06+1/4*0,03+1/2*0,03=0,015+0,0075+0,015=0,0375=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=375/10000=75/2000=15/400=3/80" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W <strong>czterech </strong>urnach są po <strong>4</strong> kule białe, <strong>4</strong> czarne i <strong>1</strong> niebieska.</p>
+<p>W <strong>sześciu </strong>urnach są po <strong>2</strong> kule białe, <strong>3</strong> czarne i <strong>4</strong> niebieskie.</p>
+<p>Z losowo wybranej urny losujemy jednocześnie <strong>2</strong> kule.</p>
+<p><strong>A</strong> - wylosowano kule różnego koloru.</p>
+<p>W każdej urnie jest po <strong>9</strong> kul, więc wybieramy dwie kule na <strong>36</strong> sposobów, bo:  </p>
+<p><math-expr expr="((9),(2))=(9!)/(2!*7!)=(9*8*7!)/(2*7!)=(9*8)/2=36" syntax="text"></math-expr>  </p>
+<p>W czterech urnach możliwości</p>
+<ul>
+<li>wylosowania jednej kuli białej i jednej czarnej jest <strong>4∙4</strong></li>
+<li>wylosowania jednej kuli białej i jednej niebieskiej jest <strong>4∙1</strong></li>
+<li>wylosowania jednej kuli czarnej i jednej niebieskiej jest <strong>4∙1</strong></li>
+</ul>
+<p>W sześciu urnach możliwości</p>
+<ul>
+<li>wylosowania jednej kuli białej i jednej czarnej jest <strong>2∙3</strong></li>
+<li>wylosowania jednej kuli białej i jednej niebieskiej jest <strong>2∙4</strong></li>
+<li>wylosowania jednej kuli czarnej i jednej niebieskiej jest <strong>3∙4</strong></li>
+</ul>
+<hr/>
+<p>Obliczamy prawdopodobieństwo całkowite zdarzenia <strong>A</strong>:</p>
+<p><math-expr expr="P(A)=4*1/10*(4*4)/36+4*1/10*(4*1)/36+4*1/10*(4*1)/36+6*1/10*(2*3)/36+" syntax="text"></math-expr>  </p>
+<p><math-expr expr="\ \ \ \ \ \ \ \ \ +6*1/10*(2*4)/36+6*1/10*(3*4)/36=" syntax="text"></math-expr>  </p>
+<p><math-expr expr="\ \ \ \ \ \ \ \ =64/360+16/360+16/360+36/360+48/360+72/360=" syntax="text"></math-expr>  </p>
+<p><math-expr expr="\ \ \ \ \ \ \ \ =252/360=0,7" syntax="text"></math-expr>  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Maszyny <strong>M<sub>1</sub></strong>, <strong>M<sub>2</sub></strong>, <strong>M<sub>3</sub></strong> wyprodukowały taką samą liczbę żarówek. <br/>Natomiast maszyna <strong>M<sub>4 </sub></strong>wyprodukowała dwa razy więcej żarówek niż każda z pozostałych maszyn.</p> <p>Niech <strong>x</strong> - liczba wyprodukowanych żarówek przez każdą z maszyn <strong>M<sub>1</sub></strong>, <strong>M<sub>2</sub></strong>, <strong>M<sub>3</sub></strong>, więc <strong>2x</strong> - liczba <br/>wyprodukowanych żarówek przez maszynę <strong>M<sub>4</sub></strong>.</p> <p>Zatem:  </p> <p><span> <math-expr expr="x+x+x+2x=1" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="5x=1 \ \ \ |:5" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="x=1/5" syntax="text"></math-expr> </span></p> <p>wobec tego:</p> <p><span> <math-expr expr="2x=2*1/5=2/5" syntax="text"></math-expr> </span>    </p> <hr/> <p>Wiemy również, że:</p> <ul> <li>maszyny <strong>M<sub>1</sub></strong> i <strong>M<sub>2</sub></strong> produkują po <strong>2%</strong> wadliwych żarówek</li> <li>maszyny <strong>M<sub>3</sub></strong> i <strong>M<sub>4</sub></strong> produkują po <strong>4%</strong> wadliwych żarówek</li> </ul> <hr/> <p><strong>A</strong> - wybrana losowo żarówka jest wadliwa</p> <p><strong>M<sub>1 </sub></strong>- wybrano żarówkę z maszyny <strong>M<sub>1</sub></strong></p> <p><strong>M<sub>2</sub></strong> - wybrano żarówkę z maszyny <strong>M<sub>2</sub></strong></p> <p><strong>M<sub>3 </sub></strong>- wybrano żarówkę z maszyny <strong>M<sub>3</sub></strong></p> <p><strong>M<sub>4</sub></strong> - wybrano żarówkę z maszyny <strong>M<sub>4</sub></strong></p> <p>Obliczamy prawdopodobieństwo zdarzenia <strong>A</strong>:</p> <p><span> <math-expr expr="P(A)=P(M_{1})*P(A|M_{1})+P(M_{2})*P(A|M_{2})+P(M_{3})*P(A|M_{3})+P(M_{4})*P(A|M_{4})=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=1/5*0,02+1/5*0,02+1/5*0,04+2/5*0,04=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=0,004+0,004+0,008+0,016=0,032" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Z diagramu dołączonego do treści zadania odczytujemy, że w egzaminie uczestniczy <br/>poszczególna liczba uczniów:</p> <ul> <li>klasa <strong>IVa</strong> - <strong>20% </strong>uczniów</li> <li>klasa <strong>IVb</strong> - <strong>1</strong><strong>0% </strong>uczniów</li> <li>klasa <strong>IVc</strong> - <strong>30% </strong>uczniów</li> <li>klasa <strong>IVd</strong> - <strong>40% </strong>uczniów</li> </ul> <p>Twierdząco na pytanie "Czy czujesz się dobrze przygotowany do egzaminu" odpowiedziało:</p> <ul> <li> <strong>40%</strong> uczniów klasy <strong>IVa</strong> </li> <li> <strong>100%</strong> uczniów klasy <strong>IVb</strong> </li> <li> <strong>20%</strong> uczniów klasy <strong>IVc</strong> </li> <li> <strong>80%</strong> uczniów klasy <strong>IVd</strong> </li> </ul> <p>Niech:  </p> <p><strong>A</strong> - losowo wybrany uczeń odpowiedział na pytanie twierdząco</p> <p><strong>B </strong>- wybrano ucznia z klasy <strong>IVa</strong></p> <p><strong>C </strong>- wybrano ucznia z klasy <strong>IVb</strong></p> <p><strong>D </strong>- wybrano ucznia z klasy <strong>IVc</strong></p> <p><strong>E </strong>- wybrano ucznia z klasy <strong>IVd</strong></p> <hr/> <p>Obliczamy prawdopodobieństwo całkowite zdarzenia <strong>A</strong>:</p> <p><span> <math-expr expr="P(A)=P(B)*P(A|B)+P(C)*P(A|C)+P(D)*P(A|D)+P(E)*P(A|E)=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=0,2*0,4+0,1*1+0,3*0,2+0,4*0,8=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=0,08+0,1+0,06+0,32=0,56" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Z treści zadania wiemy, że w <strong>pierwszej </strong>szkatułce jest <strong>10</strong> monet złotych i <strong>5</strong> srebrnych, <br/>a w <strong>drugiej 5 </strong>monet złotych i <strong>10</strong> srebrnych.</p> <p><strong>A</strong> - wylosowano dwie złote monety</p> <p><strong>B<sub>1</sub> </strong>- losowano z pierwszej szkatułki</p> <p><strong>B<sub>2</sub> </strong>- losowano z drugiej szkatułki</p> <p>Prawdopodobieństwo wybrania jednej ze szkatułek jest równe <strong><sup>1</sup>/<sub>2</sub></strong>.</p> <hr/> <p><strong>1) </strong>Rozważamy przypadek, kiedy losujemy po jednej monecie z każdej szkatułki.  </p> <p><span> <math-expr expr="P(A)=10/15*5/15=2/9" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>2) </strong>Rozważamy przypadek, kiedy przekładamy monety do jednej szkatułki i losujemy dwie monety.</p> <p><span> <math-expr expr="P(A)=15/30*14/29=1/2*14/29=14/58" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>3) </strong>Rozważamy przypadek, kiedy losowo wybieramy szkatułkę i z niej losujemy dwie monety.</p> <p><span> <math-expr expr="P(A)=P(B_{1})*P(A|B_{1})+P(B_{2})*P(A|B_{2})=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=1/2*10/15*9/14+1/2*5/15*4/14=5/15*9/14+5/15*2/14=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=5/5*3/14+10/210=3/14+10/210=45/210+10/210=55/210" syntax="text"></math-expr> </span>  </p> <hr/> <p>Zauważmy, że:</p> <p><span> <math-expr expr="2/9=0,(2) &lt; 14/58=0,2414 &lt; 55/210~~0,2619" syntax="text"></math-expr> </span>  </p> <p>Wnioskujemy, że prawdopodobieństwo wylosowania dwóch złotych monet <br/>jest największe przy <strong>3</strong><strong>)</strong> sposobie losowania.</p><br>

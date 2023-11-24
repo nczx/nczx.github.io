@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Wypowiedzi pisemne różnią się nie tylko treścią i formą, ale też stylem. Różnica między stylem formalnym i nieformalnym jest bardzo ważna, dlatego warto nauczyć się ją dostrzegać.</strong></p>
+<p><strong>Do cech charakterystycznych styli formalnego możemy zaliczyć:</strong></p>
+<ul>
+<li><strong>brak form skróconych (np. <em>there's, aren't, don't</em>);<br/><br/></strong></li>
+<li><strong>charakterystyczne pozdrowienie na początku listów: <em>Dear Sir/Madam </em>(Szanowni Państwo);<br/><br/></strong></li>
+<li><strong>zwrot grzecznościowy na końcu listu: <em>Yours faithfully/sincerely </em>(Z wyrazami szacunku / Z poważaniem);<br/><br/></strong></li>
+<li><strong>język formalny - np. brak kolokwialnych określeń (np. <em>cool</em> - fajny).</strong></li>
+</ul>
+<p><strong><br/>Styl nieformalny charakteryzuje się między innymi:</strong></p>
+<ul>
+<li><strong>pozdrowieniem na początku listu: <em>Hi/Hello </em>(Cześć);<br/><br/></strong></li>
+<li><strong>językiem potocznym;<br/><br/></strong></li>
+<li><strong>używaniem form skróconych;<br/><br/></strong></li>
+<li><strong>zakończeniami listu takimi jak np. <em>Love / Best wishes </em>(Całuję/Pozdrawiam).</strong></li>
+</ul>
+<hr/>
+<p> </p>
+<p>a. formal  </p>
+<p>b. informal</p>
+<p>c. informal</p>
+<p>d. formal</p>
+<p>e. informal</p>
+<p>f. informal</p>
+<p>g. formal</p>
+<p>h. formal</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a. 1 </p>
+<p><strong>Uzasadnienie</strong>: list motywacyjny powinien być napisany w stylu formalnym. Pozdrowienie "Drogi Tomie" nie pasuje do takiego rodzaju tekstu. </p>
+<p>b. 3, 6</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect</em> i <em>past perfect</em> do opisania bieżącej sytuacji to błędy gramatyczne. W obu przypadkach należy użyć czasu <em>present simple</em>, ponieważ występujące w zdaniach czasowniki są statyczne (<em>to be</em> - być, <em>intend </em>- zamierzać).</p>
+<p>c. 8</p>
+<p><strong>Uzasadnienie</strong>: po zwrocie grzecznościowym na zakończenie używamy przecinka, nie wykrzyknika.</p>
+<p>d. 2, 7</p>
+<p><strong>Uzasadnienie</strong>: błędna pisownia wyrazów <em>environmental </em>(środowiskowy) oraz <em>consideration </em>(namysł).</p>
+<p>e. 4, 5</p>
+<p><strong>Uzasadnienie</strong>: użycie wyrazów niepasujących do kontekstu zdania. Poprawne wyrażenia/wyrazy, to: <em>responsible for informing</em> (odpowiedzialny za informowanie) oraz <em>do a Bachelor's degree</em> (zdobyć stopień licencjata).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Dear Sir/Madam,</p>
+<p><strong>Uzasadnienie</strong>: list motywacyjny powinien być napisany w stylu formalnym. W takim rodzaju tekstu należy zwrócić się do adresata po nazwisku, a jeśli go nie znamy, użyć zwrotu "Szanowni Państwo". </p>
+<p>2. environmental issues that is taking place</p>
+<p><strong>Uzasadnienie</strong>: poprawna pisownia wyrazu <em>environmental </em>(środowiskowy).</p>
+<p>3. Currently, I am a high school student in Rzeszów, Poland</p>
+<p><strong>Uzasadnienie</strong>: do opisania bieżącej sytuacji z użyciem czasownika statycznego (<em>to be </em>- być) należy użyć czasu <em>present simple</em>.</p>
+<p>4. responsible for informing students attending our school</p>
+<p>5. My ambition is to continue my education, do a Bachelor's degree</p>
+<p><strong>Uzasadnienie (4-5)</strong>: wyraz pasujący do kontekstu zdania: <em>responsible for informing</em> (odpowiedzialny za informowanie) oraz <em>do a Bachelor's degree</em> (zdobyć stopień licencjata).</p>
+<p>6. I intend to share my experiences, as well as help others make improvements locally</p>
+<p><strong>Uzasadnienie</strong>: do opisania bieżącej sytuacji z użyciem czasownika statycznego (<em>intend </em>- zamierzać) należy użyć czasu <em>present simple</em>.</p>
+<p>7. Thank you for your time and consideration</p>
+<p><strong>Uzasadnienie</strong>: poprawna pisownia wyrazu <em>consideration </em>(namysł).</p>
+<p>8. Yours faithfully,</p>
+<p><strong>Uzasadnienie</strong>: kiedy nie znamy nazwiska naszego adresata, kończymy list zwrotem grzecznościowym <em>Yours faithfully</em>. Po zwrocie grzecznościowym w języku angielskim używamy przecinka.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Dear Sir/Madam,</p>
+<p>I am writing to apply for the position of a team member representing Poland at the international conference on endangered species. I believe that thanks to my skills and experience I will be able to make a valuable contribution to the cause. </p>
+<p>I am a secondary school student in [city/town], Poland. I have already been involved in a number of environmental projects both at school and in my local neighbourhood. This includes helping to organise the school Earth Day event three years in a row. I was also in charge of a local initiative aimed at raising awareness about endangered species. While working on this project, I proved to be a communicative and reliable leader with excellent problem-solving skills.</p>
+<p>My goal for the future is to continue my education, get a Bachelor's degree in social or environmental sciences, and pursue a career in the field of ecology. I believe that my experience, as well as my personal qualities, make me a suitable candidate for this position. I intend to share my knowledge and raise awareness of the situation we are facing. Furthermore, I hope to learn more about international efforts to address the issue of endangered species. I strongly believe that my generation is our best hope for solving the problem.</p>
+<p>Thank you for your time and consideration. I look forward to hearing from you.</p>
+<p>Yours faithfully,</p>
+<p>XYZ</p>
+<p><br/>(Liczba słów: 230)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Szanowni Państwo,</p>
+<p>piszę, aby ubiegać się o stanowisko członka zespołu reprezentującego Polskę na międzynarodowej konferencji poświęconej zagrożonym gatunkom. Wierzę, że dzięki moim umiejętnościom i doświadczeniu będę w stanie wnieść cenny wkład w tę sprawę. </p>
+<p>Jestem uczniem/uczennicą szkoły średniej w [miasto], Polska. Byłem/am już zaangażowany/a w wiele projektów środowiskowych zarówno w szkole, jak i w mojej okolicy. Obejmuje to pomoc w organizacji szkolnego Dnia Ziemi trzy lata z rzędu. Byłem/am również odpowiedzialny/a za lokalną inicjatywę mającą na celu podnoszenie świadomości na temat zagrożonych gatunków. Podczas pracy nad tym projektem udowodniłem/am, że jestem komunikatywnym/ą i niezawodnym/ą liderem/liderką z doskonałymi umiejętnościami rozwiązywania problemów.</p>
+<p>Moim celem na przyszłość jest kontynuowanie edukacji, uzyskanie tytułu licencjata w dziedzinie nauk społecznych lub środowiskowych i kontynuowanie kariery w dziedzinie ekologii. Wierzę, że moje doświadczenie, a także cechy osobiste, czynią mnie odpowiednim/ą kandydatem/ką na to stanowisko. Zamierzam dzielić się swoją wiedzą i zwiększać świadomość sytuacji, z którą przyszło nam się zmierzyć. Ponadto mam nadzieję dowiedzieć się więcej o międzynarodowych wysiłkach na rzecz rozwiązania kwestii zagrożonych gatunków. Głęboko wierzę, że moje pokolenie jest naszą najlepszą nadzieją na rozwiązanie tego problemu.</p>
+<p>Dziękuję za poświęcony czas i uwagę. Z niecierpliwością czekam na odpowiedź.</p>
+<p>Z poważaniem</p>
+<p>XYZ</p><br>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Dane są trzy liczby naturalne <strong>n<sub>1</sub></strong>, <strong>n<sub>2</sub></strong>, <strong>n<sub>3</sub> </strong>takie, że ich suma<strong> n<sub>1</sub>+n<sub>2</sub>+n<sub>3</sub></strong> jest liczbą nieparzystą. </p> <ul> <li><span style="text-decoration: underline;"><em><strong>Przypadek I</strong></em></span></li> </ul> <p>Liczby <strong>n<sub>1</sub></strong>, <strong>n<sub>2</sub></strong>, <strong>n<sub>3</sub></strong> są liczbami nieparzystymi. Czyli są liczbami postaci: </p> <p><span> <math-expr expr="n_1=2k_1+1, \ \ k_1 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="n_2=2k_2+1, \ \ k_2 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="n_3=2k_3+1, \ \ k_3 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy sumę kwadratów tych liczb. Mamy: </p> <p><span> <math-expr expr="n_1^2+n_2^2+n_3^2=(2k_1+1)^2+(2k_2+1)^2+(2k_3+1)^2=" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="=4k_1^2+4k_1+1+4k_2^2+4k_2+1+4k_3^2+4k_3+1=" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="=2(2k_1^2+2k_1+2k_2^2+2k_2+2k_3^2+2k_3+1)+1" syntax="text"></math-expr> </span>  </p> <p>Liczba</p> <p><span> <math-expr expr="2k_1^2+2k_1+2k_2^2+2k_2+2k_3^2+2k_3+1" syntax="text"></math-expr> </span> </p> <p>jest liczbą naturalną. </p> <p>Uzasadniliśmy, że suma kwadratów liczb <strong>n<sub>1</sub></strong>, <strong>n<sub>2</sub></strong>, <strong>n<sub>3</sub></strong> jest liczbą nieparzystą. </p> <ul> <li><span style="text-decoration: underline;"><em><strong>Przypadek II</strong></em></span></li> </ul> <p>Jedna z liczb <strong>n<sub>1</sub></strong>, <strong>n<sub>2</sub></strong>, <strong>n<sub>3 </sub></strong>jest liczbą nieparzystą, a pozostałe są liczbami parzystymi. Czyli są liczbami postaci: </p> <p><span> <math-expr expr="n_1=2k_1+1, \ \ k_1 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="n_2=2k_2, \ \ k_2 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="n_3=2k_3, \ \ k_3 in bb(NN)" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy sumę kwadratów tych liczb. Mamy: </p> <p><span> <math-expr expr="n_1^2+n_2^2+n_3^2=(2k_1+1)^2+(2k_2)^2+(2k_3)^2=4k_1^2+4k_1+1+4k_2^2+4k_3^2=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=2(2k_1^2+2k_1+2k_2^2+2k_3^2)+1" syntax="text"></math-expr> </span>  </p> <p>Liczba</p> <p><span> <math-expr expr="2k_1^2+2k_1+2k_2^2+2k_3^2" syntax="text"></math-expr> </span> </p> <p>jest liczbą naturalną. </p> <p>Uzasadniliśmy, że suma kwadratów liczb <strong>n<sub>1</sub></strong>, <strong>n<sub>2</sub></strong>, <strong>n<sub>3</sub></strong> jest liczbą nieparzystą. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>a)</strong></p> <p>Dana jest liczba</p> <p><span> <math-expr expr="n(n^4-1)" syntax="text"></math-expr> </span>  </p> <p>gdzie <strong>n</strong> jest liczbą całkowitą. </p> <p>Przekształcając podaną liczbę otrzymujemy:  </p> <p><span> <math-expr expr="n(n^4-1) = n(n^2-1)(n^2+1) = n(n-1)(n+1)(n^2+1)" syntax="text"></math-expr> </span>  </p> <p>Zauważmy, że</p> <p><span> <math-expr expr="(n-1)n" syntax="text"></math-expr> </span>  </p> <p>to iloczyn dwóch kolejnych liczb całkowitych, zatem jedna z nich jest liczbą parzystą. Więc ten iloczyn jest podzielny przez <strong>2</strong>.</p> <p>Dodatkowo zauważmy, że</p> <p><span> <math-expr expr="(n-1)n(n+1)" syntax="text"></math-expr> </span>  </p> <p>to iloczyn trzech kolejnych liczb całkowitych. Jedna z nich jest liczbą podzielną przez <strong>3</strong>.</p> <p>Skoro iloczyn</p> <p><span> <math-expr expr="(n-1)n(n+1)" syntax="text"></math-expr> </span>   </p> <p>jest jednocześnie podzielny przez <strong>2</strong> i przez <strong>3</strong>, to jest podzielny przez <strong>6</strong>.</p> <p>Zatem liczba</p> <p><span> <math-expr expr="n(n^4-1)" syntax="text"></math-expr> </span></p> <p>jest podzielna przez <strong>6</strong>.</p> <p><strong>co kończy dowód.</strong></p> <hr/> <p><strong>b)</strong></p> <p>Dana jest liczba</p> <p><span> <math-expr expr="n^6-2n^4+n^2" syntax="text"></math-expr> </span>  </p> <p>gdzie <strong>n</strong> jest liczbą całkowitą. </p> <p>Przekształcając podaną liczbę otrzymujemy: </p> <p><span> <math-expr expr="n^6-2n^4+n^2= n^2(n^4 - 2n^2+1) = n^2(n^2-1)^2 = (n(n^2-1))^2 = ((n-1)n(n+1))^2" syntax="text"></math-expr> </span>  </p> <p>Zauważmy, że</p> <p><span> <math-expr expr="(n-1)n" syntax="text"></math-expr> </span>  </p> <p>to iloczyn dwóch kolejnych liczb całkowitych, zatem jedna z nich jest liczbą parzystą. Więc ten iloczyn jest podzielny przez <strong>2</strong>.</p> <p>Dodatkowo zauważmy, że</p> <p><span> <math-expr expr="(n-1)n(n+1)" syntax="text"></math-expr> </span>  </p> <p>to iloczyn trzech kolejnych liczb całkowitych. Jedna z nich jest liczbą podzielną przez <strong>3</strong>.</p> <p>Skoro iloczyn</p> <p><span> <math-expr expr="(n-1)n(n+1)" syntax="text"></math-expr> </span>   </p> <p>jest jednocześnie podzielny przez <strong>2</strong> i przez <strong>3</strong>, to jest podzielny przez <strong>6</strong>.</p> <p>Czyli kwadrat tej liczby</p> <p><span> <math-expr expr="((n-1)n(n+1))^2" syntax="text"></math-expr> </span>  </p> <p>jest podzielny przez <strong>36</strong>. </p> <p>Zatem liczba</p> <p><span> <math-expr expr="n^6-2n^4+n^2" syntax="text"></math-expr> </span></p> <p>jest podzielna przez 3<strong>6</strong>.</p> <p><strong>co kończy dowód.</strong></p><br>

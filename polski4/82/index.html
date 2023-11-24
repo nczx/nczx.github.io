@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podmiot liryczny z wiersza Tadeusza Różewicza występuje w kilku rolach. Przede wszystkim jest on twórcą, kreatorem. Uczestniczy w procesie wyłaniania się nowego świata. Jest budowniczym nie tylko swojego życia, ale także przyrody oraz innych ludzi. Ujawnia się w tym jego podobieństwo do Boga, ponieważ podobnie jak on tworzy coś, powołuje do życia, ale także nazywa poszczególne elementy rzeczywistości, określa łączące je relacje: "to jest stół mówiłem / to jest stół / na stole leży chleb nóż / nóż służy do krajania chleba / chlebem karmią się ludzie". Tylko od niego zależy kształt nowego świata oraz panujący tam ład. Podmiot liryczny kreuje także system wartości, który ma obowiązywać. Opiera się on na podkreśleniu znaczenia ludzkiej egzystencji: "życie ludzkie ma wielką wagę". Ponadto osoba mówiąca wchodzi w rolę uważnego obserwatora swego dzieła. Dostrzega poszczególne elementy rzeczywistości oraz zachodzące przemiany: "za oknem jest ogród / w ogrodzie widzę jabłonkę / jabłonka kwitnie / kwiaty opadają / zawiązują się owoce". Jest także myślicielem, ponieważ obserwacja świata prowadzi podmiot do uniwersalnych refleksji. Osoba mówiąca odkrywa bowiem znaczenie ludzkiego życia i postrzega każdego człowieka jako prawdziwy skarb, co świadczy o jego afirmacji. W końcowej części wiersza podmiot liryczny próbuje także stać się uczestnikiem dialogu ze światem natury ("mówił do księżyca / do kwiatów deszczu / mówił do ziemi / do ptaków / do nieba"), jednak przyroda milczy. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Koniec świata w utworze Różewicza zostaje bezpośrednio powiązany ze śmiercią. Są to odniesienia do sytuacji człowieka, który doświadcza tragedii wojny. Nie tylko stanowi ona zagładę wielu istnień, ale burzy także dotychczasowy porządek moralny czy wiarę w drugiego człowieka. Pewne wartości zostają w  ten sposób utracone, zastępuje je walka o przetrwanie i okrucieństwo. Taki koniec świata staje się więc momentem granicznym, po którym na nowo trzeba dokonać aktu stworzenia oraz uporządkować rzeczywistość. Z tego też powodu pojawiają się w utworze aluzje sugerujące, iż podmiot liryczny próbuje na nowo nauczyć się tego, co zniweczyła wojna. </p>
+<p> </p>
+<p>Przykładowe aluzje:</p>
+<ul>
+<li>"nóż służy do krajania chleba";</li>
+<li>"człowieka trzeba kochać";</li>
+<li>"kto myśli i czuje / że ona jest niepotrzebna / ten jest ludobójcą";</li>
+<li>"ludzie karmią się aby żyć";</li>
+<li>"życie ludzkie jest ważne / życie ludzkie ma wielką wagę / wartość życia / przewyższa wartość wszystkich przedmiotów". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Prostota języka to cecha typowa dla twórczości Różewicza, ponieważ poeta w lapidarny sposób stara się przywołać jak najwięcej treści. Ta surowość silniej oddziałuje na odbiorcę, pozbawia wiersz patosu czy nadmiernej metaforyki. Brak skomplikowanych obrazów czy wyszukanego słownictwa, bogactwa środków wyrazów odgrywa też jeszcze jedną rolę. Odzwierciedla w pewien sposób sytuację podmiotu lirycznego, który dopiero tworzy świat. Z tego powodu nie jest on jeszcze skomplikowany, niejednoznaczny, więc na razie osoba mówiąca ogranicza się do podstawowych pojęć czy relacji. Świadczy to również o tym, iż po wojnie podmiot liryczny jest zmuszony zacząć odbudowywanie rzeczywistości od najprostszych elementów. Zaimki (np. "to jest stół mówiłem", "to mój ojciec") świadczą o precyzji w określaniu relacji łączących poszczególne elementy, konkretyzują je. Połączenie ich z powtórzeniami ("to jest stół mówiłem / to jest stół / na stole leży chleb nóż") przypomina pierwsze wypowiedzi dziecka, które dopiero uczy się rozpoznawania świata i za ich sprawą stara się ugruntować zdobyte informacje. Podmiot liryczny jest podobny do niego, ponieważ dopiero kreuje świat, a po doświadczonym okrucieństwie wojny musi na nowo nauczyć się tego, co zostało mu brutalnie odebrane.</p>
+<p> </p>
+<p>b) W utworze występują przede wszystkim czasowniki niedokonane (np. "stwarzałem siebie", "to jest stół mówiłem", "w ogrodzie widzę jabłonkę"). Świadczy to o tym, że proces tworzenia świata jeszcze się nie zakończył, prawdopodobnie cały czas jest w toku. Ich obecność może wskazywać także na powtarzalność pewnych czynności. Tym samym czasowniki niedokonane podkreślają trud, jaki wiąże się z nowym aktem kreacji świata. Jednocześnie zapewniają odbiorcy wrażenie naoczności, jakby opisana sytuacja zdarzyła się na jego oczach.</p>
+<p> </p>
+<p>c) Przykładowe podobieństwa:</p>
+<ul>
+<li>zwięzłość wypowiedzi;</li>
+<li>wykorzystanie konkretnych pojęć (zwłaszcza rzeczowników) i związanych z nimi sensów, które mają znaczenie przenośne;</li>
+<li>ważna rola zaimków;</li>
+<li>liczne powtórzenia;</li>
+<li>obecność wyliczeń.</li>
+</ul>
+<p> </p>
+<p>Wnioski:</p>
+<ul>
+<li>sposób wypowiedzi podmiotu lirycznego naśladuje język z opisu stworzenia świata w Biblii;</li>
+<li>teksty łączy prostota, konkretność oraz pewna surowość przedstawienia;</li>
+<li>dzieła są oszczędne w środki językowe, ale wykorzystują podobne zabiegi. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W swym utworze poeta odwołuje się do dwóch symbolicznych elementów nowej rzeczywistości. Pierwszym z nich jest nóż. Przedmiot ten wywołuje zazwyczaj niezbyt pozytywne skojarzenia. Oznacza w kulturze śmierć, zdradę, skrytobójstwo czy też zemstę, niebezpieczeństwo. Również w czasie wojny zyskuje negatywną symbolikę, ponieważ może służyć do zabicia drugiego człowieka, poddawania go torturom. W wierszu Różewicza temu przedmiotowi zostaje przywrócone podstawowe znaczenie, które zostało zapomniane podczas wojny. Nóż bowiem na nowo staje się czymś zwykłym, co służy do dzielenia się chlebem. Symbolizuje tym samym ludzką solidarność, spokój i harmonię. </p>
+<p>Pozytywna symbolika wiąże się z chlebem - pokarmem, którego bardzo często brakowało ludziom w czasach wojennych. Jego obecność na stole stanowi przejaw uporządkowanej rzeczywistości. Świadczy o tym, iż człowiek cieszy się dostatkiem, nie musi o niego walczyć. Chleb jest przy tym symbolem gościnności, pomyślności, postrzega się go także jako dar Boga. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Motyw ogrodu wywołuje przede wszystkim skojarzenia z biblijnym opisem losu pierwszych ludzi - Adama i Ewy. W takim ujęciu staje się znakiem harmonii oraz szczęśliwości, pokoju. To przestrzeń bezpieczna symbolizująca radość, życie oraz jedność istoty ludzkiej ze światem natury - przed upadkiem. Ogród to motyw obecny także w mitologii, czego przykładem jest ogród Hesperyd. W tym wyjątkowym oraz pięknym miejscu rosła bowiem jabłoń rodząca złote jabłka.</p>
+<p>Ojciec zrywający owoce z kolei przypomina pierwszych ludzi. Nieposłuszeństwo wobec Boga, przejawiające się w skosztowaniu zakazanego owocu, stało się przyczyną ich upadku oraz zerwania przyjaźni ze Stwórcą. W mitologii z kolei zerwanie złotych jabłek było jedną z prac Heraklesa, zaś wręczenie wyjątkowego owocu jednej z bogiń stało się przyczyną wybuchu wojny trojańskiej. W wierszu Różewicza ta prosta czynność jest zaś przejawem zwykłego porządku świata. Sugeruje także bogactwo świata natury, która zapewnia człowiekowi pokarm i jest z nim w harmonijnej relacji. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Wiersz autorstwa Tadeusza Różewicza można uznać za apoteozę zwykłego człowieka znajdującego się w centrum wszechświata. Przede wszystkim podmiot liryczny skupia się na elementach rzeczywistości, które są typowe dla przeciętnej jednostki, a jednocześnie znajome dla niej, ponieważ wiążą się z codziennością. W oczach podmiotu lirycznego nabierają one szczególnego znaczenia: "to jest stół / na stole leży chleb nóż / nóż służy do krajania chleba / chlebem karmią się ludzie". Apoteoza zwykłego człowieka ujawnia się jednak przede wszystkim w momencie, kiedy to osoba mówiąca zwraca uwagę na staruszkę ciągnącą na sznurku kozę. W tej części wiersza kobieta zostaje ukazana jako cenna i potrzebna jednostka, która przewyższa swą wartością nawet cuda architektury. Nie można podważyć jej roli: "kto myśli i czuje / że ona jest niepotrzebna / ten jest ludobójcą". Obserwacja ta podkreśla znaczenie ludzkiego życia, które przewyższa wszystko inne. Egzystencja człowieka, niosąca za sobą różne możliwości, piękno i uczucia, w dalszej części utworu jest wprost pochwalona przez osobę mówiącą. Wskazują na to przepełnione szacunkiem słowa podmiotu lirycznego: "życie ludzkie jest ważne / życie ludzkie ma wielką wagę / wartość życia / przewyższa wartość wszystkich przedmiotów / [...] / człowiek jest wielkim skarbem". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>W utworze Tadeusza Różewicza człowiek zostaje ukazany jako kreator rzeczywistości, a w tym również natury. Jest niczym Bóg lub architekt: "Budowałem życie / ludzi zwierzęta krajobrazy. Tym samym zyskuje nadrzędną rolę w relacji z przyrodą. Jest także jej bacznym obserwatorem: "w ogrodzie widzę jabłonkę / jabłonka kwitnie / kwiaty opadają / zawiązują się owoce".  Natura pozwala mu na dostrzeżenie niezmiennych praw rządzących światem, przypomina także o przemijaniu. Natura nie tylko zapewnia pokarm, lecz również stanowi codziennego towarzysza egzystencji - podmiot liryczny nawet traktuje ją jako uczestnika dialogu ("gładziłem ręką falę / i rozmawiałem z rzeką"). Sugeruje to pewne poczucie jedności. Z drugiej jednak strony przyroda nie wchodzi w interakcję z człowiekiem, zdaje się odległa, na co wskazują słowa: "milczała ziemia". </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowo:</p>
+<p>Ostatnia strofa wiersza sugeruje nieobecność Boga. "Po końcu świata" człowiek pozostaje osamotniony. Świadczy o tym fakt, iż to on na nowo nazwy elementy swojego otoczenia - niczym Pan w momencie stworzenia całego świata. W ostatniej strofie Bóg nie reaguje w jakikolwiek sposób na wypowiedź człowieka. Również świat natury, tło egzystencji oraz wierny towarzysz ludzkiej istoty, pozostaje milczący, nie wchodzi w żaden dialog. Porozumienie zdaje się tym samym niemożliwe, zaś sama relacja z przyrodą jest naznaczona pewnym dystansem. Kontakt można zaś jedynie nawiązać z drugim człowiekiem - to jego głos słyszy mówiący. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Zestawienie fragmentu wiersza <em>Ocalony</em> i wiersz <em>W środku życia</em> świadczy o ewolucji poezji. W tym pierwszym dziele występuje podmiot liryczny dotknięty okrucieństwem wojny. Jest on zagubiony, ponieważ utracił dotychczasowy system wartości, wiarę w drugiego człowieka. Nie potrafi się odnaleźć w nowej rzeczywistości, ponieważ rzeczy i pojęcia utraciły swój pierwotny sens. Z tego też powodu osoba mówiąca ujawnia swoje poczucie bezradności. Potrzebuje nauczyciela, który na nowo stworzy świat i uporządkuje go w taki sposób, by poszczególne elementy odzyskały swoje pierwotne znaczenia. Tylko w ten sposób podmiot liryczny odnajdzie swe miejsce. </p>
+<p>Z kolei wiersz <em>W środku życia</em> przedstawia już inną sytuację osoby mówiącej. Nie jest już bezradna czy zagubiona, lecz sama przyczynia się do uporządkowania rzeczywistości. Niczym Bóg tworzy świat, nazywa dane elementy i określa relacje je łączące: "w ogrodzie widzę jabłonkę / jabłonka kwitnie / kwiaty opadają / zawiązują się owoce". Wydaje się pogodzona z rzeczywistością, a przy tym docenia niezwykłą wartość człowieka. Nie potrzebuje już nauczyciela, ponieważ sama przejmuje jego rolę.  </p><br>

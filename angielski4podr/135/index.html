@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. chain stores</p>
+<p>(Sklepy z oddziałami w wielu miastach są nazywane "<strong>sklepami sieciowymi</strong>".)</p>
+<p>F<strong>ragment w tekście:</strong> "There are certain shops that you will find in just about every town in the UK. Known as 'chain stores', they're a familiar sight everywhere you go" - Są pewne sklepy, które znajdziesz praktycznie w każdym mieście w Zjednoczonym Królestwie. Znane jako "sklepy sieciowe", są rozpoznawalne gdziekolwiek pójdziesz. </p>
+<p>2. new</p>
+<p>(Większość rzeczy sprzedawanych w sklepach Oxfam nie jest <strong>nowa</strong>.)</p>
+<p>F<strong>ragment w tekście:</strong> "Oxfam shops sell all kinds of things, most of them second hand!" - Sklepy <em>Oxfam</em> sprzedają przeróżne rzeczy, większość z nich jest używana. </p>
+<p>3. volunteers</p>
+<p>(Wszyscy sprzedawcy to <strong>wolontariusze</strong>.)</p>
+<p>F<strong>ragment w tekście:</strong> "All the shops are run by volunteers (only the managers are paid workers) (...)" - Wszystkie sklepy prowadzone są przez wolontariuszy (tylko managerowie dostają wynagrodzenie) (...). </p>
+<p>4. charity</p>
+<p>poor</p>
+<p>disasters</p>
+<p>(Oxfam jest <strong>organizacją charytatywną</strong>, która pomaga <strong>biednym</strong> ludziom, dotkniętym wszelkiego rodzaju <strong>katastrofami</strong>.)</p>
+<p>F<strong>ragment w tekście:</strong> "(...) people who support Oxfam, which is one of the most popular charities in the UK. (...) Oxfam sends aid to places that are suffering from famine or the effects of disasters (...). It supports long-term projects that will give future generations in poor countries a head start" - (...) ludzie, którzy wspierają Oxfam, która jest jedną z najbardziej popularnych organizacji charytatywnych w Zjednoczonym Królestwie. (...) Oxfam wysyła pomoc do miejsc cierpiących głód i efekty katastrof (...). Wspiera długoterminowe projekty, które dadzą lepszy start przyszłym pokoleniom w ubogich krajach. </p>
+<p>5. developing countries</p>
+<p>fair pay</p>
+<p>(Program Fair Trade pomaga pracownikom z <strong>krajów rozwijających się</strong> we współpracy i otrzymaniu <strong>uczciwego wynagrodzenia</strong>.)</p>
+<p>F<strong>ragment w tekście:</strong> "(...) farmers in developing countries often grow crops that are sold to rich Western countries. (...) The Fair Trade scheme helps small producers to work together to form cooperatives. This means individual workers can (...) get fair pay" - (...) rolnicy w krajach rozwijających się często prowadzą uprawę, której owoce sprzedawane są do bogatych krajów Zachodu. (...) Program Fair Trade pomaga małym producentom pracować razem w celu stworzenia spółdzielni. To oznacza, że indywidualni pracownicy mogą (...) dostać uczciwe wynagrodzenie. </p>
+<p>6. reduces carbon footprint</p>
+<p>(Kupowanie używanych ubrań pomaga środowisku, ponieważ <strong>zmniejsza ślad węglowy</strong>.)</p>
+<p>F<strong>ragment w tekście:</strong> "(...) it's a great way to reduce your carbon footprint" - (...) to świetny sposób na zmniejszenie śladu węglowego.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. boxing</p>
+<p><strong>Uzasadnienie</strong>: <em>kick off</em> - rozpoczynać, ale też: wykopać. </p>
+<p>2. running</p>
+<p><strong>Uzasadnienie</strong>: <em>a head start</em> - przewaga (np. w wyścigu). </p>
+<p>3. swimming</p>
+<p><strong>Uzasadnienie</strong>: <em>out of one's depth</em> - tracić grunt pod nogami.</p>
+<p>4. football</p>
+<p><strong>Uzasadnianie</strong>: <em>a level playing field</em> - równe szanse.</p>
+<p>5. boxing</p>
+<p><strong>Uzasadnienie</strong>: <em>punch above one's weight</em> - być lepszym niż można oczekiwać.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a. - a level playing field</p>
+<p>(sprawiedliwy dla wszystkich - równe szanse) </p>
+<p>b. - punch above their weight</p>
+<p>(być silniejszym niż się wydaje - być lepszym niż można oczekiwać)</p>
+<p>c. a head start</p>
+<p>(pomoc na początku życia - przewaga)</p>
+<p>d. out of their depth</p>
+<p>(bez szans na przetrwanie - bez gruntu pod nogami)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. 1942 </p>
+<p>2. World War II</p>
+<p>3. 10,000</p>
+<p>4. 67</p>
+<p>5. 1,200</p>
+<p>6. 650 </p>
+<p>7. 12,000,000</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br>

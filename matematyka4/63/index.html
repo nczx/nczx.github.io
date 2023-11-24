@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W puli <strong>20</strong> losów jest <strong>1</strong> nagroda główna, <strong>3</strong> nagrody pocieszenia,<strong> 2</strong> losy uprawniające do ponownego losowania, a <strong>14</strong> losów jest przegrywających.</p>
+<p>Przedstawiamy na drzewie ilustrację doświadczenia opisanego w treści zadania:  </p>
+<p><img height="271" src="./data/1179311-0.jpg" width="892"/></p>
+<p>Niech <strong>A</strong> oznacza zdarzenie polegające na wygraniu nagrody pocieszenia przy zakupie jednego losu. </p>
+<p>Wyznaczmy prawdopodobieństwo zdarzenia <strong>A</strong>:</p>
+<p><math-expr expr="P(A)=3/20+2/20*3/19+2/20*1/19*3/18 = 3/20+1/10*3/19+1/10*1/19*1/6=" syntax="text"></math-expr>  </p>
+<p><math-expr expr="=3/20+3/(10*19)+1/(10*19*6) = ldots" syntax="text"></math-expr></p>
+<p>Doprowadzając ułamki występujące w działaniu do wspólnego mianownika mamy:</p>
+<p><math-expr expr="ldots = (3*19*6)/(20*19*6)+(3*2*6)/(2*10*19*6)+(2)/(2*10*19*6) =" syntax="text"></math-expr>   </p>
+<p><math-expr expr="=342/(20*19*6)+36/(20*19*6)+2/(20*19*6)=" syntax="text"></math-expr></p>
+<p><math-expr expr="=380/(20*19*6)=19/(19*6)=1/6" syntax="text"></math-expr>   </p>
+<p><strong>Odp.</strong> Prawdopodobieństwo wygrania nagrody pocieszenie przy zakupie jednego losu wynosi <strong><sup>1</sup>/<sub>6</sub></strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Niech <strong>A</strong> będzie zdarzeniem polegającym na tym, że wycieczkę wygra co najmniej jedna kobieta. </p> <p>Rozważamy zdarzenie przeciwne <strong>A'</strong> polegające na tym, że wycieczki nie wygra żadna kobieta. </p> <p>Przebieg losowania przedstawmy za pomocą drzewka:  </p> <p><img alt="" height="425" src="./data/1179354-0.jpg" width="811"/></p> <p>Wyznaczmy prawdopodobieństwo zdarzenia <strong>A'</strong>. Mamy:</p> <p><span> <math-expr expr="P(A')=36/48*35/47*34/46=1785/4324" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy prawdopodobieństwo zdarzenia <strong>A</strong>. Mamy:</p> <p><span> <math-expr expr="P(A)= 1-P(A')=1-1785/4324=2539/4324" syntax="text"></math-expr> </span>  </p> <p><strong>Odp.</strong> Prawdopodobieństwo, że wycieczkę wygra co najmniej jedna kobieta wynosi <strong><sup>2539</sup>/<sub>4324</sub></strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Dana jest urna, w której są <strong>3</strong> kule białe, <strong>4</strong> czarne i <strong>5</strong> zielonych. Losujemy bez zwracania trzy kule z urny. </p> <hr/> <p><strong>a)</strong></p> <p>Wśród wylosowanej kuli ma <span style="text-decoration: underline;">nie</span> być kuli czarnej. </p> <p><strong>I metoda: </strong></p> <p>Jeżeli mamy <span style="text-decoration: underline;">nie</span> wylosować kuli czarnej, to możemy losować kule zielone lub białe. Mamy <strong>3</strong> kule białe i <strong>5</strong> zielonych, zatem w sumie jest <strong>8</strong> kul, które spełniają założenie zadania. Wszystkich kul jest <strong>12</strong>. W pierwszym losowaniu wybieramy jedną z ośmiu kul ze zbioru <strong>12</strong> kul, w drugim losowaniu wybieramy jedną z siedmiu kul ze zbioru <strong>11</strong> kul oraz w trzecim losowaniu wybieramy jedną z sześciu kul ze zbioru <strong>10</strong> kul. Prawdopodobieństwo, że wśród wylosowanych kul nie ma kuli czarnej wynosi:</p> <p><span> <math-expr expr="8/12*7/11*6/10 = (8*7*6)/(12*11*10) = (2*7*6)/(3*11*10) = (2*7*2)/(11*10) = (7*2)/(11*5) = 14/55" syntax="text"></math-expr> </span>  </p> <p><strong>II metoda:</strong></p> <p>Możliwości wylosowania kul spełniające warunki zadania to:</p> <p>BBB, BBZ, BZB, ZBB, ZZB, ZBZ, BZZ, ZZZ.</p> <p>Kule białe są <strong>3</strong>, kul czarnych jest <strong>4</strong>, kul zielonych jest <strong>5</strong>, wszystkich kul jest <strong>12</strong>. Prawdopodobieństwo, że wśród wylosowanych kul nie ma kuli czarnej wynosi:</p> <p><span> <math-expr expr="3/12*2/11*1/10+3*3/12*2/11*5/10+3*5/12*4/11*3/10+5/12*4/11*3/10=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=6/1320+90/1320+180/1320+60/1320=336/1320=84/330=42/165=14/55" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Wśród wylosowanych kul będzie kula czarna lub zielona.</p> <p>Zauważmy, że jedyna możliwość, która <span style="text-decoration: underline;">nie</span> spełnia tego warunku, to wylosowanie trzech kul białych. </p> <p>Wyznaczmy prawdopodobieństwo wylosowania trzech kul białych. Mamy:</p> <p><span> <math-expr expr="3/12 cdot 2/11 cdot 1/10=6/1320=1/220" syntax="text"></math-expr> </span>  </p> <p>Więc prawdopodobieństwo zdarzenia polegającego na tym, że wśród wylosowanych kul będzie kula czarna lub zielona wynosi:</p> <p><span> <math-expr expr="1-1/220=219/220" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Dana jest urna z <strong>6</strong> kulami białymi, <strong>3</strong> kulami czarnymi i <strong>5</strong> kulami niebieskimi. Z tej urny losujemy bez zwracania jedną kulę i dokładamy dwie kule w kolorze wylosowanej kuli. Ponownie losujemy jedną kulę. </p> <p>Przebieg losowania ilustrujemy za pomocą drzewa:  </p> <p><img alt="" height="232" src="./data/1179397-0.jpg" width="729"/></p> <p>Wyznaczmy prawdopodobieństwo tego, że kula wylosowana za drugim razem jest niebieska. Mamy:</p> <p><span> <math-expr expr="6/14*5/15 + 3/14*5/15 + 5/14*6/15= 30/210 + 15/210 + 30/210=75/210=5/14" syntax="text"></math-expr> </span> </p> <p><strong>Odp.</strong> Prawdopodobieństwo tego, że kula wylosowana za drugim razem jest niebieska wynosi <strong><sup>5</sup>/<sub>14</sub></strong>. </p><br>

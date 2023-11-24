@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe fragmenty nawiązujące do mitologicznego źródła:</p>
+<ul>
+<li>imię bohaterki: "To ja, Kasandra"; </li>
+<li>całkowite zniszczenie (spalenie) Troi: "A to jest moje miasto pod popiołem", "Moja racja aż łuną uderzyła w niebo"; </li>
+<li>dar przewidywania przyszłości: "A to jest moja laska i wstążki prorockie";</li>
+<li>zignorowanie ostrzeżeń Kasandry: "Tylko prorocy, którym się nie wierzy, / mają takie widoki".</li>
+</ul>
+<p> </p>
+<p>Monolog jest wygłaszany już po upadku miasta i spełnieniu się przepowiedni Kasandry: "To prawda, tryumfuję. / Moja racja aż łuną uderzyła w niebo. / Tylko prorocy, którym się nie wierzy, / mają takie widoki". Prezentuje on przemyślenia bohaterki, która nie czuje satysfakcji z powodu spełnienia się jej słów. Zamiast tego odczuwa pustkę, ponieważ jej dar niczego nie zmienił - zagłada dokonała się, zaś Kasandra pozostaje osamotniona, odległa od zwykłych ludzkich doświadczeń. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Na początku wiersza Kasandra zdaje się zachowywać spokój, gdyż w dość beznamiętny sposób przedstawia się odbiorcy: "To ja, Kasandra. / A to jest moje miasto pod popiołem. / A to jest moja laska i wstążki prorockie". Ostatni wers w tej strofie sygnalizuje jednak niepewność kobiety: "A to jest moja głowa pełna wątpliwości". Kasandra odczuwa gorycz; ironiczne jest to, że chociaż jej przewidywania się spełniły, to nie czuje satysfakcji. Zamiast tego wspomnienia rodzinnego miasta przypominają o jej samotności, dystansie dzielącym ją od zwykłych ludzi: "A ta piosenka o zielonym listku - / nikt jej nie kończył przy mnie". W kolejnych strofa ujawnia się żal Kasandry, ponieważ kochała swoich rodaków, jednak nie potrafiła się do nich zbliżyć: "Spójrzcie na siebie z gwiazd - wołałam - / spójrzcie na siebie z gwiazd. / Słyszeli i spuszczali oczy". Można nawet stwierdzić, że im zazdrości, gdyż w przeciwieństwie do niej doświadczyli pełni człowieczeństwa, czerpali radość z ulotnych momentów: "Oni wiedzieli, co to takiego jest chwila, / och bodaj jedna jakakolwiek / zanim - ". Ostatecznie jednak Kasandrę przepełnia rozczarowanie oraz rezygnacja, gdyż straciła taką możliwość, pozostała sama, pogrążona w bólu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Ludzie nie reagują z entuzjazmem na słowa Kasandry, jej obecność sprawia, że cichną zwyczajne rozmowy. Można wręcz sądzić, iż unikają jej towarzystwa, ponieważ nie chcą myśleć o tragicznej przyszłości: "Rwał się śmiech. / Rozplatały się ręce. / Dzieci biegły do matki". Przestrogi kobiety wywołują niepokój, zakłopotanie, może wstyd mieszkańców Troi, jednak stają się też źródłem dystansu między Kasandrą a przeciętnymi ludźmi, dla których jej szersza perspektywa stanowi coś niezrozumiałego. Zamiast tego starają się czerpać przyjemność z ulotnych chwil ("Ale była w nich jakaś wilgotna nadzieja, / własną migotliwością sycący się płomyk"). Zajmują ich ponadto codzienne sprawy, relacje międzyludzkie czy proste utwory odwołujące się do piękna świata ("A ta piosenka o zielonym listku"). Są tym samym głęboko związani ze znaną sobie rzeczywistością, ich uwaga ogranicza się do niej. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W utworze Szymborskiej dochodzi do zestawienia dwóch porządków, perspektyw i światów w obliczu katastrofy. Z tego też powodu ważnym elementem staje się kontrastowe zestawienie Kasandry oraz jej rodaków. Relacja ta opiera się na wielu różnicach. Podstawową jest to, że poetka ukazuje bezimienny tłum oraz jedną wymienioną z imienia jednostkę - Kasandrę. Strony te różni przede wszystkim podejście do życia oraz sposób postrzegania rzeczywistości. Bohaterka utworu, obdarzona darem prorokowania, zyskuje widzenie kosmiczne, które wykracza poza codzienność. Świadomość nadciągającego zagrożenia sprawia, że niemożliwe staje się czerpanie przyjemności z ulotnych chwil, a przy tym zbliżenie się do innych. Rodacy Kasandry z kolei nie chcą słuchać ponurej przepowiedni ("Słyszeli i spuszczali oczy."). Z tego też powodu unikają bohaterki, na jej widok milkną rozmowy. Dystans między tymi perspektywami wzmacnia takze odwołanie się do wyrazistej opozycji góra-dół czy też przyszłość-teraźniejszość: "Ale kochałam z wysoka. / Sponad życia. / Z przyszłości. [...]". Ponadto można dostrzec, że kobietę oraz jej rodaków różni nie tylko wiedza, ale też doświadczane emocje. Ci pierwsi nie mają tak szerokiej perspektywy, jak Kasandra, nie podejrzewają, swego tragicznego końca. Cieszą się z każdego dnia, spędzają wspólnie czas, śpiewają pogodne piosenki. Z kolei ona wyróżnia się powagą i zdystansowaniem, dostrzega kruchość ludzkiego życia. Nie odczuwa jednak satysfakcji z tego, iż ostatecznie miała rację. </p>
+<p> </p>
+<p>Przykładowe zabiegi artystyczne wzmacniające kontrast:</p>
+<ul>
+<li>wyliczenia -&gt; "Rwał się śmiech. / Rozplatały się ręce. / Dzieci biegły do matki";</li>
+<li>epitet będący jednocześnie zdrobnieniem -&gt; "piosenka o zielonym listku";</li>
+<li>metafory -&gt; "Ale kochałam z wysoka. / Sponad życia."; "Żyli w życiu.";</li>
+<li>powtórzenia -&gt; "Spójrzcie na siebie z gwiazd - wołałam - / spójrzcie na siebie z gwiazd.";</li>
+<li>anafora -&gt; "A to jest moja szatka ogniem osmalona. / A to są moje prorockie rupiecie. / A to jest moja wykrzywiona twarz."</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Kasandra z utworu Wisławy Szymborskiej reprezentuje perspektywę kosmiczną. Dar bohaterki sprawia, że wie i widzi więcej niż zwykli ludzie, dlatego też doczesna egzystencja zdaje się jej krucha, dążąca wyłącznie do zagłady. Z jej postawą kontrastuje zachowanie zwykłych ludzi, nieświadomych nadciągającej katastrofy. Chcą oni czerpać przyjemność z życia, więc ostrzeżenia bohaterki nie budzą ich entuzjazmu, przyczyniają się do unikania Kasandry. Z tego też powodu kobieta określa ich zachowanie w następujący sposób: "Żyli w życiu". Pleonazm ten podkreśla zakorzenienie rodaków w znanej im rzeczywistości. Nie są świadomi tego, że ich los został już przypieczętowany, nie odczuwają w dogłębny sposób przemijania wpisanego w egzystencję. Zamiast tego kierują się nadzieją, co sugeruje metafora ("Od urodzenia w pożegnalnych ciałach. / Ale była w nich jakaś wilgotna nadzieja"). Sami nadają sens swemu życiu, ponieważ nie myślą o nieuchronnym końcu, lecz czerpią przyjemność z egzystencji, z każdego błahego momentu. W ten sposób realizują pełnię swego człowieczeństwa. </p>
+<p>Zastosowane sformułowania przede wszystkim wskazują na odmienność postawy Kasandry i jej rodaków. Te dwie perspektywy zdają się wykluczać, gdyż odwołują się do zupełnie innych wartości czy też porządków - są skontrastowane. Za ich pomocą zaakcentowane zostaje przywiązanie rodaków kobiety do radości wynikających z codziennego życia. Jednocześnie sformułowania te odwołują się do uniwersalnych kwestii - związanych z postawą człowieka wobec nieuchronności śmierci. Mogą być więc źródłem refleksji także dla współczesnego odbiorcy. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>a) Fragmenty, w których Kasandra odwołuje się do swego daru:</p>
+<ul>
+<li><em>A to jest moja laska i wstążki prorockie.</em></li>
+<li><em>To prawda, tryumfuję. / Moja racja aż łuną uderzyła w niebo. </em></li>
+<li><em>Tylko prorocy, którym się nie wierzy, / mają takie widoki.</em></li>
+<li><em>Ale kochałam z wysoka. / Sponad życia. / Z przyszłości. [...]</em></li>
+<li><em>Wyszło na moje. / Tylko że z tego nie wynika nic. </em></li>
+</ul>
+<p>Fragmenty te mają dość gorzką oraz ironiczną wymowę. Kasandra nie odczuwa bowiem satysfakcji z tego, że jej słowa się sprawdziły. Zamiast tego dręczy ją poczucie osamotnienia oraz bezsilność. Jej miłość do rodaków nie była bowiem przez nich rozumiana, gdyż bohaterka miała odmienną od nich perspektywę na życie, wiedziała o nadchodzącej katastrofie. Dar przyczynia się więc do narastającego dystansu oraz niemożności porozumienia, cieszenia się każdą chwilą. Taką wymowę cytatów wzmacniają zastosowanie pewnych zabiegów poetyckich. Wśród nich można wymienić np.: metafory, epitety, wyliczenia czy też paradoks.</p>
+<p> </p>
+<p>b) Początkowo wypowiedź bohaterki zdaje się spokojna, jakby relacjonowała fakty, nakreślała ogólną sytuację: "To ja, Kasandra. / A to jest moje miasto pod popiołem. / A to jest moja laska i wstążki prorockie. / A to jest moja głowa pełna wątpliwości". W dalszej jednak części, gdy wieszczka wspomina zachowanie swych rodaków oraz dystans dzielący ich od bohaterki, coraz silniej ujawniają się tłumione do tej pory emocje Kasandry. Wprost wyraża swoją miłość do nich, ale także poczucie żalu wywołane tym, iż nie potrafiła się do nich zbliżyć: "Żałuję, że mój głos był twardy. / Spójrzcie na siebie z gwiazd - wołałam - / spójrzcie na siebie z gwiazd. / Słyszeli i spuszczali oczy". Silne emocje stają się źródłem wzruszenia, co przejawia się w urwanej wypowiedzi: "och bodaj jedna jakakolwiek / zanim -". W zakończeniu wiersza kobieta dochodzi do smutnego wniosku, że dar niejako odebrał jej człowieczeństwo, przez co nie doświadczyła radości z doczesnej egzystencji.</p>
+<p> </p>
+<p>c) Atrybuty prorockie ulegają znaczącej przemianie, co podkreślają epitety w zakończeniu: "[...] szatka ogniem osmalona", "[...] prorockie rupiecie". Dochodzi więc do degradacji ich znaczenia. Wiąże się to ze spełnieniem ponurej przepowiedni. Dar widzenia przyszłych wydarzeń nie zmienił niczego w życiu mieszkańców Troi, a stał się jedynie przyczyną osamotnienia Kasandry, jej przekleństwem. Odebrał bowiem możliwość cieszenia się z życia, odkrycia swego piękna. Z tego też powodu zakończenie wiersza świadczy o cierpieniu kobiety, która odczuwa pustkę i bezsens swego istnienia. Atrybut wieszczki okazują się bezwartościowe, podobnie jak jej poświęcenie, które nie zapobiegło katastrofie. W ostatnim wersie Kasandra zaś odkrywa wielkość swej straty: "A to jest moja wykrzywiona twarz. / Twarz, która nie wiedziała, że mogła być piękna". Można stwierdzić, że dar odebrał jej człowieczeństwo, ale także możliwość odkrycia swej kobiecości. Świadomość przyszłych wypadków nie pozwoliła jej na zachowanie perspektywy typowej dla zwykłych ludzi. </p>
+<p> </p>
+<p>d) Dramat Kasandry polega na tym, że jest wyobcowaną, nieprzeciętną jednostką. Jej dar staje się przekleństwem - przyczynia się do osamotnienia bohaterki, niemożności porozumienia z innymi ludźmi. Oddala także kobietę od zwykłego życia i związanych z nim doświadczeń czy emocji. Chociaż Kasandra próbuje ostrzec innych, zwrócić ich uwagę na katastrofę, to starania te okazują się bezowocne. Wieszczka nie odczuwa jednak satysfakcji z powodu spełnienia przepowiedni. Traci wszystko, ponieważ nie udało jej się zmienić losu miasta, ponadto poświęciła się temu, co zakończyło się ostateczną klęską. Dramat bohaterki wiąże się również z tym, że utraciła ważną cząstkę swojej tożsamości - swoje człowieczeństwo, kobiecość. Dopiero po upadku Troi uświadamia sobie, że nie doświadczyła różnorodności życia, przez co nie mogła także zbliżyć się do innych mieszkańców. Jej miłość nie była zrozumiała dla rodaków, ponieważ ich perspektywa wiązała się z przyziemnym życiem. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Kasandra w pewien sposób żałuje swej postawy, ponieważ nie przyniosła jej radości ani satysfakcji. Kosmiczna perspektywa, przyjęta przez bohaterkę, a wynikająca z jej daru oraz wiedzy, staje się barierą utrudniającą nawiązanie relacji z innymi ludźmi: "Nawet nie znałam ich nietrwałych imion. / A ta piosenka o zielonym listku - / nikt jej nie kończył przy mnie". Kobieta przede wszystkim dostrzega ulotność i marność życia, co wiąże się z przesłaniem Księgi Koheleta. W niej bowiem także zaakcentowano nietrwałość rzeczywistości. Postawa Kasandry zdaje się także nawiązywać do stoicyzmu, gdyż kobieta akceptuje porządek świat i starała się o nim przypomnieć rodakom. Ostatecznie jednak odczuwa rozczarowanie, ponieważ triumf spełnionej przepowiedni jest pozorny. Okazuje się bowiem, że straciła cenne doświadczenia, możliwość czerpania radości z każdego dnia czy błahej przyjemności. W  przeciwieństwie do niej inni ludzie, reprezentujący postawę epikurejską, mogli zaznać pełni człowieczeństwa: "Oni wiedzieli, co to takiego jest chwila". Sama zaś Kasandra zdaje się być ostatecznie rozczarowana pozostałą pustką, zgorzkniała. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Poetka w swoim wierszu odwołuje się do powszechnienie znanego mitu oraz postaci z nim związanej. Kasandra bowiem w kulturze stała się znakiem jednostki wieszczącej nieszczęście, która jednak nie zostaje wysłuchana. Szymborska w utworze pogłębia i przybliża postać tej bohaterki, wiąże z nią nowe sensy, które przyczyniają się do głębszej refleksji na temat człowieka i jego stosunku do śmierci. Nowatorstwo <em>Monologu dla Kasandry</em> polega więc na tym, że wieszczka zostaje przedstawiona z nowej perspektywy. Ważne są jej uczucia i relacje z rodakami, co podkreśla wyobcowanie kobiety: "[...] ludzie, widząc mnie, milkli w pół słowa". Oryginalność dzieła polega też na tym, że stanowi swoistą grę - nie tylko gatunkową, lecz związaną np. z różnymi kierunkami filozoficznymi. W ten sposób dzieje jednostki stają się pretekstem do uniwersalnej refleksji na temat reakcji ludzi w obliczu tragicznych wydarzeń. Szymborska zdaje się tym samym sugerować, iż pewne sytuacje są niezmienne, dotyczące wszystkich - niezależnie od czasów i okoliczności. Jednocześnie wykorzystuje ona konwencje literackie (teatralność wypowiedzi) oraz zwykłe słowa, by nadać im nowe, zaskakujące sensy, podkreślić dystans dzielący Kasandrę i rodaków: "Kochałam ich. / Ale kochałam z wysoka". </p>
+<p> </p>
+<p>Przedstawienie swoich wrażeń - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br>

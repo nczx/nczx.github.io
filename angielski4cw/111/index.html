@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Czasu <em>present perfect continuous</em> używamy, żeby opisać sytuacje:</strong></p>
+<ul>
+<li><strong>które rozpoczęły się w przeszłości i trwają do teraz</strong></li>
+<li><strong>w których istotny jest czas trwania czynności</strong></li>
+<li><strong>z niedalekiej, nieokreślonej przeszłości, w której czynność była powtarzana </strong></li>
+<li><strong>które zakończyły się niedawno i widzimy ich efekty lub konsekwencje. </strong></li>
+</ul>
+<p><strong>Przykłady zdań twierdzących:</strong></p>
+<p><em>I have been waiting for you for half an hour!</em> </p>
+<p>(Czekałem/am na ciebie przez pół godziny!)</p>
+<p><em>She’s been living here since she was twelve.</em> </p>
+<p>(Ona mieszka tu odkąd miała dwanaście lat.)</p>
+<p><strong>Czasu <em>present perfect simple</em> używamy do opisu:</strong></p>
+<ul>
+<li><strong>sytuacji i czynności, które rozpoczęły się w przeszłości i nie zakończyły się </strong></li>
+<li><strong>sytuacji, w których widoczny i istotny jest efekt działania</strong></li>
+<li><strong>doświadczenia z nieokreślonego czasu w przeszłości.</strong></li>
+</ul>
+<p><strong> Przykłady zdań twierdzącyc</strong>h:</p>
+<p>I’ve written three essays since eight o’clock.</p>
+<p>(Od ósmej napisałem/am trzy eseje.)</p>
+<p>He’s never been to Paris.</p>
+<p>(On nigdy nie był w Paryżu.)</p>
+<hr/>
+<p> </p>
+<p><span style="font-weight: 400;">1. has been making </span><span style="font-weight: 400;"> </span></p>
+<p><span style="font-weight: 400;">has made</span></p>
+<p><span style="font-weight: 400;">2. have written</span></p>
+<p><span style="font-weight: 400;">have been writing</span></p>
+<p><span style="font-weight: 400;">3. has been having</span></p>
+<p><span style="font-weight: 400;">has had</span></p>
+<p><span style="font-weight: 400;">4. has been playing</span></p>
+<p><span style="font-weight: 400;">has played</span></p>
+<p><span style="font-weight: 400;">5. has lived</span></p>
+<p><span style="font-weight: 400;">has been living</span></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Pytania w czasie <em>present perfect simple</em> tworzymy w następujący sposób:</strong></p>
+<p><strong>(Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>past participle</em> + reszta pytania.</strong></p>
+<p><strong>Przykład:</strong> <em>Has she ever been to New York?</em></p>
+<p>(Czy ona była kiedyś w Nowym Jorku?)</p>
+<p><strong>Pytania w czasie<em> present perfect continuous</em> tworzymy w następujący sposób:</strong></p>
+<p><strong>(Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>been</em> + czasownik z -<em>ing</em> + reszta pytania.</strong></p>
+<p><strong>Przykład:</strong> <em>How long have you been living here?</em></p>
+<p>(Jak długo tu mieszkasz?)</p>
+<hr/>
+<p> </p>
+<p>1. Has she been married for a long time? </p>
+<p>2. How has she been working there?</p>
+<p>3. For how long have you had him?</p>
+<p>4. Have you ever visited her?</p>
+<p>5. What have you been doing?</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Charakterystyczne określenia czasu używane w czasie <em>present perfect simple</em> to:</strong></p>
+<p><em>for</em> (przez), <em>since</em> (od), <em>already</em> (już), <em>just</em> (dopiero co), <em>ever</em> (kiedykolwiek), <em>never</em> (nigdy), <em>so far</em> (dotąd), <em>recently</em> (ostatnio, niedawno), <em>yet</em> (już, jeszcze), itp.</p>
+<p><strong>Charakterystyczne określenia czasu używane w czasie <em>present perfect continuous</em> to:</strong></p>
+<p><em>for</em> (przez), <em>since</em> (od), <em>how long</em> (jak długo), <em>lately</em> (ostatnio), <em>recently</em> (niedawno), itp.</p>
+<hr/>
+<p> </p>
+<p>a. been, for, yet </p>
+<p>b. had, since</p>
+<p>c. just</p>
+<p>d. for, since</p>
+<p>e. haven't, has</p>
+<p><strong>Należy połączyć odpowiedzi z pytaniami z poprzedniego zadania:</strong></p>
+<p>1. c</p>
+<p>2. d</p>
+<p>3. b</p>
+<p>4. e</p>
+<p>5. a </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Pytania w czasie <em>present perfect simple</em> tworzymy w następujący sposób:</strong></p>
+<p><strong>(Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>past participle</em> + reszta pytania.</strong></p>
+<p><strong>Przykład:</strong> <em>Has she ever been to New York?</em></p>
+<p>(Czy ona była kiedyś w Nowym Jorku?)</p>
+<p><strong>Pytania w czasie<em> present perfect continuous</em> tworzymy w następujący sposób:</strong></p>
+<p><strong>(Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>been</em> + czasownik z -<em>ing</em> + reszta pytania.</strong></p>
+<p><strong>Przykład:</strong> <em>How long have you been living here?</em></p>
+<p>(Jak długo tu mieszkasz?)</p>
+<hr/>
+<p> </p>
+<p>1. have you been </p>
+<p>2. Have you been waiting</p>
+<p>3. Have you finished</p>
+<p>4. has she been learning</p>
+<p>5. have you talked</p>
+<p>6. have they been doing</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. A</p>
+<p><strong>Uzasadnienie</strong>: czynność, która rozpoczęła się w niedalekiej przeszłości i trwa nadal (albo skończyła się niedawno), nacisk na czas trwania - czas <em>present perfect continuous</em>. </p>
+<p>2. C</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która rozpoczęła się w przeszłości i trwa do dziś, czasownik statyczny <em>be</em> - czas <em>present perfect simple</em>. </p>
+<p>3. A</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która rozpoczęła się w przeszłości i trwa do dziś, czasownik statyczny <em>have</em> - czas <em>present perfect simple</em>. </p>
+<p>4. B</p>
+<p><strong>Uzasadnienie</strong>: czynność, która rozpoczęła się w niedalekiej przeszłości i trwa nadal (albo skończyła się niedawno), nacisk na czas trwania - czas <em>present perfect continuous</em>.</p>
+<p>5. B</p>
+<p><strong>Uzasadnienie</strong>: <em>since</em> - odkąd.</p><br>

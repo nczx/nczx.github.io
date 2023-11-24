@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Tytu³owy ¿o³nierz powraca z wyprawy jako cz³owiek okaleczony: ze wzglêdu na postrza³ w plecy i nogi nie mo¿e chodziæ, lecz tylko podskakuje. Rodzinna wioska nie przyjmuje go z radoœci¹ czy ¿yczliwoœci¹, nie docenia jego zas³ug oraz poœwiêcenia. Zamiast tego cierpi¹cy bohater staje siê obiektem kpin: "Œmieszy³ ludzi tym bólem, co tak skacz¹c, boli". Nawet we w³asnym domu spotyka siê z niechêci¹ i pogard¹, gdy¿ nie mo¿e pracowaæ na roli. Jest bezu¿yteczny dla bliskich, wiêc go odtr¹caj¹. Mê¿czyzna nie mo¿e liczyæ tak¿e na wsparcie ojca chrzestnego: "Lecz ten nie chcia³ go poznaæ i kijem postroni³". Podobnie reaguje kochanka ¿o³nierza. Nie zamierza bowiem pozostawaæ z cz³owiekiem zniszczonym i kalekim. Kpi z podskoków bohatera, nie chce wspieraæ go w najtrudniejszym momencie ¿ycia. Postawy mieszkañców wskazuj¹ na ich okrucieñstwo, obojêtnoœæ, przede wszystkim niechêæ wobec tego, co niedoskona³e. Nie potrafi¹ oni ani zaakceptowaæ, ani zrozumieæ cierpienia ¿o³nierza. U³omnoœæ budzi ich z³oœliwoœæ i sprzeciw, poniewa¿ zdaje siê zaburzaæ dotychczasow¹ wizjê znanego im œwiata, przypomina o mniej przyjemnych aspektach egzystencji. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Typowy sposób opowiadania o bohaterach wojennych prze³amuj¹ nastêpuj¹ce zabiegi:</p>
+<ul>
+<li>Humor -&gt; Mimo powa¿nego tematu (cierpienie cz³owieka wracaj¹cego z wojny) wiersz jest ¿artobliwy. Pozwala to na oswojenie zjawisk, które s¹ Ÿród³em niepokoju czy lêku. Bohater dzie³a ma dystans do siebie, nawet w nie³atwej sytuacji ¿yciowej pozostaje optymist¹ i siê nie poddaje. </li>
+<li>Konwencja baœniowa -&gt; W utworze Leœmiana elementy realistyczne (np. powrót ¿o³nierza, postawa mieszkañców wsi) ³¹cz¹ siê z niezwyk³ymi sytuacjami (zejœcie figury Chrystusa, wspólna wêdrówka postaci). Opowiadania o bohaterach wojennych odwo³uj¹ siê zaœ przede wszystkim do faktów, s¹ pozbawione takich treœci. </li>
+<li>Prostota i brak patosu -&gt; ¯o³nierz nie jest charakteryzowany przez swe doœwiadczenia wojenne, lecz kalectwo i próbê odnalezienie swojego miejsca na œwiecie. Sposób jego przedstawienia zostaje pozbawiony sentymentalizmu. Najwa¿niejsze staj¹ siê prze¿ycia postaci, która tym samym nabiera uniwersalnego charakteru.</li>
+<li>Poetycki charakter wypowiedzi -&gt; Jêzyk utworu jest przesycony epitetami, metaforami, wykrzyknieniami. Równie znacz¹ca staje siê obecnoœæ neologizmów bêd¹cych wytworem autora w celu wyra¿enia oryginalnoœci przedstawionego œwiata oraz nazwania nowych zjawisk. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="border-collapse:collapse;width:698px;height:259px;">
+<tbody>
+<tr style="height:56px;">
+<td style="background-color:#aed581;text-align:center;width:136.4px;"><strong>Neologizm</strong></td>
+<td style="background-color:#aed581;text-align:center;width:136.4px;"><strong>Budowa</strong></td>
+<td style="background-color:#aed581;text-align:center;width:136.4px;"><strong>Funkcja</strong></td>
+<td style="background-color:#aed581;text-align:center;width:136.4px;"><strong>Czyje s³owa?</strong></td>
+<td style="background-color:#aed581;text-align:center;width:136.4px;"><strong>Do kogo skierowane? </strong></td>
+</tr>
+<tr style="height:30px;">
+<td style="width:136.4px;height:30px;text-align:center;"><em>niedopl¹sie</em></td>
+<td style="width:136.4px;height:30px;text-align:center;">nie + do + pl¹s</td>
+<td style="width:136.4px;height:30px;text-align:center;">pozwala na nazwanie nowego zjawiska, które jeszcze nie ma swojej nazwy, zaznacza jego brak pe³ni</td>
+<td style="width:136.4px;height:30px;text-align:center;">kochanki</td>
+<td style="width:136.4px;height:30px;text-align:center;">do ¿o³nierza</td>
+</tr>
+<tr style="height:30px;">
+<td style="width:136.4px;height:30px;text-align:center;"><em>wyœmiewna</em></td>
+<td style="width:136.4px;height:30px;text-align:center;">wyœmiewaæ + na</td>
+<td style="width:136.4px;height:30px;text-align:center;">okreœla cechê</td>
+<td style="width:136.4px;height:30px;text-align:center;">¿o³nierza</td>
+<td style="width:136.4px;height:30px;text-align:center;">do Chrystusa</td>
+</tr>
+<tr style="height:30px;">
+<td style="width:136.4px;height:30px;text-align:center;"><em>podzielnaæ</em></td>
+<td style="width:136.4px;height:30px;text-align:center;">podzielny + aæ</td>
+<td style="width:136.4px;height:30px;text-align:center;">buduje oryginaln¹ wizjê ukazanego œwiata </td>
+<td style="width:136.4px;height:30px;text-align:center;">Chrystusa</td>
+<td style="width:136.4px;height:30px;text-align:center;">do ¿o³nierza</td>
+</tr>
+<tr style="height:30px;">
+<td style="width:136.4px;height:30px;text-align:center;"><em>bezpole, bezkrzewie, bezlesie</em></td>
+<td style="width:136.4px;height:30px;text-align:center;">bez + pole, bez + krzew, bez + las</td>
+<td style="width:136.4px;height:30px;text-align:center;">zaznacza nieokreœlony status przestrzeni, wp³ywa na nastrój utworu i wizjê przedstawionego œwiata</td>
+<td style="width:136.4px;height:30px;text-align:center;">narratora</td>
+<td style="width:136.4px;height:30px;text-align:center;">do odbiorcy</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W sensie dos³ownym okaleczonego ¿o³nierza i figurkê Chrystusa ³¹czy to, ¿e nie mog¹ chodziæ, lecz skacz¹. Podobieñstwo polega równie¿ na tym, ¿e do ich bólu przyczyni³ siê cz³owiek: "Podzielimy siê mêk¹ - podzielnaæ jest mêka! - / Wszak ta sama nas ludzka skoœlawi³a rêka". Na p³aszczyŸnie symbolicznej ¿o³nierza i Jezusa upodabnia doœwiadczenie pe³ni cz³owieczeñstwa - jest w nie bowiem tak¿e wpisane cierpienie. Bohaterowie ci, w przeciwieñstwie do innych mieszkañców, potrafi¹ jednak je zaakceptowaæ: "Ty podeprzesz miê cia³em, ja ciebie soœnin¹, / A co ma siê nam zdarzyæ, niech siê zdarzy ino!". Wiedz¹, ¿e niedoskona³oœæ to nieod³¹czna cecha œwiata, z któr¹ trzeba siê pogodziæ. Tylko w ten sposób mo¿na bowiem poznaæ prawdê o œwiecie i sobie samym. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Pierwsza przemiana odbywa siê, kiedy ¿o³nierz uznaje drewnianego Chrystusa za idealnego towarzysza w czasie swej wêdrówki. W tym momencie dochodzi do cudownego zdarzenia: "Chrystus, s³ysz¹c te s³owa, zsun¹³ siê na ziemiê, / Ów, co Boga wyciosa³, bity bywa³ w ciemiê!". Jezus tym samym odpowiada na ¿yczenie cz³owieka i przychodzi do niego, by dzieliæ z nim trudy podró¿y. Najwa¿niejsza jednak metamorfoza zachodzi ju¿ jednak w czasie wêdrówki: "Kto tam z nocy na pó³noc w burzê i zawiejê / Tak bardzo cz³owieczeje i tak bo¿yœcieje?". W wyniku wspomnianego spotkania Chrystus nabiera cech cz³owieka, zaœ ¿o³nierz przybli¿a siê do sfery duchowej. Bohaterowie wiêc wzajemnie na siebie oddzia³uj¹, dziel¹ siê swoj¹ to¿samoœci¹, co prowadzi do ich ubogacenia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Koncepcja Boga ukazana w wierszu Leœmiana mo¿e byæ nieco zaskakuj¹ca. Bóg bowiem nie jest potê¿n¹ i doskona³¹ istot¹, odleg³¹ od cz³owieka i jego problemów. Figurka Jezusa, podobnie jak ¿o³nierz, zostaje pozbawiona doskona³oœci, okaleczona - przypomina wiêc istotê ludzk¹ ze wszystkimi jej s³aboœciami oraz defektami. Chrystus przyjmuje w utworze rolê towarzysza, d¹¿y tym samym do kontaktu z cz³owiekiem. Ma tak¿e œwiadomoœæ tego, i¿ nie jest wszechpotê¿ny, idealny: "Marna ze mnie soœnina, lecz piechur nie marny, / Przejdê wiecznoœæ piechtami, chocia¿em niezdarny". Przez to zbli¿a siê do ¿o³nierza, poniewa¿ dzieli jego cierpienie oraz odrzucenie: "Podzielimy siê mêk¹ - podzielnaæ jest mêka! - / Wszak ta sama nas ludzka skoœlawi³a rêka!". Oferuje mu jednak wsparcie i ¿yczliwoœæ: "Ty podeprzesz miê cia³em, ja ciebie soœnin¹". Mo¿na wiêc powiedzieæ, ¿e to koncepcja Boga rozumiej¹cego prze¿ycia cz³owieka, znaj¹cego jego doœwiadczenia. Jest On bowiem podobny do istoty ludzkiej - ze wszystkimi swymi u³omnoœciami, które paradoksalnie potwierdzaj¹ Jego si³ê. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Wyznaczenie na bohatera dzie³a kalekiego ¿o³nierza odzwierciedla przekonanie o tym, ¿e prawdziwy jest tylko ten, kto u³omny, niepozbawiony brzydoty. Poeta tym samym pragnie przedstawiæ jednostkê z defektem, poniewa¿ takie naruszenie jej granic cia³a prowadzi do uniwersalnych refleksji na temat relacji miêdzy doczesn¹ pow³ok¹ a dusz¹. Poczucie pe³ni nie prowokuje zaœ do takich rozmyœlañ. Cz³owiek okaleczony zyskuje zaœ g³êbsz¹ œwiadomoœæ siebie, swych pragnieñ i d¹¿eñ, gdy¿ wszystko osi¹ga z trudem. W tym kontekœcie "bo¿yœcieje" sugeruje wzrost duchowy ¿o³nierza (nabieranie cech Boga), g³êbokie doœwiadczenie swego istnienia, stanowi¹ce jednoczeœnie Ÿród³o namys³u na temat rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br>

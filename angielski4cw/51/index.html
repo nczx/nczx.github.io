@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Western diet</p>
+<p><strong>Uzasadnienie:</strong> <em>Western diet</em> - dieta zachodnia.  </p>
+<p>2. come first</p>
+<p><strong>Uzasadnienie: </strong><em>come first</em> - być pierwszym. </p>
+<p>3. under, pressure</p>
+<p><strong>Uzasadnienie:</strong> <em>be under a lot of pressure</em> - być pod dużą presją.</p>
+<p>4. personal best</p>
+<p><strong>Uzasadnienie:</strong> <em>personal best</em> - rekord życiowy.</p>
+<p>5. physical strength</p>
+<p><strong>Uzasadnienie: </strong><em>develop physical strength</em> - rozwijać siłę fizyczną.</p>
+<p>6. respiratory disease</p>
+<p><strong>Uzasadnienie: </strong><em>respiratory disease</em> - choroba płuc.</p>
+<p>7. out of condition</p>
+<p><strong>Uzasadnienie: </strong><em>out of condition</em> - bez kondycji.</p>
+<p>8. peptic ulcer</p>
+<p><strong>Uzasadnienie: </strong><em>peptic ulcer</em> - wrzód trawienny. </p>
+<p><strong>9. </strong>binge-eating</p>
+<p><strong>Uzasadnienie: </strong><em>binge-eating</em> - objadanie się.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. fiercely</p>
+<p>(Chrissie chce zawsze wygrywać. Jest <strong>zaciekle</strong> rywalizująca.) </p>
+<p>2. into</p>
+<p>(Jak mogę nabrać formy bez większego wysiłku?) <em>get <strong>into</strong> shape</em> - nabrać formy. </p>
+<p>3. risk</p>
+<p>(Nigdy nie wykonuję ćwiczeń, które wiążą się z dużym <strong>ryzykiem</strong>. Wolę być bezpieczny/a.)</p>
+<p>4. sedentary </p>
+<p>(<strong>Siedzący</strong> tryb życia jest bardzo szkodliwy - wstań poćwicz!)</p>
+<p>5. threatening</p>
+<p>(Personel medyczny codziennie zmaga się tu z chorobami <strong>zagrażającymi</strong> życiu. To bardzo stresująca praca.)</p>
+<p>6. lack</p>
+<p>(Mógłbyś/mogłabyś być mistrzem/mistrzynią, ale <strong>brakuje ci</strong> determinacji.)</p>
+<p>7. anxiety</p>
+<p>(Moja babcia cierpi z powodu poczucia <strong>niepokoju</strong> i jest przygnębiona kiedy znajdzie się w trudnej sytuacji.)</p>
+<p>8. set</p>
+<p>(Kiedy <strong>wyznaczysz</strong> sobie cel, postaraj się go osiągnąć.)</p>
+<p>9. type</p>
+<p>(Jedną z przyczyn cukrzycy <strong>typu</strong> 2 jest zła dieta.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <span style="text-decoration: line-through;">what</span> which</p>
+<p><strong>Uzasadnienie</strong>: w zdaniach względnych używamy <em>which</em> w znaczeniu "co oznacza" kiedy chcemy odnieść się do jakiejś sytuacji.  </p>
+<p>2. The pitch where we played <span style="text-decoration: line-through;">on</span> was very wet due to all the rain.</p>
+<p>Możliwe opcje:</p>
+<p>The pitch <strong>where</strong> we played was very wet due to all the rain.</p>
+<p>The pitch we played <strong>on</strong> was very wet due to all the rain.</p>
+<p>The pitch <strong>on which</strong> we played was very wet due to all the rain.</p>
+<p><strong>Uzasadnienie</strong>: spośród powyższych zdań najczęściej spotykane są dwa pierwsze. Zwykle nie stawiamy przyimka (np. <em>on</em>) przed zaimkiem względnym (np. <em>which</em>), dlatego zdania podobne do ostatniego z powyższych nie występują powszechnie w języku nieformalnym - są raczej charakterystyczne dla języka formalnego. </p>
+<p>3. <span style="text-decoration: line-through;">Every of</span> the players at the tennis club <span style="text-decoration: line-through;">are</span> better than me. </p>
+<p>Możliwe opcje:</p>
+<p><strong>Every one of the</strong> players at the tennis club <strong>is</strong> better than me</p>
+<p><strong>Each of the</strong> players at the tennis club <strong>is</strong> better than me.</p>
+<p><strong>All of the</strong> players at the tennis club <strong>are </strong>better than me.</p>
+<p><strong>Uzasadnienie</strong>: należy zwrócić uwagę na zgodność pomiędzy podmiotem a formą czasownika. W pierwszych dwóch zdaniach powyżej użyjemy czasownika w liczbie pojedynczej, ponieważ podmiotem jest "każdy z zawodników", a w trzecim zdaniu wybierzemy czasownik w liczbie mnogiej, dlatego że podmiotem są "wszyscy zawodnicy". </p>
+<p>4. <span style="text-decoration: line-through;">Most of </span>climbers in my group are in peak form. </p>
+<p><strong>Most of the </strong>climbers in my group are in peak form. </p>
+<p><strong>Uzasadnienie</strong>: kiedy mowa o konkretnej grupie ludzi, używamy schematu:<em> most + of + the </em>+ rzeczownik.</p>
+<p>5.  <span style="text-decoration: line-through;">or</span> <strong>nor</strong></p>
+<p><strong>Uzasadnienie</strong>: zestawienie dwóch negatywnych koncepcji (ani..., ani...) - <em>neither ... nor ...</em></p>
+<p>6. <span style="text-decoration: line-through;">all</span> <strong>whole</strong></p>
+<p><strong>Uzasadnienie: </strong><em>the whole</em> używamy z rzeczownikami policzalnymi w liczbie pojedynczej, a <em>all</em> z rzeczownikami niepoliczalnymi i policzalnymi w liczbie mnogiej. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. A woman,<strong> whose name is Mary</strong>, has four daughters.  </p>
+<p>Mary has four daughters <strong>who all have</strong> a brother.</p>
+<p>Mary has got five children. </p>
+<p>(Mary ma pięcioro dzieci.)</p>
+<p>2. There is a man <strong>who is standing on one side of a river</strong> and <strong>whose dog is standing on the other side</strong>. The dog, <strong>which doesn't have a boat, bridge or a tunnel</strong>, crosses the river without getting wet.</p>
+<p>The river was frozen.</p>
+<p>(Rzeka była zamarznięta.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. wanted</p>
+<p><strong>Uzasadnienie</strong>: <em>I decided that I wanted to</em> - zdecydowałem, że chcę. </p>
+<p>2. decided</p>
+<p><strong>Uzasadnienie</strong>: <em>decided to</em> - zdecydowałem/am, że. </p>
+<p>3. who</p>
+<p><strong>Uzasadnienie</strong>: <em>non-defining relative clause</em> z zaimkiem względnym <em>who </em>(która). </p>
+<p>4. most</p>
+<p><strong>Uzasadnienie</strong>: <em>most of us</em> - większość z nas.</p>
+<p>5. discount</p>
+<p><strong>Uzasadnienie</strong>: <em>discount</em> - zniżka. </p>
+<p>6. value</p>
+<p><strong>Uzasadnienie</strong>: <em>good value for money</em> - dobry stosunek jakości do ceny.</p>
+<p>7. whose</p>
+<p><strong>Uzasadnienie</strong>: <em>non-defining relative clause</em> z zaimkiem względnym <em>whose</em> (której), oznaczającym czyjeś posiadanie, przynależność. </p>
+<p>8. kit</p>
+<p><strong>Uzasadnienie</strong>: first aid kit - apteczka.</p>
+<p>9. been</p>
+<p><strong>Uzasadnienie</strong>: czynność, która trwała jakiś czas przed innym wydarzeniem w przeszłości - czas <em>past perfect continuous</em>.</p>
+<p>10. have</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do konkretnego momentu w przyszłości - czas <em>future perfect</em>. </p><br>

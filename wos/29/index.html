@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Znaczenie powiedzeń w kontekście socjalizacji:</strong></span> </p>
+<ol>
+<li><span style="text-decoration: underline;"><strong>Jaki ojciec, taki syn</strong> </span>- powiedzenie to wskazuje, że dzieci czerpią zachowania, postawy oraz sposób życia od swoich rodziców, czyli osób, z którymi po pierwsze wiążą ich geny (które odgrywają istotną rolę w życiu człowieka) oraz po drugie to rodzice szczególnie w procesie socjalizacji pierwotnej kształtują osobowość młodego człowieka. Będąc najważniejszymi osobami w życiu dziecka od pierwszych chwil jego życia, dlatego też dzieci obserwują zachowania mamy i taty, następnie je naśladują, a tym samym wyrabiają u siebie pewne nawyki. </li>
+<li><span style="text-decoration: underline;"><strong>Czym skorupka za młodu nasiąknie, tym na starość trąci</strong></span>. - powiedzenie to wskazuje, że bardzo ważny jest proces socjalizacji młodych ludzi, bowiem to własnie w pierwszych latach swojego życia czerpią oni wzorce zachowania, postawy życiowe oraz zasady postępowania od ludzi z otoczenia i w późniejszych latach wykazują tendencje do naśladowania wcześniej obserwowanych zachowań. </li>
+<li><span style="text-decoration: underline;"><strong>Czego Jaś się nie nauczy, tego Jan nie będzie umiał.</strong> </span>- powiedzenie to wskazuje, że bardzo ważne jest położenie już u malutkiego dziecka podstaw pod przyszłą pracę w szkole, czy w miejscu pracy. Dlatego też bardzo ważna jest funkcja edukacyjna rodziny, która związana jest z koniecznością zainteresowania dzieci otaczających ich światem, co w przyszłości powinno skutkować śmielszym wchodzeniem dziecka w świat nauki. Dodatkowo wykształcenie u małego dziecka zasad postępowania skutkuje tym, że w dorosłym życiu będą one według nich postępować. </li>
+<li><span style="text-decoration: underline;"><strong>Kiedy wejdziesz między wrony, musisz krakać jak i one.</strong></span> - powiedzenie to wskazuje, że bardzo ważne są grupy odniesienia w życiu każdego człowieka, bowiem jednostka stając się częścią danej społeczności, przejmuje od niej normy, zasady oraz utożsamia się z prezentowanym przez jej członków sposobem życia i postępowania. </li>
+<li><span style="text-decoration: underline;"><strong>Niedaleko pada jabłko od jabłoni.</strong> </span>- powiedzenie to wskazuje, że dzieci czerpią zachowania oraz postawy życiowe od swoich rodziców, którzy ich wychowują. Ponadto dzieci postępują według zasad postępowania prezentowanych im przez ich rodziców. Dodatkowo bardzo ważną rolę odgrywają również geny, które mają duży wpływ na zachowanie jednostek, a to właśnie one ściśle wiążą dzieci z ich rodzicami. </li>
+</ol>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #00cc99;"><strong>Przysłowie</strong></td>
+<td style="background-color: #00cc99;"><strong>Krótkie wyjaśnienie przysłowia</strong></td>
+<td style="background-color: #00cc99;"><strong>Czy przysłowie jest trafne w kontekście socjalizacji?</strong></td>
+</tr>
+<tr style="height: 45px;">
+<td style="background-color: #00ffcc;">
+<ul>
+<li>Jaki ojciec, taki syn.</li>
+</ul>
+</td>
+<td style="background-color: #99ffcc;">To popularne przysłowie ludowe mówi, że dzieci upodabniają się do swych rodziców, nie tylko pod względem wyglądu, ale przede wszystkim jeśli chodzi o charakter. Tyczy się to w szczególności syna, który czerpie wzorce od swego ojca, uważając go za autorytet godny naśladowania. Nierzadko zdarza się, że syn idzie w ślady ojca, na przykład jeśli chodzi o wykonywany zawód.</td>
+<td style="background-color: #33cccc;">Przysłowie to w dużej mierze jest trafne w kontekście socjalizacji, bo w szczególności dla procesu socjalizacji pierwotnej ważny jest wpływ rodziny, w tym oczywiście ojca. Nie zawsze jednak dziecko po tym, jak dorośnie, idzie w ślady ojca. Czasami zdarza się, że postępuje wręcz odwrotnie.</td>
+</tr>
+<tr style="height: 63px;">
+<td style="background-color: #00ffcc;">
+<ul>
+<li>Czym skorupka za młodu nasiąknie, tym na starość trąci.</li>
+</ul>
+</td>
+<td style="background-color: #99ffcc;">Przysłowie to oznacza, że to, czego człowiek nauczy się w dzieciństwie i czego doświadczy jako dziecko, może być decydujące dla jego zachowań i cech charakteru jako dorosłego człowieka.</td>
+<td style="background-color: #33cccc;">W przysłowiu tym tkwi sporo racji, zwłaszcza w kontekście socjalizacji, której ważna część, mianowicie socjalizacja pierwotna, dokonuje się w dzieciństwie. Wówczas uczymy się fundamentalnych zasad życia w społeczeństwie i poznajemy najważniejsze umiejętności, a także przyswajamy mowę. Człowiek uczy się jednak przez całe życie i może się - przynajmniej do pewnego stopnia - zmieniać. Dlatego jeśli czegoś nie nauczył się w młodości, zawsze może spróbować to zrobić na późniejszych etapach swego życia.</td>
+</tr>
+<tr style="height: 63px;">
+<td style="background-color: #00ffcc;">
+<ul>
+<li>Czego Jaś się nie nauczy, tego Jan nie będzie umiał.</li>
+</ul>
+</td>
+<td style="background-color: #99ffcc;">Przysłowie to mówi o tym, że wiedza i umiejętności nabyte w dzieciństwie pozostają jednostce na całe życie. Dlatego ważne jest, aby dziecko nabyło jak najwięcej pożytecznych i przydatnych informacji i umiejętności praktycznych, bo łatwiej mu będzie funkcjonować jako dorosłej już osobie.</td>
+<td style="background-color: #33cccc;">Przysłowie to akcentuje dużą rolę socjalizacji pierwotnej. Bez wątpienia, dla rozwoju człowieka kluczowy okazuje się okres jego dzieciństwa, kiedy nabywa podstawowych norm kulturowych i umiejętności społecznych. Przykładowo, jeśli człowiek jako dziecko nie nauczy się podstaw komunikacji językowej, to później nie będzie już w stanie posiąść rozbudowanego zasobu słownictwa. Jednak generalnie braki w wiedzy teoretycznej i umiejętnościach praktycznych zawsze można do pewnego stopnia nadrobić. Dorosły człowiek, nawet w bardzo zaawansowanym wieku, może nadrobić zaległości i zacząć uczyć się czegoś, co zwykli poznawać młodzi ludzi. Na tej zasadzie Sokrates już jako posunięty w latach senior uczył się tańczyć. Jan Paweł II stwierdził zaś: 'Nigdy nie jest za późno, żeby zacząć od nowa, żeby pójść inną drogą i raz jeszcze spróbować. Nigdy nie jest za późno, by na stacji złych zdarzeń, złapać pociąg ostatni i dojechać do marzeń'.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #00ffcc;">
+<ul>
+<li>Kiedy wejdziesz między wrony, musisz krakać tak jak i one.</li>
+</ul>
+</td>
+<td style="background-color: #99ffcc;">Przysłowie to oznacza, że kiedy wejdzie się w interakcje z jakąś grupą społeczną, to aby zostać przez nią zaakceptowanym, należy do pewnego stopnia się jej podporządkować, zaakceptować panujące w niej reguły i nie deklarować sprzeciwu wobec prezentowanych w niej poglądów. </td>
+<td style="background-color: #33cccc;">W kontekście socjalizacji przysłowie to niesie wiele racji, gdyż ludzie niedostosowani społecznie, sprzeciwiający się utartym w jakiejś grupie normom społecznym i zwyczajom zachowania, mogą mieć trudności z tym, aby zostać zaakceptowanym. Nonkonformiści narażają się nierzadko na krytykę i niechęć ze strony swego otoczenia.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #00ffcc;">
+<ul>
+<li>Niedaleko pada jabłko od jabłoni.</li>
+</ul>
+</td>
+<td style="background-color: #99ffcc;">Przysłowie to mówi o tym, że dzieci bywają często podobne do swych rodziców, nie tylko pod względem wyglądu zewnętrznego, ale też w kwestii charakteru, a w szczególności przejmują wiele wad swych najbliższych.</td>
+<td style="background-color: #33cccc;">W kontekście socjalizacji przysłowie to często okazuje się trafne, albowiem na ukształtowanie człowieka duży wpływ ma jego najbliższe otoczenie, w szczególności rodzina. W rodzinie dokonuje się przede wszystkim proces socjalizacji pierwotnej. Dziecko właśnie od rodziców i opiekunów przejmuje podstawowe umiejętności. Od najbliższych uczy się norm kulturowych, a obserwując ich, kształtuje swoją osobowość i swoje poglądy. Jednak człowiek obdarzony jest wolnością, dlatego zawsze ma szansę się zmienić i samodzielnie zadecydować o kierunkach swego dalszego rozwoju.</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span> </p>
+<p>Słowa Jamesa Baldwina "Dzieci nigdy za bardzo nie słuchały starszych, ale nigdy nie przestały ich naśladować" ukazują, że w procesie socjalizacji młodzi ludzie czerpią wzorce z otoczenia. To własnie osoby starsze stanowią dla nich wzór do postępowania. Dzieci naśladują dorosłych w ich zachowaniach oraz utożsamiają się z ich sposobem życia. Ponadto postawy prezentowane przez osoby starsze rzutują na sposób odbierania rzeczywistości przez dzieci, dlatego też obserwując dorosłych przejmują one od nich pewne skłonności. Niemniej młodzi ludzie często buntują się przeciw osobom starszym. Poprzez niesłuchanie ich, młodzi ludzie chcą zademonstrować swoją odmienność, upór oraz indywidualizm. Niekiedy mówi się nawet o konflikcie pokoleniowym, bowiem pokolenia różnią się między sobą wieloma elementami, szczególnie tymi z zakresu postrzegania rzeczywistości. Z tej też przyczyny młodzi ludzie chcą podkreślić swój  indywidualizm względem osób starszych, wskazać im, że są na tyle samodzielni, że potrafią odejść od prezentowanych przez nich schematów zachowań. Z drugiej jednak strony, osoby młode zawsze (w sposób podświadomy) będą czerpać wiedzę oraz naśladować zachowania osób starszych z ich otoczenia. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej oceny. Stąd proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Amerykański pisarz James Baldwin stwierdził: 'Dzieci nigdy za bardzo nie słuchały starszych, ale nigdy nie przestały ich naśladować'. W stwierdzeniu tym jest sporo racji, ponieważ bardzo często dzieci mają tendencję do tego, by przeciwstawiać się dorosłym. Znajdują się bowiem w okresie buntu. Chcą poznawać świat, są dynamiczne, prężne i kreatywne. Podejście osób starszych wydaje się dla nich w związku z tym niekiedy nieatrakcyjne, a wręcz niezrozumiałe. Chcą zaznaczyć swą osobowość i przeciwstawić starszemu pokoleniu swój świat wartości. Dlatego bywa, że nie słuchają rad i zaleceń starszych. Jednak mimo wszystko żyją obok starszych i obserwują ich, dlatego czy tego chcą, czy też nie, niekiedy nawet nieświadomie, naśladują zachowania starszych i przejmują od nich niektóre przynajmniej wzorce postępowania.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><em>Istotą zadania jest przeanalizowanie wybranego pisma dedykowanego młodzieży lub portalu internetowego. Należy w szczególności zwrócić uwagę na to, jakie postawy i wartości prezentowane są tam jako pozytywne, a jakie - jako negatywne. Należy też - co stanowi kwestię indywidualną - rozstrzygnąć, czy są to treści zgodne ze światopoglądem tego, kto opracowuje to zadanie. Dodatkowo, należy zastanowić się, jaki wpływ na socjalizację młodych odbiorców może wywierać to czasopismo lub ten portal internetowy. Na koniec trzeba rozstrzygnąć, czy są to treści godne polecenia swoim koleżankom i kolegom. Całość można zaprezentować w formie prezentacji multimedialnej.</em></p>
+<p><strong><em>-&gt;</em></strong><em> </em><span style="text-decoration: underline;"><em>Przykładowe wskazówki mogące stanowić inspirację do samodzielnego opracowania zagadnienia na podstawie analizy czasopisma 'Mały Gość Niedzielny':</em></span></p>
+<p><strong>[A]</strong></p>
+<p>'Mały Gość Niedzielny' to miesięcznik zaadresowany do dzieci i młodzieży, który ukazuje się od 1926 roku. Powstał jako sprofilowane dla dzieci i młodzieży czasopismo związane z 'Gościem Niedzielnym'. 'Mały Gość Niedzielny', podobnie jak 'Gość Niedzielny', wydawany jest w Katowicach przez Wydawnictwo Kurii Metropolitalnej 'Gość Niedzielny'. Co ważne, 'Mały Gość Niedzielny', oprócz tego, że jest kolportowany w drodze tradycyjnej, jako czasopismo w wersji papierowej, ma też swoje wydanie internetowe i rozbudowaną stronę internetową. Zatem można powiedzieć, że obecnie 'Mały Gość Niedzielny' to zarówno czasopismo, jak i serwis internetowy skierowany do dzieci i młodzieży. Prezentuje się tam treści o tematyce religijnej, wpisujące się w nurt nauczania Kościoła katolickiego. 'Mały Gość Niedzielny' przeznaczony jest bowiem głównie dla osób wierzących, w szczególności dla chrześcijan, a dokładniej dla katolików. Dlatego jako wartości pozytywne przedstawia się tam wszystko to, co propaguje Kościół katolicki. Za dobre i godne propagowania uznaje się na łamach 'Małego Gościa Niedzielnego' między innymi postawy takie, jak: chodzenie do kościoła, przestrzeganie nakazów moralności chrześcijańskiej, szanowanie bliżnich, szerzenie miłosierdzia i cenienie wartości rodzinnych. Jako negatywne przedstawia się natomiast te postawy, które są niezgodne z nauczaniem moralnym Kościoła katolickiego.</p>
+<p><strong>[B]</strong></p>
+<p>Prezentowane na łamach 'Małego Gościa Niedzielnego' treści z reguły są aprobowane przez osoby podzielające światopogląd chrześcijański, w szczególności w wydaniu katolickim. 'Mały Gość Niedzielny' to wszakże portal internetowy i czasopismo o tematyce religijnej, zaadresowane do młodzieży katolickiej. Z niektórymi prezentowanymi tam poglądami mogą więc nie zgadzać się ci, którzy nie są ludźmi wierzącymi, a w szczególności katolikami. Warto jednak dodać, że mimo iż 'Mały Gość Niedzielny' ma profil religijny, to prezentuje nie tylko treści o tematyce religijnej. Pojawia się tam między innymi bardzo dużo artykułów o tematyce naukowej i edukacyjnej, które mogą trafiać do wszystkich młodych osób, niezależnie od wyznawanego światopoglądu.</p>
+<p><strong>[C]</strong></p>
+<p>'Mały Gość Niedzielny' może wśród młodych ludzi propagować wartości chrześcijańskie, a z racji tego, że na swoich łamach i poprzez swój portal internetowy przekazuje również wiele treści edukacyjnych i naukowych, może rozbudzać u młodych ludzi zainteresowania poznawcze. Opisywany środek masowego przekazu można polecić w szczególności wszystkim tym, którzy podzielają wartości chrześcijańskie lub interesują się tematyką religijną. Może on jednak okazać się pomocny również dla wszystkich tych, którzy chcą poszerzyć swoją wiedzę naukową, albowiem 'Mały Gość Niedzielny' zamieszcza na swych łamach szereg informacji historycznych i przyrodniczych, które służą popularyzowaniu wiedzy naukowej z różnych dziedzin.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>A. PRAWDA</p>
+<p>B. FAŁSZ</p>
+<p>C. FAŁSZ</p>
+<p>D. PRAWDA</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 35px;">
+<td style="background-color: #878787; height: 35px;"><strong>[A] </strong>Oglądanie scen przemocy w dzieciństwie może negatywnie wpłynąć na rozwój psychiczny człowieka w późniejszych latach.</td>
+<td style="background-color: #c4c4c4;"><strong>[<span style="text-decoration: underline;">PRAWDA</span>]</strong></td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #878787; height: 35px;"><strong>[B] </strong>Etap socjalizacji pierwotnej zazwyczaj rozpoczyna się w przedszkolu lub w szkole.</td>
+<td style="background-color: #c4c4c4;"><strong>[<span style="text-decoration: underline;">FAŁSZ</span>]</strong></td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #878787; height: 35px;"><strong>[C] </strong>Nauka samodzielnego jedzenia rozpoczyna się na etapie socjalizacji wtórnej.</td>
+<td style="background-color: #c4c4c4;"><strong>[<span style="text-decoration: underline;">FAŁSZ</span>]</strong></td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #878787; height: 35px;"><strong>[D] </strong>Skutkiem wykształcenia się tożsamości społecznej jest rozpoczęcie procesu socjalizacji.</td>
+<td style="background-color: #c4c4c4;"><strong>[<span style="text-decoration: underline;">PRAWDA</span>]</strong></td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Moim zdaniem tego rodzaju socjalizacja byłaby pozbawiona wielu elementów podstawowych, jak choćby bezpośredniego i stałego kontaktu fizycznego, werbalnego pomiędzy członkami rodziny. Efekty socjalizacji na odległość ukazuje problem wyjeżdżania rodziców do pracy zagranicę, czego efektem jest zjawisko eurosieroctwa. Tego rodzaju odosobnienie pozbawione jest głębokiej relacji międzyludzkiej i nie prowadzi do niczego dobrego.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Stąd proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><strong><span style="text-decoration: underline;">Przykładowe rozwiązanie:</span></strong></p>
+<p>Proces socjalizacji to proces, w którym indywidualne jednostki nabywają i uczą się norm, wartości i umiejętności niezbędnych do funkcjonowania w społeczeństwie. Ten proces zaczyna się już w dzieciństwie i kontynuuje się przez całe życie, a jego źródłem są interakcje z rodziną, przyjaciółmi, nauczycielami i innymi członkami społeczeństwa. Wydaje się, że szczególnie cenne są przy tym interakcje bezpośrednie. Komunikacja na odległość pod wieloma względami zdaje się gorszym rozwiązaniem, ponieważ poprzez rozmowę telefoniczną czy wideokonferencję nie sposób się na przykład przytulić czy uścisnąć komuś dłoni. Dzisiejsze życie społeczne jest jednak niezwykle dynamiczne i mobilne, ludzie często zmieniają swe miejsce zamieszkania, w związku z czym muszą jakoś radzić sobie z rozłąką z członkami rodziny. Pomagać może w tym komunikacja na odległość. Dzięki wideokonferencjom i rozmowom telefonicznym też można budować więzi z rodziną, a co za tym idzie i tak może dokonywać się socjalizacja.</p><br>

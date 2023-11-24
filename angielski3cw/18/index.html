@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse: collapse; width: 371px; height: 428px; border-width: 1px; border-spacing: 5px; border-color: #1874DC;">
+<tbody>
+<tr>
+<td style="background-color: rgb(185, 185, 219); width: 131.011px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p><strong>Types of music<br/></strong>(rodzaje muzyki)</p>
+</td>
+<td style="width: 212.216px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p>classical (klasyczna), gospel (chrześcijańska)</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb(185, 185, 219); width: 131.011px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p><strong>People<br/></strong>(ludzie)</p>
+</td>
+<td style="width: 212.216px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p>audience (widownia/słuchacze),</p>
+<p>violinist (skrzypek)</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb(185, 185, 219); width: 131.011px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p><strong>Instruments<br/></strong>(instrumenty)</p>
+</td>
+<td style="width: 212.216px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p>flute (flet)</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb(185, 185, 219); width: 131.011px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p><strong>Equipment<br/></strong>(sprzęt)</p>
+</td>
+<td style="width: 212.216px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p>speakers (głośniki)</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb(185, 185, 219); width: 131.011px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p><strong>Verbs<br/></strong>(czasowniki)</p>
+</td>
+<td style="width: 212.216px; border-width: 1px; border-color: rgb(24, 116, 220); padding: 5px;">
+<p>stream (transmitować na żywo)</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. rhythmical </p>
+<p>(Ich muzyka jest naprawdę <strong>rytmiczna</strong> i łatwo się do niej tańczy.) </p>
+<p>2. cheered</p>
+<p>(Publiczności bardzo podobał się koncert i głośno <strong>wiwatowała</strong>.)</p>
+<p>3. hit</p>
+<p>(Możemy stać się popularni i mieć <strong>przebojowy</strong> album.)</p>
+<p>4. soundtrack</p>
+<p>(<strong>Ścieżka dźwiękowa</strong> filmu zawierała trzy stare piosenki bluesowe, trochę punka i trochę muzyki klasycznej.)</p>
+<p>5. volume</p>
+<p>(Czy możesz trochę zwiększyć <strong>głośność</strong>? Nic nie słyszę.)</p>
+<p>6. audition</p>
+<p>(Jestem zestresowany/a, bo mam dziś <strong>przesłuchanie</strong> do roli w przedstawieniu na koniec roku.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. system  </p>
+<p>2. speakers</p>
+<p>3. microphone</p>
+<p>4. musicians</p>
+<p>5. volume</p>
+<p>6. audiences</p>
+<p><s class="odr-strikethrough">beats</s>, <s class="odr-strikethrough">playlist</s></p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Określenie "<strong>system</strong> dźwiękowy" jest obecnie używane do mówienia o wszelkiego rodzaju urządzeniach, których można używać do odtwarzania muzyki: wzmacniacz, gramofon, odtwarzacz CD, lub komputer z potężnymi <strong>głośnikami</strong> (jeśli lubisz głośną muzykę). Jednak na początku ten termin odnosił się do grupy DJ-ów i tzw. MC grających muzykę razem za pomocą własnego sprzętu domowej roboty. Skrót MC oznacza "mistrz ceremonii", co oznacza osobę, która mówi do <strong>mikrofonu</strong> i przedstawia <strong>muzyków </strong>lub innych artystów. W miarę upływu czasu, wielu mistrzów ceremonii stało się wykonawcami i wywarło ważny wpływ na powstanie raperów. Ich sprzęt musiał wyglądać imponująco i, oczywiście, odtwarzać muzykę w bardzo dobrej jakości, nawet jeśli <strong>głośność </strong>była maksymalnie zwiększona. Pomysł zrodził się na Jamajce w latach 50-tych XX wieku pośród osób grających lokalną muzykę, ska, a także amerykański rhythm and blues, który później przekształcił się w reggae. Jamajscy DJ-e grali przed <strong>widowniami </strong>na ulicach, a kiedy Antylczycy (mieszkańcy wysp pomiędzy Morzem Karaibskim a Oceanem Atlantyckim) wyemigrowali do Brytanii, przywieźli tę muzykę ze sobą.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. read</p>
+<p>(X: Czy potrafisz <strong>czytać</strong> z nut?</p>
+<p>Y: Co masz na myśli?</p>
+<p>X: Chodzi mi o to, czy potrafisz popatrzeć na stronę z zapisaną muzyką i ją zagrać?) </p>
+<p><br/>2. download</p>
+<p>(X: Lubię tę piosenkę, może ją kupię.</p>
+<p>Y: Chodzi ci o płytę CD?</p>
+<p>X: Nie, tato. Nikt już nie kupuje płyt. Zapłacę, żeby <strong>ściągnąć</strong> ją z Internetu.)</p>
+<p><br/>3. amplifiers</p>
+<p><strong>Uzasadnienie</strong>: <em>amp = amplifier </em>(wzmacniacz).</p>
+<p><br/>4. rehearsals</p>
+<p>(X: W tym tygodniu jestem zajęty/a przez koncert.</p>
+<p>Y: Ale on jest w sobotę.</p>
+<p>X: Tak, ale każdego dnia mamy <strong>próby</strong>. Musimy ćwiczyć granie razem.)<br/><br/></p>
+<p>5. cello</p>
+<p>(X: To duże skrzypce.</p>
+<p>Y: To nie są skrzypce. To <strong>wiolonczela</strong>. Gra się na niej na siedząco.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. rehearse </p>
+<p><strong>Uzasadnienie</strong>: pozostałe wyrazy to rodzaje reakcji publiczności, dlatego <em>rehearse </em>(mieć próbę) nie pasuje. </p>
+<p>2. gig</p>
+<p><strong>Uzasadnienie</strong>: pozostałe wyrazy to rodzaje sprzętu, dlatego <em>gig </em>(koncert) nie pasuje.</p>
+<p>3. gear</p>
+<p><strong>Uzasadnienie</strong>: pozostałe wyrazy to czynności wykonywane przez muzyków, dlatego <em>gear </em>(sprzęt) nie pasuje.</p>
+<p>4. soundproof</p>
+<p><strong>Uzasadnienie</strong>: pozostałe wyrazy to rodzaje instrumentu, dlatego <em>soundproof </em>(dźwiękoszczelny) nie pasuje.</p>
+<p>5. double bass</p>
+<p><strong>Uzasadnienie</strong>: pozostałe wyrazy to rodzaje piosenek, dlatego <em>double bass </em>(podwójny bas) nie pasuje.</p><br>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Zdania w czasie <em>present perfect continuous</em> tworzymy w następujący sposób:</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Twierdzące:</span> podmiot + <em>have/has</em> <em>been</em> + czasownik z -ing + reszta zdania.</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Przeczące:</span> podmiot + <em>haven't/hasn't been</em> + czasownik z -ing +  reszta zdania.</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Pytania:</span> (zaimek pytający) + <em>have/has</em> + podmiot + <em>been </em>+ czasownik z -ing + reszta pytania.</strong></p>
+<p><strong>Czasownik posiłkowy w czasach <em>present perfect</em> ma formę <em>have</em> we wszystkich osobach oprócz 3. osoby pojedynczej (<em>he/she/it</em>). W tej osobie ma formę <em>has.</em> </strong></p>
+<hr/>
+<p> </p>
+<p>1. have been dancing  </p>
+<p>2. has been swimming</p>
+<p>3. has been running</p>
+<p>4. have been rehearsing</p>
+<p><s class="odr-strikethrough">learn</s>, <s class="odr-strikethrough">listen</s></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Czasu <em>present perfect simple </em>używamy m.in. do opisania doświadczeń życiowych.</strong></p>
+<p><strong>Konstrukcja:</strong></p>
+<p><strong><span style="text-decoration: underline;">Twierdzące</span>: podmiot + <em>have/has</em> + <em>past participle </em>(końcówka -ed lub III kolumna w tabeli czasowników nieregularnych)</strong><br/><strong><span style="text-decoration: underline;">Przeczące</span>: podmiot + <em>haven't/hasn't</em> + <em>past participle</em></strong><br/><strong><span style="text-decoration: underline;">Pytania</span>: (zaimek pytający) + <em>have/has</em> + podmiot + <em>past participle</em></strong></p>
+<p><strong>Czasownik posiłkowy w czasach present perfect ma formę <em>have</em> we wszystkich osobach oprócz 3. osoby pojedynczej (<em>he/she/it</em>). W tej osobie ma formę <em>has</em>. </strong></p>
+<hr/>
+<p> </p>
+<p>1. have closed  </p>
+<p>2. Have you ever heard</p>
+<p>3. have never learnt</p>
+<p>4. have never listened</p>
+<p>5. have moved</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. I've been practising </p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing). </p>
+<p>2. has seen</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność została do tej pory wykonana określoną ilość razy, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>3. have never heard</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy czyjeś życiowe doświadczenie, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>4. I've been watching</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić jej proces, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
+<p>5. 've been building</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
+<p>6. 've had</p>
+<p><strong>Uzasadnienie:</strong> w tym znaczeniu, czasownik <em>have</em> (posiadać) jest statyczny, dlatego nie możemy użyć go w formie ciągłej. Należy wybrać czas <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Have you been crying </p>
+<p><strong>Uzasadnienie:</strong> kiedy pytamy o czynność, która była wykonywana przez dłuższy czas, a jej (negatywny) efekt jest nadal widoczny, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing). </p>
+<p>2. I've been doing, it has strengthened </p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić jej proces, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing). Kiedy przedstawiamy rezultat czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>3. Has he ever released</p>
+<p><strong>Uzasadnienie:</strong> opisując życiowe doświadczenia używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>4. have you known</p>
+<p><strong>Uzasadnienie:</strong> w tym znaczeniu, czasownik <em>know </em>(wiedzieć) jest statyczny, dlatego nie możemy użyć go w formie ciągłej. Należy użyć czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>5. have you been performing</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o długość wykonywania nieukończonej czynności, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
+<p>6. She's been studying</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. have ... looked</p>
+<p><strong>Uzasadnienie:</strong> w tym znaczeniu, czasownik <em>look</em> (wyglądać) jest statyczny, dlatego nie możemy użyć go w formie ciągłej. Należy użyć czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).  </p>
+<p>2. have ... been</p>
+<p><strong>Uzasadnienie:</strong> w tym znaczeniu, czasownik <em>to be</em><strong> </strong>(być) jest statyczny, dlatego nie możemy użyć go w formie ciągłej. Należy użyć czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>3. have been touring</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
+<p>4. Have ... seen</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o zakończoną czynność, która odbyła się w nieokreślonym momencie w przeszłości, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>5. haven't said</p>
+<p><strong>Uzasadnienie:</strong> kiedy skupiamy się na rezultacie pojedynczej czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>6. have been saying</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy czynność, żeby podkreślić jej wielokrotne powtarzanie (<em>all the time </em>- cały czas), używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. been going on </p>
+<p><strong>Uzasadnienie:</strong> kiedy pytamy o czas trwania czynności, która nie została zakończona, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing). </p>
+<p>2. has been bringing</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy czynność, żeby podkreślić jej wielokrotne powtarzanie, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
+<p>3. made</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o rezultat jakiejś czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>4. have uploaded</p>
+<p>5. have attended</p>
+<p><strong>Uzasadnienie (4-5):</strong> kiedy przedstawiamy rezultat zakończonej czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p><br>

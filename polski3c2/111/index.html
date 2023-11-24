@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Fragmenty utworu, w których ujawnia siê podmiot liryczny: </p>
+<ul>
+<li><em>nic nam nie grozi, nikt o nas nie wie;</em></li>
+<li><em>Po³ó¿ mi rêkê pod senn¹ g³owê;</em></li>
+<li><em>Jesteœmy wolni, jesteœmy sami. </em></li>
+</ul>
+<p> </p>
+<p>Ujawnienie siê podmiotu lirycznego zostaje poprzedzone niejako odsuniêciem siê od rzeczywistoœci i ca³ego œwiata. Przyroda zapewnia przedstawionej parze intymn¹ atmosferê spotkania - z dala od innych ludzi - staje siê œwiadkiem ich schadzki. Dopiero w takich okolicznoœciach osoba mówi¹ca decyduje siê na opisanie swych uczuæ wzglêdem ukochanego cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W utworze silnie zaznacza siê podzia³ na trzy perspektywy czasowe: przesz³oœæ, teraŸniejszoœæ i przysz³oœæ. Zostaj¹ one jednak ukazane przez pryzmat konkretnej jednostki oraz jej prze¿yæ - te zaœ kszta³tuj¹ stosunek emocjonalny do wskazanych p³aszczyzn czasu. Wczoraj, a wiêc przesz³oœæ, nie ma ¿adnego znaczenia dla podmiotu lirycznego, poniewa¿ nale¿y do historii, jest czymœ minionym. Z tego te¿ powodu osoba mówi¹ca nie poœwiêca przysz³oœci zbyt wiele uwagi i zauwa¿a: "Wczoraj - zginê³o [...]". Ca³e zainteresowanie podmiotu skupia siê natomiast na teraŸniejszoœci, która staje siê Ÿród³em ekscytacji, nowych odkryæ. Stanowi ona Ÿród³o wolnoœci i szczêœcia, poniewa¿ to czas, kiedy podmiot liryczny mo¿e nacieszyæ siê obecnoœci¹ swego wybranka. Zgodnie z zasad¹ <em>carpe diem </em>wykorzystuje dzieñ na schadzkê, która pobudza jego zmys³y, a przy tym prowadzi do zapomnienia o ca³ym œwiecie. Najwa¿niejsze staje siê wy³¹cznie to, co tu i teraz, zwi¹zana z tym intensywnoœæ doœwiadczeñ oraz niepowtarzalnoœæ sytuacji. Osoba mówi¹ca z tego powodu nie chce równie¿ zastanawiaæ siê nad przysz³oœci¹. Jest ona mglista, dlatego te¿ podmiot pragnie siê skupiæ na aktualnych prze¿yciach i przyjemnoœci. Beztroska teraŸniejszoœæ jest dla niego kluczow¹ wartoœci¹.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Natura to bez w¹tpienia istotny element wiersza. Stanowi sceneriê schadzki podmiotu lirycznego, ale równie¿ realizuje pewn¹ wizjê rzeczywistoœci - przyjaznej, harmonijnej. Podkreœla tym samym sielankowy oraz kameralny charakter spotkania osoby mówi¹cej z jej wybrankiem, a tak¿e zmys³owy wymiar sytuacji. Zapewnia im odosobnienie - z dala od ludzi. Koresponduje ze stanem ducha podmiotu lirycznego, który odczuwa spokój i radoœæ zwi¹zan¹ ze sw¹ aktualn¹ sytuacj¹. Pobudza te¿ jego zmys³y, o czym œwiadcz¹ s³owa: "œród zió³ pachn¹cych, pod b³êkitami", "Koniki polne w kamieniach dzwoni¹". Jednoczeœnie przyroda staje siê mimowolnym stra¿nikiem tajemnicy przedstawionej w utworze pary, zapewnia im dyskrecjê: "nic nam nie grozi, nikt o nas nie wie; ptak w migda³owym ukryty drzewie / potrz¹sa skrzyd³em [...]". Mo¿na te¿ powiedzieæ, ¿e wyzwala w osobie mówi¹cej poczucie wolnoœci oraz beztroski. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<table border="1" style="border-collapse:collapse;width:739px;height:904px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:242.95px;height:17px;"><strong>Œrodek</strong></td>
+<td style="background-color:#aed581;text-align:center;width:242.95px;height:17px;"><strong>Przyk³ad</strong></td>
+<td style="background-color:#aed581;text-align:center;width:243.1px;height:17px;"><strong>Funkcja </strong></td>
+</tr>
+<tr style="height:126px;">
+<td style="width:242.95px;text-align:center;height:126px;">epitety</td>
+<td style="width:242.95px;text-align:center;height:126px;">
+<p><em><span style="text-decoration:underline;">nisk¹</span> buczyn¹, <span style="text-decoration:underline;">ostrym</span> ja³owcem </em></p>
+<p> </p>
+<p><em>na <span style="text-decoration:underline;">rozpalonym</span> zboczu rozœciele</em></p>
+</td>
+<td style="width:243.1px;text-align:center;height:126px;">Mnogoœæ epitetów oddzia³uje na plastycznoœæ przedstawienia, oddaje piêkno i ró¿norodnoœæ œwiata natury. Sprawia, ¿e utwór wp³ywa na ró¿ne zmys³y czytelnika. </td>
+</tr>
+<tr style="height:144px;">
+<td style="width:242.95px;text-align:center;height:144px;">porównanie</td>
+<td style="width:242.95px;text-align:center;height:144px;">
+<p><em>¿agiel w b³êkicie jak skrzyd³o bia³y</em></p>
+<p> </p>
+<p><em>Serce zamiera, jak ptak pod d³oni¹</em></p>
+</td>
+<td style="width:243.1px;text-align:center;height:144px;">Porównanie zaznacza podobieñstwo zestawionych ze sob¹ elementów. Poprzez wskazanie analogii u³atwia czytelnikowi zrozumienie sensu dzie³a, poszerza perspektywê odbioru. </td>
+</tr>
+<tr style="height:126px;">
+<td style="width:242.95px;text-align:center;height:126px;">powtórzenie</td>
+<td style="width:242.95px;text-align:center;height:126px;">
+<p><em>Dom jest daleko, œwiat jest daleko</em></p>
+<p> </p>
+<p><em>Jesteœmy wolni, jesteœmy sami  </em></p>
+</td>
+<td style="width:243.1px;text-align:center;height:126px;">Powtórzenia akcentuj¹ sytuacjê podmiotu lirycznego, jego oddalenie siê od rzeczywistoœci, ale tak¿e radoœæ zwi¹zan¹ z aktualn¹ sytuacj¹. </td>
+</tr>
+<tr style="height:224px;">
+<td style="width:242.95px;text-align:center;height:224px;">wyliczenie</td>
+<td style="width:242.95px;text-align:center;height:224px;">
+<p><em>[...] nad dzikim. górskim manowcem.</em></p>
+<p> </p>
+<p><em>Wczoraj - zginê³o, Dzisiaj - jest nowe,</em></p>
+<p><em>Jutro - pod ¿aglem bia³ym na g³êbi</em></p>
+<p><em>œciga lec¹ce stado go³êbi.</em></p>
+</td>
+<td style="width:243.1px;text-align:center;height:224px;">Wyliczenia ubogacaj¹ przekaz. Sugeruj¹ tak¿e ró¿norodnoœæ oraz bogactwo rzeczywistoœci znanej  podmiotowi lirycznemu. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:242.95px;text-align:center;height:17px;">metafora</td>
+<td style="width:242.95px;text-align:center;height:17px;">
+<p><em>a Jutra nie chc¹ widzieæ za mg³ami</em></p>
+<p><em>oczy zamkniête poca³unkami</em></p>
+</td>
+<td style="width:243.1px;text-align:center;height:17px;">W oryginalny sposób komentuje sposób postrzegania rzeczywistoœci przez cz³owieka oddaj¹cego siê romantycznym uniesieniom. Prowadzi tak¿e do nadania wyrazom zupe³nie nowych i zaskakuj¹cych sensów. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:242.95px;text-align:center;height:17px;">onomatopeje</td>
+<td style="width:242.95px;text-align:center;height:17px;"><em>Koniki polne w kamieniach dzwoni¹</em></td>
+<td style="width:243.1px;text-align:center;height:17px;">Wzmacniaj¹ warstwê dŸwiêkow¹ utworu. Sugeruj¹ sielankow¹ i harmonijn¹ wizjê natury, która jest przyjazna cz³owiekowi. </td>
+</tr>
+<tr>
+<td style="width:242.95px;text-align:center;">personifikacja</td>
+<td style="width:242.95px;text-align:center;"><em>Czas coraz pust¹ nape³nia czaszê...</em></td>
+<td style="width:243.1px;text-align:center;">Za jej spraw¹ pojêcie abstrakcyjne zyskuje cechy typowe dla cz³owieka - przestaje byæ czymœ odleg³ym i obcym. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowe fragmenty utworu:</p>
+<ul>
+<li><em>B³êkitna chwila; </em></li>
+<li><em>zdeptany pio³un woni¹ oddycha;</em></li>
+<li><em>Jutro - pod ¿aglem bia³ym na g³êbi;</em></li>
+<li><em>oczy zamkniête poca³unkami. </em></li>
+</ul>
+<p> </p>
+<p>Synestezja zasadniczo wzmacnia poetyckoœæ oraz niezwyk³oœæ przedstawienia, pobudza zmys³y odbiorcy. Pozwala tak¿e na przedstawienie subiektywnej wizji œwiata - poprzez pryzmat wra¿liwoœci osoby mówi¹cej. Pragnie siê ona cieszyæ chwil¹ oraz towarzystwem ukochanego cz³owieka, z tego te¿ powodu w intensywny oraz wielowymiarowy sposób odbiera rzeczywistoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<table border="1" style="border-collapse:collapse;width:699px;height:540px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:225.26px;"><strong>Czasownik</strong></td>
+<td colspan="2" style="background-color:#aed581;text-align:center;width:466.74px;"><strong>Formy gramatyczne </strong></td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">zniknie</td>
+<td rowspan="21" style="width:115.521px;text-align:center;">strona czynna</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. przysz³y, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">ujdzie</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. przysz³y, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">rozœciele</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. przysz³y, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">wstrz¹œnie</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. przysz³y, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">jest*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">nie grozi</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">nie wie*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">potrz¹sa</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">gwi¿d¿e</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">oddycha</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">Po³ó¿</td>
+<td style="width:348.219px;text-align:center;">t. rozkazuj¹cy, 2. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">zginê³o</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. przesz³y, 3. os., lp, r. nijaki</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">jest nowe*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp, r. nijaki</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">œciga</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">Jesteœmy wolni*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 1. os., lm, r. mêskoosobowy</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">jesteœmy sami*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 1. os., lm, r. mêskoosobowy</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">dzwoni¹</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lm</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">zamiera*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">nape³nia</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">jest nasze*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lp, r. nijaki</td>
+</tr>
+<tr>
+<td style="width:225.26px;text-align:center;">nie chc¹ widzieæ*</td>
+<td style="width:348.219px;text-align:center;">t. oznajmuj¹cy, cz. teraŸniejszy, 3. os., lm</td>
+</tr>
+</tbody>
+</table>
+<p>*Czasowniki nazywaj¹ce stany </p>
+<p> </p>
+<p>Zastosowane czasowniki, nazywaj¹ce stany i czynnoœci, s³u¿¹ ukonkretnieniu przedstawionej sytuacji, charakteryzuj¹ wybrane elementy œwiata. Pozwalaj¹ tak¿e na zaprezentowanie przemian, które zachodz¹ w ukazanej rzeczywistoœci, ulotnoœci tego momentu. Ponadto za ich spraw¹ odbiorca ma wra¿enie uczestnictwa, naocznoœci, co wynika z przewagi form w czasie teraŸniejszym. Doœwiadcza on tego, równie¿ za pomoc¹ zmys³ów, co staje siê udzia³em podmiotu lirycznego. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><em>B³êkitna chwila</em> odwo³uje siê do poetyki impresjonistycznej. Przede wszystkim utwór ten stanowi zapis subiektywnych prze¿yæ podmiotu lirycznego. Jego refleksja koncentruje siê na ulotnych momentach oraz wra¿eniach (zw³aszcza zmys³owych). Ich Ÿród³o stanowi schadzka z ukochanym - osoba mówi¹ca przedstawia rzeczywistoœæ przez pryzmat swej wra¿liwoœci i uczuæ. Sw¹ uwagê skupia przede wszystkim na œwiecie natury - wa¿nym temacie dzie³ impresjonistów. Ponadto poetka w swym utworze odwo³uje siê do b³êkitu - koloru typowego dla impresjonizmu. Prowadzi on do zatarcia granicy miêdzy niebem a wod¹, ich konturów, zdaje siê ³¹czyæ ró¿ne przestrzenie. Kolejnym elementem sugeruj¹cym impresjonistyczny charakter dzie³a jest obecnoœæ epitetów wskazuj¹cych na barwê ("B³êkitna chwila", "¿agiel w b³êkicie jak skrzyd³o bia³y") - jasne i czyste kolory wp³ywaj¹ na plastycznoœæ przedstawienia. Znacz¹ce jest równie¿ to, i¿ stan psychiczny podmiotu koresponduje ze sposobem przedstawienia natury. Wspomnian¹ inspiracjê potwierdza równie¿ sam tytu³ wiersza, który stanowi przejaw synestezji - po³¹czenia ró¿nych wra¿eñ zmys³owych, czy nastrojowoœæ przedstawienia. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Utwór poetki jest poœwiêcony wra¿eniom zwi¹zanym z towarzystwem ukochanej osoby oraz temu, jak œwiat natury wspó³gra z prze¿yciami podmiotu lirycznego. Kompozycja utworu bez w¹tpienia odzwierciedla sielankowy, harmonijny oraz pozytywny wizerunek rzeczywistoœci. <em>B³êkitna chwila</em> to bowiem przyk³ad wiersza sylabicznego. Wyró¿nia siê regularn¹ budow¹ - ka¿da z czterech strof sk³ada siê z szeœciu wersów. W nich wystêpuje zaœ identyczna liczba sylab (po dziesiêæ) oraz œredniówka po pi¹tej sylabie. Zabiegi te, podobnie jak obecnoœæ rymów parzystych, wzmacniaj¹ ponadto rytmicznoœæ utworu. </p>
+<p>Równie¿ poetyka wiersza jest zwi¹zana z podjêtym zagadnieniem. Poetka wykorzystuje rozmaite œrodki stylistyczne, które ubogacaj¹ sposób przedstawienia, a jednoczeœnie wp³ywaj¹ na zmys³owe doœwiadczenie rzeczywistoœci. Wœród nich mo¿na wymieniæ m.in.:</p>
+<ul>
+<li>epitety -&gt; "na rozpalonym zboczu", "zdeptany pio³un";</li>
+<li>metafory -&gt; "serce zamiera, jak ptak pod d³oni¹";</li>
+<li>wyliczenia -&gt; [...] nad dzikim, górskim manowcem";</li>
+<li>powtórzenia -&gt; "Jesteœmy wolni, jesteœmy sami";</li>
+<li>elipsy -&gt; "Jutro - pod ¿aglem bia³ym na g³êbi";</li>
+<li>onomatopeje -&gt; "Koniki polne w kamieniach dzwoni¹";</li>
+<li>porównania -&gt; "¿agiel w b³êkicie jak skrzyd³o bia³y".</li>
+</ul>
+<p>Zabiegi te buduj¹ wizjê pozytywnej rzeczywistoœci, która sprzyja kochankom. Stanowi t³o ich schadzki, ale staje siê te¿ stra¿nikiem ³¹cz¹cego ich uczucia, zapewnia odosobnienie - ma sielankowy charakter. W utworze tym do g³osu dochodzi tak¿e poetyka impresjonistyczna. Przejawia siê nie tylko w zapisie ulotnego momentu (najwa¿niejsze dzieje siê w aktualnej chwili), lecz tak¿e w skupieniu na œwiecie natury, zainteresowaniu barwami, subiektywizmie obrazowania: "na rozpalonym zboczu rozœciele / wiatr przedwieczorny pachn¹ce ziele". Poetyka utworu opiera siê tak¿e na wykorzystaniu motywów, elementów wywo³uj¹cych pozytywne skojarzenia. To m.in.: b³êkitne niebo, woda, natura czy zastosowane kolory (b³êkit, biel), sugeruj¹ce spokój oraz niewinnoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Podobieñstwa ³¹cz¹ce obraz i wiersz: </p>
+<ul>
+<li>ukazuj¹ pejza¿;</li>
+<li>przedstawiaj¹ harmonijny œwiat natury, który zachwyca swym piêknem;</li>
+<li>oddaj¹ ulotne wra¿enia;</li>
+<li>wykorzystuj¹ te same elementy obrazowania (¿agiel, b³êkitne niebo, woda, roœliny);</li>
+<li>reprezentuj¹ optymistyczn¹, pozytywn¹ wizjê rzeczywistoœci;</li>
+<li>wyró¿niaj¹ siê nastrojowoœci¹;</li>
+<li>cechuj¹ siê subiektywizmem przedstawienia;</li>
+<li>nawi¹zuj¹ do impresjonizmu. </li>
+</ul><br>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. utilities</p>
+<p>(Stare miasto jest zatłoczone i brakuje w nim podstawowych <strong>usług komunalnych</strong>.) </p>
+<p>2. current</p>
+<p>(Przyznaję, że często mam debet na moim <strong>bieżącym</strong> rachunku.)</p>
+<p>3. hideous</p>
+<p>(Te kolory są tak okropne, że całe miejsce wygląda <strong>ohydnie</strong>.)</p>
+<p>4. accuse</p>
+<p>(Nie możemy <strong>oskarżać</strong> Emily o niezapłacenie zaliczki na czas.)</p>
+<p>5. residents</p>
+<p>(Ilu <strong>mieszkańców</strong> jest w twoim bloku?)</p>
+<p>6. order</p>
+<p>(Mam stałe <strong>zlecenie</strong> na rachunek za telefon, żebym nie zapomniał/a go zapłacić.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. hustle <strong>and</strong> bustle</p>
+<p><strong>Uzasadnienie</strong>: <em>hustle and bustle</em> - zgiełk i zamęt.   </p>
+<p>2. off the <strong>beaten</strong> track</p>
+<p><strong>Uzasadnienie</strong>: <em>off the beaten track -</em> na uboczu. </p>
+<p>3. congratulated me <strong>on</strong> getting</p>
+<p><strong>Uzasadnienie</strong>: <em>congratulate (sb) on sth</em> - pogratulować (komuś) czegoś. </p>
+<p>4. refused <strong>to</strong> pay </p>
+<p><strong>Uzasadnienie</strong>: <em>refuse to do sth</em> - odmówić zrobienia czegoś. </p>
+<p>5. to <strong>make</strong> ends meet</p>
+<p><strong>Uzasadnienie</strong>: <em>to make ends meet</em> - wiązać koniec z końcem.</p>
+<p>6. entitled <strong>to</strong> low interest rates</p>
+<p><strong>Uzasadnienie</strong>: <em>entitled to sth</em> - mieć prawo do czegoś. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. had</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która miała miejsce przed innym wydarzeniem z przeszłości - czas <em>past perfect</em>.  </p>
+<p>2. make</p>
+<p><strong>Uzasadnienie</strong>: <em>make monthly payments</em> - dokonywać comiesięcznych opłat. </p>
+<p>3. out</p>
+<p><strong>Uzasadnienie</strong>: <em>take out insurance</em> - wykupić ubezpieczenie.</p>
+<p>4. for</p>
+<p><strong>Uzasadnienie</strong>: <em>apologise for</em> - przeprosić za.</p>
+<p>5. of</p>
+<p><strong>Uzasadnienie</strong>: <em>accuse sb of sth</em> - oskarżyć kogoś o coś.</p>
+<p>6. in</p>
+<p><strong>Uzasadnienie</strong>: <em>in debt</em> - zadłużony/a. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. if I was busy that  </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna<em>,</em> pytanie wprowadzone za pomocą <em>if</em> (czy), czas <em>past simple</em>, szyk zdania twierdzącego.  </p>
+<p>2. whether he had called </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna<em>,</em> pytanie wprowadzone za pomocą <em>whether </em>(czy), czas <em>past perfect</em>, szyk zdania twierdzącego. </p>
+<p>3. insisted on treating me to </p>
+<p><strong>Uzasadnienie</strong>: <em>insist</em> + przyimek + -<em>ing</em>.</p>
+<p>4. couldn't find her keys</p>
+<p><strong>Uzasadnienie</strong>: mowa zależna, <em>can't</em> zmienia się w <em>couldn't</em>. </p>
+<p>5. his property must have been </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna<em>,</em> czasownik modalny <em>must</em> w czasie przeszłym. </p>
+<p>6. to help her get </p>
+<p><strong>Uzasadnienie</strong>: <em>ask </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. <span style="text-decoration: underline;">in</span>come /ˈɪŋ.kʌm/</p>
+<p>2. <span style="text-decoration: underline;">in</span>terests /<span class="ipa dipa lpr-2 lpl-1">ˈɪn.trəst</span>/ </p>
+<p>3. a<span style="text-decoration: underline;">ttrac</span>tive /<span class="ipa dipa lpr-2 lpl-1">əˈtræk.tɪv</span>/</p>
+<p>4. <span style="text-decoration: underline;">prop</span>erty <span class="daud"> </span><span class="pron dpron">/<span class="ipa dipa lpr-2 lpl-1">ˈprɒp.ə.ti</span>/</span></p>
+<p><span class="pron dpron">5. cre<span style="text-decoration: underline;">a</span>tive /<span class="ipa dipa lpr-2 lpl-1">kriˈeɪ.tɪv</span>/</span></p>
+<p><span class="pron dpron">6. ad<span style="text-decoration: underline;">van</span>tage /<span class="ipa dipa lpr-2 lpl-1">ədˈvɑːn.tɪdʒ</span>/</span></p>
+<p><span class="pron dpron">7. e<span style="text-decoration: underline;">xpens</span>es /<span class="ipa dipa lpr-2 lpl-1">ɪkˈ<span style="text-decoration: underline;">spen</span>s.ɪz</span>/</span></p>
+<p><span class="pron dpron">8. a<span style="text-decoration: underline;">ffo</span>rdable /<span class="ipa dipa lpr-2 lpl-1">əˈfɔː.də.b<span class="sp dsp">ə</span>l/</span></span></p>
+<p><span class="pron dpron"><span class="ipa dipa lpr-2 lpl-1">9. co<span style="text-decoration: underline;">mmu</span>nicate /kəˈmjuː.nɪ.keɪt/</span></span></p>
+<p><span class="pron dpron"><span class="ipa dipa lpr-2 lpl-1">10. <span style="text-decoration: underline;">reg</span>ular /ˈreɡ.jə.lə<span class="sp dsp">r</span>/</span></span></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

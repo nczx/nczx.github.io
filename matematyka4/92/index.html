@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="width: 573px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 124px;"> <tbody> <tr> <td style="width: 569px;"> <p><strong>Pole powierzchni całkowitej prostopadłościanu</strong> o krawędziach długości <strong>a</strong>, <strong>b</strong>, <strong>c</strong> opisuje wzór:</p> <p><span> <math-expr expr="P_c=2ab+2ac+2bc" syntax="text"></math-expr> </span>  </p> </td> </tr> </tbody> </table> <p> </p> <p>Dany jest prostopadłościan o krawędziach podstawy długości <strong>4 cm</strong> i <strong>6 cm</strong>. </p> <hr/> <p><strong>a)</strong></p> <p>Niech <strong>H</strong> będzie długością wysokości tego prostopadłościanu. </p> <p>Pole powierzchni całkowitej tego prostopadłościanu wynosi <strong>100 cm<sup>2</sup></strong>. </p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru opisującego pole powierzchni całkowitej prostopadłościanu</span> mamy:  </p> <p><span> <math-expr expr="2 cdot 4 cdot 6 + 2 cdot 4 cdot H + 2 cdot 6 cdot H = 100" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="48+8H+12H=100" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="48+20H=100" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="20H=52 \ \ \ |:20" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='ul(ul(H=2,6 \ ["cm"]))' syntax="text"></math-expr> </span>      </p> <hr/> <p><strong>b)</strong></p> <p>Niech <strong>H</strong> będzie długością wysokości tego prostopadłościanu. </p> <p>Pole powierzchni bocznej stanowi <strong>60%</strong> pola powierzchni całkowitej, czyli mamy:</p> <p><span> <math-expr expr="P_b=0,6 P_c" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="2 cdot 4 cdot H + 2 cdot 6 cdot H = 0,6(2 cdot 4 cdot 6 +2 cdot 4 cdot H + 2 cdot 6 cdot H)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="8H+12H=0,6(48+20H)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="20H=28,8+12H" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="8H=28,8 \ \ \ |:8" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='ul(ul(H=3,6 \ ["cm"]))' syntax="text"></math-expr> </span>     </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="height: 94px; width: 576px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 572px;"> <p><strong>Pole powierzchni całkowitej sześcianu</strong> o krawędzi długości <strong>a</strong> opisuje wzór</p> <p><span> <math-expr expr="P_c=6a^2" syntax="text"></math-expr> </span>  </p> </td> </tr> </tbody> </table> <p> </p> <p>Do wykonania modelu sześcianu zużyto <strong>1620 cm<sup>2</sup></strong> kartonu. Z treści zadania wynika, że zakładki stanowiły <strong>20%</strong> zużytego kartonu. Stąd</p> <p><span> <math-expr expr="20% * 1620 = 2/10 * 1620 = 324" syntax="text"></math-expr> </span>  </p> <p>Czyli pole powierzchni samego sześcianu to  </p> <p><span> <math-expr expr='1620 - 324 = 1296\ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na pole powierzchni całkowitej sześcianu</span> mamy:</p> <p><span> <math-expr expr="6a^2=1296\ \ \ \ \ |:6" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="a^2 = 216 \ \ \ ^^ \ \ \ a&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='a=6\sqrt{6}\ ["cm"]' syntax="text"></math-expr> </span>    </p> <p><strong>Odp.</strong> Krawędź tego sześcianu ma długość <strong>6√6 cm</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Suma oczek znajdujących się na przeciwległych ścianach sześciennej kostki do gry jest równa <strong>7</strong>.</p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Na przeciwległych ścianach znajdują się pola:</p>
+<ul>
+<li>
+<strong>2</strong> i <strong>5</strong>
+</li>
+<li>
+<strong>6</strong> i <strong>1</strong>
+</li>
+<li>
+<strong>3</strong> i <strong>4</strong>  </li>
+</ul>
+<p>Każda z sum dwóch liczb jest równa <strong>7</strong>. Przedstawiona siatka może być siatką tej kostki. </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Na przeciwległych ścianach znajdują się pola:</p>
+<ul>
+<li>
+<strong>4</strong> i <strong>3</strong>
+</li>
+<li>
+<strong>5</strong> i <strong>2</strong>
+</li>
+<li>
+<strong>1</strong> i <strong>6</strong>
+</li>
+</ul>
+<p>Każda z sum dwóch liczb jest równa <strong>7</strong>. Przedstawiona siatka może być siatką tej kostki. </p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Na przeciwległych ścianach znajdują się pola:</p>
+<ul>
+<li>
+<strong>3</strong> i <strong>4</strong>
+</li>
+<li>
+<strong>6</strong> i <strong>2</strong>
+</li>
+<li>
+<strong>1</strong> i <strong>5</strong>
+</li>
+</ul>
+<p>Druga suma jest równa <strong>8</strong>, a trzecia suma jest równa <strong>6</strong>. Przedstawiona siatka <strong><span style="text-decoration:underline;">nie</span></strong> może być siatką tej kostki. </p>
+<hr/>
+<p><strong>d) </strong></p>
+<p>Na przeciwległych ścianach znajdują się pola:</p>
+<ul>
+<li>
+<strong>3</strong> i <strong>4</strong>
+</li>
+<li>
+<strong>1</strong> i <strong>6</strong>
+</li>
+<li>
+<strong>2</strong> i <strong>5</strong>
+</li>
+</ul>
+<p>Każda z sum dwóch liczb jest równa <strong>7</strong>. Przedstawiona siatka może być siatką tej kostki. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Dany jest <strong><span style="text-decoration: underline;">graniastosłup prawidłowy trójkątny</span></strong>.</p> <p>Podstawą graniastosłupa prawidłowego trójkątnego jest trójkąt równoboczny.</p> <p>Obliczmy pole podstawy tego graniastosłupa, korzystając ze <span style="text-decoration: underline;">wzoru na pole trójkąta równobocznego</span>. Mamy:  </p> <p><span> <math-expr expr='P_p=(4^2sqrt3)/4=(16sqrt3)/4=4sqrt3\ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Powierzchnia boczna tego graniastosłupa składa się z trzech prostokątów o wymiarach <strong>4 cm</strong> <strong>x 10 cm</strong>. Obliczmy pole powierzchni bocznej tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='P_b=3*4*10=120\ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni całkowitej tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='P_c=2P_p+P_b=2*4sqrt3+120=ul(ul(8sqrt3+120\ ["cm"^2]))' syntax="text"></math-expr> </span>  </p> <hr/> <p>Dany jest <strong><span style="text-decoration: underline;">graniastosłup prawidłowy sześciokątny</span></strong>. </p> <p>Podstawą graniastosłupa prawidłowego sześciokątnego jest sześciokąt foremny.</p> <p>Każdy sześciokąt foremny o boku długości <strong>a</strong> zbudowany jest z sześciu przystających trójkątów równobocznych o boku długości <strong>a</strong>.</p> <p>Możemy więc obliczyć pole powierzchni podstawy tego graniastosłupa, jako pole sześciu trójkątów równobocznych o boku długości <strong>2 cm</strong>. Mamy:</p> <p><span> <math-expr expr='P_p=6 cdot P_Delta=6*(2^2sqrt3)/4=6*(4sqrt3)/4=6sqrt3\ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Powierzchnia boczna tego graniastosłupa zbudowana jest z sześciu przystających prostokątów o wymiarach<strong> 2 cm x 15 cm</strong>. Wyznaczmy pole powierzchni bocznej tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='P_b=6*2*15=180\ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni całkowitej. Mamy:</p> <p><span> <math-expr expr='P_c=2P_p+P_b=2*6sqrt3+180=ul(ul(12sqrt3+180\ ["cm"^2]))' syntax="text"></math-expr> </span>  </p> <hr/> <p>Jeśli pole powierzchni całkowitej jednego z tych graniastosłupów ma być o <strong>50%</strong> większe od pola powierzchni całkowitej drugiego graniastosłupa, to pole powierzchni jednego z tych graniastosłupów ma stanowić 150% pola powierzchni drugiego graniastosłupa. Sprawdźmy więc, czy zachodzi równość:</p> <p><span> <math-expr expr="150%*(8sqrt3+120)#=^?12sqrt3+180" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="1,5*(8sqrt3+120)#=^?12sqrt3+180" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="12sqrt3+180#=^?12sqrt3+180" syntax="text"></math-expr> </span>  </p> <p>Równość jest więc prawdziwa. </p> <p><strong>co kończy dowód.</strong></p><br>

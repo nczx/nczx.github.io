@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór Marii Pawlikowskiej-Jasnorzewskiej pt. <em>Mi³oœæ</em> sk³ada siê zaledwie z czterech wersów. Mimo tego odzwierciedlaj¹ one skomplikowane, nieraz sprzeczne uczucia podmiotu lirycznego. Opisuje on bowiem swoj¹ roz³¹kê z ukochanym, próbê zaakceptowania tej sytuacji. Mimo odejœcia osoba mówi¹ca nadal odczuwa mi³oœæ, nie mo¿e zapomnieæ o swym partnerze; œwiadczy o tym równie¿ to, i¿ zwraca siê bezpoœrednio do niego: "Nie widzia³am ciê ju¿ od miesi¹ca". Têsknota ³¹czy siê wiêc z rozczarowaniem i cierpieniem, poniewa¿ rozstanie wp³ywa na samopoczucie oraz nastrój bohaterki. Podkreœlaj¹ to zastosowane wyliczenia oraz powtórzenia: "[...] Jestem mo¿e bledsza, / trochê œpi¹ca, trochê bardziej milcz¹ca". Uczucia podmiotu lirycznego zostaj¹ tym samym ukazane w dyskretny i subtelny sposób. Sprzecznoœæ wra¿eñ podkreœla zaœ samo zakoñczenie utworu, które ma paradoksalny charakter: kobieta têskni bowiem za ukochanym, ale jednoczeœnie odkrywa, ¿e potrafi bez niego ¿yæ. Wskazuje wiêc ono na gorycz, ale tak¿e pogodzenie siê z sytuacj¹ - czas bowiem leczy rany. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Czas zostaje ukazany w wierszu jako czynnik, który wp³ywa na sytuacjê bohaterki oraz kszta³tuje jej stosunek do adresata wypowiedzi. Podmiot liryczny dog³êbnie bowiem odczuwa, ile minê³o od ostatniego spotkania z wybrankiem: "Nie widzia³am ciê ju¿ od miesi¹ca"; zdaje siê wiêc liczyæ ka¿dy dzieñ. Czas powoli leczy rany kobiety, która odkrywa, i¿ mimo cierpienia, mimo têsknoty potrafi dalej funkcjonowaæ bez swego ukochanego. Uœwiadamia jej w ten sposób, ¿e utrata kochanej osoby, mimo zwi¹zanego z tym bólu, nie stanowi koñca wszystkiego, poniewa¿ z ka¿dym kolejnym dniem zmienia siê perspektywa. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Puenta utworu zawiera siê w s³owach: "lecz widaæ mo¿na ¿yæ bez powietrza!", które zyskuj¹ ironiczny wymiar. Bohaterka utworu zdobywa siê bowiem na dystans wzglêdem swoich doœwiadczeñ, nie popada w egzaltacjê. Mi³oœæ wybranka, wczeœniej wrêcz niezbêdna do ¿ycia, okazuje siê mieæ mniejsze znaczenie ni¿ mog³oby siê wydawaæ. Ostatni wers utworu przypomina o tym, i¿ mimo cierpienia mo¿liwe jest ¿ycie bez ukochanej osoby. Zakochanie bowiem zmienia sposób postrzegania rzeczywistoœci, sprawia, i¿ cz³owiek nie wyobra¿a sobie egzystencji bez obecnoœci partnera. Ostatecznie jednak to czas weryfikuje trwa³oœæ uczucia oraz pozwala na powrót do równowagi. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Porównanie mi³oœci do Nike z Samotraki wzmacnia wymowê utworu oraz buduje okreœlon¹ wizjê tego uczucia. Sugeruje bowiem si³ê mi³oœci, jej zwyciêsk¹ moc. Mimo potencjalnego rozstania, koñca mi³oœci, nadal towarzyszy cz³owiekowi, poniewa¿ zdaje siê niezniszczalna. Trudno wiêc o niej zapomnieæ, gdy¿ ca³y czas mo¿e przypominaæ istocie ludzkiej o jej doœwiadczeniach. Ponadto ukazanie mi³oœci jako Nike sugeruje w pewien sposób, i¿ uczucie to przypomina walkê, w której tak¿e ktoœ zostaje ofiar¹ (np. jako odrzucony adorator).  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Poetka w swym utworze proponuje doœæ zaskakuj¹ce ujêcie tematu odrzuconej mi³oœci. Mimo bowiem jej tragicznego wymiaru uczucie to zostaje zestawione z wizerunkiem Nike - bogini zwyciêstwa. Okazuje siê tym samym byæ niezwyciê¿one, poniewa¿ mimo braku wzajemnoœci nie odchodzi w zapomnienie i dalej zaznacza sw¹ obecnoœæ w ¿yciu cz³owieka. Mi³oœæ jest wiêc silniejsza od czegokolwiek innego, chocia¿ niejednokrotnie staje siê Ÿród³em cierpienia. Jest celem, do którego siê d¹¿y - mimo niepowodzeñ i rozczarowañ ka¿dy jej pragnie. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Bohaterka utworu Marii Pawlikowskiej-Jasnorzewskiej nosi futro. Sugeruje ono dobr¹ sytuacjê materialn¹ kobiety, jej zami³owanie do wygody oraz luksusu. Œwiadczy tak¿e w pewien sposób o guœcie. Drugim atrybutem damy staje siê chiñski piesek, który wskazuje na to, i¿ jego w³aœcicielka pod¹¿a za mod¹, ale jednoczeœnie pragnie obdarzyæ mi³oœci¹ ¿yw¹ istotê. Parasol mo¿e œwiadczyæ o tym, ¿e bohaterka jest osob¹ przezorn¹, ostro¿n¹, jednak odgrodzon¹ od codziennoœci. Podobnie jednak jak ró¿a staje siê przy tym znakiem romantycznej i delikatnej natury damy, która zdaje siê ¿yæ w swoim œwiecie. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Puenta utworu Marii Pawlikowskiej-Jasnorzewskiej pog³êbia sens wiersza, wzbogaca go o uniwersaln¹ i egzystencjaln¹ refleksjê. Opis modnej i subtelnej damy zostaje bowiem zast¹piony pytaniem, które wykracza poza ukazan¹ codziennoœæ: "Jak¿e¿ ty zrobisz krok w nieskoñczonoœæ?". Ma ono ironiczny charakter, odwo³uje siê do stereotypu delikatnej oraz wykwintnej kobiety, która jest bezradna wobec rzeczywistoœci, zamkniêta w swoim œwiecie z dala od codziennoœci. Z tego te¿ powodu zakoñczenie utworu zmusza do zastanowienia siê nad tym, jak taka kobieta mo¿e radziæ sobie z przemijaniem, trudnymi momentami w ¿yciu czy te¿ sprawami ostatecznymi. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>Miniatury autorstwa Marii Pawlikowskiej-Jasnorzewskiej chêtnie odwo³uj¹ siê do tematyki uczuæ - najwa¿niejszym z nich staje siê mi³oœæ. Poetkê interesuje przede wszystkim zwi¹zana z ni¹ ambiwalencja. Mi³oœæ bowiem stanowi Ÿród³o szczêœcia, ale rozstanie z ukochan¹ osob¹ przyczynia siê do cierpienia i têsknoty. Sprzecznoœæ z tym zwi¹zana jest szczególnie obecna w <em>Mi³oœci</em>. Podmiot liryczny odkrywa, ¿e mo¿liwe jest ¿ycie po roz³¹ce, jednak mimo tego cz³owiek nadal odczuwa skutki tej sytuacji: "[...] Jestem mo¿e bledsza, / trochê œpi¹ca, trochê bardziej milcz¹ca". Prze¿ywa g³êbokie rozczarowanie, lecz z czasem odkrywa, i¿ mo¿liwe jest dalsze ¿ycie, a to, co zadawa³oby siê byæ niezbêdne do ¿ycia, wcale takie nie jest. Poezja Pawlikowskiej-Jasnorzewskiej podkreœla si³ê wspomnianego uczucia - nawet w sytuacji braku spe³nienia. <em>Nike</em> z kolei akcentuje potêgê mi³oœci - nawet koniec nie œwiadczy o jej œmierci. Zdaje siê nieœmiertelna, ca³y czas przypomina cz³owiekowi o jego pragnieniach, potrzebie bliskoœci z drugim cz³owiekiem.</p>
+<p>Drugim wa¿nym tematem w twórczoœci poetki staje siê kobieta - zw³aszcza w <em>Mi³oœci</em> i <em>La précieuse. </em>Jawi siê ona jako wra¿liwa jednostka, która doœwiadcza goryczy uczuæ, a przy tym stara siê dok³adnie zanalizowaæ i zrozumieæ swe prze¿ycia. Mimo cierpienia potrafi ona zachowaæ dystans wzglêdem dotychczasowych doœwiadczeñ ("lecz widaæ mo¿na ¿yæ bez powietrza!"). Ponadto w subtelny i pozbawiony dos³ownoœci sposób opisuje uczucia, nie popada w nadmiern¹ egzaltacjê. Inny typ kobiety ukazuje <em>La précieuse. </em>Utwór ten przedstawia bowiem delikatn¹ i wykwintn¹ bohaterkê. Pozornie banalna sytuacja (przejœcie przez ka³u¿ê) podkreœla jej bezradnoœæ wobec codziennoœci. Zdaje siê ona nieprzystosowana do codziennoœci, co prowokuje pytanie o to, jak bêdzie sobie radziæ z wiêkszymi trudnoœciami oraz sprawami ostatecznymi. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br>

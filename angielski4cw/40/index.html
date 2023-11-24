@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. buying more  </p>
+<p>2. not spending </p>
+<p>3. his friends swap things they</p>
+<p>4. do some work for the bike repair shop </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście</strong>: "And while customers might welcome the lower prices, what will happen when all of the competition has disappeared? They might find out that they have to pay more than in the past when one company controls the entire market." - I może klienci cieszą się z niższych cen, ale co będzie kiedy zniknie konkurencja? Być może będą musieli zapłacić więcej niż wcześniej, kiedy jedna firma będzie kontrolowała cały rynek. </p>
+<p>2. B</p>
+<p><strong>Fragment w tekście</strong>: "If you don't like getting up early, you don't have to. If you want a holiday, you don't need to ask.(...) Of course, if you are trying to raise a family or pay off a debt, then the lack of a guaranteed wage is a considerable drawback. Also, if there are no customers, there are no earnings." - Jeśli nie lubisz wcześnie wstawać - nie musisz. Jeśli potrzebujesz wolnego - nie musisz prosić. (...) Oczywiście jeśli próbujesz założyć rodzinę albo spłacić dług, wtedy brak gwarancji płacy jest wyraźną wadą. Dodatkowo, jeśli nie ma klientów - nie ma zarobków. </p>
+<p>3. D </p>
+<p><strong>Fragment w tekście</strong>: "And while customers might welcome the lower prices, what will happen when all of the competition has disappeared? They might find out that they have to pay more than in the past when one company controls the entire market." - I może klienci cieszą się z niższych cen, ale co będzie kiedy zniknie konkurencja? Być może będą musieli zapłacić więcej niż wcześniej, kiedy jedna firma będzie kontrolowała cały rynek.</p>
+<p>4. A</p>
+<p><strong>Fragment w tekście</strong>: "Have you ordered a takeaway by phone recently? Or perhaps called for a taxi to come to your home? If so, you might have used an app rather than calling the restaurant or a taxi by phone. Such apps link workers with customers and, when a worker responds and provides the service, they receive a portion of the fee." - Czy ostatnio zamawiałeś/aś jedzenie na wynos przez telefon? Albo może dzwoniłeś/aś po taksówkę? Jeśli tak, raczej użyłeś/aś aplikacji zamiast dzwonić do restauracji czy po taksówkę przez telefon. Takie aplikacje łączą pracowników z klientami i kiedy pracownik świadczy usługi - pobierają część zapłaty.</p>
+<p>5. C</p>
+<p><strong>Fragment w tekście</strong>: "However, some companies seem to exploit their workforce. Numerous workers had to sign an agreement not to work for anyone else so, if the company they were working for didn't have anything for them to do, they were stuck." - Jednakże niektóre firmy wydają się wykorzystywać swoich pracowników. Wielu z nich było zmuszonych podpisać zgodę na to, że nie będą pracowali dla nikogo innego, więc jeśli firma nie miała dla nich żadnego zadania do wykonania - byli w kropce. </p><br>

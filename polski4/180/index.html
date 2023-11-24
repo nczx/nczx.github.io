@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Na czynność podejmowaną przez podmiot liryczny wskazuje sam początek utworu: "Korzystam z najstarszego prawa wyobraźni / i po raz pierwszy przywołuję zmarłych". Osoba mówiąca, zwracając się do czaszki Jorika, zastanawia się nad tytułową kwestią rehabilitacji, tym, w jaki sposób zostali potraktowani zmarli, którym odebrano dobre imię. Dostrzega wyrządzoną krzywdę - staje się ona wynikiem fałszywych posądzeń, zakłamania historii oraz manipulacji. Jednocześnie podmiot liryczny podejmuje się refleksji na swój temat, ponieważ dostrzega to, że uległ pewnej narracji: "Wierzyłam, że zdradzili, że nie warci imion". Uświadamia sobie w ten sposób moc pamięci oraz wpływ żyjących na sposób postrzegania zmarłych. Z tego też powodu osoba mówiąca ma nadzieję, że niesprawiedliwie potraktowani odzyskają swoją dobrą reputację, zostaną właściwie osądzeni. Jednocześnie wypowiadająca się w wierszu sugeruje znaczenie poezji, która powinna bronić prawdy oraz faktów. Z tego też powodu można uznać, iż podmiot będzie się starać, aby jego twórczość stała na straży tych wartości, nie prowadziła do deformacji rzeczywistości. </p>
+<p> </p>
+<p>Określenie miejsca - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) Sposób myślenia osoby mówiącej ulega z czasem znaczącej przemianie. Początkowo bowiem podmiot liryczny wierzył w to, że zmarli byli zdrajcami, którzy nie zasługiwali na szacunek czy pamięć. Nie rozumiał mechanizmów manipulowania faktami czy historią, ulegał dominującej narracji. Obecnie jednak osoba mówiąca ma większą świadomość oraz dystans względem rzeczywistości. Odkrywa bowiem swoje zaślepienie i naiwność, ale także wpływ żyjących na sposób postrzegania zmarłych oraz kształtowania pamięci o nich. Sytuacja ta prowadzi do przewartościowania poglądów wypowiadającej się w wierszu. Dochodzi ona do wniosku, że to na żywych spoczywa obowiązek dokonania rehabilitacji tych, którzy odeszli. Aby sprawiedliwości stało się zadość, muszą jednak zostać spełnione określone warunki: "Ta nasza nad zmarłymi moc / wymaga nierozchwianej wagi / i żeby sąd nie sądził w noc / i żeby sędzia nie był nagi". </p>
+<p> </p>
+<p>b) Pretekstem do dialogu wewnętrznego staje się zwrot podmiotu lirycznego do czaski Jorika, co stanowi bezpośrednie nawiązanie do <em>Hamleta</em> Szekspira: "Czas własną głowę w ręce brać / mówiąc jej: Biedny Jorik, gdzież twoja niewiedza". Odwołanie do postaci błazna służy skonfrontowaniu dawnych poglądów podmiotu lirycznego z jego aktualną sytuacją, kiedy to odkrywa swoje zaślepienie oraz manipulację. Zabieg ten sugeruje także rozdarcie osoby mówiącej: jest świadoma swoich błędów, swej śmieszności, a jednocześnie szuka sposobu, by doprowadzić do rehabilitacji zmarłych, odkupienia swych błędów. Z tego też powodu stawia sobie pytania, na które nie może znaleźć jednoznacznej odpowiedzi: "Gdzież moja władza nad słowami?". Znaczące jest również to, że  w monologu przenikają się dwie perspektywy: osobista i ogólna, typowa dla pewnego pokolenia, o czym świadczą formy czasowników w pierwszej osobie liczby pojedynczej lub mnogiej. </p>
+<p> </p>
+<p>c) Część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Podmiot liryczny określa siebie mianem Syzyfa, co stanowi czytelne nawiązanie do mitologii greckiej. Król ten bowiem został ukarany przez bogów za swoją pychę oraz skłonność do plotkowania. Osoba mówiąca porównuje siebie do Syzyfa ze względu na zbliżoną sytuację. Twórczość poetycka, która powinna bronić prawdy, a niejednokrotnie staje się podatna na manipulacje, jest dla podmiotu źródłem nieustannego cierpienia oraz rozterek moralnych. Z tego też powodu podmiot liryczny uważa, że jest skazany na nieustanny trud, ciągłe podejmowanie niełatwego wyzwania. Nie ma jednak nadziei na ostateczne osiągnięcie celu - mimo tego nie można się poddawać, lecz należy cierpliwie kontynuować swą działalność. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Wykorzystane przez poetkę środki wyrazu akcentują tragizm sytuacji podmiotu lirycznego oraz jego rozterki moralne czy też znaczenie podejmowanego zagadnienia. Szczególnie znaczące są:</p>
+<ul>
+<li>epitety ("[...] Biedny Jorik [...]", "[...] najstarszego prawa wyobraźni") -&gt; wskazują na stosunek emocjonalny osoby mówiącej do danych zjawisk, konkretyzują i uplastyczniają pewne pojęcia;</li>
+<li>metafory ("i po raz pierwszy w życiu przywołuję zmarłych", "Słowa opadły na dno łzy") -&gt; pozwalają na nieoczywiste wyrażenie nowych sensów, podkreślają znaczenie dokonywanej rehabilitacji oraz zwątpienie osoby mówiącej;</li>
+<li>kontrast (dawna oraz obecna postawa osoby mówiącej) -&gt; uwypukla ewolucję poglądów podmiotu lirycznego, która jednocześnie staje się źródłem rozterek czy wątpliwości;</li>
+<li>wyliczenia ("[...] wracają do imion, / do pamięci narodu, do wieńców i braw") -&gt; podkreślają, na jak wielu płaszczyznach odebrano wszystko zmarłym, sugerują też całkowity wymiar zapomnienia;</li>
+<li>pytania retoryczne ("Gdzież moja władza nad słowami?") -&gt; dowodzą niepewności osoby mówiącej, która dogłębnie odczuwa swą bezradność, zaznaczają brak jednoznacznej odpowiedzi na pytania budzące niepokój;</li>
+<li>powtórzenia ("I żeby sąd nie sądził w noc / i Żeby sędzia nie był nagi") -&gt; akcentuje znaczenie pewnych warunków, które zdaniem osoby mówiącej powinny zaistnieć, by przywrócić prawdę;</li>
+<li>personifikacja ("skoro chwast się natrząsa z ich nieznanych mogił / i kruki przedrzeźniają i śnieżyce szydzą") -&gt; wskazuje na osamotnienie zmarłych, ponieważ nawet świat natury traktuje ich z dystansem oraz pogardą. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>W ostatniej strofie wiersza Szymborskiej pojawiają się następujące słowa:</p>
+<p><em>Idą do nas. I ostrzy jak diament</em></p>
+<p><em>- po witrynach wylśnionych od frontu,</em></p>
+<p><em>po okienkach przytulnych mieszkanek, </em></p>
+<p><em>po różowych okularach, po szklanych</em></p>
+<p><em>mózgach, sercach, cichutko tną. </em></p>
+<p>Ostatnia strofa utworu bezpośrednio odwołuje się do zmarłych osób, których powinna dotyczyć tytułowa "rehabilitacja". Niczym duchy powracają do żyjących, zostają również porównani do diamentu ("[...] I ostrzy jak diament"). Zestawienie przychodzących z diamentem sugeruje pewne dodatkowe sensy. Diament bowiem to nie tylko kamień szlachetny, który wyróżnia się swym połyskiem oraz twardością i powstaje w głębi Ziemi. Jego mianem określa się także wartościowe, niezwykłe jednostki. Porównanie zmarłych do niego sugeruje jednoznaczność sytuacji, kiedy to wreszcie ma dojść do sprawiedliwej oceny, ale także nieuchronność tego wydarzenia. Zestawienie to może sugerować także pewną grozę, ponieważ konieczne staje się rozliczenie i oddanie sprawiedliwości zmarłym, przywrócenie im utraconej godności. Cały czas są obecni wśród żyjących, nie pozwalają im na zapomnienie o tym, co się wydarzyło, wręcz upominają się o rehabilitację ("[...] po szklanych / mózgach, sercach, cichutko tną"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a. They are probably friends.</p>
+<p>(Prawdopodobnie są przyjaciółmi.)</p>
+<p><strong>Uzasadnienie</strong>: Świadczy o tym nieformalny charakter emaila (przejawiający się na przykład w sposobie powitania i pożegnania) oraz temat korespondencji dotyczący wspólnych zainteresowań. </p>
+<p> </p>
+<p>b. She is writing to ask Klaus for advice.</p>
+<p>(Pisze, żeby poprosić Klausa o radę.)</p>
+<p><strong>Fragment w tekście:</strong> "Which would you suggest? (...) Should I go to a gym? If so, which machines are the most useful? Would I need a personal trainer?" - Co byś mi doradził? (...) Powinnam iść na siłownię? Jeśli tak, to które urządzenia są najbardziej praktyczne? Potrzebny mi będzie trener personalny?</p>
+<p> </p>
+<p>c. In his email, Klaus informed Daria about his successful climb to Kilimanjaro. He must have also praised her paintings. </p>
+<p>(W swoim emailu Klaus poinformował Darię o swojej udanej wspinaczce na Kilimandżaro. Z pewnością pochwalił też jej obrazy.)</p>
+<p><strong>Fragment w tekście:</strong> "Congratulations on completing your climb of Mount Kilimanjaro! (...) And thanks for the kind words you sent about my paintings." - Gratuluję ci ukończenia wspinaczki na Kilimandżaro! (...) I dziękuję za miłe słowa, które przesłałeś na temat moich obrazów.</p>
+<p> </p>
+<p>d. They are both interested in climbing and walking in the mountains and hills. </p>
+<p>(Obydwoje interesują się wspinaczką i chodzeniem po górach i wzgórzach.)</p>
+<p><strong>Fragment w tekście:</strong> "Congratulations on completing your climb of Mount Kilimanjaro! (...) I'm planning on going with a group to either Wales or Scotland. Scotland looks more beautiful, but the hills are much bigger." - Gratuluję ci ukończenia wspinaczki na Kilimandżaro! (...) Planuję wyjazd z grupą do Walii albo Szkocji. Szkocja wydaje się piękniejsza, ale wzgórza są dużo wyższe.</p>
+<p> </p>
+<p>e. Scotland seems to be her preferred destination.</p>
+<p>(Wydaje się, że wolałaby wybrać Szkocję.)</p>
+<p><strong>Fragment w tekście:</strong> "Scotland looks more beautiful, but the hills are much bigger." - Szkocja wydaje się piękniejsza, ale wzgórza są dużo wyższe.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. d</p>
+<p><strong>Uzasadnienie</strong>: fragment d: "Jak się masz?" to zdanie typowe dla początkowej części listu/emaila, w której witamy się z odbiorcą i pozdrawiamy go. </p>
+<p>2. b</p>
+<p><strong>Uzasadnienie</strong>: fragment b: "Jestem z Ciebie dumna!" jest bezpośrednim nawiązaniem do zdania poprzedzającego lukę: "Gratuluję ci ukończenia wspinaczki na Kilimandżaro!". </p>
+<p>3. e</p>
+<p><strong>Uzasadnienie</strong>: fragment e: "W każdym razie, pomyślałam, że napiszę, żeby zapytać Cię o wędrówki górskie." to zdanie otwierające nowy akapit, część główną, w której nadawca przedstawia właściwy temat wiadomości. Ten fragment nawiązuje do zdania po luce: "Planuję wyjazd z grupą do Walii albo Szkocji.", podobnie jak do całego akapitu.</p>
+<p>4. f</p>
+<p><strong>Uzasadnienie</strong>: fragment f: "Zastanawiałam się, czy mógłbyś dać mi jakieś rady." nawiązuje do pytań występujących po luce: "Powinnam iść na siłownię? Jeśli tak, to które urządzenia są najbardziej praktyczne? Potrzebny mi będzie trener personalny?". </p>
+<p>5. c</p>
+<p><strong>Uzasadnienie</strong>: fragment c: "Na razie to wszystko." to fraza kończąca list i łączy się ze zdaniem po luce: "Mam nadzieję, że niedługo się zobaczymy!".</p>
+<p>6. a</p>
+<p><strong>Uzasadnienie</strong>: fragment a: "Pozdrowienia" to przykład ostatniego zdania, które umieszczamy przed podpisem na końcu listu/emaila. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. f</p>
+<p>(1. Długo się nie widzieliśmy! f. Jak życie?) </p>
+<p>2. c</p>
+<p>(2. Gratulują Ci zdania testu na prawo jazdy! c. Udało Ci się!)</p>
+<p>3. h</p>
+<p>(3. Dzięki za miłe słowa. h. Wiele dla mnie znaczą.)</p>
+<p>4. b</p>
+<p>(4. Nie mogę uwierzyć, że to naprawdę się wydarzyło. b. Niech mnie ktoś uszczypnie!)</p>
+<p>5. e</p>
+<p>(Poprosiłeś/aś mnie o radę jak uniknąć kontuzji powodowanych uprawianiem sportu. e. Najlepszym sposobem byłoby nie porywanie się na zbyt wiele.)</p>
+<p>6. a</p>
+<p>(a. Kolejnym dobrym pomysłem jest wypracowanie rutyny: godzina spaceru, jazdy na rowerze albo pływania dziennie,)</p>
+<p>7. g</p>
+<p>(g. musisz się tego trzymać nawet w złą pogodę.)</p>
+<p>8. d</p>
+<p>(8. Na razie to wszystko. d. Trzymaj się!)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. there </p>
+<p>2. wondering</p>
+<p>3. believing </p>
+<p>4. pinching</p>
+<p>5. write</p>
+<p>6. would</p>
+<p>7. thought</p>
+<p>make sure</p>
+<p>8. all</p>
+<p>9. Take care</p>
+<p> </p>
+<p><strong>Tłumaczenie (odpowiedniki wstawionych słów zostały pogrubione):</strong></p>
+<p>1. <strong>Cześć</strong>, Daria!</p>
+<p>2. <strong>Zastanawiałem</strong> się, czy zaczęłaś już treningi. </p>
+<p>3. Dzięki za <strong>wiarę</strong> we mnie. </p>
+<p>4. Wciąż <strong>szczypię</strong> się, żeby sprawdzić czy to wszystko prawda.</p>
+<p>5. Pomyślałem, że <strong>napiszę</strong>, żeby powiedzieć  Ci, że zacząłem planować swoją następną wyprawę - w Himalaje!</p>
+<p>6. Wyjeżdżam w październiku. Jeśli chciałabyś się spotkać, najlepiej <strong>byłoby</strong> zorganizować coś we wrześniu po Twoich wakacjach.</p>
+<p>7. <strong>Myślałaś</strong> już, które wakacje wybrać? Ja wolę Walię. Szkocja jest bardziej spektakularna, ale są tam komary - małe gryzące owady. Jeśli wybierzesz Szkocję, <strong>upewnij się</strong>, że weźmiesz dużo środka przeciw komarom!</p>
+<p>8. Na razie to <strong>tyle</strong>.</p>
+<p>9. <strong>Trzymaj się</strong>,</p>
+<p>Klaus</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br>

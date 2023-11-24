@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie</strong>: <em>not far from here </em>- niedaleko stąd; <em>far more </em>- o wiele więcej. </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: <em>score the final point </em>- zdobyć ostatni punkt; <em>a good point </em>- dobra uwaga / dobry argument.</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie</strong>: <em>make mistakes </em>- popełniać błędy; <em>make a cake </em>- robić ciasto.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie</strong>: <em>have a rest </em>- odpoczywać; <em>save the rest for later </em>- zostawić resztę na później.</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie</strong>: <em>curly or straight </em>- kręcone lub proste (o włosach); <em>straight </em>- prosto (o ułożeniu czegoś).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie</strong>: <em>tell the difference </em>- odróżnić; <em>tell somebody something </em>- powiedzieć coś komuś. </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: <em>set the rules </em>- ustalać zasady; <em>set the alarm clock </em>- nastawiać budzik.</p>
+<p>3. C</p>
+<p><strong>Uzasadnienie</strong>: <em>feel carsick </em>- czuć mdłości podczas podróży w aucie; <em>feel </em>- uważać, sądzić.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie</strong>: <em>clinical trial </em>- próba kliniczna; <em>put on trial </em>- postawić przed sądem.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. time </p>
+<p><strong>Uzasadnienie</strong>: <em>know the time </em>- wiedzieć, która godzina; <em>have the time of your life </em>- bawić się jak nigdy w życiu. </p>
+<p>2. space</p>
+<p><strong>Uzasadnienie</strong>: <em>outer space </em>- przestrzeń kosmiczna; <em>enough space for something </em>- wystarczająco dużo miejsca na coś.</p>
+<p>3. place</p>
+<p><strong>Uzasadnienie</strong>: <em>place </em>- miejsce (znaczenie przenośne i dosłowne).</p>
+<p>4. taste</p>
+<p><strong>Uzasadnienie</strong>: <em>taste of something </em>- smak czegoś; <em>have (excellent) taste - </em>mieć (wspaniały) gust.</p>
+<p>5. on</p>
+<p><strong>Uzasadnienie</strong>: <em>put on weight </em>- przybrać na wadze; <em>turn something on </em>- włączyć coś.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. spots </p>
+<p><strong>Uzasadnienie</strong>: <em>spots </em>- krosty, niedoskonałości; <em>beauty spot </em>- (tu:) malownicze miejsce. </p>
+<p>2. speech</p>
+<p><strong>Uzasadnienie</strong>: <em>speech (she delivered) </em>- przemowa (którą wygłosiła); <em>speech </em>- mowa, sposób mówienia.</p>
+<p>3. jam</p>
+<p><strong>Uzasadnienie</strong>: <em>strawberry jam </em>- dżem truskawkowy; <em>traffic jam </em>- korek uliczny.</p>
+<p>4. dish</p>
+<p><strong>Uzasadnienie</strong>: <em>an </em><em>Italian dish </em>- potrawa włoska; <em>an old dish </em>- stare naczynie.</p>
+<p>5. cup</p>
+<p><strong>Uzasadnienie</strong>: <em>win the cup </em>- zdobyć puchar; <em>a cup of tea </em>- filiżanka herbaty.</p><br>

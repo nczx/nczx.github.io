@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I think that piece rate is the best. You get paid for your results, so you don't have to work 8 hours every day if you work fast. Sometimes hourly pay is unfair - someone can work very slowly and get paid the same as a worker who is efficient.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Myślę, że stawka akordowa jest najlepsza. Dostaje się pieniądze za wyniki, więc nie trzeba pracować 8 godzin dziennie, jeśli pracuje się szybko. Czasami stawka godzinowa jest nie fair - ktoś może pracować bardzo wolno i otrzymywać to samo wynagrodzenie co pracownik, który jest wydajny.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. C </p>
+<p><strong>Fragment w tekście</strong>: "Some employees who get a salary also earn overtime, but others have to work as long as necessary with no increase in pay." - Niektórzy pracownicy, którzy otrzymują miesięczną pensję, zarabiają również za wykonane nadgodziny, ale inni muszą pracować tak długo, jak to konieczne, bez zwiększenia wynagrodzenia. </p>
+<p>2. A</p>
+<p><strong>Fragment w tekście</strong>: "However, they can choose when to work and when not to, and there is no long recruitment process." - Mogą jednak wybrać, kiedy pracować, a kiedy nie, nie ma też długiego procesu rekrutacji.</p>
+<p>3. A</p>
+<p><strong>Fragment w tekście</strong>: "At the same time, they expected employees to be available for work at short notice and forbade them from finding work elsewhere." - Jednocześnie oczekiwali od pracowników gotowości do pracy w krótkim czasie i zabraniali im szukania pracy gdzie indziej.</p>
+<p>4. C</p>
+<p><strong>Fragment w tekście</strong>: "Now, if someone works regularly for just one employer, they must be treated as an employee." - Teraz, jeśli ktoś pracuje regularnie tylko dla jednego pracodawcy, musi być traktowany jako pracownik.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. Recruitment </p>
+<p>(<strong>Rekrutacja</strong> to proces poszukiwania osób do firmy.) </p>
+<p>2. employment</p>
+<p>(Sytuacja, w której ktoś ma regularną pracę zarobkową, nazywa się <strong>zatrudnieniem</strong>.)</p>
+<p>3. Sickness</p>
+<p>(<strong>Choroba</strong> to stan, w którym ktoś jest chory.)</p>
+<p>4. payable</p>
+<p>(Jeśli coś jest <strong>odpłatne</strong>, to powinno zostać zapłacone.)</p>
+<p>5. performance</p>
+<p>(Kiedy mówimy o <strong>wydajności</strong> w pracy, mamy na myśli to, jak dobrze ktoś wykonuje swoją pracę.)</p>
+<p>6. shortage</p>
+<p>(<strong>Niedobór</strong> to sytuacja, w której czegoś jest za mało.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. I think I'd prefer to get a job through an employment agency. Employment agencies often have access to lots of different job opportunities from various employers. The offers are also more secure and it's easier to find temporary employment.</p>
+<p>(Chyba wolał(a)bym dostać pracę przez agencję zatrudnienia. Agencje pracy często mają dostęp do wielu różnych ofert pracy od różnych pracodawców. Oferty są też pewniejsze i łatwiej jest znaleźć pracę tymczasową.)</p>
+<p><br/>2. If it was only a summer job, I wouldn't expect much. A lunch break, reasonable working hours and health insurance would be enough for me. If I had a regular job, I'd also expect sick pay, overtime pay, and paid holidays.</p>
+<p>(Gdyby to była tylko praca wakacyjna, nie oczekiwał(a)bym wiele. Przerwa na lunch, rozsądne godziny pracy i ubezpieczenie zdrowotne w zupełności by mi wystarczyły. Gdybym miał/a stałą pracę, oczekiwał(a)bym również zasiłku chorobowego, wynagrodzenia za nadgodziny i płatnego urlopu.)</p><br>

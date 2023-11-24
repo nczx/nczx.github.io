@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) </p>
+<table border="1" style="border-collapse:collapse;width:683px;height:657px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:338px;"><strong>Apostrofa </strong></td>
+<td style="background-color:#aed581;text-align:center;width:338px;"><strong>Adresat </strong></td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>I Ciebie siê pochwali,</em></p>
+<p><em>Brzuchu na biodrach szerokich,</em></p>
+<p><em>Niewiasto!</em></p>
+</td>
+<td style="width:338px;text-align:center;">kobieta</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>Na ³awce, psiekrewie, na trawce,</em></p>
+<p><em>Naróbcie Polsce bachorów,</em></p>
+<p><em>Wijcie siê, psiekrewie, wijcie,</em></p>
+<p><em>W szynkach naro¿nych pijcie,</em></p>
+<p><em>Rozrzuæcie wiêcej "kawalerskich chorób"!</em></p>
+</td>
+<td style="width:338px;text-align:center;">mê¿czyŸni</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>T³umie, b¹dŸ dziki!</em></p>
+<p><em>T³umie! Ty masz RACJÊ!</em></p>
+</td>
+<td rowspan="2" style="width:338px;text-align:center;">t³um</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>O, ty zbrodniarzu cudowny i prosty,</em></p>
+<p><em>Elementarny, pierwotnie wspania³y!</em></p>
+<p><em>Ty gnoju miasta, tytanicznej krosty,</em></p>
+<p><em>T³umie, o T³umie, T³umie rozszala³y!</em></p>
+<p><em>Faluj, straszliwa maso, po ulicach,</em></p>
+<p><em>Wracaj od rogu, œmiej siê, wariuj, szalej!</em></p>
+</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>Uœmiechnie siê, dziewcz¹tka, kelner wasz, jak szpicel,</em></p>
+<p><em>Niejedn¹ tak¹ widzia³, niejedn¹ serdeñko...</em></p>
+</td>
+<td style="width:338px;text-align:center;">dziewczêta</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>[...] PrzeraŸ go sob¹, ty grzechu, kobieto!</em></p>
+<p><em>Rodzicielko wspania³a! samico nabrzêk³a!</em></p>
+</td>
+<td style="width:338px;text-align:center;">kobieta</td>
+</tr>
+<tr>
+<td style="width:338px;text-align:center;">
+<p><em>Och, s³awiê ja ciê, t³umie, wznios³ymi s³owami</em></p>
+<p><em>I ciebie, Wiosno, za to, ¿e siê zbrodniarz p³odzi!</em></p>
+</td>
+<td style="width:338px;text-align:center;">t³um i Wiosna</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Podmiot liryczny zwraca siê do adresatów swej wypowiedzi w niezwykle ekspresywny oraz emocjonalnie nacechowany sposób. Sugeruje on stosunek osoby mówi¹cej do t³umu oraz jego postawy. S³owa wypowiadaj¹cego siê ³¹cz¹ w sobie fascynacjê witaln¹ si³¹ masy, ale tak¿e pewien wstrêt zwi¹zany z tym, i¿ ludzie podporz¹dkowuj¹ siê najni¿szym instynktom. S¹ nieokie³znani, wyzbyci jakichkolwiek zasad moralnych. Podmiot liryczny w apostrofach ponadto akcentuje przede wszystkim si³ê oraz dynamikê t³umu. W tych wypowiedziach dominuj¹ przede wszystkim zdania wielokrotnie z³o¿one (wspó³rzêdnie). </p>
+<p> </p>
+<p>b) S³ownictwo osoby mówi¹cej jest bez w¹tpienia nacechowane emocjonalnie. Dominuj¹ w nim wyrazy z jêzyka potocznego ("pyski", "³apy"), wulgaryzmy ("ho³oty", "psiekrwie" "brzuchate koby³y") - akcentuj¹ zezwierzêcenie t³umu, jego dzikoœæ. Zastosowane œrodki buduj¹ wizjê œwiata, który jest brutalny, powi¹zany z czystym biologizmem. Wp³ywaj¹ na intensywnoœæ przedstawienia, ale przy tym sugeruj¹ ocenê podmiotu lirycznego - zafascynowanego, lecz te¿ wyra¿aj¹cego odrazê zachowaniem masy. Zdrobnienia z kolei to przejaw pozytywnego stosunku, czu³oœci mówi¹cego ("nó¿ki", "koniaczek"). Mog¹ jednak równie¿ zaznaczaæ pewn¹ pob³a¿liwoœæ, ironiê, na co wskazuje cytat: "Niejedn¹ tak¹ widzia³, niejedn¹, serdeñko...".</p>
+<p> </p>
+<p>c) Przyk³ady powtórzeñ i wyrazów dŸwiêkonaœladowczych:</p>
+<ul>
+<li><em>Gromadê dziœ siê pochwali, / Pochwali siê [..];</em></li>
+<li><em>I buchnie wielkie ognisko, / I t³um na ulice wylegnie;</em></li>
+<li><em>Z k¹tów wype³znie, z nor wybiegnie;</em></li>
+<li><em>Œwiêtowaæ wiosnê w mieœcie, / Œwiêtowaæ jurne œwiêto;</em></li>
+<li><em>Szurgaj¹ nó¿ki [...];</em></li>
+<li><em>Gwar, gwar, gwar, chichoty, / Gwar, gwar, gwar, piski;</em></li>
+<li><em>Szur, szur, szur, gwar, gwar, gwar;</em></li>
+<li><em>A dalej! A dalej! A dalej!;</em></li>
+<li><em>Wijcie siê, psiekrewie, wijcie;</em></li>
+<li><em>Na kolorowe wasze kamizelki, / Na papierowe wasze ko³nierzyki!</em></li>
+<li><em>T³umie b¹dŸ dziki! / T³umie! Ty masz RACJÊ!;</em></li>
+<li><em>T³umie, o T³umie, T³umie rozszala³y!;</em></li>
+<li><em>Na piwko, na koniaczek, na kanapkê miêkk¹!;</em></li>
+<li><em>Niejedn¹ tak¹ widzia³, niejedn¹, serdeñko...;</em></li>
+<li><em>Gdy rozedm¹ siê w ¿¹dzy nozdrza, t³uste chrapy, / Gdy ci kto pocznie szeptaæ pokusê ³ajdaczn¹;</em></li>
+<li><em>Jeszcze! Jeszcze! I jeszcze! [...].</em></li>
+</ul>
+<p> </p>
+<p>Zastosowane œrodki kieruj¹ uwagê odbiorcy na przekazywane treœci. S³u¿¹ zaznaczeniu intensywnoœci doznañ, szaleñstwu, które ogarnia t³um. Oddaj¹ atmosferê œwiêta, zwi¹zany z tym gwar oraz odg³osy, rozgor¹czkowanie t³umu, chaos. Wzbogacaj¹ równie¿ warstwê brzmieniow¹ dzie³a, poniewa¿ wp³ywa ona na zmys³y odbiorcy, uwiarygodnia sposób przedstawienia sytuacji. Czytelnik mo¿e tym samym doœwiadczyæ tego, co staje siê udzia³em mieszkañców miasta. Œrodki te wp³ywaj¹ tak¿e na rytm tekstu, poniewa¿ zapewniaj¹ mu pewn¹ regularnoœæ oraz powtarzalnoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Stosunek poety do t³umu nie jest jednoznaczny. Z jednej bowiem strony zauwa¿a on, i¿ ludzie zdaj¹ siê przypominaæ zwierzêta: "Z k¹tów wype³znie, z nor wybiegnie". Dostrzega ich zepsucie oraz rozpasanie seksualne, które skutkuje brakiem jakiejkolwiek odpowiedzialnoœci:</p>
+<p><em>Naróbcie Polsce bachorów,</em></p>
+<p><em>Wijcie siê, psiekrwie, wijcie,</em></p>
+<p><em>W szynkach naro¿nych pijcie,</em></p>
+<p><em>Rozrzuæcie wiêcej "kawalerskich chorób"!</em></p>
+<p>O jego negatywnym stosunku do mieszkañców miasta œwiadcz¹ tak¿e rozliczne okreœlenia, które s¹ nacechowane emocjonalnie: "pstrokatej ho³oty", "brzuchate koby³y", "Krzywych pêdraków sromne nosicielki!", "Ty gnoju miasta", "straszliwa maso", "dr¿¹ce ³apy", "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Z drugiej jednak strony fascynacjê zdaje siê wywo³ywaæ nieokie³znana si³a t³umu, jego poddanie siê pierwotnym instynktom biologicznym. Dzikie masy ludzi oddaj¹ siê popêdom i zaspokajaniu swych ¿¹dz. W ten sposób staj¹ siê ucieleœnieniem potêgi ¿ycia oraz prokreacji. Z tego te¿ powodu brzydota oraz moc t³umu budzi zaintrygowanie osoby mówi¹cej, która ostatecznie zaczyna dostrzegaæ wznios³oœæ masy oraz sens jej dzia³ania:</p>
+<p><em>T³umie, b¹dŸ dziki!</em></p>
+<p><em>T³umie! Ty masz RACJÊ!!!</em></p>
+<p><em>[...]</em></p>
+<p><em>Niech idzie tan lubie¿nych podnieceñ! Nie szkodzi!</em></p>
+<p><em>Och, s³awiê ja ciê, t³umie, wznios³ymi s³owami</em></p>
+<p><em>I ciebie, Wiosno, za to, ¿e siê zbrodniarz p³odzi!</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>T³um w utworze Juliana Tuwima staje siê symboliczn¹ reprezentacj¹ cz³owieka ¿yj¹cego w mieœcie, a wiêc cywilizowanego. Kultura ma wp³yw na jego sposób zachowania, poniewa¿ t³umi jego pierwotne instynkt, zmusza do zaakceptowania pewnych zasad. W wierszu poety dochodzi jednak do wyzwolenia i rezygnacji z przyjêtych regu³. T³um staje siê wiêc symbolem powrotu do tego, co pierwotne lub te¿ wyzbycia siê jakichkolwiek zahamowañ bêd¹cych przejawem umowy spo³ecznej. Z tego powodu fascynuje Tuwima, ale jednoczeœnie budzi odrazê: "Ty gnoju miasta, tytanicznej krosty". W tym kontekœcie wiosna stanowi niejako katalizator szaleñstwa ludzi. Jako czas odrodzenia staje siê znakiem biologizmu, p³odnoœci, witalizmu, ¿ycia w jego najbardziej pierwotnej postaci. Wyzwala w t³umie zmys³owoœæ, która prowadzi do deprawacji i szokuj¹cych scen: "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Rozkwit œwiata natury odpowiada w ten sposób dynamice zachowañ t³umu, który poszukuje spe³nienia w orgii, a sw¹ postaw¹ wyra¿a pêd ¿ycia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br>

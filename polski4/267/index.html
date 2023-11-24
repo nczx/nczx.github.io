@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Na wyrazisty rytm utworu wpływa zastosowanie instrumentacji głoskowej, czyli nagromadzeniu takich samych lub podobnych głosek w następujących po sobie wyrazach, np.:</p>
+<ul>
+<li><em>tłum, który tłumi i tłumaczy; / który tupotem i tępą głuchotą;</em></li>
+<li><em>słabiutkie tętno sensu, stukające w czaszce;</em></li>
+<li><em>na oczyszczenie czekającą [...];</em></li>
+<li><em>[...] głuchym mrokiem w mur komory.</em></li>
+</ul>
+<p> </p>
+<p>Przeczytanie wiersza na głos - część indywidualna zadania</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykłady wyrazów i sformułowań charakteryzujących tłum w utworze Stanisława Barańczaka:</p>
+<ul>
+<li><em>tłumi i tłumaczy; </em></li>
+<li><em>tępą głuchotą [...] tłumi / słabiutkie tętno sensu;</em></li>
+<li><em>[...] tłumnej samotności;</em></li>
+<li><em>[...] tratując i dusząc, zarazem / ogarnia swym uściskiem.</em></li>
+</ul>
+<p>Większość określeń dotyczących tłumu nacechowana jest pejoratywnie. Przedstawiany jest jako masa niezdolna do samodzielności, głucha, bezmyślna. Tytułowy tłum może być metaforycznym przedstawieniem społeczeństwa w państwie totalitarnym, które, manipulowane i ogłupiane przez władzę, nie jest zdolne do sprzeciwienia się opresyjnemu systemowi.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Na nagromadzeniu kontrastów i oksymoronów zasadza się koncept wiersza. W ten sposób autor podkreśla paradoksalny charakter tłumu, próbuje uchwycić jego złożoną naturę. Ukazuje rządzące nim sprzeczności - marazm i otępienie z jednej strony, zaskakującą siłę i żywotność z drugiej. Wskazuje także na nierozerwalny związek między zbiorowością a jednostkami ją tworzącymi.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Osoba mówiąca dostrzega paradoksalną zależność między przebywaniem w tłumie a osamotnieniem, mówi: " [...] tłumaczy ten ulotny plus / na nieodwołalną mowę / swej tłumnej samotności". Bycie częścią takiej nie sprawia, że człowiek czuje radość z kontaktu z innymi, lecz przeciwnie - pogłębia tylko izolację. Barańczak diagnozuje problem ze współczesną wspólnotowością, wskazując, że społeczeństwo masowe oddala, a nie przybliża ludzi do siebie.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe grupowanie słów związanych z fizjologią:</p>
+<ul>
+<li>Układ krwionośny: <em>tętno, puls, tętnice, krew, komory serca. </em></li>
+<li>Układ oddechowy: <em>płuca.</em></li>
+<li>Aparat mowy: <em>mowa, usta.</em></li>
+<li>Zmysł słuchu: <em>głuchota.</em></li>
+<li>Myślenie: <em>czaszka.</em></li>
+</ul>
+<p>Za pomocą odniesień do medycyny i anatomii Stanisław Barańczak kształtuje tłum na wzór organizmu. Posiada on bijące serce i działające płuca, żyje więc i oddycha. Ten pierwszy organ symbolizuje także zdolność do odczuwania emocji i uczuciowość. Masy posiadają także umiejętność myślenia (czaszka i znajdujący się w niej mózg) oraz wypowiadania się. Są jednak głuche, nie słyszą nikogo spoza tłumu. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Poezja lingwistyczna wykorzystuje język utworu jako kluczowe narzędzie przekazu myśli. Tworzący w tym nurcie pochylają się szczególnie nad cechami wyrazów - ich brzmieniem, budową, właściwościami składniowymi i frazeologią. Za pomocą przekształceń w tych obszarach wydobywają nowe, ukryte dotąd znaczenia. Poezja lingwistyczna może służyć także obnażeniu wad, nieścisłości czy paradoksów systemu językowego, np. poprzez  uwypuklenie nieprzystawalności budowy i znaczenia wyrazów (<em>paronomazja</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Tytułowy tłum w kontekście historycznym nawiązywać może do ideologii państwa komunistycznego, przedkładającego kolektywizm nad indywidualizm. Społeczeństwo polskie tamtego okresu jawi się w jego oczach jako masa, której odebrano poczucie odrębności, zmuszając do podporządkowania się obowiązującemu porządkowi. Barańczak z jednej strony krytykuje więc motłoch niezdolny do krytycznego myślenia, głuchy na głosy z zewnątrz i uciszający wszelkie przejawy indywidualizmu. Z drugiej jednak dostrzega jego siłę, być może mając w pamięci przełomowe dla pokolenia Nowej Fali protesty z marca 1968. W ostatniej frazie pobrzmiewa echo potęgi tłumu - anonimowego, bezkarnego, a zarazem niemożliwego do powstrzymania. Brak indywidualizmu niesie za sobą brak indywidualnej odpowiedzialności, w tym więc znaczeniu działanie masy jest wytłumaczone.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowe barokowe elementy utworu <em>Tłum, który tłumi i tłumaczy</em>:</p>
+<ul>
+<li>Wykorzystanie wyrazistego konceptu polegającego na zestawieniu ze sobą wyrazów podobnie brzmiących, lecz o różnym znaczeniu i etymologii (<em>tłum, tłumić, tłumaczyć). </em>W ten sposób wydobyte zostały sprzeczności w naturze tytułowego tłumu.</li>
+<li>Nagromadzenie środków stylistycznych: instrumentacji głoskowej, onomatopei, przerzutni, oksymoronów.</li>
+<li>Zaskakujące dla czytelnika zakończenie, stymulujące jego intelekt i zmuszające do rozwiązania zagadki w nim zawartej.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne</p><br>

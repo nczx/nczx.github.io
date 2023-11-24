@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Motyw strychu oraz kufra reprezentuje symboliczne sensy, które wiążą się z kontekstem nie tylko biograficznym, ale również historycznym. Strych bowiem to przestrzeń, w której przechowuje się potencjalnie cenne przedmioty, których nie chce się wyrzucić z jakiegoś powodu, np. ze względu na sentyment. Można tam także przechowywać zużyte, zbędne sprzęty. Z tego też powodu można rozpatrywać strych jako znak pamięci emigrantów, opuszczających kraj ze względów np. politycznych, oraz samego poety. Wierzyński mieszkał bowiem w USA oraz różnych krajach Europy, zmarł w Londynie. Pamięć o ojczyźnie stanowi coś cennego, ale jednocześnie wywołuje ból i nie pozwala na cieszenie się z życia, poznawania egzotycznych stron. Z kolei kufer symbolizuje los emigrantów, jest nicią łączącą ich z rodzimymi stronami. Przypomina o ich tułaczce, ale także jest znakiem nadziei na powrót. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Bagaż, o którym mówi podmiot liryczny, można rozpatrywać na dwóch płaszczyznach. Pierwsza jest dosłowna. Za bagaż można uznać kufer, w którym podmiot liryczny przechowuje swoje dokumenty i drobiazgi: "Paszporty, obywatelstwa, / Emigracyjne wizy". Mieszczą się w nim wszystkie materialne przedmioty, które osoba mówiąca zabrała ze sobą w podróż. Bagaż może mieć także sens przenośny, jeśli odnosi się do samego podmiotu, jego przeżyć, uczuć. Oznacza wtedy wszystkie doświadczenia, które wypowiadający się zebrał w czasie swego życia. Kształtują one jego tożsamość, ale przy tym mogą być źródłem obciążenia, ponieważ wywołują w osobie mówiącej smutek i tęsknotę. Nie może bowiem wrócić do swej ojczyzny, może tylko żyć jej wspomnieniami. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Kufer w utworze Wierzyńskiego symbolizuje przede wszystkim los i tułaczkę podmiotu lirycznego, zbiór jego doświadczeń. Osoba mówiąca znajduje się z dala od ojczyzny, co staje się źródłem jej nostalgii oraz cierpienia. Określenie kufra słowami "nieszczęścia początek / i obłąkany koniec" podkreśla to, że konieczność opuszczenia rodzimych stron jest początkiem wszelakich nieszczęść w życiu osoby mówiącej. Mimo możliwości podróżowania po całym świecie, nie może wrócić do jedynego miejsca, za którym tęskni: ojczyzny. Tułaczka definiuje tym samym przyszłość podmiotu oraz jego tożsamość. Z kolei słowa "obłąkany koniec" sugerują brak nadziei na powrót oraz zmianę swej dotychczasowej sytuacji. Podmiot liryczny jest tym samym przekonany, że tułaczka staje się jego przeznaczeniem, co podkreśla tragizm tej sytuacji, z której nie można znaleźć wyjścia. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a) Wiersz Kazimierza Wierzyńskiego opisuje doświadczenia emigranta, tułacza, który znajduje się z dala od ojczyzny. Dogłębnie odczuwa tragizm swego losu, ponieważ nie może znaleźć dla siebie miejsca. Cały czas żyje nostalgią i wspomnieniami, nie potrafi zapomnieć o swoim kraju. Odczuwa, żal i gorycz, zdaje mu się że jest w sytuacji bez wyjścia: "Taki jest potrzask. Ani co wziąć stąd / Ani z czym dobiec na koniec". Podmiot liryczny traci poczucie bezpieczeństwa, gdyż cały czas jest w podróży: "I przeprowadzka za przeprowadzką, / Z Ameryki do Europy, / Z Europy do Ameryki". Jego sytuacja życiowa wiąże się z osamotnieniem i ambiwalentnym stosunkiem do ojczyzny. Z jednej bowiem strony przywiązanie do niej stanowi źródło cierpienia, z drugiej zaś osoba mówiąca nie potrafi o niej zapomnieć.</p>
+<p>Osoba mówiąca w wierszu romantycznego poety znajduje się w podobnej sytuacji. Wyraża bowiem głęboką tęsknotę za swoją ojczyzną. Z tego też powodu przywołuje w pamięci jej pozytywny wizerunek. Utracony kraj jawi się jako przestrzeń, gdzie żyją pobożni oraz dobroduszni ludzie, ściśle przestrzegający tradycji: "Do kraju tego, gdzie kruszynę chleba / Podnoszą z ziemi przez uszanowanie / Dla darów Nieba...". Podmiot liryczny tęskni również za tym, ze jego rodacy są jednoznaczni w swych ocenach. W ostatniej strofie wyraża swoje poczucie osamotnienia oraz melancholię wywołaną tułaczką.</p>
+<p> </p>
+<p>b) Na tematykę wierszy oraz wyrażone w nich uczucia wpływają dwa konteksty: historyczny i biograficzny. Utwór Norwida odzwierciedla przeżycia Polaków z pierwszej połowy XIX wieku, kiedy to doszło do Wielkiej Emigracji. Po upadku powstania listopadowego ze względów politycznych wielu Polaków zdecydowało się na emigrację - wśród nich np. przedstawiciele szlachty, politycy, artyści. Wiele osób udało się do Francji, opuszczając w ten sposób zniewoloną ojczyznę. Również Norwid większość swego życia spędził z dala od ojczyzny: przebywał m.in we Włoszech, Francji, gdzie zakończył swe życie. Tym samym wiersz oddaje nie tylko osobiste doświadczenia i tęsknotę poety, ale też można jego treść odnieść do sytuacji ogółu polskich tułaczy.</p>
+<p>Wiersz Wierzyńskiego także można rozpatrywać pod względem kontekstu historycznego i biograficznego. Poeta po wybuchu drugiej wojny światowej znalazł się we Lwowie, a potem stał się emigrantem - dotarł do USA, mieszał także w Europie. Twórca zdecydował się, by pozostać na emigracji, ponieważ nie zgadzał się z sytuacją polityczną w kraju. Jego sprzeciw budziło podporządkowanie Polski ZSRR. Z tego też powodu wybrał życie na obczyźnie.</p>
+<p> </p>
+<p>c) Wiersze Norwida oraz Wierzyńskiego podkreślają wpływ historii na życie jednostki. Wielkie wydarzenia zmuszają ludzi do dokonywania trudnych wyborów, które oddziałują na ich przyszłość. Mechanizmy historii są bezlitosne, ponieważ przyczyniają się do tułaczki i ciągłej nostalgii za utraconą ojczyzną. Pozbawiają ludzi łączności z rodzimymi stronami, co wywołuje nieustający żal, cierpienie, zmusza także do określenia na nowo swojej tożsamości i miejsca. Jednocześnie historia powoduje, że ojczyzna staje się istotnym elementem pamięci, życia duchowego, co prowadzi do rozdarcia wewnętrznego tułaczy. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Podobieństwa w sposobie kreacji emigranta z XIX i XX stulecia:</p>
+<ul>
+<li>jest on osobą, która z przyczyn niezależnych od siebie musi opuścić ojczyznę; </li>
+<li>tułaczka staje się źródłem negatywnych doznań - cierpienia, bólu, głębokiej tęsknoty;</li>
+<li>w pamięci emigranta wspomnienie ojczyzny stanowi ważny punkt odniesienia, jest pielęgnowane;</li>
+<li>tułacz nie potrafi odnaleźć swojego miejsca w nowej rzeczywistości, </li>
+<li>dogłębnie odczuwa swoje osamotnienie oraz tragizm losu;</li>
+<li>pobyt w nowych miejscach nie wywołuje ciekawości czy radości, natomiast uwypukla wyobcowanie jednostki;</li>
+<li>emigrant ma świadomość tego, iż nie może zmienić swego życia, jest bezradny wobec mechanizmów dziejowych.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne</p><br>

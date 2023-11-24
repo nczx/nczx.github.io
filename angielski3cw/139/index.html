@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. usually has</p>
+<p><strong>Uzasadnienie:</strong> do opisywania regularnie wykonywanych czynności używamy czasu <em>present simple</em> (końcówka <em>-s</em> w 3. osobie l. poj.). </p>
+<p>2. more comfortably</p>
+<p><strong>Uzasadnienie:</strong> do opisywania sposobu wykonywania jakiejś czynności, używamy przysłówków. Regularną formę przysłówków możemy ułożyć dodając końcówkę <em>-ly</em> do większości przymiotników. Stopień wyższy przysłówków wielosylabowych tworzymy podobnie jak w przypadku długich przymiotników - za pomocą przysłówka <em>more</em>.</p>
+<p>3. admitted skipping</p>
+<p><strong>Uzasadnienie:</strong> do opisywania czynności wykonanej w konkretnym momencie w przeszłości używamy czasu <em>past simple</em>. Po czasowniku <em>admit </em>używamy formy z końcówką <em><strong>-</strong>ing</em>.</p>
+<p>4. can't stand watching</p>
+<p><strong>Uzasadnienie:</strong> po wyrażeniu <em>can't stand</em> używamy formy z końcówką <em>-ing</em>.</p>
+<p>5. has suggested going</p>
+<p><strong>Uzasadnienie:</strong> do opisywania czynności wykonanej w bliżej nieokreślonej przeszłości używamy czasu <em>present perfect </em>(<em>have/has + past participle </em>- tu: końcówka <em>-ed</em>). Po czasowniku <em>suggest </em>używamy formy z końcówką -<em>ing</em>.</p>
+<p>6. learnt how to compose</p>
+<p><strong>Uzasadnienie:</strong> do opisywania czynności wykonanej w konkretnym momencie w przeszłości używamy czasu <em>past simple</em>. Po czasowniku <em>learn </em>używamy przysłówka <em>how </em>(jak) i bezokolicznika z <em>to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. was determined to win </p>
+<p><strong>Uzasadnienie:</strong> do opisywania czynności wykonanej w konkretnym momencie w przeszłości, używamy czasu <em>past simple</em>. To zdanie opisuje  emocje odczuwane przez kogoś, dlatego z podanego czasownika należy ułożyć imiesłów z końcówką <em>-ed </em>(<em>determined </em>- zdeterminowany/a). Po przymiotniku (albo imiesłowie) używamy bezokolicznika z <em>to</em>. </p>
+<p>2. who loves the game</p>
+<p><strong>Uzasadnienie:</strong> do opisywania czyichś preferencji, używamy czasu <em>present simple</em> (końcówka <strong>-</strong><em>s </em>w 3. osobie l. poj.). Jest to zdanie przydawkowe niedefiniujące (oddzielone przecinkami), które dotyczy osoby, dlatego użyjemy zaimka względnego <em>who</em>.</p>
+<p>3. Breaking a world record</p>
+<p><strong>Uzasadnienie:</strong> czasownika w funkcji podmiotu używamy z końcówką -<em>ing</em>. Używamy przedimka nieokreślonego, ponieważ nie mówimy o konkretnym rekordzie światowym, tylko ogólnie.</p>
+<p>4. be looked at by</p>
+<p><strong>Uzasadnienie:</strong> to zdanie opisuje czynność wykonywaną względem czegoś, dlatego należy użyć w nim strony biernej. Stronę bierną z czasownikiem modalnym tworzymy w następujący sposób: czasownik modalny + <em>be </em>+ <em>past participle </em>(tu: końcówka <em>-ed</em>). Kiedy czasownik łączy się z przyimkiem, to w konstrukcji w stronie biernej musi on wystąpić bezpośrednio po czasowniku (<em>look at </em>- obejrzeć). Wykonawcę czynności w stronie biernej wskazujemy za pomocą przyimka <em>by </em>(przez).</p>
+<p>5. Have you ever been</p>
+<p><strong>Uzasadnienie:</strong> pytania o życiowe doświadczenie zadajemy za pomocą czasu <em>present perfect</em>. W pytaniach: <em>have/has </em>+ podmiot + <em>ever </em>(kiedykolwiek) + <em>past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych).</p>
+<p>6. advised me to walk</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>advise somebody to do something </em>(poradzić komuś, by coś zrobił). Do opisywania zakończonej czynności używamy czasu <em>past simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. stopped to look around</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik <em>stop </em>oznacza "zatrzymać się, by zrobić coś innego", stawiamy po nim bezokolicznik z <em>to</em>. </p>
+<p>2. dream of working</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>dream </em>stawiamy przyimek <em>of </em>i czasownik z końcówką -<em>ing</em>.</p>
+<p>3. invited me to stay</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>invite </em>stawiamy dopełnienie (w formie dopełnienia zaimek w 1. osobie l. poj. ma formę <em>me</em>) i bezokolicznik z <em>to</em>.</p>
+<p>4. hadn't forgotten</p>
+<p><strong>Uzasadnienie:</strong> do wyrażenia żalu odnośnie przeszłej sytuacji używamy konstrukcji <em>I wish/If only</em> + <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- tu: III kolumna w tabeli czasowników nieregularnych).</p>
+<p>5. weren't punished</p>
+<p><strong>Uzasadnienie:</strong> do opisania hipotetycznej sytuacji używamy II trybu warunkowego (warunek: <em>If </em>+ czas <em>past simple</em>). To zdanie opisuje czynność wykonywaną względem czegoś, dlatego należy użyć w nim strony biernej (<em>past simple</em> w stronie biernej: <em>was/were</em> + <em>past participle </em>- tu: końcówka -ed). </p>
+<p>6. might be hiding</p>
+<p><strong>Uzasadnienie:</strong> do wyrażenia spekulacji, że jakaś sytuacja być może odbywa się w chwili obecnej ("być może coś ukrywa"), możemy użyć czasownika modalnego <em>might</em> razem z bezokolicznikiem ciągłym czasu teraźniejszego (<em>be + </em>czasownik z <em>-ing</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. You'll never guess </p>
+<p><strong>Uzasadnienie:</strong> uzupełniony zwrot wzbudzający czyjeś zainteresowanie ("Nigdy nie zgadniesz co się stało!") </p>
+<p>2. had/got her hair cut</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że wykonanie jakiejś czynności zostało zlecone innej osobie, używamy konstrukcji <em>have/get something done</em>. Czas <em>past simple</em>, ponieważ opisujemy czynność zakończoną w konkretnym momencie w przeszłości.</p>
+<p>3. Kate will take the</p>
+<p><strong>Uzasadnienie:</strong> do wyrażenia przewidywań na podstawie czyichś przeczuć używamy czasu <em>future simple</em> (<em>will </em>+ bezokolicznik).</p>
+<p>4. the wedding had already been</p>
+<p><strong>Uzasadnienie:</strong> czas <em>past perfect</em>, aby opisać wydarzenie, które skończyło się przed inną czynnością w przeszłości. Używamy przedimka określonego <em>the</em>, ponieważ mowa o konkretnej ceremonii. </p>
+<p>5. have they been preparing </p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o długość wykonywania niezakończonej czynności używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -<em>ing</em>). </p>
+<p>6. it was snowing heavily</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś sytuacja trwała w momencie, kiedy odbyło się inne wydarzenie w przeszłości, używamy czasu <em>past continuous</em> (<em>was/were</em> + czas. z -<em>ing</em>). Z przymiotnika <em>heavy </em>(ciężki) utworzymy przysłówek, aby opisywał czynność.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. will be attending classes</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości używamy czasu <em>future continuous</em> (<em>will be </em>+ czasownik z -<em>ing</em>). </p>
+<p>2. that she would take care</p>
+<p><strong>Uzasadnienie:</strong> zdanie wyjściowe jest obietnicą, czyli do jej wyrażenia użyto czasu <em>future simple </em>(<em>will </em>+ bezokolicznik). W mowie zależnej <em>will </em>zmieni się na <em>would</em>.</p>
+<p>3. stealing money</p>
+<p><strong>Uzasadnienie:</strong> po przyimkach (tu: <em>of</em>) czasowniki przyjmują formę z końcówką -<em>ing</em>.</p>
+<p>4. are you planning to do</p>
+<p><strong>Uzasadnienie:</strong> pytanie o czynność (<em>plan </em>- planować) wykonywaną w chwili obecnej, dlatego używamy czasu <em>present continuous</em>. Czasownik <em>plan </em>łączy się z bezokolicznikiem z <em>to</em>.</p>
+<p>5. I have ever seen </p>
+<p><strong>Uzasadnienie:</strong> opis doświadczeń życiowych z przysłówkiem <em>ever </em>(kiedykolwiek) = czas <em>present perfect </em>(<em>have/has + past participle </em>- tu: III kolumna w tabeli czasowników nieregularnych).</p>
+<p>6. the flat would suit you</p>
+<p><strong>Uzasadnienie:</strong> do opisywania hipotetycznych sytuacji używamy II trybu warunkowego (rezultat: <em>would </em>+ bezokolicznik). Używamy przedimka określonego przed rzeczownikiem <em>flat </em>(mieszkanie), ponieważ mowa o konkretnym miejscu i określonej sytuacji znanej rozmówcom. </p><br>

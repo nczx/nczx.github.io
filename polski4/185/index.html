@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór Wisławy Szymborskiej pt. <em>Rozmowa z kamieniem </em>składa się z 12 strof o zróżnicowanej długości - najkrótsza składa się z jednego wersu, a najdłuższa - z dziesięciu. W wierszu pojawiają się liczne znaki interpunkcje, jest on jednak pozbawiony rymów czy regularnej liczby sylab w wersie. Można uznać, że to przykład wiersza wolnego. W utworze tym można ponadto wyróżnić sześć części, które odpowiadają sześciu próbom przedostania się do wnętrza kamienia. Każda z nich jest złożona z dwóch strof: pierwsza opisuje zachowanie podmiotu lirycznego ("Pukam do drzwi kamienia.") i przedstawia jego argument. Z kolei druga strofa prezentuje kontrargumenty kamienia, który odmawia wejścia, poznania. Osią kompozycyjną jest więc relacja człowieka i kamienia, ich dialog ujawniający ludzką potrzebę poznania oraz niemożność przekroczenia pewnych granic. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Wszystkie żądania podmiotu lirycznego odwołują się do jego niepowstrzymanego pragnienia poznania. Z tego też powodu na początku wiersza stwierdza, że chce zobaczyć wnętrze kamienia, "nabrać ciebie jak tchu". Świadczy to o chęci poznania samej istoty kamienia. On jednak odmawia osobie mówiącej, ponieważ uważa, że pewne granice są dla człowieka nieprzekraczalne, przez co niemożliwe staje się doświadczenie istoty kamienia. Za drugim razem podmiot liryczny próbuje odwołać się do argumentów emocjonalnych. Podkreśla kruchość swojej egzystencji, co znacząco ogranicza czas na poznanie świata, a także powołuje się na swoją ciekawość. Kamień jednak pozostaje niewzruszony, ponieważ nie ulega jakimkolwiek emocjom. Za trzecim razem podmiot liryczny zauważa, iż szkoda, aby wewnętrzne piękno kamienia pozostało niezauważone. Twierdzi też, iż sam kamień nie zna swego wnętrza. Ponownie jego rozmówca odmawia - sądzi, że człowiek za pomocą swoich zmysłów nie zrozumie nigdy w pełni kamienia, który pozostaje niezgłębioną tajemnicą. Osoba mówiąca nie poddaje się jednak i ponawia żądanie - obiecuje, że potem powróci do swojego świata, zaś jej opowieść o poznaniu istoty kamienia nie będzie przez nikogo uważana za prawdę. Na to kamień stwierdza, iż brak "zmysłu udziału" uniemożliwia wniknięcie w jego istotę. Chociaż podmiot liryczny próbuje przekonać rozmówcę, że nie może czekać zbyt długo, to ten pozostaje niewzruszony - wręcz wyśmiewa niecierpliwość istoty ludzkiej. Ostatecznie zaś wezwanie osoby mówiącej podsumowuje słowami: "Nie mam drzwi [...]", co podkreśla bezsilność człowieka względem tajemnic przyrody, ale też jego ograniczone możliwości. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe związki frazeologiczne:</p>
+<ul>
+<li>kamień milowy; </li>
+<li>kamień obrazy;</li>
+<li>nie zostawić kamienia na kamieniu;</li>
+<li>kamień węgielny;</li>
+<li>stać się dla kogoś kamieniem;</li>
+<li>kamień do czyjegoś ogródka;</li>
+<li>coś ciąży komuś kamieniem;</li>
+<li>być z kamienia;</li>
+<li>kamień w wodę.</li>
+</ul>
+<p> </p>
+<p>Podkreślone cechy:</p>
+<ul>
+<li>ciężar;</li>
+<li>stałość;</li>
+<li>nieczułość;</li>
+<li>martwota;</li>
+<li>obojętność. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Kamień odmawia człowiekowi dostępu do siebie, używając kilku argumentów, które odwołują się przede wszystkim do tego, iż istnieją granice poznania, których istota ludzka nie może przekroczyć. Z tego też powodu stwierdza: "Jestem szczelnie zamknięty, / Nawet rozbite na części / będziemy szczelnie zamknięte". Słowa te stanowią wyrazistą sugestię, iż człowiek nie może poznać istoty kamienia, wniknąć w niego: rozbity kamień pozostaje tajemnicą, zmienia się tylko jego wielkość, fizyczna struktura. Argumenty podmiotu lirycznego budzą drwinę kamienia - jest on stały, wieczny, więc kruchość ludzkiej egzystencji go nie porusza. Przyczyna odmowy ujawnia się także w cytacie: "Możesz mnie poznać, nie zaznasz mnie nigdy". Słowa te zaznaczają, iż człowiek może za pomocą swoich zmysłów poznać pewne cechy obserwowanego obiektu, np. kolor, kształt, zapach. Nie stanowią one jednak o istocie kamienia, nie pozwalają na pełne oraz bezpośrednie doświadczenie jego istoty. Zmysły człowieka są jednocześnie źródłem jego ograniczeń w postrzeganiu natury. Taką obserwację potwierdza kolejna wypowiedź kamienia: "Brak ci zmysłu udziału". Świadczy o tym, że człowiekowi brakuje pewnego daru, dzięki któremu można zjednoczyć się z kamieniem, zrozumieć go. Nie ma więc odpowiedniego sposobu komunikacji między dwoma tak różnymi bytami. Kamieni ponadto twierdzi, iż istota ludzka nie potrafi poznać istoty także innych elementów świata: "zwróć się do liścia, powie to, co ja. / Do kropli wody, powie to, co liść". Próby zgłębienia natury są tym samym skazane na niepowodzenie. Ostatni argument kamienia zdaje się banalny, ale też zaskakujący: "Nie mam drzwi [...]". On z kolei podkreśla, że nie istnieje żaden kanał komunikacji, który połączyłby kamieniem z ludzkim poznaniem. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Powtórzenia to ważny element utworu Wisławy Szymborskiej, ponieważ organizują one strukturę dzieła, nadają jej swoisty rytm. Ponadto wyznaczają kolejne odsłony dialogu podmiotu lirycznego z kamieniem: "Pukam do drzwi kamienia. / - To ja, wpuść mnie". W ten sposób poetka podkreśla upór istoty ludzkiej, podejmującej ciągłe próby poznania przedstawiciela świata natury, oraz równie konsekwentną postawę kamienia. Pozostaje on bowiem niewzruszony, odmawia ujawnienia swej tajemnicy, zawsze znajduje kontrargumenty pozwalające na odparcie racji osoby mówiącej. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Z wiersza Szymborskiej wyłania się obraz człowieka, który pragnie zgłębić wszelkie tajemnice rzeczywistości, przekroczyć granice poznania. To jednostka uparta, zdeterminowana, by osiągnąć swój cel, ponieważ nie przejmuje się ciągłymi odmowami kamienia. Nie jest zrezygnowana, zamiast tego sięga po kolejne argumenty (również emocjonalne), by przekonać rozmówcę do swego pragnienia. Człowiek w swym życiu kieruje się przede wszystkim niepowstrzymaną ciekawością, wie także, że jego czas jest ograniczony: "Nie wiele czasu na to wszystko mam. / Moja śmiertelność powinna cię wzruszyć". Wyróżnia go spryt, ponieważ na różne sposoby stara się przekonać kamień, by wpuścił go do środka. Świadczy to również o pomysłowości istoty ludzkiej, ale także stanowi przejaw pychy, ponieważ nie potrafi on uszanować odmowy rozmówcy. Chociaż człowiek w wierszu jest zadowolony ze świata, w którym przyszło mu żyć, nie potrafi okiełznać swej potrzeby poznania istoty kamienia. Jest jednak ograniczony w swych dążeniach, ponieważ brakuje mu "zmysłu udziału" - niezbędnego elementu. Ostatecznie też ujawnia swoją niecierpliwość: "Nie mogę czekać dwóch tysięcy wieków / na wejście pod twój dach". Puenta wiersza sugeruje jednak bezsilność istoty ludzkiej, z której drwi natura - nie pozwala na poznanie swych tajemnic, pozostaje zamknięta dla człowieka, drwi z jego bezowocnych starań. </p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Podobieństwo sytuacji lirycznej w tekście Mickiewicza oraz Szymborskiej polega na tym, że wiersze te przedstawią spotkanie człowieka z tajemnicami świata natury. Podmiot liryczny dąży bowiem do przekroczenia granic poznania: u poetki pragnie zgłębić istotę kamienia, zaś u romantycznego twórcy - mimo napomnień towarzysza - spogląda w przepaść, przez co zyskuje wgląd w inną rzeczywistość. To pragnienie wykracza poza możliwości ludzkiego umysłu, ponieważ istota ludzka nie może w pełni pojąć kamienia, zaś Pielgrzym u Mickiewicza nie potrafi oddać za pomocą słów swego niezwykłego doświadczenia. Sytuacje liryczne w tych wierszach łączy także portret człowieka jako istoty ciekawej świata, łaknącej wiedzy, ale też bezradnej względem tego, co wykracza poza ludzki rozum. Z tego też powodu pozostaje gościem, kimś obcym w świecie natury, która pilnie strzeże swych sekretów. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>a) Dzieło Friedricha przedstawia wieczorny pejzaż, w który jest wtopiona samotna ludzka sylwetka. Dominuje więc statyczna kompozycja, wskazująca na potęgę świata natury - staje się on głównym bohaterem obrazu. Dzieło przedstawia otwartą przestrzeń, w której znajdują się potężne głazy. Za nimi można zaś dostrzec krzaki, dwa rozległe drzewa oraz w oddali - ścianę lasu. Znaczną część obrazu zajmuje także niebo - rozjaśnia je subtelny blask księżyca. Friedrich wykorzystuje przede wszystkim stonowane, ciemne barwy. Dominuje czerń, szarość oraz fiolet. Kolory te budują atmosferę tajemnicy oraz niesamowitości, wpływają także na melancholijny charakter dzieła, co wiąże się z zadumą przedstawionej postaci.</p>
+<p> </p>
+<p>b) Można dostać pewne podobieństwa między bohaterem wiersza a obrazem Friedricha. Przede wszystkim twórcy ukazują jednostkę, która pragnie poznać tajemnice świata natury, zgłębić jego istotę. W wierszu Szymborskiej osoba mówiąca wprost domaga się, by kamień ukazał jej swoje wnętrze. Z kolei człowiek na obrazie zdaje się zamyślony, z uwagą przygląda się głazom, jakby chciał poznać ich tajemnicę. Mimo tego dzieła wskazują na niemożność przekroczenia pewnych granic - wynika to z ograniczeń ludzkiego umysłu oraz obcości człowieka - intruza - w świecie natury.</p>
+<p> </p>
+<p>c) Romantyczna wizja natury w wierszu oraz dziele malarskim przejawia się już chociażby w tym, iż przyroda stanowi dla człowieka obiekt fascynacji. Z tego też powodu jednostka pragnie przekroczyć granice poznania, by poznać tajemnice nieznanej rzeczywistości, zagłębić się w nią. Natura jawi się jako byt niesamowity, zagadkowy, który pilnie strzeże swych tajemnic. Jednocześnie staje się dla człowieka źródłem zadumy, kontemplacji świata. Obnaża siłę istoty ludzkiej, upartej, ciekawej, ale także słabość, ponieważ zmysły człowieka ograniczają jego zdolność poznania. Z tego też powodu, chociaż człowiek chce wejść w dialog z naturą, jest skazany na porażkę. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Teza: W wierszu Szymborskiej kamień jest synekdochą, która reprezentuje wszystko, co otacza człowieka.</p>
+<p> </p>
+<p>Stanisław Balbus twierdzi, że nie należy rozpatrywać utworu Szymborskiej jako dzieła alegorycznego lub paraboli - mimo ukazania kamienia na kształt człowieka. Według badacza kamień trzeba postrzegać jako konkretny (dosłowny) element rzeczywistości - staje się on przykładem synekdochy. Reprezentuje tym samym wszystkie istnienia, które otaczają istotę ludzką i są przez nią określane. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br>

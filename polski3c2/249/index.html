@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowo:</p>
+<p><span style="text-decoration:underline;">Podnosimy</span> rêce do <span style="text-decoration:underline;">góry.</span> -&gt; Komunikat ten nie jest b³êdny np. jeœli pojawia siê w czasie zajêæ z dzieæmi. Precyzuje bowiem czynnoœæ, któr¹ maj¹ wykonaæ, dziêki czemu staje siê dla nich jednoznaczny.</p>
+<p> </p>
+<p><span style="text-decoration:underline;">Zabija</span> owady <span style="text-decoration:underline;">na œmieræ.</span> -&gt; Nie jest to b³¹d s³ownikowy, jeœli zdanie to stanowi element reklamy. W niej bowiem dopuszcza siê wiêksz¹ swobodê oraz mo¿liwoœæ tworzenia gier jêzykowych. Zdanie to podkreœla tym samym zaletê produktu: jego niew¹tpliw¹ skutecznoœæ. </p>
+<p> </p>
+<p><span style="text-decoration:underline;">Tylko i wy³¹cznie</span> jutro. -&gt; To sformu³owanie mo¿na uznaæ za poprawne, jeœli np. pojawia siê w ofercie danego sklepu (lub w jego mediach spo³ecznoœciowych). Wskazuje bowiem odbiorcy na ostateczny termin np. okreœlonej promocji, s³u¿y zaakcentowaniu kluczowej informacji. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>WypowiedŸ 1.</strong> W zdaniu tym pope³niono b³¹d interpunkcyjny oraz sk³adniowy. Na koñcu brakuje bowiem odpowiedniego znaku, przez co, nie wiadomo, jaki charakter ma wypowiedŸ (pytanie lub stwierdzenie). Dodatkowo szyk zdania mo¿e byæ Ÿród³em nieporozumieñ. Nie jest bowiem jasne, czy s³owa po "drodze" nale¿y traktowaæ dos³ownie ('wynosiæ œmieci drog¹'), czy te¿ bardziej przenoœnie ('wynieœæ œmieci przy okazji innej czynnoœci'). </p>
+<p> </p>
+<p><strong>WypowiedŸ 2.</strong> W zdaniu tym pope³niono b³¹d interpunkcyjny - brakuje bowiem przecinka. On zaœ wp³ywa na sposób interpretacji zdania, poniewa¿ okreœla, czego dotyczy s³owo "obficie" - solenia lub u¿ycia pieprzu. </p>
+<p> </p>
+<p><strong>WypowiedŸ 3.</strong> W wypowiedzi tej b³¹d jest zwi¹zany z fleksj¹, a raczej jej niespójnoœci¹. W pierwszym i drugim zdaniu czasowniki maj¹ inne koñcówki fleksyjne, które wskazuj¹ na odmiennych wykonawców czynnoœci (3. oraz 1. os lp). Z tego powodu nie wiadomo, czy podmiot powinien byæ ten sam, czy nie.</p>
+<p> </p>
+<p><strong>WypowiedŸ 4.</strong> W zdaniu tym wystêpuje b³¹d leksykalny. Dochodzi do u¿ycia wyrazu w niew³aœciwym znaczeniu (kucie - 'obróbka metalu', k³ucie - 'sprawianie ostrego bólu'). </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p><strong>Rozwi¹zanie poni¿ej: </strong></p>
+<table border="1" style="border-collapse:collapse;width:622px;height:564px;">
+<tbody>
+<tr style="height:22px;">
+<td style="background-color:#aed581;text-align:center;width:307.663px;"><strong>B³¹d</strong></td>
+<td style="background-color:#aed581;text-align:center;width:307.337px;"><strong>Typ b³êdu</strong></td>
+</tr>
+<tr style="height:44px;">
+<td style="width:307.663px;text-align:center;height:44px;">s¹ oni wymagaj¹cy i bardzo ró¿ni</td>
+<td style="width:307.337px;text-align:center;height:44px;">b³¹d sk³adniowy </td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">wzi¹œæ</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d fleksyjny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">te pude³ko</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d sk³adniowy</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">tamte</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d sk³adniowy</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">okaza³o siê to byæ</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d sk³adniowy</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">najbardziej optymalna</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">przekonywuj¹cy</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">nastolatkowie graj¹</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d fleksyjny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">swetr</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d fleksyjny </td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">ca³y komplet</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">ubiera</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">gad¿ety</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">futrzana pufa</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d fleksyjny</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">kosmetyki</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d sk³adniowy</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">sprezentowaæ</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:22px;">
+<td style="width:307.663px;text-align:center;height:22px;">fluid</td>
+<td style="width:307.337px;text-align:center;height:22px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">ch³opaki</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d fleksyjny</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">gad¿ety</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d leksykalny</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">wymyœleæ</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d fleksyjny</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:307.663px;text-align:center;height:17px;">spersonalizowany</td>
+<td style="width:307.337px;text-align:center;height:17px;">b³¹d leksykalny </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Przyk³adowo:</p>
+<p>B³¹d pospolity: swetr -&gt; Jest to niepoprawna i rozpowszechniona forma. Mimo tego nie wp³ywa ona negatywnie na komunikacjê.</p>
+<p>B³¹d pospolity: najbardziej pospolity -&gt; To takze czêsto stosowana forma. Nie jest poprawna jej u¿ycie nie wp³ywa znacz¹co na zrozumienie sensu wypowiedzi. </p>
+<p>Usterka jêzykowa: fluid -&gt; Usterka jêzykowa nie wp³ywa na mo¿liwoœæ odczytania komunikatu, jest tylko odstêpstwem. Mimo niepotrzebnego zapo¿yczenia wypowiedŸ pozostaje jednoznaczna. </p>
+<p> </p>
+<p>Przyk³ad poprawionego tekstu:</p>
+<p><strong>Uwaga! W odpowiedzi poprawiono tak¿e pozosta³e b³êdy jêzykowe. </strong></p>
+<p>Wybór prezentów dla m³odzie¿y to nie lada wzywanie - szczególnie ¿e jest ona wymagaj¹ca i bardzo ró¿na. Jedna osoba bêdzie wola³a wzi¹æ to pude³ko, druga - tamto. Co wiêc wybraæ, aby okaza³o siê to strza³em w dziesi¹tkê?</p>
+<p>Po pierwsze, optymalna jest zawsze ksi¹¿ka - uniwersalny i przekonuj¹cy podarunek. Coraz czêœciej nastolatki graj¹ w gry planszowe; w ksiêgarniach jest ich du¿o. Dobrym prezentem bêdzie te¿ modny sweter lub oryginalne spodnie (a najlepiej komplet), które chêtnie zak³ada wspó³czesna m³odzie¿. Ponadto sprawdz¹ siê przedmioty do do pokoju, na przyk³ad futrzany puf czy plakat z idolem. Dziewczyny na ogó³ u¿ywaj¹ kosmetyków, wiêc mo¿na podarowaæ im tusz do rzês lub podk³ad; ch³opacy zawsze lubili rzeczy zwi¹zane z pi³k¹ no¿n¹. Warto te¿ wymyœliæ osobisty prezent. </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przyk³adowo:</p>
+<p>Geografia by³a najwiêksz¹ pasj¹ jego ¿ycia,<strong> któr¹ interesowa³ siê do koñca ¿ycia. </strong>-&gt; W zdaniu tym mo¿na dostrzec zbêdne rozwleczenie tekstu. Zdanie podrzêdne powtarza bowiem treœæ, któr¹ zawiera zdanie g³ówne, oraz wyraz "¿ycie".</p>
+<p> </p>
+<p>W³adze informuj¹, ¿e<strong> trupy</strong> z miejsca wypadku zosta³y przewiezione do kostnicy. -&gt; W zdaniu pojawia siê element jêzykowy niedopasowany do charakteru wypowiedzi. Wyraz z polszczyzny potocznej zostaje bowiem w³¹czony do tekstu oficjalnego. </p>
+<p> </p>
+<p><strong>Niniejszym zawiadamiam</strong>, ¿e zakupiony przeze mnie towar jest wadliwy. -&gt; B³¹d stylistyczny polega na niew³aœciwym doborze œrodków jêzykowych, które nie pasuj¹ do charakteru wypowiedzi.</p>
+<p> </p>
+<p>Reprezentowana przez g³ównego bohatera postawa stanowi swego rodzaju wzór zachowania, <strong>który wskazuje, jak nale¿y postêpowaæ.</strong> -&gt; Dochodzi tutaj do zbêdnego rozwleczenia tekstu oraz powtórzenia sensu zawartego w s³owach "wzór zachowania". </p>
+<p> </p>
+<p>Odk¹d Bartek pozbiera³ siê i <strong>wyszed³ z do³ka, œmia³o spogl¹da w przysz³oœæ, nie boj¹c siê niespodzianek, które szykuje dla niego los. </strong>-&gt; W zdaniu tym b³êdem stylistycznym jest u¿ycie modnego wyra¿enia ("wyjœæ z do³ka") oraz nadmierne skomplikowanie wypowiedzi (objêtoœæ). </p>
+<p> </p>
+<p>Zastêpca dyrektora<strong> dokona³ przedstawienia kandydatów wytypowanych do wziêcia udzia³u w konkursie. </strong>-&gt; W zdaniu zauwa¿alne jest niepotrzebne rozwleczenie tekstu. Tê sam¹ treœæ mo¿na wyraziæ w prosty i zwiêz³y sposób, bardziej zrozumia³y dla odbiorcy. </p><br>

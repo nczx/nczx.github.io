@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. work</p>
+<p><strong>Uzasadnienie</strong>: <em>work flexitime </em>- pracować w elastycznym wymiarze godzin. </p>
+<p>2. job</p>
+<p><strong>Uzasadnienie</strong>: <em>apply for a job </em>- ubiegać się o pracę. </p>
+<p>3. job</p>
+<p><strong>Uzasadnienie</strong>: <em>job interview </em>- rozmowa o pracę. </p>
+<p>4. job, work</p>
+<p><strong>Uzasadnienie</strong>: <em>summer job </em>- praca wakacyjna; <em>manual work </em>- praca fizyczna. </p>
+<p>5. work</p>
+<p><strong>Uzasadnienie</strong>: <em>work in a field </em>- pracować w jakiejś branży. </p>
+<p>6. job</p>
+<p><strong>Uzasadnienie</strong>: <em>full-time job </em>- praca na pełen etat. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. explore  </p>
+<p>2. study<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Chcesz <strong>odkrywać </strong>świat? Chciał(a)byś <strong>studiować </strong>za granicą?</p>
+<p>Możemy pomóc. Dajemy młodym ludziom możliwości na całym świecie. Studia, wolontariat, kursy językowe i wiele więcej. Zadzwoń teraz, aby uzyskać więcej informacji. <br/><br/></p>
+<p>3. do</p>
+<p>4. get<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Chciał(a)byś <strong>robić </strong>coś ciekawego, by zarobić na życie? Kiedy <strong>zdobędziesz </strong>prawo jazdy, będziesz mieć więcej możliwości! Przyjdź do nas, ekspertów od nauki jazdy, i odmień swoje życie!<br/><br/></p>
+<p>5. setting</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>think of doing something </em>(myśleć o zrobieniu czegoś), czyli wstawiony czasownik musi mieć formę <em>gerund </em>(z końcówką -ing).</p>
+<p>6. acquire<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Myślisz o tym, by <strong>założyć </strong>własną firmę? Aby prowadzić odnoszącą sukcesy firmę, trzeba <strong>zdobyć </strong>odpowiednie umiejętności personalne. Nasze kursy "Skuteczna komunikacja w pracy" i "Unikanie konfliktów w miejscu pracy" mogą w tym pomóc. Zarejestruj się już dziś.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. (przykład)</p>
+<p>2. <span style="text-decoration: line-through;">I am</span> I will </p>
+<p><strong>Uzasadnienie:</strong> do opisania możliwości w przyszłości używamy konstrukcji <em>will be able to + </em>bezokolicznik. </p>
+<p>3. <span style="text-decoration: line-through;">will pass</span> passes</p>
+<p><strong>Uzasadnienie:</strong> w zdaniach okolicznikowych czasu używamy <em>present simple</em> po spójniku (tu: <em>when</em>).</p>
+<p>4. <strong>✓ </strong></p>
+<p>5. <s class="odr-strikethrough">will <span style="text-decoration: line-through;">can</span></s> will be able </p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>can</em> nie ma formy przyszłej. Zamiast niego używamy <em>will be able to</em>, by wyrazić możliwość w przyszłości.</p>
+<p>6. <span style="text-decoration: line-through;">be able</span> - have</p>
+<p><strong>Uzasadnienie:</strong> do opisania braku obowiązku lub konieczności w przyszłości używamy konstrukcji <em>won't have to + </em>bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Odpowiedzi w punktach 2 i 6 zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. soon </p>
+<p><strong>Uzasadnienie</strong>: spójnik <em>as soon as </em>(jak tylko). </p>
+<p>2. until / before</p>
+<p>(Jack i jego rodzina wyjechali na wakacje i nie wrócą <strong>do</strong> końca miesiąca / <strong>przed </strong>końcem miesiąca.)</p>
+<p>3. time</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy okolicznik <em>this time next week </em>(o tej porze za tydzień), który jest typowy dla czasu <em>future continuous.</em></p>
+<p>4. by</p>
+<p><strong>Uzasadnienie</strong>: okolicznik <em>by the time ... </em>(do czasu, jak), który jest typowy dla czasu <em>future perfect.</em></p>
+<p>5. in</p>
+<p><strong>Uzasadnienie</strong>: <em>in three years' time </em>- za trzy lata.</p>
+<p>6. when</p>
+<p>(Będziesz mógł/mogła pójść z nami na dyskotekę, <strong>kiedy</strong> skończysz osiemnaście lat.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. up </p>
+<p><strong>Uzasadnienie:</strong> <em>set up your own business </em>- założyć własną firmę. </p>
+<p>2. able</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>will be able to </em>+ bezokolicznik, by opisać możliwość w przyszłości.</p>
+<p>3. hours</p>
+<p><strong>Uzasadnienie:</strong> <em>flexible working hours</em> - elastyczne godziny pracy.</p>
+<p>4. be</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości, używamy czasu <em>future continuous</em> (<em>will be</em> + czasownik z -ing).</p>
+<p>5. have/need</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że w przyszłości nastąpi obowiązek albo przymus wykonania jakiejś czynności, używamy konstrukcji <em>will have to / will need to </em>+ bezokolicznik.</p>
+<p>6. will</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność zakończy się przed określonym momentem w przyszłości (<em>by the end of the year </em>- przed końcem roku) używamy czasu <em>future perfect</em> (<em>will have</em> + <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. you will be serving </p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości używamy czasu <em>future continuous</em> (<em>will be</em> + czasownik z -ing). </p>
+<p>2. As soon as I get</p>
+<p><strong>Uzasadnienie:</strong> po spójniku wprowadzającym zdanie okolicznikowe czasu (tu: <em>as soon as</em> - jak tylko) używamy czasu <em>present simple</em>.</p>
+<p>3. to be financially independent</p>
+<p><strong>Uzasadnienie:</strong> <em>financially independent </em>- niezależny/a finansowo. Konstrukcja: <em>it is + </em>przymiotnik + bezokolicznik z <em>to</em>.</p>
+<p>4. we will be able to find</p>
+<p><strong>Uzasadnienie:</strong> do opisania możliwości lub umiejętności w przyszłości używamy konstrukcji <em>will be able to </em>+ bezokolicznik. </p>
+<p>5. want to do for a living</p>
+<p><strong>Uzasadnienie:</strong> <em>do for a living </em>- zarabiać na życie. Czasownik <em>want</em> (chcieć) łączy się z bezokolicznikiem z <em>to</em>.</p>
+<p>6. I will have applied for</p>
+<p><strong>Uzasadnienie:</strong> <em>apply for a job </em>- ubiegać się o pracę. Do opisania, że jakaś czynność zakończy się przed określonym momentem w przyszłości używamy czasu <em>future perfect</em> (<em>will have</em> + <em>past participle </em>- końcówka -ed lub III kolumna w tabeli czasowników nieregularnych).</p><br>

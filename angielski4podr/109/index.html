@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. c</p>
+<p>(Po zeszłorocznym pożarze, zdecydowaliśmy się wykupić ubezpieczenie, które pokrywa wszystkie zniszczenia nieruchomości.) </p>
+<p>2. b</p>
+<p>(Musimy odnowić ubezpieczenie i zapłacić roczną składkę w przyszłym miesiącu.)</p>
+<p>3. f</p>
+<p>(Pamiętaj, że broker może nie mówić ci wszystkiego, więc czytaj to co zapisano drobnym druczkiem w polisie.)</p>
+<p>4. d</p>
+<p>(Jako posiadacz polisy, jest pan/pani upoważniony/a do pełnego pokrycia kosztów szkód.)</p>
+<p>5. a</p>
+<p>(Na szczęście mieliśmy pełne ubezpieczenie, które pokrywa większość zniszczeń związanych z pogodą.)</p>
+<p>6. e</p>
+<p>(Kiedy włamano się do naszego domu, wnieśliśmy roszczenie, ale agencja ubezpieczeniowa odmówiła zapłaty.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. reimbursement</p>
+<p>(zwracanie pieniędzy - <strong>zwrot/pokrycie kosztów</strong>) </p>
+<p>2. file a claim</p>
+<p>(domagać się zapłaty od firmy ubezpieczeniowej - <strong>wnieść roszczenie</strong>)</p>
+<p>3. take out insurance</p>
+<p>(kupić plan ubezpieczeniowy - <strong>wykupić ubezpieczenie</strong>)</p>
+<p>4. premium</p>
+<p>(regularna zapłata dokonywana na rzecz agencji ubezpieczeniowej - <strong>składka ubezpieczeniowa</strong>)</p>
+<p>5. be entitled to</p>
+<p>(mieć prawo do czegoś - <strong>być upoważnionym do</strong>)</p>
+<p>6. cover</p>
+<p>(zapewniać ochronę przed - <strong>pokrywać</strong>)</p>
+<p>7. comprehensive insurance policy</p>
+<p>umowa o ubezpieczenie, które pokrywa wszelkie szkody i straty - <strong>pełne ubezpieczenie</strong>)</p>
+<p> </p>
+<p><strong>Uwaga! Poniższe rozwiązanie jest przykładowe. Definicje (lub ich części) pochodzą ze słownika <em>Cambridge Dictionary</em>. Definicje mogą się różnić w zależności od wybranego słownika. </strong></p>
+<p> </p>
+<p><strong>renew one's insurance</strong> - to make an insurance policy continue for an extra period of time</p>
+<p>(odnowić ubezpieczenie)</p>
+<p><strong>read the small print</strong> - to read the text in a formal agreement that is printed smaller than the rest of the text, sometimes in the hope that it will not be noticed</p>
+<p>(czytać tekst zapisany drobnym druczkiem)</p>
+<p><strong>insurance company</strong> - a company whose business is providing and selling insurance</p>
+<p>(agencja ubezpieczeniowa)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Mr Edwards called the help desk of an insurance company to report a <span style="text-decoration: line-through;">theft</span> <strong>burglary</strong>. He said that his house had been broken into the <span style="text-decoration: line-through;">week </span><strong>night </strong>before<strong> </strong>. The assistant informed him that his annual premium was due in four weeks and his insurance plan was <span style="text-decoration: line-through;">rather basic</span> <strong>fairly comprehensive</strong>. She also informed Mr Edwards that in order to file a claim he needed to submit various documents. She asked him if he had filed a claim in the previous months, and he replied that he <span style="text-decoration: line-through;">had</span> <strong>hadn't</strong>. At the end, the assistant pointed out that it <span style="text-decoration: line-through;">was</span> <strong>wasn't</strong> guaranteed that Mr Edwards would receive reimbursement. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. 7890986542N </p>
+<p>2. 30<sup>th</sup> September</p>
+<p>3. damage</p>
+<p>4. replacement costs</p>
+<p>5. the police report </p>
+<p>6. photographs of all the damage expected to be covered by the policy and the list of stolen things</p>
+<p>7. 30 business days</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

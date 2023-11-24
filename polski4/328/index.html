@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Gustaw Herling-Grudziński interpretuje <em>Mit Syzyfa </em>Camusa pod względem jego reprezentacji ludzkiej godności. Autor dostrzega w jego postawie podobieństwo do Hioba widzianego oczyma księdza Sadzika. Uważa, że bohater mitu świadom był tego, że nie może zmienić swojego losu, ma jednak wpływ na stosunek do odbywanej kary. Autor wskazuje, że tym co decyduje o godności mitycznego Syzyfa jest świadomość absurdu sytuacji, w której się znalazł. W jego postawie obecne są echa egzystencjalizmu. Syzyfem jest każdy człowiek, codziennie odbywana przez niego droga to zaś pozbawione sensu życie. Jego znaczenie zależne jest wyłącznie od tego, jaką wartość nada mu sama jednostka. Wędrówka mitologicznego skazańca staje się tym, czym on zechce, by była. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Gustaw Herling-Grudziński przywołuje cytaty z <em>Mitu Syzyfa, </em>by porównać sylwetkę mitologicznego bohatera z postawą biblijnego Hioba. Skupia się na momencie, kiedy skazaniec dociera na szczyt i obserwuje spadający głaz - dowód jego klęski wobec boskiej potęgi. Camus (a za nim Herling-Grudziński) proponuje jednak inną perspektywę. Syzyf jest świadom tego, że nie wyrwie się z błędnego koła swojej kary, a mimo tego podejmuje się każdorazowo tego samego zadania, wiedząc, że nie skończy się ono sukcesem. Umiejętność wzniesienia się ponad własny los świadczy o godności bohatera. Zdaje się, że samo zdobywanie szczytu, niezależnie od efektów podejmowanych działań, napawa Syzyfa radością. Świadomość tragedii wpisanej w los człowieka nie powstrzymuje mężczyzny od odnajdywania szczęścia w codziennej podróży na szczyt. W takiej perspektywie zejście w dół zdaje się drogą nie wstydu, lecz - godności, a może nawet - radosnego wyczekiwania.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Herling-Grudziński uważa, że Hioba i Syzyfa różni jego stosunek do Boga. Podczas gdy ten pierwszy pozostaje mu wierny w cierpieniu, mitologiczny bohater uznałby jego istnienie za przejaw absurdu. Różnica ta zdaje się wynikać z postrzegania cierpienia przez obie te postacie. Syzyf daleki jest od wiary w bogów, skazujących go na karę wiecznej wędrówki, nie poszukuje ulgi lub wsparcia w religijności. Wręcz przeciwnie, świadomość tragiczności ludzkiego losu odsuwa go od przekonania, że czuwa nad nim siła wyższa. Koncepcja Boga Sprawiedliwego, który "znęca się" nad swoimi wyznawcami jest wewnętrznie sprzeczna, a więc absurdalna. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>Możliwość porównania tak odległych tekstów jak Biblia i mitologia grecka świadczy o uniwersalności  prawd w nich przedstawionych. Na ich podstawie, Gustaw Herling-Grudziński rozważa zagadnienia o charakterze egzystencjalnym. Zastanawia się nad wpływem cierpienia na jednostkę  i tym, jak w jego obliczu zachować godność. Postacie takie jak Syzyf czy Hiob wpisują się w archetypy postaci wspólnych dla wszystkich kultur, wypływających z natury ludzkiej. Autor dostrzega podobieństwo w ich stosunku do tego, na co nie mają wpływu. Choć odnajdują różne sposoby radzenia sobie z własnym losem, łączy ich umiejętność stanięcia ponad nieszczęściem, które ich spotyka.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>W przedostatnim akapicie przytoczonego fragmentu autor stosuje autocytat. Przywołuje własne słowa zapisane w dzienniku przed kilkoma laty. Refleksja ta ma charakter autobiograficzny, Herling-Grudziński zderza swoje teraźniejsze rozważania dotyczące Księgi Hioba z tymi z przeszłości. Można uznać to za pewnego rodzaju rozmowę między dwoma wcieleniami autora - współczesnym i minionym. Jest  to akapit z gruntu osobisty, a wręcz intymny, poruszone zostają w nim bowiem takie kwestie jak stan emocjonalny czy stosunek do religii. Autor dziennika odkrywa się przed czytelnikiem, czego nie robi w innych fragmentach tekstu.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Przykładowo:</p>
+<p>Do zabiegów typowych dla dziennika można zaliczyć relacjonowanie wydarzeń wraz ze wskazaniem konkretnego momentu w czasie, tak, jak robi to autor w pierwszym akapicie tekstu ("Przed tygodniem poświęcono u palotynów wieczór zmarłemu 26 sierpni księdzu Józefowi Sadzikowi"). Za właściwy temu gatunkowi, choć nietypowy dla Gustawa Herlinga-Grudzińskiego, uznać pojawiający się sporadycznieopis wewnętrznych przeżyć autora, np. we fragmencie "Widywałem Sadzika niezbyt często, [...] nie potrafię jednak [...] myśleć o nim bez uczucia fascynacji".</p>
+<p>Nietypowe dla dziennika jest prowadzenie rozbudowanych, wielowątkowych rozważań budowanych na zasadzie asocjacji. Za takie uznać można skojarzenie biblijnego Hioba z mitologicznym Syzyfem. Autor, co niecharakterystyczne dla gatunku, poświęca więcej przestrzeni analizie tekstów literackich niż przedstawieniu swojej codzienności. <em>Dziennik pisany nocą </em>Herlinga-Grudzińskiego bliższy jest więc esejowi niż dziennikowi. </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Przykładowo:</p>
+<p>Podkreślone fragmenty wskazują na subiektywizm eseju. Autor odnosi się w nich do swoich prywatnych doświadczeń. Opisuje procesy myślowe, które doprowadziły go do przedstawianych w tekście rozważań. Przykładem tego może być fragment: "Ze wstępu do Księgi Hioba widzę, że uważnie czytał <em>Dżumę </em>Camusa". Grudziński wskazuje w nim konkretne okoliczności, które skłoniły go do rozważań wykraczających poza wstęp Sadzika. Rozwinięcie tego zdania stanowi bowiem omówienie stosunku bohaterów <em>Dżumy</em> do kwestii cierpienia, to zaś poszerza pole kontekstów eseju o zagadnienia egzystencjalizmu.</p><br><a style="color:red; font-size:25px;">Zadanie 15</a><br>
+<p>Przykładowo:</p>
+<ul>
+<li>O swobodnej kompozycji utworu można mówić, gdy poszczególne jego części nie wynikają z siebie, a stanowią raczej zbiór luźnych skojarzeń. Takie teksty nie mają wyraźnie wyodrębnionej wstępu, części właściwej i podsumowania. Taka budowa charakteryzuje również przywołany fragment <em>Dzienników pisanych nocą </em>Gustawa Herlinga-Grudzińskiego. Dostrzec to można szczególnie w zakończeniu. Nie jest ono konkluzją wynikającą z całości tekstu. Wręcz przeciwnie - autor wprowadza nowe zagadnienie dotyczące <em>Procesu </em>Kafki. Nie rozbudowuje swojej myśli, a raczej urywa ją nagle. </li>
+<li>Gustaw Herling-Grudziński wzbogaca swój tekst o liczne konteksty, co czyni go bardziej erudycyjnym. Odwołuje się do dwóch wielkich tradycji europejskich - wierzeń starożytnych Greków i religii judeochrześcijańskich. Przywołuje także teksty współczesne, przede wszystkim - twórczość Alberta Camusa. Tym samym w krąg swoich rozważań włącza także idee filozofii egzystencjalnej. </li>
+<li><em>Dziennik pisany nocą </em>ma charakter dygresyjny. Oznacza to, że pojawiają się w nim krótkie uwagi niedotyczące głównego tematu tekstu. W omawianym fragmencie za dygresję można uznać wspomnienie o <em>Procesie </em>Kawki. Autor zdaje się sugerować czytelnikom skojarzenie między postawionym problemem a tą powieścią. Zdanie to nie jest jednak powiązane bezpośrednio z główną myślą tekstu.</li>
+<li>Gustaw Herling-Grudziński w <em>Dzienniku pisanym nocą </em>odwołuje się do prywatnych doświadczeń, np. relacjonuje przemówienie księdza Janusza Pasierba. Dzieli się też z czytelnikami osobistymi przemyśleniami. Powołuje się na własną relację z Józefem Sadzikiem i na jej podstawie snuje przypuszczenia dotyczące recepcji <em>Dżumy </em>przez duchownego. Autor przywołuje także inne fragmenty dziennika, ustosunkowuje się więc do swoich przemyśleń z przeszłości.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zamieszczona w podręczniku grafika jest przekształceniem dwóch opowieści - o Syzyfie i o pasji Jezusa. Ich bohaterowie, zamiast samodzielnie odbywać swoją karę, dochodzą do porozumienia i wzajemnie sobie pomagają. Czas, który dzięki temu zyskują, przeznaczają na rozmowę. Grafika ta wskazuje z jednej strony na podobieństwo kulturowych archetypów, z drugiej - na potrzebę i znaczenie dialogu między podziałami. Pierwsza z postawionych tez łączy się z treścią fragmentu <em>Dziennika pisanego nocą </em>Gustawa Herlinga-Grudzińskiego. Tam jako kontekst dla mitologicznego Syzyfa przywołana zostaje inna postać biblijna - Hiob. Połączenie dwóch odmiennych źródeł i wskazanie ich punktów wspólnych pozwala spojrzeć na kulturę jako zbiór przeplatających się i korespondujących ze sobą tradycji, w których centrum stoi człowiek i jego doznania.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br>

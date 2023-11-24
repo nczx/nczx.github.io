@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe rozwiązanie:</strong></span></p>
+<p>Moim zdaniem nasze społeczeństwo w większości złożone jest z konformistów, co widać po poczynaniach władzy, która  wprowadza coraz to nowsze i wyższe podatki, ogranicza swobody obywatelskie (jak to było w czasie pandemii Covid-19), czy ogranicza rolę suwerena w sprawowaniu władzy (n.in. poprzez nieustanne odrzucanie projektów obywatelskiej inicjatywy ludowej), zaś społeczeństwo nie buntuje się takim działaniom, a co więcej spory odsetek wyborów dalej popiera rządzących. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Stąd proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe rozwiązanie:</strong></span></p>
+<p>Za konformistę uważa się tego, kto bezkrytycznie podporządkowuje się normom, wartościom i poglądom, które uznaje się za obowiązujące w danej grupie. Konformizm może być zły szczególnie wtedy, gdy dominujące normy, wartości czy poglądy z jakichś względów oddziałują negatywnie na funkcjonowanie grupy lub okazują się szkodliwe dla niektórych spośród jej przedstawicieli. W takiej sytuacji byłoby korzystne, aby ktoś zdobył się na odwagę i sprzeciwił się dominującym w grupie trendom. Niestety, współczesne społeczeństwo składa się na ogół z jednostek, które boją się zaprotestować. Większość osób broni swego stanu posiadania i stawia na konformizm. Dlatego na przykład obserwujemy gwałtowny wzrost cen towarów i usług, bo brakuje ludzi, którzy odważyliby się nonkonformistycznie powiedzieć, że tak dalej być nie może. Wydaje się więc, że nasze współczesne społeczeństwo w większości składa się z konformistów. Gdyby więcej było nonkonformistów, to na świecie nie działoby się tyle zła.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) O tym, że grupy społeczne mają duży wpływ na życie mieszkańców Polski świadczą dwa wskaźniki, a mianowicie :</p>
+<ul>
+<li>wskaźnik izolacji społecznej - niski poziom tego wskaźnika wskazuje na to, że ludzie stronią od braku kontaktów społecznych z innymi jednostkami. Ludzie nie chcą żyć w izolacji, dlatego też dążą oni do stania się częścią danej grupy społecznej lub kilku grup. </li>
+<li>wskaźnik możliwości uzyskania wsparcia od innych osób - wysoki poziom tego wskaźnika wskazuje, że ludzie żyją w grupach, w których czują się dobrze, mają poczucie bezpieczeństwa i możliwości uzyskania wsparcia od innych członków ich grup, m.in. przyjaciół, krewnych czy znajomych. </li>
+</ul>
+<p>b) Na podstawie przedstawionych danych nie można stwierdzić, że sytuacja społeczna w Polsce sprzyja narastaniu problemów wynikających z konfliktów ról społecznych, ponieważ na wysokim poziomie znajduje się wskaźnik satysfakcji z ilości czasu wolnego, a więc ludzie mają czas, aby wykorzystać  go na rekreację, to można  wnioskować to tym bardziej mają również czas na wypełnienie przypisywanych im ról społecznych. Bardo wysoki jest również wskaźnik dotyczący możliwości uzyskania wsparcia od innych osób, co świadczy o tym, że w przypadku problemów z realizacją ról społecznych ludzie mogą liczyć na pomoc otoczenia.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>O tym, że grupy społeczne mają duży wpływ na życie mieszkańców Polski, świadczą spośród podanych wskaźników przede wszystkim następujące:</p>
+<p>- wskaźnik izolacji społecznej,</p>
+<p>- wskaźnik możliwości uzyskania wsparcia od innych osób.</p>
+<p>Pierwszy ze wskaźników wiąże się bowiem z intensywnością (lub jej brakiem) kontaktów społecznych jednostki z osobami spoza jej gospodarstwa domowego. Drugi ze wskaźników dotyczy natomiast szans na uzyskanie przez jednostkę ewentualnego wsparcia (materialnego, psychicznego czy duchowego) ze strony innych osób, w tym krewnych, przyjaciół, znajomych lub sąsiadów i jest tym wyższy, im więcej jednostka ma wokół siebie bliskich sobie ludzi. </p>
+<p><strong>b)</strong></p>
+<p>Na podstawie przytoczonych danych można stwierdzić, że sytuacja społeczna w Polsce częściowo sprzyja narastaniu problemów wynikających z konfliktów ról społecznych. Konflikt ról społecznych to sytuacja, w której jednostka ma trudności z pogodzeniem ze sobą konieczności odgrywania różnych (zazwyczaj co najmniej kilku) ról społecznych. Każdy człowiek pełni w swoim życiu jednocześnie wiele ról społecznych, wcielając się na przykład w rolę ojca, policjanta, przyjaciela czy gracza drużyny piłkarskiej. Jeśli nie może sprostać wymaganiom wynikającym ze wszystkich tych ról społecznych, to świadczy to o tym, że zachodzi u takiego człowieka tzw. konflikt ról społecznych. Powodem konfliktu ról społecznych może być między innymi brak czasu, przez który nie można należycie pogodzić wszystkich swoich obowiązków, wiążących się z różnymi odgrywanymi przez siebie rolami społecznymi. Tymczasem, jak wynika z przytoczonych badań, 64,3% ankietowanych zadeklarowało, że jest usatysfakcjonowanych z ilości czasu wolnego, jakim dysponują. Spory odsetek badanych (35,7%) nie ma więc za wiele czasu wolnego, a to sprawia, że może u nich zachodzić problem z wywiązywaniem się z obowiązków związanych z pełnionymi przez nich rolami społecznymi.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Erving Gottman nazwał życie społeczne teatrem życia codziennego, ponieważ twierdził on, że ludzie podczas wchodzenie w interakcje z innymi jednostkami ogrywają pewne role oraz najczęściej w wyidealizowany sposób kształtują obraz samego siebie przed innymi ludźmi. Analiza przebiegu procesów interakcyjnych doprowadziła E. Gottmana do stanowiska, w którym wskazał on, że ludzie manipulują oraz kierują wrażeniem innych w zakresie swojego wizerunku. Tym samym odgrywają oni sceny tak jak to robią aktorzy w trakcie przedstawienia. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Amerykański socjolog <strong><span style="text-decoration: underline;">Erving Goffman</span></strong> (1922-1982) nazwał życie społeczne <strong><span style="text-decoration: underline;">teatrem życia codziennego</span></strong>, ponieważ zauważył, że <strong><span style="text-decoration: underline;">szereg ludzkich zachowań ma naturę teatralną</span></strong>. W zachowaniach z życia codziennego ludzie postępują podobnie jak aktorzy teatralni, przywdziewając w zależności od sytuacji rozmaite <strong><span style="text-decoration: underline;">'maski'</span></strong>. Chcemy bowiem, aby ludzie w odpowiedni sposób nas postrzegali, a w związku z tym często nie pokazujemy przed nimi swego prawdziwego oblicza, lecz staramy się kogoś innego w mniejszym lub większym stopniu udawać, tak jak ma to miejsce w przypadku aktorów, którzy na potrzeby spektaklu teatralnego czy planu filmowego wcielają się w różne role. <strong><span style="text-decoration: underline;">Sobą możemy być tak naprawdę jedynie 'za kulisami', kiedy nie obserwuje nas żadna publiczność</span></strong>. W swej koncepcji Goffman zwrócił więc uwagę na to, że <strong><span style="text-decoration: underline;">zachowania jednostki są w dużej mierze uzależnione od innych osób</span></strong>. Jednostka stara się bowiem spełnić oczekiwania innych. Wobec tego to, jak się zachowuje i jak postępuje, w dużej mierze motywowane jest chęcią jej przypodobania się innym.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Argumenty za tym, że współczesna młodzież to karierowicze:</span></strong></p>
+<ul>
+<li>coraz większe grono młodych ludzi podejmuje się zaangażowania w szerokie spectrum zajęć pozalekcyjnych, osiąga coraz lepsze wyniki w nauce oraz realizuje swoje pasje w celu uzyskania przez nich jak najlepszego doświadczenia i ukierunkowanie ich na zrobienie kariery, </li>
+<li>współczesna młodzież jest posłuszna rodzicom, nauczycielom oraz wychowawcą, co widać po ich zachowaniu w szkołach oraz w środowisku domowym, </li>
+<li>dzisiejsza młodzież zachowuje się zgodnie z oczekiwaniami społeczeństwa, np. poprzez ubieranie się w odzież odpowiadającą współczesnym czasom.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Argumenty za tym, że współczesna młodzież to buntownicy:</strong></span></p>
+<ul>
+<li>obecnie młodzi ludzie wychowywani są "bezstresowo", co powoduje, że mają coraz większe oczekiwania wobec członków społeczeństwa, a ich niespełnienie rodzi bunt, </li>
+<li>statystyki pokazują, że z roku na rok coraz więcej młodych ludzi ma problemy z prawem przez to, że nie przestrzegają oni prawa.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga przeprowadzenia dyskusji i zajęcia w niej własnego stanowiska. Stąd proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><em><span style="text-decoration: underline;"><strong>PRZYKŁADOWE WYPOWIEDZI MOGĄCE STANOWIĆ INSPIRACJĘ DO WYRAŻENIA WŁASNEGO ZDANIA W DYSKUSJI NA TEMAT: 'WSPÓŁCZESNA MŁODZIEŻ - KARIEROWICZE CZY BUNTOWNICY?'</strong></span></em></p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowa wypowiedź zawierająca argumenty na rzecz tego, że wśród współczesnej młodzieży więcej jest karierowiczów:</span></em></p>
+<p>O ile dzieci w początkowych stadiach nauki szkolnej - jak to dzieci - często są głośne, przeszkadzają, psocą i okazują się zwyczajnie niegrzeczne, myśląc głównie o zabawie, to jednak młodzież - powiedzmy już uczniowie ze starszych klas szkoły podstawowej, zwłaszcza VII i VIII - zaczynają myśleć o przyszłości i w większości przypadków skupiają się na zdobywaniu dobrych ocen. Mają bowiem przed sobą wybór szkoły średniej, a od tego, jaką szkołę wybiorą i na jaką specjalność postawią, może zależeć w dużej mierze ich sukces zawodowy (bądź jego brak). Żyjemy w rozwijającym się coraz intensywniej społeczeństwie informacyjnym, dla którego kluczowe są wiedza i specjalistyczne umiejętności. Wielu młodych ludzi ma tego świadomość i już w ostatnich klasach szkoły podstawowej, a zwłaszcza w szkole średniej, korzysta z dodatkowych korepetycji i doskonali znajomość języków obcych. Uczniowie szkół średnich robią zaś na ogół wszystko, aby zdobyć dobry zawód czy kontynuować naukę na prestiżowych studiach. Nie w głowach im rewolucje, bunty i przygody. Na pierwszym miejscu stawiają własną przyszłość, bogacenie się i zajęcie jak najwyższego miejsca w hierarchii społecznej. A wszystko to robią najczęściej metodami w pełni zgodnymi z obowiązującym prawem, a także normami społecznymi. Oczywiście, bawią się i imprezują, ale najczęściej w ugrzeczniony sposób, w klubach, na dyskotekach, dbając o dobrą prezencję i modny ubiór. Minęły czasy nastolatków będących buntownikami. Młodzi ludzie chcą dziś głównie robić karierę, aby później wygodnie i dostatnio żyć.</p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowa wypowiedź zawierająca argumenty na rzecz tego, że wśród współczesnej młodzieży więcej jest buntowników:</span></em></p>
+<p>Młodzi ludzie mają dziś bezproblemowy dostęp do Internetu i innych nowoczesnych technologii. Wymieniają się informacjami i poglądami, tak iż zwykle dość dobrze zdają sobie sprawę z panujących realiów. Wiedzą na przykład, że współczesna szkoła nie zawsze odpowiada potrzebom zmieniającego się dziś dynamicznie świata, a w szczególności nie nadąża za potrzebami rynku pracy. Stąd młodzi ludzie nierzadko w inteligentny sposób kontestują otaczającą ich rzeczywistość i z dystansem podchodzą do tego, co mówią im nauczyciele. Młodzież wie dziś bowiem, że formalne wykształcenie to nie wszystko. Trzeba bowiem doskonalić się na różnych kursach, w tym językowych, zdobywając umiejętności cenione we współczesnym świecie, zwłaszcza informatyczne. Wydaje się więc, że przedstawiciele współczesnej młodzieży bardzo często okazują się być buntownikami. Swój bunt kierują głównie przeciwko szkole i jej zwyczajom. O ich nonkonformizmie może niekiedy świadczyć ich złe zachowanie. Mniej lub bardziej świadomie wyrażają w ten sposób swoją krytykę pod adresem szkolnych porządków, które nie bardzo przystają do realiów współczesnego świata. Coraz częściej też młodzi ludzie potrafią mieć swoje zdanie, sprzeciwiając się nie tylko nauczycielom, ale też swoim rodzicom. Młodzież ma dziś swoje poglądy, czerpie informacje z różnych źródeł i nie daje się łatwo poddać próbom formatowania ze strony starszych pokoleń.</p><br>

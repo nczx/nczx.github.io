@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W utworze g³os zostaje oddany matce, która próbuje zachêciæ swe dziecko do snu: "uœnij syneczku uœnij". Jest wiêc to kameralna sytuacja, która dotyczy dwóch bliskich sobie osób. Sam zaœ pocz¹tek utworu ("z mroków / udrêki posuch / g³os idzie ¿a³oœn¹ steczk¹") sugeruje, i¿ jest to pewne wspomnienie, zaœ ukazana sytuacja rozgrywa siê w œwiecie wewnêtrznym osoby mówi¹cej. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Elementy charakterystyczne dla ko³ysanki: </p>
+<ul>
+<li>utwór œpiewany przez matkê dziecku;</li>
+<li>s³owa klucze: "ko³ysce", "sen", "nocy";</li>
+<li>treœæ utworu zachêcaj¹ca do snu: "uœnij syneczku [...]:</li>
+<li>wa¿ne jest wprowadzenie dziecka w dobry nastrój, co umo¿liwia m.in. zastosowanie czu³ych zdrobnieñ: "syneczku".</li>
+</ul>
+<p> </p>
+<p>Elementy budz¹ce poczucie zagro¿enia:</p>
+<ul>
+<li>smutek w g³osie matki: "g³os idzie ¿a³osn¹ steczk¹";</li>
+<li>fragmenty rzeczywistoœci, które wywo³uj¹ skojarzenie z wojn¹ i œmierci¹, zagro¿eniem: "œwiergoc¹ miotacze gwiazd", "dusi powolnie jak gaz", "[...] czarne ró¿e"; "sen pod cia³o pod³o¿y siê p³omykiem"; "zasadzka", "zasypano";</li>
+<li>zakwestionowanie prawdziwoœci ko³ysanki: "ko³ysanka nieprawdziwa";</li>
+<li>podwa¿enie wartoœci pamiêci i istnienia syna: "zasypano godziny cacka / niepamiêtania kurzem", "ciebie / nigdy nie by³o". </li>
+</ul>
+<p> </p>
+<p>W utworze Czechowicza to, co znajome i czu³e przeplata siê z narastaj¹cym poczuciem zagro¿enia i lêku. Poeta w wierszu ³¹czy ze sob¹ odmienne porz¹dki: ³agodn¹ ko³ysankê, któr¹ matka œpiewa dziecku oraz elementy sugeruj¹ce poczucie nadchodz¹cej katastrofy; ona zaœ przyniesie tylko œmieræ i cierpienie. Po³¹czenie tych rzeczywistoœci wywo³uje coraz wiêkszy niepokój oraz staje siê Ÿród³em z³owrogiej atmosfery pog³êbiaj¹cej siê z ka¿dym wersem dzie³a. Niewinnoœæ ko³ysanki, która przecie¿ wywo³uje pozytywne i ciep³e skojarzenia, zostaj¹ bowiem zestawione z groz¹ rzeczywistoœci. Pog³êbia to tragiczn¹ wymowê zakoñczenia oraz niemo¿noœæ ucieczki od koszmaru zniszczenia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Rzeczywistoœæ ukazana w wierszu Józefa Czechowicza nie jest przestrzeni¹ przyjazn¹ czy bezpieczn¹ dla cz³owieka. Chocia¿ podmiot liryczny niejako przywo³uje g³os matki œpiewaj¹cej ko³yskê, to dominuje nastrój grozy oraz nadci¹gaj¹cej katastrofy. Noc przestaje siê kojarzyæ ze spokojem oraz odpoczynkiem, a raczej wprowadza poczucie niepokoju. Potêguj¹ je obrazy pojawiaj¹ce siê w dalszej czêœci utworu. Fragmenty: "œwiergoc¹ miotacze gwiazd", "dusi powolnie jak gaz" wywo³uj¹ skojarzenia z wojn¹ i zag³ad¹, burz¹ pozorn¹ sielankê. Œwiat natury zostaje bowiem nieodwo³anie ska¿ony z³em i destrukcj¹. Sama zaœ rzeczywistoœæ to Ÿród³o zagro¿enia, œmierci:</p>
+<p>zasypi¹ ciê czarne ró¿e</p>
+<p><em>sen pod cia³o pod³o¿y siê p³omykiem</em></p>
+<p><em>sierpem</em></p>
+<p><em>a za sierpem wiosna zasadzka.</em></p>
+<p>Niemo¿liwa staje siê jakakolwiek próba ucieczki od bolesnych realiów, które odbieraj¹ spokój ducha. Taka perspektywa poety mo¿e byæ uwarunkowana przede wszystkim nastrojami katastroficznymi, które zdominowa³y lata 30. XX w. Wiersz oddaje wiêc poczucie nadchodz¹cego kryzysu, przekonanie o pesymistycznej wizji przysz³oœci. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Ko³ysankê mo¿na uznaæ za nieprawdziw¹, poniewa¿ nie spe³nia swojej podstawowej funkcji. Jej g³ównym zadaniem powinno byæ wprowadzenie dziecka w pozytywny nastrój i doprowadzenie do zaœniêcia pociechy. Sama zaœ ko³ysanka w utworze Czechowicza wzmaga poczucie zagro¿enia i niepewnoœci - przywo³uje bowiem obrazy sugeruj¹ce œmieræ i zniszczenie. W ten sposób nie chroni ona przed koszmarem rzeczywistoœci, nie przynosi ukojenia oraz poczucia bezpieczeñstwa. </p>
+<p> </p>
+<p>b) Puenta w utworze wskazuje na poczucie pustki, które dotyka "syneczka". Jego istnienie, egzystencja zostaj¹ w zakoñczeniu wiersza podwa¿one, co sugeruje osamotnienie i niemo¿noœæ ucieczki przed bolesn¹ rzeczywistoœci¹. Z³owrogie elementy rzeczywistoœci zdaj¹ siê odbieraæ mu to¿samoœæ oraz mo¿liwoœæ zaznania spokoju. Œwiadcz¹ równie¿ o tym, i¿ matka nie mo¿e obroniæ go przed groz¹ œwiata. </p>
+<p> </p>
+<p>c) S³owo "mit" ma kilka znaczeñ. Pod tym pojêciem mo¿e kryæ siê wierzenie, które umo¿liwia uporz¹dkowanie rzeczywistoœci, coœ wymyœlonego (nieprawdziwego) lub te¿ stara i fantastyczna historia. Tytu³ wiersza wskazuje na kameralnoœæ sytuacji oraz podejmowanego zagadnienia, co podkreœla epitet "ma³y". Wiersz bowiem odwo³uje siê do relacji ³¹cz¹cej matkê i syna, a wiêc bliskich sobie osób. Z kolei przywo³ane w nazwie s³owo "mit" mo¿na rozpatrywaæ przez pryzmat wszystkich jego znaczeñ. Ko³ysanka stanowi bowiem pewien przejaw uporz¹dkowania rzeczywistoœci i zapewnienia dziecku poczucia bezpieczeñstwa. Jednoczeœnie g³os matki ostatecznie nie uwalnia od koszmaru rzeczywistoœci - przynosi tylko pozorne ukojenie, które nie chroni przed trudnymi doœwiadczeniami. Z tego te¿ powodu dochodzi do podwa¿enia prawdziwoœci ko³ysanki. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zabiegi rytmizuj¹ce wypowiedŸ: </p>
+<ul>
+<li>powtórzenia -&gt; "uœnij syneczku syneczku";</li>
+<li>paralelizmy -&gt; "sobie nucê / siebie smucê";</li>
+<li>obecnoœæ rymów -&gt; np. "nocy" - "niemocy", "zasadzka" - "cacka";</li>
+<li>powtarzaj¹ce siê elementy: zwrot do syna -&gt; "uœnij syneczku syneczku", "syneczku", "syneczku syneczku";</li>
+<li>na zmienny rytmu utworu wp³ywa zró¿nicowana liczba wersów w strofach oraz sylab w wersach -&gt; "ciebie / nigdy nie by³o". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br>

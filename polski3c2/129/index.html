@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>Wczesne wiersze Przybosia wyra¿aj¹ uczucia cz³owieka, który jest zafascynowany postêpem cywilizacyjnym (miastem, masa, maszyn¹). Porusza siê w miejskiej przestrzeni, z fascynacj¹ obserwuje wznosz¹ce siê budynki - postrzega je jako przejaw ludzkiego geniuszu i si³y. Jego zaciekawienie budz¹ pozornie zwyczajne czynnoœci, którym nadaje g³êbsze znaczenie i znajduje w nich analogiê do sztuki poetyckiej. Z kolei w Notre-Dame wypowiada siê osoba, która przyjmuje rolê demiurga. Nie przedstawia pewnego wycinka rzeczywistoœci, lecz sama w dowolny sposób kszta³tuje œwiat, przetwarza go za pomoc¹ swej wyobraŸni i wra¿liwoœci. Jej silne uczucia budzi ju¿ nie miasto, lecz przede wszystkim sztuka oraz architektura. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podmiot liryczny jest zafascynowany katedr¹, pe³en podziwu dla jej potêgi, rozmachu i historii. Œwiadczy o tym wykrzyknienie sugeruj¹ce emocjonalny stosunek do tej konstrukcji: "Z miliona z³o¿onych do modlitwy palców wzlatuj¹ca przestrzeñ!". Jednoczeœnie wielkoœæ œwi¹tyni staje siê Ÿród³em przera¿enia, poniewa¿ uœwiadamia mu jego ma³oœæ oraz kruchoœæ. Z tego powodu zaczyna kwestionowaæ swe znaczenie. Osoba mówi¹ca wyra¿a zaintrygowanie autorem katedry, zastanawia siê, kto zdo³a³ opanowaæ materiê i nadaæ jej kszta³t. Jest wrêcz pe³na uznania dla twórców katedry, którzy dokonali czegoœ niemo¿liwego. Odczuwa tak¿e oszo³omienie i niedowierzanie wywo³ane geniuszem ludzkiego umys³u. Dziêki niemu mo¿liwe sta³o siê powstanie czegoœ niepowtarzalnego: "Kto pomyœla³ tê przepaœæ i odrzuci³ j¹ w górê!". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zastosowane wyrazy, które odwo³uj¹ siê przede wszystkim do ruchu, podkreœlaj¹ niezwyk³y status ukazanej przestrzeni, ale tak¿e œwiadcz¹ o oryginalnym ujêciu tematu. Jest ona ¿ywym bytem, który ulega ci¹g³ym metamorfozom. W ten sposób równie¿ podmiot liryczny jakby na oczach odbiorców przedstawia proces tworzenia siê katedry. To bowiem dzia³ania budowniczych, ich umiejêtnoœæ podporz¹dkowania sobie materii przyczyniaj¹ siê do wzniesienia œwi¹tyni. Nagromadzenie s³ownictwa oddaj¹cego dynamizm wskazuje tak¿e na sytuacjê cz³owieka: ma³ego, oszo³omionego potêg¹ budowli. Istota ludzka jest tym samym krucha wzglêdem monumentalnej budowli. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Oryginalnoœæ przytoczonej metafory polega na tym, i¿ wykorzystane w niej elementy zyskuj¹ nowe oraz zaskakuj¹ce sensy. Przepaœæ odrzucona w górê zaprzecza swoim typowym cechom, gdy¿ zazwyczaj wywo³uje skojarzenia z ziemi¹, tym, co na dole. Jest wiêc to pewne odwrócenie naturalnego porz¹dku, poniewa¿ przepaœæ nagle znajduje siê na górze. Podkreœla to niezwyk³oœæ oraz geniusz struktury katedry, jej potêgê. Oryginalnoœæ metafory wi¹¿e siê równie¿ z genez¹ przepaœci. Nie jest to bowiem efekt dzia³ania si³ przyrody, lecz pomys³u i trudu istoty ludzkiej, która zdoby³a siê na ten œmia³y czyn przekraczaj¹cy granice wyobraŸni. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Kreacjonizm w utworze Przybosia polega na tym, ¿e poeta tworzy w swym dziele now¹ rzeczywistoœæ. Nie ogranicza siê do statycznego opisu œwi¹tyni - zgodnie z jej rzeczywistym wygl¹dem - lecz zamiast tego zdaje siê j¹ kszta³towaæ na nowo - na wzór swej wyobraŸni i woli. Z tego te¿ powodu <em>Notre-Dame</em> ma antymimetyczny charakter. Poetê nie interesuje wygl¹d œwi¹tyni, lecz samo powo³ywanie katedry do ¿ycia. Budowla ta, przefiltrowana przez wra¿liwoœæ podmiotu, nabiera niezwyk³oœci: "Te mury z odr¹banych ska³ - jak ³by ponade mnie / zmartwychwstaj¹ z sarkofagu". Kreacjonizm wi¹¿e siê te¿ z wykorzystaniem elementów ekspresji i dynamizmu. Katedra zdaje siê powstawaæ na oczach czytelnika, zaœ sama osoba mówi¹ca odczuwa zachwyt i niedowierzanie jej potêg¹, która stanowi efekt ludzkiej pracy: Kto wstrz¹sn¹³ t¹ ciemnoœci¹, nagi¹³ - / i ogarn¹³?". Wypowiada siê w taki sposób, jakby sama uczestniczy³a w tworzeniu œwi¹tyni: "Wiem. Obci¹¿one Jezusami krzy¿e / trzeba wyostrzyæ w pion budowniczych drabin". Aktywnie kszta³tuje wiêc znan¹ sobie rzeczywistoœæ, dopasowuje j¹ do swych pragnieñ. Zmys³ wzroku pe³ni wa¿n¹ funkcjê w kreacjonizmie Przybosia. Przede wszystkim pozwala na dostrze¿enie, obserwacjê cudownych przemian katedry. Staje siê tak¿e Ÿród³em poznania, poniewa¿ to za jego spraw¹ podmiot liryczny rejestruje kolejne etapy kszta³towania siê katedry. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Wiersz oraz rzeŸbê ³¹czy zbli¿ona perspektywa artystów. Przede wszystkim katedra, rozumiana zazwyczaj jako budowla, traci swój materialny wymiar, a zyskuje duchowy. Do jej stworzenia Przyboœ wykorzystuje s³owa, zaœ Rodin sugeruje, i¿ cz³owiek, wraz ze wszystkim uczuciami i przymiotami ducha, sam staje siê œwi¹tyni¹. Ponadto w dzie³ach artystów szczególne znaczenie ma kierunek pionowy, wznoszenie siê w stronê nieba: tak s¹ skierowane d³onie tworz¹ce rzeŸbê, ale tak¿e w górê pnie siê wyobra¿ona przez poetê œwi¹tynia: "- i trwaæ pod hurgotem  g³azów szybuj¹cych coraz wy¿ej i wy¿ej". Sugeruje to wejœcie w sferê <em>sacrum</em>, osi¹gniêcie doskona³oœci ducha, oderwanie siê od przyziemnej codziennoœci. Znacz¹cy staje siê tak¿e motyw d³oni, który symbolizuje piêkno oraz si³ê cz³owieka: "Z miliona z³o¿onych do modlitwy palców wzlatuj¹ca przestrzeñ!". Reprezentuj¹ one istotê ludzk¹ - sw¹ modlitw¹ i prac¹ przyczynia siê do wzniesienia katedry. Równie¿ d³onie wyrzeŸbione przez Rodina wyra¿aj¹ podobne sensy: moc twórcz¹ i duchow¹ przypisan¹ cz³owiekowi</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br>

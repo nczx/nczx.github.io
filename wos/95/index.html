@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1113px; height: 796px;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #8c9eff; height: 64px; width: 232px;"><strong>Media</strong></td>
+<td style="background-color: #8c9eff; height: 64px; width: 215px;"><strong>Zalety</strong></td>
+<td style="background-color: #8c9eff; height: 64px; width: 215px;"><strong>Wady</strong></td>
+<td style="background-color: #8c9eff; height: 64px; width: 215px;"><strong>Szanse</strong></td>
+<td style="background-color: #8c9eff; height: 64px; width: 215px;"><strong>Zagrożenia</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #b2ebf2; height: 92px; width: 232px;"><strong>Prasa </strong></td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>poszerza wiedzę z wielu dziedzin, np. przyrodniczych, humanistycznych, technicznych, historycznych, muzycznych, kulturowych, </li>
+<li>treści zawarte w prasie mogą pobudzać wyobraźnię, </li>
+<li>stanowi źródło rozrywki, </li>
+<li>pobudza emocje u czytelników, </li>
+<li>rozwija umysły ludzkie (między innymi dzięki krzyżówkom i rebusom), </li>
+<li>umożliwia porównywanie informacji, które pochodzą z różnych źródeł,</li>
+<li>możliwość korzystania z prasy w przypadku braku prądu (gdy nie działa telewizja i internet), </li>
+<li>możliwość zakupu specjalistycznej prasy, np. motoryzacyjnej i poszerzanie swoich horyzontów poznawczych, </li>
+<li>treści zawarte w prasie mogą pobudzać czytelnika do dalszych poszukiwać informacji na dany temat, </li>
+<li>łatwo ją wszędzie ze sobą zabrać (np. do samolotu)</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>wycinanie lasów w celu produkcji papieru, </li>
+<li>ograniczona możliwość przedstawienia informacji w danym numerze, ze względu na określoną liczbę stron dziennika czy tygodnika</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>rozwój  inteligentnego społeczeństwa opartego na wiedzy, </li>
+<li>zmniejszenie alfabetyzmu</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>niekiedy prasa dla młodzieży propaguje świat bez wartości, w którym nie ma żadnych wartości, </li>
+<li>dołączanie do gazety jakiś gadżetów sprawia, że tym samym czytelnicy zachęcani są raczej do zakupy owych gadżetów niż prasy, </li>
+<li>prasa narzuca niekiedy społeczeństwom obcą dla nich kulturę, </li>
+<li>wyidealizowanie niektórych ludzi przez prasę  prowadzi do powstawania kompleksów u czytelników (zwłaszcza tych młodych)</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #b2ebf2; height: 92px; width: 232px;"><strong>Radio</strong></td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>możliwość skierowania treści do określonej grupy odbiorców, </li>
+<li>możliwość słuchania radia w różnych miejscach (wystarczy dostęp do radia), </li>
+<li>kierowcy mogą słuchać radia i jednocześnie nie tracić koncentracji na drodze (ze względu na brak wizualizacji, video)</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>brak obrazu, istnieje wyłącznie dźwięk, </li>
+<li>możliwość manipulowania informacjami, </li>
+<li>w przypadku audycji "na żywo" może do dojść do przekazania odbiorcom niestosownych i niesprawdzonych informacji przez zaproszonych gości</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>pozwala ono "zobaczyć oczami wyobraźni" wielki świat,</li>
+<li>możliwość  odbywania dalekich podróży bez ruszania się z domu, </li>
+<li>rozbudzanie wyobraźni prowadzi do rozwoju społeczeństwa, </li>
+<li>możliwość jednoczenia się w przypadku jakiś klęski lub problemów i niesienie pomocy osobom potrzebującym,</li>
+<li>możliwość szybkiego zdobycia informacji przez ludzi zabieganych, którzy nie mają możliwości czytania prasy oraz oglądania telewizji</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>ludzie przestają czytać i zatracają umiejętność wyszukiwania informacji, bowiem poszukują łatwej informacji (łatwo i przyjemnie jest wysłuchiwać audycji radiowych), co może stanowić zagrożenie dla nich (różne instytucje poprzez audycje radiowe mogą manipulować swoimi odbiorcami) </li>
+<li>przez brak możliwości cofania i słuchania kilku audycji z różnych stacji, niemożliwe staje się porównanie informacji</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #b2ebf2; height: 92px; width: 232px;"><strong>Telewizja</strong></td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>pobudza zainteresowania widza (poprzez dostarczenie mu bodźców o charakterze audio-wizualnym), </li>
+<li>na szeroką skalę umożliwia przeprowadzenie akcji pomocowej (np. ofiarom klęsk żywiołowych)</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>często wprowadzania widza w świat fikcji,</li>
+<li>ludzie tracą wiele czasu na oglądanie bezwartościowych programów, </li>
+<li>reklamy telewizyjne manipulują widzami</li>
+<li> </li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>możliwość jednoczenia się w przypadku jakiś klęski lub problemów i niesienie pomocy osobom potrzebującym</li>
+</ul>
+</td>
+<td style="width: 215px; height: 92px;">
+<ul>
+<li>ludzie przestają czytać i słuchać radia, przez co zatracają się w "przyjemnych" dla oka obrazach telewizyjnych, za pomocą, których ich twórcy mogą manipulować odbiorcami</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #b2ebf2; width: 232px; height: 125px;"><strong>Media społecznościowe</strong></td>
+<td style="width: 215px; height: 125px;">
+<ul>
+<li>nieograniczony dostęp do informacji i wiedzy,</li>
+<li>można zrobić szybkie zakupy, bez wychodzenia z domu, </li>
+<li>możliwość korzystania z bankowości elektronicznej, </li>
+<li>dostęp do map w wersji elektronicznej, </li>
+<li>można rozpowszechniać swoje utwory literackie za pomocą narzędzi dostępnych w sieci, </li>
+<li>można rozliczyć podatki, </li>
+<li>można wypożyczać samochody, bukować bilety komunikacyjne, </li>
+<li>rozmawiać za pomocą video-konferencji, </li>
+<li>można korzystać z poczty elektronicznej.</li>
+</ul>
+</td>
+<td style="width: 215px; height: 125px;">
+<ul>
+<li>niewłaściwe selekcjonowanie dużej ilości informacji znajdujących się w internecie, </li>
+<li>znajdowanie w internecie niebezpiecznych treści, </li>
+<li>możliwość nawiązania niebezpiecznych kontaktów, </li>
+<li>możliwość bycia ofiarą cyberprzemocy, </li>
+<li>możliwość przeprowadzenia cyberterroryzmu, </li>
+<li>możliwość bycia ofiarą cyberprzestępstw, np. kradzieży pieniędzy znajdujących się na lokatach, kupno rzeczy z fikcyjnego sklepu.</li>
+</ul>
+</td>
+<td style="width: 215px; height: 125px;">
+<ul>
+<li>zbliżanie ludzi z różnych stron świata, </li>
+<li>rozwój intelektualny użytkowników sieci, </li>
+<li>rozwój metod nauki języków obcych, </li>
+<li>budowanie otwartego społeczeństwa</li>
+</ul>
+</td>
+<td style="width: 215px; height: 125px;">
+<ul>
+<li>przyzwyczajanie ludzi do przemocy może prowadzić do brutalizacji społeczeństwa, </li>
+<li>zbyt duże poświęcanie czasu na media społecznościowe ogranicza rozwój człowieka w sferze społecznej, </li>
+<li>prowadzenie do uzależnienia</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1113px; height: 796px;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #527f76;"><strong>Media</strong></td>
+<td style="background-color: #527f76;"><strong>Zalety</strong></td>
+<td style="background-color: #527f76;"><strong>Wady</strong></td>
+<td style="background-color: #527f76;"><strong>Szanse</strong></td>
+<td style="background-color: #527f76;"><strong>Zagrożenia</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #70db93;"><strong>Prasa</strong></td>
+<td style="background-color: #dbdb70;">
+<p>Może dostarczyć wnikliwe i dogłębne informacje, ma wysoką jakość edytorską, a także dłuższe artykuły mogą zapewnić bardziej szczegółową analizę i kontekst.</p>
+</td>
+<td style="background-color: #dbdb70;">
+<p>Zwykle opóźniona, wiadomości mogą być nieaktualne, a wydawcy mogą mieć swój punkt widzenia lub uprzedzenia, co może prowadzić do stronniczości.</p>
+</td>
+<td style="background-color: #dbdb70;">Może przyzwyczajać ludzi do kontaktu ze słowem pisanym i przyczyniać się do promocji czytelnictwa, a tym samym prowadzić do zmniejszenia poziomu analfabetyzmu.</td>
+<td style="background-color: #dbdb70;">Może promować nie tylko pozytywne, ale też negatywne wzorce zachowania, a jej wydawanie w tradycyjnej wersji papierowej wiąże się z koniecznością nadmiernej eksploatacji lasów.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #70db93;"><strong>Radio</strong></td>
+<td style="background-color: #dbdb70;">
+<p>Może dostarczać aktualne informacje w czasie rzeczywistym, a także oferować różnorodne programy, w tym dyskusje, interakcje i muzykę.</p>
+</td>
+<td style="background-color: #dbdb70;">
+<p>Może mieć ograniczoną dostępność w zależności od lokalizacji i sygnału, a także nie dostarczać wnikliwej analizy i kontekstu. Pozbawione jest obrazu, przez co okazuje się mniej atrakcyjne niż na przykład telewizja.</p>
+</td>
+<td style="background-color: #dbdb70;">Poszerza horyzonty słuchaczy i pozwala im zapoznawać się z dominującymi trendami muzycznymi, jak również sprawia, że do ludzi na bieżąco docierają rozmaite informacje.</td>
+<td style="background-color: #dbdb70;">Może dekoncentrować osoby, które akurat pracują lub kierują pojazdami, przez co wzrastać może ryzyko wypadków.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #70db93;"><strong>Telewizja</strong></td>
+<td style="background-color: #dbdb70;">
+<p>Może dostarczać aktualne informacje w czasie rzeczywistym, a także oferować bogaty wizualny kontekst, w tym nagrania wideo, grafiki i animacje.</p>
+</td>
+<td style="background-color: #dbdb70;">
+<p>Może mieć ograniczoną dostępność w zależności od lokalizacji i sygnału, a także nadmiernie skupiać się na sensacyjnych wiadomościach, kosztem mniej znaczących wydarzeń.</p>
+</td>
+<td style="background-color: #dbdb70;">Oferuje ludziom łatwo dostępną rozrywkę i stwarza okazję do częściowego uczestniczenia w wielu transmitowanych wydarzeniach, takich jak koncerty, mecze, przemówienia polityków czy uroczystości religijne.</td>
+<td style="background-color: #dbdb70;">Stwarza zagrożenie dla innych rodzajów mediów i powoduje, że ludzie korzystają z nich mniej chętnie, przez co zatracają na przykład nawyk czytania książek.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #70db93;"><strong>Media społecznościowe</strong></td>
+<td style="background-color: #dbdb70;">
+<p>Mogą zapewnić dostęp do różnorodnych źródeł informacji, a także umożliwiają łatwe dzielenie się i dyskutowanie treści z innymi użytkownikami.</p>
+</td>
+<td style="background-color: #dbdb70;">
+<p>Mogą propagować fałszywe informacje i nienawiść, a także prowadzić do uzależnienia od urządzeń elektronicznych i negatywnych skutków dla zdrowia psychicznego.</p>
+</td>
+<td style="background-color: #dbdb70;">Pozwalają zbliżać ludzi z różnych części świata i komunikować się osobom mimo dużych odległości przestrzennych. Stwarzają też okazję do nauki i poznawania dóbr kultury krajowych i zagranicznych bez wychodzenia z domu.</td>
+<td style="background-color: #dbdb70;">Grożą uzależnieniem się i zamknięciem się na świat bezpośrednich kontaktów międzyludzkich.</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>W przedstawionym fragmencie tekstu mają zastosowanie następujące zasady wymienione w Karcie etycznej mediów:</strong></span></p>
+<ul>
+<li><span style="text-decoration: underline;"><strong>zasada prawdy</strong></span> - ponieważ dziennikarz nie zgodził się na utajnienie zgromadzonych przez niego informacji, lecz chciał przedstawić je światu, </li>
+<li><span style="text-decoration: underline;"><strong>zasada obiektywizmu</strong></span> - ponieważ dziennikarz chciał przedstawić rzeczywistość niezależnie od własnych poglądów oraz wpływu innych ludzi na nie, </li>
+<li><span style="text-decoration: underline;"><strong>zasada uczciwości</strong></span> - ponieważ dziennikarz działał w zgodzie z własnym sumieniem oraz dobrem odbiorcy.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">W przedstawionej sytuacji zastosowanie mają takie zasady wymienione w <em>Karcie etycznej mediów</em>, jak: zasada prawdy, zasada obiektywizmu, zasada uczciwości oraz zasada wolności i odpowiedzialności</span></strong>.</p>
+<p><strong><span style="text-decoration: underline;">Zasada prawdy</span></strong> nakazuje, aby dziennikarze przekazywali informacje prawdziwe. Dziennikarz z przytoczonej sytuacji chciał zaś ujawnić prawdę o powiązaniach burmistrza z lokalnym biznesem.</p>
+<p><strong><span style="text-decoration: underline;">Zasada obiektywizmu</span></strong> głosi, że dziennikarze powinni rzetelnie przedstawiać różne punkty widzenia, niezależnie od swoich poglądów. Dziennikarz z przytoczonej sytuacji odmówił pracy dla przedsiębiorcy, ponieważ wiedział, że powodowałaby ona klasyczny konflikt interesów, tak iż nie mógłby on być bezstronny.</p>
+<p><strong><span style="text-decoration: underline;">Zasada uczciwości</span></strong> zakłada, że każdy dziennikarz powinien postępować w myśl nakazów własnego sumienia, tak iż powinien odmawiać wykonania działań niezgodnych z własnymi przekonaniami. Dziennikarz z opisanej sytuacji odmówił pracy dla przedsiębiorcy, mimo iż byłaby ona dla niego korzystna finansowo, ponieważ ważniejsze okazało się dla niego powołanie do wykonywania zawodu dziennikarskiego.</p>
+<p><strong><span style="text-decoration: underline;">Zasada wolności i odpowiedzialności</span></strong> wiąże się zaś z tym, że media i dziennikarze powinni być w tworzonych przez siebie przekazach niezależni, a zarazem odpowiedzielni za konsekwencje swojej pracy. Dziennikarz z przywołanego przykładu nie chciał być zależny od lokalnego biznesu, a ponadto chciał przekazać opinii publicznej to, co odkrył w kontekście powiązań burmistrza z lokalnym biznesem.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>To zadanie ma charakter indywidualny. Sam/a musisz je wykonać. Poniższe informacje możesz wykorzystać do opracowania własnej prezentacji</strong></span></p>
+<p>W poniższej tabeli dokonano charakterystyki poszczególnych mediów: </p>
+<table border="1" style="border-collapse: collapse; width: 994px; height: 351px;">
+<tbody>
+<tr style="height: 32px; text-align: center;">
+<td style="background-color: #c0d9d9; height: 53px;"><strong>Media</strong></td>
+<td style="background-color: #c0d9d9; height: 53px;"><strong>Wady</strong></td>
+<td style="background-color: #c0d9d9; height: 53px;"><strong>Zalety</strong></td>
+<td style="background-color: #c0d9d9; height: 53px;"><strong>Konkretny przykład</strong></td>
+</tr>
+<tr style="height: 283px;">
+<td style="background-color: #ffcc99; height: 283px;"><strong>prasa</strong></td>
+<td style="width: 245px; height: 283px;">
+<ul>
+<li>wycinanie lasów w celu produkcji papieru, </li>
+<li>ograniczona możliwość przedstawienia informacji w danym numerze, ze względu na określoną liczbę stron dziennika czy tygodnika, </li>
+</ul>
+</td>
+<td style="width: 245px; height: 283px;">
+<ul>
+<li>możliwość korzystania z prasy w przypadku braku prądu (gdy nie działa telewizja i internet), </li>
+<li>możliwość zakupu specjalistycznej prasy, np. motoryzacyjnej i poszerzanie swoich horyzontów poznawczych, </li>
+<li>treści zawarte w prasie mogą pobudzać czytelnika do dalszych poszukiwać informacji na dany temat, </li>
+<li>łatwo ją wszędzie ze sobą zabrać (np. do samolotu)</li>
+</ul>
+</td>
+<td style="width: 245px; height: 283px;">
+<ul>
+<li>Dziennik "Rzeczpospolita"</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 232px;">
+<td style="background-color: #ffcc99; height: 232px;"><strong>radio</strong></td>
+<td style="width: 245px; height: 232px;">
+<ul>
+<li>brak obrazu, istnieje wyłącznie dźwięk, </li>
+<li>możliwość manipulowania informacjami, </li>
+<li>w przypadku audycji "na żywo" może do dojść do przekazania odbiorcom niestosownych i niesprawdzonych informacji przez zaproszonych gości</li>
+</ul>
+</td>
+<td style="width: 245px; height: 232px;">
+<ul>
+<li>możliwość skierowania treści do określonej grupy odbiorców, </li>
+<li>możliwość słuchania radia w różnych miejscach (wystarczy dostęp do radia), </li>
+<li>kierowcy mogą słuchać radia i jednocześnie nie tracić koncentracji na drodze (ze względu na brak wizualizacji, video)</li>
+</ul>
+</td>
+<td style="width: 245px; height: 232px;">
+<ul>
+<li> Radio RMF FM</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 164px;">
+<td style="background-color: #ffcc99; height: 164px;">
+<p> </p>
+<strong>telewizja</strong></td>
+<td style="width: 245px; height: 164px;">
+<ul>
+<li>często wprowadzania widza w świat fikcji,</li>
+<li>ludzie tracą wiele czasu na oglądanie bezwartościowych programów, </li>
+<li>reklamy telewizyjne manipulują widzami</li>
+</ul>
+</td>
+<td style="width: 245px; height: 164px;">
+<p> </p>
+<ul>
+<li>pobudza zainteresowania widza (poprzez dostarczenie mu bodźców o charakterze audio-wizualnym), </li>
+<li>na szeroką skalę umożliwia przeprowadzenie akcji pomocowej (np. ofiarom klęsk żywiołowych), </li>
+</ul>
+</td>
+<td style="width: 245px; height: 164px;">
+<ul>
+<li>Polsat TV</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 385px;">
+<td style="background-color: #ffcc99; height: 385px;"><strong>internet</strong></td>
+<td style="width: 245px; height: 385px;">
+<ul>
+<li>niewłaściwe selekcjonowanie dużej ilości informacji znajdujących się w internecie, </li>
+<li>znajdowanie się w internecie niebezpiecznych treści, </li>
+<li>możliwość nawiązania niebezpiecznych kontaktów, </li>
+<li>możliwość bycia ofiarą cyberprzemocy, </li>
+<li>możliwość przeprowadzenia cyberterroryzmu, </li>
+<li>możliwość bycia ofiarą cyberprzestępstw, np. kradzieży pieniędzy znajdujących się na lokatach, kupno rzeczy z fikcyjnego sklepu.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 385px;">
+<ul>
+<li>nieograniczony dostęp do informacji i wiedzy,</li>
+<li>można zrobić szybkie zakupy, bez wychodzenia z domu, </li>
+<li>możliwość korzystania z bankowości elektronicznej, </li>
+<li>dostęp do map w wersji elektronicznej, </li>
+<li>można rozpowszechniać swoje utwory literackie za pomocą narzędzi dostępnych w sieci, </li>
+<li>można rozliczyć podatki, </li>
+<li>można wypożyczać samochody, bukować bilety komunikacyjne, </li>
+<li>rozmawiać za pomocą video-konferencji, </li>
+<li>można korzystać z poczty elektronicznej.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 385px;">
+<ul>
+<li> Wirtualna Polska</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać jedynie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; <span style="text-decoration: underline;">PRYZYKŁADOWE ROZWIĄZANIE DLA STACJI RADIOWEJ RMF FM:</span></strong></em></p>
+<p><strong>a)</strong></p>
+<p>RMF FM to jedna z najpopularniejszych w Polsce rozgłośni radiowych, która nadaje od 1990 roku. Swoją siedzibę od początku ma w Krakowie, skąd nadaje spod Kopca Kościuszki. Nazwa radia jest zarazem skrótem od wyrazów odnoszących się do tematyki najczęściej obecnej na antenie rozgłośni: 'Radio - Muzyka - Fakty'. Rozgłośnia nadaje więc różne audycje radiowe, na przykład felietony poświęcone najważniejszym wydarzeniom z kraju i ze świata, jak też zagadnieniom związanym z kulturą popularną. Najwięcej czasu antenowego zabiera prezentowanie rozmaitych utworów muzycznych, wśród których dominuje muzyka pop w wydaniu zagranicznym i polskim, aczkolwiek nie brakuje też emitowania znanych przebojów rockowych. RMF FM średnio co godzinę prezentuje też najważniejsze informacje z kraju i ze świata. Skupia się na wydarzeniach politycznych, gospodarczych i kulturalnych, ale prezentuje też wieści ze świata sportu. Właśnie tego typu ramówkę radio RMF FM prezentuje zasadniczo w każdym tygodniu swego nadawania. Zazwyczaj najwięcej emocji wśród odbiorców wywołują informacje polityczne, w szczególności jeśli dotyczą kontrowersyjnych tematów czy niepopularnych decyzji polityków. Dziennikarze rozgłośni zapraszają też na poranne rozmowy do studia różne osobistości, a gośćmi najczęściej są znani politycy.</p>
+<p><strong>b)</strong></p>
+<p>Medium, jakim jest RMF FM, nie ma ściśle sprofilowanego grona odbiorców i jest popularne wśród ludzi w różnym wieku, z różnych grup i klas społecznych. Słuchają go wszyscy ci, którzy lubią muzykę pop oraz zainteresowani są bieżącymi wydarzeniami z kraju i ze świata. Jakkolwiek najwięcej słuchaczy radia rekrutuje się spośród osób w średnim wieku.</p>
+<p><strong>c)</strong></p>
+<p>Jeśli chodzi o prezentowane na antenie RMF FM treści, to przedstawia się tam głównie bieżące wydarzenia z kraju i ze świata, głównie polityczne, ale też gospodarcze, kulturalne i sportowe. Dla radiosłuchaczy organizowane są konkursy z różnego rodzaju nagrodami. Znaczną część czasu antenowego pochłania prezentowanie muzyki, głównie najpopularniejszych w danym czasie hitów z zakresu muzyki pop. Radio stawia na szybki i dynamiczny przekaz, a jego dziennikarze dążą do tego, żeby jak najszybciej informować o najciekawszych i najważniejszych zdarzeniach w danym czasie.</p>
+<p><strong>d)</strong></p>
+<p>Specyfika RMF FM polega na tym, że w szybki i zwięzły sposób informuje o najważniejszych wydarzeniach w kraju i na świecie, a także oferuje słuchaczom w swej ramówce najnowsze i największe hity muzyczne z polskich i światowych list przebojów. Spośród innych tego typu rozgłośni RMF FM wyróżnia się tym, że ma niezmiennie zasadniczo najwięcej słuchaczy. Badanie z 2019 roku wykazało, że wśród odbiorców w wieku 15-75 lat słuchaczami RMF FM było 27,5% badanych, podczas gdy drugiej w tamtym zestawieniu rozgłośni, tj. Radia ZET, słuchało 12% badanych.</p>
+<p><img alt="" height="250" src="./data/683357-0.jpg" width="333"/></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Współcześnie w Polsce mamy do czynienia z wolnością słowa w mediach, ponieważ dziennikarze niemalże swobodnie działają w ramach swojej profesji. Obecnie wolność słowa stanowi konstytucyjne prawo każdego człowieka, dlatego też w Polsce panuje powszechna możliwość wyrażania własnego zdania, zapewnia ją również pluralizm mediów. Wolność słowa jest podstawą demokracji. Istnienie wolnych mediów jest jednym z przejawów demokracji w państwie, ponieważ kształtują one opinię publiczną, wypowiadając się krytycznie na temat zaniedbań władzy, bądź wypadków przekroczenia jej uprawnień względem obywateli. Współczesne media odgrywają bardzo ważną rolę w kształtowaniu poglądów Polaków dotyczących działań rządzących, obecnej sytuacji w kraju, bądź konkretnych wydarzeń. Zdarza się również nazywać media "czwartą władzą".</p>
+<p>W dzisiejszych czasach istotny jest pluralizm mediów - oznaczający istnienie wielu różnorodnych mediów rywalizujących ze sobą o uwagę odbiorcy. Niemniej w ostatnim czasie mamy do czynienia z coraz silniejszym wpływem różnych środowisk na pracę dziennikarzy. Z raportu opublikowanego przez organizację pozarządową "Reporterzy bez Granic" wynika, że wolność mediów jest w Polsce zagrożona, ponieważ coraz częściej dochodzi do przejawów nienawiści oraz przemocy w stosunku do dziennikarzy. W 2019 r. Polska zajęła 59. miejsce w rankingu państw w zakresie wolności słowa w Polsce i traktowania dziennikarzy, zaś w 2018 r. Polska zajmowała 58. miejsce, a w 2017 r. - 54. pozycję. Tym samym mamy do czynienia ze wzrostem "mowy nienawiści" w Polsce. Raport organizacji wskazuje również na stosowane nacisków "na niezależne media", co stanowi przejaw" prawdziwego nękania sądowego". </p>
+<p>Swój sprzeciw wobec sytuacji mediów w Polsce wzniosło również Stowarzyszenie Dziennikarzy Polskich, które alarmowało, że ugrupowania znajdujące się u władzy dopuszczają się ograniczania możliwości działania mediów i dążą do przekształcenia mediów w instrumenty służące do prowadzenia prorządowej lub przeciwko danemu rządowi propagandy. Niekiedy dochodzi do sytuacji, w których zmiany dokonane w mediach prowadzą do ich upolitycznienia, m.in. poprzez zapewnienie im stabilizacji finansowej określone środowiska żądają od dziennikarzy przychylności. Ponadto wyniki badań ankietowych przeprowadzonych w 2011 r. wskazały, że 43% respondentów uważało, że zagrożona jest wolność słowa w Polsce. Ze względu na dostępność szerokiej masy ludzi do mediów społecznościowych dochodzi do chaosu informacyjnego, siania fejk new'sów oraz trollowania. Wszystkie z tych zjawisk również doprowadzają do zagrożenia w zakresie rzetelnego przekazywania informacji oraz negatywnie wpływać na wizerunek mediów we współczesnym świecie. </p>
+<p>Reasumując wolność słowa jest prawem człowieka, które gwarantowane jest zapisami Ustawy Zasadniczej z 1997 r. Niemniej występują zagrożenia, które mogą nie tylko naruszyć to prawo, ale również doprowadzić do destabilizacji i kryzysu dziennikarstwa w Polsce. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać jedynie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p>Wolność słowa to prawo do swobodnego wyrażania swoich opinii i idei bez ingerencji ze strony rządu lub innych sił zewnętrznych. Jest to ważne dla mediów, ponieważ pozwala im na wykonywanie swojej roli w społeczeństwie jako źródła informacji i platformy dla różnych perspektyw i opinii. Bez wolności słowa media mogą zostać zmuszone do publikowania tylko jednej wersji wydarzeń lub obawiać się represji za ujawnianie niekorzystnych informacji. Wolność słowa jest zatem kluczowa dla demokracji i wolnego społeczeństwa.</p>
+<p>W Polsce jest wiele kontrowersji związanych z wolnością słowa w mediach. Istnieją zarówno zarzuty, że media są nadmiernie kontrolowane i cenzurowane przez rząd, jak i że niektóre media wykorzystują swoją wolność słowa do szerzenia dezinformacji i nienawiści. Ostatecznie ocena stopnia wolności słowa w polskich mediach zależy od punktu widzenia i kontekstu.</p>
+<p>Trzeba jednak pamiętać, że współcześnie bardzo popularnym rodzajem mediów jest Internet, który tylko w ograniczonym zakresie może być kontrolowany przez rząd, polityków i inne grupy wpływu. Możliwość wypowiadania się na portalach społecznościowych czy zakładania własnych blogów daje stosunkowo dużą szansę na realne korzystanie ze swobody wypowiedzi. Dodać również należy, że artykuł 31. <em>Konstytucji RP </em>gwarantuje z prawnego punktu widzenia wolność człowieka w Polsce, stanowiąc, iż wolność człowieka podlega ochronie prawnej. Jego rozwinięciem jest artykuł 54. <em>Konstytucji RP</em>, który głosi, że '1. Każdemu zapewnia się wolność wyrażania swoich poglądów oraz pozyskiwania i rozpowszechniania informacji. 2. Cenzura prewencyjna środków społecznego przekazu oraz koncesjonowanie prasy są zakazane. Ustawa może wprowadzić obowiązek uprzedniego uzyskania koncesji na prowadzenie stacji radiowej lub telewizyjnej'.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Słowa Tocqueville odnoszące się do tego, że wolność prasy zapobiega złu oznaczają, że ten środek masowego przekazu pozwala na swobodną wymianę myśli między ludźmi, wyjawianie zjawisk niepożądanych w społeczeństwa oraz w państwie (np. korupcji), a także  stanowi pole do prowadzenia dyskusji na temat władzy i jej zapędów, co pozwala na ograniczanie niepoprawnych i niebezpiecznych działań z zakresu patologii władzy.</p>
+<p> </p>
+<p>b) <span style="text-decoration: underline;"><strong>Rola prasy w demokracji </strong></span>polega na kształtowaniu opinii publicznej, ponieważ ludzie zdobywając określone informacje z prasy przekładają je na rzeczywistość. To dziennikarze poprzez swoją pracę i sposób przekazu informacji, a także ich rzetelność kształtują opinię społeczeństwa na dany temat</p>
+<p><span style="text-decoration: underline;"><strong>Zalety wolnych mediów:</strong></span></p>
+<ul>
+<li>możliwość swobodnego wyrażania wypowiedzi w ramach mediów, </li>
+<li>umożliwienie dostępu do informacji,</li>
+<li>możliwość funkcjonowania wielu różnorodnych mediów, które mogłyby "walczyć" ze sobą o odbiorców, </li>
+<li>zapewnienie różnorodnej oferty programowej. </li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Wady wolnych mediów:</strong></span></p>
+<ul>
+<li>niewłaściwe selekcjonowanie dużej ilości informacji znajdujących się w mediach, </li>
+<li>zbyt duże poświęcanie czasu na media społecznościowe ogranicza rozwój człowieka w sferze społecznej, </li>
+<li>możliwość powstania wielu mediów, które będę prowadzić jedynie działalność propagandową i szkodliwą dla społeczeństwa. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma (częściowo) charakter indywidualny, ponieważ wymaga zaprezentowania własnego stanowiska, a także przeprowadzenia dyskusji. Stąd proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><strong>a)</strong></p>
+<p>Słowa autora na temat zła, któremu zapobiega wolność prasy, nawiązują do tego, że ograniczanie swobody wypowiedzi ludzi mogłoby być czymś negatywnym. Alexis de Tocqueville zdaje sobie jednocześnie sprawę z tego, że wolność prasy nie zawsze prowadzi do sytuacji pozytywnych, albowiem swoboda publikowania takich treści, jakie poszczególni ludzie uznają za stosowne, bywa zgubna chociażby przez wzgląd na szerzenie negatywnych wzorców zachowań i postaw w społeczeństwie.</p>
+<p><strong>b)</strong></p>
+<p>W państwie demokratycznym prasa odgrywa ważną rolę w zapewnianiu wolności słowa i informacji oraz w umożliwieniu publicznego nadzoru nad działaniami rządu i innych instytucji władzy. Dzięki wolnej prasie obywatele mają dostęp do różnorodnych perspektyw i opinii na temat ważnych kwestii publicznych, co umożliwia im podejmowanie bardziej dojrzałych decyzji. Prasa pełni również rolę 'strażnika demokracji', ujawniając nadużycia, korupcję i inne nieprawidłowości wśród władz i innych instytucji.</p>
+<table border="1" style="border-collapse: collapse; width: 696px; height: 263px;">
+<tbody>
+<tr style="height: 27px; text-align: center;">
+<td colspan="2" style="width: 692.4px; height: 27px; background-color: #009688;"><strong>Działalność wolnych mediów</strong></td>
+</tr>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #80cbc4; width: 343.263px;"><strong>Dobre strony</strong></td>
+<td style="background-color: #80cbc4; width: 346.337px;"><strong>Złe strony</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #e0f2f1; width: 343.263px;">
+<ol>
+<li>
+<p>Wprowadzanie różnorodnych i niezależnych punktów widzenia na bieżące wydarzenia.</p>
+</li>
+<li>
+<p>Dostarczanie wiarygodnych informacji i analiz na temat polityki, kultury i innych ważnych tematów.</p>
+</li>
+<li>
+<p>Poprawa przejrzystości i odpowiedzialności instytucji publicznych poprzez ujawnianie informacji.</p>
+</li>
+<li>
+<p>Zachowanie wolności słowa i prawa do informacji.</p>
+</li>
+</ol>
+</td>
+<td style="background-color: #e0f2f1; width: 346.337px;">
+<ol>
+<li>
+<p>Możliwość propagowania nieprawdziwych informacji i dezinformacji.</p>
+</li>
+<li>
+<p>Ryzyko, że wolne media mogą działać na rzecz określonych interesów lub grup społecznych.</p>
+</li>
+<li>
+<p>Koncentracja własności mediów w rękach nielicznych osób lub instytucji, co może prowadzić do monopolu na informacje.</p>
+</li>
+<li>
+<p>Ryzyko ataków i nacisków ze strony władz lub grupy interesów.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>c)</strong></p>
+<p><em><strong>-&gt;</strong> </em><em><span style="text-decoration: underline;">Przykładowa wypowiedź na temat tego, jakie jest znaczenie pracy dziennikarzy w państwie demokratycznym:</span></em></p>
+<p>Praca dziennikarzy w państwie demokratycznym polega na dostarczaniu społeczeństwu wiarygodnych informacji na temat bieżących wydarzeń i spraw publicznych, a także na analizowaniu ich i prezentowaniu różnych punktów widzenia. Dziennikarze odgrywają ważną rolę w monitorowaniu władzy i kontrolowaniu jej działań, a także w zapewnieniu przejrzystości i odpowiedzialności instytucji publicznych. Ich praca wpływa na to, jak społeczeństwo postrzega rzeczywistość i w jaki sposób podejmuje decyzje, dlatego też jest ważnym elementem funkcjonowania demokratycznego państwa.</p><br>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Osoba mówiąca zwraca uwagę na takie aspekty umierania jak:</p>
+<ul>
+<li>łamiący się głos ("[...] głos się pokruszył w drobne części dźwięków"); </li>
+<li>drżenie rąk ("i wezbrały dłonie niezwyczajnym drżeniem");</li>
+<li>lęk ("zanim skóra weszła w konstelacje lęku");</li>
+<li>niemożność mówienia ("[...] gorzki opór całkiem spętał język");</li>
+<li>zatrzymanie krążenia ("[...] w sklepieniach skroni ustało ciśnienie");</li>
+<li>oddzielenie duszy od ciała ("dusza się wreszcie wyzwoliła z więzów").</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>Za sprawą czasowników takich jak <em>pokruszył, ustało, wyzwoliła, spłonęła </em>użytych w wierszu Wojciecha Wencla śmierć sprawia wrażenie niszczycielskiej siły, która z jednej strony unicestwia to, co spotka na swojej drodze, z drugiej strony jednak - uwalnia z brzemienia życia. Jej dobroczynna działalność wyraża się przede wszystkich w słowach <em>wyzwoliła </em>i <em>ustało</em>, podkreślają one bowiem niewolę ciała, w której znajduje się ludzka dusza. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Konstelacja to inaczej gwiazdozbiór, czyli grupa gwiazd zajmujących dany obszar na niebie, często nosząca własną nazwę, np. Wielka Niedźwiedzica. Wyraz sklepienie z kolei ma dwa znaczenia - to wygięta w łuk konstrukcja zamykająca budowlę od góry (np. sklepienie katedry) lub obszar nieba w kształcie półkola roztaczający się aż do horyzontu. </p>
+<p><em>Konstelacja lęku </em>i <em>sklepienie skroni </em>odnoszą się  do fizycznej  i psychicznej konstrukcji jednostki. Oba te wyrażenia budzą skojarzenia z przestrzenią kosmiczną, bezkresem nieba. Istniejący we wszechświecie człowiek to jego pomniejszone odbicie. Jest podobnie złożony, tajemniczy i nieprzenikniony. W utworze Wojciecha Wencla organizm ludzki przedstawiony jest więc jako mikrokosmos.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Słowa "Ktoś chciał kogoś przywołać imieniem" można odczytywać na różne sposoby. Osobą wołającą może być człowiek na łożu śmierci, chcący po raz ostatni zobaczyć swoich najbliższych. W zdaniu tym uwidacznia się więc potrzeba bliskości i relacji, pragnienie ostatniego pożegnania ze światem realnym.</p>
+<p>Z drugiej strony jednak słowa te można odczytywać w kontekście religii. Wołający zwraca się być może do Boga, poszukując znaku jego obecności w momencie śmierci. Zdanie to można więc interpretować jako poszukiwanie potwierdzenia istnienia siły wyższej, czuwającej nad człowiekiem nie tylko za życia, ale i po śmierci. Głos wołający kogoś po imieniu może należeć też do Boga wzywającego umierającego do siebie. Obydwa te odczytania wskazują na szczególną relację między człowiekiem a Stwórcą w momencie końca. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Głównym środkiem artystycznym rytmizującym <em>Tren </em>Wojciecha Wencla jest paralelizm składniowy. W trzech strofach utworu w różnej kolejności i częstotliwości pojawiają się zdania: "już się głos pokruszył w drobne części dźwięków", "zanim skóra weszła w konstelacje lęku" "wezbrały dłonie niezwyczajnym drżeniem", "jeszcze ktoś chciał kogoś przywołać imieniem". Zabieg ten nie tylko rytmizuje utwór. Powtarzanie zdań opisujących moment śmierci skupia uwagę czytelnika na wąskim wycinku rzeczywistości. Ogranicza niejako pole widzenia odbiorcy, przybliża go do fizycznych i duchowych znaków umierania. Podobną funkcję przypisać można innym rytmizującym środkom stylistycznym - pojawiającym się w każdej strofie przynajmniej jednokrotnie rymom czy regularnej liczbie sylab w wersie (11).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><em>Tren </em>Wojciecha Wencla utrzymany jest w podniosłym, patetycznym tonie. Autor odwołuje się w nim do tradycji klasycznej liryki. Zasada <em>decorum </em>została zachowana. Podmiot liryczny o temacie śmierci mówi ze stosowną powagą. Ciało i duszę ludzką traktuje z szacunkiem i namaszczeniem, a wręcz uwzniośla je, porównując do ciał niebieskich i kosmosu ("w sklepieniach skroni", "konstelację lęku"). Używany w wierszu język można określić mianem literackiego, wyszukanego, np. <em>wezbrały, spętał, wyzwoliła z więzów.</em></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Tren to wywodzący się ze starożytności gatunek żałobnych utworów lirycznych. Jego celem jest nie tylko wyrażenie żalu po zmarłej osobie, lecz także opiewanie jej zasług i zalet. Najbardziej znanym cyklem trenów w literaturze polskiej są wiersze Jana Kochanowskiego poświęcone jego córce Urszuli. </p>
+<p>Wojciech Wencel w swoim utworze dokonuje przekształcenia tradycyjnego wzorca. Osoba zmarła jest anonimowa, pozbawiona jakichkolwiek cech szczególnych. Autor skupia się raczej na ukazaniu uniwersalnego doświadczenia umierania. Trudno wskazać także wyraz żalu czy rozpaczy ze strony tych, którzy pozostali.<em>Tr</em> Można stwierdzić więc, że  <em>Tren </em>łączy się z sygnalizowanym w tytule gatunkiem jedynie tematyką funeralną.</p><br>

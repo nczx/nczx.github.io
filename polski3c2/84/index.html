@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Diagnoza ojczyzny i rodaków w czterech pierwszych strofa utworu nie jest zbyt optymistyczna. Poeta przypomina bowiem o tym, i¿ wielu Polaków zosta³o zmuszonych do emigracji, opuœci³o bliskie sobie strony: "Na tysi¹czne siê wiorsty rozsiad³a nam Polska". Jednoczeœnie zwraca uwagê na to, jak du¿y wp³yw na aktualn¹ sytuacjê maj¹ romantyczne mity narodowe, które ukszta³towa³y œwiadomoœæ Polaków. Z tego powodu odwo³uje siê do twórczoœci S³owackiego, poniewa¿ "Papuga wszystkich narodów" to aluzja do <em>Grobu Agamemnona</em> - wskazuje ona na bezkrytyczne naœladownictwo obcych wzorców. Same zaœ s³owa na temat "cierniowej korony" stanowi¹ nawi¹zanie do Mickiewicza oraz koncepcji mesjanizmu (cierpienie Polski jako Ÿród³o zbawienia narodów Europy). Ojczyzna jest os³abiona, o czym œwiadczy porównanie jej do kalekich ¿o³nierzy. Ich wspomnienie przywodzi tak¿e na myœl wszystkie zrywy, w których uczestniczyli rodacy, natomiast fragment "I taka siê powlok³a do robót - w kopalni" sugeruje pamiêæ o zsy³kach. O krytycznym stosunku autora do ojczyzny i Polaków œwiadczy tak¿e ukazanie ich jako lekkomyœlnych, pozbawionych przezornoœci. Nie jest wa¿na rzeczywistoœæ, lecz wspomnienie minionych czasów, dziêki któremu mo¿na zapomnieæ o obecnym ubóstwie. Wszystko to prowadzi do apatii, marazmu, wiecznego oczekiwania na zmianê sytuacji. Taka kondycja spo³eczeñstwa zdaje siê byæ uwarunkowana przede wszystkim trudn¹ histori¹ Polski, ale tak¿e romantycznymi mitami. To one w decyduj¹cej mierze kszta³tuj¹ sposób postrzegania dziejów Polski, a przy tym staj¹ siê Ÿród³em stereotypów, wrêcz utrudniaj¹ podjêcie dzia³ania. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Sformu³owanie to nawi¹zuje do ideologii typowej dla romantyzmu - mesjanizmu, którego szczególnym orêdownikiem jest Adam Mickiewicz. "Polska w cierniowej koronie" oznacza wiêc wizjê ojczyzny, której cierpienie ma staæ siê Ÿród³em zbawienia i nadziei dla innych ludów Europy. Podmiot liryczny odnosi siê do tej koncepcji z ironi¹, poniewa¿ nie uwa¿a, aby mia³a ona pozytywny wp³yw na aktualn¹ sytuacjê. Wrêcz przeciwnie: sugeruje, i¿ takie stereotypy utrudniaj¹ zbudowanie pañstwa i poprawê jego sytuacji. Powoduj¹ bowiem, i¿ spo³eczeñstwo ¿yje przesz³oœci¹, jest obci¹¿one baga¿em mitów narodowych. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Wyobra¿enia Polaka odwo³uj¹ siê przede wszystkim do wizerunku ojczyzny, który ukszta³towa³ siê w romantyzmie. Jest on przesi¹kniêty patosem, przywi¹zaniem do mitów i stereotypów. Wi¹¿e siê równie¿ z akcentowaniem cierpienia narodu oraz jego szczególnej roli w dziejach Europy. W tej wizji ojczyzny kluczowe staje siê tak¿e nadmierne przywi¹zanie do dawnej chwa³y Polski - przy jednoczesnym ignorowaniu aktualnych bol¹czek:</p>
+<p><em>Nie­praw­ny dóbr suk­ce­sor, ora­nych przez dzie­ci,</em></p>
+<p><em>Ro­ba­czek œwiê­to­jañ­ski, co w nocy za­œwie­ci,</em></p>
+<p><em>Wspo­mnie­niem daw­nych bo­gactw ¿y­j¹­cy ubo­gi.</em></p>
+<p>Wyobra¿enia te staj¹ siê przyczyn¹ biernoœci oraz zawê¿onej perspektywy. S¹ równie¿ sprzeczne z tym, co siê dzieje w ojczyŸnie. O przyziemnym aspekcie ówczesnej rzeczywistoœci przypominaj¹ s³owa: "Taka wysz³a nam Polska z urzêdu w powiecie". Kontrastuj¹ one z podnios³¹ wizj¹, wprowadzaj¹ element codziennoœci, a wrêcz proponuj¹ inn¹ perspektywê oceny realiów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Poeta marzy o Polsce, która wyzwala siê z martyrologii oraz narodowych stereotypów:</p>
+<p><em>O! zwal­cie¿ mi £azien­ki kró­lew­skie w War­sza­wie,</em><br/><em>Bez­dusz­ne, zim­nym ryl­cem dra­pa­ne mar­mu­ry,</em><br/><em>Po­krusz­cie na ka­wa³­ki gip­so­we fi­gu­ry</em><br/><em>A Ce­res k³o­so­no­œn¹ utop­cie mi w sta­wie</em>.</p>
+<p>Pragnie silnej ojczyzny, która nie kieruje siê fa³szywymi przekonaniami, nie ¿yje tylko przesz³oœci¹, lecz jest zanurzona w rzeczywistoœci. Rezygnuje ona z martyrologii, d¹¿y do poznania prawdy, dziêki czemu mo¿liwe staje siê zdefiniowanie na nowo patriotyzmu oraz polskoœci. Szczególne znaczenie w tej wizji zyskuje œwiat natury - stanowi on przejaw normalnoœci, codziennoœci, tego, ¿e mo¿na wieœæ zwyczajne ¿ycie, a nie odwo³ywaæ siê tylko do minionych zdarzeñ ograniczaj¹cych zdolnoœæ do czynu:</p>
+<p><em>Ja nie chcê nic in­ne­go, niech jeno mi p³a­cze</em><br/><em>Je­sien­nych wia­trów gêdŸ­ba w pó³­na­gich ba­dy­lach;</em><br/><em>A la­tem niech siê s³oñ­ce prze­gl¹­da w mo­ty­lach,</em><br/><em>A wio­sn¹ - nie­chaj wio­snê, nie Pol­skê zo­ba­czê.</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Zawo³anie: "A wiosn¹ - niechaj wiosnê, nie Polskê zobaczê" wyra¿a pragnienie podmiotu lirycznego. Osoba mówi¹ca tymi s³owami zaznacza potrzebê odejœcia od mitów i stereotypów narodowych, rezygnacji z martyrologii, poniewa¿ ogranicza ona mo¿liwoœci rozwoju, nie przyczynia siê do budowania lepszej przysz³oœci. Zamiast tego podmiot liryczny proponuje, ¿eby skupiæ siê na tym, co aktualne, doceniæ rzeczywistoœæ i œwiat natury. S³owa te mo¿na odnieœæ tak¿e do literatury: powinna odejœæ od tematyki patriotycznej na rzecz opisu teraŸniejszoœci i zwi¹zanych z ni¹ zagadnieñ.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Cechy typowe dla wczesnej twórczoœci skamandrytów w wierszu: </p>
+<ul>
+<li>utwór Lechonia odrzuca martyrologiê narodow¹, ukazuje j¹ w ironiczny sposób: "Papuga wszystkich ludów - w cierniowej koronie";</li>
+<li>wskazuje na niezale¿noœæ literatury, o czym œwiadczy rezygnacja z tworzenia poezji wy³¹cznie patriotycznej lub tyrtejskiej;</li>
+<li>wyra¿a prawdê na temat sytuacji ojczyzny, rodaków, chocia¿ jest ona jednoczeœnie trudna i bolesna w swej wymowie;</li>
+<li>nie d¹¿y do moralizatorstwa, lecz ukazuje pewn¹ wizjê rzeczywistoœci, by wyraziæ swe uczucia i zachêciæ odbiorców do refleksji;</li>
+<li>wa¿nym elementem dzie³a staje siê codziennoœæ: "Taka wysz³a nam Polska z urzêdu w powiecie", "Ja nie chcê nic innego, niech jeno mi p³acze / Jesiennych wiatrów gêdŸba w pó³nagich badylach";</li>
+<li>œwiadczy o niechêtnym stosunku poety do patosu.</li>
+</ul>
+<p> </p>
+<p>Poetyka ta podkreœla zatroskanie autora aktualn¹ sytuacj¹ ojczyzny oraz potrzebê rewizji mitów i stereotypów narodowych. Wskazuje na jego silne emocje oraz niepokój zwi¹zany z tym, i¿ rodacy nie wykorzystuj¹ danej im szansy. Za pomoc¹ prowokacji Lechoñ pragnie wstrz¹sn¹æ odbiorcami, zachêciæ ich do trudnych, ale koniecznych dzia³añ, dziêki którym Polska wyzwoli siê z biernoœci i umi³owania martyrologii. Utwór ten jest ponadto silnie osadzony w codziennoœci sprzecznej jednak z wyobra¿eniami na temat kraju. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+Indywidualne<br>

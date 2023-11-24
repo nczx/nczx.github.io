@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. refused to </p>
+<p>(Zdanie 1: "Nie ma mowy, że wyjawię jej tajemnicę" - powiedział James.</p>
+<p>Zdanie 2: James <strong>odmówił </strong>wyjawienia jej tajemnicy.) <br/><br/>2. ate sweets was</p>
+<p>(Zdanie 1: Moja siostra nie jadła słodyczy przez cały rok.</p>
+<p>Zdanie 2: Ostatni raz moja siostra <strong>jadła słodycze</strong> rok temu)</p>
+<p><strong>Uzasadnienie</strong>: przypadek, gdzie podmiot jest zdaniem podrzędnym, czego nie widać po przetłumaczeniu na język polski. Podstawowa konstrukcja takiego zdania w <em>past simple</em>: <em>It was a year ago </em>(To było rok temu). Podmiot (<em>it</em>) zastępujemy zdaniem w <em>past simple </em>(<em>The last time my sister ate sweets </em>- ostatni raz, jak moja siostra jadła słodycze).<br/><br/>3. the tourists directions</p>
+<p><strong>Uzasadnienie</strong>: <em>give someone directions </em>- wskazać komuś drogę.<br/><br/>4. a strange taste</p>
+<p>(Zdanie 1: To mleko dziwnie smakuje - zastanawiam się, czy jest dobre do picia.</p>
+<p>Zdanie 2: To mleko ma <strong>dziwny smak</strong> - zastanawiam się, czy jest dobre do picia.)<br/><br/>5. has been working</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect continuous</em>, by opisać niezakończoną czynność, która trwa od jakiegoś czasu (<em>for six years </em>- od sześciu lat).<br/><br/>6. can't be stuck</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>can't </em>+ bezokolicznik, by wyrazić pewność, że coś nie jest prawdziwe.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. reminded of </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja w stronie biernej. Czasownik<em> to be</em><em> </em>w odpowiedniej formie znajduje się przed luką, dlatego wstawiamy tylko czasownik główny w formie <em>past participle </em>(tu: z końcówką <em>-ed</em>) i łączący się z nim przyimek (<em>of</em>). <br/><br/>2. had/got our window replaced</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>have/get something done</em>, aby opisać czynność zleconą komuś innemu. Czas <em>past simple</em> tak jak w zdaniu wyjściowym. <br/><br/>3. you tell me how</p>
+<p>(Zdanie 1: Czy wiesz jak dostać się do muzeum sztuki?</p>
+<p>Zdanie 2: Czy mógłbyś/mogłabyś <strong>powiedzieć mi jak </strong>dostać się do muzeum sztuki?)<br/><br/>4. has been studying Swedish</p>
+<p><strong>Uzasadnienie</strong>: opis niezakończonej czynności, która trwa od jakiegoś czasu = czas <em>present perfect continuous</em>.<br/><br/>5. will have enough time</p>
+<p><strong>Uzasadnienie</strong>: I tryb warunkowy, by mówić o przyszłości: <em>if + present simple; will </em>+ bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. you know what time</p>
+<p>(Zdanie 1: Zastanawiałem/am się, czy mógłbyś/mogłabyś mi powiedzieć, o której zaczyna się film.</p>
+<p>Zdanie 2: Czy <strong>wiesz o której</strong> zaczyna się film?) <br/><br/>2. having anything to do</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>deny </em>(zaprzeczać) łączy się z innym czasownikiem w formie <em>gerund </em>(z końcówką <em>-ing</em>). Używamy zaimka <em>anything</em>, ponieważ <em>deny</em> ma znaczenie negatywne na tej samej zasadzie, co zwykły czasownik w formie przeczącej.<br/><br/>3. were instructed to</p>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie użytym w zdaniu wyjściowym (<em>past simple</em>), czyli: <em>was/were + </em>czasownik główny w <em>past participle </em>(tu: końcówka <em>-ed</em>) + <em>to</em>.<br/><br/>4. normally meets every Wednesday</p>
+<p><strong>Uzasadnienie</strong>: zdanie w czasie <em>present simple</em>, aby opisać rutynę (dodajemy końcówkę <em>-s </em>przy podmiocie w 3. osobie l. pojedynczej).<br/><br/>5. a mistake</p>
+<p>(Zdanie 1: Jeśli zrobisz coś źle podczas pisania na klawiaturze, możesz to zawsze poprawić.</p>
+<p>Zdanie 2: Jeśli popełnisz <strong>błąd </strong>w trakcie pisania na klawiaturze, możesz to zawsze poprawić.)<br/><br/>6. taking anything from</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>deny </em>(zaprzeczać) łączy się z innym czasownikiem w formie <em>gerund </em>(z końcówką <em>-ing</em>). </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. aren't any / are no </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>there is / there are</em>, by mówić, że coś istnieje. Przeczenie tworzymy na dwa sposoby: używając czasownika w formie przeczącej i określnika <em>any</em> lub czasownika w formie twierdzącej i określnika <em>no</em>. <br/><br/>2. any people Jane</p>
+<p>(Zdanie 1: Jane znała prawie każdego na przyjęciu.</p>
+<p>Zdanie 2: Prawie <strong>nie </strong>było <strong>ludzi, których Jane</strong> by nie znała na przyjęciu.)<br/><br/>3. thankful I am</p>
+<p>(Zdanie 1: Nie mogę dostatecznie podziękować za twoją pomoc.</p>
+<p>Zdanie 2: Nie potrafię wyrazić, jak bardzo <strong>jestem wdzięczny/a </strong>za twoją pomoc.)<br/><br/>4. (a) strong wind</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>such (+ a/an) + </em>przymiotnik + rzeczownik. <em>Wind </em>(wiatr) może być policzalny lub niepoliczalny - dopuszczalne są dwie opcje.<br/><br/>5. in touch with</p>
+<p><strong>Uzasadnienie</strong>: <em>get in touch with someone</em> - skontaktować się z kimś.<br/><br/>6. been involved</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja w czasie <em>past perfect</em>: <em>had + past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych) + dopełnienie.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>1. must have broken </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>must have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka <em>-ed</em>), aby wyrazić pewność odnośnie wydarzenia z przeszłości. </p>
+<p>2. if/whether I had ever</p>
+<p><strong>Uzasadnienie</strong>: pytanie tak/nie w mowie zależnej: spójnik <em>if/whether </em>(czy) + szyk zdania twierdzącego (podmiot + czasownik posiłkowy + przysłówek + czasownik główny). Czas <em>present perfect </em>zmienia się na <em>past perfect</em>.</p>
+<p>3. refused to</p>
+<p><strong>Uzasadnienie</strong>: używamy konstrukcji <em>refuse to do something </em>(nie zgodzić się coś zrobić), aby zrelacjonować czyjąś wypowiedź. </p>
+<p>4. care of their pets</p>
+<p><strong>Uzasadnienie</strong>: <em>look after = take care of </em>(opiekować się). </p>
+<p>5. does this bike belong</p>
+<p><strong>Uzasadnienie</strong>: pytanie o podmiot ("Czyj jest ten rower?") zmieniamy na pytanie o dopełnienie ("Do kogo należy ten rower?"), czyli używamy szyku zdania pytającego. Czas <em>present simple</em> tak jak w zdaniu wyjściowym, czyli konstrukcja: zaimek pytający + <em>do/does </em>+ podmiot + czasownik + przyimek. </p><br>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Światy wykreowany przez poetkę w pewnym stopniu przypomina rzeczywistość, ponieważ nawiązuje do występujących w niej elementów natury (np. obecność sarny, las). Odróżnia go jednak tworzywo, gdyż wszystkie byty, doznania zmysłowe są oddane za pomocą słów zapisanych na papierze oraz związanych z tym skojarzeń: "Cisza - ten wyraz też szeleści na papierze / i rozgarnia / spowodowane słowem »las« gałęzie". Kluczowy jest jednak wpływ autora na opisywaną rzeczywistość. To bowiem od jego woli i wyobraźni zależy los sarny, a więc kreacja poetyckiej rzeczywistości: "Nad białą kartką czają się do skoku / litery, które mogą ułożyć się źle". Jej odmienność polega na tym, że poeta ma pełną władzę nad światem, sam określa rządzące nim jednoznaczne zasady ("Inne, czarno na białym, panują tu prawa"). Panuje nad uniwersalnymi regułami, które w świecie realnym pozostają poza jego kontrolą; nie można bowiem okiełznać czasu, zatrzymać pewnych momentów na zawsze. Tylko pisanie zapewnia osobie mówiącej nieograniczony wpływ na wydarzenia: "Bez mojej woli nawet liść nie spadnie / ani źdźbło się nie ugnie pod kropką kopytka". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowe środki wpływające na efekt plastyczności oraz zmysłowości:</p>
+<ul>
+<li>epitet -&gt; "Nad białą kartką", "z przymrużonym okiem"; </li>
+<li>wyliczenie, w którym dominują czasowniki ruchu -&gt; "gotowych zbiec po stromym piórze w dół, / otoczyć sarnę, złożyć się do strzału";</li>
+<li>onomatopeja -&gt; "szeleści";</li>
+<li>instrumentacja głoskowa -&gt; "ani źdźbło się nie ugnie pod kropką kopytka";</li>
+<li>metafora -&gt; "Nad białą kartką czają się do skoku / litery, które mogą ułożyć się źle";</li>
+<li>porównanie -&gt; "Czy z napisanej wody pić, / która jej pyszczek odbije jak kalka?";</li>
+<li>ożywienie -&gt; "Cisza [...] / i rozgarnia";</li>
+<li>oksymoron -&gt;  Okamgnienie trwać będzie tak długo, jak zechcę, / pozwoli się podzielić na małe wieczności";</li>
+<li>zdrobnienie -&gt; "nóżkach". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Wisława Szymborska w swym utworze bardzo oszczędnie wykorzystuje odniesienia do kolorów. Pojawiają się one zaledwie dwukrotnie, a ponadto można je rozpatrywać w sensie dosłownym lub też metaforycznym. Słowa "Nad białą kartką" nie tylko bezpośrednio nawiązują do sytuacji podmiotu lirycznego - na papierze może bowiem stworzyć swoją wizję poetyckiego świata. Biel kartki sugeruje potencjalne możliwości, które zostaną zrealizowane dopiero w momencie pisania, ale także czystość czy niewinność. Kontrastowe zestawienie barw przejawia się z kolei w cytacie: "Inne, czarno na białym, panują tu prawa". Fragment ten odnosi się nie tylko do koloru atramentu na papierze. Przede wszystkim wyraziście charakteryzuje odmienność poetyckiego świata od rzeczywistości. Wszystkie prawa nim rządzące są ściśle zależne od woli autora, a przy tym jednoznaczne. Nie ma więc miejsca na jakiekolwiek niuanse czy wątpliwości.</p>
+<p> </p>
+<p>b) Motyw ruchu oraz bezruchu przejawia się zasadniczo w sposobie przedstawienia czujnej sarny. Zostaje ona powołana do życia na kartce papieru, przez co podmiot liryczny może obserwować jej zachowanie: "Czy z napisanej wody pić, / która jej pyszczek odbije jak kalka? / Dlaczego łeb podnosi, czy coś słyszy?". Jej zachowanie zostaje skontrastowane z czającymi się literami oraz myśliwych. Zabieg ten wzmaga poczucie niepokoju, ponieważ nie wiadomo, co dalej się wydarzy, buduje atmosferę napięcia. Podkreśla także moc poety, gdyż zyskuje on szczególną moc: wprawia stworzoną rzeczywistość w ruch, ale jednocześnie może zatrzymać czas, powstrzymać przemijanie, które stanowi nieodłączny element ludzkiej egzystencji: "Okamienienie trwać będzie tak długo, jak zechcę, / pozwoli się podzielić na małe wieczności". Staje się w ten sposób jedynym panem stworzonej rzeczywistości. </p>
+<p> </p>
+<p>c) Nawiązanie do dźwięków ujawnia się we fragmencie: "Cisza - ten wyraz też szeleści na papierze / i rozgarnia / spowodowane słowem »las« gałęzie". Metafora ta wskazuje na różnicę między światem realnym a poetyckim. W tym pierwszym cisza oznacza po prostu brak jakiegokolwiek dźwięku. W poezji zaś staje się konkretnymi dźwiękiem wywołującym wrażenie szelestu, co wiąże się z obecnością spółgłoski "sz". Przenośnia ta wywołuje także skojarzenia z samą czynnością pisania - skrzypieniem pióra na papierze.</p>
+<p> </p>
+<p>d) W utworze Wisławy Szymborskiej pojawiają się metafory animizujące, np.: "Cisza - ten wyraz też szeleści na papierze / i rozgarnia / spowodowane słowem »las« gałęzie", "Nad białą kartką czają się do skoku / litery, które mogą ułożyć się źle, / zdania osaczające, / przed którymi nie będzie ratunku.", Czas, który wiążę łańcuchami znaków?". Ich wykorzystanie podkreśla moc aktu twórczego. Za jego sprawą poetycka wizja zostaje powołana do życia, zaś słowa stają się reprezentacją konkretnych bytów, sytuacji czy nastroju. Wykorzystanie tych metafor dynamizuje poetycki obraz, ale także wzmacnia obrazowość, gdyż ukazuje zależność między słowem a stworzoną za jego pomocą rzeczywistością. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Stosunek poetki do swych możliwości oraz poetyckiego świata jest dość zniuansowany. Podmiot liryczny w wierszu odczuwa bowiem entuzjazm i zadowolenie związane z aktem pisania, co sugeruje już sam tytuł. Satysfakcja osoby mówiącej wynika z tego, iż w przeciwieństwie do rzeczywistości wykreowany świat zapewnia jej pełnię władzy. Decyduje więc o wszystkich wydarzeniach, może też naruszyć zasady rządzące światem, dzięki czemu przeciwstawia się kruchości egzystencji: "Okamgnienie trwać będzie tak długo, jak zechcę, / pozwoli się podzielić na małe wieczności". Ma przy tym świadomość swojej mocy sprawczej, ale mimo tego zachowuje pokorę oraz pewien dystans, wręcz niedowierza swym możliwościom, które umożliwiają stworzenie na kartce papieru innego świata. Podmiot liryczny w utworze nie pozostaje jednak bezkrytyczny, naiwny. Dostrzega bowiem umowność kreacji poetyckiej: "Dokąd biegnie ta napisana sarna przez napisany las?", jej odmienność: "Zapominają, że tu nie jest życie. / Inne, czarno na białym, panują tu prawa". Rozumie bowiem, iż zwycięstwo twórcy nad rzeczywistością jest tymczasowe, chociaż dzieło pozostaje nieśmiertelne. Osoba mówiąca tym samym wykazuje znajomość pewnych mechanizmów, podejmuje grę z aktem pisania i ujawnia niejednoznaczny charakter tego działania. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przewaga świata poetyckiego nad rzeczywistym polega na tym, że jest on w pełni zależny od woli autora. Osoba taka może dowolnie kształtować przedstawiane wydarzenia, nadawać im wybrany nastrój (grozy lub sielanki) - staje się panem sytuacji. Ponadto w świecie poetyckim nie obowiązują zasady typowe dla rzeczywistości. Poeta może bowiem zatrzymać czas lub go spowolnić - w zależności od swoich pragnień: "Okamgnienie trwać będzie tak długo, jak zechcę, / pozwoli się podzielić na małe wieczności". Twórca nie podlega tym samym nieubłagalnym prawom realnego świata. Za pomocą poetyckiej kreacji chociaż przez moment udaje mu się pokonać kruchość ludzkiej egzystencji oraz zmienność realiów, w których przyszło człowiekowi żyć. Sam zaś tekst zapewnia piszącemu wieczną pamięć, nieśmiertelność: "Możność utrwalania. / Zemsta ręki śmiertelnej", umożliwia przezwyciężenie ograniczeń.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Tytułowa "radość pisania" to odczucie towarzyszące podmiotowi lirycznemu. Na kartce, za pomocą pisma, tworzy bowiem swoją poetycką rzeczywistość. Osoba mówiąca postrzega więc ten akt w pozytywny sposób, ponieważ przynosi on człowiekowi satysfakcję oraz zadowolenie. Źródłem tego stanu jest przede wszystkim charakter twórczości poetyckiej. Za jej sprawą człowiek zyskuje pełną kontrolę nad stworzonym światem, staje się niemal Bogiem; decyduje bowiem o tym, co ma się wydarzyć: "Jest w kropli atramentu spory zapas / myśliwych z przymrużonym okiem, / gotowych zbiec po stromym piórze w dół, / otoczyć sarnę, złożyć się do strzału". "Radość pisania" wynika także z innej kwestii: stworzony świat - w przeciwieństwie do realnego odpowiednika - opiera się na jednoznacznych zasadach ("Inne, czarno na białym panują tu prawa"), które ustala sam piszący. Z tego też powodu zadowolenie przynosi mu możliwość zapanowania nad czasem oraz przeciwstawienie się przemijaniu, które jest wpisane w ulotną egzystencję człowieka. Tym samym nadaje swemu życiu głębszy sens oraz pozostawia po sobie coś trwałego, co nie zniknie z jego śmiercią. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Puenta utworu Szymborskiej brzmi następująco:</p>
+<p><em>Radość pisania.</em></p>
+<p><em>Możność utrwalania. </em></p>
+<p><em>Zemsta ręki śmiertelnej.</em></p>
+<p>Podkreśla ona przede wszystkim znaczenie twórczości poetyckiej, która staje się źródłem satysfakcji oraz zadowolenia. Wynika to z faktu, iż jest ona przejawem przeciwstawienia się regułom rządzącym światem. Ludzka egzystencja cechuje się bowiem kruchością, przemijaniem, człowiek nie ma wpływu na czas, nie może go zatrzymać. Twórczość literacka pozwala na przełamanie tych ograniczeń, gdyż zapewnia "Możność utrwalania". Za jej sprawą autor pozostawia po sobie coś trwałego, czego nie zniszczy upływający czas. W ten sposób unieśmiertelnia także siebie - jako twórcę dzieła poetyckiego (<em>non omnis moriar</em>). Z kolei "Zemsta ręki śmiertelnej" wskazują na drugi aspekt poezji. Staje się ona bowiem formą rewanżu - człowiek za jej pomocą może chociaż w wykreowanym przez siebie świecie zmienić zasady typowe dla rzeczywistości, pokonać swe ograniczenia czy też przejąć władzę nad czasem. W ten sposób przeciwstawia się swej śmiertelności oraz podporządkowaniu zasadom obowiązującym w świecie realnym. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br>

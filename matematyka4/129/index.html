@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Dany jest czworościan foremny o krawędzi długości <strong>a</strong>. </p> <p>Dany jest ośmiościan foremny o krawędzi długości <strong>b</strong>. </p> <p>Wyznaczmy <strong>pole</strong> powierzchni czworościanu foremnego. Korzystając ze <span style="text-decoration: underline;">wzoru na pole trójkąta równobocznego</span> mamy:   </p> <p><span> <math-expr expr="P_1=4P_Delta = 4*(a^2sqrt3)/4 = a^2sqrt3" syntax="text"></math-expr> </span>   </p> <p>Wyznaczmy <strong>pole</strong> powierzchni ośmiościanu foremnego. Korzystając ze <span style="text-decoration: underline;">wzoru na pole trójkąta równobocznego</span> mamy: </p> <p><span> <math-expr expr="P_2=8P_Delta = 8*(b^2sqrt3)/4 = 2*b^2sqrt3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Z treści zadania wiemy, że:</p> <p><span> <math-expr expr="P_1=2*P_2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a^2sqrt3=2*2*b^2sqrt3 \ \ \ |:sqrt3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a^2=4b^2 \ \ \ ^^ \ \ \ a&gt;0, \ \ b&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a=2b" syntax="text"></math-expr> </span>  </p> <hr/> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na objętość czworościanu foremnego</span>, wiemy, że objętość danego czworościanu foremnego wynosi: </p> <p><span> <math-expr expr="V_1=(a^3sqrt2)/12" syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <strong>objętość</strong> ośmiościanu foremnego. Mamy:</p> <p><span> <math-expr expr="V_2=2 cdot 1/3 cdot b^2 cdot sqrt2/2 b = b^3sqrt2/3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <span style="text-decoration: underline;">stosunek objętości tych wielościanów</span>. Mamy:</p> <p><span> <math-expr expr="V_1/V_2=(a^3 sqrt2/12)/(b^3sqrt2/3)=(a^3/12)/(b^3/3)=a^3/12*3/b^3=(a^3)/(4b^3)=ldots" syntax="text"></math-expr> </span></p> <p>Wiedząc, że <strong>a=2b</strong> mamy:</p> <p><span> <math-expr expr="ldots=(2b)^3/(4b^3)=(8b^3)/(4b^3)=2" syntax="text"></math-expr> </span>   </p> <p><strong>Odp.</strong> Stosunek objętości tych wielościanów wynosi <strong>2:1</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Dany jest ośmiościan foremny o krawędzi długości <strong>4 cm</strong>. </p> <p>Połączono środki ciężkości tego ośmiościanu i otrzymano sześcian o krawędzi długości <strong>x</strong>. </p> <p>Środek ciężkości trójkąta równobocznego leży na jego wysokości w odległości <strong><sup>1</sup>/<sub>3</sub>h</strong> od jego podstawy. Korzystając ze <span style="text-decoration: underline;">wzoru na długość wysokości w trójkącie równobocznym</span> mamy:   </p> <p><span> <math-expr expr="h=(asqrt3)/2=(4sqrt3)/2=2sqrt3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='1/3h=1/3 cdot (4sqrt3)/2 = 1/3*2sqrt3=(2sqrt3)/3 \ ["cm"]' syntax="text"></math-expr> </span>    </p> <p>Naszkicujmy ostrosłup będący połową tego ośmiościanu: </p> <p><img alt="" height="395" src="./data/1212549-0.jpg" width="442"/></p> <p>Zauważmy, że</p> <p><span> <math-expr expr="abs(LE)=1/3h=(2sqrt3)/3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <strong>sinus</strong> kąta <span style="font-weight: 400;"><strong>𝛼</strong>. Mamy:</span></p> <p><span> <math-expr expr="sinalpha=(1/2x)/(1/3h) = (1/2x)/((2sqrt3)/3) = 1/2x*3/(2sqrt3) = (3sqrt3)/12x = sqrt3/4x" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <strong>cosinus</strong> kąta <span style="font-weight: 400;"><strong>𝛼</strong>. Mamy:</span></p> <p><span> <math-expr expr="cosalpha=(1/2a)/h = 2/(2sqrt3) = 1/sqrt3" syntax="text"></math-expr> </span>  </p> <hr/> <p>Korzystając z <strong>jedynki trygonometrycznej </strong></p> <p><span> <math-expr expr="sin^2alpha+cos^2alpha=1" syntax="text"></math-expr> </span>  </p> <p>mamy:</p> <p><span> <math-expr expr="(sqrt3/4x)^2+(1/sqrt3)^2=1" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="3/16x^2+1/3=1" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="3/16x^2=2/3 \ \ \ |:3/16" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x^2=2/3*16/3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x^2=32/9 \ \ \ ^^ \ \ \ x&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x=sqrt32/3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='ul( x=(4sqrt2)/3 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Obliczmy <strong>objętość</strong> tego sześcianu.</p> <p><span> <math-expr expr='V=((4sqrt2)/3)^3 = (64*2sqrt2)/27 = ul(ul( (128sqrt2)/27\ ["cm"^3]' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Dany jest wielościan foremny. Jego ściany malujemy tak, aby żadne dwie krawędzie nie były tego samego koloru.</p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Rysunek:  </p>
+<p><img alt="" height="337" src="./data/1212597-0.jpg" width="383"/></p>
+<p>Zauważmy, że ściana <strong>ACS</strong> <span style="text-decoration: underline;">nie</span> może być pomalowana użytymi już kolorami. </p>
+<p>Zauważmy, że ściana <strong>ABC</strong> również <span style="text-decoration: underline;">nie</span> może być pomalowana trzema z użytych już kolorów.</p>
+<p><strong>Odp. </strong>Należy użyć<strong> 4 </strong>kolorów.</p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="309" src="./data/1212597-1.jpg" width="374"/></p>
+<p>Ściany <strong>ADHE</strong> i <strong>BCGF</strong> są pomalowane na taki sam kolor.</p>
+<p>Ściany <strong>ABCD</strong> i <strong>EFGH</strong> są pomalowane na taki sam kolor.</p>
+<p>Ściany <strong>ABFE</strong> i <strong>DCGH</strong> są pomalowane na taki sam kolor.</p>
+<p><strong>Odp. </strong>Należy użyć<strong> 3 </strong>kolorów.</p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="379" src="./data/1212597-2.jpg" width="384"/></p>
+<p>Ściany <strong>ADE</strong>, <strong>BCE</strong>, <strong>ABF,</strong> <strong>DCF</strong> możemy pomalować jednym kolorem.</p>
+<p>Pozostałe ściany możemy pomalować drugim kolorem.</p>
+<p><strong>Odp. </strong>Należy użyć<strong> 2 </strong>kolorów.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<table border="1" style="width: 698px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 79px;">
+<tbody>
+<tr>
+<td style="width: 694px;"><strong>Wielościanem foremnym</strong> nazywamy wielościan wypukły, którego wszystkie ściany są przystającymi wielokątami foremnymi i w każdym wierzchołku zbiega się jednakowa liczba ścian.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Dane są dwa czterościany foremne tej samej wielkości. Złączamy je podstawami i otrzymujemy wielościan o sześciu ścianach.</p>
+<p>Rysunek:   </p>
+<p><img alt="" height="374" src="./data/1212629-0.jpg" width="331"/></p>
+<p>Zauważmy, że w wierzchołku <strong>B</strong> zbiegają się <strong>cztery</strong> ściany, a w wierzchołku <strong>D</strong> - <strong>trzy</strong> ściany.</p>
+<p>Zatem otrzymany wielościan <strong>nie</strong> jest wielościanem foremnym. </p><br>

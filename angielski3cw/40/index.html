@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. for building  </p>
+<p>2. palace</p>
+<p>3. the 12th century</p>
+<p>4. visit the stone</p>
+<p>5. an office block </p>
+<p>6. 2018</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. A tsunami caused the disaster. </p>
+<p><strong>Fragment w tekście: </strong>"An earthquake under the ocean caused a tsunami which flooded a nuclear plant, causing explosions and a leak of radiation." - Podwodne trzęsienie ziemi spowodowało tsunami, które zalało elektrownię atomową, powodując eksplozje i wyciek promieniowania. </p>
+<p>2. It made them grow up larger, become more aggressive and deadly.</p>
+<p><strong>Fragment w tekście: </strong>"The article stated that the radiation had caused hornets to grow up to four times larger than normal and become more aggressive than usual, and had given them a more deadly venom." - W artykule napisano, że promieniowanie spowodowało, że szerszenie urosły do rozmiarów czterokrotnie większych niż normalnie i stały się bardziej agresywne niż zwykle, a także dało im bardziej śmiercionośny jad.</p>
+<p>3. They included a believable source.</p>
+<p><strong>Fragment w tekście: </strong>"The story seemed genuine and even quoted a source - a doctor at the Nebraska Medical Research Symposium, who explained the effects that the venom had on victims' internal organs." - Historia wydawała się autentyczna i nawet cytowała źródło - lekarza z Medycznego Sympozjum Badawczego w Nebrasce, który wyjaśniał skutki, jakie jad wywierał na organy wewnętrzne ofiar.</p>
+<p>4. They build their nest on the ground, not in trees.</p>
+<p><strong>Fragment w tekście: </strong>"(...) not because the Asian hornets are especially aggressive, but because, unlike other hornets, they build their nests on the ground, not in trees, making it more likely that someone will accidentally disturb them." - (...) nie dlatego, że szerszenie azjatyckie są szczególnie agresywne, ale dlatego, że w przeciwieństwie do innych szerszeni budują swoje gniazda na ziemi, a nie na drzewach, co zwiększa prawdopodobieństwo, że ktoś przypadkowo je sprowokuje.</p>
+<p>5. Yes, he/she does.</p>
+<p><strong>Fragment w tekście: </strong>"The other equally bizarre and unbelievable stories on the website should have made this obvious, but this modern urban legend still spread, causing panic and fear as it did so." - Inne równie dziwaczne i niewiarygodne historie na stronie internetowej powinny były uświadomić to czytelnikom, ale ta nowoczesna miejska legenda i tak się rozprzestrzeniła, wywołując panikę i strach.</p><br>

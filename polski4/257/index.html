@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><em>Czas działania </em>to według Artura podjęcie zdecydowanych kroków zmierzających do usunięcia przyjaciela rodziny, Edka, z domu. Wykonanie tego zadania powierza Stomilowi. Uświadamia mu, że jest zdradzany przez żonę i nakłania do stanowczej reakcji - wypędzenia lub, w ostateczności, zastrzelenia intruza.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Stomil z jednej strony otwarcie komunikuje, że nie lubi Edka, z drugiej jednak jest zafascynowany jego postacią. Urok przyjaciela domu tkwi w autentyczności, rozumianej jako swoiste oderwanie od kultury, a kierowanie się pierwotnymi wręcz instynktami. Stomil zazdrości mu nieświadomości, uważa bowiem, że to ona czyni go szczęśliwszym. Prostolinijny, niewykształcony Edek wydaje się ojcu Artura remedium na przeintelektualizowanie społeczeństwa.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zabicie Edka przez Stomila jest częścią planu Artura. Młodzieniec chce wprowadzić do pełnego chaosu domu zasady, których wyzbyli się jego rodzice. Krokiem w tę stronę jest zlikwidowanie kochanka matki. Tak gwałtowny czyn wywołany zazdrością zdradzanego męża miałby ugruntować tradycyjny wzorzec małżeństwa. Nagły wstrząs wywołany śmiercią gościa miałby także stworzyć niejako nową formę, do której wtłoczona zostałaby rodzina Artura. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Aby skłonić ojca do podjęcia działania, Artur manipuluje nim. Nazywa go tchórzem, mówi, że zdolny jest jedynie do teoretyzowania, nie podejmuje jednak żadnych czynów. Naśmiewa się z tego, że Stomil nie potrafi przeciwstawić się się zdradom żony. Próbuje wzbudzić w nim agresję wobec Edka, podsyca niechęć do intruza. Według Artura, ojciec nie ponosi żadnego ryzyka. W najgorszym wypadku będzie musiał zastrzelić przeciwnika, to zaś w oczach młodzieńca nie jest żadną stratą.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Dialog Artura ze Stomilem może być uznany za ilustrację konfliktu pokoleń. Artur jest pełen chęci do działania, chce zmienić środowisko, w którym żyje. Ojciec komentuje jego postawę słowami: "Jednak co młodzieńczy entuzjazm, to nie sceptyzm epoki. Ech, młodość, młodość... ". Sam jest skłonny do rozważań teoretycznych, nie chce jednak podejmować gwałtownych działań. Potrzebuje logicznego wyjaśnienia, podczas gdy Arturowi wystarcza wewnętrzne przekonanie o słuszności swoich czynów. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Według Stomila tragedia we współczesnym świecie nie ma racji bytu. Rzeczywistość została sprowadzona do granic absurdu, nie ma więc w niej miejsca na patos i powagę, które są koniecznymi elementami tego gatunku. Nawet najtragiczniejsze wydarzenie w pozbawionym zasad świecie rządzonym przez chaos staje się groteskowe. Prawdziwości tezy dowodzi finał sceny. Stomil nie zdobywa się na wielki gest konfrontacji z Edkiem, zamiast tego dołącza do gry w karty, chowając się przed swoim synem. Zakończenie to, raczej komiczne niż dramatyczne, nie pasuje do tragedii, której pragnąłby Artur.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Członkowie rodziny Artura mają negatywny stosunek do zachowania Artura. Młodzieniec wydaje się im nieustępliwym tyranem, próbującym siłą wprowadzić porządek do domu. Czują się przez niego zastraszani i osaczani. Artur nieustannie kontroluje to, co robią poszczególni członkowie, a za niesubordynację karze. Wskazują na to słowa ukrywającej się przed wnukiem Eugenii: "A nie mówiłam, że on i tak nas znajdzie? Przed nim się nie schowasz". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Groteskowy charakter mają podejmowane przez Artura próby nakłonienia Stomila do podjęcia jakichkolwiek działań w kwestii romansu między jego żona a Edkiem. Zdradę Eleonory odkrywa jej syn, to on podejmuje się zadania poinformowania ojca i zmuszenia go do pozbycia się intruza. Role są więc w pewien sposób odwrócone - to rodzic jest uświadamiany i pouczany przez dziecko, nie zaś odwrotnie. </p>
+<p>O grotesce możemy mówić także w przypadku wymiany zdań dotyczącej powodu potępienia zdrady małżeńskiej. Zarówno pokojowo nastawiony Stomil, jak i, co ciekawsze, wojowniczy Artur nie są w stanie odpowiedzieć na pytanie, dlaczego niewierność Eleonory jest zła. Postępujący chaos światopoglądowy skłania ich do rozważania rzeczy, które wydają się pozornie oczywiste. Rozmyślania te nie przynoszą efektu. Bohaterowie, nie znalazłszy odpowiedzi, zmieniają temat i przechodzą do czynu.</p>
+<p>Za groteskowy uznać można także finał sceny ze względu na rozdźwięk między oczekiwaniami Artura (a wraz z nim  - widza) a rzeczywistością. Chłopak spodziewa się zdecydowanej reakcji ojca, przekonany jest więc, że w pokoju rozgrywa się właśnie morderstwo. Tymczasem Stomil dołącza do gry w karty, w której uczestniczy również Edek.  Natychmiastowy spadek budowanego wcześniej napięcia wywołuje efekt groteski.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo (na podstawie fragmentu z podręcznika):</p>
+<p>W <em>Tangu </em>to Artur wydaje się głową rodziny. Wie, że matka zdradza Stomila z Edkiem, inicjuje więc konfrontację między nimi. Udziela ojcu swoistej lekcji etyki, próbując wyjaśnić, dlaczego nie powinien godzić się na romans Eleonory. Jest przy tym stanowczy, wykorzystuje słabość rodzica, by skłonić go do działania. O jego przywódczej roli w rodzinie świadczy także reakcja zebranych przy stole jej członków. Ukrywali grę w karty przed Arturem wiedząc, że jest to czynność zabroniona. Dorośli zachowują się więc jak dzieci w tajemnicy łamiące zakazy rodziców.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br>

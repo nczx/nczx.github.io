@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>Nadanie ostatniemu utworowi tytu³u <em>Przedmowa </em>zdaje siê zaprzeczaæ definicji tego s³owa. Przedmowê umieszcza siê bowiem zazwyczaj na samym pocz¹tku ksi¹¿ki, poniewa¿ zawiera ona informacje dotycz¹ce np. treœci dzie³a czy okolicznoœci wydania. Paradoks ten ma jednak g³êbszy sens w kontekœcie tematyki podjêtej w wierszu. Utwór koñcz¹cy tom poetycki staje siê swoist¹ deklaracj¹ oraz zapowiedzi¹ tego, jaka bêdzie od tej pory twórczoœæ poety. Takie umiejscowienie tekstu wskazuje na odkrycie modelu poezji, który stanie siê kluczowy w póŸniejszych tomach Mi³osza. Tym samym zakoñczenie ksi¹¿ki stanowi wstêp do przysz³ych literackich poszukiwañ. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>"Mowa prosta" odwo³uje siê do podstawowych s³ów oraz ich znaczeñ. Bez w¹tpienia jest pozbawiona nadmiernej ozdobnoœci czy patosu. Wi¹¿e siê ze zwyk³ymi ludŸmi oraz pozwala na pe³ne i wiarygodne oddanie codziennoœci - bez idealizacji czy zak³amania. Opiera siê tak¿e na prawdzie, dziêki czemu pos³ugiwanie siê ni¹ nie jest Ÿród³em wstydu. Z kolei "czarodziejstwo s³ów" wywo³uje odmienne wra¿enia. Kojarzy siê bowiem z ozdobnoœci¹, oczarowywaniem ludzi za pomoc¹ jêzyka, pewn¹ iluzorycznoœci¹, za któr¹ nie kryje siê nic g³êbszego. Mo¿e symbolizowaæ tak¿e odrealnienie czy pos³ugiwanie siê mitami w celu wywarcia odpowiedniego efektu na odbiorcach. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Podmiot liryczny w swym monologu zwraca siê do jednego z przedstawicieli pokolenia Kolumbów. Sytuacja ta staje siê pretekstem do rozliczenia siê z ich koncepcj¹ poezji, ale pozwala tak¿e osobie mówi¹cej na zaprezentowanie swoich pogl¹dów dotycz¹cych tej kwestii. Wypowiadaj¹cy siê rozwa¿a bowiem sens sztuki. Dochodzi do wniosku, i¿ powinna pe³niæ niezwykle wa¿n¹ funkcjê: ma byæ Ÿród³em ocalenia dla narodów i ludzi, przypominaæ o kluczowych wartoœciach moralnych, cz³owieczeñstwie. W innej sytuacji cechuje j¹ fa³sz, staje siê "Wspólnictwem urzêdowych k³amstw, / Piosenk¹ pijaków, którym za chwilê ktoœ poder¿nie gard³a, / Czytank¹ z panieñskiego pokoju". Dochodzi tym samym do jej degradacji oraz infantylizacji. Podmiot liryczny ¿a³uje, ¿e nie uda³o mu siê ocaliæ odbiorcy wypowiedzi. Zauwa¿a przy tym, i¿ ta osoba reprezentuje inn¹ koncepcjê poezji, gdy¿ jej si³a wynika z nienawiœci, si³y, jednak nie ma w niej ratunku. Z tego te¿ powodu podmiot liryczny zdaje siê ¿egnaæ z pewn¹ tradycj¹, a przy tym d¹¿yæ do prostoty i jasnoœci lirycznej wypowiedzi. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a) Utwory przedstawiaj¹ doœæ krytycznym stosunek pisz¹cego wzglêdem historii. Przede wszystkim poeta zauwa¿a w nich wp³yw wydarzeñ na kszta³t poezji. W <em>Przedmowie</em>, zwracaj¹c siê do poleg³ego, odwo³uje siê do koncepcji liryki, która jest uwarunkowana wojn¹: "Natchnienie nienawiœci [bra³eœ] za piêkno liryczne, / Si³ê œlep¹ za dokonany kszta³t". Mi³osz pragnie odejœæ od takiego modelu poezji, aby wreszcie zaczê³a ona s³u¿yæ ocaleniu. Z tego te¿ powodu w symboliczny sposób pragnie zamkn¹æ pewien rozdzia³, byæ mo¿e odci¹æ siê od wp³ywów historycznych, co sugeruje zakoñczenie wiersza: "Tê ksi¹¿kê k³adê tutaj dla ciebie, o dawny, / Abyœ nas odt¹d nie nawiedza³ wiêcej". Doœæ gorzk¹ ocenê historii zawiera tak¿e drugi wiersz pt. <em>W Warszawie</em>. Przesz³oœæ staje siê bowiem ograniczeniem, poniewa¿ kieruje uwagê w stronê tragicznych zdarzeñ, narzuca pewne tematy. Z tego te¿ powodu okazywanie radoœci, zachwyt œwiatem staj¹ siê czymœ nieodpowiednim, poniewa¿ ra¿¹co kontrastuj¹ z tragicznymi czasami. Sytuacja ta budzi jednak sprzeciw i bunt twórcy - domaga siê on afirmacji rzeczywistoœci, utrwalania pozytywnych wra¿eñ, a nie ¿ycia w ci¹g³ej ¿a³obie.</p>
+<p> </p>
+<p>b) Wybawcza rola poezji wi¹¿e siê z tym, i¿ jest ona noœnikiem wy¿szych wartoœci (np. piêkna, wra¿liwoœci itd.), chroni tak¿e podstawowe sensy danych s³ów. Symbolizuje prawdê, poniewa¿ nie ma w niej wielkich, lecz pustych, wyrazów, k³amstwa czy manipulacji za pomoc¹ kwiecistych wyra¿eñ. Jej wybawcze znaczenie wynika równie¿ z tego, i¿ pozwala na dostrze¿enie piêkna i harmonii œwiata - przypomina wiêc ludziom o pozytywnych wartoœciach. Utrwala radosne doœwiadczenia i wszelkie przejawy cz³owieczeñstwa, dziêki czemu rzeczywistoœæ zachowuje stabilnoœæ: "[...] Zostawcie / Poetom chwilê radoœci, / Bo zginie wasz œwiat". </p>
+<p> </p>
+<p>c) Czêœæ indywidualna </p><br>

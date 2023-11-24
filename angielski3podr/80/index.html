@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I've never heard of bamboo bikes before but they sound very interesting. They're eco-friendly because they're biodegradable - they don't create as much waste as traditional bikes. Also, bamboo grows very fast so it probably doesn't take long to make them.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Nigdy wcześniej nie słyszałem/am o bambusowych rowerach, ale brzmią bardzo interesująco. Są przyjazne dla środowiska, ponieważ ulegają biodegradacji - nie wytwarzają tyle odpadów, co tradycyjne rowery. Ponadto bambus rośnie bardzo szybko, więc ich produkcja prawdopodobnie nie zajmuje dużo czasu.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odpowiedź: </strong> </p>
+<p>The blogger thinks the bamboo bikes are a good idea. On her blog, she writes about things and people that help the environment. In the introduction of the post, she describes bamboo bicycles as "amazing,"  then she lists their advantages, and in the very end, she writes that they are "definitely the way to go."</p>
+<p>(Blogerka uważa, że bambusowe rowery to dobry pomysł. Na swoim blogu, pisze ona o rzeczach i osobach przyczyniających się do ochrony środowiska. We wstępie opisuje bambusowe rowery jako "niesamowite", w dalszej części wpisu podaje ich zalety, a na samym końcu pisze, że "zdecydowanie są właściwym rozwiązaniem".)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a - 2 (Dlaczego są przyjazne dla środowiska?)</p>
+<p><strong>Fragment w tekście</strong>: "Bamboo grows really fast (...). It can be grown anywhere without pesticides (...). There's no deforestation." - Bambus rośnie naprawdę szybko (...). Może być uprawiany wszędzie bez pestycydów (...). Nie dochodzi do wylesiania. </p>
+<p>b - 5 (Gdzie można je kupić?)</p>
+<p><strong>Fragment w tekście</strong>: "At the moment, they're only sold online (...)." - Obecnie są sprzedawane jedynie przez Internet (...).</p>
+<p>c - 3 (Jakie mają inne zalety?)</p>
+<p><strong>Fragment w tekście</strong>: "As well as being lighter than most metal bikes, they're smooth to ride because the bamboo frame is flexible." - Poza tym, że są lżejsze niż większość rowerów metalowych, łatwo się na nich jeździ, ponieważ bambusowa rama jest elastyczna.</p>
+<p>d - 1 (Czym dokładnie są?)</p>
+<p><strong>Fragment w tekście</strong>: "Bamboo bikes have been around since 1896. Only the frame is made of bamboo." - Rowery bambusowe istnieją już od 1896 roku. Z bambusa wykonana jest tylko rama.</p>
+<p>e - 4 (Jakie są ich rodzaje?)</p>
+<p><strong>Fragment w tekście</strong>: "You can get pretty much any type you want - mountain, racing, hybrid ... or design your own one!" - Można kupić prawie każdy typ, jaki się chce - górski, wyścigowy, hybrydowy... lub zaprojektować swój własny!</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Akapit 2:</strong></p>
+<p>"It can be grown anywhere without pesticides as well!" - 5. In addition, it can be grown anywhere without pesticides.</p>
+<p>("Można je uprawiać wszędzie, nawet bez środków owadobójczych!" - Ponadto, można je uprawiać wszędzie bez użycia środków owadobójczych.)  </p>
+<p><strong>Akapit 4:</strong></p>
+<p>"You can get pretty much any type you want - mountain, racing, hybrid ..." - 2. It is possible to obtain many different types of bicycle, such as a mountain bike, racing bike or a hybrid bike.</p>
+<p>("Można kupić prawie każdy typ, jaki się chce - górski, wyścigowy, hybrydowy..." - Możliwe jest nabycie wielu różnych typów rowerów, takich jak rower górski, rower wyścigowy lub rower hybrydowy.)</p>
+<p>"There are lots of websites selling kits that contain everything you need." - 3. There are many websites that sell complete kits for building bamboo bikes.</p>
+<p>(Jest wiele stron internetowych sprzedających zestawy zawierające wszystko, czego potrzeba." - Jest wiele stron internetowych, które sprzedają kompletne zestawy do budowy rowerów bambusowych.)</p>
+<p><strong>Akapit 5:</strong></p>
+<p>"So, bamboo bikes are definitely the way to go!" - 1. Bamboo bikes are definitely the best option.</p>
+<p>(Więc bambusowe rowery zdecydowanie są właściwym rozwiązaniem!" - Bambusowe rowery zdecydowanie są najlepszą opcją.)</p>
+<p>"Next week, I'll be writing about sunglasses." - 4. Next week, I'm going to write about sunglasses.</p>
+<p>("W przyszłym tygodniu będę pisać o okularach przeciwsłonecznych." - W przyszłym tygodniu zamierzam napisać o okularach przeciwsłonecznych.)</p>
+<p><br/><strong>Przykładowa odpowiedź na pytanie:</strong></p>
+<p>A blog post is an informal type of writing. The sentences used in the text are more suitable for this type of writing, because they contain more colloquial expressions and constructions, abbreviated forms of verbs and talk directly to the reader.</p>
+<p>(Wpis na bloga jest nieformalnym rodzajem tekstu. Zdania użyte w tekście są bardziej pasujące do tego typu wypowiedzi, ponieważ zawierają bardziej potoczne wyrażenia i konstrukcje, skrócone formy czasowników i bezpośrednio zwracają się do czytelnika.)</p><br>

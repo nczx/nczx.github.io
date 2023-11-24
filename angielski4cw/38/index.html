@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. F </p>
+<p>2. N</p>
+<p>3. N/I</p>
+<p>4. F</p>
+<p>5. N/I</p>
+<p>6. N/F</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. e </p>
+<p>2. b</p>
+<p>3. d</p>
+<p>4. c</p>
+<p>5. a</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. c </p>
+<p>2. e</p>
+<p>3. g</p>
+<p>4. f</p>
+<p>5. a</p>
+<p>6. b</p>
+<p>7. d</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. He is writing to ask about the origin of paper used by the company.</p>
+<p>(Pisze, żeby zapytać skąd pochodzi papier używany przez firmę, do której się zwraca.)</p>
+<p><strong>Fragment w tekście:</strong> "I am writing to ask about the origin of paper used for the titles published by your company" - Piszę, żeby zapytać o pochodzenie papieru używanego do wytwarzania tytułów publikowanych przez Państwa firmę. </p>
+<p> </p>
+<p>2. He found the information in an article.</p>
+<p>(Znalazł te informacje w artykule.)</p>
+<p><strong>Fragment w tekście:</strong> "(...) according to an article I have recently read (...)." - (...) zgodnie z artykułem, który ostatnio przeczytałem (...).</p>
+<p> </p>
+<p>3. He is worried about the fact that paper used for book printing is not recycled, which affects the environment badly.</p>
+<p>(Martwi go to, że papier używany do drukowania książek nie jest poddawany recyklingowi, co źle wpływa na środowisko.)</p>
+<p><strong>Fragment w tekście:</strong> "(...) I discovered that the paper used to print them is usually not recycled. (...) the publishing industry is contributing to the problem of deforestation worldwide. We know that this process leads directly to the extinction of animal and plant species, and is also one of the most important factors in global warming." - (...) odkryłem, że papier używany do ich drukowania zazwyczaj nie jest poddawany recyklingowi. (...) przemysł wydawniczy przyczynia się do problemu wycinania lasów na całym świecie. Wiemy, że ten proces prowadzi bezpośrednio do wyginięcia gatunków zwierząt i roślin oraz jest jedną z najistotniejszych przyczyn ocieplenia klimatu. </p>
+<p> </p>
+<p>4. His question is whether the company uses recycled paper and, if not, where they source it from. He also wants to know the company's policy on some environmental issues. </p>
+<p>(Jego pytanie dotyczy tego, czy firma używa papieru z recyklingu, a jeśli nie - skąd go pozyskuje. Chce także dowiedzieć się, jaka jest polityka firmy względem problemów związanych ze środowiskiem.)</p>
+<p><strong>Fragment w tekście:</strong> "I would be grateful if you could let me know if you use recycled paper and, if not, where you source the paper from. Please also inform me of your company's policy on deforestation and other important environmental issues." - Byłbym wdzięczny za odpowiedź na pytanie, czy używacie Państwo papieru z recyklingu, a jeśli nie - skąd go pozyskujecie. Proszę również o informację na temat polityki firmy względem wycinki lasów oraz innych problemów związanych ze środowiskiem.</p>
+<p> </p>
+<p>5. He expects a reply from the company. </p>
+<p>(Oczekuje odpowiedzi od firmy.)</p>
+<p><strong>Fragment w tekście:</strong> "I look forward to hearing from you." - Czekam na Państwa odpowiedź.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. in response to  </p>
+<p>2. some concerns regarding </p>
+<p>3. would be grateful if </p>
+<p>4. look forward to hearing from</p>
+<p>5. give this matter your earnest </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywudualne</p><br>

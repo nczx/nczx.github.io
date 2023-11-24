@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Œmieræ w utworze Józefa Czechowicza nie zostaje przedstawiona w dos³owny i jednoznaczny sposób - np. jako popularny w kulturze na przestrzeni wieków koœciotrup z kos¹. Zamiast tego jej nienachalna - ale te¿ namacalna - obecnoœæ przejawia siê w ró¿nych elementach rzeczywistoœci, które mo¿na odebraæ za pomoc¹ zmys³ów: czy to s³uchu ("trzepoce motylami"), czy te¿ wêchu ("pachnie soœnin¹ modrzewiem"). Jest zjawiskiem, które przekracza wszelkie granice, ca³y czas zaznacza sw¹ obecnoœæ w doczesnej rzeczywistoœci, na co wskazuj¹ s³owa: "dotyka co noc snami / zza cichej rzeki / gdzie mg³a noga za nog¹ / wlecze siê w ciemny k¹t". Nie ma konkretnej postaci, jednak jej obecnoœci nie mo¿na podwa¿yæ, poniewa¿ przejawia siê w œwiecie natury, przypomina cz³owiekowi o tym, ¿e stanowi nieuniknion¹ koniecznoœæ. Wykorzystane œrodki stylistyczne oraz formy czasowników akcentuj¹ specyficzny status œmierci. Zastosowanie czasu teraŸniejszego sugeruje wszechobecnoœæ tego zjawiska - zdaje siê ono funkcjonowaæ poza kategori¹ czasu. W opisie œmierci w drugiej strofie poeta wykorzystuje nastêpuj¹ce œrodki:</p>
+<ul>
+<li>epitety -&gt; "o czarne okna [...]";</li>
+<li>metafory -&gt; "dotyka co noc snami";</li>
+<li>wyliczenia -&gt; "trzepoce motylami / pachnie soœnin¹ modrzewiem / dotyka co noc snami";</li>
+<li>uosobienie -&gt; "gdzie mg³a [...] / wlecze siê w ciemny k¹t";</li>
+<li>powtórzenia -&gt; "[...] noga za nog¹".</li>
+</ul>
+<p>Zastosowane œrodki wp³ywaj¹ na plastycznoœæ przedstawienia, ale tak¿e oddaj¹ niejednoznaczny charakter œmierci. Nie mo¿na opisaæ jej wprost, wiêc poeta ukazuje pewne przejawy oraz sygna³y obecnoœci, które potwierdzaj¹ zwi¹zki œmierci z rzeczywistoœci¹. Zabiegi te wp³ywaj¹ tak¿e na atmosferê tajemnicy zwi¹zanej bezpoœrednio z tym zjawiskiem. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Utwór Józefa Czechowicza jest przepe³niony nie tylko aluzjami literackimi, lecz tak¿e kulturowymi. Ju¿ sam tytu³ dzie³a odsy³a czytelnika do tradycji ballady, która szczególn¹ popularnoœci¹ cieszy³a siê w romantyzmie (<em>Ballady i romanse</em> Mickiewicza). Poeta w swym utworze wykorzystuje pewne w³aœciwoœci tego gatunku. Wœród nich mo¿na wskazaæ nastrojowoœæ przedstawienia, atmosferê grozy i tajemnicy, obecnoœæ elementów fantastycznych oraz odwo³anie do ludowego sposobu postrzegania rzeczywistoœci. Jednoczeœnie Czechowicz twórczo przetwarza balladê, poniewa¿ zasadniczo rezygnuje z fabu³y i dialogu (wyj¹tkiem s¹ zagadkowe g³osy).</p>
+<p>Ze wzglêdu na dobór tematyki oraz jej zaprezentowania - twórca w subtelny sposób nawi¹zuje do dzie³ Dantego oraz Homera, mitologii. Jego zainteresowanie - podobnie jak staro¿ytnych twórców - budzi bowiem zale¿noœæ miêdzy œwiatem ¿ywych i umar³ych, granica miêdzy dwiema rzeczywistoœciami, które zdaj¹ siê na siebie nak³adaæ. Podobnie "cicha rzeka" wywo³uje skojarzenia z mitologicznymi rzekami Hadesu. Refleksja na temat kruchoœci ¿ycia, nieuchronnoœci œmierci przypomina tak¿e o œredniowiecznym <em>memento mori</em> i barokowym motywie <em>vanitas</em>, same zaœ s³owa o charakterze sentencji: "¿ycie jest snem krótkim" odwo³uj¹ siê do dramatu pt. <em>¯ycie jest snem</em>. Mo¿na je równie¿ powi¹zaæ z postaci¹ Konrada z <em>Dziadów</em> <em>cz. III</em>, który stwierdza: "Czym jest me ¿ycie? / Ach, jedn¹ chwilk¹!". Zabieg ten poszerza perspektywê odbioru, wskazuje na to, i¿ œmieræ by³a Ÿród³em zainteresowania oraz inspiracji ju¿ od wielu wieków, zaœ pewne jej w³aœciwoœci s¹ niezmienne. </p>
+<p>Wiersz Czechowicza jednoczeœnie chêtnie korzysta z aluzji kulturowych - szczególnie odnosz¹cych siê do wierzeñ prostych ludzi. Ich przejawem jest ukazanie œmierci pod postaci¹ motyla. Wed³ug ludu ka¿dy duch mo¿e siê w niego zamieniæ. Znacz¹ca staje siê tak¿e symetryczna wizja rzeczywistoœci: istnieje œwiat ¿ywych i odpowiadaj¹cy mu œwiat zmar³ych, g³osy dobiegaj¹ zaœ z prawej oraz lewej strony - potwierdzaj¹ one kruchoœæ egzystencji, ale nie reprezentuj¹ przy tych odmiennych systemów wartoœci. Symboliczn¹ funkcjê w wierszu pe³ni tak¿e odwo³anie do koloru czarnego ("o czarne okna i powieki), który w kulturze najczêœciej oznacza œmieræ i ¿a³obê.</p>
+<p>Zawarte w utworze aluzje literackie i kulturowe wprowadzaj¹ bogactwo dodatkowych sensów, poszerzaj¹ tym samym odbiór dzie³a. Pozwalaj¹ na przedstawienie omawianego zagadnienia z ró¿nych perspektyw, które wzajemnie siê dope³niaj¹ lub potwierdzaj¹. Aluzje te staj¹ siê równie¿ swoistym sposobem na dotkniêcie tajemnicy œmierci, która fascynuje ludzi od samego pocz¹tku. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Przytoczony cytat ("trzyma w skrzynce niebieskawy akrod / skrzynki otworzyæ nie mog¹c") odnosi siê do œmierci, która trzyma w skrzynce "niebieskawy akord", jednak nie mo¿e jej otworzyæ. Sama skrzynka wywo³uje dwuznaczne skojarzenia. Mo¿e bowiem przypominaæ o trumnie, w której spoczywa cia³o zmar³ego. Z drugiej jednak strony "niebieskawy akord" sugeruje pewne bogactwo lub skarb, zawartoœæ szkatu³y staje siê wiêc czymœ cennym - na przyk³ad ¿yciem, jego przejawem. Wed³ug Czechowicza œmieræ nie jest wszechmocna, poniewa¿ chocia¿ trzyma skrzynkê, nie ma w³adzy nad jej zawartoœci¹ - dopóki nie nadejdzie w³aœciwy czas. Œciany niepozornego przedmiotu staj¹ siê jedyn¹ granic¹, która chroni zawartoœæ przed zetkniêciem z ni¹. S¹ wiêc pu³apk¹, ale te¿ ochron¹. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>Apostrofa w ostatniej czêœci utworu jest adresowana do samej œmierci. Podmiot liryczny zwraca siê do niej w nastêpuj¹cy sposób:</p>
+<p><em>o dlaczego</em></p>
+<p><em>wzrok twój nie schodzi</em></p>
+<p><em>z przedmiotów pod oknem le¿¹cych na stole</em></p>
+<p><em>z godziny w której ¿em siê rodzi³</em></p>
+<p><em>ze skrzynki zamkniêtej jak boleœæ</em></p>
+<p><em>z umar³ych r¹k czechowicza.</em></p>
+<p>Przedmiotem refleksji osoby mówi¹cej staje siê wiêc zjawisko, które przybiera okreœlon¹ formê, zyskuje wzrok. Pragnie ona zrozumieæ, dlaczego œmieræ towarzyszy cz³owiekowi ca³y czas, jest przez sw¹ obecnoœæ nieustêpliwa. Nie tylko bowiem przychodzi w momencie koñca doczesnej egzystencji, ale tak¿e bacznie obserwuje moment narodzin i codzienne ¿ycie. Nie ma jednak mocy, aby zupe³nie wymazaæ czyjeœ istnienie, dlatego ca³y czas trwa przy cz³owieku. Pytanie podmiotu lirycznego mo¿na rozpatrywaæ tak¿e w szerszym kontekœcie, poniewa¿ punkt widzenia œmierci jest niejako zbie¿ny z perspektyw¹ cz³owieka zmar³ego. Odejœcie z rzeczywistoœci doczesnej buduje dystans, utratê swej dotychczasowej to¿samoœci - istota ludzka traci to, co bliskie i codzienne. Z tego powodu skierowanie uwagi ku znanym realiom staje siê cenne, ale te¿ budzi cierpienie, poniewa¿ niczego nie mo¿na ju¿ zrobiæ ani zmieniæ. Podmiot liryczny zdaje siê wiêc zastanawiaæ, co powoduje, i¿ jednak tak trudno zapomnieæ o swej egzystencji.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Motywy oniryczne to te, które bezpoœrednio wi¹¿¹ siê ze œwiatem marzeñ sennych oraz przedstawieniem rzeczywistoœci na jej kszta³t. Ich obecnoœæ mo¿na tak¿e dostrzec w utworze lirycznym Józefa Czechowicza, na co wskazuj¹ s³owa dotycz¹ce œmierci: "dotyka co noc snami / zza cichej rzeki". Cytat ten zaznacza rozmycie siê granicy miêdzy dwiema rzeczywistoœciami, które nak³adaj¹ siê na siebie. Sen pozwala œmierci na wejœcie w doczesnoœæ, stanowi most ³¹cz¹cy odmienne porz¹dki. Jednoczeœnie wiele go ³¹czy z tym zjawiskiem, poniewa¿ nie wymaga œwiadomoœci, pozostaje poza kontrol¹ cz³owieka. Staje siê jakby swoist¹ zapowiedzi¹ tego, co nieuchronne w ¿yciu ka¿dej istoty ludzkiej, przygotowaniem do koñca egzystencji. Drugi fragment, który odwo³uje siê do tego motywu to czwarta strofa:</p>
+<p><em>¿ycie jest snem krótkim</em></p>
+<p><em>mówi g³os z prawej strony</em></p>
+<p><em>¿ycie snem krótkim</em></p>
+<p><em>wtóruje ze smutkiem </em></p>
+<p><em>g³os lewy przyciszony</em></p>
+<p><em>¿ycie snem krótkim</em></p>
+<p><em>to trzeci nieodgadniony</em></p>
+<p>Tajemnicze, bezosobowe g³osy wyra¿aj¹ utrwalon¹ w kulturze wizjê ¿ycia jako czegoœ kruchego, ulotnego, a przez to - zbli¿onego do snu. Zjawiska te s¹ bowiem nietrwa³e, ³atwo mo¿na je przerwaæ. £¹czy je równie¿ to, i¿ nie gwarantuj¹ pe³ni poznania, poniewa¿ ukazuj¹ zaledwie wycinek pewnej rzeczywistoœci. Motywy oniryczne u Czechowicza buduj¹ w pewien sposób nastrojowoœæ przedstawienia. Ponadto umo¿liwiaj¹ wyra¿enie niejednoznacznej relacji, która ³¹czy ¿ycie oraz œmieræ oraz ich wzajemne przenikanie siê. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowe œrodki rytmizuj¹ce wypowiedŸ:</p>
+<ul>
+<li>zró¿nicowana d³ugoœæ zwrotek wp³ywa na zmiany rytmu (najkrótsza - jeden wers, najd³u¿sze - siedem); </li>
+<li>ró¿na iloœæ sylab w wersach;</li>
+<li>anafory: "a czas / a ziemia";</li>
+<li>epifory: "¿ycie jest snem krótkim / mówi g³os z prawej  strony / ¿ycie snem krótkim";</li>
+<li>paralelizmy: "¿ycie jest snem krótkim / mówi g³os z prawej strony / ¿ycie snem krótkim / wtóruje ze smutkiem / g³os lewy przyciszony";</li>
+<li>nieregularna obecnoœæ rymów: np. <em>motylami - snami; przyciszony - nieodgadniony. </em>
+</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Czechowicz odwo³uje siê w swym dziele do gatunku ballady, co sugeruje ju¿ sam tytu³, lecz czyni to w doœæ nietypowy sposób. Rezygnuje bowiem z elementów podstawowych dla niej, do których mo¿na zaliczyæ np. fabu³ê oraz dialogowoœæ dzie³a (choæ pojawiaj¹ siê g³osy). Jego wiersz jest pozbawiony zdarzeñ, zaœ przedstawiony œwiat pogr¹¿a siê w bezruchu. Poeta zachowuje jednak w <em>balladzie z tamtej strony </em>pewne w³aœciwoœci gatunkowe. Jedn¹ z nich jest tajemnicza sceneria, niejednoznacznoœæ ukazanej rzeczywistoœci, w której przeplataj¹ siê dwa œwiaty: </p>
+<p><em>o czarne okna i powieki</em></p>
+<p><em>trzepoce motylami</em></p>
+<p><em>pachnie soœnin¹ modrzewiem</em></p>
+<p><em>dotyka co noc snami</em></p>
+<p><em>zza cichej rzeki. </em></p>
+<p>Wspó³istnienie ¿ycia i œmierci wywo³uje ponadto atmosferê niepokoju, poniewa¿ jest ono zagadkowe, nie mo¿na go w pe³ni poj¹æ. Kolejnym elementem wiersza typowym dla ballady jest tak¿e obecnoœæ elementów fantastycznych, niezwyk³ych lub te¿ zwi¹zanych z wierzeniami prostych ludzi -  jak na przyk³ad œmierci pod postaci¹ motyla. W ludowych wierzeniach taki kszta³t mo¿e przyj¹æ ka¿dy duch. Ponadto kolejnym znacz¹cym elementem staje siê natura, która w romantycznych balladach zyskuje szczególne znaczenie: jako œwiadek zdarzeñ, stra¿nik praw moralnych czy surowy sêdzia. U Czechowicza jest dowodem na to, i¿ œmieræ zaznacza sw¹ obecnoœæ w rzeczywistoœci, stanowi nieuchronn¹ koniecznoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>a) Przyk³adowe znaczenie elementów na obrazie: </p>
+<ul>
+<li>czaszka - œmieræ;</li>
+<li>œwieca - wiecznoœæ, dusza;</li>
+<li>zegarek - nieuchronne przemijanie czasu;</li>
+<li>kwiat - przemijanie piêkna, kruchoœæ egzystencji;</li>
+<li>list i pióro - ulotnoœæ ludzkiego dorobku materialnego;</li>
+<li>kluczyk - tajemnica, wiara, poznanie;</li>
+<li>orzech w pêkniêtej skorupie - ulotnoœæ ¿ycia.</li>
+</ul>
+<p> </p>
+<p>b) Artysta przedstawia motywy wanitatywne, czyli odnosz¹ce siê do zainteresowania przemijaniem oraz œmierci¹. </p>
+<p> </p>
+<p>c) ród³em tych motywów jest fascynacja œmierci¹ - szczególnie charakterystyczna dla œredniowiecza i baroku.</p>
+<p> </p>
+<p>Dzie³o malarskie - podobnie jak wiersz Czechowicza - przypomina o tym, ¿e œwiat doczesny jest nierozerwalnie powi¹zany ze œmierci¹. Stanowi ona naturalny fina³ egzystencji, nie mo¿na jej unikn¹æ. Artyœci staraj¹ siê dotkn¹æ jej tajemnicy - ukazuj¹ wiêc pewne sygna³y lub elementy, które pozwalaj¹ na zetkniêcie ze œmierci¹. Claesz wprowadza przedmioty nios¹ce za sob¹ sensy symboliczne - przypominaj¹ one o kruchoœci ¿ycia i tym, ¿e czas przybli¿a ka¿dego cz³owieka do odejœcia z tego œwiata. Z kolei Czechowicz akcentuje nak³adanie siê na siebie dwóch rzeczywistoœci, dwóch p³aszczyzn: ¿ycia oraz œmierci. Dzie³a artystów ³¹czy tym samym refleksyjny charakter oraz próba przedstawienia fenomenu nieuchwytnej œmierci. </p><br>

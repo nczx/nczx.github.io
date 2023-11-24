@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>A:</strong></p>
+<p>1. (przykład)</p>
+<p>2 - e</p>
+<p>(Nie lubię grać w piłkę nożną.)</p>
+<p>3 - a</p>
+<p>(Nie zadzwoniłem/am jeszcze do Olivera.) </p>
+<p>4 - d</p>
+<p>(Nigdy nie spóźniłem/am się wcześniej do szkoły.)</p>
+<p>5 - c</p>
+<p>(Właśnie wróciłem/am do domu - jakieś dwie minuty temu.)</p>
+<p><strong><br/>B:</strong></p>
+<p>1 - d</p>
+<p>(Czy Lucy kiedykolwiek miała pracę na pół etatu?)</p>
+<p>2 - e</p>
+<p>(Czy twoja mama dziś pracuje?)</p>
+<p>3 - f</p>
+<p>(Czy Susie pracuje w soboty?)</p>
+<p>4 - b</p>
+<p>(Czy skończyłeś/aś już pracę?)</p>
+<p>5 - c</p>
+<p>(Czy próbujesz skończyć z jedzeniem mięsa?)</p>
+<p>6 - a</p>
+<p>(Czy często chodzisz na zakupy?)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. (przykład)</p>
+<p>2. plays </p>
+<p><strong>Uzasadnienie:</strong> do opisania regularnie wykonywanych czynności (<em>often </em>- często) używamy czasu <em>present simple</em> (końcówka -s w 3. osobie l. poj.). </p>
+<p>3. goes</p>
+<p><strong>Uzasadnienie:</strong> do opisania regularnie wykonywanych czynności (<em>twice a week</em> - dwa razy w tygodniu) używamy czasu <em>present simple</em> (końcówka -s w 3. osobie l. poj.).</p>
+<p>4. is skateboarding</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>at the moment</em> - w tej chwili) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czas. z -ing).</p>
+<p>5. is training</p>
+<p><strong>Uzasadnienie:</strong> do opisania tymczasowych sytuacji odbywających w danym momencie (<em>for a competition next month</em> - na zawody w przyszłym miesiącu) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czas. z -ing).</p>
+<p>6. don't enjoy</p>
+<p><strong>Uzasadnienie:</strong> do opisania czyichś preferencji (<em>enjoy </em>- lubić) używamy czasu <em>present simple</em> (w przeczeniach: <em>don't/doesn't</em> + bezokolicznik).</p>
+<p>7. 'm waiting</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>right now</em> - właśnie teraz) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czas. z -ing).</p>
+<p>8. have been</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności, która została wykonana niedawno (<em>recently </em>- niedawno) używamy czasu <em>present perfect</em> (<em>have/has</em> + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. today </p>
+<p>2. at the moment</p>
+<p><strong>Uzasadnienie (1-2)</strong>: czas <em>present continuous </em>(<em>am/is/are + </em>czasownik z -ing) opisuje czynności tymczasowe lub takie, które dzieją się w chwili mówienia.</p>
+<p>3. since</p>
+<p><strong>Uzasadnienie</strong>: w czasie <em>present perfect </em>możemy podać długość trwania jakiegoś stanu. Używamy <em>since </em>(od), jeśli podajemy punkt w czasie (<em>this morning </em>- tego ranka).</p>
+<p>4. every day</p>
+<p><strong>Uzasadnienie</strong>: pytanie w czasie <em>present simple </em>(<em>do/does </em>+ osoba + bezokolicznik), czyli dotyczy czynności rutynowej (<em>every day </em>- każdego dnia).</p>
+<p>5. yet</p>
+<p><strong>Uzasadnienie</strong>: w czasie <em>present perfect </em>używamy przysłówka <em>yet </em>(jeszcze) w przeczeniach, aby powiedzieć, że czegoś do tej pory nie zrobiliśmy. Przysłówka <em>before </em>(przedtem) używamy raczej opisując doświadczenia życiowe.</p>
+<p>6. usually</p>
+<p><strong>Uzasadnienie</strong>: pytanie w czasie <em>present simple </em>(<em>do/does </em>+ osoba + bezokolicznik), czyli dotyczy czynności rutynowej (<em>usually </em>- zazwyczaj).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>A:</strong></p>
+<p>1. (przykład)</p>
+<p>2. have been</p>
+<p><strong>Uzasadnienie</strong>: kiedy podajemy długość trwania jakiejś sytuacji (tu: <em>for </em>+ okres czasu), używamy czasu <em>present perfect </em>(<em>have/has + past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). </p>
+<p>3. 'm studying </p>
+<p><strong>Uzasadnienie</strong>: kiedy mówimy o czynności wykonywanej w chwili mówienia (<em>at the moment </em>- teraz), używamy czasu <em>present continuous </em>(<em>am/is/are </em>+ czasownik z -ing).</p>
+<p><strong><br/>B:</strong></p>
+<p>1. is looking</p>
+<p><strong>Uzasadnienie</strong>: kiedy mówimy o czynności wykonywanej w chwili mówienia (<em>at the moment </em>- teraz), używamy czasu <em>present continuous </em>(<em>am/is/are </em>+ czasownik z -ing).</p>
+<p>2. has never eaten</p>
+<p><strong>Uzasadnienie</strong>: opis doświadczeń życiowych z przysłówkiem <em>never </em>(nigdy) i <em>before </em>(przedtem) = czas <em>present perfect</em>.</p>
+<p>3. hasn't found</p>
+<p><strong>Uzasadnienie</strong>: opis czynności, która do tej pory nie została wykonana (<em>yet </em>- jeszcze) = czas <em>present perfect</em>.</p>
+<p><strong><br/>C:</strong></p>
+<p>1. goes</p>
+<p><strong>Uzasadnienie</strong>: opis rutyny i przyzwyczajeń = czas <em>present simple</em>. W 3. osobie l. pojedynczej dodajemy końcówkę -s/-es do czasownika.</p>
+<p>2. isn't cycling</p>
+<p><strong>Uzasadnienie</strong>: opis odstępu od rutyny i tymczasowych sytuacji = czas <em>present continuous</em>. </p>
+<p>3. haven't fixed</p>
+<p><strong>Uzasadnienie</strong>: opis czynności, która do tej pory nie została wykonana (<em>yet </em>- jeszcze) = czas <em>present perfect</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. I've lived  </p>
+<p>2. I've known</p>
+<p><strong>Uzasadnienie (1-2)</strong>: aby opisać stan, który trwa od jakiegoś czasu (tu: <em>since </em>+ punkt w czasie), używamy czasu <em>present perfect </em>(<em>have/has + past participle</em> - III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. is working</p>
+<p><strong>Uzasadnienie</strong>: opis czynności wykonywanej w chwili mówienia (<em>at the moment </em>- teraz) = czas <em>present continuous</em> (<em>am/is/are + </em>czasownik z -ing).</p>
+<p>4. hasn't won</p>
+<p><strong>Uzasadnienie</strong>: aby opisać stan, który trwa od jakiegoś czasu (tu: <em>for </em>+ okres czasu), używamy czasu <em>present perfect </em>(<em>have/has + past participle</em>).</p>
+<p>5. always meets</p>
+<p><strong>Uzasadnienie</strong>: opis czynności rutynowych = czas <em>present simple</em>. Dla 3. osoby l. pojedynczej dodajemy -s do czasownika. Przysłówki częstotliwości stawiamy po czasowniku <em>to be</em>, ale przed wszystkimi pozostałymi czasownikami.</p>
+<p>6. I'm reading</p>
+<p><strong>Uzasadnienie</strong>: opis czynności wykonywanej w chwili mówienia (<em>at the moment </em>- teraz) = czas <em>present continuous</em> (<em>am/is/are + </em>czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. C </p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności które zawsze zachodzą w danych okolicznościach używamy czasu <em>present simple</em> (końcówka -s w 3. osobie l. poj.) </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie:</strong> po odmienionym czasowniku <em>to be </em>(<em>I'm = I <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">am</span></em>) należy wybrać czasownik z końcówką -ing, aby uzupełnić konstrukcję w czasie <em>present continuous</em>.</p>
+<p>3. D</p>
+<p><strong>Uzasadnienie:</strong> z podanych tylko przysłówek <em>yet </em>(jeszcze) stawiamy na końcu zdania. </p>
+<p>4. C</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czynność wykonywaną w danym momencie używamy czasu <em>present continuous</em> (<em>am/are/is </em>+ podmiot + czasownik z -ing).</p>
+<p>5. D</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności, która została wykonana w bliżej nieokreślonym momencie w przeszłości (<em>recently</em> - ostatnio) używamy czasu <em>present perfect</em> (<em>have/has</em> + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>6. A</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>now </em>- teraz) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czasownik z -ing). W tym znaczeniu (zastanawiać się) czasownik <em>think </em>nie jest statyczny, dlatego można użyć go w formie ciągłej.</p><br>

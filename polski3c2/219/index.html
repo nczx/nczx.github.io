@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>W utworze wypowiada siê podmiot liryczny, który obserwuje swój ogród. Przechodzi przez niego "przyg³up istnieniowy" - wyró¿nia go to, i¿ ma dwa mózgu, a w nich - zdziwienie. Wywodzi siê on z opowieœci, przemieszcza siê te¿ po ró¿nych przestrzeniach. Towarzysz¹ mu koty podmiotu lirycznego tworz¹ce swoist¹ procesjê. Wed³ug mówi¹cego w czaszce przyg³upa znajduj¹ siê dwa ostrza. Id¹ za nim tak¿e drzewa, inne, zwierzêta - on sam staje siê zaœ Ÿród³em og³upienia. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Elementy œwiata natury:</p>
+<ul>
+<li>lubczyki;</li>
+<li>œnieg;</li>
+<li>leszczyna; </li>
+<li>jarzêbina;</li>
+<li>chrust;</li>
+<li>kret;</li>
+<li>mysz;</li>
+<li>koty;</li>
+<li>brzozy;</li>
+<li>wierzby;</li>
+<li>jaœminy;</li>
+<li>je¿e;</li>
+<li>derenie. </li>
+</ul>
+<p> </p>
+<p>Podmiot liryczny stawia siê przede wszystkim w roli obserwatora rzeczywistoœci, poniewa¿ z uwag¹ obserwuje wydarzenia oraz œwiat natury: "Brat leszczyny jarzêbiny swat lubczyka / Tam za chrustem to siê zjawia a to znika". Czasem staje siê tak¿e komentatorem, mo¿na te¿ zauwa¿yæ, i¿ doskonale zna relacjê miêdzy przyg³upem a przyrod¹. Stosunek do œwiata natury jest doœæ krytyczny. Œwiadczy o tym sposób okreœlenia pewnych elementów w sposób pozbawiony idealizacji czy upiêkszenia. Dominuje naturalistyczne postrzeganie, osoba mówi¹ca podkreœla przede wszystkim brzydotê ("Jak kret wylinia³y" jak mysz chudy") oraz brak rozumu ("G³upie koty"). Jednoczeœnie ma wielk¹ potrzebê okreœlenia tego, co ze œwiata natury do niej nale¿y ("mój kot rudy", "mój kot ¿ó³ty"). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowa teza interpretacyjna:</p>
+<p>"Totalne og³upienie" œwiata wynika z podporz¹dkowania siê temu, co pozbawione sensu, bezrefleksyjne.  </p>
+<p> </p>
+<p>"Przyg³up istnieniowy" to tajemniczy stwór, który pojawia siê w ogrodzie podmiotu lirycznego i przykuwa jego uwagê. Zdaje siê pochodziæ z umys³u osoby mówi¹cej, na co wskazuj¹ s³owa: "[...] z moich istnieniowych wyszed³ rojeñ". Przyg³up istnieniowy jest zagadkowym wêdrownikiem. Stawia on pod znakiem zapytania sens oraz logikê istnienia. Podwa¿a to niejako uporz¹dkowan¹ wizjê rzeczywistoœci i miejsca cz³owieka. Sposób okreœlenia tej postaci sugeruje, i¿ nie ma wiedzy na temat istnienia, jest bezrozumna i ograniczona, ale przy tym porywa za sob¹ inne byty, cieszy siê powa¿aniem: "Za nim idzie mój kot ¿ó³ty mój kot bury / I œpiewaj¹ jemu kotów wielkie chóry". Jego obecnoœæ sugeruje pewn¹ niedoskona³oœæ, ska¿enie rzeczywistoœci g³upot¹ i bezsensem.</p>
+<p>Z kolei s³owa "Tu istnienie jak obierki jest w kompoœcie" podwa¿a metafizyczny wymiar istnienia, sprowadza go do doczesnoœci oraz przyziemnych realiów. Zaznacza przy tym nieuchronnoœæ przemijania oraz to, ¿e istnienie nie jest znacz¹ce; zostaje bowiem porównane do odpadków. Sugeruje to swoiste umniejszenie, brak g³êbszej idei, która nadawa³aby sens. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>Dwa mózgi zdaj¹ siê oznaczaæ podwójnoœæ istnienia - pozwalaj¹ nie tylko na doœwiadczenie rzeczywistoœci, ale tak¿e sugeruj¹ zbli¿enie siê do jego duchowej sfery. Nale¿¹ jednak do przyg³upa, co sugeruje jednak pewn¹ niemoc, s³aboœæ, a wrêcz niedoskona³oœæ, której nie mo¿na unikn¹æ. Ich porównanie do szpad oraz ustawienie miêdzy nimi osoby mówi¹cej symbolizuje jej bezradnoœæ. Nie ma ona bowiem ¿adnej mo¿liwoœci wyboru, jest na coœ z góry skazana, poniewa¿ szpady znacz¹co ograniczaj¹ jej swobodê. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Korowód to motyw zakorzeniony w kulturze. Wywo³uje skojarzenia nie tylko z czasem zabawy, œwiêtowania, ale w œredniowieczu, jako taniec œmierci, przypomina o nieuchronnym koñcu ka¿dego cz³owieka i równoœci wszystkich ludzi w momencie odejœcia z tego œwiata. U Rymkiewicza korowód mo¿e symbolizowaæ pewn¹ bezrefleksyjnoœæ oraz automatyzacjê zachowañ. Zwierzêta i roœliny pod¹¿aj¹ za "przyg³upem istnieniowym" bez zastanowienia. Korowód symbolizuje tym samym brak rozumu oraz jakiegokolwiek sensu, na co wskazuj¹ s³owa: "Ju¿ totalne tu panuje og³upienie". Podmiot liryczny uwa¿nie obserwuje poczynania przyg³upa, ma w¹tpliwoœci: "[...] ale nie wiem czy siê zmieœci" oraz raczej krytyczny stosunek: "Idzie przyg³up przez istnienie jak przez œcianê". Zdaje mu siê, ¿e wraz z korowodem wszystko traci sens i zmierza ku koñcowi. Jednoczeœnie uœwiadomienie sobie swej sytuacji ("Tu istnienie ma dwa mózgi jak dwie szpady / A ja stojê miêdzy nimi [...]") silnie wp³ywa na osobê mówi¹c¹. Wskazuje na to jej bladoœæ sugeruj¹ca byæ mo¿e wstrz¹s lub niedowierzanie. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Utwór ten to przyk³ad wiersza sylabicznego, dwunastozg³oskowca - ka¿dy wers zawiera dwanaœcie sylab. Regularna budowa wiersza wp³ywa na na jego jednostajny rytm. Mo¿e wiêc w ten sposób budowaæ wra¿enie monotonii. Ponadto wybrany format wiersza zdaje siê tak¿e wi¹zaæ bezpoœrednio z tekstem. Jego motywem przewodnim jest bowiem korowód, który czêsto wi¹¿e siê z tym, ¿e jego uczestniczy poruszaj¹ siê w tanecznym rytmie. Tym samym struktura utworu nawi¹zuje do kluczowego motywu, oddaje go za pomoc¹ innych œrodków oraz w innej warstwie.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

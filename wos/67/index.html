@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe rozwiązanie:</strong></span></p>
+<p>Charakterystyka <span style="text-decoration: underline;"><strong>Amnesty International:</strong></span> międzynarodowa organizacja pozarządowa, która powstała <strong><span style="text-decoration: underline;">w 1961 r. w Londynie, gdzie do tej pory ma ona swoją siedzibę.</span></strong> Główną władzę w ramach tej organizacji pełni jej <strong><span style="text-decoration: underline;">sekretarz,</span></strong> którym obecnie (stan na 2022 r.) jest <strong><span style="text-decoration: underline;">Kumi Naidoo</span></strong>. Celem organizacji jest zapobieganie naruszeniom praw człowieka poprzez prowadzenie wszelkich pokojowych akcji obywatelskich. Zajmuje się działalnością często postulatywną, np. pisanie petycji, wniosków, listów, jej działania nie mają charakteru konfrontacyjnego. Skupia się na prowadzeniu kampanii, dokumentowaniem naruszenia praw człowieka i badaniem sytuacji prawnej w poszczególnych krajach. </p>
+<p>Obecnie Amnesty International ma <strong><span style="text-decoration: underline;">8000 członków oraz sympatyków</span></strong>. Każdy, komu bliska jest ochrona praw człowieka, może zostać członkiem Amnesty International poprzez wypełnienie formularza członkowskiego, który znajduje się na oficjalnej stronie internetowej tej organizacji. Można również zaangażować się w prace Amensty International poprzez wsparcie finansowe jej działań lub podejmowanie działań, o które prosi ta organizacja, np. napisanie listu w czasie trwania akcji "Maraton pisania listów".</p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe akcje prowadzone przez Amnesty International:</strong></span></p>
+<ul>
+<li>Kampania "Światło dla Wenezueli" - podpisywanie petycji w obronie praw mieszkańców Wenezueli, w której ma miejsce kryzys praw człowieka oraz humanitaryzmu. Akcja ta ma na celu zsolidaryzowanie się z Wenezuelczykami. </li>
+<li>Akcja podpisywania petycji w sprawie manifestu "Moje ciało a prawa człowieka" - mająca na celu uświadomienie polskim władzom, że prawa seksualne i reprodukcyjne są prawami człowieka. </li>
+<li>Maraton pisania listów (grudzień  2018 r.).</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Amnesty International działa również w Polsce.</span></strong></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowe rozwiązanie dla międzynarodowej organizacji pozarządowej Greenpeace:</span></em></p>
+<p><strong>a)</strong></p>
+<p>Organizacja nazywa się Greenpeace i powstała w 1971 roku.</p>
+<p><strong>b)</strong></p>
+<p>Głównym celem organizacji Greenpeace jest działanie na rzecz zmian systemowych w zakresie ochrony przyrody. Greenpeace dąży do ochrony bioróżnorodności i chce zwiększać świadomość społeczną w sprawach związanych ze środowiskiem naturalnym.</p>
+<p><strong>c)</strong></p>
+<p>Greenpeace działa różnymi metodami, w tym między innymi organizuje zbiórki pieniędzy na rzecz ochrony środowiska. Działacze organizacji kontrolują działalność polityków i przedsiębiorców w sprawach związanych z przyrodą. Greenpeace inicjuje manifestacje, pikiety i akcje informacyjne, w których uświadamia o potrzebie zwiększenia troski o stan środowiska naturalnego. Ponadto działa kanałami politycznymi i dyplomatycznymi, albowiem dysponuje głosem doradczym przy Radzie Gospodarczej i Społecznej Organizacji Narodów Zjednoczonych.</p>
+<p><strong>d)</strong></p>
+<p>Greenpeace zasłynął z organizowania wielu projektów i akcji, w tym przede wszystkim sprzeciwiał się próbom z udziałem broni jądrowej. Członkowie Greenpeace w przeszłości prowadzili też kampanie przeciwko komercyjnym połowom wielorybów. Greenpeace prowadził też kampanię na rzecz ochrony lasów pierwotnych, koncentrując się między innymi na ochronie Puszczy Amazońskiej. W Polsce działacze Greenpeace przeciwstawiali się wycince drzew w Puszczy Białowieskiej.</p>
+<p><strong>e)</strong></p>
+<p>Greenpeace ma swoje agendy również w Polsce. Siedziba polskiego biura Greenpeace mieśc się w Warszawie.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Realizacji działań charakterystycznych dla społeczeństwa obywatelskiego nie dotyczy artykuł Konstytucji RP o numerze:</strong></span> </p>
+<p>D. 18. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #e65100; height: 17px;"><strong>Zdanie</strong></td>
+<td style="background-color: #e65100; height: 17px;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ffff8d; height: 17px;">Realizacji działań charakterystycznych dla społeczeństwa obywatelskiego nie dotyczy artykuł <em>Konstytucji RP </em>o numerze:</td>
+<td style="background-color: #ffff8d; height: 17px;">...18. <strong>[D]</strong></td>
+</tr>
+<tr style="height: 35px;">
+<td colspan="2" style="width: 50%; background-color: #ffff00; height: 35px;"><span style="text-decoration: underline;">Artykuł 18. <em>Konstytucji RP</em>:</span> 'Małżeństwo jako związek kobiety i mężczyzny, rodzina, macierzyństwo i rodzicielstwo znajdują się pod ochroną i opieką Rzeczypospolitej Polskiej'.</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) "Robienie czegoś z kimś" różni się od "robienia czegoś dla kogoś" tym, że  to pierwsze zjawisko związane jest z wchodzeniem z kimś  w interakcje poprzez wspólne podejmowane i realizowanie działań. Z kolei "robienie czegoś dla kogoś" wiąże się ze szczególną aktywnością tylko jednej strony w przygotowaniu czegoś dla innej jednostki.</p>
+<p>b) Kapitał społeczny to sieć kontaktów społecznych, które wiążą się z "robieniem czegoś z kimś", czyli wchodzeniem w interaakcje społeczne z innymi ludźmi. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">'Robienie czegoś z kimś'</span></strong> to wspólne działanie jednostki z innymi, po prostu współdziałanie, związane z przebywaniem ze sobą czy inną formą wzajemnych interakcji. Przykładem 'robienia czegoś z kimś' może być wspólne celebrowanie jakiegoś święta. Natomiast <strong><span style="text-decoration: underline;">'robienie czegoś dla kogoś'</span></strong> to wspieranie innej osoby lub innych osób, ale które może dokonywać się bez spotkania z innymi ludźmi, na przykład poprzez wpłacenie na rzecz kogoś darowizny.</p>
+<p><strong>b)</strong></p>
+<p><strong><span style="text-decoration: underline;">Kapitał społeczny</span></strong> - według autora tekstu - to sieć kontaktów międzyludzkich (społecznych), dzięki którym możliwe jest podejmowanie i realizowanie wspólnych inicjatyw, a także 'robienie czegoś z kimś'.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Organizacje trzeciego sektora powinno od podmiotów należących do sektora drugiego i pierwszego odróżniać  to, że powinny one reprezentować interes społeczny w sposób bezstronny od polityki i władzy. Ich działalność opiera się na zasadach <em>non profit</em>, a więc działalności "nie dla zysku", co nie jest cechą organizacji z pierwszego i drugiego sektora. Ponadto organizacje sektora trzeciego wyróżnia również prowadzenie działalności na zasadach <em>pro publico bono</em>, czyli "dla dobra publicznego".</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Tzw. trzeci sektor obejmuje działalność organizacji pozarządowych, tj. organizacji pożytku publicznego</span></strong>. Charakterystyczne dla tego typu organizacji jest to, że nie są one bezpośrednio zorientowane na zysk finansowy, jak również nie są prowadzone przez władze państwowe. W państwie, obok wspomnianego sektora trzeciego, funkcjonują jeszcze sektory pierwszy i drugi. <strong><span style="text-decoration: underline;">Sektor pierwszy</span><span style="text-decoration: underline;"> to obszar działania władzy i instytucji publicznych (państwowych)</span></strong>, zaś <strong><span style="text-decoration: underline;">sektor drugi obejmuje funkcjonowanie prywatnych przedsiębiorstw</span></strong>, dla których zasadniczym motywem działania jest chęć osiągnięcia zysku finansowego.</p><br>

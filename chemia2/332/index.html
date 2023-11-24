@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 138</a><br>
+<p>Wzór elektronowy metyloaminy:</p>
+<p><img alt="" height="50" src="./data/937948-0.jpg" width="74"/></p>
+<p>a) liczba elektronów tworzących wiązania -  <span style="text-decoration: underline;"><em><strong> 12 </strong></em></span></p>
+<p>b) liczba elektronów niewiążących -  <span style="text-decoration: underline;"><em><strong> 2 </strong></em></span></p>
+<p>c) liczba wiązań typu <span style="font-weight: 400;">σ -  <span style="text-decoration: underline;"><em><strong> 6 </strong></em></span></span></p>
+<p><span style="font-weight: 400;">d) liczba wiązań typu 𝜋 -  <span style="text-decoration: underline;"><em><strong> 0 </strong></em></span></span></p><br><a style="color:red; font-size:25px;">Zadanie 139</a><br>
+<p>Schemat tworzenia wiązań wodorowych: </p>
+<p><img alt="" height="145" src="./data/937957-0.jpg" width="334"/></p><br><a style="color:red; font-size:25px;">Zadanie 140</a><br>
+<p>a) Anilina jest aminą aromatyczną, zaś metyloamina alifatyczną.</p>
+<p>b) Anilina jest cieczą, zaś metyloamina gazem.</p>
+<p>c) Zarówno anilina jak i metyloamina mają zapach zepsutych ryb.</p>
+<p>d) Anilina słabo rozpuszcza się w wodzie, zaś metyloamina rozpuszcza się bardzo dobrze.</p><br><a style="color:red; font-size:25px;">Zadanie 141</a><br>
+<p>Prawidłowa kolejność wraz z rosnącym charakterem zasadowym:</p>
+<p><em>kwas octowy, woda, anilina, metyloamina, amoniak</em></p><br><a style="color:red; font-size:25px;">Zadanie 142</a><br>
+<p>Ze względu na obecność niewiążącej pary elektronowej przy atomie azotu, metyloamina może w reakcjach przyłączać proton, pełniąc tym samym rolę zasady.</p> <p>a) reakcja z wodą: </p> <p> <math-expr expr="CH_3NH_2+H_2O-&gt;CH_3NH_3^++OH^-" syntax="text"></math-expr>   </p> <p><br/>b) reakcja z kwasem solnym:</p> <p> <math-expr expr="CH_3NH_2+HCl-&gt;CH_3NH_3^+Cl^-" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 143</a><br>
+<p>a)</p> <p><img alt="" height="80" src="./data/937980-0.jpg" width="218"/></p> <p><br/>b) </p> <p> <math-expr expr="CH_3Cl+NH_3-&gt;CH_3NH_3^+Cl^-" syntax="text"></math-expr>   </p> <p><br/>c)</p> <p> <math-expr expr="CH_3-CH_2-NH_2\ +\ HCl\ -&gt;\ CH_3-CH_2-NH_3^+Cl^-" syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 144</a><br>
+<p>1.  <math-expr expr="CH_3-CH_2OH\ #(-&gt;)^(Al_2O_3,\ T)\ CH_2=CH_2\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>2.   <math-expr expr="CH_2=CH_2\ +\ H_2\ #(-&gt;)^(kat.)\ CH_3-CH_3" syntax="text"></math-expr>   </p> <p><br/>3.  <math-expr expr='CH_3-CH_3\ +\ Br_2\ #(-&gt;)^("światło")\ CH_3-CH_2Br\ +\ HBr' syntax="text"></math-expr>   </p> <p><br/>4.</p> <ul> <li>etap I:  <math-expr expr="CH_3-CH_2Br\ +\ NH_3\ -&gt;\ CH_3-CH_2NH_3^+Br^-" syntax="text"></math-expr>   </li> <li>etap II:  <math-expr expr="CH_3-CH_2NH_3^+Br^(-)\ +\ NaOH\ -&gt;\ CH_3-CH_2-NH_2\ +\ H_2O\ +\ NaBr" syntax="text"></math-expr>     </li> </ul><br><a style="color:red; font-size:25px;">Zadanie 145</a><br>
+<p>Równanie reakcji:</p> <p><img alt="" height="80" src="./data/938015-0.jpg" width="218"/></p> <p>Zaczynamy od obliczenia masy HCl w jego roztworze:</p> <p> <math-expr expr="C_p=m_s/m_r*100%\ \ \ =&gt;\ \ \ m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(HCl)=(30%*80\ g)/(100%)=24\ g" syntax="text"></math-expr>   </p> <p><br/>Z równania reakcji widzimy, że stosunek molowy substratów wynosi 1:1. Masa molowa HCl to 36,5 g/mol. Liczymy, ile gramów aniliny wzięło udział w reakcji:</p> <p> <math-expr expr="93\ g\ \ -\ \ 36,5\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m\ \ -\ \ 24\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m=(24\ g*93\ g)/(36,5\ g)=61,2\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W reakcji udział wzięło 61,2 gram aniliny.</strong></p><br>

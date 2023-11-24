@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. This picture shows a person sitting at a computer. To look after yourself, you need to have a proper sitting posture.</p>
+<p>(To zdjęcie przedstawia osobę siedzącą przy komputerze. Aby dbać o siebie, należy mieć prawidłową postawę siedzącą.)  </p>
+<p>2. This picture shows a person exercising. To look after yourself, you need to exercise regularly.</p>
+<p>(To zdjęcie przedstawia ćwiczącą osobę. Aby dbać o siebie, należy regularnie ćwiczyć.)</p>
+<p>3. This picture shows healthy food. To look after yourself, you need to eat healthily.</p>
+<p>(To zdjęcie przedstawia zdrowe jedzenie. Aby dbać o siebie, należy zdrowo jeść.)</p>
+<p>4. This picture shows sweet snacks. To look after yourself, you shouldn't eat a lot of sweets.</p>
+<p>(To zdjęcie przedstawia słodkie przekąski. Aby dbać o siebie, nie powinno się jeść dużo słodyczy.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Pictures 1-4: </strong>(zdjęcia 1-4)</p>
+<p>1. This photo shows a woman sitting at a computer. She isn't sitting straight and she might have back problems in the future. It's important to take care of your back and not to stay up late in front of a screen.</p>
+<p>(To zdjęcie przedstawia kobietę siedzącą przy komputerze. Nie siedzi ona prosto i może mieć w przyszłości problemy z kręgosłupem. Ważne jest, aby dbać o swoje plecy i nie siedzieć do późna przed ekranem.)</p>
+<p><br/>2. This photo shows a woman who is tying her shoes. She's dressed in sports clothes. I think she has gone running and she has just stopped for a moment. Next to her foot, there is a green smoothie. Spending time outdoors might help reduce stress, so maybe that's her goal. Or she's just trying to keep fit.</p>
+<p>(To zdjęcie przedstawia kobietę, która wiąże swoje buty. Jest ubrana w strój sportowy. Wydaje mi się, że poszła pobiegać i właśnie zatrzymała się na chwilę. Obok jej stopy znajduje się zielony koktajl. Spędzanie czasu na świeżym powietrzu może pomóc zmniejszyć stres, więc może to jest jej cel. Albo po prostu próbuje utrzymać formę.)</p>
+<p><br/>3. This picture shows healthy food from different food groups. There's fruit, fish, some grains, and vegetables. Having a healthy diet is important because it supports your immune system.</p>
+<p>(Ten obrazek przedstawia zdrowe jedzenie z różnych grup żywności. Są tu owoce, ryby, niektóre ziarna i warzywa. Posiadanie zdrowej diety jest ważne, ponieważ wspiera ona układ odpornościowy.)</p>
+<p><br/>4. In this picture, there are lots of unhealthy snacks that are high in sugar. I recognise some of my favourite chocolate bars. Junk food like this gives you energy but it isn't very healthy. For example, it can damage your teeth.</p>
+<p>(Na tym zdjęciu jest mnóstwo niezdrowych przekąsek, które mają wysoką zawartość cukru. Rozpoznaję kilka moich ulubionych batoników czekoladowych. Takie śmieciowe jedzenie daje energię, ale nie jest zbyt zdrowe. Może na przykład zepsuć zęby.)</p>
+<p> </p>
+<p><strong>Questions 1-2: </strong>(pytania 1-2)</p>
+<p>1. I try to keep healthy by exercising regularly and limiting junk food. I spend time outdoors, especially in spring and summer. Unfortunately, sometimes I stay up late, which isn't very good for you.</p>
+<p>(Staram się dbać o zdrowie, regularnie ćwicząc i ograniczając niezdrowe jedzenie. Spędzam czas na świeżym powietrzu, szczególnie wiosną i latem. Niestety, czasami chodzę późno spać, co nie jest zbyt dobre dla zdrowia.)</p>
+<p><br/>2. My school helps me keep healthy thanks to the sports activities it offers. I do most of my weekly exercise at school. I participate in PE lessons and I also attend practice after school.</p>
+<p>(Moja szkoła pomaga mi zachować zdrowie dzięki zajęciom sportowym, które oferuje. Większość moich cotygodniowych ćwiczeń wykonuję w szkole. Uczestniczę w lekcjach wychowania fizycznego i chodzę na treningi po szkole.) </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Yes, she has. </p>
+<p>2. Yes, they do.</p>
+<p>3. Because it does a lot to look after its students' well-being. </p>
+<p>4. Because it hasn't opened yet.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. continuous</p>
+<p>(Czasu <em>present continuous</em> używamy do opisywania czynności wykonywanych w chwili mówienia o nich albo tymczasowych sytuacji.) </p>
+<p>2. perfect</p>
+<p>(Czasu <em>present perfect</em> używamy do opisywania wydarzeń, które odbyły się w niesprecyzowanym momencie w przeszłości, wydarzeń, które rozpoczęły się w przeszłości i trwają do teraz, albo czynności z widocznymi rezultatami.)</p>
+<p>3. simple</p>
+<p>(Czasu <em>present simple</em> używamy do opisywania stałych albo typowych sytuacji i zwyczajów.) </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p><br/>2. We don't study English once a week. We study it three times a week.</p>
+<p>(Nie uczymy się angielskiego raz w tygodniu. Uczymy się go trzy razy w tygodniu.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present simple </em>dla opisywania rutynowych czynności. Przeczenie tworzymy za pomocą czasownika posiłkowego <em>don't/doesn't </em>i czasownika głównego (tu: <em>study</em>) w bezokoliczniku. </p>
+<p><br/>3. I'm not sitting next to my cousin at the moment. I'm sitting next to my friend.</p>
+<p>(Nie siedzę teraz obok mojego kuzyna / mojej kuzynki. Siedzę obok mojego kolegi / mojej koleżanki.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present continuous</em> dla opisywania tego, co dzieje się w chwili mówienia. Przeczenie tworzymy za pomocą wstawienia <em>not </em>między czasownikiem posiłkowym (<em>to be </em>w odpowiedniej formie) a czasownikiem głównym (z końcówką -ing).<br/><br/></p>
+<p>4. I haven't studied at this school for four years. I have studied here for two years.</p>
+<p>(Nie uczę się w tej szkole od czterech lat. Uczę się tu od dwóch lat.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect </em>do wyrażenia czasu trwania stanu/czynności, który/a trwa do dziś. Przeczenie utworzymy, dodając <em>not </em>do czasownika posiłkowego (<em>have not = haven't</em>).<br/><br/></p>
+<p>5. I don't eat pancakes for breakfast often. I often eat cereal instead.</p>
+<p>(Nie jem często naleśników na śniadanie. Zamiast tego często jem płatki śniadaniowe.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present simple</em>, tak jak w punkcie 2.<br/><br/></p>
+<p>6. We haven't done twenty exercises yet. We've already done four exercises.</p>
+<p>(Jeszcze nie zrobiliśmy dwudziestu ćwiczeń. Zrobiliśmy już cztery ćwiczenia.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect</em>, aby mówić o tym, ile rzeczy udało nam się do tej pory zrobić. <em>Yet </em>używamy w pytaniach i przeczeniach, <em>already </em>- w zdaniach twierdzących i pytaniach.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. does ... take </p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o regularnie wykonywane czynności, używamy czasu <em>Present continuous</em> (do/does + podmiot + podst. forma czasownika). </p>
+<p>2. 've tried</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonanych określoną ilość razy w niesprecyzowanym momencie w przeszłości, używamy czasu <em>Present perfect</em> (have/has + 3. forma czasownika).</p>
+<p>3. Has ... finished</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czynności, które powinny zostać już wykonane, używamy czasu <em>Present perfect</em> (have/has + podmiot + 3. forma czasownika).</p>
+<p>4. Are ... eating</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czynności wykonywanych w danej chwili, używamy czasu <em>Present continuous</em> (am/are/is + podmiot + czasownik z -ing).</p>
+<p>5. hasn't baked</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności, które powinny zostać już wykonane, używamy czasu <em>Present perfect</em> (have/has + 3. forma czasownika).</p>
+<p>6. doesn't serve</p>
+<p><strong>Uzasadnienie:</strong> do opisania stałej i prawdziwej sytuacji o jakimś miejscu, używamy czasu <em>Present simple</em> (w przeczeniach: don't/doesn't + bezokolicznik).</p>
+<p>7. is sleeping</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanych w danej chwili, używamy czasu <em>Present continuous</em> (am/are/is + czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. Today I've eaten cereal for breakfast at home and a sandwich at school. </p>
+<p>(Dziś na śniadanie w domu zjadłem/am płatki, a w szkole kanapkę.)</p>
+<p>2. At school I usually eat sandwiches and fruit.</p>
+<p>(W szkole zazwyczaj jem kanapki i owoce.)</p>
+<p>3. This week I've had P.E. twice. I've also been to a basketball practice.</p>
+<p>(W tym tygodniu miałem/am dwa razy zajęcia z wychowania fizycznego. Byłem/am też na treningu koszykówki.)</p>
+<p>4. I usually exercise about four times a week.</p>
+<p>(Zwykle ćwiczę około czterech razy w tygodniu.)</p><br>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1.<span style="text-decoration: line-through;"> must be</span> can't be</p>
+<p><strong>Uzasadnienie: </strong>wyrażenie przekonania o czymś w teraźniejszości -<em> can't </em>+ bezokolicznik. </p>
+<p>2. <span style="text-decoration: line-through;">top</span> tip</p>
+<p><strong>Uzasadnienie: </strong><em>the tip of the iceberg</em> - wierzchołek góry lodowej.</p>
+<p>3. <span style="text-decoration: line-through;">must have bought</span> must buy</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie potrzeby -<em> must</em> + bezokolicznik.</p>
+<p>4. <span style="text-decoration: line-through;">has to</span> can't </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku możliwości - <em>can't</em> + bezokolicznik. </p>
+<p>5. <span style="text-decoration: line-through;">can't</span> might</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie możliwości, prawdopodobieństwa - <em>might</em> + bezokolicznik. </p>
+<p>6. <span style="text-decoration: line-through;">can't</span> might/may/could</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie prawdopodobieństwa w przeszłości - <em>might/may/could</em> + <em>have</em> + <em>past participle</em>. </p>
+<p>7. <span style="text-decoration: line-through;">mustn't</span> can't</p>
+<p><strong>Uzasadnienie: </strong>wyrażenie przekonania o czymś w przeszłości -<em> can't </em>+ <em>have</em> +<em> past participle</em>.</p>
+<p>8. <span style="text-decoration: line-through;">placement</span> endorsement</p>
+<p><strong>Uzasadnienie: </strong><em>endorsement</em> - poparcie, aprobata.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. wasn't + f</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z powodu obecnej sytuacji -<em> I wish + past simple</em>.</p>
+<p><em>be on a tight budget</em> - dysponować małym budżetem. </p>
+<p>2. did + a</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie życzenia dotyczącego teraźniejszości lub bliskiej przyszłości -<em> It's time</em> + podmiot + <em>past simple</em>.</p>
+<p>3. could persuade + b</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z powodu obecnej sytuacji -<em> If only + past simple</em>.</p>
+<p>4. hadn't bought + e</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie niezadowolenia z sytuacji z przeszłości - <em>wish + past perfect</em>.</p>
+<p>5. had picked up + c</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie niezadowolenia z sytuacji z przeszłości - <em>If only</em> <em>+ past perfect</em>.</p>
+<p><em>pick up a bargain</em> - złapać okazję.</p>
+<p>6. didn't go + d</p>
+<p><strong>Uzasadnienie</strong>: preferencje i życzenia dotyczące teraźniejszości i przyszłości - <em>would rather + podmiot + past simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. must </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przekonania o czymś w teraźniejszości -<em> must</em> + bezokolicznik. </p>
+<p>2. time </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie życzenia dotyczącego teraźniejszości lub bliskiej przyszłości -<em> It's time</em> + podmiot + <em>past simple</em>.</p>
+<p>3. wish </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie chęci zrobienia, osiągnięcia czegoś - <em>wish to + bezokolicznik</em>.</p>
+<p>4. can</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie możliwości - <em>can</em> + bezokolicznik.</p>
+<p>5. only </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z powodu obecnej sytuacji -<em> If only + past simple</em>.</p>
+<p>6. should</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie rady dotyczącej zachowania z przeszłości - <em>should(n't) have + past participle</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. should have left</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu, że coś się (nie) wydarzyło w przeszłości - <em>should have + past participle</em>. </p>
+<p>2. high time we had</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie życzenia dotyczącego teraźniejszości lub bliskiej przyszłości -<em> It's (high) time</em> + podmiot + <em>past simple.</em></p>
+<p>3. If only I had </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie niezadowolenia z sytuacji z przeszłości - <em>If only + past perfect</em>.</p>
+<p>4. can't have bought</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności co do zdarzenia z przeszłości - <em>can't have + past participle</em>.</p>
+<p>5. hadn't got ripped off</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie niezadowolenia z sytuacji z przeszłości - <em>If only + past perfect</em>.</p>
+<p>6. wishes he wasn't </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z powodu obecnej sytuacji -<em> wish + past simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Brain Teaser</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

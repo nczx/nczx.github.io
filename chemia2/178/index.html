@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a)</p> <p> <math-expr expr="HCOOH" syntax="text"></math-expr>   </p> <p><br/>b) </p> <p> <math-expr expr="CH_3-CH_2-CH_2-COOH" syntax="text"></math-expr>   </p> <p><br/>c)</p> <p> <math-expr expr="CH_3-CH_2-COOH" syntax="text"></math-expr>   </p> <p><br/>d)</p> <p> <math-expr expr="CH_3-(CH_2)_(14)-COOH" syntax="text"></math-expr>       </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a)</p>
+<p>nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas etanowy </strong></em></span></p>
+<p>nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas octowy </strong></em></span></p>
+<p><br/>b) </p>
+<p>nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas propanowy </strong></em></span></p>
+<p>nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas propionowy </strong></em></span></p>
+<p><br/>c)</p>
+<p>nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas pentanowy </strong></em></span></p>
+<p>nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas walerianowy </strong></em></span></p>
+<p><br/>d)</p>
+<p>nazwa systematyczna: <span style="text-decoration: underline;"><em><strong> kwas heksanowy </strong></em></span></p>
+<p>nazwa zwyczajowa: <span style="text-decoration: underline;"><em><strong> kwas kapronowy </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1.</p> <p>  <span> <math-expr expr="CH_3CH_2OH+CuO#(-&gt;)^Tul(CH_3CHO)+Cu+H_2O" syntax="text"></math-expr> </span>  </p> <p><br/>2. </p> <p>Dokładny przebieg reakcji:</p> <p>-    <span> <math-expr expr="CH_3CHO+2\ Cu(OH)_2+NaOH#(-&gt;)^TCH_3COONa+Cu_2Odarr+3\ H_2O" syntax="text"></math-expr> </span>  </p> <p>-    <span> <math-expr expr="2\ CH_3COONa+H_2SO_4-&gt;2\ ul(CH_3COOH)+Na_2SO_4" syntax="text"></math-expr> </span>   </p> <p>Zapis uproszczony:</p> <p><span> <math-expr expr="CH_3CHO + 2\ Cu(OH)_2 #-&gt;^T CH_3COOH + Cu_2Odarr +2\ H_2O" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><span style="text-decoration: underline;"><em><strong>UWAGA!!</strong></em></span><em> Treść zadania zawiera znaczące błędy, uniemożliwiające poprawne rozwiązanie w oparciu o przedstawione w podręczniku dane.</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><em>Roztwór wodny kwasu octowego wykazuje odczyn kwasowy, zatem barwy wskaźników będą następujące:</em></p>
+<ul>
+<li>fenoloftaleina - <span style="text-decoration: underline;">bezbarwny</span>
+</li>
+<li> oranż metylowy - <span style="text-decoration: underline;">czerwony</span>
+</li>
+<li>uniwersalny papierek wskaźnikowy - <span style="text-decoration: underline;">czerwony</span>
+</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Zaczynamy od przekształcenia wzoru na stężenie procentowe, tak aby otrzymać wzór pozwalający obliczyć stężenie wynikające z mieszania roztworów:</p> <p> <math-expr expr="C_p=m_s/m_r*100%" syntax="text"></math-expr>    </p> <p>  <math-expr expr="m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p><br/> <math-expr expr="C_(p_x)=(m_(s_1)+m_(s_2))/(m_(r_1)+m_(r_2))*100%" syntax="text"></math-expr>   </p> <p>W miejsce mas substancji w liczniku wstawiamy wyliczone wcześniej wyrażenie na masę substancji i otrzymujemy:</p> <p> <math-expr expr="C_(p_x)=((C_(p_1)*m_(r_1))/(100%)+(C_(p_2)*m_(r_2))/(100%))/(m_(r_1)+m_(r_2))*100%" syntax="text"></math-expr>   </p> <p><br/>Wiemy, że otrzymany ocet będzie miał masę 1,5 kg. Możemy to zapisać jako:</p> <p> <math-expr expr="m_(r_1)+m_(r_2)=1,5\ kg" syntax="text"></math-expr>   </p> <p>Wodę traktujemy jako roztwór o stężeniu 0%. Podstawiamy znane wartości do wyznaczonego wcześniej równania. Jako roztwór 1 uznajemy esencję octową zaś jako roztwór 2 wodę.</p> <p><br/> <math-expr expr='6%=((70%*m_(r_1))/(100%)+(0%*m_(r_2))/(100%))/(1,5\ kg)*100%\ \ \ "/":100%' syntax="text"></math-expr>   </p> <p> <math-expr expr='0,06=(0,7*m_(r_1))/(1,5\ kg)\ \ \ "/"*1,5\ kg' syntax="text"></math-expr>   </p> <p> <math-expr expr='0,09\ kg=0,7*m_(r_1)\ \ \ "/":0,7' syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(r_1)=0,13\ kg" syntax="text"></math-expr>    </p> <p><br/> <math-expr expr='m_(r_1)+m_(r_2)=1,5\ kg\ \ \ "/"-m_(r_1)' syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(r_2)=1,5\ kg-m_(r_1)=1,5\ kg-0,13\ kg=1,37\ kg" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Należy użyć 0,13 kg esencji octowej i 1,37 kg wody.</strong> <br/>             </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Zaczynamy od zapisania równania reakcji dysocjacji jonowej tej soli:</p> <p> <math-expr expr="CH_3CH_2COOK#(-&gt;)^(H_2O)CH_3CH_2COO^(-)+K^+" syntax="text"></math-expr>   </p> <p>Ponieważ jest to sól mocnej zasady i słabego kwasu, zachodzić będzie hydroliza anionowa:</p> <p> <math-expr expr="CH_3CH_2COO^(-)+H_2OrlarwCH_3CH_2COOH+OH^-" syntax="text"></math-expr>   </p> <p><strong>Odczyn wodnego roztworu tej soli będzie <span style="text-decoration: underline;">zasadowy</span>.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><span style="text-decoration: underline;">Schemat doświadczenia:</span></p> <p><img alt="" height="175" src="./data/933002-0.jpg" width="154"/></p> <p><span style="text-decoration: underline;">Obserwacje:</span> </p> <p>Po dodaniu roztworu węglanu sodu do roztworu kwasu szczawiowego z probówki zaczyna wydzielać się gaz.</p> <p><br/><span style="text-decoration: underline;">Wnioski:</span></p> <p>Wydzielającym się gazem jest tlenek węgla(IV) będący produktem rozkładu kwasu węglowego. Powstanie kwasu węglowego świadczy o tym, iż został on "wyparty" z soli przez kwas szczawiowy. Kwas szczawiowy jest mocniejszym kwasem niż kwas węglowy. Zaszła reakcja:</p> <p> <math-expr expr="(COOH)_2+Na_2CO_3-&gt;(COONa)_2+H_2O+CO_2uarr" syntax="text"></math-expr>    </p><br>

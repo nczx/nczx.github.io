@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) <span style="text-decoration: underline;"><strong>Wysłuchanie publiczne</strong></span> przeprowadza się w celu poznania stanowiska obywateli w danej sprawie. Tym samym publiczne wysłuchanie daje możliwość dojścia do głosu obywatelom, którzy uważają, że podniosą oni poziom debaty publicznej ma dany temat.</p>
+<p>b) Wysłuchanie publiczne w Sejmie RP może odbyć się po tym jak zostanie uchwalona uchwała przez komisję, do której dany projekt został skierowany do rozpatrzenia. Niemniej, aby komisja podjęła stosowną uchwałę, to konieczne jest złożenie odpowiedniego do niej wniosku przez posła. Jeśli komisja podejmie stosowną uchwałę, to wysłuchanie publiczne odbywa się na jednym posiedzeniu komisji, zanim jeszcze projekt zostanie poddany głębszej analizie. Kolejność oraz czas wystąpień poszczególnych podmiotów w wysłuchaniu publicznym określa przewodniczący komisji. Każdy z podmiotów biorących udział w wysłuchaniu publicznym może tylko jeden raz wystąpić i przedstawić swoje stanowisko. </p>
+<p>c) <span style="text-decoration: underline;"><strong>Przykłady rozwiązań, które ograniczają możliwość realizacji wysłuchać publicznych:</strong></span></p>
+<ul>
+<li>możliwość tylko jednorazowego wystąpienia przez daną osobę podczas wysłuchania publicznego, </li>
+<li>aby możliwe było przeprowadzenie wysłuchania publicznego, to konieczne jest podjecie odpowiedniej uchwały przez komisję. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Wysłuchanie publiczne przeprowadza się po to, aby każdy zainteresowany mógł wypowiedzieć się odnośnie tego, co sądzi na temat danego projektu prawnego, jeszcze przed jego wprowadzeniem</span></strong>. Wysłuchanie publiczne ma umożliwić różnym podmiotom (osobom fizycznym, ale też na przykład organizacjom) wpływanie na decyzje organów władzy publicznej. Prawodawca zyskuje dzięki temu wiedzę o argumentach i opiniach różnych stron, w szczególności tych najbardziej zainteresowanych wprowadzaniem konkretnych przepisów prawnych.</p>
+<p><strong>b)</strong></p>
+<p>Wysłuchanie publiczne jest procedurą, która może zostać przeprowadzona w odniesieniu do projektu ustawy. Aby wysłuchanie publiczne mogło zostać w konkretnej sprawie przeprowadzone, niezbędne jest podjęcie uchwały w sprawie przeprowadzenia wysłuchania publicznego, którą może podjąć komisja, do której projekt został skierowany do rozpatrzenia. Uchwałę o przeprowadzeniu wysłuchania publicznego podejmuje się na pisemny wniosek złożony komisji przez posła.</p>
+<p>Gdy komisja podejmie stosowną uchwałę, może dojść do wysłuchania publicznego. Odbywa się ono przed rozpoczęciem szczegółowego rozpatrywania projektu. Co ważne, wysłuchanie publiczne przeprowadzane jest wyłącznie na jednym posiedzeniu komisji.</p>
+<p>W praktyce wysłuchanie publiczne polega na tym, że poszczególne podmioty (ich przedstawiciele) wypowiadają się na temat danego projektu prawnego. Kolejność oraz czas wystąpień podmiotów biorących udział w wysłuchaniu publicznym ustala przewodniczący komisji. Podmiot biorący udział w wysłuchaniu publicznym może na poświęconym mu posiedzeniu wystąpić tylko raz.</p>
+<p><strong>c)</strong></p>
+<p>Możliwość realizacji wysłuchań publicznych ogranicza to, że dany podmiot podczas wysłuchania publicznego może wypowiedzieć się tylko raz, a także to, iż wysłuchanie publiczne odbywa się wyłącznie na jednym posiedzeniu komisji. Przywołane ograniczenia mogą sprawiać, że obywatelom trudno jest przedstawić wszystkie swoje argumenty i opinie, zwłaszcza jeśli sprawa jest szczególnie złożona.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Immunitet parlamentarny</span></strong> - jest to przywilej chroniący osoby pełniące dane funkcje posłów lub senatorów w danym państwie przed możliwością pociągnięcia ich do odpowiedzialności sądowej. </p>
+<p><span style="text-decoration: underline;"><strong>Mandat poselski (senatorski)</strong></span> - jest to pełnomocnictwo, które zostało udzielone przez wyborców osobom piastującym funkcję posłów lub senatorów. </p>
+<p><span style="text-decoration: underline;"><strong>Klub parlamentarny</strong></span> - jest to frakcja parlamentarna, w której skład wchodzą posłowie oraz senatorowie w celu sprawniejszej organizacji swojej pracy. </p>
+<p><span style="text-decoration: underline;"><strong>Kworum</strong></span> - liczba członków danego zgromadzenia, która to liczba jest niezbędna do prowadzenia obrad lub do uzyskania prawomocności danego głosowania.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><em><strong>-&gt; </strong><strong><span style="text-decoration: underline;">MANDAT POSELSKI</span></strong><strong><span style="text-decoration: underline;"> (SENATORSKI)</span></strong></em> - upoważnienie do realizowania funkcji przedstawicieli narodu, udzielone odpowiednio posłom i senatorom przez wyborców, którzy wybrali ich w stosownych wyborach.</p>
+<p><strong><em>-&gt; <span style="text-decoration: underline;">IMMUNITET PARLAMENTARNY</span></em></strong> - przysługuje posłom i senatorom i ogranicza lub wyłącza ich odpowiedzialność prawną, co sprawia, że nie mogą oni odpowiadać przed sądem za swoją działalność wynikającą z pełnienia funkcji posła lub senatora (tak w trakcie kadencji, jak i po jej zakończeniu).</p>
+<p><strong><em>-&gt; <span style="text-decoration: underline;">KLUB</span><span style="text-decoration: underline;"> PARLAMENTARNY</span></em></strong> - frakcja w parlamencie, którą tworzą przedstawiciele zasiadających w nim partii, aby sprawniej i efektywniej organizować swoją pracę, ustalając swoje stanowisko dotyczące danej sprawy i kierunku działań politycznych.</p>
+<p><strong><em>-&gt; <span style="text-decoration: underline;">KWORUM</span></em></strong> - liczba członków zgromadzenia (na przykład posłów lub senatorów) niezbędna do tego, aby przeprowadzone głosowanie mogło zostać uznane za ważne i obowiązujące - zwykle sprowadza się do tego, że podczas głosowania na sali musi być obecna przynajmniej połowa ustawowej liczby członków zgromadzenia.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania zagadnienia.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe działania podejmowane przez opozycję w okresie grudzień 2022-luty 2023 r.:</strong></span></p>
+<ul>
+<li>Grudzień 2022 r. - złożenie wniosku o wyrażenie wotum nieufności wobec ministra sprawiedliwości Zbigniewa Ziobry, który to wniosek przygotowały opozycyjne kluby Koalicji Obywatelskiej i Lewicy oraz koło poselskie Polska 2050. Opozycji nie udało się w tej sprawie osiągnąć sukcesu, a minister Ziobro pozostał na swoim stanowisku. Wynikało to z tego, że za przyjęciem wniosku o odwołanie Ziobry opowiedziało się 226 posłów, przeciw było 228 posłów, a 3 wstrzymało się od głosu. Nie głosowało 3 posłów. Większość ustawowa konieczna do odwołania ministra wynosiła zaś 231 głosów i większości tej nie zdołano osiągnąć.</li>
+<li>Luty 2023 r. - posłowie opozycji zrzeszeni w klubie Lewica: Monika Falej, Maciej Kopiec, Paweł Krutul, Anita Kucharska-Dziedzic, Robert Obaz i Marek Rutka zgłosili do interpelację poselską skierowaną do ministra edukacji i nauki Przemysława Czarnka, która dotyczy sprawy przeciążonych programów nauczania w szkołach podstawowych i średnich. Interpelacja czeka na odpowiedź ze strony właściwego resortu.</li>
+<li>Luty 2023 r. - posłanka Koalicji Obywatelskiej Krystyna Skowrońska złożyła interpelację poselską w sprawie realizacji zamówień zbrojeniowych dla Sił Zbrojnych RP w Hucie Stalowa Wola SA. Interpelacja wpłynęła 15 lutego 2023 roku i czeka na odpowiedź.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><span style="text-decoration: underline;"><strong>Komisje śledcze parlamentarne, które działały w ostatnim czasie to:</strong></span></p>
+<ul>
+<li>Komisja Śledcza do zbadania prawidłowości i legalności działań oraz występowania zaniedbań i zaniechań organów i instytucji publicznych w zakresie zapewnienia dochodów Skarbu Państwa z tytułu podatku od towarów i usług i podatku akcyzowego w okresie od grudnia 2007 r. do listopada 2015 r. (SKVAT),</li>
+<li>Komisja Śledcza do zbadania prawidłowości i legalności działań organów i instytucji publicznych wobec podmiotów wchodzących w skład Grupy Amber Gold (SKAG),</li>
+<li>Komisja Śledcza do zbadania okoliczności porwania i zabójstwa Krzysztofa Olewnika, </li>
+<li>Komisja Śledcza do zbadania okoliczności tragicznej śmierci byłej posłanki Barbary Blidy, </li>
+<li>Komisja Śledcza do zbadania prawidłowości prywatyzacji Powszechnego Zakładu Ubezpieczeń Spółka Akcyjna, </li>
+<li>Komisja Śledcza do zbadania sprawy przebiegu procesu legislacyjnego ustaw nowelizujących ustawę z dnia 29 lipca 1992 r. o grach i zakładach wzajemnych, </li>
+<li>Komisja Śledcza do zbadania sprawy zarzutu nielegalnego wywierania wpływu na funkcjonariuszy policji, służb specjalnych, prokuratorów i osoby pełniące funkcje w organach wymiaru sprawiedliwości, </li>
+<li>Komisja Śledcza ds. banków i nadzoru bankowego, </li>
+<li>Komisja Śledcza w sprawie afery Rywina, </li>
+<li>Komisja Śledcza w sprawie PKW Orlen.</li>
+</ul>
+<p> </p>
+<p>Dalsza część zadania ma charakter indywidualny, ponieważ musisz wybrać jedną z komisji śledczych i omówić jej działalność. </p>
+<p><strong><em>-&gt; </em></strong><em><span style="text-decoration: underline;">Wybrane informacje na temat działalności Komisji Śledczej ws. afery Rywina:</span></em></p>
+<p>Afera Rywina to potoczna nazwa używana w odniesieniu do jednego z najgłośniejszych wydarzeń korupcyjnych w historii III Rzeczypospolitej. Tłem dla tej afery było prowadzenie prac nad nowym kształtem ustawy o radiofonii i telewizji, w której miał znaleźć się zapis o tym, że firma, która posiada ogólnopolski dziennik, nie może mieć zarazem stacji telewizyjnej. Rozwiązanie to było niekorzystne dla spółki Agora, która była właścicielem dziennika 'Gazeta Wyborcza', a zarazem przymierzała się do zakupu udziałów w telewizji Polsat. W lipcu 2002 roku znany producent filmowy Lew Rywin spotkał się z Wandą Rapaczyńską, prezesem Agory, a następnie z redaktorem naczelnym 'Gazety Wyborczej' Adamem Michnikiem i przedstawił im propozycję korupcyjną. Rywin w zamian za wpłynięcie na zmiany w ustawie korzystne dla Agory oczekiwał dla siebie i związanych ze sobą ludzi wysokich kwot pieniężnych. Michnik rozmowę nagrał. Później wraz z Rywinem i premierem Leszkiem Millerem odbył rozmowę w kancelarii premiera. Podczas spotkaniu Rywin powoływał się na wpływy ze strony Roberta Kwiatkowskiego - ówczesnego prezesa Telewizji Polskiej.</p>
+<p>Zarówno Miller, jak i Michnik nie zgłosili tego, że spotkali się z propozycją korupcyjną. Aferę opisano na łamach prasy we wrześniu 2002 roku, jednak wtedy przeszła ona bez echa. Sprawa nabrała rozgłosu dopiero na przełomie 2002 i 2003 roku, kiedy na jej temat napisał na łamach 'Gazety Wyborczej' dziennikarz Paweł Smoleński. Upubliczniono również zapis rozmowy Michnika z Rywinem, w której padła oferta korupcyjna.</p>
+<p>Aby wyjaśnić sprawę, powołano 10 stycznia 2003 roku sejmową komisję śledczą. Jej pracami kierował Tomasz Nałęcz. Komisja obradowała do 5 kwietnia 2004 roku. Ustalenia komisji doprowadziły do skazania Rywina za pomoc w tzw. płatnej protekcji na karę 2 lat pozbawienia wolności. Drugą osobą skazaną w związku z aferą stała się Janina Sokołowska (szefowa Departamentu Prawnego Krajowej Rady Radiofonii i Telewizji). Skazano ją za sfałszowanie projektu ustawy o radiofonii i telewizji na rok więzienia w zawieszeniu na trzy lata i 3-letni zakaz pełnienia funkcji związanych ze stanowieniem prawa. Wskutek tzw. afery Rywina ucierpiał też wizerunek ówczesnej koalicji rządzącej, którą tworzyły Sojusz Lewicy Demokratycznej i Unia Pracy. W szczególności spadły notowania premiera Millera, a także popularność prezydenta Aleksandra Kwaśniewskiego. Afera była szeroko komentowana w mediach, co spowodowało spadek zaufania obywateli do władzy i instytucji państwowych.</p><br>

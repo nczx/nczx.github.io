@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. most grateful </p>
+<p>2. apology</p>
+<p>3. appreciate</p>
+<p>4. dissatisfaction</p>
+<p>5. worse</p>
+<p>6. enough (<em>as if this was not enough</em> - jakby tego było mało)</p>
+<p>7. short (<em>fall short of expectations</em> - nie spełniać oczekiwań)</p>
+<p> </p>
+<p><strong>Tłumaczenie zdań (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. Byłbym/byłabym <strong>ogromnie wdzięczny/a</strong> gdyby problem z winda został niezwłocznie rozwiązany.</p>
+<p>2. Oczekuję przynajmniej <strong>przeprosin</strong> od recepcjonistki za jej niegrzeczne zachowanie. </p>
+<p>3. <strong>Doceniłbym/doceniłabym</strong> gdyby skontaktowano się ze mną osobiście.</p>
+<p>4. Piszę, żeby wyrazić swoje głębokie <strong>niezadowolenie</strong> ze stanu mojego pokoju hotelowego.</p>
+<p>5. Co <strong>gorsza</strong>, pociąg spóźnił się godzinę.</p>
+<p>6. Jakby tego było <strong>mało</strong>, połączenie internetowe było bardzo słabe.</p>
+<p>7. To, jak traktujecie gości <strong>nie spełnia oczekiwań</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p><span style="text-decoration: underline;">Picture A</span></p>
+<p>I would like to express my strong dissatisfaction with the view from my hotel room.</p>
+<p>(Chciałbym/ chciałabym wyrazić głębokie niezadowolenie widokiem z mojego pokoju hotelowego.) </p>
+<p>In this situation, I expect to be moved to another room.</p>
+<p>(W tej sytuacji oczekuję przeniesienia do innego pokoju.)</p>
+<p> </p>
+<p><span style="text-decoration: underline;">Picture C</span></p>
+<p>I am quite dissatisfied with the technical condition of the coach by which I went on a journey operated by your company. </p>
+<p>(Jestem niezadowolony/a ze stanu technicznego autokaru, którym odbyłem/am podróż obsługiwaną przez Państwa firmę.)</p>
+<p>I would appreciate if the fares I paid were refunded. </p>
+<p>(Byłbym/ byłabym wdzięczny/a, gdyby uiszczone przeze mnie opłaty zostały zwrócone.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>1. </strong></p>
+<p>"I travelled to Lyon on one of your coaches, and I was extremely dissatisfied with the cleanliness standards of the vehicle (...)." </p>
+<p>"The journey took place on 21 April."</p>
+<p>"As soon as we got on the coach, we realised that the vehicle was equally dirty inside."</p>
+<p><strong>2.</strong></p>
+<p>"The first thing we noticed while we were waiting at the station (...)."</p>
+<p>"(...) and it was giving off an unpleasant smell during the entire trip."</p>
+<p><strong>3.</strong></p>
+<p>"(...) the coach had not been washed before the trip (...)."</p>
+<p>"Nobody had emptied the rubbish bins or cleaned the floor."</p>
+<p><strong>4. </strong></p>
+<p>"<strong>As soon as</strong> we got on the coach, we realised that the vehicle was equally dirty inside."</p>
+<p>"(...) and it was giving off an unpleasant smell <strong>during</strong> the entire trip."</p>
+<p>"The first thing we noticed <strong>while</strong> we were waiting at the station (...)."</p>
+<p>"<strong>When</strong> we arrived at our destination, he did not even apologise."</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. once</p>
+<p>(Zeszliśmy na dół na basen <strong>kiedy tylko</strong> zameldowaliśmy się w hotelu.) </p>
+<p>2. while</p>
+<p>(Autobus odjechał <strong>kiedy</strong> jedliśmy śniadanie.)</p>
+<p>3. As soon as</p>
+<p>(<strong>Jak tylko</strong> dowiedzieliśmy się gdzie była, wzięliśmy rowery i pojechaliśmy się z nią spotkać.)</p>
+<p>4. by the time</p>
+<p>(Moi przyjaciele zdążyli już odjechać <strong>do czasu kiedy</strong> przyjechałem/am.)</p>
+<p>5. then</p>
+<p>(Ci dwaj mężczyźni poszli na górę i <strong>potem</strong> słyszeliśmy dużo krzyków.)</p>
+<p>6. As</p>
+<p>(<strong>Kiedy</strong> wychodziliśmy z autobusu, Karim poślizgnął się i upadł.)</p>
+<p>7. Meanwhile</p>
+<p>(Pociąg odjeżdżał za godzinę.<strong> W międzyczasie</strong> poszliśmy się czegoś napić.)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

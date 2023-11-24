@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. c (film animowany) </p>
+<p>2. g</p>
+<p>3. e (horror)</p>
+<p>4. a (film fantastycznonaukowy)</p>
+<p>5. f (film o superbohaterach)</p>
+<p>6. d</p>
+<p>7. b (komedia romantyczna)</p>
+<p>8. i (komputerowa gra akcji)</p>
+<p>9. j (serial komediowy)</p>
+<p>10. k (program rozrywkowy o poszukiwaniu talentów)</p>
+<p>11. h (program kulinarny)</p>
+<p>12. l (teleturniej)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. air </p>
+<p>2. scriptwriter</p>
+<p>3. crew</p>
+<p>4. set</p>
+<p>5. spin-off</p>
+<p>6. cast</p>
+<p>7. shot</p>
+<p>8. location</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Niektóre współczesne filmy o Batmanie mogą skłaniać do myślenia, ale oryginalny serial, który był <strong>na antenie</strong> (<em>on air</em>) w latach 1966-1969 był zupełnie inny. Mimo, że zawsze pojawiało się jakieś źródło zła, zazwyczaj w postaci słynnych czarnych charakterów: Jokera, Człowieka-Zagadki, Pingwina, i Kobiety-Kota, program był lekki w odbiorze i zabawny. Podczas walk na ekranie pojawiały się słowa takie jak "Pow!" i "Oof!" w jaskrawych kolorach. <strong>Scenarzysta</strong> napisał przezabawne dialogi i jestem pewien/pewna, że <strong>ekipa filmowa</strong> i aktorzy mieli czasem trudność z zachowaniem powagi. <strong>Plan zdjęciowy</strong> również był owiany sławą, szczególnie jaskinia Batmana, pełna najnowocześniejszych rozwiązań technologicznych.</p>
+<p>Kiedy <em>Batman</em> powrócił na ekrany w 1989 roku, reżyser Tim Burton nazwał zarówno Batmana jak i Jokera "bohaterami niezrównoważonymi psychicznie". Joker był uważany za tak interesującego, że w 2019 roku stworzono <strong>poświęcony mu film*</strong>, bez Batmana, zatytułowany <em>Joker</em>. Film analizuje jego charakter oraz powody popełnianych przestępstw i ma świetną <strong>obsadę</strong>, a na uwagę zasługują zwłaszcza Joaquin Phoenix, Robert De Niro i Zazie Beetz. Część filmu była <strong>kręcona w plenerze</strong> w Nowym Jorku, a najsłynniejsze ujęcie stworzono na schodach, które teraz nazywają się Schodami Jokera, ponieważ przyciągają rzesze fanów. </p>
+<p><strong>*</strong>spin-off to film lub serial opowiadający historię bohaterów znanych z innego filmu/serialu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. gloomy </p>
+<p>(Nie podobał mi się film, bo wszystko było takie <strong>przygnębiające</strong> i smutne: od zakończonego związku po deszczową pogodę.) </p>
+<p>2. engrossing</p>
+<p>(Film ma <strong>wciągającą</strong> fabułę z zagadką niemożliwą do rozwikłania aż do ostatniej sceny. Jest niesamowicie ekscytująca!)</p>
+<p>3. profound</p>
+<p>(Film zawiera <strong>dogłębne</strong> przesłanie o tym, jak nasze zachowanie niszczy planetę.)</p>
+<p>4. convincing</p>
+<p>(Efekty specjalne były tak <strong>przekonujące</strong>, że aż krzyknąłem/krzyknęłam. Czułem/am jakby kosmita naprawdę był w pokoju.)</p>
+<p>5. hilarious</p>
+<p>(To był <strong>komiczny</strong> film. Nie mogliśmy przestać się śmiać!)</p>
+<p>6. baffling</p>
+<p>(Dwaj główni bohaterowie wyglądali bardzo podobnie, co sprawiło, że historia była momentami <strong>dezorientująca</strong>. Nie wiedziałem/am, kto był kim.)</p>
+<p>7. gripping</p>
+<p>(Historia jej podróży w dziewiętnastowiecznej Afryce była absolutnie <strong>porywająca</strong>. Fascynująca kobieta!)</p>
+<p>8. appalling</p>
+<p>(Nie wiem, po co stworzono ten film. Wszystko - fabuła, gra aktorska, efekty specjalne - było <strong>okropne</strong>! Nie marnujcie na to czasu.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. movies </p>
+<p>2. movie theater</p>
+<p>3. line</p>
+<p>4. potato chips</p>
+<p>5. soda</p>
+<p>6. candies</p>
+<p>7. store</p>
+<p>8. trash</p>
+<p>9. sidewalk</p>
+<p>10. parking lot</p>
+<p>11. cab</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Kocham <strong>filmy</strong> i uwielbiam chodzić do miejscowego <strong>kina</strong>. Wczoraj poszedłem/poszłam zobaczyć najnowszy film Marvela z kolegą. Jest popularny, ale nie musiałam/em stać w <strong>kolejce</strong> po bilety, bo kupiłem/am je w Internecie. Zawsze kupuję różne przekąski - <strong>czipsy</strong>, <strong>napoje gazowane</strong>, może jakieś <strong>słodycze</strong>. Mój kolega powiedział, żebym nie zawracał/a sobie głowy i kupił wielką paczkę czipsów w <strong>sklepie</strong> obok kina, bo były tańsze. Jednak osoba sprawdzająca bilety zauważyła je i mój kolega musiał je oddać. Po tym jak film się skończył chciałam/em zostać do samego końca, ale ekipa sprzątająca weszła do sali, żeby posprzątać <strong>śmieci</strong> przed  kolejnym seansem, więc wyszliśmy. Mój kolega odebrał czipsy od człowieka, który zabrał je przed filmem i staliśmy na <strong>chodniku</strong> przy <strong>parkingu</strong> dyskutując na temat filmu. Miałem/am zamiar wziąć <strong>taksówkę</strong> do domu, ale mama mojego kolegi podwiozła mnie do domu, więc zaoszczędziłem/am trochę pieniędzy. </p><br>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. joint</p>
+<p>(Nie mogłem/am zrobić treningu przez spuchnięty <strong>staw</strong> kolanowy.) </p>
+<p>2. Identifying</p>
+<p>(<strong>Określenie</strong> plusów i minusów możliwego rozwiązania może pomóc w podjęciu decyzji.)</p>
+<p>3. defective</p>
+<p>(Jeśli produkt okaże się <strong>wadliwy</strong>, klienci mają prawo do odszkodowania.)</p>
+<p>4. kidney</p>
+<p>(Czekała na przeszczep <strong>nerki</strong> trzy lata.)</p>
+<p>5. intestine</p>
+<p>(Biegunka jest częstą dolegliwością <strong>jelita</strong>.)</p>
+<p>6. enhance</p>
+<p>(Te rozwiązania powinny <strong>poprawić</strong> jakość życia pacjenta.)</p>
+<p>7. outdated</p>
+<p>(Sprzęt jest beznadziejnie <strong>przestarzały</strong> i powinien jak najszybciej być wymieniony.) </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. embedded</p>
+<p>(Nie chciałbym/chciałabym mieć biochipa <strong>wszczepionego</strong> w żadną część mojego ciała.) </p>
+<p>2. draw</p>
+<p>(Nie sądzę, żebyśmy mogli <strong>wyciągnąć</strong> wnioski z tych wyników. Są niejednoznaczne.)</p>
+<p>3. brainstorm</p>
+<p>(Dobrym podejściem do znalezienia odpowiedzi jest <strong>szukanie</strong> jej <strong>za pomocą burzy mózgów</strong>.)</p>
+<p>4. intuition</p>
+<p>(Myślenie kreatywne polega na używaniu <strong>intuicji</strong> w celu znalezienia pomysłów na rozwiązywanie problemów.)</p>
+<p>5. unfollow</p>
+<p>(Moja była dziewczyna wstawiła na Instagram zdjęcie ze swoim nowym chłopakiem. Zasmuciło mnie to i postanowiłem <strong>przestać ją obserwować</strong>.)</p>
+<p>6. judgement</p>
+<p>(Nie śmiej się z czyichś pomysłów - powstrzymaj się przed <strong>osądem</strong> nawet jeśli coś wydaje ci się szalone!)</p>
+<p>7. interactive</p>
+<p>(Czy technologia <strong>interaktywna</strong> emocjonalnie naprawdę może działać? Czy urządzenia będą kiedyś w stanie naprawdę rozumieć nasze uczucia?)</p>
+<p>8. driverless</p>
+<p>(Biorąc pod uwagę wszystkie wypadki z udziałem samochodów <strong>autonomicznych</strong>, wydaje się, że nie są jeszcze całkowicie bezpieczne.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. will have been working</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>. </p>
+<p>2. have collected</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>as soon as </em>używamy czasu <em>present simple</em> albo <em>present perfect </em>(jeśli chcemy podkreślić, że jedna czynność musi się zakończyć zanim zacznie się kolejna) - tu czas <em>present perfect. </em></p>
+<p>will publish </p>
+<p><strong>Uzasadnienie</strong><em>: </em>zdanie czasowe, wydarzenie, które wydarzy się w przyszłości <em>- will. </em></p>
+<p>3. will</p>
+<p><strong>Uzasadnienie</strong><em>: </em>zdanie czasowe, wydarzenie, które wydarzy się w przyszłości <em>- will. </em></p>
+<p>4. is going to rain</p>
+<p><strong>Uzasadnienie</strong><em>: </em>przewidywanie przyszłości (prawdopodobnie) na podstawie obserwacji obecnej sytuacji - <em>be going to</em>.</p>
+<p>5. was going to </p>
+<p><strong>Uzasadnienie</strong><em>: </em>ogólne plany na przyszłość, które mogą ulec zmianie - <em>be going to</em>.</p>
+<p>6. will have found</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do określonego czasu w przyszłości - czas <em>future perfect</em>.</p>
+<p>7. wouldn't accept </p>
+<p><strong>Uzasadnienie</strong>: spekulacje dotyczące przyszłości z perspektywy przeszłości - <em>would</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. This weekend, <span style="text-decoration: line-through;">I go</span> to London to see my cousins.</p>
+<p>This weekend, <strong>I'm going</strong> to London to see my cousins.</p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji zaplanowanej na najbliższą przyszłość, której szczegóły są już znane - czas <em>present continuous</em>.  </p>
+<p>2. This time next week, I <span style="text-decoration: line-through;">am</span> lying on a beach in Italy.</p>
+<p>This time next week, I <strong>will be</strong> lying on a beach in Italy.</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym momencie w przyszłości - czas <em>future continuous</em>.</p>
+<p>3. The postman's about to <span style="text-decoration: line-through;">arriving</span>. Let's go outside.</p>
+<p>The postman's about to arrive. Let's go outside.</p>
+<p><strong>Uzasadnienie</strong>: do opisu sytuacji, które wydarzą się w bardzo bliskiej przyszłości używamy konstrukcji <em>be about to</em> + bezokolicznik.</p>
+<p>4. There are four trains a day to York on Sundays. The first one <span style="text-decoration: line-through;">will leave</span> at 8 am. </p>
+<p>There are four trains a day to York on Sundays. The first one <strong>leaves</strong> at 8 am. </p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w rozkładzie jazdy - czas <em>present simple</em>. </p>
+<p>5. My holiday <span style="text-decoration: line-through;">will</span> due to start in three days - I can't wait!</p>
+<p>My holiday <strong>is</strong> due to start in three days - I can't wait!</p>
+<p><strong>Uzasadnienie</strong>: do opisu wydarzeń zaplanowanych na konkretny termin w przyszłości używamy konstrukcji <em>be due to</em> + bezokolicznik.</p>
+<p>6. That suitcase looks heavy, Grandma. <span style="text-decoration: line-through;">I carry</span> it for you!</p>
+<p>That suitcase looks heavy, Grandma. I<strong>'ll</strong> carry it for you!</p>
+<p><strong>Uzasadnienie</strong>: w celu wyrażenia spontanicznej propozycji używamy konstrukcji z <em>will (will='ll). </em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. will you have read</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do określonego czasu w przyszłości - czas <em>future perfect</em>. </p>
+<p>2. was about to begin</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości - <em>be about to</em> + bezokolicznik.</p>
+<p>3. would get used to sleeping</p>
+<p><strong>Uzasadnienie</strong>: spekulacje dotyczące przyszłości z perspektywy przeszłości - <em>would (will </em>w przeszłości zmienia się w<em> would) + </em>konstrukcja <em>get used to</em> + czasownik z końcówką -<em>ing</em> do opisu przyzwyczajania się do czegoś.</p>
+<p>4. comes</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>until </em>- czas <em>present simple</em>.</p>
+<p>5. are due to start</p>
+<p><strong>Uzasadnienie</strong>: sytuacja zaplanowana na konkretny termin w przyszłości - <em>be due to</em> + bezokolicznik.</p>
+<p>6. is going to finish</p>
+<p><strong>Uzasadnienie</strong>: przewidywanie dotyczące przyszłości poparte dowodami - <em>be going to + </em>bezokolicznik<em>.</em></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. A</p>
+<p><strong>Uzasadnienie</strong>: opis zdarzenia, które wydarzyło się w przeszłości - czas <em>past simple</em>.  </p>
+<p>2. D</p>
+<p><strong>Uzasadnienie</strong>: czynność będąca tłem dla innej czynności w przeszłości - czas <em>past continuous</em>.</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie</strong>: czynność, która przerywa inne zdarzenie w przeszłości - czas<em> past simple</em>.</p>
+<p>4. D</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie i nadzieja na przyszłość - <em>will</em>.</p>
+<p>5. A</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie dolności zrobienia czegoś w przyszłości - <em>will be able to</em>. </p>
+<p>6. B</p>
+<p><strong>Uzasadnienie</strong>: ogólne plany i zamierzenia, które mogą ulec zmianie - <em>be going to</em>.</p>
+<p>7. C</p>
+<p><strong>Uzasadnienie</strong>: opis osiągnięcia, którego efekt jest widoczny i ważny - czas <em>present perfect</em>.</p>
+<p>8. D</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie i nadzieja na przyszłość - <em>will (tu w stronie biernej).</em></p><br>

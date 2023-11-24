@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Modelowanie przeszłości jest ważne dla władzy Oceanii przynajmniej z kilku istotnych powodów. Przede wszystkim pozwala na manipulowanie pamięcią zbiorową oraz sposobem interpretacji dziejów. Obywatelom brakuje stałego oraz obiektywnego punktu odniesienia, więc zmniejsza to ryzyko buntu czy kwestionowania słuszności podejmowanych działań. Ponadto dowolne przekształcanie historii powoduje, iż zawsze można dopasować ją do swoich potrzeb w taki sposób, aby potwierdzała określone tezy, a tym samym - umacniała rządy. Wskazane zjawisko świadczy także o pełni władzy. Partia bowiem sprawuje rządy absolutne - nie tylko wpływa na teraźniejszość i przyszłość, ale także zmienia przeszłość. Zdaje się przez to niepowstrzymaną siłą. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><em>Dwójmyślenie</em> to technika szczególnie istotna dla Partii, służy bowiem jej interesom, zakłamaniu historii: "[...] udało się - a stan ten może równie dobrze trwać przed tysiąc lat - zatrzymać bieg historii". Pozwala na zaakceptowanie rzeczywistości oraz ciągłych kłamstw władzy - są one przyjmowane jako coś zgodnego z faktami. Dzięki niej możliwe staje się funkcjonalnie w autorytarnym państwie, utwierdza również przewagę rządzących. Celem tej techniki jest nauczenie obywateli, by wierzyli w dwie przeciwstawne prawdy - w ten sposób dostosowują swoje poglądy do wymagań Partii, a przez to stają się podatni na manipulację, tracą pewne punkty odniesienia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Nowomowa służy przede wszystkim ograniczeniu swobody myślenia przy jednoczesnym zapewnieniu zwolennikom angsocu odpowiednich środków wyrazu. Jej celem jest także doprowadzenie do tego, by staromowa została zapomniana. W ten sposób odejście od idei Partii będzie niemożliwe - podobnie jak krytyka działań rządzących.</p>
+<p>W nowomowie przeprowadza się różne operacje na języku. To m.in. tworzenie nowych słów, usuwanie dodatkowych i niepożądanych sensów, redukcja leksyki, by ograniczyć ją do niezbędnych składników. Dzieli się w niej słownictwo na trzy zbiory: A, B, C. W pierwszym z nich znajdują się słowa dotyczące życia codziennego - jeden wyraz to jedna informacja. Wyrazy w tej grupie do konkretnych zjawisk, nie da się jednak ich stosować w literaturze czy rozmowach dotyczących polityki, filozofii. Istnieje jednak możliwość tworzenia nowych form na podstawie np. danej części mowy, chętnie też wykorzystuje się przedrostki "bez-" lub "plus-". Przyczynia się to do zawężenia niezbędnego słownictwa, jego różnorodności - podobnie jak upraszczanie odmiany rzeczowników.</p>
+<p>W zbiorze B są wyrazy złożone związane z polityką - wyrażają pewne treści, ale wpływają też na umysły obywateli. Są to połączenia dwóch lub kilku słów - albo też grupy spółgłoskowe - które nie sprawiają trudności w wymowie. Z nich zaś można tworzyć kolejne części mowy. Zrozumienie subtelnych sensów przekazywanych przez te wyrazy wymaga jednak doskonałego zrozumienia angsocu. Ujawnia się tutaj także dążenie do rezygnacji z precyzowania znaczeń. W ten sposób jedno słowo może reprezentować wszystkie sensy - prowadzi to do do redukcji leksyki. Twórcy nowomowy godzą się także na odarcie wyrazów z ich sensów, które są niezgodne z polityką Partii. Ułatwia to podporządkowanie sobie społeczeństwa. </p>
+<p>Zbiór C, w którym są terminy techniczne oraz naukowe, stanowi dopełnienie grup A i B. Tutaj również precyzyjnie określono znaczenie słów, wyzbyto się sensów uznanych za zbędne, zaś zasady gramatyczne są takie same jak w ogólnej nowomowie. Każda dziedzina ma spis słów właściwych dla siebie. Brakuje natomiast wyrazów dotyczących metod pracy czy też naukowego sposobu myślenia. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Redukcja wyrazów ogranicza obywatelom możliwość swobodnego wypowiadania się, co stanowi także odebranie wolności. Wyrażanie swej opinii, snucia refleksji na temat abstrakcyjnych zagadnień stanowi pewne zagrożenie dla rządzących, ponieważ jest przejawem samodzielnego myślenia. Z tego też powodu dochodzi do zniszczenia systemu językowego, ponieważ w ten sposób władza zyskuje pewność, iż wszyscy będą przestrzegać angsocu, nie będzie buntu. Z kolei eliminacja dwuznaczności w znaczeniu wyrazów powoduje, iż ludzie nie mogą wyrażać kontrowersyjnych sądów. W ten sposób nie trzeba się obawiać, iż będą głosić nieprawomyślne opinie skierowane przeciwko państwu. Nieużywane znaczenia w efekcie stają się martwe - np. "wolność" jako brak przymusu. Twórcy nowomowy dążą jednak także do uniknięcia zbyt silnego sprecyzowania znaczenia słów - np. w przypadku idei sprzecznych z wartościami Partii. Celem takiego działania jest ograniczenie myślenia obywateli. Gdyby poznali idee wrogie rządzącym, mogliby dojść do wniosku, że są prawdziwe w przeciwieństwie do głoszonej propagandy. Ponadto w ten sposób ogranicza się bogactwo języka - jedno słowo może zastępować wiele innych form. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Konsekwencje modyfikowania języka:</p>
+<ul>
+<li>Modyfikacje języka wpływają na obywateli, umacniają rządy Partii. W ten sposób odbiera się ludziom możliwość samodzielnego myślenia oraz wolność. Takie zmiany ograniczają bowiem prawo do swobodnego formułowania wypowiedzi. Pozwala to na wyrażanie tylko tego, co jest zgodne z założeniami sprawujących władzę.</li>
+<li>Zjawisko to zapewnia środki wyrazu dla zwolenników angsocu, wzmacnia ich pozycję.</li>
+<li>Ograniczanie leksyki prowadzi do jej zubożenia, stanowi także zerwanie z dotychczasowym systemem językowym. Niektóre wyrazy, uznane za niepożądane, tracą swoje sensy. Z tego powodu językiem nie można wyrazić swej kreatywności ani czegoś abstrakcyjnego. Opisuje on tylko podstawowe zjawiska w ograniczony sposób. </li>
+<li>Przyczynia się to bezpowrotnego zniszczenia języka.</li>
+<li>Modyfikacja języka odbiera możliwość krytyki władzy, ponieważ taka wypowiedź zyskuje absurdalny charakter. Zmiany w języku utrudniają także opisywanie pracy naukowców, co może ograniczać rozwój nauki. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<ul>
+<li>Nowomowa narzuca obywatelom nowy język, który nie pozwala na swobodne wyrażanie swych myśli czy sprzeciwu wobec Partii. Są oni w ten sposób ograniczeniu - również w codziennym życiu. </li>
+<li>W nowomowie dochodzi do redukcji sensów, które mogą zachęcać obywateli do samodzielnego odbioru rzeczywistości. Przykładem jest słowo "wolny". Przestaje ono dotyczyć człowieka i jego niezależności, traci swój przenośny sens. </li>
+<li>Drastyczna redukcja słownictwa powoduje, iż obywatele mogą korzystać tylko z narzuconych środków językowych, które określają konkretne zjawiska (np. "bieg", "pies", "dom").</li>
+<li>Dla zrozumienia przekazu nowomowy konieczna jest doskonała orientacja w angsocu - bez niej zrozumienie zdania z artykułu ("Staromyślaki bezkiszkoczują angsoc") pozostaje niepełne. Komunikacja nie stanowi więc czegoś naturalnego, lecz wymaga spełnienia określonych warunków.</li>
+<li>Obywatele nie mają wpływu na to, iż władza usuwa podstawowe pojęcia, uznawane za niewygodne (np.: "wiedza", "demokracja", "honor"). </li>
+<li>Również osoby zajmujące się nauką i techniką muszą wykorzystywać okrojone słownictwo, które nie pozwala na swobodny opis metod badawczych.</li>
+<li>Nowomowa powoduje, iż niemożliwe staje się wygłoszenie krytyki względem rządzących, ponieważ zyskuje ona absurdalny charakter, nie oddaje faktycznej myśli ("Wielki Brat jest bezdobry"). </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br>

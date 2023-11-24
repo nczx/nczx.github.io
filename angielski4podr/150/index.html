@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. which/ that</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego, ponieważ nie występuje po nim rzeczownik ani zaimek osobowy.  </p>
+<p>2. which/ that/ <span style="font-weight: 400;">∅ </span></p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny. </p>
+<p>3. who/ that </p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego, ponieważ nie występuje po nim rzeczownik ani zaimek osobowy. </p>
+<p>4. who/ that/ <span style="font-weight: 400;">∅ </span></p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny. </p>
+<p>5. which/ that/ <span style="font-weight: 400;">∅ </span></p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. requiring</p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu teraźniejszego (<em>requiring)</em>.</p>
+<p>Anyone who requires more information on the topic should send me an email.</p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>who</em> ("kto").  </p>
+<p>2. available</p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z przymiotnikiem (<em>available)</em>.</p>
+<p>We need to book all the seats which/that are available.</p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>which/that </em>("które"). </p>
+<p>3. polluted</p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu przeszłego (<em>polluted</em>).</p>
+<p>The scientist were examining the ground waters which/that had been polluted by a local factory. </p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>which/that </em>("które"). </p>
+<p>4. listed </p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu przeszłego (<em>listed</em>).</p>
+<p>Three candidates who/that were listed have withdrawn from the elections. </p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>who/that</em> ("którzy"). </p>
+<p>5. graduating </p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu teraźniejszego (<em>graduating)</em>.</p>
+<p>It was a meeting for students who/that are graduating from university next semester.</p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>who/that</em> ("którzy"). </p>
+<p>6. organised</p>
+<p><strong>Uzasadnienie</strong>: <em>reduced relative clause</em> z imiesłowem czasu przeszłego (<em>organised</em>).</p>
+<p>The Zero Waste campaign which/that was organised by our school was a major success. </p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>which/that </em>("która"). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><span style="font-weight: 400;">1. where</span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja dodatkowa, oddzielona przecinkiem -</span><em><span style="font-weight: 400;"> non-defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">where </span></em><span style="font-weight: 400;">(“gdzie”).  </span></p>
+<p><span style="font-weight: 400;">2. who</span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja dodatkowa, oddzielona przecinkiem -</span><em><span style="font-weight: 400;"> non-defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">who </span></em><span style="font-weight: 400;">(“która”). </span></p>
+<p><span style="font-weight: 400;">3. when</span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - </span><em><span style="font-weight: 400;">defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">when </span></em><span style="font-weight: 400;">(“kiedy”). </span></p>
+<p><span style="font-weight: 400;">4. which </span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja dodatkowa, oddzielona przecinkiem -</span><em><span style="font-weight: 400;"> non-defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">which </span></em><span style="font-weight: 400;">(“który”). </span></p>
+<p><span style="font-weight: 400;">5. which/that</span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - </span><em><span style="font-weight: 400;">defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">which/that </span></em><span style="font-weight: 400;">(“który”). </span></p>
+<p><span style="font-weight: 400;">6. whose</span></p>
+<p><strong>Uzasadnienie:</strong><span style="font-weight: 400;"> informacja dodatkowa, oddzielona przecinkiem -</span><em><span style="font-weight: 400;"> non-defining relative clause</span></em><span style="font-weight: 400;"> z zaimkiem względnym </span><em><span style="font-weight: 400;">whose </span></em><span style="font-weight: 400;">(“której”). </span></p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. neither</p>
+<p><strong>Uzasadnienie</strong>: neither of + them - odniesienie do konkretnej rzeczy w liczbie mnogiej, znanej z kontekstu. </p>
+<p>2. whole</p>
+<p><strong>Uzasadnienie</strong>: <em>the whole</em> + rzeczownik w liczbie pojedynczej.</p>
+<p>3. every</p>
+<p><strong>Uzasadnienie</strong>: <em>every</em> + rzeczownik w liczbie pojedynczej.</p>
+<p>4. the whole</p>
+<p><strong>Uzasadnienie</strong>: <em>the whole</em> of + rzeczownik w liczbie pojedynczej.</p>
+<p>5. another</p>
+<p><strong>Uzasadnienie</strong>: <em>another</em> (inny, kolejny) + rzeczownik w liczbie pojedynczej.</p>
+<p>6. other</p>
+<p><strong>Uzasadnienie</strong>: odniesienie do rzeczownika w liczbie mnogiej w znaczeniu "inni". </p>
+<p>7. either</p>
+<p><strong>Uzasadnienie</strong>: <em>either of + them</em> - odniesienie do konkretnej grupy, znanej z kontekstu.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. zdanie poprawne</p>
+<p>2. Each <strong>of the</strong> students in my class does some sport in the afternoons. </p>
+<p><strong>Uzasadnienie</strong>: <em>each of</em> <em>the</em> + rzeczownik w liczbie mnogiej.  </p>
+<p>3. zdanie poprawne</p>
+<p>4. I searched the whole <strong>of</strong> my school for the lost trainers, but I couldn't find them. </p>
+<p><strong>Uzasadnienie</strong>: <em>the whole of</em> + przymiotnik dzierżawczy + rzeczownik. </p>
+<p>5. Both <strong>of</strong> the players who scored the highest had won a gold medal before. </p>
+<p><strong>Uzasadnienie</strong>: both of the + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy znanej z kontekstu. </p>
+<p>6. Most <strong>of the</strong> people I invited to the party have already confirmed they'll come. </p>
+<p><strong>Uzasadnienie</strong>: <em>most of the</em> + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy, o której mowa w zdaniu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Both of my parents </p>
+<p><strong>Uzasadnienie</strong>: <em>both + of + </em>rzeczownik w liczbie mnogiej (obydwoje) - odnosi się do konkretnych osób wspomnianych wcześniej.  </p>
+<p>2. the whole evening</p>
+<p><strong>Uzasadnienie</strong>: <em>the whole</em> + rzeczownik w liczbie pojedynczej.</p>
+<p>3. all of the players </p>
+<p><strong>Uzasadnienie:</strong> <em>all of the</em> + rzeczownik w liczbie mnogiej.</p>
+<p>4. Neither of the school teams </p>
+<p><strong>Uzasadnienie</strong>: <em>neither of the</em> + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy znanej z kontekstu.</p>
+<p>5. do not have time </p>
+<p><strong>Uzasadnienie</strong>: <em>I do not have time or money</em> = <em>I've got neither time nor money</em>. </p><br>

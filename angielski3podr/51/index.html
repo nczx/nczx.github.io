@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. C </p>
+<p><strong>Fragment w tekście</strong>: "As Edward V was only thirteen, he needed an adult to help him, a protector. (...) his Uncle Richard got the job instead." - Ponieważ Edward V miał zaledwie trzynaście lat, potrzebował dorosłego człowieka do pomocy, protektora. (...) zamiast tego tę posadę dostał jego wujek Richard. </p>
+<p>2. A</p>
+<p><strong>Fragment w tekście</strong>: "Shakespeare's play written about a century later showing Richard as the murderer didn't help Richard's case either." - Sztuka Szekspira napisana około wiek później ukazująca Richarda jako mordercę również nie stawiała go w najlepszym świetle.</p>
+<p>3. D</p>
+<p><strong>Fragment w tekście</strong>: "Also, till the end of his reign, Henry had problems with a man who claimed that he was Edward V. Henry put him in prison, but never openly said the man was lying." - Dodatkowo, do końca swojego panowania Henryk miał problemy z człowiekiem, który twierdził, że jest Edwardem V. Henryk wtrącił go do więzienia, ale nigdy otwarcie nie powiedział, że człowiek ten kłamie.</p>
+<p>4. B</p>
+<p><strong>Fragment w tekście</strong>: "Yet it seems likely that their aim was not to discover the truth behind the bones but to prove they really were the princes'." - Jednak wydaje się prawdopodobne, że ich celem nie było odkrycie prawdy kryjącej się za kośćmi, ale udowodnienie, że rzeczywiście należały do książąt.</p>
+<p>5. B</p>
+<p><strong>Fragment w tekście</strong>: "The mystery of the Princes in the Tower is the most mysterious murder story in English history." - Tajemnica książąt w Tower to najbardziej zagadkowa historia morderstwa w historii Anglii.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>Hi, everyone! Exciting story today! </em>Have you heard of the unsolved mystery of D. B. Cooper? One day in November 1971, on a flight to Seattle, a man told a flight attendant he had a bomb and demanded $200,000, over one million dollars in today's money. He then asked for four parachutes and later jumped off the plane. Nobody knows what happened to him or the money, though some of it was later found by the Columbia River.</p>
+<p>One theory says he died right after he jumped. I don't believe this. Someone would have found his body and the rest of the money. He must have managed to escape. He probably had someone helping him. I think he ran off with the money and moved to a foreign country.</p>
+<p>Let me know what you think in the comments. I'd love to learn your theories!</p>
+<p><br/>(Liczba słów: 144)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Cześć wszystkim! Dziś ekscytująca historia! Czy słyszeliście o nierozwiązanej zagadce D. B. Coopera? Pewnego dnia w listopadzie 1971 roku, podczas lotu do Seattle, mężczyzna powiedział stewardesie, że ma bombę i zażądał 200 000 dolarów, czyli ponad milion dolarów w dzisiejszych pieniądzach. Następnie poprosił o cztery spadochrony, a później wyskoczył z samolotu. Nikt nie wie, co stało się z nim i z pieniędzmi, choć część z nich znaleziono później nad rzeką Columbia.</p>
+<p>Jedna z teorii mówi, że zginął zaraz po skoku. Nie wierzę w to. Ktoś znalazłby jego ciało i resztę pieniędzy. Musiał zdołać uciec. Pewnie ktoś mu pomagał. Myślę, że uciekł z pieniędzmi i przeniósł się do obcego kraju.</p>
+<p>Dajcie znać w komentarzach co myślicie. Chętnie poznam Wasze teorie!</p><br><a style="color:red; font-size:25px;">THINKING IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>• This quote means that solving mysteries is enjoyable. It's thrilling to work out different theories and discover the truth.</p>
+<p>(Cytat ten oznacza, że rozwiązywanie zagadek jest przyjemne. To porywające rozpracowywać różne teorie i odkrywać prawdę.)</p>
+<p><br/>• People react to fictional characters differently than to people in real life. They are likely to stay away from mysterious people because they're afraid of them. As viewers or readers, however, they feel safe, so they find such people intriguing.</p>
+<p>(Ludzie reagują na postacie fikcyjne inaczej niż na osoby w prawdziwym życiu. Prawdopodobnie będą trzymać się z dala od tajemniczych osób, ponieważ się ich boją. Jako widzowie lub czytelnicy czują się jednak bezpiecznie, więc uważają takie osoby za intrygujące.)</p>
+<p><br/>• Fictional mysteries make life exciting. Novels, ancient tales, or thrillers have unforgettable plots. They aren't real, so you can try to solve their mysteries as a hobby. However, mysteries that happen in your real life can be destructive. When a family member goes missing, it's horrible and frightening. Some people spend their entire lives trying to find their loved ones without success.</p>
+<p>(Fikcyjne tajemnice sprawiają, że życie jest ekscytujące. Powieści, starożytne baśnie czy thrillery mają niezapomniane fabuły. Nie są one prawdziwe, więc można próbować rozwiązać ich tajemnice jako hobby. Jednak tajemnice, które zdarzają się w prawdziwym życiu, mogą być destrukcyjne. Kiedy zaginie ktoś z rodziny, jest to straszne i przerażające. Niektórzy ludzie spędzają całe życie, próbując znaleźć swoich bliskich bez skutku.)</p><br>

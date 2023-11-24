@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. training, to win</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>enjoy</em> (lubić, czerpać przyjemność z) używamy formy z końcówką -ing. Po czasowniku <em>want </em>(chcieć) używamy bezokolicznika z <em>to.</em> </p>
+<p>2. to watch, running</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik opisuje cel wykonania jakiejś czynności, używamy bo w formie bezokolicznika z <em>to</em>. Po przyimkach (<em>at </em>- w) używamy formy z końcówką -ing.</p>
+<p>3. to take, being</p>
+<p><strong>Uzasadnienie:</strong> po przymiotnikach (<em>important </em>- ważne) używamy bezokolicznika z <em>to.</em> Po przyimkach (<em>of </em>- o) używamy formy z końcówką -ing.</p>
+<p>4. practising, relaxing</p>
+<p><strong>Uzasadnienie:</strong> po przyimkach (<em>by </em>- dzięki, poprzez) i po wyrażeniu <em>spend time</em> (spędzać czas) używamy formy z końcówką -ing.</p>
+<p>5. Throwing, to do</p>
+<p><strong>Uzasadnienie:</strong> kiedy używamy czasownika jako podmiotu, używamy go w formie z końcówką -ing. Po przymiotnikach (<em>important</em>) używamy bezokolicznika z <em>to.</em></p>
+<p>6. to do, to win</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>learn </em>(uczyć się) i po przymiotnikach (<em>difficult - </em>ciężko) używamy bezokolicznika z <em>to.</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. to build</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>help</em> (pomagać) używamy bezokolicznika z <em>to</em>. </p>
+<p>2. seeing</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>miss</em> (tęsknić za) używamy formy z końcówką -ing. </p>
+<p>3. to train</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>decide</em> (postanowić) używamy bezokolicznika z <em>to.</em> </p>
+<p>4. Learning</p>
+<p><strong>Uzasadnienie:</strong> kiedy używamy czasownika jako podmiotu w zdaniu, używamy go w formie z końcówką -ing. </p>
+<p>5. to take</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik opisuje cel wykonania jakiejś czynności, używamy go w formie bezokolicznika z to. </p>
+<p>6. to climb</p>
+<p><strong>Uzasadnienie:</strong> po przymiotnikach (<em>easy </em>- łatwe) używamy bezokolicznika z <em>to.</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. championships  </p>
+<p>2. reminds</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present simple </em>(końcówka -s przy <em>she, he, it</em>), ponieważ <em>remind </em>to czasownik statyczny, który w tym zdaniu opisuje coś w teraźniejszości. Nie możemy go użyć w czasie ciągłym (<em>continuous</em>).</p>
+<p>3. lost</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple</em> dla czynności zakończonej w określonym punkcie w przeszłości (<em>that year </em>- w tamtym roku).</p>
+<p>4. sitting</p>
+<p><strong>Uzasadnienie</strong>: po czasowniku <em>remember </em>używamy czasownika z końcówką -ing w znaczeniu "pamiętać, jak coś się robiło".</p>
+<p>5. speak</p>
+<p><strong>Uzasadnienie</strong>: po czasowniku <em>stop </em>używamy bezokolicznika z <em>to</em> w znaczeniu "zatrzymać się, aby coś zrobić".</p>
+<p>6. advise</p>
+<p><strong>Uzasadnienie</strong>: <em>advice </em>- porada; <em>advise </em>- radzić. Czasownik w bezokoliczniku, bo lukę poprzedza czasownik łączący się z <em>to</em>.</p>
+<p>7. forced</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple </em>dla czynności zakończonej w określonym momencie w przeszłości.</p>
+<p><s class="odr-strikethrough">make</s>, <s class="odr-strikethrough">speech</s></p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Zawsze byłam osobą nastawioną na rywalizację, więc kiedy zaczęłam grać w rugby, to po to, żeby wygrywać. Moja drużyna brała udział w wielu <strong>mistrzostwach</strong> i zazwyczaj wracała do domu z trofeami. Ale na mojej półce jest jedno puste miejsce. <strong>Przypomina</strong> mi, że chociaż <strong>przegraliśmy</strong> w tamtym roku mecz, to wyciągnęłam z tego ważną lekcję. Pamiętam, że <strong>siedziałam</strong> na ławce, zdenerwowana, gdy zawodnik z innej drużyny zatrzymał się, by ze mną <strong>porozmawiać</strong>. Myślałam, że przyszedł się ze mnie śmiać, ale on po prostu chciał mi <strong>doradzić</strong>, żebym grała w bardziej przemyślany sposób. To <strong>zmusiło</strong> mnie do przemyślenia mojej strategii i od tamtej pory gram znacznie lepiej.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1 - <strong>c</strong></p>
+<p>(niewystarczająco - za mało)  </p>
+<p>2 - <strong>f</strong></p>
+<p>(tylko kilka - niewiele)</p>
+<p>3 - <strong>a</strong></p>
+<p>(niedużo - mała ilość)</p>
+<p>4 - <strong>e</strong></p>
+<p>(kilka - kilka)</p>
+<p>5 - <strong>d</strong></p>
+<p>(mnóstwo - wiele)</p>
+<p>6 - <strong>b</strong></p>
+<p>(za dużo - więcej niż wystarczająco)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>We do <strong>too little</strong> exercise.</p>
+<p>(Wykonujemy za mało ćwiczeń.) </p>
+<p><br/>2. We have read <strong>only a few</strong> modern books.</p>
+<p>(Przeczytaliśmy tylko kilka współczesnych książek.) </p>
+<p>We have <strong>not</strong> read <strong>many</strong> modern books.</p>
+<p>(Nie przeczytaliśmy wielu współczesnych książek.)</p>
+<p><br/>3. We do <strong>not</strong> have <strong>much</strong> equipment at the school gym.</p>
+<p>(Nie mamy dużo sprzętu na szkolnej siłowni.)</p>
+<p>We only have <strong>a small amount of </strong>equipment at the school gym.</p>
+<p>(Mamy jedynie niewielką ilość<strong> </strong>sprzętu na szkolnej siłowni.)</p>
+<p><br/>4. <strong>Several / A few</strong> students from my class are good at sports.</p>
+<p>(Kilkoro uczniów z mojej klasy jest dobrych w sporcie.)</p>
+<p><br/>5. We get <strong>loads of / plenty of</strong> homework every week.</p>
+<p>(Każdego tygodnia dostajemy mnóstwo zadań domowych.)</p>
+<p><br/>6. We spend <strong>too much / more than enough </strong>time on homework and studying at home.</p>
+<p>(Spędzamy za dużo / więcej niż wystarczająco dużo<strong> </strong>czasu na zadaniach domowych i nauce w domu.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. b </p>
+<p><strong>Uzasadnienie:</strong> określenie <em>a few </em>(kilka) w logiczny sposób uzupełnia to zdanie (Jest tylko kilku sportowców, których podziwiam). </p>
+<p>2. c</p>
+<p><strong>Uzasadnienie:</strong> określenie<em> lots of </em>(wiele) w logiczny sposób uzupełnia to zdanie (Narciarstwo ma wiele zalet dla zdrowia).</p>
+<p>3. b</p>
+<p><strong>Uzasadnienie:</strong> określenia <em>not enough </em>(niewystarczająco) można użyć z rzeczownikiem policzalnym. Odrzucamy wariant a, ponieważ jest to niepełne wyrażenie - brakuje przyimka <em>of</em>.</p>
+<p>4. b</p>
+<p><strong>Uzasadnienie:</strong> tylko <em>loads </em>(mnóstwo) połączy się z przyimkiem <em>of.</em></p>
+<p>5. c</p>
+<p><strong>Uzasadnienie:</strong> z podanych opcji tylko określenie <em>much </em>może zostać użyte z rzeczownikiem niepoliczalnym.</p>
+<p>6. a</p>
+<p><strong>Uzasadnienie:</strong> określenia <em>several </em>(kilka) można użyć z rzeczownikiem policzalnym, i w logiczny sposób uzupełnia ono to zdanie (Byłem/am na kilku wydarzeniach sportowych, ale nigdy na żadnym meczu).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. A</p>
+<p><strong>Uzasadnienie</strong>: określenia <em>plenty of </em>(wielu) można użyć z rzeczownikiem policzalnym w liczbie mnogiej (<em>people </em>- ludzie). </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie</strong>: odrzucamy warianty C i D, ponieważ nie można ich użyć z rzeczownikami policzalnymi (<em>benefits </em>- korzyści). Odrzucamy A, ponieważ określenie <em>a number </em>musi się połączyć z przyimkiem <em>of</em>.</p>
+<p>3. D</p>
+<p><strong>Uzasadnienie</strong>: określenia<em> many</em> można użyć w zdaniu przeczącym z rzeczownikiem policzalnym (<em>students </em>- uczniowie).</p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: określenia <em>not enough </em>(niewystarczająco) można użyć z rzeczownikiem policzalnym (<em>activities </em>- zajęcia).</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie</strong>: określenia <em>plenty of</em> (mnóstwo) można użyć z rzeczownikiem policzalnym (<em>opportunities </em>- okazje).</p>
+<p>6. D</p>
+<p><strong>Uzasadnienie</strong>: określenia <em>a great deal of </em>(dużą ilość) można użyć z rzeczownikiem niepoliczalnym (<em>activity </em>- aktywność).</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p><strong>Wielu</strong> ludzi uważa, że sporty zespołowe są ważną częścią szkolnego programu nauczania. Mówi się, że mają <strong>kilka </strong>korzyści zdrowotnych. Po pierwsze, zachęcają do pracy zespołowej, czego nie<strong>wielu </strong>uczniów doświadcza poza szkołą. Po drugie, pomagają rozwijać cechy przywódcze - nadal jest <strong>niewystarczająco </strong>dużo szkolnych zajęć, które to umożliwiają. I wreszcie, oczywiście, zapewniają <strong>mnóstwo </strong>okazji do zdrowego wysiłku fizycznego. Jednak sporty indywidualne również mogą dać uczniom <strong>bardzo dużo </strong>ruchu - a ja zdecydowanie preferuję ten rodzaj aktywności.</p><br>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="height: 109px; width: 894px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 890px;"> <p><strong>Pole powierzchni całkowitej</strong> walca o promieniu podstawy <strong>r</strong> i wysokości długości<strong> h</strong> wyraża się wzorem:</p> <p><span> <math-expr expr="P_c=2P_p+P_b=2pir^2+2pirh=2pir(r+h)" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy walca, a <strong>P<sub>b</sub></strong> - polem jego powierzchni bocznej.  </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Podstawą walca jest koło o promieniu długości <strong>r</strong>. Mamy zatem:  </p> <p><span> <math-expr expr="P_p=pir^2" syntax="text"></math-expr> </span>  </p> <p>Powierzchnią boczną walca jest prostokąt, którego jeden bok ma długość <strong>h</strong>, a drugi ma taką długość jak obwód podstawy, czyli obwód koła o promieniu długości <strong>r</strong>. Wyznaczmy pole powierzchni bocznej tego walca. Mamy:</p> <p><span> <math-expr expr="P_b=h*2pir=2pirh" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <strong>pole powierzchni całkowitej</strong> tego walca. Mamy:</p> <p><span> <math-expr expr="P_c=2P_p+P_b=2pir^2+2pirh=ul(ul( 2pir(r+h)" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Dany jest walec, którego podstawą jest koło o promieniu długości <strong>r</strong> i wysokości długości <strong>10 cm</strong>. </p> <p>Wiemy, że pole powierzchni całkowitej tego walca jest równe <strong>40</strong><span style="font-weight: 400;"><strong>𝜋 cm<sup>2</sup></strong>. Korzystając ze <span style="text-decoration: underline;">wzoru na pole powierzchni całkowitej walca</span> mamy: </span></p> <p><span> <math-expr expr="40pi=2pir^2+2pir*10" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="40pi=2pir^2+20pir\ \ \ |:2pi" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="20=r^2+10r" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="0=r^2+10r-20" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="r^2+10r-20=0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="Delta=10^2-4*1*(-20)=100+80=180" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="sqrtDelta=6sqrt5" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="r_1=(-10-6sqrt5)/2&lt; 0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="r_2=(-10+6sqrt5)/2=-5+3sqrt5=3sqrt5-5" syntax="text"></math-expr> </span>  </p> <p>Zatem ostatecznie</p> <p><span> <math-expr expr="r=3sqrt5-5" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <strong>pole koła</strong> będącego podstawą tego walca. Mamy: </p> <p><span> <math-expr expr="P_p=pi*(3sqrt5-5)^2=pi*((3sqrt5)^2-2*3sqrt5*5+5^2)=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='\ \ \ =pi*(70-30sqrt5)=ul(ul( 10pi(7-3sqrt5) \ ["cm"^2]' syntax="text"></math-expr> </span>   </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="height: 109px; width: 894px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 890px;"> <p><strong>Pole powierzchni całkowitej</strong> walca o promieniu podstawy <strong>r</strong> i wysokości długości<strong> h</strong> wyraża się wzorem:</p> <p><span> <math-expr expr="P_c=2P_p+P_b=2pir^2+2pirh=2pir(r+h)" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy walca, a <strong>P<sub>b</sub></strong> - polem jego powierzchni bocznej.  </p> </td> </tr> </tbody> </table> <p> </p> <p>Rysunek:  </p> <p><img alt="" height="256" src="./data/1219838-0.jpg" width="515"/></p> <p>Pole przekroju osiowego tego walca jest równe <strong>40 cm<sup>2</sup></strong>. mamy zatem</p> <p><span> <math-expr expr="8h=40 \ \ \ |:8" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='h=5 \ ["cm"]' syntax="text"></math-expr> </span></p> <hr/> <p>Wyznaczmy <strong>pole powierzchni całkowitej</strong> tego walca. Mamy:</p> <p><span> <math-expr expr='P_c=2pi cdot 4 cdot (4+5)=8pi cdot 9 = ul(ul( 72pi \ ["cm"^2] ))' syntax="text"></math-expr> </span>    </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="height: 109px; width: 894px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 890px;"> <p><strong>Pole powierzchni całkowitej</strong> walca o promieniu podstawy <strong>r</strong> i wysokości długości<strong> h</strong> wyraża się wzorem:</p> <p><span> <math-expr expr="P_c=2P_p+P_b=2pir^2+2pirh=2pir(r+h)" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy walca, a <strong>P<sub>b</sub></strong> - polem jego powierzchni bocznej.  </p> </td> </tr> </tbody> </table> <p> </p> <p>Rysunek:  </p> <p><img alt="" height="235" src="./data/1219840-0.jpg" width="457"/></p> <p>Wiemy, że</p> <p><span> <math-expr expr='d=12 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>oraz</p> <p><span> <math-expr expr="alpha=30^@" syntax="text"></math-expr> </span>  </p> <p>Korzystając ze związku między długościami boków w trójkącie o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>,<strong> 90<sup>o</sup></strong> mamy:</p> <p><span> <math-expr expr='h=1/2d=1/2 cdot 12= 6\ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>oraz</p> <p><span> <math-expr expr='2r=6sqrt3\ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>czyli</p> <p><span> <math-expr expr='r=3sqrt3 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <strong>pole powierzchni całkowitej</strong> tego walca. Mamy:</p> <p><span> <math-expr expr='P_c=2pi cdot 3sqrt3 cdot (3sqrt3+6) = 54pi+36sqrt3pi=ul(ul( 18pi(3+2sqrt3) \ ["cm"^2] ))' syntax="text"></math-expr> </span>  </p><br>

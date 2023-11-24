@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. private</p>
+<p>public</p>
+<p>(W Ameryce szkoła, za którą się płaci nazywana jest <strong>prywatną</strong>, a w Anglii - <strong>publiczną</strong> (jest to szkoła państwowa w Stanach).) </p>
+<p>2. fail</p>
+<p>Amerykanie mówią też, że przeciwieństwem zdania egzaminu jest <strong>oblanie</strong> go (<em>flunk</em>). To slangowe wyrażenie na <strong>niezdanie</strong> (<em>fail</em>). </p>
+<p>3. sit/take</p>
+<p>resit/retake</p>
+<p>(W naszej szkole <strong>piszemy</strong> egzaminy tylko raz. Jeśli nie zdasz, nie masz szansy <strong>podejść</strong> do egzaminu <strong>jeszcze raz</strong>.)</p>
+<p>4. did</p>
+<p>do</p>
+<p>(<em>do well in sth</em> - być w czymś dobrym</p>
+<p><em>do a degree in sth</em> - studiować coś)</p>
+<p>5. academic</p>
+<p>(Najpopularniejsze tu przedmioty <strong>akademickie</strong> to literatura, ekonomia i prawo, ale rząd chciałby, żeby więcej osób studiowało matematykę i przedmioty ścisłe.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Bachelor of Arts </p>
+<p>2. Master of Business Administration</p>
+<p>3. Doctor of Philosophy </p>
+<p>4. Master of Science </p>
+<p>5. Bachelor of Science </p>
+<p>6. Master of Arts </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <span style="text-decoration: line-through;">on</span> <strong>in </strong></p>
+<p><strong>Uzasadnienie:</strong> <em>major in</em> - specjalizować się w. </p>
+<p>2. <span style="text-decoration: line-through;">costs</span> <strong>fees</strong></p>
+<p><strong>Uzasadnienie: </strong><em>tuition fees</em> - czesne. </p>
+<p>3. <span style="text-decoration: line-through;">find</span> <strong>win</strong></p>
+<p><strong>Uzasadnienie: </strong><em>win a scholarship</em> - zdobyć stypendium naukowe.</p>
+<p>4. <span style="text-decoration: line-through;">broke</span> <strong>scraped</strong></p>
+<p><strong>Uzasadnienie: </strong><em>scrape through</em> - ledwo przejść/zdać.</p>
+<p>5. <span style="text-decoration: line-through;">scientist</span> <strong>science</strong></p>
+<p><strong>Uzasadnienie: </strong><em>computer science</em> - informatyka. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. residence  </p>
+<p>attend</p>
+<p>grant</p>
+<p>2. dissertation </p>
+<p>degree</p>
+<p>thesis</p>
+<p>majored</p>
+<p>finance</p>
+<p>3. linguistics</p>
+<p>faculty</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione): </strong></p>
+<p>1. X: Mój <strong>akademik</strong> jest bardzo blisko uniwersytetu, co ułatwia <strong>uczęszczanie</strong> na wykłady, nawet jeśli odbywają się wcześnie rano. Niesamowite ile jest wolnych miejsc o tej porze!</p>
+<p>Y: Masz szczęście. Ubiegałem/am się o <strong>dotację</strong>, która pomogłaby mi poradzić sobie z codziennymi wydatkami, ale mi jej nie przyznano, dlatego zdecydowałem/am się pójść na studia w moim rodzinnym mieście i mieszkam teraz z rodzicami.</p>
+<p>2. X: Dlaczego mówi się, że trzeba bronić <strong>dysertacji</strong>?</p>
+<p>Y: Tak nazywa się pracę doktorską. Ja jestem na <strong>studiach</strong> magisterskich, więc piszę <strong>pracę magisterską</strong>. Ją też się broni. Myślę, że dlatego, że trzeba ją obronić albo obalić, a podczas obrony pokazujesz, że umiesz to zrobić. Podczas studiów licencjackich, <strong>specjalizowałem/am się</strong> w rachunkowości i <strong>finansach</strong>, a moja praca dotyczy tego, jak możemy powstrzymać unikanie płacenia podatków. </p>
+<p>3. X: Studiujesz <strong>lingwistykę</strong>, tak? Co to właściwie jest?</p>
+<p>Y: Jest to nauka o języku.</p>
+<p>X: Więc ten kierunek jest częścią <strong>wydziału</strong> nauk ścisłych czy humanistycznych?</p>
+<p>Y: Na moim uniwersytecie uznaje się ją za naukę humanistyczną, ale mówi się też o niej jako o humanistycznej nauce ścisłej.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. resourceful </p>
+<p>2. management</p>
+<p>3. resolution</p>
+<p>4. residence</p>
+<p><strong>The extra words: decide, willing. </strong></p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Wolne stanowiska</p>
+<p>Szukamy pracowitych, zmotywowanych, <strong>pomysłowych</strong> kandydatów do pracy w naszej firmie. Najlepiej, żebyś był/a związany/a z <strong>zarządzaniem</strong> w biznesie albo ekonomią. Preferowany tytuł magistra, ale wyróżniający się kandydaci z tytułem licencjata również będą brani pod uwagę. Ci, którzy przejdą rekrutację będą mieli okazję zaprezentować doskonałe umiejętności <strong>rozwiązywania</strong> konfliktów, ponieważ stanowisko obejmuje negocjacje z klientami. Doświadczenie nie jest wymagane, a obecnie prowadzimy rozmowy ze studentami kończącymi studia. Zapraszamy studentów tego uniwersytetu do biura <strong>akademików</strong> od 12 do 15 maja. W celu aplikowania na to stanowisko proszę wypełnić formularz zgłoszeniowy i złożyć go w sekretariacie uniwersytetu przed 30 kwietnia. </p><br>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe parafrazy i motywy:</p>
+<ul>
+<li>"homeopatii zbawienia" -&gt; We fragmencie tym pojawia się motyw zbawienia, który jest szczególnie obecny w Nowym Testamencie. W chrześcijaństwie pojęcie to oznacza przede wszystkim wieczne szczęście człowieka, który może obcować z Bogiem, a przy tym nie cierpi już z powodu zła czy innych zagrożeń. Przytoczona metafora przynależy do sfery <em>sacrum</em>, ale sugeruje też ironiczny stosunek osoby mówiącej do niej. Nie postrzega jej jako czegoś raczej fascynującego i kluczowego.</li>
+<li>"boga naszego powszedniego" -&gt; Zwrot do bóstwa stanowi parafrazę fragmentu modlitwy <em>Ojcze nasz </em>("Chleba naszego powszedniego daj nam dzisiaj"). Istota boska, co zaskakujące, zostaje przyporządkowana do banalnej codzienności. Tym samym poeta nadaje sferze <em>profanum</em> szczególne znaczenie, stara się, by zwrócić na nią uwagę. Ponadto pisownia słowa "bóg" małą literą zdaje się sugerować jego powszedniość. Powiązanie boga z podłogą, jego reprezentantem, świadczy o uzwykleniu tego, co przynależne do ducha, a jednocześnie uświęceniu czegoś zwyczajnego.</li>
+<li>"Podłogo nasza, / błogosław nam pod nami" -&gt; Apostrofa do podłogi (niczym Boga lub świętego) wywołuje skojarzenia z litanią lub też podniosłym stylem biblijnym. Podkreśla ona niebagatelne znaczenie podłogi zapewniającej człowiekowi płaszczyznę poruszania się. Błogosławieństwo ma więc dotykać sfery przyziemnej - uświęconej, ale również bliskiej człowiekowi.  </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Utwór Mirona Białoszewskiego pt. <em>Podłogo, błogosław!</em> wyróżnia się bogatą warstwą brzmieniową, na co wpływają zastosowane przez poetę środki czy też zabiegi. Już na początku wiersza pojawia się aliteracja ("Buraka burota / i buraka / bliskie [...]"). Wpływa ona na rytm tego fragmentu, a przy tym wzbogaca tekst o walory dźwiękowe (intensyfikuje je) czy też zaznacza związek między poszczególnymi wyrazami. Ważna jest także instrumentacja głoskowa ("o manierach / i o fornierach w serca, w sęki"), której celem staje się wywołanie określonego wrażenia na odbiorcy - np. poprzez nagromadzenie twardego "r". Warstwę dźwiękową oraz sensy utworu wzmacnia także dzielenie wyrazów, ponieważ w ten sposób poeta wydobywa ich nowe sensy (np. "fisharmonia" dzielona na "fis" i "harmonię") - również metaforyczne. Innym zabiegiem staje się zaś zestawienie wyrazów połączonych wspólną cząstką ("w kartofle - flet"), co służy podkreśleniu relacji łączącej dwa pozornie odmienne elementy. </p>
+<p> </p>
+<p>Przykłady innych środków stylistycznych:</p>
+<ul>
+<li>apostrofa -&gt; "Podłogo nasza";</li>
+<li>wykrzyknienie -&gt; "w kartofle - flet / w kartofle rysunków i kształtów zatartych!";</li>
+<li>epitety -&gt; "bliskie profile skrojone";</li>
+<li>metafora -&gt; "homeopatii zbawienia";</li>
+<li>anafora/elipsa -&gt; "w kartofle - flet / w kartofle rysunków i kształtów zatartych!";</li>
+<li>powtórzenie -&gt; "to stara podłoga / podłoga";</li>
+<li>inwersja -&gt; "boga naszego powszedniego".</li>
+</ul>
+<p> </p>
+<p>Zastosowanie licznych środków stylistycznych wzbogaca sensy przekazywane za pomocą utworu. Przede wszystkim budują one poetycką wizję codzienności, która staje się czymś niezwykłym, fascynującym. Poeta odwołuje się bowiem do elementów banalnych (jak np. podłoga, kartofle) i przenosi je w sferę <em>sacrum</em> - odwraca utrwalony w kulturze czy tradycji porządek. Warstwa brzmieniowa z kolei zwraca uwagę odbiorcy na doznania dźwiękowe, a jednocześnie wzmacnia przesłanie utworu. Staje się przestrzenią, która pozwala poecie na swobodne eksperymentowanie z językiem.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Poeta w swoim utworze zestawia dwa porządki odnoszące się do sfery <em>sacrum</em> i <em>profanum</em>. Do każdej z nich przyporządkowuje określone zjawiska, które wywołują jego aprobatę lub znudzenie. W jednym z fragmentów stwierdza: "tu nie fis / i nie harmonia, / ale dysonans". Słowa te świadczą o tym, iż poeta deklaruje, co stanie się obiektem jego zainteresowania. Podmiot liryczny rezygnuje bowiem z harmonii, jako reprezentacji świętości, doskonałości czy kultury wysokiej. Zamiast tego swą uwagę kieruje w stronę dysonansu. On zaś z kolei wiąże się ze świeckim oraz codziennym światem, odzwierciedla skomplikowanie, ale też piękno przyziemnej rzeczywistości. W kontrastowym zestawieniu pojęć zawiera się także program twórczości poetyckiej. Nie dąży ona do regularności, zachowania odpowiednich proporcji czy też stosowności. Zamiast tego kluczowe znaczenie zostaje nadane wszelakim dysonansom. Przejawiają się nie tylko poprzez zainteresowanie banalnym elementom codzienności, ale także poprzez odwoływanie się do mowy potocznej, zróżnicowanie długości wersów (oraz liczby sylaby), łączenie pojąć w zaskakujący, pozornie chaotyczny, sposób. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>a) Kompozycja obrazu jest bardzo ascetyczna, surowa, ograniczona do niezbędnych elementów. Artysta bowiem przedstawia wnękę w ścianę, w której umieszczeni są różni przedstawiciele świata natury. Niektóre warzywa czy owoce leżą, inne zaś są powieszone, tworząc w ten sposób harmonijną kompozycję. Charakterystyczną cechą obrazu jest mocne światło, padające z lewej strony, oraz czerń w głębi wnęki. Kompozycja i kolorystyka pogłębiają odbiór dzieła, ponieważ w centrum zainteresowania stawiają martwą naturę. Sposób ułożenia owoców i warzyw wydobywa ich piękno oraz wdzięk, który bywa niezauważalny. Kluczowa jest również kolorystyka - jej walor podkreśla zestawienie mocnego oświetlenia z czarnym tłem. W ten sposób wydobyte zostaje bogactwo barw oraz odcieni (np. żółci, zieleni). Taki dobór środków uwzniośla podejmowaną tematykę, przenosi ją w wymiar wręcz duchowy i zachęca do kontemplacji codzienności.</p>
+<p> </p>
+<p>b) Przykładowe podobieństwa:</p>
+<ul>
+<li>artyści wykazują zainteresowanie przejawem codziennego życia;</li>
+<li>interesuje ich przede wszystkim istota oraz faktura warzyw;</li>
+<li>w warzywach dopatrują się przejawów piękna i niezwykłości;</li>
+<li>uwznioślają pozornie banalne zjawisko;</li>
+<li>łączą ze sobą przejawy sfery<em> sacrum</em> i <em>profanum</em>, kultury wysokiej oraz niskiej. </li>
+</ul>
+<p> </p>
+<p>c) Przykładowe cele:</p>
+<ul>
+<li>odnalezienie nowych źródeł inspiracji artystycznych;</li>
+<li>zaskoczenie odbiorcy;</li>
+<li>wyrażenie refleksji na temat różnorodności i niezwykłości tego co codzienne;</li>
+<li>kontemplacja rzeczywistości;</li>
+<li>uwznioślenie doczesności;</li>
+<li>dowartościowanie codziennej sfery życia. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowo:</p>
+<p>Autorzy przytoczonych tekstów poruszają zagadnienie dotyczące rozlicznych funkcji krzesła, odwołują się także do jego historii. Hanna Wieczorek zwraca uwagę na symboliczne znaczenie tego przedmiotu. Stanowi on bowiem znak pozycji społecznej, władzy czy też splendoru, jest przynależny tylko wybranym. Z kolei Jerzy Brukwicki odwołuje się do motywu krzesła jako reprezentacji absencji (lub jej braku) czy też oczekiwania. Nawiązuje w swym tekście również do krzesła jako metaforycznego przedstawienia swojego wizerunku przez artystę. </p><br>

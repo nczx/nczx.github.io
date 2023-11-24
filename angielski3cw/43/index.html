@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czas <em><span style="text-decoration: underline;">future continuous</span></em> służy do opisania czynności, która będzie w trakcie w określonym momencie w przyszłości. Tworzymy go w następujący sposób:</strong></p>
+<p style="padding-left: 40px;"><strong>Podmiot + will/won't + be + czasownik z -ing</strong></p>
+<p><strong>Czas <em><span style="text-decoration: underline;">future perfect</span></em> służy do opisania czynności, która zostanie zakończona przed określonym momentem w przyszłości. Tworzymy go w następujący sposób:</strong></p>
+<p style="padding-left: 40px;"><strong>Podmiot + will/won't + have + <em>past participle </em>(końcówka -ed lub III kolumna w tabeli czasowników nieregularnych)</strong></p>
+<hr/>
+<p> </p>
+<p>1. will be sitting </p>
+<p>2. won't be snowing</p>
+<p>3. will be listening</p>
+<p><br/>4. won't have finished</p>
+<p>5. will have got</p>
+<p>6. will have had</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czas <em>future continuous</em> służy do opisania czynności, która będzie <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">w trakcie</span> w określonym momencie w przyszłości. Tworzymy go w następujący sposób:</strong></p>
+<p style="padding-left: 40px;"><strong>Podmiot + will/won't + be + czasownik z -ing</strong></p>
+<hr/>
+<p> </p>
+<p>1. will be eating </p>
+<p>2. will be starting</p>
+<p>3. will be flying</p>
+<p>4. will be studying</p>
+<p>5. will be going </p>
+<p>6. will be doing</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1 - e </p>
+<p>(Do końca tygodnia absolwenci szkół poznają swoje oceny z egzaminów końcowych.) </p>
+<p>2 - a</p>
+<p>(Czy do czasu aż skończysz 17 lat nauczysz się prowadzić samochód?)</p>
+<p>3 - d</p>
+<p>(Co będziesz robić jutro o tej porze?)</p>
+<p>4 - f</p>
+<p>(Nie będę się uczyć w sobotę wieczorem.)</p>
+<p>5 - c</p>
+<p>(Nie będę przechodził/a na emeryturę w przyszłym roku - chyba że wygram na loterii!)</p>
+<p>6 - b</p>
+<p>(Nie złożę podania na kurs do końca przyszłego tygodnia - to zajmie mi trochę dłużej.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czas <em>future perfect</em> służy do opisania czynności, która zostanie zakończona przed określonym momentem w przyszłości. Tworzymy go w następujący sposób:</strong></p>
+<p style="padding-left: 40px;"><strong>Podmiot + will/won't + have + <em>past participle </em>(końcówka -ed lub III kolumna w tabeli czasowników nieregularnych)</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. will have spent  </p>
+<p>3. will have checked</p>
+<p>4. will have watched</p>
+<p>5. will have exercised</p>
+<p>6. will have spent</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. will be doing</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości, używamy czasu <em>future continuous</em> (<em>will/won't be</em> + czas. z -ing). </p>
+<p>2. will have joined<br/>3. will have exercised</p>
+<p><strong>Uzasadnienie (2-3):</strong> kiedy opisujemy, że jakaś czynność zakończy się przed określonym momentem w przyszłości (<em>by this time next week </em>- do tego czasu w przyszłym tygodniu), używamy czasu <em>future perfect</em> (<em>will/won't have</em><strong> </strong>+ <em>past participle </em>- tu: końcówka -ed).</p>
+<p>4. will be researching</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości, używamy czasu <em>future continuous</em> (<em>will/won't be</em> + czas. z -ing).</p>
+<p>5. will have chosen<br/>6. will have filled in</p>
+<p><strong>Uzasadnienie (5-6):</strong> kiedy opisujemy, że jakaś czynność zakończy się przed określonym momentem w przyszłości (<em>by Monday </em>- do poniedziałku; <em>by the time </em>- do czasu, jak), używamy czasu <em>future perfect</em> (<em>will/won't have</em><strong> </strong>+ <em>past participle </em>- końcówka -ed lub III kolumna w tabeli czasowników nieregularnych).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. will be living</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości, używamy czasu <em>future continuous</em> (<em>will/won't be</em> + czasownik z -ing).  </p>
+<p>2. will have finished</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność zakończy się przed określonym momentem w przyszłości, używamy czasu <em>future perfect</em> (<em>will/won't have</em><strong> </strong>+ <em>past participle </em>- końcówka -ed lub III kolumna w tabeli czasowników nieregularnych).</p>
+<p>3. will be doing</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości, używamy czasu <em>future continuous</em> (<em>will/won't be</em> + czasownik z -ing).</p>
+<p>4. hope I will have started</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność zakończy się przed określonym momentem w przyszłości, używamy czasu <em>future perfect</em> (<em>will/won't have</em><strong> </strong>+ <em>past participle</em>).</p><br>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Rymkiewicz w pewien sposób wykracza poza tradycyjną relację twórcy i dzieła. Zgodnie z utrwalonym w kulturze wzorcem utwór poetycki staje się przedłużeniem życia podmiotu lirycznego. Nawet po jego śmierci pozostaje żywy, w pamięci kolejnych pokoleń, które go odczytują. W ten sposób śmierć poety nie jest aktem ostatecznym i nieodwracalnym, ponieważ jego cząstka istnieje w pozostawionych tekstach. Wykroczenie poza tradycyjną relację polega na tym, że Rymkiewicz ukazuje swój dorobek jako wampira. Zachowuje więc pewien dystans oraz autoironię, gdyż uważa, że jego wiersze niekoniecznie zostaną docenione. Tym samym rezygnuje więc z patosu typowego dla tradycyjnego ukazania motywu <em>exegi monumentum</em>, zamiast tego wybiera groteskę.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>Wskazana figura poetycka składa się z dwóch elementów, które mają swoją symbolikę. Wiersz bowiem można rozpatrywać jako znak twórczości literackiej - ma ona nieśmiertelny, ponadczasowy charakter, jest przejawem sił kreatywnych oraz myśli twórcy. Z kolei trumna to symbol śmierci, przemijania, degradacji ciała czy też końca doczesnej egzystencji. Z tego też powodu figurę wiersza trumny można uznać za symbol spuścizny, którą pozostawia po sobie poeta. Wiersz - podobnie jak trumna - zawiera w sobie cząstkę twórcy - ma ona przede wszystkim duchowy charakter. W metaforyczny sposób staje się miejscem spoczynku artysty oraz ważnych dla niego idei. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Symbol ten można uznać za nawiązanie do tradycji biblijnej lub też tej, która wiąże się z romantyzmem. "Boża błyskawica" wskazuje na pierwiastek boskości, doskonałość, którą nie ogranicza przemijanie ani śmierć poety. Jego dzieła pozostają bowiem żywe, pokonują śmierć oraz kruchość ludzkiego ciała. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo: </p>
+<table border="1" style="border-collapse: collapse; width: 637px; height: 627px;">
+<tbody>
+<tr style="height: 27px;">
+<td style="background-color: #aed581; text-align: center; height: 27px; width: 315.3px;"><strong>Antyteza</strong></td>
+<td style="background-color: #aed581; text-align: center; height: 27px; width: 315.3px;"><strong>Interpretacja </strong></td>
+</tr>
+<tr style="height: 52px;">
+<td style="width: 315.3px; text-align: center; height: 52px;"><em>Moje dzieło pośmiertne: trumna która gada</em></td>
+<td style="width: 315.3px; text-align: center; height: 52px;">Dziełu literackiemu zostaje nadane szczególne znaczenie, ponieważ łączy w sobie dwa światy. Z jednej strony jest świadectwem istnienia zmarłego twórcy, wskazuje na przemijanie. Z drugiej zaś jest czymś żywym, ponieważ idee, myśli poety zawarte w utworze pozostają aktualne, dzięki czemu możliwy staje się dialog żyjących z dziełem. </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 315.3px; text-align: center; height: 27px;"><em>To ja: trup który idzie i rosną mu włosy</em></td>
+<td style="width: 315.3px; text-align: center; height: 27px;">Śmierć artysty stanowi dla niego zakończenie doczesnej egzystencji. Staje się on jednak kimś na kształt upiora, ponieważ jego cząstka pozostaje wśród żyjących, nie daje im spokoju.  </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 315.3px; text-align: center; height: 27px;"><em>Bo choć nie mam nadziei to wiersz ma nadzieję</em></td>
+<td style="width: 315.3px; text-align: center; height: 27px;">Podmiot liryczny zdaje się być w pewien sposób zrezygnowany. Jednocześnie podkreśla znaczenie wiersza, ponieważ wyraża on przekonanie, że pewne rzeczy kiedyś się wydarzą. </td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 315.3px; text-align: center; height: 27px;"><em>Bo nikt się nie spodziewa a wiersz się spodziewa</em></td>
+<td style="width: 315.3px; text-align: center; height: 27px;">Sformułowanie to podkreśla odmienny status człowieka i dzieła. Istota ludzka - w przeciwieństwie do wiersza - nie przewiduje wszystkiego lub też na nic nie oczekuje. </td>
+</tr>
+<tr style="height: 57px;">
+<td style="width: 315.3px; text-align: center; height: 57px;">
+<div class="c-virtual_list__item c-virtual_list__item--initial-activeitem">
+<div class="c-message_kit__background p-message_pane_message__message c-message_kit__message">
+<div class="c-message_kit__hover">
+<div class="c-message_kit__actions c-message_kit__actions--default">
+<div class="c-message_kit__gutter">
+<div class="c-message_kit__gutter__right">
+<div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+<div class="c-message__message_blocks c-message__message_blocks--rich_text">
+<div class="p-block_kit_renderer">
+<div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first">
+<div class="p-rich_text_block">
+<div class="p-rich_text_section"><em>Więc nosi moje ciało choć zeń ciało spada</em></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="width: 315.3px; text-align: center; height: 57px;">Słowa te nawiązują do relacji łączącej autora z dziełem. Wiersz bowiem niejako zawsze funkcjonuje w kontekście swego twórcy, jednak relacja ta pozostaje niejednoznaczna - utwór może bowiem być odczytywany na różne sposoby, więc zyskuje nowe znaczenia, uniezależnia się w pewien sposób od autora. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Wykorzystane przez autora antytezy budują niejednoznaczną, skomplikowaną wizję relacji łączących autora, śmierć i dzieło. Wpływają przy tym na nastrój utworu, ponieważ wskazują na jego nieco groteskową, wręcz absurdalną atmosferę. Ponadto środek ten zwiększa ekspresję, a ponadto zdaje się wskazywać na inspiracje szczególnie ważne w twórczości Rymkiewicza. Jedną z nich jest bez wątpienia barok, w którym antyteza była chętnie wykorzystywana. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe cytaty:</p>
+<ul>
+<li><em>Moje dzieło pośmiertne: trumna która gada / Wiersz który jest upiorem i na trumnie siada; </em></li>
+<li><em>Mój wiersz: w spróchniałej trumnie Boża błyskawica;</em></li>
+<li><em>To ja: trup który idzie i rosną mu włosy / Bo są trumny co łakną krzyczą wniebogłosy;</em></li>
+<li><em>Mój wiersz: otwarta trumna i niech Bóg ją osądzi;</em></li>
+<li><em>Więc nosi moje ciało choć zeń ciało spada / Moje dzieło pośmiertne wiersz-trup który gada. </em></li>
+</ul>
+<p> </p>
+<p>Obecność autoironii wskazuje na to, w jaki sposób podmiot liryczny postrzega siebie oraz własną twórczość. Przedstawienie siebie z dystansem świadczy o tym, iż poeta nie uznaje siebie za wielkiego twórcę, który będzie wyłącznie podziwiany. Zamiast tego akcentuje niechęć względem patosu, w bezpośredni oraz szczery sposób nakreśla swój stosunek do spuścizny literackiej. Z przekorą odnosi się więc do utrwalonej tradycji w kulturze, podejmującej temat artysty i dzieła z zupełną powagą. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Groteskowość w utworze Rymkiewicza przejawia się nie tylko w sposobie obrazowania, wykreowania nastroju, ale także w ujęciu podejmowanego zagadnienia. Kwestia artysty i jego dzieła, obecna w kulturze na przestrzeni wieków, przedstawiana zazwyczaj z powagą czy patosem, w dziele polskiego poety zyskuje nowy wymiar. Podmiot liryczny wykazuje się bowiem autoironią, nie traktuje siebie w śmiertelnie poważny sposób. Świadczy o tym na przykład sformułowanie: "Moje dzieło pośmiertne: wiersz-trup który gada". Równe przekorne staje się połączenie "dzieła pośmiertnego" z osobą, która pozostaje wciąż żywa. Ponadto obrazowanie w przytoczonym utworze lirycznym łączy przeciwstawne elementy. Są one czasem makabryczne, niepokojące, humorystyczne czy też niezwykle poetyckie, co potwierdzają następujące fragmenty: "Moje dzieło pośmiertne: trumna która gada / Wiersz który jest upiorem i na trumnie siada", "Bo nikt się nie spodziewa a wiersz się spodziewa / I w ciało co umarło jeszcze się odziewa". Z tego tez powodu w wierszu dominuje atmosfera dziwności wywołana przywołaniem sprzecznych elementów, co znacząco wpływa na groteskowość przedstawienia. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>W przytoczonym fragmencie wiersza Rymkiewicza paradoks ujawnia się w relacji występującej między dziełem, utworem a odbiorcami sztuki. Wiersz bowiem stanowi pewne przedłużenie osoby poety, ale jednocześnie zyskuje odrębność. Po śmierci twórcy poezja jest bowiem odczytywana na nowo, można więc odkrywać w niej rozmaite nowe sensy, przez co buduje się swoisty mit jej autora. Z tego też powodu śmierć staje się początkiem nowego życia dla twórczości. W efekcie zaś artysta pozostaje w pewnym stopniu w świecie żywych - poprzez swoje idee, poglądy, dzieła.</p>
+<p>Również Norwid w swym utworze odwołuje się do paradoksu związanego z z odbiorem sztuki i twórcy. Dochodzi bowiem do wniosku, iż za życia taka jednostka nie cieszy się zazwyczaj poważaniem. Zamiast tego jest niezrozumiana, odtrącona przez społeczeństwo. Dopiero po jakimś czasie i pośmiertnie zmienia się stosunek publiki do jej osiągnięć - zyskują one aprobatę. </p><br>

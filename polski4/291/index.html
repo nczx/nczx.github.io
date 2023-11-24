@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Bohater stwierdza: " [...] czeka mnie jeszcze ostatni kilometr mojej Golgoty [...]". Porównuje swoje doświadczenia z drogą krzyżową Chrystusa - symbolem męki. Jego życie było dotychczas pasmem cierpień i upokorzeń. Dostrzega, że zbliża się do nieuchronnego końca swej ziemskiej wędrówki. Swoją śmierć traktuje być może jak ofiarę lub poświęcenie.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe motywy i toposy, do których odwołuje się Tadeusz Konwicki w omawianym tekście: </p>
+<ul>
+<li>motyw apokalipsy ("oto nadchodzi koniec świata"); </li>
+<li>motyw snu ("bo ja przed snem, albo może w pierwszym przelotnym obłoczku snu, zaczyna, rozumieć sens egzystencji [...]";</li>
+<li>motyw drogi ("w którą stronę skręcić na tym ostatnim okrążeniu?", "[...] czeka mnie jeszcze ostatni kilometr mojej Golgoty, ostatnie okrążenie w tym maratonie [...]");</li>
+<li>motyw człowieka-zwierzęcia ("jestem dwunogiem spłodzonym nieopodal Wisły [...]. Sam widziałem wojnę, to znaczy straszny amok ssaków", "jestem doskonałym anonimem homo sapiens"); </li>
+<li>motyw miasta ("za oknem moje miasto pod chmurą, jak stara, sczerniała tapera", "miasto zaczyna szumieć jak pas transmisyjny. Ruszyło z nocnego letargu").</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W pierwszym akapicie tekstu zastosowano stylizację biblijną. Świadczy o tym wykorzystanie biblijnych schematów ideowych, np. wizji końca świata czy męki Chrystusa, a także zabiegi językowe takie jak powtórzenie wyrazu <em>oto </em>na początku kolejnych zdań. Dzięki tym działaniom tekst nawiązuje dialog z tradycją judeochrześcijańską. Losy głównego bohatera zestawiane są z obrazami z Pisma Świętego, co wpływa na emocjonalny wydźwięk tekstu.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Narrator <em>Małej apokalipsy </em>uważa, że proces tworzenia to akt ukrycia się przed światem i samym sobą. Papier nazywa "nitrogliceryną współczesnego literata" - lekiem na serce z jednej strony, a składnikiem materiałów wybuchowych z drugiej. Dostrzega więc dwa oblicza tworzenia. Jedno z nich to przelewanie na kartkę wszystkich negatywnych emocji, które ma w sobie autor. Drugie zaś to pisanie tekstów podnoszących na duchu, optymistycznych, choć fałszywych. Artysta to osoba wewnętrznie skonfliktowana, traktująca tworzenie jak terapię lub lek, poszukująca w niej ukojenia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Pałac Kultury i Nauki w <em>Małej apokalipsie </em>staje się symbolem systemu, którego jest dziełem. To niechciany dar od okrutnego dyktatora, górujący nad Warszawą niczym strażnik. Początkowo budził strach i nienawiść mieszkańców, kojarzył się bowiem nieodparcie z totalitarnymi rządami komunistów. Obecnie narrator widzi go inaczej - jako popadający w ruinę barak, który nikogo już nie interesuje. Jest odstręczający, obrzydliwy. </p>
+<p>Bohater widzi w nim odbicie samego siebie. Mówi o nim: "[...] wielki barak, postawiony na sztorc.", a chwilę później zadaje retoryczne pytanie: "A kto mnie postawił na sztorc?". Rozpadająca się budowla bliska jest odliczającemu godziny do swojej śmierci narratorowi.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Narrator ma krytyczny stosunek do realiów PRL-u. Uważa, że ludzie żyjący w tym systemienie mogą cieszyć się prawdziw ą wolnością, choć często nie mają tego świadomości. Mówi: "Jestem jednym z niewielu ludzi wolnych w tym kraju przezroczystego zniewolenia. Zniewolenia pokrytego niechlujnie lakierem nowoczesności". Bohater wielokrotnie powraca zresztą do obrazowania otaczającego go świata jako brudnego, zaniedbanego i ponurego. Symptomatyczny jest tutaj szczególnie opis Pałacu Kultury - symbolu reżimu, o którym bohater mówi: "[...] wielki barak, postawiony na sztorc. Zżarty przez grzyb i pleśń stary szalet [...]". Z budowli odpada tynk, ściany są zawilgocone i pokrywają się pleśnią. Rozkład i brzydota zdają się charakteryzować również totalitarne państwo polskie.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Narrator <em>Małej apokalipsy </em>o swoim stosunku do życia i śmierci mówi: [...] myślę o tym wątłym łańcuszku reakcji chemicznych, który powoduje, że unoszę powiekę, że burczy mi w żołądku [...], że w głowie albo poza głową odbywa się ruch słów, wyobrażeń, które nazywam myślami [...]. U wielu moich przyjaciół pękł nagle jednego dnia ten łańcuszek reakcji chemicznych i nie wiem, gdzie oni teraz są, czy pokutują przy garści fosforu wietrzejącej ziemi cmentarnej, czy oddalają się w konwulsjach drgań właściwych falom, czy pędzą w głąb w nieskończoność i odbiją się od czarnej ściany końca tej nieskończoności, i wrócą tu, gdzie mnie już nie będzie" . Główny bohater uznaje życie ludzkie za zbiór zachodzących nieustannie procesów fizycznych i chemicznych, które determinują nie tylko stan fizyczny jednostki, ale także jej myśli i uczucia.  Nie wie jednak, co dzieje się po śmierci. Sam proces umierania rozpatruje w podobnie materialnych kategoriach - jako przerwanie łańcucha procesów chemicznych, zastanawia się także nad procesem rozkładu ciała. Rozważa także inne opcje, bierze więc pod uwagę możliwość, że cząstka człowieka pozostaje aktywna nawet po śmierci.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Narrator <em>Małej apokalipsy </em>uważa, że druga wojna światowa była nie tylko katastrofą humanitarną, ale także kulturalną. Odmieniła ludzką moralność i obyczajowość. Spowodowała cywilizacyjne cofnięcie się nie pod względem zdobyczy materialnych, lecz etyki i estetyki. Społeczeństwo dorastające w Europie powojennej pozbawione zostało cnót pielęgnowanych przez wcześniejsze pokolenia. Wszelkie działania jego członków są automatyczne, jałowe, pozbawione głębi. Codzienne czynności nie mają sensu i nie prowadzą do ubogacenia dorobku ludzkości.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Bohater tekstu jest mieszkającym w Warszawie mężczyzną. Można przypuszczać, że zawodowo zajmuje się pisaniem. Myśli dużo o własnej śmierci, przeczuwa jej bliskie nadejście. Nie boi się jej jednak, wręcz przeciwnie - niecierpliwie wyczekuje końca. Mówi: "Od wielu lat mozolnie skracam sobie życie". Jedyne, czego pragnie przed zgonem, to zapisanie się jakoś w historii ludzkości, efektowne pożegnanie się z ziemią. Czuje, że to jemu mogłyby zostać wyjawione sekrety wszechświata.</p>
+<p>Jednocześnie jednak przekonany jest o swojej zwykłości, określa się mianem <em>anonima</em>. Rozpatruje się w kategorii zwierzęcości, mówi o sobie: dwunóg, ssak. Wie, że nie jest nikim wyjątkowym, nic nie wyróżnia go spośród reszty społeczeństwa. Podlega takim samym mechanizmom fizycznym i socjologicznym jak wszyscy. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Narratora powyższego fragmentu można nazwać nihilistą. Nie dostrzega on sensu ludzkich działań. Przekonanie to wyraża w słowach: "trzeba podnieść się z łóżka i wykonać piętnaście czynności, nad których sensem nie wolno się zastanawiać". Z obojętnością, a być może nawet i pewną dozą radości, myśli o nieuniknionej śmierci. Uznaje małość jednostki, mówi o sobie: "jestem wolnym anonimem". </p>
+<p>Wierzy także w materializm. Człowieka postrzega jako zbiór komórek, którymi rządzą procesy chemiczne. Zwraca uwagę na to, jak przemiany fizyczne wpływają na działania takie jak myślenie i odczuwanie emocji. Siebie samego opisuje tak, jak mówi się o zwierzętach: "jestem dwunogiem spłodzonym [...] przez starych rodziców, [...] odziedziczyłem w genach całe dwunożne doświadczenie".</p>
+<p>Wyróżnić można w nim także cechy agnostyka. Zastanawia się nad granicami poznania człowieka ("dlaczego [...] kaprys przypadku nie miałby mnie zawierzyć tajemnicy, jeśli w ogóle jest przeznaczone jej ujawnienie"), rozważa także kwestie istnienia po śmierci. Modli się, choć trudno orzec, czy swoje słowa adresuje do jednego z bogów, bliżej nieokreślonej siły wyższej, czy też traktuje je jako swoistą afirmację.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przytoczony fragment jest pisany językiem barwnym i poetyckim. Narrator używa wysmakowanych zabiegów stylistycznych, bawi się słowem (np. "statua niewolności"). Opisuje otaczającą go rzeczywistość w sposób plastyczny, uwagę zwraca bogactwo epitetów ("gorzkie lewo", "słodkie prawo", "stara, sczerniała tapeta"). Charakterystyczną cechą tekstu jest psychologizacja przyrody - nadawanie jej cech istot ożywionych w celu ukazania stanu emocjonalnego bohatera, np. "to wiatr, może jeszcze letni, a może już zimowy, gna z placu Defilad i obraca topole srebrną stroną do słońca"). Zdania są rozbudowane, wielokrotnie złożone. </p>
+<p>Na podstawie zapisu myśli narratora stwierdzić można, że jest on człowiekiem erudycyjnym, wykształconym, a przy tym skłonnym do refleksji. W tekście ujawnia się jego sprawne pióro i wrażliwość estetyczna. </p><br>

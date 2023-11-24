@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Na podstawie tekstu źródłowego należy wskazać, ze "dzikie dzieci" to określenie stosowane w stosunku do osób, które zagubiły się i zostały wychowane w osamotnieniu od ludzi, najczęściej wśród zwierząt. </p>
+<p>b) Zachowania dzieci dorastających poza wspólnotami ludzkimi mogą różnić się od zachowań ich rówieśników, którzy przeszli socjalizację tym, że nie umieją one się posługiwać się językiem, ich komunikacja jest ograniczona do wydawania dźwięków zwierzęcych, są nieufne, uciekają od ludzi, nie potrafią pisać, czytać ani się bawić, często dzieci te nie umieją nawet chodzić w postawie stojącej, lecz raczkują lub poruszają się w sposób podobny do chodu małpiego. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Określenie <strong><span style="text-decoration: underline;">'dzikie dzieci'</span></strong> oznacza dzieci, które dorastały w swych najwcześniejszych latach bez kontaktu z innymi ludźmi. W pierwszych latach swego życia przebywały najczęściej w lesie, a niekiedy były również wychowywane nie przez ludzi, lecz przez zwierzęta, w związku z czym nie opanowały ludzkiej mowy i prezentowały zachowania typowe dla zwierząt.</p>
+<p><strong>b)</strong></p>
+<p>Socjalizacja to proces przyswajania norm i wartości społecznych oraz nabywania umiejętności społecznych przez jednostkę, który pozwala jej na funkcjonowanie w społeczeństwie. Może ona mieć miejsce przez różne kanały, takie jak rodzina, szkoła, media i grupy rówieśnicze. Socjalizacja jest niezbędna dla rozwoju osobowości i kultury jednostki oraz umożliwia jej adaptację do środowiska społecznego.</p>
+<p>Dzieci dorastające poza wspólnotami ludzkimi nie mają możliwości odpowiednio przejść przez proces socjalizacji. Socjalizacja następuje bowiem w grupach społecznych, takich jak rodzina, grupa rówieśnicza, szkoła, społeczność lokalna czy zakład pracy. Dzieci dorastające poza wspólnotami ludzkimi nie mogą nauczyć się języka oraz norm ważnych z punktu widzenia współżycia społecznego. Dzieci dorastające bez kontaktów z innymi ludźmi z konieczności muszą być również pozbawione manier i ogłady towarzyskiej.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe instytucje oraz zbiorowości, które wywierają wpływ na życie człowieka:</strong></span></p>
+<ul>
+<li>szkoła, </li>
+<li>rodzina,  </li>
+<li>Kościół lub związek wyznaniowy, </li>
+<li>drużyna sportowa,</li>
+<li>stowarzyszenie, </li>
+<li>grupa sąsiedzka.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, ponieważ należy odnieść je do osobistej sytuacji. Stąd proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Największy wpływ na tożsamość młodego człowieka, takiego jak uczeń szkoły średniej, wywierają: rodzina, przyjaciele, szkoła, media i społeczeństwo. Każda z tych instytucji i zbiorowości odgrywa ważną rolę w kształtowaniu postaw, wartości i przekonań młodego człowieka.</p>
+<p>Szczególną rolę w kształtowaniu tożsamości młodych ludzi odgrywa dziś, jeśli chodzi o media, Internet i prezentowane tam treści. To właśnie za pośrednictwem tego kanału młodzi ludzie najczęściej się komunikują. Internetowi influencerzy zaszczepiają zaś wśród nich określone trendy.</p>
+<p>Wciąż jednak, tak jak przed wiekami, na ukształtowanie się tożsamości młodego człowieka silny wpływ wywierają rodzina, grupa rówieśnicza, krąg sąsiedzki, szkoła i znajomi (przyjaciele).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Zgodnie z art. 48. Konstytucji RP rodzice w Polsce powinni uwzględniać w wychowaniu swoich dzieci:</strong></span> </p>
+<p>B. aktualny etap ich rozwoju fizycznego i intelektualnego. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 52px;">
+<td colspan="2" style="width: 100%; background-color: #ff9999; height: 52px;"><strong>Artykuł 48. <em>Konstytucji RP</em>:</strong> '1. Rodzice mają prawo do wychowania dzieci zgodnie z własnymi przekonaniami. Wychowanie to powinno uwzględniać stopień dojrzałości dziecka, a także wolność jego sumienia i wyznania oraz jego przekonania. 2. Ograniczenie lub pozbawienie praw rodzicielskich może nastąpić tylko w przypadkach określonych w ustawie i tylko na podstawie prawomocnego orzeczenia sądu'.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ff0066; height: 17px; width: 48.4402%;"><strong>Zdanie</strong></td>
+<td style="background-color: #ff0066; height: 17px; width: 51.5598%;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #ffccff; width: 48.4402%;">Zgodnie z artykułem 48. <em>Konstytucji RP </em>rodzice w Polsce powinni uwzględniać w wychowaniu swoich dzieci...</td>
+<td style="background-color: #ffccff; width: 51.5598%;">...aktualny etap ich rozwoju fizycznego i intelektualnego. <strong>[B]</strong></td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>To zadanie ma charakter indywidualny. Sam/a musisz je wykonać. Poniższe sformułowania możesz wykorzystać w swojej wypowiedzi. </strong></span></p>
+<p>Kim jestem?:</p>
+<ul>
+<li>obywatelem, </li>
+<li>Polakiem/Polską,  </li>
+<li>Europejczykiem, </li>
+<li>synem/córką, </li>
+<li>wnuczką.wnukiem, </li>
+<li>sportowcem, </li>
+<li>aktorem, </li>
+<li>uczniem.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może stanowić wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><strong>a)</strong></p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Lista 10 przykładowych rzeczowników, za pomocą których można odpowiedzieć na pytanie: 'Kim jestem?'</span></em></p>
+<p><strong><em>~~~&gt; <span style="text-decoration: underline;">KIM JESTEM?</span></em></strong></p>
+<ol>
+<li>Człowiekiem.</li>
+<li>Mieszkańcem świata.</li>
+<li>Europejczykiem/Europejką.</li>
+<li>Polakiem/Polką.</li>
+<li>Synem/córką.</li>
+<li>Wnukiem/wnuczką.</li>
+<li>Przyjacielem/przyjaciółką.</li>
+<li>Uczniem/uczennicą.</li>
+<li>Studentem/studentką.</li>
+<li>Pracownikiem/pracownicą.</li>
+</ol>
+<p><strong>b)</strong></p>
+<p>To, jakie trzy odpowiedzi w badaniu powtarzały się najczęściej, jak też to, jakie określenie pojawiło się na pierwszym miejscu, należy samodzielnie sprawdzić osobno dla każdej grupy, w ramach której przeprowadza się badanie. Jest jednak bardzo prawdopodobne, że często pojawiać się będą takie określenia, jak przykładowo: 'człowiek', 'Polak'/'Polka', 'Europejczyk'/'Europejka', 'uczeń'/'uczennica' czy 'syn'/'córka'. Identyfikujemy się bowiem przez pryzmat swego pochodzenia, narodowości, więzi rodzinnych, a także wykonywanych codziennie czynności. </p>
+<p><strong>c)</strong></p>
+<p>Wyniki badania w zależności od grupy, w jakiej badanie zostało przeprowadzone, mogą się różnić. Jest jednak wysoce prawdopodobne, że w odpowiedzi na pytanie: 'Kim jestem?' padną takie odpowiedzi, jak na przykład: jestem 'człowiekiem', 'Polkiem'/'Polką', 'Europejczykiem'/'Europejką', 'synem'/'córką', 'uczniem'/'uczennicą', 'chrześcijaninem'/'chrześcijanką' czy 'przyjacielem'/'przyjaciółką'. Często bowiem w pierwszej kolejności identyfikujemy się i określamy swoją tożsamość przez wzgląd na własne pochodzenie, uwzględniając w tym naszą narodowość. Przykładowo, Polacy przesiąknięci są narodową kulturą polską i czy tego chcą, czy też nie, polskość silnie oddziałuje na ich jednostkowe charaktery. Żyjemy jednak w globalizującym się świecie, dlatego prawdopodobne jest to, że wiele osób będzie się identyfikowało jako 'mieszkańcy świata' lub 'Europejczycy'. Wiele osób często dziś podróżuje, zna obce języki, czerpie z innych kultur, a to wszystko sprawia, że granice państwowe i podziały narodowe zacierają się, choć nie przestają mieć znaczenia. Utożsamiamy się również z własną rodziną i nierzadko definiujemy siebie przez pryzmat naszych relacji rodzinnych, mówiąc o sobie, że jesteśmy czyimś synem/córką, względnie czyimś współmałżonkiem albo rodzicem określonego dziecka. Duże znaczenie w życiu ludzkim odgrywa ponadto wiara religijna, dlatego dość często można się spotkać z sytuacją, w której ktoś jako ważny element swej tożsamości wymienia identyfikowanie się z konkretnym wyznaniem religijnym, na przykład z chrześcijaństwem czy islamem. Kwestie religijne są w życiu człowieka tak doniosłe, że nawet osoby niewierzące akcentują to, iż są ateistami, względnie agnostykami. Wreszcie, znaczenie ma to, co w życiu robimy i czym się zajmujemy, a więc nasz zawód, zdobyte wykształcenie czy zainteresowania. Stąd można się spotkać z tym, że ktoś powie o sobie, iż - przykładowo - jest: prawnikiem, lekarzem, nauczycielem, górnikiem, policjantem, strażakiem, pielęgniarką, położną, influencerem, architektem, sklepikarzem czy filozofem.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>bezustanność</strong></span>-  Proces socjalizacji zachodzi przez całe życie, ponieważ od  urodzenia dziecko podlega socjalizacji tzw. pierwotnej.</p>
+<p><span style="text-decoration: underline;"><strong>powszechność</strong></span> - socjalizacja ma miejsce wszędzie tam, gdzie są ludzie. Wraz z rozwojem dziecka, napotyka ono na swojej drodze różne osoby, czyli członków społeczeństwa, którzy oddziałują na jego zachowanie, a tym samym przechodzi ono <strong>proces wtórnej socjalizacji</strong>. Trwanie tego procesu obejmuje wchodzenie danej jednostki do nowych grup społecznych i trwa ona do końca życia danej osoby.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma (częściowo) charakter indywidualny. Dlatego proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej przy samodzielnym opracowaniu odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td colspan="2" style="width: 50%; height: 17px; background-color: #e65100;"><strong>Dwa przykładowe słowa, które charakteryzują proces socjalizacji i jego efekty</strong></td>
+</tr>
+<tr style="height: 17px; text-align: center;">
+<td style="background-color: #ff9100; height: 17px;"><strong>Słowo</strong></td>
+<td style="background-color: #ff9100; height: 17px;"><strong>Uzasadnienie wyboru</strong></td>
+</tr>
+<tr style="height: 123px;">
+<td style="background-color: #ffab91; height: 123px;"><em>bezustanność</em></td>
+<td style="background-color: #ff8a65;">Słowo to dobrze opisuje socjalizację, ponieważ stanowi ona proces, który trwa przez całe życie jednostki. Oczywiście, bardzo ważna jest tzw. socjalizacja pierwotna, która dokonuje się w dzieciństwie, głównie za sprawą rodziny, lecz później jednostka uczestniczy w tzw. socjalizacji wtórnej, która dokonuje się na dalszych etapach jej życia, między innymi wskutek wpływu mediów czy zakładu pracy. Wejście w dorosłość nie oznacza więc zakończenia dla jednostki procesu socjalizacji.</td>
+</tr>
+<tr style="height: 105px;">
+<td style="background-color: #ffab91; height: 105px;"><em>powszechność</em></td>
+<td style="background-color: #ff8a65;">Można powiedzieć, że socjalizacja dokonuje się powszechnie (czy niemal powszechnie), ponieważ zachodzi wszędzie tam, gdzie przebiega życie społeczne i gdzie na jednostkę oddziałują inni ludzie i inne grupy społeczne. We wszystkich epokach i we wszystkich kręgach geograficznych zachodzi więc socjalizacja, która ponadto obejmuje ludzi w różnym wieku, gdyż jest procesem, który trwa przez całe życie jednostki.</td>
+</tr>
+<tr style="height: 41px;">
+<td colspan="2" style="width: 50%; height: 41px; background-color: #ffd54f;"><sup><strong>Definicja socjalizacji:</strong> Socjalizacja jest procesem, w którym jednostka uczy się norm i wartości kulturowych oraz nabywa umiejętności społecznych niezbędnych do funkcjonowania w społeczeństwie. Proces ten jest kształtowany przez rodzinę, szkołę, media i inne instytucje społeczne.</sup></td>
+</tr>
+</tbody>
+</table><br>

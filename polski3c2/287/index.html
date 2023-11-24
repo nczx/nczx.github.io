@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe argumenty:</p>
+<ul>
+<li>Wiersz Tuwima, przedstawiciela Skamandrytów, wskazuje na to, ¿e miasto prowadzi do zaprzepaszczenia dorobku kulturowego, niszczy dotychczasow¹ wizjê œwiata.</li>
+<li>Skamandryci ukazuj¹ miasto jako przestrzeñ pozbawion¹ pierwiastka transcendencji oraz moralnoœci. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>T³um w utworze Juliusza Tuwima stanowi Ÿród³o sprzecznych wra¿eñ: nie tylko fascynacji, ale te¿ obrzydzenia. Przyczyn¹ tego jest dwoista natura masy. Ma ona w sobie niespo¿yte si³y ¿yciowe, biologizm, p³odnoœæ, energiê, przypomina o tym, co w cz³owieku pierwotne. Nie postêpuje w zgodzie z przyjêtymi zasadami czy tradycjami, lecz d¹¿y do zamanifestowania spontanicznoœci i swych ¿¹dz. Jest spontaniczna, autentyczna w swych pragnieniach, tê zaœ prostotê docenia podmiot liryczny: "O ty, zbrodniarzu cudowny i prosty, / Elementarny, pierwotnie wspania³y!". Osoba mówi¹ca wyra¿a fascynacjê szaleñstwem t³umu i jego rozwi¹z³oœci¹. Z drugiej jednak strony szalona, chaotyczna masa prowadza poczucie grozy oraz wstrêtu, poniewa¿ cechuje siê rozwi¹z³oœci¹ i zaprzecza jakimkolwiek zasadom moralnym: "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Burzy ona dotychczasowy porz¹dek, jednak nie proponuje niczego w zamian - jaki siê tym samym jako destruktywna si³a. Prowadzi tym samym tak¿e do degradacji rzeczywistoœci, gdy¿ wprowadza do niej brzydotê i prymitywnoœæ: "Dziewki fabryczne, brzuchate koby³y" / Krzywych pêdraków sromne nosicielki!", "Gwa³æcie! Poleci ka¿da na kolacjê!".  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Niepokoje skamandrytów s¹ bezpoœrednio zwi¹zane z ówczesnymi przemianami cywilizacyjnymi. Dostrzegaj¹ oni bowiem wzrost znaczenia miejskich mas, które zyskuj¹ uprzywilejowan¹ pozycjê. Proces ten prowadzi jednak do umniejszenia roli jednostek i moralnoœci. Ponadto Ÿród³em niepokoju staj¹ siê instynkty masy, jej bezwzglêdnoœæ czy sk³onnoœæ do burzenia dotychczasowych osi¹gnieæ, kultury, tradycji. W¹tpliwoœci budzi tak¿e fakt, i¿ t³um rezygnuje z perspektywy transcendencji, staje siê destruktywn¹ si³¹, która nie wnosi nowych oraz wartoœciowych idei. Nastroje skamandrytów s¹ zbie¿ne z refleksjami hiszpañskiego filozofa. Wed³ug Ortegi y Gasseta kluczowa rola t³umu na dobre przyczynia siê do zmian o charakterze spo³ecznym. Jest zauwa¿alny, ale przy tym niszczy wszystko, co staje na jego drodze. Jawi siê wiêc jako niepowstrzymana si³a. Mo¿na wiêc zauwa¿yæ, ¿e skamandryci i filozof wyra¿aj¹ podobne obawy, gdy¿ ludzka masa jest Ÿród³em negatywnych skutków, trwale oddzia³uje na kszta³t rzeczywistoœci.</p>
+<p> </p>
+<p>b) Tuwim w swym poemacie akcentuje wzrost znaczenia masy zamieszkuj¹cej miasto. Zgodnie z refleksjami Szóstak jest on groŸny oraz niepowstrzymany: "Karabiny nabijali". Rewolucyjny charakter tej przemiany ostatecznie prowadzi jednak do zbrodni i zniszczenia - nie dochodzi tym samym do realizacji pozornie wznios³ego celu. Utwór Tuwima podkreœla równie¿ bezwzglêdnoœæ masy, która nie kieruje siê ¿adnymi zasadami moralnymi, lecz ulega najni¿szym instynktom: "Wrogom zêby wybijali, Wrogom czaszki rozbijali / I do krzy¿a przybijali". W podobny sposób portretuje j¹ w swym tekœcie Ortega y Gasset. Myœliciela zaznacza, i¿ t³um d¹¿y do unicestwienia tego, co nie jest zgodne z jego d¹¿eniami - walczy wiêc z indywidualizmem czy innymi wrogami. W swym utworze poeta przedstawia tym samym zagro¿enia wynikaj¹ce z dominuj¹cej roli t³umu, który narzuca pewn¹ wizjê rzeczywistoœci, a przy tym kieruje siê ¿¹dz¹ mordu i prowadzi do rezygnacji z duchowych wartoœci. </p><br>

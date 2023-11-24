@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W utworze wypowiada się młoda kobieta, która przedstawia się jako Julia. Opisuje swoje doświadczenia związane z miłością. Jej utrata wpływa na sytuację bohaterki, która nie potrafi odzyskać równowagi, zapomnieć o wielkim uczuciu. Z tego też powodu życie nie przynosi jej radości. Same zaś trudne doświadczenia sprawiają, iż osoba mówiąca czuje się wiekowa, uosabia uniwersalne dla wszystkich ludzi przeżycia. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Doświadczenie miłości silnie wpływa na podmiot liryczny. Należy do jego przeszłości, która jednak również w chwili obecnej nie daje o sobie zapomnieć. Nawet subtelne zetkniecie z miłością ("dotknęłam") wywołuje bardzo silną reakcję. Poetka porównuje to uczucie do "[...] filiżanki ciemnej kawy", a więc dość rozpowszechnionego elementu rzeczywistości. Podobieństwo wiąże się ze smakiem, co sugeruje, iż uczucie do drugiego człowieka stało się dla bohaterki źródłem ogromnego rozczarowania, cierpienia czy goryczy. Jednocześnie miłość pobudza ją, otwiera przed nią nowe możliwości, ale przy tym rozdrażnia - staje się przyczyną rozterek lub niepokojów. W ten sposób podmiot liryczny niejako zostaje podporządkowany namiętności, która przejmuje nad nim władzę i zapewnia mu sprzeczne doznania, uzależnia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>Miłość w życiu podmiotu lirycznego staje się kluczowym zjawiskiem, które znacząco wpływa na jego przeżycia i sytuację życiową. Przede wszystkim oddziałuje na rozmaite zmysły kobiety, a więc dotyka aspektu biologicznego. Miłość można więc doświadczyć niczym filiżankę kawy, na co wskazują słowa osoby mówiącej. W sposobie przedstawienia uczucia znajdują się nawiązania do dotyku ("dotknęłam kiedyś miłości"), smaku ("miała smak gorzki"), wzroku ("przygryzione wargi / barwą krwi") czy słuchu ("krzyczę wróć"). Zabieg ten świadczy o namacalności uczucia, którego utrata staje się źródłem pustki dla osamotnionej, nieszczęśliwej kobiety. Jednocześnie sugeruje, iż miłość to doświadczenie totalne, które obejmuje we władanie jednostkę. W wierszu poetki prowadzi ono do swoistego przebudzenia się bohaterki - jej zmysły stają się rozdrażnione, a serce zaczyna bić w innym rytmie. Zakochana kobieta podlega przede wszystkim jednak cierpieniu, ponieważ odejście wybranka staje się źródłem bólu i tęsknoty. Nie może jednak zmienić swej sytuacji ani zapanować nad rozpaczą, czego znakiem stają się przygryzane do krwi usta. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Deklaracja "Jestem Julią" wyznacza poszczególne części utworu, a więc wpływa na spójność konstrukcji wiersza. Słowa te wprowadzają czas teraźniejszy, odwołują się więc do aktualnej sytuacji podmiotu lirycznego i określają perspektywę czasową. W pierwszej strofie służą konkretyzacji osoby mówiącej. Przedstawia się ona w następujący sposób: "Jestem Julią mam lat 23". W drugiej zaś przyczyniają się do poszerzenia perspektywy odbioru, ponieważ podmiot liryczny odwołuje się do Julii z tragedii Szekspira i sceny balkonowej. W ten sposób podkreślony zostaje związek między doświadczeniami bohaterki oraz literackiej postaci, znającej również miłosne cierpienie. W ostatniej strofie pojawiają się z kolei słowa: Jestem Julią / mam tysiąc lat".  Świadczą o tym, iż osoba mówiąca w utworze staje się uosobieniem ponadczasowego doświadczenia, utożsamia się z przeżyciami innych ludzi na przestrzeni wieków. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Na początku podmiot liryczny mówi: "Jestem Julią, mam lat 23". Informacja o wieku przybliża osobę wypowiadającej się, ukonkretnia ją, wskazuje na jej jednostkowe doświadczenie. Jest to bowiem młoda kobieta, która doświadcza intensywnego uczucia - niestety pozbawionego spełnienia. W związku z tym, co typowe dla osób młodych, odczuwa, że życie traci sens bez ukochanej osoby, nie potrafi pogodzić się ze stratą. Wzmianka na temat wieku tworzy klamrę kompozycyjną, ponieważ pojawia się także w zakończeniu wiersza: "Jestem Julią / mam tysiąc lat". W ten sposób zostają wyrażone przeżycia bohaterki. Ból sprawia, że czuje się wiekowa, być może również zmęczona. Z drugiej strony wspomniana informacja poszerza perspektywę odbioru. Zakończenie sugeruje bowiem, że nieszczęśliwa miłość i cierpienie z nią związane stanowią coś uniwersalnego w losach ludzkości. Z tego też powodu historia bohaterki powtarzała się już na przestrzeni wieków, a ona stanowi uosobienie miłosnych rozterek. Jej przeżycia zyskują w ten sposób ponadczasowy charakter. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Tragizm bohaterki polega na tym, że doświadczyła miłości, która ją rozbudziła, zmieniła jej sposób postrzegania świata. Niestety nie było to szczęśliwe uczucie, ponieważ odeszło w bliżej nieokreślonych okolicznościach, pozostawiło osobę mówiącą w smutku i samotności. Kobieta - mimo upływu czasu - nie potrafi odzyskać równowagi ducha, na nowo przeżywa swój ból: "krzyczę wróć / wołam wróć / plamię przygryzione wargi / barwą krwi". Chociaż żyje, jej egzystencja jest naznaczona tęsknotą i brakiem pogodzenia ze swą sytuacją. W ten sposób zostaje zaburzony pewien porządek świata. Tragizm przejawia się także w tym, iż młoda osoba dogłębnie odczuwa brzemię swych doświadczeń: "Jestem Julią / mam lat tysiąc". Słowa te świadczą o tym, iż bohaterka stanowi uosobienie uniwersalnej historii w dziejach ludzkości - dotyczącej miłosnego cierpienia. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowe argumenty:</p>
+<ul>
+<li>Szekspirowska Julia w przeciwieństwie do tej z wiersza nie przeżyła, aby opowiadać o swym uczuciu, na co wskazuje słowo "żyję -".</li>
+<li>Bohaterką wiersza rządzą sprzeczne odczucia - od melancholii ku rozpaczy i poczuciu klęski. Nie odczuwa tym samym jakiegokolwiek triumfu.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br>

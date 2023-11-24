@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Zakamuflowanie relacji nadawcy i odbiorcy wiąże się z tym, że nie zostali oni przedstawieni w precyzyjny, konkretny sposób. Ponadto sama sytuacja balu, a więc konkretnego wydarzenia, zyskuje sensy metaforyczne (huczna zabawa jako życie). Na podstawie tekstu można jednak dojść do pewnych wniosków. Przede wszystkim podmiot liryczny zdaje się być osobą doświadczoną, uczestnikiem tytułowego balu. Doskonale wie, że trzeba czerpać radość z życia, ponieważ jest ono czymś ulotnym i niepowtarzalnym: "niech żyje bal, / drugi raz nie zaproszą nas wcale". To bystry obserwator rzeczywistości PRL-u, zachęcający do wykorzystywania możliwości, które zapewnia egzystencja: "Tańcz, póki żyjesz, i śmiej się do żony / i pij zdrowie dam...".</p>
+<p>Jego relacja z odbiorcą jest zakamuflowana, ponieważ w swej wypowiedzi zwraca się do kilku adresatów, nie zaś jednego. Na początku utworu mówi: "Życie, kochanie, trwa tyle, co taniec". Taka apostrofa sugeruje zażyły stosunek z odbiorcą komunikatu, ale też może zaznaczać pobłażliwy stosunek do mniej doświadczonego człowieka. W dalszej części utożsamia się jednak z uczestnikami balu, co sugeruje wspólnotę doświadczeń: "Bal to najdłuższy, na jaki nas proszą". W drugiej strofie ponownie zmienia się perspektywa, ponieważ osoba mówiąca zwraca się do aort ("Szalejcie, aorty, gdy idę na korty") i pracy ("roboto, ty w rękach się pal"). Potem jednak kieruje swe słowa bezpośrednio do anonimowego mężczyzny: "Tańcz, póki żyjesz, i śmiej się do żony / i pij zdrowie dam...", by w refrenie ponownie zaznaczyć związek ze wspólnotą uczestników zabawy ("drugi raz nie zaproszą nasz wcale"). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>a) W wyliczeniu tym pojawiają się rzeczowniki, które nazywają m.in.: ekspresyjne formy tańca ("Fandango, bolero, be-bop"), pokarm lub też cudowne wydarzenie ("manna"). Niektóre z nich wyrażają radość ("hosanna"), odwołują się do przedmiotu religijnego ("różaniec"), walki ("szaniec") czy też ruchu oraz jego zatrzymania ("i jazda, i basta, i stop"). Wyliczenie to charakteryzuje ludzką egzystencję jako zmienną, intensywną, w której występują obok siebie zróżnicowane zjawiska. W tym też przejawia się groteskowość, dramatyzm, smutek czy radość życia. Jest ono niestałe, dostarcza wiele radości, ale także wiąże się z monotonną codziennością. Z kolei zestawienie obok siebie kontrastowych elementów (np. należących do sfery ducha i codzienności) buduje jej groteskowy charakter oraz odzwierciedla chaotyczność. Samym zaś przejawem dramatyzmu jest fakt, iż człowiek nigdy nie ma pewności, co go spotka. W każdym bowiem momencie może coś go nagle zatrzymać, zaburzyć jego życie. </p>
+<p> </p>
+<p>b) Zestawienie tych wyrazów tworzy w wersie rym, poetka bawi się podobieństwem brzmieniowym oraz budowy przytoczonych słów. Zabieg ten wpływa na żartobliwy oraz nieco groteskowy charakter cytatu, wzbogaca warstwę dźwiękową. Przede wszystkim jednak to zestawienie podkreśla zbliżonych charakter słów: "chłoporobotnik" to kategoria ludzi będących chłopami, ale też robotnikami. Z kolei boa i grzechotnik to przedstawiciele kolejno gatunku węży oraz żmij. </p>
+<p> </p>
+<p>c) Określenie śmierci mianem "Miss Wykidajło" prowadzi do jej upersonifikowania, a zarazem - ukonkretnienia. "Miss" można rozpatrywać jako tytuł grzecznościowy lub też uznanie niezwykłej piękności bohaterki, co kontrastowałoby ironicznie z wcześniejszymi słowami ("Sucha kostucha [...]"). Z kolei "wykidajło" to osoba, która dba o porządek w lokalu rozrywkowym. W ten sposób śmierć niejako zostaje pozbawiona patosu, przestaje wywoływać grozę, ponieważ zostaje dostosowana do codziennych realiów. Zamiast tego jawi się jako strażnik porządku, który bez wahania potrafi wyrzucić z zabawy uczestników, jest bezlitosny. Śmierć decyduje o losie ludzi, może być nieobliczalna lub też uciążliwa. W ten sposób poetka niejako prowadzi do jej oswojenia, wpisania w ludzką egzystencję. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Osoba mówiąca w utworze, odwołując się do balu i tańca, w metaforyczny sposób przedstawia życie. Przede wszystkim zestawienie z tańcem podkreśla tempo, ale także zmienność czy krótkość ludzkiej egzystencji. Nie jest ona czymś trwałym, lecz może być przepełniona pasją, radością czy namiętnością. Pewną gorycz wywołuje wiedza, iż życie, jako bal, jest czymś niepowtarzalnym, ale też jednorazowym: "nie grają na bis, chociaż żal". Z tego też powodu podmiot liryczny zachęca, by wykorzystać okazję uczestnictwa w zabawie, nie marnować ani chwili: "na bal, marsz na bal!". Mimo ulotności egzystencji osoba mówiąca docenia ją, ponieważ staje się źródłem niezapomnianych doznań. Świadomość jej kruchości wręcz zachęca do tego, by celebrować każdy moment, co sugeruje także dramatyzm sytuacji człowieka - świadomego rychłego końca. Mimo tego podmiot liryczny podkreśla wyjątkowość życia za pomocą słów: "[...] to bal jest nad bale". </p>
+<p>Śmierć z kolei zostaje scharakteryzowana cytatem: "Sucha kostucha, ta Miss Wykidajło / wyłączy nam prąd w środku dnia". Opis ten łączy w sobie tradycyjny oraz pejoratywny sposób przedstawienia śmierci z oryginalną personifikacją. Przedstawienie tego zjawiska jako "Miss Wykidajło" wprowadza je bowiem w codzienność, a zarazem odziera z patosu. Sugeruje także żartobliwy stosunek osoby mówiącej do nieuchronnego końca. Śmierć tym samym jawi się jako bezwzględny strażnik porządku, który decyduje o losie uczestników zabawy, może zakończyć ich udział przedwcześnie. Taki sposób przedstawienia śmierci podkreśla to, że jest nieprzewidywalna.  </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Elementy życia skojarzone z zabawą:</p>
+<ul>
+<li>taniec; </li>
+<li>pokarm i napoje;</li>
+<li>relacje z innymi ludźmi;</li>
+<li>śmiech;</li>
+<li>toast;</li>
+<li>poddanie się nastrojowi.</li>
+</ul>
+<p> </p>
+<p>Druga część zadania  - indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Główne założenia epikureizmu:</p>
+<ul>
+<li>Człowiek w swoim życiu powinien dążyć do osiągnięcia szczęścia. </li>
+<li>Najwyższym dobrem jest przyjemność, jednak należy unikać jej nadmiaru. </li>
+<li>Radość z życia zapewnia umiar.</li>
+<li>Nie należy obawiać się śmierci.</li>
+<li>Trzeba w pełni wykorzystywać każdy dzień. </li>
+<li>Powinno się unikać cierpienia.</li>
+</ul>
+<p> </p>
+<p>W utworze Agnieszki Osieckiej można dostrzec elementy odwołujące się do założeń epikureizmu. Przede wszystkim zestawienie życia z balem czy też tańcem sugeruje, iż powinno się z niego czerpać radość oraz przyjemność. Z tego też powodu podmiot liryczny zachęca, by wykorzystać niepowtarzalną okazję, ponieważ druga się nie zdarzy: "Bal to najdłuższy, na jaki nas proszą, / nie grają na bis, chociaż żal, / zanim więc serca upadłość ogłoszą - / na bal, marsz na bal!". Szukanie przyjemności w utworze przejawia się nie tylko w zabawie, ale też w docenianiu przyziemnych przyjemności: pokarmu, alkoholu, towarzystwa pięknych dam ("Tańcz, póki żyjesz, i śmiej się do żony / i pij zdrowie dam..."). Warto też zauważyć, iż tekst nie wyraża bezpośrednio strachu przed śmiercią, co także zgadza się z założeniami epikureizmu. Śmierć zostaje bowiem przedstawiona jako nieustępliwy strażnik, który w każdym momencie może zakończyć zabawę, jednak motywuje to tym bardziej do intensywnego korzystania z życia. W ten sposób dochodzi do realizacji zasady <em>carpe diem </em>oraz podkreślenia wartości życia doczesnego ("[...] to bal jest nad bale", "dzień wart jest dnia / i to życie zachodu jest warte!"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p><em>Danse macabre</em> to motyw utrwalony w kulturze. Wskazuje przede wszystkim na kruchość doczesność egzystencji, ale także równość wszystkich ludzi, niezależnie od pozycji społecznej - w obliczu nieuchronnego końca. Nawiązaniem do niego w utworze Osieckiej jest przede wszystkim tytułowy bal oraz taniec. Uczestnicy zabawy również bowiem zmierzają ku śmierci, gdyż przyjęcie staje się metaforą życia. W ten sposób niejako poetka oswaja rychły koniec, ale także sugeruje przede wszystkim, by czerpać z egzystencji to, co najlepsze, cieszyć się każą chwilą, ponieważ więcej się nie powtórzy. Ponadto w ten sposób pozornie zwykłemu wydarzeniu nadaje głębsze znaczenie i ukazuje je w szerszej perspektywie - ona z kolei zmusza do refleksji na temat sensu egzystencji. </p>
+<p>W utworze pojawia się także nawiązanie do Byrona: "pchajmy więc taczki obłędu jak Byron". Ten angielski twórca, skandalista, człowiek przełamujący ówczesne konwenanse staje się reprezentantem postawy aprobowanej przez podmiot liryczny. Można bowiem powiedzieć, że korzystał on z życia - mimo jego absurdów czy ulotności. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo: </p>
+<table border="1" style="border-collapse: collapse; width: 672px; height: 895px;">
+<tbody>
+<tr style="height: 20px;">
+<td style="background-color: #aed581; text-align: center; width: 334.312px; height: 20px;"><strong>Element rzeczywistości</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 330.688px; height: 20px;"><strong>Interpretacja</strong></td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 334.312px; text-align: center; height: 45px;"><em>Zanim więc serca upadłość ogłoszą</em></td>
+<td style="width: 330.688px; text-align: center; height: 45px;">W PRL-u drastycznie wzrosło zadłużenie, co przyczyniło się do kryzysu gospodarczego. Ogłoszenie upadłości w utworze Osieckiej zyskuje metaforyczny sens. Sugeruje bowiem nadejście momentu poddania się, popadnięcia w marazm. </td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 334.312px; text-align: center; height: 23px;"><em>roboto, ty w rękach się pal.</em></td>
+<td style="width: 330.688px; text-align: center; height: 23px;">Słowa te stanowią pośrednią aluzję do ówczesnego etosu pracy. Metaforycznie wskazują na entuzjazm oraz energię podmiotu lirycznego - pragnie on w pełni wykorzystać swoje życie.  </td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 334.312px; text-align: center; height: 23px;"><em>Miasta nieczułe [...]</em></td>
+<td style="width: 330.688px; text-align: center; height: 23px;">Taki sposób ukazania przestrzeni miejskiej może nawiązywać do ówczesnego typu architektury (socrealistycznego). Jego surowość kontrastuje z atmosferą balu. </td>
+</tr>
+<tr style="height: 143px;">
+<td style="width: 334.312px; text-align: center; height: 143px;">
+<p><em>Bufet, jak bufet, jest zaopatrzony,</em></p>
+<p><em>zależy, czy tu, czy gdzieś tam. </em></p>
+</td>
+<td style="width: 330.688px; text-align: center; height: 143px;">Bufety były stałym elementem rzeczywistości w PRL-u. Ze względu na problemy gospodarcze bardzo często dochodziło do problemów z ich zaopatrzeniem. Odzwierciedla to także utwór Osieckiej. Ponadto cytat ten - w znaczeniu przenośnym - może świadczyć o tym, że życie bywa nieprzewidywalne, nie zawsze zapewnia to, czego się pragnie. </td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 334.312px; text-align: center; height: 23px;"><em>Chłoporobotnik [...] </em></td>
+<td style="width: 330.688px; text-align: center; height: 23px;">Jest to kategoria społeczno-zawodowa. W utworze chłoporobotnik staje się jednym z uczestników balu, a także reprezentantem pewnej grupy społecznej. Pełni podobną funkcję jak przedstawiciele średniowiecznych warstw w motywie <em>danse macabre</em>.</td>
+</tr>
+<tr style="height: 45px;">
+<td style="width: 334.312px; text-align: center; height: 45px;"><em>wyłączy nam prąd w środku dnia</em></td>
+<td style="width: 330.688px; text-align: center; height: 45px;">Słowa te są aluzją do gaszenia światła w lata 70. oraz w okresie stanu wojennego. U Osieckiej symbolizują nagłe zakończenie zabawy, a więc niespodziewane oraz przedwczesne przerwanie życia. </td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 334.312px; text-align: center; height: 36px;"><em>i to życie zachodu jest warte!</em></td>
+<td style="width: 330.688px; text-align: center; height: 36px;">Cytat jest dwuznaczny. Z jednej bowiem strony można go rozpatrywać jako nawiązanie do Zachodu. Postrzegano go jako wolność, dostatek, chociaż był jednocześnie krytykowany przez propagandę PRL-u. W sensie metaforycznym przytoczone słowa podkreślają wartość życia - mimo przeżywanych trudności czy tego, że nie trwa ono długo, kończy się śmiercią. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br>

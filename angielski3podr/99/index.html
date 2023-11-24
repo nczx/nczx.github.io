@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. get suspicious </p>
+<p><strong>Fragment w tekście</strong>: "Would you get suspicious if a drone kept flying over your garden? (...) But what if a cat wandered through?" - Czy nabrałbyś podejrzeń, gdyby nad twoim ogrodem latał dron? (...) A co, gdyby przeszedł tamtędy kot? </p>
+<p>2. to record</p>
+<p><strong>Fragment w tekście</strong>: "In the 1970s, that pigeon might have had a CIA camera strapped to it (...)." - W latach 70. ten gołąb mógł mieć przypiętą kamerę CIA (...).</p>
+<p>3. bring in fresh fruit from abroad</p>
+<p><strong>Fragment w tekście</strong>: "In New Zealand, where bringing in fresh fruit from abroad is prohibited, (...)." - W Nowej Zelandii, gdzie sprowadzanie świeżych owoców z zagranicy jest zabronione, (...).</p>
+<p>4. are trained</p>
+<p><strong>Fragment w tekście</strong>: "Caring for them helps the prisoners' rehabilitation, while training the pups gives them something to do." - Opieka nad nimi pomaga więźniom w rehabilitacji, a szkolenie szczeniąt daje im coś do roboty.</p>
+<p>5. replace dogs</p>
+<p><strong>Fragment w tekście</strong>: "It's unlikely that K-9 units will be replaced by technology any time soon!" - Jest mało prawdopodobne, że jednostki K-9 zostaną zastąpione przez technologię w najbliższym czasie!</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>When rules are broken, there have to be consequences, and schools are no different. While some countries prefer detention as punishment, there are people who argue that it would be a good idea to punish rule-breakers with community service for the school. There are both pros and cons to this approach. </p>
+<p>On the one hand, punishing students with community service should teach them that they need to take responsibility for their actions. By cleaning or carrying out tasks to benefit the school, students may be less likely to break the rules in the future. Moreover, community service is a productive way of serving punishment because it helps to develop a sense of community. Students might feel like they are contributing to something.</p>
+<p>On the other hand, while community service may be intended as a positive punishment, students might feel humiliated or embarrassed by their peers for having to do things such as cleaning. Some might also say that punishments for breaking school rules should be related to academics. Finally, introducing this punishment system might require a lot of work. It is simply difficult to organise because students need to be supervised while doing community service.</p>
+<p>All in all, this idea has both benefits and drawbacks. Although this punishment can be seen as productive, some may feel it is humiliating, inappropriate or difficult to introduce. It is important to take it into account before making a decision.</p>
+<p><br/>(Liczba słów: 236)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Kiedy zasady są łamane, trzeba ponieść konsekwencje i szkoły nie są tu wyjątkiem. Podczas gdy niektóre kraje preferują zatrzymanie uczniów po lekcjach jako karę, są ludzie, którzy twierdzą, że dobrym pomysłem byłoby karanie osób łamiących zasady pracą społeczną na rzecz szkoły. Takie podejście ma zarówno plusy, jak i minusy.</p>
+<p>Z jednej strony, karanie uczniów pracami społecznymi powinno nauczyć ich, że muszą brać odpowiedzialność za swoje czyny. Sprzątając lub wykonując zadania na rzecz szkoły, uczniowie mogą być mniej skłonni do łamania zasad w przyszłości. Co więcej, prace społeczne są produktywnym sposobem odbywania kary, ponieważ pomagają rozwijać poczucie wspólnoty. Uczniowie mogą mieć poczucie, że wnoszą w coś swój wkład.</p>
+<p>Z drugiej strony, podczas gdy prace społeczne mogą być zamierzone jako pozytywna kara, uczniowie mogą czuć się upokorzeni lub zawstydzeni przez swoich rówieśników, ponieważ muszą wykonywać takie czynności, jak sprzątanie. Niektórzy mogą również powiedzieć, że kary za łamanie zasad szkolnych powinny być związane z nauką. Wreszcie, wprowadzenie tego systemu kar może wymagać wiele pracy. Jest to po prostu trudne do zorganizowania, ponieważ uczniowie muszą być nadzorowani podczas wykonywania prac społecznych.</p>
+<p>Podsumowując, pomysł ten ma zarówno zalety, jak i wady. Chociaż kara ta może być postrzegana jako produktywna, niektórzy mogą uważać, że jest upokarzająca, nieodpowiednia lub trudna do wprowadzenia. Ważne jest, aby wziąć to pod uwagę przed podjęciem decyzji.</p><br><a style="color:red; font-size:25px;">THINKING IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>• I'd say that the tone of this quote is rather bitter and angry. The author is trying to say that the justice system often fails and disappoints, or that life in general is unfair. He recommends not expecting justice because it's quite rare.</p>
+<p>(Powiedział(a)bym, że ton tego cytatu jest raczej gorzki i zły. Autor próbuje powiedzieć, że system sprawiedliwości często zawodzi i rozczarowuje, lub że życie w ogóle jest niesprawiedliwe. Zaleca, aby nie oczekiwać sprawiedliwości, ponieważ jest ona dość rzadka.)<br/><br/></p>
+<p>• I agree with what it suggests about the justice system. It's true that criminals, such as thieves, robbers or murderers generally get arrested, go to court, and then to prison. However, many often escape justice and instead innocent people go to trial and get punished.</p>
+<p>(Zgadzam się z tym, co sugeruje na temat wymiaru sprawiedliwości. To prawda, że przestępcy, tacy jak złodzieje, rabusie czy mordercy, są zazwyczaj aresztowani, trafiają do sądu, a następnie idą do więzienia. Jednak wielu z nich często wymyka się wymiarowi sprawiedliwości, a zamiast tego niewinni ludzie stają przed sądem i zostają ukarani.)<br/><br/></p>
+<p>• Taking the law into your own hands means you're actually breaking it, so I don't think people should do it. Such people often act impulsively and they might not always be right. I agree that the justice system needs improvement but becoming a criminal yourself isn't the answer.</p>
+<p>(Branie prawa w swoje ręce oznacza, że tak naprawdę je łamiesz, więc uważam, że ludzie nie powinni tego robić. Tacy ludzie często działają impulsywnie i nie zawsze mają rację. Zgadzam się, że wymiar sprawiedliwości wymaga poprawy, ale zostanie przestępcą nie jest rozwiązaniem.)</p><br>

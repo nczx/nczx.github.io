@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>4.1. C</p>
+<p><strong>Fragment w tekście:</strong> "The age-old rivalry between France and Great Britain - the latter being a country which had begun to demonstrate its technological and engineering expertise much earlier - must have given the project a boost, since it was a unique chance to prove that the French could also construct a technological marvel (...)" - Wiekowa rywalizacja między Francją a Wielką Brytanią - która wcześniej zaczęła pokazywać swoje umiejętności technologiczne i inżynieryjne - musiała dać projektowi przyspieszenie, ponieważ była to unikalna okazja, aby udowodnić, że Francuzi również mogą zbudować technologiczne cudo (...) </p>
+<p>4.2. D</p>
+<p><strong>Fragment w tekście:</strong> "As soon as the designs for the project were made public in 1987, engineers, architects and artists unrelated to the project began to voice their objections, and a protest group was formed in order to stop the construction before it had even begun (...) The Eiffel Tower soon became what is one of the most recognisable structures in the world" - Kiedy <span>ty</span><span>l</span><span>ko</span><span> pro</span><span>j</span><span>ek</span><span>ty</span><span> budowli</span><span> z</span><span>osta</span><span>ł</span><span>y</span><span> op</span><span>ub</span><span>lik</span><span>ow</span><span>ane</span><span> w</span><span> 1987</span><span> ro</span><span>ku</span><span>,</span><span> in</span><span>ż</span><span>yn</span><span>ier</span><span>ow</span><span>ie</span><span>,</span><span> arch</span><span>ite</span><span>k</span><span>ci</span><span> i</span><span> ar</span><span>ty</span><span>ś</span><span>ci</span><span> n</span><span>ie</span><span>z</span><span>wi</span><span>ą</span><span>z</span><span>ani</span><span> z</span><span> pro</span><span>j</span><span>ek</span><span>tem</span><span> z</span><span>ac</span><span>z</span><span>ę</span><span>li</span><span> w</span><span>y</span><span>ra</span><span>ż</span><span>a</span><span>ć</span><span> sw</span><span>oj</span><span>e</span><span> spr</span><span>z</span><span>ec</span><span>iw</span><span>y i</span><span> </span><span>z</span><span>osta</span><span>ł</span><span>a</span><span> ut</span><span>w</span><span>or</span><span>zona </span><span>gru</span><span>pa</span><span> protest</span><span>acy</span><span>j</span><span>na</span><span>,</span><span> ab</span><span>y</span><span> z</span><span>at</span><span>r</span><span>zy</span><span>ma</span><span>ć</span><span> bud</span><span>ow</span><span>ę</span><span>,</span><span> z</span><span>anim</span><span> ta</span><span> si</span><span>ę</span><span> j</span><span>es</span><span>z</span><span>c</span><span>ze</span><span> z</span><span>ac</span><span>z</span><span>ę</span><span>ł</span><span>a</span><span> (</span><span>...)</span><span> W</span><span>ie</span><span>ż</span><span>a</span><span> E</span><span>iff</span><span>la</span><span> s</span><span>zy</span><span>b</span><span>ko</span><span> st</span><span>a</span><span>ł</span><span>a</span><span> si</span><span>ę</span><span> j</span><span>ed</span><span>n</span><span>ą</span><span> z</span><span> n</span><span>aj</span><span>bard</span><span>zie</span><span>j</span><span> ro</span><span>z</span><span>po</span><span>zn</span><span>aw</span><span>al</span><span>ny</span><span>ch</span><span> konstrukcji </span><span>na</span><span> ś</span><span>w</span><span>ie</span><span>c</span><span>ie</span><span>.</span></p>
+<p>4.3. A</p>
+<p><strong>Fragment w tekście:</strong> "Every great city has its defining landmarks, which are recognisable to people all over the world. For example, Rome has the Colosseum, Athens the Parthenon, and New York the Empire State Building" - Każde wielkie miasto ma swoje charakterystyczne zabytki, które są rozpoznawalne dla ludzi na całym świecie. Na przykład, Rzym ma Koloseum, Ateny Partenon, a Nowy Jork Empire State Building.</p>
+<p>4.4. D</p>
+<p><strong>Fragment w tekście:</strong> "As soon as the designs for the project were made public in 1987, engineers, architects and artists unrelated to the project began to voice their objections, and a protest group was formed in order to stop the construction before it had even begun. While some engineers did not believe such a tall tower was actually possible to build, the main objection was that such a bizarre object would not fit in alongside the architecture and atmosphere of Paris (...)" - Kiedy <span>ty</span><span>l</span><span>ko</span><span> pro</span><span>j</span><span>ek</span><span>ty</span><span> budowli</span><span> z</span><span>osta</span><span>ł</span><span>y</span><span> op</span><span>ub</span><span>lik</span><span>ow</span><span>ane</span><span> w</span><span> 1987</span><span> ro</span><span>ku</span><span>,</span><span> in</span><span>ż</span><span>yn</span><span>ier</span><span>ow</span><span>ie</span><span>,</span><span> arch</span><span>ite</span><span>k</span><span>ci</span><span> i</span><span> ar</span><span>ty</span><span>ś</span><span>ci</span><span> n</span><span>ie</span><span>z</span><span>wi</span><span>ą</span><span>z</span><span>ani</span><span> z</span><span> pro</span><span>j</span><span>ek</span><span>tem</span><span> z</span><span>ac</span><span>z</span><span>ę</span><span>li</span><span> w</span><span>y</span><span>ra</span><span>ż</span><span>a</span><span>ć</span><span> sw</span><span>oj</span><span>e</span><span> spr</span><span>z</span><span>ec</span><span>iw</span><span>y i</span><span> </span><span>z</span><span>osta</span><span>ł</span><span>a</span><span> ut</span><span>w</span><span>or</span><span>zona </span><span>gru</span><span>pa</span><span> protest</span><span>acy</span><span>j</span><span>na</span><span>,</span><span> ab</span><span>y</span><span> z</span><span>at</span><span>r</span><span>zy</span><span>ma</span><span>ć</span><span> bud</span><span>ow</span><span>ę</span><span>,</span><span> z</span><span>anim</span><span> ta</span><span> si</span><span>ę</span><span> j</span><span>es</span><span>z</span><span>c</span><span>ze</span><span> z</span><span>ac</span><span>z</span><span>ę</span><span>ł</span><span>a. Chociaż niektórzy inżynierowie nie wierzyli, że taka wysoka wieża jest w ogóle możliwa do zbudowania, głównym zarzutem było to, że taki dziwny obiekt nie pasowałby do architektury i atmosfery Paryża (...).</span></p>
+<p>4.5. B</p>
+<p><strong>Fragment w tekście:</strong> "The first conceptual sketches of the tower were made by Maurice Koechlin, an architect at the Eiffel building company, in 1884. (...) In the end, Eiffel bought the rights to the design from the engineers and the architects who  had developed it, and his name became permanently attached to the project, even though he had little to do with its design" - Pierwsze koncepcyjne szkice wieży zostały wykonane przez Maurice'a Koechlina, architekta w firmie budowlanej Eiffel, w 1884 roku. (...) Ostatecznie Eiffel kupił prawa do projektu od inżynierów i architektów, którzy go opracowali, a jego nazwisko stało się na stałe z nim związane, chociaż miał niewiele wspólnego z jego wyglądem.</p><br>

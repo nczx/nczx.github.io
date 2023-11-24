@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a)</p>
+<p><img alt="" height="75" src="./data/932667-0.jpg" width="125"/></p>
+<p><br/>b) </p>
+<p><img alt="" height="75" src="./data/932667-1.jpg" width="176"/></p>
+<p><br/>c)</p>
+<p><img alt="" height="110" src="./data/932667-2.jpg" width="94"/></p>
+<p><br/>d)</p>
+<p><img alt="" height="75" src="./data/932667-3.jpg" width="232"/></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) <span style="text-decoration: underline;"><em><strong> 1-chloro-2,2-dimetylopropan </strong></em></span></p>
+<p>b)  <span style="text-decoration: underline;"><em><strong> 2,3-dimetylobutan-2-ol </strong></em></span></p>
+<p>c) <span style="text-decoration: underline;"><em><strong> heksan-2-on </strong></em></span></p>
+<p>d) <span style="text-decoration: underline;"><em><strong> 2-metylopropanal </strong></em></span></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Fluorowcopochodne:</p>
+<ul>
+<li>CH<sub>3</sub>CHClCH<sub>2</sub>CH<sub>3</sub>
+</li>
+</ul>
+<p>Alkohole: </p>
+<ul>
+<li>CH<sub>3</sub>OH</li>
+</ul>
+<p>Aldehydy:</p>
+<ul>
+<li>CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CHO</li>
+<li>CH<sub>3</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CHO</li>
+</ul>
+<p>Ketony:</p>
+<ul>
+<li>CH<sub>3</sub>COCH<sub>3</sub>
+</li>
+<li>CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>COCH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub>
+</li>
+<li>CH<sub>3</sub>CH<sub>2</sub>COCH<sub>2</sub>CH<sub>3</sub>
+</li>
+</ul>
+<p><br/>Izomery konstytucyjne:</p>
+<ul>
+<li>CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CHO oraz CH<sub>3</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CHO - izomeria szkieletowa</li>
+<li>CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CHO oraz CH<sub>3</sub>CH<sub>2</sub>COCH<sub>2</sub>CH<sub>3</sub> - izomeria funkcyjna</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zdaniami prawdziwymi są: <span style="text-decoration: underline;"><em><strong> c , d, e </strong></em></span>.</p>
+<p><em>wyjaśnienie zdań fałszywych:</em></p>
+<p><em>a. Chlorometan ma większą lotność od jodometanu ze względu na niższą temperaturę wrzenia oraz niższą masę cząsteczkową.</em></p>
+<p><em>b. Alkoholem o najmniejszej masie cząsteczkowej jest metanol.</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zaczynamy od obliczenia masy przedstawionego pojedynczego meru: </p> <p> <math-expr expr="m=4*m_C+6*m_H+2*m_O=4*12\ u+6*1\ u+2*16\ u=86\ u" syntax="text"></math-expr>   </p> <p>Wiemy, że dany polimer składa się z 250 merów. Liczymy jego masę cząsteczkową:</p> <p> <math-expr expr="m=250*86\ u=21500\ u" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Masa cząsteczkowa tego polimeru wynosi 21500 u.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Masy atomowe poszczególnych pierwiastków w cząsteczce mentolu to:</p> <p> <math-expr expr="m_C=12\ u" syntax="text"></math-expr>    </p> <p> <math-expr expr="m_H=1\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_O=16\ u" syntax="text"></math-expr>   </p> <p><br/>Liczymy wartości indeksów we wzorze mentolu:</p> <p> <math-expr expr="x*m_C=(76,92%*156\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='x*12\ u=120\ u\ \ \ "/":12\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=10" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="y*m_H=(12,82%*156\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='y*1\ u=20\ u\ \ \ "/":1\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="y=20" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="z*m_O=(10,26%*156\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='z*16\ u=16\ u\ \ \ "/":16\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="z=1" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Wzór rzeczywisty mentolu to  <math-expr expr="bb(C_(10)H_(20)O)." syntax="text"></math-expr>    </strong> </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Zaczynamy od obliczenia masy powstałego etanolu:</p> <p> <math-expr expr="m=d*V=0,7851\ g/(cm^3)*100\ cm^3=78,51\ g" syntax="text"></math-expr>   </p> <p><br/>Zapisujemy równanie reakcji fermentacji alkoholowej:</p> <p> <math-expr expr='C_6H_(12)O_6#(-&gt;)^("drożdże")2\ CH_3CH_2OH+2\ CO_2uarr' syntax="text"></math-expr>   </p> <p>Widzimy, że z jednej cząsteczki glukozy powstają dwie cząsteczki etanolu. Masa cząsteczkowa glukozy to 180 u, zaś masa cząsteczkowa etanolu to 46 u.</p> <p><br/> <math-expr expr="180\ g_(C_6H_(12)O_6)\ \ -\ \ 2*46\ g_(CH_3CH_2OH)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(C_6H_(12)O_6)\ \ -\ \ 78,51\ g_(CH_3CH_2OH)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(C_6H_(12)O_6)=(78,51\ g*180\ g)/(2*46\ g)=153,6\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Fermentacji uległo 153,6 g glukozy.</strong>   </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Wzór grupowy propan-1-olu:  <math-expr expr="CH_3CH_2CH_2OH," syntax="text"></math-expr>   wzór sumaryczny:  <math-expr expr="C_3H_8O," syntax="text"></math-expr>   masa cząsteczkowa:  <math-expr expr="m_(C_3H_8O)=60\ u" syntax="text"></math-expr>   </p> <p>Wzór grupowy propanalu:   <math-expr expr="CH_3CH_2CHO," syntax="text"></math-expr>   wzór sumaryczny:  <math-expr expr="C_3H_6O," syntax="text"></math-expr>   masa cząsteczkowa:  <math-expr expr="m_(C_3H_6O)=58\ u" syntax="text"></math-expr>   </p> <p>Wzór grupowy propan-2-onu:  <math-expr expr="CH_3COCH3," syntax="text"></math-expr>   wzór sumaryczny:  <math-expr expr="C_3H_6O," syntax="text"></math-expr>   masa cząsteczkowa:  <math-expr expr="m_(C_3H_6O)=58\ u" syntax="text"></math-expr>   </p> <p>Każdy z tych związków zawiera w cząsteczce po jednym atomie tlenu. Masa atomowa tlenu to 16 u. Liczymy zawartość procentową tlenu w poszczególnych związkach:</p> <p>- propan-1-ol:  <math-expr expr="%O=(16\ u)/(60\ u)*100%=26,7%" syntax="text"></math-expr>   </p> <p>- propanal:  <math-expr expr="%O=(16\ u)/(58\ u)*100%=27,6%" syntax="text"></math-expr>   </p> <p>- propan-2-on:  <math-expr expr="%O=(16\ u)/(58\ u)*100%=27,6%" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Najmniejszą zawartość procentową (procent masowy) tlenu w cząsteczce ma <span style="text-decoration: underline;">propan-1-ol</span>.</strong> </p><br>

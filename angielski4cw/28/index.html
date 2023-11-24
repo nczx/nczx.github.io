@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. E </p>
+<p>2. B</p>
+<p>3. D</p>
+<p>4. F</p>
+<p>5. A</p>
+<p><strong>Niewykorzystana odpowiedź:</strong> C</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. C</p>
+<p><strong>Fragment w tekście:</strong> "(...) either went on excursion or had independent free time. The latter was unsupervised, but there were numerous rules in place and restrictions regarding what was allowed. The organisers had informed the parents about them in an information pack they sent out to everyone who had booked a place." - (...) albo wybierali się na wycieczkę albo mieli czas wolny. W przypadku tej drugiej opcji dzieci były pozostawione bez nadzoru, ale było wiele zasad i ograniczeń dotyczących tego, co było dozwolone. Organizatorzy poinformowali o nich rodziców w zestawie informacji wysłanym do wszystkich, którzy zarezerwowali pobyt. </p>
+<p>2. A</p>
+<p><strong>Fragment w tekście:</strong> "Not long after the session had started, one of the children came running out of the forest. He was as white as a sheet and breathlessly indicated that we should follow him." - Niedługo po rozpoczęciu sesji jedno z dzieci przybiegło z lasu. Był biały jak ściana i bez tchu dał nam do zrozumienia, że powinniśmy pójść za nim.</p>
+<p>3. D</p>
+<p><strong>Fragment w tekście:</strong> "Needless to say, the unsupervised free time periods came to an end." - Nie muszę chyba dodawać, że nie było już więcej czasu wolnego, w którym dzieci były pozbawione nadzoru.</p>
+<p>4. C</p>
+<p><strong>Fragment w tekście:</strong> "He gave us a thumbs up and a high five, and signed his name on a piece of paper. He then produced a tennis ball to show us how he could grab the ball when we threw it to him." - Pokazał nam kciuk w górę, przybił piątkę i zapisał swoje imię na kawałku papieru. Potem poszedł po piłkę do tenisa, żeby pokazać nam jak potrafi ją łapać, kiedy do niego rzucamy. </p>
+<p>5. by biological features.</p>
+<p>(Technologia, która jest bioniczna jest uzupełniona <strong>właściwościami biologicznymi</strong>.)</p>
+<p><strong>Fragment w tekście:</strong> "The word bionic is a combination of biology and electronics and can refer to any application of biological features to improve human-made technology." - słowo bioniczny to połączenie biologii i elektroniki i może odnosić się do każdej sytuacji, w której cechy biologiczne są wykorzystane do usprawnienia technologii stworzonej przez człowieka.</p>
+<p>6. dirt repellent paint, ships and artificial limbs. </p>
+<p>(Trzy produkty wymienione jako przykłady bioniki to <strong>farba odporna na bród, statki i sztuczne kończyny</strong>.)</p>
+<p>7. is that they were heavier than </p>
+<p>(Jeden powód, dla którego protezy kończyn były niewygodne<strong> to fakt, że były cięższe niż</strong> są teraz.)</p>
+<p><strong>Fragment w tekście:</strong> "The other huge benefit has been to make them lighter and enable users to wear them for much longer without discomfort." - Kolejny ogromny plus to fakt, że stały się lżejsze, co umożliwia użytkownikom noszenie ich dłużej bez poczucia dyskomfortu.</p>
+<p>8. of the body would be a human </p>
+<p>(Większość ludzi uważa, że osoba z bionicznymi częściami <strong>ciała byłaby człowiekiem</strong> dopóki jej umysł nie zostałby zastąpiony.)</p>
+<p><strong>Fragment w tekście:</strong> "Most people would probably say that someone remains a human 'until we replace the brain'." - Większość ludzi powiedziałaby pewnie, że ktoś pozostaje człowiekiem 'aż do momentu zastąpienia jego umysłu'. </p><br>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="border-collapse: collapse; width: 646px; height: 322px; border-width: 1px; border-spacing: 5px; border-color: #00CC00;">
+<tbody>
+<tr style="height: 10px;">
+<td colspan="3" style="width: 636px; height: 10px; background-color: rgb(204, 255, 204); border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);">
+<p><span style="color: rgb(2, 175, 101);"><strong>A for-and-against essay </strong>(rozprawka za i przeciw)</span></p>
+</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 209px; height: 33px; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);"><span style="color: rgb(42, 179, 124);"><strong>Addition </strong>(dodanie)</span></td>
+<td style="width: 206px; height: 33px; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);"><span style="color: rgb(42, 179, 124);"><strong>Contrast </strong>(kontrastowanie)</span></td>
+<td style="width: 221px; height: 33px; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);"><span style="color: rgb(42, 179, 124);"><strong>Conclusion </strong>(zakończenie)</span></td>
+</tr>
+<tr style="height: 279px;">
+<td style="width: 209px; height: 279px; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);">
+<p>and (i)</p>
+<p>also (także)</p>
+<p>besides (oprócz tego) </p>
+<p><strong>Furthermore</strong> (Ponadto) </p>
+<p><strong>In addition</strong> (Dodatkowo)</p>
+<p><strong>Moreover</strong> (Co więcej)</p>
+<p><strong>Not only ... but also ...</strong><br/>(Nie tylko ... ale także)</p>
+</td>
+<td style="width: 206px; height: 279px; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);">
+<p>but (ale)</p>
+<p>although (chociaż)</p>
+<p>yet (mimo tego)</p>
+<p><strong>However</strong> (Jednakże)</p>
+<p><strong>On the other hand</strong><br/>(Z drugiej strony)</p>
+<p><strong>Nevertheless</strong> (Jednakże)</p>
+</td>
+<td style="width: 221px; height: 279px; vertical-align: top; border-width: 1px; padding: 5px; border-color: rgb(0, 204, 0);">
+<p>All in all (Podsumowując)</p>
+<p>To conclude (Na zakończenie)</p>
+<p>Summing up (Podsumowując)</p>
+<p><strong>To sum up</strong> (Na podsumowanie)</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. Moreover </p>
+<p>(Wszystkie społeczeństwa potrzebują zasad, by utrzymać dyscyplinę, a szkoły nie są tu wyjątkiem. <strong>Co więcej</strong>, szkoły byłyby bardziej stresujące, gdyby nie było w nich żadnego regulaminu.) </p>
+<p>2. Although</p>
+<p>(<strong>Chociaż</strong> szkolny regulamin może być przydatny, nie powinien być zbyt surowy, ponieważ dzieciństwo to jedyny czas w życiu, kiedy możemy być wolni!)</p>
+<p>3. not only</p>
+<p>(Zasady są konieczne <strong>nie tylko</strong> ogólnie w społeczeństwie, ale także w szkole.)</p>
+<p>4. However</p>
+<p>(Niektóre szkolne zasady mogą ułatwić życie. <strong>Jednak</strong> zasady takie jak noszenie mundurka uniemożliwiają uczniom wyrażanie własnej osobowości.)</p>
+<p>5. also</p>
+<p>(Szkolne zasady wspierają sprawiedliwość i szacunek. Czynią one <strong>także</strong> życie bezpieczniejszym i wygodniejszym zarówno dla uczniów, jak i nauczycieli.)</p>
+<p>6. on the other hand</p>
+<p>(Z jednej strony jest wiele powodów, by mieć szkolne zasady. <strong>Z drugiej strony,</strong> społeczeństwo ma już mnóstwo praw, więc nie robiłoby to różnicy, gdyby szkolny regulamin nie istniał.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>For (za):</p>
+<p> - 1. all societies need rules ... (każde społeczeństwo potrzebuje zasad)</p>
+<p> - 3. rules are necessary in general (zasady są ogólnie potrzebne)  </p>
+<p> - 5. school rules promote fairness and respect (regulamin szkolny promuje uczciwość i szacunek)</p>
+<p><br/>Against (przeciwko):</p>
+<p> - 2. childhood is the only time in life hen we can be free! (dzieciństwo to jedyny czas w życiu, kiedy możemy być wolni)</p>
+<p> - 4. rules such as wearing a uniform prevent students from expressing their own personality (zasady, takie jak noszenie mundurka, uniemożliwiają uczniom wyrażanie własnej osobowości)</p>
+<p> - 6. it wouldn't matter if school rules didn't exist (nie robiłoby to różnicy, gdyby szkolny regulamin nie istniał)</p>
+<p> </p>
+<p><br/><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>For:</p>
+<p> - if there are rules, there are also rights (jeśli istnieją zasady, istnieją również prawa)</p>
+<p> - clear rules help regulate behaviour (jasne zasady pomagają regulować zachowanie)</p>
+<p><br/>Against:</p>
+<p> - not all rules are reasonable, but instead based on prejudice (nie wszystkie zasady są rozsądne, ale oparte na uprzedzeniach)</p>
+<p> - each school can have different rules, which is unfair (każda szkoła może mieć inne zasady, co jest niesprawiedliwe)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Notes: </strong>(notatki)</p>
+<p>1. Introduction: strict school rules used to be a standard in the past, but now things are beginning to change. </p>
+<p>(Wstęp: surowe zasady szkolne były standardem w przeszłości, ale teraz sytuacja zaczyna się zmieniać.) </p>
+<p><br/>2. For: </p>
+<p>- strict rules help with discipline and structure (surowe zasady pomagają w utrzymaniu dyscypliny i struktury)</p>
+<p>- they reduce distractions and help students focus on studying (ograniczają rozpraszanie uwagi i pomagają uczniom skupić się na nauce)</p>
+<p><br/>3. Against:</p>
+<p>- strict rules may lead to increased stress and the feeling of injustice (surowe zasady mogą prowadzić do zwiększonego stresu i poczucia niesprawiedliwości)</p>
+<p>- they may lead students to rebel (mogą prowadzić uczniów do buntu)</p>
+<p>- they restrict creativity and self-expression (ograniczają kreatywność i wyrażanie siebie)</p>
+<p><br/>4. Conclusion: there are benefits and drawbacks to introducing strict rules in school, but in my opinion, this approach is outdated and is just a means of controlling teenagers.</p>
+<p>(Wniosek: wprowadzenie surowych zasad w szkole ma swoje zalety i wady, ale moim zdaniem takie podejście jest przestarzałe i jest jedynie sposobem kontrolowania nastolatków.)</p>
+<p> </p>
+<p><strong>Essay: </strong>(rozprawka)</p>
+<p>Strict school rules used to be a standard in the past, but now things are beginning to change. Some argue that introducing strict rules in a school is beneficial, while others believe this approach is not only old-fashioned, but that it also limits students' freedoms.</p>
+<p>On the one hand, strict rules help with discipline and structure. This promotes a positive learning culture and helps students develop self-control, responsibility, and good habits. Moreover, it can be seen as a way to reduce distractions and help students focus on studying. This could result in better grades and overall academic success.</p>
+<p>On the other hand, strict rules may lead to increased stress and the feeling of injustice. For example, dress codes are almost always stricter when it comes to girls. Besides, the majority of the rules do not apply to the teachers. This may also lead students to rebel and resist authority. Finally, strict rules restrict creativity and self-expression. They may stop students from developing a sense of personal identity.</p>
+<p>All in all, there are benefits and drawbacks to introducing strict rules in school. While it can potentially ensure discipline and remove distractions, it may be seen as unfair or controlling, and lead to acts of rebellion. Personally, I believe this approach is outdated and it is based on the idea that teenagers are unreasonable and must never be trusted.</p>
+<p><br/>(Liczba słów: 227)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Surowe zasady szkolne były standardem w przeszłości, ale teraz sytuacja zaczyna się zmieniać. Niektórzy twierdzą, że wprowadzenie surowych zasad w szkole jest korzystne, podczas gdy inni uważają, że takie podejście jest nie tylko staromodne, ale także ogranicza wolność uczniów.</p>
+<p>Z jednej strony surowe zasady pomagają w utrzymaniu dyscypliny i struktury. Promuje to pozytywną kulturę uczenia się i pomaga uczniom rozwijać samokontrolę, odpowiedzialność i dobre nawyki. Co więcej, może to być postrzegane jako sposób na ograniczenie rozpraszania uwagi i pomoc uczniom w skupieniu się na nauce. Może to skutkować lepszymi ocenami i ogólnym sukcesem akademickim.</p>
+<p>Z drugiej strony, surowe zasady mogą prowadzić do zwiększonego stresu i poczucia niesprawiedliwości. Na przykład zasady dotyczące ubioru są prawie zawsze bardziej rygorystyczne w przypadku dziewcząt. Poza tym większość zasad nie dotyczy nauczycieli. Może to również prowadzić uczniów do buntu i oporu wobec autorytetu. Wreszcie, surowe zasady ograniczają kreatywność i wyrażanie siebie. Mogą powstrzymywać uczniów przed rozwijaniem poczucia własnej tożsamości.</p>
+<p>Podsumowując, wprowadzenie surowych zasad w szkole ma swoje zalety i wady. Chociaż może to potencjalnie zapewnić dyscyplinę i wyeliminować rozpraszanie uwagi, może być postrzegane jako niesprawiedliwe lub kontrolujące i prowadzić do aktów buntu. Osobiście uważam, że takie podejście jest przestarzałe i opiera się na założeniu, że nastolatki są nierozsądne i nigdy nie można im ufać.</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>For: </strong>(za)</p>
+<p>• Detention shows that actions have consequences, and students need to be held responsible for their actions.</p>
+<p>(Taka kara pokazuje, że działania mają konsekwencje, a uczniowie muszą ponosić odpowiedzialność za swoje czyny.) </p>
+<p>• It can be a good opportunity to complete assignments or do homework.</p>
+<p>(Może to być dobra okazja do ukończenia zadań lub odrobienia pracy domowej.)</p>
+<p> </p>
+<p><strong>Against: </strong>(przeciw)</p>
+<p>• Detention can sometimes make students feel singled out, which can lead to a negative attitude toward school.</p>
+<p>(Zostawanie za karę po lekcjach może czasami sprawić, że uczniowie poczują się pokrzywdzeni, co może prowadzić do negatywnego nastawienia do szkoły.)</p>
+<p>• Students can miss out on a lot of things when they are forced to sit in detention.</p>
+<p>(Uczniowie mogą przegapić wiele rzeczy, gdy są zmuszeni zostawać za karę po lekcjach.)</p>
+<p>• Since it's usually the same students that keep getting punished with detention, you could argue it isn't effective.</p>
+<p>(Ponieważ zazwyczaj ciągle ci sami uczniowie są karani zostawaniem w szkole po lekcjach, można argumentować, że nie jest to skuteczne.)</p><br><a style="color:red; font-size:25px;">RESEARCH IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Rules typical of American high schools: </strong></p>
+<p>• The grades aren't numbers, but letters. Schools use A, B, C, D, F grades, where A is the best and F is the worst.</p>
+<p>(Oceny nie są liczbami, ale literami. Szkoły stosują oceny A, B, C, D, F, gdzie A jest najlepszą oceną, a F najgorszą.) </p>
+<p>• If you are late, you need to go to the office and get a 'tardy card' that you have to give to your teacher. If you have too many of these cards, your teacher might give you detention.</p>
+<p>(Jeśli się spóźnisz, musisz udać się do sekretariatu i otrzymać "kartę spóźnienia", którą musisz oddać nauczycielowi. Jeśli masz zbyt wiele takich kart, nauczyciel może kazać ci zostać za karę po szkole.)</p>
+<p>• At the beginning of every schoolyear, students can choose some of the subjects they want to study. However, there are subjects no one can skip.</p>
+<p>(Na początku każdego roku szkolnego uczniowie mogą wybrać niektóre przedmioty, których chcą się uczyć. Są jednak przedmioty, których nikt nie może pominąć.)</p>
+<p> </p>
+<p>The rules are obviously different from the ones in Poland. Our schools use grades from 1 to 6, where 6 is the best. We don't have tardy cards, but we can get into trouble when we are constantly late. Finally, most secondary school students can only choose a 'profile' before they apply to a school. They can't choose individual subjects they want to attend.</p>
+<p>I think the last rule sounds nice, but it would be difficult to introduce it in my school. We are divided into classes, or groups, and we have all (or most) subjects as one group. This makes it hard for everyone to have a different schedule. </p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Te zasady są oczywiście inne niż w Polsce. Nasze szkoły stosują oceny od 1 do 6, gdzie 6 jest najlepsza. Nie mamy kart spóźnień, ale możemy mieć kłopoty, jeśli ciągle się spóźniamy. Wreszcie, większość uczniów szkół średnich może wybrać tylko profil przed złożeniem podania do szkoły. Nie mogą wybrać poszczególnych przedmiotów, na które chcą uczęszczać.</p>
+<p>Myślę, że ostatnia zasada brzmi fajnie, ale trudno byłoby ją wprowadzić w mojej szkole. Jesteśmy podzieleni na klasy lub grupy i mamy wszystkie (lub większość) przedmiotów jako jedna grupa. To sprawia, że trudno jest każdemu mieć inny plan zajęć.</p><br>

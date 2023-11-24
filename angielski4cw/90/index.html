@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. part-time job  </p>
+<p>2. shift</p>
+<p>3. challenging</p>
+<p>4. go on an exchange</p>
+<p>5.  sociable</p>
+<p>6. unreliable</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Imię: Elaine Masters</p>
+<p>Cele: iść na studia, zdobyć <strong>dorywczą pracę</strong> w weekendy albo pracować w tygodniu na wieczornej <strong>zmianie</strong> (wiem, że będzie <strong>ciężko</strong> pracować i studiować jednocześnie), <strong>wyjechać na wymianę</strong> do Hiszpanii na jeden semestr, żeby naprawdę nauczyć się języka </p>
+<p>Osobowość: <strong>towarzyska</strong> - lubi poznawać nowych ludzi, czasem <strong>niesłowna</strong> (spóźnia się, zapomina pracy domowej)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. willingness</p>
+<p>(Posiadanie <strong>chęci</strong> do pracy jest bardzo ważne kiedy zaczynasz nową pracę i chcesz zaimponować szefowi!) </p>
+<p>2. problem-solving </p>
+<p>(Jeśli masz umiejętność<strong> rozwiązywania problemów</strong>, szukasz odpowiedzi zamiast narzekać.)</p>
+<p>3. under pressure</p>
+<p>(Większość firm jest tak zajęta, że naprawdę cenią pracowników, którzy potrafią dobrze pracować <strong>pod presją</strong>.)</p>
+<p>4. resilient</p>
+<p>(Bycie <strong>odpornym psychicznie</strong> i umiejętność dojścia do siebie po napotkanych problemach to przydatne wszędzie zdolności.)</p>
+<p>5. ethic</p>
+<p>(Mój szef uważa, że posiadanie wysokiej <strong>etyki</strong> pracy oznacza robienie wszystkiego, co mówi oraz codzienne zostawanie do późna.)</p>
+<p>6. self-motivated</p>
+<p>(Nie wystarczy ciężko pracować, kiedy ktoś cię nadzoruje. Musisz być <strong>wewnętrznie zmotywowany/a</strong> i samodzielnie radzić sobie z obowiązkami.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. management</p>
+<p>(Jedna przydatna rzecz już od czasu szkoły to zdolność <strong>zarządzania</strong> czasem tak, żeby dostarczać prace zgodnie z planem.) </p>
+<p>2. adaptable</p>
+<p>resourceful</p>
+<p>(Myślę, że dwie najważniejsze rzeczy, których może nauczyć cię szkoła to <strong>umiejętność przystosowania się</strong> oraz <strong>pomysłowość</strong>.)</p>
+<p>3. trustworthy</p>
+<p>(Ona jest szczera i można na niej polegać - prawdziwie <strong>godna zaufania</strong> osoba w otoczeniu.)</p>
+<p>4. decision</p>
+<p>(Muszę poprawić umiejętność podejmowania <strong>decyzji</strong> - zawsze źle wybieram.)</p>
+<p>5. resolution</p>
+<p>(Umiejętność <strong>rozwiązywania</strong> konfliktów jest często potrzebna w firmach, podobnie jak pomiędzy państwami.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. fair-minded</p>
+<p>(Dan jest <strong>bezstronny</strong>. Słucha ludzi i nie podejmuje żadnych decyzji zanim usłyszy wszystkie fakty.) </p>
+<p>2. quick-witted</p>
+<p>(Z Beth świetnie się pracuje. Jest taka <strong>błyskotliwa</strong>. W nagłej potrzebie potrafi podjąć właściwą decyzję w kilka sekund.)</p>
+<p>3. laid-back</p>
+<p>(Wiem, że dobrze jest być <strong>beztroskim</strong>, ale Steve jest za bardzo wyluzowany.)</p>
+<p>4. bad-mannered</p>
+<p>(Ronny jest <strong>źle wychowany</strong>. Nie wstaje nawet z krzesła kiedy nowe osoby wchodzą do jego biura.)</p>
+<p>5. self-centred</p>
+<p>(Każdy czasem musi myśleć o sobie, ale Sara jest tak <strong>egocentryczna</strong>, że nigdy nie myśli o osiemdziesięciu pięciu osobach, które z nią pracują.) </p>
+<p>6. broad-minded</p>
+<p>(Janice przyszła do pracy z czerwonymi włosami i dużym tatuażem na ramieniu. Na szczęście pan Hopkins <strong>ma otwarty umysł</strong> i jest tolerancyjny.) </p>
+<p>7. quick-tempered</p>
+<p>(Lubię Setha, ale czasami złości się bez powodu. Jest bardzo <strong>porywczy</strong>.)</p>
+<p>8. strong-willed</p>
+<p>(Potrzebujemy ludzi <strong>o silnej woli</strong> jak Ursula, zdeterminowanych do wykonywania obowiązków.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. strong-minded</p>
+<p>(Zamierzam dokończyć ten raport na czas, choćbym miał/a siedzieć nad nim całą noc".)</p>
+<p>2. absent-minded</p>
+<p>("Nie pamiętam, gdzie położyłem/am okulary. Miałem/am je wcześniej".)</p>
+<p>3. like minded</p>
+<p>(Joey i ja myślimy, że pierwszy kandydat był zdecydowanie najlepszy".)</p>
+<p>4. weak-minded</p>
+<p>("Może powinniśmy umieścić reklamę w Internecie albo może w gazecie. Nie jestem pewien/pewna, co ty myślisz?")</p>
+<p>5. broad-minded</p>
+<p>(Akceptujemy w firmie każdego bez względu na przekonania, jeśli tylko ciężko pracują".)</p>
+<p>6. narrow-minded</p>
+<p>(Nie zatrudniłbym/zatrudniłabym nikogo z tatuażem albo kolczykiem w nosie, ani kogoś z farbowanymi włosami".)</p><br>

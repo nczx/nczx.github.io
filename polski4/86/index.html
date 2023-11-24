@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Fragment ten stanowi refleksję podmiotu lirycznego, który przestaje się oburzać obojętnością innych ludzi niezauważających tragedii Ikara. Odkrywa bowiem swoistą harmonię świata. Okazuje się, iż każda jednostka ma swój los oraz przeznaczenie, które powinna wypełnić. Z tego też powodu rodzi się niejako zrozumienie podmiotu lirycznego. Godzi się z tym, iż inne jest przeznaczenie Ikara, inne zaś oracza czy pasterza. Nie ma w tym nic złego, że każdy człowiek dąży do realizacji własnych celów i wypełnia w życiu odmienne zadania. Z tego też powodu obserwowanie upadku Ikara niczego nie zmieni, stanowi coś wpisanego w porządek świata. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Metafora ta odwołuje się do utrwalonej tradycji literackiej. Jest ona związana z ukazywaniem symbolicznych treści pod postacią statku oraz otaczającej go wody. Z tego też powodu bardzo często w ten sposób przedstawiano ludzką egzystencję lub też sytuację kraju. Z kolei nieraz wzburzona woda symbolizowała zagrożenia i trudności napotykane w czasie życia czy też związane z funkcjonowaniem państwa. O popularności tej tradycji świadczy jej obecność  w dziełach twórców z różnych epok: np. Horacego, Skargi, Słowackiego, Baudelaire'a. </p>
+<p>Różewicz w zakończeniu swego wiersza pisze: "że piękny statek dalej płynie dalej / do portu przeznaczenia". Jego wypowiedź sugeruje nawiązanie do wspomnianej tradycji. W ten sposób poeta podkreśla bowiem stałość ludzkiego losu, jego niezmienność. Niezależnie bowiem od tragedii Ikara życie toczy się dalej i zmierza do określonego celu. Przeznaczenie każdej jednostki jest tak samo ważne, nie da się go uniknąć. Taką ocenę sugeruje określenie statku mianem "pięknego". </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>W swoim wierszu Tadeusz Różewicz ukazuje przemianę podstawy podmiotu lirycznego. W kontekście historycznym tę zmianę można połączyć z doświadczeniem wojny, które stanowi przełomowe oraz tragiczne doświadczenie. Rozpad znanej jednostce rzeczywistości, niepokój sprawiają, iż w inny sposób postrzega swoje relacje ze światem oraz zobowiązania moralne. Traci bowiem przekonanie o tym, iż może głosić jednoznaczne oraz stanowcze sądy: "[...] myślałem że mam prawo obowiązek / krzyczeć na oracza". Zamiast tego staje się świadkiem wydarzeń i odkrywa, że przeznaczenie każdego człowieka jest inne.</p>
+<p>Z kolei w kontekście biograficznym przemianę można utożsamić z doświadczeniami Różewicza, który z wiekiem je zdobywa. "Dawniej" to czas młodości, idealizmu oraz buntu, kiedy chce się protestować przeciwko tragedii jednostki, oburzać się na obojętność ogółu. Z czasem jednak człowiek dojrzewa i jego postawa ulega zmianie. Odkrywa bowiem odwieczną harmonię rzeczywistości, staje się łagodny i wyrozumiały. Zaczyna bowiem rozumieć, iż naturalnym porządkiem rzeczy jest odmienne przeznaczenie każdego człowieka.  </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Przykładowo:</p>
+<p>a) W wierszach mitologicznym postaciom zostaje przypisana zbliżona symbolika; </p>
+<table border="1" style="border-collapse: collapse; width: 628px; height: 95px;">
+<tbody>
+<tr>
+<td style="background-color: #80cbc4; text-align: center;"><strong>Symbolika u Brylla</strong></td>
+<td style="background-color: #80cbc4; text-align: center;"><strong>Symbolika u Różewicza</strong></td>
+</tr>
+<tr>
+<td style="width: 310.406px;">
+<ul>
+<li>Dedal - pragmatyzm, realistyczne podejście do życia, skuteczność</li>
+<li>Ikar - naiwność, marzycielstwo, lekkomyślność</li>
+</ul>
+</td>
+<td style="width: 310.594px;">
+<ul>
+<li>Dedal - determinacja, skupienie na celu</li>
+<li>Ikar - marzycielstwo, impulsywność</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>b) Osoby mówiące kierują się realizmem oraz pragmatyzmem. Nie poświęcają zbyt wiele uwagi Ikarowi, który stał się symbolem, chociaż nie osiągnął zamierzonego celu. Zamiast tego swą uwagę koncentrują na Dedalu. Jego postawa, pełna determinacji, skupienia na celu, nieulegania emocjom, staje się w przytoczonych utworach kluczowa. Filozofia życia opiera się więc na akceptacji świata, pogodzeniu się z tragedią Ikara. Każdy ma bowiem swoje przeznaczenie. Jednocześnie zdaje się podkreślać znaczenie opanowania, które umożliwia osiągnięcie celu bez ulegania silnym emocjom. </p>
+<p> </p>
+<p>c) Pytanie retoryczne dotyczy postawy Dedala, który - mimo tragedii - nie zrezygnował ze swego celu. Podkreśla ono tragizm wyboru bohatera. Przypomina również o tym, że idealistyczna postawa Ikara nie przyczynia się do osiągnięcia upragnionej wolności. Zamiast tego staje się źródłem porażki.</p>
+<p> </p>
+<p>d) Część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br>

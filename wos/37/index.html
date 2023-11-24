@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Na podstawie danych przedstawionych na wykresie należy wskazać, że jedynie 19,8% respondentów spożywa codziennie wspólne śniadania z rodziną, zaś 29,7% spożywa codziennie kolacje z bliskimi. Od 5 do 6 dni w tygodniu ok. 8,3% ankietowanych spożywa codziennie śniadania z rodziną, zaś 11,7% je codziennie kolacje. Wyniki badania wskazują, że 12% osób biorących w nich udział zadeklarowało, że 3-4 dni w tygodniu je śniadania z rodziną, zaś 14,8% twierdziło, że je z nią kolację. Rzadko, bo jedynie raz w tygodniu aż 29,8% respondentów wskazało, że je śniadania z bliskimi i 14,4% je kolacje z członkami własnej rodziny. Rzadziej niż raz w tygodniu 11,6% respondentów je śniadania i 11,8% je kolacje wspólnie z bliskimi. Duży odsetek ankietowanych w ogóle nie je śniadań (18,5%) oraz kolacji (17,6%) z rodziną. </p>
+<p>Jedzenie wspólnych posiłków jest bardzo ważne z punktu widzenia budowania prawidłowych relacji międzyludzkich pomiędzy członkami danej rodziny. Podczas wspólnego spożywania posiłków rodzina może zacieśniać swoje stosunki, przekazywać sobie informacje na temat własnych doznań, przeżyć, czy dzielić się z członkami rodziny swoimi radościami i problemami. Wspólne spędzanie czasu pozwala jeszcze bardziej zżyć się członkom rodziny. Współcześnie jest to bardzo ważne, ponieważ ludzie coraz częściej są zabiegani, żyją w pośpiechu i właśnie wspólne posiłki mogą być odskocznią dla nich od spraw, które zaprzątają ich głowy i niekiedy mogą stanowić jedyny czas, w którym rodzina jest razem w danym dniu.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wiąże się z wyrażeniem własnej opinii. Toteż proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Wspólne spożywanie posiłków jest ważne, ponieważ umożliwia rodzinie spędzanie czasu razem, rozmawianie i budowanie bliskich więzi. W szczególności dzieci i młodzież powinni spożywać posiłki z rodzicami, ponieważ to pomaga im w rozwoju i uczeniu się dobrych nawyków żywieniowych oraz wzmacnia relacje rodzinne. Wspólne posiłki pozwalają ponadto rodzicom monitorować dietę swoich dzieci i upewnić się, że jedzą zdrowe i zrównoważone posiłki. Nade wszystko wspólne spożywanie posiłków przez członków rodziny pozwala im zacieśniać więzi i budować dobrą atmosferę, jak też stanowi okazję do rozmów na różne tematy.</p>
+<p>Z przytoczonych wyników badań wynika, że 18,5% osób w wieku od 11 do 16 lat nigdy nie spożywa śniadań wraz z rodzicami, a 17,6% młodych ludzi w tym wieku nigdy nie jada kolacji razem z rodzicami. 19,8% osób w wieku od 11 do 16 lat je codziennie śniadania z rodzicami, zaś 29,7% osób w tym wieku deklaruje, że codziennie jada z rodzicami kolacje. Aby budować trwałe relacje z najbliższymi, trzeba mieć z nimi jak najwięcej kontaktu. Jednak liczy się nie tylko długość owych kontaktów, ale też jakość. Czasami stosunkowo rzadki kontakt, powiedzmy raz w tygodniu, może okazać się wystarczający, jeśli polega na miłej, szczerej i pogłębionej rozmowie.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">To zadanie ma charakter indywidualny. Sam/a musisz je wykonać. Poniższe informacje mogą pomóc Ci w opracowaniu własnej prezentacji. </span></strong></p>
+<p><span style="text-decoration: underline;"><strong>UŻYWKI I NAŁOGI (UZALEŻNIENIA W RODZINIE)</strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Nałóg</strong> </span>to - najogólniej rzecz ujmując - szkodliwy dla zdrowia nawyk. Inaczej można nazwać go uzależnieniem, czyli nabytym stanem zaburzenia zdrowia psychicznego i fizycznego, odznaczającym się czasowym lub stałym przymusem wykonywania określonej czynności lub przyswajania psychoaktywnej substancji chemicznej. W tym sensie można mówić o różnorakich uzależnieniach, na przykład od korzystania z Internetu, palenia papierosów, picia alkoholu czy brania narkotyków.</p>
+<p>Wśród zagrożeń, jakie mogą wynikać z nałogu, można wskazać: </p>
+<p>- odebranie człowiekowi wolności,</p>
+<p>- obniżenie sprawności intelektualnej jednostki,</p>
+<p>- utrudnienie człowiekowi podejmowania racjonalnych wyborów,</p>
+<p>- zmniejszenie aktywności życiowej,</p>
+<p>- osłabienie kondycji zdrowotnej, a w skrajnych sytuacjach śmierć,</p>
+<p>- zawężenie relacji społecznych,</p>
+<p>- wzrost agresji u jednostki,</p>
+<p>- powstanie negatywnych odczuć wynikających ze świadomości pozostawania pod jarzmem nałogu,</p>
+<p>- trudność porzucenia uzależnienia,</p>
+<p>- zniszczenie więzi społecznych i rodzinnych jednostki,</p>
+<p>- możliwość utraty pracy,</p>
+<p>- wyniszczenie organizmu,</p>
+<p>- spadek odporności organizmu,</p>
+<p>- obniżenie jakości życia</p>
+<p><span style="text-decoration: underline;">Regularne nadużywanie alkoholu powoduje ogromne szkody w organizmie człowieka.</span> Najbardziej wrażliwa na działanie alkoholu jest tkanka nerwowa. Alkohol powoduje niszczenie komórek nerwowych, co z kolei powoduje zaniki pamięci, problemy z koncentracją i zaburzenia psychiczne. Alkohol jest <strong><span style="text-decoration: underline;">trucizną</span></strong>, dlatego musi być neutralizowany w wątrobie, jednak zbyt duże dawki niszczą strukturę wątroby i mogą prowadzić do marskości.  Zwłókniona wątroba nie może  pełnić swoich funkcji - obniża się jej wydajność detoksykacyjna oraz sprawność w regulacji poziomu cukru we krwi. Alkoholicy często cierpią więc na cukrzycę. Alkoholizm ma negatywny wpływ także na układ krwionośny, a w szczególności na mięsień sercowy. Nadużywanie alkoholu może powodować <strong><span style="text-decoration: underline;">nadciśnienie tętnicze oraz zawał serca</span></strong>. Alkohol wpływa także na narządy przewodu pokarmowego, powodując ich owrzodzenie. </p>
+<p><span style="text-decoration: underline;"><strong>Alkoholizm to choroba alkoholowa,</strong></span> inaczej nazywana uzależnieniem od alkoholu. Każda forma uzależnienia jest szkodliwa, ponieważ wpływa ona na psychikę człowieka.  Uzależnienie zniewala człowieka i <span style="text-decoration: underline;">odbiera kontrolę nad samym sobą</span>. Ogromna chęć spożycia alkoholu silnie wpływa na stan psychiczny organizmu, zwłaszcza wtedy kiedy alkohol jest z pewnych względów niedostępny. Alkoholik staje się wtedy drażliwy i agresywny dla otoczenia. Również w stanie upojenia alkoholicy mogą być agresywni, wszczynać kłótnie lub bójki. Nierzadko zdarza się, że osoby będące pod wpływem alkoholu biją swoich najbliższych lub wyrządzają im inne krzywdy na tle psychicznym. Nierzadko również dochodzi do wypadków drogowych, których sprawcami są pijani kierowcy. Zachowanie się alkoholików sprawia, że zostają oni odrzuceni i wykluczeni ze społeczeństwa.</p>
+<p><span style="text-decoration: underline;"><strong>Narkomania</strong></span> jest uzależnieniem od psychoaktywnych substancji chemicznych (narkotyków), które w znaczny sposób oddziałują na aktywność mózgu i wpływają na percepcje. Powodują stany euforii, relaksu, przyjemności, sprawności intelektualnej. Dają wrażenie funkcjonowania i myślenia na "zwiększonych obrotach". Organizm przyzwyczaja się do sztucznie wywoływanych stanów, do tego stopnia, że po odstawieniu substancji (lub zmniejszeniu ich dawki), które je powodują, pojawia się tzw. zespół abstynencyjny. To szereg objawów odstawienia narkotyków, które różnią się w zależności od rodzaju narkotyku. W każdym przypadku zostaje zaburzone funkcjonowanie układu krążenia, układu nerwowego i trawiennego. Odstawienie narkotyku mocno odbija się na psychice. Pojawią się tzw. głód narkotykowy, czyli trudna do opanowania chęć sięgnięcia po używkę. Stan ten może utrzymywać się przez kilka dni. Najtrudniejszy okres przypada na 3-4 dzień odwyku.<img alt="Palić, Papieros, Tytoń, Nikotyna, Nałóg" class="photo-result-image" height="352" src="./data/654488-0.jpg" srcset="https://cdn.pixabay.com/photo/2014/04/03/10/53/smoke-311623__340.png 1x, https://cdn.pixabay.com/photo/2014/04/03/10/53/smoke-311623__480.png 2x" width="704"/></p>
+<p><img alt="Konopie Indyjskie, Leczniczy, Wyciąć" class="photo-result-image" height="714" src="./data/654488-1.jpg" srcset="https://cdn.pixabay.com/photo/2015/11/07/17/00/cannabis-1032119__340.png 1x, https://cdn.pixabay.com/photo/2015/11/07/17/00/cannabis-1032119__480.png 2x" width="678"/></p>
+<p><img alt="Yahtzee, Kostka Do Gry, Szczęście, Gra" class="photo-result-image" height="543" src="./data/654488-2.jpg" srcset="https://cdn.pixabay.com/photo/2016/01/10/21/10/yahtzee-1132533__340.jpg 1x, https://cdn.pixabay.com/photo/2016/01/10/21/10/yahtzee-1132533__480.jpg 2x" width="805"/></p>
+<p><img alt="Facet, Alkohol, Kac, Sesja Picia, Pijany" class="photo-result-image" height="537" src="./data/654488-3.jpg" srcset="https://cdn.pixabay.com/photo/2014/08/26/20/08/man-428392__340.jpg 1x, https://cdn.pixabay.com/photo/2014/08/26/20/08/man-428392__480.jpg 2x" width="806"/></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania zagadnienia.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania zagadnienia:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><strong><em><span style="text-decoration: underline;">PRZEMOC I AGRESJA W RODZINACH</span></em></strong></p>
+<p>Przemoc i agresja w rodzinie to wszelkiego rodzaju działania lub zachowania, które są niezgodne z prawem lub etyką i powodują fizyczne, emocjonalne lub seksualne cierpienie, szkody lub krzywdy wśród członków rodziny. Mogą to być między innymi: bicie, molestowanie, szantaż emocjonalny, kontrola, izolacja, stosowanie przemoc psychicznej lub ekonomicznej. Przemoc w rodzinie jest poważnym problemem społecznym i może mieć poważne konsekwencje dla zdrowia i dobrostanu ofiary. Jednak okazuje się ona mieć także negatywny wpływ na samego sprawcę, na którego działa demoralizująco. Często też dokonuje się, ponieważ z poważnymi trudnościami życiowymi boryka się sam sprawca, który szuka w ten sposób możliwości odreagowania lub traci nad sobą kontrolę.</p>
+<p>Dane statystyczne na temat przemocy w rodzinie w Polsce mówią, że ogólna liczba osób dotkniętych przemocą w rodzinie wyniosła w 2019 roku 227 826. Zdecydowaną większość stanowiły kobiety (124 382 w porównaniu do 39 625 mężczyzn i 63 819 dzieci). Wśród zatrzymanych sprawców zdecydowaną większość również stanowili mężczyźni (16 647 w porównaniu do 606 kobiet). Trzeba jednak pamiętać, że mężczyźni mniej chętnie zgłaszają podejrzenie, iż padają ofiarami przemocy w rodzinie, ponieważ obawiają się, iż zostaną uznani za niezaradnych życiowo, słabych i pozbawionych cech uznawanych za typowo męskie.</p>
+<p><em><strong><sup>-&gt; </sup></strong></em><em><span style="text-decoration: underline;"><sup>Przykładowe elementy graficzne, którymi można zainspirować się przy tworzeniu prezentacji na temat przemocy i agresji w rodzinach:</sup></span></em></p>
+<p><sup><img alt="" height="316" src="./data/654488-4.jpg" width="402"/></sup></p>
+<p><sup><img alt="" height="605" src="./data/654488-5.jpg" width="402"/></sup></p>
+<p><sup><img alt="" height="720" src="./data/654488-6.jpg" width="403"/></sup></p>
+<p><sup><img alt="" height="267" src="./data/654488-7.jpg" width="401"/></sup></p>
+<p><sup><img alt="" height="268" src="./data/654488-8.jpg" width="403"/></sup></p>
+<p><sup><img alt="" height="268" src="./data/654488-9.jpg" width="403"/></sup></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Nazwa "rodzina nuklearna" wskazuje, że określana w ten sposób rodzina jest:</strong></span> </p>
+<p>C. podstawowym - podobnie jak atom w przyrodzie - elementem w strukturze społecznej.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #69f0ae;"><strong>Zdanie</strong></td>
+<td style="background-color: #69f0ae;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #ccff90;">Nazwa 'rodzina nuklearna' wskazuje, że określana w ten sposób rodzina jest...</td>
+<td style="background-color: #ccff90;">
+<p>...podstawowym - podobnie jak atom w przyrodzie - elementem w strukturze społecznej<sup>* </sup><strong>[C]</strong>. </p>
+<p><sup>* Opcjonalnie jako poprawną odpowiedź można również wskazać następujące dokończenie zdania: ...niewielką - maksymalnie trzyosobową - grupą społeczną <strong>[D]</strong>. Przez rodzinę nuklearną rozumie się bowiem również niewielką liczebnie rodzinę, na przykład taką, która składa się z dwójki rodziców oraz ich jednego dziecka.</sup></p>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td colspan="2" style="width: 100%; height: 41px; background-color: #76ff03;"><sup>Rodzina nuklearna to grupa osób składająca się z rodziców i ich dzieci mieszkających razem jako jednostka społeczna. Jest to najbardziej powszechny dziś, zwłaszcza w społeczeństwach z państw rozwiniętych, typ rodziny, w którym występują silne więzi emocjonalne i ekonomiczne.</sup></td>
+</tr>
+</tbody>
+</table><br>

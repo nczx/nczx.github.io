@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. I like the fact that there are lots of parks and forests where I can go for a walk. Our local community centre offers lots of activities, so people can find something they like.</p>
+<p>(Podoba mi się to, że jest tu wiele parków i lasów, gdzie mogę pójść na spacer. Nasz lokalny dom kultury oferuje wiele zajęć, więc ludzie mogą znaleźć coś, co lubią.)</p>
+<p><br/>2. The roads are in a pretty bad shape and the public transport could be better. </p>
+<p>(Drogi są w dość złym stanie, a transport publiczny mógłby być lepszy.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. She got involved in getting free calendars for the residents with rubbish pick-up dates and getting free public transport for all students. </p>
+<p><strong>Fragment w tekście</strong>: "If all goes well, we'll be able to get free calendars for all residents showing rubbish pick-up dates. (...) We were also trying to get free public transport for all students (...)." - Jeśli wszystko dobrze pójdzie, będziemy mogli uzyskać darmowe kalendarze dla wszystkich mieszkańców pokazujące terminy odbioru śmieci. (...) Staraliśmy się też o darmową komunikację miejską dla wszystkich uczniów (...).</p>
+<p>2. They might succeed in getting free calendars with rubbish pick-up dates for the residents. They didn't succeed in getting free public transport for all students.</p>
+<p><strong>Fragment w tekście</strong>: "If all goes well, we'll be able to get free calendars for all residents showing rubbish pick-up dates. (...) We were also trying to get free public transport for all students, but we won't be able to get that." - Jeśli wszystko dobrze pójdzie, będziemy mogli uzyskać darmowe kalendarze dla wszystkich mieszkańców pokazujące terminy odbioru śmieci. (...) Staraliśmy się też o darmową komunikację miejską dla wszystkich uczniów, ale tego nie uda nam się osiągnąć.</p>
+<p>3. To find out about the history of the old city gates.</p>
+<p><strong>Fragment w tekście</strong>: "Our new project is to convince the authorities to renovate the old city gates, but I will have to do a lot of research about their history first." - Naszym nowym projektem będzie przekonanie władz do odnowienia starych bram miejskich, ale najpierw będę musiała dowiedzieć się wiele na temat ich historii.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. a </p>
+<p>2. b</p>
+<p><strong>Uzasadnienie (1, 2)</strong>: zdania a i b są przykładem przyszłej formy czasownika modalnego wyrażającego możliwość (<em>will/won't be able to</em>).</p>
+<p>3. c</p>
+<p><strong>Uzasadnienie</strong>: zdanie c jest przykładem przyszłej formy czasownika modalnego wyrażającego przymus zewnętrzny (<em>will have to</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. <span style="text-decoration: line-through;">won't can</span> won't be able to</p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>can't</em> nie ma formy przyszłej. Zamiast niego używamy <em>will (not) be able to</em>. </p>
+<p>2. <span style="text-decoration: line-through;">will must</span> will have to </p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>must</em> nie ma formy przyszłej. Zamiast niego używamy <em>will have to</em>.</p>
+<p>3. <span style="text-decoration: line-through;">won't needing</span> won't need </p>
+<p><strong>Uzasadnienie:</strong> po czasowniku posiłkowym <em>will </em>nie może wystąpić czasownik w formie <em>gerund</em>.</p>
+<p>4. <span style="text-decoration: line-through;">will to need</span> will need </p>
+<p><strong>Uzasadnienie:</strong> czasownik posiłkowy <em>will </em>nie łączy się z bezokolicznikiem z <em>to</em>.</p>
+<p>5. <span style="text-decoration: line-through;">will can</span> will be able to</p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>can</em> nie ma formy przyszłej. Zamiast niego używamy <em>will be able to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie:</strong> </p>
+<p>W podanych zdaniach akcent pada na czasownik <em>have</em>, natomiast <em>to</em> nie jest akcentowane. Dlatego wymawiamy je w następujący sposób: /tə/.</p>
+<p> </p>
+<p><strong>Uwaga! Pozostałą część zadania należy wykonać indywidualnie.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>W zdaniach okolicznikowych czasu dotyczących przyszłości używamy czasu <em>present simple</em> po spójnikach takich jak <em>when </em>(kiedy), <em>as soon as </em>(jak tylko), <em>until </em>(dopóki nie). </strong><strong>W drugiej części zdania używamy czasów przyszłych.</strong></p>
+<p><strong>Przykłady:</strong></p>
+<p style="padding-left: 30px;"><em><strong>I <span style="text-decoration: underline;">will let</span> you know as soon as I <span style="text-decoration: underline;">learn</span> anything more.</strong></em><strong> <br/></strong><strong>(Dam ci znać, jak tylko dowiem się więcej.)</strong></p>
+<p style="padding-left: 30px;"><em><strong>I <span style="text-decoration: underline;">will be travelling</span> the world when I <span style="text-decoration: underline;">finish</span> school.</strong></em><strong> <br/></strong><strong>(Będę podróżować po świecie, kiedy skończę szkołę.)</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Rozwiązanie:</strong> </p>
+<p>1. present simple</p>
+<p>2. future tenses</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>Zdania okolicznikowe czasu dotyczące przyszłości są konstrukcją, w której używamy czasu <em>Present simple</em> i jakiegoś czasu przyszłego.</strong></p>
+<p><strong>W części zdania, w której występuje spójnik <em>before</em> (zanim), <em>until</em> (dopóki nie), <em>by the time</em> (do czasu), <em>if </em>(jeśli), <em>as soon as</em> (kiedy tylko), <em>after</em> (po) itd. używamy czasu <em>Present simple</em>.</strong></p>
+<p><strong>W drugiej części zdania możemy użyć czasu <em>Future simple</em> (<em>will </em>+ bezokolicznik) kiedy wydarzenie dotyczy krótkiej czynności, albo <em>Future continuous</em> (<em>will be</em> + czasownik z -ing) kiedy dotyczy długiej czynności.</strong></p>
+<hr/>
+<p> </p>
+<p>1. 'll learn, 'm  </p>
+<p>2. get, 'll be sleeping</p>
+<p>3. won't look, get</p>
+<p>4. finishes, 'll go</p>
+<p>5. 'll be thinking, meet</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>1. not have to</p>
+<p><strong>Uzasadnienie:</strong> czasownik <em>must (not)</em> nie ma formy przyszłej, dlatego po <em>will</em> należy użyć <em>not have to</em>. </p>
+<p>2. can</p>
+<p><strong>Uzasadnienie:</strong> po określeniu czasowym <em>as soon as</em> (kiedy tylko) należy użyć teraźniejszej formy czasownika - <em>can</em>.</p>
+<p>3. need to</p>
+<p><strong>Uzasadnienie:</strong> czasownik <em>must</em> nie ma formy przyszłej, dlatego po <em>won't</em> należy użyć <em>need to</em>. </p>
+<p>4. meet</p>
+<p><strong>Uzasadnienie:</strong> po określeniu czasowym <em>when</em> (kiedy) należy użyć teraźniejszej formy czasownika - <em>meet</em>.</p>
+<p>5. finds</p>
+<p><strong>Uzasadnienie:</strong> po określeniu czasowym <em>until</em> (dopóki) należy użyć teraźniejszej formy czasownika - <em>finds</em>.</p>
+<p>6. be able to</p>
+<p><strong>Uzasadnienie:</strong> czasownik <em>can</em> nie ma formy przyszłej, dlatego po <em>won't</em> należy użyć <em>be able to</em>. </p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Things I won't be able to do until I turn 18: </strong></p>
+<p>(rzeczy, których nie będę mógł/mogła robić, dopóki nie skończę 18 lat)</p>
+<p>• drive a car (jeździć samochodem)</p>
+<p>• rent a flat (wynająć mieszkanie) </p>
+<p>• move out (wyprowadzić się)</p>
+<p>• donate blood (oddawać krew)</p>
+<p>• get a permanent job (zdobyć stałą pracę)</p>
+<p> </p>
+<p><strong>Things I will be able to do when I get a job: </strong></p>
+<p>(rzeczy, które będę mógł/mogła robić, kiedy dostanę pracę)</p>
+<p>• save money (oszczędzać pieniądze)</p>
+<p>• pay the bills (płacić rachunki)</p>
+<p>• be financially independent (być niezależny/a finansowo)</p>
+<p>• buy concert tickets (kupować bilety na koncert)</p>
+<p>• eat pizza whenever I want (jeść pizzę, kiedy tylko będę chciał/a)</p>
+<p> </p>
+<p>I won't be able to drive a car until I turn 18.</p>
+<p>(Nie będę mógł/mogła prowadzić samochodu, dopóki nie skończę 18 lat.)</p>
+<p><br/>I also won't be able to move out and rent a flat before my 18th birthday.</p>
+<p>(Nie będę też mógł/mogła wyprowadzić się i wynająć mieszkania przed 18. urodzinami.)</p>
+<p><br/>When I turn 18, I will be able to get a job.</p>
+<p>(Kiedy skończę 18 lat, będę mógł/mogła znaleźć pracę.)</p>
+<p><br/>When I get a job, I will be able to save money.</p>
+<p>(Kiedy dostanę pracę, będę w stanie zaoszczędzić pieniądze.)</p>
+<p><br/>Once I save money, I will be able to buy concert tickets and eat pizza whenever I want.</p>
+<p>(Gdy już zaoszczędzę pieniądze, będę mógł/mogła kupować bilety na koncerty i jeść pizzę, kiedy tylko zechcę.)</p><br>

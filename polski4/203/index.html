@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Inne role, w które wciela się nienawiść:</p>
+<ul>
+<li>rodzicielka -&gt; "Sama rodzi przyczyny, / które ją budzą do życia";</li>
+<li>artystka -&gt; "Czy trzeba mówić ile ułożyła pieśni.";</li>
+<li>historyczka/władczyni -&gt; "Ile stronic historii ponumerowała"; </li>
+<li>zbrodniarka -&gt; "Ile dywanów z ludzi porozpościerała";</li>
+<li>estetka -&gt; "potrafi tworzyć piękno";</li>
+<li>niszczycielka -&gt; "Wspaniałe są jej łuny czarną nocą. / Świetne kłęby wybuchów o różanym świcie". </li>
+</ul>
+<p> </p>
+<p>b) </p>
+<table border="1" style="border-collapse: collapse; width: 602px; height: 473px;">
+<tbody>
+<tr>
+<td style="background-color: #aed581; text-align: center; width: 198.95px;"><strong>Środek</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 196.45px;"><strong>Przykład</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 196.6px;"><strong>Funkcja</strong></td>
+</tr>
+<tr>
+<td style="width: 198.95px; text-align: center;">antropomorfizacje</td>
+<td style="width: 196.45px; text-align: center;">
+<p><em>Spójrzcie, jaka wciąż sprawna, </em></p>
+<p><em>jak dobrze się trzyma </em></p>
+<p><em>w naszym stuleciu nienawiść.</em></p>
+<p><em>Jak lekko bierze wysokie przeszkody. </em></p>
+</td>
+<td style="width: 196.6px; text-align: center;">Zastosowanie antropomorfizacji uatrakcyjnia treść utworu, ponieważ pozwala na oryginalne przedstawienie nienawiści. Nadanie jej ludzkich cech wywołuje zaskoczenie, ale przyczynia się także do przedstawienia celnych refleksji. Uwypukla przy tym siłę wspomnianego uczucia, jego zdolność do adaptacji. </td>
+</tr>
+<tr>
+<td style="width: 198.95px; text-align: center;">kontrasty</td>
+<td style="width: 196.45px; text-align: center;">
+<p><em>między łoskotem a ciszą</em></p>
+<p><em>między czerwoną krwią a białym śniegiem </em></p>
+</td>
+<td style="width: 196.6px; text-align: center;">Kontrast wskazuje na cechę nienawiści. Potrafi doskonale łączyć ze sobą przeciwieństwa dla zwiększenia efektu. </td>
+</tr>
+<tr>
+<td style="width: 198.95px; text-align: center;">wyliczenia</td>
+<td style="width: 196.45px; text-align: center;"><em>Zdolna, pojętna, bardzo pracowita</em></td>
+<td style="width: 196.6px; text-align: center;">Wyliczenia doprecyzowują cechy nienawiści. Służą również zwiększeniu wyrazistości przedstawienia.</td>
+</tr>
+<tr>
+<td style="width: 198.95px; text-align: center;">metafory</td>
+<td style="width: 196.45px; text-align: center;">
+<p><em>Sama rodzi przyczyny,</em></p>
+<p><em>które ją budzą do życia. </em></p>
+</td>
+<td style="width: 196.6px; text-align: center;">Metafory nadają wyrazom i ich połączeniom nowe znaczenia. Umożliwiają wyrażenie prawdy na temat istoty nienawiści, która sama zapewnia sobie powody dla swego istnienia, nigdy nie zasypia.</td>
+</tr>
+<tr>
+<td style="width: 198.95px; text-align: center;">epitety</td>
+<td style="width: 196.45px; text-align: center;"><em>Świetne kłęby wybuchów o różanym świcie </em></td>
+<td style="width: 196.6px; text-align: center;">Epitety bez wątpienia wzbogacają obrazowanie w wierszu - staje się ono bardziej plastycznie. Przez to silniej oddziałuje na wyobraźnię odbiorcy.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>c)</p>
+<table border="1" style="border-collapse: collapse; width: 604px; height: 288px;">
+<tbody>
+<tr style="height: 17px;">
+<td style="background-color: #aed581; text-align: center; width: 198px; height: 17px;"><strong>Środek retoryczny</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 198px; height: 17px;"><strong>Przykład</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 198px; height: 17px;"><strong>Funkcja</strong></td>
+</tr>
+<tr style="height: 105px;">
+<td style="width: 198px; text-align: center; height: 105px;">pytanie retoryczne</td>
+<td style="width: 198px; text-align: center; height: 105px;">
+<p><em>Od kiedy to braterstwo</em></p>
+<p><em>może liczyć na tłumy?</em></p>
+</td>
+<td style="width: 198px; text-align: center; height: 105px;">Pytanie retoryczne sygnalizuje kwestie, które budzą szczególne zainteresowanie osoby mówiącej, ale nie można na nie znaleźć jednoznacznej odpowiedzi. Ma zachęcić czytelników do refleksji.</td>
+</tr>
+<tr style="height: 144px;">
+<td style="width: 198px; text-align: center; height: 144px;">anafora</td>
+<td style="width: 198px; text-align: center; height: 144px;">
+<p><em>Ile stronic historii ponumerowała.</em></p>
+<p><em>Ile dywanów z ludzi porozpościerała </em></p>
+<p><em>na ilu placach, stadionach.</em></p>
+</td>
+<td style="width: 198px; text-align: center; height: 144px;">Anafora uwypukla potęgę nienawiści, jej nieustanną obecność w życiu człowieka.</td>
+</tr>
+<tr style="height: 35px;">
+<td style="width: 198px; text-align: center; height: 35px;">apostrofa</td>
+<td style="width: 198px; text-align: center; height: 35px;"><em>Spójrzcie, jaka wciąż sprawna</em></td>
+<td style="width: 198px; text-align: center; height: 35px;">Apostrofa umożliwia mówiącemu nawiązanie kontaktu z odbiorcą.</td>
+</tr>
+<tr style="height: 35px;">
+<td style="width: 198px; text-align: center; height: 35px;">inwersja</td>
+<td style="width: 198px; text-align: center; height: 35px;"><em>Wspaniałe są jej łuny czarną nocą.</em></td>
+<td style="width: 198px; text-align: center; height: 35px;">Inwersja służy zaakcentowaniu pewnych treści, np. doświadczeniu piękna - efektu działań nienawiści. Wprowadza to pewną dwuznaczność do jej sposobu przedstawienia. </td>
+</tr>
+<tr style="height: 140px;">
+<td style="width: 198px; text-align: center; height: 140px;">paralelizm</td>
+<td style="width: 198px; text-align: center; height: 140px;">
+<p><em>Religia nie religia - </em></p>
+<p><em>byle przyklęknąć na starcie.</em></p>
+<p><em>Ojczyzna nie ojczyzna - </em></p>
+<p><em>byle się zerwać do biegu.</em></p>
+</td>
+<td style="width: 198px; text-align: center; height: 140px;">Akcentują to, że różne przyczyny wiążą się z niepowstrzymaną siłą nienawiści.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 198px; text-align: center; height: 18px;">czasowniki w 1. os. lm</td>
+<td style="width: 198px; text-align: center; height: 18px;"><em>Nie okłamujmy się:</em></td>
+<td style="width: 198px; text-align: center; height: 18px;">Czasowniki budują poczucie wspólnoty, zmniejszają dystans między podmiotem a odbiorcą. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>d) Przykładowe fragmenty o ironicznym wydźwięku:</p>
+<ul>
+<li>"Spójrzcie, jaka wciąż sprawna, / jak dobrze się trzyma";</li>
+<li>"Niezła i sprawiedliwość na początek.";</li>
+<li>"Ach, te inne uczucia - / cherlawe i ślamazarne."</li>
+<li>"Od to kiedy braterstwo / może liczyć na tłumy?"</li>
+<li>"Współczucie czy kiedykolwiek / pierwsze dobiło do mety?";</li>
+<li>"Nie okłamujmy się: / potrafi tworzyć piękno.";</li>
+<li>"Wspaniałe są jej łuny czarną nocą. / Świetne kłęby wybuchów o różanym świcie.".</li>
+</ul>
+<p> </p>
+<p>e) Przewrotność opisu przejawia się w tym, że uwydatnia on zalety nienawiści, nie dąży do jej oczywistej negacji. Jest ona cierpliwa, wieczna, silna, a przy tym "Zdolna, pojętna, bardzo pracowita". Może więc imponować swoimi talentami, determinacją, niespożytą energią. Poetka prowadzi tym samym grę z oczekiwaniami czytelnika, ponieważ unika dydaktycznego, przepełnionego nadmierną powagą tonu. Pochwała jest jednak pozorna, gdyż podmiot liryczny wykorzystuje ironię. Uwypuklenie zalet nienawiści wprowadza bowiem niezbyt optymistyczną refleksję na temat kondycji ludzkości, która cały czas podlega temu uczuciu. Zło jest bowiem cierpliwe, znajduje preteksty dla swego istnienia. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>Sformułowania nawiązujące do sportu służą wskazaniu podobieństw łączących nienawiść ze sportowcami. Podkreślają jej determinację, cierpliwość, sprawność oraz skłonność do rywalizacji czy też potrzebę zwyciężania: "Jak lekko bierze wysokie przeszkody, / Jakie to łatwe dla niej - skoczyć, dopaść". Zło w ten sposób udowadnia swoją siłę, ale też zostaje ukazane niczym człowiek. Sformułowania związane ze światem sztuki z kolei sugerują wszechobecność nienawiści. Zaznaczają także jej wpływ na ludzkie wytwory - są skażone jej wpływem, a nieraz stanowią zapis przerażających zdarzeń ("Czy trzeba mówić ile ułożyła pieśni"). Nienawiść przenika tym samym rozmaite sfery ludzkiej egzystencji, a jednocześnie stanowi siłę twórczą, gdyż fascynuje.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>a) <em>Nie jest jak inne uczucia.</em></p>
+<p><em>Starsza i młodsza od nich równocześnie.</em></p>
+<p>Nienawiść wyróżnia się na tle innych uczuć. Zdaje się bowiem funkcjonować poza kategorią czasu, ponieważ jest i młodsza, i starsza od innych doznań. Z tego też powodu łączy w sobie cechy kojarzone z tymi okresami w życiu. Jej młodość przejawia się w sile, energii, skłonności do rywalizacji. Z kolei wiekowość ujawnia cierpliwość, determinacja oraz bogate doświadczenia nienawiści. </p>
+<p> </p>
+<p>b) <em>Sama rodzi przyczyny,</em></p>
+<p><em>które ją budzą do życia.</em></p>
+<p>Słowa te świadczą o tym, że nienawiść jest samowystarczalna. Sama bowiem tworzy preteksty, które przyczyniają się do jej zaistnienia. Nie dotyczy jej przemijanie. Jej ciągła obecność w świecie pozostaje tym samym niezaprzeczalna.</p>
+<p> </p>
+<p>c) <em>Jeśli zasypia, to nigdy snem wiecznym,</em></p>
+<p><em>Bezsenność nie odbiera jej sił, ale dodaje. </em></p>
+<p>Siły nienawiści są niespożyte. Nawet kiedy zaczyna panować pokój, to nie oznacza to ostatecznego zwycięstwa nad złem. Pozostaje ono uśpione, ale w każdym momencie może powrócić. Również kiedy ulega przebudzeniu nie powoduje to, iż nienawiść słabnie. Niezależnie bowiem od sytuacji za każdym razem wzmacnia się i powraca z większą siłą.</p>
+<p> </p>
+<p>Paradoks w sposobie portretowania nienawiści polega na tym, że opiera się ona na przeciwstawnych elementach, co wywołuje zdumienie, niedowierzanie odbiorcy. W ten sposób poetka akcentuje jej siłę oraz uzasadnia, dlaczego wciąż pozostaje żywym zjawiskiem. Wyróżnia się bowiem doskonałą zdolnością adaptacji do różnych warunków, czerpie swą moc z różnych źródeł i zawsze znajduje powód dla swej obecności. Zastosowanie paradoksów umożliwia wielopłaszczyznowe przedstawienie nienawiści oraz dotknięcie jej istoty.  </p><br>

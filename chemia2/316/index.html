@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Związek ten zawiera w cząsteczce <span style="text-decoration: underline;">jeden</span> atom węgla, <span style="text-decoration: underline;">cztery</span> atomy wodoru oraz <span style="text-decoration: underline;">jeden</span> atom tlenu. Masa atomowa węgla to 12 u, wodoru 1 u, zaś tlenu 16 u. Liczymy stosunek masowy:</p> <p><span> <math-expr expr="m_C:m_H:m_O=12\ u\ :\ [4*1\ u]\ :\ 16\ u=12:4:16=3:1:4" syntax="text"></math-expr> </span>  </p> <p>Masa cząsteczkowa tego związku to:</p> <p><span> <math-expr expr="m_(CH_4O) = 12 + 4*1 + 16 = 32\ u" syntax="text"></math-expr> </span>  </p> <p>Liczymy skład procentowy:</p> <p><span> <math-expr expr="%C=(12\ u)/(32\ u)*100%=37,5%" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="%H=(4*1\ u)/(32\ u)*100%=12,5%" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="%O=(16\ u)/(32\ u)*100%=50%" syntax="text"></math-expr> </span>  </p> <p><strong>Odpowiedź: Stosunek masowy pierwiastków w tym związku to m<sub>C</sub>:m<sub>H</sub>:m<sub>O</sub> = 3:1:4, zaś skład procentowy to 37,5% węgla, 12,5% wodoru oraz 50% tlenu.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Wzór tego związku możemy zapisać jako C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>. Zaczynamy od obliczenia zawartości procentowej tlenu:</p> <p> <math-expr expr="%O=100%-40%-6,67%=53,33%" syntax="text"></math-expr>   </p> <p>Masa atomowa węgla to 12 u, wodoru 1 u, zaś tlenu 16 u. Liczymy wartości indeksów <em>x, y </em>oraz <em>z</em>. </p> <p> <math-expr expr="x*12\ u=(40%*60\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='x*12\ u=24\ u\ \ \ "/":12\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=2" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="y*1\ u=(6,67%*60\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='y*1\ u=4\ u\ \ \ "/":1\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="y=4" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="z*16\ u=(53,33%*60\ u)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='z*16\ u=32\ u\ \ \ "/":16\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="z=2" syntax="text"></math-expr>   </p> <p><strong>Wzór sumaryczny tego związku to  <math-expr expr="bb(C_2H_4O_2)." syntax="text"></math-expr>    </strong></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zaczynamy od ustalenia stosunku ilościowego, w oparciu o stosunek masowy, atomów w tym związku i wyprowadzenia wzoru empirycznego C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>. Masa atomowa węgla to 12 u, wodoru 1 u, zaś tlenu 16 u.</p> <p> <math-expr expr="m_x:m_y:m_z=6:1:8" syntax="text"></math-expr>   </p> <p> <math-expr expr="[x*12]\ :\ [y*1]\ :\ [z*16]=6:1:8" syntax="text"></math-expr>    </p> <p>Możemy to rozbić na części jako:</p> <p> <math-expr expr="x*12=6\ \ \ \ \ \ \ \ \ \ y*1=1\ \ \ \ \ \ \ \ \ \ z*16=8" syntax="text"></math-expr>   </p> <p>Z tego wyliczamy wartości <em>x</em>,<em> y </em>oraz <em>z</em>:</p> <p> <math-expr expr='x*12=6\ \ "/":12\ \ \ \ \ \ \ \ \ \ y*1=1\ \ "/":1\ \ \ \ \ \ \ \ \ \ z*16=8\ \ "/":16' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=0,5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y=1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z=0,5" syntax="text"></math-expr>     </p> <p>Podstawiamy to do stosunku ilościowego <em>x</em>:<em>y</em>:<em>z</em> i otrzymujemy:</p> <p> <math-expr expr="x:y:z=0,5:1:0,5=1:2:1" syntax="text"></math-expr>   </p> <p>Wzór empiryczny tego związku to CH<sub>2</sub>O.</p> <p>Wyznaczamy wzór rzeczywisty:</p> <p> <math-expr expr="m_((CH_2O)_n)=180\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="n*(m_C+2*m_H+m_O)=180\ u" syntax="text"></math-expr>    </p> <p> <math-expr expr="n*(12\ u+2*1\ u+16\ u)=180\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr='n*30\ u=180\ u\ \ \ "/":30\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=6" syntax="text"></math-expr>   </p> <p> <math-expr expr="(CH_2O)_6=bbul(C_6H_(12)O_6)" syntax="text"></math-expr>   </p> <p><strong>Wzór rzeczywisty tego związku to C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>.</strong>    </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zapisujemy równanie reakcji spalania:</p> <p> <math-expr expr="C_xH_y+(x+y/4)\ O_2-&gt;x\ CO_2+y/2\ H_2O" syntax="text"></math-expr>   </p> <p>Liczymy liczbę moli otrzymanego CO<sub>2</sub>: </p> <p> <math-expr expr="M_(CO_2)=44\ g/(mol)" syntax="text"></math-expr>   </p> <p> <math-expr expr="n=m/M=(4,4\ g)/(44\ g/(mol))=0,1\ mola" syntax="text"></math-expr>   </p> <p><br/>Spalając 1,6 g węglowodoru otrzymujemy zatem 0,1 mola CO<sub>2</sub>. Z równania reakcji widzimy, że ilość moli CO<sub>2</sub> równa jest ilości moli atomów węgla w molu cząsteczek węglowodoru. Liczymy zatem, jaka masa węglowodoru pozwoli otrzymać jeden mol CO<sub>2</sub>, a tym samym jaka masa węglowodoru zawiera w sobie jeden mol atomów węgla.</p> <p> <math-expr expr="1,6\ g\ \ -\ \ 0,1\ mola" syntax="text"></math-expr>   </p> <p> <math-expr expr="x\ \ -\ \ 1\ mol" syntax="text"></math-expr>   </p> <p> <math-expr expr="x=(1\ mol*1,6\ g)/(0,1\ mola)=16\ g" syntax="text"></math-expr>   </p> <p><br/>Zatem masa związku, zawierającego jeden mol atomów węgla to 16 g. Jeden mol atomów węgla ma masę 12 g. Liczymy ilość moli atomów wodoru w związku wiedząc, że masa jednego mola atomów tego pierwiastka to 1 g.</p> <p> <math-expr expr="16\ g-12\ g=4\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="y=(4\ g)/(1\ g)=4" syntax="text"></math-expr>   </p> <p><br/><strong>Wzór empiryczny i zarazem rzeczywisty tego związku to CH<sub>4</sub>.</strong>  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a) Równanie reakcji:</p> <p> <math-expr expr="C_2H_6O+3\ O_2-&gt;2\ CO_2+3\ H_2O" syntax="text"></math-expr>   </p> <p><br/>b) </p> <p>Z równania reakcji wynika, że stosunek molowy spalanego związku do otrzymanego tlenku węgla(IV) wynosi 1:2. Masa molowa tego związku to 46 g/mol, zaś jeden mol CO<sub>2</sub> w warunkach normalnych zajmuje 22,4 dm<sup>3</sup>.</p> <p> <math-expr expr="46\ g\ \ -\ \ 2*22,4\ dm^3" syntax="text"></math-expr>   </p> <p> <math-expr expr="2,3\ g\ \ -\ \ V_(CO_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr="V_(CO_2)=(2,3\ g*2*22,4\ dm^3)/(46\ g)=2,24\ dm^3" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Wydzieli się 2,24 dm<sup>3</sup> tlenku węgla(IV).</strong>     </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Wzory alkanów to:</p> <p> <math-expr expr="C_5H_(12)," syntax="text"></math-expr>    <math-expr expr="C_3H_8,\ C_(10)H_(22)" syntax="text"></math-expr>   </p> <p><br/><em>wyjaśnienie: wzór ogólny alkanów to C<sub>n</sub>H<sub>2n+2</sub>.</em>  </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>a)</p> <p>nazwa: <span style="text-decoration: underline;"><em><strong> butan </strong></em></span></p> <p>wzór półstrukturalny:  <math-expr expr="CH_3-CH_2-CH_2-CH_3" syntax="text"></math-expr>    </p> <p><br/>b) </p> <p>nazwa: <span style="text-decoration: underline;"><em><strong> pentan </strong></em></span></p> <p>wzór półstrukturalny:  <math-expr expr="CH_3-CH_2-CH_2-CH_2-CH_3" syntax="text"></math-expr>    </p> <p><br/>c)</p> <p>nazwa: <span style="text-decoration: underline;"><em><strong> propan </strong></em></span></p> <p>wzór półstrukturalny:  <math-expr expr="CH_3-CH_2-CH_3" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Wzór:</p>
+<p><img alt="" height="68" src="./data/934928-0.jpg" width="97"/> </p>
+<p>Liczba elektronów tworzących wiązania - <span style="text-decoration: underline;"><em><strong> 14 </strong></em></span></p>
+<p>Liczba wiązań typu σ - <span style="text-decoration: underline;"><strong> 7 </strong></span></p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><em>Atomy węgla I-rzędowe łączą się z tylko jednym innym atomem węgla oraz 3 atomami wodoru. Atomy II-rzędowe z dwoma innymi atomami węgla, III-rzędowe z trzema, zaś IV-rzędowe z czterema.</em></p>
+<p>Przykładowy wzór strukturalny alkanu spełniającego warunki podane w zadaniu:</p>
+<p><img alt="" height="200" src="./data/934951-0.jpg" width="228"/></p>
+<p>Nazwa powyższego alkanu:  <span style="text-decoration: underline;"><em><strong> </strong><strong>2,2,4-trimetylopentan </strong></em></span></p>
+<p><em>Uwaga: Powyższy węglowodór to jedynie jeden z kilku przykładów związków spełniających warunek z zadania. Możliwe są też inne kombinacje.</em></p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Poprawny podział:</p>
+<ul>
+<li>gazy: C<sub>4</sub>H<sub>10</sub>, CH<sub>4</sub>, C<sub>2</sub>H<sub>6</sub>;</li>
+<li>ciecze: C<sub>8</sub>H<sub>18</sub>, C<sub>5</sub>H<sub>12</sub>, C<sub>16</sub>H<sub>34</sub>;</li>
+<li>ciała stałe: C<sub>20</sub>H<sub>42</sub>;</li>
+</ul>
+<p><em>Węglowodory o 1-4 atomach węgla w cząsteczce występują w warunkach normalnych w stanie gazowym, 5-16 atomów węgla w stanie ciekłym, zaś poqyżej 17 atomów węgla w stanie stałym.</em></p><br>

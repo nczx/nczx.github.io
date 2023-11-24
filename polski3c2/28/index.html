@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>G³ówne kierunki w malarstwie: </p>
+<ul>
+<li>ekspresjonizm;</li>
+<li>kubizm;</li>
+<li>abstrakcjonizm;</li>
+<li>surrealizm;</li>
+<li>dadaizm.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" cellspacing="0" style="height:344px;width:1066px;border-collapse:collapse;">
+<tbody>
+<tr style="height:19px;">
+<td style="background-color:#aed581;text-align:center;"><strong>Cechy<br/></strong></td>
+<td style="background-color:#aed581;text-align:center;"><strong>Architektura secesyjna</strong></td>
+<td style="background-color:#aed581;text-align:center;"><strong>Architektura modernistyczna </strong></td>
+</tr>
+<tr style="height:246px;">
+<td style="width:115px;text-align:center;height:127px;">
+<p>bry³y i</p>
+<p>linie</p>
+</td>
+<td style="width:424px;height:127px;">
+<ul>
+<li>asymetria;</li>
+<li>naœladowanie form naturalnych;</li>
+<li>falistoœæ i dynamika linii;</li>
+</ul>
+</td>
+<td style="width:468px;height:127px;">
+<ul>
+<li>funkcja decyduje o konstrukcji i formie budowli;</li>
+<li>proste bry³y, podstawowe figury geometryczne;</li>
+<li>otwarty plan przestrzeni wewn¹trz budynku;</li>
+</ul>
+</td>
+</tr>
+<tr style="height:49px;">
+<td style="width:115px;text-align:center;height:49px;">
+<p>materia³y</p>
+</td>
+<td style="width:424px;height:49px;text-align:center;">
+<p>³¹czenie kamienia, ¿elaza i szk³a</p>
+</td>
+<td style="width:468px;height:49px;text-align:center;">
+<p>wykorzystanie szk³a i ¿elbetonu</p>
+</td>
+</tr>
+<tr style="height:100px;">
+<td style="width:115px;text-align:center;height:100px;">
+<p>zdobienia</p>
+</td>
+<td style="width:424px;height:100px;">
+<ul>
+<li>bogata ornamentyka, wykorzystuj¹ca m.in. motywy roœlinne, zwierzêce, a tak¿e stylizowane sylwetki kobiet;</li>
+<li>staranna dekoracja wnêtrz;</li>
+</ul>
+</td>
+<td style="width:468px;height:100px;">
+<p>g³adka elewacja budowli bez ozdób i dodatków</p>
+</td>
+</tr>
+<tr style="height:49px;">
+<td style="width:115px;text-align:center;height:49px;">
+<p>okna i drzwi</p>
+</td>
+<td style="width:424px;height:49px;text-align:center;">
+<p>³uki w oknach i drzwiach</p>
+</td>
+<td style="width:468px;height:49px;text-align:center;">
+<p>szerokie, du¿e okna, p³aski dach</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Najwa¿niejsze cechy teatru miêdzywojnia:</p>
+<ul>
+<li>³¹czy w sobie funkcje nie tylko kulturalne, ale tak¿e polityczne i spo³eczne; </li>
+<li>rozwijaj¹ siê jego ró¿ne typy: teatry dramatyczne, literacko-rewiowe, kabarety, sceny musicalowe;</li>
+<li>publicznoœæ zyskuje szczególn¹ rolê - jako wspó³twórca spektaklu;</li>
+<li>Ÿród³em inspiracji staje siê sztuka cyrkowa, komedia dell'arte, rytua³y o charakterze religijnym czy teatr japoñski;</li>
+<li>stosowane s¹ zró¿nicowane metody gry aktorskiej;</li>
+<li>wyró¿nia siê zaanga¿owaniem w kwestie spo³eczne i polityczne;</li>
+<li>jest tak¿e wykorzystywany do celów ideologicznych. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br>

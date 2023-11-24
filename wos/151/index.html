@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Zasady niezależności sądów i niezawisłości sędziów są ważne z punktu widzenia obywateli, ponieważ stanowią one gwarancję prawa do sądu (art. 45 Konstytucji RP). Tylko przestrzeganie tych zasad może doprowadzić do tego, że prawa nie będą łamane w ramach wymiaru sprawiedliwości oraz dojdzie do zaprzestania korupcji, a obywatele będą mieli poczucie, że ich sprawy będą rozstrzygane w sposób bezstronny i sprawiedliwy. Tym samym zasady te stanowią podstawy prawidłowego funkcjonowania wymiaru sprawiedliwości. Przestrzeganie tych zasad stanowi podstawę przestrzegania praw i wolności obywatelskich. </p>
+<p>b) </p>
+<p><span style="text-decoration: underline;"><strong>Przykład naruszenie zasady niezawisłości sędziowskiej:</strong></span></p>
+<ul>
+<li>Sędzia wydał wyrok w sprawie swojego sąsiada, który jest jego najlepszym przyjacielem. - <strong>Niezawisłość </strong><strong>sędziowska</strong> polega na tym, że sędzia jest zobowiązany do bezstronnego rozwiązywania sporów. Sędzia musi być niezależny, orzekać zgodnie z własnym sumieniem, wskazaniami wiedzy, doświadczeniem, a co najważniejsze - nakazami prawa. </li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Przykład naruszenia zasady niezależności sądów:</strong></span></p>
+<ul>
+<li>Rząd dyktuje sądom jakie wyroki mają wydać w sprawach związanych z danymi politykami. - <strong>Niezależność sądów</strong> polega na braku jakichkolwiek nacisków ze strony wewnętrznej, jak i zewnętrznej. W czasie orzekania - sędzia nie może być poddawany naciskom ze strony władzy wykonawczej lub partii politycznej sprawującej władzę. Sędzia rozstrzygając sprawę ma podlegać tylko i wyłącznie obowiązującej konstytucji i ustawom. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Zasady niezależności sądów i niezawisłości sędziów są ważne z punktu widzenia obywateli, ponieważ dzięki nim zyskują oni możliwość sprawiedliwego rozpatrzenia ich sprawy przez sąd</span></strong>. Wspomniane zasady stanowią gwarancję ochrony praw i wolności jednostki, w tym zwłaszcza w jej relacjach z władzą publiczną. <strong><span style="text-decoration: underline;">Dzięki realizowaniu tych zasad możliwe jest urzeczywistnianie względem obywateli prawa do sprawiedliwego procesu</span></strong>, o którym mówi artykuł 45. <em>Konstytucji RP</em>, stanowiący, że: 'Każdy ma prawo do sprawiedliwego i jawnego rozpatrzenia sprawy bez nieuzasadnionej zwłoki przez właściwy, niezależny, bezstronny i niezawisły sąd'.</p>
+<p><strong>b)</strong></p>
+<p><strong><span style="text-decoration: underline;">Zasada niezależności sądów</span></strong> polega na tym, że sądy mają status jednej z trzech niezależnych od siebie władz w państwie, w związku z czym w ich orzeczenia nie mogą ingerować organy władzy ustawodawczej lub wykonawczej. Przykładem złamania tej zasady byłaby sytuacja, w której na przykład posłowie (jako przedstawiciele władzy ustawodawczej) lub ministrowie (jako przedstawiciele władzy wykonawczej) nakazywaliby sędziom zmianę lub uchylanie konkretnych orzeczeń.</p>
+<p><strong><span style="text-decoration: underline;">Zasada niezawisłości sędziów</span></strong> głosi zaś, że w sprawowaniu swojego urzędu każdy sędzia musi kierować się jedynie przepisami <em>Konstytucji RP </em>i ustaw, wydając orzeczenia zgodnie z własnym sumieniem i bezstronnie, tzn. w sposób wolny od nacisków zarówno stron sporu, jak i organów władzy państwowej. Przykładem naruszenia tej zasady byłaby sytuacja, w której sędzia wydałby wyrok pod wpływem przekupstwa lub zastraszenia ze strony dysponującej odpowiednią siłą strony sporu, w którym przyszło orzekać sędziemu.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Organem, który występuje do Prezydenta RP z wnioskiem o powołanie sędziów, jest: </strong></span></p>
+<p>C Krajowa Rada Sądownictwa. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #cc3300; width: 49.6533%;"><strong>Zdanie</strong></td>
+<td style="background-color: #cc3300; width: 50.26%;"><strong>Właściwe dokończenie zdania</strong></td>
+</tr>
+<tr>
+<td style="background-color: #ff9966; width: 49.6533%;">Organem, który występuje do Prezydenta RP z wnioskami o powołanie sędziów, jest...</td>
+<td style="background-color: #ff9966; width: 50.26%;">...Krajowa Rada Sądownictwa. <strong>[C]</strong></td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Tak, ławnicy są potrzebni, ponieważ pełnienie przez nich funkcji sędziego społecznego pozwala na wprowadzenie do sądowego organu orzeczniczego nowego spojrzenia, które pozwalałoby na popatrzenie na daną sprawę inaczej niż przez pryzmat samych kodeksów. Ponadto ławnicy posiadają również bogate doświadczenie, które pozwala im na kontrolowanie działań podejmowanych przez sąd.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może mieć wyłącznie charakter przykładowej wskazówki pomocnej do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Ławnicy sądowi są w wymiarze sprawiedliwości przedstawicielami społeczeństwa i biorą udział w wydawaniu wyroków przez sąd. Wydaje się zatem, że są oni potrzebni w sądach, ponieważ zwiększają poziom kontroli społecznej nad pracą sądów. Trzeba jednak pamiętać, że ławnicy nie muszą mieć zwykle odpowiedniego przygotowania prawniczego. Niektóre sprawy są zaś na tyle złożone i nieoczywiste, że brak specjalistycznej wiedzy prawniczej może być przeszkodą przy ich rozstrzyganiu. Być może więc na ławników powinno się wybierać tych, którzy na przykład wcześniej zdadzą specjalne egzaminy lub testy z wiedzy o prawie.</p><br>

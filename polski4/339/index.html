@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W podkreślonym zdaniu Jan Kott odwołuje się do utrwalonego przez Stefana Żeromskiego w powieści <em>Ludzie bezdomni </em>rozumienia bezdomności w sposób symboliczny. Problem ten ma więc w sobie pewną literackość, podlega interpretacji, jest abstrakcyjny. Takiemu przedstawianiu tej kwestii Kott przeciwstawia "homlesów" z <em>Antygony w Nowym Jorku</em>. Pisze o nich: "śmierdzą i nie mają gdzie pójść". Nie są więc symbolami, a prawdziwymi ludźmi. Głowacki w swoim dramacie przedstawia rzeczywistość pozbawioną patetyczności, nieupiększoną.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Jan Kott uważa, że nowy realizm jest tragikomiczny, łączy bowiem w sobie sprzeczności współczesnego świata. Autor dostrzega niemożność wyrażenia chaosu rzeczywistości bez elementu komizmu czy absurdu. Przyczyn tego doszukuje się w historii, przez którą dokonały się zasadnicze zmiany w sposobie pisania literatury. Świat okazał się absurdalny, nie działa według takich zasad, jakie dawniej znała ludzkość. Jego literackim obrazem są więc teksty, w których komedia przeplata się z tragedią, oddają one w pełni jego naturę, stanowią najdokładniejszy opis, to czyni je zaś realistycznymi. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Tekst Jana Kotta można uznać za esej. Świadczą o tym następujące cechy:</p>
+<ul>
+<li>Utwór ma charakter dygresyjny. Autor zarysowuje wiele wątków i tematów, ale żadnego z nich nie wyczerpuje. Rozważanie o <em>Antygonie w Nowym </em><em>Jorku </em>stają się pretekstem do omówienia takich tematów jak np.: wizerunek bezdomnego w literaturze czy przyczyny powstawania utworów tragikomicznych. </li>
+<li>Tekst nie ma wyraźnego schematu kompozycyjnego, jest zbudowany na zasadzie asocjacji. Kolejne akapity są ze sobą luźno powiązane, stanowią rozwinięcie skojarzeń autora.</li>
+<li>Rozważania Kotta mają charakter subiektywny - wyrażone zostają w nich prywatne opinie.. Piszący nawiązuje do własnych doświadczeń życiowych, np. w słowach: "Pytał mnie wielki amerykański socjolog, jacy są w tej sztuce u Głowackiego homlesi".</li>
+<li>Tekst jest erudycyjny, autor posługuje się bogatym słownictwem, pozwala sobie na stosowanie różnych dykcji - w tym poetyckiej i potocznej. Przywołuje różne teksty z tradycji literackiej, powołuje się także na zdanie autorytetów (np. anegdota z życia Stryjkowskiego).</li>
+</ul><br>

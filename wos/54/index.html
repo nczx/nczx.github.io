@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Poniżej przedstawiono rozwiązanie zadania:</strong></span> </p>
+<p><img alt="" height="763" src="./data/667695-0.jpg" width="1579"/></p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 17px;">
+<td style="background-color: #0099cc;"><strong>(1) </strong>społeczeństwo otwarte</td>
+<td style="background-color: #66ccff;"><strong>[D] </strong>Życie w tym społeczeństwie jest zorganizowane zgodnie z zasadami wolności, tolerancji, pluralizmu oraz poszanowania praw jednostki.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #0099cc;"><strong>(2) </strong>społeczeństwo postindustrialne</td>
+<td style="background-color: #66ccff;"><strong>[A] </strong>Charakterystyczna dla tego społeczeństwa jest dominująca pozycja sektora usług w gospodarce. Podstawą funkcjonowania przedsiębiorstw jest w nim specjalistyczna wiedza. W produkcji wykorzystuje się nowoczesne technologie.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #0099cc;"><strong>(3) </strong>społeczeństwo masowe</td>
+<td style="background-color: #66ccff;"><strong>[B] </strong>W społeczeństwie takim można zaobserwować stopniowy zanik więzi międzyludzkich. Jego członkowie odchodzą od tradycyjnych wartości. Dominują wśród nich postawy bierności, materializmu i konformizmu.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #0099cc;"><em><strong>-&gt; </strong></em><span style="text-decoration: line-through;">społeczeństwo informacyjne</span></td>
+<td style="background-color: #66ccff;"><span style="text-decoration: line-through;"><strong>[C] </strong>U podstaw funkcjonowania tego społeczeństwa leży masowe wykorzystanie nowoczesnych, zaawansowanych technicznie środków komunikacji oraz szybkie przetwarzanie i przekazywanie informacji.</span></td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Na podstawie tekstu źródłowego należy wskazać, że jego autor <span style="text-decoration: underline;"><strong>zmiany formy aktywności w ramach ruchów społecznych</strong> </span>upatruje w  zmianach zachodzących w zakresie nacisku na "<strong>tożsamość, wartości kulturowe oraz proces nadawania (i redefiniowania) znaczeń</strong>". J. Nowak zauważył, że współczesne ruchy społeczne "stanowią coraz ważniejszy element <strong>globalnego pejzażu aktywności obywatelskiej</strong>". Ponadto mogą one wykorzystywać w swoim działaniu <strong>nowe media,</strong> które wcześniej nie były w zasięgu ruchów społecznych. </p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>b) Przykładowe rozwiązanie:</strong></span></p>
+<p>Moim zdaniem najważniejszą cechą nowych ruchów społecznych jest zapotrzebowanie informacyjne, które stanowi wyznacznik współczesnych czasów. Obecnie mamy do czynienia z ogromnym znaczeniem informacji, które stały się cennym towarem. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>W ostatnich latach - według autora tekstu - zmieniły się formy aktywności w ramach ruchów społecznych, ponieważ wzrosło znaczenie procesu komunikowania się w nowoczesny sposób, przy użyciu nowych technologii (w tym tzw. nowych mediów), a także zasobów informacyjnych. Położono też nacisk na kultywowanie własnych tożsamości i wartości kulturowych.</p>
+<p><strong>b)</strong></p>
+<p><strong>Ta część zadania ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Wydaje się, że najważniejszą cechą nowych ruchów społecznych opisanych w tekście jest to, iż dla ich funkcjonowania kluczowe okazują się nowe media. Nowe ruchy społeczne komunikują swoje treści i pozyskują swoich zwolenników w dużej mierze poprzez Internet, w tym dzięki portalom społecznościowym. W związku z tym aktywność obywatelska może realizować się dziś za pośrednictwem sieci i przybierać globalny zasięg działania.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe kryteria oceny rozwoju społeczeństwa informacyjnego:</strong></span></p>
+<ul>
+<li>udział zatrudnionych w sektorze informacyjnym do ogólnej liczby osób zatrudnionych w gospodarce, </li>
+<li>udział sektora informacyjnego w wytwarzaniu PKB, </li>
+<li>miernik gęstości infrastruktury informacyjnej, </li>
+<li>wskaźnik ilości produkowanych informacji na jednego mieszkańca kraju (np. ilość wydanych książek), </li>
+<li>liczba godzin oglądanych wiadomości w przeliczeniu na jednego mieszkańca kraju, </li>
+<li>liczba użytkowników internetu, </li>
+<li>liczba godzin korzystania z internetu w przeliczeniu na jednego mieszkańca kraju, </li>
+<li>wskaźnik edukacji na poziomie szkół wyższych, </li>
+<li>wydatki przedsiębiorstw na informacje, </li>
+<li>wydatki gospodarstw domowych na informacje.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p>Społeczeństwo informacyjne jest pojęciem określającym społeczeństwo, w którym informacja jest kluczowym zasobem i wprowadza znaczące zmiany w sposobie funkcjonowania społeczeństwa oraz interakcjach między jego członkami. Obejmuje to rozwój i szerokie wykorzystanie technologii informacyjnych, takich jak komputery i Internet, do przetwarzania, dostarczania i wymiany informacji.</p>
+<p>Można - przykładowo - ocenić stopień rozwoju społeczeństwa informacyjnego w Polsce przy pomocy kilku kryteriów, w tym:</p>
+<ol>
+<li>
+<p>Dostępność i szybkość sieci: w Polsce powinna istnieć szeroka dostępność sieci szybkiego Internetu, co pozwala na łatwe i szybkie korzystanie z usług i aplikacji on-line.</p>
+</li>
+<li>
+<p>Zastosowanie technologii: stopień wykorzystania technologii informacyjnej i komunikacyjnej przez różne sektory społeczeństwa, takie jak edukacja, biznes czy administracja rządowa.</p>
+</li>
+<li>
+<p>Edukacja: poziom wiedzy i umiejętności w zakresie technologii informacyjnej i komunikacyjnej wśród społeczeństwa, w szczególności wśród dzieci i młodzieży.</p>
+</li>
+<li>
+<p>Innowacje i rozwój: stopień wprowadzania i rozwijania nowych technologii i usług, co wpływa na rozwój gospodarki i społeczeństwa.</p>
+</li>
+<li>
+<p>Bezpieczeństwo cybernetyczne: poziom ochrony danych i informacji przed nieuprawnionym dostępem i wykorzystaniem, co jest niezbędne w dobie rosnącego zagrożenia cyberprzestępczością.</p>
+</li>
+<li>
+<p>Uczestnictwo w kulturze cyfrowej: stopień uczestnictwa społeczeństwa w kulturze cyfrowej, takiej jak korzystanie z social mediów czy usług e-commerce.</p>
+</li>
+</ol>
+<p>Ocena stopnia rozwoju społeczeństwa informacyjnego powinna opierać się na analizie tych i innych kryteriów, uwzględniając różne aspekty rozwoju technologicznego i społecznego w Polsce.</p><br>

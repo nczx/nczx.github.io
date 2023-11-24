@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W utworze przedstawiono tytu³owy przedœwit. Towarzysz¹ mu apokaliptyczne oraz niepokoj¹ce zdarzenia, które prowokuj¹ chêæ ucieczki od takiej rzeczywistoœci i cierpienia. Podmiot liryczny w wierszu zasadniczo siê nie ujawnia. Jednak na podstawie wiersza mo¿na postrzegaæ go jako œwiadka i obserwatora zdarzeñ. Z uwag¹ bowiem przedstawia dynamiczny charakter rzeczywistoœci: "pó³noc s¹czy³a udrêkê có¿ z tego zab³ys³a woda / mo¿na choæ konno uciec uciec wzd³u¿ niskich wierzb". Zwraca siê bezpoœrednio do anonimowej osoby, równie¿ doœwiadczaj¹cej tej grozy: "chcesz czy nie chcesz zaliczonyœ do nich / widzisz / w œwitaniu pa³aj¹cym przewala siê  t³um jeŸdŸców". Podmiot wyra¿a siê w sytuacji zagro¿enia, drêczy go przeczucie nadchodz¹cej klêski oraz niebezpieczeñstwa: "o klêsko / dno". Pragnie uciec od wszechobecnego zamêtu, byæ mo¿e niepokoi go destrukcja œwiata: "w potwornych ob³oków leju znikasz i ty i oni i wszystko". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) Przyk³adowo: </p>
+<table border="1" style="border-collapse:collapse;width:716px;height:465px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;"><strong>Cytat</strong></td>
+<td style="background-color:#aed581;text-align:center;"><strong>Wyjaœnienie</strong></td>
+</tr>
+<tr style="height:161px;">
+<td style="width:343.875px;text-align:center;height:161px;">
+<p><em>œpi¹cy ju¿ rêce unosz¹ a zasiani s¹ gêsto jak sieæ [...]</em></p>
+<p><em>mo¿na choæ konno uciec uciec wzd³u¿ niskich wierzb [...]</em></p>
+<p><em>powietrze rwiesz to pêd to pêd u czo³a wiatr i wiatr / u piêt</em></p>
+</td>
+<td style="width:365.125px;text-align:center;height:161px;">Fragment ten wyró¿nia siê dynamizmem. Obraz œpi¹cych wprowadza poczucie niepokoju oraz zagro¿enia. Jedyn¹ mo¿liwoœci¹ ocalenia staje siê ucieczka. W jej czasie cz³owiek wrêcz jednoczy siê z wiatrem.</td>
+</tr>
+<tr style="height:144px;">
+<td style="width:343.875px;text-align:center;height:144px;">
+<p><em>ha w wodospadach pagórków têtent lotnej pogoni</em></p>
+<p><em>najbli¿si nienawistni na koniach smolistych i rydzych</em></p>
+<p><em>chcesz czy nie chcesz zaliczonyœ do nich</em></p>
+</td>
+<td style="width:365.125px;text-align:center;height:144px;">Wzmianka o pogoni pog³êbia uczucie nadci¹gaj¹cego zagro¿enia, zaœ wprowadzenie motywu konia wywo³uje skojarzenia z jeŸdŸcami Apokalipsy - sugeruje koniec czasów. W tej sytuacji cz³owiek jest bezradny, nie mo¿e poprawiæ swej sytuacji. Jego los zostaje przypieczêtowany, sam jest Ÿród³em nieszczêœæ.</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:343.875px;text-align:center;height:17px;">
+<p><em>w œwitaniu pa³aj¹cym przewala siê t³um jeŸdŸców [...]</em></p>
+<p><em>a konie [...] urastaj¹ gniot¹c ogromem jesieñ</em></p>
+<p><em>w potwornych ob³oków leju znikasz i ty i oni i wszystko</em></p>
+</td>
+<td style="width:365.125px;text-align:center;height:17px;">We fragmencie tym nasilaj¹ siê apokaliptyczne obrazy zwiastuj¹ce zag³adê. T³umy jeŸdŸców potêguj¹ wra¿enie zamêtu. Zdaje siê, ¿e katastrofa prowadzi do unicestwienia dotychczasowej rzeczywistoœci. Nie mo¿na jednak zatrzymaæ tego procesu.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>b) Cz³owiek jest œciœle zwi¹zany z otaczaj¹cym go œwiatem, jednak staje siê on Ÿród³em zagro¿enia i niepokoju. Nawet sen nie zapewnia spokoju: "œpi¹cy ju¿ rêce unosz¹ a zasiani s¹ gêsto jak sieæ". Z tego te¿ powodu pojawia siê potrzeba ucieczki, unikniêcia apokaliptycznych zdarzeñ. Istota ludzka, która znajduje siê w centrum przedstawionej rzeczywistoœci, ostatecznie jednak nie mo¿e unikn¹æ katastrofy. Zostaje tym samym poch³oniêta przez bezlitosny ¿ywio³: "w potwornych ob³oków leju znikasz i ty i oni i wszystko". Cz³owiek zdaje siê gin¹æ wraz z dotychczasowym œwiatem, jest bezradny wobec bolesnych realiów. </p><br>

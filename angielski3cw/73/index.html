@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. arsonist </p>
+<p>(Al podpalił kilka starych budynków. - <strong>podpalacz</strong>) </p>
+<p>2. burglar</p>
+<p>(Bob włamał się do domu, żeby ukraść sprzęt elektroniczny. - <strong>włamywacz</strong>)</p>
+<p>3. smuggler</p>
+<p>(Sally próbowała wywieźć z kraju kilka chronionych antyków. - <strong>przemytniczka</strong>)</p>
+<p>4. robbers</p>
+<p>(Russell i Roberta weszli na teren poczty z pistoletami i zażądali pieniędzy. - <strong>rabusie</strong>)</p>
+<p>5. shoplifter</p>
+<p>(Sue ukryła paczkę ciastek pod swoim płaszczem i próbowała wyjść z supermarketu bez płacenia. - <strong>złodziejka sklepowa</strong>)</p>
+<p>6. thief</p>
+<p>(Timmy cały czas kradł rzeczy od każdego, kogo spotkał. - <strong>złodziej</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. guilty, victim </p>
+<p>(Dlaczego dziennikarze robią mi zdjęcie? Nie jestem <strong>winny/a</strong> żadnej zbrodni. Jestem <strong>ofiarą</strong>.) </p>
+<p>2. Detectives, arrested</p>
+<p>(<strong>Śledczy </strong>uważają, że wiedzą, kto popełnił przestępstwo, ale jeszcze nikogo nie <strong>aresztowali</strong>.)</p>
+<p>3. illegal, fine</p>
+<p>(To, co zrobiłeś/aś, było <strong>nielegalne</strong> i musisz zostać ukarany/a. Musisz zapłacić 100 funtów <strong>grzywny</strong>.)</p>
+<p>4. court, judge, trial, authority</p>
+<p>(Na <strong>sali rozpraw </strong>było dużo hałasu, więc <strong>sędzia</strong> przerwał <strong>proces</strong> i powiedział hałasującym ludziom, że jest <strong>uprawniony </strong>wysłać ich do więzienia, jeśli nie będą się zachowywać.)</p>
+<p>5. security, escape</p>
+<p>(Mamy dwóch <strong>ochroniarzy</strong> wewnątrz sklepu, aby powstrzymać ludzi od okradania nas. Jest też jeden na zewnątrz, na wypadek gdyby złodziej próbował <strong>uciec</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. could, were, had stayed</p>
+<p>(X: Chciał(a)bym <strong>umieć </strong>prowadzić samochód.</p>
+<p>Y: Gdybyś <strong>był/a</strong> starszy/a, mógłbyś/mogłabyś chodzić na lekcje.</p>
+<p>X: Gdybyśmy <strong>zostali</strong> w Północnej Dakocie zamiast przeprowadzać się do Teksasu, mógłbym/mogłabym nauczyć się jeździć w wieku 14 lat.)<br/><br/><strong>Uzasadnienie</strong>: (X) konstrukcja <em>I wish + could</em>, by wyrazić żal odnośnie braku umiejętności w teraźniejszości. (Y) drugi tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości: <em>if + past simple, would + </em>bezokolicznik. (X) trzeci tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle</em>.</p>
+<p><br/>2. had, wouldn't have lost, didn't spend</p>
+<p>(X: Chciał(a)bym <strong>mieć </strong>telefon.</p>
+<p>Y: Gdybyś dbał/a o swój stary telefon, to <strong>byś </strong>go <strong>nie zgubił/a</strong>.</p>
+<p>Z: Gdybyś <strong>nie wydawał/a</strong> wszystkich pieniędzy na ubrania, mógłbyś/mogłabyś kupić nowy.)<br/><br/><strong>Uzasadnienie</strong>: (X) konstrukcja <em>I wish + past simple</em>, by wyrazić żal odnośnie sytuacji w teraźniejszości. (Y) trzeci tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle</em>. (Z) drugi tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości: <em>if + past simple, would + </em>bezokolicznik.</p>
+<p><br/>3. wasn't, wouldn't be, hadn't been</p>
+<p>(X: Gdyby tylko <strong>nie było </strong>tak zimno.</p>
+<p>Y: Gdybyś mieszkał/a w Australii, <strong>nie byłoby</strong> ci zimno.</p>
+<p>Z: Gdybyś <strong>nie był/a</strong> w takim pośpiechu tego ranka, nie zapomniał(a)byś o swoim płaszczu.)<br/><br/><strong>Uzasadnienie</strong>: (X) konstrukcja <em>if only + past simple</em>, by wyrazić żal odnośnie sytuacji w teraźniejszości. (Y) drugi tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości: <em>if + past simple, would + </em>bezokolicznik. (Z) trzeci tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle</em>.</p>
+<p><s class="odr-strikethrough">have</s></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. had seen, had seen, would have stopped</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>I wish + past perfect</em>, by wyrazić żal odnośnie sytuacji z przeszłości. III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>2. tried, would be</p>
+<p><strong>Uzasadnienie</strong>: II tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości lub przyszłości: <em>if + past simple, would + </em>bezokolicznik.</p>
+<p>3. were, would send, hadn't been, would have joined</p>
+<p><strong>Uzasadnienie</strong>: (X) II tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości lub przyszłości: <em>if + past simple, would + </em>bezokolicznik. (Y) III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle</em>.</p>
+<p>4. would you do, were, would get</p>
+<p><strong>Uzasadnienie</strong>: (X) II tryb warunkowy, by mówić o hipotetycznej sytuacji w teraźniejszości lub przyszłości: <em>if + past simple, would + </em>bezokolicznik. Tutaj część z rezultatem musi mieć szyk zdania pytającego, czyli <em>would</em> należy postawić przed podmiotem. (Y) rezultat nierealnej sytuacji w teraźniejszości (odpowiedź na pytanie w II trybie warunkowym), czyli konstrukcja <em>would + </em>bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. had  </p>
+<p><strong>Uzasadnienie</strong>: III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect </em>(<em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">had</span> + past participle</em>), <em>would have + past participle</em>. </p>
+<p>2. been</p>
+<p><strong>Uzasadnienie</strong>: <em>be happy </em>- cieszyć się. Konstrukcja w III trybie warunkowym: <em>would(n't) have + past participle, if + past perfect</em>.</p>
+<p>3. stole</p>
+<p><strong>Uzasadnienie</strong>: połączenie czasu <em>past continuous </em>(<em>was/were + </em>czasownik z -ing) i czasu <em>past simple </em>(końcówka -ed lub II kolumna w tabeli). Konstrukcja: <em>while + past continuous, <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">past simple</span></em>.</p>
+<p>4. only</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>if only + past perfect</em>, by wyrazić żal odnośnie sytuacji w przeszłości.</p>
+<p>5. service</p>
+<p><strong>Uzasadnienie</strong>: <em>do community service </em>- wykonywać prace społeczne (rodzaj kary).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. if you had a</p>
+<p><strong>Uzasadnienie</strong>: II tryb warunkowy, by opisać nierealną, hipotetyczną sytuację w przyszłości: <em>would </em>+ bezokolicznik, <em>if + past simple</em>. Używamy przedimka nieokreślonego przed rzeczownikiem po luce, ponieważ nie mówimy o czymś konkretnym i wspominamy o tym po raz pierwszy. </p>
+<p>2. I would have played in</p>
+<p><strong>Uzasadnienie</strong>: III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect, would have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. If only we had noticed </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>if only + past perfect </em>(<em>had + past participle</em>), by wyrazić żal odnośnie konkretnej sytuacji z przeszłości.</p>
+<p>4. had been the judge</p>
+<p><strong>Uzasadnienie</strong>: III tryb warunkowy, by mówić o przeszłości: <em>if + past perfect </em>(<em>had + past participle</em>), <em>would have + past participle</em>. Używamy przedimka określonego przed rzeczownikiem <em>judge </em>(sędzia), ponieważ to zdanie dotyczy konkretnej sytuacji ogłoszenia wyroku, w której uczestniczył konkretny/a sędzia/sędzina. Osoba mówiąca stawia się w tej sytuacji i opisuje, co by zrobiła na jego/jej miejscu,</p><br>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podmiot liryczny w czasie bezsennej nocy niespodziewanie przenosi siê do Rawenny. Tam poddaje siê czarowi gry na flecie, nastêpnie spe³nia siê jego pragnienie i spotyka na swej drodze Dantego. Osoba mówi¹ca podziw dla swego mistrza, ale niepokoi siê tak¿e jego bladoœci¹ i widocznym napiêciem. Postrzega siebie jako cz³owieka zagubionego, wiêc prosi w³oskiego pisarza o radê. Ten zaœ uœwiadamia swemu rozmówcy, i¿ nic nie istnieje: ani niebo, ani piek³o itd. Równie¿ status Beatrycze jest paradoksalny, poniewa¿ jest, ale jednoczeœnie jej nie ma.</p>
+<p>Konwencja marzenia sennego jest kluczowa w utworze Jana Lechonia, poniewa¿ kreuje nieco fantastyczn¹ atmosferê spotkania, uzasadnia mo¿liwoœæ przekroczenia granic poznania, a tym samym - rozmowy z nie¿yj¹cym pisarzem. Znacz¹co wp³ywa na nastrojowoœæ przedstawienia, gdy¿ to, co realne ustêpuje miejsca niezwyk³ej rzeczywistoœci. Ods³ania rozterki ducha mówi¹cego, ale te¿ mo¿e zapewniæ mu odpowiedzi na drêcz¹ce go niepokoje. Podmiot liryczny tylko za pomoc¹ marzenia sennego mo¿e przenieœæ siê w œwiat jak gdyby funkcjonuj¹cy poza czasem. Jednoczeœnie sen staje siê Ÿród³em poznania, zg³êbienia tajemnic - zyskuje w ten sposób wymiar metafizyczny, a wrêcz uniwersalny. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><em>Boskiej komedii</em> przypisuje siê wielkie znaczenie w kulturze. Jest ona nie tylko kompleksowym obrazem œredniowiecznego sposobu postrzegania rzeczywistoœci, w którym wiedza ³¹czy siê z pewnymi wyobra¿eniami na temat Wszechœwiata. Przede wszystkim zapisuje siê w historii jako arcydzie³o stanowi¹ce jednoczeœnie zapowiedŸ nadejœcia nowych czasów - renesansu. Wyró¿nia siê przy tym bogactwem nawi¹zañ: nie tylko do chrzeœcijañstwa, ale i pogañstwa, filozofii, literatury czy teologii. £¹czy w sobie przy tym p³aszczyzny. Pierwsza z nich ma charakter uniwersalny, gdy¿ odwo³uje siê do zagadnieñ moralnych i filozoficznych. Druga zaœ staje siê opowieœci¹ na temat cz³owieka - jego rozterek i przemian. Niebagateln¹ rolê <em>Boskiej komedii</em> w kulturze odzwierciedla równie¿ to, i¿ staje siê Ÿród³em natchnienia dla wielu twórców. Chêtnie odwo³uj¹ siê oni do treœci tego utworu, nawi¹zuj¹ z nim dialog. </p>
+<p>W tym kontekœcie Dante jest dla osoby mówi¹cej autorytetem, artyst¹ wprowadzaj¹cym nowatorskie rozwi¹zania, które kszta³tuj¹ europejsk¹ kulturê. Podmiot liryczny postrzega go jako mistrza i wybitn¹ jednostkê, poniewa¿ tylko on mo¿e rozwiaæ w¹tpliwoœci i wskazaæ mu drogê. Spotkanie z w³oskim artyst¹ staje siê zaœ okazj¹ do zdobycia ¿yciowej m¹droœci, zetkniêcia siê z geniuszem Dantego. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zaskakuj¹cy charakter puenty utworu polega na tym, i¿ nie mistrz nie ma dla podmiotu lirycznego rady, za której pomoc¹ móg³by odkryæ swoj¹ drogê. Zamiast tego Dante w bezpoœredni sposób uœwiadamia osobie mówi¹cej, ¿e brakuje sta³ych wartoœci bêd¹cych dla cz³owieka Ÿród³em oparcia oraz sensu: "Nie ma nieba i ziemi, otch³ani ni piek³a". S³owa te œwiadcz¹ o kryzysie idei, zw¹tpieniu w metafizyczny wymiar rzeczywistoœci. Puenta dzie³a wskazuje na paradoks kszta³tuj¹cy egzystencjê cz³owieka: "Jest tylko Beatrycze. I w³aœnie jej nie ma". Istota ludzka pragnie wiêc osi¹gn¹æ wymarzone cele, jednak w jej ¿ycie wpisana jest niemo¿noœæ spe³nienia. Z tego te¿ powodu podejmowane s¹ dzia³ania, chocia¿ musz¹ zakoñczyæ siê nieuchronn¹ klêsk¹. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Aluzje do tekstów kultury: </p>
+<ul>
+<li>Dante, <em>Boska komedia</em> -&gt; "Jest tylko Beatrycze. [...]";</li>
+<li>Biblia, Ewangelia wg œw. Mateusza -&gt; "Bêdziecie wys³uchaniu têskni¹cy, wiêc proœcie!";</li>
+<li>Nietzsche, <em>Tako rzecze Zaratustra</em> -&gt; "Nie ma nieba i ziemi, otch³ani ni piek³a".</li>
+</ul>
+<p> </p>
+<p>Aluzje te œwiadcz¹ o szerokich horyzontach oraz niew¹tpliwej erudycji autora. Czerpie on inspiracjê z klasycznych tekstów, które ukszta³towa³y kulturê, ale równie¿ Ÿród³em jego refleksji staj¹ siê dzie³a poœwiêcone zagadnieniom filozoficznym czy egzystencjalnym. Wskazuj¹ one na nieustanny dialog, jaki Jan Lechoñ prowadzi z tradycj¹ - staje siê on przy tym tak¿e Ÿród³em nowych sensów oraz refleksji, które wzmacniaj¹ przekaz utworu oraz nakreœlaj¹ sytuacjê egzystencjaln¹ cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br>

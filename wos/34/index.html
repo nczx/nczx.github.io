@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Wnioski przygotowane na podstawie danych z wykresów:</strong></span> </p>
+<table border="1" style="border-collapse: collapse; width: 995px; height: 470px;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #99ccff;"><strong>Wnioski</strong></td>
+<td style="background-color: #99ccff;"><strong>Ocena stopnia oczekiwania realizacji przez ludzi poszczególnych wniosków </strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 493px;">Większość respondentów (56%) preferuje partnerski model rodziny. </td>
+<td style="width: 493px;">Analiza wyników badań wskazuje, że 56% respondentów opowiada się za partnerskim modelem rodziny. Niemniej jedynie 33% respondentów realizuje wskazany przez niego model partnerski rodziny, co oznacza, że w 33% przypadków mąż i żona mniej więcej tyle samo czasu poświęcają na pracę zawodową oraz oboje w równym stopniu zajmują się domem i dziećmi.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 493px;">Wyniki badań wskazują, że 27% ankietowanych  preferuje model rodziny nieproporcjonalny żeński, co oznacza, że mąż i żona pracują zawodowo, ale to mąż poświęca więcej czasu na pracę zawodową, zaś żona poświęca się dodatkowo wychowywaniu dzieci i prowadzeniu domu.</td>
+<td style="width: 493px;">Analiza wyników badań pozwala stwierdzić, że 28% ankietowanych realizuje nieproporcjonalnie żeński model rodziny, co oznacza, że o jeden punkt procentowy więcej osób realizuje ten model rodziny niż wskazało go w ramach preferowanego modelu rodziny.</td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 493px;">Model tradycyjny rodziny preferuje 12% respondentów.</td>
+<td style="width: 493px;">Analiza wyników badań wskazuje, że model tradycyjny realizuje 26% ankietowanych, a więc o 14 punktów procentowych więcej respondentów niż tych, którzy wskazali, że preferują ten model rodziny. </td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 493px;">Model nieproporcjonalny męski preferuje 4% respondentów. </td>
+<td style="width: 493px;">Tyle samo procent respondentów preferuje i realizuje model nieproporcjonalny męski. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><em>-&gt; </em></strong><span style="text-decoration: underline;"><em>Cztery wnioski na temat tego, jakie są oczekiwania mieszkańców Polski dotyczące modelu rodziny:</em></span></p>
+<ol>
+<li>Większość ankietowanych Polaków, tj. 56%, preferuje partnerski model rodziny, czyli taki, w którym mąż (partner) i żona (partnerka) w mniej więcej równym stopniu zajmują się domem i dziećmi, a także oboje poświęcają się w podobny sposób pracy zawodowej.</li>
+<li>Dużą popularnością wśród ankietowanych Polaków cieszy się też tzw. nieproporcjonalny żeński model rodziny, gdyż preferuje go 27% badanych, a w praktyce realizuje go 28% respondentów. Model ten polega na tym, że zarówno mąż (partner), jak i żona (partnerka) pracują zawodowo, ale ten pierwszy pracuje więcej, natomiast ta druga oprócz pracy zawodowej odgrywa decydującą rolę w zajmowaniu się domem i wychowywaniu dzieci.</li>
+<li>Stosunkowo mało Polaków, bo wedle statystyk 12%, preferuje tradycyjny model rodziny, w którym pracy zawodowej poświęca się jedynie mąż (partner), natomiast żona (partnerka) nie pracuje zawodowo (zarobkowo), gdyż skupia się na prowadzeniu domu i wychowywaniu dzieci. </li>
+<li>Mimo iż mało Polaków, bo 12% ankietowanych, preferuje tradycyjny model rodziny, to jednak w praktyce jego realizowanie deklaruje 26% badanych.</li>
+</ol>
+<p><em><strong>-&gt; </strong></em>Oczekiwania mieszkańców Polski dotyczące modelu rodziny nie zawsze są realizowane w rzeczywistości. Przykładowo, najwięcej respondentów, bo 56%, oczekuje, że realizowany będzie tzw. partnerski model rodziny, lecz faktycznie jego urzeczywistnianie stwierdza 33% badanych. Jedynie 12% ankietowanych deklaruje, że preferowanym przez nich modelem rodziny jest model tradycyjny, a jego realizowanie się w praktyce konstatuje 26% respondentów. Ogółem, 49% ankietowanych twierdzi, że dostrzega niezgodność preferowanego przez siebie modelu rodziny z tym, jaki jest faktycznie realizowany.</p><br>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. will cure</p>
+<p><strong>Uzasadnienie</strong>: spekulacje na temat przyszłości, niepoparte dowodami - <em>will</em>. </p>
+<p>I'm going to study</p>
+<p><strong>Uzasadnienie</strong>: ogólny plan, zamierzenie, które może ulec zmianie - <em>be going to</em>.</p>
+<p>2. leaves</p>
+<p><strong>Uzasadnienie</strong>: sytuacja zaplanowana w rozkładzie jazdy - czas <em>present simple.</em></p>
+<p>I'll take </p>
+<p><strong>Uzasadnienie</strong>: decyzja podjęta spontanicznie - <em>will</em>.</p>
+<p>3. it's going to fall</p>
+<p><strong>Uzasadnienie</strong>: przewidywanie przyszłości na podstawie obserwacji obecnej sytuacji - <em>be going to</em>.</p>
+<p>4. are you meeting</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są znane - czas <em>present continuous</em>.</p>
+<p>finishes</p>
+<p><strong>Uzasadnienie: </strong>w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>when </em>- czas <em>present simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. have read</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>once, </em>z naciskiem na to, że jedna sytuacja musi się zakończyć, zanim odbędzie się inna - czas <em>present perfect simple</em>. </p>
+<p>2. arrives</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>after </em>- czas <em>present simple</em>.</p>
+<p>3. will have published</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect</em>.</p>
+<p>4. is</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w harmonogramie - czas <em>present simple</em>.</p>
+<p>5. I'll go</p>
+<p><strong>Uzasadnienie</strong>: decyzja podjęta spontanicznie - <em>will</em>.</p>
+<p>6. won't be wandering around </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która (nie) będzie się odbywała w przyszłości w konkretnym momencie - czas <em>future continuous</em>.</p>
+<p>7. will have tried on</p>
+<p><strong>Uzasadnienie</strong>: czynność, która zostanie wykonana do konkretnego czasu w przyszłości - czas <em>future perfect</em>.</p>
+<p>8. will have been working</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która w konkretnym momencie w przyszłości będzie już trwała jakiś czas - czas <em>future perfect continuous</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. will be flying</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym czasie w przyszłości - czas <em>future continuous</em>. </p>
+<p>2. will be sitting</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym czasie w przyszłości - czas <em>future continuous</em>.</p>
+<p>3. will have been sitting</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>4. won't have slept</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie, które (nie) zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>5. will be wearing</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym czasie w przyszłości - czas <em>future continuous</em>.</p>
+<p>6. won't have finished</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie, które (nie) zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>7. will be standing</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym czasie w przyszłości - czas <em>future continuous</em>.</p>
+<p>8. will have been working</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>9. will have saved</p>
+<p><strong>Uzasadnienie</strong>: czynność, która zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. I will be driving </p>
+<p><strong>Uzasadnienie</strong>: czynność, która będzie trwała w konkretnym momencie w przyszłości - czas <em>future continuous</em>. </p>
+<p>2. will probably live on Mars</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie na przyszłość - <em>will</em>.</p>
+<p>3. am going to study </p>
+<p><strong>Uzasadnienie</strong>: plany na przyszłość, które mogą ulec zmianie - <em>be going to</em>.</p>
+<p>4. will have been working </p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>5. leaves at four o'clock</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w rozkładzie jazdy - czas <em>present simple</em>.</p><br>

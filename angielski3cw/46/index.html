@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. living </p>
+<p><strong>Uzasadnienie</strong>: <em>do for a living </em>- zarabiać na życie. </p>
+<p>2. shift</p>
+<p><strong>Uzasadnienie</strong>: <em>do shift work </em>- pracować w trybie zmianowym.</p>
+<p>3. manual</p>
+<p><strong>Uzasadnienie</strong>: <em>manual work </em>- praca fizyczna.</p>
+<p>4. acquire</p>
+<p><strong>Uzasadnienie</strong>: <em>acquire qualifications </em>- zdobyć kwalifikacje. </p>
+<p>5. worker</p>
+<p><strong>Uzasadnienie</strong>: <em>an office worker </em>- pracownik biurowy.</p>
+<p>6. long</p>
+<p><strong>Uzasadnienie</strong>: <em>work long hours </em>- długo pracować.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. d </p>
+<p>(Pracuję od dziewiątej do siedemnastej, od poniedziałku do piątku. - <strong>praca na pełen etat</strong>) </p>
+<p>2. f</p>
+<p>(Uczę się, żeby zostać elektrykiem. - <strong>szkolenie zawodowe</strong>)</p>
+<p>3. b</p>
+<p>(Czasami pracuję od 6:00 do 14:00, a czasami od 14:00 do 22:00. - <strong>praca zmianowa</strong>)</p>
+<p>4. a</p>
+<p>(Robię to samo każdego dnia. - <strong>monotonna praca</strong>)</p>
+<p>5. e</p>
+<p>(Pracuję dla siebie. Puszę artykuły i proponuję je czasopismom albo stronom internetowym, które byłyby skłonne je opublikować. - <strong>wolny strzelec</strong>)</p>
+<p>6. c</p>
+<p>(Dobrze wiedzieć jak korzystać z różnych programów. To użyteczne w wielu różnych zawodach. - <strong>uniwersalne umiejętności</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. qualifications </p>
+<p><strong>Uzasadnienie</strong>: <em>acquire qualifications </em>- zdobyć kwalifikacje. </p>
+<p>2. vocational</p>
+<p><strong>Uzasadnienie</strong>: <em>vocational course </em>- praktyka zawodowa.</p>
+<p>3. skills</p>
+<p><strong>Uzasadnienie</strong>: <em>transferable skills </em>- uniwersalne umiejętności.</p>
+<p>4. well-paid</p>
+<p><strong>Uzasadnienie</strong>: <em>a well-paid job </em>- dobrze płatna praca.</p>
+<p>5. long</p>
+<p><strong>Uzasadnienie</strong>: <em>work long hours </em>- długo pracować.</p>
+<p>6. office</p>
+<p><strong>Uzasadnienie</strong>: <em>an office worker </em>- pracownik biurowy.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. a</p>
+<p>(praca fizyczna - <strong>praca, w której pracuje się ręcznie</strong>) </p>
+<p>2. b</p>
+<p>(praca tymczasowa - <strong>praca przez krótki okres czasu</strong>)</p>
+<p>3. a</p>
+<p>(mieć elastyczne godziny pracy - <strong>zaczynać i kończyć pracę, kiedy nam pasuje</strong>)</p>
+<p>4. b</p>
+<p>(długo pracować - <strong>być w pracy przez długi czas każdego dnia</strong>)</p>
+<p>5. a</p>
+<p>(dobrze płatna praca - <strong>praca, w której dużo zarabiasz</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. repetitive </p>
+<p>(Nienawidzę swojej pracy. Jest <strong>monotonna</strong> i nudna.) </p>
+<p>2. financially, retirement</p>
+<p>(Nie mogę się doczekać, kiedy stanę się niezależny/a <strong>finansowo</strong> i będę mógł/mogła cieszyć się <strong>emeryturą</strong>.)</p>
+<p>3. qualifications, apprenticeship</p>
+<p>(Czy masz odpowiednie <strong>kwalifikacje</strong> w tym zawodzie, czy musisz odbyć <strong>praktykę</strong>, żeby zostać przeszkolonym do wykonywania pracy?)</p>
+<p>4. adolescence, adulthood</p>
+<p>(W okresie <strong>dojrzewania</strong> nie myśli się zbytnio o pracy, ale jest ona ogromną częścią <strong>dorosłości</strong>.)</p>
+<p>5. freelancer</p>
+<p>(Lubię być swoim/swoją własnym/ą szefem/szefową. Pracuję jako <strong>wolny strzelec</strong> i uwielbiam to.)</p>
+<p>6. transferable</p>
+<p>(Mój tata przez trzydzieści lat był mechanikiem samochodowym. Teraz szuka czegoś innego, ale umiejętność naprawiania samochodów nie jest raczej <strong>uniwersalną</strong> umiejętnością.)</p><br>

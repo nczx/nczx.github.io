@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>Zdania w czasie <em>present perfect simple </em>tworzymy w następujący sposób:</strong></p>
+<p><strong><span style="text-decoration: underline;">Twierdzące</span>: Podmiot + <em>have/has</em> + czasownik główny w formie <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Przeczące</span>: Podmiot + <em>haven't/hasn't</em> + czasownik główny w formie <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Pytania</span>: (Zaimek pytający) + <em>Have/Has</em> + podmiot + czasownik główny w formie <em>past participle</em></strong></p>
+<p><strong><br/>Czasownik posiłkowy w czasach <em>present perfect</em> ma formę <em>have</em> we wszystkich osobach oprócz 3. osoby pojedynczej (<em>he/she/it</em>). W tej osobie ma formę <em>has.</em> </strong></p>
+<p><strong>Forma <em>past participle </em>to III kolumna w tabeli czasowników nieregularnych lub końcówka -ed.</strong></p>
+<hr/>
+<p> </p>
+<p>1. have listened </p>
+<p>2. Have ... read</p>
+<p>3. haven't seen</p>
+<p>4. have decided</p>
+<p>5. hasn't heard</p>
+<p>6. Has ... tried</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Zdania w czasie <em>present perfect continuous</em> tworzymy w następujący sposób:</strong></p>
+<p><strong>Twierdzące: Podmiot + <em>have/has</em> <em>been</em> + czasownik z -ing + reszta zdania.</strong></p>
+<p><strong>Przeczące: Podmiot + <em>haven't/hasn't been</em> + czasownik z -ing +  reszta zdania.</strong></p>
+<p><strong>Pytania: (Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>been </em>+ czasownik z -ing + reszta pytania.</strong></p>
+<p><strong><br/>Czasownik posiłkowy w czasach <em>present perfect</em> ma formę <em>have</em> we wszystkich osobach oprócz 3. osoby pojedynczej (<em>he/she/it</em>). </strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład), I have been studying </p>
+<p>2. Has your mum been working, She has been working</p>
+<p>3. Have you been waiting, I have been shopping</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. (przykład)</p>
+<p>2. He has never been to a live concert before.</p>
+<p><strong>Uzasadnienie</strong>: opis życiowych doświadczeń = czas <em>present perfect simple </em>(<em>have/has + past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). </p>
+<p>3. I have been waiting ages for you to arrive.</p>
+<p><strong>Uzasadnienie</strong>: opis czynności, która trwa nieprzerwanie od jakiegoś czasu = <em>present perfect continuous </em>(<em>have/has been + </em>czasownik z końcówką -ing).</p>
+<p>4. Have you seen my new headphones?</p>
+<p><strong>Uzasadnienie</strong>: czynność wykonana w nieokreślonym momencie w przeszłości = <em>present perfect simple </em>(<em>have/has + past</em> participle).</p>
+<p>5. Have you been learning Chinese for long?</p>
+<p><strong>Uzasadnienie</strong>: pytanie o długość wykonywanej czynności = <em>present perfect continuous </em>(<em>have/has been + </em>czasownik z końcówką -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. has been touring </p>
+<p>2. I have been running</p>
+<p><strong>Uzasadnienie (1-2):</strong> opis czynności, która trwa od jakiegoś czasu i jeszcze się nie zakończyła = czas <em>present perfect continuous </em>(<em>have/has been + </em>czasownik z końcówką -ing).</p>
+<p>3. they haven't sold</p>
+<p><strong>Uzasadnienie</strong>: kiedy skupiamy się na rezultacie jakiejś zakończonej czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>4. has been going to</p>
+<p><strong>Uzasadnienie</strong>: opis niezakończonej czynności, która trwa od dłuższego czasu = czas <em>present perfect continuous</em>.</p>
+<p>5. Have you finished</p>
+<p><strong>Uzasadnienie</strong>: kiedy skupiamy się na rezultacie jakiejś zakończonej czynności, używamy czasu <em>present perfect simple.</em></p>
+<p>6. Has it been raining</p>
+<p><strong>Uzasadnienie:</strong> pytanie o długość niezakończonej czynności = czas <em>present perfect continuous.</em></p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>Pytań rozłącznych (<em>question tags</em>) używamy, żeby potwierdzić jakąś informację.</strong></p>
+<p><strong>Kiedy zdanie jest przeczące, używamy pytania w formie twierdzącej.<br/></strong><strong>Kiedy zdanie jest twierdzące, używamy pytania w formie przeczącej.</strong></p>
+<p><strong>Używamy podmiotu w tej samej osobie i takich samych czasowników posiłkowych albo modalnych, jakie występują w danym zdaniu.</strong></p>
+<p><strong>Kiedy w zdaniu nie ma czasownika posiłkowego, musi to być zdanie twierdzące w czasie <em>present simple </em>lub <em>past simple </em>- używamy wówczas odpowiedniego czasownika posiłkowego (<em>do/does </em>lub <em>did</em>)<em>.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. are you  </p>
+<p>2. was there</p>
+<p>3. didn't he</p>
+<p>4. haven't you</p>
+<p>5. wasn't she</p>
+<p>6. don't they</p>
+<p><strong>Uzasadnienie</strong>: <em>have </em>jest czasownikiem posiłkowym tylko wtedy, gdy występuje razem z innym czasownikiem głównym (wyrażającym czynność), ewentualnie w zdaniach z konstrukcją <em>have got</em> (mieć, posiadać). Tutaj jest czasownikiem głównym (<em>have </em>- mieć) i jest to zdanie twierdzące w czasie <em>present simple</em>, dlatego w pytaniu rozłącznym używamy <em>don't/doesn't</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>Pytań rozłącznych (<em>question tags</em>) używamy, żeby potwierdzić jakąś informację.</strong></p>
+<p><strong>Kiedy zdanie jest przeczące, używamy pytania w formie twierdzącej.<br/></strong><strong>Kiedy zdanie jest twierdzące, używamy pytania w formie przeczącej.</strong></p>
+<p><strong>Używamy podmiotu w tej samej osobie i takich samych czasowników posiłkowych albo modalnych, jakie występują w danym zdaniu.</strong></p>
+<p><strong>Kiedy w zdaniu nie ma czasownika posiłkowego, musi to być zdanie twierdzące w czasie <em>present simple </em>lub <em>past simple </em>- używamy wówczas odpowiedniego czasownika posiłkowego (<em>do/does </em>lub <em>did</em>)<em>.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. Your school day always starts at 8 am, doesn't it?  </p>
+<p>3. They were sleeping when we phoned, weren't they?</p>
+<p>4. Your friends have already read this book, haven't they?</p>
+<p>5. You don't tidy the classroom every day, do you?</p>
+<p>6. There weren't many people at the shop yesterday, were there?</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Przyimek znajdzie się na końcu pytania, jeśli główny czasownik z jakimś się łączy (np. <em>listen <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">to</span> music </em>- słuchać muzyki) lub kiedy jest czasownikiem frazowym (<em>switch off </em>- wyłączyć).</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. Did you switch the air conditioning off? </p>
+<p><strong>Uzasadnienie</strong>: kolejność: czasownik posiłkowy + podmiot + czasownik + dopełnienie + przyimek (część czasownika frazowego). </p>
+<p>3. Where does the new student come from?</p>
+<p><strong>Uzasadnienie</strong>: kolejność: słowo pytające + czasownik posiłkowy + podmiot + czasownik + przyimek.</p>
+<p>4. What kind of films are you interested in?</p>
+<p><strong>Uzasadnienie</strong>: kolejność: <em>what </em>+ rzeczownik (dopełnienie) + czasownik <em>to be</em> + podmiot + przymiotnik + przyimek.</p>
+<p>5. What are they thinking about?</p>
+<p><strong>Uzasadnienie</strong>: kolejność: słowo pytające + czasownik <em>to be</em> + podmiot + czasownik + przyimek.</p>
+<p>6. Who do you agree with?</p>
+<p><strong>Uzasadnienie</strong>: kolejność: słowo pytające + czasownik posiłkowy + podmiot + czasownik + przyimek.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. waiting for</p>
+<p><strong>Uzasadnienie</strong>: jeśli czasownik łączy się z przyimkiem (<em>wait for something </em>- czekać na coś), stawiamy go na końcu pytania. </p>
+<p>2. haven't you</p>
+<p><strong>Uzasadnienie</strong>: kiedy chcemy potwierdzić jakąś informację, używamy pytań rozłącznych. W pytaniu rozłącznym występuje podmiot w tej samej osobie i czasownik posiłkowy w formie przeciwnej niż jest w zdaniu. W przypadku zdania twierdzącego w czasie <em>present perfect</em> należy użyć <em>haven't/hasn't</em>.</p>
+<p>3. to talk to</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>need </em>i dopełnieniu używamy bezokolicznika z <em>to</em>. Czasownik <em>talk </em>tworzy wyrażenie z przyimkiem <em>to </em>(porozmawiać z kimś). W pytaniach przyimki występują na końcu.</p>
+<p>4. were you</p>
+<p><strong>Uzasadnienie:</strong> tworzymy pytanie rozłączne. W przypadku zdania przeczącego z czasownikiem <em>to be</em> w formie przeszłej należy użyć <em>was</em><em>/</em><em>were</em><strong>.</strong></p>
+<p>5. worried about</p>
+<p><strong>Uzasadnienie:</strong> czasownik <em>worry </em>tworzy wyrażenie z przyimkiem <em>about </em>(martwić się o coś). W pytaniach przyimki występują na końcu.</p>
+<p>6. doesn't she</p>
+<p><strong>Uzasadnienie:</strong> tworzymy pytanie rozłączne. W przypadku zdania twierdzącego w czasie <em>present simple</em> należy użyć <em>don't/doesn't.</em></p><br>

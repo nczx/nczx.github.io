@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór opisuje obrady sejmowe, które przerywa wkroczenie na salê Zag³oby. Jego obecnoœæ budzi onieœmielenie, ale tak¿e niepokój spowodowany tym, i¿ szlachcic mo¿e kogoœ obraziæ. Deklaruje on <em>veto</em> wzglêdem dyskusji poœwiêconej bud¿etowi, co wywo³uje ogólny chaos. Nastêpnie Zag³oba czêstuje króla tabak¹ i szepcze mu coœ do ucha - wywo³uje to œmiech w³adcy. On z kolei powtarza s³owa kanclerzowi, zaœ ten - senatowi. Wszyscy zgromadzeni ostatecznie wybuchaj¹ œmiechem, jednocz¹ siê ze sob¹. Sejm zaœ krzyczy: "Polska niechaj ¿yje!". Wiersz ten reprezentuje lirykê poœredni¹ (sytuacyjn¹). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="border-collapse:collapse;width:515px;height:218px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:251.363px;"><strong>Pozytywne cechy polskiego szlachcica</strong></td>
+<td style="background-color:#aed581;text-align:center;width:256.638px;">
+<strong>Negatywne cechy polskiego </strong><strong>szlachcica </strong>
+</td>
+</tr>
+<tr>
+<td style="width:251.363px;">
+<ul>
+<li>odwaga;</li>
+<li>patriotyzm;</li>
+<li>dobrodusznoœæ;</li>
+</ul>
+</td>
+<td style="width:256.638px;">
+<ul>
+<li>sk³onnoœæ do pijañstwa;</li>
+<li>awanturnictwo;</li>
+<li>rubasznoœæ;</li>
+<li>teatralnoœæ;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Ocena postaci - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Zag³oba wkracza do sejmu w czasie dyskusji dotycz¹cej finansów pañstwa. Jego dramatyczne wejœcie bezpoœrednio nawi¹zuje do tradycji szlacheckiej, wyra¿a niejednoznaczny stosunek autora do niej. Z jednej bowiem strony przerwanie spotkania kojarzy siê z zasad¹ <em>liberum veto</em>, która to umo¿liwia³a przedstawicielom szlachty zak³ócenie obrad oraz uniewa¿nienie podjêtych uchwa³. W takiej sytuacji Zag³oba jawi siê jako niezbyt pozytywna postaæ, awanturnik, który zak³óca pracê sejmu, przerywa próbê osi¹gniêcia porozumienia i odci¹ga uwagê zgromadzonych od wa¿nych zagadnieñ. Z drugiej jednak strony staje siê on uosobieniem pewnej tradycji, która ma jednak tak¿e pewne zalety. Wnosi bowiem do sali ¿ycie, entuzjazm oraz zdecydowanie, byæ mo¿e symbolizuje tak¿e patriotyzm, poniewa¿ przyczynia siê do zjednoczenia obraduj¹cych, przypomina im o ojczyŸnie. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Utwór Lechonia wyró¿nia siê sw¹ niejednoznacznoœci¹. Sam okrzyk mo¿na jednak postrzegaæ w pozytywny sposób. Wydaje go bowiem ca³y sejm, co sugeruje jego jednoœæ oraz zgodê, byæ mo¿e tak¿e g³êbok¹ troskê o los ojczyzny. Nastêpuje zaœ po tym, jak Zag³oba rozbawia towarzystwo swoj¹ mow¹, wiêc szlachcic niejako przyczynia siê do zbratania obraduj¹cych. Okrzyk podkreœla silne emocje zgromadzonych, przypomina tak¿e o celu, który powinien byæ dla nich nadrzêdn¹ wartoœci¹. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Œmiej¹ce siê sio³a za pierwszym razem zdaj¹ siê wprowadzaæ pozytywne znaczenie. Stanowi¹ zapowiedŸ przygody oraz wspó³graj¹ z uwznioœleniem postaci Zag³oby, któremu zostaje przypisane dostojeñstwo: "[...] £una! £una bije!". Staj¹ siê wiêc swoistym znakiem aprobaty dla postawy szlachcica. Z kolei œmiej¹ce siê sio³a w zakoñczeniu wiersza zyskuj¹ dwuznaczny charakter - w zale¿noœci od tego, jak zinterpretuje siê sytuacjê w sejmie. Je¿eli postrzega siê Zag³obê jako symbol tradycji i tego, który wprowadza zgodê, zdaj¹ siê one œwiadczyæ o ogólnej radoœci. Wynika ona z pogodzenia obraduj¹cych, którzy przypominaj¹ sobie o tym, co najwa¿niejsze: "[...] Polska niechaj ¿yje!", natomiast rezygnuj¹ ze sporów. Niejednoznacznoœæ utworu Lechonia mo¿e prowadziæ równie¿ do tego, i¿ zakoñczenie zyskuje ironiczny, wrêcz gorzki charakter. Postawa Zag³oby, rozpatrywana jako przejaw warcholstwa, niszczy wiêc starania maj¹ce na celu podjêcie wa¿nych dla pañstwa decyzji. Z tego te¿ powodu œmiech przestaje wskazywaæ na radoœæ, a sugeruje za to drwinê i rozczarowanie. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przyk³adowo:</p>
+<p>Autor pragnie zwróciæ uwagê na to, i¿ konieczny jest wspólny wysi³ek. Nie nale¿y siê bowiem ograniczyæ do radoœci z powodu odzyskania niepodleg³oœci. Trzeba natomiast d¹¿yæ do zbudowania jednoœci Polski, poprawy sytuacji. W tym celu konieczne staje siê uzyskanie narodowej jednoœci, solidarne dzia³anie w duchu patriotyzmu. Jednoczeœnie poeta zwraca uwagê na ogólne znaczenie tradycji, a w szczególnoœci - dorobek czasów szlacheckich. Niejednoznaczna wymowa wiersza sugeruje, i¿ mo¿e staæ siê on si³¹ destruktywn¹ lub pozytywn¹ - w zale¿noœci od tego, czy punktem odniesienia stan¹ siê zalety, czy te¿ wady szlachty. Kluczow¹ kwesti¹ jest jednak wyzbycie siê jakichkolwiek w¹tpliwoœci lub uprzedzeñ, kierowanie siê przede wszystkim mi³oœci¹ do kraju i poszukiwanie kompromisu. </p>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna  </p><br>

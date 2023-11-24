@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. c</p>
+<p><strong>Fragment w tekście</strong>: "Hunderwasser was born in 1928 and (...)" - Hunderwasser urodził się w 1928 roku i (...).  </p>
+<p>2. f</p>
+<p><strong>Fragment w tekście</strong>: "His career as an artist really tok off when he had his first exhibition in Vienna in 1952." - Jego kariera jako artysty naprawdę nabrała tempa po pierwszej wystawie w Wiedniu w 1952 roku. </p>
+<p>3. a</p>
+<p><strong>Fragment w tekście</strong>: "It was in 1972 that he appeared on a television programme on which he demonstrated the art of roof forestation, early evidence of a growing interest in architecture, town planning and the environment" - To w 1972 roku pojawił się w programie telewizyjnym, w którym zademonstrował sztukę zalesiania dachów, pierwszy dowód rosnącego zainteresowania architekturą, planowaniem przestrzennym i środowiskiem.</p>
+<p>4. e</p>
+<p><strong>Fragment w tekście</strong>: "In 1977 the mayor of Vienna invited him to create an apartment building in the city" - W 1977 roku prezydent Wiednia zaprosił go do zaprojektowania budynku mieszkalnego w mieście. </p>
+<p>5. b</p>
+<p><strong>Fragment w tekście</strong>: "(...) it still took two more years before the building was completed in 1985" - (...) mimo wszystko zajęło to kolejne dwa lata zanim budynek został ukończony w 1985 roku. </p>
+<p>6. d</p>
+<p><strong>Fragment w tekście</strong>: "Visitors can, though, go to the Hundertwasser mall across the street. This dates back to 1991 and (...)" - Turyści mogą natomiast wejść do centrum handlowego Hundretwassera po drugiej stronie ulicy. Powstało ono w 1991 roku i (...).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście:</strong> "Perhaps the iconic Hundertwasserhaus which, despite the relatively young age, has become one of the most famous symbols of the Austrian capital (...)" - Być może kultowy  dom Hundertwassera, który pomimo stosunkowo młodego wieku stał się jednym z najsłynniejszych symboli austriackiej stolicy (...).  </p>
+<p>2. B</p>
+<p><strong>Fragment w tekście:</strong> "This brightly coloured mass of irregular shapes (...) is, amazingly, a normal public housing project which is home to ordinary Viennese residents. However, apart from its function, it is definitely one building that can't be described as normal" - Ta jaskrawa kolorowa masa nieregularnych kształtów jest, o dziwo, normalnym publicznym projektem mieszkaniowym i domem dla zwykłych mieszkańców Wiednia. Jednakże, pomijając jego funkcję, jest to zdecydowanie budynek, którego nie można nazwać normalnym.</p>
+<p>3. A</p>
+<p><strong>Fragment w tekście:</strong> "His career as an artist really tok off when he had his first exhibition in Vienna in 1952. After the war, he had studied art, first in Vienna and then in Paris, where he changed his name" - Jego kariera jako artysty naprawdę nabrała tempa po pierwszej wystawie w Wiedniu w 1952 roku. Po wojnie studiował sztukę, najpierw w Wiedniu, a potem w Paryżu, gdzie zmienił nazwisko. </p>
+<p>4. A</p>
+<p><strong>Fragment w tekście:</strong> "Although he already had a vision of what he wanted to create, it still took six years before work could start on the building, with Hundertwasser being unimpressed with architect Josef Krawina's original models and diagrams" - Mimo, że miał już wizję tego, co chciał stworzyć, minęło sześć lat zanim budowa mogła ruszyć, ze względu na rozczarowanie Hundertwassera oryginalnymi modelami i diagramami projektanta, Josefa Krawiny. </p><br>

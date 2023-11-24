@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. call </p>
+<p>2. made</p>
+<p>3. like</p>
+<p>4. use</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Zaczynamy. Zasada jest taka, że nie można podać nazwy sportu. Trzeba opisać sprzęt.</p>
+<p>Y: Dobrze.</p>
+<p>X: Tak więc, na moim obrazku, nie wiem jak <strong>nazywa</strong> się to po angielsku. To coś, czego używa się zamiast piłki. Ten sport przypomina tenis. Używa się w nim rakietki i siatki.</p>
+<p>Y: Jak to wygląda?</p>
+<p>X: Ciężko to opisać. Końcówka jest <strong>zrobiona</strong> z gumy, a całość wygląda, <strong>jakby</strong> miała pióra, ale czasem są one plastikowe. </p>
+<p>Y: Wiem! To lotka. <strong>Używa</strong> się jej do badmintona.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. hard to be sure  </p>
+<p>2. might have just finished</p>
+<p>3. could be about </p>
+<p>4. Judging by </p>
+<p>5. what appears to be </p>
+<p>6. clear that you're not </p>
+<p>7. It's obvious based on </p>
+<p>8. Based on what </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Hej, spójrz na to zdjęcie Jasona, które przysłał z Australii.</p>
+<p>Y: Ładne. <strong>Ciężko stwierdzić z pewnością</strong>, czy jest w trakcie gry czy po prostu pozuje do zdjęcia.</p>
+<p>X: <strong>Możliwe, że właśnie skończy</strong>ł mecz. </p>
+<p>Y: Albo <strong>może właśnie</strong> go zaczynać.</p>
+<p>X: <strong>Sądząc po</strong> czystych ubraniach, nie sądzę, żeby już zaczął grę. W każdym razie, co to za sport? Widzę coś, <strong>co wygląda jak</strong> trzy drewniane patyki. </p>
+<p>Y: To <strong>jasne, że nie jesteś</strong> fanem/fanką krykieta. To jest bramka. Przeciwna strona próbuje trafić w nią piłką, jego zadaniem jest powstrzymać ich za pomocą kija i kiedy wybije daleko piłkę zdobywa punkty. </p>
+<p>X: <strong>Patrząc na </strong>jego wyraz twarzy<strong> </strong><strong>jest </strong><strong>oczywiste</strong>, że świetnie się bawi. </p>
+<p>Y: Jaki wyraz twarzy? Ma na sobie hełm! <strong>Na podstawie tego, co</strong> widzę, nie byłbym/byłabym nawet w stanie stwierdzić, czy to na pewno Jason!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Based </p>
+<p>2. say</p>
+<p>3. assume</p>
+<p>4. clear</p>
+<p>5. tell</p>
+<p>6. could</p>
+<p>7. about</p>
+<p>8. judging</p>
+<p>9. chances</p>
+<p> </p>
+<p><strong>Tłumaczenie (odpowiedniki wstawionych słów zostały pogrubione):</strong></p>
+<p>X: Najpierw chciałbym/chciałabym żebyś opisał/a obrazek, a potem odpowiedział/a na pytania pod spodem. Jesteś gotowy/a?</p>
+<p>Y: Cóż, yyy, właściwie jest to jakieś wydarzenie sportowe. Na pierwszym planie widzimy zawodnika, a za nim jest kilku widzów. <strong>Na podstawie</strong> wyglądu jego ubrań, <strong>powiedziałbym/powiedziałabym</strong>, że to Szkocja, ponieważ ma na sobie kilt, wie pan/pani. Można <strong>założyć</strong>, że to słynne zawody Highland Games, czy coś takiego. Jest <strong>oczywiste</strong>, że ten mężczyzna musi być niesamowicie silny, żeby przenieść długi drewniany słup. Nie mogę <strong>ocenić</strong>, czy to wyścig czy nie. To znaczy, <strong>możliwe</strong>, że biegnie z tym słupem albo <strong>może za chwilę</strong> rzuci go najdalej, jak potrafi. A więc, jak on się czuje? Cóż, <strong>sądząc</strong> po rozmiarze słupa są <strong>szanse</strong>, że jest bardzo zmęczony, ale też zdeterminowany, żeby wygrać i popisać się swoją siłą. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. the impression </p>
+<p>2. chances are </p>
+<p>3. tell if </p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. X: Nauczyłem/am się windsurfingu w jedno popołudnie. </p>
+<p>Y: Naprawdę? <strong>Wydawało mi się</strong>, że to bardzo trudny sport.</p>
+<p>2. X: Jak myślisz, jak pójdzie Bea w wyścigu na 100 m?</p>
+<p>Y: <strong>Są szanse</strong>, że znowu wygra, jak zawsze.</p>
+<p>3. X: Zrobiłem/am to zdjęcie wczoraj podczas meczu. </p>
+<p>Y: Ciężko <strong>powiedzieć</strong>, <strong>czy</strong> ta drużyna wygrywa czy przegrywa. Kilka osób w tłumie się uśmiecha, a kilka wygląda smutno. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Idywidualne</p><br>

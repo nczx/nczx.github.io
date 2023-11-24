@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Kultura to ten czynnik, który niejako ogranicza pierwotne instynkty. Porz¹dkuje rzeczywistoœæ i moralnoœæ, umieszcza cz³owieka i jego dzia³ania w pewnych ramach czy konwenansach. Jest ona jednak bezradna, kiedy do g³osu dochodzi biologizm, witalizm oraz wszelakie popêdy. Przejmuj¹ one w³adzê nad cz³owiekiem, który zatraca siê w swych pragnieniach. Z utworu wynika wiêc refleksja na temat s³aboœci kultury wzglêdem tego, co pierwotne. ¯ycie, dzikoœæ, chaos niszcz¹ jej wytwory. Ludzie ukazani w wierszu Tuwima oddaj¹ siê bowiem rozpuœcie, nie myœl¹ o swych powinnoœciach czy jakichkolwiek zasadach:</p>
+<p><em>Na ³awce, psiekrewie, na trawce,</em></p>
+<p><em>Naróbcie Polsce bachorów,</em></p>
+<p><em>Wijcie siê, psiekrewie, wijcie,</em></p>
+<p><em>W szynkach naro¿nych pijcie,</em></p>
+<p><em>Rozrzuæcie wiêcej "kawalerskich chorób"!</em></p>
+<p>Ekstaza ta nie ma charakteru jednostkowego, staje siê pewnym zjawiskiem spo³ecznym. Dotyczy bowiem przedstawicieli ró¿nych p³ci w ró¿nym wieku ("Niewiasto!", "dziewcz¹tka", "[...] œliskie, dr¿¹ce ³apy"). Trac¹ oni sw¹ autonomiê, przemieniaj¹ siê w jedn¹ szalon¹, pozbawion¹ hamulców masê ("Faluj, straszliwa maso, po ulicach") - zdaje siê ona ulegaæ dehumanizacji. W kontekœcie tych refleksji "papierowe ko³nierzyki" oraz "kolorowe kamizelki" oznaczaj¹ pewien przejaw kultury, a jednoczeœnie - st³umienia instynktów. W ostatecznym rozrachunku jednak okie³znanie jest to pozorne, poniewa¿ elementy te s³u¿¹ realizacji popêdów. Maj¹ bowiem budziæ zainteresowanie kobiet, aby dostrzeg³y atrakcyjnoœæ mê¿czyzny, co sugeruj¹ s³owa: "[...] Poleci ka¿da na kolacjê! / Na kolorowe wasze kamizelki, Na papierowe wasze ko³nierzyki!". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Obraz macierzyñstwa i kobiety w utworze Tuwima prze³amuje tabu, jest prowokuj¹cy, a wrêcz szokuj¹cy sw¹ wulgarnoœci¹ oraz bezpoœrednioœci¹. Przedstawicielki p³ci piêknej nie zostaj¹ bowiem ukazane jako piêkne, kruche i niewinne istoty. Ich wizerunek jest tak¿e sprzeczny ze sposobem postrzegania matki - jako osoby obdarzonej instynktem macierzyñskim, ciesz¹cej siê z narodzin dziecka i dbaj¹cej o jego ¿ycie. Zamiast tego Tuwim prezentuje zezwierzêcony wizerunek kobiet:</p>
+<p><em>Dziewki fabryczne, brzuchate koby³y,</em></p>
+<p><em>Krzywych pêdraków sromne nosicielki!</em></p>
+<p><em>Gwa³æcie! Poleci ka¿da na kolacjê!</em></p>
+<p><em>Na kolorowe wasze kamizelki,</em></p>
+<p><em>Na papierowe wasze ko³nierzyki!</em></p>
+<p>Ulegaj¹ wiêc one najni¿szym instynktom, a jednoczeœnie pozwalaj¹ mê¿czyznom na zaspokojenie ich ¿¹dz. S¹ grzeszne i wyuzdane, liczy siê dla nich tylko czysty biologizm: "RodŸcie, a jak najwiêcej! Trzeba miasto siliæ!". O ich brutalnoœci i szale œwiadczy tak¿e sposób traktowania narodzonych dzieci, które czeka niezwykle okrutny los: "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Taki dialog z tradycj¹ s³u¿y prowokacji, poniewa¿ burzy zakorzenione stereotypy czy przekonania. Sugeruje tak¿e, i¿ pewne przypisywane kobietom i matkom cechy wynikaj¹ z kultury i ogólnie przyjêtych zasad. Trac¹ one jednak na znaczeniu, kiedy do g³osu dochodz¹ pierwotne instynkty. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
+Indywidualne<br>

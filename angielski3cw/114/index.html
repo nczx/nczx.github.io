@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czasowników modalnych możemy użyć do wyrażenia spekulacji odnośnie teraźniejszości. Łączą się one z czasownikiem głównym w bezokoliczniku bez <em>to</em>.</strong></p>
+<p><strong><em>must</em> - używamy, kiedy mamy 100% pewności, że coś jest prawdziwe</strong></p>
+<p><strong><em>can't</em> - używamy, kiedy mamy 100% pewności, że coś nie jest prawdziwe</strong></p>
+<p><strong><em>might</em> - używamy, kiedy nie jesteśmy pewni, czy coś jest prawdziwe, czy nie.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. must be  </p>
+<p>3. might be</p>
+<p>4. can't be</p>
+<p>5. must be</p>
+<p>6. can't be</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czasowników modalnych możemy użyć do spekulacji na temat przyszłości. Wówczas używamy następujących konstrukcji:</strong></p>
+<p><strong><em>m</em><em>ust have + past participle</em> - używamy, kiedy mamy 100% pewności, że coś miało miejsce w przeszłości.</strong></p>
+<p><strong><em>can't/couldn't have + past participle</em> - używamy, kiedy mamy 100% pewności, że coś nie miało miejsca.</strong></p>
+<p><strong><em>may / might / could have + past participle</em> - używamy, kiedy nie jesteśmy do końca pewni, czy coś miało miejsce. </strong></p>
+<p><strong><br/>Forma <em>past participle </em>to III kolumna w tabeli czasowników nieregularnych lub końcówka -ed.</strong></p>
+<hr/>
+<p> </p>
+<p>1. couldn't have seen  </p>
+<p>2. must have made</p>
+<p>3. might have caught</p>
+<p>4. can't have</p>
+<p>5. could have gone</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. can't/couldn't have done </p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>can't/couldn't have + past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed), by wyrazić pewność, że coś się nie wydarzyło. </p>
+<p>2. must have won</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>must have + past participle</em>, aby wyrazić pewność, że coś miało miejsce.</p>
+<p>3. can't/couldn't have bought</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>can't/couldn't have + past participle</em>, by wyrazić pewność, że coś się nie wydarzyło.</p>
+<p>4. might have gone</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>might have + past participle</em>, by wyrazić spekulację na temat wydarzenia z przeszłości.</p>
+<p>5. can't be late</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>can't + </em>bezokolicznik, by wyrazić pewność, że coś nie jest prawdziwe.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. were waiting </p>
+<p><strong>Uzasadnienie:</strong> czynność w trakcie trwania w określonym momencie w przeszłości - <em>past continuous</em> (<em>was/were</em> + czasownik z -ing).  </p>
+<p>2. had read</p>
+<p><strong>Uzasadnienie:</strong> czynność, która odbyła się przed innymi opisywanymi wydarzeniami w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. arrived</p>
+<p><strong>Uzasadnienie:</strong> czynność wykonana później - <em>past simple</em> (II kolumna w tabeli czasowników nieregularnych lub końcówka -ed). Czynność wykonana wcześniej jest wyrażona w czasie <em>past perfect.</em></p>
+<p>4. took</p>
+<p>5. searched</p>
+<p><strong>Uzasadnienie (4-5):</strong> zakończone wydarzenie w przeszłości - <em>past simple</em>. </p>
+<p>6. was looking</p>
+<p><strong>Uzasadnienie:</strong> czynność w trakcie trwania w określonym momencie w przeszłości - <em>past continuous</em> (<em>was/were</em> + czasownik z -ing). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. (przykład)</p>
+<p>2. Darren had never sung in a concert before, which is why he was so nervous. </p>
+<p><strong>Uzasadnienie:</strong> życiowe doświadczenie, które trwało do pewnego momentu w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). Czynność wykonana później - <em>past simple</em> (II kolumna w tabeli czasowników nieregularnych lub końcówka -ed).  </p>
+<p>3. When their parents left for work, they were still eating breakfast.</p>
+<p><strong>Uzasadnienie:</strong> krótka czynność zakończona w trakcie trwania innej, dłuższej. Konstrukcja: <em>when + past simple </em>(krótka czynność), <em>past continuous </em>(dłuższa czynność - <em>was/were </em>+ czasownik z -ing).</p>
+<p>4. Had she ever performed on live TV before?</p>
+<p><strong>Uzasadnienie:</strong> pytanie o życiowe doświadczenie, które trwało do pewnego momentu w przeszłości - <em>past perfect</em>.</p>
+<p>5. We left the house quietly because their parents were sleeping.</p>
+<p><strong>Uzasadnienie:</strong> krótka czynność zakończona w trakcie trwania innej, dłuższej. Konstrukcja: <em>past simple </em>(krótka czynność), <em>past continuous </em>(dłuższa czynność).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. I hadn't heard </p>
+<p>2. We had seen</p>
+<p>3. she hadn't started</p>
+<p>4. Had you studied</p>
+<p><strong>Uzasadnienie (1-4):</strong> czynność, która odbyła się przed innymi opisywanymi wydarzeniami w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). </p>
+<p>5. when she met</p>
+<p><strong>Uzasadnienie:</strong> zakończone wydarzenie w przeszłości - <em>past simple</em> (II kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>6. I was sitting</p>
+<p><strong>Uzasadnienie:</strong> czynność w trakcie trwania w określonym momencie w przeszłości - <em>past continuous</em> (<em>was/were</em> + czasownik z -ing). </p><br>

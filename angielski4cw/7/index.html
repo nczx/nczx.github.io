@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. was travelling</p>
+<p>2. was </p>
+<p>3. did you go to</p>
+<p>4. didn't go </p>
+<p>5. visited </p>
+<p>6. met</p>
+<p>7. was staying</p>
+<p>8. invited</p>
+<p>9. did you stay</p>
+<p>10. was having</p>
+<p>11. stayed</p>
+<p>12. loved</p>
+<p> </p>
+<p><strong>Tłumaczenie dialogu (odpowiedniki wstawionych wyrażeń zostały pogrubione):</strong></p>
+<p>X: Gdzie byłeś/aś w zeszłe lato?</p>
+<p>Y: <strong>Podróżowałem/am.</strong> Po Europie.</p>
+<p>X: Całe lato?</p>
+<p>Y: Dłużej. Od kwietnia do września, więc <strong>było</strong> to w summie sześć miesięcy.</p>
+<p>X: Więc do których krajów <strong>pojechałeś/aś</strong>? </p>
+<p>Y: Niech pomyślę. <strong>Nie pojechałem/am do</strong> wszystkich, ale <strong>odwiedziłem/am</strong> wiele. Więcej niż się spodziewałem/am. <strong>Poznałem/am pewną</strong> Czeszkę, kiedy <strong>przebywałem/am</strong> w hostelu w Niemczach i <strong>zaprosiła</strong> mnie do swojego domu niedaleko Pragi. To było świetne!</p>
+<p>X: Jak długo <strong>zostałeś/aś</strong> w każdym miejscu?</p>
+<p>Y: Różnie. Jeśli <strong>dobrze się bawiłem/am</strong>, zostawałem/am dłużej. Najdłużej ze wszystkich miejsc <strong>zostałem/am</strong> w Berlinie. Naprawdę <strong>pokochałem/am</strong> Berlin - mógłbym/mogłabym tam mieszkać. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Żeby opisać tło sytuacji z przeszłości, używamy czasu <em>past continuous.</em> Podobnie dzieje się w przypadku czynności, która odbywała się i została przerwana przez inną czynność. Przykłady:</strong></p>
+<p><strong><em>It was a nice day: the sun was shining and the birds were singing. Then, the rain started. </em></strong></p>
+<p><strong>(To był ładny dzień: świeciło słońce i śpiewały ptaki. Wtedy zaczęło padać.)</strong></p>
+<p><strong><em>As/when I was watching TV, the phone rang.</em></strong></p>
+<p><strong>(Podczas gdy odrabiałem/am pracę domową, zadzwonił telefon.)</strong></p>
+<hr/>
+<p> </p>
+<p>1. As it was getting dark, the bus started climbing into the mountains.  </p>
+<p>2. The bus suddenly stopped while I was sleeping.</p>
+<p>3. While I was looking out of the window, I noticed something moving - it was a bear.</p>
+<p>4. It turned and looked at me as I was watching.</p>
+<p>5. While I was trying to switch my phone on to use the camera, it disappeared. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. I had already visited </p>
+<p>2. had always liked</p>
+<p>3. had travelled</p>
+<p>4. had driven</p>
+<p>5. I hadn't realised</p>
+<p>6. Had Liam ever been</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. was shining</p>
+<p><strong>Uzasadnienie</strong>: opis tła zdarzenia w przeszłości - czas <em>past continuous</em>.</p>
+<p>2. came.</p>
+<p><strong>Uzasadnienie</strong>: czynność zakończona w przeszłości - czas <em>past simple.</em> </p>
+<p>3. were getting </p>
+<p><strong>Uzasadnienie</strong>: opis tła zdarzenia w przeszłości - czas <em>past continuous</em>.</p>
+<p>4. was working</p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie wykonywania w przeszłości - czas <em>past continuous.</em></p>
+<p>5. didn't have </p>
+<p><strong>Uzasadnienie</strong>: stan zakończony w przeszłości - czas <em>past simple</em>.</p>
+<p>6. asked</p>
+<p><strong>Uzasadnienie</strong>: czynność zakończona w przeszłości - czas <em>past simple.</em></p>
+<p>7. wanted</p>
+<p><strong>Uzasadnienie</strong>: stan zakończony w przeszłości - czas <em>past simple</em>.</p>
+<p>8. had invited </p>
+<p><strong>Uzasadnienie</strong>: zdarzenie, które odbyło się przed innym zdarzeniem w przeszłości - czas <em>past perfect.</em></p>
+<p>9. had never been</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie, które odbyło się przed innym zdarzeniem w przeszłości - czas <em>past perfect</em>.</p>
+<p>10. were getting off</p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie trwania, przerwana przez inną - czas <em>past continuous.</em></p>
+<p>11. fell </p>
+<p><strong>Uzasadnienie</strong>: czynność przerywająca inną, będącą w trakcie trwania - czas <em>past simple</em>.</p>
+<p>12. was texting </p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie wykonywania w przeszłości - czas <em>past continuous</em>.</p>
+<p>13. wasn't looking</p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie wykonywania w przeszłości - czas <em>past continuous</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. our plane was landing</p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie trwania, przerwana przez inną - czas <em>past continuous. </em></p>
+<p>2. I had never been</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie, które odbyło się przed innym zdarzeniem w przeszłości - czas <em>past perfect</em>.</p>
+<p>3. he hadn't told </p>
+<p><strong>Uzasadnienie</strong>: zdarzenie, które odbyło się przed innym zdarzeniem w przeszłości - <em>czas past perfect</em>.</p>
+<p>4. While we were wandering </p>
+<p><strong>Uzasadnienie</strong>: czynność w trakcie trwania, przerwana przez inną - czas <em>past continuous.</em></p>
+<p>5. there had been </p>
+<p><strong>Uzasadnienie</strong>: zdarzenie, które odbyło się przed innym zdarzeniem w przeszłości - czas <em>past perfect</em>.</p><br>

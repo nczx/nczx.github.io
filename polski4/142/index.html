@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podmiot liryczny w utworze Miłosza to jednostka przywiązana do swego ojczystego języka. Postrzega siebie jako jego sługę. On z kolei pozwala mu na wyrażenie swej tęsknoty za ojczyzną, łączy go duchowo z krajem: "Co noc stawiałem przed tobą miseczki z kolorami, / żebyś miała i brzozę, i konika polnego, i gila / zachowanych w mojej pamięci". Jego szczególna rola polega na tym, że nie tylko stanowi namiastkę utraconego miejsca ("Byłaś moją ojczyzną, bo zabrakło innej"), ale również może zapewnić porozumienie z rodakami: "Myślałem, że będziesz także pośredniczką / pomiędzy mną i dobrymi ludźmi". Osoba mówiąca znajduje się poza granicami swego kraju, więc mowa przypomina jej o tożsamości: "Ale bez ciebie kim jestem. / Tylko szkolarzem gdzieś w odległym kraju". Bez niej osoba mówiąca byłaby zagubiona, pozbawiona swej wyjątkowości. Jednocześnie mowa staje się dla podmiotu lirycznego źródłem cierpienia, ponieważ w odległym kraju dochodzi do jej zdeformowania. Przestaje reprezentować piękno, prawdę, moralność: "Bo ty jesteś mową upodlonych, / mową nierozumnych i nienawidzących". Sam zaś mówiący nie chce podporządkować swej twórczości instrumentalnym celom, najważniejsze jest dla niego ocalenie niewinności języka, propagowanie za jego pomocą określonych wartości nieskażonych złem: "Więc będę dalej stawiać przed tobą miseczki z kolorami / jasnymi i czystymi, jeżeli to możliwe, / bo w nieszczęściu potrzebny jakiś ład czy piękno". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Obraz ten odwołuje się do poetyckiej działalności osoby mówiącej, świadczy także o zależności, która występuje między nią a mową. Podmiot liryczny musi bowiem troszczyć się o język, by wyrazić za jego pomocą swoje odczucia czy wspomnienia ojczystych stron. Z tego powodu mówi: "Co noc stawiałem przed tobą miseczki z kolorami". Słowa te świadczą o tym, iż twórca zapewnia mowie niezbędne tworzywo (np. wspomnienia, swoje refleksje, wartości), które pozwala na bogate i pełne odwzorowanie minionej rzeczywistości. Tym samym w mowie uobecnia się ojczyzna, za którą tęskni podmiot liryczny, harmonijne piękno jej przyrody ujawniające się w wyliczeniu: "żebyś miała i brzozę, i konika polnego i gila". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Epitet "wierna", określający mowę, wskazuje na przypisywane jej przez podmiot liryczny właściwości. Podkreśla przede wszystkim to, że dla osoby mówiącej, znajdującej się z dala od ojczyzny, mowa jest lojalną towarzyszką, ponieważ odpowiada rzeczywistości i odczuciom wypowiadającego się. Świadczy to o jej prawdziwości oraz niezmiennym charakterze, ponieważ nie podlega ona ciągłym przekształceniom, zafałszowaniu. Określenie "wierna" zaznacza wartość mowy - budzi ona zaufanie, jest pozbawiona obłudy. Nigdy też nie opuści osoby mówiącej i nie zdradzi jej. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zwątpienie osoby mówiącej wynika z jej obserwacji dotyczących ojczystej mowy. Jest ona bardzo ważna dla podmiotu lirycznego ze względu na jego sytuację życiową. Znajduje się on bowiem z dala od rodzinnych stron, więc mowa staje się namiastką kraju, zapewnia poczucie tożsamości i więzi z ojczyzną, ale też rodakami. Mówiący starannie pielęgnuje język również tego powodu, iż za jego pomocą może tworzyć, utrwalać wspomnienia bliskich sercu stron: "Co noc stawiałem przed tobą miseczki z kolorami, / żebyś miała i brzozę, i konika polnego, i gila". Wątpliwości wiążą się jednak z tym, iż osoba mówiąca zauważa degradację języka w kraju. Mowa przestaje służyć pięknu, prawdzie i wartościom moralnym. Zamiast tego zostaje skażona nienawiścią, fałszem oraz propagandą. Wskazują na to słowa: "Bo ty jesteś mową upodlonych, / mową nierozumnych i nienawidzących, / siebie bardziej może niż innych narodów". Sytuacja ta rodzi niepewność osoby mówiącej, która zaczyna wątpić w swe działania. Nie wie, czy uda się jej ocalić czystość mowy, a tym samym - świat wartości etycznych. Mimo tego niepokoju decyduje się, by kontynuować swą pracę. Przezwycięża przynajmniej tymczasowo swe obawy, co podkreśla zakończenie wiersza: "Więc będę dalej stawiać przed tobą miseczki z kolorami / jasnymi i czystymi, jeżeli to możliwe, / bo w nieszczęściu potrzebny jakiś ład czy piękno". </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W trzeciej strofie poeta pisze:</p>
+<p><em>Teraz przyznaję się do zwątpienia. </em></p>
+<p><em>Są chwile kiedy wydaje się, że zmarnowałem życie.</em></p>
+<p><em>Bo ty jesteś mową upodlonych,</em></p>
+<p><em>mową nierozumnych i nienawidzących</em></p>
+<p><em>siebie bardziej może od innych narodów,</em></p>
+<p><em>mową konfidentów,</em></p>
+<p><em>mową pomieszanych,</em></p>
+<p><em>chorych na własną niewinność.</em></p>
+<p> </p>
+<p>W słowach tych wyraża się niepewność podmiotu lirycznego. Odczuwa rozczarowanie ponieważ mowa, która powinna być prawdziwa i piękna, zostaje potraktowana w instrumentalny sposób w kraju. Z perspektywy tułacza osoba mówiąca dostrzega skażenie mowy - zatraca ona swoją czystość, nie reprezentuje wyższych wartości. Zamiast tego wykorzystuje się ją do manifestowania nienawiści czy donoszenia, czynienia innym krzywdy. Mowa nie wprowadza wiec harmonii i dobra. Zamiast tego wkrada się do niej chaos oraz propaganda - zjawisko szczególnie obecne za czasów komunizmu w Polsce. Z tego też powodu podmiot liryczny ujawnia swoje zwątpienie. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>W ostatniej strofie wiersza zawarte są następujące słowa:</p>
+<p><em>Moja wierna mowo,</em></p>
+<p><em>może to jednak ja muszę ciebie ratować. </em></p>
+<p><em>Więc będę dalej stawiać przed tobą miseczki z kolorami</em></p>
+<p><em>jasnymi i czystymi jeżeli to możliwe,</em></p>
+<p><em>bo w nieszczęściu potrzebny jakiś ład czy piękno.</em></p>
+<p> </p>
+<p>Stanowią one podsumowanie rozterek podmiotu lirycznego, a jednocześnie zapowiadają jego dalsze działania. Dochodzi bowiem do odwrócenia ról: o ile wcześniej mowa była ratunkiem dla podmiotu, ponieważ przypominała mu o ojczyźnie i tożsamości, o tyle teraz to twórca musi ją ocalić przed degradacją. W ostatniej strofie zawiera się tym samym deklaracja podmiotu lirycznego. Mimo wątpliwości, rozczarowania wywołanego wykorzystaniem języka do czynienia zła i manipulacji, osoba mówiąca pragnie odnajdywać w mowie piękno, bronić ją przed potencjalnym zagrożeniem. Jest to próba przeciwstawieniu się nieszczęściu, która pozwala na odnalezienie "ładu czy piękna" nawet w najtrudniejszych momentach. Z tego też powodu osoba mówiąca pragnie pielęgnować język poza granicami kraju - w ten sposób podmiot liryczny staje po stronie wartości moralnych, staje się wiernym sługą. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Język może być symbolem:</p>
+<ul>
+<li>poezji; </li>
+<li>przeszłości;</li>
+<li>pamięci;</li>
+<li>ojczyzny;</li>
+<li>rodaków;</li>
+<li>prawdy i piękna;</li>
+<li>tożsamości;</li>
+<li>wartości moralnych;</li>
+<li>komunikacji;</li>
+<li>ocalenia. </li>
+</ul>
+<p> </p>
+<p>Zabieg polegający na zastąpieniu ogólne pojęcie jego elementem to synekdocha. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Utwór Miłosza przede wszystkim przypomina o niebagatelnym znaczeniu ojczystej mowy w życiu człowieka - nawet na emigracji. Staje się ona bowiem symbolem ukochanego kraju, tożsamości, kultury czy też pewnych wartości. Przesłanie wiersza przypomina o tym, iż mimo zakłamania, niesprzyjających czasów należy stać na straży czystości mowy, aby nie została na dobre skażona nienawiścią, manipulacją, propagandą ("Więc będę dalej stawiać przed tobą miseczki z kolorami / jasnymi i czystymi, jeżeli to możliwe"). Z tego też powodu podmiot liryczny decyduje się na działania mające doprowadzić do ocalenia dotychczasowego charakteru języka. W efekcie postuluje dążenie do piękna i ładu, które może zapewnić człowiekowi poezja - jako źródło wartości moralnych oraz tego, co pozytywne w życiu człowieka. Osoba mówiąca deklaruje tym samym swoją wiarę w niezmienność uniwersalnych pojęć. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowe utwory:</p>
+<ul>
+<li><em>Latarnik</em>, Sienkiewicz; </li>
+<li><em>A...B...C...</em>, Orzeszkowa;</li>
+<li><em>Syzyfowe prace</em>, Żeromski;</li>
+<li><em>Rota</em>, Konopnicka. </li>
+</ul>
+<p> </p>
+<p>Omówienie motywu - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Typowym środkiem dla liryki inwokacyjnej w utworze są liczne apostrofy, np. "Moja wierna mowo", "Byłaś moją ojczyzną [...]", "Moja wierna mowo, / może to jednak ja muszę ciebie ratować". </p>
+<p> </p>
+<p>Inne środki w utworze:</p>
+<ul>
+<li>epitet -&gt; "Moja wierna mowo";</li>
+<li>synekdocha -&gt; zastąpienie pewnych pojęć jednym ogólnym (mowa);</li>
+<li>wyliczenie -&gt; żebyś miała i brzozę, i konika polnego, i gila;</li>
+<li>anafora -&gt; "mową konfidentów, / mową pomieszanych";</li>
+<li>metafora -&gt;Moja wierna mowo, / służyłem tobie";</li>
+<li>porównanie -&gt; "Filozofem takim jak każdy". </li>
+</ul>
+<p> </p>
+<p>Przykłady innych utworów należących do liryki inwokacyjnej:</p>
+<ul>
+<li><em>List do ludożerców</em>, Różewicz;</li>
+<li><em>Do młodych</em>, Asnyk;</li>
+<li><em>Który skrzywdziłeś</em>, Miłosz;</li>
+<li><em>Do Marka Aurelego</em>, Herbert. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Przykładowo:</p>
+<p>Grafika zwraca uwagę na zależność między językiem a eskalacją przemocy. Wynika z niej, iż język oraz komunikacja mogą prowadzić do wykluczenia pewnych grup lub jednostek, odizolowania ich od reszty społeczeństwa. Następnym etapem staje się dyskryminacja, która prowadzi do aktów przemocy, a wreszcie - eksterminacji. Piramida ta świadczy więc o tym, że mowa ma realny wpływ na rzeczywistość, jest - w określonych sytuacjach - głównym źródłem nienawiści, ponieważ prowokuje, zachęca do okazywania innym pogardy. W efekcie prowadzi to do narastających konfliktów i zagłady niepożądanych grup. Tym samym język jest pierwszą dziedziną, w której można dostrzec zapowiedź ewentualnego zagrożenia oraz aktów przemocy. </p><br>

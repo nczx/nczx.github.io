@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź:</strong> </p>
+<p>1. c </p>
+<p>(Wiemy, że autor lubi wygląd swojej butelki.)</p>
+<p><strong>Fragment w tekście: </strong>"As well as being environmentally friendly and looking cool, they are also quite cheap." - Oprócz tego, że są przyjazne dla środowiska i fajnie wyglądają, są też dość tanie.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Because he does a lot of sport. </p>
+<p><strong>Fragment w tekście</strong>: "(...) I do a lot of sport, and I always take water with me - but not in disposable plastic bottles." - (...) często uprawiam sport i często noszę ze sobą wodą - ale nie w jednorazowych plastikowych butelkach. </p>
+<p>2. That it's light.</p>
+<p><strong>Fragment w tekście</strong>: "It looks great, and it is strong but light." - Wygląda świetnie i jest silna, choć lekka.</p>
+<p>3. Online or in sports shops.</p>
+<p><strong>Fragment w tekście</strong>: "You can buy the bottles online or in sports shops." - Można kupić te butelki przez Internet albo w sklepach sportowych.</p>
+<p>4. It's made from recycled metal.</p>
+<p><strong>Fragment w tekście</strong>: "If you want to be even more environmentally friendly, check out the bottles which are made from recycled metal - like mine!" - Jeśli chcecie być jeszcze bardziej przyjaźni dla środowiska, sprawdźcie butelki, które są wykonane z metalu pochodzącego z recyklingu - tak jak moja!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <strong>As you will know if you read my blog regularly</strong> (Jak wiecie, jeśli regularnie czytacie mojego bloga)</p>
+<p>(przykład bezpośredniego zwrotu do czytelnika) </p>
+<p>2. <strong>looking cool</strong> (wygląda fajnie), <strong>check out</strong> (sprawdźcie)</p>
+<p>(przykład nieformalnego, potocznego języka) </p>
+<p>3. <strong>It'll</strong></p>
+<p>(forma skrócona) </p>
+<p>4. <strong>metal bottles really are the way to go</strong><em> </em>(metalowe butelki to naprawdę najlepsze rozwiązanie)</p>
+<p>(idiom)</p>
+<p>5. <strong>and </strong>(i), <strong>too </strong>(też), <strong>also </strong>(ponadto)</p>
+<p>(nieformalne wyrazy łączące)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. as well as  </p>
+<p>2. or</p>
+<p>3. also</p>
+<p>4. unlike</p>
+<p>5. plus</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Butelki te utrzymują <strong>zarówno</strong> ciepło, <strong>jak i</strong> zimno przechowywanego napoju. Można kupić mały, średni <strong>lub</strong> duży rozmiar w zależności od potrzeb. Wyglądają fajnie, <strong>a ponadto</strong> są naprawdę wytrzymałe. Są przyjazne dla środowiska <strong>w przeciwieństwie do</strong> jednorazowych plastikowych butelek. Łatwo mieszczą się w każdej torbie, <strong>a w dodatku</strong> mają kilka niesamowitych wzorów.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Metal bottles are definitely the way to go.</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>the best option </em>(najlepsza opcja) zastępujemy idiomem <em>the way to go </em>(najlepsze rozwiązanie). </p>
+<p>2. It is possible to get reusable water bottles online these days.</p>
+<p><strong>Uzasadnienie</strong>: formalny czasownik <em>obtain </em>(uzyskiwać) zastępujemy jego mniej formalnym synonimem <em>get </em>(dostać).</p>
+<p>3. You can also find bottles that are made from recycled materials.</p>
+<p><strong>Uzasadnienie</strong>: zmieniamy styl na bardziej kolokwialny; <em>it is possible to </em>(to możliwe) → <em>you can </em>(możesz); <em>in addition </em>(w dodatku) → <em>also </em>(też).</p>
+<p>4. I have looked at lots of websites with reusable water bottles.</p>
+<p><strong>Uzasadnienie</strong>: <em>many</em> → <em>lots of</em><em> </em>(wiele).</p>
+<p>5. They won't end up in landfills, unlike plastic bottles.</p>
+<p><strong>Uzasadnienie</strong>: zastępujemy wyrażenie <em>which is different from </em>(co różni się od) przysłówkiem <em>unlike </em>(w odróżnieniu od).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>Hi! In this week's post, I want to tell you about an environmentally friendly product that I use</em>. Its the SolarBloom, a small and useful desk lamp. You can use it when you work or study.</p>
+<p>It's stylish and very modern. It also helps me reduce my carbon footprint. It's an eco-friendly product because it uses solar power to generate electricity. It also has energy-efficient LED bulbs. Additionally, it's made from sustainable materials like bamboo and recycled plastic.</p>
+<p>If you're interested in getting it, you can find it at the company's website. They offer worldwide shipping, so it's accessible to everyone.</p>
+<p>I highly recommend the SolarBloom LED Desk Lamp to other people who care about the environment. It's great if you often study or work in the evenings and need a good light source.</p>
+<p>Do you have any other recommendations for eco-friendly products? Please share them in the comments!</p>
+<p><br/>(Liczba słów: 149)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>W tym tygodniu chcę opowiedzieć o przyjaznym dla środowiska produkcie, którego używam. Jest to SolarBloom, mała i użyteczna lampka biurkowa. Można jej używać podczas pracy lub nauki.</p>
+<p>Jest stylowa i bardzo nowoczesna. Pomaga mi również zmniejszyć mój ślad węglowy. Jest to produkt przyjazny dla środowiska, ponieważ wykorzystuje energię słoneczną do generowania energii elektrycznej. Posiada również energooszczędne żarówki LED. Ponadto jest wykonana z ekologicznych materiałów, takich jak bambus i plastik z recyklingu.</p>
+<p>Jeśli jesteście zainteresowani jej zakupem, możecie ją znaleźć na stronie internetowej firmy. Oferuje ona wysyłkę na cały świat, więc jest dostępna dla każdego.</p>
+<p>Gorąco polecam lampkę biurkową SolarBloom LED innym osobom dbającym o środowisko. To świetne rozwiązanie, jeśli często uczysz się lub pracujesz wieczorami i potrzebujesz dobrego źródła światła.</p>
+<p>Czy macie jakieś inne rekomendacje dotyczące ekologicznych produktów? Podzielcie się nimi w komentarzach!</p><br>

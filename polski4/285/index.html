@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>W słowach "Bunt jest płomieniem życia. Ale może być także płomieniem śmierci, jeśli do gniewu domiesza się pogarda" Zygmunt Kubiak wyraża przekonanie dotyczące relacji między nastawieniem buntującego się a moralną oceną przedsięwzięcia. Eseista zwraca uwagę na gwałtowność rewolucji, szybkość rozprzestrzeniania się i powagę konsekwencji, porównując ją do płomieni. Słowa te przywodzą na myśl biblijne obrazy ognia oczyszczającego, który wypala w człowieku to, co złe, i ognia piekielnego, będącego karą za grzechy. </p>
+<p>Nieodłączną częścią buntu jest, jak stwierdza Kubiak, gniew skierowany w stronę elementu opresyjnego, przeciw któremu należy się przeciwstawić. Pogarda dla natury ludzkiej, płynąca z przekonania o własnej potędze w zderzeniu z nią, sprawia jednak, że znaczenie przestają mieć ofiary, jakie rewolucja mogłaby nieść za sobą. Krzywda warstw najniższych, w których najpełniej przejawiają się wrodzone cechy rodzaju ludzkiego, wliczana jest do nieuniknionych kosztów tworzenia nowego systemu.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zygmunt Kubiak twierdzi, że systemy totalitarne za cel obierają sobie przede wszystkim naturę ludzką i prawidła ekonomii. Oba te zjawiska próbują, wbrew rządzących nimi prawom, podporządkować swojej ideologii w sposób sztuczny. Wykorzystują w tym celu rozbudowane aparaty przymusu i propagandy, których zadaniem jest wykreowanie nowej, niezgodnej z prawdą wizji rzeczywistości, a następnie zmuszenie obywateli do zaakceptowania jej jako prawdziwej, choćby przemocą. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Zygmunt Kubiak w omawianym eseju przedstawia naturę jako to co ludzkie, przyrodzone. W jej poczet włącza zarówno pozytywne cechy człowieka, jak i jego skłonność do zła czy swoistą marność egzystencji. Mianem obłędu określa z kolei starania, by zmienić tę naturę i podporządkować ją wypływającemu z rozważań intelektualistów modelowi jednostki idealnej.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Nawiązania do innych tekstów kultury w eseju sprawiają, że staje się on bardziej kunsztowny. Przykłady zaczerpnięte z dzieł wielkich twórców wskazują, że omawiany przez autora problem nie jest jednostkowy, ma charakter uniwersalny. Zależności opisywane przez Kubiaka dostrzeżone zostały już przez Szekspira czy Montaigne'a. Takie skojarzenia świadczą o erudycji eseisty i umożliwiają pogłębioną interpretację omawianych zjawisk, rozszerzają bowiem autorską perspektywę.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>W eseju <em>Natura i obłęd </em>Zygmunt Kubiak w sposób niebudzący wątpliwości wyraża swój skrajnie krytyczny  stosunek do totalitaryzmów. Ekspresja negatywnych uczuć autora widoczna jest w określeniach, których używa do opisania tego systemu, np. <em>system nieludzki</em>, <em>tragiczny, ohydny. </em>Jego wykonawców określa mianem <em>prostackich cyników. </em>Autor buduje także porównania o pejoratywnym nacechowaniu, nasuwające czytelnikowi nieprzyjemne skojarzenia: "ludzkość przerażona jest totalizmem niby garbem, który wyrósł jej na plecach [...]", " jeśli przekreśla jej [natury] prawa, aby dokonać na <em>materiale ludzkim</em> eksperymentu [...] niby chirurg ponad ludzkością stojący - z jego serca odpływa wszelka ludzka treść [...]".</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Esej Zygmunta Kubiaka składa się z pięciu części. Poruszane w nich kwestie ułożone są niejako w porządku chronologicznym. Pierwsze trzy akapity dotyczą przyczyn, dla których intelektualiści zapragnęli zbuntować się przeciwko porządkowi świata, mówią więc o przeszłości sprzed pierwszych ruchów totalitarnych. W części drugiej tekstu wyjaśnione zostało, w jaki sposób doszło do wypaczenia idei rewolucyjnej . Kolejny fragment traktuje o tym,  w jaki sposób omawiany system przekłada się na funkcjonowanie państwa. Czwarty segment dotyczy "ideału nowego człowieka", do którego stworzenia dąży totalitaryzm. Fragment ten, choć dotyczy także przeszłości, kieruje myśli czytelnika w przyszłość, do wizji zmienionej rzeczywistości. W ostatniej części autor wybiega myślami w przód, zastanawiając się nad tym, co czeka przyszłe pokolenia.</p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>W eseju Zygmunta Kubiaka dominujące są takie cechy gatunkowe jak:</p>
+<ul>
+<li>kunsztowność, erudycja językowa;</li>
+<li>liczne odwołania do innych tekstów kultury; </li>
+<li>bogactwo środków językowych;</li>
+<li>refleksyjność.</li>
+</ul>
+<p>Mniejsze znaczenie mają natomiast poniższe przymioty:</p>
+<ul>
+<li>dygresyjność, asocjacyjność (całość wydaje się uporządkowana, kolejne wątki są ze sobą ściśle połączone);</li>
+<li>subiektywizm (autor rzadko się ujawnia i przedstawia swój tok myślowy).</li>
+</ul>
+<p>Skrajnie negatywna postawa autora wobec opisywanego zjawiska odbija się w jego formie - Zygmunt Kubiak nie pozostawia czytelnikowi przestrzeni na osobistą moralną ocenę opisywanego problemu. Teza o złu totalitaryzmu zdaje się ogólnie przyjętym konsensusem, eseista stawia sobie za cel nie przekonanie odbiorców, a jedynie zdemaskowanie mechanizmów zbrodniczego systemu. W kontekście historycznym tekst ten nabiera szczególnego znaczenia - jest wyrazem tego, co przez lata cenzury autor musiał zachować dla siebie, swoistym aktem odkrycia prawdziwej natury komunistycznego reżimu.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br>

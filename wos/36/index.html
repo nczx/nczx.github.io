@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Rodzice przygotują swoje dzieci do życia we wspólnocie poprzez ich pierwotną socjalizację, która ma miejsce w domu. Rodzice pokazują dziecku (często na własnym przykładzie) jak należy zachowywać się w danych sytuacjach, jak traktować osoby starsze czy schorowane. Dziecko obserwując własnych rodziców, uczy się życia w społeczeństwie. Dorośli również mogą wpływać na zachowanie dziecka poprzez wskazywanie mu różnych zainteresowań, np. kulturą (wspólne chodzenie do kina), literaturą (czytanie dzieciom książek) czy sportem (granie z dziećmi w różne gry lub zapisanie dzieci do szkółek). Najważniejsze jest jednak zbudowanie między rodzicami a dziećmi silnych więzi, które maja wpływ na emocjonalność młodego człowieka i jego otwartość na innych ludzi, którzy tworzą społeczeństwo. </p>
+<p> </p>
+<p>b) Szczególna rola rodziny w życiu człowieka polega na tym, że stanowi ona <strong>podstawową komórkę społeczną</strong>, w której młody człowiek przechodzi <strong>pierwszy proces socjalizacji</strong>. Człowiek rodzi się w rodzinie i w niej się wychowuje, np. matka uczy dziecko chodzić, ubierać się czy czesać. Rodzina stanowi <strong>fundament wychowania człowieka</strong>, daje mu <strong>podwaliny kodeksu wartości oraz etycznego postępowania</strong>. Rodzina to również wspólnota, w której każdy z jej członków może znaleźć pomoc i bezinteresowne wsparcie. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Wypełnianie przez rodzinę swoich funkcji jest kluczowe dla zdrowego i harmonijnego funkcjonowania jednostki w codziennym życiu. Rodzina pełni funkcje emocjonalne, opiekuńcze, ekonomiczne, społeczne i reprodukcyjne, co pozwala na zaspokojenie potrzeb i wsparcie emocjonalne dla jej członków. Ponadto, wychowywanie dzieci w rodzinie jest niezwykle ważne dla ich rozwoju i budowania relacji z innymi. Warto zaznaczyć, że funkcje rodziny różnią się w zależności od kultury, społeczeństwa i czasów, ale ich znaczenie dla jednostki pozostaje niezmienne.</p>
+<p><strong>b)</strong></p>
+<p>Rodzina jest nazywana 'podstawową komórką życia społecznego', ponieważ jest to pierwsza i najważniejsza grupa społeczna, w której człowiek się formuje i uczy najważniejszych wartości i norm społecznych. To w rodzinie dziecko poznaje miłość, bezpieczeństwo i wsparcie, a także uczy się odpowiedzialności i współpracy. Rodzina stanowi więc podstawę do budowania relacji z innymi ludźmi w społeczeństwie.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Funkcja ekonomiczna</strong></span> stanowi najważniejszą funkcję, ponieważ wpływa ona na możliwości wypełnienia przez rodzinę pozostałych ich funkcji, ponieważ poprzez funkcję ekonomiczną rodzina zaspokaja swoje materialne potrzeby, co możliwe jest dzięki zarobkowaniu przez jej członków. Dzięki wypełnianiu tej funkcji możliwe jest podjęcie się przez małżonków <strong><span style="text-decoration: underline;">spłodzenia dzieci,</span></strong> bo posiadając środki materialne mają oni pewność, że zapewnią byt swojemu potomstwu.</p>
+<p>Posiadając środki finansowe rodzina ma większe możliwości w zakresie zapewniania swoim członkom wypełnienia <strong><span style="text-decoration: underline;">funkcji socjalizacyjnej,</span></strong> a więc zastosowania odpowiednich środków w celu przygotowania dzieci do dorosłego życia. Ponadto od posiadanych środków uzależnione jest również spełnianie funkcji stratyfikacyjnej, która polega na tym, że rodzina nadaje swoim członkom określoną pozycję społeczną. Tym samym czym większe środki majątkowe posiada dana rodzina, tym ich pozycja jest wyższa w danym społeczeństwie.</p>
+<p>Dodatkowo łatwiej rodzinie jest również wypełniać <span style="text-decoration: underline;"><strong>funkcję  opiekuńczo-zabezpieczającą,</strong></span> bowiem rodzinę stać na stosowanie różnych środków oraz metod służących do odpowiedniego sprawowania opieki nad jej członkami. Warto również podkreślić, że dobrze wypełniona funkcja ekonomiczna wpływa na odpowiednie wypełnienie funkcji rekreacyjnej (ponieważ rodzina jest w stanie w odpowiedni sposób zaspokoić potrzeby odpoczynku i rozrywki swoich członków) oraz funkcji kulturowej (poprzez zapewnienie jej członkom korzystania z dóbr kultury).</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma (częściowo) charakter indywidualny, bo wymaga wyrażenia własnego zdania. Toteż proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Nie można wskazać jednej konkretnej funkcji rodziny jako najważniejszej dla rozwoju społeczeństw, ponieważ każda z nich pełni ważną rolę. Funkcje rodziny, takie jak opieka nad dziećmi, wychowanie, dostarczanie emocjonalnego wsparcia i pomoc finansowa, wszystkie przyczyniają się do rozwoju jednostki i społeczeństwa jako całości. To, która z funkcji jest najważniejsza, może się różnić w zależności od kultury, kraju i indywidualnych potrzeb. Jednakże w związku z tym, że życie w dzisiejszym świecie okazuje się dynamiczne, trudne i nierzadko stresujące, szczególnie doniosła wydaje się funkcja opiekuńcza rodziny. Jeśli jest ona realizowana właściwie, a członkowie rodziny zapewniają sobie pomoc i wsparcie, zwłaszcza w sytuacjach trudnych, to bez wątpienia jakość ich życia staje się wyższa.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>a) W poniższych krajach wzrósł odsetek dzieci żyjących w rodzinach z jednym rodzicem:</strong></span> </p>
+<ul>
+<li>Grecja, </li>
+<li>Francja,</li>
+<li>USA.</li>
+</ul>
+<p> </p>
+<p>b) W krajach z większym odsetkiem gospodarstw domowych bez dzieci jest proporcjonalnie więcej rodzin z jednym opiekunem, ponieważ wyniki badań przeprowadzonych badań wskazują, że w Polsce w 2015 r. było 62% gospodarstw domowych bez dzieci, co odpowiada 12,1% dzieci, które w Polsce wychowywały się tylko z jednym rodzicem. Z kolei w 2015 r. we Francji było 68% gospodarstw domowych bez dzieci, czyli więcej niż w Polsce i jednocześnie więcej, bo 18,6% dzieci wychowuje się we Francji tylko z jednym rodzicem. Z kolei w Szwecji w 2015 r. funkcjonowało 78% gospodarstw domowych bez dzieci, a więc najwięcej spośród tych trzech wskazanych państw i jednocześnie najwięcej dzieci, bo aż 20,2% wychowywało się tylko z jednym rodzicem.</p>
+<p> </p>
+<p>c) Na podstawie danych przedstawionych na wykresach na stronie 33 należy stwierdzić, że w Polsce i w innych państwach (branych pod uwagę w badaniu) jest porównywalna sytuacja pod względem funkcjonowania rodzin, bowiem porównywalny odsetek rodzin wychowuje jedno dziecko w Polsce (18%), we Francji (13%), Irlandii (15%) oraz w Wielkiej Brytanii (14%). Z kolei w Meksyku (24%) oraz Turcji (21%) o wiele więcej niż w Polsce (18%) procentowo  dzieci wychowuje się w rodzinie tworzonej przez jednego rodzica. Podobnie porównywalna jest sytuacja Polski (15%) z Francją (13%), Irlandią (16%), Szwecją (10%) i Wielką Brytanią (13%) pod względem stosunku liczby gospodarstw domowych z dwóją dzieci. Odsetek ten jest większy w Turcji (20%) i w Meksyku (21%). Polska w porównaniu z państwami przedstawionymi na wykresie prawie na samym dole plasuje się pod względem odsetkowym w licznie gospodarstw domowych wychowujących trójkę  lub większą ilość dzieci. W Polsce ten odsetek wynosi 5%, zaś we Francji - 6%, Irlandii - 11%, Turcja - 14%, Wielka Brytania - 5% oraz Meksyk - 14%. Jedynie Szwecja ma mniejszy odsetek gospodarstw domowych wychowujących trójkę lub większą ilość dzieci (3%). W Polsce panuje również porównywalna sytuacja w zakresie odsetka gospodarstw domowych bez dzieci (62%) do sytuacji takich krajów jak: Francja - 68%, Irlandia - 58%, Wielka Brytania - 68%. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Z zamieszczonego wykresu wynika, że <strong><span style="text-decoration: underline;">w latach 2005-2016 odsetek dzieci żyjących w rodzinach z jednym rodzicem wzrósł: w Grecji, we Francji oraz w Stanach Zjednoczonych</span></strong>.</p>
+<p><strong>b)</strong></p>
+<p>W krajach z większym odsetkiem gospodarstw domowych bez dzieci jest proporcjonalnie więcej rodzin z jednym opiekunem. Można to uzasadnić tym, że w Polsce w 2015 roku funkcjonowało 62% gospodarstw domowych bez dzieci, co odpowiada 12,1% dzieci, które w Polsce wychowywały się tylko z jednym rodzicem. We Francji w 2015 roku istniało zaś 68% gospodarstw domowych bez dzieci, co oznacza, że było ich więcej niż w Polsce. We Francji więcej dzieci, bo 18,6%, wychowuje się tylko z jednym rodzicem. Natomiast w Szwecji w 2015 roku było 78% gospodarstw domowych bez dzieci (najwięcej spośród trzech wskazanych krajów) i jednocześnie najwięcej dzieci, bo aż 20,2% wychowywało się tam wyłącznie z jednym rodzicem.</p>
+<p><strong>c)</strong></p>
+<div class="divText ouputsection">W Polsce i innych krajach (wziętych pod uwagę w badaniu) sytuacja w zakresie funkcjonowania rodziny jest porównywalna, gdyż porównywalny jest odsetek rodzin wychowujących jedno dziecko w Polsce (18%), Francji (13%), Irlandii (15%) i Wielkiej Brytanii (14%). Z kolei w Meksyku (24%) i Turcji (21%) więcej dzieci wychowuje się w rodzinach niepełnych niż w Polsce (18%). Pod względem liczby gospodarstw domowych z dwojgiem dzieci sytuacja w Polsce (15%) jest porównywalna z Francją (13%), Irlandią (16%), Szwecją (10%) i Wielką Brytanią (13%). Odsetek ten jest wyższy w Turcji (20%) i Meksyku (21%). W porównaniu z krajami ukazanymi na wykresie Polska jest prawie na ostatnim miejscu pod względem liczby gospodarstw domowych z trojgiem lub większą liczbą dzieci. W Polsce odsetek ten wynosi 5%, we Francji – 6%, w Irlandii – 11%, w Turcji – 14%, w Wielkiej Brytanii – 5% i w Meksyku – 14%. Odsetek gospodarstw domowych z mniej niż trojgiem dzieci występuje tylko w Szwecji (3%). Polska ma sytuację porównywalną z odsetkiem gospodarstw bezdzietnych (62%) w następujących krajach: Francja – 68%, Irlandia – 58%, Wielka Brytania – 68%.</div><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Dawniej rodziny</span></strong> częściej były wielopokoleniowe, co oznaczało, że oprócz dzieci i rodziców składały się też z dziadków, czasami też pradziadków i dalszych krewnych. Przeważały rodziny o modelu patriarchalnym, gdzie władza nad najważniejszymi sprawami, jakie jej dotyczyły, spoczywała w rękach ojca. Stawiano na dużą liczbę dzieci, a kobiety zajmowały się przeważnie gospodarstwem domowym.</p>
+<p><span style="text-decoration: underline;"><strong>Współcześnie</strong></span> natomiast obserwuje się odejście od modelu patriarchalnego na rzecz rodziny egalitarnej, w której mężczyzna i kobieta mają mniej więcej równy wpływ na kluczowe decyzje dotyczące spraw rodzinnych. Czymś normalnym jest, że zarówno mężczyzna, jak i kobieta zajmują się pracą zarobkową. Zamiast rodzin wielopokoleniowych przewagę zyskują mniejsze rodziny dwupokoleniowe, przy czym częsty jest model tzw. rodziny nuklearnej, w której rodzice wychowują jedno dziecko.</p>
+<p>Współczesna polska rodzina odbiega od tradycyjnego modelu rodziny. <span style="text-decoration: underline;"><strong>Zmienił się sposób myślenia o roli rodziny</strong></span> w społeczeństwie oraz charakter i rola jej poszczególnych członków. Współczesny wzorzec polskiej rodziny jest spójny ze wzorcem rodziny zachodnioeuropejskiej. Niestety rodziny stały się również mniej trwałe. Ich stabilność uległa degradacji. </p>
+<p>Obecnie panuje powszechne przekonanie, że związek małżeński powinien opierać się <span style="text-decoration: underline;"><strong>na partnerstwie</strong>,</span> zaś kobieta i mężczyzna wspólnie mają podejmować decyzje w poszczególnych sprawach. Coraz częściej dochodzi do tego, że rodzice mają tylko jedno lub dwoje dzieci, ponieważ proces wychowywania jest męczący i absorbujący dla nich, więc u części społeczeństwa istnieje pogląd, że lepiej wychowywać małą liczbę potomstwa. Coraz częściej Polacy <span style="text-decoration: underline;"><strong>odchodzą od tradycyjnych wartości rodzinnych na rzecz zdobycia dobrego wykształcenia oraz rozwój zawodowy</strong>.</span> Współcześnie coraz częściej członkowie rodziny odwracają się od siebie i nie stanowią dla siebie oparcia. Co więcej "współcześnie role rodzinne stają się mniej wyodrębnione jako specyficznie męskie i kobiece", co związane jest z przyjmowaniem modelu partnerskiego przez Polaków.</p>
+<p>Według danych statystycznych rośnie liczba rozwodów w Polsce, a tym samym odsetek rozpadających się rodzin. W 1950 r. w Polsce miało miejsce 11 tysięcy rozwodów, zaś w 2015 r. ponad 67 tysięcy razy sąd orzekł rozpad małżeństwa. Ponadto w ostatnich latach jest bardzo niska liczba urodzeń, co wskazuje, że małżeństwa oddają się pracy zawodowej lub wzmożonej edukacji niż rodzeniu i wychowywaniu dzieci. </p>
+<p>Współcześnie obserwujemy kryzys rodziny, który polega na tym, że coraz częściej dochodzi do <strong>rozbicia dużej ilości rodzin</strong>. Coraz częściej rodziny budują swoje fundamenty nie na wartościach, ale na karierze. Prowadzi to do <strong>zaniku tradycyjnych funkcji rodziny</strong> (np. wychowawczych, prokreacyjnych, kulturowych). Dochodzi do rozluźnienia więzi między rodzicami i ich potomstwem. Rodziny dążąc do zaspokojenia coraz bardziej wymagających potrzeb ekonomicznych, zatracają wartości, na których zostały zbudowane. Kryzys rodzin spowodowany jest również po części kryzysem ekonomicznym oraz moralnym. Na kryzys rodziny nakłada się również <strong>egalitaryzm</strong>, czyli zjawisko polegające na "równości płci, zwiększeniu się zakresu wolności osobistej jednostki, wzrastającej  niezależności partnerów tworzących związek". Tym samym dochodzi do odchodzenia od tradycyjnych wzorców rodziny i wartości. Negatywnie na rodzinę wpływa również tolerancja społeczna na funkcjonowanie przedmałżeńskich oraz pozamałżeńskich kontaktów seksualnych. Przejawem kryzysu rodziny jest również <strong>spadek znaczenia norm społecznych</strong> kontrolujących życie rodzinne, a także <strong>zmniejszenie "wspólnotowego charakteru przeżywania doświadczeń w rodzinie"</strong>. Niewątpliwie jedną z największych bolączek jest również "brak silnej pozytywnej więzi między rodzicami a ich dziećmi", co przekłada się na relacje między członkami rodziny. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><strong><span style="text-decoration: underline;">Modele funkcjonowania rodziny w dawnych wiekach i współczesnej różnią się pomiędzy sobą, jednak istnieją również pewne podobieństwa</span></strong>.</p>
+<p><span style="text-decoration: underline;"><strong>Podobieństwa:</strong></span></p>
+<ol>
+<li>Rola rodziny w życiu człowieka - w obu modelach rodzina jest ważna i pełni kluczową rolę w życiu człowieka.</li>
+<li>Ochrona i opieka nad członkami rodziny - oba modele uwzględniają obowiązek chronienia i opiekowania się członkami rodziny.</li>
+</ol>
+<p><strong><span style="text-decoration: underline;">Różnice:</span></strong></p>
+<ol>
+<li>Struktura rodziny - w dawnych wiekach rodziny były zwykle większe i obejmowały dalszych krewnych, podczas gdy współczesne rodziny są często mniejsze i ograniczają się do najbliższej rodziny.</li>
+<li>Funkcje rodziny - w dawnych wiekach rodzina pełniła szersze funkcje, takie jak produkcja i dystrybucja towarów, podczas gdy współczesne rodziny skupiają się na emocjonalnej i duchowej opiece.</li>
+<li>Równouprawnienie płci - w dawnych wiekach równouprawnienie płci nie było powszechne, podczas gdy współczesne rodziny starają się promować równość pomiędzy mężczyznami i kobietami.</li>
+</ol>
+<p><strong><span style="text-decoration: underline;">Wniosek:</span></strong> Modele funkcjonowania rodziny ewoluowały na przestrzeni wieków, jednak ich rola w życiu człowieka pozostaje niezmienna. Obecnie wiele rodzin stara się zachować tradycyjne wartości i zasady, jednocześnie dostosowując się do współczesnych realiów.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Ustęp 1. artykułu 33. Konstytucji RP odnosi się do modelu funkcjonowania rodziny o nazwie <span style="text-decoration: underline;"><strong>partnerski</strong></span>. </p>
+<p><span style="text-decoration: underline;"><strong>Uzasadnienie</strong></span>: </p>
+<p>Ustawodawca w art. 33 ust. 1. odniósł się do partnerskiego modelu rodziny, bowiem wskazał na równorzędną rolę kobiety i mężczyzny w życiu rodzinnym, politycznym, społecznym i gospodarczym, a właśnie model partnerski opiera się na wspólnym podejmowaniu decyzji przez męża i żonę w zakresie funkcjonowania ich rodziny, obowiązków domowych i wspólnego życia. Zatem cel wprowadzenia przez ustawodawcę zapisu art. 33 ust. 1. jest tożsamy z modelem partnerskim rodziny.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Ustęp 1. artykułu 33. <em>Konstytucji RP</em> stanowi, że: 'Kobieta i mężczyzna w Rzeczypospolitej Polskiej mają równe prawa w życiu rodzinnym, politycznym, społecznym i gospodarczym'.</p>
+<p>Zapis ten nawiązuje do <strong><span style="text-decoration: underline;">partnerskiego (egalitarnego) modelu rodziny</span></strong>, który zakłada, że równouprawnieni małżonkowie (partnerzy) wspólnie podejmują decyzje związane z ich rodziną oraz mniej więcej po równo dzielą się obowiązkami domowymi. </p><br>

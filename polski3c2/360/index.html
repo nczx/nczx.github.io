@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Nacisk w opowiadaniu jest po³o¿ony przede wszystkim na prezentacjê czynów i zachowañ postaci. Narrator nie interesuje siê ich emocjami czy motywacj¹ - pozostaj¹ one nieznane. Ujawnia siê to na przyk³ad we fragmencie dotycz¹cym dziewczyny: </p>
+<p><em>Raptem spoœród tej ca³e fali ludzkiej, która par³a na œlepo w stronê aut jak rzeka pchana niewidzialn¹ si³¹, wynurzy³a siê dziewczyna, zeskoczy³a lekko z wagonu na ¿wir i spojrza³a doko³a badawczym okiem, jak cz³owiek, który czemuœ bardzo siê dziwi. [...] Sta³a tak chwilê, kogoœ szukaj¹c. Nieœwiadomie szuka³em jej wzroku, oczy nasze spotka³y siê.</em></p>
+<p><em>- S³uchaj, s³uchaj, powiedz, dok¹d oni nas powioz¹?</em></p>
+<p><em>[...]</em></p>
+<p><em>Milcza³em. Zacisnê³a usta.</em></p>
+<p><em>- Ju¿ wiem - rzek³a z odcieniem pañskiej pogardy w g³osie, odrzucaj¹c w ty³ g³owê; œmia³o posz³a w stronê samochodów. Ktoœ j¹ chcia³ zatrzymaæ, odsunê³a go œmia³o na bok i wbieg³a po schodkach na wype³nione ju¿ prawie auto. Zobaczy³em tylko z daleka bujne jasne w³osy, rozwiane w pêdzie. </em></p>
+<p>Narrator przedstawia bohaterkê wy³¹cznie poprzez ukazanie jej reakcji oraz gestów. Zabieg ten œwiadczy o zastosowaniu techniki behawiorystycznej, która rezygnuje z dociekania uczuæ czy motywacji cz³owieka. W ten sposób narrator skupia siê wy³¹cznie na tym, co mo¿e samodzielnie zaobserwowaæ. Taki sposób obrazowania odzwierciedla tak¿e mechanizm dzia³ania obozów: istota ludzka zostaje odarta z ¿ycia wewnêtrznego, podporz¹dkowana podstawowym instynktom i nic oprócz nich siê nie liczy. Ponadto sugeruje to, i¿ kluczowe s¹ konkretne postawy wiêŸniów, nie zaœ ich potencjalne deklaracje czy systemy wartoœci. Brak analizy motywacji oraz prze¿yæ mo¿e te¿ oznaczaæ, i¿ narrator rezygnuje z oceny bohaterów i pozwala w ten sposób odbiorcy na samodzielne wyci¹gniêcie wniosków. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Podkreœlone czasowniki odnosz¹ siê do czynnoœci wykonywanych przez narratora - odpowiada on za roz³adunek przyby³ych ludzi. S¹ to jednak bezosobowe konstrukcje utworzone za pomoc¹ cz¹stki "siê". Sugeruj¹ one przede wszystkim gwa³townoœæ dzia³ania wiêŸnia ("wyrywa siê") lub te¿ jego odcz³owieczenie, degradacjê ("szczeka siê"). Wybór form bezosobowych jest znacz¹cy, gdy¿ œwiadczy o dystansie narratora wzglêdem rzeczywistoœci. Mo¿na tutaj tak¿e dostrzec swoiste rozdwojenie bohatera, poniewa¿ nie uto¿samia siê ze swymi dzia³aniami. S¹ one w pewien sposób niezale¿ne od niego - jakby w ogóle go nie dotyczy³y lub istnia³y poza jego wol¹ czy œwiadomoœci¹, co wskazywa³oby na mechaniczne zachowanie czy te¿ wp³yw obozowej rzeczywistoœci.  </p>
+<p> </p>
+<p>b) Czas teraŸniejszy i przesz³y wprowadzaj¹ dwie p³aszczyzny czasowe, ale tak¿e nieco inaczej ukazuj¹ dane czynnoœci. Czas przesz³y œwiadczy bowiem o ich zakoñczeniu. Z kolei teraŸniejszy zapewnia poczucie naocznoœci, poniewa¿ sugeruje to równoczesnoœæ czynnoœci i pisania o niej. Ponadto wywo³uje to wra¿enie wielokrotnoœci pewnych dzia³añ, co koresponduje z sytuacj¹ w obozie, gdzie pojawiaj¹ siê t³umy ludzi, a narrator odpowiada za ich roz³adunek. </p>
+<p> </p>
+<p>c) Rzeczowniki odwo³uj¹ce siê do metafory akwatycznej:</p>
+<ul>
+<li><em>Wody!;</em></li>
+<li><em>ryby;</em></li>
+<li><em>piasek;</em></li>
+<li><em>fala;</em></li>
+<li><em>rzeki;</em></li>
+<li><em> koryta.;</em></li>
+<li><em>fali;</em></li>
+<li><em>rzeka. </em></li>
+</ul>
+<p>Metaforyka akwatyczna pe³ni u Borowskiego kilka funkcji. Przede wszystkim ukazuje ofiary jako jedn¹ i wielk¹ masê, ¿ywio³, co wskazuje na rozmiar zag³ady oraz machiny wojennej. Prowadzi to jednoczeœnie do odebrania przyby³ym indywidualizmu - wszyscy staj¹ siê anonimow¹ czêœci¹ t³umu, zatracaj¹ sw¹ to¿samoœæ. Ponadto mo¿na dostrzec analogiê miêdzy sytuacj¹ ofiar a wod¹ - zdaj¹ siê oni nieustannie przep³ywaæ przez obóz, ca³y czas zmienia siê ich sytuacja. Metaforyka akwatyczna podkreœla zasadniczo tak¿e nieuchronne przemijanie ludzi, poniewa¿ s¹ skazani na œmieræ, nie ma dla nich ratunku. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Esesmani zostaj¹ przedstawieni w doœæ ogólny sposób: narrator zwraca uwagê na niektóre cechy ich powierzchownoœci czy zachowania. Przede wszystkim w swej wypowiedzi eksponuje spokój oraz opanowanie tych postaci. Esesmani z obojêtnoœci¹ wykonuj¹ sw¹ pracê, cechuje ich skrupulatnoœæ i metodycznoœæ: "Z boku stoi m³ody, g³adko wygolony pan, esman z notatnikiem w krêgu; ka¿de auto to kreska, jak odjedzie szesnaœcie aut, to jest tysi¹c, tak plus-minus. Pan jest zrównowa¿ony i dok³adny". Zdaj¹ siê wrêcz zdegustowani swym otoczeniem oraz losem ofiar: "[...] skrzywi³ usta z niesmakiem."; "Chudy, ospowaty esman spokojnie zagl¹da do œrodka, kiwa g³ow¹ z niesmakiem, ogarnia ans spojrzeniem i wskazuje wnêtrze". Ich postawa kontrastuje z dramatem wiêŸniów oraz przeznaczeniem obozu. Esesmani ze spokojem wykonuj¹ swoje obowi¹zki, nie ma w nich wspó³czucia dla losu innych - s¹ zdystansowani wzglêdem rzeczywistoœci, wrêcz pozbawieni ludzkich odruchów. </p>
+<p> </p>
+<p>Zabiegi jêzykowe wykorzystane w opisie esesmanów:</p>
+<ul>
+<li>epitety -&gt; "Za plecami stoi esman, spokojny, opanowany, fachowy.";</li>
+<li>peryfraza -&gt; "Cz³owiek w zielonym mundurze, bardziej ni¿ inni obsypany srebrem [...]";</li>
+<li>wyliczenie -&gt; "Zaci¹gn¹³ siê papierosem, odrzuci³ go nag³ym ruchem, prze³o¿y³ teczkê z prawej do lewej i skin¹³ na posta".</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Porównanie to wskazuje na specyfikê Auschwitz. Miejsce to bowiem przyczynia siê do odarcia œmierci z tego, co decyduje o jej znaczeniu. Przestaje ona nale¿eæ do sfery tabu, nie jest tak¿e zwi¹zana z niepewnoœci¹, groz¹, przekonaniem o istnieniu sfery duchowe, atmosfer¹ powagi. Zamiast tego œmieræ staje siê codziennoœci¹, metodycznym procesem, który prowadzi do zapomnienia o cz³owieczeñstwie i szokuj¹cym wymiarze tej sytuacji. Zabieg ten podkreœla wiêc zmianê sposobu postrzegania zbrodni: eliminacja ludzi staje siê czymœ zwyk³ym, zaplanowanym - trac¹ tym samym swoj¹ podmiotowoœæ. Porównanie unaocznia te¿ bezdusznoœæ systemu, w którym pozbawianie ofiar ¿ycia staje siê normaln¹ prac¹ wykonywan¹ zgodnie z ustalonym schematem. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<ul>
+<li><em>Za plecami stoi esman, spokojny, opanowany, fachowy.; </em></li>
+<li><em>Niezmordowanie jeŸdzi karetka Czerwonego Krzy¿a: to w³aœnie w niej wozi siê gaz, gaz, którym truj¹ tych ludzi.;</em></li>
+<li><em>Z boku stoi m³ody, g³adko wygolony pan, esman z notatnikiem w rêku; ka¿de auto to kreska, jak odjedzie szesnaœcie aut, to jest tysi¹c, tak plus-minus. Pan jest zrównowa¿ony i dok³adny. Nie odjedzie auto bez jego wiedzy i jego kreski: Ordnung muss sein. </em></li>
+<li><em>- Nie nieœ ich na auto. Oddaj kobietom - mówi, zapalaj¹c papierosa, esman. Zapalniczka mu siê zaciê³a, jest ni¹ bardzo zaaferowany.</em></li>
+</ul>
+<p> </p>
+<p>Ironia sugeruje dystans narratora wzglêdem rzeczywistoœci, która jest groŸna i okrutna. Dziêki temu wypowiadaj¹cy siê nie popada w patos, unika bana³u, natomiast oddaje zaburzon¹ wizjê œwiata. Ironia mo¿e byæ równie¿ sposobem na poradzenie sobie z doœwiadczanym nieustannie koszmarem. Jednoczeœnie zabieg ten akcentuje grozê miejsca, w którym dochodzi do zag³ady niewinnych ofiar. Podkreœlone w ten sposób zostaje tak¿e odcz³owieczenie esesmanów: s¹ metodyczni, sumienni, jednak ich postawa kontrastuje z tym, czym siê zajmuj¹. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Gwara obozowa pe³ni wa¿n¹ funkcjê w opowiadaniu Borowskiego. Przede wszystkim oddaje realia obozowej rzeczywistoœci oraz specyficzny jêzyk, jakim siê tam pos³ugiwano. Pozwala ona na nazwanie zjawisk typowych wy³¹cznie dla tego miejsca - prowadzi tym samym do ukonkretnienia przedstawienia ("Ci, którzy pójd¹ z tego transportu na lager, dostan¹ numery: 131-132"). Ponadto wp³ywa na wiarygodnoœæ i realizm przedstawienia, gdy¿ odwo³uje siê do autentycznych pojêæ. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Motyw s¹du ostatecznego podkreœla przede wszystkim grozê sytuacji wiêŸniów oraz koniec znanej do tej pory rzeczywistoœci. W tradycji chrzeœcijañskiej jest to szczególny moment. W dniu ostatecznym Bóg bowiem s¹dzi œwiat i ludzi, rozlicza ich ze wszystkich uczynków. Prowadzi to do zbawienia bogobojnych oraz potêpienia grzeszników, przejœcia od rzeczywistoœci doczesnej do ¿ycia wiecznego. W rzeczywistoœci obozowej motyw ten ulega jednak wynaturzeniu, poniewa¿ traci swój metafizyczny wymiar oraz istotê. Dochodzi bowiem do sytuacji, kiedy to ludzie (esesmani) przejmuj¹ rolê Stwórcy i decyduj¹ o losie wiêŸniów. Ich s¹d wp³ywa na przysz³oœæ ofiar, nie wi¹¿e siê jednak z obiektywnymi kryteriami czy te¿ jak¹kolwiek sprawiedliwoœci¹, nie jest Ÿród³em nadziei na ¿ycie wieczne. Motyw s¹du ostatecznego akcentuje wiêc zburzenie dotychczasowego porz¹dku œwiata oraz apokaliptyczny charakter obozowych realiów. W wyrazisty sposób sugeruje tak¿e, i¿ przyjazd do tego miejsca jest równoznaczny z wyrokiem œmierci, którego nie mo¿na unikn¹æ. Ten brak nadziei, odarcie z duchowego wymiaru zaznaczaj¹  s³owa: "Dziwnie niepotrzebnie pada imiê Boga [...]". Œwiadcz¹ o tym, i¿ w miejscu tym nie ma ¿adnych zasad moralnych, nie mo¿na te¿ dostrzec obecnoœci Stwórcy, przez co s¹d nad ofiarami staje siê nieludzki. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<ul>
+<li><em>Zapchane ludŸmi auta odje¿d¿aj¹ z piekielnym warkotem wœród zawodzenia i wrzasku kobiet op³akuj¹cych dzieci i og³upia³ego milczenia nagle osamotnionych mê¿czyzn.</em></li>
+<li><em>Gdy skoñczy siê wojna, bêd¹ liczyæ spalonych.</em></li>
+<li><em>[...] mówi, zapalaj¹c papierosa [...]";</em></li>
+<li><em>[...] z drzewami nieruchomymi, nie wiadomo dlaczego czarnymi [...]";</em></li>
+<li><em>¯eby siê ziemia pod nimi wszystkimi rozst¹pi³a.</em></li>
+<li><em>Kto raz tu wszed³, nic nawet popio³ów swoich nie wyniesie za postenkettê, nie wróci do tamtego ¿ycia.</em></li>
+</ul>
+<p> </p>
+<p>Motywy inferalne zaznaczaj¹ grozê i ponury charakter tego miejsca. Ponadto sugeruj¹, i¿ obozy to przestrzeñ nieludzka, piekielna, w której nie obowi¹zuj¹ ¿adne zasady moralne. Nie ma tam nadziei na ocalenie, poniewa¿ jest to miejsce cierpienia oraz zag³ady wiêŸniów. Ponadto obecnoœæ takich motywów sugeruje, i¿ obozy s¹ przesi¹kniête z³em. WiêŸniowie doœwiadczaj¹ tam nieustannej mêki.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>"Siwa pani" to jedyna kobieta, która decyduje siê na zabranie poduszonych i zdeformowanych niemowl¹t. W przeciwieñstwie do innych osób nie jest przera¿ona, lecz reaguje ze spokojem, pewnym zrozumieniem dla narratora. Z kolei dziewczyna zadaje mu jedno pytanie, na które bohater nie odpowiada: "S³uchaj, s³uchaj, powiedz, dok¹d oni nas powioz¹?". Kiedy domyœla siê prawdy, mimo próby zatrzymania, wsiada do auta. Heroizm i zwyciêstwo moralne tych kobiet polega na tym, i¿ mimo trudnych okolicznoœci zachowuj¹ swe cz³owieczeñstwo. Starsza pani zapobiega potencjalnej strzelaninie, zdobywa siê na gest, który przywraca poduszonym niemowlêtom utracon¹ godnoœæ. Z kolei dziewczyna wykazuje siê dum¹ i odwag¹. Nie popada w rozpacz, kiedy odkrywa prawdê, nie b³aga o litoœæ, nie okazuje tak¿e strachu. W honorowy sposób postanawia zmierzyæ siê ze swym losem, nawet w tej tragicznej sytuacji jest zdolna do wielkiego czynu.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Cechy cz³owiek zlagrowanego:</p>
+<ul>
+<li>jest pozbawiony indywidualizmu; </li>
+<li>dostosowuje siê do regu³ rz¹dz¹cych obozem;</li>
+<li>skupia siê na walce o przetrwanie;</li>
+<li>traci empatiê, wra¿liwoœæ na los drugiego cz³owieka;</li>
+<li>ma zaburzony system wartoœci;</li>
+<li>podporz¹dkowuje siê woli esesmanów.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Sformułowania o dwuznacznym sensie:</p>
+<ul>
+<li><em>Szkoda, że Cię tu nie ma;</em></li>
+<li><em>[...] co można widzieć, / gdy jest się Tobą; </em></li>
+<li><em>[...] czy czas coś znaczy, / gdy jest się Tobą;</em></li>
+<li><em>[...] jak boli / Ciebie Twój człowiek.</em></li>
+</ul>
+<p> </p>
+<p>Dwuznaczność dotyczy tożsamości odbiorcy. Kierowane do osoby mieszkającej po drugiej stronie żelaznej kurtyny wskazywałyby na diametralne różnice w wyglądzie i funkcjonowaniu państw o różnych ustrojach. Pierwsze z nich ma dodatkowo charakter typowego pozdrowienia umieszczanego na widokówkach. Jeśli przyjmie się natomiast, że adresatem jest Bóg, pytania te zaczynają dotykać metafizycznych. Stanowią rozważania nad istnieniem siły wyższej.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Widokówka została wybrana ze względu na swoją skrótowość i ogólność. Treści w niej zawarte są zazwyczaj błahe, sztampowe. Świat, w którym żyje podmiot liryczny, znajduje odzwierciedlenie właśnie w takiej nieznaczącej, pozbawionej patosu formie. Osoba mówiąca uważa go za pozbawiony głębi, tani, niewymagający dłuższego opisu np. w liście.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Tytułowy świat przedstawiony jest w sposób ambiwalentny. Z jednej strony osoba mówiąca zdaje się żałować, że adresat nie może przebywać w tej rzeczywistości razem z nim, mówi: "Szkoda, że Cię tu nie ma". Można odczytywać to jako entuzjastyczną recenzję miejsca, w którym się znajduje. Zwraca jednak uwagę na takie elementy przestrzeni, które trudno uznać za zachęcające: pustkę, chłód, przejmującą ciszę. Określa wprawdzie powietrze mianem "lepszego niż gdzie indziej", klimat nazywa jedynie "znośnym". Krytycznie odnosi się do postępu i wytworów rąk ludzkich, zwraca uwagę na zanieczyszczenie środowiska, nierozkładający się plastik. W tym, co produkuje cywilizacja zachodnia widzi "mieszankę śmiecia i rozpaczy". </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Osoba mówiąca w utworze może być utożsamiana z autorem wiersza, Stanisławem Barańczakiem, który w momencie wydania <em>Widokówki z tego świata </em>przebywał na emigracji w USA.</p>
+<p>Pobyt na obcej ziemi skłania podmiot liryczny do rozmyślań nad swoim miejscem w świecie. Czuje się opuszczony, również przez Boga, uważa niebiosa za miejsce zimne i nieprzyjazne człowiekowi. Ironicznie komentuje nieobecność Stwórcy, jednocześnie nie mogąc oprzeć się potrzebie rozmowy z nim. Metafizycznemu lękowi przed byciem samemu we wszechświecie towarzyszy również przekonanie, że nie pozostawia następnym pokoleniom nic wartościowego. Ludzie jego czasów tworzą kolejną warstwę geologiczną składającą się ze śmieci i rozpaczy. Bada również własne ciało, dostrzegając niemożliwe do wyjaśnienia tajemnice w nim zawarte. Zastanawia się, jak wygląda i czy istnieje w ogóle rzeczywistość po śmierci.</p>
+<p> </p>
+<p>Ocena podmiotu lirycznego - indywidualna część zadania</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podstawowe wyróżniki poezji Stanisława Barańczaka:</p>
+<ul>
+<li>gry słowne, podkreślanie warstwy fonetycznej języka; </li>
+<li>dekonstrukcja związków frazeologicznych, utartych zwrotów w celu wydobycia z nich nowych sensów;</li>
+<li>demaskowanie języka propagandy totalitarnej poprzez wykorzystanie typowych dla niej wyrażeń;</li>
+<li>problematyka zniewolenia jednostki, emigracji, kondycji społeczeństwa, ale także podejmowanie kwestii metafizyczny: istnienia Boga, znaczenia człowieka;</li>
+<li>nawiązywanie do form użytkowych wypowiedzi (np. widokówka, kwestionariusz);</li>
+<li>parodia, ironia.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Stanisław Barańczak jako kanwę swoich utworów wykorzystuje konwencje językowe i frazeologizmy. Powszechnie używane, znane odbiorcy formy, za sprawą przekształceń autora nabierają nowych sensów, dopełniają treść utworu. Poeta stosuje je w sposób konceptystyczny - podstawą jego utworów stają się nietypowe, zaskakujące dla czytelnika skojarzenia.</p>
+<p>Charakterystyczne dla Barańczaka jest łączenie codzienności i metafizyki, <em>sacrum</em> i <em>profanum. </em>W utworze <em>Drogi kąciku porad </em>punktem wyjścia staje się znana z telewizji śniadaniowych i czasopism kobiecych i młodzieżowych sekcja pytań od widzów lub czytelników. W dalszych częściach utworu schemat budowania wypowiedzi pozostaje ten sam, zmienia się natomiast adresat. Relacja między człowiekiem a Bogiem, do którego kierowane są wołania podmiotu lirycznego w ostatniej strofie, zostaje naświetlona z innej strony. Barańczak odnajduje cechy wspólne głuchego medium i nieobecnego Stwórcy. </p>
+<p>Tekst <em>Wypełnić czytelnym pismem </em> składa się z pytań kwestionariuszowych zbudowanych na zasadzie kontaminacji. Autor rozbija utarte związki wyrazowe, łącząc w jedno język urzędowy i poetycki. Dzięki tym zabiegom uwaga czytelnika po raz kolejny kierowana jest ku kwestiom egzystencjalnym, mimo tego, że tekst osadzony jest głęboko w realiach życia w państwie totalitarnym.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Joanna Dębińska-Pawelec w utworach Stanisława Barańczaka dostrzega silny związek między warstwą formalną a semantyczną dzieła. Zauważa, że poeta odnosi brzmienie wiersza do rzeczywistości pozatekstowej. Za pomocą rytmu, rymów i innych operacji pragnie oddać doświadczenie współczesnego mu człowieka. Język staje się narzędziem nie tylko swoistego okiełznania rzeczywistości, ale także wydobywania występujących w paradoksów, sprzeczności, kontrastów. Przykładem tego może być zastosowanie w wierszu <em>Tłum, który tłumi i tłumaczy </em>paronimów (wyrazów o podobnym brzmieniu, ale różnym znaczeniu i etymologii). Zauważona przez poetę osobliwość zostaje odniesiona do świata pozatekstowego, pozwala dostrzec i określić złożony mechanizm działania zbiorowości.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br>

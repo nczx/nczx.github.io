@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 693px; height: 471px;">
+<tbody>
+<tr style="height: 51px;">
+<td style="background-color: #99ccff; text-align: center; width: 134px; height: 51px;"><strong>Wyraz</strong></td>
+<td colspan="2" style="background-color: #99ccff; text-align: center; width: 248px; height: 51px;"><strong>Budowa wyrazu</strong><strong><br/></strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 153px; height: 51px;"><strong>Znaczenie etymologiczne</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 140px; height: 51px;"><strong>Znaczenie realne</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 140px;"><strong>Związek między znaczeniem etymologicznym a realnym</strong></td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 134px; text-align: center; height: 51px;">warzywo</td>
+<td style="width: 135px; text-align: center; height: 51px;">warzyć</td>
+<td rowspan="3" style="width: 113px; text-align: center; height: 103px;">+ iwo/-ywo</td>
+<td style="width: 153px; text-align: center; height: 51px;">coś, co się warzy (gotuje)</td>
+<td style="width: 140px; text-align: center; height: 51px;">typ jadalnych roślin</td>
+<td style="width: 140px; text-align: center;">niewidoczny</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 134px; text-align: center; height: 26px;">paliwo</td>
+<td style="width: 135px; text-align: center; height: 26px;">palić</td>
+<td style="width: 153px; text-align: center; height: 26px;">coś, co się pali</td>
+<td style="width: 140px; text-align: center; height: 26px;">substancja służąca do napędzania silników lub rozpalania ognia w piecach</td>
+<td style="width: 140px; text-align: center;">zachowany</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 134px; text-align: center; height: 26px;">piwo</td>
+<td style="width: 135px; text-align: center; height: 26px;">pić</td>
+<td style="width: 153px; text-align: center; height: 26px;">coś, co się pije</td>
+<td style="width: 140px; text-align: center; height: 26px;">napój alkoholowy otrzymywany ze słodu jęczmiennego</td>
+<td style="width: 140px; text-align: center;">zachowany</td>
+</tr>
+<tr style="height: 76px;">
+<td style="width: 134px; text-align: center; height: 76px;">godło</td>
+<td style="width: 135px; text-align: center; height: 76px;">godzić</td>
+<td rowspan="3" style="width: 113px; text-align: center; height: 155px;">+ -dło</td>
+<td style="width: 153px; text-align: center; height: 76px;">coś, za pomocą czego się godzi (uzgadnia, umawia)</td>
+<td style="width: 140px; text-align: center; height: 76px;">znak wyróżniający </td>
+<td style="width: 140px; text-align: center;">niewidoczny</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 134px; text-align: center; height: 26px;">szydło</td>
+<td style="width: 135px; text-align: center; height: 26px;">szyć</td>
+<td style="width: 153px; text-align: center; height: 26px;">coś, za pomocą czego się szyje</td>
+<td style="width: 140px; text-align: center; height: 26px;">igła wykorzystywana do szycia grubego materiału</td>
+<td style="width: 140px; text-align: center;">zachowany</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 134px; text-align: center; height: 53px;">siodło</td>
+<td style="width: 135px; text-align: center; height: 53px;">siedzieć</td>
+<td style="width: 153px; text-align: center; height: 53px;">coś, na czym się siedzi</td>
+<td style="width: 140px; text-align: center; height: 53px;">siedzisko do jazdy wierzchem</td>
+<td style="width: 140px; text-align: center;">zachowany</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Znaczenie etymologiczne słowa <em>puszcza</em>: 'to, co jest puste, pusty, niezamieszkany teren, pustkowie'.</p>
+<p> </p>
+<p>Realne znaczenie <em>puszczy </em>od XIV wieku odnosiło się zarówno do 'lasu, boru', jak i do 'pustyni'. W XVI wieku objęło również 'miejsce samotne; pustelnię'. Pochodzący z Biblii frazeologizm "głos wołającego na puszczy" należy rozumieć jako "głos wołającego na pustyni".</p>
+<p> </p>
+<p>Artykuł hasłowy zawiera informacje na temat znaczenia i pisowni wyrazu <em>puszcza</em> na poszczególnych etapach rozwoju języków słowiańskich (polskiego, czeskiego, rosyjskiego, słoweńskiego).</p>
+<p> </p>
+<p>Elementy tworzące artykuł hasłowy:</p>
+<ul>
+<li>hasło; </li>
+<li>znaczenie oraz pisownia wyrazu w różnych językach i okresach;</li>
+<li>informacje o pochodzeniu słowa;</li>
+<li>konteksty ("zob.", "por.");</li>
+<li>analiza słowotwórcza.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 476px; height: 237px;">
+<tbody>
+<tr style="height: 75px;">
+<td style="background-color: #99ccff; text-align: center; height: 75px;"><strong>Wyraz</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 75px;"><strong>Znaczenie etymologiczne</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 75px;"><strong>Znaczenie realne</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 75px;"><strong>Sposób ukształtowania współczesnego znaczenia</strong></td>
+</tr>
+<tr style="height: 108px;">
+<td style="width: 155px; height: 108px; text-align: center;">luty</td>
+<td style="width: 155px; height: 108px; text-align: center;">'srogi, surowy'</td>
+<td style="width: 155px; height: 108px; text-align: center;">drugi miesiąc roku kalendarzowego</td>
+<td style="width: 155px; height: 108px; text-align: center;">przeniesienie nazwy na zasadzie metonimii (luty - srogi, surowy miesiąc)</td>
+</tr>
+<tr style="height: 33px;">
+<td style="width: 155px; height: 33px; text-align: center;">bielizna</td>
+<td style="width: 155px; height: 33px; text-align: center;">'coś białego'</td>
+<td style="width: 155px; height: 33px; text-align: center;">odzież spodnia</td>
+<td style="width: 155px; height: 33px; text-align: center;">
+<p>zawężenie znaczenia (z 'czegoś białego' do 'elementów ubioru wykonanych z białej tkaniny')</p>
+</td>
+</tr>
+<tr style="height: 87px;">
+<td style="width: 155px; height: 87px; text-align: center;">kreatura</td>
+<td style="width: 155px; height: 87px; text-align: center;">'stworzenie'</td>
+<td style="width: 155px; height: 87px; text-align: center;">
+<p>'istota budząca odrazę'</p>
+</td>
+<td style="width: 155px; height: 87px; text-align: center;">pogorszenie odbioru (z neutralnego na pejoratywny)</td>
+</tr>
+</tbody>
+</table><br>

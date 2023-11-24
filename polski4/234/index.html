@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowe elementy:</p>
+<ul>
+<li>naturalizmu -&gt; "Już chce mnie próchno już mnie grzybnia chce / Już pobielałe śnią się w listkach dłonie"; </li>
+<li>makabry -&gt; "Co nie ma oczu ze mnie oczy ma / Co nie ma krtani moją krtań otwiera";</li>
+<li>humoru -&gt; "Pleśń czeka na mnie i pleśń o mnie wie / A czemu jeszcze ja od pleśni stronię".</li>
+<li>groteski -&gt; "Pleśń chce oddychać próchno patrzeć chce / Grzybnia chce śpiewać ale nie zna pieśni". </li>
+</ul>
+<p> </p>
+<p>Śmierć zostaje przedstawiona przede wszystkim przez pryzmat procesów biologicznych, które jej towarzyszą. Z tego też powodu poeta bardzo często odwołuje się do motywu pleśni. Śmierć w ujęciu Rymkiewicza jawi się jako niejednoznaczne zjawisko, o czym świadczy połączenie ze sobą elementów makabry, naturalizmu, humoru, groteski. Proces przemijania nie tylko bowiem wiąże się ze stopniową degradacją ciała, jego przemianą w inną materię, co może wywoływać grozę lub niepokój, ale także staje się źródłem fascynacji. Śmierć bowiem niejako doprowadzi do integracji podmiotu lirycznego z pleśnią - w ten sposób produkty rozkładu zyskują cechy typowo ludzkie: "Co nie ma oczu ze mnie oczy ma / Co nie ma krtani moją krtań otwiera / A co jest próchno to się ze mnie zna". Utwór przypomina o tym, że taki koniec stanowi nieodłączną część ludzkiej natury. Podkreśla to zakończenie utworu: "Mój język pleśń jest i pleśń będę wszystek". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Powtórzenia:</p>
+<ul>
+<li><em>Już chce mnie próchno już mnie grzybnia chce;</em></li>
+<li><em>Pleśń czeka na mnie i pleśń o mnie wie; </em></li>
+<li><em>Co nie ma oczu ze mnie oczy ma;</em></li>
+<li><em>Co nie ma krtani moją krtań otwiera;</em></li>
+<li><em>Mój język pleśń jest i pleśń będę wszystek / Ja com wyśpiewał w pleśni każdy listek.</em></li>
+</ul>
+<p> </p>
+<p>Przykładowe słowa klucze:</p>
+<ul>
+<li>próchno;</li>
+<li>grzybnia;</li>
+<li>pleśń;</li>
+<li>złota krtań;</li>
+<li>listek.</li>
+</ul>
+<p> </p>
+<p>Przykładowe skojarzenia:</p>
+<ul>
+<li>śmierć;</li>
+<li>rozkład;</li>
+<li>brzydota;</li>
+<li>degradacja ciała;</li>
+<li>metamorfoza, odradzanie się życia.</li>
+</ul>
+<p> </p>
+<p>Prowokacja poety polega na tym, że porusza temat zazwyczaj uznawany za tabu lub opisywany za pomocą eufemizmów, z pominięciem sfery czysto biologicznej. Śmierć w utworze poety zostaje przedstawiona w wyrazisty sposób, który zwraca uwagę odbiorcy na metamorfozę cielesnej powłoki. Z tego też powodu Rymkiewicz nie unika elementów makabry czy groteski wskazujących na zawłaszczenie ciała przez pleśń. Drobiazgowo, z niewątpliwą fascynacją, opisuje oczekiwanie pleśni i próchna pragnących zjednoczyć się z człowiekiem - nie można tego  żaden sposób uniknąć, ponieważ umieranie jest wpisane w ludzką naturę. Jednocześnie prowokacja ta łączy się z zaakcentowaniem procesu rozkładu, który przyczynia się do powstania nowego istnienia. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Przytoczone słowa sugerują ścisły związek, który zachodzi między artystą a pleśnią, symbolem rozkładu oraz przemiany. Wskazują one na siłę twórczą poety. Nawet po śmierci wciąż żywa pozostaje jego twórczość, która niejako przekształca rzeczywistość. Chociaż artysta umiera, jego ciało ulega rozkładowi, to jednak w procesie tym powstaje nowa materia. Poeta za pomocą przytoczonych słów zdaje się sugerować, iż jakaś jego cząstka pozostanie obecna. W ten sposób zaznacza się także nierozerwalny porządek świata: koniec to początek czegoś nowego. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Motyw snu jest znaczący w utworze Rymkiewicza, ponieważ wprowadza atmosferę niesamowitości, nawet grozy czy makabry. Wywołuje ją bowiem wizja pleśni, która oczekuje na podmiot liryczny, pragnie się z nim zjednoczyć. Jednocześnie motyw snu ma profetyczny charakter, gdyż stanowi zapowiedź przyszłych, niezmiennych wypadków, które w pewnym momencie staną się rzeczywistością. Być może pozwala to także na oswojenie nieuniknionego, pogodzenie się z przemijaniem. Z kolei motyw pieśni stanowi nawiązanie do artysty i jego twórczości jako czegoś trwałego mimo śmierci autora. W ten sposób poeta niejako odwołuje się do utrwalonej w kulturze koncepcji nieśmiertelności twórczości. Ponadto sugeruje, iż pieśń to zjawisko ściśle związane z człowieczeństwem oraz ludzką pamięcią ("Grzybnia chce śpiewać ale nie zna pieśni"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Przytoczone słowa ("Pleśń będę wszystek") wskazują w podstawowym znaczeniu na nieuchronny los człowieka. Jego żywot jest bowiem kruchy, naznaczony przemijaniem, zaś po śmierci ciało podlega rozkładowi. W ten sposób ulega metamorfozie, która prowadzi do powstania nowego bytu, zjednoczenia człowieka z pleśnią czy grzybnią. Stwierdzenie podmiotu lirycznego zdaje się stanowić wyraz pogodzenia z rzeczywistością, zaakceptowania marności doczesnej egzystencji. Takie podejście wywołuje skojarzenia przede wszystkim z barokowym światopoglądem ("marność nad marnościami i wszystko marność").</p>
+<p>Kluczowe wydaje się jednak również zestawienie słów "Pleśń będę wszystek" z innym cytatem - "Nie wszystek umrę". Refleksja Horacego dotyczy przede wszystkim sytuacji artysty - chociaż umiera, pozostawia swoje dzieła, które mogą być odczytywane i podziwiane przez kolejne pokolenia. Jego cząstka zostaje tym samym ocalona, zapewnia mu wieczną chwałę. Rymkiewicz w swym utworze zdaje się nawiązywać do tej tradycji. Poeta zauważa, że zjednoczenie artysty z pleśnią to nieuchronny proces, który przyczyni się do całkowitego zintegrowania. Jednocześnie "Pleśń będę wszystek" można rozpatrywać jako refleksję dotyczącą twórczości. Wraz ze śmiercią twórcy zaczyna ona funkcjonować w nowych okolicznościach, tworzy pewne mity i jest rozmaicie interpretowana, odczytywana przez kolejne pokolenia. Koniec staje się w ten sposób nowym początkiem. Zmienia się przy tym charakter dorobku literackiego - podobnej przemianie ulega ciało, które podlega metamorfozie.  </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowe utwory będące kontekstem do wiersza:</p>
+<ul>
+<li><em>Do trupa</em>, Jan Andrzej Morsztyn; </li>
+<li><em>Uwagi śmierci niechybnej</em>, Józef Baka;</li>
+<li><em>Rozmowa mistrza Polikarpa ze Śmiercią</em>;</li>
+<li><em>Dla zakochanych to samo staranie</em>, Stanisław Grochowiak. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne</p><br>

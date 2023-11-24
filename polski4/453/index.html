@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Adresatami tekstu są wszyscy Polacy ("[...] zwracamy się do wszystkich obywateli naszego kraju."), w szczególności "ludzie pracy". Mówiący identyfikuje się ze swymi słuchaczami, buduje poczucie wspólnoty między przedstawicielami poszczególnych grup społecznych. W tym celu wykorzystuje formy gramatyczne odpowiadające pierwszej osobie liczby mnogiej:</p>
+<ul>
+<li>zaimki osobowe i dzierżawcze ("Zależeć to będzie od <span style="text-decoration: underline;">nas</span> wszystkich, od sprawności <span style="text-decoration: underline;">naszego</span> działania, od <span style="text-decoration: underline;">naszej</span> gospodarności [...].");</li>
+<li>czasowniki ("musimy").</li>
+</ul>
+<p> </p>
+<p>Szczegółowej identyfikacji adresatów służą z kolei zrytualizowane określenia o charakterze klisz językowych: "towarzysze", "kadra kierownicza", "załogi robotnicze", "wieś pracująca". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowe rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 532px; height: 219px;">
+<tbody>
+<tr style="height: 67px;">
+<td style="background-color: #99ccff; text-align: center; height: 67px; width: 266px;"><strong>Przykłady przymiotników o charakterze wartościującym</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 67px; width: 266px;"><strong>Znaczenie określeń wartościujących dla wymowy tekstu</strong></td>
+</tr>
+<tr style="height: 52px;">
+<td style="width: 266px; text-align: center; height: 52px;">"kładziemy tak <span style="text-decoration: underline;">wielki</span> nacisk"</td>
+<td rowspan="4" style="width: 266px; text-align: center; height: 207px;"> przekonanie obywateli o dobrych intencjach rządu, wyolbrzymienie jego zasług</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 266px; text-align: center; height: 46px;">"<span style="text-decoration: underline;">najpilniejsze</span> sprawy społeczne"</td>
+</tr>
+<tr style="height: 49px;">
+<td style="width: 266px; text-align: center; height: 49px;">"<span style="text-decoration: underline;">żywotne</span> interesy naszego narodu"</td>
+</tr>
+<tr style="height: 60px;">
+<td style="width: 266px; text-align: center; height: 60px;">"<span style="text-decoration: underline;">konsekwentna</span> realizacja programu oszczędnościowego"</td>
+</tr>
+<tr style="height: 90px;">
+<td style="width: 266px; text-align: center; height: 90px;">"wieś <span style="text-decoration: underline;">pracująca</span>"</td>
+<td style="width: 266px; text-align: center; height: 90px;">kreowanie uproszczonego, podporządkowanego obowiązującej ideologii obrazu rzeczywistości</td>
+</tr>
+<tr style="height: 68px;">
+<td style="width: 266px; text-align: center; height: 68px;">"jest to problem <span style="text-decoration: underline;">trudny</span>"</td>
+<td style="width: 266px; text-align: center; height: 68px;">usprawiedliwienie porażek partii rządzącej</td>
+</tr>
+<tr style="height: 77px;">
+<td style="width: 266px; text-align: center; height: 77px;">"<span style="text-decoration: underline;">powszechna</span>, <span style="text-decoration: underline;">patriotyczna</span> powinność"</td>
+<td style="width: 266px; text-align: center; height: 77px;">budowanie wśród odbiorców poczucia przynależności do wspólnoty, wskazanie pożądanych postaw i wartości</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 427px; height: 232px;">
+<tbody>
+<tr style="height: 47px;">
+<td style="background-color: #99ccff; text-align: center; height: 47px;"><strong>Przykłady sloganów</strong></td>
+<td style="background-color: #99ccff; text-align: center; height: 47px;"><strong>Funkcja w tekście</strong></td>
+</tr>
+<tr style="height: 117px;">
+<td style="width: 210.3px; text-align: center; height: 117px;">"Zależeć to będzie od nas wszystkich, od sprawności naszego działania, od naszej gospodarności, od wydajności pracy."</td>
+<td rowspan="2" style="width: 210.3px; text-align: center; height: 293px;">
+<p>przeniesienie odpowiedzialności za dobro obywateli na nich samych;</p>
+<p>manipulacja odbiorcą poprzez odniesienia do społecznie akceptowanych postaw i szlachetnych wartości;</p>
+<p>narzucenie adresatowi określonej wizji świata</p>
+</td>
+</tr>
+<tr style="height: 176px;">
+<td style="width: 210.3px; text-align: center; height: 176px;">"[...] żywotne interesy naszego narodu wymagają od wszystkich wysokiej dyscypliny i rozwagi, wymagają poczucia odpowiedzialności za kraj."</td>
+</tr>
+<tr style="height: 108px;">
+<td style="width: 210.3px; text-align: center; height: 108px;">"[...] względy sprawiedliwości społecznej stanowczo za tym przemawiają."</td>
+<td style="width: 210.3px; text-align: center; height: 108px;">ukazanie działań rządu jako bezspornie słusznych</td>
+</tr>
+</tbody>
+</table>
+<p>                                                                                                                                                    </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Słowa "sprawiedliwość" i "odpowiedzialność" budzą powszechne zaufanie, ponieważ odnoszą się do uniwersalnych wartości oraz pożądanych postaw społecznych. W kontekście przemówienia Gierka owe "uświęcone wyrażenia" mają arbitralny charakter - mówiący świadomie dostosowuje ich znaczenie do potrzeb partyjnej ideologii. "Sprawiedliwość" - nazywająca to, co obiektywnie słuszne - w nowomowie staje się synonimem "równości" (w ubóstwie - zob.: "[...] rząd podejmuje kroki w kierunku zmniejszenia rozpiętości dochodów i zarobków, względy sprawiedliwości społecznej stanowczo za tym przemawiają."), z kolei "odpowiedzialność", związana z poczuciem moralnego obowiązku, wymusza na obywatelach bezwzględne posłuszeństwo władzy ("[...] żywotne interesy naszego narodu wymagają [...] poczucia odpowiedzialności za kraj."). Arbitralność języka propagandy przesądza - jak zauważa Głowiński - o tym, iż jest ona "mową niewątpliwie manipulowaną".</p><br>

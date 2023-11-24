@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="width: 707px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 149px;"> <tbody> <tr> <td style="width: 703px;"> <p>Objętość dowolnego graniastosłupa wyraża się za pomocą wzoru:</p> <p><span> <math-expr expr="V=P_p cdot H" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy tego graniastosłupa, a <strong>H</strong> - długością jego wysokości.  </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Dany jest graniastosłup prawidłowy trójkątny, którego wszystkie krawędzie mają długość <strong>a</strong>. </p> <p>Podstawą tego graniastosłupa jest trójkąt równoboczny.  </p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na pole trójkąta równobocznego</span>, wyznaczmy pole powierzchni podstawy. Mamy:  </p> <p><span> <math-expr expr="P_p= frac(a^2 sqrt3)(4)" syntax="text"></math-expr> </span>  </p> <p>Wysokość tego graniastosłupa również ma długość <strong>a</strong>. </p> <p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr="V=P_p cdot H =  frac(a^2 sqrt3)(4) cdot a =  frac(a^3 sqrt3)(4) = sqrt3/4 a^3" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Dany jest graniastosłup prawidłowy sześciokątny, którego wszystkie krawędzie mają długość <strong>a</strong>. </p> <p>Podstawą tego graniastosłupa jest sześciokąt foremny. Każdy sześciokąt foremny zbudowany jest z sześciu przystających trójkątów równobocznych.</p> <p>Korzystając ze <span style="text-decoration: underline;">wzoru na pole trójkąta równobocznego</span>, wyznaczmy pole powierzchni podstawy tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr="P_p= 6 cdot P_Delta= 6 cdot frac(a^2 sqrt3)(4) = frac(3a^2 sqrt3)(2)" syntax="text"></math-expr> </span>  </p> <p>Wysokość tego graniastosłupa również ma długość <strong>a</strong>. </p> <p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr="V=P_p cdot H =  frac(3a^2 sqrt3)(2) cdot a =  frac(3 a^3 sqrt3)(2) = frac(3sqrt3)(2) a^3" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="width: 707px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 149px;"> <tbody> <tr> <td style="width: 703px;"> <p>Objętość dowolnego graniastosłupa wyraża się za pomocą wzoru:</p> <p><span> <math-expr expr="V=P_p cdot H" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy tego graniastosłupa, a <strong>H</strong> - długością jego wysokości.  </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Dany jest graniastosłup prawidłowy sześciokątny. </p> <p>Podstawą tego graniastosłupa jest sześciokąt foremny o boku długości <strong>4 cm</strong>. Taki sześciokąt foremny zbudowany jest z sześciu trójkątów równobocznych o boku długości <strong>4 cm</strong>. Wyznaczmy zatem pole powierzchni podstawy tego graniastosłupa. Mamy:  </p> <p><span> <math-expr expr='P_p=6 cdot P_Delta = 6 cdot frac(4^2 sqrt3)(4)=6 cdot frac(16sqrt3)(4)=6 cdot 4sqrt3=24sqrt3 \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Niech <strong>H</strong> będzie długością wysokości tego graniastosłupa. Zatem powierzchnia boczna zbudowana jest z sześciu prostokątów o bokach długości <strong>H</strong> i <strong>4 cm</strong>. </p> <p>Z treści zadania wiemy, że pole powierzchni bocznej tego graniastosłupa jest równe <strong>180 cm<sup>2</sup></strong>. Stąd otrzymujemy równanie:</p> <p><span> <math-expr expr="6 cdot 4 cdot H = 180" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="24H=180 \ \ \ |:24" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='H=7,5 \ ["cm"]' syntax="text"></math-expr> </span>   </p> <hr/> <p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa:</p> <p><span> <math-expr expr='V=P_p cdot H = 24sqrt3 cdot 7,5= ul(ul(180sqrt3 \ ["cm"^3]))' syntax="text"></math-expr> </span>  </p> <hr/><hr/> <p><strong>b)</strong></p> <p>Dany jest graniastosłup prawidłowy trójkątny. </p> <p>Podstawą tego graniastosłupa jest trójkąt równoboczny o boku długości <strong>5 cm</strong>. Wyznaczmy zatem pole powierzchni podstawy tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='P_p=frac(5^2 sqrt3)(4)=frac(25sqrt3)(4) \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Pole powierzchni bocznej tego graniastosłupa jest równe sumie pól jego podstaw. Zatem</p> <p><span> <math-expr expr='P_b=2P_p=2 cdot  frac(25sqrt3)(4) = frac(25sqrt3)(2) ["cm"^2]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Niech <strong>H</strong> będzie długością wysokości tego graniastosłupa. </p> <p>Powierzchnia boczna zbudowana jest z trzech prostokątów o bokach długości <strong>H</strong> i <strong>5</strong>. Stąd otrzymujemy równanie: </p> <p><span> <math-expr expr="3 cdot 5 cdot H = frac(25sqrt3)(2)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="15 H = frac(25sqrt3)(2) \ \ \ |:15" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="H = frac(25sqrt3)(2) cdot 1/15" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr='H=frac(5sqrt3)(6) \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='V = P_p cdot H =frac(25sqrt3)(4) cdot frac(5sqrt3)(6)= frac(125 cdot 3)(24)=ul(ul(125/8 \ ["cm"^3]))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<table border="1" style="width: 707px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 149px;"> <tbody> <tr> <td style="width: 703px;"> <p>Objętość dowolnego graniastosłupa wyraża się za pomocą wzoru:</p> <p><span> <math-expr expr="V=P_p cdot H" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy tego graniastosłupa, a <strong>H</strong> - długością jego wysokości.  </p> </td> </tr> </tbody> </table> <p> </p> <p>Budynek można podzielić na dwie bryły:</p> <ul> <li>prostopadłościan o podstawie o wymiarach <strong>2,5 m x 4 m</strong> oraz wysokości długości <strong>6 m </strong> </li> <li>graniastosłup trójkątny o podstawie będącej trójkątem o podstawie długości <strong>4 m</strong> i wysokości długości <strong>1,5 m</strong> oraz wysokości graniastosłupa długości <strong>6 m</strong> </li> </ul> <p>Wyznaczmy objętość <span style="text-decoration: underline;">pierwszej</span> bryły:</p> <p><span> <math-expr expr='V_1=2,5 cdot 4 cdot 6 = 60 \ ["m"^3]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy objętość <span style="text-decoration: underline;">drugiej</span> bryły:</p> <p><span> <math-expr expr='V_2=frac(4 cdot 1,5)(2) cdot 6 = 3 cdot 6 = 18 \ ["m"^3]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <span style="text-decoration: underline;">kubaturę (objętość) całego budynku</span>:</p> <p><span> <math-expr expr='V=V_1+V_2=60+18= ul(ul(78  \ ["m"^3]))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="width: 707px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 149px;"> <tbody> <tr> <td style="width: 703px;"> <p>Objętość dowolnego graniastosłupa wyraża się za pomocą wzoru:</p> <p><span> <math-expr expr="V=P_p cdot H" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy tego graniastosłupa, a <strong>H</strong> - długością jego wysokości.  </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Dany jest graniastosłup prosty o wysokości długości <strong>7 cm</strong>. </p> <p>Jego podstawą jest przedstawiony na rysunku trapez:</p> <p><img alt="" height="198" src="./data/1201885-0.jpg" width="352"/></p> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> mamy:  </p> <p><span> <math-expr expr="2^2+h^2=4^2" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="4+h^2=16" syntax="text"></math-expr> </span>    </p> <p><span> <math-expr expr="h^2=12 \ \ \ ^^ \ \ \ h&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='h=2sqrt3 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni podstawy tego graniastosłupa. Korzystając ze <span style="text-decoration: underline;">wzoru na pole trapezu</span> mamy:</p> <p><span> <math-expr expr='P_p=(8+4)/2*2sqrt3=12/2*2sqrt3=6*2sqrt3=12sqrt3 \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Obliczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='V=P_p cdot H = 12sqrt3*7= ul(ul(84sqrt3 \ ["cm"^3]))' syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Dany jest graniastosłup prosty o wysokości długości <strong>3a</strong>. </p> <p>Jego podstawą jest przedstawiony na rysunku trapez:</p> <p><img alt="" height="213" src="./data/1201885-1.jpg" width="296"/></p> <p>Korzystając z funkcji <strong>tangens</strong> mamy:</p> <p><span> <math-expr expr='h/a="tg" \ alpha \ \ \ | cdot a' syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='h=a cdot "tg" \ alpha' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni podstawy tego graniastosłupa. Korzystając ze <span style="text-decoration: underline;">wzoru na pole trapezu</span> mamy:</p> <p><span> <math-expr expr='P_p=(2a+a)/2*a cdot "tg" \ alpha=(3a)/2*a cdot "tg" \ alpha=frac(3a^2 \ "tg" \ alpha)(2)' syntax="text"></math-expr> </span>  </p> <p>Obliczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p> <p><span> <math-expr expr='V=P_p cdot H = frac(3a^2 \ "tg" \ alpha)(2) cdot 3a=  ul(ul(frac(9a^3 \ "tg" \ alpha)(2)))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="width: 707px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 149px;">
+<tbody>
+<tr>
+<td style="width: 703px;">
+<p>Objętość dowolnego graniastosłupa wyraża się za pomocą wzoru:</p>
+<p><math-expr expr="V=P_p cdot H" syntax="text"></math-expr></p>
+<p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy tego graniastosłupa, a <strong>H</strong> - długością jego wysokości.  </p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Dany jest graniastosłup prawidłowy czworokątny. Jego podstawą jest kwadrat o polu <strong>16 cm²</strong>. Zatem bok tego kwadratu ma długość <strong>4 cm</strong>.</p>
+<p>Niech <strong>H</strong> będzie długością wysokości tego graniastosłupa.  </p>
+<p>Wiemy, że przekątna tego graniastosłupa ma długość <strong>9 cm</strong>. Korzystając ze <span style="text-decoration: underline;">wzoru na długość przekątnej prostopadłościanu</span> otrzymujemy równanie:</p>
+<p><math-expr expr="sqrt(4^2+4^2+H^2)=9" syntax="text"></math-expr>  </p>
+<p><math-expr expr="sqrt(16+16+H^2)=9" syntax="text"></math-expr>  </p>
+<p><math-expr expr="sqrt(32+H^2)=9\ \ \ |^2" syntax="text"></math-expr></p>
+<p><math-expr expr="32+H^2=81" syntax="text"></math-expr>  </p>
+<p><math-expr expr="H^2=49 \ \ \ ^^ \ \ \ H&gt;0" syntax="text"></math-expr>  </p>
+<p><math-expr expr='H=7 \ ["cm"]' syntax="text"></math-expr>  </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p>
+<p><math-expr expr='V= P_p cdot H = 16*7= ul(ul(112 \ ["cm"^3]))' syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>b) </strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="423" src="./data/1201925-0.jpg" width="296"/></p>
+<p>Korzystając z funkcji <strong>sinus</strong> mamy:</p>
+<p><math-expr expr="x/d=sin alpha \ \ \ | cdot d" syntax="text"></math-expr></p>
+<p><math-expr expr="x=d sin alpha" syntax="text"></math-expr>   </p>
+<p>Korzystając z funkcji <strong>cosinus</strong> mamy:</p>
+<p><math-expr expr="a/d = cos alpha \ \ \ | cdot d" syntax="text"></math-expr>  </p>
+<p><math-expr expr="a=d cos alpha" syntax="text"></math-expr>  </p>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> mamy: </p>
+<p><math-expr expr="a^2+H^2=x^2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="(d cos alpha)^2+H^2=(d sin alpha)^2" syntax="text"></math-expr></p>
+<p><math-expr expr="d^2cos^2alpha+H^2=d^2sin^2alpha" syntax="text"></math-expr>  </p>
+<p><math-expr expr="H^2=d^2sin^2alpha-d^2cos^2alpha" syntax="text"></math-expr></p>
+<p><math-expr expr="H^2=d^2(sin^2alpha-cos^2alpha)" syntax="text"></math-expr></p>
+<p><math-expr expr="H^2=d^2(-(cos^2alpha-sin^2alpha))" syntax="text"></math-expr>  </p>
+<p>Korzystając ze <span style="text-decoration: underline;">wzoru na cosinus podwojonego kąta</span> <strong>cos2𝛼=cos<sup>2</sup>𝛼-sin<sup>2</sup>𝛼</strong> mamy: </p>
+<p><math-expr expr="H^2=d^2(-(cos2alpha))" syntax="text"></math-expr></p>
+<p>Aby spierwiastkować obustronnie równość, obie strony muszą być <span style="text-decoration: underline;">dodatnie</span> (bo również <strong>H&gt;0</strong>). Zatem <strong>cos2𝛼</strong><strong>&lt;0</strong> i kąt <strong>𝛼 </strong>jest ostry, czyli</p>
+<p><math-expr expr="\displaystyle \cos2\alpha&lt;0\;\;\;\to\;\;\;2\alpha\in\left(90^{\circ},180^{\circ}\right)"></math-expr></p>
+<p>A stąd <strong>𝛼∈(45<sup>o</sup>, 90<sup>o</sup>)</strong>.</p>
+<p><math-expr expr="H=d sqrt(-cos2alpha)" syntax="text"></math-expr>  </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">objętość</span> tego graniastosłupa. Mamy:</p>
+<p><math-expr expr="V=P_p cdot H = a^2H=d^2cos^2alpha cdot dsqrt(-cos2alpha)= ul(ul( d^3cos^2alphasqrt(-cos2alpha), \ \ alpha in (45^@, \ 90^@) ))" syntax="text"></math-expr></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Do dwóch akwariów (A i C) wrzucamy ten sam kamień. </p> <hr/> <p>Obliczmy, jaka jest objętość wody znajdującej się w akwarium A. Mamy:</p> <p><span> <math-expr expr='V_A=20*15*10=3000 \ ["cm"^3]' syntax="text"></math-expr> </span>       </p> <hr/> <p>Obliczmy, jaka jest łączna objętość wody z akwarium A i kamienia - patrzymy na akwarium B. Mamy:  </p> <p><span> <math-expr expr='V_B=20*15*12=3600 \ ["cm"^3]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Różnica otrzymanych objętości to objętość kamienia. Wyznaczmy zatem objętość kamienia. Mamy:</p> <p><span> <math-expr expr='V_k=V_B-V_A=3600-3000=600 \ ["cm"^3]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Obliczmy, jaka jest objętość wody znajdującej się w akwarium C. Mamy:</p> <p><span> <math-expr expr='V_C=20*10*11=2200 \ ["cm"^3]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Obliczmy, jaka jest łączna objętość wody z akwarium C i kamienia. Otrzymamy wtedy objętość akwarium D. Mamy:</p> <p><span> <math-expr expr='V_D=V_C+V_k=2200+600=2800 \ ["cm"^3]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Korzystając z danych na rysunku, możemy ułożyć wyrażenie opisujące objętość akwarium D. Mamy:</p> <p><span> <math-expr expr="V_D=20 cdot 10 cdot x=200x" syntax="text"></math-expr> </span>  </p> <hr/> <p>Stąd otrzymujemy równanie:</p> <p><span> <math-expr expr="200x=2800\ \ \ |:200" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='ul(ul(x=14 \ ["cm"] ))' syntax="text"></math-expr> </span>  </p><br>

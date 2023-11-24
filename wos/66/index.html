@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Odsetek organizacji pozarządowych na wsiach i we wskazanych rodzajach miast jest zbliżony do odsetka zamieszkującej ich ludności, ponieważ 33% organizacji pozarządowych znajduje się na wsi, co odpowiada 40% osób mieszkających na wsiach; 21% organizacji pozarządowych znajduje się w miastach do 50 tysięcy mieszkańców, co odpowiada 24% osób mieszkających w nich; 16% organizacji pozarządowych znajduje się w miastach do 200 tys. mieszkańców, co odpowiada 16% osób mieszkających w tego rodzaju miast; 20% organizacji pozarządowych znajduje się w miastach powyżej 200 tys. mieszkańców, co odpowiada 15% osób mieszkających w tego rodzaju miastach; 10% organizacji pozarządowych znajduje się w Warszawie, co odpowiada 5% jej mieszkańców, </p>
+<p>b) organizacje pozarządowe na wsiach stanowią  33%</p>
+<p>bez ochotniczych straż pożarnych organizacji pozarządowych na wsi jest 25%, czyli (33%-25%) 8% stanowią ochotnicze straże pożarne, a więc w stosunku do organizacji pozarządowych na wsiach stanowią one ich 1/4 odsetka.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Można uznać, że odsetek organizacji pozarządowych na wsiach i we wskazanych rodzajach miast jest zbliżony do odsetka zamieszkującej ich ludności. I tak, na wsiach - wedle stanu na grudzień 2017 roku - mieszkało 40% Polaków. Jednocześnie na wsiach swą siedzibę miało 33% organizacji pozarządowych. W miastach do 50 tys. mieszkańców mieszkało 24% Polaków, a miało tam swe siedziby 21% organizacji pozarządowych. W miastach do 200 tys. mieszkańców mieszkało 16% mieszkańców Polski, a swe siedziby miało tam 16% organizacji pozarządowych. Z kolei w miastach powyżej 200 tys. mieszkańców (bez Warszawy) zamieszkiwało 15% Polaków, a siedziby miało tam 20% organizacji pozarządowych. Jeśli chodzi o samą Warszawę, to mieszkało w niej 5% ludności Polski, a siedziby miało tam 10% organizacji pozarządowych. Warszawa jest jednak miastem specyficznym, albowiem jako stolica państwa jest jednocześnie miejscem, gdzie działa najwięcej spośród polskich organizacji z tzw. sektora trzeciego.</p>
+<p><strong>b)</strong></p>
+<p>Jak wynika z przedstawionych danych, organizacje pozarządowe na wsiach stanowią 33% spośród wszystkich polskich organizacji pozarządowych. Bez ochotniczych straży pożarnych organizacji pozarządowych na obszarach wiejskich jest 25%. 8% organizacji pozarządowych na wsiach stanowią więc straże pożarne, co oznacza, że <sup>1</sup>/<sub>4 </sub>organizacji pozarządowych na wsiach to ochotnicze straże pożarne. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Charakterystyka <strong>Amnesty International:</strong> międzynarodowa organizacja pozarządowa, której celem jest zapobieganie naruszeniom praw człowieka poprzez prowadzenie wszelkich pokojowych akcji obywatelskich. Zajmuje się działalnością często postulatywną, np. pisanie petycji, wniosków, listów, jej działania nie mają charakteru konfrontacyjnego. Skupia się na prowadzeniu kampanii, dokumentowaniem naruszenia praw człowieka i badaniem sytuacji prawnej w poszczególnych krajach. </p>
+<p><strong>Przykładowe akcje prowadzone przez Amnesty International (stan na marzec 2019 r.):</strong></p>
+<ul>
+<li>Kampania "Światło dla Wenezueli" - podpisywanie petycji w obronie praw mieszkańców Wenezueli, w której ma miejsce kryzys praw człowieka oraz humanitaryzmu. Akcja ta ma na celu zsolidaryzowanie się z Wenezuelczykami. </li>
+<li>Akcja podpisywania petycji w sprawie manifestu "Moje ciało a prawa człowieka" - mająca na celu uświadomienie polskim władzom, że prawa seksualne i reprodukcyjne są prawami człowieka. </li>
+<li>Maraton pisania listów (grudzień 2018 r.)</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może stanowić jedynie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Przykładem organizacji pozarządowej działającej w jednym z regionów Polski, mianowicie na terenie Małopolski, może być Krakowskie Towarzystwo Opieki nad Zwierzętami (KTOZ). Organizacja ta może się poszczycić długą i bogatą historią, albowiem jej początki sięgają 1864 roku, co oznacza, że była to druga tego typu organizacja na świecie, po Królewskim Towarzystwie dla Zapobiegania Okrucieństwu wobec Zwierząt (RSPCA), które działało w Wielkiej Brytanii.</p>
+<p>KTOZ zajmuje się opieką i chronieniem wszystkich gatunków zwierząt. Jako główne cele stawia przed sobą: propagowanie właściwego stosunku ludzi do zwierząt, humanitarne traktowanie zwierząt, dążenie do zapewniania zwierzętom odpowiednich warunków bytowania, promowanie ochrony środowiska, a w szczególności zwierząt.</p>
+<p>Działacze KTOZ szczególną opieką otaczają schroniska dla zwierząt, zbierając środki finansowe na ich funkcjonowanie, a także karmę i inne potrzebne rzeczy. Podejmują również interwencje w sytuacjach, w których podejrzewa się, że jakieś zwierzęta mogą być nieodpowiednio i w okrutny sposób traktowane.</p>
+<p>Opisywana organizacja pozarządowa działa więc na rzecz istotnego problemu społecznego, jakim jest kwestia ekologiczna. Oczywiście, działacze KTOZ nie są w stanie rozwiązać wszystkich problemów związanych z okrucieństwem wobec zwierząt, jednak ich aktywność przyczynia się do poprawy dobrostanu zwierząt na obszarze Krakowa i Małopolski.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe rozwiązanie:</strong></span></p>
+<p>Moim zdaniem działalność NGO jest najbardziej efektywna w obszarze edukacji, ponieważ w ostatnim czasie powstało wiele stowarzyszeń oraz fundacji, których celem jest tworzenie szkół przyjezdnych dzieciom oraz miejsc warsztatowych. Z uwagi na wielość podmiotów działających w obszarze edukacyjnym, jest to najbardziej dofinansowany i doinwestowany obszar działania NGO. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny i wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Wydaje się, że działalność organizacji pozarządowych najbardziej efektywna okazuje się w zakresie sportu, turystyki i rekreacji, a także kultury i sztuki. Organizacje pozarządowe organizują wiele wydarzeń sportowych i kulturalnych, które mogą być atrakcyjne dla zainteresowanych nimi osób. Jednak organizacje pozarządowe okazują się na ogół nieskuteczne w kwestii ochrony zdrowia, jak również usług socjalnych i pomocy społecznej. Świadczy o tym fakt, że wiele osób, mimo działalności organizacji pozarządowych ukierunkowanych na ochronę zdrowia i pomoc społeczną, umiera, choruje oraz tkwi w ubóstwie.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong><span style="text-decoration: underline;">To zadanie ma charakter indywidualny. Sam/a musisz je wykonać. Poniżej została opisana jedna z organizacji pozarządowych.</span></strong></p>
+<p>Charakterystyka <strong>Amnesty International:</strong> międzynarodowa organizacja pozarządowa, której celem jest zapobieganie naruszeniom praw człowieka poprzez prowadzenie wszelkich pokojowych akcji obywatelskich. Zajmuje się działalnością często postulatywną, np. pisanie petycji, wniosków, listów, jej działania nie mają charakteru konfrontacyjnego. Skupia się na prowadzeniu kampanii, dokumentowaniem naruszenia praw człowieka i badaniem sytuacji prawnej w poszczególnych krajach. </p>
+<p><strong>Przykładowe akcje prowadzone przez Amnesty International (stan na marzec 2019 r.):</strong></p>
+<ul>
+<li>Kampania "Światło dla Wenezueli" - podpisywanie petycji w obronie praw mieszkańców Wenezueli, w której ma miejsce kryzys praw człowieka oraz humanitaryzmu. Akcja ta ma na celu zsolidaryzowanie się z Wenezuelczykami. </li>
+<li>Akcja podpisywania petycji w sprawie manifestu "Moje ciało a prawa człowieka" - mająca na celu uświadomienie polskim władzom, że prawa seksualne i reprodukcyjne są prawami człowieka. </li>
+<li>Maraton pisania listów (grudzień 2018 r.)</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może stanowić przykładową wskazówkę pomocną do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="width: 25%; background-color: #cfb53b;"> </td>
+<td style="background-color: #ff2400;"><strong>Krakowskie Towarzystwo Opieki nad Zwierzętami (KTOZ) - przykład organizacji pozarządowej o zasięgu lokalnym</strong></td>
+<td style="background-color: #ff2400;"><strong>Polskie Towarzystwo Nefrologiczne (PTN)</strong></td>
+<td style="background-color: #ff2400;"><strong>Greenpeace</strong></td>
+</tr>
+<tr>
+<td style="background-color: #ff7f00;"><strong>a) Krótka charakterystyka formy aktywności organizacji</strong></td>
+<td style="background-color: #ebc79e;">Organizacja ma swą siedzibę w Krakowie i działa na terenie Krakowa i Małopolski, stawiając sobie za cel opiekę i chronienie wszystkich gatunków zwierząt. Stara się propagować w społeczeństwie odpowiednią postawę wobec zwierząt i zachowania proekologiczne. Dodatkowo podejmuje interwencje w sytuacjach, w których może być zagrożony dobrostan zwierząt.</td>
+<td style="background-color: #ebc79e;">Organizacja powstała w 1983 roku i od początku swej działalności skupiała lekarzy i pracowników naukowych zajmujących się chorobami nerek, dializoterapią i transplantologią kliniczną. Zasadniczym celem stowarzyszenia jest reprezentowanie polskich nefrologów i promocja zdrowia, w szczególności w zakresie chorób nerek. Działa również na rzecz dializoterapii i transplantacji nerek.</td>
+<td style="background-color: #ebc79e;">Międzynarodowa organizacja pozarządowa założona w 1971 roku w Kanadzie, która stara się przeciwdziałać globalnym problemom związanym ze środowiskiem naturalnym, takim jak: zmiana klimatu, wylesienie, przełowienie czy wielorybnictwo komercyjne. Greenpeace dąży do wspierania bioróżnorodności i zwiększania świadomości społecznej w sprawach związanych ze środowiskiem naturalnym. Ma status doradczy przy Radzie Gospodarczej i Społecznej Organizacji Narodów Zjednoczonych.</td>
+</tr>
+<tr>
+<td style="background-color: #ff7f00;"><strong>b) Obszary życia społecznego, w których funkcjonuje organizacja</strong></td>
+<td style="background-color: #ebc79e;">Organizacja działa na rzecz pomocy potrzebującym zwierzętom, dlatego można uznać, że działa w obszarze ochrony środowiska naturalnego, w szczególności zwierząt.</td>
+<td style="background-color: #ebc79e;">Głównymi obszarami życia społecznego, w jakich funkcjonuje organizacja, są nauka oraz ochrona zdrowia.</td>
+<td style="background-color: #ebc79e;">Głównym obszarem życia społecznego, w jakim działa Greenpeace, jest ochrona środowiska naturalnego i zabieganie o przeciwdziałanie niekorzystnym dla ludzi zmianom klimatycznym.</td>
+</tr>
+<tr>
+<td style="background-color: #ff7f00;"><strong>c) Krótki przykładowy tekst zachęcający do zainteresowania się działalnością organizacji, dający się zaprezentować na wybranym portalu społecznościowym lub własnym blogu</strong></td>
+<td style="background-color: #ebc79e;">Krakowskie Towarzystwo Opieki nad Zwierzętami (KTOZ) jest najstarszą w Polsce organizacją wspierającą zwierzęta, dlatego warto ją wspierać. Jeśli ktoś nie jest obojętny na los cierpiących zwierząt, to powinien zaangażować się na rzecz KTOZ.</td>
+<td style="background-color: #ebc79e;">Polskie Towarzystwo Nefrologiczne (PTN) to organizacja, która przyczynia się do wspierania osób chorych, w szczególności borykających się z problemami dotyczącymi nerek. Każdy, komu leży na sercu los ludzi chorych i cierpiących, powinien włączyć się w akcje organizowane przez PTN.</td>
+<td style="background-color: #ebc79e;">Greenpeace od lat działa na rzecz ochrony środowiska naturalnego i jest organizacją bardzo wpływową, ponieważ ma głos doradczy przy Radzie Gospodarczej i Społecznej ONZ. Dlatego angażując się w aktywność tej organizacji, można mieć realny wpływ na ochronę środowiska naturalnego.</td>
+</tr>
+</tbody>
+</table><br>

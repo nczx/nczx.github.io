@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! </strong><strong>W zdaniach przydawkowych definiujących używamy następujących zaimków:</strong></p>
+<p><em><strong>who/that</strong></em> -<strong> w odniesieniu do <em>osób.</em></strong></p>
+<p><strong><em>which/that</em> - w odniesieniu do rzeczy, zwierząt i miejsc (kiedy opisujemy, że jakieś są)<em>.</em></strong></p>
+<p><strong><em>where</em> - w odniesieniu do miejsc (kiedy opisujemy, że coś się w nich znajduje albo dzieje)<em>.</em></strong></p>
+<p><strong><em>when</em> - w odniesieniu do okresu czasu (kiedy opisujemy, że coś się wtedy dzieje)<em>.</em></strong></p>
+<p><strong><em>whose</em> - kiedy chcemy opisać posiadanie albo pokrewieństwo.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. This is the phone that/which I wanted to buy.  </p>
+<p>3. That's the girl whose mum is my dance teacher.</p>
+<p>4. That's the place where I used to go swimming.</p>
+<p>5. There's the boy that/who likes skateboarding.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! </strong><strong>W zdaniach przydawkowych <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">definiujących</span> używamy następujących zaimków:</strong></p>
+<p><em><strong>who/that</strong></em> -<strong> w odniesieniu do <em>osób.</em></strong></p>
+<p><strong><em>which/that</em> - w odniesieniu do rzeczy, zwierząt i miejsc (kiedy opisujemy, że jakieś są)<em>.</em></strong></p>
+<p><strong><em>where</em> - w odniesieniu do miejsc (kiedy opisujemy, że coś się w nich znajduje albo dzieje)<em>.</em></strong></p>
+<p><strong><em>when</em> - w odniesieniu do okresu czasu (kiedy opisujemy, że coś się wtedy dzieje)<em>.</em></strong></p>
+<p><strong><em>whose</em> - kiedy chcemy opisać posiadanie albo pokrewieństwo.</strong></p>
+<p><br/><strong>Zdania przydawkowe <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">niedefiniujące</span> podają dodatkową informację, bez której zdanie ciągle ma sens. W takich zdaniach wprowadzoną informację oddzielamy przecinkami. </strong></p>
+<p><strong>W zdaniach przydawkowych niedefiniujących używamy tych samych zaimków, co w definiujących za jednym wyjątkiem - nie używamy zaimka względnego <em>that</em>.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. In 2017, when I visited Los Angeles, I saw Lady Gaga making the film 'A Star is Born'. </p>
+<p>3. My brother works in a restaurant that is famous for its steak and kidney pie.</p>
+<p>4. My mother, whose favourite food is sushi, loves visiting Japan.</p>
+<p>5. Jeff, who works as an engineer, has lived in lots of different places.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>W zdaniach przydawkowych niedefiniujących używamy:</strong></p>
+<p><strong><em>who</em> - w odniesieniu do osób.</strong><br/><strong><em>which</em> - w odniesieniu do rzeczy, zwierząt i miejsc (kiedy opisujemy, że jakieś są).</strong><br/><strong><em>where</em> - w odniesieniu do miejsc (kiedy opisujemy, że coś się w nich znajduje albo dzieje).</strong><br/><strong><em>when</em> - w odniesieniu do okresu czasu (kiedy opisujemy, że coś się wtedy dzieje).</strong><br/><strong><em>whose</em> - kiedy chcemy opisać posiadanie albo pokrewieństwo.</strong></p>
+<p><strong>W zdaniach przydawkowych niedefiniujących (z przecinkami) nie używamy <em>that</em> w odniesieniu do osób i rzeczy.</strong></p>
+<hr/>
+<p> </p>
+<p>1. when  </p>
+<p>2. where</p>
+<p>3. which</p>
+<p>4. whose</p>
+<p>5. who/that</p>
+<p>6. when</p>
+<p>7. which</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zaimków zwrotnych używamy do opisania, że czynność została wykonana przez kogoś względem samego siebie, albo że została wykonana samodzielnie. Na język polski każdy zaimek zwrotny, bez względu na osobę, zwykle tłumaczymy jako "się", "sobie", "siebie", lub ewentualnie "sam(a)". Zaimki odmieniają się przez osoby i liczbę:</strong></p>
+<table border="1" style="height: 239px; text-align: center; border-style: solid; width: 282px;" width="267">
+<tbody>
+<tr>
+<td style="background-color: #d9d9d9; width: 131px;"><strong>zaimek </strong><br/><strong>osobowy</strong></td>
+<td style="background-color: #d9d9d9; width: 145px;"><strong>zaimek </strong><br/><strong>zwrotny</strong></td>
+</tr>
+<tr>
+<td style="width: 131px;">I (ja)</td>
+<td style="width: 145px;">myself</td>
+</tr>
+<tr>
+<td style="width: 131px;">you (ty)</td>
+<td style="width: 145px;">yourself</td>
+</tr>
+<tr>
+<td style="width: 131px;">he (on)<br/>she (ona)<br/>it (ono)</td>
+<td style="width: 145px;">himself<br/>herself<br/>itself</td>
+</tr>
+<tr>
+<td style="width: 131px;">we (my)</td>
+<td style="width: 145px;">ourselves</td>
+</tr>
+<tr>
+<td style="width: 131px;">you (wy)</td>
+<td style="width: 145px;">yourselves</td>
+</tr>
+<tr>
+<td style="width: 131px;">they (oni)</td>
+<td style="width: 145px;">themselves</td>
+</tr>
+</tbody>
+</table>
+<p><strong>W liczbie mnogiej możemy użyć określenia <em>each other</em> żeby wyrazić, że czynność została wykonana z wzajemnością, np.:</strong></p>
+<p style="padding-left: 40px;"><strong><em>People usually give each other gifts on Christmas. </em></strong><br/><strong>(Ludzie zazwyczaj obdarowują się nawzajem prezentami w Boże Narodzenie.)</strong></p>
+<hr/>
+<p> </p>
+<p>1. myself  </p>
+<p>2. itself</p>
+<p>3. themselves</p>
+<p>4. each other</p>
+<p>5. yourself</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. (przykład)</p>
+<p>2. <span style="text-decoration: line-through;">themselves</span> each other</p>
+<p><strong>Uzasadnienie</strong>: czynność <em>be friends </em>(przyjaźnić się) dotyczy czegoś, co jest wykonywane z wzajemnością (jedna osoba przyjaźni się z drugą i na odwrót), dlatego należy użyć zaimka <em>each other</em>. Zaimek zwrotny <em>themselves </em>nie pasuje, bo oznacza, że jakaś osoba przyjaźni się ze samą sobą. </p>
+<p>3. <span style="text-decoration: line-through;">themself</span> themselves</p>
+<p><strong>Uzasadnienie</strong>: poprawna forma zaimka zwrotnego dla podmiotu <em>they</em> (oni, one) to <em>themselves</em>.</p>
+<p>4. <span style="text-decoration: line-through;">me</span> myself</p>
+<p><strong>Uzasadnienie</strong>: <em>treat oneself to something </em>(zafundować sobie coś), czyli używamy odpowiedniego zaimka zwrotnego (<em>I - myself</em>).</p>
+<p>5. <span style="text-decoration: line-through;">ourselves</span> each other</p>
+<p><strong>Uzasadnienie</strong>: czynność <em>meet </em>(spotykać się) jest wykonywana z wzajemnością (jedna osoba spotyka drugą i na odwrót), a nie względem wykonawcy czynności. Z tego powodu używamy zaimka <em>each other.</em></p>
+<p>6. <span style="text-decoration: line-through;">himself</span> itself </p>
+<p><strong>Uzasadnienie</strong>: zwierzęta, rzeczy nieożywione i pojęcia abstrakcyjnie mają w języku angielskim rodzaj nijaki, czyli zastępujemy je zaimkiem <em>it </em>(to, ono). Używamy odpowiedniego zaimka zwrotnego (<em>it - itself</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. B  </p>
+<p>(X: Mamy kota i psa.</p>
+<p>Y: <strong>Czy lubią się nawzajem?</strong></p>
+<p>X: Przez większość czasu dobrze się dogadują, ale nie zawsze.)</p>
+<p><br/>2. A</p>
+<p>(X: Mój brat szuka kogoś, kto naprawi mu rower.</p>
+<p>Y: <strong>Dlaczego nie może zrobić tego sam?</strong></p>
+<p>X: Nie jest zbyt dobry w praktycznych rzeczach.)</p>
+<p><br/>3. C</p>
+<p>(X: Jak długo twoja siostra zna się ze swoim narzeczonym?</p>
+<p>Y: <strong>Znają się od dwóch tygodni.</strong></p>
+<p>X: To niesamowite!) </p><br>

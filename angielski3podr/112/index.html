@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Poniżej znajduje się tłumaczenie ankiety na język polski.</strong></p>
+<hr/>
+<p> </p>
+<p><strong style="text-align: center;">Twój ostatni dzień w szkole</strong></p>
+<p>Ile czasu spędziłeś/aś...</p>
+<p>• w szkole?      ___ godzin </p>
+<p>• podróżując do/ze szkoły?      ___ minut / godzin</p>
+<p>• robiąc zadania domowe?     ___ minut / godzin</p>
+<p>• śpiąc?     ___ godzin</p>
+<p>Ile miałeś/aś czasu wolnego?     ___ godzin</p>
+<p>Jak spędzałeś/aś swój czas wolny?</p>
+<p> </p>
+<p><strong>Uwaga! Wypełnienie ankiety to zadanie indywidualne.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a. conclusion</p>
+<p><strong>Uzasadnienie</strong>: końcowe przemyślenia na temat poruszanego zagadnienia zawarte są w zakończeniu tekstu. </p>
+<p>b. introduction</p>
+<p><strong>Uzasadnienie</strong>: temat jest przedstawiony we wstępie do tekstu.</p>
+<p>c. main body 1, main body 2</p>
+<p><strong>Uzasadnienie</strong>: różne aspekty poruszanego zagadnienia zawarte są w akapitach tworzących główną część tekstu.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>a. <strong>Contractions</strong> (formy skrócone):</p>
+<p> - It's  (It + is)</p>
+<p> - don't  (do + not)</p>
+<p> - they'd  (they + had) </p>
+<p> - I'd  (I + would)</p>
+<p> - didn't  (did + not)</p>
+<p> - we've  (we + have)</p>
+<p><br/>b. <strong>Exclamation marks</strong> (zdania z wykrzyknikami):</p>
+<p> - I don't think so!</p>
+<p> - That means it was 7 pm before the vast majority of them were free!</p>
+<p> - So all of you guys working so hard - hang in there, summer will be here in just two months, and then we can sleep all day and stay up all night!<br/><br/></p>
+<p>c. <strong>Questions</strong> (pytania):</p>
+<p> - And the owner of these things?</p>
+<p> - The purpose of a teen's life is to have a good time?</p>
+<p> - The survey also asked how many hours we had spent sleeping, and guess what?</p>
+<p> - Not much left, huh?</p>
+<p> - Time flies when you're having fun?</p>
+<p> - How would we know?<br/><br/></p>
+<p>d.<strong> Addressing the reader</strong> (zwroty do czytelnika):</p>
+<p> - Imagine a teenager's room: books everywhere, a skateboard against a wall, music playing from the computer.</p>
+<p> - Take a look at the survey 'Your last school day' conducted in our school.</p>
+<p> - The survey also asked how many hours we had spent sleeping, and guess what?</p>
+<p> - But do the maths - ten hours for school plus ten hours of sleep.</p>
+<p> - So all of you guys working so hard - hang in there, summer will be here in just two months, and then we can sleep all day and stay up all night!</p>
+<p><br/>e.<strong> Idioms</strong> (idiomy):</p>
+<p> - It's NOT all fun and games (To nie tylko dobra zabawa)</p>
+<p> - have a good time (dobrze się bawić)</p>
+<p> - take a look (spojrzeć)</p>
+<p> - stay up (nie kłaść się do łóżka)</p>
+<p> - do the maths (policzcie to sobie)</p>
+<p> - Time flies when you're having fun (Czas leci szybko, kiedy dobrze się bawisz)</p>
+<p> - time flies (czas leci)</p>
+<p> - hang in there (trzymajcie się)</p>
+<p><br/>f. <strong>Colloquial vocabulary</strong> (potoczne słownictwo):</p>
+<p> - I don't think so! (Nie sądzę!)</p>
+<p> - a lot of (sporo)</p>
+<p> - Take a look (Spójrzcie)</p>
+<p> - Add to that (Do tego dochodzi)</p>
+<p> - I'd like to know (chciałabym siedzieć)</p>
+<p> - how we're supposed to (jak niby mamy)</p>
+<p> - guess what (zgadnijcie)</p>
+<p> - Not much left, huh? (Nie zostało za dużo, co?)</p>
+<p> - Maybe (Może)</p>
+<p> - How would we know? (Skąd mamy wiedzieć?)</p>
+<p> - when we've got school (kiedy mamy szkołę)</p>
+<p> - So (Więc)</p>
+<p> - stay up all night (nie kłaść się w nocy)</p><br>

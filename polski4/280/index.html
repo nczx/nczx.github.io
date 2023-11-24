@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Król chciał, by poeta stworzył poemat opiewający jego wielkie zwycięstwo. Początkowo oczekiwał dzieła osadzonego głęboko w tradycji literackiej. Miało być wzorowane na klasycznych tekstach - zarówno pod względem treściowym, jak i formalnym. Zlecił powielenie tego utworu, by rozpowszechnił się wśród ludzi i tym samym wzbogacił kulturę irlandzką. </p>
+<p>Drugi poemat miał odchodzić od klasycznych zasad. Król chciał, by był ekspresyjny, zaskakujący, silnie oddziałujący na uczucia odbiorcy. Otrzymał tekst niepodobny do wcześniejszych wytworów kultury, nowatorski i niepowtarzalny. Uznał go za nazbyt skomplikowany dla szerokiego grona odbiorców, polecił więc zamknąć poemat w szkatule, by tylko wybrani mieli do niego dostęp.</p>
+<p>Trzeci tekst miał być ostatecznym popisem wirtuozerii poety. Nie został zapisany - jego treść znali jedynie twórca i król. Był najbliższy doskonałości, musiał więc pozostać pilnie strzeżoną tajemnicą.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Pierwsza wersja poematu została uznana przez króla za kunsztowną i wpisującą się w wielowiekową tradycję literacką. Władca dostrzegł jednak, że nie oddaje ona ducha wydarzeń, na kanwie których powstała. Nie oddziaływała na emocje i wyobraźnię czytelnika w takim stopniu, jak powinna. Dzieło oparte na wzorcach klasycznych było zbyt harmonijne, by móc stanowić zapis doświadczeń wojennych.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Druga wersja utworu oddaje doświadczenie bitwy nie tylko za pomocą treści, ale także formy. Jest chaotyczna, zaskakująca, budzi w czytelnikach wielkie emocje. Jej plastyczność sprawia, że odbiorcy mają wrażenie uczestniczenia w przedstawianych wydarzeniach, a nie tylko zapoznawania się z ich opisem. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>O ile dwie pierwsze wersje poematu zostały utrwalone na papierze, o tyle trzecią przekazano wyłącznie drogą ustną. Król po usłyszeniu jej stwierdza, że zbliża się ona niebezpiecznie do doskonałości, dotyka sfer, które nie powinny być dostępne człowiekowi. Zarówno twórca utworu, jak i władca zdają sobie sprawę z sakralnego charakteru dzieła, widzą w nim dar od siły wyższej, nie mają pewności jednak, czy jest to błogosławieństwo, czy też przekleństwo. Zachowanie treści poematu w tajemnicy jest próbą uchronienia z jednej strony świętości przed ludzką eksploatacją, z drugiej - człowieka przed wiedzą większą niż jest w stanie unieść.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W zaznaczonym fragmencie za kluczowe odniesienie intertekstualne należy uznać figurę słowika, pełniącego funkcję symboliczną już w tekstach starożytnych. W opowieściach mitologicznych ptak ten pojawia się jako znak ludzkiego cierpienia, żałoby i tęsknoty. Platon widział w nim odbicie greckich bardów. W przypadku opowiadania Borgesa śpiew słowiczy rozpatrywać można w kontekście poezji. Jego pieśń wiązana bywa ze sztuką liryczną, przypisuje się jej szczególne właściwości, np. moc uzdrawiania jak w baśni Hansa Christiana Andersena. To ptak czarujący, władający duszami ludzkimi. Nie bez znaczenia jest także jego wędrowny charakter. Każdy powrót słowika do Irlandii zwiastuje wiosnę, a więc - nadejście nowego. Nie bez przyczyny kolejne utwory poety z opowiadania sygnalizowane są słowiczym trelem.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Za najważniejszą liczbę pojawiającą się w tym utworze jest 3, co dostrzegają również bohaterowie dzieła (król mówi: "[...] w baśniach prym wiedzie liczba trzy"). Symbolizuje ona doskonałość i harmonię. W religiach judeochrześcijańskich to cyfra boska, czego znakiem jest choćby Trójca Święta. Przekonanie o szczególnych jej własnościach uwidacznia się także w powiedzeniu takim jak <em>do trzech razy sztuka</em>, mającym swój odpowiednik w wielu języków kręgu kultury zachodniej.</p>
+<p>Innymi liczbami pojawiającymi się w tekście szczególnie często są 360 oraz jej dzielniki: 12 i 30. Poeta deklaruje znajomość 360 opowieści i 12 lat doświadczenia. Trzydziestu skrybów dostaje polecenie dwunastokrotnego przepisania dzieła wieszcza, tworząc w ten sposób 360 kopii poematu. 360 oznaczać może doskonałość, całość (tak, jak 360 stopni w kącie pełnym), ale także nawiązywać do kalendarza, niektóre starożytne cywilizacje dzieliły bowiem rok na tyle dni. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Tekst w trzeciej próbie był doskonały, ponieważ w minimalnej liczbie słów mieścił maksimum treści. Zostało w nim ujęte to, co niewyrażalne w inny sposób. Poeta i król byli przekonani, że dzieło to jest możliwie najbliższe idei piękna. Znajduje się na granicy świata ludzi i niebios, a może i przekracza ją. To, co usłyszeli, musiało zostać jednak pomiędzy nimi. Poznanie tajników piękna, wyjście z platońskiej jaskini i zobaczenie rzeczywistości taką, jaka jest, było przekroczeniem praw ludzkich. Z tego powodu poeta musiał zginąć, a król utracić władzę.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>W opowiadaniu Jorge Luisa Borgesa przedmioty, które król podarował poecie w nagrodę za stworzenie poematu mają swoje symboliczne znaczenia. Zwierciadło oznacza mimetyzm, odwzorowanie rzeczywistości, ale także odtwórczość. Pierwsza wersja dzieła jest bowiem swoistym odbiciem dorobku literackiego poprzednich epok.</p>
+<p>Drugi prezent  - maska - może być odczytywana jako przeciwieństwo zwierciadła, wskazuje bowiem na to, co nowe, wykreowane przez twórcę, autorskie. To także odniesienie do teatru greckiego, w którym za pomocą masek i kostiumów oddawano emocje i charaktery bohaterów. Jest więc to symbol literackiej ekspresji. Wręczenie jej poecie wskazuje, że udało mu się oderwać od klasycznych zasad tworzenia tekstu i odnaleźć własny język.</p>
+<p>Trzeci dar, sztylet, jest symbolem końca. Poeta otrzymuje go w momencie, w którym wspiął się już na wyżyny własnych możliwości i osiągnął to, co niedostępne dla innych śmiertelników. W darze tym ukryta jest sugestia samobójczej śmierci.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Nawiązanie do konwencji baśniowej w opowiadaniu Borgesa ma charakter metafikcji. Bohaterowie mają świadomość tego, że istnieją w wymyślonej rzeczywistości, choć, paradoksalnie, akcja rozgrywa się w prawdziwych lokacjach, a jej tłem są wydarzenia historyczne. Jednocześnie jednak król z uśmiechem stwierdza: "jesteśmy postaciami z baśni [...]". Warto przy tym zauważyć, że tekst nie zachowuje cech typowych dla tego gatunku: można określić czas i miejsce akcji, nie występują postaci fantastyczne, trudno wyróżnić jednoznacznie strony dobra i zła. </p>
+<p>Wyraźna sugestia odautorska, że czytelnik ma do czynienia z baśnią, podważa realność prawdopodobieństwo opisanych wydarzeń. Wskazuje, że tekst ten należy odczytywać przede wszystkim w warstwie symbolicznej, nie jako odbicie rzeczywistości, lecz kreację artystyczną.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Odwołania do dzieł z okresu starożytności i średniowiecza, a także wydarzeń historycznych osadzają utwór Borgesa w kręgu kulturowym Europy Zachodniej. Skupiają uwagę czytelnika wokół tematyki szeroko pojmowanej tradycji literackiej. Zabieg ten zwraca również uwagę na intertekstualne zależności między poszczególnymi tekstami. Bohaterowie wykreowani przez autora, choć, jak sami stwierdzają, baśniowi, znają wielkie dzieła literatury europejskiej. Borges zwraca więc uwagę na status prawdziwości i fikcji, sugerując, że wszystkie wydarzenia z przeszłości stają się jedynie opowieścią.</p><br>

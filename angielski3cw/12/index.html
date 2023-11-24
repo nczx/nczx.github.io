@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. themselves - <strong>b</strong>  </p>
+<p>2. myself - <strong>a</strong></p>
+<p>3. each other - <strong>c</strong></p>
+<p><s class="odr-strikethrough">d</s></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zaimków zwrotnych używamy do opisania, że czynność została wykonana przez kogoś względem samego siebie, albo że została wykonana samodzielnie. Zaimki odmieniają się przez osoby i liczbę:</strong></p>
+<table border="1" style="text-align: center; height: 337.818px; width: 218px;" width="267">
+<tbody>
+<tr style="height: 26.9091px;">
+<td style="width: 91px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>osobowy</strong></td>
+<td style="width: 99.2273px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>zwrotny</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 91px; height: 62.9091px;">
+<p><strong>I<br/>(ja)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 62.9091px;"><strong>myself</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 91px; height: 62.9091px;">
+<p><strong>you<br/>(ty)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 62.9091px;"><strong>yourself</strong></td>
+</tr>
+<tr style="height: 52.3636px;">
+<td style="width: 91px; height: 52.3636px;">
+<p><strong>he (on)</strong><br/><strong>she (ona)</strong><br/><strong>it (ono)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 52.3636px;"><strong>himself</strong><br/><strong>herself</strong><br/><strong>itself</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 91px; height: 34.9091px;">
+<p><strong>we<br/>(my)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 34.9091px;"><strong>ourselves</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 91px; height: 62.9091px;">
+<p><strong>you<br/>(wy)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 62.9091px;"><strong>yourselves</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 91px; height: 34.9091px;">
+<p><strong>they<br/>(oni/one)</strong></p>
+</td>
+<td style="width: 99.2273px; height: 34.9091px;"><strong>themselves</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p> </p>
+<p>1. yourselves  </p>
+<p>2. itself, myself</p>
+<p>3. yourself</p>
+<p>4. himself, herself</p>
+<p>5. ourselves, themselves</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zaimków zwrotnych używamy do opisania, że czynność została wykonana przez kogoś względem samego siebie, albo że została wykonana samodzielnie. Zaimki odmieniają się przez osoby i liczbę:</strong></p>
+<table border="1" style="text-align: center; height: 523px; width: 278px;" width="267">
+<tbody>
+<tr style="height: 26.9091px;">
+<td style="width: 121px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>osobowy</strong></td>
+<td style="width: 129.227px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>zwrotny</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>I<br/>(ja)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>myself</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>you<br/>(ty)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>yourself</strong></td>
+</tr>
+<tr style="height: 52.3636px;">
+<td style="width: 121px; height: 52.3636px;">
+<p><strong>he (on)</strong><br/><strong>she (ona)</strong><br/><strong>it (ono)</strong></p>
+</td>
+<td style="width: 129.227px; height: 52.3636px;"><strong>himself</strong><br/><strong>herself</strong><br/><strong>itself</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 121px; height: 34.9091px;">
+<p><strong>we<br/>(my)</strong></p>
+</td>
+<td style="width: 129.227px; height: 34.9091px;"><strong>ourselves</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>you<br/>(wy)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>yourselves</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 121px; height: 34.9091px;">
+<p><strong>they<br/>(oni/one)</strong></p>
+</td>
+<td style="width: 129.227px; height: 34.9091px;"><strong>themselves</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p> </p>
+<p>1. himself  </p>
+<p>2. myself</p>
+<p>3. herself</p>
+<p>4. yourself</p>
+<p>5. themselves</p>
+<p>6. ourselves</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1 - <strong>c</strong>  (One się oglądają.) </p>
+<p>2 - <strong>d</strong>  (Oni patrzą na siebie nawzajem.)</p>
+<p>3 - <strong>b</strong>  (Oni mówią do siebie.)</p>
+<p>4 - <strong>a</strong>  (Oni rozmawiają ze sobą.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zaimków zwrotnych używamy do opisania, że czynność została wykonana przez kogoś względem samego siebie, albo że została wykonana samodzielnie. Zaimki odmieniają się przez osoby i liczbę:</strong></p>
+<table border="1" style="text-align: center; height: 523px; width: 278px;" width="267">
+<tbody>
+<tr style="height: 26.9091px;">
+<td style="width: 121px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>osobowy</strong></td>
+<td style="width: 129.227px; background-color: rgb(226, 226, 226); height: 26.9091px;"><strong>zaimek </strong><br/><strong>zwrotny</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>I<br/>(ja)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>myself</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>you<br/>(ty)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>yourself</strong></td>
+</tr>
+<tr style="height: 52.3636px;">
+<td style="width: 121px; height: 52.3636px;">
+<p><strong>he (on)</strong><br/><strong>she (ona)</strong><br/><strong>it (ono)</strong></p>
+</td>
+<td style="width: 129.227px; height: 52.3636px;"><strong>himself</strong><br/><strong>herself</strong><br/><strong>itself</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 121px; height: 34.9091px;">
+<p><strong>we<br/>(my)</strong></p>
+</td>
+<td style="width: 129.227px; height: 34.9091px;"><strong>ourselves</strong></td>
+</tr>
+<tr style="height: 62.9091px;">
+<td style="width: 121px; height: 62.9091px;">
+<p><strong>you<br/>(wy)</strong></p>
+</td>
+<td style="width: 129.227px; height: 62.9091px;"><strong>yourselves</strong></td>
+</tr>
+<tr style="height: 34.9091px;">
+<td style="width: 121px; height: 34.9091px;">
+<p><strong>they<br/>(oni/one)</strong></p>
+</td>
+<td style="width: 129.227px; height: 34.9091px;"><strong>themselves</strong></td>
+</tr>
+</tbody>
+</table>
+<p><br/><strong>W liczbie mnogiej możemy użyć <em>each other</em>, żeby wyrazić, że czynność została wykonana z wzajemnością.</strong></p>
+<hr/>
+<p> </p>
+<p>1. each other  </p>
+<p>2. myself</p>
+<p>3. each other</p>
+<p>4. each other</p>
+<p>5. ourselves</p>
+<p>6. each other</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>This is a story about two friends <span style="text-decoration: line-through;">which</span> <strong>who/that <sup>1</sup> </strong>fell out over money. The two friends, <span style="text-decoration: line-through;">who</span> <strong>whose <sup>2</sup> </strong>names were Duncan and Serge, met <span style="text-decoration: line-through;">themselves</span> <strong>each other <sup>3</sup> </strong>in the town centre. Duncan suggested going for a coffee, and Serge thought it was a good idea.<span style="color: rgb(255, 255, 255);"><strong><sup>i</sup></strong></span>The café they went to was small and very crowded, but they waited for a few minutes and some other customers left, so they sat down. Serge ordered <span style="text-decoration: line-through;">him</span> <strong>himself <sup>4</sup> </strong>a large coffee and a big piece of chocolate cake, but Duncan only wanted a small coffee.</p>
+<p>They sat and laughed and talked about people they both knew until it was time to go home. Duncan took out £1, <span style="text-decoration: line-through;">that</span> <strong>which <sup>5</sup> </strong>was the price of the coffee, and called the waiter. Before the waiter came with the bill, Serge thanked Duncan for inviting him for coffee, said that the cake had been delicious, stood up and left.<span style="color: rgb(255, 255, 255);"><strong><sup>i</sup></strong></span>Duncan had to pay £6.50! When he got home, he phoned a different friend. 'I wanted to buy <span style="text-decoration: line-through;">me</span> <strong>myself <sup>6</sup> </strong>a T-shirt , but I didn't have enough money after paying for Serge's coffee and cake!'</p>
+<p> </p>
+<p>1. <strong>Uzasadnienie:</strong> kiedy w zdaniu przydawkowym definiującym dodajemy informację o osobach, używamy zaimka <em>who</em> lub <em>that.</em> </p>
+<p>2. <strong>Uzasadnienie:</strong> kiedy w zdaniu przydawkowym dodajemy informację o czyimś posiadaniu, używamy zaimka <em>whose.</em> </p>
+<p>3. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana w liczbie mnogiej z wzajemnością (Duncan poznał Serge'a, a Serge poznał Duncana), używamy wyrażenia <em>each other</em>. </p>
+<p>4. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie, używamy zaimków zwrotnych. Zaimek osobowy w 3. osobie l. poj., w rodzaju męskim ma formę <em>himself.</em> </p>
+<p>5. <strong>Uzasadnienie:</strong> to zdanie przydawkowe podaje dodatkową informację, bez której zdanie w dalszym ciągu ma sens, dlatego jest to zdanie niedefiniujące. W zdaniach przydawkowych niedefiniujących nie używamy zaimka <em>that.</em></p>
+<p>6. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie, używamy zaimków zwrotnych. Zaimek osobowy w 1. osobie l. poj. ma formę <em>myself.</em> </p><br>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Positive</strong> (pozytywne):</p>
+<p> - amazing (niesamowity)</p>
+<p> - amusing (zabawny)  </p>
+<p> - fascinating (fascynujący)</p>
+<p> - unforgettable (niezapomniany)</p>
+<p><br/><strong>Negative</strong> (negatywne):</p>
+<p> - awful (okropny)</p>
+<p> - frightening (przerażający)</p>
+<p> - horrible (okropny)</p>
+<p> - strange (dziwny)</p>
+<p><br/><strong>Neutral</strong> (neutralne):</p>
+<p> - huge (ogromny)</p>
+<p> - original (oryginalny)</p>
+<p> - tiny (malutki)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>• Picture A is a map that shows the Bermuda Triangle. It's a region in the Atlantic Ocean where a number of planes and ships have gone missing.  </p>
+<p>(Zdjęcie A to mapa, która przedstawia Trójkąt Bermudzki. Jest to region na Oceanie Atlantyckim, gdzie zaginęło wiele samolotów i statków.)<br/><br/></p>
+<p>• Picture B shows Area 51 Alien Center. It's an ordinary restaurant/shop but it's alien-themed. Area 51 itself is a military base in the USA. It's secret but a lot of people believe it has something to do with aliens.</p>
+<p>(Zdjęcie B przedstawia Area 51 Alien Center. Jest to zwykła restauracja/sklep, ale o tematyce związanej z kosmitami. Sama Strefa 51 to baza wojskowa w USA. Jest ona tajna, ale wiele osób wierzy, że ma coś wspólnego z kosmitami.)<br/><br/></p>
+<p>• Picture C shows an ancient city known as Teotihuacan. It's located in Mexico and it was built by an ancient civilisation. There are many legends connected to this place. One of them claims these structures were built by giants.</p>
+<p>(Zdjęcie C przedstawia starożytne miasto znane jako Teotihuacan. Znajduje się ono w Meksyku i zostało zbudowane przez starożytną cywilizację. Z tym miejscem związanych jest wiele legend. Jedna z nich głosi, że struktury te zostały zbudowane przez olbrzymów.)<br/><br/></p>
+<p>• The last one is a photo of the Phaistos Disc. It was discovered in Crete and it's very old. It's covered with symbols that don't belong to any known alphabet. </p>
+<p>(Ostatnie z nich to zdjęcie dysku z Fajstos. Został on odkryty na Krecie i jest bardzo stary. Jest pokryty symbolami, które nie należą do żadnego znanego alfabetu.)</p>
+<p> </p>
+<p><strong>What they all have in common: </strong>(co mają ze sobą wspólnego)</p>
+<p>All these objects and places are mysterious in some way. There have been many theories connected to them but in each case it's impossible to know the whole story.</p>
+<p>(Wszystkie te obiekty i miejsca są w jakiś sposób tajemnicze. Powstało wiele teorii z nimi związanych, ale w każdym przypadku nie sposób poznać całej historii.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Znaczenie pogrubionych słów:</strong></p>
+<p> - delighted - zachwycony</p>
+<p> - mysterious - tajemniczy</p>
+<p> - dramatic - dramatyczny</p>
+<p> - thrilling - porywający  </p>
+<p> - enjoyable - przyjemny</p>
+<p> - ancient - starożytny</p>
+<p> - intriguing - intrygujący</p>
+<p> - puzzling - zagadkowy</p>
+<p> - curious - osobliwy</p>
+<p> - terrifying - przerażający</p>
+<p> - alien - obcy</p>
+<p> - disappointing - rozczarowujący</p>
+<p> - inspiring - inspirujący</p>
+<p> - unbelievable - niewiarygodny</p>
+<p> - thought-provoking - skłaniający do myślenia</p>
+<p> - true to life - realistyczny</p>
+<p><br/><strong>Odpowiedzi na pytania:</strong></p>
+<p>1. <em>The Maze Runner</em>, <em>Stranger Things</em></p>
+<p><strong>Fragment w tekście</strong>: "If you like science fiction, I recommend <em>The Maze Runner</em> - you'll be delighted. (...) Generally, the plot is quite terrifying, as you quickly realise some horrible alien beings are behind it all. Many alien series are disappointing, but not this one!" - Jeśli lubicie science fiction, to polecam <em>Więźnia Labiryntu</em> - będziecie zachwyceni. (...) Generalnie fabuła jest dość przerażająca, bo szybko zorientujecie się, że za wszystkim stoją jakieś straszne obce istoty. Wiele seriali o obcych rozczarowuje, ale nie ten!</p>
+<p>2. <em>13 Reasons Why</em></p>
+<p><strong>Fragment w tekście</strong>: "I guess it is thought-provoking, which is great. But the experiences of the characters might be too true to life for very sensitive teens." - Powiedziałabym, że skłania do myślenia, co jest świetne. Ale przeżycia bohaterów mogą być zbyt realistyczne dla bardzo wrażliwych nastolatków.</p>
+<p> </p>
+<p> </p>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>3. I already know <em>The Maze Runner</em>, so I'd choose <em>Stranger Things</em>. I've heard a lot about this TV series and this description makes me want to start watching it. It sounds very thrilling.</p>
+<p>(Znam już <em>Więźnia Labiryntu</em>, więc wybrał(a)bym <em>Stranger Things</em>. Wiele słyszałem/am o tym serialu i ten opis sprawia, że chcę zacząć go oglądać. Brzmi bardzo porywająco.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. a</p>
+<p>(bardzo szczęśliwy - <strong>zachwycony</strong>)  </p>
+<p>2. c</p>
+<p>(bardzo stary - <strong>starożytny</strong>)</p>
+<p>3. h</p>
+<p>(sprawiający, że myślisz o czymś ważnym - <strong>skłaniający do refleksji</strong>)</p>
+<p>4. e</p>
+<p>(niezwykły albo dziwny - <strong>osobliwy</strong>)</p>
+<p>5. d</p>
+<p>(mylący albo trudny do zrozumienia albo rozwiązania - <strong>zagadkowy</strong>)</p>
+<p>6. b</p>
+<p>(ekscytujący - <strong>intrygujący</strong>)</p>
+<p>7. g</p>
+<p>(zbyt nieprawdopodobny - <strong>niewiarygodny</strong>)</p>
+<p>8. f</p>
+<p>(dziwny, inny albo nie z tej planety - <strong>obcy</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>• I really liked the book <em>The Da Vinci Code</em>. It's a mysterious and intriguing story. It's also dramatic and thrilling with some really terrifying moments.</p>
+<p>(Bardzo podobała mi się książka <em>Kod Da Vinci</em>. To tajemnicza i intrygująca historia. Jest również dramatyczna i porywająca z kilkoma naprawdę przerażającymi momentami.)<br/><br/></p>
+<p>• Another great book is <em>The Hobbit</em>. It has a very thought-provoking message. I found it to be very inspiring.</p>
+<p>(Kolejną świetną książką jest <em>Hobbit</em>. Ma ona bardzo dające do myślenia przesłanie. Uważam, że jest bardzo inspirująca.)<br/><br/></p>
+<p>• As for films, I recently watched <em>Arrival</em> and found it to be quite puzzling. While I found it to be a bit slow at times, it was still an enjoyable and well-made film.</p>
+<p>(Jeśli chodzi o filmy, niedawno obejrzałem/am <em>Nowy początek</em> i stwierdziłem/am, że jest dość zagadkowy. Chociaż uznałem/am, że momentami był nieco powolny, to nadal był to przyjemny i dobrze zrobiony film.)<br/><br/></p>
+<p>• I was really disappointed with the film <em>The Last Airbender</em>. It wasn't as good as the original animated series. It definitely wasn't true to life and I wouldn't recommend it.</p>
+<p>(Bardzo zawiodłem/am się na filmie Ostatni Władca Wiatru. Nie był tak dobry jak oryginalny serial animowany. Zdecydowanie nie był realistyczny i nie polecam go.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. D  </p>
+<p>2. B</p>
+<p>3. C</p>
+<p><span style="text-decoration: line-through;">A</span></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>a. </strong></p>
+<p>1 - thrilling announcement, mysterious labyrinth, legendary maze, ancient palace, fascinating places, curious writings </p>
+<p>2 - intriguing places, thought-provoking theory, alien spaceship, top secret (area)</p>
+<p>3 - original structure, remarkable condition, puzzling question, ancient site, unforgettable experience</p>
+<p><br/><strong>b. </strong></p>
+<p>1 - Speaker 2 (Area 51)</p>
+<p>2 - Speaker 1 (The Phaistos Disc)</p>
+<p>3 - Speaker 3 (Teotihuacan)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>In the video still, there are three statues. They're made of grey stone. They look ancient and they're probably huge and heavy. They depict three men from the waist up. They have hats on their heads. These hats were made of a different stone than the rest of the monuments. The sculptures look very impressive and mysterious. </p>
+<p><strong><br/>Tłumaczenie: </strong></p>
+<p>Na zatrzymanym filmiku widać trzy posągi. Są one wykonane z szarego kamienia. Wyglądają na starożytne i prawdopodobnie są ogromne i ciężkie. Przedstawiają trzech mężczyzn od pasa w górę. Na głowach mają kapelusze. Te kapelusze zostały wykonane z innego kamienia niż reszta pomników. Wyglądają bardzo imponująco i tajemniczo.</p>
+<p> </p>
+<p>1. These heads are called the Moai statues. These are the famous sculptures found on the Easter Island, also known as Rapa Nui.</p>
+<p>(Głowy te nazywane są posągami Moai. Są to słynne rzeźby znajdujące się na Wyspie Wielkanocnej, znanej również jako Rapa Nui.)</p>
+<p><br/>2. They were probably built by the islanders a long time ago. It's possible they were built for religious purposes. </p>
+<p>(Prawdopodobnie zostały zbudowane dawno temu przez mieszkańców wyspy. Możliwe, że zbudowano je w celach religijnych.)</p>
+<p><br/>3. I've heard of lots of strange places. One that comes to mind is the Stonehenge. It's one of the most famous ancient structures in Europe. It's located in the UK and it's mysterious because no-one knows who built it.</p>
+<p>(Słyszałem/am o wielu dziwnych miejscach. Jedno, które przychodzi mi na myśl to Stonehenge. To jedna z najbardziej znanych starożytnych budowli w Europie. Znajduje się w Zjednoczonym Królestwie i jest tajemnicza, ponieważ nikt nie wie, kto ją zbudował.)</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I'd like to see Teotihuacan and the Moai statues. Ancient structures are very mysterious and intriguing. What's more, places like this always have a great atmosphere.</p>
+<p>(Chciał(a)bym zobaczyć Teotihuacan i posągi Moai. Starożytne budowle są bardzo tajemnicze i intrygujące. Co więcej, takie miejsca zawsze mają świetną atmosferę.)</p><br>

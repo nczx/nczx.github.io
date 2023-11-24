@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="width: 649px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 137px;">
+<tbody>
+<tr>
+<td style="width: 645px;">
+<p><strong>Twierdzenie o trzech prostych prostopadłych</strong></p>
+<p>Prosta <strong>k</strong> zawarta w płaszczyźnie <strong>P</strong> jest prostopadła do prostej <strong>l</strong> pochyłej do płaszczyzny <strong>P</strong> wtedy i tylko wtedy, gdy jest prostopadła do prostej <strong>l'</strong> będącej rzutem prostokątnym prostej <strong>l</strong> na płaszczyznę <strong>P</strong>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Rysunek:  </p>
+<p><img alt="" height="357" src="./data/1205206-0.jpg" width="346"/></p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Prosta <strong>BD</strong> jest rzutem prostokątnym prostej <strong>BD<sub>1</sub></strong> na płaszczyznę <strong>ABCD</strong>. Prosta <strong>AC</strong> jest prostopadła do prostej<strong> BD</strong>, zatem na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong> jest również prostopadła do prostej <strong>BD<sub>1</sub></strong>. </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Prosta <strong>BC<sub>1</sub></strong> jest rzutem prostokątnym prostej <strong>BD<sub>1</sub></strong> na płaszczyznę <strong>BCC<sub>1</sub>B<sub>1</sub></strong>. Prosta <strong>BC<sub>1</sub></strong> nie jest prostopadłą do prostej <strong>B<sub>1</sub>C </strong>(są przekątnymi prostokąta niebędącego kwadratem) zatem również nie jest prostopadła do prostej<strong> BD<sub>1</sub></strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="width: 649px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 137px;">
+<tbody>
+<tr>
+<td style="width: 645px;">
+<p><strong>Twierdzenie o trzech prostych prostopadłych</strong></p>
+<p>Prosta <strong>k</strong> zawarta w płaszczyźnie <strong>P</strong> jest prostopadła do prostej <strong>l</strong> pochyłej do płaszczyzny <strong>P</strong> wtedy i tylko wtedy, gdy jest prostopadła do prostej <strong>l'</strong> będącej rzutem prostokątnym prostej <strong>l</strong> na płaszczyznę <strong>P</strong>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<hr/>
+<p>Rysunek:  </p>
+<p><img alt="" height="453" src="./data/1205261-0.jpg" width="407"/></p>
+<hr/>
+<p><strong>Rozwiązanie 1. </strong></p>
+<p>Niech dany będzie ostrosłup <strong>ABCS</strong> (jak na rysunku powyżej). </p>
+<p>Rozważmy wszystkie pary prostych zawierających skośne krawędzie tego ostrosłupa: <strong>AS</strong> i <strong>BC</strong>, <strong>BS</strong> i<strong> AC</strong> oraz <strong>CS</strong> i <strong>AB</strong>.</p>
+<ul>
+<li>Wykażemy, że proste <strong>AS</strong> i<strong> BC</strong> są prostopadłe. </li>
+</ul>
+<p style="padding-left: 30px;">Prosta <strong>AE</strong> jest rzutem prostokątnym prostej <strong>AS</strong> na płaszczyznę podstawy <strong>ABC</strong>. Prosta <strong>AE</strong> zawiera wysokość trójkąta równobocznego <strong>ABC</strong>, czyli jest prostopadła do prostej <strong>BC</strong>. Zatem na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong> proste<strong> AS</strong> i <strong>BC</strong> są prostopadłe. </p>
+<ul>
+<li>Wykażemy, że proste <strong>BS</strong> i<strong> AC</strong> są prostopadłe. </li>
+</ul>
+<p style="padding-left: 30px;">Prosta <strong>BF</strong> jest rzutem prostokątnym prostej <strong>BS</strong> na płaszczyznę podstawy <strong>ABC</strong>. Prosta <strong>BF</strong> zawiera wysokość trójkąta równobocznego <strong>ABC</strong>, czyli jest prostopadła do prostej <strong>AC</strong>. Zatem na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong> proste<strong> BS</strong> i <strong>AC</strong> są prostopadłe. </p>
+<ul>
+<li>Wykażemy, że proste <strong>CS</strong> i<strong> AB</strong> są prostopadłe. </li>
+</ul>
+<p style="padding-left: 30px;">Prosta <strong>CD</strong> jest rzutem prostokątnym prostej <strong>CS</strong> na płaszczyznę podstawy <strong>ABC</strong>. Prosta <strong>CD</strong> zawiera wysokość trójkąta równobocznego <strong>ABC</strong>, czyli jest prostopadła do prostej <strong>AB</strong>. Zatem na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong> proste<strong> CS</strong> i <strong>AB</strong> są prostopadłe. </p>
+<p>Podsumowując wykazaliśmy, że proste zawierające skośne krawędzie ostrosłupa prawidłowego trójkątnego są prostopadłe, <strong>co należało dowieść</strong>. </p>
+<hr/>
+<p><strong>Rozwiązanie 2. </strong></p>
+<p>Rozważmy dowolną parę prostych zawierających skośne krawędzie ostrosłupa prawidłowego trójkątnego: czyli prostą zawierającą krawędź boczną i prostą zawierającą przeciwległą do niej krawędź podstawy. </p>
+<p>Zastanówmy się jak będzie wyglądał rzut prostokątny prostej zawierającej krawędź boczną na płaszczyznę podstawy. </p>
+<ul>
+<li>Wierzchołek zawierający się w podstawie jest punktem stałym rzutowania (jest obrazem samego siebie).</li>
+<li>Rzutem prostokątnym wierzchołka, w którym schodzą się krawędzie boczne (zgodnie z naszymi oznaczeniami wierzchołka <strong>S</strong>) jest spodek wysokości ostrosłupa prawidłowego trójkątnego (punkt przecięcia wysokości podstawy, który oznaczyliśmy przez<strong> O</strong>).</li>
+</ul>
+<p>Zatem rzutem prostej zawierającej krawędź boczną ostrosłupa na płaszczyznę podstawy jest prosta zawierająca wysokość podstawy (przechodząca przez wierzchołek krawędzi bocznej, który zawierał się w podstawie np. rzutem prostej <strong>CS</strong> jest prosta <strong>CO</strong>), czyli jest to prosta prostopadła do prostej zawierającej przeciwległą krawędź podstawy (np. wysokość podstawy poprowadzona z wierzchołka <strong>C</strong> jest prostopadła do prostej <strong>AB</strong>), która to jest krawędzią podstawy skośną do rzutowanej krawędzi bocznej.  </p>
+<p>Otrzymujemy więc, że jeśli rozważymy dowolną krawędź boczną i przeciwległą do niej krawędź podstawy, to rzut prostej zawierającą krawędź boczną na płaszczyznę podstawy jest prostopadły do tej krawędzi podstawy. Zatem na mocy<strong> twierdzenia o trzech prostych prostopadłych </strong>proste zawierające skośne krawędzie ostrosłupa prawidłowego trójkątnego są prostopadłe, <strong>co należało dowieść</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>a)</strong></p> <p>Rysunek:  </p> <p><img alt="" height="354" src="./data/1205278-0.jpg" width="334"/></p> <p>Odcinek <strong>AS</strong> jest wysokością tego ostrosłupa, zatem wiemy, że trójkąty <strong>ABS</strong> i <strong>ADS</strong> są prostokątne - co zaznaczono na rysunku. </p> <p>Prosta <strong>AB</strong> jest rzutem prostokątnym prostej <strong>BS</strong> na płaszczyznę <strong>ABCD</strong>. Skoro prosta <strong>AB</strong> jest prostopadła do prostej <strong>BC</strong>, to również prosta <strong>BS</strong> jest prostopadła do <strong>BC</strong>.</p> <p>Prosta<strong> DA</strong> jest rzutem prostokątnym prostej<strong> DS</strong> na podstawę <strong>ABCD</strong>. Skoro prosta<strong> DA</strong> jest prostopadła do prostej <strong>DC</strong>, to również prosta <strong>DS</strong> jest prostopadła do <strong>DC</strong>.</p> <p>Zatem trójkąty <strong>BCS</strong> i <strong>DAS</strong> są trójkątami prostokątnymi.</p> <p>Zatem wszystkie ściany boczne tego ostrosłupa są trójkątami prostokątnymi. </p> <hr/> <p><strong>b)</strong></p> <p>Rysunek:</p> <p><img alt="" height="257" src="./data/1205278-1.jpg" width="397"/></p> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>ABS</strong> wiemy, że</p> <p><span> <math-expr expr="x=sqrt(3^2+4^2)=sqrt(9+16)=sqrt25=5" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni podstawy. Mamy:</p> <p><span> <math-expr expr="P_=4^2=16" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni bocznej. Mamy:</p> <p><span> <math-expr expr="P_b= 2 cdot 1/2 cdot 3 cdot 4 + 2 cdot 1/2 cdot 5 cdot 4 = 12+20=32" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <span style="text-decoration:underline;">pole powierzchni całkowitej</span>. Mamy:</p> <p><span> <math-expr expr="P_c=16+32 = ul(ul(48))" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rysunek:  </p> <p><img alt="" height="368" src="./data/1205328-0.jpg" width="332"/></p> <p>Rozpatrujemy proste wyznaczone przez dwa punkty spośród <strong>A</strong>, <strong>B</strong>, <strong>C</strong>, <strong>D</strong>, <strong>E</strong>, <strong>F</strong>. </p> <hr/> <p><strong>a)</strong></p> <p>Prosta <strong>BF</strong> jest rzutem prostokątnym prostej <strong>BF<sub>1</sub></strong> na płaszczyznę podstawy tego graniastosłupa. </p> <p>Wypiszmy proste prostopadłe do prostej <strong>BF<sub>1</sub></strong>:</p> <p><span> <math-expr expr="AD, \ BC, \ EF" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Prosta <strong>BE</strong> jest rzutem prostokątnym prostej <strong>BE<sub>1</sub></strong> na płaszczyznę podstawy tego graniastosłupa. </p> <p>Wypiszmy proste prostopadłe do prostej <strong>BE<sub>1</sub></strong>:</p> <p><span> <math-expr expr="AC, \ DF" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>c)</strong></p> <p>Prosta <strong>BC</strong> jest rzutem prostokątnym prostej <strong>BC<sub>1</sub></strong> na płaszczyznę podstawy tego graniastosłupa. </p> <p>Wypiszmy proste prostopadłe do prostej <strong>BC<sub>1</sub></strong>:</p> <p><span> <math-expr expr="BF, \ CE" syntax="text"></math-expr> </span></p> <hr/> <p><strong>d)</strong></p> <p>Każda prosta zawarta w płaszczyźnie podstawy jest prostopadła do prostej <strong>BB<sub>1</sub></strong>, ponieważ prosta <strong>BB<sub>1</sub></strong> nachylona jest pod kątem <strong>90<sup>o</sup></strong> do podstawy tego graniastosłupa. </p> <p>Wypiszmy proste prostopadłe do prostej <strong>BB<sub>1</sub></strong>:</p> <p><span> <math-expr expr="AB, \ AC, \ AD, \ AE, \ AF, \ BC, \ BD, \ BE, \ BF, \ CD, \ CE, \ CF, \ DE, \ DF, \ EF" syntax="text"></math-expr> </span>   </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="width: 649px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 137px;">
+<tbody>
+<tr>
+<td style="width: 645px;">
+<p><strong>Twierdzenie o trzech prostych prostopadłych</strong></p>
+<p>Prosta <strong>k</strong> zawarta w płaszczyźnie <strong>P</strong> jest prostopadła do prostej <strong>l</strong> pochyłej do płaszczyzny <strong>P</strong> wtedy i tylko wtedy, gdy jest prostopadła do prostej <strong>l'</strong> będącej rzutem prostokątnym prostej <strong>l</strong> na płaszczyznę <strong>P</strong>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Dany jest graniastosłup prawidłowy ośmiokątny.</p>
+<p>Najdłuższa przekątna tego graniastosłupa łączy wybrany punkt podstawy z przeciwległym punktem drugiej podstawy. </p>
+<p>Naszkicujmy podstawę tego graniastosłupa.   </p>
+<p><img alt="" height="338" src="./data/1205365-0.jpg" width="338"/></p>
+<p>Odcinek <strong>BF</strong> jest rzutem prostokątnym najdłuższej przekątnej tego graniastosłupa na jego podstawę. </p>
+<p>Skoro proste wyznaczone przez odcinki <strong>GE</strong>, <strong>HD</strong>, <strong>AC</strong> są prostopadłe do<strong> FB</strong>, zatem na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong>, są również prostopadłe do najdłuższej przekątnej tego graniastosłupa. </p>
+<p>Zatem są <strong>trzy</strong> takie proste. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<table border="1" style="width: 649px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 137px;">
+<tbody>
+<tr>
+<td style="width: 645px;">
+<p><strong>Twierdzenie o trzech prostych prostopadłych</strong></p>
+<p>Prosta <strong>k</strong> zawarta w płaszczyźnie <strong>P</strong> jest prostopadła do prostej <strong>l</strong> pochyłej do płaszczyzny <strong>P</strong> wtedy i tylko wtedy, gdy jest prostopadła do prostej <strong>l'</strong> będącej rzutem prostokątnym prostej <strong>l</strong> na płaszczyznę <strong>P</strong>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Dany jest graniastosłup prawidłowy pięciokątny.</p>
+<p>Naszkicujmy podstawę tego graniastosłupa.  </p>
+<p><img alt="" height="297" src="./data/1205746-0.jpg" width="325"/></p>
+<p>Odcinek <strong>DB</strong> jest rzutem prostokątnym przekątnej tego graniastosłupa na jego podstawę. </p>
+<p>Odcinki <strong>AD</strong>, <strong>AC</strong>,<strong> BE</strong>, <strong>EC</strong>, <strong>DB</strong> zawierają się w prostych wyznaczonych przez dwa wierzchołki jego podstawy. Żadna z tych prostych <strong>nie</strong> jest prostopadła do rzutu prostokątnego przekątnej <strong>DB</strong>, zatem <strong>nie</strong> jest również prostopadła do przekątnej tego graniastosłupa. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Rysunek:</p> <p><img alt="" height="257" src="./data/1205777-0.jpg" width="392"/></p> <p>Wyznaczmy pewne długości odcinków w tym prostopadłościanie. Korzystając z <strong>twierdzenia Pitagorasa</strong> mamy:  </p> <p><span> <math-expr expr='abs(AD_1)=sqrt(3^2+4^2)=sqrt(9+16)=sqrt25=5 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy długość przekątnej tego prostopadłościanu. Mamy:</p> <p><span> <math-expr expr='d=sqrt(3^2+4^2+5^2)=sqrt(9+16+25)=sqrt50=5sqrt2 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>Pierwsza możliwość</strong></p> <p><img alt="" height="260" src="./data/1205777-1.jpg" width="398"/></p> <p>Rozważmy czworokąt <strong>ABC<sub>1</sub>D<sub>1</sub></strong>. Każdy bok tego czworokąta ma długość <strong>5 cm</strong> oraz długość jego przekątnej wynosi <strong>5√2 cm</strong>. Zatem czworokąt ten jest kwadratem. Przekątne w kwadracie przecinają się pod kątem prostym, czyli <span style="text-decoration: underline;">przekątne <strong>AC<sub>1</sub></strong> i<strong> BD<sub>1</sub></strong> są prostopadłe</span>. </p> <hr/> <p><strong>Druga możliwość</strong></p> <p><img alt="" height="277" src="./data/1205777-2.jpg" width="406"/></p> <p>Rozważmy czworokąt <strong>DCB<sub>1</sub>A<sub>1</sub></strong>. Każdy bok tego czworokąta ma długość <strong>5 cm</strong> oraz długość jego przekątnej wynosi <strong>5√2 cm</strong>. Zatem czworokąt ten jest kwadratem. Przekątne w kwadracie przecinają się pod kątem prostym, czyli <span style="text-decoration: underline;">przekątne <strong>A<sub>1</sub>C</strong> i<strong> B<sub>1</sub>D</strong> są prostopadłe</span>. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Rysunek:  </p> <p><img alt="" height="375" src="./data/1205796-0.jpg" width="354"/></p> <p>Zauważmy, że skoro prosta <strong>B'D</strong> jest prostopadła do prostej <strong>AD</strong>, to na mocy <strong>twierdzenia o trzech prostych prostopadłych</strong>, prosta <strong>DB</strong> jest prostopadła do prostej <strong>AD</strong>. </p> <p>Naszkicujmy trapez będący podstawą tego graniastosłupa. Mamy:</p> <p><img alt="" height="231" src="./data/1205796-1.jpg" width="436"/></p> <p>Korzystając ze związku między długościami boków w trójkącie <strong>AED</strong> o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>, <strong>90<sup>o</sup></strong> mamy:</p> <p><span> <math-expr expr='x=sqrt3/sqrt3=1 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr='c=2 cdot 1 = x \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Korzystając ze związku między długościami boków w trójkącie <strong>EDB</strong> o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>, <strong>90<sup>o</sup></strong> mamy:</p> <p><span> <math-expr expr='abs(EB)=b+1=sqrt3 cdot sqrt3 = 3 [ "cm"]' syntax="text"></math-expr> </span></p> <p>więc</p> <p><span> <math-expr expr='b=2 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>a stąd mamy:</p> <p><span> <math-expr expr='abs(AB)=2x+b=2+2=4 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>Wyznaczmy <span style="text-decoration: underline;">pole tego trapezu</span>. Mamy:</p> <p><span> <math-expr expr='P=frac((4+2) cdot sqrt3)(2)=frac(6sqrt3)(2)=ul(ul( 3sqrt3 \ ["cm"^2] ))' syntax="text"></math-expr> </span>    </p><br>

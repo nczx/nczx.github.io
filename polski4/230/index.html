@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Na podstawie wiersza Białoszewskiego można stwierdzić, że "końcówkowanie" to odmiana wyrazów, dostosowywanie ich formy gramatycznej do wypowiedzi. Neologizm ten może oznaczać zapisywanie samych końcówek poszczególnych wyrazów, co też podmiot liryczny czyni w dalszej części dzieła. Z kolei sytuacja "niepisaniowości" wiąże się bezpośrednio z tym, co przeżywa osoba mówiąca. To stan, kiedy człowiek pozbawiony jest twórczej inspiracji, ma problemy z wyrażeniem swoich myśli za pomocą słów. Odczuwa więc niemoc, ponieważ akt pisania staje się męką i swoistą walką człowieka z językiem. </p>
+<p>"Niepisaniowość" to nie tylko temat wiersza Białoszewskiego. Stan ten przejawia się także bezpośrednio w języku utworu - odzwierciedla on próby przelania na papier swych myśli. Niemożność ujawnia się np. w rozbiciu wersów oraz zastosowaniu neologizmów. Okazuje się bowiem, iż powszechnie używane słowa nie oddają przeżyć osoby mówiącej, są być może niewystarczające lub ograniczają ją. Takie wrażenie wzmacnia również eliptyczny charakter utworu oraz specyficzne zestawienie ze sobą wyrazów. Wywołują one wrażenie jakby osoba mówiąca nie potrafiła słowami wyrazić swoich myśli - czyni to w nieporadny sposób: "natreść / mi / ości / i / uzo". Fragment ten jednak również sugeruje, że samo pisania sprawia mękę oraz wielkie trudności - słowo "ości" przywodzi na myśl frazeologizm "stanąć komuś ością w gardle". Wskazuje tym samym na to, iż akt pisania nie zapewnia podmiotowi spokoju, a jest źródłem rozterek.   </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) W wierszu Białoszewskiego pojawia się neologizm "natreść". Słowo to wyraża pragnienie podmiotu lirycznego, który kieruje swe wezwanie do muzy. Przytoczony neologizm łączy się z różnymi sensami, które bezpośrednio dotyczą aktu tworzenia. "Natreść" może tym samym wyrażać prośbę podmiotu lirycznego, który nie znajduje inspiracji, odpowiedniego wyrażenia swych myśli. Z tego też powodu prosi muzę, by pomogła mu w znalezieniu odpowiedniej treści. Jednocześnie neologizm ten wskazuje na dążenia osoby mówiącej, ponieważ pragnie ona znaleźć odpowiednią formę literackiego wyrazu, napełnić swą wypowiedź sensem. Z kolei neologizm "uzo" to prawdopodobnie końcówka wyrazu, zwrotu do muzy. Jest przejawem wspomnianego wcześniej przez podmiot "końcówkowania", odzwierciedla zmaganie się osoby mówiącej z językiem. </p>
+<p> </p>
+<p>b) Przykładowe skojarzenia ze słowem "ości":</p>
+<ul>
+<li>ryba;</li>
+<li>resztki;</li>
+<li>kłucie;</li>
+<li>ból;</li>
+<li>ostrość;</li>
+<li>kość;</li>
+<li>dławienie;</li>
+<li>szkielet;</li>
+<li>karp. </li>
+</ul>
+<p> </p>
+<p>"Ości" z wiersza Białoszewskiego można przykładowo uznać za cząstkę wyrazu "miłość" - wrażenie to wzmacnia układ wersów: "natreść / mi / ości". W takiej sytuacji słowo to podkreśla trud człowieka - stara się on za pomocą języka wyrazić pewne idee, myśli, które ostatecznie stają się "ościami", a więc czymś banalnym, zwyczajnym. To żartobliwe zestawienie sugeruje inne spojrzenie na akt pisania - zostaje on pozbawiony patosu. "Ości" z wiersza Białoszewskiego stają się także znakiem cierpienia, twórczej męki podmiotu lirycznego, o czym świadczy nieporadny język wypowiadającego się. Ma on problem z przełamaniem blokady pisarskiej, wysłowieniem się. Z tego też powodu "ości" wywołują skojarzenie ze sformułowaniem "ktoś/coś staje ością w gardle komuś". Osoba mówiąca w czasie pisania napotyka na przeszkody, być może jest rozdrażniona swą sytuacją, niemocą. </p>
+<div class="hasla_odnosnikowe">
+<p class="odnosniki_kwal"> </p>
+</div><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 559px; height: 366px;">
+<tbody>
+<tr style="height: 30px;">
+<td style="background-color: #aed581; text-align: center; height: 30px; width: 276px;"><strong>Neologizm</strong></td>
+<td style="background-color: #aed581; text-align: center; height: 30px; width: 276px;"><strong>Budowa</strong></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 276px; text-align: center; height: 30px;"><em>Natchniuza</em></td>
+<td style="width: 276px; text-align: center; height: 30px;">
+<p>wyraz podstawowy: <em>natchnienie</em></p>
+<p>podstawa słowotwórcza: <em>natchni-</em></p>
+<p>formant: <em>-uza</em></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 276px; text-align: center; height: 30px;"><em>końcówkować</em></td>
+<td style="width: 276px; text-align: center; height: 30px;">
+<p>wyraz podstawowy: <em>końcówka</em></p>
+<p>podstawa słowotwórcza: <em>końcówk-</em></p>
+<p>formant: <em>ować</em></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 276px; text-align: center; height: 30px;"><em>niepisaniowość</em></td>
+<td style="width: 276px; text-align: center; height: 30px;">
+<p>wyraz podstawowy: <em>niepisanie</em></p>
+<p>podstawa słowotwórcza: <em>niepisani- </em></p>
+<p>formant: <em>-owość</em></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 276px; text-align: center; height: 30px;"><em>natreścić</em></td>
+<td style="width: 276px; text-align: center; height: 30px;">
+<p>wyraz podstawowy: <em>treść</em></p>
+<p>podstawa słowotwórcza: <em>-treść-</em></p>
+<p>formant: <em>na-, -ić</em></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 276px; text-align: center; height: 30px;"><em>uza</em></td>
+<td style="width: 276px; text-align: center; height: 30px;">
+<p>wyraz podstawowy: muza</p>
+<p>podstawa: <em>-uza</em> </p>
+<p>formant: brak formantu, odcięcie <em>m-</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Budowa neologizmów łączy się ściśle z tematyką podjęta przez Białoszewskiego w utworze. Tworzenie swoich wyrazów, dzielenie ich na morfemy świadczy bowiem o zmaganiu się jednostki z materią języka - podmiot używa neologizmów, by wyrazić swój stan, określić dokładniej to, czego doświadcza. Jednocześnie zabieg ten stanowi przejaw działalności artystycznej, a więc niejako staje się odpowiedzią na prośbę o inspirację. Neologizmy sugerują także nieporadność podmiotu lirycznego, który próbuje się wyrazić za pomocą nowych słów. Jednocześnie ich budowa oraz sensy pozbawiają dzieło patosu. Stają się przejawem gier językowych oraz żartobliwego podejścia do tematyki twórczości poetyckiej.  </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Żartobliwy charakter utworu przejawia się przede wszystkim w tym, że poeta odwołuje się do tematu obecnego w kulturze na przestrzeni wieków. Kwestia tworzenia, działalności artystycznej zostaje jednak odarta z patosu i powagi. Zamiast tego podmiot liryczny bawi się słowami, tworząc nowe formy (neologizmy), co zasadniczo prowadzi także do wyzwolenia się z pewnych ograniczeń języka. Neologizmy odzwierciedlają jednak przy tym zmagania człowieka w próbą wyrażenia się. W pewien sposób wywołują skojarzenia z nieporadnym językiem dziecka: "końcówkuję / z niepisaniowości". Ponadto w żartobliwy sposób zostaje ukazana także muza - dostojna opiekunka artystów, do której osoba mówiąca zwraca się następująco, w bezpośredni sposób: "Muzo / Natchniuzo". Humor utworu przejawia się więc w tym, iż twórczość poetycka nie jest traktowana poważny sposób, lecz z lekkością. Prowadzi to do zestawienia ze sobą dwóch odmiennych sfer ("natreść / mi / ości") oraz licznych gier językowych, zabawy słowami.  </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>a) Tytułowe "wyjęzyczenie" stanowi próbę wysłowienia się. Może ono także oznaczać trudności, niepowodzenia. Wynikają one z tego, iż poeta cały czas zmaga się z językiem, za pomocą którego stara się oddać swe myśli czy też intencje. </p>
+<p> </p>
+<p>b) Poeta nieustannie zmaga się z językiem, ponieważ on sam, gramatyka czy słowa, stanowią pewne ograniczenie w sposobie wrażenia myśli. Niekoniecznie bowiem mogą w pewni oddawać intencje czy też sensy, które pragnie wyrazić podmiot liryczny. Z tego powodu język oddala człowieka od jego celu, a nie przybliża do niego. Ponadto przyczynia się on do teatralizacji, przez co odbiera poczucie autentyczności, jest także źródłem skrępowania jednostki. Wskazują na to słowa: "kiedy mówię / to zupełnie / jakby długo kupowany / kalosz / czuję się / rozciągający się / pąs". Mówienie przynosi osobie mówiącej trud - dobieranie właściwych słów staje się czasochłonne, wiąże się z potężnym wysiłkiem oraz niepewnością.</p>
+<p> </p>
+<p>c) Poeta odwołuje się do francuskiego malarza, ponieważ uosabia on pewną koncepcję twórczości. Dominuje w niej tematyka codzienna, związana z nocnym życiem Paryża, oraz przedstawienie zwykłych ludzi - nawet z marginesu społecznego. Te cechy zdają się łączyć twórczość polskiego poety z francuskim artystą. Białoszewski określa jednak język w następujący sposób: "[...] kurtyzana / w sztucznych perłach zębów". Słowa te sugerują w pewien sposób sprzedajność i sztuczność języka oraz wynikające z tego ograniczenia. Podobnie więc jak malarz zwraca uwagę na dany element rzeczywistości, wywołujący ambiwalentne odczucia. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Nawi¹zania biblijne i mitologiczne:</p>
+<ul>
+<li><em>kap³ani; </em></li>
+<li><em>sêdziowie;</em></li>
+<li><em>mój ojcze;</em></li>
+<li><em>cherubiñski;</em></li>
+<li><em>œwiêtego Franciszka;</em></li>
+<li><em>Achillesa i Hektora;</em></li>
+<li><em>Nie wierzê w przemianê wody w wino;</em></li>
+<li><em>nie wierzê w grzechów odpuszczenie;</em></li>
+<li><em>nie wierzê w cia³a zmartwychwstanie. </em></li>
+</ul>
+<p> </p>
+<p>Odniesienia biblijne oraz mitologiczne wskazuj¹ na dwie p³aszczyzny punktów odniesieñ dla podmiotu lirycznego. Pierwszy stanowi wiara wraz ze wszystkimi jej prawdami. Drugi to kultura (zw³aszcza staro¿ytna) - jako Ÿród³o wartoœci estetycznych, moralnych, pewnych wzorców postêpowania czy postawy wzglêdem ojczyzny. Podmiot liryczny na œwiadków swego wyznania wybiera m.in. kap³anów i sêdziów, którzy s¹ reprezentantami w³adzy boskiej oraz ludzkiej, ale przy tym reprezentuj¹ ogó³ wartoœci moralnych. Równie¿ zwrot do ojca sugeruje to, i¿ podmiot liryczny zwraca siê bezpoœrednio do Boga. Okreœleniem œmiechu mianem "cherubiñskiego" tak¿e stanowi nawi¹zanie biblijne; epitet ten bowiem pochodzi od nazwy jednego z wa¿niejszych anio³ów (cheruba). Podkreœla on niewinn¹ i subteln¹ urodê osoby mówi¹cej, wywo³uj¹c¹ skojarzenia ze sfer¹ duchow¹. Z kolei koñcz¹ce utwór odwrotne <em>Credo </em>stanowi zaprzeczenie podstawowych prawd wiary. Osoba mówi¹ca wprost wyznaje, i¿ nie wierzy w ¿ycie pozagrobowe.</p>
+<p>Poeta ponadto odwo³uje siê tak¿e do trzech postaci, które zyskuj¹ symboliczne znaczenie. Œwiêty Franciszek przypomina bowiem o pozytywnej wizji rzeczywistoœci, w której obecny jest Bóg. To g³osiciel mi³oœci do ka¿dego stworzenia, radoœci, mi³osierdzia i dobroci. Z kolei Achilles i Hektor s¹ nawi¹zaniem do wielkiego dzie³a Homera - <em>Iliady.</em> Oni zaœ s¹ znakiem szlachetnoœci, odwagi, poœwiêcenia, wiernoœci swym zasadom, honoru.</p>
+<p>Aluzje biblijne, mitologiczne i wspomniane postaci wprowadzaj¹ swoisty paradoks do wiersza Ró¿ewicza. Poeta przywo³uje je po to, aby dokonaæ negacji sfery wiary i kultury. Elementy te bowiem staj¹ siê noœnikiem wartoœci, postaw, które w czasie wojny trac¹ swe znaczenie dla podmiotu lirycznego. Nawi¹zania te pozwalaj¹ wiêc na wyraziste i przejmuj¹ce ukazanie kryzysu cz³owieka, który odkrywa, i¿ ani kultura, ani wiara nie przynosz¹ mu ukojenia. Tym samym s¹ pustymi pojêciami, które nie przystaj¹ do rzeczywistoœci naznaczonej cierpieniem.  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><em>Credo</em> stanowi wyznanie wiary, odwo³uje siê do podstawowych prawd. U Ró¿ewicza dochodzi do jego odwrócenia, poniewa¿ liryczny deklaruje swój brak wiary. W przejmuj¹cy sposób zaprzecza wiêc wszystkim dogmatom: "Nie wierzê w przemianê wody w wino / nie wierzê w grzechów odpuszczenie / nie wierzê w cia³a zmartwychwstanie". S³owa te stanowi¹ wiêc ostateczne i jednoznaczne potwierdzenie postawy osoby mówi¹cej oraz podsumowanie wypowiedzi. Doœwiadczenia wojenne powoduj¹, i¿ nie dostrzega obecnoœci Boga w œwiecie, traci nadziejê na istnienie ¿ycia pozagrobowego. Stanowczo w ten sposób wskazuje, i¿ niemo¿liwe jest odzyskanie wczeœniejszej równowagi ducha, z tego te¿ powodu odwraca siê od wiary. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Wiersz Ró¿ewicza mo¿na okreœliæ jako akt niewiary. Podmiot liryczny bowiem w doœæ oficjalny sposób decyduje siê na zadeklarowanie swojej postawy. O powa¿nym i uroczystym charakterze sytuacji œwiadczy dobór s³uchaczy i modyfikacja <em>Credo</em> - wyznania wiary. W wierszu traci ono jednak swój pierwotny charakter, poniewa¿ osoba mówi¹ca zaprzecza prawdom wiary, neguje istnienie sfery duchowej i ¿ycia wiecznego. Akt niewiary mo¿na tak¿e postrzegaæ w szerszym zakresie. Osoba mówi¹ca nie tylko bowiem odwraca siê od religii i Boga, ale tak¿e podwa¿a znaczenie estetyki i moralnoœci, dotychczasowych zasad rz¹dz¹cych œwiatem. Jej w¹tpliwoœci dotycz¹ wiêc tak¿e uniwersalnych wartoœci, które odrzuca ze wzglêdu na tragiczne prze¿ycia: "Okaleczony nie widzia³em / ani nieba ani ró¿y / ptaka gniazda drzewa". Niewiara w tym przypadku ma ca³kowity charakter, œwiadczy o rozpadzie rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>a) Obraz Kirchnera to przyk³ad malarstwa ekspresjonistycznego. Charakterystyczne cechy, które o tym œwiadcz¹, to:</p>
+<ul>
+<li>rezygnacja z wiernego przedstawienia rzeczywistoœci na rzecz uzewnêtrznienia swych prze¿yæ; </li>
+<li>deformacja postaci, wyolbrzymienie ich okreœlonych cech;</li>
+<li>subiektywizm;</li>
+<li>antyestetyzm;</li>
+<li>zastosowanie intensywnej kolorystyki (czerwienie, ¿ó³cie, granat);</li>
+<li>obecnoœæ kontrastu (granatowy mundur - ¿ó³te cia³o);</li>
+<li>zdecydowana, mocna kreska;</li>
+<li>pesymistyczny nastrój i wymowa dzie³a. </li>
+</ul>
+<p> </p>
+<p>b) Dzie³o Kirchnera przypomina o tym, ¿e wojna nie ma w sobie piêkna ani wznios³oœci. Jawi siê za to jako destrukcyjna si³a, na co wskazuje sposób przedstawienia ¿o³nierza. Jego twarz jest pusta, pozbawiona emocji, wrêcz martwa - odzwierciedla zapewne traumatyczne prze¿ycia postaci. Znacz¹ce jest tak¿e odwrócenie siê mê¿czyzny od nagiej kobiety. Tym samym ¿o³nierz niejako odcina siê od ¿ycia i rzeczywistoœci, jest pogr¹¿ony w innym œwiecie. Okaleczenie emocjonalne wi¹¿e siê jednak tak¿e z cierpieniem fizycznym. Œwiadczy o tym odciêta prawa rêka mê¿czyzny, który w ten sposób traci sw¹ pe³n¹ sprawnoœæ, a zarazem staje siê ofiara konfliktu. </p>
+<p> </p>
+<p>c) Okaleczenie w wierszu Ró¿ewicza to skutek wojny, jednak zyskuje ono metaforyczny charakter. Z treœci wynika, i¿ podmiot liryczny nie dozna³ uszczerbku na zdrowiu i wygl¹dzie ("ani jasnoœæ otwartego czo³a / ani puch nad s³odk¹ warg¹ / ni œmiech cherubiñski / ni krok elastyczny"). Jego rany maj¹ charakter emocjonalny i duchowy. Osoba mówi¹ca odczuwa bowiem utratê dotychczasowego systemu wartoœci i stabilnej wizji ¿ycia. Jest wiêc pozbawiona jakiegokolwiek punktu odniesienia, poniewa¿ kultura i wiara nie przynosz¹ pogodzenia siê z prze¿yciami wojennymi ani ulgi. Podmiot liryczny doœwiadcza wiêc rozpadu œwiata, nie potrafi wróciæ do dawnej egzystencji, zaœ jego psychika jest trwale uszkodzona, nie pozwala mu na dostrze¿enie piêkna, dobroci, Boga. Motyw ten koresponduje z dzie³em Kirchnera, poniewa¿ malarz przedstawia dos³ownie okaleczonego mê¿czyznê - pozbawionego rêki. Jego smutna, ziemista twarz sugeruje tak¿e cierpienie wewnêtrzne, co upodabnia go do bohatera wiersza. Motyw okaleczenia wskazuje wiêc na negatywne konsekwencje wojny, jako Ÿród³a zniszczenia, a jednoczeœnie s³u¿y podkreœleniu tragedii jednostki. Nie tylko zostaje naruszona integralnoœæ jej cia³a, ale zniszczeniu ulega tak¿e psychika i dotychczasowy system wartoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przyk³adowo:</p>
+<p>a) Formalne podobieñstwo dotyczy struktury utworów:</p>
+<ul>
+<li>swobodna kompozycja przypominaj¹ca kola¿; </li>
+<li>brak rymów;</li>
+<li>bardzo ograniczone znaczenie interpunkcji oraz oszczêdne stosowanie œrodków poetyckiego wyrazu;</li>
+<li>zwiêz³oœæ i powœci¹gliwoœæ wypowiedzi;</li>
+<li>nienumeryczny wiersz wolny. </li>
+</ul>
+<p> </p>
+<p>b) Dok³adne okreœlenie wieku precyzuje, z jakiej perspektywy wypowiada siê mówi¹cy. Œwiadczy tak¿e o tym, w którym momencie ¿ycia siê znajduje, co prowadzi do ukonkretnienia treœci, i jak ten moment wp³ywa na jego postrzeganie rzeczywistoœci.</p>
+<p> </p>
+<p>c) M³odoœæ u Ró¿ewicza nie wi¹¿e siê z pozytywnymi doœwiadczeniami, co jest paradoksem. Okres ten, kojarzony z poznawaniem œwiata, kszta³towaniem siê to¿samoœci, niewinnoœci¹ i wra¿liwoœci¹, traci swe podstawowe cechy. Doœwiadczenie wojny wywiera na m³odoœæ negatywny wp³yw. Wiek bowiem nie wspó³gra z prze¿yciami podmiotu, który doœwiadcza okrucieñstwa wojny, prze¿ywa traumê. Jego zewnêtrzne piêkno kontrastuje z wewnêtrznym cierpieniem: "Nie jestem m³ody / niech was smuk³oœæ mego cia³a nie zwodzi / ani tkliwa biel szyi". M³odoœæ jest bolesna, poniewa¿ wi¹¿e siê z za³amaniem dotychczasowych systemów wartoœci, przez co podmiot liryczny odczuwa zagubienie, nie mo¿e w pe³ni okreœliæ swej to¿samoœci. Ma jedynie przekonanie o swej winie: "jestem morderc¹ / jestem narzêdziem"; podkreœla to tragizm dorastania w nieprzyjaznej rzeczywistoœci. M³odoœæ staje siê przekleñstwem, gdy¿ samo ocalenie nie przynosi ulgi - taki cz³owiek jest ju¿ na zawsze poraniony psychicznie, w¹tpi w jakiekolwiek wartoœci ("Pojêcia s¹ tylko wyrazami: / cnota i wystêpek / prawda i k³amstwo"). Czechowicz podobnie jak Ró¿ewicz prezentuje zgubienie m³odego cz³owieka, który próbuje odnaleŸæ siê w chaosie rzeczywistoœci, nie ma tak¿e ukszta³towanej to¿samoœci. Sugeruj¹ to s³owa: "jest nas dwudziestu dwóch". M³odoœæ wed³ug poety wi¹¿e siê z ograniczonymi mo¿liwoœciami i wiedz¹ cz³owieka: "Mam dopiero 22 lata / znam dopiero 22 piêtra". Mimo tego próbuje on okie³znaæ rzeczywistoœæ, ma te¿ œwiadomoœæ swej niepe³nej wiedzy: "zapomnia³em miliardy o swe dumie pamiêtam". </p>
+<p> </p>
+<p>d) Dla Ró¿ewicza czas dzieli siê na trzy p³aszczyzny: czas przed wojn¹, wojnê i rzeczywistoœæ po niej. Poeta zauwa¿a, i¿ up³yw czasu nie przynosi spokoju i pogodzenia siê z wydarzeniami. Konflikt ma bowiem destrukcyjny wp³yw na cz³owieka oraz jego sytuacjê, z tego powodu trauma jest ca³y czas obecna ("ocala³em / prowadzony na rzeŸ") i nie mo¿na powróciæ do dawnej wizji œwiata, poniewa¿ kluczowe pojêcia uleg³y wypaczeniu ("Jednako wa¿y cnota i wystêpek"). Czas tym samym nie leczy ran, co wskazuje na rozpad rzeczywistoœci, niemo¿noœæ osi¹gniêcia spokoju. Z kolei u Czechowicza czas jest czymœ nieprzerwanym, wi¹¿e siê z ci¹g³ymi zmianami oraz swoist¹ p³ynnoœci¹, która wywo³uje wra¿enie chaosu. Jednoczeœnie to potê¿na si³a ("nieskoñczony jest przemian ruch"), która zmienia za ka¿dym razem cz³owieka. Poetów ³¹czy przekonanie o tym, i¿ jest czynnikiem kszta³tuj¹cym cz³owieka oraz jego dzia³ania. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>. </p><br>

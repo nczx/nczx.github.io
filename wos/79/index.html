@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Zadanie zostało wykonane na podstawie wyborów parlamentarnych z 2019 r.:</p>
+<p><span style="text-decoration: underline;"><strong>a) Partie polityczne, które przekroczyły próg wyborczy i uzyskały prawo do otrzymania dotacji budżetowej:</strong></span></p>
+<ul>
+<li>Prawo i Sprawiedliwość, </li>
+<li>Polskie Stronnictwo Ludowe, </li>
+<li>Sojusz Lewicy Demokratycznej, </li>
+<li>Konfederacja Wolność i Niepodległość, </li>
+<li>Koalicja Obywatelska,</li>
+<li>Mniejszość Niemiecka. </li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>b) Partie, które przekroczyły próg niezbędny do uzyskania subwencji budżetowej:</strong></span></p>
+<ul>
+<li>Polskie Stronnictwo Ludowe, </li>
+<li>Prawo i Sprawiedliwość, </li>
+<li>Sojusz Lewicy Demokratycznej, </li>
+<li>Konfederacja Wolność i Niepodległość, </li>
+<li>Koalicja Obywatelska.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>c) Imina i nazwiska liderów politycznych partii wyżej wymienionych:</strong></span></p>
+<ul>
+<li>Polskie Stronnictwo Ludowe - Władysław Kosiniak-Kamysz</li>
+<li>Prawo i Sprawiedliwość - Jarosław Kaczyński</li>
+<li>Sojusz Lewicy Demokratycznej - Włodzimierz Czarzasty</li>
+<li>Konfederacja Wolność i Niepodległość - Janusz Korwin-Mikke, Robert Winnicki, Grzegorz Braun, </li>
+<li>Koalicja Obywatelska - Borys Budka </li>
+<li>Mniejszość niemiecka - Ryszard Galla.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>d) Podstawowe założenia programowe głównych partii, które znalazły się w parlamencie:</strong></span></p>
+<table border="1" style="border-collapse: collapse; width: 995px; height: 469px;">
+<tbody>
+<tr style="text-align: center;">
+<td colspan="4" style="width: 982px; background-color: #99ccff; height: 39px;"><strong>Programy głównych partii politycznych w Polsce</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Nazwa partii</strong></td>
+<td style="width: 245px; height: 39px;">Prawo i Sprawiedliwość</td>
+<td style="width: 245px; height: 39px;">Platforma Obywatelska</td>
+<td style="width: 245px; height: 39px;">Polskie Stronnictwo Ludowe</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Wartość, cele</strong></td>
+<td style="width: 245px; height: 39px;">prawo do życia, wolność, solidarność, równość, sprawiedliwość, wspólnota, naród, szacunek dla przyrodzonej godności ludzkiej</td>
+<td style="width: 245px; height: 39px;">zbudowanie sprawnego państwa, wzmocnienie celów gospodarki krajowej, poprawa jakości życia każdej polskiej rodziny</td>
+<td style="width: 245px; height: 39px;">oparcie swoich założeń na doktrynie neoagraryzmu, solidaryzm społeczeństwa, pomoc najuboższym</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program polityczny</strong></td>
+<td style="width: 245px; height: 39px;">Oparty na pięciu głównych punktach: I. Naprawa państwa, II. Gospodarka i rozwój, III. Rodzina, IV. Społeczeństwo, V. Polska w Europie i w świecie</td>
+<td style="width: 245px; height: 39px;">Oparty na decentralizacji państwa na rzecz wzmocnienia samorządów terytorialnych. Wprowadzenie mieszanego systemu wyborczego do Sejmu i Senatu, ograniczenie zakresu immunitetu poselskiego.</td>
+<td style="width: 245px; height: 39px;">Szybkie i sprawne odpowiadanie na wyzwania współczesności, odejście od państwa scentralizowanego na rzecz decentralizacji, przeprowadzenie restytucji samorządności terytorialnej. </td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program gospodarczy</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Rejestracja działalności 6 albo 12 miesięcy od jej rozpoczęcia.</li>
+<li>Rozliczenie z US na zasadzie kasowej.</li>
+<li>Wprowadzenie tzw. renty innowacyjnej.</li>
+<li>Utworzenie Ministerstwa Gospodarki i Rozwoju oraz kilku innych nowych resortów.</li>
+<li>Powołanie Państwowej Rady Rozwoju.</li>
+<li>Ograniczenie roli ministra finansów.</li>
+<li>Likwidacja Ministerstwa Skarbu - przeniesienie zadań do ministerstw i Prokuratorii Generalnej RP.</li>
+<li>Opodatkowanie instytucji finansowych i hipermarketów.</li>
+<li>Przebudowa systemu podatkowego.</li>
+<li>Zachowanie waluty złotówki.</li>
+<li> </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wprowadzenie ułatwień dla osób chcących założyć własną działalność gospodarczą, </li>
+<li>obliczanie dochodu do opodatkowania na osobę w gospodarstwie domowym,</li>
+<li>stworzenie Stref Aktywności Gospodarczej na terenie wsi i małych miasteczek </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>tworzenie nowych miejsc pracy i zwalczanie bezrobocia poprzez analizowanie poszczególnych (wprowadzanych) zasad pod kątem ich skutków dla rynku pracy, </li>
+<li>prowadzenie aktywnej polityki proeksportowej, </li>
+<li>inwestowanie w postęp,</li>
+<li>tworzenie warunków dla rozwoju polityki pieniężnej, </li>
+<li>rozważenie wprowadzenia zakazu zatrudnienia emerytów i rencistów, </li>
+<li>przeprowadzenie przemyślanej prywatyzacji i reprywatyzacji, </li>
+<li>wprowadzenie samorządowych hub technologicznych, </li>
+<li>chorobowe opłacane przez ZUS, </li>
+<li>0% CIT dla małych i średnich firm</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program społeczny</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Pakiet prorodzinny m.in. zerowa stawka VAT na ubrania dziecięce.</li>
+<li>Wprowadzenie programu 500+.</li>
+<li>Zmiana wieku emerytalnego.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wprowadzenie 13. emerytury, </li>
+<li>rozszerzenie programu 500+ na pierwsze dziecko (bez względu na wysokość dochodów rodziców), </li>
+<li>sprzeciw legalizacji aborcji i eutanazji</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>prowadzenie budownictwa mieszkaniowego jako podstawy społecznego dobrobytu, </li>
+<li>darmowa komunikacja dla dzieci, </li>
+<li>program M@M@ I T@T@ (możliwość połączenia pracy na pół etatu i opieki nad dziećmi), </li>
+<li>bezpłatne żłobki i kluby malucha, </li>
+<li>zwolnienie rodziców z opłat parkingowych, </li>
+<li>złotówka za złotówkę w programie 500+, </li>
+<li>niższy wiek emerytalny dla matek,</li>
+<li>większa rodzina = niższe podatki</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Edukacja</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Przynajmniej 1,2 proc. PKB na finansowanie nauki.</li>
+<li>Przeprowadzenie gruntownej zmiany w szkolnictwie wyższym.</li>
+<li>Likwidacja gimnazjów. </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wdrożenie systemu stypendialnego dla o specjalnych potrzebach edukacyjnych, </li>
+<li>przeprowadzenie gruntownej reformy systemu edukacji</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>posiłek dla każdego ucznia, </li>
+<li>ograniczenie liczebności klas, </li>
+<li>angielski od pierwszej klasy, </li>
+<li>dualny system szkół zawodowych, </li>
+<li>program iTornister</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Kultura</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Zwiększenie nakładów na kulturę, co najmniej do poziomu 1 proc. wydatków budżetu państwa.</li>
+<li>Państwo powinno stać się mecenasem kultury i inicjatorem najważniejszych przedsięwzięć.</li>
+<li>Sfinansowanie budowy Muzeum Historii Polski, a w następnej kolejności Muzeum Ziem Zachodnich i Muzeum II Wojny Światowej.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>opracowanie programów przygotowujących do świadomego uczestnictwa w kulturze,</li>
+<li>zwiększenie dostępu do kultury</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Reymontówki - program stworzenie wiejskich świetlic, </li>
+<li>wsparcie orkiestr i zespołów ludowych, </li>
+<li>program kino za rogiem, </li>
+<li>program orły obok orlików</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Polityka zagraniczna</strong></td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>Funkcjonowanie Polski w strukturach Unii Europejskiej,</li>
+<li>kształtowanie przyjaznych stosunków z sąsiadami, </li>
+<li>budowanie renomy i prestiżu Polski na arenie międzynarodowej, </li>
+<li>polityka nie przyjmowania uchodźców z Bliskiego Wschodu i Afryki na teren Polski</li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>pozostanie Polski w strukturach UE, </li>
+<li>obrona praw chrześcijan prześladowanych w innych krajach, </li>
+<li>pomoc uchodźcom z Bliskiego Wschodu i Afryki, </li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>aktywna polityka proeksportowa, </li>
+<li>nawiązywanie dobrych relacji partnerskich z innymi państwami</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Zapowiadane reformy</strong></td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>poprawa infrastruktury drogowej poprzez modernizację już istniejącej oraz budowę nowych dróg, </li>
+<li>dalszy proces repolonizacji banków, </li>
+<li>wprowadzenie całkowitego zakazu handlu w niedzielę, </li>
+<li>coroczny wzrost płacy minimalnej</li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>wprowadzenie programu "Grant na start", </li>
+<li>wprowadzenie zmian w zakresie odprowadzania składek na ubezpieczenie społeczne oraz umowy zlecenia, </li>
+<li>wprowadzenie "jednolitego kontraktu" w zamian za inne formy zatrudnienia, </li>
+<li>przeliczanie dochodu do opodatkowania na osobę w gospodarstwie domowym. </li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>iTornister, </li>
+<li>M@MA I T@T@, </li>
+<li>Rejmontówki</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Przywódca partii</strong></td>
+<td style="width: 245px; height: 40px;">Jarosław Kaczyński</td>
+<td style="width: 245px; height: 40px;">Borys Budka</td>
+<td style="width: 245px; height: 40px;">Władysław Kosiniak-Kamysz</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, ponieważ musi zostać wykonane w odniesieniu do ostatnich wyborów parlamentarnych, jakie przeprowadzono w Polsce. Dlatego proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi:</strong></span></p>
+<p><strong>a)</strong></p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Partie polityczne, które przekroczyły próg wyborczy (wynoszący 5% dla partii politycznych, a 8% dla bloków koalicyjnych) w wyborach parlamentarnych w Polsce w 2019 roku, uzyskując prawo do otrzymania dotacji budżetowej:</span></em></p>
+<p>- Prawo i Sprawiedliwość,</p>
+<p>- Koalicja Obywatelska (Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Partia Zieloni),</p>
+<p>- Sojusz Lewicy Demokratycznej,</p>
+<p>- Polskie Stronnictwo Ludowe,</p>
+<p>- Konfederacja Wolność i Niepodległość,</p>
+<p>- Mniejszość Niemiecka (ma zagwarantowane mandaty w Sejmie RP).</p>
+<p><strong>b)</strong></p>
+<p>Próg niezbędny do uzyskania subwencji budżetowej dla komitetów samodzielnych wynosi 3%, natomiast dla komitetów koalicyjnych - 6% głosów.</p>
+<p>W wyborach parlamentarnych z 2019 roku taki próg przekroczyły następujące ugrupowania:</p>
+<p>- Prawo i Sprawiedliwość,</p>
+<p>- Koalicja Obywatelska (Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Partia Zieloni),</p>
+<p>- Sojusz Lewicy Demokratycznej,</p>
+<p>- Polskie Stronnictwo Ludowe,</p>
+<p>- Konfederacja Wolność i Niepodległość.</p>
+<p><strong>c)</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #0097a7;"><strong>Partia polityczna</strong></td>
+<td style="background-color: #0097a7;"><strong>Lider (liderzy)</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #b2ebf2;">Prawo i Sprawiedliwość</td>
+<td style="background-color: #b2ebf2;">Jarosław Kaczyński</td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #b2ebf2;">Koalicja Obywatelska (Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Partia Zieloni)</td>
+<td style="background-color: #b2ebf2;">Donald Tusk, Borys Budka, Adam Szłapka, Barbara Nowacka, Przemysław Słowik, Urszula Zielińska</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #b2ebf2;">Sojusz Lewicy Demokratycznej</td>
+<td style="background-color: #b2ebf2;">Włodzimierz Czarzasty</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #b2ebf2;">Polskie Stronnictwo Ludowe</td>
+<td style="background-color: #b2ebf2;">Władysław Kosiniak-Kamysz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #b2ebf2;">Konfederacja Wolność i Niepodległość</td>
+<td style="background-color: #b2ebf2;">Robert Winnicki, Sławomir Mentzen, Artur Dziambor, Grzegorz Braun</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #b2ebf2;">Mniejszość Niemiecka</td>
+<td style="background-color: #b2ebf2;">Ryszard Galla</td>
+</tr>
+</tbody>
+</table>
+<p><strong>d)</strong></p>
+<p><em><strong>-&gt;</strong> <span style="text-decoration: underline;">Podstawowe założenia programowe głównych ugrupowań reprezentowanych obecnie w polskim parlamencie (stan na luty 2023 roku):</span></em></p>
+<ul>
+<li><em><span style="text-decoration: underline;"><strong>PRAWO I SPRAWIEDLIWOŚĆ</strong></span></em> - konserwatyzm, interwencjonizm gospodarczy, popieranie członkostwa Polski w Unii Europejskiej i tzw. koncepcji Europy narodów, chrześcijańska demokracja.</li>
+<li><strong><span style="text-decoration: underline;"><em>KOALICJA OBYWATELSKA (PLATFORMA OBYWATELSKA, NOWOCZESNA, INICJATYWA POLSKA, PARTIA ZIELONI)</em></span></strong> - euroentuzjazm, proeuropeizm, liberalizm, centryzm, socjaldemokracja, socjalliberalizm, demoliberalizm, feminizm, wolnorynkowość, kapitalizm.</li>
+<li><span style="text-decoration: underline;"><em><strong>SOJUSZ LEWICY DEMOKRATYCZNEJ</strong></em></span> - proeuropeizm, interwencjonizm gospodarczy, socjaldemokracja, egalitaryzm, antyklerykalizm, popieranie członkostwa Polski w Unii Europejskiej i NATO.</li>
+<li><span style="text-decoration: underline;"><em><strong>POLSKIE STRONNICTWO LUDOWE</strong></em></span> - centryzm, proeuropeizm, społeczna gospodarka rynkowa, chrześcijańska demokracja, liberalizm gospodarczy, agraryzm.</li>
+<li><strong><em><span style="text-decoration: underline;">KONFEDERACJA WOLNOŚĆ I NIEPODLEGŁOŚĆ</span></em></strong> - konserwatyzm, liberalizm gospodarczy, wolnorynkowość, eurosceptycyzm.</li>
+<li><strong><em><span style="text-decoration: underline;">MNIEJSZOŚĆ NIEMIECKA</span></em></strong> - regionalizm, centryzm, liberalizm, proeuropeizm, popieranie zacieśniania współpracy z Niemcami, solidaryzm.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>W Polsce subwencje budżetowe przyznawane są partiom politycznym, które jako podmioty samodzielne zdobyły w wyborach 3% ważnie oddanych głosów lub 6% ważnie oddanych głosów w przypadku komitetów wyborczych koalicji. Partie, które przekroczyły wyżej wskazane progi wyborcze mają ustalaną subwencje budżetową na zasadzie degresji proporcjonalnie do liczby głosów oddanych na ich partię. W przypadku partii, które uzyskały do 5% ważnie oddanych głosów ich wysokość subwencji za każdy z owych głosów wynosi 5,77 zł; dla partii posiadających powyżej 5% do 10% ważnie oddanych głosów, kwota subwencji wynosi 4,61 zł za każdy ważnie oddany głos; dla partii mających od 10 do 20% owa kwota wynosi 4,04 zł za każdy ważnie oddany głos; dla partii powyżej 20% o 30% = 2,31 zł za każdy ważnie oddany głos; dla partii posiadających powyżej 30% kwota wynosi 0,87 zł za każdy ważnie oddany głos. </p>
+<p>Z kolei dotacje budżetowa zostaje przyznana każdemu komitetowi wyborczemu partii politycznej, z którego została wyłoniona osoba, która uzyskała mandat posła lub senatora. Wysokość dotacji budżetowej wylicza się według ustawowo określonego wzoru.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Aby otrzymać dotację bądź subwencję budżetową partia polityczna lub blok koalicyjny muszą spełnić pewne kryteria, przede wszystkim związane z przekroczeniem stosownych progów wyborczych. Dotację budżetową otrzymują te samodzielne komitety, które osiągną minimum 5% głosów, zaś jeśli chodzi o komitety koalicyjne - 8% głosów. Subwencję budżetową otrzymują te komitety samodzielne, które przekroczą w wyborach parlamentarnych 3% głosów, a dla komitetów koalicyjnych próg ten wynosi 6% głosów. </p>
+<p>Wypłacane ugrupowaniom lub ich koalicjom środki ustala się tak, iż sumę wydatków wszystkich komitetów, które wprowadziły posłów do parlamentu dzieli się - w przypadku dotacji budżetowej - przez liczbę wszystkich mandatów. Uzyskaną w ten sposób kwotę mnoży się przez liczbę mandatów każdego komitetu.</p>
+<p>Natomiast jeśli chodzi o subwencję budżetową, to jej wysokość ustala się tak, iż za głosy oddane na daną partię przyznawane są jej ustalone kwoty. Przy czym od 2011 roku za każdy głos w przedziale do 5% ogółu wszystkich głosów nalicza się 5,77 zł, powyżej 5% do 10% - 4,61 zł, powyżej 10% do 20% - 4,04 zł, powyżej 20% do 30% - 2,31 zł, a powyżej 30% - 0,87 zł.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Na polskiej scenie politycznej następujące partie można uznać za:</strong></span></p>
+<p>- <strong>lewicową</strong> - <span style="text-decoration: underline;">Sojusz Lewicy Demokratycznej</span> -  Program wyborczy SLD wskazuje na forsowanie przez jej polityków zagadnień związanych z szerokim stosowaniem praw oraz wolności człowieka, szczególnie w zakresie wprowadzenia legalnej aborcji do 12. tygodnia ciąży, refundowania antykoncepcji oraz <em>in vitro</em>, wprowadzenie kas fiskalnych dla księży oraz usunięcie Funduszu Kościelnego (a więc silne oddzielenie Kościoła od państwa), wsparcie instytucjonalne oraz prawne osób LGBT. Ideologiami przewodnimi tej partii jest socjaldemokracja oraz proeuropeizm. </p>
+<p>-<strong> prawicową</strong> - <span style="text-decoration: underline;">Konfederacja Wolność i Niepodległość</span> - Poglądy prezentowane przez członków tej partii oraz wyszczególnione w jej programie wskazują, że są one silnie konserwatywne. Program wyborczy Konfederacji przesycony jest wartościami wolnościowymi, narodowymi, konserwatywnymi oraz proobywatelskimi. Wśród postulatów wyborczych tej partii znalazły się m.in. sprzeciw wobec działań podejmowanych przez środowiska LGBT, przywrócenie kary śmierci dla nadzwyczajnych przestępstw, ograniczenie imigracji z państw pozaeuropejskich, ochrona życia ludzkiego od poczęcia oraz decentralizacja i debiurokratyzacja państwa. Postulaty Konfederacji wskazują, że jest to partia prawicowa. </p>
+<p>- <strong>centrową</strong> - <span style="text-decoration: underline;">Prawo i Sprawiedliwość</span> - Program wyborczy tej partii skupia się na ideologii konserwatywnej, chrześcijańskiej demokracji, solidaryzmu oraz interwencjonizmu. Postulaty PiS nie są ściśle prawicowe (choć część ich wyborców tak uważa), bowiem np. politycy tej partii nie są za całkowitym zakazem aborcji, a także są oni za poszanowaniem szerokiego katalogu praw obywatelskich, a także za współpracą i rozwojem Polski na arenie międzynarodowej, również w ramach struktur Unii Europejskiej. Postulaty PiS skupiają się a zachowaniu równowagi pomiędzy tradycją oraz propagowaniem nowatorskich rozwiązań prawnych, społecznych oraz politycznych. Najważniejszym przesłaniem ich programu jest zachowanie "umiaru".</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><em><strong>-&gt;</strong> </em>Jako partię <em><strong><span style="text-decoration: underline;">LEWICOWĄ</span></strong></em> na polskiej scenie politycznej można scharakteryzować <strong><span style="text-decoration: underline;">Sojusz Lewicy Demokratycznej (SLD)</span></strong>, ponieważ jest to partia, która dopuszcza interwencjonizm państwowy w gospodarce, głosi poglądy socjaldemokratyczne, popiera wprowadzanie i zwiększanie zasiłków socjalnych, jak też opowiada się za egalitaryzmem i antyklerykalizmem.</p>
+<p><em><strong>-&gt; </strong></em>Jako partię <strong><span style="text-decoration: underline;"><em>CENTROWĄ</em></span></strong> na polskiej scenie politycznej można scharakteryzować <strong><span style="text-decoration: underline;">Polskie Stronnictwo Ludowe (PSL)</span></strong>, ponieważ przedstawiciele tego ugrupowania głoszą poglądy umiarkowane, współpracują z partiami politycznymi o różnych założeniach programowych i opowiadają się za demokracją i powolnym wprowadzaniem reform.</p>
+<p><em><strong>-&gt; </strong></em>Jako partię <span style="text-decoration: underline;"><em><strong>PRAWICOWĄ</strong></em></span> na polskiej scenie politycznej można scharakteryzować <strong><span style="text-decoration: underline;">Konfederację Wolność i Niepodległość</span></strong>, ponieważ jest to partia, która głosi konserwatyzm, przywiązanie do tradycyjnych wartości, popieranie interesu narodowego, wolny rynek i liberalizm gospodarczy.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>A.</strong></span> W art. 11 Konstytucji Rzeczpospolitej Polskiej została wskazana <span style="text-decoration: underline;"><strong>demokratyczna metoda</strong></span> zdobywana i sprawowania władzy. Z kolei w art. 13 Ustawy Zasadniczej ustawodawca wskazał na <span style="text-decoration: underline;"><strong>totalitarne metody</strong></span> zdobywania i sprawowania władzy (m.in. związanych z funkcjonowaniem nazizmu, faszyzmu oraz komunizmu), a także te, które związane są ze stosowaniem przemocy w celu zdobycia władzy. </p>
+<p><span style="text-decoration: underline;"><strong>B.</strong></span> W Polsce zakazane jest stosowanie totalitarnych metod zdobywania oraz sprawowania władzy, ponieważ niedopuszczalne jest prowadzenie działalności w Polsce, która odwołuje się do nienawiści rasowej oraz narodowościowej. Ustawodawca w art. 13 Konstytucji RP wskazuje, że niedopuszczalne jest stosowanie przemocy oraz utajnianie struktur i członkostwa organizacji, bowiem tego rodzaju zabiegi mogą prowadzić do totalitaryzmu i wyniszczenia narodu oraz państwa. Z kolei demokratyczne metody zdobywania i sprawowania władzy są w Polsce legalne, ponieważ stabilizują one funkcjonowanie państwa oraz sprzyjają jego rozwojowi, przy jednoczesnym zapewnieniu poszanowania praw i wolności obywatelskich.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Artykuł 11. <em>Konstytucji RP </em>zatytułowany: <em>Zasada wolności tworzenia partii</em>, stanowi, że: '1. Rzeczpospolita Polska zapewnia wolność tworzenia i działania partii politycznych. Partie polityczne zrzeszają na zasadach dobrowolności i równości obywateli polskich w celu wpływania metodami demokratycznymi na kształtowanie polityki państwa. 2. Finansowanie partii politycznych jest jawne'. </p>
+<p>Natomiast artykuł 13. <em>Konstytucji RP </em>zatytułowany: <em>Ograniczenie pluralizmu politycznego</em>, głosi, że: 'Zakazane jest istnienie partii politycznych i innych organizacji odwołujących się w swoich programach do totalitarnych metod i praktyk działania nazizmu, faszyzmu i komunizmu, a także tych, których program lub działalność zakłada lub dopuszcza nienawiść rasową i narodowościową, stosowanie przemocy w celu zdobycia władzy lub wpływu na politykę państwa albo przewiduje utajnienie struktur lub członkostwa'.</p>
+<p><strong>[A]</strong></p>
+<p>W wymienionych fragmentach <em>Konstytucji RP</em>, tj. w artykułach 11. i 13., wskazane zostały <strong><span style="text-decoration: underline;">demokratyczne, pokojowe, jawne i zgodne z obowiązującym w Polsce prawem</span></strong> metody zdobywania i sprawowania władzy.</p>
+<p><strong>[B]</strong></p>
+<p><em>Konstytucja RP </em>jako legalne dopuszcza te metody działania partii politycznych, które związane są z zasadami demokracji, zgodności z obowiązującym prawem i jawnością finansowania. Ponadto partie polityczne w Polsce mogą zrzeszać członków tylko na zasadach dobrowolności i równości.</p>
+<p>Nielegalne jest działanie partii politycznych, które nawiązują w swych programach do metod i praktyk totalitarnych, w szczególności o podłożu nazistowskim, faszystowskim i komunistycznym. Zakazane jest również stosowanie metod, które odwołują się do braku jawności finansowania, nienawiści rasowej i narodowościowej, stosowania przemocy czy utajniania struktur bądź członkostwa.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>a) Przykładowe nazwy partii:</strong></span></p>
+<ul>
+<li>Platforma Obywatelska, </li>
+<li>Polska Zjednoczona Partia Robotnicza, </li>
+<li>Związek Komunistów Polskich "Proletariat",  </li>
+<li>Polska Unia Socjaldemokratyczna, </li>
+<li>Zjednoczone Stronnictwo Ludowe, </li>
+<li>Polskie Stronnictwo Ludowe - Odrodzenie, </li>
+<li>Stronnictwo Demokratyczne, </li>
+<li>Stronnictwo Ludowe, </li>
+<li>Unia Polityki Realnej, </li>
+<li>Porozumienie, </li>
+<li>Konfederacja Wolność i Niepodległość, </li>
+<li>Unia Europejskich Demokratów, </li>
+<li>Ruch Narodowy, </li>
+<li>Polskie Stronnictwo Ludowe, </li>
+<li>Unia pracy, </li>
+<li>Ruch Katolicko Narodowy, </li>
+<li>Unia Polskich Ugrupowań  Monarchistycznych, </li>
+<li>Stronnictwo Pracy, </li>
+<li>Stronnictwo Narodowe, </li>
+<li>Stronnictwo Narodowe im. Dmowskiego Romana, </li>
+<li>Polski Ruch Monarchistyczny, </li>
+<li>Stronnictwo Polska Racja Stanu, </li>
+<li>Związek Słowiański, </li>
+<li>Konfederacja Polski Niepodległej, </li>
+<li>Stronnictwo "Piast",</li>
+<li>Twój Ruch, </li>
+<li>Stronnictwo Patriotyczne Polski i Polonii, </li>
+<li>Stronnictwo Ludowe "Ojcowizna" RP, </li>
+<li>Polskie Stronnictwo Demokratyczne,</li>
+<li>Porozumienie Jarosława Gowina, </li>
+<li>Ruch Sprawiedliwości Społecznej, </li>
+<li>Zjednoczenie Chrześcijańskich Rodzin, </li>
+<li>Ruch 11 Listopada, </li>
+<li>Ruch Prawdziwa Europa - Europa Christi.</li>
+</ul>
+<p> </p>
+<p>b) To zadanie ma charakter indywidualny. Sam/a musisz je wykonać. Poniższe informacje mogą pomóc Ci w opracowaniu rozwiązania. </p>
+<table border="1" style="border-collapse: collapse; width: 995px; height: 469px;">
+<tbody>
+<tr style="text-align: center;">
+<td colspan="4" style="width: 982px; background-color: #99ccff; height: 39px;"><strong>Programy głównych partii politycznych w Polsce</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Nazwa partii</strong></td>
+<td style="width: 245px; height: 39px;">Prawo i Sprawiedliwość</td>
+<td style="width: 245px; height: 39px;">Platforma Obywatelska</td>
+<td style="width: 245px; height: 39px;">Polskie Stronnictwo Ludowe</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Wartość, cele</strong></td>
+<td style="width: 245px; height: 39px;">prawo do życia, wolność, solidarność, równość, sprawiedliwość, wspólnota, naród, szacunek dla przyrodzonej godności ludzkiej</td>
+<td style="width: 245px; height: 39px;">zbudowanie sprawnego państwa, wzmocnienie celów gospodarki krajowej, poprawa jakości życia każdej polskiej rodziny</td>
+<td style="width: 245px; height: 39px;">oparcie swoich założeń na doktrynie neoagraryzmu, solidaryzm społeczeństwa, pomoc najuboższym</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program polityczny</strong></td>
+<td style="width: 245px; height: 39px;">Oparty na pięciu głównych punktach: I. Naprawa państwa, II. Gospodarka i rozwój, III. Rodzina, IV. Społeczeństwo, V. Polska w Europie i w świecie</td>
+<td style="width: 245px; height: 39px;">Oparty na decentralizacji państwa na rzecz wzmocnienia samorządów terytorialnych. Wprowadzenie mieszanego systemu wyborczego do Sejmu i Senatu, ograniczenie zakresu immunitetu poselskiego.</td>
+<td style="width: 245px; height: 39px;">Szybkie i sprawne odpowiadanie na wyzwania współczesności, odejście od państwa scentralizowanego na rzecz decentralizacji, przeprowadzenie restytucji samorządności terytorialnej. </td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program gospodarczy</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Rejestracja działalności 6 albo 12 miesięcy od jej rozpoczęcia.</li>
+<li>Rozliczenie z US na zasadzie kasowej.</li>
+<li>Wprowadzenie tzw. renty innowacyjnej.</li>
+<li>Utworzenie Ministerstwa Gospodarki i Rozwoju oraz kilku innych nowych resortów.</li>
+<li>Powołanie Państwowej Rady Rozwoju.</li>
+<li>Ograniczenie roli ministra finansów.</li>
+<li>Likwidacja Ministerstwa Skarbu - przeniesienie zadań do ministerstw i Prokuratorii Generalnej RP.</li>
+<li>Opodatkowanie instytucji finansowych i hipermarketów.</li>
+<li>Przebudowa systemu podatkowego.</li>
+<li>Zachowanie waluty złotówki.</li>
+<li> </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wprowadzenie ułatwień dla osób chcących założyć własną działalność gospodarczą, </li>
+<li>obliczanie dochodu do opodatkowania na osobę w gospodarstwie domowym,</li>
+<li>stworzenie Stref Aktywności Gospodarczej na terenie wsi i małych miasteczek </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>tworzenie nowych miejsc pracy i zwalczanie bezrobocia poprzez analizowanie poszczególnych (wprowadzanych) zasad pod kątem ich skutków dla rynku pracy, </li>
+<li>prowadzenie aktywnej polityki proeksportowej, </li>
+<li>inwestowanie w postęp,</li>
+<li>tworzenie warunków dla rozwoju polityki pieniężnej, </li>
+<li>rozważenie wprowadzenia zakazu zatrudnienia emerytów i rencistów, </li>
+<li>przeprowadzenie przemyślanej prywatyzacji i reprywatyzacji, </li>
+<li>wprowadzenie samorządowych hub technologicznych, </li>
+<li>chorobowe opłacane przez ZUS, </li>
+<li>0% CIT dla małych i średnich firm</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Program społeczny</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Pakiet prorodzinny m.in. zerowa stawka VAT na ubrania dziecięce.</li>
+<li>Wprowadzenie programu 500+.</li>
+<li>Zmiana wieku emerytalnego.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wprowadzenie 13. emerytury, </li>
+<li>rozszerzenie programu 500+ na pierwsze dziecko (bez względu na wysokość dochodów rodziców), </li>
+<li>sprzeciw legalizacji aborcji i eutanazji</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>prowadzenie budownictwa mieszkaniowego jako podstawy społecznego dobrobytu, </li>
+<li>darmowa komunikacja dla dzieci, </li>
+<li>program M@M@ I T@T@ (możliwość połączenia pracy na pół etatu i opieki nad dziećmi), </li>
+<li>bezpłatne żłobki i kluby malucha, </li>
+<li>zwolnienie rodziców z opłat parkingowych, </li>
+<li>złotówka za złotówkę w programie 500+, </li>
+<li>niższy wiek emerytalny dla matek,</li>
+<li>większa rodzina = niższe podatki</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Edukacja</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Przynajmniej 1,2 proc. PKB na finansowanie nauki.</li>
+<li>Przeprowadzenie gruntownej zmiany w szkolnictwie wyższym.</li>
+<li>Likwidacja gimnazjów. </li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>wdrożenie systemu stypendialnego dla o specjalnych potrzebach edukacyjnych, </li>
+<li>przeprowadzenie gruntownej reformy systemu edukacji</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>posiłek dla każdego ucznia, </li>
+<li>ograniczenie liczebności klas, </li>
+<li>angielski od pierwszej klasy, </li>
+<li>dualny system szkół zawodowych, </li>
+<li>program iTornister</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 39px; width: 247px;"><strong>Kultura</strong></td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Zwiększenie nakładów na kulturę, co najmniej do poziomu 1 proc. wydatków budżetu państwa.</li>
+<li>Państwo powinno stać się mecenasem kultury i inicjatorem najważniejszych przedsięwzięć.</li>
+<li>Sfinansowanie budowy Muzeum Historii Polski, a w następnej kolejności Muzeum Ziem Zachodnich i Muzeum II Wojny Światowej.</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>opracowanie programów przygotowujących do świadomego uczestnictwa w kulturze,</li>
+<li>zwiększenie dostępu do kultury</li>
+</ul>
+</td>
+<td style="width: 245px; height: 39px;">
+<ul>
+<li>Reymontówki - program stworzenie wiejskich świetlic, </li>
+<li>wsparcie orkiestr i zespołów ludowych, </li>
+<li>program kino za rogiem, </li>
+<li>program orły obok orlików</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Polityka zagraniczna</strong></td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>Funkcjonowanie Polski w strukturach Unii Europejskiej,</li>
+<li>kształtowanie przyjaznych stosunków z sąsiadami, </li>
+<li>budowanie renomy i prestiżu Polski na arenie międzynarodowej, </li>
+<li>polityka nie przyjmowania uchodźców z Bliskiego Wschodu i Afryki na teren Polski</li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>pozostanie Polski w strukturach UE, </li>
+<li>obrona praw chrześcijan prześladowanych w innych krajach, </li>
+<li>pomoc uchodźcom z Bliskiego Wschodu i Afryki, </li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>aktywna polityka proeksportowa, </li>
+<li>nawiązywanie dobrych relacji partnerskich z innymi państwami</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Zapowiadane reformy</strong></td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>poprawa infrastruktury drogowej poprzez modernizację już istniejącej oraz budowę nowych dróg, </li>
+<li>dalszy proces repolonizacji banków, </li>
+<li>wprowadzenie całkowitego zakazu handlu w niedzielę, </li>
+<li>coroczny wzrost płacy minimalnej</li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>wprowadzenie programu "Grant na start", </li>
+<li>wprowadzenie zmian w zakresie odprowadzania składek na ubezpieczenie społeczne oraz umowy zlecenia, </li>
+<li>wprowadzenie "jednolitego kontraktu" w zamian za inne formy zatrudnienia, </li>
+<li>przeliczanie dochodu do opodatkowania na osobę w gospodarstwie domowym. </li>
+</ul>
+</td>
+<td style="width: 245px; height: 40px;">
+<ul>
+<li>iTornister, </li>
+<li>M@MA I T@T@, </li>
+<li>Rejmontówki</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #ccffff; height: 40px; width: 247px;"><strong>Przywódca partii</strong></td>
+<td style="width: 245px; height: 40px;">Jarosław Kaczyński</td>
+<td style="width: 245px; height: 40px;">Grzegorz Schetyna</td>
+<td style="width: 245px; height: 40px;">Władysław Kosiniak-Kamysz</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><span style="text-decoration: underline;"><strong>W tekście wymieniono następujące określenia:</strong></span></p>
+<p>- unia,</p>
+<p>- związek,</p>
+<p>- ruch,</p>
+<p>- zjednoczenie,</p>
+<p>- obóz,</p>
+<p>- stronnictwo,</p>
+<p>- konfederacja,</p>
+<p>- platforma.</p>
+<p><strong><span style="text-decoration: underline;">Przykładami dawnych i obecnie istniejących polskich partii politycznych, które w swoich nazwach mają te określenia, są:</span></strong></p>
+<ul>
+<li>Unia Polityki Realnej,</li>
+<li>Unia Wolności,</li>
+<li>Unia Pracy,</li>
+<li>Unia Europejskich Demokratów,</li>
+<li>Związek Słowiański,</li>
+<li>Ruch Palikota,</li>
+<li>Ruch Sprawiedliwości Społecznej,</li>
+<li>Ruch Prawdziwa Europa - Europa Christi,</li>
+<li>Zjednoczenie Chrześcijańskich Rodzin,</li>
+<li>Obóz Patriotyczny,</li>
+<li>Polskie Stronnictwo Ludowe, </li>
+<li>Stronnictwo Narodowo-Demokratyczne,</li>
+<li>Stronnictwo Demokracji Polskiej,</li>
+<li>Stronnictwo Demokratyczne,</li>
+<li>Konfederacja Polski Niepodległej,</li>
+<li>Platforma Obywatelska.</li>
+</ul>
+<p><strong>b)</strong></p>
+<p><strong>Ta część zadania ma charakter indywidualny. Dlatego proponowane rozwiązanie może przybrać jedynie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><span style="text-decoration: underline;"><em>Przykładowy opis jednej z funkcjonujących obecnie w Polsce (wedle stanu na luty 2023 roku) partii politycznej, z uwzględnieniem trzech podstawowych elementów jej działalności, tj. organizacji, programu i funkcji:</em></span></p>
+<p>~&gt; <strong><span style="text-decoration: underline;"><em>POLSKIE STRONNICTWO LUDOWE (PSL)</em></span></strong></p>
+<p>Polskie Stronnictwo Ludowe (PSL) jest polską partią polityczną o programie centrowym, zakładającym popieranie społecznej gospodarki rynkowej, zabieganie o interesy polskich rolników, jak najlepszą pozycję Polski w Unii Europejskiej i strukturach NATO, a także opowiadającym się za tradycyjnymi wartościami i konserwatyzmem. </p>
+<p>PSL ma przewodniczącego (prezesa), którym wedle stanu na luty 2023 roku jest Władysław Kosiniak-Kamysz. W kierowaniu partią pomagają mu wiceprezesi, sekretarze, skarbnik i członkowie tzw. Naczelnego Komitetu Wykonawczego, który tożsamy jest z władzami partii. PSL skupia w całej Polsce około 100 tysięcy członków i ma swe struktury regionalne i lokalne we wszystkich województwach.</p>
+<p>Co 4 lata zwoływany jest Kongres partii, a między Kongresami zwierzchnictwo nad partią sprawuje tzw. Rada Naczelna. Najwyższy organ wykonawczy partii to wspomniany wcześniej Naczelny Komitet Wykonawczy.</p>
+<p>W przeszłości PSL wchodziło w skład koalicji rządowych w Polsce, między innymi w latach 2007-2015, kiedy współrządziło Polską wraz z Platformą Obywatelską. Obecnie partia pełni funkcję partii opozycyjnej.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Różnice między partią polityczną a organizacją pozarządową:</strong></span></p>
+<ul>
+<li>partia społeczna działa w celu uzyskania wpływu na politykę, zaś organizacja pozarządowa działa na rzecz poprawy sytuacji w danym zakresie, </li>
+<li>partie polityczne działają na podstawie swojego programu wyborczego, zaś organizacje pozarządowe opierają się na swoich statusie, </li>
+<li>do partii polityczne mogą należeć wyłącznie osoby pełnoletnie, zaś niektóre organizacje pozarządowe zrzeszają osoby niepełnoletnie, </li>
+<li>nie wszystkie grupy interesów są zarejestrowane, zaś wszystkie partie polityczne muszą być zarejestrowane.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Partia polityczna i organizacja pozarządowa to dwa różne typy organizacji, które mają odmienne cele i sposoby działania. Oto kilka kluczowych różnic między nimi:</p>
+<ol>
+<li>
+<p>Cel: Partie polityczne działają w celu zdobycia władzy i wprowadzenia swoich poglądów do polityki państwa. Natomiast organizacje pozarządowe działają na rzecz dobra społeczeństwa i wywierają wpływ na decyzje polityczne, ale nie mają na celu bezpośredniego uzyskania władzy.</p>
+</li>
+<li>
+<p>Finansowanie: Partie polityczne często są finansowane przez państwo lub prywatnych darczyńców (tak jak jest między innymi w Stanach Zjednoczonych), a także ze składek członków. Organizacje pozarządowe zaś są zazwyczaj finansowane przez darowizny i granty od prywatnych darczyńców, fundacji i rządu.</p>
+</li>
+<li>
+<p>Struktura: Partie polityczne mają hierarchiczną strukturę, w której istnieją wyraźne stanowiska i zasady sukcesji. Organizacje pozarządowe zazwyczaj mają bardziej demokratyczną strukturę, w której każdy członek ma równe prawa i możliwość uczestnictwa w podejmowaniu decyzji.</p>
+</li>
+<li>
+<p>Działalność: Partie polityczne koncentrują się głównie na działalności politycznej, takiej jak kampanie wyborcze i lobbing. Organizacje pozarządowe zajmują się różnymi dziedzinami, takimi jak ochrona środowiska, pomoc społeczna, prawa człowieka i wiele innych.</p>
+</li>
+</ol>
+<p>Wniosek: Partie polityczne i organizacje pozarządowe różnią się celami, finansowaniem, strukturą i działalnością, co sprawia, że są to dwie różne formy organizacji społecznej.</p><br>

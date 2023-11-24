@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Związek miedzy legitymacją a oceną działalności polityków polega na  tym, że czym <strong><span style="text-decoration: underline;">lepsza jest ocena działalności danego polityka</span></strong> (czym bardziej społeczeństwo jest zadowolone z pracy danego polityka),<span style="text-decoration: underline;"><strong> tym samym wyższy jest poziom legitymizacji pełnienia przez niego danego urzędu</strong></span>. </p>
+<p> </p>
+<p>b) Na podstawie danych przedstawionych na wykresie należy stwierdzić, że poziom legitymizacji władzy prezydenta Andrzeja Dudy jest niższy niż poziom legitymizacji władzy dwóch wcześniejszych prezydentów, a więc Aleksandra Kwaśniewskiego i Bronisława Komorowskiego i jednocześnie obaj z wyżej wskazanych prezydentów odnotowali w swojej karierze politycznej bardzo duży spadek legitymacji ich władzy (Aleksander Kwaśniewski - w czerwcu 2005 r.) ok. 45% respondentów uważało, że źle sprawuje on swój urząd, zaś na wiosnę 2015 r. ok. 49% ankietowanych uważało, że Bronisław Komorowski źle wypełnia swoje zadania), czego nie odnotowano w procesie urzędowania Andrzeja Dudy (każdym badaniu poniżej 40% respondentów negatywnie ocenia sprawowanie przez niego funkcji głowy państwa). Legitymizacja władzy Andrzeja Dudy jest wyższa niż legitymizacja władzy byłego prezydenta - Lecha Kaczyńskiego, bowiem u owego prezydenta na bardzo wysokim poziomie utrzymała się opinia społeczeństwa na temat źle prowadzonych przez niego rządów (np. w czerwcu 2009 r. ok. 69% respondentów negatywnie oceniło rządy L. Kaczyńskiego).</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Legitymizacja oznacza akceptację istniejącego porządku, na przykład aktualnej władzy. Istnieje wiele czynników, które mają wpływ na legitymizację, jednak akceptacja ze strony społeczeństwa jest kluczowa. Ocena funkcjonowania polityków na forum publicznym jest najważniejszym elementem legitymizacji.</p>
+<p><strong>b)</strong></p>
+<p>Jak wynika z danych przedstawionych na wykresach, poziom legitymizacji obecnie urzędującego Prezydenta RP (stan na luty 2023 roku), tj. Andrzeja Dudy, jest stosunkowo wysoki. Wynika to z tego, że w 2019 roku około 60% ankietowanych oceniało jego rządy jako dobre. To wynik lepszy niż na przykład urzędującego w latach 2005-2010 Lecha Kaczyńskiego, a także lepszy niż w końcowym okresie sprawowania urzędu prezydenckiego przez Aleksandra Kwaśniewskiego i Bronisława Komorowskiego. Jednak najwyższą oceną może pochwalić się Aleksander Kwaśniewski, którego działalność jako dobrą oceniało na początku 2003 roku około 80% respondentów (jakkolwiek pod koniec jego drugiej i zarazem ostatniej kadencji poziom ten spadł do około 45%).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Prerogatywa</strong> to uprawnienie prezydenta, które wynika z zajmowanego przez niego stanowiska. Na mocy prerogatywy prezydent może wypełniać określone kompetencje z wyłączeniem kontroli organu przedstawicielskiego, a tym samym nie wymagają one kontrasygnaty rządowej. </p>
+<p> </p>
+<p><strong>Przykładowe prerogatywy, które wywierają największy wpływ na decyzje podejmowane przez inne naczelne organy państwa:</strong></p>
+<ul>
+<li>zarządzanie referendum ogólnokrajowego - prezydent ma możliwość zarządzenia referendum, a tym samym daje szansę wypowiedzenia się suwerenowi (stosując formę demokracji bezpośredniej) w istotnych sprawach dla państwa, </li>
+<li>podpisywania lub odmowy podpisania ustawy - to właśnie prezydent stanowi ogniwo procesu legislacyjnego, bez jego podpisu na projekcie ustawy, niemożliwe jest zakończenie procedury legislacyjnej, a tym samym ustawa nie może wejść w życie, </li>
+<li>powoływanie sędziów - powołując dane osoby na stanowiska sędziów, prezydent ma wpływ jacy ludzie będą orzekać w sądach, a tym samym ma określony wpływ na kształtowanie środowiska sędziowskiego w Polsce.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Prerogatywy Prezydenta RP to uprawnienia, jakie posiada on w związku ze sprawowanym przez siebie urzędem</span></strong>. Za najważniejszą prerogatywę Prezydenta RP można uznać <strong><span style="text-decoration: underline;">prawo weta</span></strong>, które pozwala mu odrzucić ustawę przyjętą przez Sejm RP. Można jednak wskazać także kilka innych bardzo ważnych prerogatyw Prezydenta RP, które są istotne z uwagi na to, że może on dzięki nim mieć znaczący wpływ na kwestie związane z polityką zagraniczną i wewnętrzną państwa. Do preroragatyw tych należą między innymi: mianowanie i odwoływanie ambasadorów oraz innych przedstawicieli Polski za granicą, powoływanie sędziów (na wniosek Krajowej Rady Sądownictwa) czy inicjatywa ustawodawcza.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Prezydent RP, który sprawował swój urząd przez dwie kadencje przewidziane w Konstytucji RP i nadal cieszy się dużym poparciem społecznym, <strong><span style="text-decoration: underline;">nie powinien</span> </strong>mieć możliwość ubiegania się raz jeszcze o ponowny wybór, ponieważ takie działanie może prowadzić do rządów autorytarnych w kraju. Demokracja wymaga zastosowania ograniczenia w zakresie możliwości wielokrotnego urzędowania na najwyższym szczeblu władzy, czyli jako Głowa Państwa Polskiego. Gdyby nie było tego ograniczenia to jedna osoba mogłaby pełnić funkcję Prezydenta RP dożywotnio, czyli de facto takie rozwiązanie groziłoby przejęciem władzy wykonawczej w Polsce przez jednowładcę, który z czasem mógłby stać się dyktatorem. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, ponieważ wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Wydaje się, że Prezydent RP, który sprawował swój urząd przez dwie kadencje przewidziane w <em>Konstytucji RP</em>, a nadal cieszy się dużym poparciem społecznym, powinien mieć możliwość ubiegania się raz jeszcze o ponowny wybór. Zwiększyłoby to możliwości wyboru osób chcących oddać swój głos. Jeśli bowiem Prezydent RP sprawuje swój urząd dobrze i ma spore poparcie społeczne, jest ceniony przez obywateli, to powinni mieć oni szansę raz jeszcze na niego głosować. Warto też zwrócić uwagę na to, że skoro Prezydent RP rządzi przez drugą kadencję, a jednocześnie wie, iż nie będzie mógł zostać wybrany na trzecią kadencję (tak jak ma to miejsce obecnie), to podczas swej drugiej kadencji może mieć mniejszą motywację do pracy. Natomiast gdyby znów mógł ubiegać się o fotel prezydencki, to miałby dodatkowy bodziec, aby starać się pracować dla Polski i Polaków jak najlepiej. Trzeba jednocześnie zrozumieć argumenty tych, którzy twierdzą, że Prezydent RP powinien sprawować swój urząd maksymalnie dwie kadencje. Taki zabieg ma bowiem pomagać w tym, aby dać szansę innym politykom i nie dopuścić do sytuacji, w której szczególnie charyzmatyczny człowiek stałby się kimś na kształt dyktatora, rządzącego jako Prezydent RP przez bardzo długi czas.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><span style="text-decoration: underline;"><strong>Przykłady działań obecnego Prezydenta RP związanych z polityką wewnętrzną:</strong></span></p>
+<ul>
+<li>weto prezydenta w zakresie zmiany ustaw sądowych (lipiec 2017 r.),</li>
+<li>weto prezydenta w sprawie ustawy degradacyjnej, </li>
+<li>zwołanie przez prezydenta narady Biura Bezpieczeństwa Narodowego i ministrów przed szczytem NATO (listopad 2019 r.),</li>
+<li>uhonorowanie Krzyżem Komandorskim z Gwiazdą Orderu Odrodzenia Polski pośmiertnie Wojciecha Narębskiego (luty 2023 r.),</li>
+<li>spotkanie prezydenta z mieszkańcami powiatu brzezińskiego w województwie łódzkim (luty 2023 r.).</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Przykłady działań obecnego Prezydenta RP związanych z polityką zewnętrzną:</strong></span></p>
+<ul>
+<li>udział w szczycie ONZ, </li>
+<li>wizyta pary prezydenckiej na Litwie (listopad 2019 r.),</li>
+<li>udział prezydenta w obchodach 30. rocznicy upadku muru berlińskiego (listopad 2019 r.),</li>
+<li>udział prezydenta w szczycie Grupy Arraiolos (październik 2019 r.),</li>
+<li>spotkanie prezydenta w Londynie z królem Wielkiej Brytanii Karolem III (luty 2023 r.).</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Obowiązki prezydenta RP sprawowały trzy osoby w dniu  <strong><span style="text-decoration: underline;">8 lipca 2010 r.,</span></strong> kiedy to po katastrofie smoleńskiej nowym prezydentem został wybrany Bronisław Komorowski. Do dnia wyborów pełnił on funkcję głowy państwa jako marszałek sejmu. Jednak po wyborze na głowę państwa (ale przed przysiężeniem) złożył on swój mandat poselski na ręce marszałka seniora, a tym samym funkcję prezydenta przejął marszałek senatu - Bogdan Borusewicz (pełnił tę funkcję od godz. 8:15 do godz. 18:30). Po wyborze nowego marszałka sejmu, czyli Grzegorza Schetyny, to on przejął funkcję głowy państwa. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Dniem, w którym obowiązki Prezydenta RP sprawowały trzy osoby, był 8 lipca 2010 roku</span></strong>. Obowiązki Prezydenta RP pełnili wówczas: Bronisław Komorowski, Bogdan Borusewicz i Grzegorz Schetyna. Miało to związek z katastrofą lotniczą w Smoleńsku, w której 10 kwietnia 2010 roku zginął Lech Kaczyński - sprawujący urząd prezydencki od 2005 roku. Jako że drugą osobą w państwie w chwili śmierci Lecha Kaczyńskiego był Bronisław Komorowski (Marszałek Sejmu RP), to on wówczas stał się pełniącym obowiązki Prezydenta RP. Do dnia nowych wyborów prezydenckich pełnił on funkcję głowy państwa jako Marszałek Sejmu RP. Jednak po wyborze na głowę państwa (ale przed zaprzysiężeniem) złożył on swój mandat poselski na ręce marszałka seniora, a tym samym funkcję prezydenta przejął Marszałek Senatu, tj. Bogdan Borusewicz (pełnił tę funkcję od godz. 8:15 do godz. 18:30). Po wyborze nowego Marszałka Sejmu RP, czyli Grzegorza Schetyny, to on przejął obowiązki głowy państwa. Pełnił te obowiązki od 8 lipca do 6 sierpnia 2010 roku, tj. do chwili zaprzysiężenia nowo wybranego Prezydenta RP, którym został Bronisław Komorowski.</p><br>

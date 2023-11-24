@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. book </p>
+<p>take-away</p>
+<p>tip</p>
+<p>self-service</p>
+<p>2. dairy</p>
+<p>roast</p>
+<p>salmon</p>
+<p>boil</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. X: <strong>Zarezerwować</strong> stolik w tej chińskiej restauracji na dzisiejszy wieczór?</p>
+<p>Y: Nie, weźmiemy jedzenie <strong>na wynos</strong>. Jedząc będziemy mogli obejrzeć mecz. </p>
+<p>X: Po prostu nie lubisz zostawiać kelnerowi <strong>napiwku</strong>!</p>
+<p>Y: Nie mają tam kelnerów. To restauracja <strong>samoobsługowa</strong>. </p>
+<p>X: Racja. Ostatnim razem kiedy tam byliśmy, wziąłeś/wzięłaś tyle, że prawie wylewało się z talerza. </p>
+<p>2. X: Beth przychodzi na kolację, co zjemy? Coś z sosem śmietanowym?</p>
+<p>Y: Nie, jest uczulona na wszystkie produkty <strong>mleczne</strong>.</p>
+<p>X: Dobrze, to może <strong>pieczeń</strong>?</p>
+<p>Y: Nie, jest wegetarianką. Ale je ryby. Mamy <strong>łososia</strong>?</p>
+<p>X: Tak. To ja <strong>ugotuję</strong> do tego trochę młodych ziemniaków i fasolkę. </p>
+<p>Y: Świetnie. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. crash</p>
+<p>well-balanced</p>
+<p>varied</p>
+<p>(Nie przechodź na <strong>restrykcyjną</strong> dietę. <strong>Zbilansowana</strong> i <strong>zróżnicowana</strong> dieta to coś, czego potrzebujesz.) </p>
+<p>2. rich</p>
+<p>(Jajka są <strong>bogate</strong> w białko, więc powinniśmy jeść je częściej.)</p>
+<p>3. reduce</p>
+<p>(Jeśli chcesz <strong>zmniejszyć</strong> ślad węglowy, jedz jedzenie wytwarzane lokalnie.)</p>
+<p>4. nutrition</p>
+<p>(Zapomniałem/am swoich okularów, więc nie mogłem/am przeczytać etykiety z informacjami <strong>żywieniowymi</strong> w supermarkecie.)</p>
+<p>5. consumption</p>
+<p>(Zamierzam ograniczyć <strong>spożycie</strong> mięsa, ale nie planuję zostać wegetarianinem/wegetarianką.</p>
+<p>6. fair</p>
+<p>(Ten certyfikat dotyczący <strong>sprawiedliwego</strong> handlu oznacza, że produkcja jest ekologiczna, a pracownicy w nią zaangażowani zarabiają należyte pieniądze.)</p>
+<p>7. low</p>
+<p>(Ryba jest <strong>nisko</strong>węglowodanową alternatywą dla mięsa. Jest też smaczniejsza i mniej tucząca.)</p>
+<p>8. vendors </p>
+<p>(Uwielbiam kupować sezonowe produkty u lokalnych <strong>sprzedawców</strong> na targach owocowo-warzywnych.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. local </p>
+<p>2. carbon</p>
+<p>3. zero</p>
+<p>4. reusable</p>
+<p>5. labels</p>
+<p>6. vegan</p>
+<p>7. cruelty</p>
+<p>8. organic</p>
+<p>9. low</p>
+<p>10. calories</p>
+<p><strong>The extra word is: vegetarian.</strong></p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Warzywa Vicky</p>
+<p>Przyjdź i kup warzywa w Warzywach Vicky  i pomóż ocalić planetę! Nasze jedzenie pochodzi od <strong>lokalnych</strong> sprzedawców, co oznacza, że kupując tu możesz zredukować ślad <strong>węglowy</strong>. Żeby <strong>zminimalizować</strong> wytwarzanie odpadów, nasze torby są <strong>wielorazowe</strong>, a jeśli przyniesiesz ze sobą torbę na następne zakupy, dostaniesz dziesięć procent zniżki na WSZYSTKO. </p>
+<p>Żaden z naszych produktów nie ma plastikowego opakowania - komu potrzebne są <strong>etykiety</strong> dotyczące wartości odżywczych kiedy kupuje świeże owoce i warzywa.</p>
+<p>A jeśli zastanawiasz się nad przejściem na <strong>weganizm</strong>, bo chcesz jeść produkty wolne od <strong>okrucieństwa</strong>, gwarantujemy, że nasze jajka pochodzą od kur z wolnego wybiegu, które przez całe życie wędrowały beztrosko i jadły tylko <strong>organiczne</strong> pożywienie. Nasze warzywa mają <strong>niską</strong> zawartość tłuszczu, <strong>kalorii</strong> i niską cenę!</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. short </p>
+<p>2. value</p>
+<p>3. off </p>
+<p>4. pick</p>
+<p>5. footprint</p>
+<p>6. in</p>
+<p>7. free</p>
+<p>8. go</p>
+<p>9. bag</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Myślałeś/aś o tym, co powiedziałem/am ci o etycznym kupowaniu?</p>
+<p>Y: Tak, ale jak wiesz, mam teraz <strong>mało</strong> pieniędzy. Bardziej zależy mi na dobrym stosunku <strong>jakości</strong> do ceny i pewności, że nie <strong>zostanę oszukany/a</strong> (get ripped off) niż na kupowaniu rzeczy, które są wyprodukowane w etyczny sposób.</p>
+<p>X: To nie musi być wybór. Możesz kupować używane ubrania w sklepach charytatywnych. Czasem można <strong>złapać</strong> prawdziwą okazję. I, ponieważ nie kupujesz nowych ubrań, zmniejszasz <strong>ślad</strong> węglowy. </p>
+<p>Y: Dobry pomysł. Lubię ubrania w stylu vintage. Ale z jedzeniem jest inaczej. Supermarkety są zdecydowanie tańsze od lokalnych targów. </p>
+<p>X: Nie zawsze. Niedawno kupowałem/am jajka, bo, jako wegetarianin/wegetarianka, potrzebuję czegoś bogatego <strong>w</strong> biało. W supermarkecie możesz dostać jajka po 80 pensów, ale te z wolnego wybiegu są prawie po 2 funty. Na targu jest kobieta, która ma własne kury. Sprzedaje świeże jajka po 1,50 £, a są dwa razy większe niż te z supermarketu. Dodatkowo, czuję się lepiej wiedząc, że są są <strong>pozbawione</strong> okrucieństwa. Jeśli chcesz oszczędzić pieniądze, jedz mniej mięsa.</p>
+<p>Y: Co, <strong>przejść</strong> na weganizm?</p>
+<p>X: Nie, jedz mięso raz w tygodniu, rybę dwa razy w tygodniu i cztery razy w tygodniu wegetariańskie jedzenie. A, i nie kupuj plastikowej <strong>torby</strong> za każdym razem, kiedy idziesz na zakupy. Pamiętaj, żeby zabierać tę wielorazową!</p><br>

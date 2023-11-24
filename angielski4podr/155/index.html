@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. (przykład)</p>
+<p>2. my parents didn't want to control my life.</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu z powodu obecnej sytuacji -<em> I wish + past simple</em>. </p>
+<p>3. who I met last weekend is starting at my school next semester.</p>
+<p><strong>Uzasadnienie:</strong> <em>defining relative clause </em>z zaimkiem względnym <em>who</em> (który). </p>
+<p>4. have broken your tablet. </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>must have + past participle.</em></p>
+<p>5. to buy a lot of clothes.</p>
+<p><strong>Uzasadnienie</strong>: czynność powtarzająca się w przeszłości - konstrukcja <em>used to + bezokolicznik.</em></p>
+<p>6. will have been married. </p>
+<p><strong>Uzasadnienie</strong>: czynność, która wydarzy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <span style="text-decoration: line-through;">I'm going to fly</span> <strong>I will be flying </strong></p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie się odbywała w konkretnym momencie w przyszłości - czas <em>future continuous</em>. </p>
+<p>2. <span style="text-decoration: line-through;">didn't borrow</span> <strong>hadn't borrowed</strong></p>
+<p><strong>Uzasadnienie</strong>: wyrażenie niezadowolenia z sytuacji z przeszłości - <em>I wish</em> <em>+ past perfect</em>.</p>
+<p>3. Let's find a restaurant, where they serve vegan food. (zbędny przecinek)</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause </em>z zaimkiem względnym<em> where </em>(gdzie). </p>
+<p>4.<span style="text-decoration: line-through;"> might have done</span> <strong>can't have done</strong></p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>can't have + past participle.</em></p>
+<p>5. I was about <strong>to</strong> turn off the TV when I saw her face on the screen.</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości - <em>be about to</em> + bezokolicznik.</p>
+<p>6. <span style="text-decoration: line-through;">sleep</span> <strong>sleeping</strong></p>
+<p><strong>Uzasadnienie</strong>: opis przyzwyczajenia się do czegoś - konstrukcja <em>get used to + czasownik z -ing.</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. A</p>
+<p><strong>Uzasadnienie</strong>: opis czynności powtarzającej się w przeszłości w zdaniu twierdzącym - konstrukcja z <em>would</em><em>.  </em></p>
+<p>2. C</p>
+<p><strong>Uzasadnienie: </strong>wydarzenie, które miało miejsce przed inną czynnością z przeszłości - <em>czas past perfect</em>.</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em> z zaimkiem względnym <em>which </em>(“którą”). </p>
+<p>4. D</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>must have + past participle.</em></p>
+<p>5. B</p>
+<p><strong>Uzasadnienie: </strong>styl formalny, oficjalne plany - <em>be to</em> + bezokolicznik.</p>
+<p>6. B</p>
+<p><strong>Uzasadnienie</strong>: czynność, która wydarzy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. would have </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z teraźniejszości i jej potencjalne przyszłe następstwa - <em>second conditional</em>. </p>
+<p>2. had rented</p>
+<p><strong>Uzasadnienie</strong>: mowa zależna;<em> confess + that + past perfect</em>.</p>
+<p>3. have been stolen</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>must have + past participle.</em></p>
+<p>4. to reach</p>
+<p><strong>Uzasadnienie</strong>: strona bierna; <em>expect</em> + bezokolicznik z <em>to</em>. </p>
+<p>5. answering</p>
+<p><strong>Uzasadnienie</strong>: <em>avoid + gerund.</em></p>
+<p>6. to be elected/ to elect </p>
+<p><strong>Uzasadnienie</strong>: strona bierna lub czynna; <em>refuse + </em>bezokolicznik <em>z to.</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. to apologise for sending </p>
+<p><strong>Uzasadnienie</strong>: zdanie celowe (<em>called <strong>to </strong>apologise</em>); <em>apologise for + gerund</em>. </p>
+<p>2. If I didn't know you, I would have thought </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja w teraźniejszości i jej wpływ na przeszłość - mieszany tryb warunkowy: <em>if + past simple, would + have + past participle</em>.</p>
+<p>3. is said to be</p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - podmiot + czasownik w stronie biernej + bezokolicznik z <em>to.</em> </p>
+<p>4. encouraged me to take part</p>
+<p><strong>Uzasadnienie</strong>: <em>encourage</em> + dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>5. had told me about it, I would have slept </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej niedoszłe przeszłe następstwa - <em>third conditional</em>.</p>
+<p>6. that she would come </p>
+<p><strong>Uzasadnienie</strong>: mowa zależna, <em>will</em> zmienia się w <em>would</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. for</p>
+<p><strong>Uzasadnienie</strong>:<em> but for</em> - gdyby nie; <em>thank (sb) for</em> - podziękować (komuś) za coś; <em>stick up for sb</em> - stanąć w czyjejś obronie.  </p>
+<p>2. made</p>
+<p><strong>Uzasadnienie</strong>:<em> make sb do sth </em>- zmusić kogoś do zrobienia czegoś; <em>make noise</em> - robić hałas; <em>make a promise</em> - składać obietnicę.</p>
+<p>3. have</p>
+<p><strong>Uzasadnienie: </strong>mieszany tryb warunkowy <em>- if + past simple, would + have + past participle; seem + </em>bezokolicznik <em>z to + have + participle; have a lie-in </em>- spędzać leniwie czas w łóżku.</p>
+<p>4. in</p>
+<p><strong>Uzasadnienie: </strong><em>in-laws</em> - teściowie; <em>major in sth</em> - specjalizować się w czymś; <em>have sth in mind</em> - mieć coś na myśli. </p><br>

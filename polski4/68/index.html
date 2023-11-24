@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>O życiu w przestrzeni zsowietyzowanej świadczą następujące kwestie:</p>
+<ul>
+<li>obecność monumentów upamiętniających komunistycznych przywódców -&gt; "Paweł wyszedł na plac na wprost pomnika Lenina i Stalina."; </li>
+<li>przyjęcie określonej formy zwracania się do innych ludzi -&gt; "Towarzyszu Konradzie!";</li>
+<li>nauczanie zgodne z założeniami komunizmu -&gt; "Dziś godzina konstytucji stalinowskiej [...].";</li>
+<li>kult jednostki -&gt; "Nad szafą z przyborami fizycznymi wisiał portret Stalina.";</li>
+<li>publikacje propagujące idee zgodne z linią polityczną partii -&gt; "Było to najświeższe wydanie «Słownika politycznego.»";</li>
+<li>język przepełniony sformułowaniami typowymi dla ustroju komunistycznego, sugerującymi nieraz ocenę zjawisk -&gt; "Agentura szpiegowska państw kapitalistycznych.", "[...] mas pracujących [...]", "[...] ostoja międzynarodowej reakcji [...]", "WROGOWIE LUDU.";</li>
+<li>bezkrytyczna aprobata komunistycznej władzy, uległość -&gt; "Ostatecznie to oni zwyciężyli, a nie my ich.";</li>
+<li>bierna, konformistyczna postawa -&gt; "Naszym zadaniem zachować substancję narodową, stan posiadania, utrzymać się samym. Nawet położyć uszy po sobie [...]";</li>
+<li>wierność narzuconym przez komunistów przepisom -&gt; "Aha, nawet w rubryce siecznej wymieniono specjalnie: szable. Więc jak ty możesz narażać siebie, no i ostatecznie innych... Przychodzić tu, do mnie, w biały dzień... A gdyby tak nagle rewizja!";</li>
+<li>atmosfera nieufności, zastraszenia -&gt; [...] tak się jednak złożyło, że ludzie, do których właśnie zachodził, odmawiali mu tej łaski."</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Słowa bohatera sugerują, iż znana mu rzeczywistość diametralnie się zmieniła po wkroczeniu Armii Czerwonej. Wojsko przynosi nowy porządek, który prowadzi do zmiany dotychczasowego ładu. Okazuje się, iż prawo nie jest już przestrzegane, stosowane w praktyce. Wręcz obumiera, ponieważ traci swoją użyteczność. Z tego też powodu Konrad stwierdza, że "[..] prawo nie ma zastosowania" - nikt go nie respektuje, każdy może być zagrożony w konfrontacji z brutalnością Sowietów. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Konrad postrzega swoje wybory jako naturalny efekt aktualnej sytuacji politycznej. Uznaje przewagę ZSRR - okazuje się niezwyciężoną siłą. Z tego też powodu bohater rezygnuje z romantycznych idei. Przeciwstawia się zrywom, walce przeciwko przeważającym siłom wroga, ponieważ uważa, takie działania za bezsensowne. Zamiast tego pragnie skupić się na dwóch elementach: "Liczą się tylko fakty i siła". Konrad twierdzi, że trzeba zmienić swój sposób postrzegania rzeczywistości: zamiast bezsensownego przelewania krwi należy raczej skupić się na przetrwaniu. Z tego też powodu bohater reprezentuje postawę opartą na przystosowaniu się do warunków, cierpliwym czekaniu: "Naszym zadaniem zachować substancję narodową, stan posiadania, utrzymać się samym. Nawet położyć uszy po sobie, mówiąc ordynarnie". Kieruje się więc pragmatyzmem, a nie przywiązaniem do wielkich idei. Sama zaś deklaracja bohatera świadczy o tym, że postrzega swoje zajęcie jako takie, które nie wymaga od niego jasnego zadeklarowania swej postawy. W ten sposób Konrad nie opowiada się po żadnej ze stron, niejako ignoruje realia, przez co stara się zapewnić sobie spokój oraz bezpieczeństwo. </p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Racje Konrada:</p>
+<ul>
+<li>Sowieci pokonali Polaków. </li>
+<li>Liczy się tylko faktyczna siła, którą udowadnia trwanie ZSRR.</li>
+<li>Trzeba porzucić czyn, romantyczną walkę, ponieważ nie przynosi żadnych skutków.</li>
+<li>Konieczne jest zadbanie o swoją sytuację - poprzez potulną postawę.</li>
+<li>Polacy przetrwali już sto lat pod panowaniem Rosji - teraz będzie tak samo.</li>
+</ul>
+<p> </p>
+<p> </p>
+<p>Kontrargumenty Pawła:</p>
+<ul>
+<li>Działania Sowietów były podstępne - nie można pokonać kogoś, kto się nie broni.</li>
+<li>Na razie obawy dotyczące wystąpień Polaków są nieuzasadnione.</li>
+<li>Potulność to przejaw wygodnictwa.</li>
+<li>Dawna Rosja, która doprowadziła do zniewolenia Polski, jest czymś innym niż obecna.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Konrad postrzega historię i politykę przez pryzmat faktów oraz siły. Ta ostatnia zaś determinuje rzeczywistość i wszelakie zależności. Ważne dla bohatera są analogie historyczne, przez pryzmat których stara się tłumaczyć sobie realia, słuszność przyjętej postawy uległości: "Zresztą, nie trzeba zapominać, jeżeli już wychodzimy z założeń politycznych, że już raz, i to przez sto lat, byliśmy opanowani przez Rosję i wyszliśmy z tego cało". Dla Konrada najważniejsze jest tym samym przetrwanie, pragmatyzm. Bohater w krytyczny sposób ocenia tradycje romantyczne oraz mentalność rodaków. Według niego idee z minionej epoki utrudniają właściwy odbiór rzeczywistości, ponieważ nie umożliwiają odniesienia sukcesu. Są za to przejawem braku rozsądku, marzycielstwa, zmarnowania wielu żyć w bezsensownej walce. Konrad negatywnie wypowiada się na temat zachowania Polaków. Krytykuje ich za nieuzasadniony optymizm, skłonność do przelewu krwi, który nie przynosi żadnych efektów. Uważa także, że skłonność do wielkich gestów oraz poświęcania się to słabości narodu. </p>
+<p>W wypowiedzi tej ujawnia się przede wszystkim irytacja Konrada wywołana postawą rodaków. Bohater jest wzburzony tym, że Polacy, kierując się wielkimi ideami, wybieraj zazwyczaj śmierć oraz poświęcenie dla ogółu. Można także dostrzec jego zdenerwowanie wywołane rozmową: "Wziął ze stołu okulary, których używał do czytania, i począł je przecierać nerwowo, za czym ciągnął z wzrastającym rozdrażnieniem". Z trudem panuje nad swoją złością: "[...] dokończył Konrad, hamując ponownie wybuch rozdrażnienia". Również dobór słownictwa wskazuje na odczucia bohatera. Wyraża bowiem dezaprobatę względem romantycznych idei, odnosi się do nich w ironiczny sposób służący ich umniejszeniu: ("[...] dziecinne frazesy [...] ", "[...] wiecznej donkiszoterii", "[...] a nie ciągle spoglądać przez różowe szkła romantyzmu"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Końcowy fragment przytoczonego tekstu opisuje tułaczkę bohatera. Prosi on swoich znajomych o przechowanie zabytkowej szabli, jednak każda z napotkanych osób odmawia. W tej scenie szabla zyskuje symboliczne sensy. Przede wszystkim przywołuje określone tradycje, które ukształtowały kraj i wpływały przez wieki na jego sytuację. Przedmiot ten odwołuje się  bowiem do Polski szlacheckiej oraz zjawiska sarmatyzmu, czyli ideologii typowej dla szlachty. Jest więc znakiem historii oraz pamięci na temat przeszłości. Może także symbolizować pewne wartości reprezentowane przez szlachtę, np.: odwagę, waleczność, wyjątkową pozycję w społeczeństwie, skłonność do walki z zagrożeniem. Jednocześnie, w kontekście ukazanych realiów życia, szabla jest wszystkim tym, z czym walczyli komuniści. Obawa przed przechowaniem jej odzwierciedla więc odrzucenie tradycji i pewnego dziedzictwa w imię poczucia bezpieczeństwa. Motyw szabli staje się źródłem ironicznej obserwacji: spadkobiercy Polski szlacheckiej i sarmatyzmu są pozbawieni dumy oraz waleczności swój przodków. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Niedopowiedzenia, gesty i pozostałe niewerbalne znaki wskazują na napięcie w relacjach bohaterów oraz - być może - pewną nieufność. Już na początku rozmowy bohaterowie opisują realia życia w komunistycznym kraju, jednak nie czynią tego wprost. Zamiast tego wykorzystują ogólnikowe słowa: "Gdy prawo nie ma zastosowania", "Mówiono mi [...] że ty podobno... że masz jakieś sposoby, no, możliwości...", "Wolałbym [...] coś takiego, no, aby nie musieć...". Taki sposób wypowiedzi świadczy o tym, iż mężczyźni czują zagrożenie, nie chcą precyzować swoich myśli, ponieważ może to być przyczyną ich zguby. W komunistycznej rzeczywistości nikt nie czuje się bezpiecznie, ponieważ słowo niejednokrotnie obraca się przeciwko człowiekowi, jest źródłem represji. </p>
+<p>W towarzystwie Pawła Konrad zachowuje się poważnie, ponieważ jego pozycja jest silniejsza względem proszącego o pomoc kolegi: "[..] ułowiwszy przelotnie wzrok Pawła, poprawił się z namaszczeniem w krześle". Kiedy jednak pojawia się dyrektorka, Konrad staje się potulny. Swoim zachowaniem okazuje uniżenie względem dyrektorki, co kontrastuje z wcześniejszą postawą: "[...] nie dał jej dokończyć; zerwał się w krzesła i pobiegł do drzwi tym specjalnym truchcikiem starszych panów, w którym obydwie nogi wybiegają jakoś naprzód w zgiętych kolanach, a bardziej ociężały zadek jakby fruwa z tyłu w powietrzu". Ta przemiana sugeruje chęć przypodobania się osobie na wyższym stanowisku, by zyskać jej przychylność. Po powrocie z rozmowy Konrad stara się zademonstrować swój stosunek do pracy: "[...] westchnął, dając tym samym do zrozumienia, jak przykre ma teraz obowiązki, jednocześnie jednak zerknął spod oka podejrzliwie i nawet z pewnym rozdrażnieniem na Pawła, widocznie mając mu za złe, że był mimowolnym świadkiem [...]". Być może nie chce być postrzegany jako osoba, która współpracuje z komunistami. W jego rozważaniach są obecne pewne niedopowiedzenia ("Ostatecznie to oni nas zwyciężyli, a nie my ich.") - za ich pomocą unika wyrażania swoich sądów wprost. Może być to forma ochrony przed potencjalnym donosem.</p>
+<p>Na kontrargumenty Pawła Konrad reaguje ze zdenerwowaniem, gdyż irytują go poglądy kolegi. Z tego też powodu skupia się na błahej czynności: "Wziął ze stołu okulary, których używał do czytania, i począł je przecierać nerwowo [...]". Jednocześnie nie chce sprecyzować, w czyim imieniu się wypowiada, zmusza rozmówcę do domyślenia się pominiętych treści. Zamiast tego formuje swoją myśl w zawoalowany sposób: "Mówię - a mówię to, jak się domyślasz, nie tylko w swoim imieniu , ale... - [...] zniżył głos poufnie - czynników mających szerszy horyzont niż my tu, dwaj". Każda kolejna krytyczna wypowiedź Pawła wzmacnia złość kolegi, ponieważ jest sprzeczna z jego poglądami: "[...] dokończył Konrad, hamując ponownie wybuch rozdrażnienia". Samo zaś spojrzenie na zegarek świadczy o chęci zakończenia rozmowy, zniecierpliwieniu. Potwierdza to rozkojarzenie Konrada, który przestaje się w pełni skupiać na swym gościu: "I Konrad, nie przestając bawić się okularami lewą ręką, prawą przerzucił przez poręcz rozsiadł się wygodniej, powiódł roztargnionym wzrokiem". Dopiero informacja o zawartości pakunku wywołuje wściekłość Konrada. Traci on nad sobą panowanie: "Zerwał się z krzesła na równe nogi.", "I aż zakręcił się z oburzenia na miejscu". Konrad żegna Pawła z wymuszonym uśmiechem, uważnie sprawdza, czy ktoś jest świadkiem ich pożegnania. Zachowanie to świadczy o tym, iż Konrad chce zachować je w dyskrecji, nie czuje się komfortowo.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br>

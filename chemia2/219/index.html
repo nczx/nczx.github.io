@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Równanie reakcji: </p>
+<p><img alt="" height="175" src="./data/933622-0.jpg" width="590"/></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) </p>
+<p>faza wodna: wodny roztwór octu lub soku cytrynowego</p>
+<p>faza olejowa: olej</p>
+<p>b) </p>
+<p>Aby zbadać właściwości emulgatora w majonezie należy przeprowadzić następujące doświadczenie:</p>
+<p><strong>Sprzęt:</strong> zlewka, szklana bagietka</p>
+<p><strong>Odczynniki:</strong> wodny roztwór octu, olej, żółtko jaja kurzego</p>
+<p><strong>Schemat:</strong></p>
+<p><img height="363" src="./data/933669-0.jpg" width="278"/></p>
+<p><strong>Opis:</strong> W zlewce mieszamy wodny roztwór octu i olej. Następnie dodajemy żółtko jaja kurzego i mieszamy do uzyskania jednorodnej masy.</p>
+<p><strong>Obserwacje:</strong> Wodny roztwór octu z olejem tworzy dwie niemieszające się fazy. Po dodaniu żółtka jaja kurzego powstaje biała, gęsta, jednorodna masa.</p>
+<p><strong>Wnioski:</strong> Emulgator w majonezie sprawia, iż masa się nie rozwarstwia i pozostaje jednorodna.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Obliczanie zawartości procentowej olejku w płatkach: </p> <p> <math-expr expr="x=(1\ kg)/(3\ t)*100%=(1\ kg)/(3000\ kg)*100%=0,033%" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Zawartość procentowa olejku różanego w płatkach róży to 0,033%.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zaczynamy od obliczenia masy etanolu potrzebnej do otrzymania 50 g toniku: </p> <p> <math-expr expr='100\ g_"toniku"\ \ -\ \ 20\ g_"etanolu"' syntax="text"></math-expr>   </p> <p> <math-expr expr='50\ g_"toniku"\ \ -\ \ x' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=(50\ g*20\ g)/(100\ g)=10\ g" syntax="text"></math-expr>   </p> <p>Liczymy objętość etanolu:</p> <p> <math-expr expr="V=m/d=(10\ g)/(0,79\ g/(cm^3))=12,66\ cm^3" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Do produkcji 50 g toniku potrzeba 12,66 cm<sup>3</sup> etanolu.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Liczymy masę poszczególnych składników:</p> <p>- skrobia lub kreda:  <math-expr expr="(150\ g*40%)/(100%)=60\ g" syntax="text"></math-expr>    </p> <p>- talk:  <math-expr expr="(150\ g*30%)/(100%)=45\ g" syntax="text"></math-expr>   </p> <p>- tlenek cynku:  <math-expr expr="(150\ g*24%)/(100%)=36\ g" syntax="text"></math-expr>   </p> <p>- stearynian cynku:  <math-expr expr="(150\ g*6%)/(100%)=9\ g" syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Składniki wraz z funkcjami:</p>
+<p>- <em>Aqua</em> - <span style="text-decoration: underline;"><strong>woda</strong></span> - faza wodna </p>
+<p>- <em>Mineral Oil</em> - <span style="text-decoration: underline;"><strong>olej mineralny</strong></span> - faza olejowa</p>
+<p>- <em>Glycerin</em> - <span style="text-decoration: underline;"><strong>gliceryna</strong></span> - substancja nawilżająca</p>
+<p>- <em>Stearic Acid</em> - <span style="text-decoration: underline;"><strong>kwas stearynowy</strong></span> - zabezpiecza przed utratą wody</p>
+<p>- <em>Cera Alba</em> - <span style="text-decoration: underline;"><strong>wosk pszczeli (bielony)</strong></span> - substancja natłuszczająca, tworzy warstwę ochronną skóry</p>
+<p>- <em>Citric Acid</em> - <span style="text-decoration: underline;"><strong>kwas cytrynowy</strong></span> - funkcja rozświetlająca, zapobiega przebarwieniom</p>
+<p>- <em>Citronellol</em> - <span style="text-decoration: underline;"><strong>cytronelol</strong></span> - substancja zapachowa</p>
+<p>- <em>Eugenol</em> - <span style="text-decoration: underline;"><strong>eugenol</strong></span> - substancja zapachowa</p><br>

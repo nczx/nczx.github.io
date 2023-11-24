@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>a) Środki językowe służące budowaniu kontrastu:</p>
+<ul>
+<li>naprzemienne określenia wartościujące pozytywnie i negatywnie ("[...] bo to nasze piękne, znane ze swej pracowitości, z patriotyzmu i z zamiłowania do porządku miasto stało się terenem zbrodniczej prowokacji i krwawych zajść, które wstrząsnęły sumieniem każdego uczciwego poznaniaka, każdego Polaka [...].");</li>
+<li>hiperbole ("zbrodnicza prowokacja", "krwawe zajścia") i eufemizmy ("trudności", "bolączki", "Bo przecież wiadomo, że warunki te nie są takie, jakie chcielibyśmy, żeby były.");</li>
+<li>stygmatyzujące, demonizujące określenia uczestników manifestacji ("zbrodniczy prowokatorzy", "wróg", "imperialistyczni agenci");</li>
+<li>antyteza ("O ile robotnicy Poznania mieli niewątpliwie na celu przedstawienie swych postulatów, co jest ich prawem - to prowokatorzy imperialistyczni mieli na oku coś zupełnie odwrotnego.");</li>
+<li>imitacja dialogu ("Ale czy o to chodziło prowokatorom? Oczywiście, chodziło im o coś zupełnie odwrotnego").</li>
+</ul>
+<p> </p>
+<p>Przedstawione wyżej zabiegi miały na celu stworzenie sztucznych podziałów wśród polskiego społeczeństwa, osłabienie jego solidarności oraz poczucia wspólnoty. Działania te, przywodzące na myśl starożytną zasadę "dziel i rządź" (łac. divida et impera), umożliwiały władzom komunistycznym sprawowanie skutecznej kontroli nad skłóconym narodem.</p>
+<p> </p>
+<p>b) Arbitralność budowanego przez władzę obrazu rzeczywistości polega na:</p>
+<ul>
+<li>jednoznacznym wartościowaniu postaw lub zjawisk społecznych ("zbrodnicza prowokacja", "krwawe zajścia", "zamieszki");</li>
+<li>narzucaniu odbiorcy określonej interpretacji aktualnych wydarzeń ("Ale czy o to chodziło prowokatorom? Oczywiście, chodziło im o coś zupełnie odwrotnego. [...] Chcieliby przeszkodzić w realizacji tych postulatów [...] i [...] wywołać anarchię, która przeszkodziłaby także postępującym procesom demokratyzacji naszego życia.");</li>
+<li>umniejszaniu porażek partii rządzącej ("trudności ekonomiczne", "dokuczliwe bolączki") oraz demonizowaniu opozycji ("Na Poznaniu skupiła się cała uwaga ośrodków imperialistycznych, albowiem chodziło o to, aby Poznań [...] uczynić terenem zamieszek.");</li>
+<li>odwołaniu się do informacji i danych, których prawdziwości przeciętny obywatel nie jest w stanie zweryfikować ("[...] błędy te muszą być i będą natychmiast poprawione, zwłaszcza że decyzja o poprawieniu tych błędów zapadła ze strony rządu i partii jeszcze kilka dni temu, wówczas gdy delegacje robotników przyjęte zostały przez przedstawicieli rządu i słuszne ich postulaty zostały załatwione pozytywnie.");</li>
+<li>roszczeniu przez mówiącego praw do wypowiadania się w imieniu obywateli ("[...] miasto stało się terenem zbrodniczej prowokacji i krwawych zajść, które wstrząsnęły sumieniem każdego uczciwego poznaniaka, każdego Polaka, i które społeczeństwo z całych swoich sił stanowczo potępia.").</li>
+</ul>
+<p> </p>
+<p>c)</p>
+<table border="1" style="border-collapse: collapse; width: 402px; height: 257px;">
+<tbody>
+<tr style="height: 65px;">
+<td style="background-color: #99ccff; text-align: center; width: 197.825px; height: 65px;"><strong>Przykład sloganu</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 197.775px; height: 65px;"><strong>Rola w rytualizowaniu języka przemówienia</strong></td>
+</tr>
+<tr style="height: 104px;">
+<td style="width: 197.825px; height: 104px;">"Bo przecież wiadomo, że warunki te nie są takie, jakie chcielibyśmy, żeby były."</td>
+<td style="width: 197.775px; height: 104px;">przekonanie odbiorców o dobrych intencjach rządu </td>
+</tr>
+<tr style="height: 105px;">
+<td style="width: 197.825px; height: 105px;">"agenci imperialistyczni", "prowokatorzy"</td>
+<td style="width: 197.775px; height: 105px;">przedstawienie opozycji politycznej w złym świetle, zwrócenie Polaków przeciw sobie nawzajem</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Powyższe slogany - poprzez rytualizację języka propagandy - ukazują odbiorcy arbitralną, uproszczoną wizję rzeczywistości - zgodną z interesami władzy i niepodlegającą dyskusji. </p>
+<p> </p>
+<p>d) Przejawy antykomunikacyjności w przemówieniu Cyrankiewicza:</p>
+<ul>
+<li>przewaga słownictwa wartościującego, narzucającego odbiorcy określoną ocenę poszczególnych zjawisk lub postaw ("[...] to nasze piękne, znane ze swej pracowitości, z patriotyzmu i z zamiłowania do porządku miasto stało się terenem zbrodniczej prowokacji i krwawych zajść, które wstrząsnęły sumieniem każdego uczciwego poznaniaka, każdego Polaka, i które społeczeństwo z całych swoich sił stanowczo potępia...");</li>
+<li>dezinformacja ("[...] prowokatorzy i agenci imperialistyczni mieli na oku coś zupełnie odwrotnego. Chcą przeszkodzić w realizacji tych postulatów [...] i chcieliby wywołać anarchię [...].");</li>
+<li>szum informacyjny, wielosłowie ("Jeżeli chodzi o bolączki ujawnione w całym szeregu zakładów pracy w Poznaniu, które w dużym stopniu wywołane zostały błędami i nieprawidłowym stosowaniem obowiązujących przepisów, to rzecz jasna, błędy te muszą być i będą natychmiast poprawione, zwłaszcza że decyzja o poprawieniu tych błędów zapadła ze strony rządu i partii jeszcze kilka dni temu, wówczas gdy delegacje robotników przyjęte zostały przez przedstawicieli rządu i słuszne ich postulaty zostały załatwione pozytywnie.");</li>
+<li>slogany ("Bo przecież wiadomo, że warunki te nie są takie, jakie chcielibyśmy, żeby były."), obietnice pozbawione treści ("Temu zadaniu chcemy poświęcić nasze wysiłki.").</li>
+</ul><br>

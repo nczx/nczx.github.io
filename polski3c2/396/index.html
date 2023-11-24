@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Relacja cz³owieka i psa przypomina relacjê pana oraz s³ugi lub niewolnika, który pragnie zyskaæ aprobatê. Pies jest bowiem w pe³ni zale¿ny od swego w³aœciciela i jego nastrojów. Z tego te¿ powodu robi wszystko, aby zyskaæ jego przychylnoœæ: "Podniós³ na pana wzrok i huœtn¹³ ciê¿kim ogonem - na znak wdziêcznoœci za jedzenie i gotowoœci natychmiastowego ods³u¿enia go." Zale¿noœæ tê mo¿na okreœliæ jako niesymetryczn¹, poniewa¿ zwierzê w pe³ni podporz¹dkowuje siê woli i nakazom cz³owieka, chocia¿ ten niekoniecznie odp³aca siê ¿yczliwoœci¹ i sympati¹: "Ale pan nie zauwa¿y³ jego dotyku i nie odpowiedzia³, jak to zawsze bywa³o, k³ad¹c d³oñ na ³bie - a to ju¿ by³o przykre". Pies staje siê dla pana wrêcz narzêdziem, wymaga siê od niego bezb³êdnego postêpowania, zaœ za ka¿da pomy³kê jest karany. Zwierzê w pe³ni oddaje siê swej s³u¿bie, traktuje j¹ w bardzo powa¿ny sposób i d¹¿y do tego, aby zawsze zadowoliæ swego w³aœciciela. Darzy swego pana g³êbokim przywi¹zaniem i zrobi dla niego wszystko, jednak ten jest wzglêdem niego obojêtny, traktuje Rus³ana w przedmiotowy sposób. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>£agier na dobre ³¹czy losy ludzi i psów, poniewa¿ zwierzêta s¹ potrzebne do skutecznego zarz¹dzania obozem, œcigania uciekinierów. Ich z³¹czenie ma tak¿e wymiar dos³owny: "Potem pan nawin¹³  trochê smyczy na rêkê, a koniec przyczepi³ sobie do pasa. W ten sposób rpzez ca³¹ s³u¿bê byli ze sob¹ zwi¹zani i nie mogli siê wzajemnie zgubiæ". Tresuje siê je w taki sposób, aby wesz³y w rolê stra¿ników i w pe³ni podporz¹dkowa³y siê cz³owiekowi, b³yskawicznie spe³nia³y jego rozkazy. Psa i pana ³¹czy tak¿e silna wiêŸ emocjonalna, poniewa¿ pan dostarcza psu jedzenie, jest dla niego najwa¿niejsz¹ istot¹, która nadaje sens zwierzêcej egzystencji. Podporz¹dkowanie to sprawia, i¿ dla Rus³ana istotna jest tylko s³u¿ba, nie zna niczego oprócz niej i okreœlonych schematów zachowania. Nawet wszystkie jego rozwa¿ania i emocje wi¹¿¹ siê z obowi¹zkami: "A teraz, myœl¹c o tym, jak chytrze uciekinierzy oszukali pana, po prostu podnieca³ siê do pracy; budzi³ w sobie z³oœæ tak d³ugo, a¿ siê naprawdê rozwœcieczy³." </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Rozwi¹zanie poni¿ej: </p>
+<table border="1" style="border-collapse:collapse;width:701px;height:549px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:231.725px;"><strong>Przyk³adowe emocje</strong></td>
+<td style="background-color:#aed581;text-align:center;width:229.775px;"><strong>Cytat</strong></td>
+<td style="background-color:#aed581;text-align:center;width:229.5px;"><strong>Co jest Ÿród³em?</strong></td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">wstyd</td>
+<td style="width:229.775px;text-align:center;"><em>Ale wstyd mu by³o wyci¹gn¹æ j¹ przy panu z miski [...]. </em></td>
+<td style="width:229.5px;text-align:center;">chêæ wyci¹gniêcia koœci z miski - w towarzystwie pana </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;"> entuzjazm</td>
+<td style="width:229.775px;text-align:center;"><em>Rus³an skwapliwie nadstawi³ ³eb i zastrzyg³ uszami, reaguj¹c na dotkniêcie r¹k pana.</em></td>
+<td style="width:229.5px;text-align:center;">wezwanie do s³u¿by </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">niepokój</td>
+<td style="width:229.775px;text-align:center;"><em>Ogarn¹³ go niejasny lêk.</em></td>
+<td style="width:229.5px;text-align:center;">zaskakuj¹ca cisza oraz brak wiêŸniów w barakach </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">zdenerwowanie</td>
+<td style="width:229.775px;text-align:center;"><em>Zadr¿a³ z napiêcia, zacz¹³ gor¹co i g³oœno dyszeæ.</em></td>
+<td style="width:229.5px;text-align:center;">podejrzenie ucieczki wiêŸniów</td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;"> troska</td>
+<td style="width:229.775px;text-align:center;"><em>Otar³ siê barkiem o szynel pana, co znaczy³o, ¿e wszystko rozumie i na wszystko jest gotów [...].</em></td>
+<td style="width:229.5px;text-align:center;">dziwne i ponure zachowanie pana </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">gniew</td>
+<td style="width:229.775px;text-align:center;"><em>Raptem zobaczy³ coœ takiego, ¿e sierœæ na karku mu siê zje¿y³a, a z gard³a wydoby³ siê g³uchy warkot. </em></td>
+<td style="width:229.5px;text-align:center;">dostrze¿enie zmian w obozie</td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">akceptacja</td>
+<td style="width:229.775px;text-align:center;"><em>Rus³an nie mia³ pretensji do pana i nie zarzuca³ mu niczego. </em></td>
+<td style="width:229.5px;text-align:center;">œwiadomoœæ b³êdów pana </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">wœciek³oœæ</td>
+<td style="width:229.775px;text-align:center;"><em>[...] rzuci³ siê z wœciek³ym szczekaniem [...]. </em></td>
+<td style="width:229.5px;text-align:center;">bezczelnoœæ wiêŸniów oraz ich ucieczka</td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">uleg³oœæ </td>
+<td style="width:229.775px;text-align:center;"><em>Rus³anowi chcia³o siê rozp³aszczyæ i pope³zn¹æ na brzuchu [...]. </em></td>
+<td style="width:229.5px;text-align:center;">chêæ zyskania akceptacji pana </td>
+</tr>
+<tr>
+<td style="width:231.725px;text-align:center;">mi³oœæ</td>
+<td style="width:229.775px;text-align:center;"><em>[...] ale i tak robi³o siê wszystko, czego chcia³y te najukochañsze na œwiecie kr¹¿ki [...]. </em></td>
+<td style="width:229.5px;text-align:center;">przywi¹zanie do pana</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Emocje Rus³ana œwiadcz¹ o tym, ¿e bardzo prze¿ywa zaistnia³¹ sytuacjê, doœwiadcza skrajnie odmiennych wra¿eñ. Pozytywne wi¹¿¹ siê z osob¹ pana, który jest dla psa najwa¿niejsz¹ osob¹. Z kolei negatywne wynikaj¹ ze z³oœci zwierzêcia na uciekinierów z obozu. Ich ró¿norodnoœæ oraz zmiennoœæ nadaj¹ Rus³anowi cz³owieczy rys, poniewa¿ jego odczucia przypominaj¹ to, co typowe dla istoty ludzkiej. W ten sposób pies zdaje siê byæ symbolem, który odzwierciedla psychikê funkcjonariuszy oraz ich emocje, przekazuje prawdê na temat obozowych mechanizmów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>a) Przestrzeñ w dziele W³adimowa zostaje ukazana przez pryzmat ograniczonej wiedzy zwierzêcia, dzieli siê na dwie czêœci. Pierwsza z nich, zwi¹zana z obozem, jest oswojona, doœæ bliska, poniewa¿ pies zna zasady jej funkcjonowania. To wiêc nie tylko baraki, pomieszczenia, w których przebywa bohater, lecz tak¿e ca³y teren do samych granic obozu, podlegaj¹cy kontroli psa i jego pana. Z kolei przestrzeñ poza obozem pozostaje niedookreœlona: jest tajemnicza, obca, pozbawiona szczegó³ów. Budzi wiêc niepewnoœæ: "Bia³¹ droga wychodzi³a z obozu niczym nieprzegrodzona, nieprzekreœlona krat¹ bierwion - i bieg³a w las, ku linii ciemnego horyzontu....". Z tego te¿ powodu wszystko, co wa¿ne dla Rus³ana zamyka siê w granicach obozu, zaœ rzeczywistoœæ poza nim stanowi dla psa zagadkê. Takie przedstawienie przestrzeni nie tylko podkreœla odosobnienie obozu, który staje siê samodzielnym œwiatem, niezale¿nym od zewnêtrznych czynników. Zabieg ten odzwierciedla równie¿ sytuacjê funkcjonariusza obozu. Jego egzystencja jest œciœle powi¹zana z miejscem pracy, ono zaœ zapewnia poczucie bezpieczeñstwa i sensu. Z kolei œwiat zewnêtrzny staje siê czymœ groŸnym i obcym, bli¿ej nieokreœlonym, co mo¿e zaburzyæ harmoniê.</p>
+<p>W przytoczonym fragmencie symboliczne znaczenie zyskuj¹ tak¿e dwa kolory: bia³y oraz ¿ó³ty. Ten pierwszy staje siê znakiem zachwiania wiedzy Rus³ana o znanej mu rzeczywistoœci: "Dla Rus³ana by³a to po prostu - biel. I wszystko traci³o przez ni¹ nazwy, wszystko, do czego przywyk³ wzrok i wêch, siê zmienia³o". Jest on symbolem zmian, innej rzeczywistoœci, która dla psa pozostaje niezrozumia³a, poniewa¿ zak³óca jednoznaczny odbiór otoczenia. Zaburza tak¿e znan¹ psu obozow¹ przestrzeñ. Z kolei ¿ó³æ odzwierciedla silne emocje psa, one zaœ wp³ywaj¹ na jego sposób postrzegania realiów, subiektywizm doznañ.</p>
+<p> </p>
+<p>b) Zjawiska i emocje Rus³an postrzega przez pryzmat swych doœwiadczeñ, próbuje je tak¿e t³umaczyæ i definiowaæ na swój zwierzêcy, uproszczony sposób. Nie nazywa ich wprost. Z tego te¿ powodu œnieg jest niczym ¿ywa istota ("Wiêc w³aœnie to tak wy³o w nocy. A teraz siê u³o¿y³o - grub¹ puszyst¹ warstw¹ na bezludnym placu [...]"). Pies nie postrzega go jednak jako zjawiska atmosferycznego, lecz skupia siê wy³¹cznie na aspekcie kolorystycznym, który wp³ywa na sposób odbierania rzeczywistoœci: "Dla Rus³ana by³a to po prostu - biel. I wszystko traci³o przez ni¹ nazwy, wszystko, do czego przywyk³ wzrok i wêch, siê zmienia³o.". Podobnie dzieje siê w przypadku tajemniczej nieobecnoœci wiêŸniów. Pies stara siê wyjaœniæ sobie to zjawisko poprzez znalezienie logicznego wyt³umaczenia tej sytuacji. Wi¹¿e siê ono bezpoœrednio z prac¹ Rus³ana jako stra¿nika: "Ale gdyby wymarli, to przecie¿ on by to poczu³! A jeœli nie on, to inny pies. [...] I zawstydzi³ siê z powodu w³asnej niedomyœlnoœci. Tamci nie umarli, tylko uciekli". Nie potrafi jednak zrozumieæ, i¿ powody znikniêcia wiêŸniów mog¹ byæ zupe³nie inne. Podobnie interpretuje emocje swego pana, poniewa¿ ³¹czy je z potencjaln¹ ucieczk¹ osadzonych. Kiedy myœli o odczuciach cz³owieka, skupia siê przede wszystkim na fizycznej reakcji, która niejako odzwierciedla prze¿ywane emocje: "Rus³an pomyœla³ nawet, ¿e panu zziêb³o w brzuchu - nic dziwnego, skoro czeka ich dzisiaj takie zadanie". Ponadto mo¿na zauwa¿yæ, i¿ bohater bardzo czêsto opisuje zjawiska, które s¹ dla niego trudne do zinterpretowania. Widok otwartych bram, pustki, wspomnienie dziwnego zachowania wiêŸniów wywo³uj¹ oszo³omienie psa. Nie rozumie on bowiem, jak to jest mo¿liwe, aby naruszaæ zasady tego miejsca. </p>
+<p> </p>
+<p>c) Hierarchia obozowa to dla Rus³ana bardzo wa¿ny i sta³y element ¿ycia. Jest on wierny swemu panu, robi wszystko, aby zas³u¿yæ na jego przychylnoœæ. Jednoczeœnie odczuwa oburzenie, kiedy dochodzi do naruszenia tego porz¹dku. Nieobecnoœæ wiêŸniów budzi niepokój, a potem wœciek³oœæ zwierzêcia, dla którego to nietypowa sytuacja. Pies postrzega bowiem siebie jako stra¿nika hierarchii, z tego te¿ powodu jest wyczulony na zaskakuj¹ce zachowanie uwiêzionych: "[...] chodzili gromadami po ca³ym obozie, ha³asowali harmoni¹, wywrzaskiwali piosenki, a jeszcze w dodatku g³upio i bezsensownie dra¿nili psy". Mo¿na wiêc stwierdziæ, i¿ hierarchia jest dla psa najwa¿niejsz¹ wartoœci¹, której pragnie broniæ. Przeciwna sytuacja zaburza bowiem jego œwiatopogl¹d i rutynê. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Rozwa¿ania Rus³ana na temat œmierci przedstawia fragment: "Otar³ siê barkiem o szynel pana, co znaczy³o, ¿e wszystko rozumie i na wszystko jest gotów - nawet na œmieræ. Rus³an nie mia³ jeszcze okazji umieraæ, ale widzia³, jak robi¹ to i ludzie, i psy. By³o to najstraszniejsze ze wszystkiego, ale - jeœli razem z panem - to co innego; Rus³an to wytrzyma". </p>
+<p> </p>
+<p>Rozmyœlania psa sugeruj¹, i¿ nigdy nie doœwiadczy³ œmierci, jednak obserwuje j¹ wœród ludzi i zwierz¹t. Zjawisko to budzi niepokój i strach, ale Rus³an uwa¿a, ¿e je¿eli zginie wraz ze swoim panem, to nie bêdzie siê obawiaæ, zniesie swój los. WypowiedŸ ta wskazuje na œlepe przywi¹zanie do pana - Rus³an chce byæ z nim do koñca, poniewa¿ obecnoœæ tego cz³owieka zapewnia mu poczucie spokoju oraz sensu ¿ycia. Refleksje psa sugeruj¹ tak¿e, i¿ jest ze swym panem nierozerwalnie z³¹czony - nawet w momencie œmierci. PóŸniejsze wygnanie psa drastycznie kontrastuje z jego refleksj¹. Pozostawienie zwierzêcia zdaje siê zapowiadaæ niepewn¹ przysz³oœæ, pozbawion¹ obecnoœci ukochanego pana, w której dominowaæ bêdzie strach i samotnoœæ. Pies bowiem w ten sposób traci swój sta³y punkt odniesienia, musi radziæ sobie zupe³nie sam. Sytuacja ta ujawnia tak¿e brutaln¹ prawdê na temat ufnoœci Rus³ana oraz obojêtnoœci jego opiekuna. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>. </p><br>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. ancient </p>
+<p>(bardzo stare - <strong>starożytne</strong>) </p>
+<p>2. delighted</p>
+<p>(bardzo szczęśliwi - <strong>zachwyceni</strong>)</p>
+<p>3. tiny</p>
+<p>(bardzo mały - <strong>malutki</strong>)</p>
+<p>4. awful</p>
+<p>(źle - <strong>okropnie</strong>)</p>
+<p>5. huge</p>
+<p>(bardzo duże - <strong>ogromne</strong>)</p>
+<p>6. unforgettable</p>
+<p>(coś, co zawsze będę pamiętać - <strong>niezapomniane</strong>)</p>
+<p><s class="odr-strikethrough">enjoyable</s>, <s class="odr-strikethrough">mysterious</s></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. inspiring </p>
+<p>(Film był naprawdę genialny - uważam, że był <strong>inspirujący</strong>. Sprawił, że chcę zmienić świat!) </p>
+<p>2. true to life</p>
+<p>(Fabuła była oparta na faktach i zwykłych sytuacjach - całkowicie w nią uwierzyłem/am, ponieważ była <strong>realistyczna</strong>.)</p>
+<p>3. curious</p>
+<p>(Bohaterowie byli <strong>osobliwymi </strong>ludźmi, bardzo nietypowymi i interesującymi.)</p>
+<p>4. thought-provoking</p>
+<p>(Książka skłoniła mnie do przemyślenia kilku ważnych idei - naprawdę <strong>skłania do refleksji</strong>.)</p>
+<p>5. thrilling</p>
+<p>(Historia jest ekscytująca i dużo w niej akcji. Nie przegapcie tego <strong>porywającego</strong> filmu!)</p>
+<p>6. original</p>
+<p>(To naprawdę <strong>oryginalna</strong> historia. Nigdy wcześniej nie czytałem/am czegoś podobnego.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. enjoyable </p>
+<p><strong>Uzasadnienie</strong>: <em>fun ≈ enjoyable </em>(przyjemne). </p>
+<p>2. amusing</p>
+<p><strong>Uzasadnienie</strong>: <em>funny ≈ amusing </em>(zabawne).</p>
+<p>3. puzzling</p>
+<p><strong>Uzasadnienie</strong>: <em>confusing</em> (niejasne) <em>≈ puzzling </em>(zagadkowe).</p>
+<p>4. dramatic</p>
+<p><strong>Uzasadnienie</strong>: <em>exciting and tense </em>(ekscytujące i pełne napięcia) <em>≈ dramatic </em>(dramatyczne).</p>
+<p>5. unbelievable</p>
+<p><strong>Uzasadnienie</strong>: <em>difficult to believe </em>(trudne do uwierzenia) <em>≈ </em><em>unbelievable </em>(niewiarygodne).</p>
+<p>6. disappointing</p>
+<p><strong>Uzasadnienie</strong>: <em>worse than expected </em>(gorsze niż się spodziewano) <em>≈ disappointing </em>(rozczarowujące).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. a </p>
+<p><strong>Uzasadnienie</strong>: <em>alien </em>(obcy) ≈ <em>from a different planet </em>(z innej planety). </p>
+<p>2. a</p>
+<p><strong>Uzasadnienie</strong>: <em>intriguing </em>(intrygujący) ≈ <em>very interesting </em>(bardzo interesujący).</p>
+<p>3. b</p>
+<p><strong>Uzasadnienie</strong>: <em>terrifying </em>(przerażający) ≈ <em>scary </em>(straszny).</p>
+<p>4. a</p>
+<p><strong>Uzasadnienie</strong>: <em>mysterious </em>(tajemnicze) ≈ <em>difficult to explain </em>(trudne do wyjaśnienia).</p>
+<p>5. b</p>
+<p><strong>Uzasadnienie</strong>: <em>ancient </em>(starożytny) ≈ <em>very old </em>(bardzo stare).</p>
+<p>6. a</p>
+<p>(Dialog był bardzo realistyczny. - a. brzmiał jak naturalna rozmowa)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<table border="1" style="border-collapse: collapse; width: 541px; height: 165px; border-width: 1px; border-color: #192062;">
+<tbody>
+<tr style="background-color: #d0d0e1;">
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;"><strong>big</strong><br/>(duży)</td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;"><strong>small</strong><br/>(mały)</td>
+<td style="width: 104.234px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;"><strong>good</strong><br/>(dobry)</td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;"><strong>bad</strong><br/>(zły)</td>
+<td style="width: 108.109px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;"><strong>funny</strong><br/>(śmieszny)</td>
+</tr>
+<tr>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">huge<br/>(ogromny)</td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">tiny<br/>(malutki)</td>
+<td style="width: 104.234px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">amazing<br/>(niesamowity)</td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">awful<br/>(okropny)</td>
+<td style="width: 108.109px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">amusing<br/>(zabawny)</td>
+</tr>
+<tr>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">enormous<br/>(gigantyczny)  </td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">minute<br/>(drobny)</td>
+<td style="width: 104.234px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">wonderful<br/>(cudowny)</td>
+<td style="width: 104.219px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">terrible<br/>(okropny)</td>
+<td style="width: 108.109px; border-width: 1px; border-color: rgb(25, 32, 98); text-align: center;">hilarious<br/>(przezabawny)</td>
+</tr>
+</tbody>
+</table><br>

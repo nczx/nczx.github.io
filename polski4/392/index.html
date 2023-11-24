@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>W pierwszej wiadomości można dostrzec liczne zabiegi, których celem jest oddanie ekspresji wypowiedzi głosowej. Należą do nich wersaliki ("SZYKUJ NA CITO WIADRA Z WODĄ"), powtórzone litery ("Znooowu!!!"), nadmiar wykrzykników ("!!!!") oraz wyrażenia potoczne ("nawaliło"). W komunikacie pojawia się również element gry językowej, polegającej na graficznym wyodrębnieniu części wyrazu w celu utworzenia nowej treści - o charakterze ironicznym, wręcz wulgarnym ("oczySZCZALNIA"). Wypowiedź najprawdopodobniej pochodzi z prywatnego czatu, służącego nieformalnej, poufnej komunikacji między dwoma użytkownikami.</p>
+<p>Drugi komunikat napisany jest stylem urzędowym. Świadczy o tym obecność kancelaryzmów, takich jak "Szanowni Państwo", "informujemy" czy bezosobowy zwrot "przewiduje się". Styl jest przejrzysty i neutralny, a sam tekst - poprawny pod względem gramatycznym, ortograficznym oraz interpunkcyjnym. Wiadomość mogła zostać zamieszczona na oficjalnej stronie WWW firmy, której nazwa widnieje w stopce ("Przedsiębiorstwo Wodno-Kanalizacyjne <em>Północ</em>").</p>
+<p>Ostatnia wiadomość zawiera graficznie wyeksponowany nagłówek, zwracający uwagę odbiorcy emotikonami wykrzykników. Tekst właściwy cechuje telegraficzna zwięzłość - pojawiają się w nim zdanie pojedyncze nierozwinięte ("Trwa usuwanie usterki.") oraz równoważnik zdania ("Przerwa w dostawie wody [...]."). Komunikat może pochodzić z postu w mediach społecznościowych, za pomocą którego przedsiębiorstwo na bieżąco informuje obserwujących użytkowników o postępach prac nad usterką.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zastosowanie w wypowiedzi znaków <em>emoji</em> sprawia, że tekst wydaje się atrakcyjny pod względem wizualnym. Ponadto emotikony wzmacniają komunikat, powielając lub modyfikując treści zawarte w poszczególnych fragmentach. </p>
+<p> </p>
+<p>Opinia na temat reklamy - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowe rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 435px; height: 256px;">
+<tbody>
+<tr style="height: 48px;">
+<td style="background-color: #99ccff; text-align: center; width: 140px;"><strong>Wypowiedź</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 141px;"><strong>Przejawy ironii</strong></td>
+<td style="background-color: #99ccff; text-align: center; width: 141px;"><strong>Znaczenie</strong></td>
+</tr>
+<tr style="height: 152px;">
+<td style="width: 140px; height: 152px; text-align: center;">"Jestem cenionym krytykiem literackim, chociaż w życiu nie przeczytałem żadnej ksionżki."</td>
+<td style="width: 141px; height: 152px; text-align: center;">
+<p>zestawień dwóch twierdzeń o sprzecznej treści</p>
+<p>błąd ortograficzny </p>
+</td>
+<td style="width: 141px; height: 152px; text-align: center;">drwina z samozwańczych znawców literatury</td>
+</tr>
+<tr style="height: 124px;">
+<td style="width: 140px; height: 124px; text-align: center;">"Co mam zrobić, gdy już skończę to <em>fascynujące</em> zajęcie?"</td>
+<td style="width: 141px; height: 124px; text-align: center;">ujęcie określenia wartościującego w cudzysłów</td>
+<td style="width: 141px; height: 124px; text-align: center;">wyraz znużenia wykonywaną czynnością</td>
+</tr>
+<tr style="height: 123px;">
+<td style="width: 140px; height: 123px; text-align: center;">"Niesamowici są ci politycy - bezbłędnie rozwiązują każdy realny problem ;)"</td>
+<td style="width: 141px; height: 123px; text-align: center;">hiperbola, nagana w formie pochwały</td>
+<td style="width: 141px; height: 123px; text-align: center;">krytyka nieudolności polityków </td>
+</tr>
+</tbody>
+</table><br>

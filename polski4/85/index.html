@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Cechy Dedala:</p>
+<ul>
+<li>rozsądny, </li>
+<li>mądry,</li>
+<li>konsekwentny,</li>
+<li>kreatywny,</li>
+<li>pomysłowy,</li>
+<li>opanowany.</li>
+</ul>
+<p> </p>
+<p>Cechy Ikara:</p>
+<ul>
+<li>lekkomyślny,</li>
+<li>marzycielski,</li>
+<li>nieodpowiedzialny,</li>
+<li>nieposłuszny,</li>
+<li>beztroski,</li>
+<li>ciekawski.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Reinterpretacja mitu polega na tym, że malarz bezpośrednio odwołuje się do jego treści, ale przy tym proponuje nowe spojrzenie. Może w ten sposób wskazywać na wartości, sensy czy problematykę, które są prekursorskie w stosunku do podstawowej interpretacji. Bruegel przedstawia scenę znaną z mitu o Dedalu i Ikarze - jest to upadek Ikara do morza. Artysta proponuje jednak nową perspektywę. Młodzieniec nie znajduje się w centrum dzieła - tragedia już wydarzyła, można dostrzec tylko nogi Ikara. Zamiast tego uwaga malarza skupia się na reakcji otoczenia. Prowadzi to do refleksji na temat losu człowieka oraz powinności każdej jednostki. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Tekst Różewicza odwołuje się do czterech elementów znanych z obrazu Bruegla: Ikara, oracza, pasterza, statku. Poeta jest bardzo wierny temu, co ukazał malarz. Przede wszystkim opisuje moment upadku, utonięcie Ikara. Również na obrazie można dostrzec tonącego młodzieńca - z wody wystają tylko jego nogi. Artyści w zbliżony sposób ukazują także zwykłych ludzi zajętych pracą, którzy nie dostrzegają tragedii Ikara. Bruegel przedstawia bowiem oracza oraz pasterza wypasającego owce - jest on odwrócony tyłem do morza. Postacie te znajdują swoje odzwierciedlenie w wierszu: "porzuć pług / porzuć ziemię", "wiem że oracz winien orać ziemię / pasterz pilnować trzody". Podobnie jest w przypadku statku widocznego po prawej stronie; Różewicz odwołuje się do niego w następujący sposób: "[...] piękny statek płynie dalej / do portu przeznaczenia". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Stosunek podmiotu lirycznego do Ikara ulega ewolucji. Początkowo osoba mówiąca jest nim zafascynowana. Uwzniośla postawę Ikara, ponieważ określa go mianem "syna marzenia". Jest więc to niezwykła jednostka, która kieruje się swoimi ideałami. Podmiot liryczny pragnie, by każdy dostrzegł tragiczną śmierć młodzieńca, nie pozostawał na nią obojętny. Z tego też powodu zachowanie oracza i pasterza budzi niewątpliwe potępienie: "porzuć pług / porzuć ziemię / otwórz oczy / tam Ikar". Podmiot domaga się, by to dramatyczne wydarzenie nie zostało zapomniane, by wszyscy je dostrzegli. W drugiej części wiersza osoba mówiąca rezygnuje ze swego buntowniczego zachowania. Nie narzuca już bowiem innym ludziom tego, jak powinni się zachować w obliczu śmierci Ikara. Umniejsza też samą tragedię młodzieńca, ponieważ mówi o niej w następujący sposób: "przygoda Ikara nie jest ich przygodą". Jest tym samym pogodzona z jego nieuchronnym przeznaczeniem.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a) Podmiot liryczny w pierwszej części utworu wyraża oburzenie postawą oracza oraz pasterza. Uważa, że powinni oni porzucić swoje codzienne obowiązki, ponieważ na ich oczach rozgrywa się wielka tragedia: "porzuć pług / porzuć ziemię / otwórz oczy". Nie można więc pozostać obojętnym, udawać, że nic się nie stało. Osoba mówiąca wzywa innych, by spojrzeli na upadającego Ikara i wyzbyli się w ten sposób swego zaślepienia. Krytykuje bierność oracza i pasterza, ich skupienie na prozaicznych czynnościach czy też nieczułość względem dramatu Ikara, reprezentowanych przez niego idei.</p>
+<p> </p>
+<p>b) W drugiej części zmienia się stanowisko podmiotu lirycznego. Twierdzi on, że pasterz oraz oracz powinni sumiennie wypełniać swoje obowiązki - taka jest bowiem ich rola: "wiem że oracz winien orać ziemię / pasterz pilnować trzody". Najważniejszym punktem odniesienia dla nich powinno być codzienne życie oraz związane z tym obowiązki. Podmiot liryczny rezygnuje z przekonania o tym, iż ludzie powinni się skupiać na upadku Ikara, odkrywa, że ich przeznaczenie jest inne i nie ma w tym nic gorszącego.</p>
+<p> </p>
+<p>c) Język wypowiedzi świadczy o zmianie stosunku emocjonalnego osoby mówiącej względem pasterza i oracza. W pierwszej części utworu podmiot liryczny wyraża oburzenie postawą tych osób. O oraczu wypowiada się w następujący sposób: "patrz patrz słuchaj pniu". Sugeruje on dość pogardliwą ocenę człowieka, który nie dostrzega tragedii Ikara, ma ograniczone horyzonty. Również słowo "pastuch" można uznać za nacechowane emocjonalnie, wskazujące na zacofanie postaci. W drugiej części wiersza zmienia się stosunek podmiotu; ma to związek z zastosowaniem innego słownictwa: "wiem że oracz winien orać ziemię / pasterz pilnować trzody". Osoba mówiąca nie traktuje już tych postaci z poczuciem wyższości, zaczyna rozumieć, że przeznaczenie każdego człowieka jest inne.</p>
+<p> </p>
+<p>d) Pasterz to postać obecna w mitologii i Biblii. W mitach bardzo często pasterzem stawali się bogowie. Przykładem jest Apollo, dla którego wypas trzody króla Admeta stał się formą pokuty za zabicie Cyklopów, czy też Hermes. Istniały także bóstwa uznawane za patronów pasterzy - był nim Pan. Motyw pasterza jest także związany z losami Parysa - ocalił go mężczyzna zajmujący się wypasem trzody i przyuczył do tego zawodu. Pasterz pojawia się również na kartach Biblii - W Starym Testamencie oraz Nowym Testamencie (np. w przypowieściach). Zazwyczaj symbolizuje Boga, który opiekuje się swym ludem i chroni go przed jakimkolwiek niebezpieczeństwem. Z kolei w Nowym Testamencie mianem tym określa się Chrystusa - jako duchowego przewodnika. </p>
+<p>Kontekst ten pogłębia refleksję dotyczącą wiersza Różewicza, a przy tym sugeruje nowe tropy interpretacyjne. Konteksty biblijne i mitologiczne wskazują bowiem na uwznioślenie pracy pasterza, nadanie jej głębszego sensu lub też boskiego aspektu. Z tego też powodu codzienny trud pasterza w wierszu Różewicza zyskuje dodatkowe sensy, jest nie mniej ważny od dramatycznego losu Ikara, a przy tym zostaje wpisany w porządek świata. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Prawo i obowiązek, o których wspomina podmiot liryczny, można odnieść do jego relacji ze światem, tego, jak powinien zachowywać się w obliczu dramatycznych wydarzeń dotykających jednostkę. Z tego też powodu osoba mówiąca rozważa istotę tej sytuacji: czy będzie to obowiązek, czy też prawo, by protestować przeciwko pewnym zjawiskom. Niepewność tę można jednocześnie odnieść do postawy poety i jego zachowania. W ten sposób podmiot liryczny przedstawia dwie koncepcje artysty. Z jednej strony może bowiem czuć moralną odpowiedzialność, by za każdym razem podejmować walkę, formułować morał. Z drugiej zaś można to uznać za jego prawo, co sugeruje, iż nie występuje wtedy konieczność. Nowa postawa osoby mówiącej sugeruje odmienne podejście do kwestii praw i obowiązków - dla każdego człowieka są inne. Staje się nimi akceptacja świata oraz przekonanie o tym, iż każdy ma swoje przeznaczenie, czego nie można zmienić. </p>
+<p> </p>
+<p>Przedstawienie ról poetów - część indywidualna </p><br>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowo:</p>
+<p>Przestrzeñ ukazana w wierszu podlega niew¹tpliwej mityzacji. Podmiot liryczny przedstawia bowiem kniejê, morze, gaj. Tereny te wyró¿niaj¹ siê swoj¹ dzikoœci¹, rozleg³oœci¹ oraz atmosfer¹ tajemnicy, przez co zdaj¹ siê odzwierciedlaæ kobiec¹ naturê oraz nastrój intymnoœci i zmys³owoœci. Pozwalaj¹ tak¿e na wyra¿enie w subtelny sposób relacji ³¹cz¹cej kochanków, poniewa¿ podmiot liryczny eksploruje przestrzeñ, doœwiadcza jej za pomoc¹ ró¿nych zmys³ów. W wierszu Baczyñskiego mo¿na tak¿e znaleŸæ odwo³ania do dwóch odmiennych porz¹dków: dnia ("Albo w gaju, gdzie jesteœ / brzoz¹, bia³ym powietrzem / i mlekiem dnia") i nocy ("Jeszcze w mroku owinê, tak jeszcze ró¿¹ nocy / i minie œwiat ga³¹zk¹, strzêpem albo gestem"). Nocna pora oraz ciemnoœæ wprowadzaj¹ nieco melancholijny nastrój, poniewa¿ przypominaj¹ o kruchoœci œwiata; buduje to tak¿e poczucie kameralnoœci, wywo³uje te¿ skojarzenia z tajemn¹ schadzk¹ zakochanych. Z kolei dzieñ pozwala na poznanie otoczenia w jego prawdziwiej formie, dostrze¿enie piêkna. Powi¹zanie dnia z biel¹ sugeruje czystoœæ, szlachetnoœæ, dobro. Samo zaœ przedstawienie uzupe³niaj¹cych siê pór oraz zwi¹zanych z tym zmian oœwietlenia mo¿e wskazywaæ na charakter zwi¹zku bohaterów tekstu - jest on ponadczasowy, zaœ namiêtnoœæ zakochanych realizuje siê w ka¿dych okolicznoœciach. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>G³êbia i gêstwina ukazane s¹ w niezwykle sugestywny sposób. W przedstawieniu kniei zostaje wykorzystane porównanie: "[...] jak wieczór - ciemnej", które podkreœla panuj¹cy w niej mrok wywo³any zagêszczeniem drzew. Charakter przestrzeni przybli¿aj¹ tak¿e s³owa: "wo³anie nadaremne / daremny plusk". W poœredni sposób przypominaj¹ o tym, ¿e gêstwina prowadzi do zagubienia siê cz³owieka, który pozostaje bezradny wobec jej potêgi. Odwo³anie do gaju pojawia siê tak¿e w ostatniej strofie. W niej to podmiot liryczny uto¿samia adresatkê z potê¿nym i wiekowym drzewem - wykorzystuje w tym celu uosobienie oraz epitety. Symboliczn¹ g³êbiê wody wprowadza zaœ przede wszystkim metaforyczne ukazanie cia³a wybranki jako morza. Jest ono szumi¹ce, staje siê Ÿród³em synestezji: "delfinem srebrnie ryte" i koj¹cych doznañ: "w muszli twojego cia³a szumi¹ce snem". Osoba mówi¹ca mo¿e siê w nie zag³êbiæ: Jeszcze tak w ciebie p³yn¹c [...]". Wskazane elementy - w kontekœcie tematyki wiersza - zdaj¹ siê symbolizowaæ zmys³owoœæ, zapomnienie oraz si³ê kobiecoœci, wprowadzaj¹ kameralny nastrój oraz poczucie odosobnienia. Wywo³uj¹ równie¿ wra¿enie tajemniczoœci, które towarzyszy intymnej relacji ³¹cz¹cej bohaterów. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Mê¿czyzna zostaje przedstawiony jako wêdrowiec, cz³owiek zagubiony w swej kochance. Przyjmuje rolê odkrywcy, ale tak¿e obserwatora, który pragnie poznaæ cia³o swej wybranki: "W potoku w³osów twoich, w rzece ust, / kniei jak wieczór - ciemnej / wo³anie nadaremne / daremny plusk". W dalszej czêœci utworu staje siê p³ywakiem i uwa¿nym s³uchaczem: "us³yszê w tobie morze delfinem srebrnie ryte". Ostatecznie zaœ przemienia siê w bugaj oraz ptaka, jednoczy siê ze œwiatem natury i ukochan¹.</p>
+<p> </p>
+<p>b) Na pocz¹tku utworu kobieta zostaje pokazana jako potok i rzeka. Wywo³uje równie¿ skojarzenia z kniej¹, w której mo¿na zab³¹dziæ. Nastêpnie przemienia siê w odbicie w oczach podmiotu lirycznego, kojarzy siê te¿ mówi¹cemu ze ³z¹. Kolejna transformacja prowadzi do tego, i¿ wybranka jest uto¿samiona z morzem, w którym p³ywa delfin, zaœ jej cia³o to muszla. Zamienia siê tak¿e w "brzozê, bia³e powietrze / i mleko dnia". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W utworze dominuje intymny i zmys³owy nastrój, który wynika z podejmowanej tematyki. Wiersz, jak wskazuje sam tytu³, opowiada bowiem o zbli¿eniu miêdzy kochaj¹cymi siê osobami - ma ono nie tylko wymiar fizyczny, ale równie¿ duchowy. Fantastyczne przemiany, którym ulegaj¹ bohaterowie, wprowadzaj¹ atmosferê tajemnicy oraz magii, pewnego odrealnienia sytuacji, przez co zyskuje ona uniwersalny, ponadczasowy wymiar. Wiersz jest tak¿e przesycony erotyzmem - wynika to ze œmia³ego obrazowania: "trysnê szumem bugaju", "Jeszcze tak w ciebie p³yn¹c [...]". Jedynie dedykacja koñcz¹ca utwór wprowadza pewien smutek oraz przeczucie roz³¹ki: "w ka¿dy czas - duch czekaj¹cy w prochu". Nastrój utworu ró¿ni siê od pozosta³ych dzie³ Baczyñskiego, poniewa¿ nie dominuje w nim niepokój, groza, wra¿enie nadci¹gaj¹cej katastrofy. Zamiast tego kluczowa jest subtelnoœæ, atmosfera tajemnicy i fascynacji ukochanym cz³owiekiem. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Dedykacja utworu, co mo¿na wywnioskowaæ na podstawie dopisku pod wierszem, jest poœwiêcona ukochanej Basi. Zakoñczenie wiersza przede wszystkim podkreœla niezmiennoœæ uczucia ³¹cz¹cego zakochanych. Nie wyobra¿aj¹ sobie ¿ycia bez siebie, o czym œwiadcz¹ s³owa: "Jeden dzieñ - a na têsknotê - wiek". Dedykacja ta podkreœla intymnoœæ relacji podmiotu lirycznego oraz jego wybranki. Pojedynczy dzieñ czy gest zostaj¹ bowiem zestawione z wiekiem oraz pochodem. Dla osoby mówi¹cej znaczenie ma tylko kochanka - skupia sw¹ uwagê wy³¹cznie na niej. Z tego te¿ powodu deklaruje, i¿ mimo up³ywu czasu, a nawet œmierci, ich mi³oœæ wszystko przetrwa, co wskazuje na jej duchowy charakter. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br>

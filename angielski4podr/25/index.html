@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>The speaker is going to cover the following topics: </strong></p>
+<p>1. current technological solutions that already exist</p>
+<p>2. other technological solutions, e.g. smart traffic lights</p>
+<p>3. the solutions for further into the future.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Today, I'm going to talk about ... </p>
+<p>I'm going to begin by talking about ...</p>
+<p>I'll go on to discuss ...</p>
+<p>And finally, I'll mention ...</p>
+<p>... for instance ...</p>
+<p>If anyone has any questions (about the agenda), please fell free to ask now.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. draw your attention </p>
+<p>are several reasons </p>
+<p>2. strong evidence </p>
+<p>problem with</p>
+<p>3. to make</p>
+<p>fact that </p>
+<p>4. all from me</p>
+<p>you found</p>
+<p>please feel free</p>
+<p> </p>
+<p><strong>Tłumaczenie (odpowiedniki wstawionych fragmentów zostały pogrubione):</strong></p>
+<p>1. Drodzy Rodzice! Dziś chciałbym/chciałabym <strong>skierować waszą uwagę</strong> na problem, który dotyka wszystkich nastolatków, mianowicie wysokość kieszonkowego, które wszyscy dostajemy. J<strong>est kilka powodów</strong>, dla których uważam, że nasze cotygodniowo wypłacane pieniądze powinny być większe. </p>
+<p>2. Podczas gdy istnieją <strong>mocne dowody</strong> na to, że regularne testy zmuszają uczniów, żeby uczyli się więcej i mają pozytywny wpływ na ich wyniki szkolne, <strong>problem z</strong> tym argumentem jest taki, że nie uwzględnia on emocjonalnych potrzeb uczniów. </p>
+<p>3. Kolejna kwestia, którą <strong>chciałbym/chciałabym poruszyć</strong> jest to, że nie mamy szansy zasugerować własnych rozwiązań. <strong>Faktem jest</strong>, że opinie uczniów rzadko są wysłuchiwane przez władze szkoły. </p>
+<p>4. To już <strong>wszystko ode mnie</strong>. Dziękuję bardzo za wysłuchanie i mam nadzieję, że moja prezentacja <strong>was zainteresowała</strong>. Jeśli macie jakieś pytania, <strong>zachęcam do ich zadawania</strong> i spróbuję na nie odpowiedzieć. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. discuss other‿solutions a </p>
+<p>2. today‿I'm going to b</p>
+<p>3. talking‿about transport a</p>
+<p>4. what we know‿about a</p>
+<p>5. talking to you‿about b</p>
+<p>6. science and‿technology a</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

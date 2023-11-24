@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Po połączeniu zdań w każdym z nich można odszukać kolokację. Zostały one wypisane pod każdym podpunktem.</strong></p>
+<hr/>
+<p> </p>
+<p>1. c</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>backpacking holiday</em> (wakacje z plecakiem). </p>
+<p>2. h</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>do some trekking</em> (wybrać się na pieszą wędrówkę).</p>
+<p>3. e</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>pack light</em> (spakować mało rzeczy).</p>
+<p>4. g</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>sleeping bags</em> (śpiwory)</p>
+<p>5. d</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>city break</em> (krótkie wakacje w mieście). </p>
+<p>6. b</p>
+<p><strong>Uzasadnienie</strong>: powstała fraza to <em>must-see places</em> (miejsca konieczne do zobaczenia).</p>
+<p> </p>
+<p><strong>Niewykorzystane odpowiedzi:</strong> a, f. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. budget</p>
+<p><strong>Uzasadnienie</strong>: <em>to fit everyone's budget</em> - mieszczące się w każdym budżecie.</p>
+<p>2. vast sums</p>
+<p><strong>Uzasadnienie</strong>: <em>to spend vast sums</em> - wydać ogromne kwoty. </p>
+<p>3. adrenaline pumping</p>
+<p><strong>Uzasadnienie</strong>: <em>to get one's adrenaline pumping</em> - podnieś poziom adrenaliny.</p>
+<p>4. theme park (park rozrywki)</p>
+<p>5. resorts</p>
+<p><strong>Uzasadnienie</strong>: <em>popular resorts</em> - popularne kurorty.</p>
+<p>6. run into (wpaść na)</p>
+<p>7. on foot (pieszo)</p>
+<p>8. rent (wypożyczyć)</p>
+<p>9. wander</p>
+<p><strong>Uzasadnienie</strong>: <em>to wander around</em> - spacerować. </p>
+<p>10. tourist attractions (atrakcje turystyczne)</p>
+<p>11. hunt for</p>
+<p><strong>Uzasadnienie</strong>: <em>to hunt for souvenirs</em> - polować na pamiątki.</p>
+<p>12. soaking up</p>
+<p><strong>Uzasadnienie</strong>: <em>to soak up the atmosphere</em> - chłonąć atmosferę.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. deserted </p>
+<p>2. breathtaking</p>
+<p>3. flea</p>
+<p>4. skyline</p>
+<p>5. stunning</p>
+<p>6. winding</p>
+<p>7. peak</p>
+<p>8. remote</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. W trakcie spaceru zatrzymaliśmy się na odległej, <strong>opuszczonej</strong> plaży, którą mieliśmy tylko dla siebie przez cały dzień. </p>
+<p>2. Widok gór był <strong>zapierający dech w piersiach</strong> - nigdy nie widziałem/am czegoś tak niesamowitego.</p>
+<p>3. Kupiłem/am fantastyczny płaszcz na <strong>pchlim</strong> targu, który odbywa się w niedziele w Madrycie.</p>
+<p>4. Moim marzeniem jest zobaczyć <strong>panoramę</strong> Nowego Jorku, szczególnie Empire State Building. </p>
+<p>5. Moi dziadkowie wybrali się na trzydniową wycieczkę pociągiem przez Kanadę. Powiedzieli, że zobaczyli <strong>oszałamiającą</strong> scenerię. </p>
+<p>6. Spędziliśmy poranek spacerując <strong>krętymi</strong> uliczkami starego miasta.</p>
+<p>7. Zaśnieżony <strong>szczyt</strong> góry Ararat są dobrze widoczne z Erywania, stolicy Armenii.</p>
+<p>8. Chciałem/am wybrać się do <strong>odległego</strong> miejsca i udało mi się - najbliższy sklep jest oddalony o 25 km.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. winding (kręta)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>opuszczona, prywatna, ustronna (plaża) </p>
+<p>2. adrenaline (adrenalina)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>(zapierający/a dech w piersiach) krajobraz, widok, prędkość</p>
+<p>3. remote (odległa)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>oszałamiająca, robiąca wrażenie, stale zmieniająca się, (sceneria)</p>
+<p>4. valley (dolina)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>strzeliste, śnieżne, gór (szczyty)</p>
+<p>5. secluded (ustronna)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>miasta, miejska, wyróżniająca się (panorama)</p>
+<p>6. skyline (panorama)</p>
+<p><strong>tłumaczenie pozostałych słów: </strong>(kręta/te) ulica, alejki, ścieżki</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. ever-changing scenery </p>
+<p>2. distinctive skyline</p>
+<p>3. winding street/alley/path</p>
+<p>4. secluded beach</p>
+<p>5. mountain/towering/snowy peaks</p>
+<p>6. breathtaking speed</p>
+<p> </p>
+<p><strong>Tłumaczenie zdań (wstawione słowa zostały pogrubione):</strong></p>
+<p>1. Uwielbiam tę <strong>ciągle zmieniającą się scenerię</strong> - w jednej chwili góry, za chwilę pustynia albo las deszczowy. Wszystko na jednaj małej wyspie!</p>
+<p>2. Londyn ma niezwykle <strong>charakterystyczną panoramę</strong> ze słynnymi drapaczami chmur takimi jak the Shard, the Gherkin i oczywiście koło obserwacyjne - London Eye. </p>
+<p>3. Dystans do hostelu w linii prostej wynosił tylko 2 km, ale musieliśmy przejść <strong>krętą ulicą/aleją/ścieżką</strong>, co wyniosło w sumie 5 km.</p>
+<p>4. Znaleźliśmy <strong>ustronną plażę</strong> z pięknym złotym piaskiem, o której wiedziało tylko kilka innych osób. </p>
+<p>5. Kiedy odsłoniły się chmury, zdaliśmy sobie sprawę, że byliśmy otoczeni przez<strong> górskie/ strzeliste/ zaśnieżone szczyty</strong>, wszystkie były 3000 metrów nad nami. </p>
+<p>6. Jechaliśmy z <strong>zapierającą dech w piersiach prędkością</strong> i musieliśmy poprosić kierowcę, żeby zwolnił. </p><br>

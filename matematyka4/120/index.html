@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>a)</strong></p> <p>Rysunek:  </p> <p><img alt="" height="387" src="./data/1210347-0.jpg" width="420"/></p> <p>Zauważmy, że</p> <p><span> <math-expr expr="abs(EF)=3sqrt2" syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr="abs(GC)=3/2 sqrt2" syntax="text"></math-expr> </span>   </p> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>GCC<sub>1</sub></strong> mamy:</p> <p><span> <math-expr expr="h^2=6^2+(3/2sqrt2)^2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="h^2=36+9/2" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="h^2=81/2 \ \ \ ^^ \ \ \ h&gt;0" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="h=9/sqrt2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='h=frac(9sqrt2)(2) \ ["cm"]' syntax="text"></math-expr> </span></p> <p>Obliczmy pole trójkąta <strong>FEC<sub>1</sub></strong>. Mamy:</p> <p><span> <math-expr expr='P=1/2 cdot 3sqrt2 cdot frac(9sqrt2)(2)=ul(ul( 13,5 \ ["cm"^2] ))' syntax="text"></math-expr> </span>     </p> <hr/> <p><strong>b)</strong></p> <p>Rysunek: </p> <p><img alt="" height="350" src="./data/1210347-1.jpg" width="416"/></p> <p>Punkty <strong>G</strong> i <strong>H</strong> są środkami krawędzi - odpowiednio - <strong>DD<sub>1</sub></strong> i <strong>BB<sub>1</sub></strong>. </p> <p>Zauważmy, że odcinki <strong>AH</strong>, <strong>HC<sub>1</sub></strong>, <strong>GC<sub>1</sub></strong>, <strong>AG</strong> to przeciwprostokątne w trójkątach prostokątnych o przyprostokątnych długości <strong>3 cm</strong> i <strong>6 cm</strong>, więc:</p> <p><span> <math-expr expr="|AH|=|HC_1|=|GC_1|=|AG|" syntax="text"></math-expr> </span>  </p> <p>Z powyższej równości wynika, że czworokąt <strong>AHC<sub>1</sub>G</strong> jest rombem.</p> <p>Skoro punkty <strong>G</strong> i <strong>H</strong> są środkami krawędzi <strong>DD<sub>1</sub></strong> i<strong> BB<sub>1</sub></strong>, to </p> <p><span> <math-expr expr='abs(GH)=abs(DB)=6sqrt2 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Odcinek <strong>AC<sub>1</sub></strong> jest przekątną sześcianu. Korzystając ze <span style="text-decoration: underline;">wzoru na długość przekątnej sześcianu</span> wiemy, że</p> <p><span> <math-expr expr='abs(AC_1)=6sqrt3 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Obliczmy pole tego przekroju. Korzystając ze <span style="text-decoration: underline;">wzoru na pole rombu</span> mamy:</p> <p><span style="font-weight: 400;"> <span> <math-expr expr='P=1/2*6sqrt2*6sqrt3=1/2*36sqrt6= ul(ul( 18sqrt6\ ["cm"^2] ))' syntax="text"></math-expr> </span>  </span></p> <hr/> <p><strong>c)</strong></p> <p>Rysunek:</p> <p><img alt="" height="386" src="./data/1210347-2.jpg" width="404"/></p> <p>Powstały przekrój <strong>DBFE</strong> jest trapezem równoramiennym. </p> <p>Wiemy, że kąt <strong>PSG</strong> ma miarę <strong>60<sup>o</sup></strong>. </p> <p>Rozważmy trójkąt prostokątny <strong>SPG</strong>. Korzystając ze związku między długościami boków w trójkącie o kątach <strong>30<sup>o</sup>, 60<sup>o</sup></strong>,<strong> 90<sup>o</sup></strong> mamy:</p> <p><span> <math-expr expr='abs(SP)=6/sqrt3 = 2sqrt3 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr='h=abs(SG)=4sqrt3 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>Naszkicujmy kwadrat<strong> ABCD</strong>:</p> <p><img alt="" height="317" src="./data/1210347-3.jpg" width="333"/></p> <p>Zauważmy, że trójkąty <strong>KRD</strong> i <strong>BLQ</strong> to trójkąty prostokątne równoramienny, więc</p> <p><span> <math-expr expr='abs(DK)=abs(LB)=2sqrt3 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>Wyznaczmy długość odcinka <strong>KL</strong>. Mamy:</p> <p><span> <math-expr expr='abs(KL)=(6sqrt2-4sqrt3) \ ["cm"]' syntax="text"></math-expr> </span>   </p> <p>Skoro <strong>|KL|=|RQ|=|EF|</strong>, to mamy:</p> <p><span> <math-expr expr='abs(EF)=(6sqrt2-4sqrt3) \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Obliczmy pole trapezu <strong>DBFE</strong>. Korzystając ze <span style="text-decoration: underline;">wzoru na pole trapezu</span> mamy:</p> <p><span> <math-expr expr='P=frac( (6sqrt2+6sqrt2-4sqrt3) cdot 4sqrt3)(2)=(12sqrt2-4sqrt3) cdot 2sqrt3 = 24sqrt6-24=ul(ul( 24(sqrt6-1) \ ["cm"^2] ))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Rysunek:  </p> <p><img alt="" height="429" src="./data/1210553-0.jpg" width="337"/></p> <p>Zauważmy, że</p> <p><span> <math-expr expr="abs(AC)=4sqrt2" syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr="abs(DS)=2sqrt2" syntax="text"></math-expr> </span></p> <hr/> <p>Wiedząc, że pole trójkąta <strong>ACH</strong> jest równe <strong>16</strong>, to mamy:</p> <p><span> <math-expr expr="1/2 cdot 4sqrt2 cdot h = 16" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="2sqrt2 h = 16 \ \ \ |:2sqrt2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="h=8/sqrt2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="h=4sqrt2" syntax="text"></math-expr> </span>       </p> <hr/> <p>Korzystając z funkcji<strong> cosinus</strong> w trójkącie prostokątnym <strong>ACH</strong> mamy:</p> <p><span> <math-expr expr="cos alpha = frac(2sqrt2)(4sqrt2)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="cos alpha = 1/2" syntax="text"></math-expr> </span></p> <p>zatem</p> <p><span> <math-expr expr="ul(ul(alpha = 60^@))" syntax="text"></math-expr> </span>    </p><br>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Poezja, która nie ocala traci swe znaczenie, poniewa¿ nie jest symbolem prawdy i cz³owieczeñstwa. W takiej sytuacji cechuje j¹ fa³sz oraz degradacja, na co wskazuj¹ s³owa j¹ opisuj¹ce: "Wspólnictwem urzêdowych k³amstw". O jej upadku, utracie znaczenia œwiadczy tak¿e zestawienie jej z "Piosenk¹ pijaków, którym za chwilê ktoœ poder¿nie gard³a". Taka liryka nie ma pozytywnego wp³ywu na rzeczywistoœæ, jest bezcelowa, ulotna, wrêcz prymitywna, gdy¿ nie broni kluczowych wartoœci. Z kolei odwo³anie siê do "Czytanki z panieñskiego pokoju" sugeruje, i¿ poezja pozbawiona swej donios³ej roli staje siê b³aha, naiwna, przedstawia uproszczon¹ lub wyidealizowan¹ wizjê rzeczywistoœci. Pozbawia j¹ to tak¿e wartoœci artystycznej. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowe aluzje do literatury romantycznej:</p>
+<ul>
+<li>nadanie poecie szczególnego znaczenia - jest on przewodnikiem, który ocala ludzi i narody; </li>
+<li>odwo³anie do obrzêdu dziadów - pozostawianie pokarmu dla zmar³ych;</li>
+<li>podkreœlenie wyj¹tkowej roli poezji, która kszta³tuje rzeczywistoœæ i jej moralny wymiar;</li>
+<li>nawi¹zanie do obecnej w romantyzmie tradycji tyrtejskiej.</li>
+</ul>
+<p> </p>
+<p>Aluzje do poezji romantyczne œwiadcz¹ o tym, i¿ poeta wchodzi w polemikê z pewnymi ideami, podstawami ukszta³towanymi przez romantyzm. W jego wypowiedzi mo¿na zauwa¿yæ, i¿ o ile pewne elementy zyskuj¹ akceptacjê (rola poety i poezji), o tyle inne zostaj¹ stanowczo odrzucone. Dzieje siê tak w przypadku tradycji tyrtejskiej, poniewa¿ wed³ug osoby mówi¹cej nie zapewnia ona ocalenia, natomiast odwo³uje siê tylko do si³y i przemocy. Nie gloryfikuje wiêc walki, œmierci, co by³o typowe w romantyzmie. Aluzje do poezji romantycznej umo¿liwiaj¹ podmiotowi skonfrontowanie swoich przemyœleñ na temat roli poety oraz nakreœlenie wizji twórczoœci¹, któr¹ bêdzie konsekwentnie wciela³ w ¿ycie. Jednoczeœnie nawi¹zania te w symboliczny sposób zamykaj¹ przesz³oœæ, o czym œwiadczy pozostawienie ksi¹¿ki na grobie. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowe rozwi¹zanie: </p>
+<table border="1" style="border-collapse:collapse;width:702px;height:819px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:230.65px;"><strong>Figura poetycka</strong></td>
+<td style="background-color:#aed581;text-align:center;width:230.65px;"><strong>Przyk³ad</strong></td>
+<td style="background-color:#aed581;text-align:center;width:230.7px;"><strong>Funkcja</strong></td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">apostrofa</td>
+<td style="width:230.65px;text-align:center;"><em>Ty, którego nie mog³em ocaliæ</em></td>
+<td style="width:230.7px;text-align:center;">Apostrofa wskazuje na odbiorcê wypowiedzi, jednoczeœnie wp³ywa na uroczysty ton.</td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">anafora</td>
+<td style="width:230.65px;text-align:center;">
+<p><em>To, ¿e chcia³em dobrej poezji, nie umiej¹c,</em></p>
+<p><em>To, ¿e póŸno poj¹³em jej wybawczy cel, </em></p>
+<p><em>To jest i tylko jest ocalenie.</em></p>
+</td>
+<td style="width:230.7px;text-align:center;">Rytmizuje wypowiedŸ, podkreœla znaczenie powtarzaj¹cych siê s³ów. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">metafora</td>
+<td style="width:230.65px;text-align:center;"><em>Przysiêgam, nie ma we mnie czarodziejstwa s³ów.</em></td>
+<td style="width:230.7px;text-align:center;">Nadaje u¿ytym s³owom nowych znaczeñ. Umo¿liwia oryginalnie zaprezentowanie treœci.</td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">powtórzenie</td>
+<td style="width:230.65px;text-align:center;"><em>To jest i tylko jest ocalenie.</em></td>
+<td style="width:230.7px;text-align:center;">Akcentuje sens powtórzonych s³ów, które potwierdzaj¹ wci¹¿ aktualne i niezmienne znaczenie poezji. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">elipsa</td>
+<td style="width:230.65px;text-align:center;"><em>¯ywi¹c zlatuj¹cych siê umar³ych - ptaki. </em></td>
+<td style="width:230.7px;text-align:center;">Prowadzi do kondensacji treœci, ale tak¿e dynamizuje tekst i zachêca odbiorcê do pobudzenia swej wyobraŸni. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">epitet</td>
+<td style="width:230.65px;text-align:center;"><em>[...] z panieñskiego pokoju.</em></td>
+<td style="width:230.7px;text-align:center;">Uplastycznia poetyckie obrazy, przyczynia siê do ich ukonkretnienia. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">inwersja</td>
+<td style="width:230.65px;text-align:center;"><em>Sypano na mogi³y proso albo mak </em></td>
+<td style="width:230.7px;text-align:center;">Wprowadza podnios³y nastrój. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">kontrast</td>
+<td style="width:230.65px;text-align:center;"><em>To, co wzmacnia³o mnie, dla ciebie by³o œmiertelne</em></td>
+<td style="width:230.7px;text-align:center;">Zestawienie to uwypukla ró¿nicê miêdzy sytuacj¹ podmiotu a zmar³ego. </td>
+</tr>
+<tr>
+<td style="width:230.65px;text-align:center;">wyliczenie</td>
+<td style="width:230.65px;text-align:center;">
+<p><em>Wspólnictwem urzêdowych k³amstw,</em></p>
+<p><em>Piosenk¹ pijaków, którym za chwilê ktoœ poder¿nie gard³a,</em></p>
+<p><em>Czytank¹ z panieñskiego pokoju.</em></p>
+</td>
+<td style="width:230.7px;text-align:center;">Uwypukla przekazywane treœci, wskazuje na mnogoœæ pewnych zjawisk. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Przyk³adowe elementy retoryki:</p>
+<ul>
+<li>zastosowanie œrodków typowych dla wypowiedzi retorycznych (np. anafor, wyliczeñ);</li>
+<li>klarowna oraz przejrzysta struktura wypowiedzi;</li>
+<li>obecnoœæ czasowników 1 . os. lp, które wskazuj¹ na osobisty stosunek mówi¹cego do prezentowanej kwestii ("nie mog³em ocaliæ", "Przysiêgam");</li>
+<li>trójdzielna kompozycja (wstêp - nawi¹zanie kontaktu z odbiorc¹, rozwiniêcie - przedstawienie tematu i argumentów; zakoñczenie - konkluzja);</li>
+<li>spójnoœæ oraz logicznoœæ wypowiedzi;</li>
+<li>obecnoœæ argumentów potwierdzaj¹cych tezê podmiotu (dotycz¹c¹ roli poezji).</li>
+</ul>
+<p> </p>
+<p>Jêzyk poety odzwierciedla wyra¿one przez niego w utworze pogl¹dy. Jest on bowiem doœæ powœci¹gliwy, ale pozwala na wyra¿enie istoty myœli - poeta czyni to w logiczny i klarowny sposób. W utworze pojawiaj¹ siê s³owa w swym podstawowym sensie - twórca nie wykorzystuje wiêc "czarodziejstwa s³ów", lecz w wiarygodny sposób stara siê oddaæ swe przemyœlenia. Z tego te¿ powodu wiersz nie wyró¿nia siê kwiecistym jêzykiem, który czarowa³by odbiorcê. Przypomina raczej precyzyjny wywód potwierdzaj¹cy niezwyk³¹ rolê poezji - jako Ÿród³a ocalenia ludzi. Kwestia ta przejawia siê tak¿e w powa¿nym sposobie ukazania liryki - staje siê si³¹ pozwalaj¹c¹ na uratowanie cz³owieczeñstwa. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
+<p>.</p><br>

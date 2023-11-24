@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. deserted</p>
+<p>(Nie sądzę, żebym mógł/mogła spędzić wakacje na <strong>bezludnej</strong> wyspie. Potrzebuję towarzystwa.) </p>
+<p>2. mishaps</p>
+<p>(To miały być wakacje moich marzeń, ale seria <strong>niefortunnych wypadków</strong> podczas podróży zrujnowała je.)</p>
+<p>3. market</p>
+<p>(Kiedyś kupowałem/am ubrania na pchlim <strong>targu</strong>, ale teraz nie mam czasu szukać okazji.)</p>
+<p>4. poisoning</p>
+<p>(Ramsay jest w pokoju z okropnym <strong>zatruciem</strong> pokarmowym - nie może przyjść na kolację.)</p>
+<p>5. repellent</p>
+<p>(Nie mogę uwierzyć, że nie zabrałeś/aś żadnego <strong>środka</strong> odstraszającego komary!)</p>
+<p>6. soak up</p>
+<p>(Zostańmy tu na chwilę i <strong>chłońmy</strong> atmosferę starego miasta, dobrze?)</p>
+<p>7. vaccinated</p>
+<p>(Jeśli chcesz jechać do Azji, musisz się <strong>zaszczepić</strong> przeciwko kilku chorobom.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. C</p>
+<p><strong>Uzasadnienie</strong>: <em>make something into something</em> - zmienić coś w/no coś. </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie</strong>: <em>venture out</em> - zaryzykować wyprawę gdzieś.</p>
+<p>3. D</p>
+<p><strong>Uzasadnienie</strong>: <em>stunning scenery</em> - zachwycająca sceneria.</p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: <em>unexpected destination</em> - niespodziewany cel.</p>
+<p>5. B</p>
+<p><strong>Uzasadnienie</strong>: <em>gained skills</em> - zdobyte umiejętności.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. We asked him what happened, but he kept silent.</p>
+<p>We asked him what <strong>had</strong> happened, but he kept silent. </p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji która miała miejsce przed innym wydarzeniem z przeszłości - czas <em>past perfect</em>. </p>
+<p> </p>
+<p>2. We decided not to visit the ancient ruins because Lily <span style="text-decoration: line-through;">has</span> seen them before.</p>
+<p>We decided not to visit the ancient ruins because Lily <strong>had</strong> seen them before.</p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji która miała miejsce przed innym wydarzeniem z przeszłości - czas <em>past perfect</em>.</p>
+<p> </p>
+<p>3. I couldn't go because I <span style="text-decoration: line-through;">studied</span> for an exam the next day.</p>
+<p>I couldn't go because I <strong>was studying</strong> for an exam the next day.</p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji trwającej w konkretnym momencie w przeszłości - czas <em>past continuous</em>.</p>
+<p> </p>
+<p>4. Don't trust her! She <span style="text-decoration: line-through;">was</span> always making up stories.</p>
+<p>Don't trust her! She <strong>is</strong> always making up stories.</p>
+<p><strong>Uzasadnienie</strong>: irytująca sytuacja w teraźniejszości - czas <em>present continuous</em>.</p>
+<p> </p>
+<p>5. When Florence was young, her parents <span style="text-decoration: line-through;">use</span> to have a small cottage by the sea.</p>
+<p>When Florence was young, her parents <strong>used</strong> to have a small cottage by the sea.</p>
+<p><strong>Uzasadnienie</strong>: opis stanu z przeszłości - konstrukcja <em>used to</em>.</p>
+<p> </p>
+<p>6. Jo <span style="text-decoration: line-through;">used to do</span> volunteer work in Kenya in 2009.</p>
+<p>Jo <strong>did </strong>volunteer work in Kenya in 2009.</p>
+<p><strong>Uzasadnienie</strong>: zakończona sytuacja z przeszłości, która odbyła się w konkretnym czasie - czas <em>past simple</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. did you use to go</p>
+<p><strong>Uzasadnienie</strong>: pytanie o czynność powtarzającą się, przyzwyczajenie z przeszłości - konstrukcja <em>used to</em>. </p>
+<p>2. had put</p>
+<p><strong>Uzasadnienie</strong>: opis czynności, która wydarzyła się przed innym wydarzeniem w przeszłości - czas <em>past perfect</em>.</p>
+<p>3. was listening</p>
+<p><strong>Uzasadnienie</strong>: sytuacja w trakcie trwania w przeszłości - czas <em>past continuous</em>.</p>
+<p>4. was</p>
+<p><strong>Uzasadnienie</strong>: stan powtarzający się w przeszłości - czas <em>past simple</em>.</p>
+<p>5. get used to living</p>
+<p><strong>Uzasadnienie</strong>: opis przyzwyczajania się do czegoś - konstrukcja <em>get used to</em>.</p>
+<p>6. didn't follow<strong>*</strong></p>
+<p><strong>Uzasadnienie</strong>: sytuacja zakończona w przeszłości - czas <em>past simple</em>. </p>
+<p>7. Are you used to making</p>
+<p><strong>Uzasadnienie</strong>: pytanie o czyjeś przyzwyczajenie - konstrukcja <em>be used to</em>. </p>
+<p> </p>
+<p><strong>*</strong> W powyższym rozwiązaniu wbrew poleceniu dwa razy został użyty czas <em>past simple</em>. Nie użyto natomiast <em>would</em>, ponieważ nie pasuje do żadnego ze zdań. Należy pamiętać, że <em>would</em> używamy, kiedy mówimy o sytuacjach, zachowaniach (nie stanach) powtarzających się w przeszłości, ale tylko w zdaniach twierdzących. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. were still packing when </p>
+<p><strong>Uzasadnienie</strong>: opis czynności będącej w trakcie wykonywania w przeszłości - czas <em>past continuous</em>. </p>
+<p>2. is used to travel</p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś przyzwyczajenia - konstrukcja <em>be used to</em>.</p>
+<p>3. we had never</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzyła się przed inną sytuacją w przeszłości - czas <em>past perfect</em>.</p>
+<p>4. had learnt </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzyła się przed inną sytuacją w przeszłości - czas <em>past perfect</em>.</p>
+<p>5. when we were visiting</p>
+<p><strong>Uzasadnienie</strong>: opis tła wydarzenia - czas <em>past continuous</em>.</p>
+<p>6. used to meet </p>
+<p><strong>Uzasadnienie</strong>: sytuacja powtarzająca się w przeszłości, przyzwyczajenie - konstrukcja <em>used to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. had never taken out </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzyła się przed inną sytuacją z przeszłości - czas <em>past perfect</em>. </p>
+<p>2. used to walking </p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś przyzwyczajenia - konstrukcja <em>be used to</em>.</p>
+<p>3. were refurbishing it </p>
+<p><strong>Uzasadnienie</strong>: sytuacja trwająca w konkretnym momencie w przeszłości - czas <em>past continuous</em>.</p>
+<p>4. didn't fit my budget</p>
+<p><strong>Uzasadnienie</strong>: sytuacja zakończona w przeszłości - czas <em>past simple</em>. <em>Fit somebody's budget</em> - mieścić się w czyimś budżecie.</p>
+<p>5. had lost valuable things</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzyła się przed inną sytuacją z przeszłości - czas <em>past perfect</em>.</p>
+<p>6. get used to running into</p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś przyzwyczajania się - konstrukcja <em>get used to</em>.</p><br>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Problem number one is that the traffic flow systems aren't flexible. The other problem is the occupancy of cars in cities.</p>
+<p><strong>Fragment w tekście:</strong> "Some experts argue that the traffic flow systems aren't flexible enough to cope.(...) The size and occupancy of cars in urban areas is also a matter of concern." - Niektórzy eksperci uważają, że systemy usprawniające ruch drogowy nie są wystarczająco elastyczne. (...) Wielkość i obłożenie samochodów w obszarach miejskich również jest powodem do zmartwień. </p>
+<p>2. A solution to problem number one is installation of smart traffic lights. The second problem can be solved by replacing cars by moving electric pods. </p>
+<p><strong>Fragment w tekście:</strong> "In the near future, cities will be installing smart traffic lights, which will analyse the amount of traffic flowing past them and will modify how frequently the lights change to clear traffic more efficiently. (...) Experts predict that in ten or twenty years' time, many cars will have been replaced by independently moving electric pods."- W bliskiej przyszłości miasta będą instalowały inteligentną sygnalizację świetlną, która będzie analizowała natężenie ruchu w jej obrębie i dostosuje częstotliwość zmiany światła w celu efektywnego usprawnienia ruchu drogowego. (...) Eksperci przewidują, że w ciągu dziesięciu lub dwudziestu lat wiele samochodów zostanie zastąpionych samodzielnie poruszającymi się elektrycznymi kabinami."</p>
+<p> </p>
+<p><strong>Przykładowa odpowiedź:</strong></p>
+<p>3. I would find a text like this on a blog or in a magazine. The use of verbs in first person singular in the introduction shows the readers who the author of the text could be and indicates that the text is not written in formal style. The author addresses a universal and interesting topic which could attract many readers of a magazine or a blog. </p>
+<p>(Znalazłbym/znalazłabym taki tekst na blogu albo w czasopiśmie. Użycie czasowników w pierwszej osobie liczby pojedynczej we wstępie pokazuje czytelnikom, kim może być autor i wskazuje na to, że teks nie jest pisany językiem formalnym. Autor porusza uniwersalny i ciekawy temat, który może zainteresować wielu czytelników czasopisma albo bloga.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Paragraph 1 - b, c, f</p>
+<p>Paragraph 2 - c, e, g, h</p>
+<p>Paragraph 3 - c, d, e, h</p>
+<p>Paragraph 4 - a, c, </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. d </p>
+<p>2. a</p>
+<p>3. c</p>
+<p>4. b</p><br>

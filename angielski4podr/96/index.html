@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. The purpose of the article is to recommend the film titled "Once<em>"</em>.</p>
+<p>(Celem artykułu jest polecenie filmu zatytułowanego "Once".) </p>
+<p>2. The writer gives the readers some information about the director of the film and his previous films, the genre of the film, the cast, the setting, the plot, the reception and the rewards that the film was awarded and nominated. </p>
+<p>(Autor tekstu dzieli się z czytelnikami informacjami o reżyserze filmu, jego wcześniejszych filmach, gatunku filmu, obsadzie, scenerii, fabule, odbiorze oraz nagrodach i nominacjach, które film otrzymał.)</p>
+<p>3. The writer finds the film worth seeing and he/she strongly recommends watching it.</p>
+<p>(Autor tekstu uważa, że film jest wart zobaczenia i gorąco poleca jego obejrzenie.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <strong>Fragment w tekście</strong>: "It's a musical set in Dublin, with a cast of almost unknown actors, and what a fantastic job they did!" - Jest to musical osadzony w Dublinie z prawie nieznanymi aktorami, ale jaką świetną wykonali pracę! </p>
+<p>2. <strong>Fragmenty w tekście</strong>: "If you have some spare time (...), let me tell you about something well worth seeing." - Jeśli masz trochę wolnego czasu (...), pozwól, że opowiem ci o czymś wartym zobaczenia.</p>
+<p>"It's quite an old film, but if you haven't seen it, I strongly recommend you do." - To dosyć stary film, ale jeśli jeszcze go nie widziałeś/aś to gorąco ci go polecam.</p>
+<p>3. <strong>Fragmenty w tekście</strong>: "It was directed by John Carney, the guy behind<em> Being Again</em> (2013) and <em>Sing Street</em> (2016). It's a musical set in Dublin, with a cast of almost unknown actors (...)" - Został wyreżyserowany przez Johna Carney'a, stojącego za filmami "Being Again" (2013) i "Sing Street" (2016). Jest to musical osadzony w Dublinie z prawie nieznanymi aktorami (...). </p>
+<p>"A song from the film called <em>Falling Slowly</em> won an Oscar for Best Original Song in 2007 and (...) soundtrack album was nominated for two Grammy Awards." - Piosenka z filmu zatytułowana "Falling Slowly" zdobyła Oscara za najlepszą piosenkę oryginalną w 2007 roku a (...) album ze ścieżką dźwiękową był nominowany do dwóch nagród Grammy. </p>
+<p>4. <strong>Fragmenty w tekście</strong>: "(...) with a cast of almost unknown actors, and what a fantastic job they did!" - Jest to musical osadzony w Dublinie z prawie nieznanymi aktorami, ale jaką świetną wykonali pracę!</p>
+<p>"It's all filmed in and around the gorgeous city of Dublin, so you get a fantastic insight into life there." - Wszystko to nakręcone zostało w cudownym mieście Dublinie, więc mamy doskonały wgląd w tamtejsze życie.</p>
+<p>"However, without a doubt the best thing about the film is the enchanting music (...) - Jednakże, bez wątpienia najlepsza w tym filmie jest czarująca muzyka (...). </p>
+<p>"The story told is truly profound, with brilliant music and convincing acting, and all filmed in a beautiful city." - Przedstawiona historia jest naprawdę przenikliwa, ze świetną muzyką i przekonującą grą aktorską, a wszystko to nakręcone w pięknym mieście. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. directed</p>
+<p>(Został <strong>wyreżyserowany</strong> przez...) </p>
+<p>2. set</p>
+<p>(Akcja <strong>rozgrywa się</strong> w...)</p>
+<p>3. best</p>
+<p>(<strong>Najlepsze</strong>/ najgorsze w filmie jest...)</p>
+<p>4. worth</p>
+<p>(Film jest <strong>wart</strong> zobaczenia, ponieważ...)</p><br>

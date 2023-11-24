@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. exam</p>
+<p>(Możesz napisać, oblać albo poprawić <strong>egzamin</strong>.) </p>
+<p>2. private</p>
+<p>(Publiczna szkoła w Zjednoczonym Królestwie to to samo co <strong>prywatna</strong> szkoła w Stanach Zjednoczonych.)</p>
+<p>3. do</p>
+<p>(Możesz <strong>uzyskać</strong> stopień naukowy, <strong>zrobić</strong> pracę domową czy <strong>radzić</strong> sobie dobrze w konkretnym przedmiocie.)</p>
+<p>4. academic</p>
+<p>(Prawo, ekonomia i literatura to przykłady przedmiotów <strong>akademickich</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. f - odpowiednik tytułu licencjata w dziedzinie nauk humanistycznych </p>
+<p>2. c - odpowiednik tytułu licencjata w dziedzinie nauk ścisłych</p>
+<p>3. b - odpowiednik tytułu magistra studiów menadżerskich</p>
+<p>4. a - odpowiednik tytułu doktora nauk humanistycznych</p>
+<p>5. e - odpowiednik tytułu magistra w dziedzinie nauk ścisłych</p>
+<p>6. d - odpowiednik tytułu magistra w dziedzinie nauk humanistycznych</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>She's going to choose a BA programme. </p>
+<p>(Zamierza wybrać studia licencjackie w dziedzinie nauk humanistycznych.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. apply for a grant </p>
+<p>(próbować dostać fundusze na konkretny akademicki projekt - <strong>ubiegać się o dotacje</strong>) </p>
+<p>2. scrape through</p>
+<p>(odnieść sukces, ale z wielką trudnością - <strong>ledwo przejść</strong>)</p>
+<p>3. win a scholarship</p>
+<p>(zdobyć pieniądze za dobre wyniki w nauce na studiach - <strong>zdobyć stypendium naukowe</strong>)</p>
+<p>4. attend lectures</p>
+<p>(chodzić na zajęcia na uniwersytecie - <strong>uczęszczać na wykłady</strong>)</p>
+<p>5. linguistics</p>
+<p>(nauka badająca funkcjonowanie języka - <strong>lingwistyka</strong>)</p>
+<p>6. tuition fees</p>
+<p>(pieniądze, które płaci się za naukę - <strong>czesne</strong>)</p>
+<p>7. faculty</p>
+<p>(instytut na uniwersytecie - <strong>wydział</strong>)</p>
+<p>8. major in</p>
+<p>(<strong>specjalizować się w</strong>)</p>
+<p>9. dissertation, thesis</p>
+<p>(długa praca pisemna będąca ostatnią częścią dyplomu naukowego - <strong>dysertacja</strong>, <strong>praca dyplomowa</strong>)</p>
+<p>10. halls of residence</p>
+<p>(budynki, często na terenie kampusu, w których mieszkają studenci - <strong>akademiki</strong>)</p>
+<p>11. humanities</p>
+<p>(przedmioty takie jak historia, literatura, filozofia, itp. - <strong>nauki</strong> <strong>humanistyczne</strong>)</p>
+<p>12. master's degree </p>
+<p>(stopień naukowy, który studenci otrzymują po pierwszym stopniu - <strong>tytuł magistra</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. in this faculty  </p>
+<p>win a scholarship</p>
+<p>2. writing MA thesis</p>
+<p>3. our hall of residence</p>
+<p>attending morning lectures</p>
+<p>4. apply for a grant </p>
+<p>tuition fees</p>
+<p>5. scraped through</p>
+<p>majoring in </p>
+<p>the PhD</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. <span style="text-decoration: line-through;">passed</span> <strong>failed </strong></p>
+<p>2. <span style="text-decoration: line-through;">a bachelor's dissertation in one</span> <strong>two papers in both </strong></p>
+<p>3. <span style="text-decoration: line-through;">the strictest</span> <strong>really cool, the best </strong></p>
+<p>4. <span style="text-decoration: line-through;">is</span> <strong>isn't</strong></p>
+<p>5. <span style="text-decoration: line-through;">BA</span> <strong>BSc</strong></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

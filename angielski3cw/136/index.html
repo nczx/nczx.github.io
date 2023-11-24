@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. be </p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę czasownikiem w bezokoliczniku, skoro poprzedza ją czasownik łączący się z <em>to</em>. Czasownik <em>to be</em> (być) pasuje w tym kontekście: "(...) mówi się, że <strong>jest </strong>jednym z najbardziej kompletnych zamków średniowiecznych w Szkocji". </p>
+<p>2. has</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę czasownikiem posiłkowym w czasie <em>present perfect </em>(tu: <em>has </em>dla <em>she, he, it</em>), aby mówić o wydarzeniu, które miało miejsce w bliżej nieokreślonym momencie w przeszłości (<em>recent </em>- ostatnie).</p>
+<p>3. of</p>
+<p><strong>Uzasadnienie</strong>: <em>the result of something </em>- wynik czegoś.</p>
+<p>4. The</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę przedimkiem określonym, ponieważ wspominamy o zamku po raz drugi i dlatego wiadomo, że mowa o czymś konkretnym.</p>
+<p>5. was</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy konstrukcję w stronie biernej. Brakuje czasownika <em>to be</em> w odpowiedniej formie - chodzi o przeszłość, a w lukę należy wpisać jeden wyraz, dlatego jedyną opcją jest czas <em>past simple </em>(<em>was/were</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. to </p>
+<p><strong>Uzasadnienie</strong>: <em>access to something </em>- dostęp do czegoś. </p>
+<p>2. before</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę przysłówkiem <em>before</em>, ponieważ może on być użyty na końcu zdania i pasuje do kontekstu: "Wraz z rozwojem branży turystycznej rośnie dochód i zatrudnienie, a także reputacja miejsc, które <strong>wcześniej </strong>mogły być nieznane".</p>
+<p>3. this/that</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę zaimkiem wskazującym, który odnosi się do treści poprzedniego zdania i będzie pełnił funkcję podmiotu, którego w zdaniu brakuje.</p>
+<p>4. by</p>
+<p><strong>Uzasadnienie</strong>: <em>replaced by something </em>- zastąpione czymś.</p>
+<p>5. own</p>
+<p><strong>Uzasadnienie</strong>: <em>one's own way of life </em>- własny sposób na życie.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. that </p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę spójnikiem <em>that </em>(że), który łączy się często z czasownikiem <em>agree </em>(zgadzać się) i wprowadza zdanie podrzędne. </p>
+<p>2. are</p>
+<p><strong>Uzasadnienie</strong>: po luce znajduje się czasownik główny w formie <em>gerund </em>(z końcówką <em>-ing</em>), co wskazuje na czas typu <em>continuous</em>. Okolicznik <em>nowadays </em>(w dzisiejszych czasach, obecnie) użyty na początku zdania oznacza, że chodzi o teraźniejszość, czyli uzupełniamy lukę tak, by powstał czas <em>present continuous </em>(<em>am / is / are </em>+ czasownik z <em>-ing</em>).</p>
+<p>3. on</p>
+<p><strong>Uzasadnienie</strong>: <em>get on well with somebody </em>- mieć z kimś dobre stosunki.</p>
+<p>4. how</p>
+<p><strong>Uzasadnienie</strong>: <em>explain how to do something </em>- wyjaśniać, jak coś robić.</p>
+<p>5. interested</p>
+<p><strong>Uzasadnienie</strong>: <em>get </em><em>interested in something </em>- zainteresować się czymś.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. instead </p>
+<p><strong>Uzasadnienie</strong>: <em>instead of </em>- zamiast. </p>
+<p>2. as</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>as ... as </em>(tak... jak), aby porównać dwie rzeczy ze sobą.</p>
+<p>3. if</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę spójnikiem, który wprowadza zdanie w trybie warunkowym (<em>if </em>- jeśli).</p>
+<p>4. for</p>
+<p><strong>Uzasadnienie</strong>: <em>ask for help </em>- prosić o pomoc.</p>
+<p>5. have/need</p>
+<p><strong>Uzasadnienie</strong>: <em>have to / need to </em>- musieć. Te czasowniki łączą się z <em>to</em>, które znajduje się po luce i pasują do kontekstu: "Nie ma ustalonego punktu, który musisz osiągnąć, zanim zwrócenie się o pomoc będzie można uznać za akceptowalne".</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. of </p>
+<p><strong>Uzasadnienie</strong>: <em>the importance of something </em>- znaczenie czegoś. </p>
+<p>2. where</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę odpowiednim zaimkiem względnym, aby wprowadzić zdanie przydawkowe. Tutaj dotyczy ono miejsca, dlatego używamy <em>where </em>(gdzie).</p>
+<p>3. not</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>not only ... (but) also </em>(nie tylko... ale i).</p>
+<p>4. that</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę spójnikiem <em>that </em>(to, że), aby wprowadzić zdanie podrzędne.</p>
+<p>5. why</p>
+<p><strong>Uzasadnienie</strong>: ten przysłówek wprowadzi zdanie podrzędne i pasuje do kontekstu: "To świetny sposób, aby pokazać, dlaczego precyzyjne obliczenia i znajomość pierwiastków chemicznych mają znaczenie".</p><br>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. a. reveal</p>
+<p>(Twórcy filmu poprosili wszystkich podczas premiery, żeby nie <strong>ujawniali</strong> zwrotu akcji.) </p>
+<p>b. assured </p>
+<p>(Firma dostawcza <strong>zapewniła</strong> mnie, że zatroszczą się o moje obrazy w trakcie transportowania ich do mojego nowego domu.)</p>
+<p>extra words: insist (nalegać), confess (wyznawać). </p>
+<p>2. a. persuaded</p>
+<p>(To mój nauczyciel <strong>przekonał </strong>mnie, żebym zajął/zajęła się sztuką. Dostrzegł, że mam naturalny talent.)</p>
+<p>b. surprised</p>
+<p>(Niektóre decyzje sędziego <strong>zaskoczyły</strong> mnie, szczególnie wybór zwycięskiego zdjęcia, które według mnie nie było zbyt imponujące.)</p>
+<p>extra words: point out (wskazać, zauważyć), process (procesować, przetwarzać).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. illustrates </p>
+<p>2. got</p>
+<p>3. figure</p>
+<p>4. criticise</p>
+<p>5. appeal</p>
+<p>6. captures</p>
+<p>7. rejected</p>
+<p>8. interpret </p>
+<p>9. highlights</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione): </strong></p>
+<p><em>Guernica</em> Picassa to obraz antywojenny, który doskonale <strong>ilustruje</strong> koszmar wojny, ale nie w sposób tradycyjny. Artysta <strong>przekazał</strong> wiadomość za pomocą innych obrazów. Na przykład, żarówka otoczona świecącymi kolcami oznacza pożar powstały po bombardowaniu. </p>
+<p>W przypadku sztuki nowoczesnej czasem może być trudno <strong>zrozumieć</strong>, co artysta stara się powiedzieć. Nie chcę <strong>krytykować</strong> artystów, bo wiem, że wielu ludzi ceni ich prace, ale ci, którzy starają się szokować bez powodu po prostu do mnie nie <strong>przemawiają</strong>. Ale muszę przyznać, że uwielbiam prace Picassa, szczególnie <em>Guernicę.</em></p>
+<p>Tak, naprawdę <strong>oddaje</strong> strach i smutek tych ludzi. Jest niesamowity.</p>
+<p>Pomimo swojego wyjątkowego stylu Picasso <strong>odrzucił</strong> ideę sztuki abstrakcyjnej. Mówił, że nie ma czegoś takiego. Trzeba zacząć od rzeczywistości i potem zmienić ją w swoją własną wizję. To dlatego całkiem łatwo jest <strong>interpretować</strong> przekaz Picassa. Jeśli spojrzymy na <em>Guernicę </em>jeszcze raz, żarówka jest obok lampy naftowej, co <strong>podkreśla</strong> użycie nowoczesnej technologii w niszczeniu tradycyjnej wspólnoty. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. up </p>
+<p><strong>Uzasadnienie</strong>: <em>own up</em> - przyznawać się; <em>soak up the atmosphere</em> - chłonąć atmosferę. </p>
+<p>2. to</p>
+<p><strong>Uzasadnienie</strong>: <em>keep something to oneself</em> - zatrzymać coś dla siebie; <em>push oneself to the limit</em> - zmusić się do wielkiego wysiłku.</p>
+<p>3. on</p>
+<p><strong>Uzasadnienie</strong>: <em>move on</em> - przejść do; <em>on foot</em> - pieszo.</p>
+<p>4. up</p>
+<p><strong>Uzasadnienie</strong>: <em>open up to sb</em> - otworzyć się przed kimś; <em>throw up</em> - wymiotować.</p>
+<p>5. in</p>
+<p><strong>Uzasadnienie: </strong><em>butt in</em> - wtrącać się; <em>come out in a rash</em> - mieć wysypkę.</p>
+<p>6. off</p>
+<p><strong>Uzasadnienie</strong>: <em>bounce sth off sb</em> - przedyskutować coś z kimś; <em>get ripped off</em> - zostać oszukanym.</p>
+<p>7. up</p>
+<p><strong>Uzasadnienie</strong>: <em>stick up for sb</em> - stanąć w czyjejś obronie;<em> to sum things up</em> - podsumowując. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. bounce</p>
+<p>(W koszykówce nie można biec i trzymać piłki, ale można biec i ją <strong>odbijać</strong>.) </p>
+<p>2. butt</p>
+<p>(Uważaj w małym zoo - kozy mogą <strong>bodnąć </strong>cię rogami.)</p>
+<p>3. stick</p>
+<p>(Ciężko jest mi <strong>trzymać się</strong> diety przez długi czas.)</p>
+<p>4. own </p>
+<p>(Do czasu kiedy będę mieć trzydzieści lat chcę <strong>mieć</strong> Jaguara i jacht.)</p><br>

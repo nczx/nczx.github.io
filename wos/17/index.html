@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa opinia:</strong></span> </p>
+<p>Myślę, że media wykorzystują przypadki znieczulicy społecznej do "nakręcania tematu", ale tak naprawdę ludzie poważnie traktują reguły życia społecznego. Sam/a niejednokrotnie byłam świadkiem zwyczajnej (i zarazem niezwyczajnej) pomocy np. poprzez ustąpienie miejsca w autobusie osobie starszej, przepuszczenia w kolejce sklepowej kobiety ciężarnej. Niekiedy same media pokazują przypadki wartościowych osób, które np. uratowały kogoś z pożaru, udzieliły pomocy podczas wypadku czy działają w wolontariacie. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Stąd proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Reguły życia społecznego to rozmaite trwałe zasady organizujące życie społeczne, stanowiące swoisty fundament relacji międzyludzkich. Przykładowymi regułami życia społecznego mogą być: zasada troski o dobro wspólne, zasada pomocniczości, zasada wzajemności czy zasada solidarności. Żyjemy w czasach zdominowanych przez silny trend indywidualizmu. Oznacza to, że jednostki troszczą się głównie o siebie i często nie dostrzegają potrzeb innych. Zdają się być nieczułe na problemy swych bliźnich, a nierzadko wyrządzają innym krzywdę. To jednak tylko część prawdy o współczesnym życiu społecznym. Oprócz zachowań negatywnych ze społecznego punktu widzenia zdarzają się też przypadki bezinteresownego wspierania bliźnich, pomagania słabszym i ratowania potrzebujących. Zarówno w Polsce, jak i na całym świecie, aktywne są dziś różnego rodzaju fundacje i stowarzyszenia, które działają na rzecz potrzebujących, a w ich akcje angażuje się wiele osób. Reasumując, choć nie brakuje przypadków łamania reguł życia społecznego, to jednak nie są też one lekceważone całkowicie i z pewnością nie jest tak, jakoby nikogo dziś one już nie obchodziły.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) <span style="text-decoration: underline;"><strong>Zjawisko społecznej znieczulicy</strong></span> polega na zignorowaniu poważnej sytuacji przez poszczególne osoby, których niewłaściwa postawa mogłaby doprowadzić do śmierci lub pogorszenia sytuacji osób potrzebujących pomocy. </p>
+<p>b) W kryzysowej sytuacji, gdy trzeba zaangażować postronne osoby do udzielenia komuś pomocy konieczne jest zaapelowanie do sumienia osób, które mogą się przydać do pomocy. Uważam również, że osoba nakłaniająca powinna stanowczo wyrazić nie prośbę a rozkaz wykonania danych czynności przez postronne osoby, wówczas może dojść do tego, że będą one działać w sposób mechaniczny, a nie zgodnie ze zdrowym rozsądkiem. </p>
+<p><strong><span style="text-decoration: underline;">c) Przykłady sytuacji z życia codziennego, w których dochodzi do rozproszenia odpowiedzialności:</span></strong></p>
+<ul>
+<li>Osoba leży na poboczu ruchliwej drogi. Każdy z kierujących myśli, że ktoś inny udzieli jej pomocy. </li>
+<li>Samotne dziecko wędruje wśród alejek sklepowych. Każdy klient myśli, że ktoś inny pomoże dziecku odnaleźć opiekunów. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Zjawisko <strong><span style="text-decoration: underline;">społecznej znieczulicy</span></strong> polega na tym, że jednostki nie reagują, gdy widzą, iż komuś może dziać się coś złego, ponieważ boją się o własne bezpieczeństwo lub sądzą, iż sprawą zajmie się ktoś inny.</p>
+<p><strong>b)</strong></p>
+<p>W kryzysowej sytuacji, w której trzeba nakłonić postronne osoby do udzielenia komuś pomocy, można przede wszystkim wołać głośno o pomoc, a ponadto wskazać na konkretnego człowieka, sygnalizując mu, że to właśnie jego prosi się o wsparcie. Trzeba przy tym jednocześnie pamiętać, aby oszacować rozsądnie ryzyko wiążące się z daną sytuacją i nie zlekceważyć również swojego bezpieczeństwa.</p>
+<p><strong>c)</strong></p>
+<p><strong><span style="text-decoration: underline;">Rozproszenie odpowiedzialności</span></strong> to sytuacja, która polega na tym, że zmniejsza się prawdopodobieństwo zareagowania świadków kryzysowego zdarzenia, kiedy rośnia liczba świadków tego zdarzenia. Ludzie w tłumie, gdy widzą, że dzieje się coś złego, liczą na to, iż sprawą zajmie się ktoś inny, a oni w związku z tym nie muszą. Może to prowadzić do kuriozalnej sytuacji, w której mimo dużej liczby osób, jednostce potrzebującej wsparcia, nie zostanie udzielona żadna pomoc.</p>
+<p>Przykładem sytuacji z życia codziennego, w której dochodzi do rozproszenia odpowiedzialności, może być zasłabnięcie człowieka przy ruchliwej ulicy. Mimo iż wiele osób dostrzega wówczas, że komuś dzieje się coś złego, to nikt nie jest skory do zareagowania, bo myśli, iż z pomocą przyjdzie inny przechodzień.</p>
+<p>Innym jeszcze przykładem rozproszenia odpowiedzialności z życia codziennego może być brak reakcji na niszczenie mienia publicznego w parku, w którym w danej chwili przechadza się wielu spacerowiczów. Wiele osób widzi, że niszczone są elementy wyposażenia parku, ale nikt nie decyduje się na upomnienie sprawców dewastacji, gdyż włącza się u nich myślenie, iż o interwencję powinien pokusić się ktoś inny. W konsekwencji nie reaguje nikt.</p><br>

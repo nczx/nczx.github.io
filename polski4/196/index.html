@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Neologizmy i archaizmy:</p>
+<ul>
+<li><em>najkonniejszym;</em></li>
+<li><em>najjedwabniejszych;</em></li>
+<li><em>xiążę;</em></li>
+<li><em>niebrzuchaty; </em></li>
+<li><em>xiążęciu;</em></li>
+<li><em>xsiężna;</em></li>
+<li><em>najpacholętszy;</em></li>
+<li><em>przenajśmieszniejszym;</em></li>
+<li><em>najgniadszy;</em></li>
+<li><em>moiściewy;</em></li>
+<li><em>najprzydrożniejsze;</em></li>
+<li><em>zasię;</em></li>
+<li><em>Najżadniejszej;</em></li>
+<li><em>najlazurowszym;</em></li>
+<li><em>najsokolszego;</em></li>
+<li><em>przemile;</em></li>
+<li><em>najfeudalniejszym;</em></li>
+<li><em>arcysamo</em>. </li>
+</ul>
+<p> </p>
+<p>b) Przykładowe przymiotniki w stopniu najwyższym:</p>
+<ul>
+<li><em>najzieleńszym;</em></li>
+<li><em>najkonniejszym;</em></li>
+<li><em>najpochlebniej;</em></li>
+<li><em>najgniadszy;</em></li>
+<li><em>najfeudalniejszym.</em></li>
+</ul>
+<p>Zastosowanie licznych przymiotników w stopniu najwyższym to celowy zabieg poetki, który stanowi znaczący element obrazowania. Wyrazy te bowiem podkreślają pewne cechy typowe dla sztuki średniowiecza. Przekazuje ona wyidealizowaną wizję życia, w której nie ma miejsca dla brzydoty czy śmierci. Za pomocą przedrostka <em>naj- </em>Szymborska wskazuje na natężenie określonych cech przedstawienia - wszystko w nim jest intensywne. Wzmacnia to ironię utworu oraz refleksję na temat wymazywania tego, co jest niepożądane. Zabieg ten podkreśla także groteskowość, sztuczność przedstawienia, które nie jest zakorzenione w faktycznych realiach, lecz pod każdym względem doskonałe. </p>
+<p> </p>
+<p>c) Zdrobnienia i popularne związki frazeologiczne sprawiają, że wiersz jest przystępny dla przeciętnego odbiorcy. Odwołuje się bowiem do znanych mu elementów z rzeczywistości. Ponadto sformułowania te budują idealistyczną, nieco infantylną, wizję średniowiecznego świata, który jest pogodny, piękny, pozbawiony śmierci, brzydoty oraz cierpienia. Służy to wyrażeniu refleksji na temat sztuki podporządkowanej wymogom ideologicznym. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Idealizacja buduje określone przedstawienie świata, który odbiega od skomplikowanej rzeczywistości. Prowadzi to do znaczącego uproszczenia wizji średniowiecza - pominięciu ulegają negatywne zjawiska, śmierć, cierpienie czy istnienie innych warstw społecznych, będących nisko w ówczesnej hierarchii. Uwypuklona za to zostaje nienaturalna wręcz harmonia oraz uroda bohaterów miniatury: "Na przedzie xiąże / najpochlebniej niebrzuchaty, / przy xiążęciu xsiężna pani / cudnie młoda, młodziusieńka". Zdrobnienia oraz wyrazy określające (w stopniu najwyższym) sugerują przy tym ironię oraz swoiste sparodiowanie wzorców typowych dla średniowiecza, przekazujących stereotypową wizję ówczesnego społeczeństwa. Idealizacja tym samym wprowadza poczucie braku autentyczności, a zarazem wskazuje na mechanizmy sztuki - wykluczającej niewygodne kwestie, fałszującej realia. Podkreśla też rozdźwięk między utrwalonym dziełem a prawdą, która bywa mniej przyjemna i sielankowa. W ten sposób prowadzi do ponadczasowej refleksji na temat sztuki zideologizowanej. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Tytułowa miniatura przedstawia wzgórze, po którym porusza się dostojny orszak - zmierza on do potężnego zamku. Na jego czele jedzie książę w towarzystwie urodziwej księżnej. Za nimi znajduje się grono dworek oraz paź z małpką. Orszak zamyka trzech rycerzy, którzy poruszają się na gniadych koniach. W feudalnej rzeczywistości szczególne miejsce zajmuje także natura - piękna, niewzruszona w swej doskonałości. Artysta pomija za to mniej przyjemne obrazy. Rezygnuje bowiem z ukazania problemów typowych dla innych warstw, śmierci, konfliktów, ubóstwa. Wybiórczość malarza wynika przede wszystkim z tego, iż odwołuje się on do pewnej wizji średniowiecza - jest ona wyidealizowana, oparta na ówczesnej hierarchii. Z tego powodu miniatura odzwierciedla utrwaloną wtedy hierarchię społeczną oraz ideały epoki. Ważniejsze staje się zaprezentowanie walorów estetycznych, być może w zgodzie z wymaganiami zamawiającego dzieło, niż oddanie trudnej czy bolesnej prawdy o średniowieczu, która zaburzyłaby piękną i sielankową wizję. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Szymborska podważa autentyczność sztuki, która zostaje podporządkowana jakiejś wizji świata. Dostrzega bowiem, że idealizacja prowadzi do pominięcia autentycznych problemów, które także stanowią element danej epoki: "Szubieniczki nawet tyciej / dla najsokolszego oka / i nic nie rzuca cienia wątpliwości". Taka sztuka buduje w wyobraźni odbiorców uproszczoną wizję świata - zatraca on swoją niejednoznaczność - a przy tym nie przekazuje jakiejkolwiek prawdy. Przedstawione zostaje to, co artysta uzna za słuszne - kierując się poczuciem estetyki czy obowiązująca hierarchią społeczną. Jednocześnie prowadzi to do zafałszowania charakteru epoki - podlega ona idealizacji, gdyż niewygodne tematy są usunięte w cień. Taki przekaz wpływa zarazem na stereotypowe postrzeganie rzeczywistości, utrwalanie się utartych przekonań, które nie oddają całej prawdy lub ją uproszczają. W przedstawionej na miniaturze rzeczywistości nie istnieją bowiem członkowie niższych warstw, są nieobecni, skazani na zapomnienie. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>a) Artysta przedstawia koncepcję rzeczywistości opierającej się na wyrazistym kontraście między dwoma ideologiami. Pierwszą z nich reprezentuje modnie ubrana kobieta po lewej stronie - reprezentantka Zachodu oraz kapitalizmu. Jest elegancko uczesana i pomalowana, jej oczy skrywają się za dużymi okularami. Korale, biała suknia z napisami (np. "London", "Wall Street"), mała torebka dopełniają wizerunku światowej damy. Wydaje się ona jednak zdystansowana, wyniosła, na co wskazuje jej mowa ciała, dłonie zaciśnięte na torebce. Obok niej, po prawej stronie, znajdują się przedstawiciele ludu pracującego. W przeciwieństwie do swej towarzyszki ich pozy są dość swobodne. Kobieta i mężczyzna wyróżniają się roboczym strojem oraz innymi cechami (krzepkością, siłą, naturalnością). Ich rysy twarzy nie są tak subtelne, jak eleganckiej damy, ale mają w sobie godność i zdecydowanie. Są to ludzie czynu, którzy nie obawiają się ciężkiej pracy, o czym świadczą towarzyszące im narzędzia. </p>
+<p> </p>
+<p>b) Idealizacja postaci w dziele Szymborskiej polega na tym, że zostają one przedstawione w zasadniczo zniekształcony sposób. Bohaterowie tracą bowiem swój indywidualizm, zostają pozbawieni wad. Uwypukleniu ulega natomiast ich pozytywny wymiar podkreślony licznymi przymiotnikami (lub przysłówkami) w stopniu najwyższym: "Na przedzie xiążę / najpochlebniej niebrzuchaty", "i paź najpacholętszy". Sposób ich zaprezentowania odbiega znacząco od rzeczywistości, ponieważ nie wskazuje na żadną dwuznaczność czy zjawiska negatywne. Postacie są idealne, pozbawione przywar. Z kolei Fangor idealizuje lud pracujący - wywyższa go nad elegancką reprezentantkę kapitalizmu. Dąży bowiem do ukazania piękna i siły robotników, którzy zdają się wręcz posągowi, dumni. Wyróżniają ich szlachetne rysy twarzy czy też pozy pełne zdecydowania oraz woli działania. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Żeby opisać hipotetyczną sytuację z przeszłości i jej skutki, które widzimy w teraźniejszości używamy mieszanego trybu warunkowego w następującej formie:</strong></p>
+<p><strong> <em>if + past perfect, would</em> + bezokolicznik</strong></p>
+<p> </p>
+<p><strong>Żeby opisać hipotetyczną sytuację w teraźniejszości i jej wpływ na przeszłość używamy mieszanego trybu warunkowego w następującej formie:</strong></p>
+<p><strong><em> if + past simple, would + have + past participle</em>.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Możliwe poprawne zdania:</strong></p>
+<p>1. If I hadn't had any homework, I would practise the guitar.</p>
+<p>If I didn't have any homework, I would have practised the guitar.  </p>
+<p>2. If we hadn't had to wait for Toby to arrive yesterday, we wouldn't miss the train.</p>
+<p>3. If he wasn't so moody, he would have had more friends. </p>
+<p>If he hadn't been so moody, he would have more friends.</p>
+<p>4. She would be very happy if she hadn't been chosen to play in the match last Saturday. </p>
+<p>5. I wouldn't answer my phone if the call had been from an unknown number. </p>
+<p>6. If you could have changed one thing about yourself, what would it be?</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Żeby opisać hipotetyczną sytuację z przeszłości i jej skutki, które widzimy w teraźniejszości używamy mieszanego trybu warunkowego w następującej formie:</strong></p>
+<p><strong> <em>if + past perfect, would</em> + bezokolicznik. </strong></p>
+<hr/>
+<p> </p>
+<p>1. hadn't eaten </p>
+<p>wouldn't feel </p>
+<p>2. would know</p>
+<p>had studied</p>
+<p>3. had gone</p>
+<p>wouldn't be</p>
+<p>4. had called</p>
+<p>would see</p>
+<p>5. hadn't painted</p>
+<p>would attract</p>
+<p>6. wouldn't know</p>
+<p>hadn't found </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Żeby opisać hipotetyczną sytuację z przeszłości i jej skutki, które widzimy w teraźniejszości używamy mieszanego trybu warunkowego w następującej formie:</strong></p>
+<p><strong> <em>if + past perfect, would</em> + bezokolicznik</strong></p>
+<p> </p>
+<p><strong>Żeby opisać hipotetyczną sytuację w teraźniejszości i jej wpływ na przeszłość używamy mieszanego trybu warunkowego w następującej formie:</strong></p>
+<p><strong><em> if + past simple, would + have + past participle</em>.</strong></p>
+<hr/>
+<p> </p>
+<p>1. lived</p>
+<p>2. would have been able </p>
+<p>3. had</p>
+<p>4. would have gone</p>
+<p>5. hadn't bought</p>
+<p>6. would have</p>
+<p>7. had got</p>
+<p>8. would be</p>
+<p>9. would have got</p>
+<p>10. wasn't</p>
+<p>11. didn't spend</p>
+<p>12. wouldn't have failed</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. long</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditional; as long as </em>(o ile) zamiast<em> if </em>(jeśli). </p>
+<p>2. have</p>
+<p><strong>Uzasadnienie</strong>: sytuacja oczywista, która ma łatwe do przewidzenia następstwa - <em>zero conditional</em>.</p>
+<p>3. provided</p>
+<p><strong>Uzasadnienie</strong>: zasada, reguła - <em>zero conditional; provided that </em>(pod warunkiem, że) zamiast<em> if </em>(jeśli)<em>. </em></p>
+<p>4. had </p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej niedoszłe przeszłe następstwa - <em>third conditional</em>.</p>
+<p>5. would</p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z przeszłości i jej skutki w teraźniejszości - <em>if + past perfect, would</em> + bezokolicznik.</p>
+<p>6. unless</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która może wydarzyć się w przyszłości - <em>first conditiona</em>l<em>; unless </em>(jeśli nie) zamiast <em>if </em>(jeśli). </p><br>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>'Everyone can do sports at little cost'</strong></p>
+<p>Nowadays everybody knows that it is healthy to do sports. However, one may argue that it costs money - gym and sports club memberships are not cheap. Some even use it as an excuse not to stay active. Yet, to my mind, both from the perspective of people exercising for health and those planning to become professional athletes, it is definitely possible to do sports at little cost.</p>
+<p>Firstly, people who exercise for health can can choose activities such as walking or jogging in the park. Working out at home is also a good option, so they can do exercises like press-ups and stretching, which are free and do not require expensive equipment. These activities can easily become part of a daily routine, providing the health benefits of physical activity.</p>
+<p>In addition, for those who aspire to become professional athletes, the initial training and practice can be done with minimal expenses. Public sports facilities, community programmes, and school teams offer opportunities for people considering a career in sports. Many successful athletes started their journey without expensive means, relying on passion and determination instead.</p>
+<p>In conclusion, sports is accessible to everyone, no matter their financial situation. Engaging in physical activities does not require expensive memberships or fancy equipment. By taking advantage of free or affordable resources, both amateurs and aspiring professionals can participate in sports at little cost. In my view, that is great news for anyone out there interested in becoming more active.</p>
+<p><br/>(Liczba słów: 242)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>W dzisiejszych czasach każdy wie, że uprawianie sportu jest zdrowe. Można jednak argumentować, że to kosztuje - członkostwo w siłowni i klubie sportowym nie jest tanie. Niektórzy nawet używają tego jako wymówki, by nie być aktywnym. Jednak moim zdaniem, zarówno z perspektywy osób ćwiczących dla zdrowia, jak i tych planujących zostać zawodowymi sportowcami, zdecydowanie możliwe jest uprawianie sportu niewielkim kosztem.</p>
+<p>Po pierwsze, osoby ćwiczące dla zdrowia mogą wybrać aktywność taką jak spacer czy jogging w parku. Dobrą opcją jest również trening w domu, dzięki czemu można wykonywać ćwiczenia takie jak pompki i rozciąganie, które są bezpłatne i nie wymagają drogiego sprzętu. Czynności te mogą łatwo stać się częścią codziennej rutyny, zapewniając korzyści zdrowotne wynikające z aktywności fizycznej.</p>
+<p>Ponadto, dla tych, którzy pragną zostać profesjonalnymi sportowcami, początkowy trening i ćwiczenia mogą być wykonywane przy minimalnych kosztach. Publiczne obiekty sportowe, programy społecznościowe i szkolne drużyny oferują możliwości dla osób rozważających karierę sportową. Wielu odnoszących sukcesy sportowców rozpoczęło swoją podróż bez kosztownych środków, zamiast tego polegając na pasji i determinacji.</p>
+<p>Podsumowując, sport jest dostępny dla każdego, bez względu na jego sytuację finansową. Angażowanie się w aktywność fizyczną nie wymaga drogiego członkostwa ani wymyślnego sprzętu. Korzystając z bezpłatnych lub niedrogich zasobów, zarówno amatorzy, jak i aspirujący profesjonaliści mogą uprawiać sport niewielkim kosztem. Moim zdaniem to świetna wiadomość dla wszystkich zainteresowanych zwiększeniem aktywności fizycznej.</p><br><a style="color:red; font-size:25px;">THINKING IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Yes, I think that both the picture and the comments illustrate this saying. The picture presents a team of figure skaters who are posing as a group after a competition. They look very enthusiastic. In the comments, people mention friendships and how the relationship between athletes is something special. </p>
+<p>I think it's true because relationships get stronger when people share a passion and a common goal. This is why I believe joining a sports team is a fantastic way to make friends. You can hang out during practice or even go to competitions together to win medals and titles. It doesn't matter if it's tennis, football, handball, or volleyball - sport definitely brings people together.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Tak, myślę, że zarówno zdjęcie, jak i komentarze ilustrują to powiedzenie. Zdjęcie przedstawia zespół łyżwiarzy figurowych, którzy pozują jako grupa po zawodach. Wyglądają na pełnych entuzjazmu. W komentarzach ludzie wspominają o przyjaźni i o tym, że relacje między sportowcami są czymś wyjątkowym. </p>
+<p>Myślę, że to prawda, ponieważ relacje stają się silniejsze, gdy ludzie dzielą pasję i wspólny cel. Dlatego uważam, że dołączenie do drużyny sportowej to fantastyczny sposób na nawiązanie przyjaźni. Można spędzać razem czas podczas treningów, a nawet jeździć razem na zawody, by zdobywać medale i tytuły. Nie ma znaczenia, czy jest to tenis, piłka nożna, piłka ręczna czy siatkówka - sport zdecydowanie zbliża ludzi.</p><br>

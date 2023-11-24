@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Funkcjonariusze okreœlaj¹ siebie mianem "skromnych". Ponadto nie znaj¹ dokumentów sprawy; ograniczaj¹ siê do spe³niania zaledwie jednego obowi¹zku: "[...] mamy tyle z pañsk¹ spraw¹ wspólnego, ¿e musimy przez dziesiêæ godzin dziennie pilnowaæ pana, i za to nam p³ac¹". Mê¿czyŸni ci œlepo spe³niaj¹ rozkazy - ich oburzenie budzi przekonanie K. o tym, ¿e ma wp³yw na sw¹ sytuacjê. To s³udzy w³adzy, o której wyra¿aj¹ siê z szacunkiem, i wierz¹ w jej nieomylnoœæ: [...] informuj¹ siê, nim zarz¹dz¹ aresztowanie, bardzo dok³adnie  o powodach uwiêzienia i o osobie uwiêzionego". Nie znaj¹ instancji jednak zbyt dobrze - z wyj¹tkiem "[...] najni¿szych [...] stopni". Twierdz¹ ponadto, ¿e ich prze³o¿eni nie musz¹ szukaæ winnych, poniewa¿ wystêpki maj¹ moc przyci¹gania i na tej zasadzie opiera siê panuj¹ce prawo, którego nie wolno podwa¿aæ. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>S³owa funkcjonariuszy wskazuj¹ na nieomylnoœæ oraz wszechwiedzê instancji s¹dz¹cej. Jej decyzje s¹ pewne, jednak niemo¿liwe staje siê ujawnienie dodatkowych informacji. Chocia¿ bohater nie zna swojej winy, to jego rozmówcy s¹ przekonani o s³usznoœci oskar¿enia, którego nie nale¿y podwa¿aæ. S³owa te sugeruj¹ bezradnoœæ oskar¿onego, poniewa¿ nie ma on szansy na obronê. Nawet nie wie, co takiego zrobi³, ¿e ma byæ zaaresztowany, zaœ wypowiedŸ funkcjonariuszy odbiera nadziejê na cokolwiek. Bohater jest wrêcz od samego pocz¹tku skazany i - jako osamotniona jednostka - nie mo¿e skutecznie przeciwstawiæ siê bezlitosnej machinie biurokracji. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Bohater pocz¹tkowo nie rozumie swojej sytuacji. Wyra¿a zaskoczenie, ale i oburzenie, niespodziewanym najœciem, które zaburza jego spokój. Józef K. uwa¿a bowiem, i¿ ¿yje w praworz¹dnym kraju, wiêc sytuacja ta jest nietypowa - nie dostrzega przy tym swej winy. Wizyta funkcjonariuszy budzi jednak jego niepokój, który kontrastuje ze zwyczajow¹ beztrosk¹ mê¿czyzny. Próbuje wyjaœniæ sytuacjê, jednak jest skazany na niepowodzenie, której nie polepsza równie¿ to, i¿ w pewnym momencie przyznaje siê do nieznajomoœci prawa. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Kafka pos³uguje siê narracj¹ trzecioosobow¹, jednak wiedza narratora na temat rzeczywistoœci jest ograniczona. Nie posiada on bowiem wszystkich informacji, np. na temat tego, kto wp³yn¹³ na sytuacjê bohatera: "Ktoœ musia³ zrobiæ doniesienie na Józefa K., bo mimo ¿e nic z³ego nie pope³ni³, zosta³ pewnego ranka po prostu aresztowany". Narrator zdaje siê ponadto przyjmowaæ punkt widzenia postaci (za pomoc¹ mowy pozornie zale¿nej), chocia¿ sam nie wyra¿a swych s¹dów czy refleksji: "Co to byli za ludzie? O czym mówili? [...] Kto œmia³ go we w³asnym mieszkaniu napadaæ?". </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>S¹d znajduje siê na przedmieœciach przy ulicy Juliusza, gdzie wznosz¹ siê szare budynki zamieszkiwane przez najbiedniejszych. To nietypowa lokalizacja - Józef K. nie dostrzega ¿adnego znaku, który wskaza³by mu cel podró¿y. Siedziba s¹du jest w g³êbi ulicy, wyró¿nia siê wielkoœci¹ oraz potê¿n¹ bram¹ wjazdow¹ - obok niej siedzi bosy mê¿czyzna pogr¹¿ony w lekturze gazety. Bohater nie wie, jak dotrzeæ do sali rozpraw: [...] oprócz tych schodów zauwa¿y³ w podwórzu jeszcze trzy ró¿ne klatki schodowe, a ponadto na koñcu podwórza ma³e przejœcie [...]". Zaczyna przeszukiwaæ kolejne piêtra budynku - pod pretekstem pytania o stolarza zyskuje mo¿liwoœæ zajrzenia do kolejnych pomieszczeñ. Budynek nie przypomina s¹du, poniewa¿ bohater napotyka tam przeciêtnych mieszkañców - kobiety, dzieci, chorych œpi¹cych, którzy oddaj¹ siê codziennym czynnoœciom. Ostatecznie jednak znajduje cel swej wêdrówki, kiedy powraca do pierwszych drzwi na pi¹tym piêtrze, gdzie do œrodka zaprasza go m³oda kobieta. Sala rozpraw znajduje siê w jej mieszkaniu. Jest to œredniej wielkoœci pokój; ma on dwa okna oraz galeriê, na której t³ocz¹ siê ludzie oczekuj¹cy na przybycie Józefa K. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Opisane miejsce jest Ÿród³em atmosfery niepewnoœci, zagubienia oraz absurdu. Przeciwstawia siê typowym wyobra¿eniom s¹du, poniewa¿ zdaje siê on funkcjonowaæ w zwyczajnym budynku mieszkalnym - jest wiêc wszechobecny, ale te¿ nieokreœlony. Przestrzeñ ta wp³ywa na poczucie dziwnoœci oraz nierealnoœci sytuacji, podkreœla bezradnoœæ bohatera wzglêdem jego sytuacji ¿yciowej. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Groteskowoœæ i absurdalnoœæ ujawnia siê za pomoc¹ pewnych elementów œwiata przedstawionego. Jednym z nim nich jest kreacja postaci - przyk³adowo funkcjonariuszy. S¹ oni oddani w³adzy, spe³niaj¹ jej wolê, jednak ich wiedza jest niezwykle ograniczona, oni sami zaœ nie potrafi¹ udzieliæ Józefowi K. ¿adnych informacji: "[...] mamy tyle z pañsk¹ spraw¹ wspólnego, ¿e musimy przez dziesiêæ godzin dziennie pilnowaæ pana, i za to nam p³ac¹. Oto wszystko, czym jesteœmy". Groteskowym bohaterem staje siê tak¿e sam s¹d - tajemniczy, wszechwiedz¹cy, oddzia³uj¹cy na ¿ycie oskar¿onego. £¹czy on w sobie sprzeczne elementy: pozornie troszczy siê o mê¿czyznê, ale jednoczeœnie traktuje go w bezwzglêdny sposób: "Wybrano niedzielê jako dzieñ badañ, aby K. nie dozna³ przeszkody w pracy zawodowej. Z góry zak³ada siê jego zgodê, a jeœli ¿yczy sobie innego terminu, w³adze gotowe s¹ pójœæ mu wedle mo¿noœci na rêkê. Te przes³uchania  s¹ na przyk³ad mo¿liwe i w nocy, ale o tej porze K. nie bêdzie prawdopodobnie doœæ rzeœki. Nieznane s¹ dok³adne zasady jego funkcjonowania, zdaje siê on byæ wszêdzie i nigdzie. Nie umo¿liwia tak¿e Józefowi zapoznania siê z aktem oskar¿enia, przez co jego los jest od pocz¹tku przes¹dzony. Poczucie absurdu wzmacniaj¹ tak¿e ukazane we fragmencie wydarzenia oraz sama przestrzeñ. Bohater zostaje po prostu pewnego dnia aresztowany, chocia¿ nic tego nie zapowiada, a on sam nie ma mo¿liwoœci, by udowodniæ sw¹ niewinnoœæ. Groteskowy wymiar zyskuje tak¿e poszukiwanie sali rozpraw - mê¿czyzna trafia do swoistego labiryntu; wywo³uje to skojarzenia z koszmarem sennym. Ostatecznie okazuje siê, i¿ poszukiwane pomieszczenie znajduje siê w jednym z mieszkañ. Ukazana przestrzeñ jest tym samym dziwaczna, pozbawiona jakiejkolwiek logiki czy prawdopodobieñstwa, a przez to nieprzyjazna. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Sposób kreacji miasta i s¹du odwo³uje siê do motywu labiryntu. Kafka w ten sposób przedstawia wizjê nieprzyjaznej rzeczywistoœci, która stanowi dla cz³owieka zagadkê, przyczynia siê do jego poczucia bezsilnoœci oraz niew¹tpliwego zagubienia: "K. zwróci³ siê ku schodom, by dojœæ do pokoju rozpraw, ale znowu przystan¹³, gdy¿ oprócz tych schodów zauwa¿y³ w podwórzu jeszcze trzy ró¿ne klatki schodowe, a ponadto na koñcu podwórza ma³e przejœcie, które zdawa³o siê prowadziæ na jeszcze inne podwórze". Wykorzystanie tego motywu buduje tak¿e swoiste napiêcie. Józef K. jest bezradny w starciu z w³adz¹, która d¹¿y do ukarania go, zdaje siê osaczony. Wspomniany motyw zyskuje ponadto cechy koszmaru sennego, z którego mê¿czyzna nie mo¿e siê wybudziæ, prowadzi do odrealnienia rzeczywistoœci i zaakcentowania jej groteskowego wymiaru.  </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

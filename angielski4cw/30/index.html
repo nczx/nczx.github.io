@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. window</p>
+<p><strong>Uzasadnienie</strong>: <em>window-shopping</em> - oglądanie wystaw sklepowych </p>
+<p>2. offer</p>
+<p><strong>Uzasadnienie</strong>: <em>on offer</em> - na sprzedaż (zwykle w niższej niż zwykle cenie)</p>
+<p>3. charge</p>
+<p><strong>Uzasadnienie</strong>: <em>free of charge</em> - bezpłatnie</p>
+<p>4. special offer</p>
+<p><strong>Uzasadnienie</strong>: <em>spot a special offer</em> - dostrzec ofertę specjalną</p>
+<p>5. bargain </p>
+<p><strong>Uzasadnienie</strong>: <em>come across a bargain</em> - natknąć się na prawdziwą okazję</p>
+<p>6. brands (marki)</p>
+<p>7. billboard (bilbord)</p>
+<p>8. advertising agency (agencja reklamowa)</p>
+<p>9. advertising campaign (kampania reklamowa)</p>
+<p>10. commercial breaks (przerwy na reklamy)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. f</p>
+<p>(Jeśli masz mały budżet, uważaj ile wydajesz.) </p>
+<p>2. e</p>
+<p>(Sklepy należące do dużych sieci to sklepy znajdujące się w głównych dzielnicach handlowych.)</p>
+<p>3. a</p>
+<p>(Jeśli o czymś mówi się, że ma dobry stosunek jakości do ceny oznacza to, że cena nie jest zbyt wysoka.)</p>
+<p>4. i</p>
+<p>(Kiedy ludzie rozglądają się po sklepach, sprawdzają różne miejsca zanim coś kupią.)</p>
+<p>5. g</p>
+<p>(Reklamówka to torba, do której wkładasz zakupy.)</p>
+<p>6. b</p>
+<p>(Jeśli brakuje ci pieniędzy to znaczy, że nie masz wiele.)</p>
+<p>7. h</p>
+<p>(Jeśli złapiesz prawdziwą okazję oznacza to, że znalazłeś coś taniego.)</p>
+<p>8. j</p>
+<p>(Decyzja o zakupie następuje wtedy, gdy decydujesz, że coś kupisz albo nie.)</p>
+<p>9. d</p>
+<p>(Jeśli zostajesz oszukany, płacisz za coś więcej niż powinieneś.)</p>
+<p>10. c</p>
+<p>(Opakowanie to plastik albo inny materiał, w który zawinięte są produkty kiedy je kupujesz.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p><br/>1. sustainable </p>
+<p>2. production</p>
+<p>3. endorsement</p>
+<p>4. placement</p>
+<p>5. underestimate</p>
+<p>6. valued</p>
+<p> </p>
+<p><strong>Tłumaczenie:</strong></p>
+<p>Dzisiejszy przemysł modowy nie jest <strong>zrównoważony</strong>. Wielu ekspertów uważa, że kupujemy około ośmiu miliardów sztuk odzieży każdego roku - cztery razy więcej niż dwadzieścia lat temu. Firmy chcą zwiększyć <strong>produkcję</strong> nowych ubrań i sprzedawać je, żeby utrzymać ciągłość przychodów. Mogą zdecydować się na kampanię reklamową polegającą na <strong>promowaniu</strong> ich produktów przez celebrytów, mogą też wybrać świadome <strong>lokowanie</strong> produktów w sklepach, żeby zostały one zauważone przez klientów jako pierwsze. I oczywiście nie możemy <strong>bagatelizować</strong> efektywności ofert specjalnych i obniżonych cen. Jeśli ubranie jest tanie, klient może założyć je raz, wyrzucić i kupić coś nowego. W czasach jednorazowych ubrań, jakość nie jest <strong>ceniona</strong>. Nudzimy się zbyt szybko, żeby martwić się czy nasz zakup przetrwa dłuższy czas.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. d </p>
+<p>2. a</p>
+<p>3. e</p>
+<p>4. f</p>
+<p>5. c</p>
+<p>6. b</p>
+<p>1. pro</p>
+<p>(Oczywiście, że jestem <strong>za</strong> niepodległością - chcę, żeby mój kraj był wolny!)</p>
+<p>2. over</p>
+<p>(Ta koszulka ma <strong>zawyżoną</strong> cenę. Idę poszukać czegoś tańszego.)</p>
+<p>3. under</p>
+<p>(W tym sklepie na rogu jest <strong>za mało</strong> pracowników. Są w nim ogromne kolejki, bo otwarta jest tylko jedna kasa.)</p>
+<p>4. anti</p>
+<p>(Poszedłem/poszłam na duży protest <strong>anty</strong>wojenny, ponieważ wierzę w pokój.)</p>
+<p>5. post</p>
+<p>(Niektóre kobiety cierpią na depresję <strong>po</strong>porodową po urodzeniu dziecka.)</p>
+<p>6. pre</p>
+<p>(Nowa gra nie pojawi się do przyszłego roku, ale kupiłem/am egzemplarz w <strong>przed</strong>sprzedaży, żeby mieć pewność, że ją dostanę kiedy będzie na promocji.)</p><br>

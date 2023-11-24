@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W sensie dos³ownym celem braci jest zniszczenie muru, aby wyzwoliæ Dziewczynê, która za nim przebywa. W warstwie symbolicznej ich trud nabiera dodatkowych sensów. Bohaterowie pragn¹ bowiem zaspokoiæ swoj¹ ciekawoœæ, przekroczyæ granicê miêdzy znan¹ im rzeczywistoœci¹ a œwiatem marzeñ i pragnieñ, wejœæ w niepoznan¹ do tego momentu sferê. Staraj¹ siê przezwyciê¿yæ materiê, aby odkryæ rzeczywistoœæ duchow¹. Bracia wybieraj¹ wiêc postawê aktywn¹, zdeterminowan¹ i bezkompromisow¹. Mimo trudnoœci ca³y czas staraj¹ siê osi¹gn¹æ zamierzony cel, zrealizowaæ swe marzenie i nie zamierzaj¹ siê poddawaæ. Napêdza ich potrzeba, któr¹ musz¹ bezwzglêdnie zaspokoiæ. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Mur w utworze Leœmiana symbolizuje przeszkodê, granicê oddzielaj¹c¹ cz³owieka od sfery ducha, marzeñ. Mo¿e oznaczaæ tak¿e wszelakie trudnoœci, bariery, przez które osi¹gniêcie wyznaczonego celu staje siê niemo¿liwe. G³os dziewczyny oznacza zaœ pragnienia - podobnie jak one jest nieuchwytny, ale zachêca tak¿e do wytê¿onego trudu, podejmowania prób. Na tej podstawie mo¿na wyci¹gn¹æ wniosek, i¿ celem ¿ycia staje siê przekraczanie granicy miêdzy œwiatem rzeczywistym a metafizycznym. Kluczowe nie jest jednak osi¹gniêcie spe³nienia: pragnienia s¹ celem samym w sobie. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Paradoks ludzkiej egzystencji polega na tym, ¿e cz³owiek, nale¿¹cy do okreœlonej, znanej mu rzeczywistoœci, usilnie stara siê przekroczyæ granicê poznania. Oddziela go ona od sfery metafizycznej, marzeñ i pragnieñ. Istota ludzka próbuje przezwyciê¿yæ trudnoœci, za pomoc¹ swych dzia³añ osi¹gn¹æ po¿¹dany cel. Jej postawa jest wiêc podobna do braci, którzy chc¹ zniszczyæ mur, aby wyzwoliæ tajemnicz¹ Dziewczynê. Okazuje siê jednak, i¿ za murem czai siê pustka, nie ma niczego. Jest to drugi paradoks egzystencji cz³owieka: liczy siê nie spe³nienie pragnienia, lecz samo d¹¿enie do niego. </p>
+<p> </p>
+<p>Ocena dzia³añ braci - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Wysi³ek dwunastu braci koñczy siê ich œmierci¹. Dzie³o bohaterów kontynuuj¹ cienie zmar³ych, nastêpnie same m³oty. W sensie symbolicznym po braciach pozostaje idea. To ona powoduje, i¿ ¿ywe jest nadal d¹¿enie do tego, aby zniszczyæ mur i zbadaæ niepoznan¹ rzeczywistoœæ, która siê za nim rozci¹ga. Dziedzictwem braci staje siê tak¿e sama wola czynu, chêæ zrealizowania najskrytszych pragnieñ. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Metafora pró¿ni sugeruje niemo¿noœæ spe³nienia, poznania sfery metafizycznej, która wymyka siê ludzkiemu umys³owi. Jest ona na tyle pojemna, i¿ mo¿na odczytywaæ j¹ na ro¿ne sposoby. Przede wszystkim zasadne zdaje siê jej odczytanie w kontekœcie ateizmu. Pró¿nia œwiadczy o tym, ¿e po drugiej stronie nie ma niczego, do czego siê d¹¿y. Tym samym jakikolwiek wysi³ek cz³owieka, by przekroczyæ granicê poznania okazuje siê byæ bezzasadny, skazany na niepowodzenie. Jest to doœæ pesymistyczna refleksja, poniewa¿ podwa¿a sens ludzkiego starania. Je¿eli jednak odniesie siê j¹ do buddyzmu, to nicoœæ zyskuje dodatkowe znaczenia. Symbolizuje bowiem wyzwolenie, ostateczne z³¹czenie siê ze sfer¹ metafizyczn¹. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Aluzje do znanych tekstów kultury:</p>
+<ul>
+<li>Baœnie -&gt; W utworze Boles³awa Leœmiana wystêpuj¹ elementy typowe dla œwiata baœni. Przede wszystkim istotny jest wybór na bohaterów dwunastu braci, którzy pojawiaj¹ siê te¿ na przyk³ad w utworach braci Grimm. Zgodnie z baœniow¹ konwencj¹ podejmuj¹ siê wzywania, które ma pozwoliæ im na osi¹gniêcie wymarzonego celu (wyzwolenie tajemniczej Dziewczyny). W wierszu polskiego poety s¹ ponadto obecne cudowne i niezwyk³e wydarzenia (np. samodzielna praca m³otów) wp³ywaj¹ce na atmosferê niesamowitoœci. <em>Dziewczynê</em> ze wspomnianym gatunkiem ³¹czy tak¿e pewna nieokreœlonoœæ, poniewa¿ rzeczywistoœæ ta zostaje zarysowana w ogólny sposób, pozbawiona jakiegokolwiek ukonkretnienia. </li>
+<li>Ksiêga Rodzaju (wie¿a Babel) -&gt; <em>Dziewczyna</em> Leœmiana w pewien sposób nawi¹zuje równie¿ do historii ukazanej w Ksiêdze Rodzaju. Bracia pragn¹ bowiem przekroczyæ granice poznania, dokonaæ tego, czego do tej pory nie uda³o siê osi¹gn¹æ. Podobnie jak ludzie wznosz¹cy wie¿ê s¹ przekonani, i¿ mog¹ wszystko. Ich dzia³ania jednak, podobnie jak trud budowniczych, s¹ skazane na klêskê, poniewa¿ mo¿liwoœci cz³owieka s¹ w pewien sposób ograniczone</li>
+<li>Pisma egzystencjalistów -&gt; Inspiracje egzystencjalizmem przejawiaj¹ siê w sensie ukazanych w wierszu zdarzeñ. Dzieje braci, ich trud kontynuowany nawet po œmierci oraz odkrycie, ¿e za murem jest tylko pustka odzwierciedlaj¹ przekonania typowe dla wspomnianego nurtu w filozofii. Podkreœlaj¹ bowiem absurdalny wymiar ludzkiego ¿ycia i sytuacji cz³owieka znajduj¹cego siê w obliczu pustki czy nieskoñczonoœci.</li>
+</ul>
+<p> </p>
+<p>Przyk³adowe symbole z utworu:</p>
+<ul>
+<li>mur - podzia³, trudnoœæ, bariera, granica; </li>
+<li>sen - tajemnica, przemijanie, wiecznoœæ, u³uda;</li>
+<li>m³ot - praca, si³a, dzia³anie twórcze, </li>
+<li>cieñ - œmieræ, dusza, przemijanie. </li>
+</ul>
+<p> </p>
+<p>Aluzje i symbole pog³êbiaj¹ sensy utworu, poniewa¿ odsy³aj¹ czytelnika do okreœlonych tradycji oraz elementów, które w kulturze s¹ ju¿ zakorzenione i reprezentuj¹ ró¿norodne znaczenia. Ponadto œwiadcz¹ one o inspiracjach, kszta³tuj¹cych poetyck¹ wizjê œwiata u Leœmiana, a tak¿e nieustannym dialogu z kultur¹. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowo:</p>
+<p>W utworze Boles³awa Leœmiana pt. <em>Dziewczyna</em> mo¿na dostrzec obecnoœæ elementów typowych dla baœni. Jednym z nich jest na przyk³ad nieokreœlone miejsce oraz czas ukazanych wydarzeñ. Z tego te¿ powodu losy braci zdaj¹ siê rozgrywaæ poza tymi kategoriami, przez co nabieraj¹ uniwersalnego znaczenia, ukazuj¹ prawdê na temat cz³owieka, który d¹¿y do przekroczenia granic poznania. Równie¿ dobór bohaterów nawi¹zuje do baœni - dwunastu braci pojawia siê np. w utworach braci Grimm, w innych zaœ dzie³ach wystêpuje równie¿ postaæ kobieca oczekuj¹ca na uratowanie - podobnie jak tajemnicza dziewczyna: </p>
+<p><em>A poza murem p³aka³ g³os, dziewczêcy g³os zaprzepaszczony.</em><br/><br/><em>I pokochali g³osu dŸwiêk i chêtny domys³ o Dziewczynie,</em><br/><em>I zgadywali kszta³ty ust po tym, jak œpiew od ¿alu ginie…</em></p>
+<p>Leœmian jednak wykorzystuje nie tylko pewne elementy, ale równie¿ motywy czy typow¹ konstrukcjê baœni. Opisuje bowiem bohaterów, którzy mierz¹ siê z ogromnym wyzwaniem - staraj¹ siê pokonaæ przeszkody, by wyzwoliæ dziewczynê: "Porwali m³oty w tward¹ d³oñ i jêli w mury t³uc z ³oskotem! / I nie wiedzia³a œlepa noc, kto jest cz³owiekiem, a kto m³otem?". Ich trud ma tym samym umo¿liwiæ im osi¹gniêcie wymarzonego celu: "O, prêdzej skruszmy zimny g³az, nim œmieræ Dziewczynê rdz¹ powlecze!". W wierszu Leœmiana obecne s¹ tak¿e element cudownoœci podkreœlaj¹ce niezwyk³oœæ oraz niejednoznacznoœæ przedstawionej rzeczywistoœci. Mo¿na tu wymieniæ m.in. pracê cieni oraz m³oty, które przejê³y obowi¹zki braci. </p>
+<p>Poeta zdaje siê jednak przetwarzaæ konwencjê baœni na swój oryginalny sposób, o czym œwiadczy zakoñczenie utworu: m³oty ostatecznie krusz¹ mur, jednak okazuje siê, ¿e za nim znajduje siê pustka. Jest to pewna wskazówka interpretacyjna dla czytelnika. Nie ma tutaj bowiem typowego dla baœni zwyciêstwa dobra nad z³em, pojawia siê za to ponadczasowa refleksja na temat d¹¿eñ cz³owieka oraz granic poznania. Sugeruje to antybaœniowy wymiar rzeczywistoœci zwi¹zany z tragizmem cz³owieka, niemo¿noœci¹ zaspokojenia swych pragnieñ. Prowadzi to w efekcie do pog³êbionej zadumy filozoficznej. Umo¿liwia równie¿ poecie zaprezentowanie z³o¿onego wizerunku rzeczywistoœci: pe³nej cudownoœci, ale tak¿e grozy. </p><br>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 27</a><br>
+<p>a) <span style="text-decoration: underline;"><em> reakcja addycji </em></span></p>
+<p>b)  <em><span style="text-decoration: underline;"> reakcja eliminacji </span></em></p>
+<p>c) <span style="text-decoration: underline;"><em> reakcja polimeryzacji </em></span></p>
+<p>d) <span style="text-decoration: underline;"><em> reakcja substytucji </em></span></p><br><a style="color:red; font-size:25px;">Zadanie 28</a><br>
+<p>a)  <math-expr expr='CH_2=CH-CH_3\ +\ H_2\ #(-&gt;)^(Pt)\ #(CH_3-CH_2-CH_3)_("propan")' syntax="text"></math-expr>   </p> <p>b)   <math-expr expr='CH_3-CH=CH-CH_3\ +\ Br_2\ -&gt;\ #(CH_3-CHBr-CHBr-CH_3)_("2,3-dibromobutan")' syntax="text"></math-expr>   </p> <p>c)  <math-expr expr='n\ CH_2=CH_2\ ##(-&gt;)_("kat.")^(p,\ T)\ #(cancel("[")CH_2-CH_2cancel("]")_n)_("polietylen")' syntax="text"></math-expr>       </p><br><a style="color:red; font-size:25px;">Zadanie 29</a><br>
+<p>Zapisujemy równanie tej reakcji:</p> <p> <math-expr expr="C_nH_(2n)+(4+n)/2\O_2-&gt;2\ CO_2+n\ H_2O" syntax="text"></math-expr>   </p> <p>Widzimy, że wszystkie atomy węgla wchodzące w skład  otrzymanego tlenku węgla(IV) pochodzą ze spalanego alkenu. Jeżeli zatem w produktach mamy łącznie 2 mole atomów węgla, to tyle też musi ich być w molu cząsteczek alkenu. Indeks <em>n</em> jest zatem równy 2. </p> <p><strong>Wzór sumaryczny spalanego alkenu to  <math-expr expr="bb(C_2H_4)." syntax="text"></math-expr>    </strong></p><br><a style="color:red; font-size:25px;">Zadanie 30</a><br>
+<p>a)</p> <p> <math-expr expr="CF_2=CF_2" syntax="text"></math-expr>   </p> <p> </p> <p>b) </p> <p> <math-expr expr="CH_2=CH_2" syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 31</a><br>
+<p><strong><span style="text-decoration: underline;">Opis doświadczenia:</span></strong></p>
+<p><span style="text-decoration: underline;">Etap 1.</span> W probówce umieszczamy kawałek foli polietylenowej. Następnie probówkę zatykamy korkiem z rurka odprowadzającą, której wylot wprowadzamy pod wodą do drugiej, napełnionej wodą i odwróconej do góry dnem probówki. Probówkę z folią ogrzewamy w płomieniu palnika. </p>
+<p><span style="text-decoration: underline;">Obserwacje 1.</span> Folia ulega rozkładowi w wyniku czego wydziela się bezbarwny gaz, który zbiera się w drugiej probówce.</p>
+<p><span style="text-decoration: underline;">Wniosek 1.</span> Pod wpływem wysokiej temperatury polietylen ulega rozkładowi i wydziela się eten.</p>
+<p><br/><span style="text-decoration: underline;">Etap 2.</span> Probówkę z zebranym w etapie 1 etenem zatykamy korkiem z wkraplaczem, który napełniamy wodą bromową. Następnie wkraplamy wodę bromową do probówki z etenem.</p>
+<p><span style="text-decoration: underline;">Obserwacje 2.</span> Woda bromowa ulega odbarwieniu.</p>
+<p><span style="text-decoration: underline;">Wniosek 2.</span> Eten reaguje z bromem, przyłączając go do swojej cząsteczki w miejscu wiązania wielokrotnego. Eten jest węglowodorem nienasyconym.</p><br><a style="color:red; font-size:25px;">Zadanie 32</a><br>
+<p>Wzór sumaryczny polietylenu możemy zapisać jako  <math-expr expr="(C_2H_4)_n." syntax="text"></math-expr>   Masa cząsteczkowa pojedynczej cząsteczki etenu wynosi 28 u. Liczymy ilość etenu w polimerze: </p> <p> <math-expr expr="m_((C_2H_4)_n)=n*m_(C_2H_4)" syntax="text"></math-expr>   </p> <p> <math-expr expr='84000\ u=n*28\ u\ \ \ "/":28\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=3000" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Polimeryzacji uległo 3000 cząsteczek etenu.</strong>  </p><br><a style="color:red; font-size:25px;">Zadanie 33</a><br>
+<p>a)  <math-expr expr='CH_3-CH_2-OH\ #(-&gt;)^(Al_2O_3)\ #(CH_2=CH_2)_("eten")\ +\ H_2O' syntax="text"></math-expr>   </p> <p>b)   <math-expr expr='CH_2=CH-CH_3\ +\ H_2O\ #(-&gt;)^(H^+)\ #(CH_3-CH(OH)-CH_3)_("propan-2-ol")' syntax="text"></math-expr>   </p> <p>c)  <math-expr expr='2\ CH_2=CH-CH_2-CH_3\ +\ 2\ HCl\ #(-&gt;)^(H^+)\ #(CH_3-CHCl-CH_2-CH_3)_("2-chlorobutan")\ +\ #(CH_2Cl-CH_2-CH_2-CH_3)_("1-chlorobutan")' syntax="text"></math-expr>   </p> <p>d)  <math-expr expr='CH_3-CH_2-Cl\ +\ KOH\ #(-&gt;)^("alkohol")\ #(CH_2=CH_2)_("eten")\ +\ KCl\ +\ H_2O' syntax="text"></math-expr>   </p> <p>e)  <math-expr expr='HC-=C-CH_3\ +\ 2\ HCl\ -&gt;\ #(CH_3-C Cl_2-CH_3)_("2,2-dichloropropan")' syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 34</a><br>
+<p>1.  <math-expr expr='CH_4+Cl_2#(-&gt;)^("światło")CH_3Cl+HCl' syntax="text"></math-expr>   </p> <p>2.  <math-expr expr="2\ CH_3Cl\ +\ 2\ Na\ -&gt;\ CH_3-CH_3\ +\ 2\ NaCl" syntax="text"></math-expr>   </p> <p>3.   <math-expr expr="CH_3-CH_3\ +\ Br_2\ -&gt;\ CH_3-CH_2Br\ +\ HBr" syntax="text"></math-expr>   </p> <p>4.  <math-expr expr='CH_3-CH_2Br\ +\ KOH\ #(-&gt;)^("alkohol")\ CH_2=CH_2\ +\ KBr\ +\ H_2O' syntax="text"></math-expr>   </p> <p>5.  <math-expr expr="CH_2=CH_2\ +\ H_2O\ #(-&gt;)^(H^+)\ CH_3-CH_2OH" syntax="text"></math-expr>   </p> <p>6.  <math-expr expr="CH_3-CH_2OH\ #(-&gt;)^(Al_2O_3)\ CH_2=CH_2\ +\ H_2O" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 35</a><br>
+<p><span style="text-decoration: underline;">Opis doświadczenia:</span></p>
+<p>W trzech nieopisanych, zatkanych korkami probówkach umieszczamy heksan, butan oraz but-1-en.</p>
+<p>Odróżnienie heksanu od dwóch pozostałych możliwe jest na podstawie prostej obserwacji stanu skupienia - heksan jest cieczą zaś butan i but-1-en to gazy.</p>
+<p>Następnie do probówek z gazami dodajemy wodę bromową. Probówka, w której nastąpi odbarwienie wody bromowej, zawiera but-1-en zaś w drugiej znajduje się butan.</p><br><a style="color:red; font-size:25px;">Zadanie 36</a><br>
+<p>Wzór:</p>
+<p><img alt="" height="32" src="./data/935596-0.jpg" width="98"/> </p>
+<p>Liczba elektronów tworzących wiązania - <span style="text-decoration: underline;"><em><strong> 10 </strong></em></span></p>
+<p>Liczba wiązań typu <span style="font-weight: 400;">σ</span> - <em><span style="text-decoration: underline;"><strong> 3 </strong></span></em></p>
+<p>Liczba wiązań typu <span style="font-weight: 400;">𝜋 - <em><span style="text-decoration: underline;"><strong> 2 </strong></span></em></span></p><br>

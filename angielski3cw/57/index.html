@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie: </strong> </p>
+<p>a. Someone taking action and planting trees.</p>
+<p>(Ktoś, kto podejmuje działanie i sadzi drzewa.)</p>
+<p><strong>Fragment w tekście: </strong>"Imagine a forest bigger than five football stadiums (...) Now imagine you created it yourself by planting all the trees over decades. It's hard to believe, but that's just what Jadav Payeng has done!" - Wyobraźcie sobie las większy niż pięć stadionów piłkarskich (...) A teraz wyobraźcie sobie, że sami go stworzyliście, sadząc wszystkie drzewa przez dziesięciolecia. Trudno w to uwierzyć, ale właśnie tego dokonał Jadav Payeng!</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1 - d </p>
+<p><strong>Fragment w tekście</strong>: "Molai Forest, an amazing nature reserve (...)." - Las Molai, niesamowity rezerwat przyrody (...). </p>
+<p>2 - a</p>
+<p><strong>Fragment w tekście</strong>: "Jadav is a farmer (...)." - Jadav jest rolnikiem (...).</p>
+<p>3 - e</p>
+<p><strong>Fragment w tekście</strong>: "(...) who lives on Majuli, the biggest river island in the world (...)." - (...) który mieszka na Majuli, największej wyspie rzecznej na świecie (...).</p>
+<p>4 - c</p>
+<p><strong>Fragment w tekście</strong>: "Every day since then, Jadav, now fifty-eight, has added a tree to his forest, which now helps protect the island." - Od tamtej pory, pięćdziesięcioośmioletni obecnie Jadav, codziennie dodaje kolejne drzewo do swojego lasu, który teraz pomaga chronić wyspę.</p>
+<p>5 - b</p>
+<p><strong>Fragment w tekście</strong>: "The 'Forest Man', as Jadav was called, slowly became famous internationally." - "Leśny człowiek", jak nazywano Jadava, powoli zdobywał międzynarodową sławę.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. A </p>
+<p><strong>Fragment w tekście:</strong> "It's hard to believe, but that's just what Jadav Payeng has done! Molai Forest, an amazing nature reserve, exists because of his dedication." - Trudno w to uwierzyć, ale właśnie tego dokonał Jadav Payeng! Las Molai, niesamowity rezerwat przyrody, istnieje dzięki jego poświęceniu. </p>
+<p><br/>2. C</p>
+<p><strong>Fragment w tekście:</strong> "In 1979, after a particularly bad flood, sixteen-year-old Jadav saw snakes dying on the sand because there was no shade from trees. (...) He wanted to do something, so he planted a few trees, thinking that the roots would help hold the soil together." - W 1979 roku, po szczególnie silnej powodzi, szesnastoletni Jadav zobaczył węże umierające na piasku, ponieważ nie miały cienia od drzew. (...) Pragnął coś zrobić, więc zasadził kilka drzew, sądząc, że korzenie pomogą wzmocnić glebę.</p>
+<p><br/>3. A</p>
+<p><strong>Fragment w tekście:</strong> "Every day since then, Jadav, now fifty-eight, has added a tree to his forest, which now helps protect the island." - Od tamtej pory, pięćdziesięcioośmioletni obecnie Jadav, codziennie dodaje kolejne drzewo do swojego lasu, który teraz pomaga chronić wyspę.</p>
+<p><br/>4. C</p>
+<p><strong>Uzasadnienie</strong>: z podanych zdań tylko C. ("Jadav napisał książkę o sobie i o swojej działalności") nie ma potwierdzenia w tekście. Fragmenty, które zawierają potwierdzenie pozostałych zdań:</p>
+<p> - A. "For years, nobody noticed his efforts. Then, in 2009, a nature photographer, Jitu Kalita, discovered his forest and published an article in a local newspaper." - Przez lata nikt nie zauważał jego wysiłków. Dopiero w 2009 roku fotograf przyrody, Jitu Kalita, odkrył jego las i opublikował artykuł w lokalnej gazecie.)</p>
+<p> - B. "In 2013, a film about his work was a huge success at the Cannes Film Festival and was followed by a children's story book about him." - W 2013 roku film o jego działalności odniósł ogromny sukces na Festiwalu Filmowym w Cannes, a po nim powstała książka z opowiadaniami dla dzieci.)</p>
+<p> - D. "In 2015, Jadav received one of India's highest civilian awards." - W 2015 roku Jadav otrzymał jedno z najwyższych indyjskich odznaczeń dla cywili.</p>
+<p><br/>5. C</p>
+<p><strong>Fragment w tekście:</strong> "It shows how one person really can make a difference if they put their mind to it." - To pokazuje, że jedna osoba naprawdę może coś zmienić, jeśli tylko się do tego przyłoży.</p><br>

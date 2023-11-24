@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 9</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><span style="font-weight:400;">Przyk³adowo:</span></p>
+<p><span style="font-weight:400;">W poezji Tuwima mo¿na dostrzec uszanowanie tradycji, ale tak¿e sk³onnoœæ do eksperymentowania. Œwiadczy o tym chocia¿by zró¿nicowanie dzie³ poetyckich poety. Czêœæ z nich (np. <em>Wiosna. Dytyramb, Bal w operze</em>) odwo³uje siê do nowej tematyki, któr¹ stanowi ¿ycie miasta. Tuwim nie boi przedstawiæ siê miejskiej egzystencji w jej ró¿nych przejawach. Z tego te¿ powodu w pierwszym z wymienionych utwór opisuje t³um ulegaj¹cy pierwotnym instynktom, co budzi ambiwalentne odczucia podmiotu lirycznego: </span></p>
+<p><em><span style="font-weight:400;">O, ty zbrodniarzu cudowny i prosty,</span></em></p>
+<p><em><span style="font-weight:400;">Elementarny, pierwotnie wspania³y!</span></em></p>
+<p><em><span style="font-weight:400;">Ty gnoju miasta, tytanicznej krosty,</span></em></p>
+<p><em><span style="font-weight:400;">T³umie, o T³umie, T³umie rozszala³y!</span></em></p>
+<p><span style="font-weight:400;">Poeta skupia siê na szokuj¹cym i wyrazistym przedstawieniu rzeczywistoœci, nie unika dosadnego jêzyka, wulgaryzmów, wyrazistych i kontrowersyjnych obrazów. Podobnie dzieje siê w przypadku </span><em><span style="font-weight:400;">Balu w operze</span></em><span style="font-weight:400;"> zapowiadaj¹cego katastroficzne nastroje. Artysta, przedstawiaj¹c zepsucie elit, celnie oraz ironicznie komentuje ówczesne realia ¿ycia - spo³ecznego i politycznego. Jednoczeœnie bawi siê jêzykiem, ukazuje go jako element, który mo¿e podlegaæ manipulacji. Nowatorstwo Tuwima wi¹¿e siê równie¿ z dzieleniem wyrazów, mieszaniem ich ze sob¹ - w ten sposób np. oddaje atmosferê zabawy pijanych ludzi, wzmacnia rytmicznoœæ oraz ekspresjê wypowiedzi. Sk³onnoœæ do eksperymentowania, poszukiwania nowych sposobów wyrazu artystycznego zaznacza siê tak¿e w utworze pt. <em>S³owisieñ</em>. Tworzy w nim jêzyk sztuki, gdzie s³owa i ich po³¹czenia ulegaj¹ rozmaitym metamorfozom, co zdejmuje z nich jakiekolwiek ograniczenia: . Poezja ³¹czy siê z muzyk¹, zaledwie sugeruje pewne wra¿enia, a nie narzuca interpretacji w bezpoœredni sposób. Eksperymenty Tuwima nie dotycz¹ wiêc tylko poruszanej tematyki, ale przede wszystkim s³owa - jako tworzywa, które mo¿na swobodnie modelowaæ, by w odpowiedni sposób oddzia³ywa³o na odbiorcê.</span></p>
+<p><span style="font-weight:400;">Julian Tuwim to nie tylko jednak zwolennik artystycznego nowatorstwa, ale tak¿e cz³owiek, który w swej dojrza³ej twórczoœci na nowo odkrywa znaczenie sztuki klasycznej. Fascynacja ta jest uwarunkowana ówczesn¹ sytuacj¹: narodzinami totalitaryzmów i rozwojem kultury masowej. Odwo³ywanie siê do pewnych tradycji literackich staje siê wiêc prób¹ zachowania porz¹dku, walk¹ o prawdê oraz sens. Z tego te¿ powodu poeta chêtnie powo³uje siê na dorobek jednej z najwa¿niejszych postaci w historii polskiej literatury - Jana Kochanowskiego. Osoba ta staje siê dla autora symbolem prawdy, ³adu, jasnoœci oraz prostoty wypowiedzi. Wartoœci te maj¹ nie tylko zwi¹zek z regularn¹ form¹ dzie³a, lecz tak¿e z tym, i¿ renesansowy artysta porusza ponadczasowe zagadnienia, które nigdy nie trac¹ na swej aktualnoœci. Z tego te¿ powodu Tuwim czerpie inspiracjê z klasycznych Ÿróde³, aby na nowo okreœliæ sens literatury. </span></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>W twórczoœci Juliana Tuwima bez w¹tpienia obecna jest prowokacja artystyczna, która szczególnie zaznacza siê w trzech utworach. S¹ to: <em>Wiosna Dytyramb, Bal w operze, Do krytyków</em>. Prowokacja ta dokonuje siê na ró¿ne sposoby. Przede wszystkim wynika z charakteru wierszy poety. Dochodzi w nich bowiem do naruszenia tematów tabu, obna¿enia biologicznego aspektu cz³owieka oraz jego zachowañ. Tuwim prze³amuje stereotypy, poniewa¿ w pierwszym ze wspomnianych wierszy ukazuje mieszkañców miasta, którzy przestaj¹ podlegaæ kulturze, natomiast oddaj¹ siê zaspokojeniu podstawowych instynktów oraz ¿¹dz. Ich szokuj¹ce przedstawienie wynika z tego, i¿ s¹ wyzbyci jakichkolwiek zasad. Ulegaj¹ wrêcz zezwierzêceniu i rozwi¹z³oœci: "Na ³awce, psiekrewie, na trawce, / Naróbcie Polsce bachorów, / Wijcie siê, psiekrewie, wijcie, / W szynkach naro¿nych pijcie". Prze³amanie stereotypów wi¹¿e siê w tym utworze tak¿e ze sposobem kreacji bohaterów, a w szczególnoœci kobiet i matek. S¹ one wyzbyte przypisywanej im tradycyjnie delikatnoœci, niewinnoœci, czu³oœci; ich rol¹ staje siê zaspokajanie mêskich ¿¹dz, nie maj¹ tak¿e w sobie mi³oœci dla swych potomków, gdy¿ zdaj¹ siê byæ pogr¹¿one w szale ("Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". </p>
+<p>Prowokacja artystyczna u Tuwima przejawia siê nie tylko w doborze tematyki i specyficznej kreacji œwiata przedstawionego. Ujawnia siê ona równie¿ w wierszu, który jasno okreœla stosunek poety do jego roli, ale te¿ krytyków. Sposobem na subteln¹ prowokacjê staje siê nonszalancki stosunek podmiotu lirycznego do adresatów jego wypowiedzi: "Tak to jade na przedniej platformie tramwaju, / Wielce szanowni panowie!". Osoba mówi¹ca d¹¿y bowiem do zszokowania krytyków sw¹ beztrosk¹ postaw¹ i umi³owaniem ¿yciem miasta, które staje siê zupe³nie nowym Ÿród³em inspiracji artystycznej. Podmiot niejako zapomina o powadze zwi¹zanej z dzia³alnoœci¹ poetyck¹ czy krytyczn¹ - zamiast tego proponuje odkrywanie piêkna codziennoœci. Wiersz tym samym staje siê wyzwaniem dla krytyków, deklaracj¹ twórczoœci nowej i nieskrêpowanej, powi¹zanej z tym, co aktualne.</p>
+<p>Z kolei w <em>Balu w operze </em>Tuwim wykorzystuje kontrasty oraz jêzyk, by stworzyæ wyrazisty, ale te¿ szokuj¹cy obraz elit. S¹ one pogr¹¿one w szalonej zabawie, chocia¿ nieuchronnie zbli¿aj¹ siê do ostatecznej katastrofy. Towarzysz¹cy im przepych zostaje zestawiony z fizjologi¹, pijañstwem i ob¿arstwem goœci: "Serpnetynê flaków wcina, / Na talerzu Donny / Ryczy wó³ zamordowany, D¿wachadze, prync gruziñski, / Rwie zêbami ty³ek œwiñski". Rzekome elity oddaj¹ siê wiêc podstawowym instynktom, s¹ zepsute. Prowokacyjny jest w utworze tak¿e jêzyk wypowiedzi. Mo¿na go okreœliæ mianem wulgarnego, bezpoœredniego, odwo³uj¹cego siê do tego, co potoczne i przyziemne: "Wszelka dziwka majtki pierze". </p>
+<p>Prowokacja artystyczna w twórczoœci Tuwima spe³nia kilka funkcji. Przede wszystkim umo¿liwia przedstawienie faktycznego obrazu cz³owieka - pozbawionego upiêkszeñ, stereotypów, wp³ywu kultury. Tym samym poeta przedstawia istotê ludzk¹ sprowadzon¹ do tego, co biologiczne i podstawowe. Zaskakuj¹ce czy wrêcz szokuj¹ce obrazy w pewien sposób uwznioœlaj¹ rzeczywistoœæ. Œwiadcz¹ bowiem o tym, i¿ aktualne realia staj¹ siê tematem twórczoœci literackiej. Ponadto prowokacyjny charakter wierszy Tuwima stanowi przejaw nowatorstwa, poszukiwania nieoczywistych form wyrazu, które nie pozostawiaj¹ czytelnika obojêtnym. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+Indywidualne<br>

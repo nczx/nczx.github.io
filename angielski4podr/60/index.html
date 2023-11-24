@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Na pytanie nr 2 należy odpowiedzieć samodzielnie.</strong></p>
+<p>1. Food that can lead to diseases of civilisation include: red meat, dairy products, refined grains, processed food and sugar. </p>
+<p>(Jedzenie, które prowadzi do chorób cywilizacyjnych obejmuje: czerwone mięso, produkty mleczne, oczyszczone ziarna zbóż, przetworzoną żywność i cukier.)</p>
+<p><strong>Fragment w tekście:</strong> "(...) the intake of large amounts of red meat, dairy products, refined grains, processed food and sugar (...) has been scientifically proven to positively correlate with acne, obesity, type 2 diabetes, cardiovascular and respiratory diseases, hypertension, peptic ulcers and cancer." - (...) zostało naukowo udowodnione, że spożycie dużych ilości czerwonego mięsa, produktów mlecznych, oczyszczonych ziaren zbóż, przetworzonej żywność i cukru (...) koreluje z trądzikiem, otyłością, cukrzyca typu drugiego, chorobami sercowo-naczyniowymi i oddechowymi, nadciśnieniem, wrzodami trawiennymi i nowotworami.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. type 2 diabetes </p>
+<p>(choroba, w której ciało nie produkuje wystarczającej ilości insuliny do zredukowania poziomu cukru we krwi - <strong>cukrzyca typu 2</strong>) </p>
+<p>2. respiratory</p>
+<p>(związany z oddychaniem - <strong>oddechowy</strong>)</p>
+<p>3. acne</p>
+<p>(przypadłość typowa dla nastolatków, charakteryzująca się występowaniem wyprysków - <strong>trądzik</strong>)</p>
+<p>4. peptic ulcers</p>
+<p>(małe, bolące miejsca w żołądku, zwykle spowodowane przez bakterie - <strong>wrzody trawienne</strong>)</p>
+<p>5. life-threatening</p>
+<p>(stwarzające ryzyko śmierci - <strong>zagrażające życiu</strong>)</p>
+<p>6. sedentary</p>
+<p>(polegający na siedzeniu, z małą ilością ruchu - <strong>siedzący</strong>)</p>
+<p>7. chronic</p>
+<p>(poważny i długotrwały - <strong>chroniczny</strong>)</p>
+<p>8. hypertension</p>
+<p>(choroba polegająca na bardzo wysokim ciśnieniu krwi - <strong>nadciśnienie</strong>)</p>
+<p>9. ailments</p>
+<p>(choroby, zwykle mało poważne - <strong>dolegliwości</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. acne </p>
+<p>2. hypertension, respiratory disease</p>
+<p>3. cancer, peptic ulcer</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. autoimmune </p>
+<p>2. cells</p>
+<p>3. mental</p>
+<p>4. anxiety</p>
+<p>5. binge-eating</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Naprawdę wierzę, że większości chorób cywilizacyjnych można zapobiec, jeśli tylko bierzemy odpowiedzialność za naszą codzienną rutynę - przestrzegamy odpowiedniej diety i ćwiczymy. To, co uważam za zdecydowanie bardziej niebezpieczne to przypadłości, nad którymi nie mamy kontroli, na przykład choroby <strong>autoimmunologiczne</strong>, w których organizm produkuje przeciwciała do atakowania własnych <strong>komórek</strong>. To schorzenie staje się coraz powszechniejsze i jest niezwykle trudne do leczenia.</p>
+<p>Żyjemy w czasach, kiedy choroby <strong>psychiczne</strong> są równie powszechne jak te fizyczne. Mam wielu znajomych, którzy cierpią na depresję czy zaburzenia <strong>lękowe</strong>. Niedawno czytałam o przypadłości nazywanej <strong>objadaniem się</strong>, która charakteryzuje się napadami niekontrolowanego jedzenia. Zastanawiam się dlaczego zdrowie psychiczne nie jest właściwie leczone.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. cells</p>
+<p>(Rany się goją, ponieważ <strong>komórki</strong> rozmnażają się.) </p>
+<p>2. chronic</p>
+<p>(Nic nie pomaga mi pozbyć się tego <strong>chronicznego</strong> bólu pleców - ciągle go czuję.)</p>
+<p>3. cardiovascular </p>
+<p>(Problemy z naczyniami krwionośnymi mogą iść w parze z innymi dolegliwościami <strong>naczyniowymi</strong>, takimi jak zawał serca.)</p>
+<p>4. ailments</p>
+<p>(Wielu ludzi cierpi z powodu bezsenności i innych <strong>dolegliwości</strong> spowodowanych stresem.)</p>
+<p>5. anxiety</p>
+<p>(Zbyt duża ilość kofeiny może powodować <strong>niepokój</strong> - to tak jakbyś zawsze był/a trochę zmartwiony/a albo niespokojny/a.)</p>
+<p>6. sedentary</p>
+<p>(Odkąd Ben zaczął <strong>siedzącą</strong> pracę biurową, przytył przynajmniej trzy funty.)</p>
+<p>7. mental</p>
+<p>(Po tym jak Sue nie zdała kilku egzaminów z rzędu, skończyła z poważnymi problemami <strong>psychicznymi</strong> i musiała zrobić sobie rok przerwy.)</p>
+<p>8. life-threatening</p>
+<p>(Ta przypadłość może nie jest <strong>zagrażająca życiu</strong>, ale trudno z nią żyć.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

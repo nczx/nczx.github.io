@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <span style="text-decoration: line-through;">acquaintances</span> (znajomi)</p>
+<p><strong>Uzasadnienie</strong>: pozostałe słowa oznaczają członków rodziny.</p>
+<p>dodatkowe słowo: aunts (ciocie) </p>
+<p>2. <span style="text-decoration: line-through;">brother-in-law</span> (szwagier)</p>
+<p><strong>Uzasadnienie</strong>: pozostałe słowa oznaczają rodzeństwo, z którym dzielimy przynajmniej jednego rodzica.</p>
+<p>dodatkowe słowo: sister</p>
+<p>3. <span style="text-decoration: line-through;">siblings</span> (rodzeństwo)</p>
+<p><strong>Uzasadnienie</strong>: pozostałe słowa oznaczają osoby niespokrewnione. </p>
+<p>dodatkowe słowo: friends</p>
+<p>4. <span style="text-decoration: line-through;">honeymoon</span> (podróż poślubna)</p>
+<p><strong>Uzasadnienie</strong>: pozostałe słowa oznaczają nazwy uroczystości. </p>
+<p>dodatkowe słowo: christening (chrzest)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. e </p>
+<p>2. g</p>
+<p>3. a</p>
+<p>4. h</p>
+<p>5. b</p>
+<p>6. d</p>
+<p>7. c</p>
+<p>8. f</p>
+<p> </p>
+<p><strong>Tłumaczenie:</strong></p>
+<p>1. Nie spóźnij się do kościoła na nabożeństwo ślubne, albo twoja panna młoda będzie zła!</p>
+<p>2. Na nasze ostatnie spotkanie rodzinne przyszło trzydzieści pięć osób! To była całkiem duża impreza.</p>
+<p>3. Chcemy mieć małe przyjęcie weselne tylko dla najbliższej rodziny. </p>
+<p>4. Diana mówi, ze oczekuje kolejnego dziecka.</p>
+<p>5. Zostawiłeś puste miejsce na informację o najbliższych krewnych. Nie będą wiedzieli z kim się kontaktować w razie wypadku.</p>
+<p>6. W sobotę są chrzciny mojej trzymiesięcznej siostrzenicy/bratanicy i jestem rodzicem chrzestnym.</p>
+<p>7. Małżonkowie to słowo oznaczające mężów albo żony.</p>
+<p>8. Grill Paula nie był wielką ucztą - nadal jestem głodny/a!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. engagement </p>
+<p>expecting</p>
+<p>2. anniversary</p>
+<p>in-laws</p>
+<p>festivities</p>
+<p>televised</p>
+<p>3. ceremony</p>
+<p>spouses</p>
+<p>feast</p>
+<p>kin</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogubione):</strong></p>
+<p>1. X: Cześć, Sandro, jak się masz?</p>
+<p>Y: W porządku. Simon zapytał, czy zostanę jego żoną i zgodziłam się. Urządzamy przyjęcie <strong>zaręczynowe</strong> w sobotę. Przyjdziesz?</p>
+<p>X: Tak, świetnie. Wow! To bardzo szybko. Dopiero zaczęliście się spotykać. Nie <strong>oczekujesz</strong> chyba dziecka, prawda?</p>
+<p>Y: Nie! Czujemy po prostu pewność, że jesteśmy dla siebie stworzeni, więc po co czekać?</p>
+<p>2. X: Jak udała się piąta <strong>rocznica</strong> ślubu twojej siostry?</p>
+<p>Y: Okropnie. Miała dużą kłótnię ze swoimi <strong>teściami</strong>! Mama Dave'a potrafi być bardzo trudna. </p>
+<p>X: Czy ta kłótnia zepsuła <strong>obchody</strong>?</p>
+<p>Y: W pewnym sensie. Było tak głośno, że sąsiedzi zadzwonili po policję i pojawiła się lokalna telewizja. Więc skończyło się na tym, że impreza była <strong>transmitowana w telewizji</strong>!</p>
+<p>3. X: W Południowej Korei jest kościół, który organizuje zbiorowe śluby. Mogą w nim być trzy tysiące par, które zawierają małżeństwa w tym samym czasie. To musi być cudowna <strong>ceremonia</strong>.</p>
+<p>Y: Może być niezręczna. Co jeśli <strong>małżonkowie</strong> się pomieszają!</p>
+<p>X: Wyobraź sobie wesele. Na pewno są tam ogromne ilości jedzenia! Prawdziwa <strong>uczta</strong>!</p>
+<p>Y: Wyobraź sobie zdjęcie zbiorowe i proszenie ludzi, żeby znaleźli cię na fotografii!</p>
+<p>4. Możesz mi pomóc wypełnić ten formularz? Kim są moi "<strong>najbliżsi krewni</strong>" (<em>next of kin</em>)?</p>
+<p>Y: Najbliżsi żyjący członkowie rodziny - sądzę, że to twoja mama i twój tata. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. wedding </p>
+<p>2. cast</p>
+<p>3. siblings</p>
+<p>4. location</p>
+<p>5. in-laws</p>
+<p>6. air</p>
+<p>7. engagement</p>
+<p>8. spouses</p>
+<p>9. interview</p>
+<p>10. spin-off</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p><em>The Crown</em> to popularny serial telewizyjny o brytyjskiej rodzinie królewskiej. Zaczyna się od uroczystości <strong>zaślubin</strong> królowej w 1947 roku, kiedy poślubiła księcia Filipa, i ciągnie się do XXI wieku. To oznaczało, że potrzebne były zmiany w <strong>obsadzie</strong>, dlatego Olivia Coleman przejęła po Claire Foy rolę królowej, ale zmienili się też pozostali aktorzy, szczególnie książę Filip, mąż królowej i ich czworo dzieci, książę Karol i jego troje <strong>rodzeństwa</strong>, Anna, Andrzej i Edward. Film kręcony jest w studio pod Londynem oraz w <strong>plenerze</strong> w Zjednoczonym Królestwie i za granicą. </p>
+<p>Mimo popularności serialu, pojawiły się słowa krytyki dotyczące jego wierności w stosunku do prawdziwych wydarzeń, szczególnie w sezonie 4, w którym Karol i Diana są na pierwszym planie. Twórcy przedstawili księżną Dianę w korzystnym świetle, a wszystkich pozostałych, nawet jej <strong>teściów</strong>, królową i księcia Filipa, jako niesympatycznych. Książę Karol i jego druga żona, Kamila, wyłączyli możliwość dodawania komentarzy w swoich mediach społecznościowych, kiedy program był na <strong>antenie</strong>, ponieważ reakcje publiczności były tak negatywne. </p>
+<p>W sezonie 4 widzimy jak Karol i Diana się poznają, ich <strong>zaręczyny</strong>, kiedy Karol zapytał Dianę, czy za niego wyjdzie, a ona się zgodziła, ich bajkowy ślub i ciążę Diany. Następnie śledzimy rozstanie <strong>małżonków</strong> i rozwód pary aż do momentu słynnego szokującego <strong>wywiadu</strong> dla w brytyjskiej telewizji. </p>
+<p>Czy <em>The Crown</em> doczeka się <strong>kontynuacji*</strong> - <em>Harry i Meghan w Kalifornii</em>? Cóż, podpisali umowę z Netflixem, więc jest to możliwe!</p>
+<p> </p>
+<p><strong>*</strong>spin-off to serial lub film opowiadający historię bohaterów innego serialu lub filmu. </p><br>

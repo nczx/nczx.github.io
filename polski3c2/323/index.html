@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W przytoczonym fragmencie utworu zastosowano typ liryki zwrotu do adresata. Podmiot liryczny kieruje bowiem swe s³owa do bli¿ej nieokreœlonego odbiorcy: "Czy znasz ten kraj pod soplami sczernia³ych gor¹cych gromnic". Utwór zostaje jednak tak¿e wzbogacony o rozbudowany opis rzeczywistoœci, który podkreœla jej grozê. Samo zaœ powtórzenie pytania podkreœla jego sens w kontekœcie zaprezentowanych realiów. Œwiadczy o próbie rozpoznania dawniej znanego i przyjaznego kraju w jego nowej oraz ponurej ods³onie, potêguje wra¿enie rozdŸwiêku miêdzy przesz³oœci¹ a tym, co siê dzieje. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Gajcy ukazuje wizjê przestrzeni, która jest wyzbyta swego dawniej sielankowego charakteru. To obszar martwy, dotkniêty œmierci¹. Takie skojarzenia wywo³uje sugestywny obraz "[...] sopli sczernia³ych gor¹cych gromnic" - kojarz¹ siê z zagro¿eniem, ale tak¿e przemijaniem. Wra¿enie te potêguj¹ "[...] b³ony skrzyde³ / nietoperzy ogromnych", gdy¿ stanowi¹ znak nocy, œmierci oraz si³ nieczystych. W przestrzeni kraju dominuj¹ resztki kwiatów i zwierz¹t. Œwiadcz¹ one o ca³kowitym zniszczeniu i zag³adzie ca³ego œwiata natury. Równie z³owrogie skojarzenia wywo³uj¹ s³owa: "schodz¹ do jezior z siarki / i wêgla lasy brzozowe", poniewa¿ odwo³uj¹ siê do motywów infernalnych, zaznaczaj¹ nieuchronne unicestwienie. Apokaliptyczny wymiar rzeczywistoœci prowadzi do tego, i¿ nawet pojêcia wywo³uj¹ce pozytywne myœli zyskuj¹ nowe sensy i staj¹ siê Ÿród³em zagro¿enia. Tak dzieje siê na przyk³ad we fragmencie: "kiedy czerwony tulipan ze strzechy wyrós³ drzemi¹cej / i roni³ p³atki gor¹ce".  Kwiat, znak piêkna, kruchoœci, reprezentuje ogieñ, niesie zniszczenie. Poeta w swym utworze ukazuje tak¿e przestrzeñ miejsk¹ - przyjmuje wiêc szerok¹ perspektywê, podkreœla panuj¹c¹ tam pustkê: "Miasta pogiête jak muszle na czarnoziemnych wybrze¿ach". Dodatkowo zaznacza katastroficzn¹ wizjê œwiata, poniewa¿ dochodzi do naruszenia jego porz¹dku, nieodwracalnego okaleczenia. Towarzysz¹ temu przera¿aj¹ce zdarzenia o charakterze globalnym: "Marszczy siê skóra globu, lasami zapada i pêka, [...] / ziewaj¹ krwiste zachody przy ziemi rozwartym pyskiem". Œwiadcz¹ one o tym, i¿ nastêpuje koniec rzeczywistoœci znanej cz³owiekowi, poniewa¿ istnieje tylko œmieræ oraz pustka ("Ryby na rzekach z fioletu wyp³ywaj¹ brzuchami do góry", "i znaki z morowego powietrza / jak ob³oki wêdruj¹ nad œwiatem"; "i pustkê z³¹ ustokrotnia, / pustkê o wnêtrzu p³omienia"). Kolejne strofy pog³êbiaj¹ ponur¹ wizjê przestrzeni, w której po¿arom towarzyszy "[...] œmiertelny deszcz z gromnic". Taki sposób ukazania rzeczywistoœci przypomina o tym, i¿ nigdzie nie mo¿na znaleŸæ ratunku. Wszystko ulega bowiem destrukcji: nie tylko przyroda, ale tak¿e cz³owiek i jego osi¹gniêcia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<p><em>Czy znasz ten kraj pod soplami sczernia³ych gor¹cych gromnic</em></p>
+<p><em>skrzypi¹cych dawniej ¿ywic¹ - dzisiaj b³onami skrzyde³</em></p>
+<p><em>nietoperzy ogromnych </em></p>
+<p> </p>
+<p><em>Gdzie p³aski wypasa³ krajobraz</em></p>
+<p><em>stulone uœmiechy wiosek</em></p>
+<p><em>i kwit³y d³ugo przy ustach ³¹ki ³agodne jak flety - </em></p>
+<p><em>schodz¹ do jezior z siarki</em></p>
+<p><em>i wêgla lasy brzozowe.</em></p>
+<p> </p>
+<p><em>A domy ³ami¹ siê lekko, domy, w których zamieszka³ cz³owiek</em></p>
+<p><em>naszeptuj¹cy do kopców cmentarnych u granic.</em></p>
+<p><em>Ludzie o twarzach z wosku i oczach ³agodnej ³ani</em></p>
+<p><em>czekaj¹ na ga³¹zkê oliwn¹, a mo¿e</em></p>
+<p><em>na ga³¹zkê zwyk³ego œpiewu.</em></p>
+<p> </p>
+<p>Kontrasty przede wszystkim zaznaczaj¹ rozdŸwiêk miêdzy przesz³oœci¹ a obecn¹ wizj¹ rzeczywistoœci, wp³ywaj¹ na ekspresjê przedstawienia. Traci ona bowiem swój uporz¹dkowany i sielankowy charakter, natomiast staje siê naznaczona œmierci¹ oraz apokaliptycznymi zdarzeniami. Zabieg ten podkreœla grozê oraz totalny wymiar katastrofy, która trwale odmienia kraj, unicestwia jakiekolwiek przejawy ¿ycia, a za to wprowadza strach i poczucie bezradnoœci. Jednoczeœnie wskazuje na biern¹ postawê ludzi, którzy -  w obliczu tych przemian - mog¹ tylko oczekiwaæ na zmianê swej dramatycznej sytuacji. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowe nawi¹zania biblijne:</p>
+<ul>
+<li><em>[...] do jezior z siarki / i wêgla; </em></li>
+<li><em>[...] g³osy psalmistów letnich;</em></li>
+<li><em>Marszczy siê skóra globu, lasami zapada i pêka, / w szczelinach grzmoty podziemne niebo kalecz¹ niskie;</em></li>
+<li><em>i czarne s³oñce zmala³o do kszta³tu serca cz³owieka;</em></li>
+<li><em>i znaki z morowego powietrza;</em></li>
+<li><em>ptaków niebieskich [...];</em></li>
+<li><em>A domy ³ami¹ siê lekko, domy, w których zamieszka³ cz³owiek;</em></li>
+<li><em>czekaj¹ na ga³¹zkê oliwn¹ [...]. </em></li>
+</ul>
+<p> </p>
+<p>Nawi¹zania biblijne podkreœlaj¹ apokaliptyczny wymiar katastrofy. Ma ona totalny charakter i stanowi koniec znanej cz³owiekowi rzeczywistoœci, zag³adê cywilizacji oraz dotychczasowych osi¹gniêæ ludzkoœci. Odniesienia te nadaj¹ tragedii szczególny wymiar, ale tak¿e œwiadcz¹ o jej nieuchronnoœci, dope³nieniu siê apokaliptycznych wizji. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a)-e) Rozwi¹zanie poni¿ej: </p>
+<table border="1" style="border-collapse:collapse;width:695px;height:596px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:344px;height:17px;"><strong>Fragment</strong></td>
+<td style="background-color:#aed581;text-align:center;width:344px;height:17px;"><strong>Opis peryfrazy</strong></td>
+</tr>
+<tr style="height:119px;">
+<td style="width:344px;text-align:center;height:119px;">
+<p><em>schodz¹ do jezior z siarki / i wêgla lasy brzozowe</em></p>
+</td>
+<td style="width:344px;text-align:center;height:119px;">Peryfraza wprowadza infernalne motywy. Dochodzi bowiem do o¿ywienia lasów, które "schodz¹ do jezior z siarki / i wêgla". Sugeruje wiêc zag³adê i piek³o, spalenie oraz zniszczenie œwiata natury, który przestaje istnieæ. Œwiadczy równie¿ o odwróceniu dotychczasowego porz¹dku.</td>
+</tr>
+<tr style="height:136px;">
+<td style="width:344px;text-align:center;height:136px;"><em>czerwony tulipan ze strzechy wyrós³ drzemi¹cej / i roni³ p³atki gor¹ce</em></td>
+<td style="width:344px;text-align:center;height:136px;">Zastosowana peryfraza ukazuje po¿ar. Poeta opisuje go za pomoc¹ odniesienia siê do tulipana oraz jednej z jego typowych barw - czerwieni. Kwiat zyskuje jednak z³owrogie znaczenie, poniewa¿ staje siê znakiem zagro¿enia, zaœ jego p³atki to najprawdopodobniej p³omienie.</td>
+</tr>
+<tr style="height:34px;">
+<td style="width:344px;text-align:center;height:34px;"><em>ziewaj¹ krwiste zachody przy ziemi rozwartym pyskiem</em></td>
+<td style="width:344px;text-align:center;height:34px;">Peryfraza przedstawia pejza¿ naznaczony wojn¹. "Krwiste zachody" mo¿na zapewne odnieœæ do ³uny na horyzoncie, która wskazuje na tocz¹ce siê walki, zaœ jej kolor przypomina o krwi przelewanej przez ludzi. Jednoczeœnie "rozwarty pysk" zachodów wprowadza ponury nastrój, poniewa¿ œwiadczy o nieuchronnym zagro¿eniu, czymœ zach³annym i brutalnym. </td>
+</tr>
+<tr style="height:34px;">
+<td style="width:344px;text-align:center;height:34px;"><em>pada œmiertelny deszcz z gromnic wysokich</em></td>
+<td style="width:344px;text-align:center;height:34px;">Peryfraza ta przywodzi na myœl bombardowania, niebezpieczeñstwo nadchodz¹ce z nieba. Deszcz nie przynosi tym samym ¿ycia, ale staje siê Ÿród³em zag³ady. </td>
+</tr>
+<tr style="height:51px;">
+<td style="width:344px;text-align:center;height:51px;"><em>œlepn¹ Ÿrenice ludzi pod ciêciem puchowej lotki / ptaków niebieskich przemienionych w z³e</em></td>
+<td style="width:344px;text-align:center;height:51px;">Peryfraza prawdopodobnie odnosi siê do nalotów i zrzucania bomb przez samoloty. Mo¿na j¹ tak¿e rozpatrywaæ jako opis doœwiadczanego z³a. Pozytywne zjawiska trac¹ swój pierwotny wydŸwiêk (ptaki), staj¹ siê zagro¿eniem, natomiast cz³owiek traci dotychczasow¹ zdolnoœæ rozpoznawania rzeczywistoœci. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Peryfrazy wp³ywaj¹ na poetycki charakter przedstawienia - autor rezygnuje z brutalnej dos³ownoœci. Zamiast tego w aluzyjny sposób prezentuje apokaliptyczny wymiar sytuacji, odwo³uje siê do oniryzmu jako techniki obrazowania. Peryfrazy kszta³tuj¹ niepokoj¹c¹, ponur¹, przepe³nion¹ groz¹ atmosferê dzie³a oraz odzwierciedlaj¹ rozpad znanej cz³owiekowi rzeczywistoœci - staje siê nagle niepojêta, wroga. Zabieg ten wp³ywa tak¿e na oryginalnoœæ przedstawienia, która pozwala na ró¿norodne odczytywanie sensu. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<p><em>Gdzie p³aski wypasa³ krajobraz</em></p>
+<p><em>stulone uœmiechy wiosek </em></p>
+<p><em>i kwit³y d³ugo przy ustach ³¹ki ³agodne jak flety - </em></p>
+<p><em>schodz¹ do jezior z siarki</em></p>
+<p><em>i wêgla lasy brzozowe,</em></p>
+<p><em>Stanê³y w martwym powietrzu g³osy psalmistów letnich,</em></p>
+<p><em>kiedy czerwony tulipan ze strzechy wyrós³ drzemi¹cej</em></p>
+<p><em>i roni³ p³atki gor¹ce. </em></p>
+<p> </p>
+<p><em>Marszczy siê skóra globu, lasami zapada i pêka,</em></p>
+<p><em>w szczelinach grzmoty podziemne niebo kalecz¹ niskie,</em></p>
+<p><em>ziewaj¹ krwiste zachody przy ziemi rozwartym pyskiem</em></p>
+<p><em>i czarne s³oñce zmala³o do kszta³tu serca cz³owieka.</em></p>
+<p> </p>
+<p><em>Ptaki nieznane nikomu po d³ugich roœlinach œwistu</em></p>
+<p><em>spadaj¹ w d³onie ³un</em></p>
+<p><em>jak w sieci listków.</em></p>
+<p><em>Jab³ko ziemi b³¹dz¹ce w zdwojonych mocnych obrotach</em></p>
+<p><em>o obrêcz blasku ociera sypk¹ sosnow¹ sierœæ.</em></p>
+<p><em>Rwie siê niebieski bulgot </em></p>
+<p><em>i pustkê z³¹ ustokrotnia,</em></p>
+<p><em>pustkê o wnêtrzu p³omienia.</em></p>
+<p> </p>
+<p><em>Pada œmiertelny deszcz z gromnic wysokich,</em></p>
+<p><em>bezpañskie </em><em>zwierzêta strasz¹ miêdzy noc¹ a dniem,</em></p>
+<p><em>œlepn¹ Ÿrenice ludzi pod ciêciem puchowej lotki</em></p>
+<p><em>ptaków niebieskich przemienionych w z³e.</em></p>
+<p> </p>
+<p><em>Sk³êbiona puchnie darñ,</em></p>
+<p><em>skwiercz¹ rozwiane knoty gromnic,</em></p>
+<p><em>noce wtulone w skrzyd³a nietoperzy ogromnych </em></p>
+<p><em>ko³ysz¹ kraj.</em></p>
+<p> </p>
+<p>Zastosowanie stylu ekspresjonistycznego przede wszystkim wzmacnia emocjonalnoœæ przekazu, poczucie grozy wynikaj¹ce z zag³ady œwiata. Poeta za jego pomoc¹ d¹¿y do ukazania subiektywnej wizji rzeczywistoœci, która szokuje apokaliptycznym wymiarem i zwi¹zanym z nim unicestwieniem. Pozwala to wiêc na wyraziste ukazanie rozpadu dotychczasowego porz¹dku œwiata, co umo¿liwia tak¿e oddanie silnego poczucia niepokoju i nieuchronnej tragedii. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Cz³owiek niejako znajduje siê w centrum nieuniknionej katastrofy, przynale¿y do œwiata dotkniêtego zag³ad¹. Nie mo¿e jednak siê uchroniæ przed apokaliptycznymi zdarzeniami. Sugeruje to jego bezbronnoœæ wzglêdem rzeczywistoœci, znikomoœæ oraz naznaczenie œmierci¹. Wra¿enie to pog³êbia sposób przedstawienia ludzi: "[...] o twarzach z wosku i oczach ³agodnej ³ani". Cz³owiekowi odebrane zostaje nawet poczucie bezpieczeñstwa, które zazwyczaj zapewnia dom: "A domy ³ami¹ siê lekko, domy, w których zamieszka³ cz³owiek / naszeptuj¹cy do kopców cmentarnych u granic". Pozostaje mu tylko oczekiwanie na nadejœcie pokoju lub ukojenie (byæ mo¿e mo¿liwe dziêki sztuce): "czekaj¹ na ga³¹zkê oliwn¹, a mo¿e / na ga³¹zkê zwyk³ego œpiewu". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Tytu³ utworu wprowadza rozmaite mo¿liwoœci interpretacyjne - w zale¿noœci od sposobu zdefiniowania s³owa "widma". W podstawowym ujêciu nazwa poematu Gajcego zapowiada charakter zdarzeñ, które zyskuj¹ nadprzyrodzony oraz fantastyczny rys, wykraczaj¹ poza rozum czy logikê: "W promieniu wklês³ym i szklanym mówi¹ - œmieræ."; "Przymkniête s¹ oczy po¿arów, spod których ³zy jak katedry - / ³zy wyœcie³ane wrzosami miêkkie i dziwnie ciche -". Jednoczeœnie "widma" sugeruj¹ poczucie grozy oraz niepewnoœci, niepokoju wywo³anego apokaliptyczn¹ rzeczywistoœci¹. Wprowadzaj¹ tym samym perspektywê niebezpieczeñstwa, co odzwierciedla wyraziste obrazowanie w utworze odnosz¹ce siê do œmierci i unicestwienia: "Pada œmiertelny deszcz z gromnic wysokich". Taki tytu³ nawi¹zuje w ten sposób równie¿ do sfery metafizycznej (widmo jako duch), œwiadczy o odwróceniu porz¹dku œwiata, poniewa¿ w oswojonej do tej pory rzeczywistoœci pojawiaj¹ siê groŸne elementy, które s¹ przejawem z³a zag³ady oraz œmierci.  </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<p><em>Gdzie p³aski wypasa³ krajobraz </em></p>
+<p><em>stulone uœmiechy wiosek</em></p>
+<p><em>i kwit³y d³ugo przy ustach ³¹ki ³agodne jak flety - </em></p>
+<p><em>schodz¹ do jezior z siarki</em></p>
+<p><em>i wêgla lasy brzozowe.</em></p>
+<p><em>Stanê³y w martwym powietrzu g³osy psalmistów letnich,</em></p>
+<p><em>kiedy czerwony tulipan ze strzechy wyrós³ drzemi¹cej </em></p>
+<p><em>i roni³ p³atki gor¹ce. </em></p>
+<p> </p>
+<p><em>Ryby na rzekach z fioletu wyp³ywaj¹ brzuchami do góry,</em></p>
+<p><em>jawi¹ siê niebom obcym geometryczne stygmaty,</em></p>
+<p><em>a to zapowiedŸ z³owieszcza,</em></p>
+<p><em>bo u serca dzwonów wisz¹ ju¿ nietoperze</em></p>
+<p><em>i znaki z morowego powietrza</em></p>
+<p><em>jak ob³oki wêdruj¹ nad œwiatem.</em></p>
+<p> </p>
+<p><em>Pada œmiertelny deszcz z gromnic wysokich,</em></p>
+<p><em>bezpañskie zwierzêta strasz¹ miêdzy noc¹ a dniem, </em></p>
+<p><em>œlepn¹ Ÿrenice ludzi pod ciêciem puchowej lotki</em></p>
+<p><em>ptaków niebieskich przemienionych w z³e. </em></p>
+<p> </p>
+<p>Ocena zastosowania groteski - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>.</p><br>

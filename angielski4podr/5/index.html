@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Family members:</strong> (przykład), half brother, nephew, relative, sibling, sister-in-law, stepsister, twin.</p>
+<p>(Członkowie rodziny: brat przyrodni, siostrzeniec/bratanek, krewny, rodzeństwo, szwagierka, przyszywana siostra, bliźniak.) </p>
+<p><strong>Other people (not family):</strong> (przykład), best friend/mate, classmate, close friend, colleague, flatmate/roommate, (next door) neighbour, teammate, travel buddy, workmate.</p>
+<p>(Inni ludzie (spoza rodziny): najlepszy przyjaciel/przyjaciółka/kumpel/kumpela, kolega/koleżanka z klasy, bliski kolega/koleżanka, kolega/koleżanka z pracy, współlokator/współlokatorka, sąsiad/sąsiadka, kolega/koleżanka z zespołu, towarzysz/ka podróży, kolega/koleżanka z pracy.)</p>
+<p><strong>Males </strong>(mężczyźni): (przykład), half brother, nephew.</p>
+<p><strong>Females</strong> (kobiety): (przykład) sister-in-law, stepsister.</p>
+<p><strong>Either male or female </strong>(mężczyźni albo kobiety)<strong>:</strong> (przykład) best friend/mate, classmate, close friend, colleague, flatmate/roommate, (next door) neighbour, relative, sibling, teammate, travel buddy, twin, workmate. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. b </p>
+<p>2. f</p>
+<p>3. a</p>
+<p>4. d</p>
+<p>5. c</p>
+<p>6. e</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. three </p>
+<p>2. his exams</p>
+<p>3. ten</p>
+<p>4. October</p>
+<p>5. history teacher</p>
+<p>6. Rome</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. present perfect continuous </p>
+<p>2. lately</p>
+<p>3. present perfect simple</p>
+<p>4. ever</p>
+<p>5. never</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. has been helping out</p>
+<p><strong>Uzasadnienie</strong>: czynność powtarzająca się w niedalekiej, nieokreślonej przeszłości - czas <em>present perfect continuous</em>. </p>
+<p>has become </p>
+<p><strong>Uzasadnienie</strong>: opis zauważalnego efektu - czas p<em>resent perfect simple</em>.</p>
+<p>2. has already sent </p>
+<p><strong>Uzasadnienie</strong>: czynność, która miała miejsce w przeszłości, a jej skutki są widoczne są teraz - czas <em>present perfect simple</em>.</p>
+<p>3. have been learning </p>
+<p><strong>Uzasadnienie</strong>: nacisk położony jest na sam proces, nie efekt - czas <em>present perfect continuous</em>.</p>
+<p>4. Have, heard</p>
+<p><strong>Uzasadnienie</strong>: pytanie o efekt - czas <em>present perfect simple</em>.</p>
+<p>5. have lived</p>
+<p><strong>Uzasadnienie</strong>: czynność, która rozpoczęła się w przeszłości i trwa do dziś - czas <em>present perfect</em>.</p>
+<p>6. Have, gone<strong>*</strong></p>
+<p><strong>Uzasadnienie</strong>: pytanie o doświadczenie bez konkretnego momentu w przeszłości - czas <em>present perfect simple</em>.</p>
+<p> </p>
+<p><strong>*</strong> W tym zdaniu powinien zostać użyty czasownik "be", a zdanie powinno brzmieć: "Have they ever been to the USA?". W ten właśnie sposób pytamy o czyjeś doświadczenie.</p>
+<p>Zdania z czasownikiem "go" w czasie present perfect simple możemy użyć w innym kontekście, np. "Have they gone to the post office?" (Czy oni poszli na pocztę?) - oznacza to, że oni wyszli na pocztę, ale jeszcze nie wrócili, więc albo są w drodze, albo już dotarli na miejsce. Pytanie "Have they gone to the USA?" oznacza, że osoba je wypowiadająca zakłada, że oni pojechali do USA, ale stamtąd nie wrócili, a nie czy "Czy oni kiedykolwiek byli w Stanach Zjednoczonych?", jak zakładano w tym zadaniu. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>indywidualne</p><br>

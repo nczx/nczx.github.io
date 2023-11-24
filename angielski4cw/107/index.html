@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. potters </p>
+<p>2. tiles </p>
+<p>3. judges</p>
+<p>4. clay</p>
+<p>5. creative</p>
+<p>6. identical</p>
+<p>7. colours</p>
+<p>8. argue</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. They have to make nine tiles. </p>
+<p>(Muszą wykonać dziewięć płytek.) </p>
+<p>2. They have ninety minutes to complete the task. </p>
+<p>(Mają dziewięćdziesiąt minut na ukończenie zadania.)</p>
+<p>3. He puts his name on the tiles. </p>
+<p>(Umieszcza na płytkach swoje imię i nazwisko.)</p>
+<p>4. They have to step back from their tiles.</p>
+<p>(Muszą odsunąć się od swoich płytek.)</p>
+<p>5. He's happy but he's not sure why he has won.</p>
+<p>(Jest szczęśliwy, ale nie jest pewien, dlaczego wygrał.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. what</p>
+<p>(Zaraz dowiedzą się, <strong>co</strong> muszą zrobić.) </p>
+<p>2. what</p>
+<p>(Pod przykryciami znajdziecie <strong>to</strong>, na czym zostawicie swój ślad.)</p>
+<p>3. what</p>
+<p>(Artyści muszą pokazać sędziom, <strong>co</strong> potrafią.)</p>
+<p>4. that</p>
+<p>(Jedna osoba zapomniała, <strong>że</strong> sędziowie nie powinni wiedzieć, kto wykonał który zestaw płytek.)</p>
+<p>5. that</p>
+<p>(W miarę postępu prac, niektórzy martwią się, <strong>że</strong> prace sąsiadów mogą być lepsze.)</p>
+<p>6. that</p>
+<p>(Ale inni uważają, że to ekscytujące, <strong>że</strong> jest tyle różnych wzorów.)</p>
+<p>7. what</p>
+<p>(Co pomyślą o <strong>tym</strong>, co zrobili artyści?)</p>
+<p>8. what</p>
+<p>(I to najciekawszy sposób użycia <strong>tego</strong>, z czym artyści musieli pracować.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. need to be decorated. </p>
+<p>2. the decorations should look like.</p>
+<p>3. they have made.</p>
+<p>4. are not very creative.</p>
+<p>5. are all identical.</p>
+<p>6. made the the judges choose him</p>
+<p>he has won. </p>
+<p> </p>
+<p><strong>Tłumaczenie powstałych zdań (dopisane fragmenty są pogrubione):</strong></p>
+<p>1. Garncarze otrzymali dziewięć płytek, które <strong>muszą zostać udekorowane</strong>.</p>
+<p>2. Nie ma żadnych zasad ani wskazówek na temat tego, jak <strong>powinny wyglądać dekoracje</strong>.</p>
+<p>3. Kiedy kończą, sędziowie przyglądają się temu, <strong>co stworzyli</strong>.</p>
+<p>4. Nie zaimponowały im płytki, które <strong>nie są zbyt kreatywne</strong>.</p>
+<p>5. Ale podobają im się płytki, które <strong>są identyczne</strong>.</p>
+<p>6. Matthew nie wie, co <strong>sprawiło, że sędziowie go wybrali</strong>, ale jest bardzo zadowolony, że <strong>wygrał</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br>

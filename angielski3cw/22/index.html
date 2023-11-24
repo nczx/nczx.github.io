@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. percussion </p>
+<p><strong>Uzasadnienie</strong>: rzeczownik "perkusja" nie pasuje do reszty wyrazów, ponieważ nie jest nazwą osoby. </p>
+<p>2. opera</p>
+<p><strong>Uzasadnienie</strong>: rzeczownik "opera" nie pasuje do reszty wyrazów, ponieważ nie jest nazwą czynności.</p>
+<p>3. melody</p>
+<p><strong>Uzasadnienie</strong>: rzeczownik "melodia" nie pasuje do reszty wyrazów, ponieważ nie jest nazwą gatunku muzycznego.</p>
+<p>4. record</p>
+<p><strong>Uzasadnienie</strong>: czasownik "nagrywać" nie pasuje do reszty wyrazów, ponieważ nie jest nazwą miejsca.</p>
+<p>5. lyrics</p>
+<p><strong>Uzasadnienie</strong>: rzeczownik "słowa piosenki" nie pasuje do reszty wyrazów, ponieważ nie jest nazwą sprzętu.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. release </p>
+<p>(Mam nadzieję, że Morat <strong>wyda</strong> wkrótce nowy singiel.) </p>
+<p>2. tour</p>
+<p>(Ludzie nie zdają sobie sprawy, że kiedy zespoły są w <strong>trasie</strong>, ich życie jest dość nudne. Polega jedynie na podróżowanie i przebywaniu w pokojach hotelowych, które wszystkie wyglądają tak samo.) </p>
+<p>3. lead singer</p>
+<p>(<strong>Głównym wokalistą</strong> zespołu Coldplay jest Chris Martin. Ma niesamowity głos!) </p>
+<p>4. sound quality</p>
+<p>(Nasza szkolna aula to świetne miejsce na koncerty, ponieważ <strong>jakość dźwięku</strong> jest doskonała - wszystko naprawdę dobrze słychać.) </p>
+<p>5. support band</p>
+<p>(<strong>Support</strong> na koncercie Eda Sheerana był genialny. Nigdy o nich nie słyszałem, ale na pewno poszedłbym/poszłabym na ich występ ponownie.) </p>
+<p>6. record</p>
+<p>(Wielu młodych artystów na YouTube <strong>nagrywa</strong> piosenki w domu, a następnie umieszcza je w sieci, żeby ludzie mogli ich słuchać.) </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. a </p>
+<p><strong>Uzasadnienie</strong>: <em>catchy songs </em>- piosenki wpadające w ucho. </p>
+<p>2. c</p>
+<p><strong>Uzasadnienie</strong>: <em>sing along to a song </em>- wtórować piosence.</p>
+<p>3. b</p>
+<p><strong>Uzasadnienie</strong>: <em>lyrics tell stories </em>- słowa piosenek opowiadają historie.</p>
+<p>4. c</p>
+<p><strong>Uzasadnienie</strong>: <em>lead singers </em>- głowni wokaliści.</p>
+<p>5. b</p>
+<p><strong>Uzasadnienie</strong>: <em>live album </em>- płyta koncertowa.</p>
+<p>6. a</p>
+<p><strong>Uzasadnienie</strong>: <em>sound quality </em>- jakość dźwięku.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1 - c</p>
+<p>(Nie daliśmy rady kupić biletów. <strong>Wszystkie sprzedały się bardzo szybko.</strong>) </p>
+<p>2 - e</p>
+<p>(Mam nadzieję, że nie będzie padać. <strong>Koncert odbędzie się na świeżym powietrzu.</strong>)</p>
+<p>3 - b</p>
+<p>(Chodźmy na rynek miejski. <strong>Jest tam uliczny grajek, który występuje każdego dnia i jest niesamowity.</strong>)</p>
+<p>4 - a</p>
+<p>(Nie napisali tej piosenki. <strong>To cover piosenki z lat 80. XX wieku.</strong>)</p>
+<p>5 - d</p>
+<p>(Nie lubię tej piosenki, ale bardzo wpada w ucho. <strong>Często śpiewam ją, nawet o tym nie myśląc.</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. songwriter  </p>
+<p>2. released</p>
+<p>3. hit</p>
+<p>4. lyrics</p>
+<p>5. sell out</p>
+<p>6. stream</p>
+<p><s class="odr-strikethrough">entertain</s>, <s class="odr-strikethrough">rehearsal</s>, <s class="odr-strikethrough">tour</s></p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Dawid Podsiadło jest wokalistą i <strong>autorem tekstów</strong>, a także jednym z odnoszących największe sukcesy polskich artystów muzycznych ostatniej dekady. Stał się sławny, kiedy wygrał konkurs talentów <em>X Factor </em>w 2012 roku. <strong>Wydał </strong>swój pierwszy album następnego roku i stał się on wielkim <strong>hitem</strong>, stając się numerem jeden na rankingu albumów i sprzedając się w tysiącach egzemplarzy. Dawid napisał większość <strong>tekstów piosenek </strong>samemu, zarówno te polskie, jak i angielskie. Bilety na jego koncerty zawsze <strong>wyprzedają się</strong> jak tylko trafiają do sprzedaży. Oprócz grania solo, ma również zespół, który założył z przyjaciółmi ze szkoły. Jego muzykę i występy na żywo można <strong>streamować</strong> online - robią to miliony ludzi. Jestem pewny/a, że gdy już usłyszycie jego piosenki, będziecie chcieli dodać niektóre z nich do swojej listy odtwarzania. </p><br>

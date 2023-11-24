@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. never - <strong>e</strong>  </p>
+<p>2. before - <strong>a</strong></p>
+<p>3. play - <strong>g</strong></p>
+<p>4. three - <strong>b</strong></p>
+<p>5. neighbours - <strong>d</strong></p>
+<p>6. tired - <strong>f</strong></p>
+<p>7. written - <strong>c</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zdania w czasie <em>present perfect simple</em> tworzymy w następujący sposób:</strong></p>
+<p><strong><span style="text-decoration: underline;">Twierdzące</span>: Podmiot + <em>have / has</em> + <em>past participle </em>(końcówka -ed lub III kolumna w tabeli czasowników nieregularnych)</strong></p>
+<p><strong><span style="text-decoration: underline;">Przeczące</span>: Podmiot + <em>haven't / hasn't</em> + <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Pytania</span>: (Zaimek pytający) + <em>have / has</em> + podmiot + <em>past participle</em></strong></p>
+<p><strong>Czasownik posiłkowy w czasie present perfect ma formę have we wszystkich osobach oprócz 3. osoby pojedynczej (he/she/it). W tej osobie ma formę has. </strong></p>
+<hr/>
+<p> </p>
+<p>1. Ariana Grande has recorded a new single.  </p>
+<p>2. They haven't bought tickets for the concert.</p>
+<p>3. Have you played the guitar in public?</p>
+<p>4. He hasn't heard that song before.</p>
+<p>5. Has your brother listened to your favourite song?</p>
+<p>6. We have written a rap song.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Zdania w czasie <em>present perfect simple</em> tworzymy w następujący sposób:</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Twierdzące</span>: Podmiot + <em>have / has</em> + <em>past participle </em>(końcówka -ed lub III kolumna w tabeli czasowników nieregularnych)</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Przeczące</span>: Podmiot + <em>haven't / hasn't</em> + <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Pytania</span>: (Zaimek pytający) + <em>have / has</em> + podmiot + <em>past participle</em></strong></p>
+<p><strong>Czasownik posiłkowy w czasie present perfect ma formę have we wszystkich osobach oprócz 3. osoby pojedynczej (he/she/it). W tej osobie ma formę has. </strong></p>
+<hr/>
+<p> </p>
+<p>1. has worked  </p>
+<p>2. haven't listened</p>
+<p>3. has won</p>
+<p>4. has inspired</p>
+<p>5. have uploaded</p>
+<p>6. have bought</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Zdania w czasie <em>Present perfect continuous</em> tworzymy w następujący sposób:</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Twierdzące</span>: Podmiot + <em>have/has</em> <em>been</em> + czasownik z -ing + reszta zdania.</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Przeczące</span>: Podmiot + <em>haven't/hasn't been</em> + czasownik z -ing +  reszta zdania.</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Pytania</span>: (Zaimek pytający) + <em>Have/Has</em> + podmiot + <em>been </em>+ czasownik z -ing + reszta pytania.</strong></p>
+<p><strong>Czasownik posiłkowy w czasach <em>Present perfect</em> ma formę <em>have</em> we wszystkich osobach oprócz 3. osoby pojedynczej (<em>he/she/it</em>). W tej osobie ma formę <em>has.</em> W 3. formie czasowniki regularne mają końcówkę -ed. Czasowniki nieregularne mają różne formy, których należy nauczyć się na pamięć.</strong></p>
+<hr/>
+<p> </p>
+<p>1. have been performing </p>
+<p>2. have been learning</p>
+<p>3. haven't been doing, have been watching</p>
+<p>4. has been thinking, hasn't been listening</p>
+<p>5. haven't been downloading</p>
+<p>6. Have ... been working</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. have probably heard </p>
+<p><strong>Uzasadnienie:</strong> kiedy przedstawiamy rezultat zakończonej czynności, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). </p>
+<p>2. have been writing</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been </em>+ czasownik z -ing).</p>
+<p>3. have had</p>
+<p><strong>Uzasadnienie:</strong> kiedy jakaś czynność odbyła się kilka razy w nieokreślonej przeszłości, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>).</p>
+<p>4. have been making</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been </em>+ czasownik z -ing).</p>
+<p>5. have won</p>
+<p><strong>Uzasadnienie:</strong> kiedy jakaś czynność odbyła się kilka razy w nieokreślonej przeszłości, używamy czasu <em>present perfect simple</em> (<em>have/has</em> + <em>past participle</em>). W tym tekście nazwa zespołu traktowana jest jako rzeczownik zbiorowy (<em>Clean Bandit - they</em>), dlatego używamy formy <em>have</em>.</p>
+<p>6. have been calling</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been </em>+ czasownik z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie</strong>: niezakończoną czynność, która trwa od jakiegoś czasu, możemy wyrazić za pomocą <em>present perfect continuous </em>(<em>have been + </em>czasownik z -ing). </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: stan (<em>to be awake </em>- być obudzonym / nie spać), który trwa od jakiegoś czasu, wyrazimy za pomocą <em>present perfect simple </em>(<em>have + past participle</em>). Choć teoretycznie nie ma tutaj żadnego określonego rezultatu, czasowników wyrażających stany nie używamy w czasie ciągłym (<em>continuous</em>).</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie</strong>: dotychczasowe doświadczenia wyrażamy za pomocą czasu <em>present perfect simple</em>.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie</strong>: kiedy podkreślamy długość trwania jakiejś czynności, której (negatywne) skutki są nadal odczuwalne, używamy czasu <em>present perfect continuous</em>.</p><br>

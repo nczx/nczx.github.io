@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Matka nie odgrywa w opowiadaniu znacz¹cej roli, chocia¿ to ona nakazuje narratorowi przyniesienie portfela. Mówi¹cy nie poœwiêca jej zbyt wiele uwagi, przyznaje nawet sw¹ obojêtnoœæ: "[...] o matkê nie dba³em". Kobieta ta bowiem reprezentuje si³ê sprawcz¹ oraz ¿yciowy pragmatyzm, zwyczajnoœæ. Z tego te¿ powodu stara siê odci¹gn¹æ mê¿a od jego rozwa¿añ i kieruje go ku przyziemnym kwestiom: "A¿eby mu sprawiæ pewn¹ dystrakcjê i oderwaæ go od chorobliwych dociekañ, wyci¹ga³a go [...] na wieczorne spacery, na które szed³, milcz¹c, bez oporu, ale i bez przekonania". W przeciwieñstwie do niej ojciec zostaje przedstawiony jako mêdrzec, cz³owiek przebywaj¹cy w innej rzeczywistoœci. Otacza go aura tajemnicy oraz niezwyk³oœci. Narrator jest nim zafascynowany, w zwi¹zku z czym poœwiêca mu wiêcej uwagi ni¿ matce. Mówi¹cego intryguje zachowanie rodziciela, poniewa¿ widzi wiêcej ni¿ inni, ma dostêp do sfery zamkniêtej dla innych ludzi, œwiata wy¿szych wartoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Przekroczenie granicy miêdzy realizmem a rzeczywistoœci¹ oniryczn¹ zaczyna siê zasadniczo w momencie, kiedy matka nakazuje narratorowi, aby przyniós³ z domu portfel ojca. Realna sytuacja (wyjœcie do teatru) ustêpuje wizji œwiata, który wywo³uje skojarzenia z marzeniem sennym - zmiennym, tajemniczym, niejednoznacznym: "Jest lekkomyœlnoœci¹ nie do darowania wysy³aæ w tak¹ noc m³odego ch³opca z misj¹ wa¿n¹ i piln¹ albowiem w jej pó³œwietle zwielokrotniaj¹ siê, pl¹cz¹ i wymieniaj¹ jednej z drugimi ulice". Oniryzm ulega pog³êbieniu równie¿ w momencie, kiedy narrator pragnie odwiedziæ sklepy cynamonowe, jednak wtedy miasto staje siê dla niego labiryntem, co prowadzi do kolejnych cudownych sytuacji. Na zmianê rzeczywistoœci wp³ywa przede wszystkim niezwyk³oœæ opisywanej nocy, która zdaje siê zwodziæ i kusiæ zmys³y cz³owieka, otwieraæ przed nim nowe przestrzenie. W czasie tym bowiem wszystko staje siê mo¿liwe oraz cudowne: "Wszyscy, oczarowani widowiskiem tej nocy, mieli twarze wzniesione i srebrne od magii nieba". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Etapy wêdrówki:</p>
+<p>1. Decyzja o przyniesieniu przez narratora portfela.</p>
+<p><span style="text-decoration:underline;">2. Obserwacja niezwyk³ych metamorfoz. </span></p>
+<p>3. Postanowienie odwiedzenia sklepów cynamonowych.</p>
+<p><span style="text-decoration:underline;">4. Zagubienie siê w labiryncie ulic.</span></p>
+<p>5. Przejœcie przez szko³ê.</p>
+<p>6. Propozycja woŸnicy.</p>
+<p><span style="text-decoration:underline;">7. Porzucenie wozu przez woŸnicê.</span></p>
+<p><span style="text-decoration:underline;">8. Cudowna podró¿.</span></p>
+<p><span style="text-decoration:underline;">9. Rozmowa z koniem.</span></p>
+<p>10. Powrót do miasta. </p>
+<p> </p>
+<p><span style="text-decoration:underline;">Etapy fantastyczne - podkreœlenie</span></p>
+<p>Pozosta³e etapy - realistyczne </p>
+<p> </p>
+<p>Wprowadzenie poetyki snu buduje specyficzny, poetycki nastrój dzie³a, w którym rzeczywistoœæ jest p³ynna, niejednoznaczna: "By³a to jedna z tych jasnych nocy, w których firmament gwiezdny jest tak rozleg³y i rozga³êziony, jakby rozpad³ siê, roz³ama³ i podzieli³ na labirynt odrêbnych niebios, wystarczaj¹cych do obdzielenia ca³ego miesi¹ca nocy zimowych i do nakrycia swymi srebrnymi i malowanymi kloszami wszystkich ich nocnych zjawisk, awantur i karnawa³ów". Oryginalna wizja miasteczka pozwala na odkrycie jego innego oblicza, które ulega ci¹g³ym przemianom. Wskazuje to tak¿e na subiektywizm doœwiadczenia narratora. Poetyka ta prowadzi przy tym do odrealnienia ukazanych sytuacji, przez co wszystko staje siê mo¿liwe. Przestrzeñ ma tajemniczy charakter, umo¿liwia wkroczenie w zupe³nie now¹ rzeczywistoœæ. Zabieg ten odzwierciedla tak¿e indywidualizm narratora. Sprawia bowiem, i¿ odkrywa on na nowo z³o¿onoœæ œwiata, wchodzi w niepoznane dot¹d sfery. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W opowiadaniu autorstwa Schulza wspó³istniej¹ obok siebie dwie przestrzenie. Pierwsza z nich jest wewnêtrzna, zamkniêta. Mo¿na do niej zaliczyæ m.in. dom narratora, teatr czy sklepy cynamonowe. Wyró¿nia siê ona kameralnym charakterem. Dom - mimo swej zwyk³oœci, przeciêtnoœci - nabiera jednak dodatkowych sensów - za spraw¹ ojca. W znanej mu przestrzeni odkrywa on inn¹ rzeczywistoœæ, pogr¹¿a siê w swych rozmyœlaniach: "Wszystkie chroboty, trzaski nocne, tajne, skrzypi¹ce ¿ycie pod³ogi mia³y w nim nieomylnego i czujnego dostrzegacza, szpiega i wspó³spiskowca. Absorbowa³o go to w tym stopniu, ¿e pogr¹¿a³ siê zupe³nie w tej niedostêpnej dla nas sferze, z której nie próbowa³ zdawaæ nam sprawy". ród³em tajemnic i uniesienia staje siê tak¿e przestrzeñ teatru, w której dominuje napiêcie, oczekiwanie na sztukê. Z kolei sklepy cynamonowe - w ujêciu narratora - nabieraj¹ szczególnego znaczenia. Wprowadzaj¹ egzotykê, tajemnicê, kusz¹ intryguj¹cym towarem, który pobudza zmys³y czy wyobraŸniê. Symbolizuj¹ tym samym sferê pragnieñ oraz marzeñ, umo¿liwiaj¹ tak¿e realizacjê ¿yczeñ lub te¿ ods³onienie zagadek œwiata. Przestrzeñ ta zyskuje wiêc metafizyczny i wrêcz mistyczny charakter.</p>
+<p>W przytoczonym fragmencie opowiadania dominuje jednak przestrzeñ zewnêtrzna, któr¹ narrator opisuje przez pryzmat swej wêdrówki. Wyró¿nia siê ona onirycznym charakterem, sk³onnoœci¹ do ci¹g³ych metamorfoz, które wywo³uj¹ zachwyt i oszo³omienie. Ponadto ta szczególna noc powoduje, i¿ otoczenie przestaje byæ przyziemne czy te¿ znajome. Œwiadczy o tym przedstawienie ulic na podobieñstwo labiryntu: "Oczarowana i zmylona wyobraŸnia wytwarza z³udne plany miasta, rzekomo dawno znane i wiadome, w których te ulice maj¹ swe miejsce i sw¹ nazwê, a noc w niewyczerpanej swej p³odnoœci nie ma nic lepszego do roboty, jak dostarczaæ wci¹¿ nowych i urojonych konfiguracyj". Ukazana przestrzeñ jest magiczna, uwodzi zmys³y cz³owieka, wp³ywa na jego dzia³ania. Zapewnia mu niepowtarzalny spektakl: "Œnieg skurczy³ siê w baranki bia³e, w niewinne i s³odkie runo, które pachnia³o fio³kami. W takie same baranki rozpuœci³o siê niebo, w którym ksiê¿yc dwoi³ siê i troi³, demonstruj¹c w tym zwielokrotnieniu wszystkie swoje fazy i pozycje". Jednoczeœnie przestrzeñ ta to ¿ywy byt, który niejako bawi siê narratorem, zaburza jego orientacjê w terenie: "Po drugiej stronie  tych domów musi prowadziæ w³aœciwa ulica, od której te domy s¹ dostêpne - myœla³em sobie. Z niepokojem przyspiesza³em kroku, rezygnuj¹c w duchu z myœli zwiedzenia sklepów. Byle tylko wydostaæ siê st¹d prêdko w znane okolice miasta". O niezwyk³oœci opisywanej przestrzeni œwiadczy równie¿ to, i¿ nieustannie siê poszerza - w ten sposób odkrywa przed mieszkañcami miasta now¹ oraz fantastyczn¹ rzeczywistoœæ: "Kolorowa mapa niebios wyogromnia³a w kopu³ê niezmiern¹, na której spiêtrzy³y siê fantastyczne l¹dy, oceany i morza, porysowane liniami wirów i pr¹dów gwiezdnych, œwietlistymi liniami geografii niebieskiej". Tym samym przestrzeñ zewnêtrzna jest nieokie³znana, wyj¹tkowa i niepojêta, silnie oddzia³uje na prze¿ycia mieszkañców miasta. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Labirynt w utworze Schulza to istotny element opisywanej rzeczywistoœci. Dotyczy on nie tylko miasta, jego ulic, ale przejawia siê tak¿e w sposobie ukazania zimowego nieba. Motyw ten s³u¿y przede wszystkim zbudowaniu tajemniczej i onirycznej atmosfery, jednak wyra¿a tak¿e prawdê na temat relacji cz³owieka ze œwiatem. Ten zaœ jest niejednoznaczny, zmienny, a tak¿e podstêpny, poniewa¿ zaburza sposób postrzegania terenu, wywo³uje w bohaterze niepokój oraz poczucie zagubienia. Miejski labirynt tworz¹ przede wszystkim ulice, które ca³y czas zdaj¹ siê ulegaæ przemianom, wprowadzaæ cz³owieka w b³¹d: "Otwieraj¹ siê w g³êbi miasta, ¿eby tak rzec, ulice podwójne, ulice sobowtóry, ulice k³amliwe i zwrotne." Sugeruje to subiektywizm doœwiadczania przestrzeni, jej fantastyczny charakter, umo¿liwiaj¹cy przekroczenie granic. W ten sposób narrator odkrywa sensualn¹ wizjê rzeczywistoœci, która staje siê dla niego Ÿród³em poznania, byæ mo¿e tak¿e sposobem na poszukiwanie prawdy czy w metaforycznym sensie - swej ¿yciowej drogi. Labirynt stanowi tak¿e przejaw fantazji, mo¿liwoœci wyobraŸni, chocia¿ przy tym jednoczeœnie pewnego zagubienia: "Oczarowana i zmylona wyobraŸnia wytwarza z³udne plany miasta, rzekomo dawno znane i wiadome, w których te ulice maj¹ swe miejsce i sw¹ nazwê [...]". Dochodzi do jego multiplikacji tak¿e na niebie, co wp³ywa na pog³êbienie wielowymiarowoœci œwiata: "[...] firmament gwiezdny jest tak rozleg³y i rozga³êziony, jakby rozpad³ siê, roz³ama³ i podzieli³ na labirynt odrêbnych niebios, wystarczaj¹cych, do obdzielenia ca³ego  miesi¹ca nocy [...]". Staje siê w ten sposób symbolem tego, co uniwersalne oraz symboliczne. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Sklepy zostaj¹ okreœlone mianem cynamonowych ze wzglêdu na ciemn¹ boazeriê, któr¹ s¹ wy³o¿one. Wywo³uje ona skojarzenia w³aœnie z cynamonem. Nazwa ta wskazuje tak¿e na ich niezwyk³oœæ, egzotykê oraz niepowtarzalnoœæ. Sklepy dostarczaj¹ bowiem piêkne, tajemnicze i pobudzaj¹ce wyobraŸniê przedmioty: "[...] ognie bengalskie, szkatu³ki czarodziejskie, marki krajów dawno zaginionych, chiñskie odbijanki, indygo, kalafonium z Malabaru, jaja owadów egzotycznych, papug, tukanów, ¿ywe salamandry i bazyliszki, korzeñ Mandragory, norymberskie mechanizmy, homunculusy w doniczkach, mikroskopy i lunety, a nade wszystko rzadkie i osobliwe ksi¹¿ki, stare folianty pe³ne przedziwnych rycin i osza³amiaj¹cych  historii". S¹ one w utworze symbolem tego, co magiczne, zagadkowe. Pobudzaj¹ przy tym marzenia i stanowi¹ obiekt fascynacji narratora, który decyduje siê odwiedziæ te sklepy. </p>
+<p> </p>
+<p>Czêœæ indywidualna - wyra¿enie swojego zadania</p><br>

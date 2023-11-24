@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. different from  </p>
+<p>(Kolejność wyrazów w pytaniach pośrednich jest inna niż w pytaniach bezpośrednich.)</p>
+<p><strong>Uzasadnienie</strong>: w języku angielskim pytania mają szyk przestawny (np. <em><span style="text-decoration: underline;">Is she</span> tired?</em> - czasownik + podmiot + dopełnienie). W pytaniach pośrednich używamy szyku zdania twierdzącego (np. <em>I wonder if <span style="text-decoration: underline;">she is</span> tired.</em>).</p>
+<p>2. don't use</p>
+<p>(W pytaniach pośrednich nie używamy czasowników posiłkowych <em>do</em>, <em>does</em>, ani <em>did</em>.)</p>
+<p><strong>Uzasadnienie</strong>: w czasach gramatycznych typu <em>simple</em> do utworzenia pytań używamy czasowników posiłkowych (<em>present simple - do/does, past simple - did</em>). Jako że w pytaniach pośrednich występuje szyk zdania twierdzącego, nie ma potrzeby używać <em>do/does/did </em>(np. <em>Did he go? </em>zmieni się na: <em>I wonder if he went</em>.).</p>
+<p>3. if </p>
+<p>(Kiedy pytanie bezpośrednie nie zaczyna się od zaimka/wyrażenia pytającego (<em>Wh</em>- albo <em>How</em>), w pytaniu pośrednim używamy "czy" (<em>if</em> / <em>whether</em>).)</p>
+<p><strong>Uzasadnienie</strong>: podobnie jak w języku polskim, pytania ogólne (typu tak/nie) zamieniamy na pytania pośrednie, wykorzystując spójnik "czy" (Zastanawiam się, czy przyjdzie na tę imprezę → <em>I wonder if/whether she comes to the party</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Indirect questions in Sam's letter: </strong>(pytania pośrednie w liście Sama)</p>
+<p>1. "Could you tell me where exactly the projects are located (...)?" <br/><br/>2. "Could you tell me (...) whether it is possible to choose a location?"</p>
+<p><br/><strong>Direct questions: </strong>(pytania bezpośrednie)</p>
+<p>1. Where exactly are the projects located?</p>
+<p><strong>Uzasadnienie: </strong>w pytaniu szczegółowym występuje zaimek pytający (tu: <em>where</em> - gdzie), którego używamy na początku zdania. Zmieniamy szyk na pytający (<em>the projects are → are the projects ...?</em>).</p>
+<p>2. Is it possible to choose a location?</p>
+<p><strong>Uzasadnienie: </strong>spójnik <em>if/whether </em>(czy) występuje tylko w pytaniach pośrednich. Zmieniamy szyk zdania na pytający (<em>it is → is it ...?</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>W pytaniach pośrednich występuje szyk zdania twierdzącego. Porównaj:</strong></p>
+<p style="padding-left: 30px;"><em><strong><span style="text-decoration: underline;">Do you like</span> football? → I was wondering if <span style="text-decoration: underline;">you like</span> football.</strong></em></p>
+<p style="padding-left: 30px;"><em><strong><span style="text-decoration: underline;">Did she stay</span>? → I wonder if <span style="text-decoration: underline;">she stayed</span>.</strong></em></p>
+<p style="padding-left: 30px;"><em><strong><span style="text-decoration: underline;">Is he</span> alright? → Could you tell me if <span style="text-decoration: underline;">he is</span> alright?</strong></em></p>
+<p><strong><br/>Po wybranym zwrocie wprowadzającym używamy także słowa pytającego (w przypadku pytań szczegółowych) lub (w przypadku pytań ogólnych) spójnika <em>if </em>lub <em>whether </em>(czy). Przykład:</strong></p>
+<p style="padding-left: 30px;"><em><strong><span style="text-decoration: underline;">When</span> did you leave? → I would like to know <span style="text-decoration: underline;">when</span> you left.</strong></em></p>
+<p style="padding-left: 30px;"><em><strong>Will you stay? → I wonder <span style="text-decoration: underline;">whether</span> you will stay.</strong></em></p>
+<hr/>
+<p> </p>
+<p>1. if/whether the accommodation is free </p>
+<p>2. when the job starts</p>
+<p>3. if/whether I will have to send my CV</p>
+<p>4. what the activities are </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Notes: </strong>(notatki)</p>
+<p>• job: pet sitting (praca: zajmowanie się zwierzakiem)</p>
+<p>• interests: animals, dog training (zainteresowania: zwierzęta, szkolenia psów) </p>
+<p>• relevant experience: taking care of my grandma's cat, looking after my neighbour's two dogs </p>
+<p>(istotne doświadczenie: zajmowanie się kotem mojej babci, opiekowanie się dwoma psami sąsiadki)</p>
+<p>• my questions: (moje pytania)</p>
+<p style="padding-left: 30px;">- What are the working hours? (Jakie są godziny pracy?)</p>
+<p style="padding-left: 30px;">- Do you provide accommodation? (Czy zapewniacie Państwo zakwaterowanie?)</p>
+<p> </p>
+<p><strong>Letter: </strong>(list)</p>
+<p>Dear Sir or Madam,</p>
+<p>I am writing in response to the advertisement about a pet sitting job I have seen on your website. Given my interests and experience, I feel that I am the right candidate for this job and I would like to apply for the position you are offering. Also, I would be grateful if you could reply to some of my questions.</p>
+<p>Firstly, let me provide some information about myself. I have been interested in animals since I was a small child. I have read several books on animal behaviour and dog training and I plan on becoming a professional dog trainer after I graduate. Every summer, I take care of my grandmother's cat, and every so often my neighbour asks me to look after her two dogs. These experiences have proved that I am reliable and responsible, and simply great with pets.</p>
+<p>As for my questions, the advertisement mentions that the job is to look after pets of the guests who come to your sea resort. Could you tell me if you provide accommodation for your staff? Secondly, I was wondering if you could tell me what the working hours are. </p>
+<p>Thank you for your help. I look forward to hearing from you.</p>
+<p>Yours faithfully,</p>
+<p>XYZ </p>
+<p><br/>(Liczba słów: 209)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Szanowni Państwo,</p>
+<p>piszę w odpowiedzi na ogłoszenie dotyczące pracy w charakterze opiekuna zwierząt, które widziałem/am na Państwa stronie internetowej. Biorąc pod uwagę moje zainteresowania i doświadczenie, uważam, że jestem odpowiednim/ą kandydatem/ką do tej pracy i chciał(a)bym ubiegać się o oferowane stanowisko. Był(a)bym również wdzięczny/a, gdyby odpowiedzieli Państwo na kilka moich pytań.</p>
+<p>Po pierwsze, pozwolę sobie podać kilka informacji o sobie. Interesuję się zwierzętami od najmłodszych lat. Przeczytałem/am wiele książek na temat zachowania zwierząt i szkolenia psów, a po ukończeniu szkoły planuję zostać profesjonalnym/ą trenerem/ką psów. Każdego lata opiekuję się kotem mojej babci, a co jakiś czas moja sąsiadka prosi mnie o opiekę nad jej dwoma psami. Te doświadczenia udowodniły, że jestem rzetelny/a, odpowiedzialny/a i po prostu świetny/a w kontaktach ze zwierzętami.</p>
+<p>Jeśli chodzi o moje pytania, ogłoszenie wspomina, że praca polega na opiece nad zwierzętami domowymi gości, którzy przyjeżdżają do Państwa nadmorskiego kurortu. Czy mogliby Państwo powiedzieć mi, czy zapewniają Państwo zakwaterowanie dla swoich pracowników? Po drugie, zastanawiałem/am się, czy mogliby Państwo powiedzieć mi, jakie są godziny pracy.</p>
+<p>Dziękuję za pomoc. Z niecierpliwością czekam na odpowiedź.</p>
+<p>Z poważaniem</p>
+<p>XYZ</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Questions to ask about the job: </strong>(pytania dotyczące tej pracy)</p>
+<p>1. Could you tell me more about the environmental projects you mention?</p>
+<p>(Czy może Pani powiedzieć coś więcej o projektach środowiskowych, o których Pani wspomina?)</p>
+<p>2. Could you give me more details about the accommodation?</p>
+<p>(Czy mogłaby Pani podać więcej szczegółów na temat zakwaterowania?) </p>
+<p>3. Do I need any experience?</p>
+<p>(Czy potrzebuję doświadczenia?)</p>
+<p>4. When does the camp start?</p>
+<p>(Kiedy rozpoczyna się obóz?)</p>
+<p>5. Do you offer grants to cover travel costs?</p>
+<p>(Czy oferują Państwo dotacje na pokrycie kosztów podróży?)</p>
+<p> </p>
+<p><strong>Indirect questions: </strong></p>
+<p>1. I was wondering if you could tell tell me more about the environmental projects you mention.</p>
+<p>2. I wonder whether you could give me more details about the accommodation.</p>
+<p>3. I would like to know if I need any experience.</p>
+<p>4. Could you tell me when the camp starts?</p>
+<p>5. I was wondering if you offer grants to cover travel costs.</p>
+<p><strong>Uzasadnienie (1-5)</strong>: po wybranym zwrocie wprowadzającym używamy spójnika <em>if/whether </em>w pytaniach tak/nie lub zaimka pytającego w pytaniach szczegółowych. Zmieniamy szyk pytający na szyk zdania twierdzącego (czasownik + podmiot <strong>→</strong> podmiot + czasownik, lub: czasownik posiłkowy + podmiot + czasownik główny w bezokoliczniku <strong>→</strong> podmiot + czasownik główny w formie osobowej).</p><br>

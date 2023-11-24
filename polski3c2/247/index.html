@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse:collapse;width:659px;height:519px;">
+<tbody>
+<tr style="height:35px;">
+<td style="background-color:#aed581;text-align:center;height:35px;width:216.312px;"><strong>Zdanie</strong></td>
+<td style="background-color:#aed581;text-align:center;height:35px;width:216.312px;"><strong>Na czym polega b³¹d?</strong></td>
+<td style="background-color:#aed581;text-align:center;height:35px;width:216.375px;"><strong>Poprawne zdanie </strong></td>
+</tr>
+<tr style="height:35px;">
+<td style="width:216.312px;text-align:center;height:35px;">Wst¹p do nas na pyszne naleœniki z kakaem.</td>
+<td style="width:216.312px;text-align:center;height:35px;">Jest to b³¹d fleksyjny: zostaje odmieniony wyraz nieodmienny. </td>
+<td style="width:216.375px;text-align:center;height:35px;">Wst¹p do nas na pyszne naleœniki z kakao.</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:216.312px;text-align:center;height:35px;">Najlepszy gofer w mieœcie? Tu¿ za rogiem!</td>
+<td style="width:216.312px;text-align:center;height:35px;">Jest to b³¹d fleksyjny: b³êdna postaæ wyrazu. </td>
+<td style="width:216.375px;text-align:center;height:35px;">Najlepszy gofr w mieœcie? Tu¿ za rogiem!</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:216.312px;text-align:center;height:35px;">Kup od¿ywkê dla w³osów krêconych.</td>
+<td style="width:216.312px;text-align:center;height:35px;">Jest to b³¹d sk³adniowy: niepoprawne u¿ycie przyimka. </td>
+<td style="width:216.375px;text-align:center;height:35px;">Kup od¿ywkê do w³osów krêconych.</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:216.312px;text-align:center;height:35px;">Promocja! Maliny - tylko 3 z³ote za 100 gram.</td>
+<td style="width:216.312px;text-align:center;height:35px;">Jest to b³¹d fleksyjny: brak odmiany wyrazu odmiennego. </td>
+<td style="width:216.375px;text-align:center;height:35px;">Promocja! Maliny - tylko 3 z³ote za 100 gramów.</td>
+</tr>
+<tr style="height:52px;">
+<td style="width:216.312px;text-align:center;height:52px;">Nawet nie staraj siê t³umaczyæ zasad tej gry! Nic z tego nie zrozumi¹.</td>
+<td style="width:216.312px;text-align:center;height:52px;">Jest to b³¹d fleksyjny: niew³aœciwa koñcówka fleksyjna. </td>
+<td style="width:216.375px;text-align:center;height:52px;">Nawet nie staraj siê t³umaczyæ zasad tej gry! Nic z tego nie zrozumiej¹.</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:216.312px;text-align:center;height:35px;">Truskawki z Maroko - œwie¿e i soczyste.</td>
+<td style="width:216.312px;text-align:center;height:35px;">Jest to b³¹d fleksyjny: brak odmiany wyrazu odmiennego.</td>
+<td style="width:216.375px;text-align:center;height:35px;">Truskawki z Maroka - œwie¿e i soczyste.</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Mam pytanie odnoœnie poprzedniej lekcji. </td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to b³¹d sk³adniowy: brak przyimka. </td>
+<td style="width:216.375px;text-align:center;height:17px;">Mam pytanie odnoœnie do poprzedniej lekcji. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Tylko u nas sok ze œwie¿o wyciskanych pomarañcz!</td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to b³¹d fleksyjny: niew³aœciwa koñcówka fleksyjna. </td>
+<td style="width:216.375px;text-align:center;height:17px;">Tylko u nas sok ze œwie¿o wyciskanych pomarañczy!</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Te tabletki zapobiegaj¹ i lecz¹ katar. </td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to b³¹d sk³adniowy: niepoprawny skrót. </td>
+<td style="width:216.375px;text-align:center;height:17px;">Te tabletki zapobiegaj¹ katarowi i lecz¹ go. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Tomek zwykle kupywa³ stare komiksy w antykwariacie.</td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to b³¹d fleksyjny: b³êdna postaæ wyrazu.</td>
+<td style="width:216.375px;text-align:center;height:17px;">Tomek zwykle kupowa³ stare komiksy w antykwariacie.</td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Myœla³am, ¿e pogubi³am moje notatki, ale chyba nic nie brakuje. </td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to sk³adniowy: niew³aœciwe po³¹cznie wyrazów w zwi¹zku zgody.</td>
+<td style="width:216.375px;text-align:center;height:17px;">Myœla³am, ¿e pogubi³am moje notatki, ale chyba niczego nie brakuje. </td>
+</tr>
+<tr style="height:17px;">
+<td style="width:216.312px;text-align:center;height:17px;">Bohater utworu oddaje siê rozmyœlaniom o dobrze i Ÿle. </td>
+<td style="width:216.312px;text-align:center;height:17px;">Jest to b³¹d fleksyjny: niew³aœciwy wzorzec odmiany. </td>
+<td style="width:216.375px;text-align:center;height:17px;">Bohater utworu oddaje siê rozmyœlaniom o dobru i z³u. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przeredagowane tytu³y:</p>
+<p>Jutro w Krakowie odbêdzie siê marsz milczenia przeciwko przemocy</p>
+<p>NietrzeŸwy kierowca bez prawa jazdy wozi³ pasa¿erów</p>
+<p> </p>
+<p>B³¹d wystêpuj¹cy w nag³ówkach polega³ na niew³aœciwym szyku zdania. Przez to tytu³y zyska³y sens niezgodny z treœci¹ artyku³ów. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo: </p>
+<table border="1" style="border-collapse:collapse;width:689px;height:408px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:226.325px;"><strong>B³¹d sk³adniowy</strong></td>
+<td style="background-color:#aed581;text-align:center;width:226.325px;"><strong>Na czym polega?</strong></td>
+<td style="background-color:#aed581;text-align:center;width:226.35px;"><strong>Poprawne zdanie</strong></td>
+</tr>
+<tr>
+<td style="width:226.325px;text-align:center;"><em>Jeszcze tylko jeden odcinek i biorê siê <span style="text-decoration:underline;">za naukê.</span></em></td>
+<td style="width:226.325px;text-align:center;">zastosowanie niepoprawnego przyimka</td>
+<td style="width:226.35px;text-align:center;">Jeszcze tylko jeden odcinek i biorê siê do nauki.</td>
+</tr>
+<tr>
+<td style="width:226.325px;text-align:center;"><em>Egzamin ustny <span style="text-decoration:underline;">wydaje siê byæ ³atwiejszy</span> w porównaniu do pisemnego.</em></td>
+<td style="width:226.325px;text-align:center;">niepotrzebne zapo¿yczenie sk³adniowe, zastosowanie niepoprawnego przyimka</td>
+<td style="width:226.35px;text-align:center;">Egzamin ustny wydaje siê ³atwiejszy w porównaniu z pisemnym.</td>
+</tr>
+<tr>
+<td style="width:226.325px;text-align:center;"><em>Nie trzeba zwracaæ <span style="text-decoration:underline;">uwagê</span> na ortografiê i interpunkcjê.</em></td>
+<td style="width:226.325px;text-align:center;">niew³aœciwe po³¹czenie wyrazów w zwi¹zku rz¹du</td>
+<td style="width:226.35px;text-align:center;">Nie trzeba zwracaæ uwagi na ortografiê i interpunkcjê.</td>
+</tr>
+<tr>
+<td style="width:226.325px;text-align:center;"><em>Przecie¿ to nie moja wina, ¿e <span style="text-decoration:underline;">przygotowuj¹c siê</span> do testu, wypad³a akurat premiera nowego sezonu mojego ulubionego serialu.</em></td>
+<td style="width:226.325px;text-align:center;">b³êdne u¿ycie imies³owowego równowa¿nika zdania</td>
+<td style="width:226.35px;text-align:center;">Przecie¿ to nie moja wina, ¿e kiedy przygotowywa³am siê do testu, wypad³a akurat premiera nowego sezonu mojego ulubionego serialu.</td>
+</tr>
+<tr>
+<td style="width:226.325px;text-align:center;"><em>Nie mogê siê doczekaæ, kiedy ten rok <span style="text-decoration:underline;">skoñczy siê</span> i bêdê móg³ <span style="text-decoration:underline;">robiæ,</span> na co mam ochotê. </em></td>
+<td style="width:226.325px;text-align:center;">niew³aœciwy szyk wyrazów, brak zaimka </td>
+<td style="width:226.35px;text-align:center;">Nie mogê siê doczekaæ, kiedy ten rok siê skoñczy i bêdê móg³ robiæ to, na co mam ochotê. </td>
+</tr>
+</tbody>
+</table><br>

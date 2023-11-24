@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przedstawione na plakatach slogany odnoszą się do planów gospodarczych wprowadzonych przez władze socjalistyczne w powojennej Rzeczpospolitej. Hasła te zakłamują rzeczywistość, kreując wizję przyszłości kraju na wzór arkadii ("Budujemy nową kulturę dla szczęścia ojczyzny, dla utrwalenia pokoju świata."). Przede wszystkim jednak milczą na temat negatywnych konsekwencji gwałtownej industrializacji kraju, takich jak złe warunki pracy czy niedobór artykułów pierwszej potrzeby. Szczególną wymowę mają sformułowania opisujące naród jako jednomyślną i szczęśliwą wspólnotę ("wysiłkiem całego narodu", "Wspólną drogą do szczęścia i rozkwitu ojczyzny."), co zdaje się przeczyć ówczesnemu niezadowoleniu społecznemu, które z czasem doprowadziło do licznych strajków. Slogany w najwyższym stopniu realizują założenie, iż to, o czym się nie mówi, nie istnieje - prawdziwa jest wyłącznie rzeczywistość wykreowana za pomocą języka propagandy.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>Elementy charakterystyczne dla nowomowy:</p>
+<ul>
+<li>retoryka wojenna ("aparat ucisku i grabieży"); </li>
+<li>metafory o ustalonym konkretnym znaczeniu ("urzędnicy o czystych rękach" - niewinni, uczciwi);</li>
+<li>wartościujący szyk wyrazów ("Uczciwe państwo to takie, które dotrzymuje zobowiązań wobec warstw najuboższych: robotników, rolników, urzędników, nauczycieli, lekarzy, młodzieży [...].");</li>
+<li>slogany ("Uczciwe państwo to takie, które traktujemy, my wszyscy, jako własne."). </li>
+</ul>
+<p> </p>
+<p>Opisane wyżej zabiegi - wykorzystane w tekście ulotki wyborczej opracowanej po 1989 r., a więc po obaleniu ustroju komunistycznego w Polsce - mogą budzić wśród bardziej świadomych odbiorców negatywne skojarzenia z propagandą oraz polityczną opresją. W przypadku reszty społeczeństwa, przyzwyczajonego do nowomowy i pozostającego pod jej silnym wpływem, sformułowany w ten sposób komunikat najprawdopodobniej okaże się skutecznym środkiem perswazji.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowa odpowiedź:</p>
+<p>a) Dewaluacja słów, o której pisze autor, wynika z wieloletniego procesu rozwoju nowomowy na gruncie języka polskiego. Nadużywanie przez władze komunistyczne górnolotnych ("przeniknięte duchem wolności człowieka i poszanowania praw obywatela") lub silnie wartościujących sformułowań ("zbrodniczy prowokatorzy", "reakcyjne cele", "oszukańcze hasła"), składanie obietnic bez pokrycia ("Temu zadaniu chcemy poświęcić nasze wysiłki."), szerzenie dezinformacji ("[...] prowokatorzy i agenci imperialistyczni mieli na oku coś zupełnie innego.") czy zaklinanie rzeczywistości za pomocą hiperbol ("krwawe zajścia", "atmosfera podniecenia i niepokoju") i eufemizmów ("bolączki", "błędy", "obniżanie kosztów własnych") sprawiły, że wiele środków wyrazu straciło swą dotychczasową wymowę, a hasła odnoszące się do szlachetnych wartości oraz idei stały się z czasem nic nieznaczącymi sloganami ("demokratyzacja życia", "władza ludowa", "poszanowanie praw obywatela").</p>
+<p> </p>
+<p>b) Słowa, które utraciły swe znaczenie, przestały być dla odbiorców źródłem inspiracji ("Towarzysze! Obywatele! Ludu pracujący stolicy!"), ponadto nie są w stanie ich zastraszyć ("Tego imperialistyczni agenci boją się najbardziej.") ani nakłonić do określonych zachowań ("Podnoście wydajność pracy, zwalczajcie marnotrawstwo i obniżajcie koszty własne."). Przede wszystkim jednak pojęcia te nie znajdują żadnego potwierdzenia w działaniach mówiącego - ten może odwoływać się do nich bez namysłu, bez zobowiązań czy obawy przed negatywnymi konsekwencjami ("Temu zadaniu chcemy poświęcić nasze wysiłki."). Z kolei odbiorca takiego komunikatu nie powinien dłużej oczekiwać, że wypowiedziane słowa w jakikolwiek sposób wpłyną na rzeczywistość. Język ukształtowany przez nowomowę przypomina raczej pozbawiony treści i ekspresji bełkot, przez Kapuścińskiego zwany "cymbałami pusto brzmiącymi".</p><br>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Before lunchtime, in the author's schedule there are maths and science. </p>
+<p><strong>Fragment w tekście:</strong> "(...) I feel that by lunchtime, I'll have solved hundreds of maths problems and done some virtual experiments." - (...) myślę, że do czasu obiadu rozwiążę setki problemów matematycznych i zrobię kilka wirtualnych eksperymentów.</p>
+<p>2. To make food, the author uses a 3D food printer.</p>
+<p><strong>Fragment w tekście:</strong> "The 3D food printer is on - lunch will be ready in no time." - Drukarka jedzenia 3D jest włączona - obiad będzie gotowy w mgnieniu oka.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a. 1 </p>
+<p>b. 8</p>
+<p>c. 7</p>
+<p>d. 6</p>
+<p>e. 2</p>
+<p>f. 9</p>
+<p>g. 5</p>
+<p>h. 4</p>
+<p>i. 3</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. starts </p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w programie telewizyjnym - czas <em>present simple. </em></p>
+<p>2. will be bringing</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, co do której jesteśmy pewni, że nastąpi - czas <em>future continuous</em>. </p>
+<p>3. is playing</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są już znane - czas <em>present continuous.</em></p>
+<p>4. Will Chelsea beat</p>
+<p><strong>Uzasadnienie</strong>: przypuszczenie, przewidywanie na przyszłość, niepoparte dowodami - <em>will </em>+ bezokolicznik.</p>
+<p>5. Will Jones have recovered</p>
+<p><strong>Uzasadnienie</strong>: pytanie o wydarzenie, które zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>6. will have been working</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie trwała już przez jakiś czas w konkretnym momencie w przyszłości - czas <em>future perfect continuous</em>.</p>
+<p>7. will be presenting</p>
+<p><strong>Uzasadnienie</strong>: czynność, która będzie w trakcie wykonywania w konkretnym momencie w przyszłości - czas <em>future continuous</em>.</p>
+<p>8. 's going to interview</p>
+<p><strong>Uzasadnienie</strong>: plany na przyszłość, które mogą ulec zmianie - <em>be going to</em> + bezokolicznik.</p>
+<p>9. will scientists come up with </p>
+<p><strong>Uzasadnienie</strong>: pytanie o ogólne przewidywania na przyszłość - will + bezokolicznik.</p>
+<p>10. will have found out </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do konkretnego momentu w przyszłości - czas <em>future perfect.</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. leaves</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w rozkładzie jazdy - czas <em>present simple</em>. </p>
+<p>will go</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie na przyszłość - <em>will</em>.</p>
+<p>2. I'm meeting</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na bliską przyszłość, którego szczegóły są znane - czas <em>present continuous</em>.</p>
+<p>3. finishes</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>as soon as</em> - czas <em>present simple</em>.</p>
+<p>4. will spill</p>
+<p><strong>Uzasadnienie</strong>: spontaniczna sytuacja - <em>will</em>.</p>
+<p>5. will have been working </p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>becomes</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>before </em>- czas <em>present simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

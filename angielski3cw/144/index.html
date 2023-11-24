@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. The introduction should present two sides of the argument. </p>
+<p>(Wstęp powinien przedstawiać dwie strony dyskusji.) </p>
+<p><br/>2. Firstly, it would help its students look for a job in the future. Secondly, it might improve students' confidence and self-esteem, as they gain competence in practical tasks.</p>
+<p>(Po pierwsze, pomogłoby to uczniom w poszukiwaniu pracy w przyszłości. Po drugie, może poprawić pewność siebie i samoocenę uczniów, ponieważ zyskują oni kompetencje w zakresie praktycznych zadań.)</p>
+<p><br/>3. High schools aren't meant to teach practical skills - it's what vocational schools are for. What's more, the secondary school curriculum is already overloaded.</p>
+<p>(Szkoły średnie nie są przeznaczone do nauczania praktycznych umiejętności - od tego są szkoły zawodowe. Co więcej, program nauczania w szkołach średnich jest już przeładowany.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. should  </p>
+<p>(Wstęp <strong>powinien </strong>odnosić się do obu stron dyskusji.)  </p>
+<p>2. isn't</p>
+<p>(Liczba argumentów za lub przeciw <strong>nie jest</strong> taka sama.) </p>
+<p><strong>Uzasadnienie</strong>: autor/ka rozprawki uwzględnia tylko jeden artykuł za.</p>
+<p>3. One fragment doesn't </p>
+<p>(<strong>Jeden fragment nie</strong> pasuje w logiczny sposób do eseju.)</p>
+<p><strong>Uzasadnienie</strong>: w trzecim akapicie argument podany przeciwko tezie jest taki, że nauka umiejętności biurowych będzie zabierać za dużo czasu uczniom, którzy i tak mają napięty plan lekcji. Jednak drugi przykład na jego poparcie opisuje coś innego (fakt, że szkoły nie są odpowiednio wyposażone).</p>
+<p>4. should</p>
+<p>(W podsumowaniu argumenty dla obu stron <strong>powinny </strong>zostać podsumowane.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Some educators claim that students should acquire basic office skills before graduating from high school <strong>while others disagree with this idea</strong><strong>. There are arguments supporting both sides of the argument.</strong> </p>
+<p>On the one hand, it is believed that learning office skills can help in the search for a good job. To begin with, employers appreciate the fact that new employees do not need to be trained in using a copying machine or preparing a presentation in PowerPoint. <strong>Secondly, teaching practical skills helps students develop a sense of independence and self-reliance. It might even improve their confidence and self-esteem, which is definitely a good thing. </strong></p>
+<p>On the other hand, adding more subjects to an already overloaded high school curriculum might distract students from revising for their school-leaving exams. Firstly, high school students ae already overworked and, if anything, need more leisure time rather than more subjects to study. Secondly, <strong>a lot of people choose high school because they want to study at a university in the future. Getting a job directly after graduating is not their plan and so they would rather focus on studying. </strong></p>
+<p>While there are obviously valid arguments on both sides, it seems to me that education is never a one-size-fits-all proposition. Ideally, students should be able to choose from a wide range of subjects those which suit their needs and interests. </p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Niektórzy nauczyciele twierdzą, że uczniowie powinni zdobyć podstawowe umiejętności biurowe przed ukończeniem szkoły średniej, <strong>podczas gdy inni nie zgadzają się z tym pomysłem. Istnieją argumenty wspierające obie strony sporu.</strong></p>
+<p>Z jednej strony uważa się, że nauka umiejętności biurowych może pomóc w poszukiwaniu dobrej pracy. Po pierwsze, pracodawcy doceniają fakt, że nowi pracownicy nie muszą być szkoleni w zakresie korzystania z kserokopiarki lub przygotowywania prezentacji w PowerPoint. <strong>Po drugie, nauczanie praktycznych umiejętności pomaga uczniom rozwijać poczucie niezależności i samodzielności. Może nawet poprawić ich pewność siebie i poczucie własnej wartości, co jest zdecydowanie dobrą rzeczą. </strong></p>
+<p>Z drugiej strony, dodanie większej liczby przedmiotów do i tak już przeładowanego programu nauczania w szkole średniej może odciągnąć uczniów od powtórek do egzaminów maturalnych. Po pierwsze, uczniowie szkół średnich są już przepracowani i jeśli już, to potrzebują więcej czasu wolnego, a nie więcej przedmiotów do nauki. Po drugie, <strong>wiele osób wybiera liceum, ponieważ chce w przyszłości studiować na uniwersytecie. Zdobycie pracy bezpośrednio po ukończeniu szkoły nie jest ich planem, więc woleliby skupić się na nauce. </strong></p>
+<p>Choć obie strony mają oczywiście uzasadnione argumenty, wydaje mi się, że edukacja nigdy nie jest rozwiązaniem uniwersalnym. Idealnie byłoby, gdyby uczniowie mogli wybierać spośród szerokiej gamy przedmiotów te, które odpowiadają ich potrzebom i zainteresowaniom.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Nowadays more and more people are prioritising the potential earnings of a career over their own skills and interests when making educational choices. This approach has both advantages and disadvantages.</p>
+<p>On the one hand, focusing on earnings leads to financial security and stability. By selecting high-paying professions, people may have better opportunities to support themselves and their families, as well as afford a comfortable lifestyle. Additionally, the lack of money problems reduces overall stress and gives a sense of accomplishment and well-being.</p>
+<p>On the other hand, not taking skills and interests into consideration may result in an unhappy life. Pursuing a profession for financial gain may result in a lack of passion, motivation, and dedication. What is more, it is much harder to study and work in a field one finds uninteresting. Individuals studying topics they find boring are more likely to fail and never get their degree.</p>
+<p>In conclusion, while focusing on earnings when choosing a career can provide financial security, it might have an impact on people's well-being. While it is true that capitalism makes it impossible not to consider money when making career choices, perhaps we should try to find a balance and look for a career that pays well but that we also enjoy. </p>
+<p><br/>(Liczba słów: 208)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>W dzisiejszych czasach coraz więcej osób przedkłada potencjalne zarobki związane z karierą zawodową nad własne umiejętności i zainteresowania przy dokonywaniu wyborów edukacyjnych. Takie podejście ma zarówno zalety, jak i wady.</p>
+<p>Z jednej strony, skupienie się na zarobkach prowadzi do bezpieczeństwa finansowego i stabilności. Wybierając wysoko płatne zawody, ludzie mogą mieć lepsze możliwości utrzymania siebie i swoich rodzin, a także pozwolić sobie na wygodny styl życia. Dodatkowo, brak problemów finansowych zmniejsza ogólny stres i daje poczucie spełnienia i dobrego samopoczucia.</p>
+<p>Z drugiej strony, nieuwzględnienie umiejętności i zainteresowań może skutkować nieszczęśliwym życiem. Wykonywanie zawodu dla zysku finansowego może skutkować brakiem pasji, motywacji i poświęcenia. Co więcej, znacznie trudniej jest studiować i pracować w dziedzinie, którą uważa się za nieciekawą. Osoby studiujące tematy, które uważają za nudne, z większym prawdopodobieństwem poniosą porażkę i nigdy nie uzyskają dyplomu.</p>
+<p>Podsumowując, podczas gdy skupianie się na zarobkach przy wyborze kariery może zapewnić bezpieczeństwo finansowe, może mieć wpływ na samopoczucie ludzi. Chociaż prawdą jest, że kapitalizm sprawia, że nie można nie brać pod uwagę pieniędzy przy dokonywaniu wyborów zawodowych, być może powinniśmy spróbować znaleźć równowagę i poszukać kariery, która jest dobrze płatna, ale jednocześnie sprawia nam przyjemność.</p><br>

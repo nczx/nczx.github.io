@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Paragraph 1: (przykład)</p>
+<p><br/>Paragraph 2: attractions and good points (atrakcje i dobre strony)</p>
+<p><strong>Fragment w tekście</strong>: "Last year, there were seven music stages to choose from, with huge variety of bands and music styles (...). (...) The sound quality and special effects were excellent." - W zeszłym roku było siedem scen muzycznych do wyboru, z ogromną różnorodnością zespołów i stylów muzycznych (...). (...) Jakość dźwięku i efekty specjalne były doskonałe. </p>
+<p><br/>Paragraph 3: bad points and things to change (złe strony i rzeczy, które można by w nim zmienić)</p>
+<p><strong>Fragment w tekście</strong>: "However, there should be more showers as they get crowded. The food was fantastic, but small bottles of water cost £2.50, which is too expensive." - Powinno być jednak więcej pryszniców, ponieważ jest tam tłoczno. Jedzenie było fantastyczne, ale małe butelki wody kosztowały 2,50 funta, co jest zbyt drogo.</p>
+<p><br/>Paragraph 4: opinion and recommendation (opinia i polecenie)</p>
+<p><strong>Fragment w tekście</strong>: "With something for everyone and the tickets good value, it's well worth going to." - Jako że jest tu coś dla każdego, a bilety są warte swojej ceny, warto na to iść.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. Don't </p>
+<p>(<strong>Nie</strong> przegapcie...) </p>
+<p>2. check ... out</p>
+<p>(Zdecydowanie powinniście to <strong>sprawdzić</strong>.)</p>
+<p>3. to</p>
+<p><strong>Uzasadnienie</strong>: <em>recommend to someone </em>- polecić komuś.</p>
+<p>4. sure</p>
+<p><strong>Uzasadnienie</strong>: <em>make sure </em>- upewnić się.</p>
+<p>5. worth</p>
+<p>(To jest <strong>warte</strong> (zobaczenia).)</p>
+<p>6. thing</p>
+<p>(Warsztaty są najlepszą <strong>rzeczą</strong> na festiwalu.)</p>
+<p>7. from</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>choose </em>(wybierać) łączy się z przyimkiem <em>from </em>(z).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. the support band </p>
+<p>(Zdanie 1: Zespół grający w supporcie jest świetny.</p>
+<p>Zdanie 2: Nie przegapcie <strong>zespołu grającego w supporcie</strong>.) </p>
+<p><br/>2. see this band live</p>
+<p>(Zdanie 1: Uważam, że wszyscy powinni zobaczyć ten zespół grający na żywo.</p>
+<p>Zdanie 2: Upewnijcie się, że <strong>zobaczycie ten zespół na żywo</strong>.)</p>
+<p><br/>3. this festival to anyone who likes indie music</p>
+<p>(Zdanie 1: Pójście na ten festiwal jest dobrym pomysłem, zwłaszcza jeśli lubicie muzykę alternatywną.</p>
+<p>Zdanie 2: Polecam <strong>ten festiwal każdemu, kto lubi muzykę alternatywną</strong>.)</p>
+<p><br/>4. buying the ticket</p>
+<p>(Zdanie 1: Kupcie bilet.</p>
+<p>Zdanie 2: Warto <strong>kupić bilet</strong>.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>it's worth doing something</em>, dlatego czasownik należy wstawić w formie <em>gerund</em>.</p>
+<p><br/>5. definitely stand at the front</p>
+<p>(Zdanie 1: Najlepsze miejsce do stania jest z przodu.</p>
+<p>Zdanie 2: <strong>Zdecydowanie</strong> powinniście <strong>stanąć z przodu</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. got a great one  </p>
+<p>2. 'd recommend</p>
+<p>3. choose</p>
+<p>4. worth</p>
+<p>5. sure</p>
+<p>6. shouldn't</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p><strong>Mam</strong> dla was <strong>coś wspaniałego</strong>: Pol'and'Rock! To największy festiwal muzyczny w Europie, na jaki można się dostać ZA DARMO! Wyobrażacie to sobie? <strong>Poleciłabym</strong> ten festiwal wszystkim fanom rocka i metalu! Jest wiele scen i różnych gatunków muzyki do <strong>wyboru</strong>, i będziecie mieli okazję zobaczyć zarówno gwiazdy polskiego i międzynarodowego rocka, jak i nowe talenty, które dopiero co pojawiają się na zestawieniach muzycznych.</p>
+<p>Naprawdę <strong>warto</strong> na niego pójść, ale <strong>upewnijcie</strong> się, że będziecie wcześnie, w przeciwnym razie może być ciężko znaleźć miejsce na kempingu. Zdecydowanie <strong>nie powinniście</strong> też przychodzić w waszych najlepszych albo najdroższych ubraniach - ten festiwal to jedno wielkie pole błota, co dla niektórych ludzi jest problemem. Ale atmosfera jest świetna!</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Notes: </strong>(notatki)</p>
+<p>• event (wydarzenie): Pol'and'Rock Festival 2022</p>
+<p>• artist (artysta): Luxtorpeda </p>
+<p>• time (czas): August 2022 (sierpień 2022 rok)</p>
+<p>• location (lokalizacja): Czaplinek, Poland</p>
+<p>• good points (dobre strony): free (darmowy), great artists (świetni artyści), good sound quality (dobra jakość dźwięku)</p>
+<p>• bad points (złe strony): crowds (tłumy), mud (błoto)</p>
+<p> </p>
+<p><strong>Plan: </strong></p>
+<p>paragraph 1 (1. akapit): general information (ogólne informacje)</p>
+<p>paragraph 2 (2. akapit): attractions and good points (atrakcje i dobre strony)</p>
+<p>paragraph 3 (3. akapit): bad points and things to change (złe strony i rzeczy, które można by w nim zmienić)</p>
+<p>paragraph 4 (4. akapit): opinion and recommendation (opinia i polecenie)</p>
+<p> </p>
+<p><strong>Post: </strong>(wpis)</p>
+<p><em>I knew I had to see this concert as soon as I heard about it!</em> Luxtorpeda, my favourite band, appeared at a popular open-air festival known as Pol'and'Rock Festival. The whole event took place in August 2022 in Czaplinek, Poland. It was a long-way drive from where I live, but it was definitely worth it.</p>
+<p>The concert was fantastic. First of all, the entry was free and the sound quality was excellent. The most interesting part of the concert was when one of the artists jumped off the stage. I couldn't believe my eyes!</p>
+<p>I enjoyed the festival a lot but there were lots of crowds. The mud was pretty annoying, too. Luckily, I didn't bring my best clothes because I knew better.</p>
+<p>In all, the event is well worth seeing. I'd recommend it to anyone who's a fan of rock and metal bands but can't afford the tickets.</p>
+<p><br/>(Liczba słów: 149)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Wiedziałem/am, że muszę zobaczyć ten koncert, jak tylko o nim usłyszałem/am! Luxtorpeda, mój ulubiony zespół, wystąpił na popularnym festiwalu plenerowym znanym jako Pol'and'Rock Festival. Całe wydarzenie miało miejsce w sierpniu 2022 roku w Czaplinku. To kawał drogi od miejsca, w którym mieszkam, ale zdecydowanie było warto.</p>
+<p>Koncert był fantastyczny. Przede wszystkim wejście było darmowe, a jakość dźwięku doskonała. Najciekawszą częścią koncertu było to, że jeden z artystów zeskoczył ze sceny. Nie mogłem/am uwierzyć własnym oczom!</p>
+<p>Festiwal bardzo mi się podobał, ale było dużo tłumów. Błoto też było dość denerwujące. Na szczęście nie przyniosłem/am moich najlepszych ubrań, ponieważ wiedziałem/am lepiej.</p>
+<p>W sumie warto zobaczyć to wydarzenie. Polecił(a)bym je każdemu, kto jest fanem zespołów rockowych i metalowych, ale nie stać go na bilety.</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Forum post: </strong>(wpis na forum)</p>
+<p>Polish music includes a wide variety of music types so everyone can find something interesting. Classic rock bands I'd recommend are: Republika, Myslovitz, Maanam, Coma, and Happysad. If you're a fan of rap and hip hop, you should definitely check out artists such as: Quebonafide, Taco Hemingway, Mata, ReTo, or K2. A good way to discover new Polish artists is to listen to radio stations that stream Polish music, for example <em>RMF Polskie przeboje</em>. Enjoy!</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Polska muzyka to wiele różnych gatunków muzycznych, więc każdy może znaleźć coś ciekawego. Klasyczne zespoły rockowe, które bym polecił/a to: Republika, Myslovitz, Maanam, Coma oraz Happysad. Fani rapu i hip hopu powinni koniecznie sprawdzić takich artystów jak: Quebonafide, Taco Hemingway, Mata, ReTo czy K2. Dobrym sposobem na odkrycie nowych polskich artystów jest słuchanie stacji radiowych, które nadają polską muzykę, na przykład RMF Polskie przeboje. Miłego słuchania!</p><br><a style="color:red; font-size:25px;">RESEARCH IMPULSE</a><br>
+<p>Indywidualne</p><br>

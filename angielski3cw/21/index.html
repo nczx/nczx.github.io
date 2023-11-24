@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź:</strong> </p>
+<p>c</p>
+<p>(To artykuł o tym, jak zwyczajne nastolatki pomagają w kreowaniu nowych gwiazd.)</p>
+<p><strong>Fragment w tekście</strong>: "(...) young people today are using the Internet to shape the music industry in a manner people had never dreamed of before. (...) So, how do teens 'discover' these stars?" - (...) młodzi ludzie używają dziś Internetu do kształtowania przemysłu muzycznego w sposób, o jakim ludziom się wcześniej nie śniło. (...) Jak więc nastolatki "odkrywają" te gwiazdy?</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <strong>Contractions: </strong>(skrócone formy)</p>
+<p> - "The online music stars <strong>you'll</strong> want to hear!"</p>
+<p> - "<strong>What's</strong> fascinating is how (...)."</p>
+<p> - "If you <strong>haven't</strong> heard of these artists, <strong>you're</strong> not alone."  </p>
+<p> - "You <strong>won't</strong> hear them on the radio because <strong>they're</strong> only famous online, where teens discover and share their songs."</p>
+<p><br/>2. <strong>Addressing the reader: </strong>(zwrot do czytelnika)</p>
+<p> - "The online music stars <strong>you'll </strong>want to hear!" - Muzyka w Internecie, której będziecie chcieli posłuchać!</p>
+<p> - "If <strong>you</strong> haven't heard of these artists, you're not alone." - Jeśli nie słyszeliście o tych twórcach, nie jesteście sami.</p>
+<p> - "<strong>You</strong> won't hear them on the radio because (...)." - Nie usłyszycie ich w radiu, ponieważ (...).</p>
+<p> - "Have <strong>you</strong> discovered a new singer and posted their song online recently?" - Czy odkryliście ostatnio nowego piosenkarza i zamieściliście jego piosenkę w Internecie?</p>
+<p> - "You never know - <strong>you</strong> could be helping to create a star of the future!" - Nigdy nie wiadomo - być może pomożesz w wykreowaniu nowej, przyszłej gwiazdy!</p>
+<p><br/>3. <strong>Asking the reader questions: </strong>(zadawanie czytelnikowi pytań)</p>
+<p> - "Have <strong>you</strong> discovered a new singer and posted their song online recently?" </p>
+<p><br/>4. <strong>Exclamation marks: </strong>(wykrzykniki)</p>
+<p> - "The online music stars you'll want to hear<strong>!</strong>"</p>
+<p> - "Clairo's song Pretty Girl has had over seventy-five million views on YouTube, and songs by Khai Dreams have been streamed over twenty-two million times<strong>!</strong>"</p>
+<p> - "You never know - you could be helping to create a star of the future<strong>!</strong>"</p>
+<p><br/>5. <strong>Colloquial language and idioms: </strong>(potoczny język i idiomy)</p>
+<p>- "(...) <strong>right back to</strong> the the early days of pop." - (...) począwszy od początków popu.<br/><br/>- "(...) Youtubers with <strong>lots</strong> of teen followers can have a huge influence. </p>
+<p><strong>Uzasadnienie</strong>: określnik <em>lots of </em>(wiele) zaliczamy do zwrotów potocznych.<br/><br/>- "<strong>Take</strong> Youtuber Emma Chamberlain, for example." - Weźmy na przykład Youtuberkę Emmę Chamberlain.<br/><br/>- "When she recommends songs, many of her ten million followers <strong>check </strong>them<strong> out</strong>." </p>
+<p><strong>Uzasadnienie</strong>: czasowniki frazowe zaliczamy do przykładów języka potocznego.<br/><br/>- "<strong>You never know</strong> - you could be helping to create a star of the future!" - Nigdy nie wiadomo - być może pomożesz w wykreowaniu nowej gwiazdy w przyszłości!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie</strong>: zdanie po luce podaje przykłady twórców wypromowanych w Internecie przez młodzież, dlatego pasującym wprowadzeniem jest zdanie <strong>B</strong>: "Jednym z najbardziej interesujących sposobów, w jaki robią to nastolatki, jest pomaganie młodym gwiazdom w osiągnięciu popularności". </p>
+<p>2. E</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje, że czytelnik mógł nie słyszeć o podanych twórcach, dlatego pasującym uzasadnieniem jest zdanie <strong>E</strong>: "Wszyscy są młodzi i większość z nich nie ma kontraktów nagraniowych i nie daje wywiadów".</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką przedstawia Youtuberkę Emmę Chamberlain, dlatego pasującą kontynuacją opisu jest zdanie <strong>A</strong>: "Sama jest nastolatką i tworzy śmieszne filmiki na swoim kanale od 2017 roku".</p>
+<p>4. D</p>
+<p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje rodzaje filmików oglądane przez młodzież w Internecie, dlatego pasującą kontynuacją jest zdanie <strong>D</strong>: "Potem przesyłają je dalej swoim znajomym na portalach społecznościowych".</p>
+<p><s class="odr-strikethrough">C</s></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Emma Chamberlain.  </p>
+<p>2. She's called 'a Youtuber'.</p>
+<p><strong>Uzasadnienie (1-2): </strong>zdanie A pasuje do luki numer 3. Zdanie przed luką to: "Weźmy na przykład Youtuberkę, Emmę Chamberlain". Dlatego zaimek <em>she</em> (ona) odnosi się do wspomnianej Emmy Chamberlain. Wiemy, że tworzy filmiki w Internecie, ponieważ w zdaniu znajduje się nazwa jej zajęcia - "Youtuberka".</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. I share songs with my friends quite often. I do it because we have a similar taste in music. I usually send them the link via Facebook or we share playlists on Spotify.</p>
+<p>(Często dzielę się piosenkami z moimi przyjaciółmi. Robię to, ponieważ mamy podobny gust muzyczny. Zazwyczaj wysyłam im link przez Facebooka lub dzielimy się playlistami na Spotify.)</p>
+<p><br/>2. I check out YouTube and Spotify recommendations. These two websites sometimes recommend songs based on what I usually listen to, so I sometimes manage to find something new I like. </p>
+<p>(Sprawdzam rekomendacje na YouTube i Spotify. Te dwa serwisy czasami polecają utwory na podstawie tego, czego zwykle słucham, więc czasami udaje mi się znaleźć coś nowego, co mi się podoba.)</p><br>

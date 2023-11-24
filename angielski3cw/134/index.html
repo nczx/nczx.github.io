@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. A </p>
+<p><strong>Uzasadnienie</strong>: <em>not entirely clear </em>- nie do końca jasne. </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie</strong>: przymiotnik <em>worth </em>(warty) łączy się z innym czasownikiem w formie <em>gerund </em>(z końcówką <em>-ing</em>).</p>
+<p>3. C</p>
+<p><strong>Uzasadnienie</strong>: używamy zaimka względnego <em>which</em>, aby wprowadzić zdanie przydawkowe dotyczące jakiejś rzeczy.</p>
+<p>4. B</p>
+<p><strong>Uzasadnienie</strong>: <em>whether or not </em>(czy) to fraza używana, gdy nieważne jest, która z dwóch możliwości jest prawdziwa.</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie</strong>: po przyimkach (tu: <em>by</em>) używamy czasownika w formie <em>gerund</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. A </p>
+<p><strong>Uzasadnienie</strong>: <em>in fact </em>- w zasadzie, zasadniczo, właściwie. </p>
+<p>2. C</p>
+<p><strong>Uzasadnienie</strong>: używamy określnika <em>a few </em>(kilka) w zdaniach twierdzących przed rzeczownikiem policzalnym w liczbie mnogiej.</p>
+<p>3. B</p>
+<p><strong>Uzasadnienie</strong>: <em>fake news </em>- fałszywe wiadomości.</p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: <em>a pair of trainers </em>- para butów sportowych.</p>
+<p>5. A</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past continuous</em> dla czynności, która była w trakcie w określonym momencie w przeszłości.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie</strong>: aby wzmocnić znaczenie innego przysłówka (<em>little </em>- mało), używamy przysłówka <em>so</em> (tak). </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie</strong>: <em>drive somebody out </em>- wypędzać/wypierać kogoś.</p>
+<p>3. B</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past continuous</em>, by opisać czynność, która była w trakcie trwania w określonym punkcie w przeszłości (<em>at the time </em>- w tym czasie).</p>
+<p>4. A</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>decide </em>(postanowić) łączy się z bezokolicznikiem z <em>to</em>.</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie</strong>: należy uzupełnić lukę nazwą narodowości, aby logicznie uzupełnić to zdanie: "Boudica stałą się bohaterką starożytnych Brytów".</p><br>

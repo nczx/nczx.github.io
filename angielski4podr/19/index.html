@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. B</p>
+<p><strong>Fragment w tekście:</strong> "Everyone I meet says it, 'Oh, that must be the best job in the world'. (...) The truth is very different, however. Travel writing is very hard work, badly paid and extremely competitive." - Wszyscy, których spotykam mówią te słowa "Och, to musi być najlepsza praca na świecie". (...) Prawda jest jednak zupełnie inna. Dziennikarstwo turystyczne jest bardzo ciężką pracą, źle płatną i z ogromną konkurencją.  </p>
+<p>2. D</p>
+<p><strong>Fragment w tekście:</strong> "A lot of work you're asked to do is so-called 'press trips'". - Duża część pracy, której się ode mnie wymaga to tak zwane "wyjazdy prasowe".</p>
+<p>3. C</p>
+<p><strong>Na poprawność powyższej odpowiedzi wskazuje negatywny wydźwięk całego akapitu, ujawniający się w następującym fragmencie:</strong> "(...) but it also means staying at hostels with primitive facilities for guests in locations where you don't even speak the local language." - (...) ale oznacza to też zatrzymywanie się w hostelach o prymitywnym standardzie, położonych w miejscach, w których nawet nie mówi się w lokalnych językach. </p>
+<p>4. D</p>
+<p><strong>Fragment w tekście:</strong> "Nowadays, with travel websites like TripAdvisor, (...) as a travel writer you're competing with people who do your job for free!" - W dzisiejszych czasach ze stronami takimi jak TripAdvisor, (...) jako dziennikarz turystyczny konkurujesz z ludźmi, którzy wykonują twoją pracę za darmo!</p>
+<p>5. three animals</p>
+<p><strong>Fragment w tekście:</strong> "On this voyage Jip begged so hard to be taken that the Doctor finally gave in and said he could come. Polynesia and Chee-Chee were the only other animals to go with us." - Przed podróżą Jip tak bardzo prosił Doktora, żeby pozwolił mu popłynąć z nimi, że ten w końcu się zgodził. Oprócz niego Polynesia i Chee-Chee były jedynymi zwierzętami, które płynęły z nami. </p>
+<p>6. parents</p>
+<p><strong>Fragment w tekście:</strong> "Standing right near the gang-plank were my mother and father." - Obok pomostu stali moja matka i ojciec.</p>
+<p>7. feed the animals at </p>
+<p><strong>Fragment w tekście:</strong> "We were a little surprised not to see Matthew Mugg among the crowd. (...) the Doctor had intended to give him some extra instructions about the food for the animals we had left at the house." - Byliśmy trochę zaskoczeniu nieobecnością Matthew Mugga w tłumie. (...) Doktor miał zamiar przekazać mu dodatkowe instrukcje dotyczące jedzenia dla zwierząt, które zostawiliśmy w domu. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br>

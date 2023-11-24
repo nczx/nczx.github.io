@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Nazwa ta jest zwi¹zana z ubiorem obozowych kobiet w pogodne dni. Kolorowe suknie oraz chusteczki na g³owach wywo³ywa³y skojarzenia z bujnym ¿yciem na rynku. Z kolei wra¿enie egzotyki przyczyni³o siê do okreœlenia obozu "perskim". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Sytuacja kobiet w obozie jest bardzo trudna. Przede wszystkim ¿yj¹ one w barakach, które nie zosta³y wykoñczone, w nieustannej ciasnocie. Kobiety s¹ pozbawione swego dobytku, nie otrzymuj¹ przedmiotów potrzebnych w codziennym ¿yciu. Brakuje im tak¿e ubioru dopasowanego do warunków atmosferycznych, przez co marzn¹ w czasie porannego apelu. Ich uprzedmiotowienie wi¹¿e siê tak¿e z tym, i¿ traktuje siê je jako œrodek p³atniczy za po³o¿enie dachu na budach. Tragiczn¹ sytuacjê uwiêzionych potwierdzaj¹ tak¿e pocz¹tki obozu: "[...] trupy kobiet le¿a³y pod wszystkimi blokami i gni³y niewynoszone ze szpitalnych ³ó¿ek, a ka³ ludzki potwornymi stosami gromadzi³ siê w blokach". Inn¹ metod¹ upokarzania kobiet staj¹ siê posi³ki, które budz¹ wstrêt i s¹ niewystarczaj¹ce, czy niemo¿noœæ zatroszczenia siê o w³asn¹ higienê. Czêœæ wiêŸniarek (zazwyczaj s³abszych) jest zaœ zabierana i mordowana.</p>
+<p> </p>
+<p>Opresyjne metody:</p>
+<ul>
+<li>odebranie wolnoœci i godnych warunków egzystencji;</li>
+<li>odebranie w³asnoœci, przedmiotów osobistych;</li>
+<li>zgolenie g³ów;</li>
+<li>wymuszanie okreœlonych zachowañ;</li>
+<li>naruszenie nietykalnoœci cielesnej;</li>
+<li>pozbawienie prawa do prywatnoœci;</li>
+<li>brak mo¿liwoœci zaspokajania podstawowych potrzeb (np. higienicznych, fizjologicznych);</li>
+<li>przemoc;</li>
+<li>odebranie prawa do ¿ycia. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a) Narrator - zgodnie z za³o¿eniami behawioryzmu - nie interesuje siê emocjami i motywacjami wiêŸniarek, lecz skupia siê na tym, co mo¿e samodzielnie zaobserwowaæ. Przedstawia wiêc cechy wygl¹du oraz opisuje zachowania kobiet. W tym celu wykorzystuje np. zdrobnienia, metafory i wyliczenia. Zdrobnienia ("sukieneczki bez rêkawków", "kolorowe chusteczki") mog¹ sugerowaæ pozytywny, czu³y stosunek narratora. Przede wszystkim jednak wskazuj¹ na delikatnoœæ opisanych w ten sposób elementów, które kontrastuj¹ z ponur¹ obozow¹ rzeczywistoœci¹, nie przystaj¹ do niej. Przypominaj¹ bowiem raczej o beztrosce, piêknie. Z kolei metafory ("[...] tuli³y siê do siebie jak stado kuropatw.", "[...] k³êbi³y siê na szerokiej drodze miêdzy blokami") podkreœlaj¹ bezradnoœæ uwiêzionych, ich zagubienie w nieprzyjaznej rzeczywistoœci. Ponadto sugestywnie wskazuj¹ na zachowanie kobiet, które d¹¿¹ do tworzenia gromady lub te¿ niespokojnie siê poruszaj¹. W ich opisie wa¿na jest tak¿e rola wyliczeñ ("Kobiety te ostrzy¿ono do skóry, ubrano w letnie sukieneczki bez rêkawków."; "Ani ³y¿ki, ani miski, ani szmaty do cia³a."; "Piêæset, szeœæset, tysi¹c wybranych kobiet."). Œwiadcz¹ one o celowym i metodycznym upokarzaniu wiêŸniarek, które trac¹ swe podstawowe prawa i wolnoœæ, a przy tym zaznaczaj¹ rozmiar zag³ady i okrucieñstwa panuj¹cego w obozie, dodatkowo ukonkretniaj¹ wywód.</p>
+<p> </p>
+<p>b) Przyk³adowe wyra¿enia wskazuj¹ce na anonimowoœæ i proces dehumanizacji:</p>
+<ul>
+<li><em> [...] tysi¹c i wiêcej m³odych dziewcz¹t [...];</em></li>
+<li><em>Ani ³y¿ki, ani miski, ani szmaty do cia³a.</em></li>
+<li><em>[...] jak stado kuropatw;</em></li>
+<li><em>Barwne letnie suknie i kolorowe chusteczki [...];</em></li>
+<li><em>[...] kobiety le¿¹ca g³owa przy g³owie na pryczach [...];</em></li>
+<li><em>[...] chudsze, brzydsze, brzuchate [...];</em></li>
+<li><em>Piêæset, szeœæset, tysi¹c wybranych kobiet.</em></li>
+</ul>
+<p> </p>
+<p>c) Przyk³ady obrazowania naturalistycznego:</p>
+<ul>
+<li><em>Pamiêta³y pocz¹tki FKL-u, kiedy trupy kobiet le¿a³y pod wszystkimi blokami i gni³y niewynoszone ze szpitalnych ³ó¿ek, a ka³ ludzki potwornymi stosami gromadzi³ siê w blokach.</em></li>
+<li><em>Pamiêtam równie¿ drug¹ blokow¹, wysokie, rude dziewczynisko o szerokich stopach i czerwonych d³oniach.</em></li>
+<li><em>Kobiety po¿¹dliwie ch³epta³y zupê, które u nas na blokach nikt nie jad³. Œmierdzia³y potem i krwi¹ kobiec¹.</em></li>
+<li><em>Roz³o¿yste blondyny, esmanki w butach z cholewami, wyci¹ga³y z szeregów chudsze, brzydsze, brzuchate i wrzuca³y do œrodka "oka".</em></li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zabawa w "oko" polega na tym, i¿ kobiety "[...] chudsze, brzydsze, brzuchate [...]" znajduj¹ siê w kole utworzonym przez sztubowe - one zaœ trzymaj¹ siê za rêce. Nastêpnie stworzona w ten sposób grupa przesuwa siê w stronê bramy obozu, gdzie ³¹czy siê z "okiem" ogólnym. Zabawa ta nawi¹zuje do motywu <em>danse macabre. </em>Zyskuje w ten sposób upiorny wydŸwiêk, poniewa¿ stanowi dos³own¹ realizacjê tañca œmierci. Kobiety te s¹ bowiem skazane na zag³adê, zaœ grozê sytuacji podkreœla postrzeganie jej w kategoriach zabawy. Nie ma w tym bowiem ani beztroskiej rozrywki, ani niewinnoœci, gdy¿ wi¹¿e siê to z makabr¹, unicestwieniem wielu istnieñ.  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Narrator przedstawia esesmanki w niezwykle oszczêdny sposób, nie poœwiêca im tak wiele uwagi, jak sytuacji wiêŸniarek. Wykorzystuje w swej wypowiedzi przede wszystkim epitety wskazuj¹ce na cechy wygl¹du. Przedstawia bohaterki w nastêpuj¹cych fragmentach: "Roz³o¿yste blondyny, esmanki w butach z cholewami [...]", "Czasami wchodzi³a esmanka na blok. Rozgl¹da³a siê po buksach, kobieta patrz¹ca na kobiety". Kontrast miêdzy opisem esesmanek a wiêŸniarek podkreœla nie tylko ich odmienn¹ sytuacjê zwi¹zan¹ z tym, i¿ te pierwsze s¹ katem, a drugie - ofiar¹. Przede wszystkim sugeruje to dystans - miêdzy kobietami nie ma solidarnoœci, wspó³czucia i empatii. Zabieg ten zaznacza tak¿e anonimowoœæ z³a: nie ma ono jednej, konkretnej twarzy, lecz dotyczy wszystkich osób bior¹cych udzia³ w zag³adzie ofiar. Wp³ywa to tak¿e na uniwersalnoœæ tekstu, poniewa¿ ukazuje on wp³yw dramatycznych okolicznoœci na postawy kobiet. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Narrator opisuje jedn¹ z blokowych, która by³a S³owaczk¹. Wspomina "[...] wysokie, rude dziewczynisko o szerokich stopach i czerwonych d³oniach". Bohaterka mimo trudnych warunków ¿ycia zachowuje swoje cz³owieczeñstwo, dobroæ oraz wra¿liwoœæ. Jest uczciwa wobec wspó³wiêŸniarek, poniewa¿ nie krzywdzi ich, nie wyzyskuje: "Nic im nie mogê daæ, ale nic od nich nie zabiorê". Nie unika tak¿e z nimi kontaktu z innymi kobietami, stara siê byæ tu¿ obok nich, gdy¿ nie ma budy, lecz oddziela siê od wiêŸniarek œcian¹ z koców. Wyró¿nia j¹ tak¿e zdolnoœæ do g³êbszej refleksji, poniewa¿ zastanawia siê nad istnieniem ¿ycia pozagrobowego oraz kar¹ za uczynione z³o. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>S³owa te ujawniaj¹ zachowawcz¹ postawê narratora. Jest bowiem cz³owiekiem zlagrowanym, dla którego najwa¿niejsze staje siê prze¿ycie w niesprzyjaj¹cych warunkach. Z tego te¿ powodu nie interesuje go nic wiêcej ni¿ przetrwanie i troska o swój los. Postrzega siebie jako zwyk³ego cz³owieka, który nie chce nara¿aæ siê na niebezpieczeñstwo, pragnie jedynie unikn¹æ tragicznego koñca. Jego potrzeby zostaj¹ wiêc drastycznie zawê¿one do tych podstawowych oraz kluczowych.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przyk³adowo:</p>
+<p>a) Dialog bohaterów mo¿na rozpatrywaæ na trzech p³aszczyznach. Pierwsza z nich ma dos³owny charakter, poniewa¿ wi¹¿e siê z sytuacj¹, w której siê znajduj¹. Dotyczy wiêc pytania o winê i karê zwi¹zan¹ z niezawinionym cierpieniem. W p³aszczyŸnie historycznej perspektywa ta ulega poszerzeniu, poniewa¿ odwo³uje siê do kwestii postrzegania tych zdarzeñ oraz oceny nie tylko katów, ale tak¿e wiêŸniów. Prowokuje wiêc pytanie, czy historia pozwoli na uczciwe rozliczenie. Z kolei p³aszczyzna eschatologiczna wprowadz¹ przekonanie o istnieniu ¿ycia pozagrobowego i odpowiedzialnoœci moralnej ludzi.</p>
+<p> </p>
+<p>b) Czêœæ indywidualna</p>
+<p> </p>
+<p>c) Zdanie to wyra¿a w¹tpliwoœci bohatera. Nie wie bowiem, czy istnieje si³a, która wymierzy³aby kare oprawcom. S³owa te sugeruj¹ tak¿e nieprzystawanie do siebie tragicznych wydarzeñ oraz ich oceny czy rozliczenia. S¹ to bowiem dwa ró¿ne porz¹dki, co sugeruje wprowadzenie dwóch odmiennych p³aszczyzn. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Podmiot liryczny w utworze poetki marzy o podró¿y z ukochan¹ osob¹ do Wenecji, która jawi siê jako miejsce cudowne, piêkne i niezwyk³e. Wyobra¿a sobie, ¿e bêd¹ prowadziæ d³ugie rozmowy, spêdzaæ razem czas w przyjemny sposób. Planuje tak¿e wspólny rejs ³odzi¹ oraz beztroskie liczenie gwiazd czy latarni. Podmiot liryczny przeczuwa, ¿e obudzi siê w nim na nowo mi³oœæ. Nie obawia siê tak¿e milczenia czy przerywanych dyskusji oraz skrytoœci swojej i wybranka. Nawet mo¿liwoœæ uczuciowej mêki, doœwiadczania sprzecznych wra¿eñ nie zmienia jego postawy. Jest bowiem przekonany o tym, i¿ w ka¿dej sytuacji bêdzie têskniæ za swym towarzyszem, poniewa¿ nigdy nie mog¹ nasyciæ siê swoj¹ obecnoœci¹. Z tego te¿ powodu staj¹ siê niewra¿liwi na jakiekolwiek przeciwnoœci, gdy¿ s¹ sobie przeznaczeni. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>Pierwsza strofa utworu rozpoczyna siê deklaracj¹ podmiotu lirycznego: "Jeszcze siê serce twe ku mnie nachyli, / jeszcze bêdziemy ze sob¹ mówili". Zawiera ona sugestywny obraz miasta, które ma staæ siê celem podró¿y pary - jest to prawdopodobnie Wenecja, na co wskazuj¹ s³owa: "o wielkim mieœcie le¿¹cym na wodzie". W czêœci tej mo¿na dostrzec przede wszystkim elementy konwencji romantycznej i sielankowej. Cel podró¿ staje siê bowiem przestrzeni¹ fascynuj¹c¹ i przyjazn¹ dla cz³owieka. W niej to mo¿na doœwiadczyæ cudów natury - podmiot wspomina o czarnych kwiatach, zaœ "[...] niewidzialne lasy koralowe" wprowadzaj¹ baœniow¹ atmosferê. Sam zaœ motyw podró¿y, swoistej egzotyki to nawi¹zanie do romantyzmu, kiedy to wêdrówki sta³y siê wa¿nym doœwiadczeniem ówczesnych twórców.</p>
+<p>Sielankowy i romantyczny sposób obrazowania zyskuje swoj¹ kontynuacjê w kolejnej strofie. Opisuje ona podró¿ ³odzi¹, która wprowadza poczucie niepewnoœci, tajemnicy: "przy czarnych wios³ach po szumi¹cej fali / gêstwin¹ kana³ów, pod zwodzone mosty, / gdzie siê jak wê¿e czaj¹ wodorosty". Nastêpnie poetka odwo³uje siê do typowych motywów, które wi¹¿¹ siê z ukazaniem mi³oœci. Noc, gwiazdy, ksiê¿yc buduj¹ nastrojowoœæ przedstawienia, sugeruj¹ romantyczny charakter zaprezentowanej przestrzeni, która wspó³gra z prze¿yciami bohaterów, a jednoczeœnie jest œwiadkiem ich szczêœcia.</p>
+<p>Trzecia ze strof - w przeciwieñstwie do dwóch wczeœniejszych - nie skupia siê ma miejscu, lecz zachowaniu postaci. Ich rozmowy, gesty maj¹ bowiem ukradkowy charakter. Sugeruje to, i¿ ³¹cz¹ce ich uczucie jest byæ mo¿e zakazane lub te¿ stanowi tajemnicê, wywo³uje napiêcie emocjonalne. Zmys³owy charakter tej czêœci nasuwa skojarzenia z m³odopolskim sposobem przedstawiania mi³oœci - jako doznania opieraj¹cego siê na kontakcie fizycznym: "by siê wejrzenie nie zbieg³o z wejrzeniem, / by z powitaniem albo te¿ w podziêce / d³u¿ej siê czasem nie zetknê³y rêce".  Wykorzystany tutaj motyw mi³oœci jako tajemnicy jest zaœ charakterystyczny nie tylko dla romantyków (Mickiewicz), lecz pojawia siê w wielu dzie³ach na przestrzeni wieków (np. <em>Romeo i Julia, Dzieje Tristana i Izoldy</em>). </p>
+<p>W ostatniej czêœci utworu zmienia siê atmosfera oraz tonacja dzie³a. Znacz¹ce staje siê tutaj obrazowanie oparte na motywie p³omienia, piek³a, gor¹ca. Sielankowa wizja rozkwitaj¹cego uczucia zostaje zast¹piona obrazem cierpienia, które staje siê udzia³em bohaterów. Mi³oœæ bowiem jest niczym ogieñ - budzi w cz³owiek ¿ar, lecz przy tym stanowi Ÿród³o bólu i têsknoty. Mo¿na tutaj dostrzec koncepcjê uczucia rozpowszechnion¹ w romantyzmie - jako ambiwalentnego doœwiadczenia. Refleksja ta oraz wspomniany motyw ³¹cz¹ wiersz poetki z barokow¹ poezj¹, poniewa¿ ona tak¿e wiele uwagi poœwiêca³a niejednoznacznemu wp³ywowi mi³oœci na cz³owieka. Zmiana nastroju pozwala na prze³amanie optymistycznej, idealistycznej wizji. Uwzglêdnia bowiem to, i¿ mi³oœæ przyczynia siê do szczêœcia, lecz równie¿ ma si³ê destruktywn¹. W ten sposób poetka zdaje siê podkreœlaæ jej niezwyk³oœæ oraz niezwyciê¿onoœæ - mimo bólu osoba mówi¹ca deklaruje sta³oœæ swych uczuæ:</p>
+<p><em>bêdziemy, nawet w najszczytniejszej chwili, </em></p>
+<p><em>jak potêpieñcy do siebie têsknili,</em></p>
+<p><em>na jednym stosie do krzy¿a przybici,</em></p>
+<p><em>wiecznie pragn¹cy i nigdy niesyci!</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Motywy zwi¹zane z ogniem s¹ obecne w dwóch ostatnich strofach utworu i odnosz¹ siê bezpoœrednio do emocji osoby mówi¹cej. Wskazuj¹ bowiem na si³ê jej uczucia, wierzy ona, ¿e "Jeszcze siê we mnie mi³oœæ roz¿arzy...". Mi³oœæ tym samym zostaje ukazana jako ogieñ, który rozpala duszê cz³owieka, ogrzewa j¹, pobudza do ¿ycia. Wywo³uje wiêc niew¹tpliwie pozytywne skojarzenia. Ta jednak interpretacja zostaje w dalszym ci¹gu wiersza pog³êbiona, poniewa¿ ogieñ zostaje powi¹zany z cierpieniem i mêk¹: "w najg³êbszym piekle"; "paleni gor¹cem"; "na jednym stosie do krzy¿a przybici". Tym samym poetka zdaje siê sugerowaæ, ¿e mi³oœæ stanowi Ÿród³o szczêœcia i spe³nienia, ale niesie ze sob¹ tak¿e nieod³¹czne cierpienie. Ogieñ w ten sposób wyra¿a dwoist¹ naturê tego uczucia; wskazuje równie¿ na sprzeczne wra¿enia osoby mówi¹cej. Mi³oœæ jest bowiem dla niej niezwykle wa¿na, pragnie jej, chocia¿ tak¿e przynosi ból. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Motywy akwatyczne wystêpuj¹ w dwóch pierwszy strofach utworu - s¹ elementem definiuj¹cym miejsce, które podmiot liryczny pragnie odwiedziæ ze swym ukochanym. W jednym z pierwszych fragmentów pojawia siê obraz wody ods³aniaj¹cej przed cz³owiekiem tajemnice g³êbiny: "gdzie, byle tylko trochê woda spad³a, / morskie na œwiat³o wychodz¹ dziwad³a". ¯ywio³ ten symbolizuje wiêc poznanie oraz prawdê. Pozwala osobie mówi¹cej na zetkniêcie siê z innym œwiatem, który zaskakuje sw¹ odmiennoœci¹ oraz dziwnoœci¹; wp³ywa tym samym na nieco fantastyczny nastrój tej czêœci. W dalszej czêœci utworu podmiot liryczny wspomina o rejsie "[...] po szumi¹cej fali / gêstwi¹ kana³ów, pod zwodzone mosty, / gdzie siê jak wê¿e czaj¹ wodorosty". S³owa te wprowadzaj¹ pewien niepokój, poniewa¿ sugeruj¹ swoiste zagro¿enie ze strony wodnego œwiata. Symbolizuj¹ tak¿e zmienny oraz niejednoznaczny charakter wody, jej kapryœnoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Elementy wprowadzaj¹ce rytm:</p>
+<ul>
+<li>rymy parzyste -&gt; nachyli - mówili, wodzie - ³odzie; </li>
+<li>sta³a liczba sylab w wersie -&gt; w ka¿dym wersie jest jedenaœcie sylab;</li>
+<li>anafory -&gt;"gdzie pe³ne kwiatów czarne p³yn¹ ³odzie, / gdzie co wieczora s³oñce kryje g³owê"; "by siê wejrzenie nie zbieg³o z wejrzeniem, / by z powitaniem albo te¿ w podziêce"; </li>
+<li>rozpoczynanie ka¿dej strofy w ten sam sposób -&gt; ka¿da strofa rozpoczyna siê s³owem "jeszcze";</li>
+<li>sta³a liczba wersów w ka¿dej strofie -&gt; w ka¿dej strofie jest osiem wersów (z wyj¹tkiem ostatniej, gdzie wystêpuje ich dziesiêæ);</li>
+<li>paralelizmy  -&gt; "Jeszcze siê we mnie mi³oœæ raz roz¿arzy..."; ""Jeszcze siê p³omieñ rozpali ostatni".</li>
+</ul>
+<p> </p>
+<p>Elementy te sprawiaj¹, ¿e wiersz jest rytmiczny oraz zasadniczo regularny. Sugeruj¹ wiêc czytelnikowi harmonijny oraz spokojny nastrój dzie³a, którego struktura nie zostaje zaburzona w jakikolwiek sposób. Dziêki temu wiersz wyró¿nia siê melodyjnoœci¹, prostot¹ i konsekwencj¹ kompozycji. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Anafora "jeszcze" organizuje strukturê wiersza. Wp³ywa bowiem na jego rytm oraz regularnoœæ, gdy¿ rozpoczyna ka¿dy z czterech segmentów tekstu. Wskazuje tak¿e na przekonania podmiotu lirycznego oraz jego pewnoœæ, wiarê. Przytoczona partyku³a sugeruje bowiem trwanie relacji, która po³¹czy³a osobê mówi¹c¹ z jej odbiorc¹, mimo mo¿liwoœci potencjalnego jej zakoñczenia. Œwiadczy wiêc ona o szczególnej wiêzi bohaterów - niezale¿nie od trudnoœci oraz ¿yciowych doœwiadczeñ. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Tytu³ wiersza to <em>Co siê staæ musi</em>. Zak³ada on wiêc pewn¹ koniecznoœæ oraz przekonanie o tym, i¿ pewne wydarzenia s¹ nieuchronne, musz¹ zaistnieæ w przysz³oœci. Jego perswazyjny charakter niesie ze sob¹ tak¹ konsekwencjê, i¿ œwiadczy o próbie przekonania siebie oraz odbiorcy utworu do przedstawionej w wierszu wizji przysz³ych sytuacji. Wskazuje wiêc na wiarê oraz determinacjê osoby mówi¹cej, nieuchronnoœæ tego, co nast¹pi.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

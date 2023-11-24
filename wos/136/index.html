@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1086px; height: 548px;">
+<tbody>
+<tr style="height: 79px; text-align: center;">
+<td style="background-color: #99ccff; width: 242px;"><strong> </strong></td>
+<td style="background-color: #99ccff; width: 434px;"><strong>Tekst nr 1</strong></td>
+<td style="background-color: #99ccff; width: 398px;"><strong>Tekst nr 2</strong></td>
+</tr>
+<tr style="height: 171px; text-align: center;">
+<td style="background-color: #ccffff; width: 242px;"><strong>Stanowisko</strong></td>
+<td style="width: 434px; height: 171px;">Pozycja ustrojowa prezydenta Rzeczpospolitej Polskiej powinna być niższa niż Rady Ministrów, czyli rządu. Prezydent pełni rolę "honorowej głowy państwa". Ryszard Balicki krytykuje posiadane przez prezydenta prawo weta, bowiem według niego jest to element destrukcyjny. </td>
+<td style="width: 398px; height: 171px;">K. Szczucki wskazuje, że wyniki badań opinii publicznej podają, że Polacy opowiadają się za silna pozycją ustrojową prezydenta. Jego zdaniem prezydent powinien mieć szersze uprawnienia, ponieważ jest on wybierany w wyborach powszechnych, a jego mandat społeczny jest bardzo silny i jednocześnie ma on małe uprawnienia, co jest nielogiczne. </td>
+</tr>
+<tr style="height: 171px; text-align: center;">
+<td style="background-color: #ccffff; width: 242px;"><strong>Argumenty</strong></td>
+<td style="width: 434px; height: 171px;">
+<ul>
+<li>Rada Ministrów ponosi odpowiedzialność za swoje działania, a konsekwencją może być nawet wyrażenie dla niej wotum nieufności przez sejm. Z kolei prezydent ma bardzo ograniczoną odpowiedzialność (ograniczona do odpowiedzialności konstytucyjnej). </li>
+<li>Przyznane prezydentowi prerogatywy wskazują na ograniczone przez niego możliwości działania (reprezentuje on Polskę na zewnątrz i uosabia jej majestat, czyli pełni funkcje honorowe, a nie decyzyjne). </li>
+<li>Krytyka instytucji weta ustawodawczego wynika z tego, że prezydent może zawetować każdą ustawę, a jednocześnie nie ponosi on odpowiedzialni politycznej, tym samym takie działanie głowy państwa może doprowadzić do dezorganizacji prac Rady Ministrów. </li>
+</ul>
+</td>
+<td style="width: 398px; height: 171px;">
+<ul>
+<li>Na podstawie wyników badań opinii publicznej można wskazać, że większość respondentów chce rozszerzenia kompetencji głowy państwa (m.in. w zakresie obronności, dowodzenia armią w czasie pokoju).</li>
+<li>Wybory prezydenckie cieszą się bardzo dużą frekwencją, a tym samym należy zauważyć, że społeczeństwo popiera głowę państwa i chce rozszerzyć jego kompetencje. </li>
+<li>Prezydent jest wybierany w wyborach powszechnych, bezpośrednio przez suwerena, a nie jak Rada Ministrów, czyli z mianowania, więc prezydent cieszy się większym poparciem społecznym, a więc powinien mieć również szersze kompetencje. </li>
+<li>Prezydent ma silny mandat społeczny, a wąskie kompetencje, a tym samym mamy do czynienia ze znaczną dysproporcją w tym zakresie. </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>W tekście nr 1 podkreślono, że prerogatywy przyznane polskiemu prezydentowi stawiają go raczej w roli 'honorowej głowy państwa'. Prezydent ponosi jedynie ograniczoną odpowiedzialność konstytucyjną, a głównym ośrodkiem władzy wykonawczej okazuje się Rada Ministrów. Autor tekstu nr 1 zwrócił uwagę na to, że największa kompetencja polskiego prezydenta wiąże się z tym, iż dysponuje on prawem weta. Prawo to jednak, zdaniem autora tekstu nr 1, jest czymś destrukcyjnym, a nie konstruktywnym. Prezydent może nie zgodzić się na wejście w życie danej ustawy niemal z każdego powodu, jaki uzna za istotny. Weto prezydenckie jest zaś trudne do odrzucenia przez Sejm RP, dlatego może ono dezorganizować prace władz ustawodawczej i wykonawczej. Zdaniem autora tekstu nr 1, warto by rozważyć zmniejszenie liczby głosów potrzebnych w Sejmie RP do odrzucenia weta. Najdalej idącym projektem autora tekstu nr 1 jest jednak propozycja, aby wybór prezydenta Polski następował w wyniku głosowania Zgromadzenia Narodowego. Wynika więc z tego, że autor tekstu nr 1 opowiada się za zredukowaniem kompetencji i znaczenia polskiego prezydenta.</p>
+<p>Tekst nr 2 odmiennie widzi pozycję prezydenta w ustroju państwa polskiego. Jego autor opowiada się za tym, aby prerogatywy prezydenta zostały w Polsce zwiększone. Przyznaje on, że prezydent powinien stać na czele rządu lub przynajmniej winien mieć decydujący głos w sprawie wyboru premiera. Twierdzi on, że prezydent nadal powinien być wybierany w wyborach powszechnych, gdyż Polacy chcą silnego prezydenta, posiadającego znaczącą pozycję ustrojową. Dodaje, że wybory prezydenckie cieszą się w Polsce dużą popularnością, co wynika z tego, iż są dla obywateli zrozumiałe, ponieważ wybierają oni konkretną osobę, która powinna mieć cechy męża stanu. Autor tekstu nr 2 sądzi, że powinno się poszerzyć zakres uprawnień prezydenta, gdyż dysponuje on silnym mandatem społecznym.</p><br>

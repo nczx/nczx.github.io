@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse: collapse; width: 542px; height: 199.568px; border-width: 1px; border-spacing: 5px; border-color: #192062;">
+<tbody>
+<tr style="background-color: rgb(217, 230, 242); height: 39.4091px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;"><strong>Adverbs of manner</strong><br/>(przysłówki sposobu)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;"><strong>Adverbs of place</strong><br/>(przysłówki miejsca)</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;"><strong>Adverbs of time</strong><br/>(przysłówki czasu)</td>
+</tr>
+<tr style="height: 39.4091px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;"><em>carefully </em>(ostrożnie)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;">everywhere (wszędzie)</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;">during (podczas)  </td>
+</tr>
+<tr style="height: 20.3182px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">easily (łatwo)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">outside (na zewnątrz)</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">in 2018 (w 2018 roku)</td>
+</tr>
+<tr style="height: 20.3182px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">loudly (głośno)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">over there (tam)</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">just (właśnie)</td>
+</tr>
+<tr style="height: 20.3182px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">slowly (powoli)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">upstairs (na górze)</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3182px; text-align: center; padding: 5px;">soon (wkrótce)</td>
+</tr>
+<tr style="height: 39.4091px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;">smoothly (gładko)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;">-</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 39.4091px; text-align: center; padding: 5px;">two weeks ago (dwa tygodnie temu)</td>
+</tr>
+<tr style="height: 20.3864px;">
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3864px; text-align: center; padding: 5px;">well (dobrze)</td>
+<td style="width: 177.328px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3864px; text-align: center; padding: 5px;">-</td>
+<td style="width: 177.344px; border-width: 1px; border-color: rgb(25, 32, 98); height: 20.3864px; text-align: center; padding: 5px;">-</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Przysłówki</strong> <strong>sposobu umieszczamy najczęściej na końcu zdania po czasowniku lub po dopełnieniu. Przykłady:</strong></p>
+<p style="padding-left: 40px;"><em><strong>The choir sang <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">beautifully</span>.</strong></em></p>
+<p style="padding-left: 40px;"><em><strong>She plays the piano <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">well</span>.</strong></em></p>
+<p><strong>W sytuacji, gdy dopełnienie składa się z 2-3 wyrazów, przysłówek sposobu może znaleźć się także przed czasownikiem:</strong></p>
+<p style="padding-left: 40px;"><em><strong>He <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">quickly</span> replied to his mum's message.</strong></em></p>
+<p style="padding-left: 40px;"><em><strong>We <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">carefully</span> listened to the teacher's instructions.</strong></em></p>
+<p><strong>Jeśli przysłówek sposobu składa się z więcej niż jednego wyrazu, możemy go umieścić tylko na końcu zdania:</strong></p>
+<p style="padding-left: 40px;"><em><strong>We listened to the teacher's instructions <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">very</span></strong></em><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);"> carefully.</span></strong></p>
+<p style="padding-left: 40px;"><em><strong>He replied to his mum's message <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">really fast</span>.</strong></em></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. They sang very loudly.  </p>
+<p>3. I listened to the instructions carefully. / I carefully listened to the instructions.</p>
+<p>4. The lift went up quickly.</p>
+<p>5. He plays the guitar really well.</p>
+<p>6. We were laughing quietly.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. later </p>
+<p>(X: Czy zobaczymy się <strong>później</strong> na koncercie?</p>
+<p>Y: Tak, spotkamy się tam.) </p>
+<p>2. early</p>
+<p>(Jest 6 rano! To zdecydowanie za <strong>wcześnie</strong>. Nie zamierzam jeszcze wstawać.) </p>
+<p>3. upstairs</p>
+<p>(Uwielbiam mieszkać parterze. Nigdy nie muszę wchodzić <strong>na górę</strong>!) </p>
+<p>4. just</p>
+<p>(Ktoś <strong>właśnie</strong> pobił rekord świata! Stało się to ledwie godzinę temu.) </p>
+<p>5. everywhere</p>
+<p>(Podczas wyprawy zgubiło się trzech odkrywców. Ratownicy szukali <strong>wszędzie</strong>, ale ich nie znaleźli.) </p>
+<p>6. never</p>
+<p>(<strong>Nigdy</strong> nie byłem/am w Brazylii, ale bardzo chciał(a)bym tam kiedyś pojechać.) </p>
+<p><br/><s class="odr-strikethrough">all day</s>, <s class="odr-strikethrough">eventually</s>, <s class="odr-strikethrough">inside</s></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>a - 3 </p>
+<p>b - 4</p>
+<p>c - 2</p>
+<p>d - 5</p>
+<p>e - 1</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. B  </p>
+<p>2. C</p>
+<p>3. A</p>
+<p>4. D</p><br>

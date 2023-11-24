@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe cechy:</p>
+<ul>
+<li>Po³¹czenie intelektualnej refleksji z oryginalnym œwiatem przedstawionym. -&gt; Tradycyjne w poezji Leœmiana jest zainteresowanie ponadczasowymi zagadnieniami, które dotycz¹ bytu cz³owieka oraz mo¿liwoœci jego poznania. Oryginalnoœæ wizji artysty wi¹¿e siê z tym, ¿e powa¿na refleksja zostaje powi¹zana z fantastycznym i niezwyk³ym œwiatem, w którym stykaj¹ siê ze sob¹ sprzeczne pierwiastki. Potwierdza to na przyk³ad utwór pt. <em>Dusio³ek</em>. Humorystyczna i doœæ groteskowa scena, w której banalna sytuacja prowadzi do niecodziennej konfrontacji, staje siê Ÿród³em g³êbokiego namys³u nad charakterem rzeczywistoœci. Prowokuje te¿ kluczowe pytanie o genezê z³a, które dotyka œwiat stworzony przez Boga: "Nie doœæ ci, ¿eœ potworzy³ mnie, szkapê i wo³ka, / Jeszczeœ musia³ takiego zmajstrowaæ Dusio³ka?".</li>
+<li>Wykorzystanie tradycyjnych oraz nowatorskich konstrukcji. -&gt; Poeta wybiera klasyczne kompozycje dzie³a (np. trójdzielna <em>Dziewczyna</em>), utrwalone w tradycji gatunki (<em>Dusio³ek</em> jako ballada) czy wersyfikacjê (trzynastozg³oskowy <em>Topielec</em>). Jednoczeœnie nowoczesnoœæ przejawia siê w œmia³ych zabawach jêzykiem, tworzeniu neologizmów. Leœmian bowiem odbiera s³owom pierwotne sensy, a nadaje im w³asne. Stworzone przez niego wyrazy pozwalaj¹ nie tylko na nazwanie nowych zjawisk, ale przede wszystkim tworz¹ niepowtarzaln¹ wizjê rzeczywistoœci oraz sugeruj¹ niejednoznacznoœæ poznania ("I nêci³ ust zdyszanych tajemnym bezœmiechem, / I czarowa³ zniszczot¹ wonnych niedowcieleñ"). <br/>. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) Przyk³adowo:</p>
+<table border="1" style="border-collapse:collapse;width:586px;height:292px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:50.9px;"><strong>Lp.</strong></td>
+<td style="background-color:#aed581;text-align:center;width:292.663px;"><strong>Leœmianizm</strong></td>
+<td style="background-color:#aed581;text-align:center;width:232.438px;"><strong>Interpretacja znaczenia </strong></td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">1.</td>
+<td style="width:292.663px;text-align:center;"><em>bezœmiech</em></td>
+<td style="width:232.438px;text-align:center;">'to, co pozbawione œmiechu'</td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">2.</td>
+<td style="width:292.663px;text-align:center;"><em>znicestwieæ</em></td>
+<td style="width:232.438px;text-align:center;">'przestaæ istnieæ, zanikn¹æ'</td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">3.</td>
+<td style="width:292.663px;text-align:center;"><em>œniarz</em></td>
+<td style="width:232.438px;text-align:center;">'ten kto œni'</td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">4.</td>
+<td style="width:292.663px;text-align:center;"><em>najdalszoœæ</em></td>
+<td style="width:232.438px;text-align:center;">'w³aœciwoœæ tego, co znajduje siê najdalej'</td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">5.</td>
+<td style="width:292.663px;text-align:center;"><em>niezjawiona</em></td>
+<td style="width:232.438px;text-align:center;">'taka, która siê jeszcze nie zjawi³a, nie sta³a siê gdzieœ obecna'</td>
+</tr>
+<tr>
+<td style="width:50.9px;text-align:center;">6.</td>
+<td style="width:292.663px;text-align:center;"><em>bylejaczyæ</em></td>
+<td style="width:232.438px;text-align:center;">'powodowaæ, ¿e coœ jest byle jakie'</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>b) Czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Znakowy charakter poezji Leœmiana wi¹¿e siê z tym, ¿e wa¿na jest w kontekœcie jego twórczoœci koncepcja znaku jako elementu sk³adaj¹cego siê z treœci oraz formy. Poeta wykorzystuje pewne znaki, jednak w twórczy sposób przekszta³ca ich znaczenie, ci¹gle je zmienia. Za pomoc¹ neologizmów Leœmian przypomina o tym, i¿ rzeczywistoœæ nie jest jednoznaczna, zaœ jedne zjawiska przechodz¹ p³ynnie w inne. Artysta nadaje swemu systemowi indywidualny charakter, poniewa¿ wprowadza nowe sensy poszczególnych znaków, które nie s¹ zgodne z ich pierwotn¹ treœci¹. W ten sposób zaznacza bogactwo sensów, ale oddaje te¿ ¿ywy charakter jêzyka. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br>

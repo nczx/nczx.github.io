@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Motyw ogrodu ma w kulturze bogatą symbolikę. Może bowiem oznaczać schronienie, ale także piękno, potęgę, urodzaj. W wierszu Balińskiego ulega jednak pewnemu przetworzeniu, ponieważ do uporządkowanej przestrzeni wkracza zniszczenie: "W ogrodzie moich mistrzów potrzaskano drzewa". Sugeruje to zaburzenie dotychczasowej harmonii, być może przemijanie, które dotyka idei mistrzów lub, pozornie, ich wytworów. Dalej bowiem podmiot stwierdza: "Rozszarpano domostwa, zaciemniono stawy, / Ale struny drzew żyją i grają nocami".</p>
+<p>W wierszu ujawnia się także relacja między mistrzem a uczniem, czyli osobą mówiącą. Zależność ta sugeruje ciągłość przekazywanej tradycji, która nie umiera, lecz wciąż trwa. Podmiot liryczny niejako kontynuuje dzieło mistrza, również odwołuje się do dawnych wzorców, które w jego oczach zyskują aprobatę i pozwalają na uzewnętrznienie swego talentu: "Pisze do mgieł scenariusz, niebu daję rymy -". W dziele Balińskiego pojawia się także obraz teatru i okrętu: "Wiatrom nadaję kontur lotnego okrętu", "Czas zapuszcza kurtynę. [...]". Okręt symbolizuje przede wszystkim nieśmiertelność, ale też podróż (np. poetycką). Może być również znakiem poetyckiej inspiracji umożliwiającej swobodne przekształcanie rzeczywistości, by zamienić ją w sztukę. Z kolei w literaturze teatr bardzo często służy przedstawieniu refleksji na temat ludzkiego życia (<em>theatrum mundi</em>). W wierszu Balińskiego motyw ten podkreśla nieubłagalny upływ czasu, który niejako wyznacza koniec dzieła osoby mówiącej.</p>
+<p>W <em>Monumencie</em> obecny jest także motyw lotu: "Zimną arię klasyczną o ruinach sławy, / Uniesionych przez słowa i między gwiazdami". Zdaje się on zaznaczać wyjątkowość twórcy, który przekracza granice między różnymi sferami rzeczywistości, jego indywidualizm. Jednocześnie lot wyraża przyjęcie nowej perspektywy, która zapewnia pełnię poznania. Zabieg ten może też świadczyć o uwzniośleniu artysty i unieśmiertelnieniu jego dorobku, którego sława wykracza poza codzienność. Sam zaś motyw sławy poetyckiej wskazuje na autotematyczny charakter wiersza, w którym podmiot liryczny pragnie zaznaczyć swe przywiązanie do dawnych wzorców. Jednocześnie w ten sposób podkreśla swą wiarę w znaczenie oraz nieśmiertelność poezji, która będzie oddziaływać na przyszłe pokolenia.</p>
+<p>Odwołanie do różnorodnych motywów i toposów świadczy o przywiązaniu poety do utrwalonych w kulturze tradycji. Jednocześnie wprowadza to do dzieła dodatkowe sensy, które wynikają z przenośnych znaczeń przywołanych elementów. Wzbogaca to możliwości interpretacyjne <em>Monumentu</em>, a jednocześnie wskazuje na źródła inspiracji Balińskiego. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Utwór Balińskiego na różnych płaszczyznach wskazuje na jego fascynację muzyką i próbach łączenia jej z inną dziedziną twórczości - poezją. Język wiersza odwołuje się do pojęć, które są typowe dla świata muzyki. Jest bowiem mowa o "barytonie", czyli męski głosie, który znajduje się pośrodku skali. Następnie poeta przywołuje "Zimną arię klasyczną". Z definicji to pieśń wykonywana solowo, najczęściej będąca częścią operetki, opery itd. Również metaforyczny obraz drzew ("Ale struny drzew żyją i grają nocami") wprowadza nawiązanie do muzyki, ponieważ stają się one niezwykłymi instrumentami, z których wydobywają się dźwięki. W dalszej części utworu podmiot liryczny mówi: "I tak nad ziemią wschodzi historyczny balet". Słowa te można rozpatrywać jako nawiązanie do widowiska teatralnego - istotną funkcję pełni w nim nie tylko taniec, ale również muzyka. Dobór słownictwa oraz metafor w znaczącym stopniu nawiązuje tym samym do świata muzyki. Również wykorzystane przez Balińskiego motywy odwołują się do tej dziedziny sztuki. Muzyka bowiem staje się znakiem ludzkiej działalności i jego osiągnięć. Może także przypominać o nieuchronnym przemijaniu: "Nad pustym brzegiem smutek barytonem śpiewa / Zimną arię klasyczną o ruinach sławy". Jest ona obecna w rzeczywistości otaczającej człowieka, nieustannie mu towarzyszy: "Ale struny drzew żyją i grają nocami". Drugi motyw powiązany z muzyką to człowiek jako twórca. Podmiot liryczny postrzega bowiem siebie jako niezwykłą jednostkę. Ma władzę nad światem, jest wielkim artystą, którego akt tworzenia odnosi się do świata. Osoba mówiąca przystosowuje go do swoich potrzeb, dyryguje poszczególnymi elementami: "Pisze do mgieł scenariusz, niebu daję rymy, / Wiatrom nadaję kontur lotnego okrętu".</p>
+<p>Nie tylko język i motywy świadczą o muzyczności dzieła. Przejawia się ona także w wersyfikacji oraz rytmie utworu. Wiersz Balińskiego składa się z siedmiu strof, a w każdej z nich są cztery wersy - wskazuje to na regularną budowę dzieła. Twórca wykorzystuje przy tym trzynastozgłoskowiec, można też dostrzec obecność rymów krzyżowych, które dodatkowo są żeńskie i dokładne. Te właściwości wiersza sprawiają, iż jest on płynny, ma stały rytm, gdyż powtarzają się w nim pewne elementy. Nie dochodzi więc w żadnym fragmencie do ich zaburzenia - wpływa to na melodyjność dzieła. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>a) Elementy kompozycji i zabiegów stylistycznych, które zbliżają wiersz do poetyki klasycznej:</p>
+<ul>
+<li>harmonijna, regularna budowa dzieła -&gt; utwór składa się z siedmiu strof - w każdej są cztery wersy, występują rymy krzyżowe, są one ponadto żeńskie i dokładne; każdy wers jest zapisany trzynastozgłoskowcem;</li>
+<li>poeta stosuje się do zasady <em>decorum</em> - język wypowiedzi jest dostosowany do powagi podejmowanego tematu; zachowuje także umiar;</li>
+<li>artysta odwołuje się do toposów i motywów, które pojawiały się już w dziełach starożytnych (np. <em>exegi monumentum</em>, okręt);</li>
+<li>symetria dzieła przejawiająca się w obecności klamry kompozycyjnej: "Nad pustym brzegiem smutek barytonem śpiewa / Zimną arię klasyczną o ruinach sławy";</li>
+<li>oszczędne wykorzystanie środków stylistycznych (np. metafor, epitetów).</li>
+</ul>
+<p> </p>
+<p>b) Ironia ujawnia się w momencie zestawienia tytułu z treścią wiersza. Słowo "monument" wywołuje bowiem skojarzenia z czymś namacalnym - budowlą upamiętniającą pamięć o wybitnej jednostce, zasłużonej z jakiegoś powodu. Z kolei "monument" w wierszu Balińskiego zdaje się ulotny, nie przybiera materialnej formy. Jest nim dzieło twórcy, który kształtuje rzeczywistość i w ten sposób przenosi się w innym wymiar istnienia. Chociaż doświadcza przemijania, to jednak wierzy, że jego poezja pozostanie żywa w pamięci kolejnych pokoleń. Staje się ona w ten sposób wiecznym pomnikiem chwały. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Poezja według podmiotu lirycznego ma być strażniczką tradycji i jej kontynuatorką. Jest ona żywa, gdyż ma moc kształtowania rzeczywistości i odnajdywania w niej piękna oraz ukrytych sensów: "Ale struny drzew żyją i grają nocami". Twórczość, według podmiotu lirycznego, powinna być powiązana z otaczającym go światem, naturą. Stanowi ona ponadto reprezentację harmonii, piękna i stosowności. Uosabia ona ukryte pragnienie człowieka: "I tak nad ziemią wschodzi historyczny balet, / Który chcemy dosięgnąć, za którym gonimy". Zdaje się jedynym stałym punktem odniesienia w egzystencji naznaczonej niepewnością: "Między pustką ogrodu a głębią odmętu". Celem tak przedstawionej poezji staje się przekraczania granic, lecz także zapewnienie twórcy nieśmiertelnej sławy. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Twórca w utworze może odczuwać pewne osamotnienie i melancholię. Wynika ona z faktu, iż dorobek jego mistrzów zdaje się ulegać zniszczeniu czy zapomnieniu: "W ogrodzie moich mistrzów potrzaskano drzewa, / Rozszarpano domostwa, zaciemniono stawy". Podmiot liryczny dogłębnie odczuwa upływ czasu, który jest wpisany w ludzką egzystencję, jednak jego słowa sugerują nieśmiertelność sztuki: "Ale struny drzew żyją i grają nocami, / Koloru dobywając z fosforycznych palet". Ma świadomość zmieniającej się rzeczywistości, jednak nie chce rezygnować z tradycji, która go ukształtowała. Z tego też powodu wykorzystuje świat do stworzenia swego dzieła: "Piszę do mgieł scenariusz, niebu daję rymy". Jest świadomy przemijania oraz wyraża pewną bezradność wynikającą z sytuacji człowieka: "Między pustką ogrodu a głębią odmętu / Czas zapuszcza kurtynę. Mój sen ją rozwiewa". Znaj jednak przy tym wartość swego dzieła, co ma mu zapewnić wieczną sławę.</p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br>

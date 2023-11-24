@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie:</strong> <em>every time </em>- ilekroć, za każdym razem. </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie:</strong> używamy określenia <em>enough</em>, aby powiedzieć, że czegoś jest za mało.</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie:</strong> to zdanie opisuje jedną konkretną rzecz, dlatego należy wybrać opcję z przedimkiem określonym <em>the</em>.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>thank somebody for doing something </em>(dziękować komuś za zrobienie czegoś).</p>
+<p>5. B</p>
+<p><strong>Uzasadnienie:</strong> <em>would like to </em>- chciał(a)by.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie:</strong> aby poprawnie przetłumaczyć fragment w nawiasie, musimy użyć szyku zdania pytającego. Tu: czasownik modalny + podmiot + czasownik główny w bezokoliczniku. </p>
+<p>2. A</p>
+<p><strong>Uzasadnienie:</strong> w pytaniach o czyjeś przewidywania na temat przyszłości używamy czasu <em>future simple</em> (<em>will </em>+ bezokolicznik).</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>can't have + past participle</em>, by wyrazić pewność, że jakaś sytuacja nie miała miejsca.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności zaplanowanej na najbliższą przyszłość używamy czasu <em>present continuous</em> (<em>am / are / is </em>+ czasownik z <strong>-</strong><em>ing</em>).</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność odbyła się w konkretnym momencie w przeszłości używamy czasu <em>past simple</em>. W mowie zależnej zamieniamy go na <em>past perfect</em> (<em>had </em>+ <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. B </p>
+<p><strong>Uzasadnienie:</strong> konstrukcja z przysłówkiem <em>there</em>, aby powiedzieć, że coś istnieje. Z rzeczownikami niepoliczalnymi (<em>ice cream </em>- lody) używamy formy czasownika jak dla liczby pojedynczej (tu: <em>is </em>- jest). </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność będzie w trakcie wykonywania w przyszłości używamy czasu <em>future continuous</em> (<em>will be</em> + czasownik z -<em>ing</em>).</p>
+<p>3. A</p>
+<p><strong>Uzasadnienie:</strong> <em>can't stand </em>- nie znosić.</p>
+<p>4. C</p>
+<p><strong>Uzasadnienie:</strong> używamy <em>used to</em> do opisania dawnych nawyków, które uległy zmianie.</p>
+<p>5. B</p>
+<p><strong>Uzasadnienie:</strong> w języku angielskim są dwa osobne czasowniki oznaczające "pożyczać". <em>Lend somebody something </em>- pożyczyć coś komuś. <em>Borrow something from someone </em>- pożyczyć coś od kogoś.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong> </p>
+<p>1. used to spend</p>
+<p><strong>Uzasadnienie:</strong> do opisania dawnych nawyków i przyzwyczajeń, które uległy zmianie, używamy <em>used to</em>. </p>
+<p>2. I will eat</p>
+<p><strong>Uzasadnienie:</strong> zdanie okolicznikowe czasu. Konstrukcja: <em>future simple </em>(<em>will </em>+ bezokolicznik), spójnik (tu: <em>as soon as </em>- jak tylko) + <em>present simple</em>.</p>
+<p>3. whose sister is</p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o czyimś posiadaniu albo pokrewieństwie w zdaniu przydawkowym używamy zaimka względnego <em>whose </em>(tu: którego).</p>
+<p>4. to go / going skiing</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku <em>like </em>(lubić) używamy formy z końcówką -<em>ing</em>, kiedy mówimy o upodobaniach. Kiedy ten czasownik łączy się z <em>to</em>, jest pewna różnica w znaczeniu (opis czynności wykonywanej często lub regularnie).</p>
+<p>5. she was working</p>
+<p><strong>Uzasadnienie:</strong> spójnik <em>while </em>(podczas gdy) wprowadza zdanie w czasie <em>past continuous </em>(<em>was/were </em>+ czasownik z <em>-ing</em>), który wyraża czynność w trakcie trwania w określonym momencie w przeszłości.</p>
+<p>6. it is important </p>
+<p><strong>Uzasadnienie:</strong> w języku angielskim w takich zdaniach nie możemy pominąć czasownika, dlatego korzystamy z konstrukcji: podmiot + osobowa forma <em>to be</em> + przymiotnik.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. would sign up for</p>
+<p><strong>Uzasadnienie:</strong> <em>sign up for something </em>- zapisać się na coś. Do opisania wyobrażonej sytuacji używamy II trybu warunkowego (warunek: <em>If</em> + <em>past simple</em>; rezultat: <em>would </em>+ bezokolicznik). </p>
+<p>2. every time you use it</p>
+<p><strong>Uzasadnienie:</strong> <em>every </em>używamy przed określeniami czasowymi, kiedy chcemy powiedzieć, że jakaś sytuacja zachodzi za każdym razem. </p>
+<p>3. renovating this house</p>
+<p><strong>Uzasadnienie:</strong> po wyrażeniu <em>waste time</em> (marnować czas) używamy formy czasownika z końcówką <em>-ing.</em></p>
+<p>4. Josh might/could have told me</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>might/could have + past participle</em> (tu: III kolumna w tabeli czasowników nieregularnych), by spekulować na temat przeszłości.</p>
+<p>5. I wish/If only I wasn't/weren't</p>
+<p><strong>Uzasadnienie:</strong> do wyrażenia życzenia zmiany obecnego stanu rzeczy używamy konstrukcji z "<em>wish / if only</em>" + <em>past simple.</em> W tej konstrukcji wyjątkowo możemy użyć formy <em>were </em>w pierwszej i trzeciej osobie liczby pojedynczej.</p>
+<p>6. are meeting up</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności zaplanowanej na najbliższą przyszłość używamy czasu <em>present continuous</em> (<em>am / are / is</em><strong> </strong>+ czasownik z <strong>-</strong><em>ing</em>).</p><br>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. fashion design</p>
+<p>(Nie wiem, czy <strong>projektowanie mody</strong> jest formą sztuki. Czasem nie jestem nawet pewien/pewna, czy ma coś wspólnego z ubraniami!) </p>
+<p>2. photography</p>
+<p>(Naprawdę uwielbiam <strong>fotografię</strong>, szczególnie kiedy zdjęcia są czarno-białe.)</p>
+<p>3. painter</p>
+<p>(Mój ulubiony <strong>malarz</strong>? Myślę, że Monet, szczególnie jego obraz przedstawiający most i kwiaty w rzece.)</p>
+<p>4. sculpture</p>
+<p>(Miasto chce umieścić <strong>rzeźbę</strong> jakiejś miejscowej postaci historycznej naprzeciwko ratusza, ale nie wiedzą, kogo wybrać.)</p>
+<p>5. graffiti</p>
+<p>(Nie przeszkadza mi <strong>graffiti</strong>, kiedy wygląda ładnie, ale nie znoszę gdy ściany pokryte są wulgarnymi słowami.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. fashion </p>
+<p>2. graffiti</p>
+<p>3. paintings</p>
+<p>4. sculpture</p>
+<p>5. installation</p>
+<p>6. drawings</p>
+<p>7. photography</p>
+<p>8. clay</p>
+<p>9. graphic</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Dziś otwarcie wystawy sztuki</p>
+<p>Na naszej wystawie jest coś dla każdego:</p>
+<p>1. Projektowanie <strong>mody</strong>, w tym ubrania od Gucci, Diora i wielu innych czołowych projektantów.</p>
+<p>2. <strong>Graffiti</strong> z niesamowitą mapą świata w 3D i zachwycającym audiowizualnym występem.</p>
+<p>3. <strong>Obrazy</strong> z całego świata, między innymi wybrane dzieła francuskich impresjonistów nigdy wcześniej nie wystawiane w tym kraju. </p>
+<p>4. Ogród z <strong>rzeźbami</strong> prezentujący dzieła z kamienia, metalu i szkła.</p>
+<p>5. <strong>Instalacja</strong> artystyczna w postaci interaktywnej ściany, do której możesz dodać swoje własne dzieła!</p>
+<p>6. Kilka wczesnych <strong>rysunków</strong> Van Gogha wykonanych czerwoną i czarną kredą albo węglem - pamiętaj, że w tamtym czasie nie było jeszcze ołówków!</p>
+<p>7. Obowiązek dla każdego zainteresowanego <strong>fotografią</strong>. Wystawa zdjęć zrobionych na całym świecie, przedstawiających konflikty, naturę i świat wokół nas.</p>
+<p>8. Ręcznie robione i malowane <strong>gliniane</strong> garnki z całego świata.</p>
+<p>9. Przykłady projektów <strong>graficznych</strong>, między innymi okładki komiksów, opakowania różnych produktów, okładki płyt CD i wiele innych. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. curator </p>
+<p>2. exhibits</p>
+<p>3. watercolours</p>
+<p>4. canvas</p>
+<p>5. landscapes</p>
+<p>6. still life</p>
+<p>7. mural</p>
+<p>8. self-portrait</p>
+<p>9. masterpiece</p>
+<p>10. artistry</p>
+<p>11. sketches</p>
+<p>12. carvings</p>
+<p>13. statues</p>
+<p>14. bust</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Co za nieład!</p>
+<p>Co się dzieje, kiedy postawisz entuzjastycznego ale bezradnego <strong>kuratora</strong> na czele wystawy? Przyjdź i sam/a zobacz! Mieszanina <strong>eksponatów</strong> autorstwa przypadkowo dobranych artystów. Dodatkowo, niektóre oznaczenia były mylne, na przykład jedną salę oznaczono jako prezentującą <strong>akwarele,</strong> podczas gdy w rzeczywistości zawierała obrazy olejne. </p>
+<p>Co za marnotrawstwo <strong>płótna</strong> i farb!</p>
+<p>Widziałem/am tylko obrazy. Nie mogłem/am znieść nic więcej. Były tam <strong>pejzaże</strong> przedstawiające jesienne pola, <strong>martwa natura</strong> z miską owoców i kwiatami, był nawet <strong>mural</strong> na całą ścianę, który zdawał się przedstawiać scenę z westernu, a jeden z artystów namalował swój <strong>autoportret</strong>. Może powinien zamiast tego zrobić sobie selfie! Jednak żadne z nich nie może być nazywane<strong> dziełem sztuki</strong>. Właściwie to <strong>kunszt</strong> większości ludzi zaangażowanych w tę wystawę był na podobnym poziomie do uczestników zajęć plastycznych w 10 klasie miejscowej szkoły. </p>
+<p>5/10 za staranie</p>
+<p>To nie było idealne, ale miło zobaczyć, że miejscowa galeria próbuje czegoś nowego. <strong>Szkice</strong> i rysunki Da Vinci były oczywiście wspaniałe, ale musiałem/am przepychać się przez tłum, żeby rzucić na nie okiem. Było tam kilka ciekawych <strong>rzeźb</strong> z drewna z niesamowitymi szczegółami. Niektóre z <strong>posągów</strong> w ogrodzie były zabawne. Nie poruszyło mnie marmurowe <strong>popiersie</strong> starszego pana w korytarzu, ale okazało się, że nie był to eksponat, a podobizna dyrektora galerii. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. B </p>
+<p>2. D</p>
+<p>3. A</p>
+<p>4. C</p>
+<p>5. A</p>
+<p>6. B</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Igor Mitoraj był polskim artystą, który zajął się rzeźbą po wizycie w Ameryce Południowi. Pomimo, że zaczął od pracy z brązem i pewnym rodzajem <strong>gliny</strong> - terakotą (<em>terra cotta</em> to po włosku 'wypiekana ziemia') w 1979, po wizycie we Włoszech <strong>przeszedł</strong> (moved on) do czegoś nowego - marmuru, chociaż w razie potrzeby używał też innych materiałów.</p>
+<p>Igor tworzył posągi i <strong>popiersia</strong> w klasycznym stylu, ale jego prace często przedstawiają tylko fragment ciała czy twarzy. Dlaczego? Jaką wiadomość starał się <strong>przekazać</strong> (get across)? Są dwa możliwe sposoby <strong>interpretacji</strong> jego stylu. Zgodnie z pierwszym z nich, greckie i rzymskie posągi zwykle są uszkodzone i jego prace pokazują podobny rodzaj zniszczeń. Inna interpretacja mówi, że rzeźby <strong>podkreślają</strong> delikatność ludzkiego ciała oraz nasze cierpienie, zwłaszcza kiedy się starzejemy. </p><br>

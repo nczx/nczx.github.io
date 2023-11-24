@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Set</p>
+<p>(<strong>Ustawić</strong> nowe hasło) </p>
+<p>2. Install</p>
+<p>(<strong>Zainstalować</strong> oprogramowanie antywirusowe)</p>
+<p>3. Post</p>
+<p>(<strong>Opublikować</strong> komentarze pod zdjęciami z wakacji moich znajomych)</p>
+<p>4. Update</p>
+<p>(<strong>Zaktualizować</strong> swój profil w mediach społecznościowych nowym, wstawiając nowe zdjęcie i szczegóły dotyczące mojej nowej szkoły)</p>
+<p>5. scam </p>
+<p>(Dowiedzieć się więcej o tym, jak rozpoznać emaile, które starają się <strong>oszukiwać</strong> za pomocą jakiegoś podstępu)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. host</p>
+<p>(Możesz zapłacić jakiejś firmie, żeby <strong>zapewniała sprzęt i oprogramowanie</strong> twojej stronie internetowej - jest to bardzo tanie, jeśli używasz współdzielonego serwera.) </p>
+<p>2. implant, embedded</p>
+<p>(Mój tata mówi, że nigdy nie chce mieć <strong>biochipa</strong>. Mówi, że gdyby miał coś takiego <strong>wszczepionego</strong> w swoim ciele, czułby się jak robot!)</p>
+<p>3. unfollow</p>
+<p>(Nie lubię całkiem <strong>przestawać obserwować</strong> ludzi w mediach społecznościowych, bo wydaje się to niegrzeczne, ale wyciszanie może być dobrą alternatywą.)</p>
+<p>4. domestic appliances</p>
+<p>(Mamy u siebie jakieś piętnaście <strong>urządzeń domowych</strong>, a w dodatku jeszcze oczywiście telefony, laptopy i tablety.)</p>
+<p>5. virtual assistants, emotionally interactive</p>
+<p>(Będzie świetnie kiedy <strong>wirtualni asystenci</strong> i roboty będą <strong>interaktywne emocjonalnie</strong>.)</p>
+<p>6. diverless cars</p>
+<p>(Myślę, że <strong>autonomiczne samochody</strong> będą lepsze na długodystansowe podróże na autostradzie niż na krótkie trasy na zatłoczonych miejskich drogach.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. user-friendly</p>
+<p>(Nie mogę rozpracować jak używa się tej aplikacji - nie jest zbyt <span style="text-decoration: underline;">intuicyjna</span> <strong>przyjazna użytkownikowi</strong>.) </p>
+<p>2. feasible</p>
+<p>(Ta praca nie byłaby <span style="text-decoration: underline;">możliwa</span> <strong>wykonalna </strong>dla mnie - dojazd do niej tramwajem z miejsca, w którym mieszkam zajmuje dwie i pół godziny.)</p>
+<p>3. intriguing</p>
+<p>(Uważam nowe urządzenie czytające w myślach za <span style="text-decoration: underline;">fascynujące</span> <strong>intrygujące</strong>. To niesamowite jak pomyślę, że kiedyś będzie to możliwe.)</p>
+<p>4. outdated</p>
+<p>(Czy to prawda, że produkty są celowo projektowane tak, żeby stawały się <span style="text-decoration: underline;">nieaktualne</span> <strong>przestarzałe</strong>, żeby ludzie kupowali nowe?)</p>
+<p>5. cutting-edge</p>
+<p>(Nowy telefon, który wyszedł na rynek jest supernowoczesny i <span style="text-decoration: underline;">aktualny</span> <strong>nowatorski </strong>w porównaniu do innych.)</p>
+<p>6. broadband</p>
+<p>(Mam mieć <span style="text-decoration: underline;">szybki</span> <strong>szerokopasmowy</strong> internet, ale spójrz jak długo ładuje się strona.)</p>
+<p>7. defective</p>
+<p>(Ta aplikacja jest w porządku, ale trochę <span style="text-decoration: underline;">problematyczna</span> <strong>wadliwa</strong>, ponieważ nie łączy się z mediami społecznościowymi.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. dated </p>
+<p>2. state-of-the-art </p>
+<p>3. outdated</p>
+<p>4. leading-edge</p>
+<p>5. fascinating</p>
+<p>6. old-time</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Cyberiada - zbiór opowiadań polskiego autora, Stanisława Lema została napisana w 1965 roku, ale wcale nie wydaje się <strong>przestarzała</strong>. Być może dlatego, że nie tylko przedstawia <strong>najnowocześniejszą</strong> technologię, którą tworzą dwaj główni bohaterowie, ale też mówi o chciwości i władzy - tematach, które nigdy nie będą <strong>nieaktualne</strong>. W jednym z opowiadań wynalazcy wykorzystują <strong>wiodącą technologię</strong>, żeby powstrzymać wybuch wojny poprzez nadanie żołnierzom z obydwu stron konfliktu świadomości zbiorowej. Opowiadania są <strong>fascynujące</strong>, skłaniające do refleksji i bardzo zabawne. Jedno, które wydaje się szczególnie prawdziwe opowiada o tym, jak zniszczyli niezwyciężonego wroga <strong>staroświecką</strong> metodą - ciągle przesyłając mu formularze do wypełnienia i zwracając je, zaznaczając, że zostały wypełnione nieprawidłowo. Sprawiło, że potwór stopniowo zmniejszał się, aż stał się tak mały, że nie stanowił już zagrożenia. </p><br><a style="color:red; font-size:25px;">WATCH OUT</a><br>
+<p>Adjectives meaning <strong>modern</strong>:</p>
+<p>advanced  </p>
+<p>leading-edge</p>
+<p>state-of-the-art</p>
+<p>up-to-the-moment</p>
+<p>Adjectives meaning <strong>old-fashioned</strong>:</p>
+<p>dated</p>
+<p>outdated</p>
+<p>archaic</p>
+<p>old-time</p><br>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Elementy sielanki Karpiñskiego, do których odwo³uje siê poetka:</p>
+<ul>
+<li>tytu³ utworu (<em>Laura i Filon</em>); </li>
+<li>g³ówni bohaterowie: Laura i Filon;</li>
+<li>sceneria schadzki: ³ono natury;</li>
+<li>jawor jako miejsce spotkania;</li>
+<li>rekwizyty: koszyk oraz maliny. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Poetka w swym utworze odwo³uje siê do elementów obecnych w utworze Franciszka Karpiñskiego. Nie czyni tego jednak w odtwórczy sposób, poniewa¿ doprowadza do ich modyfikacji - na przyk³ad za pomoc¹ odebrania tym zjawiskom ich pierwotnych sensów lub poprzez wskazanie tego, i¿ wyczerpa³a siê ich formu³a. Ujawnia siê to ju¿ na przyk³adzie natury. Niemy œwiadek i towarzysz schadzki kochanków u Pawlikowskiej-Jasnorzewskiej traci swój pozytywny wymiar, poniewa¿ podkreœla martwotê przedstawionego œwiata, zyskuje ponadto z³owrogi charakter: "A jawor by³ szumi¹cy, ponury i siny". Równie¿ schadzka tytu³owych bohaterów zdaje siê pozbawiona emocji pierwowzoru. Laura i Filon, bohaterowie aktywni w dziele Karpiñskiego, w wierszu pisarki s¹ bierni, wyzbyci ¿ycia i energii. Nie przepe³nia ich radoœæ ze spotkania: "Laura mia³a ³zy w oczach [...]", inny jest równie¿ cel ich schadzki:</p>
+<p><em>Przyszli w proch siê rozsypaæ (p³ascy jak kwiat w ksi¹¿ce)</em></p>
+<p><em>pod umówionym, sinym, szumi¹cym jaworem:</em></p>
+<p><em>smutny, zielony Filon, Laura w modrej wst¹¿ce,</em></p>
+<p><em>w bladej sukni, i w wielkiej kamei z amorem.</em></p>
+<p>W ten sposób poetka przetwarza sielankow¹ wizjê rzeczywistoœci, ukazuje jej iluzorycznoœæ. Modyfikacja znaczeñ prowadzi wiêc do wyra¿enia refleksji na temat pewnych wzorców w tradycji literackiej. W nowej rzeczywistoœci okazuj¹ siê nieaktualne, pozbawione dotychczasowego sensu, co w <em>Laurze i Filonie</em> udowadnia w³aœnie Palikowska-Jasnorzewska. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Elementy wiersza wskazuj¹ce na nierealnoœæ sceny: </p>
+<ul>
+<li>siny jawor;</li>
+<li>"maliny w nim ró¿owe œmia³y siê po cichu";</li>
+<li>"wœród ksi¹¿kowej, po¿ó³k³ej i francuskiej woni";</li>
+<li>"Przyszli w proch siê rozsypaæ (p³ascy jak kwiat w ksi¹¿ce"). </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Sformu³owanie to okreœla w³aœciwoœci bohaterów wiersza. S¹ oni bowiem ukazani jako postacie pozbawione ¿ycia i g³êbi, zaprezentowane w jednowymiarowy sposób, na co wskazuje okreœlenie "p³ascy". S³owo to jednak niesie za sob¹ tak¿e dodatkowe sensy, gdy¿ sugeruje, i¿ istnienie Laury i Filona nie ma realnego charakteru. Staj¹ siê wiêc oni zaledwie jednym z elementów pewnej konwencji literackiej - dlatego te¿ wywo³uj¹ skojarzenia z "kwiatem w ksi¹¿ce". Sformu³owanie to jest ogóln¹ refleksj¹ na temat konwencji literackich. Œwiadczy bowiem o tym, i¿ nie s¹ one wiecznie ¿ywe i mog¹ ulec wyczerpaniu, straciæ na aktualnoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Pawlikowska-Jasnorzewska wyra¿a doœæ krytyczny stosunek wzglêdem tradycji literackiej. Œwiadczy o tym ju¿ chocia¿by czêœæ opisowa dzie³a, w której elementy znane z sielanki Karpiñskiego ulegaj¹ przetworzeniu - trac¹ swój pierwotny charakter, arkadyjska wizja rzeczywistoœci podlega zniekszta³ceniu: "A jawor by³ szumi¹cy, ponur i siny, / mia³ du¿o, du¿o liœcie, jak drzewo na sztychu". Kluczowe s¹ jednak dwa inne fragmenty. Pierwszy z nich brzmi:</p>
+<p><em>Laura mia³a ³zy w oczach i przepaskê modr¹,</em></p>
+<p><em>wœród ksi¹¿kowej, po¿ó³k³ej  i francuskiej woni</em></p>
+<p><em>le¿a³a, chud¹ rêkê opar³szy o biodro. </em></p>
+<p>Cytat ten wskazuje na przekonanie poetki o tym, ¿e pewne tradycje literackie w danym momencie ulegaj¹ wyczerpaniu, poniewa¿ trac¹ jakiekolwiek zwi¹zki z rzeczywistoœci¹. Okreœlenie "po¿ó³k³ej" sugeruje nieprzystawalnoœæ do realiów, podobnie jak pozbawiona ¿ycia Laura. Stanowisko Pawlikowskiej-Jasnorzewskiej wyra¿a tak¿e cytat: "Przyszli w proch siê rozsypaæ (p³ascy jak kwiat w ksi¹¿ce)". Okreœlona tradycja literacka staje siê wiêc martwa, powinna tym samym przejœæ do historii, gdy¿ nie mo¿e zaoferowaæ nic nowego ani aktualnego. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p><em>Laura i Filon</em> Marii Pawlikowskiej-Jasnorzewskiej to przyk³ad aluzji literackiej. Autorka nawi¹zuje bowiem do oœwieceniowej sielanki Franciszka Karpiñskiego za pomoc¹ czytelnych sygna³ów. Œwiadczy o tym nie tylko identyczny tytu³ dzie³a, ale wybór g³ównych bohaterów: Laury i Filona. Ponadto przywo³uje w tekœcie podobn¹ sceneriê zdarzeñ - para spotyka siê na ³onie natury, pod jaworem - zmienia siê jednak charakter otoczenia. Przestaje byæ ono piêkn¹ i przyjazn¹ przestrzeni¹, a zyskuje nieco z³owrogi charakter: "A jawor by³ szumi¹cy, ponury i siny". Na aluzjê wskazuje tak¿e wzmianka o rekwizytach wystêpuj¹cych w oryginale - koszyku i malinach. W swym utworze jednak Pawlikowska-Jasnorzewska demaskuje wyczerpanie sentymentalnej konwencji, a tym samym wchodzi w polemikê z dotychczasowymi wzorcami. W ten sposób odniesienie do oœwieceniowego wiersza pozwala na udowodnienie, ¿e pewne tradycje nie s¹ ju¿ tak aktualne jak wczeœniej i nie mog¹ wyra¿aæ prawdy na temat rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br>

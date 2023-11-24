@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe s³owa klucze: </p>
+<ul>
+<li>odnosz¹ce siê do œwiata natury: "trawa", "ogrody", "ga³êzie", "liœcie", "jaskó³ki";</li>
+<li>odnosz¹ce siê do wojny: "sztandary", "dynamit", "czo³g", "po¿ar", "atak", "szrapnel";</li>
+<li>"serce";</li>
+<li>"wygnaniec";</li>
+<li>"ptaki". </li>
+</ul>
+<p> </p>
+<p>S³owa te najczêœciej pojawiaj¹ siê w utworze, co sugeruje, i¿ s¹ kluczowe dla jego zrozumienia. Ka¿dy z nich niesie te¿ za sob¹ okreœlone sensy (np. serce - uczucia, wra¿liwoœæ; wygnaniec - tu³aczka, samotnoœæ; ptaki - wolnoœæ, artysta), które odnosz¹ siê w pewien sposób do sytuacji podmiotu lirycznego, przybli¿aj¹ jego postaæ. Z kolei s³owa zwi¹zane z wojn¹ lub natur¹ zaznaczaj¹ odmiennoœæ tych rzeczywistoœci oraz ich nieprzystawanie do siebie. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Obrazy wojny s¹ niejako przyporz¹dkowane do rzeczywistoœci typowej dla cz³owieka. Pojawiaj¹ siê bowiem w zwi¹zku z wytworami ludzkiej myœli. Pozornie zwyk³e miejsca lub elementy nagle zyskuj¹ nowe znaczenie, poniewa¿ staj¹ siê naznaczone wojennym koszmarem. Œwiat cz³owieka jest niespodziewanie groŸny i nieprzyjazny: "Pod wszystkie triumfalne bramy / zbuntowani podk³adaj¹ dynamit!"; "Szrapnel pêka ze s³upów latarni". Same zaœ przedmioty codziennego u¿ytku zdaj¹ siê buntowaæ przeciwko swemu twórcy: "Stó³  pod moim piórem wezbrawszy do samych krawêdzi / przebiera sw¹ miarê. / jak czo³g, gdy ma ruszyæ do ataku". Równie zazwyczaj pozytywnie kojarzona przestrzeñ domu traci swe pierwotne znaczenie: "[...] ju¿ dziœ p³onie we mnie jutrzejszym po¿arem". Rzeczywistoœæ ta jest odleg³a od harmonijnego œwiata natury, ale niew¹tpliwe oddzia³uje tak¿e na niego ("Z rudej trawy zje¿y³y ¿ebra poleg³ych darñ"). Przenikanie siê przyrody i wojny podkreœla nieprzystawalnoœæ tych dwóch sfer do siebie oraz negatywny wp³yw konfliktu. Stanowi on bowiem zaprzeczenie harmonijnej natury, która funkcjonuje wed³ug niezmiennych praw. Ponadto zabieg ten wprowadza z³owrog¹, niepokoj¹c¹ atmosferê, gdy¿ sugeruje nadejœcie mrocznych i tragicznych chwil burz¹cych dotychczasowy ³ad. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Osoba mówi¹ca przedstawia siebie jako "wygnañca ptaków". Te s³owa oraz cytaty: "Stó³ pod moim piórem [...]", "i tylko liœci jesiennych opada na g³owê laur" sugeruj¹, i¿ podmiotem lirycznym w wierszu jest cz³owiek tworz¹cy, poeta. W zwi¹zku z tym mo¿na w pewnym stopniu uto¿samiæ go z samym autorem. Osoba mówi¹ca jest wra¿liwym, refleksyjnym i czujnym obserwatorem rzeczywistoœci, poniewa¿ dostrzega zapowiedŸ przysz³ych nieszczêœæ. Ma przy tym œwiadomoœæ, ¿e œwiat natury rz¹dzi siê swoimi prawami, gdy¿ mo¿e tak¿e istnieæ bez cz³owieka: "[...] beze mnie siê spe³nia wolny i bezczu³y". Jawi siê jako jednostka ³agodna i troskliwa ("ka¿d¹ kieszeñ obróci³bym w gniazdo jaskó³ek"), która pragnie zachowaæ harmoniê rzeczywistoœci. Jej postawê wzglêdem œwiata tym samym mo¿na okreœliæ jako przyjazn¹. Samo zaœ okreœlenie "wygnaniec ptaków" wskazuje na specyficzn¹ sytuacjê mówi¹cego. Jest on prawdopodobnie indywidualist¹, który ceni sobie wolnoœæ, niezale¿noœæ od spo³eczeñstwa. Pod¹¿a wiêc w³asnymi œcie¿kami. Przytoczone okreœlenie odnosi siê tak¿e do jego artystycznej dzia³alnoœci, maj¹cej swe Ÿród³o w natchnieniu. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyroda w utworze Przybosia zostaje ukazana jako stra¿nik odwiecznego porz¹dku, który funkcjonuje niezale¿nie od cz³owieka: "Œwiat beze mnie siê spe³nia wolny i bezczu³y". Ponadto natura zdaje siê reprezentowaæ kluczowe wartoœci: niewinnoœæ, czystoœæ, spokój. Z tego te¿ powodu podmiot liryczny pragnie j¹ chroniæ, aby nie uleg³a destrukcyjnemu wp³ywowi cz³owieka.  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Laur zyskuje w kulturze bogate sensy. Przede wszystkim staje siê oznak¹ triumfu, natchnienia artystycznego, ale tak¿e wielkiej poezji. Laur z liœci jesiennych sugeruje wiêc, i¿ przyroda wyznacza osobie mówi¹cej szczególn¹ rolê - jest ona wyj¹tkow¹ jednostk¹. Natura w ten sposób docenia twórczoœæ podmiotu lirycznego, jego wielkoœæ, ale jednoczeœnie zachêca go do dzia³ania: "...abym ju¿ nigdy nie ucich³". Mo¿e nim byæ opiewanie œwiata, który zas³uguje na ocalenie. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Podmiot liryczny ma œwiadomoœæ nadchodz¹cej katastrofy, która przyczyni siê do zagro¿enia dotychczasowego porz¹dku œwiata. Mimo tego wyra¿a nadziejê na to, ¿e uda mu siê ocaliæ naturê. Postrzega j¹ jako byt czysty i niewinny, zapewniaj¹cy trwa³y ³ad. Z tego te¿ powodu deklaruje chêæ obrony nieska¿onego charakteru przyrody. Zagro¿eniem dla niej staje siê bowiem sk³onnoœæ cz³owieka do rozlewu krwi - wprowadza destrukcjê, zaburza równowagê. S³owa: "ka¿d¹ kieszeñ obróci³bym w gniazdo dla jaskó³ek / odlatuj¹cych od ludzi" wskazuj¹ tym samym na chêæ uratowania rzeczywistoœci przed cz³owiekiem i jego zgubnymi dzia³aniami. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>TeraŸniejszoœæ w utworze Juliana Przybosia traci swój pierwotny charakter. Jest bowiem naznaczona przysz³ymi zdarzeniami, które zak³óc¹ harmoniê rzeczywistoœci. Ukazany œwiat przesycaj¹ znaki zwiastuj¹ce zbli¿aj¹c¹ siê apokalipsê: "Powietrze uduszono sztandarami", "Dom ju¿ dziœ p³onie [..]". Ponura przysz³oœæ zdaje siê rzucaæ swój cieñ na istniej¹c¹ jeszcze rzeczywistoœæ, co sygnalizuj¹ s³owa: "¯ywy idê miastem bêd¹cym, a ju¿ tylko by³ym". Te dwa porz¹dki tym samym nak³adaj¹ siê na siebie; przejawy katastrofy ju¿ naznaczaj¹ przyrodê: "Z rudej trawy zje¿y³y ¿ebra poleg³ych darñ", wprowadzaj¹ z³owroga atmosferê i odbieraj¹ spokój ducha. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przyk³adowo:</p>
+<p>Tytu³ <em>Równanie serca </em>w kontekœcie treœci wiersza mo¿na rozpatrywaæ na ró¿ne sposoby. Przede wszystkim wywo³uje on skojarzenia zwi¹zane z matematyk¹. Równanie to bowiem wyra¿enia, których uk³ad prowadzi do odkrycia niewiadomej. W ten sposób tytu³ wiersza zdaje siê sugerowaæ mo¿liwoœæ okreœlenia statusu cz³owieka, jego miejsca i roli w znanej mu rzeczywistoœci. Podmiot liryczny postrzega siebie jako obroñcê porz¹dku natury, chce j¹ chroniæ przed zgubnym wp³ywem cz³owieka. Z drugiej strony <em>Równanie serca</em> mo¿ne oznaczaæ "czynienie g³adkim, równym". W kontekœcie wiersza by³oby nim odzyskiwanie równowagi duchowej, swoistego rytmu. Podmiot liryczny zdaje siê bowiem godziæ z tym, i¿ œwiat równie¿ bez niego mo¿e funkcjonowaæ, znajduje te¿ dla siebie cel. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br>

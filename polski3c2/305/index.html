@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Grottger w swym przedstawieniu odwo³uje siê do romantycznego postrzegania walki. Powstaniec zostaje bowiem ukazany w podnios³y, wyidealizowany sposób. Mimo koniecznoœci roz³¹ki z ukochan¹ kobiet¹, niepewnoœci, jest on zdecydowany, by poœwiêciæ siê ojczyŸnie. Obraz przepe³nia atmosfera smutku i zadumy. Z kolei Baczyñski zdaje siê wchodziæ w polemikê z takim przedstawieniem, poniewa¿ proponuje inn¹ perspektywê. Dominuje w niej przekonanie o tragizmie losu cz³owieka - skazanego na zniszczenie i œmieræ. Historia jawi siê jako nieub³agalny mechanizm, w którym cyklicznie dochodzi do rozlewu krwi. Poeta rezygnuje wiêc z idealizacji i wznios³oœci. Zamiast tego przypomina o tym, ¿e wojna zmienia charakter rzeczywistoœci, a tak¿e oddzia³uje na los innych ludzi: krewnych, matek, ukochanych. Nie ma w niej nic piêknego: "Nie to, ¿e marzyæ, bo marzyæ krew, / to krew ta sama spod kity czy he³mu", ponadto stanowi wykroczenie przeciwko moralnoœci: "bo nie anio³, nie anio³ prowadzi", co sugeruje, i¿ obna¿a pierwotne instynkty cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Apostrofa w utworze jest skierowana do kobiet:</p>
+<p><em>P³acz, matko, kochanko, przebacz,</em></p>
+<p><em>bo nie anio³, nie anio³ prowadzi, </em></p>
+<p><em>Wy te same dr¿¹ce u nieba,</em></p>
+<p><em>wy te same ró¿e sadziæ jak g³os</em></p>
+<p><em>na grobach przyjdziecie i d³oni¹</em></p>
+<p><em>odgarniecie wspomnienia i liœcie jak w³os</em></p>
+<p><em>siwiej¹cy na p³ytach p³askich. </em></p>
+<p>Adresatki to kobiety cierpi¹ce po œmierci bliskich im poleg³ych. S¹ równie¿ ofiarami wojny poniewa¿ doœwiadczaj¹ ¿a³oby oraz poczucia straty. W utworze Baczyñskiego zostaje im nadana szczególna rola, gdy¿ staj¹ siê stra¿niczkami pamiêci o zmar³ych, wspomnieñ minionych chwil. Apostrofa ta podkreœla wp³yw tragicznych wydarzeñ na ¿ycie wszystkich ludzi: nie tylko tych, którzy zginêli w walce, ale tak¿e pozosta³ych, zmuszonych do radzenia sobie w nowej rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>Porównania do ust, w³osów, chleba i zwierz¹t wp³ywaj¹ na plastycznoœæ oraz sugestywnoœæ przedstawienia. Wprowadzaj¹ do utworu dodatkowe sensy, ale przede wszystkim œwiadcz¹ o przenikaniu siê codziennoœci z rzeczywistoœci¹ wojenn¹. Staje siê ona wszechobecna i wp³ywa na sposób postrzegania œwiata - wszystkie bowiem te elementy przywo³ane s¹ w kontekœcie walki oraz brutalnych realiów, wskazuj¹ na atmosferê grozy. Z tego te¿ powodu usta zostaj¹ ukazane w negatywnym znaczeniu: "gdzie teraz dzbany wrz¹ce jak usta / pe³ne, kipi¹ce od gniewu", poniewa¿ sugeruj¹ nienawiœæ, która dzieli ludzi. Z kolei odniesienia do œwiata zwierz¹t umo¿liwiaj¹ zaakcentowanie charakterystycznych cech po¿egnania i opisywanego czasu - zaznacza siê w tym przypadku pewien kontrast. Porównanie chwili rozstania do "wiotkiego motyla" sugeruje piêkno i kruchoœæ chwili opieraj¹cej siê przede wszystkim na silnych emocjach i poczuciu niepewnoœci co do przysz³ego losu. Z kolei zestawienie czasu oraz "warcz¹cego lwa" przypomina o ponurym i groŸnym momencie historycznym. Cz³owiek odczuwa bowiem nieustanne zagro¿enie, które mo¿e go spotkaæ w ka¿dym momencie. Porównanie  "wspomnienia i liœcie jak w³os / siwiej¹cy" równie¿ niesie za sob¹ g³êbsze sensy. Kieruj¹ bowiem uwagê cz³owieka na nieuchronne przemijanie: dotyczy ono nie tylko zmieniaj¹cych siê pór roku, ale tak¿e cz³owieka i jego blakn¹cych wspomnieñ. W metaforyczny sposób odwo³uje siê tak¿e do przysz³oœci, pamiêci o poleg³ych. Ostatnie porównanie ("Jak no¿e / gin¹ w chleb pogr¹¿one") zaznacza tragizm losu walcz¹cych: s¹ unicestwieni, zaœ ten proces jest tak powszechny i zwyczajny jak pokrojenie chleba. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>S³owa: "Nie anio³ prowadzi [...]" podkreœlaj¹ fakt, i¿ wojna zdaje siê nie mieœciæ w boskim planie, jest wykroczeniem przeciwko Jego prawom oraz moralnoœci. Fragment ten sugeruje istnienie innych si³, które przyczyniaj¹ siê do tragicznej wizji rzeczywistoœci i œmierci wielu ludzi. Poeta nie okreœla ich w jednoznaczny sposób, co pozwala na szersz¹ interpretacjê oraz pewne niedopowiedzenie. Z tego powodu, za to, co prowadzi walcz¹cych mo¿na uznaæ œlepy los, niesprzyjaj¹ce i okrutne mechanizmy historii, koniecznoœæ wynikaj¹c¹ z poczucia patriotyzmu, wreszcie z³o i pierwotne instynkty cz³owieka, które najpe³niej ujawniaj¹ siê w czasie wojny. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Metaforyczne pytanie stanowi refleksjê na temat losu walcz¹cych. Zostaj¹ oni okreœleni mianem "wygnañców ³aski", co wskazuje na to, i¿ s¹ splamieni krwi¹, byæ mo¿e tak¿e pozbawieni Bo¿ego przewodnictwa. Wojna jawi siê wiêc jako zaprzeczenie wszelkich zasad. Z kolei "l¹d kr¹¿¹cy po niebie" wywo³uje skojarzenia nie tylko z samolotami, ale tak¿e dymem, który zdaje siê tworzyæ na niebie ulotne odbicie ziemi - stanowi on tak¿e przejaw ludzkiego okrucieñstwa i destrukcji. Podmiot wyra¿a pewne w¹tpliwoœci: [...] dok¹d id¹, / których prowadzi jak wygnañców ³aski / l¹d kr¹¿¹cy po niebie. A mo¿e / niebo po l¹dzie dm¹ce piaskiem / tak kszta³t ich zasypuje. [...]". Pozosta³a czêœæ utworu w pewien sposób sugeruje dalszy los ¿o³nierzy. Otó¿ dokonuje siê ich przeznaczenie wynikaj¹ce z mechanizmów historii, oni zaœ odchodz¹ i umieraj¹. Ich odejœcie zostaje jednak pozbawione duchowego wymiaru - lub jest on niepewny. Poeta ukazuje bowiem czysto fizyczny aspekt: "[...] Piach ich pokrywa". </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Ostatnia strofa stanowi zwiêz³e, ale przy tym wyraziste, podsumowanie mechanizmów historiozofii, które opisuje wiersz Baczyñskiego. Dziêki temu w pe³ni wybrzmiewa przes³anie poety. Przede wszystkim s³owa "Jeszcze s³ychaæ œpiew i r¿enie koni" stanowi¹ pewne zatoczenie krêgu, poniewa¿ podmiot liryczny zdaje siê wracaæ pamiêci¹ do przesz³oœci. Motyw ten pojawia siê tak¿e na samym pocz¹tku utworu: "Arkebuzy dymi¹ce jeszcze widzê, / jakby to wczoraj u g³owic lont sp³on¹³". Puenta dzie³a przypomina wiêc o nieustannej zale¿noœci miêdzy przesz³oœci¹ a teraŸniejszoœci¹, nak³adaniu siê na siebie dwóch p³aszczyzn czasowych. Wreszcie sugeruje tak¿e powtarzalnoœæ pewnych procesów - mimo up³ywaj¹cych lat, zachodz¹cych zmian, tradycja polskich zrywów wci¹¿ pozostaje aktualna, zaœ mechanizmy dziejów - nieuchronne. Podmiot liryczny wydaje siê z tym byæ pogodzony. Ostatnia strofa wskazuje tak¿e na znaczenie pamiêci, dziêki której polegli zostaj¹ zachowani od zapomnienia - staj¹ siê czêœci¹ pamiêci zbiorowej.</p>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Dyskursywny charakter utworu wynika z jego intelektualnej treœci. Tematem rozwa¿añ podmiotu lirycznego staje siê bowiem uniwersalne zagadnienie - historiozofia rozumiana jako refleksja dotycz¹ca przebiegu dziejów, sensu historii oraz typowych dla niej mechanizmów. Osoba mówi¹ca dostrzega powtarzalnoœæ pewnych procesów: echa dawnych wydarzeñ nadal s¹ obecne w teraŸniejszoœci, zaœ wspó³czesny konflikt zdaje siê byæ odbiciem dawnych walk narodowowyzwoleñczych Polaków. Prowadzi to do wspó³istnienia dwóch p³aszczyzn czasowych w tym samym momencie: "Arkebuzy dymi¹ce jeszcze widzê, / jakby to wczoraj u g³owic lont sp³on¹³ / i kanonier jeszcze rêkê trzyma³, / gdzie dziœ wyrasta liœæ zielony". Historia staje siê wiêc Ÿród³em pamiêci wspólnej dla wszystkich Polaków.</p>
+<p>Z kolei elegijny charakter wiersza przejawia siê w jego tonacji emocjonalnej oraz podejmowanych zagadnieniach. Utwór wyró¿nia siê podnios³ym oraz powa¿nym nastrojem. Odwo³uje siê do przemijania, wyra¿a przy tym ¿a³obne odczucia. Dotycz¹ one nie tylko losu ludzi poleg³ych w czasie walki, ale uwaga zostaje zwrócona na los tych, którzy staj¹ siê stra¿nikami pamiêci o zmar³ych: "P³acz, matko, kochanko, przebacz". Wiersz - w przeciwieñstwie do trenów - nie dotyczy konkretnej jednostki, lecz przedstawia refleksje o uniwersalnym charakterze. Wyra¿a smutek i ¿al zwi¹zany z wszechobecn¹ œmierci¹: "wy te same ró¿e sadziæ jak g³os / na grobach przyjdziecie i d³oni¹ / odgarniecie wspomnienia i liœcie jak w³os". Jednoczeœnie ¿a³obê mo¿na odnieœæ w szerszej perspektywie do samej rzeczywistoœci - wojna nieodwracalnie zmienia jej kszta³t, sprawia, i¿ zostaje zaburzony dotychczasowy ³ad. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Utwór Baczyñskiego zawiera koncepcjê dziejów, która odwo³uje siê do pewnej cyklicznoœci. Przesz³oœæ i teraŸniejszoœæ to dwie p³aszczyzny pozostaj¹ce jednak w uchwytnej zale¿noœci, poniewa¿ kszta³tuj¹ pamiêæ zbiorow¹. Historia jest zaœ splotem lat pokoju i konfliktów, na co wskazuje odniesienie siê do tradycji walk: "Arkebuzy dymi¹ce jeszcze widzê.", "i kanonier jeszcze rêkê trzyma³", "gdzie brak d³oni i rapierów œpiewu". Poeta zdaje siê podejmowaæ refleksjê na temat historiozofii, a przede wszystkim prowidencjalizmu. Zastanawia siê bowiem, czy na pewno œwiatem kieruje Bo¿a opatrznoœæ: "bo nie anio³, nie anio³ prowadzi", "Id¹, id¹ pochody, dok¹d id¹, / których prowadzi jak wygnañców ³aski / l¹d kr¹¿¹cy po niebie. A mo¿e / niebo po l¹dzie dm¹ce piaskiem". Wed³ug podmiotu lirycznego mechanizmy historii s¹ niezmienne i jednostka staje siê wobec nich bezradna, poniewa¿ nie mo¿e zmieniæ swej sytuacji. Zawsze pozostaje ofiar¹ procesów dziejowych ("to krew ta sama spod kity czy he³mu"). Miniony kataklizm dotyka bowiem kolejne pokolenia, które uczestnicz¹ w nowych konfliktach, co przyczynia siê do tragizmu ich egzystencji. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>.</p><br>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 122</a><br>
+<p>Ogólnie wzór estru zapisać możemy jako C<sub>x</sub>H<sub>2x</sub>O<sub>2</sub>. Równanie reakcji spalania tego estru będzie miało postać: </p> <p> <math-expr expr="C_xH_(2x)O_2+(3x-2)/2\ O_2-&gt;x\ CO_2+x\ H_2O" syntax="text"></math-expr>   </p> <p>Widzimy, że wszystkie atomy wodoru zawarte w cząsteczce wody pochodzą z cząsteczki estru. Jeśli zatem otrzymano 4 mole cząsteczek wody, to zawierają one łącznie 8 moli atomów wodoru i tyle też zawiera ich mol cząsteczek estru.</p> <p><strong>Wzór sumaryczny estru</strong> to zatem  <math-expr expr="bb(C_4H_8O_2)." syntax="text"></math-expr>   </p> <p><strong>Wzór półstrukturalny kwasu karboksylowego</strong> będącego izomerem tego estru to:  <math-expr expr="bb(CH_3-CH_2-CH_2-COOH)." syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 123</a><br>
+<p>Prawidłowa kolejność wraz z rosnącą temperaturą wrzenia:</p> <p> <math-expr expr="HCOOCH_3," syntax="text"></math-expr>    <math-expr expr="CH_3CH_2COOCH_3,\ CH_3CH_2CH_2COOCH_3,\ CH_3CH_2CH_2CH_2COOCH_2CH_3" syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 124</a><br>
+<p>a)  <math-expr expr="CH_3-#C^(#O_(||))-bbul(OH)\ +\ CH_3-CH_2Obbul(H)\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3-#C^(#O_(||))-O-CH_2-CH_3\ +\ H_2O" syntax="text"></math-expr>    </p> <p><br/>b)   <math-expr expr="H-#C^(#O_(||))-bbul(OH)\ +\ CH_3-CH_2Obbul(H)\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ H-#C^(#O_(||))-O-CH_2-CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>c)  <math-expr expr="CH_3-CH_2-#C^(#O_(||))-bbul(OH)\ +\ CH_3Obbul(H)\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3-CH_2-#C^(#O_(||))-O-CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>d)  <math-expr expr="CH_3-CH_2-CH_2-#C^(#O_(||))-bbul(OH)\ +\ CH_3-CH_2Obbul(H)\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3-CH_2-CH_2-#C^(#O_(||))-O-CH_2-CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>e)  <math-expr expr="CH_3-CH_2-CH_2-#C^(#O_(||))-bbul(OH)\ +\ CH_3-CH_2-CH_2Obbul(H)\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3-CH_2-CH_2-#C^(#O_(||))-O-CH_2-CH_2-CH_3\ +\ H_2O" syntax="text"></math-expr>      </p><br><a style="color:red; font-size:25px;">Zadanie 125</a><br>
+<p>a)  <math-expr expr="HCOOH\ +\ CH_3OH\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ H-#C^(#O_(||))-O-CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>b)   <math-expr expr="CH_3CH_2CH_2COOH\ +\ CH_3CH_2CH_2CH_2OH\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3CH_2CH_2-#C^(#O_(||))-O-CH_2CH_2CH_2CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>c)  <math-expr expr="CH_3COOH\ +\ CH_3CH_2OH\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ CH_3-#C^(#O_(||))-O-CH_2CH_3\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>d)  <math-expr expr="HCOOH\ +\ CH_3CH_2OH\ #(rlarw)^(H_2SO_(4\ (stęż.)))\ H-#C^(#O_(||))-O-CH_2CH_3\ +\ H_2O" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 126</a><br>
+<p>a)  <math-expr expr="HCOOCH_3\ +\ H_2O\ #(rlarw)^(H^+\ _((aq)))\ HCOOH\ +\ CH_3OH" syntax="text"></math-expr>   </p> <p>b)   <math-expr expr="CH_3COOCH_2CH_2CH_3\ +\ H_2O\ #(rlarw)^(H^+\ _((aq)))\ CH_3COOH\ +\ CH_3CH_2CH_2OH" syntax="text"></math-expr>   </p> <p>c)  <math-expr expr="CH_3CH_2COOCH_2CH_3\ +\ H_2O\ #(rlarw)^(H^+\ _((aq)))\ CH_3CH_2COOH\ +\ CH_3CH_2OH" syntax="text"></math-expr>   </p> <p>d)  <math-expr expr="CH_3COOCH_3\ +\ H_2O\ #(rlarw)^(H^+\ _((aq)))\ CH_3COOH\ +\ CH_3OH" syntax="text"></math-expr>       </p><br><a style="color:red; font-size:25px;">Zadanie 127</a><br>
+<p>a)  <math-expr expr="CH_3CH_2COOCH_3+NaOH-&gt;CH_3CH_2COONa+CH_3OH" syntax="text"></math-expr>   </p> <p>b)   <math-expr expr="CH_3COOCH_3+NaOH-&gt;CH_3COONa+CH_3OH" syntax="text"></math-expr>   </p> <p>c)  <math-expr expr="CH_3CH_2CH_2COOCH_2CH_3+NaOH-&gt;CH_3CH_2CH_2COONa+CH_3CH_2OH" syntax="text"></math-expr>   </p> <p>d)  <math-expr expr="HCOOCH_2CH_2CH_3+NaOH-&gt;HCOONa+CH_3CH_2CH_2OH" syntax="text"></math-expr>       </p><br><a style="color:red; font-size:25px;">Zadanie 128</a><br>
+<p>a)</p>
+<p>- roślinne:</p>
+<ul>
+<li>oliwa z oliwek;</li>
+<li>olej rzepakowy;</li>
+<li>masło kakaowe;</li>
+</ul>
+<p>- zwierzęce:</p>
+<ul>
+<li>smalec;</li>
+<li>tran;</li>
+<li>masło;</li>
+<li>łój;</li>
+</ul>
+<p><br/>b) </p>
+<p>- nasycone:</p>
+<ul>
+<li>smalec;</li>
+<li>masło;</li>
+<li>łój;</li>
+<li>masło kakaowe;</li>
+</ul>
+<p>- nienasycone:</p>
+<ul>
+<li>oliwa z oliwek;</li>
+<li>tran;</li>
+<li>olej rzepakowy;</li>
+</ul>
+<p><br/>c)</p>
+<p>- stałe:</p>
+<ul>
+<li>smalec;</li>
+<li>masło;</li>
+<li>łój;</li>
+<li>masło kakaowe;</li>
+</ul>
+<p>- ciekłe:</p>
+<ul>
+<li>oliwa z oliwek;</li>
+<li>tran;</li>
+<li>olej rzepakowy;</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 129</a><br>
+<p>a)</p>
+<p><img alt="" height="160" src="./data/937867-0.jpg" width="535"/></p>
+<p> </p>
+<p>b) </p>
+<p><img alt="" height="160" src="./data/937867-1.jpg" width="533"/></p>
+<p><br/>c)</p>
+<p><img alt="" height="160" src="./data/937867-2.jpg" width="541"/></p><br>

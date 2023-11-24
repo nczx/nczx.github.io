@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Utwory poruszaj¹ problem up³ywu czasu. Proponuj¹ jednak okreœlon¹ perspektywê, poniewa¿ opisuj¹ wp³yw przemijania na ¿ycie oraz uczucia kobiet, ich sytuacjê egzystencjaln¹. </p>
+<p> </p>
+<p>b) Metafory dotycz¹ce przemijania i staroœci:</p>
+<ul>
+<li>"zakwita - rozkwita - przekwita - zakwita - rozkwita";</li>
+<li>"rozkwita - / i kwita";</li>
+<li>"przejechana przez ¿ycie / jak przez z³ego szofera";</li>
+<li>"Oblicze jej pociête / jak gdyby ostrym mieczem / wœród naszych m³odych twarzy / zawiewa œredniowieczem";</li>
+<li>"jest z³amana, pogiêta, / pociêta, poorana";</li>
+<li>"[...] jej kobiecoœæ / to zagojona rana".</li>
+</ul>
+<p> </p>
+<p>c) Pawlikowska ukazuje egzystencjê kobiety przede wszystkim przez pryzmat zmian, które czas odciska na jej ciele. Bohaterka wiersza to osoba doœwiadczona przez ¿ycie, na co wskazuj¹ zmarszczki, jej deformacja cia³a. Starsz¹ osobê definiuje przede wszystkim poczucie samotnoœci, zdaje siê nie pasowaæ do teraŸniejszych czasów. Jest zmêczona, byæ mo¿e tak¿e rozczarowana swoj¹ sytuacj¹. Egzystencja kobiety w tym momencie pozbawiona radoœci i spokoju, jest przepe³niona bólem oraz ograniczeniami, które wynikaj¹ z utraty sprawnoœci fizycznej. Nie jest to wiêc zbyt optymistyczny sposób przedstawienia kobiecej egzystencji.</p>
+<p>Z kolei Mi³obêdzka ukazuje ¿eñsk¹ egzystencjê przez pryzmat cyklu, któremu podlega. ¯ycie kobiety jest podobne do kwiatów. Zwi¹zek ten mo¿e wynikaæ nie tylko z kruchoœci i piêkna, ale przede wszystkim z tego, i¿ ¿eñska egzystencja tak¿e sk³ada siê z momentów zakwitania, rozkwitania i przekwitania. Poetka akcentuje wiêc dynamikê kobiecego losu, który nie jest tak oczywisty. Utwór sugeruje pogodzenie z tymi zmianami, poniewa¿ s¹ wpisane w naturalny porz¹dek œwiata. Szczególnie widoczne jest to w zakoñczeniu: "rozkwita - / i kwita!". Podmiot liryczny zatrzymuje siê na momencie rozkwitu i w stanowczy sposób podkreœla koniec swej wypowiedzi. Wyra¿a w ten sposób pozytywny wizerunek egzystencji kobiety - niezale¿nie od up³ywu bezlitosnego czasu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a) Œwiat kobiety w utworze Pawlikowskiej-Jasnorzewskiej ulega swoistej redukcji. Podmiot liryczny skupia siê bowiem przede wszystkim na powierzchownoœci obserwowanej kobiety (futro, parasol, ró¿a, towarzysz¹cy kobiecie piesek), co przyczynia siê do jej ukonkretnienia, zasugerowania pewnych cech czy sytuacji ¿yciowej. Jedyny element otoczenia to ka³u¿a, jednak ona tak¿e bezpoœrednio wi¹¿e siê z sytuacj¹ bohaterki wiersza, poniewa¿ staje siê dla niej powa¿n¹ przeszkod¹. Œwiat zostaje tym samym niejako ograniczony do kobiety, nic innego nie ma znaczenia, a ona sama znajduje siê w centrum zdarzenia. W wierszu Mi³obêdzkiej podobnie dochodzi do kondensacji treœci. Zwyczajne elementy zwi¹zane z ¿yciem kobiety okreœlaj¹ jej sytuacjê, ale równie¿ reprezentuj¹ pewne wartoœci (np. piêkno, rodzinê, mi³oœæ, urodê). Utwory ³¹czy tak¿e to, i¿ rzeczywistoœæ doczesna prowadzi do refleksji o uniwersalnym charakterze, pewnych w¹tpliwoœci czy nawet niepokoju.</p>
+<p> </p>
+<p>b) Puenta wiersza Pawlikowskiej-Jasnorzewskiej wyra¿a pewne obawy dotycz¹ce losu ukazanej kobiety. Jej bezradnoœæ wzglêdem pozornie drobnego problemu prowokuje pytania dotycz¹ce tego, jak poradzi sobie z nieskoñczonoœci¹ - banalna sytuacja zyskuje wymiar filozoficzny. Podobny charakter zyskuje zakoñczenie wiersza Mi³obêdzkiej, poniewa¿ tak¿e poszerza perspektywê odbioru. U niej z kolei pojawia siê gorzka myœl na temat przemijania, poczucia pustki, które podwa¿a dotychczasow¹, zdawa³oby siê harmonijn¹, egzystencjê. Puenty te oznaczaj¹ wiêc nieuchronne zderzenie siê z kwestiami ostatecznymi i pewn¹ bezradnoœæ bohaterek. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Czas stanowi jeden z kluczowych motywów w przytoczonych wierszach Krystyny Mi³obêdzkiej. Odzwierciedla on bowiem naturalny porz¹dek œwiata oraz nieuchronne zmierzanie cz³owieka ku koñcowi. Kszta³tuje tak¿e jego sytuacjê i relacjê z otoczeniem, a przy tym zmusza do refleksji nad swoj¹ egzystencj¹, jej sensem. Podmiot liryczny nie jest jednak przera¿onym zachodz¹cymi zmianami. Zdaje siê akceptowaæ up³ywaj¹cy czas, poniewa¿ nie wywo³uje on smutku czy rozczarowania. Mo¿e to sugerowaæ spe³nienie podmiotu lirycznego, który jest ze sob¹ pogodzony: "zakwita - rozkwita - przekwita - zakwita - rozkwita -". Z humorem tak¿e podsumowuje zarysowan¹ w utworze sytuacjê: "i kwita". Równie¿ u¿yte w drugim utworze s³owa "bieg rzeczy" œwiadcz¹ o stosunku podmiotu do czasu, ale tak¿e zaznaczaj¹ pewn¹ dwuznacznoœæ tego sformu³owania. W sensie dos³ownym wyra¿enie te mo¿na odnieœæ do przedmiotów z ¿ycia osoby mówi¹cej: pojawiaj¹ siê i znikaj¹, staj¹ siê dynamicznym elementem. W sensie przenoœnym zaœ sugeruj¹, i¿ up³yw czasu nie budzi ¿adnych w¹tpliwoœci, jest czymœ naturalnym, zgodnym z oczekiwaniami. Nawet koñcz¹ce utwór s³owa ("bieg nic") nie zak³ócaj¹ pogodzenia osoby mówi¹cej z tym, i¿ wszystko przemija, choæ mog¹ wyra¿aæ pewne zw¹tpienie.  </p><br>

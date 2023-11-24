@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 153</a><br>
+<p>Obserwacje:</p>
+<ol>
+<li>Po wprowadzeniu do wodnego roztworu glicyny roztworu HCl oraz oranżu metylowego, otrzymany roztwór barwi się na żółto-pomarańczowo.  </li>
+<li>Po wprowadzeniu do wodnego roztworu glicyny roztworu NaOH oraz fenoloftaleiny, otrzymany roztwór pozostaje bezbarwny.</li>
+</ol>
+<p>Wniosek: Glicyna reaguje zarówno z kwasem jak i zasadą w reakcjach zobojętniania.</p><br><a style="color:red; font-size:25px;">Zadanie 154</a><br>
+<p>Wzór tego aminokwasu możemy zapisać jako C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>N<sub>v</sub>. Zaczynamy od obliczenia zawartości procentowej azotu:</p> <p> <math-expr expr="%N=100%-51,3%-9,4%-27,4%=11,9%" syntax="text"></math-expr>   </p> <p>Masa molowa węgla to 12 g/mol, wodoru 1 g/mol, tlenu 16 g/mol, zaś azotu 14 g/mol. Liczymy wartości indeksów <em>x, y, </em><em>z</em> oraz <em>v</em>. </p> <p> <math-expr expr="x*12\ g/(mol)=(51,3%*117\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='x*12\ g/(mol)=60\ g/(mol)\ \ \ "/":12\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="x=5" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="y*1\ g/(mol)=(9,4%*117\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='y*1\ g/(mol)=11\ g/(mol)\ \ \ "/":1\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="y=11" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="z*16\ g/(mol)=(27,4%*117\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='z*16\ g/(mol)=32\ g/(mol)\ \ \ "/":16\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="z=2" syntax="text"></math-expr>   </p> <p> </p> <p> <math-expr expr="v*14\ g/(mol)=(11,9%*117\ g/(mol))/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr='v*14\ g/(mol)=14\ g/(mol)\ \ \ "/":14\ g/(mol)' syntax="text"></math-expr>   </p> <p> <math-expr expr="v=1" syntax="text"></math-expr>   </p> <p><strong>Wzór sumaryczny tego aminokwasu to  <math-expr expr="bb(C_5H_(11)O_2N)." syntax="text"></math-expr>     </strong></p><br><a style="color:red; font-size:25px;">Zadanie 155</a><br>
+<p>Zaczynamy od obliczenia masy roztworu:</p> <p> <math-expr expr="m_r=m_(H_2O)+m_s=100\ g+8,9\ g=108,9\ g" syntax="text"></math-expr>   </p> <p>Liczymy stężenie procentowe roztworu:</p> <p> <math-expr expr="C_p=m_s/m_r*100%=(8,9\ g)/(108,9\ g)*100%=8,17%" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Stężenie procentowe nasyconego roztworu <em>β</em>-alaniny w temperaturze 20<sup>o</sup>C wynosi 8,17%.</strong><strong> </strong></p><br><a style="color:red; font-size:25px;">Zadanie 156</a><br>
+<p>Liczymy ile gramów glicyny może rozpuścić się w 150 g wody:</p> <p> <math-expr expr='100\ g_(H_2O)\ \ -\ \ 25\ g_"glicyny"' syntax="text"></math-expr>    </p> <p> <math-expr expr='150\ g_(H_2O)\ \ -\ \ m_"glicyny"' syntax="text"></math-expr>   </p> <p> <math-expr expr='m_"glicyny"=(150\ g*25\ g)/(100\ g)=37,5\ g' syntax="text"></math-expr>   </p> <p><br/>Liczymy ile gramów glicyny nie uległo rozpuszczeniu:   </p> <p> <math-expr expr="x=50\ g-37,5\ g=12,5\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Rozpuszczeniu nie uległo 12,5 g glicyny.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 157</a><br>
+<p>Zaczynamy od obliczenia ilości moli glicyny w roztworze:</p> <p> <math-expr expr="C_m=n/V\ \ \ =&gt;\ \ \ n=C_m*V" syntax="text"></math-expr>    </p> <p> <math-expr expr="n=0,1\ (mol)/(dm^3)*500\ cm^3=0,1\ (mol)/(dm^3)*0,5\ dm^3=0,05\ mola" syntax="text"></math-expr>   </p> <p><br/>Liczymy masę glicyny:</p> <p> <math-expr expr="m=M*n=75\ g/(mol)*0,05\ mola=3,75\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W roztworze znajduje się 3,75 g glicyny.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 158</a><br>
+<p>Wzory strukturalne <span style="font-weight: 400;">α-</span>aminokwasów o wzorze sumarycznym C<sub>6</sub>H<sub>13</sub>O<sub>2</sub>N to:</p>
+<p>1.</p>
+<p><img alt="" height="100" src="./data/938240-0.jpg" width="163"/></p>
+<p><br/>2. </p>
+<p><img alt="" height="100" src="./data/938240-1.jpg" width="169"/></p><br><a style="color:red; font-size:25px;">Zadanie 159</a><br>
+<p>Zaczynamy od obliczenia masy wody:</p> <p> <math-expr expr="m=d*V=1\ g/(cm^3)*20\ cm^3=20\ g" syntax="text"></math-expr>   </p> <p><br/>Liczymy masę roztworu: </p> <p> <math-expr expr="m_r=m_(H_2O)+m_(BCA A)=20\ g+10\ g=30\ g" syntax="text"></math-expr>   </p> <p><br/>Liczymy stężenie poszczególnych aminokwasów:</p> <p> <math-expr expr="C_p=m_s/m_r*100%" syntax="text"></math-expr>   </p> <p><br/> <math-expr expr='C_(p_"leucyny")=(3\ g)/(30\ g)*100%=10%' syntax="text"></math-expr>   </p> <p> <math-expr expr='C_(p_"izoleucyny")=(1,5\ g)/(30\ g)*100%=5%' syntax="text"></math-expr>   </p> <p> <math-expr expr='C_(p_"waliny")=(1,5\ g)/(30\ g)*100%=5%' syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: Stężenia poszczególnych aminokwasów w otrzymanym roztworze suplementu diety to 10% dla leucyny, 5% dla izoleucyny oraz 5% dla waliny.</strong>    </p><br><a style="color:red; font-size:25px;">Zadanie 160</a><br>
+<p>Substancje zawierające wiązanie peptydowe to <span style="text-decoration: underline;"><em><strong> b </strong></em></span>  oraz <span style="text-decoration: underline;"><em><strong> e </strong></em></span>.</p>
+<p><em>wyjaśnienie: wiązanie peptydowe ma postać CO-NH.</em></p><br>

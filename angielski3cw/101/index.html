@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. are you looking for </p>
+<p><strong>Uzasadnienie</strong>: pytanie dotyczy czynności wykonywanej w chwili mówienia, dlatego użyjemy czasu <em>present continuous </em>(<em>am/is/are </em>+ podmiot + czasownik z końcówką -ing). </p>
+<p>2. Very few people</p>
+<p><strong>Uzasadnienie</strong>: <em>few </em>- niewiele.</p>
+<p>3. I'd like to be able to</p>
+<p><strong>Uzasadnienie</strong>: <em>would like to </em>- chciał(a)bym. Czasownik <em>can </em>(móc) nie łączy się z <em>to</em>, dlatego należy użyć wymiennie wyrażenia <em>be able to</em>.</p>
+<p>4. as many medals as</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>as ... as </em>(tylu... ilu).</p>
+<p>5. was sentenced to</p>
+<p><strong>Uzasadnienie</strong>: <em>be sentenced to something </em>- zostać skazanym na coś.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. B  </p>
+<p>2. C</p>
+<p>3. D</p>
+<p>4. B</p>
+<p>5. A</p>
+<p><strong>Uzasadnienie</strong>: używamy czasownika <em>have to</em>, by wyrazić konieczność lub zewnętrzny przymus (coś, co nie zależy od nas).</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Co to jest fałszywy kibic? Najprościej rzecz ujmując, jest to osoba, która twierdzi, że kibicuje konkretnej drużynie, ale <strong>wydaje się</strong> być nią naprawdę zainteresowana tylko wtedy, gdy ta dobrze sobie radzi. Wkrótce przestają chodzić na stadion, gdy wyniki nie idą po ich myśli.</p>
+<p>Łowca chwały również lubi wspierać drużynę odnoszącą sukcesy. Może to nie być drużyna z ich miasta, a nawet kraju, o ile zdobywa wiele <strong>trofeów</strong>. W przeciwieństwie do fałszywego kibica, łowca chwały jest skłonny zmienić drużynę, której kibicuje, jeśli pojawi się ktoś odnoszący jeszcze większe sukcesy.</p>
+<p>Jakkolwiek irytujące mogą być te dwa typy kibiców, żaden z nich nie jest tak zły jak nawrócony. Nawrócony jest całkowicie niezainteresowany piłką nożną, <strong>dopóki nie</strong> nadejdą Mistrzostwa Świata i nie staje się nagle największym fanem na świecie. <strong>Większość z</strong> nich nie dba o to, kto wygra, po prostu kochają ten sport. Mogą nawet krytykować zwykłych fanów za to, że nie chcą zostać do późna, aby obejrzeć nieistotny mecz grupowy. Ale przynajmniej <strong>musisz </strong>znosić ich tylko przez cztery tygodnie raz na cztery lata. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. temporary job for </p>
+<p>(Zdanie 1: Nie mogłem/am znaleźć stałej posady, albo ta praca jest na dwa miesiące.</p>
+<p>Zdanie 2: Mam <strong>tymczasową pracę przez</strong> następne dwa miesiące.) </p>
+<p><br/>2. have been robbed if</p>
+<p><strong>Uzasadnienie</strong>: III tryb warunkowy, by mówić o przeszłości: <em>would have + past participle, if + past perfect</em>.</p>
+<p><br/>3. from the oil spill is being cleared up</p>
+<p>(Zdanie 1: Oczyszczają ropę z wycieku, ale zajmuje to dużo czasu.</p>
+<p>Zdanie 2: Ropa <strong>z wycieku jest usuwana</strong>, ale zajmuje to dużo czasu.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja w stronie biernej w czasie <em>present continuous: am/is/are being + past participle.</em></p>
+<p><br/>4. we will be celebrating our 25th </p>
+<p>(Zdanie 1: Został dokładnie jeden tydzień do obchodów naszej 25. rocznicy ślubu.</p>
+<p>Zdanie 2: O tej porze w przyszłym tygodniu <strong>będziemy obchodzić naszą 25.</strong> rocznicę ślubu.)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>future continuous</em>, by mówić o czynności, która będzie w trakcie w określonym momencie w przyszłości.</p>
+<p><br/>5. were you, I would replace</p>
+<p>(Zdanie 1: Uważam, że powinieneś/powinnaś wymienić te wszystkie znoszone ubrania!</p>
+<p>Zdanie 2: Na <strong>twoim miejscu wymienił(a)bym</strong> te wszystkie znoszone ubrania!)</p>
+<p><strong>Uzasadnienie</strong>: II tryb warunkowy, by dawać rady: <em>if + past simple, would </em>+ bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>High-achieving athletes are usually very popular, but with fame comes responsibility. In my view, success is not enough to become a sports star - one also must be a role model for young people. </p>
+<p>Teenagers often look up to sports stars. They idolise their favourite athletes and want to be like them, which can motivate them to achieve their goals. However, young people also tend to imitate their stars' values and behaviours. Sometimes a sportsperson's attitude or personality can be more inspiring than their successes. Examples of positive personality traits include discipline, honesty, fairness and kindness. </p>
+<p>Parents, on the other hand, would like their children to be influenced by positive role models. They want them to understand the importance of hard work, dedication, and respect for others. Sports stars who have these qualities can inspire parents to encourage their children's involvement in sports, knowing that they will be exposed to positive influences.</p>
+<p>In conclusion, being a sports star involves more than just being successful; it means being a good example for young people. Both teenagers and parents understand the importance of sports stars who show values like honesty and fairness. By playing this role, athletes can inspire and influence young individuals, positively impacting their growth and dreams. For this reason, I strongly believe that it takes more than just success to become a sports star.</p>
+<p><br/>(Liczba słów: 224)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Sportowcy osiągający wysokie wyniki są zazwyczaj bardzo popularni, ale ze sławą wiąże się odpowiedzialność. Moim zdaniem sukces nie wystarczy, aby zostać gwiazdą sportu - trzeba być również wzorem do naśladowania dla młodych ludzi. </p>
+<p>Nastolatki często wzorują się na gwiazdach sportu. Ubóstwiają swoich ulubionych sportowców i chcą być tacy jak oni, co może motywować ich do osiągania celów. Jednak młodzi ludzie mają również tendencję do naśladowania wartości i zachowań swoich gwiazd. Czasami postawa lub osobowość sportowca może być bardziej inspirująca niż jego sukcesy. Przykłady pozytywnych cech osobowości obejmują dyscyplinę, uczciwość, sprawiedliwość i życzliwość. </p>
+<p>Z kolei rodzice chcieliby, aby ich dzieci znajdowały się pod wpływem pozytywnych wzorców do naśladowania. Chcą, aby rozumiały znaczenie ciężkiej pracy, poświęcenia i szacunku dla innych. Gwiazdy sportu, które mają te cechy, mogą inspirować rodziców do zachęcania swoich dzieci do uprawiania sportu, ponieważ mają świadomość, że będą one podlegać pozytywnym wpływom.</p>
+<p>Podsumowując, bycie gwiazdą sportu to coś więcej niż tylko odnoszenie sukcesów; oznacza to bycie dobrym przykładem dla młodych ludzi. Zarówno nastolatki, jak i rodzice rozumieją znaczenie gwiazd sportu, które prezentują wartości takie jak uczciwość i sprawiedliwość. Odgrywając tę rolę, sportowcy mogą inspirować i wpływać na młode osoby, pozytywnie wpływając na ich rozwój i marzenia. Z tego powodu jestem głęboko przekonany/a, że aby zostać gwiazdą sportu, potrzeba czegoś więcej niż tylko sukcesów.</p><br>

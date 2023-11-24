@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. intriguing</p>
+<p>(Nauka o mózgu scalona z inżynierią stanowi <strong>intrygujący</strong> temat badań w przyszłości.) </p>
+<p>2. embedded</p>
+<p>(Istnieje pewien rodzaj zagrożenia <strong>powiązany</strong> z każdym postępem technologicznym.)</p>
+<p>3. enhance</p>
+<p>(Naukowcy powinni skupić się na dziedzinach rozwoju, które naprawdę <strong>ulepszą</strong> nasze życie.)</p>
+<p>4. muted</p>
+<p>(Większość niepochlebnych reakcji na to, co zaproponowali została od razu <strong>wyciszona</strong> przez władze.)</p>
+<p>5. unfollows</p>
+<p>(Wielu influencerom nie przeszkadza to, że ktoś <strong>przestaje obserwować</strong> ich profil.)</p>
+<p>6. defective</p>
+<p>(Obecny system jest bardzo <strong>wadliwy</strong> i powinien jak najszybciej być zastąpiony nowym.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. b</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie się trwała w konkretnym czasie w przyszłości - czas <em>future continuous</em>. </p>
+<p>2. c</p>
+<p><strong>Uzasadnienie</strong>: przewidywanie dotyczące przyszłości, oparte na obserwacji tego, co dzieje się w chwili obecnej - <em>be going to</em>.</p>
+<p>3. c</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie przyszłości - <em>will</em>.</p>
+<p>4. b</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są już znane - czas <em>present continuous</em>.</p>
+<p>5. c</p>
+<p><strong>Uzasadnienie</strong>: ogólne spekulacje na temat przyszłości przedstawione z perspektywy przeszłości - <em>would</em>.</p>
+<p>6. b</p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>until</em> używamy czasu <em>present simple</em> albo <em>present perfect</em>, tu - <em>present perfect</em>.</p>
+<p>7. a</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na konkretną datę - <em>be due to</em> + bezokolicznik. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. is due to begin</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na konkretną datę - <em>be due to</em> + bezokolicznik.  </p>
+<p>2. will be having</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie trwała w konkretnym czasie w przyszłości - czas <em>future continuous</em>.</p>
+<p>3. will have been studying</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w pewnym momencie w przyszłości będzie już trwała jakiś czas - czas <em>future perfect continuous</em>. </p>
+<p>4. are to give</p>
+<p><strong>Uzasadnienie</strong>: styl formalny, oficjalne plany - <em>be to</em> + bezokolicznik. </p>
+<p>5. are due to give/make a presentation </p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane na konkretną datę - <em>be due to</em> + bezokolicznik. </p>
+<p>6. I will have changed </p>
+<p><strong>Uzasadnienie</strong>: czynność, która wydarzy się do konkretnego momentu w przyszłości - czas <em>future perfect</em>. </p>
+<p>7. we have researched </p>
+<p><strong>Uzasadnienie</strong>: w tzw. <em>future time clauses</em>, czyli po wyrażeniach takich jak np. <em>after </em>używamy czasu <em>present simple</em> albo <em>present perfect</em>, tu - <em>present perfect</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. carefully </p>
+<p>2. judgement</p>
+<p>3. solution</p>
+<p>4. convinced</p>
+<p>5. improvement</p>
+<p>6. unpredictable</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Słyszałeś/aś kiedyś o analizie SWOT? To metoda oparta na szukaniu rozwiązań za pomocą burzy mózgów i przemyślaniu <strong>uważnie</strong> tematu przed podjęciem wiążących decyzji. Analiza ta oznacza wstrzymanie się z <strong>wydawaniem opinii</strong> zanim weźmie się pod uwagę mocne strony (<span style="text-decoration: underline;">s</span>trengths), słabości (<span style="text-decoration: underline;">w</span>eaknesses), możliwości (<span style="text-decoration: underline;">o</span>pportunities) i zagrożenia (<span style="text-decoration: underline;">t</span>hreats) - czyli SWOT - nieodzowne elementy w procesie wyboru najlepszego <strong>rozwiązania</strong>. Przy takim podejściu, kilka pytań wymaga odpowiedzi, na przykład: "Czy ten pomysł jest wystarczająco dobry, żeby wszyscy byli <strong>przekonani</strong>?", "Czy rzeczywiście efektem tego rozwiązania będzie jakaś <strong>poprawa</strong>?", "Czy istnieją jakieś <strong>nieprzewidywalne</strong> przeszkody?". Następnym razem kiedy będziesz chciał/a rozpocząć jakiś projekt, którego nie jesteś pewien/pewna, wypróbuj analizę SWOT! Z pewnością pomoże. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

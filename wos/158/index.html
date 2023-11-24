@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) <span style="text-decoration: underline;"><strong>Najwyższa Izba Kontroli zwróciła uwagę na następujące aspekty problemu dotyczącego substancji dodatkowych:</strong></span></p>
+<ul>
+<li>Brak nadzoru nad stosowaniem  konserwantów do produkcji artykułów spożywczych.</li>
+<li>Brak każdorazowego badania wszystkich dodatków do produktów przez inspekcje. </li>
+<li>Brak weryfikacji, czy to co jest napisane na opakowaniu zgadza się z zawartością  produktu. </li>
+<li>Brak badania jak wygląda kwestia kumulacji limitów "E" w diecie  i ich wpływie na zdrowie człowieka. </li>
+</ul>
+<p> </p>
+<p>b) To zadanie jest indywidualne. Można na nie odpowiedzieć zarówno twierdząco, jak i przecząco. Sam/a musisz zdecydować, jakie jest Twoje zdanie w tym temacie. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Najwyższa Izba Kontroli (NIK) zwróciła uwagę na to, że brakuje właściwego nadzoru nad stosowaniem do celów spożywczych konserwantów, przeciwutleniaczy, emulgatorów czy wzmacniaczy smaku, tj. różnego rodzaju substancji dodawanych do żywności, które oznacza się zwykle symbolami 'E'. NIK zwróciła uwagę na to, że nie weryfikuje się tego, czy to, co napisane na opakowaniu produktu, zgadza się z tym, co jest w środku. Ponadto, na co zwróciła uwagę NIK, sprawdza się jedynie limity danego 'E' w konkretnym produkcie, ale nie bierze się pod uwagę kumulacji tego typu substancji w codziennej diecie przeciętnego człowieka i tego, jak to może wpływać na zdrowie. NIK zwróciła uwagę na niepokojącą sytuację, że w jednym dniu można przyswoić nawet 85 różnych dodatków typu 'E'.</p>
+<p><strong>b) </strong></p>
+<p><strong>Ta część zadania ma charakter indywidualny, bo wymaga wyrażenia własnego zdania. Dlatego proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania zagadnienia.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>W pierwszej chwili wydaje się, że działania podjęte przez Najwyższą Izbę Kontroli (NIK) w opisanej sprawie były słuszne, bo miały na względzie troskę o zdrowie polskich konsumentów. W pewnym sensie zapewne tak właśnie było, niemniej jednak wydaje się jednocześnie, że każdy - jako wolny człowiek - powinien konsumować to, co chce, a państwo, w tym NIK, nie powinny w to ingerować. Natomiast warto, aby każdy konsument miał świadomość jakości żywności, jaką kupuje. Działania żadnej z instytucji nie powinny jednak prowadzić do zabraniania mu kupowania tego, na co ma ochotę, nawet gdyby miało się to okazać szkodliwe.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Najwyższa Izba Kontroli posiada kompetencje do <strong>kontrolowania działalności</strong> organów administracji rządowej, Narodowego Banku Polskiego, państwowych osób prawnych oraz innych państwowych jednostek organizacyjnych. Kontrola ze strony NIKu może również dotyczyć działalności innych jednostek organizacyjnych i podmiotów gospodarczych, przy czym zakres tego rodzaju kontroli musi dotyczyć wyłącznie wykorzystywania majątku lub środków państwowych albo komunalnych i realizacji zobowiązań finansowych na rzecz państwa. Kontrola przeprowadzana przez Najwyższą Izbę Kontroli może być (w zależności od charakteru podmiotu podlegającego kontroli) rozpatrywana pod względem kryteriów: legalności, gospodarności, celowości i rzetelności. </p>
+<p>Działalność Najwyższej Izby Kontroli skupia się na przedstawieniu wyników przeprowadzonej kontroli w postaci końcowego dokumentu (sprawozdania). Ponadto prezes NIK przesyła informacje o wynikach kontroli właściwym naczelnym lub centralnym organom państwowym. w tym Sejmowi, Prezydentowi Rzeczypospolitej Polskiej i Prezesowi Rady Ministrów. Zatem raport końcowy z oceną działalności danej instytucji państwowej, dociera do najważniejszych osób w Polsce. Na podstawie tego dokumentu organy naczelne i centralne mogą podjąć szereg działań zmierzających do poprawy funkcjonowania instytucji publicznych w Polsce. Z tego względu znaczenie Najwyższej Izby Kontroli należy ocenić na wysokim poziomie. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Najwyższa Izba Kontroli (NIK)</span></strong> ma za zadanie kontrolować działalność organów administracji rządowej, Narodowego Banku Polskiego (NBP), państwowych osób prawnych, a także innych państwowych jednostek organizacyjnych z punktu widzenia legalności, gospodarności, celowości i rzetelności. NIK może też sprawdzać działalność organów samorządu terytorialnego, komunalnych osób prawnych oraz innych komunalnych jednostek organizacyjnych, przez wzgląd na legalność, gospodarność i rzetelność ich pracy. Dodatkowo, NIK może również poddawać kontroli działania wszelkich innych podmiotów i jednostek organizacyjnych, jeśli jakkolwiek wykorzystują one majątek lub środki państwowe, względnie komunalne. </p>
+<p>Działalność NIK może korzystnie wpływać na funkcjonowanie organów władzy państwowej, ponieważ jest w stanie zapobiegać ewentualnym nadużyciom. NIK może zwiększać jakość pracy organów władzy państwowej.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Trzy zdania, które zawierają informacje o kompetencjach Trybunału Konstytucyjnego:</strong></span></p>
+<p>B. Orzeka o zgodności z ustawą zasadniczą aktów prawnych niższego rzędu.  </p>
+<p>D. Rozstrzyga spory kompetencyjne pomiędzy centralnymi organami konstytucyjnymi państwa. </p>
+<p>F. Orzeka o wystąpieniu przeszkody w sprawowaniu urzędu Prezydenta RP. </p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Kompetencje Trybunału Stanu:</strong></span></p>
+<p>A. Orzeka o odpowiedzialności konstytucyjnej Prezydenta RP i członków rządu. </p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>Kompetencje Sądu Najwyższego:</strong></span></p>
+<p>C. Rozpatruje kasacje wyroków wydawanych przez sądy powszechne. </p>
+<p>E. Stwierdza ważność wyborów do Sejmu i Senatu RP oraz na Prezydenta RP. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="height: 126px;">
+<td style="background-color: #ff66ff; height: 126px;"><strong>Trzy zdania, które zawierają informacje o kompetencjach Trybunału Konstytucyjnego:</strong></td>
+<td style="background-color: #ff66ff; height: 126px;">
+<p>Orzeka o zgodności z ustawą zasadniczą aktów prawnych niższego rzędu. <strong>[B]</strong></p>
+<p>Rozstrzyga spory kompetencyjne pomiędzy centralnymi organami konstytucyjnymi państwa. <strong>[D]</strong> </p>
+<p>Orzeka o wystąpieniu przeszkody w sprawowaniu urzędu Prezydenta RP. <strong>[</strong><strong>F]</strong></p>
+</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #cc99ff; height: 17px;"><strong>Kompetencje Trybunału Stanu:</strong></td>
+<td style="background-color: #cc99ff; height: 17px;">Orzeka o odpowiedzialności konstytucyjnej Prezydenta RP i członków rządu. <strong>[A]</strong></td>
+</tr>
+<tr style="height: 77px;">
+<td style="background-color: #6666ff; height: 77px;"><strong>Kompetencje Sądu Najwyższego:</strong></td>
+<td style="background-color: #6666ff; height: 77px;">
+<p>Rozpatruje kasacje wyroków wydawanych przez sądy powszechne. <strong>[C]</strong></p>
+<p>Stwierdza ważność wyborów do Sejmu i Senatu RP oraz na Prezydenta RP. <strong>[E]</strong></p>
+</td>
+</tr>
+</tbody>
+</table><br>

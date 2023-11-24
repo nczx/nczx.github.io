@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Speaker 1</strong> D </p>
+<p><strong>Speaker 2 </strong>A</p>
+<p><strong>Speaker 3 </strong>F</p>
+<p><strong>Speaker 4 </strong>B</p>
+<p><strong>Speaker</strong> <strong>5 </strong>E</p>
+<p> </p>
+<p><strong>Dodatkowe zdanie:</strong> C.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście:</strong> "Since they couldn't pay back their debts, (...) the family were forced to travel westwards towards California." - Ponieważ nie mogli spłacić długów, (...) rodzina została zmuszona do podróży na zachód w kierunku Kalifornii. </p>
+<p>"The other nomads, living and on the move like them, are their family, helping out in times of trouble (...)" - Inni nomadzi, żyjący i w drodze jak oni, to ich rodzina, pomagająca w trudnych czasach (...).</p>
+<p>2. C</p>
+<p><strong>Uzasadnienie</strong>: ta fraza nawiązuje do pierwszego akapitu, w którym opisana jest historia bohaterów powieści "The Grapes of Wrath".</p>
+<p>3. C</p>
+<p><strong>Fragment w tekście:</strong> "(...) the main highways in the Midwest of the USA are once again being left more and more to those who have to travel rather than those who travel for fun." - (...) główne autostrady w Środkowym Zachodzie Stanów Zjednoczonych znów są używane raczej przez tych, którzy zmuszeni są podróżować niż przez podróżujących dla rozrywki. </p>
+<p>4.  A</p>
+<p><strong>Fragment w tekście:</strong> "Some are keen to buy their own van and hit the road, to enjoy the freedom that the nomadic lifestyle seems to offer. That's certainly not the way of living that anyone who ever read 'The Grapes of Wrath' would opt for." - Niektórzy są chętni, żeby kupić swojego vana i ruszyć w drogę, żeby cieszyć się wolnością, którą życie nomadów zdaje się oferować. Z pewnością nie jest to styl życia, który wybrałby ktokolwiek, kto kiedyś przeczytał 'The Grapes of Wrath'. </p><br>

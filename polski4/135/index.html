@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Podmiot liryczny można utożsamić z każdą z tych postaci. Łączy bowiem w sobie ich cechy. Jako poeta wykorzystuje swoją wypowiedź oraz różnorodne środki wyrazu, by przedstawiać refleksję na uniwersalny temat - dotyczący zależności między władzą a moralnością. Wprost wskazuje na powinności poety, co sugeruje, iż można go z nim utożsamić: "Nie bądź bezpieczny. Poeta pamięta. / Możesz go zabić - narodzi się nowy". Osoba mówiąca jest także w pewnym stopniu mędrcem. Ma pewną wiedzę, to bystry obserwator, który potrafi na podstawie dostrzeżonych zjawisk sformułować uniwersalne przesłanie. Jednocześnie wyróżnia się głębokim poszanowaniem moralności, empatią względem pokrzywdzonego człowieka. Dla osoby mówiącej ważne są podstawowe wartości (np. sprawiedliwość, uczciwość), które stara się obronić. Podmiot liryczny można uznać także za obywatela. Zwraca się on do ludzi sprawujących władzę, wykazuje więc zainteresowanie tym, co dzieje się w państwie. Wyraża sprzeciw wobec niemoralnych praktyk rządzących. Przypomina im o tym, że powinni kierować się przede wszystkim dobrem zwykłego człowieka, gdyż ich naganne czyny zostaną zapamiętane i potępione. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W dwóch pierwszych strofach poeta ukazuje mechanizmy działania władzy tyrańskiej. Jest ona cyniczna i pozbawiona jakiejkolwiek moralności, ponieważ czerpie przyjemność z poniżenia prostego człowieka. Taki władca ma świadomość swojej przewagi oraz bezkarności. Utwierdza go w tym otoczenie: "Gromadę błaznów koło siebie mając". Dwór jest służalczy, aprobuje okrucieństwo rządzącego. Prowadzi to do zachwiania porządku moralnego, ale też przekonania, że jest się poza prawem. Pewność siebie tyrana wynika z tego, iż wszyscy się go obawiają, więc okazują mu fałszywe przywiązanie. Również za pomocą zakłamywania rzeczywistości cały czas wzmacnia się pychę władcy, od którego zależy życie innych ludzi: "Złote medale na twoją cześć kując / Radzi, że jeszcze jeden dzień przeżyli". </p>
+<p>Uniwersalny wymiar przedstawionych mechanizmów polega na tym, że poeta nie dąży do nadmiernego ukonkretnienia tyrana ani realiów, w których egzystuje. Sam sposób przedstawienia rządów okrutnika zyskuje ponadczasowy wymiar, ponieważ przedstawione zjawiska są obecne w historii - niezależnie od czasów, okoliczności czy przestrzeni geograficznej. Ponadto w utworze pewne elementy rzeczywistości (np. gromada błaznów, dwór) zostają wzbogacone o dodatkowe sensy gwarantujące uniwersalność przekazu, który można cały czas aktualizować. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>"Pomieszanie dobrego i złego" świadczy o wpływie rządzących na rzeczywistość. Pod ich wpływem przestają obowiązywać dotychczasowe zasady moralne: podział na dobro i zło nie funkcjonuje. Porządek etyczny zostaje w ten sposób zaburzony, ponieważ obywatele tracą stałe punkty odniesienia, niemożliwe jest odróżnienie dwóch przeciwstawnych sobie wartości. Słowa te stanowią aluzję do biblijnej Księgi Rodzaju, a przede wszystkim sceny stworzenia świata. Pomieszanie dobra oraz zła przypomina rzeczywistość sprzed tego aktu - dopiero bowiem działania Boga przyczyniły się do wyodrębnienia poszczególnych elementów świata, jego uporządkowania. Chaos z wiersza Miłosza sugeruje zaś zagubienie, odejście od podstawowych zasad. "Pomieszanie dobrego i złego" to także aluzja kulturowa. Można ją odnieść do języka propagandy w krajach totalitarnych - manipuluje słowami, zaciera granice między dobrem a złem. Jej celem staje się przede wszystkim zaakcentowanie negatywnego wpływu rządzących na system etyczny oraz upadku moralności, do którego w aktywny sposób się przyczyniają. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W wierszu Czesława Miłosza na artystę zostaje nałożona wielka odpowiedzialność. Przede wszystkim przypomina on o podstawowych zasadach moralnych, staje się także rzecznikiem ludzi skrzywdzonych. Jednoznacznie przeciwstawia się arogancji rządzących, wręcz domaga się sprawiedliwości. Sugeruje, iż tyran nie może czuć się bezpiecznie, ponieważ "[...] Poeta pamięta". Twórca spisujący "czyny i rozmowy" przekazuje pamięć o wydarzeniach, sprawia, że decyzje rządzących nie popadną w niepamięć. Tym samym kiedyś zostaną odpowiednio ocenione oraz potępione. Przynosi sprawiedliwość dziejową, a jednocześnie gwarantuje, iż na winnych spadnie zasłużona kara. Sztuka służy w tym ujęciu obronie zasad moralnych i zwykłego człowieka. Przywraca utracony ład, a przy tym naprawia rzeczywistość. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>W utworze dominuje funkcja impresywna służąca wywarciu wpływu na odbiorcę tekstu. Świadczą o tym następujące środki wyrazu: </p>
+<ul>
+<li>apostrofa -&gt;"Choćby przed tobą wszyscy się skłonili";</li>
+<li>czasownik w trybie rozkazującym -&gt; "Nie bądź bezpieczny. [...]";</li>
+<li>słownictwo sugerujące ocenę -&gt; "Gromadę błaznów koło siebie mając", "Lepszy dla ciebie byłby świt zimowy". </li>
+</ul>
+<p>Dominująca funkcja impresywna sprawia, iż wierszy zyskuje charakter przestrogi, wręcz groźby. Poeta w wyrazisty sposób przypomina tyranowi o tym, iż nie pozostanie on bezkarny, ponieważ pamięć o jego zbrodniach nie zostanie zapomniana. Z tego też powodu nie powinien popadać w samozadowolenie i pychę, lecz musi mieć świadomość, że "[...] Poeta pamięta". Spotka go kara, przed którą nie może uciec. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Osoba mówiąca zwraca uwagę na to, że historia osądzi wszystkie czyny tyrana. Na razie cieszy się on pełnią władzy i bezkarnością. Z szerszej jednak perspektywy historia, rozumiana jako ciąg minionych zdarzeń kształtujących teraźniejszość, pozwala na potępienie jego działań czy okrucieństwa. Słowa "Spisane będą czyny i mowy" mogą sugerować nie tylko siłę literatury, która przechowuje pamięć o ludzkiej krzywdzie. Wywołują one skojarzenia także z dokumentami, zapisami rozmów czy decyzji władz totalitarnych. Stają się one dowodem na popełnione zbrodnie, przyczyniają się do właściwego osądu tyranów. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Osoba mówiąca sugeruje, iż karę tyranowi wymierzą historia oraz literatura. Z perspektywy czasu zostaną bowiem odpowiednio osądzone i potępione jego czyny. Jest to możliwe również dzięki postawie poety, który staje się rzecznikiem ludzi pokrzywdzonych. Jego twórczość staje się nośnikiem pamięci, nie pozwala na zatarcie okrucieństwa władcy czy też naruszenia przez niego podstawowych praw etycznych. Na zawsze zostanie więc potępiony jako człowiek niemoralny, zbrodniarz.</p>
+<p>Podmiot liryczny twierdzi także: "Lepszy dla ciebie byłby świt zimowy / I sznur, i gałąź pod ciężarem zgięta". Sceneria tej śmierci wywołuje skojarzenia z brutalnym aktem przerwania życia - samobójczym lub też hańbiącym, gdyż przywodzi na myśl brutalną egzekucję. Słowa te świadczą o tym, że lepiej jest umrzeć nawet w tak tragicznych okolicznościach, niż dalej wieść egzystencję, która przyczynia się do krzywdy zwykłych ludzi. Taka śmierć jest bowiem niczym w porównaniu z dokonywanym złem oraz późniejsza karą wymierzoną przez historię czy literaturę. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Pomnik Poległych Stoczniowców 1970 odsłonięto 16 grudnia 1980 roku. Upamiętnia on wydarzenia Grudnia 1970, kiedy to robotnicze protesty zostały brutalnie stłumione przez władzę; stanowi przede wszystkim hołd oddany poległym stoczniowcom. Monument znajduje się w Gdańsku nieopodal Bramy nr 2 Stoczni Gdańskiej. Składa się z trzech wysokich krzyży - na każdym z nich zawieszona jest kotwica - symbol nadziei. Kompozycja wskazuje więc na śmierć, cierpienie, ale też zapowiada zmartwychwstanie. Dolną część krzyży zdobią płaskorzeźby przedstawiające sceny z życia ludzi pracy (stoczniowców, rolników, robotników, górników). Na pomniku umieszczono również fragmenty psalmu 29 i wiersza <em>Który skrzywdziłeś </em>Miłosza. </p>
+<p>Pomnik ten przypomina więc o cierpieniu, którego doświadczyli zwykli ludzie. Sprzeciw wobec władzy stał się dla nich źródłem tragedii, przyczynił się do ich przedwczesnej śmierci. Pomnik przypomina o tej ofierze - niewinnej niczym Chrystus poświęcający się za ludzkość. Monument nie pozwala na to, aby zapomnieć o tragicznej przeszłości i winie osób, które doprowadziły do tej sytuacji. Jest więc przejawem pamięci o krzywdzie prostych ludzi, a jednocześnie świadczy o tym, że postawa obywateli przyczyniła się do zachodzących przemian, dała nadzieję na zmianę dziejów. Nieprzypadkowo na pomniku znalazł się cytat z wiersza Miłosza - koresponduje on z wymową monumentu. Potwierdza to, iż cierpienie zwykłego człowieka nie ulegnie zapomnieniu, zaś czyny tyrana zostaną sprawiedliwie ocenione. Pamięć w dziełach poety odzwierciedla bowiem wspomniany pomnik - dowód uhonorowania ofiar przemocy. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Dobry władca to osoba, która nie wyróżnia się okrucieństwem i pychą. Zamiast tego jest wrażliwa i zdolna do refleksji na temat swego postępowania. Nie unika także odpowiedzialności za swe postępowanie: "Stój! Zadrżyj w sercu swoim! Nie umywaj rąk!". Ma świadomość swojego wpływu na los obywateli, więc kieruje się sprawiedliwością oraz rozwagą. Potrafi miłość, którą obdarza najbliższych, przenieść na poddanych. Dobry władca troszczy się o obywateli, nie wyrządza im krzywdy, a stara się służyć.</p>
+<p>W przeciwieństwie do niego tyran bezrefleksyjnie ulega złu. Odczuwa swoją wyższość względem ludu, uważa, że stoi ponad prawem, więc może postępować okrutnie. Nie ma w nim współczucia, wręcz z przyjemnością zadaje ból: "Który skrzywdziłeś człowieka prostego, / Śmiechem nad krzywdą jego wybuchając". Otacza się ludźmi, którzy mu wyłącznie pochlebiają i nie próbują się w jakikolwiek sprzeciwiać. Tyran starannie pielęgnuje swoje poczucie wyjątkowości, oczekuje nieustannych pochwał i wyrazów uwielbienia. Dąży do likwidacji osób, które mogą zachowywać pamięć o jego zbrodniach: "[...] Poeta pamięta. / Możesz go zabić - narodzi się nowy". Jest pozbawiony zasad moralnych czy empatii. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Utwór Miłosza z dziełem Kochanowskiego łączy to, że podejmuje zbliżoną tematykę. Mimo innych epok, czasów, artystów interesuje przede wszystkim relacja łącząca rządzących oraz obywateli. Z tego też powodu osoby mówiące w utworach tych poetów są zaangażowane w życie państwa i krytycznie obserwują sprawujących władzę. Stają się strażnikami moralności, gdyż przypominają rządzącym o tym, że powinni troszczyć się o dobro ogółu. Negatywną ocenę wypowiadających się w utworach budzi z kolei wszelaka niesprawiedliwość, pycha polityków czy też brak szacunku dla obywateli. Kochanowski oraz Miłosz przestrzegają odbiorców przed taką postawą. Uważają bowiem, że może ich za to spotkać kara - surowy osąd historii (Miłosz) lub upadek państwa (Kochanowski). Dzieła tych twórców łączy także refleksja na temat roli literatury w kontekście polityki. Ich poezja jest zaangażowana w sprawy państwowe. Za jej zadania można uznać wywieranie określonego wpływu na władających, przypominanie im o ich obowiązkach i służbie narodowi. </p>
+<p> </p>
+<p>Wnioski:</p>
+<ul>
+<li>Utwory poetów to należą do typu poezji zaangażowanej w sprawy obywatelskie.</li>
+<li>Twórcy podejmują uniwersalny temat władzy i jej relacji ze zwykłym człowiekiem.</li>
+<li>Krytyce zostaje poddana przede wszystkim arogancja władzy i jej brak zasad moralnych.</li>
+<li>Poeta ma prawo do piętnowania niepożądanych zachowań i przypominania o obowiązkach polityków. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Indywidualne </p><br>

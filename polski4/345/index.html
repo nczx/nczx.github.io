@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Mianem legendarnych określić można takie wydarzenia z życia bohatera jak: </p>
+<ul>
+<li>krótka kariera w zespole jazzowym Modern Jazz Quartet;</li>
+<li>prowadzenie tzw. Teatru Szekspira i wystawienie spektaklu <em>Cały świat to scena</em>;</li>
+<li>rzekomy romans z dyrektorką szkoły - Madame.</li>
+</ul>
+<p>Sytuacje te zostały utrwalone w pamięci zbiorowej w formie podkoloryzowanych, mijających się z prawdą historii. Wydaje się, że rzeczywiste wydarzenia zostały wielokrotnie przekształcone, niczym plotka. Ich główny bohater urósł do rangi legendy szkolnej, choć jego rzeczywiste dokonania nie były tak spektakularne, jak można by zakładać na podstawie opowieści.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Na podstawie dialogu bohaterów <em>Madame </em>można stwierdzić, że mit powstaje na kanwie prawdziwych wydarzeń. Upływ czasu i przekazywanie opowieści o nich z ust do ust sprawia jednak, że pewne fakty zmieniają się. Rzeczywistość zapamiętywana jest wybiórczo - część informacji zostaje przemilczana, inne są natomiast modyfikowane. Dokonania narratora zostają wyolbrzymione, przedstawione zostają jako bardziej spektakularne, niż były w rzeczywistości. Mit utrwala skrajnie pozytywny, choć nieprawdziwy, obraz bohatera.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>Reakcje rozmówcy narratora na udzielane przez niego wyjaśnienia można odczytywać różnorako. Z jednej strony powtarzane "tak, tak" może świadczyć o źle maskowanym rozczarowaniu. Młodzieniec próbuje poradzić sobie z nowo otrzymanymi informacjami, które zburzyły jego dotychczasowe wyobrażenia o nauczycielu. Z drugiej słowa te mogą wskazywać na fakt, że uczeń nie uwierzył w wersję zdarzeń narratora. Jego przytakiwanie miałoby więc charakter ironiczny, jak gdyby lekceważył odpowiedzi narratora.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Bohater uważa, że jego relacja z Madame, choć w rzeczywistości nie była romansem, składała się z momentów typowych dla niego. Dostrzega, że jego doświadczenia z tego okresu życia wpisują się w utrwalony w kulturze schemat romantycznej historii. Mówi o zazdrości, listach miłosnych, wielkich gestach i szczerych wyznaniach. Zwraca uwagę na elementy mistycyzmu, magii, symboliczności. Wszystko to, obserwowane z dystansu wielu lat, wygląda na opowieść o wielkiej miłości, choć w rzeczywistości nią nie jest.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Próby demistyfikacji opowieści o swoim życiu spowodowane pytaniami zadawanymi przez ucznia uświadamiają bohaterowi, że on również mógł stworzyć w swojej głowie nieprawdziwe wyobrażenie Madame. Opierając się na szczątkowych informacjach, zbudował własną opowieść o nauczycielce francuskiego i uwierzył w nią. Narrator mówi: "Więc może i Madame, może i całe jej życie wcale nie było takie, jak mnie się przedstawiło? Może sam wszystko stworzyłem.... z pomocą Konstantego, który kochał się w Claire".</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Bohater zdaje się widzieć miłość jako głębokie wewnętrzne przeżycie duchowe. Przywiązuje wagę do gestów i symboli jako składowych uczucia, mówi "szczęściem jest kochać i chwytać drobne, zwodnicze zbliżenia [...]". Zakochanie jest dla niego powiązane ściśle z poezją. Łączy je element tajemnicy, niedopowiedzenia, nieoczywistości, ale także wywoływanie wrażeń estetycznych i zmysłowych. Można przyjąć, że bohater patrzy na miłość podobnie, jak czynili to wieki przed nim romantycy, którzy także poszukiwali w niej doznań spirytualnych, a nie fizycznych.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Problem istnienia prawdy główny bohater komentuje następująco: "Lecz cóż właściwie jest prawdą? Rzecz sama w sobie? Dla siebie? Czy też, jak nam się jawi? Jak ją sobie roimy? A może jedno i drugie? Lecz jeśli tak, to co wybrać? Prawdę niejawną czy jawną, jakkolwiek byłaby względna?". Dostrzega więc, że istnieje rozbieżność między faktami takimi jakie są, a ich postrzeganiem przez jednostkę. Narrator zastanawia się, czy nie istnieją różne rodzaje prawd - obiektywne, będące rzeczywistym stanem rzeczy oraz subiektywne - przetworzone przed doświadczenie i pamięć ludzką. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>W zamieszczonym fragmencie tekstu można znaleźć odwołania do:</p>
+<ul>
+<li>Williama Szekspira, którego twórczość w całości znał i rzekomo recytował z pamięci główny bohater ("Podobno znał pan na pamięć dziesiątki monologów, a nawet potrafił pan... improwizować Szekspirem, mówić na każdy temat jedenastozgłoskowcem"). W cytacie tym zawarta może być także aluzja do postaci Adama Mickiewicza, który słynął z umiejętności improwizacji poetyckiej.</li>
+<li>Bohaterów mitologicznych - Fedry (tu zapewne przywołana w kontekście tragedii klasycystycznego dramaturga Jeana Racine'a o tym samym tytule), Prometeusza, a także pojawiającego się u Goethego w <em>Fauście </em>diabła Mefista.</li>
+<li>Historii Adama i Ewy. Bohater porównuje zaakceptowanie fikcyjnej wersji własnego życiorysu do przyjęcia kuszącego owocu od węża w ogrodzie rajskim, mówi: "Tymczasem gorączkowo trawiłem ów jej owoc w postaci słodkiej fikcji, który mi został podany przez niewinnego chłopca".</li>
+<li>Obrzędów pogańskich (noc Walpurgii). Odwołanie do legendarnego sabatu czarownic może podkreślać swoistą magię, nadprzyrodzoność, jaka, według narratora, towarzyszyła jego relacji z Madame.</li>
+<li>Chrystusa. Narrator nawiązuje do męki ("golgota w styczniową noc pod oknem") i zmartwychwstania Jezusa ("A potem zmartwychwstanie, wielkie wyznania Fedry"), a także do zapowiedzi powtórnego nadejścia Mesjasza ("zapowiedź drugiego przyjścia").</li>
+</ul>
+<p>W pamięci narratora odwołania kulturowe związane są z historią znajomości jego i Madame, można przypuszczać więc, że literatura i sztuka towarzyszyły im w kluczowych momentach rozwoju relacji. Były elementem towarzyszącym ich spotkaniom, świadczyły o ich zainteresowaniach i wrażliwości. Z drugiej strony uwikłanie kreacji mitologicznych i literackich w ten swoisty "romans" włącza go poniekąd w szereg opowieści fikcyjnych. Przedstawiona przez narratora wersja zdarzeń staje się poniekąd kolejnym mitem, o którego prawdziwości trudno decydować. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Motyw mistrza i ucznia w <em>Madame </em>wpisuje się w schemat powieści inicjacyjnej. Starszy bohater jest wzorem dla młodszego. Traktowany jest jak legenda, a jego życie owiane jest mitem. Jego doświadczenia są wyolbrzymiane i idealizowane. Mistrz wprowadza ucznia w dorosłość, wpływa na podejmowane przez niego wybory; autorytetem. Libera wykorzystuje ten motyw przynajmniej dwukrotnie. Funkcje życiowego przewodnika dla swoich uczniów zdają się pełnić bowiem zarówno narrator, jak i Madame. Autor zaznacza więc swoistą ciągłość pokoleniową między kolejnymi nauczycielami otaczanymi szczególnym uwielbieniem przez swoich wychowanków.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br>

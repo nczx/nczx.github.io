@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>arrest - aresztować</p>
+<p>court - sąd</p>
+<p>detectives - detektywi, śledczy </p>
+<p>escape - uciec</p>
+<p>guilty - winny</p>
+<p>illegal - nielegalny</p>
+<p>innocent - niewinny</p>
+<p>judge - sędzia</p>
+<p>prison - więzienie</p>
+<p>punish - ukarać</p>
+<p>rob - napaść</p>
+<p>security officers - pracownicy ochrony</p>
+<p>steal - ukraść</p>
+<p>victim - ofiara</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. I think that this man was trying to smuggle a turtle in his suitcase. The turtle is inside of a burger, so perhaps that's how he wanted to hide him.</p>
+<p>(Myślę, że ten człowiek próbował przemycić żółwia w swojej walizce. Żółw znajduje się wewnątrz burgera, więc być może w ten sposób chciał go ukryć.)</p>
+<p><br/>2. In this cartoon, a man is trying to rob a shop. I think he's holding a cucumber. He probably wants the shop assistant to believe it's a real weapon.</p>
+<p>(W tej kreskówce mężczyzna próbuje obrabować sklep. Wydaje mi się, że trzyma w ręku ogórka. Prawdopodobnie chce, aby sprzedawca uwierzył, że to prawdziwa broń.)</p>
+<p><br/>3. In this picture, there's a man sleeping in a bed. He's wearing a mask and black clothes. He's probably a burglar. The people who have just entered the room are probably the owners of this house. Perhaps the man tried to rob their house but then fell asleep.</p>
+<p>(Na tym zdjęciu widać mężczyznę śpiącego w łóżku. Ma na sobie maskę i czarne ubranie. To prawdopodobnie włamywacz. Ludzie, którzy właśnie weszli do pokoju, to pewnie właściciele tego domu. Być może mężczyzna próbował okraść ich dom, ale potem zasnął.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. The second story.  </p>
+<p>2. The third story.</p>
+<p>3. The fifth story.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="text-align: center; border-collapse: collapse; width: 524px; height: 365px;">
+<tbody>
+<tr style="color: white; background-color: #660000;">
+<td style="width: 258.906px;"><strong>Crime</strong> (zbrodnia)</td>
+<td style="width: 258.094px;"><strong>Criminal</strong> (sprawca zbrodni)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">arson (podpalenie)</td>
+<td style="width: 258.094px;">arsonist (podpalacz) </td>
+</tr>
+<tr>
+<td style="width: 258.906px;">burglary (włamanie)</td>
+<td style="width: 258.094px;">burglar (włamywacz)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">murder (morderstwo)</td>
+<td style="width: 258.094px;">murderer (morderca)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">robbery (napad)</td>
+<td style="width: 258.094px;">robber (złodziej, rabuś)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">shoplifting (kradzież sklepowa)</td>
+<td style="width: 258.094px;">shoplifter (złodziej sklepowy)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">smuggling (przemyt)</td>
+<td style="width: 258.094px;">smuggler (przemytnik)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">theft (złodziejstwo)</td>
+<td style="width: 258.094px;">thief (thieves) (złodziej, złodzieje)</td>
+</tr>
+<tr>
+<td style="width: 258.906px;">vandalism (wandalizm)</td>
+<td style="width: 258.094px;">vandal (wandal)</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I think that the most serious crime is murder because it means taking someone else's life.</p>
+<p>(Uważam, że najpoważniejszym przestępstwem jest morderstwo, ponieważ oznacza ono odebranie komuś życia.)</p>
+<p><br/>Arson is also quite serious because fire can do a lot of damage and it's very dangerous if it spreads.</p>
+<p>(Podpalenie jest również dość poważne, ponieważ ogień może wyrządzić wiele szkód i jest bardzo niebezpieczny, jeśli się rozprzestrzeni.)</p>
+<p><br/>The least serious crimes are shoplifting and vandalism because they don't hurt people.</p>
+<p>(Najmniej poważnymi przestępstwami są kradzieże sklepowe i wandalizm, ponieważ nie krzywdzą one ludzi.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Vandals and shoplifters should be punished with doing community service and paying a fine. (Wandale i złodzieje sklepowi powinni być karani pracą społeczną i grzywną.)</p>
+<p>Burglars, robbers, smugglers and thieves should go to prison. (Włamywacze, rabusie, przemytnicy i złodzieje powinni iść do więzienia.)</p>
+<p>Murderers should always get a life sentence. (Mordercy powinni zawsze otrzymywać wyrok dożywocia.)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1 - f  </p>
+<p>2 - e</p>
+<p>3 - b</p>
+<p>4 - d</p>
+<p>5 - c</p>
+<p>6 - a</p>
+<p> </p>
+<p>The smuggler escaped justice. He was allowed to get on his plane but he had to leave his pet turtle with a friend.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. In the picture, there are two students in a lab. They're wearing protective clothing. The student in the foreground is holding a small bottle with some liquid. He's trying to put this liquid on a piece of paper that he's holding with his other hand. The student in the background is reading something. If they're training to be forensic scientists, perhaps they're doing a DNA test.</p>
+<p>(Na zdjęciu widać dwóch studentów w laboratorium. Mają na sobie odzież ochronną. Student na pierwszym planie trzyma małą butelkę z jakimś płynem. Próbuje umieścić ten płyn na kartce papieru, którą trzyma drugą ręką. Studentka w tle coś czyta. Jeśli szkolą się na techników kryminalistyki, być może wykonują test DNA.)</p>
+<p><br/>2. I think it's difficult because you have to study a lot and take exams to become a forensic scientist. But I also think it can be interesting because you help to solve crimes.</p>
+<p>(Myślę, że jest to trudne, ponieważ trzeba dużo się uczyć i zdawać egzaminy, aby zostać specjalistą w dziedzinie medycyny sądowej. Ale myślę też, że może to być interesujące, ponieważ pomagasz rozwiązywać przestępstwa.)</p>
+<p><br/>3. I've heard that they don't show the truth. TV crime shows usually depict a more sensational version of life. They aren't very realistic.</p>
+<p>(Słyszałem/am, że nie pokazują prawdy. Telewizyjne programy kryminalne zazwyczaj przedstawiają bardziej sensacyjną wersję życia. Nie są zbyt realistyczne.)</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>A burglar got stuck in a chimney while trying to break into a house in Oxford. </em>The burglar's name was Benny, and he wasn't very smart. He thought he had the perfect plan to steal stuff during the holidays, but it turned into a big mess. What's worse, the owners were away. Poor Benny had to wait for a very long time before someone heard his cries for help ...</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Włamywacz utknął w kominie podczas próby włamania się do domu w Oxfordzie. Włamywacz miał na imię Benny i nie był zbyt bystry. Myślał, że ma idealny plan na kradzież rzeczy podczas świąt, ale skończyło się to wielkim zamieszaniem. Co gorsza, właścicieli nie było wtedy w domu. Biedny Benny musiał czekać bardzo długo, zanim ktoś usłyszał jego wołanie o pomoc...</p><br>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Zwrot "nie daæ wepchn¹æ siê na beczkê" wi¹¿e siê z sytuacj¹ zaobserwowan¹ przez Edelmana. Jest on œwiadkiem pozornie niewinnej sytuacji, kiedy to ustawionemu na beczce ¯ydowi niemieccy oficerowie obcinaj¹ po kawa³ku brodê. Wywo³uje to ¿yw¹ reakcjê zgromadzonych tam ludzi: "T³um, których ich otacza³, te¿ siê œmia³. Bo obiektywnie by³o to naprawdê œmieszne: ma³y cz³owieczek na drewnianej beczce z coraz krótsz¹ brod¹, gin¹c¹ pod krawieckimi no¿ycami". Wed³ug Edelmana sam fakt takiego potraktowania ¯yda œwiadczy o narastaj¹cym poczuciu bezkarnoœci. Z tego te¿ powodu "nie daæ wepchn¹æ siê na beczkê" oznacza przede wszystkim, ¿e trzeba zachowaæ godnoœæ niezale¿nie od sytuacji, nie pozwoliæ na to, aby staæ siê obiektem upokorzenia, owym ¯ydem stoj¹cym na beczce i znosz¹cym upokorzenie. Z tego tez powodu Edelman wybiera dzia³anie, anga¿uje siê w walkê, nie czeka biernie na œmieræ ("Ta krz¹tanina nie mia³a ¿adnego znaczenia, bo i tak wszyscy ginêli, ale cz³owiek nie czeka³ na swoj¹ kolej bezczynnie"). </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Edelman wskazuje na dwa przyk³ady œmierci. Pierwsza z nich ma spokojny i godny charakter, chocia¿ jest bez w¹tpienia trudniejsza: "[...] o wiele ³atwiej by³o umieraæ nam ni¿ cz³owiekowi, który idzie do wagonu, a potem jedzie wagonem, a potem kopie sobie dó³, a potem rozbiera siê do naga...". Drugi przyk³ad œmierci to zaœ przyjêcie aktywnej postawy, walka mimo tragicznych okolicznoœci - jako sposób na zachowanie godnoœci ("Ta krz¹tanina nie mia³a ¿adnego znaczenia, bo i tak wszyscy ginêli, ale cz³owiek nie czeka³ na swoj¹ kolej bezczynnie."). Edelman nie wskazuje, aby któryœ z tych przyk³adów by³ lepszy czy gorszy, zas³uguj¹cy na krytykê. Jego wypowiedŸ wskazuje na to, i¿ zas³uguj¹ one na zrozumienie i uszanowanie, co wi¹¿e siê z nadzwyczajnymi oraz tragicznymi okolicznoœciami. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Edelman nie potrafi do koñca wyjaœniæ swojej decyzji, na co wskazuj¹ s³owa: "Bardzo ciê proszê, nie ka¿ mi dzisiaj t³umaczyæ, dlaczego wtedy powiedzia³em »nie«"; "Nie wiem. Dzisiaj ju¿ siê nie wie takich rzeczy, dlaczego". Na decyzjê mê¿czyzny zdaje siê jednak wp³ywaæ jego sytuacja ¿yciowa, poniewa¿ nie wywodzi siê z kulturalnego oraz zamo¿nego domu ("To byli inni ludzie. To byli wspaniali ch³opcy [...]. Œwietnie siê uczyli, mieli telefony w mieszkaniach i wisia³y tam piêkne obrazy."). Kluczowe s¹ jednak doœwiadczenia zwi¹zane z Umschalgplatzem. Edelman, jako œwiadek wywozu ¯ydów, jest naznaczony t¹ sytuacj¹, poniewa¿ definiuje ona jego to¿samoœæ i dalsze wybory. Czuje siê odpowiedzialny za ¿ycia innych osób, poniewa¿ w getcie jego zadanie polega³o na wyprowadzaniu niektórych jednostek z t³umu. </p>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Edelman staje siê cz³onkiem komendy zasadniczo przez przypadek: "To nie ja powinienem tam byæ". Zastêpuje on "Adama", który pod wp³ywem strzelaniny traci wolê dzia³ania, za³amuje siê tak¿e zatrzymaniem swej dziewczyny - jest wiêc innym cz³owiekiem, niezdolnym do czynu. Potwierdza to cytat: "I kiedy mia³o byæ pierwsze posiedzenie Komendy, on siê ju¿ nie nadawa³, ¿eby tam iœæ. Wiêc ja poszed³em". Relacja ta nie wpisuje siê w stereotypowe wyobra¿enie o wojnie, jest pozbawiona patosu. Wydaje siê bowiem, i¿ takie decyzje s¹ przejawem zdecydowania i heroizmu, potwierdzaj¹ brak strachu. U Edelmana z kolei najwa¿niejsza staje siê przypadkowa sytuacja, która obna¿a strach "Adama" i prowadzi siê do wycofywania z walki. Okolicznoœci nie s¹ podnios³e, lecz banalne, ludzkie w swej prostocie. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>"Krz¹tanina" oznacza w szerokim znaczeniu podjêcie konkretnych dzia³añ, brak biernego oczekiwania na œmieræ. Wi¹¿e siê z przyjêciem aktywnej postawy i staje siê sposobem na radzenie sobie z okrutn¹ rzeczywistoœci¹. W przypadku Edelmana polega na przebywaniu wokó³ Umschalgplatzu i wyci¹ganiu osób, które mog¹ byæ potrzebne. Tym samym nadaje on "krz¹taninie" dodatkowy sens - staje siê zwyk³ym elementem codziennoœci - przyczynia siê do ocalenia godnoœci mimo œwiadomoœci zag³ady. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Edelman interesuje siê medycyn¹, poniewa¿ diagnozowanie pacjenta stanowi dla niego wyzwanie, zagadkê. Dziêki jej rozwi¹zaniu mo¿e poznaæ przyczyny stanu chorego: "[...] choroba cz³owieka jest rozsypan¹ ³amig³ówk¹ i jak siê j¹ dobrze z³o¿y, to siê wie, co jest w cz³owieku, w œrodku". Jednoczeœnie medycyna jest wa¿na dla bohatera, poniewa¿ stanowi kontynuacjê jego dzia³añ z Umschlagplatzu. Jest to przejaw odpowiedzialnoœci za ¿ycie innych jednostek, wybrana dziedzina pozwala na ocalenie lub zapewnienie spokojnej œmierci. Medycyna staje siê tym samym  dla Edelmana ¿yciow¹ misj¹, swoistym wyœcigiem z Bogiem. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>S³owa te podkreœlaj¹ wp³yw doœwiadczenia z getta, które kszta³tuje to¿samoœæ i postawy Edelmana. Stanie przy bramie staje siê odzwierciedleniem aktywnej postawy polegaj¹cej przede wszystkim na ratowaniu cz³owieka. Dzia³alnoœæ ta nie koñczy siê wraz z zakoñczeniem wojny, ale przejawia siê tak¿e w póŸniejszych wyborach mê¿czyzny. Poœwiêca siê bowiem medycynie, by ratowaæ ¿ycie i zapewniaæ godne odejœcie z tego œwiata. W ten sposób podkreœlona zostaje konsekwencja Edelmana oraz jego niezmienny system wartoœci - pozostaje on taki sam niezale¿nie od zmieniaj¹cych siê realiów. Zawsze jest wiêc stra¿nikiem ¿ycia i przeciwstawia siê zag³adzie. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Wyœcig z Bogiem polega na rywalizacji o ¿ycie. Edelman przeciwstawia siê wyrokom Stwórcy, pragnie jak najwiêcej ludzi ocaliæ od œmierci. Z tego te¿ powodu wykorzystuje wszystkie mo¿liwoœci oraz œrodki, by przed³u¿yæ ¿ycie innych ludzi i tym samym zmieniæ ich przeznaczenie. </p>
+<p> </p>
+<p>Wyra¿enie opinii - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Edelman wyra¿a bunt przeciwko Stwórcy, poniewa¿ rywalizuje z nim o ¿ycie ludzi. Nie zgadza siê wiêc z Jego wyrokami: "Pan Bóg ju¿ chce zgasiæ œwieczkê, a ja muszê szybko os³oniæ p³omieñ, wykorzystuj¹c Jego chwilowa nieuwagê. Niech siê pali choæ trochê d³u¿ej, ni¿ On by sobie ¿yczy³". Jego postawa jest krytyczna, poniewa¿ uwa¿a, i¿ ma ze Stwórc¹ "parê spraw do za³atwienia". Nie postrzega Go tak¿e w sposób zbli¿ony do ludzi wierz¹cych, gdy¿ nie uwa¿a, aby Bóg by³ sprawiedliwy. Edelman czerpie niew¹tpliw¹ przyjemnoœæ z ka¿dej swej wygranej w wyœcigu o ¿ycie. Jego postawa jest uwarunkowana zapewne tragicznymi doœwiadczeniami z getta. Widok ludzi z Umschlagplatzu kszta³tuje jego relacjê ze Stwórc¹, byæ mo¿e prowokuje tak¿e refleksjê na temat nieobecnoœci Pana w tych tragicznych momentach zag³ady. Prze¿ycia te sprawiaj¹ wiêc, i¿ wiara nie przynosi bohaterowi ukojenia. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Jêzyk wypowiedzi Edelmana jest pozbawiony patosu oraz bogactwa œrodków stylistycznych. Bohater skupia siê na faktach i konkretnych obrazach, co wp³ywa na precyzjê przedstawienia. Nie tworzy w ten sposób heroicznych mitów, lecz d¹¿y do wiarygodnego ukazania ówczesnych realiów oraz zachowañ ludzi: "Wiesz, - ja sobie przedtem nie wyobra¿a³em, ze on siê mo¿e czegokolwiek baæ. A on, mój idol, uciek³". Surowoœæ narracji, pewna beznamiêtnoœæ uwydatnia tragizm losu ofiar - nie trzeba wielkich s³ów, aby wyraziœcie przedstawiæ ich cierpienie. Ponadto przypomina ona o tym, i¿ Edelman nie postrzega tamtych zdarzeñ jako przejawu bohaterstwa. Wrêcz przeciwnie: prostota jego wypowiedzi podkreœla cz³owieczeñstwo mieszkañców getta, a przy tym pozwala na zachowanie pamiêci o konkretnych jednostkach ("[...] on by³ z drukarni, ona by³a dobr¹ ³¹czniczk¹."). Typowe dla jêzyka Edelmana jest równie¿ unikanie wartoœciowania pewnych postaw.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

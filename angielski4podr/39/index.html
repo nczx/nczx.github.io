@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. shop around</p>
+<p>(brać pod uwagę kilka możliwości przed podjęciem decyzji co kupić - <strong>rozglądać się po sklepach</strong>) </p>
+<p>2. you're on a tight budget</p>
+<p>(mieć ograniczoną ilość pieniędzy do wydania na coś - <strong>dysponujesz małym budżetem</strong>)</p>
+<p>3. picked up a real bargain</p>
+<p>(kupił/a coś, co kosztowało zdecydowanie mniej niż zwykle - <strong>złapał/a prawdziwą okazję</strong>)</p>
+<p>4. you're short of money</p>
+<p>(nie ma dużo pieniędzy - <strong>masz mało pieniędzy</strong>)</p>
+<p>5. carrier bag</p>
+<p>(torba, którą oferuje ci sprzedawca na kupione rzeczy - <strong>reklamówka</strong>)</p>
+<p>6. high-street stores</p>
+<p>(sklepy znajdujące się na głównej ulicy miasta - <strong>sklep należący do dużej sieci</strong>)</p>
+<p>7. packaging</p>
+<p>(pudełka, butelki, plastik itp., których używa się do pakowania produktów przed sprzedażą - <strong>opakowanie</strong>)</p>
+<p>8. get ripped off</p>
+<p>(być oszukanym przez kogoś, kto zmusza cię do zapłacenia więcej za coś - <strong>zostać oszukanym</strong>)</p>
+<p>9. good value for money</p>
+<p>(warte ceny, którą płacisz - <strong>dobry stosunek jakości do ceny</strong>)</p>
+<p>10. purchase</p>
+<p>(proces kupowania czegoś - <strong>zakup</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. budget</p>
+<p><strong>Uzasadnienie</strong>: <em>tight budget</em> - skromny budżet. </p>
+<p>2. short</p>
+<p><strong>Uzasadnienie</strong>: <em>be short of money</em> - mieć mało pieniędzy.</p>
+<p>3. pick</p>
+<p><strong>Uzasadnienie</strong>: <em>pick up a bargain</em> - złapać okazję.</p>
+<p>4. ripped off</p>
+<p><strong>Uzasadnienie</strong>: <em>be ripped off -</em> być oszukanym<em>.</em></p>
+<p>5. around</p>
+<p><strong>Uzasadnienie</strong>: <em>to shop around</em> - rozglądać się po sklepach.</p>
+<p>6. carrier</p>
+<p><strong>Uzasadnienie</strong>:<em> a carrier bag</em> - reklamówka, torba na zakupy.</p>
+<p>7. purchase</p>
+<p><strong>Uzasadnienie</strong>: <em>a purchase</em> - zakup.</p>
+<p>8. value </p>
+<p><strong>Uzasadnienie</strong>: <em>good value for money</em> - dobry stosunek jakości do ceny.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Kavita </p>
+<p>2. Kavita</p>
+<p>3. Charlie</p>
+<p>4. Charlie</p>
+<p>5. Charlie</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<table border="1" style="height: 394px; width: 785px; border-collapse: collapse; text-align: center;">
+<tbody>
+<tr style="height: 36px;">
+<td style="width: 192.997px; height: 36px;"><strong>word</strong> (słowo)</td>
+<td style="width: 192.997px; height: 36px;"><strong>translation</strong> (tłumaczenie)</td>
+<td style="width: 192.997px; height: 36px;"><strong>part of speech</strong> (część mowy)</td>
+<td style="width: 193.082px; height: 36px;"><strong>derives from</strong> (pochodzi od)</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 192.997px; height: 36px;">endorsement</td>
+<td style="width: 192.997px; height: 36px;">promowanie, poparcie</td>
+<td style="width: 192.997px; height: 36px;">noun (rzeczownik)</td>
+<td style="width: 193.082px; height: 36px;">to endorse (udzielać poparcia, promować) </td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 192.997px; height: 36px;">overvalued</td>
+<td style="width: 192.997px; height: 36px;">wyceniony zbyt wysoko</td>
+<td style="width: 192.997px; height: 36px;">adjective (przymiotnik)</td>
+<td style="width: 193.082px; height: 36px;">
+<p>to overvalue (wyceniać coś za wysoko)</p>
+<p>to value (wyceniać, cenić)</p>
+</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 192.997px; height: 36px;">placement </td>
+<td style="width: 192.997px; height: 36px;">lokowanie, umieszczenie</td>
+<td style="width: 192.997px; height: 36px;">noun </td>
+<td style="width: 193.082px; height: 36px;">to place (lokować, umieścić)</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 192.997px; height: 18px;">production </td>
+<td style="width: 192.997px; height: 18px;">produkcja</td>
+<td style="width: 192.997px; height: 18px;">noun </td>
+<td style="width: 193.082px; height: 18px;">to produce (produkować)</td>
+</tr>
+<tr style="height: 54px;">
+<td style="width: 192.997px; height: 54px;">sustainable </td>
+<td style="width: 192.997px; height: 54px;">zrównoważony, trwały</td>
+<td style="width: 192.997px; height: 54px;">adjective </td>
+<td style="width: 193.082px; height: 54px;">to sustain (podtrzymywać, utrzymywać)</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 192.997px; height: 18px;">underestimate </td>
+<td style="width: 192.997px; height: 18px;">zaniżona wycena, koszt</td>
+<td style="width: 192.997px; height: 18px;">noun </td>
+<td style="width: 193.082px; height: 18px;">
+<p>to underestimate (zbyt nisko coś oszacować)</p>
+<p>to estimate (oszacować)</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>1. underestimate</p>
+<p>(Nie <strong>bagatelizuj</strong> mocy reklamy - może ona przekonać miliony ludzi do kupienia produktu.) </p>
+<p>2. sustainable</p>
+<p>(Wszystkie buty sportowe tej marki są wyprodukowane ze <strong>zrównoważonych</strong> materiałów.)</p>
+<p>3. production</p>
+<p>(<strong>Produkcja</strong> naszej nowej marki odbywa się teraz w Chinach.)</p>
+<p>4. placement</p>
+<p>(<strong>Lokowanie</strong> produktu to dobry sposób dla marek na dotarcie do swoich docelowych klientów.)</p>
+<p>5. endorsement</p>
+<p>(Agencja twierdzi, że najlepszym sposobem na reklamowanie naszych butelek na wodę jest <strong>promowanie</strong> przez celebrytów.)</p>
+<p>6. overvalued</p>
+<p>(Niektóre marki nie są warte swojej ceny - ich wartość jest <strong>przeceniana</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

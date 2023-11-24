@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rozwi¹zanie poni¿ej: </p>
+<table border="1" style="border-collapse:collapse;width:719px;height:691px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:356px;height:17px;"><strong>Fragment</strong></td>
+<td style="background-color:#aed581;text-align:center;width:356px;height:17px;"><strong>Œrodki</strong></td>
+</tr>
+<tr style="height:228px;">
+<td style="width:356px;text-align:center;height:228px;">
+<p>Bruk opryskany winem</p>
+<p>I od³amkami kwiatów</p>
+</td>
+<td style="width:356px;text-align:center;height:228px;">Poeta przedstawia elementy typowe dla placu, który staje siê centrum ¿ycia oraz handlu. Bruk okreœla epitet "opryskany winem". Pozornie nie ma w tym nic niepokoj¹cego, jednak kolor rozbryzganego wina wywo³uje skojarzenia z krwi¹. Z kolei sfomu³owanie "od³amki kwiatów" tak¿e wprowadza dodatkowe sensy, gdy¿ wprowadza poczucie zagro¿enia. Mianem "od³amka" okreœla siê bowiem fragment pocisku, który odrywa siê w momencie eksplozji - tym samym kwiaty zostaj¹ powi¹zane z czymœ typowym dla wojny. </td>
+</tr>
+<tr style="height:158px;">
+<td style="width:356px;text-align:center;height:158px;">
+<p>Salwy za murem getta</p>
+<p>G³uszy³a skoczna melodia</p>
+<p>I wzlatywa³y pary</p>
+<p>Wysoko w pogodne niebo</p>
+</td>
+<td style="width:356px;text-align:center;height:158px;">We fragmencie tym pojawia siê metafora, zaœ epitety "skoczna", "pogodne" podkreœlaj¹ sielankowy wymiar zabawy na karuzeli. Dwie rzeczywistoœci zostaj¹ ze sob¹ zestawione na zasadzie kontrastu. Pewn¹ dwuznacznoœæ wprowadza przenoœnia "I wzlatywa³y pary / Wysoko w pogodne niebo". Mo¿na j¹ odnieœæ bowiem nie tylko do bawi¹cych siê na karuzeli ludzi, ale tak¿e gin¹cych w getcie.</td>
+</tr>
+<tr style="height:88px;">
+<td style="width:356px;text-align:center;height:88px;">Przynosi³ czarne latawce</td>
+<td style="width:356px;text-align:center;height:88px;">Wiatr zostaje o¿ywiony, poniewa¿ to on przynosi latawce - fragmenty spalonych przedmiotów z domów ¯ydów. Przedmiot ten wywo³uje skojarzenia z zabaw¹, beztrosk¹, dzieciñstwem. W utworze Mi³osza nabiera jednak z³owrogiego znaczenia, poniewa¿ opisuje go epitet "czarny". Kolor ten kojarzy siê z ¿a³ob¹, œmierci¹, jest znakiem losu ofiar.</td>
+</tr>
+<tr style="height:77px;">
+<td style="width:356px;text-align:center;height:77px;">
+<p>Rozwiewa³ suknie dziewczynom</p>
+<p>Ten wiatr od domów p³on¹cych</p>
+</td>
+<td style="width:356px;text-align:center;height:77px;">Równie¿ tutaj jest zauwa¿alne zestawienie ze sob¹ kontrastuj¹cych elementów. Tragizm losu ¯ydów nie przystaje do beztroskiej zabawy na karuzeli. Rzeczywistoœci te ³¹czy jedynie wspólny element: wiatr. Pe³ni on dwoist¹ funkcjê: podkreœla zniszczenie lub te¿ potêguje zabawê.  </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Mi³osz w swoim utworze zestawia dwie doœæ odleg³e sytuacje: spalenie Bruna i likwidacjê getta w Warszawie. £¹czy je tragedia niewinnych ofiar oraz przede wszystkim obojêtnoœæ zwyk³ych ludzi, którzy nie dostrzegaj¹ rozgrywaj¹cego siê obok nich dramatu: "Kat p³omieñ stosu za¿egn¹³ / W kole ciekawej gawiedzi. / A ledwo p³omieñ przygasn¹³, / Znów pe³ne by³y tawerny". Z tych historii mo¿na wyci¹gn¹æ wnioski na temat przemijania czy tego, ¿e cierpienie przegrywa z codziennoœci¹. Dla podmiotu lirycznego kluczowe jednak staje siê oddanie ho³du ofiarom; dostrzega ich osamotnienie oraz odrêbnoœæ doœwiadczenia: "Ju¿ zapomniani od œwiata, / Jêzyk nasz sta³ siê im obcy / Jak jêzyk dawnej planety". Przes³anie wiêc opiera siê na sprzeciwie wobec obojêtnoœci oraz nadaniu poecie i jego dzie³om wa¿nej funkcji moralnej. Zyskuje on bowiem moc przemiany rzeczywistoœci, dziêki czemu mo¿e zapobiec kolejnym tak dramatycznym sytuacjom: "Na nowym Campo di Fiori / Bunt wznieci s³owo poety". </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Podzia³ na dwa jêzyki obrazuje przede wszystkim niemo¿noœæ porozumienia, ale tak¿e odmiennoœæ doœwiadczeñ, które dziel¹ ludzi. Gin¹cy w getcie zdaj¹ siê nale¿eæ do innej rzeczywistoœci, która jest obca dla osób pogr¹¿onych w beztroskiej zabawie. Z tego te¿ powodu pojawia siê miêdzy nimi rozdŸwiêk obrazowany przez motyw dwóch jêzyków. ¯ydzi nie mog¹ wyraziæ swych prze¿yæ, zaœ inni ludzie - ze wzglêdu na spokojn¹ egzystencjê lub obojêtnoœæ nie rozumiej¹ dramatu rozgrywaj¹cego siê na ich oczach. Ofiary bowiem pos³uguj¹ siê jêzykiem cierpienia i œmierci - nie przystaje on do spokojnego ¿ycia i dotychczasowej mowy. Dwa jêzyki podkreœlaj¹ tak¿e wyobcowanie cierpi¹cych oraz ich niew¹tpliw¹ samotnoœæ, gdy¿ zostaj¹ wy³¹czeni z codziennoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Mi³osz wyznacza poecie i jego twórczoœci szczególn¹ rolê. Twórca - jako wra¿liwy obserwator rzeczywistoœci - ma bowiem dostrzec los jednostek osamotnionych, wyobcowanych, których los nie budzi zainteresowania przeciêtnych ludzi: "Ja jednak wtedy myœla³em / O samotnoœci gin¹cych" . Staje siê on si³¹ moraln¹, poniewa¿ za spraw¹ swych dzie³ upamiêtnia los ofiar, a tak¿e przypomina o tym, jak wa¿na jest tolerancja. Jego poezja zyskuje moc zmieniania rzeczywistoœci: "Na nowym Campo di Fiori / Bunt wznieci s³owo poety". Twórczoœæ ta mo¿e wiêc w przysz³oœci zagwarantowaæ, i¿ tragiczne zdarzenia ju¿ nigdy siê nie pojawi¹, poniewa¿ za jej pomoc¹ artysta przeciwstawia siê cierpieniu oraz obojêtnoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
+<p>. </p><br>

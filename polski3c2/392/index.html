@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przyk³adowo:</p>
+<p>Fakt ten wskazuje na to, i¿ wspomnienie obozowej rzeczywistoœci odgrywa wa¿n¹ rolê w ¿yciu bohaterki. Paradoksalnie - mimo grozy tego miejsca - okreœlenie to zdaje siê budziæ ciep³e uczucia w Pani Czechnie. Uznanie jej za "Miss Auschwitz" to namiastka normalnego œwiata, a przy tym docenienie piêkna i wyj¹tkowoœci kobiety, które w pewien sposób pozwala na przetrwanie w niesprzyjaj¹cych okolicznoœciach. Ponadto okreœlenie to w g³êbszym sensie wi¹¿e siê z przetrwaniem, poniewa¿ uroda bohaterki staje siê gwarancj¹ prze¿ycia: "Dopóki ³adnie wygl¹dam, znaczy, ze jeszcze ¿yjê". Jednoczeœnie "Miss Auschwitz" mo¿e sugerowaæ pewn¹ fascynacjê oprawc¹, emocjonalne uzale¿nienie, którego Pani Czechna nie potrafi siê wyzbyæ. Wspomnienie to zdaje siê budziæ nostalgiê, co zaburza typow¹ wizjê obozu i ofiar. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Pani Czechna d¹¿y przede wszystkim do podkreœlania swojej kobiecoœci, skupia siê na sobie, zaznacza sw¹ niezale¿noœæ. Wygl¹d jest dla niej bardzo wa¿ny, staje siê Ÿród³em niew¹tpliwej dumy: "Uwielbiam siê o siebie troszczyæ i nikt nie mo¿e mi w tym przeszkodziæ". Dba³oœæ ta stanowi wynik obozowych doœwiadczeñ, poniewa¿ uroda bohaterki zapewni³a jej mo¿liwoœæ przetrwania: "Dopóki ³adnie wygl¹dam, znaczy, ze jeszcze ¿yjê. Ju¿ jako dziecko to wiedzia³am". Jednoczeœnie kobieta nie skupia siê na doœwiadczonym w obozie koszmarze, lecz przede wszystkim opowiada o sobie jako "Miss Auschwitz". Wskazuje to na jej niejednoznaczn¹ relacjê z oprawc¹, który doceni³ jej urodê; jest od niego emocjonalnie uzale¿niona ("W³osów mi nie œciêli. Doktor Josef lubi³ na nie patrzeæ"). Z tego te¿ powodu Pani Czechna z zaskakuj¹cym spokojem opowiada o swoich doœwiadczeniach, wyra¿a pewne zaskoczenie: "A widzi pan, ja nie pamiêtam swojej mamy. Czy to normalne? Mia³am prawie dwanaœcie lat, jak nas rozdzielono. I nic nie pamiêtaæ? Dziwne, takie to dziwne. Nawet nie wiem, jak ja sama wygl¹da³am jako dziecko. Po wojnie, w ochronce nie robiono zdjêæ." Mimo trudnych doœwiadczeñ nie wygl¹da na osobê, która prze¿y³a pobyt w obozie, w swej opowieœci skupia siê na tym, co budzi jej nostalgiê. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przyk³adowo:</p>
+<p>a) Jêzyk wyra¿a pewn¹ ocenê rzeczywistoœci. Z tego te¿ powodu pewne s³owa, nazywaj¹ce zjawiska lub inne elementy, ju¿ sugeruj¹ stosunek emocjonalny do nich. Mog¹ wiêc wprowadzaæ pozytywn¹ lub negatywn¹ ocenê, która buduje wizjê œwiata i utrwala go.</p>
+<p> </p>
+<p>b) Autorka mówi o nierównoœciach wynikaj¹cych z kulturowej przewagi mê¿czyzn. Sytuacja ta wi¹¿e siê tak¿e z marginalizowaniem kobiet, odbieraniem im pozytywnych cech, które s¹ przypisywane wy³¹cznie mê¿czyznom. </p>
+<p> </p>
+<p>c) Historycznym Ÿród³em tych nierównoœci jest przede wszystkim dominuj¹ca rola patriarchatu oraz utrwalony w historii podzia³ sfer na ¿eñsk¹ i mêsk¹. Mo¿na bowiem zauwa¿yæ, i¿ to mê¿czyŸni zyskali mo¿liwoœæ kszta³towania rzeczywistoœci ze wzglêdu na swe lepsze wykszta³cenie, dzia³alnoœæ polityczn¹ czy wojskow¹. Kobietom z kolei najczêœciej przypisywano biern¹ postawê, która ma ograniczaæ siê do troski o rodzinê. Ich rola w spo³eczeñstwie nie by³a wiêc znacz¹ca, co np. potwierdza póŸniejsza walka o prawa kobiet. </p>
+<p> </p>
+<p>d) Czêœæ indywidualna - wyra¿enie swojego zdania </p>
+<p> </p>
+<p>e) S³owa pani Czechny œwiadcz¹ o tym, i¿ wie, jaki ma wp³yw na otoczenie: nie wpisuje siê w jego oczekiwania, budzi niechêæ. Sugeruj¹ ponadto, ¿e jest potê¿n¹ jednostk¹, która jednak wywo³uje niepokój i obawy. Mo¿e to mieæ zwi¹zek z jej wiedz¹ czy doœwiadczeniami, tym, i¿ pozostaje niezale¿na oraz ekscentryczna. Takie zaklasyfikowanie kobiety mo¿e tak¿e s³u¿yæ jej oswojeniu czy wyjaœnieniu postawy. W symboliczny sposób œwiadczy o tym, i¿ Czechna dokonuje rzeczy nieosi¹galnych dla innych, czym jest np. prze¿ycie Zag³ady. </p>
+<p> </p>
+<p>f) Wyra¿enie swojego zdania - czêœæ indywidualna </p><br>

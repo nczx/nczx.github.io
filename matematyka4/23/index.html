@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="border-collapse:collapse;width:641px;height:98px;"> <tbody> <tr style="border-color:#99cccc;background-color:#99cccc;"> <td style="width:637px;">Wszystkich <strong>k</strong>-elementowych <span style="text-decoration:underline;">wariacji z powtórzeniami</span> zbioru <strong>n</strong>-elementowego jest <strong>n<sup>k</sup></strong>.</td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Obliczamy liczbę <strong>2</strong>-elementowych wariacji z powtórzeniami zbioru <strong>10</strong>-elementowego:  </p> <p><span> <math-expr expr="10^2=100" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Obliczamy liczbę <strong>10</strong>-elementowych wariacji z powtórzeniami zbioru <strong>2</strong>-elementowego:</p> <p><span> <math-expr expr="2^10=1024" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse:collapse;width:641px;height:98px;"> <tbody> <tr style="border-color:#99cccc;background-color:#99cccc;"> <td style="width:637px;">Wszystkich <strong>k</strong>-elementowych <span style="text-decoration:underline;">wariacji z powtórzeniami</span> zbioru <strong>n</strong>-elementowego jest <strong>n<sup>k</sup></strong>.</td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Obliczamy, ile jest liczb trzycyfrowych, które można utworzyć z cyfr ze zbioru  <strong>{1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>:</p> <p><span> <math-expr expr="9^3=729" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Obliczamy, ile jest liczb trzycyfrowych, które można utworzyć z cyfr ze zbioru <strong>{1, 2, 3, 5, 6, 7, 8, 9}</strong>:</p> <p><span> <math-expr expr="8^3=512" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>c)</strong></p> <p>Obliczamy, ile jest liczb trzycyfrowych, które można utworzyć z cyfr ze zbioru <strong>{1, 2, 3, 6, 7, 8, 9}</strong>:</p> <p><span> <math-expr expr="7^3=343" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>d)</strong></p> <p>Pamiętamy, że pierwszą cyfra w liczbie nie może być <strong>0</strong>.</p> <p>Obliczamy, ile jest liczb trzycyfrowych, które można utworzyć z cyfr ze zbioru <strong>{0, 1, 2, 3, 6, 7, 8, 9}</strong>:</p> <p><span> <math-expr expr="7*8^2=7*64=448" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="border-collapse:collapse;width:641px;height:98px;"> <tbody> <tr style="border-color:#99cccc;background-color:#99cccc;"> <td style="width:637px;">Wszystkich <strong>k</strong>-elementowych <span style="text-decoration:underline;">wariacji z powtórzeniami</span> zbioru <strong>n</strong>-elementowego jest <strong>n<sup>k</sup></strong>.</td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Sprawdzamy, ile jest liczb pięciocyfrowych, które zaczynają się od <strong>12</strong>.</p> <p>Wobec tego dwie pierwsze cyfry mamy już określone, pozostaje sprawdzić, na ile <br/>sposobów możemy ustalić trzy pozostałe cyfry.</p> <p>Cyfry wybieramy ze zbioru  <strong>10</strong>-elementowego <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>, a więc<br/>każdą pozostałą cyfrę możemy wybrać na <strong>10</strong> sposobów.</p> <p>Wnioskujemy, że wszystkich liczb <strong>pięciocyfrowych </strong>rozpoczynających się od <strong>12</strong> mamy łącznie:</p> <p><span> <math-expr expr="10^3=1000" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Sprawdzamy, ile jest liczb pięciocyfrowych, których ostatnia cyfrą jest <strong>7</strong>.</p> <p>Wobec tego ostatnią cyfrę mamy już określoną, pozostaje sprawdzić, na ile <br/>sposobów możemy ustalić cztery pierwsze cyfry.</p> <p>Cyfry wybieramy ze zbioru <strong>10</strong>-elementowego <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong>, a więc<br/>pierwszą cyfrę możemy wybrać na <strong>9</strong> sposobów (pierwszą cyfrą nie może być <strong>0</strong>), a każdą pozostałą <br/>cyfrę możemy wybrać na <strong>10</strong> sposobów.</p> <p>Wnioskujemy, że wszystkich liczb <strong>pięciocyfrowych </strong>kończących się cyfrą <strong>7</strong> mamy łącznie:</p> <p><span> <math-expr expr="9*10^3=9*1000=9000" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="border-collapse:collapse;width:641px;height:98px;"> <tbody> <tr style="border-color:#99cccc;background-color:#99cccc;"> <td style="width:637px;">Wszystkich <strong>k</strong>-elementowych <span style="text-decoration:underline;">wariacji z powtórzeniami</span> zbioru <strong>n</strong>-elementowego jest <strong>n<sup>k</sup></strong>.</td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p>Obliczamy liczbę <strong>2</strong>-elementowych wariacji z powtórzeniami zbioru <strong>3</strong>-elementowego:  </p> <p><span> <math-expr expr="W_{3}^{2}=3^2=9" syntax="text"></math-expr> </span> </p> <p>Obliczamy liczbę <strong>3</strong>-elementowych wariacji z powtórzeniami zbioru <strong>2</strong>-elementowego:</p> <p><span> <math-expr expr="W_{2}^{3}=2^3=8" syntax="text"></math-expr> </span> </p> <p>Zatem:</p> <p><span> <math-expr expr="W_{3}^{2}&gt;W_{2}^{3}" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Obliczamy liczbę <strong>3</strong>-elementowych wariacji z powtórzeniami zbioru <strong>4</strong>-elementowego:</p> <p><span> <math-expr expr="W_{4}^{3}=4^3=64" syntax="text"></math-expr> </span> </p> <p>Obliczamy liczbę <strong>4</strong>-elementowych wariacji z powtórzeniami zbioru <strong>3</strong>-elementowego:</p> <p><span> <math-expr expr="W_{3}^{4}=3^4=81" syntax="text"></math-expr> </span> </p> <p>Zatem:</p> <p><span> <math-expr expr="W_{3}^{4}&gt;W_{4}^{3}" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W urnie znajdują się kule z numerami <strong>4, 5, 6, 7, 8, 9</strong>.</p>
+<p>Losujemy kolejno cztery kule. Numery wylosowanych kul, zapisane w kolejności <br/>losowania tworzą liczbę czterocyfrową.</p>
+<p>Losowanie kul możemy odczytywać jako wybranie cyfr, które tworzą liczbę.</p>
+<hr/>
+<p>Obliczamy, ile jest wariacji bez powtórzeń wylosowania czterech kul w urny:</p>
+<p><math-expr expr="V_{6}^{4}=(6!)/((6-4)!)=(6*5*4*3*2!)/(2!)=6*5*4*3" syntax="text"></math-expr>  </p>
+<p>Obliczamy, ile jest wariacji z powtórzeniami wylosowania czterech kul w urny:</p>
+<p><math-expr expr="W_{6}^{4}=6^4=6*6*6*6" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Zauważamy, że:</p>
+<p><math-expr expr="(W_{6}^{4})/(V_{6}^{4})=(6*6*6*6)/(6*5*4*3)=(6*6*6)/(5*4*3)=216/60=3,6&gt;3" syntax="text"></math-expr>  </p>
+<p>Wnioskujemy, że przy losowaniu ze zwracaniem możliwych do otrzymania liczb jest ponad <br/>trzykrotnie więcej niż przy losowaniu bez zwracania,</p>
+<p>co należało uzasadnić.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>a)</strong></p> <p>Mamy <strong>3</strong> szuflady i <strong>9</strong> kul (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">trzy</span> sposoby (do jednej z <strong>trzech </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>3<sup>9</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="3^9=19\ 683" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Mamy <strong>9</strong> szuflad i <strong>3</strong> kule (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">dziewięć</span> sposobów (do jednej z <strong>dziewięciu </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>9<sup>3</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="9^3=729" syntax="text"></math-expr> </span> </p><br>

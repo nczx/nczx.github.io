@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>He can't imagine going to Mars because it means leaving your life on Earth behind. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>The text presents some tips for those who consider becoming astronauts and going on a mission to Mars. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. C</p>
+<p><strong>Fragment w tekście:</strong> "(...) this devotion is very necessary. An early, privately funded Mars project called Mars One, for example, worked on the assumption that the first humans who travel to Mars would never go back to Earth" - (...) to oddanie jest niezbędne. Na przykład pierwszy prywatnie ufundowany projekt lotu na Marsa nazwany<em> Mars One</em>, pracował w założeniu, że pierwsi ludzie, którzy polecą na Marsa nigdy nie wrócą na Ziemię.  </p>
+<p>2. C</p>
+<p><strong>Fragment w tekście:</strong> "The 'red planet', as it is often called, is around fifty-five million kilometres from Earth at its closest point. A journey to Mars will take about six to seven months, depending on the alignment of the planets when the mission sets off. (...) they will have to stay on Mars for nineteen to twenty months until the two planets re-align" - 'Czerwona planeta', jak ją często nazywają,  oddalona jest od Ziemi około pięćdziesiąt pięć milionów kilometrów w najbliższym punkcie. Wyprawa na Marsa zajmie od sześciu do siedmiu miesięcy, w zależności od ustawienia planet w momencie startu misji. (...) będą musieli zostać na Marsie przez dziewiętnaście do dwudziestu miesięcy do czasu aż te dwie planety znów nie ułożą się w linii. </p>
+<p>3. B</p>
+<p><strong>Fragment w tekście:</strong> "(...) candidates who wear glasses may have to have their eyesight corrected by laser treatment" - (...) kandydaci noszący okulary być może będą musieli poddać się zabiegowi laserowej korekty wzroku. </p>
+<p>4. D</p>
+<p><strong>Uzasadnienie</strong>: tekst prezentuje wymagania stojące przed potencjalnymi kandydatami na astronautów. Wyrażają je nagłówki poszczególnych akapitów: "1. be totally committed" - być całkowicie oddanym; "2. have the right technical skills" - posiadać odpowiednie umiejętności techniczne; "3. be ready for a long trip!" - być gotowym na długą podróż!; "4. other requirements" - inne wymagania. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. girl </p>
+<p>2. requirements </p>
+<p>3. science and technical </p>
+<p>4. physical</p>
+<p>5. chosen</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. worked on the assumption</p>
+<p>(oprzeć swoje plany na czymś, w co wierzymy -<strong> pracować w założeniu</strong>) </p>
+<p>2. resilience</p>
+<p>(umiejętność dojścia do siebie szybko po napotkanych problemach - <strong>odporność psychiczna</strong>)</p>
+<p>3. committed</p>
+<p>(lojalny w stosunku do idei i chętny do pracy na jej rzecz - <strong>oddany</strong>)</p>
+<p>4. steer clear of</p>
+<p>(próbować unikać -<strong> trzymać się z dala od</strong>)</p>
+<p>5. give her the edge</p>
+<p>(jest jej zaletą - <strong>daje jej przewagę</strong>)</p>
+<p>6. having second thoughts</p>
+<p>(zacząć wątpić we wcześniej podjęte decyzje - <strong>mieć wątpliwości</strong>)</p>
+<p>7. going all out</p>
+<p>(używać całą swoją energię, siłę i determinację żeby coś osiągnąć - <strong>dać z siebie wszystko</strong>)</p>
+<p>8. dedication</p>
+<p>(czas i wysiłek, który wkładasz w coś - <strong>oddanie</strong>)</p>
+<p>9. university degree</p>
+<p>(kwalifikacje, które zdobywasz na uniwersytecie - <strong>wykształcenie wyższe</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. work on the assumption </p>
+<p>2. dedication</p>
+<p>3. go all out</p>
+<p>4. resilience</p>
+<p>5. give you the edge</p>
+<p>6. steer clear of</p>
+<p>7. committed</p>
+<p>8. have second thoughts </p>
+<p>9. university degree</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

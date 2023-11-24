@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. The writer thinks taking photos in art galleries should be forbidden.</p>
+<p>(Autor/ka tekstu uważa, że robienie zdjęć w galeriach sztuki powinno być zabronione.)</p>
+<p><strong>Fragment w tekście:</strong> "(...) I completely agree with the museum's policy of forbidding visitors from photographing the exhibits." - (...) w zupełności zgadzam się z przepisami muzeum dotyczącymi zakazu fotografowania eksponatów przez zwiedzających.  </p>
+<p> </p>
+<p>2. The writer claims that the purpose of art galleries is to contemplate and reflect on art.</p>
+<p>(Auror/ka tekstu twierdzi, że celem galerii sztuki jest kontemplacja i refleksja nad dziełami sztuki.)</p>
+<p><strong>Fragment w tekście:</strong> "A gallery is a place for contemplating and reflecting on art." - Galeria jest miejscem do kontemplacji i refleksji nad sztuką.</p>
+<p> </p>
+<p>3. The four problems are:</p>
+<p>- when you take pictures, you can't really capture the beauty of arts</p>
+<p>- you can't see the paintings when there are people taking pictures in front of them</p>
+<p>- pictures of paintings taken by a smartphone in a gallery do not reflect their beauty anyway</p>
+<p>- although it's forbidden, many people use a flash and thus, they contribute to the damage of the works od art. </p>
+<p>(Te cztery problemy są następujące:</p>
+<p>- kiedy robimy zdjęcia, nie możemy uchwycić piękna sztuki</p>
+<p>- nie da się zobaczyć obrazów, kiedy ludzie robią im zdjęcia</p>
+<p>- zdjęcia obrazów zrobione w galerii smartfonem i tak nie oddają ich piękna</p>
+<p>- pomimo, że jest to zabronione, niektórzy używają lampy błyskowej i tym samym przyczyniają się do niszczenia dzieł sztuki.)</p>
+<p><strong>Fragmenty w tekście:</strong> "(...) many people spend their time photographing exhibits rather than trying to capture the beauty of what they are looking at." - (...) wielu ludzi zajmuje się fotografowaniem eksponatów zamiast próbą uchwycenia piękna tego, na co patrzą.</p>
+<p>"Moreover, due to the number of people taking photos in front of paintings, you cannot really see the masterpieces (...)" - Ponadto, z powodu liczby ludzi robiących zdjęcia przed obrazami, nie da się zobaczyć tych dzieł (...).</p>
+<p>"If you only view art on a tiny screen, you do not feel its full impact." - Jeśli oglądasz dzieła sztuki na małym ekranie, nie odczuwasz w pełni ich wpływu.</p>
+<p>"(...) even though using a flash is forbidden, some people do it anyway, and that can damage the artwork." - (...) pomimo, że używanie lampy błyskowej jest zabronione, niektórzy i tak to robią, co może zniszczyć dzieła.</p>
+<p> </p>
+<p>4. The writer suggests looking up high quality photos of famous paintings on-line. </p>
+<p>(Autor/ka tekstu sugeruje wyszukanie dobrej jakości zdjęć słynnych obrazów w Internecie.)</p>
+<p><strong>Fragment w tekście:</strong> "(...) it would make much more sense to use high-quality photographs of famous works of art which are easily available online." - (...) zdecydowanie bardziej sensowne byłoby użycie dobrej jakości fotografii słynnych dzieł sztuki, które są łatwo dostępne w Internecie.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. however (jednak), nevertheless (jednakże), but (ale) </p>
+<p>2. moreover (dodatkowo), furthermore (ponadto)</p>
+<p>3. if that was the case (jeśli to byłaby prawda)</p>
+<p>4. To sum up (podsumowując)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. <strong>Fragment w tekście:</strong> "Last week, I had the pleasure of visiting the Louvre Museum in Paris with a party of friends." - W zeszłym tygodniu miałem/am przyjemność odwiedzenia muzeum Luwr w Paryżu z paczką przyjaciół.</p>
+<p>The author uses this technique to appear more authentic and to appeal to the readers more.  </p>
+<p>2. <strong>Fragmenty w tekście:</strong> "Some people claim that they take photos to study the paintings later, but (...)" - Niektórzy twierdzą, że robią zdjęcia, żeby później przyglądać się obrazom, ale (...).</p>
+<p>"I have to admit that some of my friends were exasperated because of this ban." - Muszę przyznać, że niektórzy z moich przyjaciół byli zirytowani tym zakazem.</p>
+<p>It is a good idea, because it shows a different point of view and helps to take a wider perspective of the problem. </p>
+<p>3. <strong>Fragmenty w tekście:</strong> "Some people <span style="text-decoration: underline;">claim</span> that (...)"</p>
+<p>The verb makes the text more authentic as it reports somebody's opinion.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. could be argued</p>
+<p>(<strong>Można stwierdzić</strong>, że fotografia nie jest tak artystyczna, jak malarstwo olejne.) </p>
+<p>2. my belief</p>
+<p>(<strong>Wierzę, że</strong> ten artysta powinien otrzymywać od państwa regularną wypłatę.)</p>
+<p>3. reason why</p>
+<p>(<strong>Powód, dla którego</strong> wejście do muzeów powinno być darmowe jest taki, że byłyby one wtedy dostępne dla szerszej publiczności.)</p>
+<p>4. of the opinion</p>
+<p>(<strong>Moim zdaniem</strong> wirtualne zwiedzanie nie zapewni takiego doświadczenia, jak zobaczenie wystawy na własne oczy.)</p>
+<p>5. far as concerned</p>
+<p>(<strong>Według mnie</strong> edukacja artystyczna jest zbędna.)</p><br>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe tytuły:</p>
+<ul>
+<li>Nieudana wyprawa Tucydydesa i jej skutki </li>
+<li>Dowódcy - dawniej i dzisiaj</li>
+<li>Refleksja na temat znaczenia sztuki</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Tukidydes wyjaśnia swe niepowodzenie w następującym fragmencie: </p>
+<p><em>[..] mówi tylko</em></p>
+<p><em>że miał siedem okrętów </em></p>
+<p><em>była zima</em></p>
+<p><em>i płynął szybko</em></p>
+<p>Ateński strateg w swej wypowiedzi nie szuka dla siebie usprawiedliwienia, nie podkreśla swego męstwa czy zrzuca też winy na kogoś innego. Zamiast tego skupia się na samych faktach bez przedstawienia opinii. Dąży więc do obiektywizmu i rzeczowości, co odzwierciedla także precyzyjna wypowiedź - niezbyt rozbudowana, pozbawiona zasadniczo jakichkolwiek zabiegów stylistycznych. Tukidydes tłumaczy, iż zrobił to, co mógł ("[...] płynął szybko"), być może ma świadomość, że liczba statków mogła zmienić bieg wydarzeń. Wzmianka na temat pory roku, z którą prawdopodobnie wiążą się niezbyt sprzyjające warunki atmosferyczne dla morskiej podróży, wskazuje na okoliczność mogące być przyczyną spóźnionej odsieczy. W swej wypowiedzi strateg nikogo nie oskarża, lecz bierze na siebie całą odpowiedzialność za to niepowodzenie. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo:</p>
+<p>Współczesnego człowieka może dziwić to, że postawa Tukidydesa jest niezwykle powściągliwa. Nawet w obliczu porażki i surowej kary (wygnanie) pozostaje niewzruszony. Nie szuka usprawiedliwienia dla swej nieudanej odsieczy, nie próbuje też zrzucić winy na innych ludzi czy okoliczności, co czynią współcześni dowódcy. Przytacza jedynie fakty i nie sugeruje przy tym swej oceny - interpretację pozostawia odbiorcom. Dla Tukidydesa najważniejsza jest prawda. Jego zaś postawa stanowi przejaw wierności zasadom, męstwa i godności pozwalającej na zachowanie spokoju nawet w najtrudniejszym momencie życia. Bohater ma bowiem świadomość, że zawiódł, jednak nie stara się znaleźć dla siebie wymówki. Zamiast tego zachowuje dystans oraz obiektywizm. W ten sposób strateg staje się uosobieniem tego, co Herbert docenia w klasycznej sztuce. Jest bowiem opanowany, odwołuje się do pewnych utrwalonych w tradycji zasad etycznych, które czasem wymagają dokonania trudnych wyborów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Postawa Tukidydesa i "generałów ostatnich wojen" jest oparta na kontraście. Ateński strateg zostaje zaprezentowany jako dumna i honorowa jednostka. W pełni bierze odpowiedzialność za nieudaną odsiecz. Wykazuje się umiłowaniem prawdy oraz obiektywizmem, ponieważ nie obarcza innych winą, lecz przedstawia tylko fakty: "[...] miał siedem okrętów / była zima / i płynął szybko". Jest powściągliwy i opanowany, ponieważ nie ulegam emocjom i chęci umniejszenia swej porażki - mimo surowej kary: "zapłacił za to rodzinnemu miastu / dozgonnym wygnaniem". Tukidydes pozostaje wierny pewnym ideałom moralnym, gdyż nawet w trudnym momencie życia pozostaje niezłomnym oraz mężnym człowiekiem odpowiedzialnym za swe czyny.</p>
+<p>Współcześni dowódcy stanowią natomiast jego przeciwieństwo - nie potrafią bowiem zachować dystansu. Zamiast tego starają się umniejszyć swoją winę, przekonać innych, że są bohaterami. Świadczy to o tym, iż nie potrafią przyznać się do błędu - ideały Tukidydesa są im obce. Pragną uchodzić za wielkie oraz nieomylne jednostki, a jednocześnie żebrzą o aprobatę. Z tego powodu szukają wymówek dla swych niepowodzeń, co świadczy o ich tchórzliwości, braku męstwa. O stosunku podmiotu lirycznego do nich świadczą słowa: "skomlą na kolanach przed potomnością", "oskarżają podwładnych / zawistnych kolegów / nieprzyjazne wiatry". </p>
+<p> </p>
+<p>Przykładowe wnioski:</p>
+<ul>
+<li>Postawy Tukidydesa i współczesnych dowódców są skontrastowane.</li>
+<li>Ateński strateg zachowuje męstwo i obiektywizm, natomiast współczesnym dowódcom brakuje jego wielkości. Są przez to śmieszni, pozbawieni godności.</li>
+<li>Sformułowania podmiotu lirycznego, a dotyczące współczesnych strategów, wskazują na krytyczny stosunek względem nich oraz dezaprobatę. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zakończenie utworu Zbigniewa Herberta zawiera refleksję na temat współczesności oraz aktualnego charakteru sztuki. Poeta przytacza w tej części wizję twórczości; jej tematem staje się "[...] dzbanek rozbity / mała rozbita dusza / z wielkim żalem nad sobą". Słowa te wywołują skojarzenie z wcześniej zaprezentowanym wizerunkiem "generałów ostatnich wojen" - ludzi, którzy nie potrafią zachować się z godnością i męstwem, są emocjonalni i domagają się aprobaty. Dzbanek symbolizuje bowiem sztukę nadmiernie emocjonalną - jest rozbita, prowadzi do rozczulania się nad sobą, skupia się też na nieistotnych zjawiskach. Ujawnia się w ten sposób także słabość współczesnego człowieka, jego małość względem antycznych ideałów. Z tego też powodu Herbert porównuje dorobek współczesnych sobie do "[...] płaczu kochanków / w małym brudnym hotelu / kiedy świtają tapety". Świadczy to o krytycznym stosunku względem sztuki, która nie porusza uniwersalnych i ważnych tematów. Zamiast tego można ją określić jako tandetną, pozbawioną znaczenia, wręcz ckliwą. Kontrastuje z dorobkiem antycznej kultury - surowej, odwołującej się do kanonów piękna, podejmującej kluczowe i ponadczasowe tematy. Poeta sugeruje, iż taki dorobek jest mało znaczący w zestawieniu z dawnymi dziełami, ponieważ nie dorównuje im podejmowaną problematyką, opisuje ulotne i subiektywne wrażenia. Przez to nie będzie czymś ważnym dla przyszłych pokoleń. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Poetyckie credo Herberta opiera się na wierności zasadom typowym dla starożytnych. W tym też celu poeta odwołuje się do historycznej postaci stratega Tukidydesa, który wziął na siebie odpowiedzialność za niepowodzenie odsieczy. Jego postawa reprezentuje pożądane przez Herberta cechy: męstwo, godność, obiektywizm, umiłowanie prawdy. Elementy te znajdują swoje miejsce w jego poezji, ponieważ twórca ten bardziej ceni refleksję intelektualną niż emocje. Z tego też powodu uważa, że dzieło literackie powinno poruszać uniwersalne i wielkie zagadnienia, które będą ważne także w przyszłości dla kolejnych pokoleń. Wyraża sprzeciw względem twórczości, która porusza błahą tematykę, skupia się tylko na emocjach piszącego, ma subiektywny czy intymny charakter: "[...] tematem sztuki / będzie dzbanek rozbity / mała rozbita dusza / z wielkim żalem nad sobą". W takiej postaci traci swoją ponadczasowość, nie jest cennym dorobkiem ludzkiej myśli, który ma odpowiednią rangę i zawiera głębszą refleksję na temat człowieka. Herbert postrzega więc poezję w poważny sposób; z tego też powodu wybiera klasyków (<em>Dlaczego klasycy</em>). Reprezentują oni aprobowane przez poetę wartości oraz wizję twórczości, która powinna opisywać rzeczywistość z pewnego dystansu pozbawionego nadmiernej emocjonalności. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br>

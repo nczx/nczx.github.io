@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. theme music</p>
+<p>(Mój/Moja znajomy/a jest kompozytorem/ką i poproszono go/ją, żeby skomponował/a <strong>motyw muzyczny</strong>.) </p>
+<p>2. audition</p>
+<p>(Podczas <strong>przesłuchania</strong> musieliśmy zagrać utwór muzyki klasycznej.)</p>
+<p>3. lyrics</p>
+<p>(Naprawdę podobają mi się <strong>słowa</strong> tej <strong>piosenki</strong>.)</p>
+<p>4. sell out</p>
+<p>(Wejdź na stronę kiedy tylko bilety będą dostępne. Bardzo szybko się <strong>wyprzedają</strong>.) </p>
+<p>5. release</p>
+<p>(Studio nagraniowe zespołu zamierza <strong>wydać</strong> album 1. grudnia.) </p>
+<p>6. on tour</p>
+<p>(Koledzy Helen są teraz <strong>w trasie koncertowej</strong>.)</p>
+<p><s class="odr-strikethrough">melody</s>, <s class="odr-strikethrough">rehearsal</s></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. violinist </p>
+<p>(<strong>Skrzypaczka</strong> grała na swoim instrumencie lepiej niż ktokolwiek inny, kogo kiedykolwiek słyszałem/am.) </p>
+<p>2. musicians</p>
+<p>(Wokalista/tka chce założyć zespół. Poszukuje utalentowanych <strong>muzyków </strong>zainteresowanych metalem i punkiem.)</p>
+<p>3. rehearsal</p>
+<p>(Dziś wieczorem mamy <strong>próbę</strong> do szkolnego przedstawienia.)</p>
+<p>4. performance</p>
+<p>(Gina była genialna. Śpiewała, tańczyła, grała na pianinie. To był niesamowity <strong>występ</strong>!)</p>
+<p>5. speakers</p>
+<p>(Mama mówi, że <strong>głośniki</strong> w mojej sypialni są za duże jak na tak mały dom.)</p>
+<p>6. catchy</p>
+<p>(Wiem, dlaczego ludzie lubią tę piosenkę. Bardzo <strong>wpada w ucho</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. aren't, <strong>d </strong></p>
+<p>(Dostanę zaproszenie na twoją imprezę, prawda? -  Tak, oczywiście, ale jeszcze ich nie napisałem/am.) </p>
+<p><strong>Uzasadnienie</strong>: tworzymy pytanie rozłączne. Uwaga na wyjątek - w zdaniu, gdzie podmiotem jest 1. osoba l. pojedynczej (<em>I </em>- ja), a operatorem jest czasownik <em>to be</em> w czasie teraźniejszym (<em>am</em>), pytanie rozłączne ma formę <em>aren't I</em>. </p>
+<p>2. been, <strong>f </strong></p>
+<p>(Jak długo uczysz się angielskiego? - Od trzech lat.)</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy brakującą formę czasownika <em>to be</em> w <em>past participle</em>, aby utworzyć czas <em>present perfect continuous </em>(<em>have/has been + </em>czasownik z -ing).</p>
+<p>3. haven't, <strong>a </strong></p>
+<p>(Masz ten album, prawda? - Tak, kupiłem/am go w dniu, kiedy zespół go wydał.)</p>
+<p><strong>Uzasadnienie</strong>: tworzymy pytanie rozłączne, gdzie czasownikiem posiłkowym jest <em>have</em>.</p>
+<p>4. have, <strong>e </strong></p>
+<p>(Ile piosenek dzisiaj ściągnąłeś/ściągnęłaś? - Tylko jedną. Nie zostało mi za dużo pieniędzy.)</p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę brakującym czasownikiem posiłkowym w czasie <em>present perfect</em>.</p>
+<p>5. to, <strong>b </strong></p>
+<p>(Do kogo piszesz? - Do Paula. Obiecałem/am, że wyślę mu dziś wieczorem maila.)</p>
+<p><strong>Uzasadnienie</strong>: <em>write to someone </em>- pisać do kogoś.</p>
+<p>6. did, <strong>c </strong></p>
+<p>(Nie kupiłeś/aś biletów na koncert, prawda? - Nie, zostały wyprzedane zanim miałem/am okazję.) </p>
+<p><strong>Uzasadnienie</strong>: tworzymy pytanie rozłączne w czasie <em>past simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. for </p>
+<p><strong>Uzasadnienie</strong>: <em>what ... for </em>- po co; <em>for half an hour </em>- od pół godziny. </p>
+<p>2. out</p>
+<p><strong>Uzasadnienie</strong>: <em>go out </em>- wychodzić z domu; <em>sell out </em>- wyprzedać się.</p>
+<p>3. on</p>
+<p><strong>Uzasadnienie</strong>: <em>go on tour </em>- wyruszyć w trasę koncertową; <em>on what day </em>- którego dnia.</p>
+<p>4. sound</p>
+<p><strong>Uzasadnienie</strong>: <em>sound system </em>- system dźwiękowy; <em>sound quality </em>- jakość dźwięku.</p>
+<p>5. up</p>
+<p><strong>Uzasadnienie</strong>: <em>turn the volume up </em>- zwiększać głośność; <em>wake up </em>- obudzić się.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. been </p>
+<p><strong>Uzasadnienie</strong>: uzupełniamy lukę czasownikiem "być" w formie <em>past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych). W ten sposób powstaje czas <em>present perfect</em> - na konieczność jego użycia wskazuje dodatkowo okolicznik <em>for over twenty-five years </em>(od ponad 25 lat). </p>
+<p>2. since</p>
+<p><strong>Uzasadnienie</strong>: kiedy w czasie <em>present perfect </em>podajemy punkt rozpoczęcia (<em>the age of six </em>- 6. rok życia), używamy przyimka <em>since </em>(od). </p>
+<p>3. lead</p>
+<p><strong>Uzasadnienie</strong>: <em>lead singer </em>- główna wokalistka.</p>
+<p>4. tour</p>
+<p><strong>Uzasadnienie</strong>: <em>go on tour </em>- jechać w trasę koncertową.</p>
+<p>5. to</p>
+<p><strong>Uzasadnienie</strong>: <em>listen to someone</em> - słuchać kogoś.</p>
+<p>6. for</p>
+<p><strong>Uzasadnienie</strong>: <em>be famous for something </em>- słynąć z czegoś.</p><br>

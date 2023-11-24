@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. who </p>
+<p><strong>Uzasadnienie:</strong> <em>non-defining relative clause, </em>nie można pominąć zaimka względnego <em>who</em> (który). </p>
+<p>2. whose</p>
+<p><strong>Uzasadnienie:</strong> <em>non-defining relative clause, </em>nie można pominąć zaimka względnego <em>whose</em> (którego).</p>
+<p>3. when</p>
+<p><em><strong>Uzasadnienie: </strong>defining relative clause, </em>nie można pominąć zaimka względnego <em>when</em> (kiedy).</p>
+<p>4. who</p>
+<p><em><strong>Uzasadnienie: </strong>defining relative clause, </em>nie można pominąć zaimka względnego <em>who </em>(który).</p>
+<p>5. which</p>
+<p><strong>Uzasadnienie:</strong> <em>non-defining relative clause, </em>nie można pominąć zaimka względnego <em>which </em>(co).</p>
+<p>6. which</p>
+<p><em><strong>Uzasadnienie: </strong>defining relative clause, </em>nie można pominąć zaimka względnego <em>which </em>(którego).</p>
+<p>7. on which</p>
+<p><em><strong>Uzasadnienie: </strong>defining relative clause, </em>nie można pominąć zaimka względnego <em>which </em>(który).</p>
+<p>8. who </p>
+<p><em><strong>Uzasadnienie: </strong>defining relative clause, </em>nie można pominąć zaimka względnego <em>who </em>(którego).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <span style="text-decoration: line-through;">who is</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>worried</em>). </p>
+<p>2. <span style="text-decoration: line-through;">who are seen</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny, czasownik i imiesłów czasu przeszłego mogą zostać zastąpione imiesłowem czasu teraźniejszego (<em>insulting)</em>.</p>
+<p>3. <span style="text-decoration: line-through;">which are</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>located</em>).</p>
+<p>4. <span style="text-decoration: line-through;">which are</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>parked</em>).</p>
+<p>5.  <span style="text-decoration: line-through;">interested</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>interested</em>).</p>
+<p>6.<span style="text-decoration: line-through;"> which have been</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny, czasownik i imiesłów czasu przeszłego mogą zostać zastąpione innym imiesłowem czasu przeszłego (<em>purchased)</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. when</p>
+<p><strong>Uzasadnienie</strong>: zaimek względny odnoszący się do czasu ("kiedy").  </p>
+<p>2. whose</p>
+<p><strong>Uzasadnienie</strong>: zaimek względny oznaczający czyjąś przynależność lub związek z czymś ("których"). </p>
+<p>3. which</p>
+<p><strong>Uzasadnienie</strong>: zaimek względny odnoszący się do rzeczownika <em>tents</em> ("które"). </p>
+<p>4. who</p>
+<p><strong>Uzasadnienie</strong>: zaimek względny odnoszący się do osób ("kto"). </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. another </p>
+<p><strong>Uzasadnienie</strong>: <em>another</em> <em>one</em> - inny, kolejny. </p>
+<p>2. All</p>
+<p><strong>Uzasadnienie</strong>: <em>all + of + the</em> + rzeczownik - odniesienie do konkretnej grupy.</p>
+<p>3. neither </p>
+<p><strong>Uzasadnienie</strong>: <em>neither of +</em> rzeczownik w liczbie mnogiej lub zaimek - żaden/żadna.</p>
+<p>4. whole</p>
+<p><strong>Uzasadnienie</strong>: <em>the whole</em> + rzeczownik w liczbie pojedynczej.</p>
+<p>5. Either</p>
+<p><strong>Uzasadnienie</strong>: zestawienie dwóch możliwości - <em>either ... or ...</em> (albo... albo...).</p>
+<p>6. others</p>
+<p><strong>Uzasadnienie</strong>: odniesienie do konkretnej grupy, <em>others </em>(pozostali, inni) zastępuje rzeczownik.</p>
+<p>7. Every</p>
+<p><strong>Uzasadnienie</strong>: <em>every </em>(każda)<em> + </em>rzeczownik w liczbie pojedynczej - informacja ogólna.</p>
+<p>8. nor</p>
+<p><strong>Uzasadnienie: </strong>zestawienie dwóch negatywnych koncepcji (ani..., ani...) - <em>neither ... nor ...</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. All of the</p>
+<p><strong>Uzasadnienie</strong>: <em>all + of + the</em> + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy - wszyscy. </p>
+<p>2. The whole</p>
+<p><strong>Uzasadnienie</strong>: <em>the whole</em> + rzeczownik w liczbie pojedynczej - cała.</p>
+<p>3. Each</p>
+<p><strong>Uzasadnienie</strong>: <em>each + </em>rzeczownik w liczbie pojedynczej - każdy/każda<em>.</em></p>
+<p>4. none of the</p>
+<p><strong>Uzasadnienie</strong>: <em>none + of + the</em> + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy - żadna.</p>
+<p>5. either, or</p>
+<p><strong>Uzasadnienie</strong>: zestawienie dwóch możliwości - <em>either ... or ...</em> (albo... albo...)</p>
+<p>6. Most of the</p>
+<p><strong>Uzasadnienie</strong>: <em>most + of + the</em> + rzeczownik w liczbie mnogiej - odniesienie do konkretnej grupy - większość.</p>
+<p>the other</p>
+<p><strong>Uzasadnienie</strong>: odniesienie do konkretnej grupy w liczbie mnogiej -<em> </em>pozostałe.</p>
+<p>7. Neither, nor </p>
+<p><strong>Uzasadnienie</strong>: zestawienie dwóch negatywnych koncepcji (ani..., ani...) - <em>neither ... nor ...</em></p>
+<p>both</p>
+<p><strong>Uzasadnienie</strong>: <em>both</em> (obydwoje) odnosi się do dwóch wymienionych wcześniej osób. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. B</p>
+<p><strong>Uzasadnienie</strong>: <em>each</em> + rzeczownik w liczbie pojedynczej - każdej. </p>
+<p>2. B</p>
+<p><strong>Uzasadnienie</strong>: odniesienie do konkretnej grupy ludzi - pozostali. </p><br>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>• Amnesty International works to protect human rights globally. They investigate and report cases where human rights get abused, and support people affected by human rights violations. </p>
+<p>(Amnesty International działa na rzecz ochrony praw człowieka na całym świecie. Bada i zgłasza przypadki łamania praw człowieka oraz wspiera osoby dotknięte naruszeniami praw człowieka.) </p>
+<p><br/>• The European Union (EU) is a political and economic organisation consisting of multiple European countries. Its goal is to promote peace, stability, and cooperation among member states.</p>
+<p>(Unia Europejska (UE) jest organizacją polityczną i gospodarczą składającą się z wielu krajów europejskich. Jej celem jest promowanie pokoju, stabilności i współpracy między państwami członkowskimi.)</p>
+<p><br/>• Greenpeace is an environmental organisation that focuses on promoting environmental protection. They campaign against issues such as climate change, deforestation, and pollution.</p>
+<p>(Greenpeace to organizacja ekologiczna, która koncentruje się na promowaniu ochrony środowiska. Prowadzi kampanie przeciwko zmianom klimatu, wylesianiu i zanieczyszczeniom.)</p>
+<p><br/>• NATO is a military alliance among North American and European countries. Its main purpose is to provide defence and security among its member states.</p>
+<p>(NATO to sojusz wojskowy między krajami Ameryki Północnej i Europy. Jego głównym celem jest zapewnienie obrony i bezpieczeństwa państwom członkowskim.)</p>
+<p><br/>• The Red Cross is a humanitarian organisation that provides assistance and support to people affected by conflicts, disasters, and emergencies.</p>
+<p>(Czerwony Krzyż jest organizacją humanitarną, która zapewnia pomoc i wsparcie osobom dotkniętym konfliktami, katastrofami i sytuacjami kryzysowymi.)</p>
+<p><br/>• The United Nations (UN) is an international organisation composed of member states. Its goal is to maintain international peace and security, promote human rights, social and economic development, and cooperation among nations.</p>
+<p>(Organizacja Narodów Zjednoczonych (ONZ) jest organizacją międzynarodową złożoną z państw członkowskich. Jej celem jest utrzymanie międzynarodowego pokoju i bezpieczeństwa, promowanie praw człowieka, rozwoju społecznego i gospodarczego oraz współpracy między narodami.)</p>
+<p><br/>• The World Health Organization is a specialised agency of the United Nations. It promotes international efforts in disease prevention, health emergencies, healthcare policies, and improving health standards worldwide.</p>
+<p>(Światowa Organizacja Zdrowia jest wyspecjalizowaną agencją Organizacji Narodów Zjednoczonych. Promuje międzynarodowe wysiłki na rzecz zapobiegania chorobom, sytuacji kryzysowych, polityki opieki zdrowotnej i poprawy standardów zdrowotnych na całym świecie.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p> - <span style="text-decoration: underline;">International Court of Justice</span> - legal disagreements of countries</p>
+<p>(Międzynarodowy Trybunał Sprawiedliwości - spory prawne państw)  </p>
+<p> - <span style="text-decoration: underline;">International Crime Court</span> - serious accusations against state governments or organisations</p>
+<p>(Międzynarodowy Trybunał karny - poważne oskarżenia dotyczące rządów państw albo organizacji)</p>
+<p> - <span style="text-decoration: underline;">UNICEF</span> - helps defend the rights of children</p>
+<p>(UNICEF, Fundusz Narodów Zjednoczonych na Rzecz Dzieci - pomaga bronić prawa dzieci)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. authority</p>
+<p>(prawo do podejmowania decyzji - <strong>władza</strong>)  </p>
+<p>2. law and order</p>
+<p>(bezpieczna i spokojna sytuacja dzięki temu, że ludzie nie łamią prawa - <strong>prawo i porządek</strong>)</p>
+<p>3. prohibit</p>
+<p>(oficjalnie coś zdelegalizować - <strong>zakazać</strong>)</p>
+<p>4. defend</p>
+<p>(chronić przed szkodą albo atakiem - <strong>bronić</strong>)</p>
+<p>5. charge</p>
+<p>(oficjalnie oskarżyć kogoś o popełnienie przestępstwa - <strong>wnieść oskarżenie</strong>)</p>
+<p>6. grant </p>
+<p>(zezwolić komuś na posiadanie czegoś - <strong>nadać, przyznać</strong>)</p>
+<p>7. accuse</p>
+<p>(powiedzieć, że ktoś popełnił coś niewłaściwego albo nielegalnego - <strong>oskarżyć</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="text-align: center; border-collapse: collapse; width: 680px; height: 246px;">
+<tbody>
+<tr style="color: white; background-color: #660000; text-align: center;">
+<td style="width: 223.636px; height: 10px;">
+<p><strong>Verb</strong></p>
+<p><strong>(czasownik)</strong></p>
+</td>
+<td style="width: 223.636px; height: 10px;">
+<p><strong>Noun (person)</strong></p>
+<p><strong>(rzeczownik - osoba)</strong></p>
+</td>
+<td style="width: 223.818px; height: 10px;">
+<p><strong>Abstract noun</strong></p>
+<p><strong>(rzeczownik abstrakcyjny)</strong></p>
+</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 223.636px; height: 48px;"><strong>judge</strong> <br/>(osądzić)</td>
+<td style="width: 223.636px; height: 48px;">judge <br/>(sędzia)  </td>
+<td style="width: 223.818px; height: 48px;"><strong>judgement</strong> <br/>(osąd)</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 223.636px; height: 48px;">regulate <br/>(regulować prawnie)</td>
+<td style="width: 223.636px; height: 48px;">-</td>
+<td style="width: 223.818px; height: 48px;"><strong>regulation</strong> <br/>(przepis)</td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 223.636px; height: 48px;"><strong>try</strong> <br/>(sądzić)</td>
+<td style="width: 223.636px; height: 48px;">-</td>
+<td style="width: 223.818px; height: 48px;">trial <br/>(proces)</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. The government has adopted, grants more rights</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect</em>, ponieważ nie określamy momentu, w którym wydarzyła się pierwsza czynność i ważny jest jej efekt (teraz prawo się zmieniło). W drugiej luce czas <em>present simple</em> dla ogólnych faktów w teraźniejszości (zamierzenia danej ustawy). </p>
+<p>2. doesn't have the authority to prohibit</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present simple</em> dla ogólnych faktów w teraźniejszości. Organizację traktujemy jako <em>it</em> (to), dlatego czasownik ma formę dla 3. osoby l. pojedynczej.</p>
+<p>3. have charged, 'll be tried</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect</em>, ponieważ nie określamy momentu, w którym wydarzyła się pierwsza czynność i ważny jest jej efekt (teraz dyktator będzie sądzony; sprawa jest w toku). W drugiej luce czas <em>future simple </em>dla ogólnych wydarzeń w przyszłości.</p>
+<p>4. During a trial, before they give their verdict, the accused person</p>
+<p><strong>Uzasadnienie</strong>: przed rzeczownikiem <em>trial </em>(proces) przedimek nieokreślony, ponieważ zdanie nie dotyczy konkretnego procesu, tylko wyjaśnia ogólne zasady. W drugiej luce czas <em>present simple</em>, ponieważ chodzi o rutynowe czynności.</p>
+<p>5. defending the criminal, the judgement</p>
+<p><strong>Uzasadnienie</strong>: imiesłów czynny (w języku polskim zakończony m.in. na -ący) to w języku angielskim <em>gerund </em>(czasownik z końcówką -ing).</p>
+<p>6. The new regulations, law and order</p>
+<p><strong>Uzasadnienie</strong>: w pierwszej luce przedimek określony, ponieważ mowa o konkretnych przepisach. W drugiej luce nie używamy przedimka, ponieważ mówimy o prawie i porządku ogółem.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I think it's harder for young people to influence politicians because they mostly care about people who can vote for them in the elections. However, teenagers can organise protests, sign petitions, and start initiatives, so in that way they can make a difference.</p>
+<p>A great example of a young person who changed the world is Malala Yousafzai, who became the youngest person to get a Nobel Peace Prize.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Myślę, że młodym ludziom trudniej jest wpływać na polityków, ponieważ zależy im głównie na ludziach, którzy mogą głosować na nich w wyborach. Jednak nastolatki mogą organizować protesty, podpisywać petycje i rozpoczynać inicjatywy, więc w ten sposób mogą coś zmienić.</p>
+<p>Świetnym przykładem młodej osoby, która zmieniła świat, jest Malala Yousafzai, która została najmłodszą osobą, która otrzymała Pokojową Nagrodę Nobla.</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>If I could participate in one of the model conferences, I would choose the International Criminal Court. I have always been interested in crime/courtroom films. I enjoy listening to podcasts about famous criminal trials. Taking part in this conference would be a very useful experience for me because I might want to choose a career in law.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Gdybym mógł/mogła wziąć udział w jednej z przykładowych konferencji, wybrałbym/wybrałabym Międzynarodowy Trybunał Karny. Zawsze interesowały mnie filmy kryminalne i sądowe. Lubię słuchać podcastów o słynnych procesach karnych. Udział w tej konferencji byłby dla mnie bardzo przydatnym doświadczeniem, ponieważ być może będę chciał/a wybrać karierę prawniczą.</p><br><a style="color:red; font-size:25px;">RESEARCH IMPULSE</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Young people can help Amnesty International by joining The Amnesty International Global Youth Collective. Members of the Collective serve for two years and act as spokespeople for youth-related issues. They can take part in the discussions and decision-making processes in global, regional, and national Amnesty International meetings. Additionally, they give strategic advice to many teams within Amnesty International on how to include young people's perspectives in all areas and levels of the organisation's work.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Młodzi ludzie mogą pomóc Amnesty International dołączając do Globalnego Kolektywu Młodzieżowego Amnesty International. Członkowie Kolektywu pełnią swoją funkcję przez dwa lata i działają jako rzecznicy spraw związanych z młodzieżą. Mogą brać udział w dyskusjach i procesach decyzyjnych podczas globalnych, regionalnych i krajowych spotkań Amnesty International. Ponadto udzielają strategicznych porad wielu zespołom w Amnesty International na temat tego, jak włączyć perspektywę młodzieży do wszystkich obszarów i poziomów pracy organizacji.</p>
+<p> </p>
+<p><strong>Uwaga! Wykonanie plakatu to zadanie indywidualne.</strong></p><br>

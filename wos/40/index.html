@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Stygmatyzacja</strong></span> negatywnie wpływa na relacje stygmatyzowanej jednostki z jej otoczeniem, ponieważ osoba taka może czuć obsesyjny niepokój, a nawet może dojść do wyparcia jej przynależności do danej grupy społecznej. Ponadto taka osoba może stać się wycofana, przez co jej pasywność należy uznać za przyjęty przez nią sposób przetrwania. Stygmatyzowana osoba może również wykazywać agresję przeciwko własnej grupie oraz szeregiem uprzedzeń wobec innych grup. Stygmatyzacja prowadzi do zmniejszenia pozycji danej osoby w grupie społecznej, jej odrzucenia, obniżenia poczucia własnej wartości, co w konsekwencji prowadzi do wyuczonej bezradności, a nawet do <span style="text-decoration: underline;"><strong>efektu Golema</strong>,</span> czyli osoba stygmatyzowana zaczyna przejawiać cechy, które jej przypisuje społeczeństwo. W tekście źródłowym wskazano, że postrzeganie dzieci otyłych oraz osób ubogich za osoby leniwe oraz bierne powoduje, że do tych osób przyklejane są etykiety wskazujące, że są one złe, niezasługujące na pomoc, czy też współczucie. Przykład dzieci romskich, który został opisany w tekście źródłowym wskazuje, że ich stygmatyzacja doprowadziła do zamknięcia im możliwości nauki oraz asymilacji ze społeczeństwem polskim. <span style="text-decoration: underline;"><strong>Skutkiem społecznego wykluczenia może być również </strong></span>wystąpienie problemów psychicznych u osób wykluczonych społecznie (np. depresji, załamań nerwowych oraz apatii), rozwój zachowań patologicznych (alkoholizmu, narkomanii, przestępczości, przemocy), zubożenie osoby dotkniętej wykluczeniem społecznym, jak i jej rodziny. Ponadto osoba wykluczona jest również ograniczona w zakresie realizacji swoich potrzeb obywatelskich.</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Stygmatyzacja to negatywne i fałszywe przypisywanie cech, atrybutów i zachowań osobom z pewnej grupy społecznej na podstawie uprzedzeń i przesądów</span></strong>. Może prowadzić do dyskryminacji i izolacji osób stygmatyzowanych, a także do utrwalania nierówności społecznych.</p>
+<p><strong><span style="text-decoration: underline;">Stygmatyzacja pogarsza jakość życia jednostki, która jest stygmatyzowana. Rodzi ponadto bariery między różnymi grupami społecznymi</span></strong>. Ukazują to przytoczone teksty. W tekście 1. wskazano, że ludzie otyli, w tym otyłe dzieci, są złośliwie wyśmiewane, izolowane przez rówieśników i odrzucane. Uważa się je ponadto za leniwe i mało inteligentne, co powoduje u nich powstawanie problemów psychospołecznych, takich jak nieposłuszeństwo, agresja słowna lub przemoc fizyczna.</p>
+<p>W analogiczny sposób - o czym traktuje tekst 2. - wyklucza się ludzi biednych. <strong><span style="text-decoration: underline;">Negatywne stereotypy na ich temat pogłębieją ich wykluczenie społeczne</span></strong>, a to z kolei sprawia, że jeszcze trudniej wydostać się im z biedy, nawet gdyby bardzo się starali.</p>
+<p>Tekst 3. pokazuje z kolei, do jak kuriozalnych sytuacji może dochodzić w związku z dyskryminacją przedstawicieli innych grup etnicznych i narodowościowych, w tym wypadku Romów. Wyłącznie w oparciu o stereotypy ludność polska nie chce z Romami wchodzić w bliższe interakcje.</p><br>

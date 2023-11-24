@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. are going to </p>
+<p><strong>Uzasadnienie</strong>: plan, zamierzenie, które może ulec zmianie - <em>be going to</em>. </p>
+<p>2. I will</p>
+<p><strong>Uzasadnienie</strong>: decyzja podjęta spontanicznie - <em>will</em>.</p>
+<p>3. will have finished</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie, które zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>4. cleaned</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie, które (nie) zakończy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>5. are going </p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są znane - czas <em>present continuous</em>.</p>
+<p>6. begins</p>
+<p><strong>Uzasadnienie</strong>: sytuacja zaplanowana odgórnie w rozkładzie - czas <em>present simple.</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. will have been reading</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>2. isn't going to rain</p>
+<p><strong>Uzasadnienie</strong>: przewidywanie przyszłości na podstawie obserwacji obecnej sytuacji - <em>be going to</em>.</p>
+<p>3. Will she have left </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która zakończy się do pewnego momentu - czas <em>future perfect</em>.</p>
+<p>4. won't be lying </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która (nie) będzie się odbywała w przyszłości w konkretnym momencie - czas <em>future continuous</em>.</p>
+<p>5. is leaving</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są znane - czas <em>present continuous</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. am taking</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są znane - czas <em>present continuous</em>. </p>
+<p>2. will go</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywanie i nadzieje na przyszłość - <em>will + </em>bezokolicznik.</p>
+<p>3. I'm going to study </p>
+<p><strong>Uzasadnienie</strong>: plany na przyszłość, które mogą ulec zmianie - <em>be going to</em>.</p>
+<p>4. are going to set up</p>
+<p><strong>Uzasadnienie</strong>: plany na przyszłość, które mogą ulec zmianie - <em>be going to</em>.</p>
+<p>5. will become</p>
+<p><strong>Uzasadnienie</strong>: ogólne nadzieje na przyszłość - <em>will</em>.</p>
+<p>6. will have been running </p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p>7. will have sold </p>
+<p><strong>Uzasadnienie</strong>: czynność, która wydarzy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p><strong>The extra verb is <em>visit</em>. </strong></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. closes </p>
+<p><strong>Uzasadnienie</strong>: zasada zaplanowana odgórnie - czas <em>present simple. </em></p>
+<p>2. we will have been </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do konkretnego czasu w przyszłości - czas <em>future perfect.</em></p>
+<p>3. going to travel </p>
+<p><strong>Uzasadnienie</strong>: ogólny plan, zamierzenie, które może ulec zmianie - <em>be going to</em>.</p>
+<p>4. am having dinner </p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane na najbliższą przyszłość, którego szczegóły są znane - czas <em>present continuous</em>.</p>
+<p>5. will have been sleeping</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. due</p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana na konkretny termin - <em>be due to</em> + bezokolicznik. </p>
+<p>2. about</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości - <em>be about to</em> + bezokolicznik.</p>
+<p>3. to </p>
+<p><strong>Uzasadnienie: </strong>styl formalny, oficjalne plany - <em>be to</em> + bezokolicznik.</p>
+<p>4. due </p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana na konkretny termin - <em>be due to</em> + bezokolicznik.</p>
+<p>5. was</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości, przedstawiona z perspektywy przeszłości - <em>be about to</em> + bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <span style="text-decoration: line-through;">I'm going</span> <strong>I was going</strong></p>
+<p><strong>Uzasadnienie</strong>: opis zamiaru dotyczącego przyszłości przedstawiony z perspektywy przeszłości -<em> was going to</em>. </p>
+<p>2. <span style="text-decoration: line-through;">I'm about</span> <strong>I was about</strong> </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości przedstawiona z perspektywy przeszłości - <em>was about to</em> + bezokolicznik.</p>
+<p>3. prawidłowe zdanie</p>
+<p>4. prawidłowe zdanie</p>
+<p>5. <span style="text-decoration: line-through;">was due to</span> <strong>is due to </strong></p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana w teraźniejszości - <em>is due to</em> + bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. was due to be shown</p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana na konkretny termin w przeszłości - <em>was due to</em> + bezokolicznik. </p>
+<p>2. were going to improve</p>
+<p><strong>Uzasadnienie</strong>: opis zamiaru dotyczącego przyszłości przedstawiony z perspektywy przeszłości -<em> were going to</em>.</p>
+<p>3. am about to say </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości - <em>be about to</em> + bezokolicznik.</p>
+<p>4. would finish</p>
+<p><strong>Uzasadnienie</strong>: przypuszczenia dotyczące przyszłości z perspektywy przeszłości - <em>would + </em>bezokolicznik.</p>
+<p>5. is due to visit </p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana na konkretny termin - <em>is</em> d<em>ue to</em> + bezokolicznik.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. was about to leave </p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się w najbliższej przyszłości - <em>be about to</em> + bezokolicznik. </p>
+<p>2. is due to graduate </p>
+<p><strong>Uzasadnienie</strong>: sytuacja z góry zaplanowana na konkretny termin - <em>be due to</em> + bezokolicznik.</p>
+<p>3. was going to invite my cousins</p>
+<p><strong>Uzasadnienie</strong>: opis zamiaru dotyczącego przyszłości przedstawiony z perspektywy przeszłości -<em> was going to</em>.</p>
+<p>4. were supposed to read </p>
+<p><strong>Uzasadnienie</strong>: oczekiwania względem kogoś - <em>be supposed to</em> + bezokolicznik.</p>
+<p>5. they would reach </p>
+<p><strong>Uzasadnienie</strong>: przewidywania dotyczące przyszłości z perspektywy przeszłości - <em>would</em>.</p><br>

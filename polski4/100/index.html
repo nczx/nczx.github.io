@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Początek utworu należy rozpatrywać w kontekście biografii poety, któremu Kaczmarski poświęcił swe dzieło. Na tej podstawie można uznać, iż mianem "piekła" określone zostaje jego egzystencja w ZSRR. Tam bowiem panował terror, ludzie żyli w ciągłym strachu, nie mogli cieszyć się wolnością, zaś prawda i prawa człowieka nie były w żaden sposób respektowane. Z tego też powodu w utworze pojawiają się słowa: "To moja droga z piekła do piekła" - ziemskie cierpienie zostaje zmienione na dosłowną podróż w głąb piekła. Fragment ten podkreśla takze doświadczenia podmiotu lirycznego, który za życia doświadczył męki. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Budowa tekstu:</p>
+<ul>
+<li>oś kompozycyjną stanowi trawestacja słów z utworu Włodzimierza Wysockiego; </li>
+<li>utwór składa się z dwudziestu siedmiu strof;</li>
+<li>można wyróżnić 148 wersów;</li>
+<li>strofy są niezwykle zróżnicowane pod względem długości - od czterech do ośmiu wersów;</li>
+<li>dość często pojawia się schemat: jedna strofa czterowersowa + dwie strofy z sześcioma wersami;</li>
+<li>pojawiają się rymy żeńskie (najczęściej niedokładne) oraz męskie (zazwyczaj dokładne);</li>
+<li>liczba sylab w wersach jest zróżnicowana; są np. strofy dziesięciozgłoskowe, ale też pojawiają się takie, w których jest np. dziewięć lub osiem. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>W pierwszym kręgu piekła podmiot liryczny spotyka rudowłosą dziewczynę, która przywiązuje go do grzywy konia. Jej zachowanie przyczynia się do zniecierpliwienia podróżnika. Nie przejmuje się jednak ostrzeżeniami dziewczyny.</p>
+<p>W drugim kręgu podmiot liryczny spotyka zesłańców. Pracują w bardzo trudnych warunkach, zdają się zniewoleni. Proszą jedna osobę mówiącą, aby nie okazywała im współczucia, gdyż uważają, że są w odpowiednim dla siebie miejscu, nie muszą obawiać się złych ludzi. W tej części pojawia się także prośba do tajemniczej pani, by przygotowała w łaźni kamienie.</p>
+<p>Kolejny krąg wiąże się z wizytą w chatce pod miastem. Mieszkają tam życzliwi ludzie zachęcający podmiot liryczny do wspólnej biesiady. Twierdzą, że ich życie jest znośne, spokojne, ponieważ są niewidzialni dla innych.</p>
+<p>Następny krąg to przestrzeń miejska. Matka przebywa w sklepie, ojciec spędza czas w barze, natomiast syn udaje żołnierza i należy do pionierów. Ludzie w mieście mają różne rozrywki, np. cyrk, kino, mogą oglądać coś w telewizji, chodzą także na wiece i mecze. Ich życie nie jest jednak sielankowe, ponieważ obawy budzi bezpieka. Nikt nie może czuć się bezpiecznie, dlatego ludzie są ostrożni względem sąsiadów, zachowują dystans.</p>
+<p>W piątym kręgu pojawia się inscenizacja<em> Hamleta</em>. Wypowiedź aktora odgrywającego tytułową rolę ukazuje wyrzuty Hamleta. Krytykuje matkę za to, że jest uległa względem mordercy męża, co ma doprowadzić do upadku całego państwa. To jednak nie podoba się cenzorowi - nie zgadza się na takie słowa w przedstawieniu.</p>
+<p>W kręgu szóstym zaznacza się rozdźwięk w rosyjskim społeczeństwie. Zwykli ludzie żyją w biedzie, dręczy ich poczucie beznadziei, zaś tylko uprzywilejowani wiodą życie w luksusie, nie muszą się niczym martwić.</p>
+<p>W kręgu siódmym podmiot liryczny spotyka funkcjonariuszy służb bezpieczeństwa. Chociaż milczą, są groźni, gdyż mają wpływ na los osoby mówiącej.</p>
+<p>Ósmy krąg to zaś miejsce kary dla artysty. Czeka go tam pustka, czyli zapomnienie, unicestwienie pamięci o nim oraz jego dziełach. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Podróż podmiotu lirycznego można uznać za przejaw wyprawy w historię Rosji. Przede wszystkim kolejne kręgi piekła odwołują się do rozmaitych wydarzeń lub zjawisk związanych z ówczesną sytuacją tego państwa. Kaczmarski przedstawia bowiem m.in. zesłania oraz ciężką pracę ukaranych w ten sposób ludzi. Ponadto w tekście odwołuje się do postaci Stalina: "Bo na sercu, po lewej, tam Stalin drży". Następnie skupia się na realiach życia w sowieckim kraju. W tym celu nawiązuje do organizacji pionierskiej czy wszechobecnej inwigilacji, działalności służb bezpieczeństwa, która wpływa na nieufność ludzi względem siebie: "Jak świat światem do ostrożnych / Zwykł należeć i uśmiechać się ten świat!". Elementem rosyjskiej historii jest także cenzura m.in. przedstawień teatralnych czy też rozwarstwienie społeczeństwa. Artysta przypomina także o wpływie służb na los twórcy - mógł on zostać za ich sprawą wymazany ze zbiorowej pamięci. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe nawiązania literackie:</p>
+<ul>
+<li>
+<em>Mistrz i Małgorzata</em>, Bułhakow -&gt; Ruda chwyta mnie dziewczyna swymi dłońmi", "[...] wiedźmo wściekła!"; </li>
+<li>
+<em>Łaźnia na biało</em>, Wysocki -&gt; w utworze Kaczmarskiego trawestacja: "To moja droga z piekła do piekła";</li>
+<li>
+<em>Hamlet</em>, Szekspir -&gt; "Na scenie Hamlet, skuty bok";</li>
+<li>
+<em>Boska komedia</em>, Dante -&gt; wędrówka po kręgach piekła: "I w drugi krąg kieruje krok!". </li>
+</ul>
+<p> </p>
+<p>Nawiązanie literackie do utworu Wysockiego to wyraz hołdu Kaczmarskiego, który cenił sobie rosyjskiego twórcę i z tego też powodu poświęcił mu swoje dzieło. Aluzja do Bułhakowa z kolei buduje nastrój przedstawienia, wprowadza atmosferę fantastyki, ale także niepokoju, warto zaznaczyć, iż powieść tego autora również przedstawiała realia życia w ZSRR. Z kolei nawiązania do <em>Hamleta</em> i <em>Boskiej komedii</em> sugerują uniwersalność pewnych zagadnień oraz rozterek człowieka. Wskazują na wspólne doświadczenia ludzi niezależnie od czasów czy miejsca egzystencji. Ponadto nawiązania do <em>Boskiej komedii</em> zaznaczają piekielny wymiar rzeczywistości znanej Wysockiemu, egzystencję naznaczoną męką. Wpływa to na wyrazistość ukazania realiów życia w ZSRR - współczesnego piekła. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowe aluzje polityczne z tekstu:</p>
+<ul>
+<li>"Zesłani! Zesłani! / Naznaczeni, potępieni i sprzedani! / Co robicie w piekła sztolniach" -&gt; Stalin dążył do eliminacji jednostek uznawanych za niepożądane lub będących dla niego zagrożeniem. Wprowadził politykę terroru i przeprowadził czystki. Nie tylko dochodziło więc do egzekucji, ale wiele ludzi zsyłano np. do łagrów, gdzie czekała ich ciężka praca. </li>
+<li>"Bo na sercu, po lewej, tam Stalin drży, / Pot zalewa mu oczy i wąs!" -&gt; Aluzja do radzieckiego przywódcy, Józefa Stalina. </li>
+<li>"Na pionierskiej chuście marzeń / Gwiazdę ma!" -&gt; Jest to nawiązanie do politycznej organizacji skupiającej dzieci. Powstała ona ze względów ideologicznych, by kształtować młode pokolenia w duchu miłości do Stalina i Związku Radzieckiego. </li>
+<li>"Na mecze! Na mecze! Na wiece! / Swoje znać, nie rzucać się w oczy bezpiece!" -&gt; Jest to nawiązanie do wpływu tajnych służb na życie społeczeństwa. Jako aparat bezpieczeństwa bezpieka zajmowała się inwigilacją oraz obserwacją opozycji, a przede wszystkim chroniła istniejący system polityczny. </li>
+<li>"Cenzor z dziewiątego rzędu" -&gt; Typowym zjawiskiem za czasów stalinizmu była cenzura. Polegała na eliminacji treści uznawanych przez rządzących za szkodliwe lub sprzeczne z linią partii. Z tego tez powodu wszelkie materiały podlegały kontroli.</li>
+</ul>
+<p> </p>
+<p>Aluzje polityczne świadczą o tym, że autor nawiązuje do konkretnego momentu w dziejach, który wiąże się ze zniewoleniem jednostki oraz ograniczeniem jej praw, staje się źródłem inspiracji artystycznej. Rzeczywistość w związku z tym jawi się jako piekielna, stanowi więzienie. Artysta, ukazując panujący terror, jednocześnie staje się orędownikiem prawdy i wolności. Sam zaś utwór pozostaje silnie zakorzeniony w pewnych realiach historycznych, łączy w sobie różne płaszczyzny, np. uniwersalną (zniewolenie człowieka) czy polityczną. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Fragment:</p>
+<p><em>Pamiętajcie wy o mnie co sił! Co sił! </em></p>
+<p><em>Choć przemknąłem  przed wami jak cień!</em></p>
+<p><em>Palcie w łaźni aż kamień się zmieni w pył - </em></p>
+<p><em>Przecież wrócę, gdy zacznie się dzień!</em></p>
+<p> </p>
+<p>Podmiot liryczny w tej części wyraża nadzieję na nieśmiertelność. Może ją osiągnąć tylko poprzez pamięć potomnych. Twórczość poetycka staje się tym samym gwarancją wiecznego życia, co jest czytelnym nawiązaniem do motywu <em>exegi</em> <em>monumentum.</em> Osoba mówiąca przewiduje swój powrót, ma bowiem świadomość, że jest żywa w swych dziełach, które pozostają dla kolejnych pokoleń. Dostrzega swoją wielkość. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Ósmy krąg piekła to miejsce, w którym artystę spotyka najdotkliwsza kara. Każdy twórca pragnie bowiem sławy, tego, by jego dzieło zapisało się w pamięci kolejnych pokoleń, pozostało nieśmiertelne. W ostatnim kręgu zaś "[...] nie ma już nic". Ta pustka zdaje się wiązać z obawami artysty, którego niepokoi zapomnienie. Brak pamięci to nie tylko jego unicestwienie jako jednostki, ale także przekreślenie całego sensu twórczości. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Językowe i interpunkcyjne elementy utworu tworzące dramatyzm gonitwy:</p>
+<ul>
+<li>nagromadzenie słownictwa wskazującego na ruch -&gt; "W dół na złamanie karku gnam!", "unosi", "kieruje"; </li>
+<li>wykrzyknienia oraz częste zastosowanie wykrzyknika sugerującego silne emocje -&gt; "Ostrą grań!"</li>
+<li>wyliczenia -&gt; "Nad przepaścią bez łańcuchów, bez wahania!";</li>
+<li>powtórzenia -&gt; "Po grani! Po grani!";</li>
+<li>słownictwo nacechowane emocjonalnie -&gt; "Nie mam czasu na na przejażdżki wiedźmo wściekła!";</li>
+<li>metafory -&gt; "To moja droga z piekła do piekła";</li>
+<li>apostrofy - "Matko, nie rób tego - stój!";</li>
+<li>zastosowanie równoważników zdań -&gt; "I ot co!";</li>
+<li>porównania -&gt; "Choć przemknąłem przed wami jak cień!". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br>

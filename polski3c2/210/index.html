@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Bohaterowie fantastyczni w przytoczonym fragmencie to: Woland, Fagot, Behemot i tajemnicza dziewczyna. Pierwszy z nich jest magiem, który ma zaprezentowaæ publicznoœci swoje triki. Otacza go aura tajemnicy, on sam wyra¿a zaœ zainteresowanie mieszkañcami miasta i tym, czy zasz³a w nich wewnêtrzna przemiana. Wyró¿nia go refleksyjnoœæ oraz powaga, znakomicie wyczuwa nastroje widzów. Doskonale przy tym zna naturê cz³owieka: "Ludzie s¹ tylko ludŸmi. Lubi¹ pieni¹dze, ale przecie¿ tak by³o zawsze...". Rozumie bowiem, i¿ ludzie ³¹cz¹ w sobie zalety, ale tak¿e wady - sugeruje to krytyczny stosunek wzglêdem rzeczywistoœci, poniewa¿ Woland dostrzega niejednoznacznoœæ mieszkañców miasta. Mag jednak potrafi okazaæ mi³osierdzie i wyrozumia³oœæ, na co wskazuje to, i¿ przystaje na proœby zgromadzonych, aby zaprzestaæ mêczenia Bengalskiego. Jego wypowiedzi na ogó³ s¹ doœæ patetyczne - wynika to np. z zastosowanego s³ownictwa, apostrof i inwersji: "Powiedz mi, zacny Fagocie - zapyta³ Woland [...] - twoim zdaniem mieszkañcy Moskwy bardzo siê zmienili?". Jednoczeœnie inne s³owa maga maj¹ cechy typowe dla stylu potocznego: pojawiaj¹ siê urwane zdania, które sugeruj¹ zmianê toku myœli ("O ubraniach nie ma nawet co mówiæ, ale pojawi³y siê te... jak im tam... tramwaje, automobile...") oraz wyra¿enia typowe dla nieoficjalnej komunikacji ("Ale my tu gadu, gadu [...]") lub wyra¿aj¹ce stosunek emocjonalny ("coœ proœciutkiego").</p>
+<p>Wiernym towarzyszem Wolanda jest Fagot-Korowiow - "d³ugi asystent", który prezentuje sztuczkê z pieniêdzmi. W przeciwieñstwie do spokojnego Wolanda jego reakcje s¹ bardziej gwa³towne, posuwa siê tak¿e do bezpoœredniej krytyki Bengalskiego - nie darzy go sympati¹. Niezadowolenie asystenta budzi oskar¿enie o hipnozê: "A oto przypadek tak zwanego ³garstwa [...]".Z tego te¿ powodu - pod wp³ywem g³osów z widowni - bohater surowo karze konferansjera, co sugeruje jego bezwzglêdnoœæ, a nawet sk³onnoœæ do okrucieñstwa. Przy tym bez trudu nawi¹zuje kontakt z widzami: "Co z nim zrobimy?". Fagot to postaæ wyró¿niaj¹ca siê bezpoœrednim podejœciem oraz sk³onnoœci¹ do szyderstwa - szacunek okazuje jedynie Wolandowi. Jêzyk wypowiedzi asystenta zdaje siê odzwierciedlaæ jego niespokojn¹, niejednoznaczn¹ naturê. Mo¿na w jego wypowiedziach dostrzec elementy stylu urzêdowego - pewn¹ oficjalnoœæ i odpowiednie s³ownictwo: "Wiêc jak obywatele, darowaæ mu czy nie?". Ponadto kwestie Fagota wyró¿niaj¹ liczne zapo¿yczenia: z francuskiego ("Avec plaisir"), niemieckiego ("Eins, zwei, drei!") czy archaicznego w³oskiego ("messer"). Mog¹ one wskazywaæ na bogate doœwiadczenia bohatera, jego znajomoœæ innych pañstw czy potrzebê ubarwiania, urozmaicania swych wypowiedzi. Zdaj¹ siê jednak kontrastowaæ z innymi s³owami asystenta, które z kolei odwo³uj¹ siê do stylu potocznego. Pojawiaj¹ siê bowiem elementy nacechowane emocjonalnie i wykrzyknienia ("³garstwa", "obrzyd³ mi", A teraz, skoroœmy sp³awili ju¿ tego nudziarza, otwórzmy magazyn dla pañ!"), typowa leksyka ("facet"), zwi¹zki frazeologiczne ("Bêdziesz jeszcze plót³ smalone duby?"). Niejednorodnoœæ stylistyczna akcentuje charakter oraz niezwyk³y status tej postaci, jej swoist¹ dziwnoœæ  - nie przystaje do ukazanej we fragmencie rzeczywistoœci. </p>
+<p>Wraz z Wolandem i Fagotem pojawia siê tak¿e Behemot. Jest wielkim kotem, który potrafi chodziæ na tylnych ³apach; w przytoczonym fragmencie nie wypowiada siê. To on odrywa g³owê konferansjera, co œwiadczy o jego sile i braku litoœci: "I sta³a siê rzecz nies³ychana. Czarny kot zje¿y³ siê i miaukn¹³ rozdzieraj¹co. Potem sprê¿y³ siê i jak pantera da³ susa prosto na pierœ Bengalskiego [...]". Pojawia siê tak¿e zagadkowa dziewczyna: "Ruda pannica w czarnej wieczorowej toalecie, pannica, która diabli wiedz¹ sk¹d siê wziê³a i która by³aby bardzo przystojna, gdyby nie szpeci³a jej dziwaczna blizna na szyi [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowo:</p>
+<p>a) £¹czenie stylu potocznego i urzêdowego wzmacnia przede wszystkim groteskow¹ wizjê œwiata. Dochodzi w nim do po³¹czenia nieprzystaj¹cych pierwiastków, które odwo³uj¹ siê do odmiennych sfer ¿ycia. Zabieg ten wywo³uje tak¿e efekt humorystyczny, poniewa¿ to, co oficjalne zostaje zestawione z jêzykiem potocznym - staje siê to Ÿród³em swoistego kontrastu. Ponadto tê cechê tekstu mo¿na tak¿e bezpoœrednio odnieœæ do charakteru ukazanej rzeczywistoœci, w której to biurokracja ma olbrzymi wp³yw na egzystencjê wszystkich ludzi - zdaje siê wiêc przenikaæ do ró¿nych dziedzin, a nawet jêzyka. </p>
+<p> </p>
+<p>b) Wyrazy wartoœciuj¹ce przede wszystkim wskazuj¹ na ocenê pewnych elementów lub zjawisk przez narratora, jego stosunek wzglêdem zaprezentowanej rzeczywistoœci: "I sta³a siê rzecz nies³ychana." Czasem sugeruj¹ jego dystans lub buduj¹ humorystyczny efekt: "[...] ów niezrównany, najmilszy na œwiecie zapach œwie¿o wydrukowanych banknotów". Za ich spraw¹ zostaje zaznaczona obecnoœæ narratora, on tym samym nie jest zupe³nie obojêtny wzglêdem ukazanych realiów. Z kolei okreœlenia animizuj¹ce wp³ywaj¹ na niezwyk³oœæ ukazanej sytuacji. Elementy realistyczne ³¹cz¹ siê bowiem, z tym, co fantastyczne, niemo¿liwe. Zabieg ten wprowadza atmosferê tajemnicy, niezwyk³oœci, zwi¹zanej z pokazem maga.</p>
+<p> </p>
+<p>c) Fragmenty, w których wystêpuje mowa zale¿na:</p>
+<ul>
+<li><em>Fagot, s³odko szczerz¹c zêby, oœwiadczy³, ¿e firma ca³kowicie bezp³atnie wymienia stare sukienki i obuwie  na paryskie toalety i równie paryskie pantofelki. Dotyczy to, doda³, równie¿ torebek, perfum i ca³ej reszty.</em></li>
+<li><em>Oœwiadczy³ on, ¿e jego ma³¿onka cierpi na grypê i ¿e w zwi¹zku z tym zmuszony jest prosiæ, aby przekazano jej to i owo za jego poœrednictwem. </em></li>
+<li><em>Fagot zaœ wrzasn¹³, ¿e ufa mu jak samemu sobie nawet bez okazywania dowodu [...].</em></li>
+<li><em>Wówczas Fagot oœwiadczy³, ¿e z powodu spóŸnionej pory magazyn zostanie zamkniêty a¿ do jutrzejszego wieczora [...]. </em></li>
+</ul>
+<p>Mowa zale¿na podkreœla wiedzê narratora, poniewa¿ wprowadza on wypowiedŸ bohatera w niedos³owny sposób - mo¿na mówiæ o jej parafrazie. Nie dochodzi tym samym do wyrazistego oddzielenia s³ów postaci i narratora, przez co czytelnik mo¿e polegaæ tylko na tym, co chce mu przekazaæ narrator. Zabieg ten pozwala tak¿e na urozmaicenie narracji, kondensacjê wymiany zdañ. </p><br>

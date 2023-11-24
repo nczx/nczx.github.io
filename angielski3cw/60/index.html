@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Konstrukcji <em>have something done</em> używamy do opisania sytuacji, w której zleciliśmy wykonanie jakiejś usługi albo po prostu takiej, w której ktoś inny coś dla nas zrobił. Tę konstrukcję tworzymy w następujący sposób w poszczególnych czasach:</strong></p>
+<p><strong><span style="text-decoration: underline;">Past simple</span>: podmiot + had + dopełnienie + <em>past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed)</strong></p>
+<p><strong><span style="text-decoration: underline;">Czasownik modalny</span>: podmiot + czasownik modalny + have + dopełnienie + <em>past participle</em></strong></p>
+<p><strong><br/>Zamiast czasownika <em>have </em>można użyć <em>get</em>. Zdanie będzie miało wtedy bardziej potoczny wydźwięk.</strong></p>
+<hr/>
+<p> </p>
+<p>1. got/had it repaired five years ago  </p>
+<p>2. must have/get my back checked </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1 - c </p>
+<p>(Muszę iść obciąć włosy.) </p>
+<p>2 - f</p>
+<p>(W tej chwili zlecamy dekorację naszego domu.)</p>
+<p>3 - a</p>
+<p>(Kiedy zbadasz sobie oczy?)</p>
+<p>4 - e</p>
+<p>(Powinienem/Powinnam był/a oddać mój rower do naprawy.)</p>
+<p>5 - b</p>
+<p>(Czy kiedykolwiek miałeś/aś usuwany ząb?)</p>
+<p>6 - d</p>
+<p>(Czy naprawdę ktoś przygotowywał ci posiłki?)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. redesigning the garden  </p>
+<p>2. planted five trees</p>
+<p><strong>Uzasadnienie (1, 2): </strong>podmiot wykonuje czynność samodzielnie, dlatego należy wybrać stronę czynną czasownika.</p>
+<p>3. have it done</p>
+<p>4. getting them flown in</p>
+<p><strong>Uzasadnienie (3, 4): </strong>czynność jest zlecana komuś innemu, dlatego należy wybrać konstrukcję <em>have (get) sth done</em>.</p>
+<p>5. cooking dinner</p>
+<p><strong>Uzasadnienie: </strong>podmiot wykonuje czynność samodzielnie, dlatego należy wybrać stronę czynną czasownika.</p>
+<p>6. to have something made</p>
+<p><strong>Uzasadnienie: </strong>czynność jest zlecana komuś innemu, dlatego należy wybrać konstrukcję <em>have sth done</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Konstrukcji <em>have/get something done </em>używamy do opisania sytuacji, w której zleciliśmy wykonanie jakiejś usługi albo po prostu takiej, w której ktoś inny coś dla nas zrobił. </strong></p>
+<p><strong>Aby ją utworzyć, odmieniamy czasownik <em>have </em>(lub <em>get</em>) w wybranym czasie. Po nim następuje dopełnienie (rzeczownik lub zaimek osobowy) oraz czasownik główny (wyrażający czynność) w formie <em>past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</strong></p>
+<p><strong><br/>Konstrukcja <em>have something done</em> w poszczególnych czasach:</strong></p>
+<p><strong><span style="text-decoration: underline;">Present simple</span>: podmiot + <em>have/has</em> + dopełnienie + <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Past simple</span>: podmiot + <em>had </em>+ dopełnienie + <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Present continuous</span>: podmiot + <em>am/</em><em>are/is</em> <em>having </em>+ dopełnienie + <em>past participle</em></strong></p>
+<p><strong><span style="text-decoration: underline;">Czasownik modalny</span>: podmiot + czasownik modalny + <em>have</em> + dopełnienie + <em>past participle</em></strong></p>
+<p><br/><strong>Zamiast czasownika <em>have</em> można użyć <em>get.</em> Zdanie będzie miało wtedy bardziej potoczny wydźwięk.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. I got my nails painted </p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple </em>dla czynności zakończonej w przeszłości. </p>
+<p>3. get it fixed</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>have to </em>(musieć) łączy się z bezokolicznikiem, dlatego odmienna część konstrukcji <em>get something done </em>musi przybrać formę bezokolicznika.</p>
+<p>4. am having my room painted</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present continuous </em>dla czynności, która dzieje się w chwili mówienia (<em>at the moment </em>- teraz).</p>
+<p>5. has his car washed</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present simple </em>dla czynności rutynowej (<em>every Sunday </em>- w każdą niedzielę).</p>
+<p>6. having her head scratched / to have her head scratched</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>like </em>(lubić) łączy się z innym czasownikiem w formie <em>gerund </em>(z końcówką -ing) lub w formie bezokolicznika z <em>to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Konstrukcji <em>have/get something done </em>używamy do opisania sytuacji, w której zleciliśmy wykonanie jakiejś usługi albo po prostu takiej, w której ktoś inny coś dla nas zrobił. </strong></p>
+<p><strong>Aby ją utworzyć, odmieniamy czasownik <em>have </em>(lub <em>get</em>) w wybranym czasie. Po nim następuje dopełnienie (rzeczownik lub zaimek osobowy) oraz czasownik główny (wyrażający czynność) w formie <em>past participle </em>(III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</strong></p>
+<p><strong><br/>Konstrukcja <em>have something done</em> w poszczególnych czasach:</strong></p>
+<p><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Present continuous</span>:</em> podmiot + <em>am/</em><em>are/is</em> <em>having </em>+ dopełnienie + <em>past participle</em></strong></p>
+<p><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Past simple</span>:</em> podmiot + <em>had </em>+ dopełnienie + <em>past participle</em></strong></p>
+<p><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Present perfect</span>:</em> podmiot + <em>have/has had + </em>dopełnienie + <em>past participle </em></strong></p>
+<p><strong><em><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Future simple</span>:</em> podmiot + <em>will have </em>+ dopełnienie + <em>past participle</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. is having a wind farm built </p>
+<p><strong>Uzasadnienie</strong>: czas <em>present continuous </em>tak jak w zdaniu wyjściowym. </p>
+<p>2. had solar panels put on our roof</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple </em>tak jak w zdaniu wyjściowym. </p>
+<p>3. have never had my hair dyed</p>
+<p><strong>Uzasadnienie</strong>: czas <em>present perfect </em>tak jak w zdaniu wyjściowym. </p>
+<p>4. got my homework checked </p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple </em>tak jak w zdaniu wyjściowym. Tutaj używamy wymiennie czasownika <em>get </em>(<em>get something done</em>). </p>
+<p>5. will have winter tyres put on the car</p>
+<p><strong>Uzasadnienie</strong>: czas <em>future simple </em>tak jak w zdaniu wyjściowym.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. having/getting </p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>have/get something done</em>, aby opisać, że czynność została zlecona komuś innemu. Czas <em>past continuous </em>(<em>was/were </em>+ czasownik z -ing). </p>
+<p>2. were</p>
+<p><strong>Uzasadnienie:</strong> używamy strony biernej, bo podmiot w zdaniu (<em>we </em>- my) nie jest wykonawcą czynności (<em>give </em>- dać). Czas <em>past simple </em>dla czynności zakończonej w przeszłości, czyli tworzymy następującą konstrukcję: <em>was/were + </em>czasownik główny w <em>past participle.</em> </p>
+<p>3. being</p>
+<p><strong>Uzasadnienie:</strong> używamy strony biernej, bo podmiot (<em>the gym </em>- siłownia) nie jest wykonawcą czynności (<em>paint </em>- malować). Konstrukcja w czasie <em>past continuous</em>: <em>was/were being + </em>czasownik główny w <em>past participle</em>.</p>
+<p>4. was</p>
+<p><strong>Uzasadnienie:</strong> używamy strony biernej, bo podmiot (<em>I </em>- ja) nie jest wykonawcą czynności (<em>beat </em>- pokonać). Opisujemy czynność zakończoną w przeszłości, więc używamy czasu <em>past simple</em>. Konstrukcja: <em>was/were + </em>czasownik główny w <em>past participle</em>.</p>
+<p>5. have/get</p>
+<p>6. have/get</p>
+<p><strong>Uzasadnienie (5, 6):</strong> konstrukcja <em>have/get something done</em>, aby opisać, że czynność została zlecona komuś innemu. Konstrukcja <em>be going to</em> oraz czasownik modalny przed luką łączą się z innym czasownikiem w formie bezokolicznika.</p><br>

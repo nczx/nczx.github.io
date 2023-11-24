@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Wyrazy, które dotknê³a zmiana normy:</p>
+<ul>
+<li>bronz -&gt; "on" zosta³o zast¹pione samog³osk¹ "¹"; </li>
+<li>brózda -&gt; "ó" zosta³o zast¹pione "u";</li>
+<li>brózdowaæ -&gt; "ó" zosta³o zast¹pione "u";</li>
+<li>bruljon -&gt; "j" zosta³o zast¹pione samog³osk¹ "i";</li>
+<li>Brunszwik (Brunœwik) -&gt; funkcjonuje tylko nazwa "Brunszwik";</li>
+<li>nak³uæ, nak³u³ (nak³óæ) -&gt; "ó" zosta³o zast¹pione "u";</li>
+<li>nakoniec -&gt; zosta³a wprowadzona pisownia rozdzielna ;</li>
+<li>nakrzy¿ -&gt; zosta³a wprowadzona pisownia rozdzielna;</li>
+<li>nakszta³t -&gt; zosta³a wprowadzona pisownia rozdzielna;</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Innowacje jêzykowe we wskazanych zdaniach s¹ podporz¹dkowane ró¿nym funkcjom. W pierwszym zdaniu s³owo "dedykowane" u¿yto prawdopodobnie, aby uatrakcyjniæ wypowiedŸ, co wynika z mody jêzykowej, przekonania o tym, ¿e bardziej wyszukane s³owa mog¹ wywrzeæ pozytywny wp³yw na odbiorcê. W drugim zdaniu zastosowanie s³owa "obrzydliwa" sugeruje raczej nieznajomoœæ norm jêzykowych, poniewa¿ zosta³o u¿yte w niew³aœciwym kontekœcie. Z kolei "kaczkomat" i "sojaburger" pozwalaj¹ na zwiêz³e i precyzyjne nazwanie nowych zjawisk. </p>
+<p> </p>
+<p>B³êdy jêzykowe: <em>dedykowane, obrzydliwa</em></p>
+<p><em>Wyrazy w normie: kaczkomaty, sojaburger</em></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przyk³adowo: </p>
+<table border="1" style="border-collapse:collapse;width:981px;height:463px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:112.9px;"><strong>Wyraz</strong></td>
+<td style="background-color:#aed581;text-align:center;width:146.025px;"><strong>Kryterium wystarczalnoœci</strong></td>
+<td style="background-color:#aed581;text-align:center;width:145.5px;"><strong>Kryterium ekonomicznoœci</strong></td>
+<td style="background-color:#aed581;text-align:center;width:144.075px;"><strong>Kryterium funkcjonalnoœci</strong></td>
+<td style="background-color:#aed581;text-align:center;width:174.925px;"><strong>Kryterium rozpowszechnienia</strong></td>
+<td style="background-color:#aed581;text-align:center;width:122.338px;"><strong>Kryterium autorytetu kulturalnego </strong></td>
+<td style="background-color:#aed581;text-align:center;width:113.238px;"><strong>Kryterium estetyczne</strong></td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">chirur¿ka</td>
+<td style="width:146.025px;text-align:center;">Kryterium zostaje spe³nione. Wyraz nazywa zjawisko, które ju¿ wczeœniej istnia³o, ale nie by³o okreœlane w tak precyzyjny sposób.</td>
+<td style="width:145.5px;text-align:center;">Tak. Wyraz zwiêŸle wyra¿a sens po³¹czenia "kobieta chirurg".  </td>
+<td style="width:144.075px;text-align:center;">Jest zgodny z funkcj¹ wypowiedzi. </td>
+<td style="width:174.925px;text-align:center;">Jest coraz bardziej obecny w dyskursie.</td>
+<td style="width:122.338px;text-align:center;">To forma akceptowana przez jêzykoznawców.</td>
+<td style="width:113.238px;text-align:center;">Spe³nia je, chocia¿ budzi niechêæ niektórych osób.</td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">komórka</td>
+<td style="width:146.025px;text-align:center;">Nie do koñca spe³nia kryterium, poniewa¿ jest skrótem (telefon komórkowy).</td>
+<td style="width:145.5px;text-align:center;">Tak, stanowi krótsze okreœlenie. </td>
+<td style="width:144.075px;text-align:center;">Jest to zale¿ne od kontekstu, w którym wyraz funkcjonuje. </td>
+<td style="width:174.925px;text-align:center;">Jest u¿ywanym powszechnie wyrazem. </td>
+<td style="width:122.338px;text-align:center;">Nie spe³nia kryterium, to wyraz potoczny. </td>
+<td style="width:113.238px;text-align:center;">Tak, spe³nia kryterium.</td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">koronakryzys</td>
+<td style="width:146.025px;text-align:center;">Tak. Nazywa nowe zjawisko. </td>
+<td style="width:145.5px;text-align:center;">Tak, wyra¿a sens w precyzyjny sposób.</td>
+<td style="width:144.075px;text-align:center;">Tak.</td>
+<td style="width:174.925px;text-align:center;">Tak, pojawia siê w ró¿nych tekstach, wypowiedziach.</td>
+<td style="width:122.338px;text-align:center;">Tak - pojawia siê w s³owniku. </td>
+<td style="width:113.238px;text-align:center;">Tak, spe³nia kryterium.</td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">PUPA</td>
+<td style="width:146.025px;text-align:center;">Jest skrótem, nie nazywa nowych rzeczy. </td>
+<td style="width:145.5px;text-align:center;">Tak, jest zwiêz³y w porównaniu z pe³n¹ nazw¹. </td>
+<td style="width:144.075px;text-align:center;">Nie, utrudnia spe³nienie przez tekst danej funkcji.</td>
+<td style="width:174.925px;text-align:center;">Nie jest rozpowszechnionym skrótem.</td>
+<td style="width:122.338px;text-align:center;">Nie, nie spe³nia kryterium.</td>
+<td style="width:113.238px;text-align:center;">Nie spe³nia kryterium.</td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">sojonez</td>
+<td style="width:146.025px;text-align:center;">Tak, nazywa nowe zjawisko. </td>
+<td style="width:145.5px;text-align:center;">Tak, cechuje siê precyzj¹. </td>
+<td style="width:144.075px;text-align:center;">Tak, spe³nia je.</td>
+<td style="width:174.925px;text-align:center;">Tak, pojawia siê w ró¿nych wypowiedziach. </td>
+<td style="width:122.338px;text-align:center;">Tak, spe³nia je.</td>
+<td style="width:113.238px;text-align:center;">Tak, spe³nia kryterium.</td>
+</tr>
+<tr>
+<td style="width:112.9px;text-align:center;">wakajki</td>
+<td style="width:146.025px;text-align:center;">Nazywa istniej¹ce ju¿ zjawisko.</td>
+<td style="width:145.5px;text-align:center;">Nie prowadzi do krótszego wyra¿enia sensu.</td>
+<td style="width:144.075px;text-align:center;">Spe³nienie go zale¿y od kontekstu, w którym wystêpuje. </td>
+<td style="width:174.925px;text-align:center;">Jest rozpowszechniony wœród w¹skiej grupy u¿ytkowników jêzyka. </td>
+<td style="width:122.338px;text-align:center;">Nie, spe³nia tego kryterium. </td>
+<td style="width:113.238px;text-align:center;">Tak, spe³nia kryterium. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<table border="1" style="border-collapse:collapse;width:644px;height:319px;">
+<tbody>
+<tr style="height:52px;">
+<td style="background-color:#aed581;text-align:center;height:52px;width:148.525px;"><strong>Zdanie</strong></td>
+<td style="background-color:#aed581;text-align:center;height:52px;width:148.525px;"><strong>Wyraz modny</strong></td>
+<td style="background-color:#aed581;text-align:center;height:52px;width:148.525px;"><strong>Znaczenie wyrazu modnego</strong></td>
+<td style="background-color:#aed581;text-align:center;height:52px;width:185.425px;"><strong>Wyraz zastêpuj¹cy (przyk³ad) </strong></td>
+</tr>
+<tr style="height:35px;">
+<td style="width:148.525px;text-align:center;height:35px;">Festiwal k³amstw w sprawie katastrofy.</td>
+<td style="width:148.525px;text-align:center;height:35px;">festiwal</td>
+<td style="width:148.525px;text-align:center;height:35px;">artystyczna impreza</td>
+<td style="width:185.425px;text-align:center;height:35px;">ci¹g</td>
+</tr>
+<tr style="height:52px;">
+<td style="width:148.525px;text-align:center;height:52px;">Aktualne problemy polskiej gospodarki.</td>
+<td style="width:148.525px;text-align:center;height:52px;">aktualne</td>
+<td style="width:148.525px;text-align:center;height:52px;">zwi¹zane z teraŸniejszoœci¹, zachowuj¹ce wa¿noœæ </td>
+<td style="width:185.425px;text-align:center;height:52px;">obecne</td>
+</tr>
+<tr style="height:35px;">
+<td style="width:148.525px;text-align:center;height:35px;">Pora na dialog z mieszkañcami.</td>
+<td style="width:148.525px;text-align:center;height:35px;">dialog</td>
+<td style="width:148.525px;text-align:center;height:35px;">rozmowa co najmniej dwóch osób</td>
+<td style="width:185.425px;text-align:center;height:35px;">konsultacje</td>
+</tr>
+<tr style="height:52px;">
+<td style="width:148.525px;text-align:center;height:52px;">Amerykanie testuj¹ myœliwiec nowej generacji.</td>
+<td style="width:148.525px;text-align:center;height:52px;">generacji</td>
+<td style="width:148.525px;text-align:center;height:52px;">ogó³ istot, które maj¹ ten sam wiek </td>
+<td style="width:185.425px;text-align:center;height:52px;">typu</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>. </p><br>

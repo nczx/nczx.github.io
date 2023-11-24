@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 1077px; height: 606px;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #90caf9; height: 87px; width: 357px;"> </td>
+<td style="background-color: #90caf9; height: 87px; width: 356px;"><strong>Tekst nr 1</strong></td>
+<td style="background-color: #90caf9; height: 87px; width: 361px;"><strong>Tekst nr 2</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #a5d6a7; height: 138px; width: 357px;">Jakie informacje pojawiają się w obu tekstach? </td>
+<td colspan="2" style="width: 717px; height: 138px;">
+<ul>
+<li>Europa się starzeje, </li>
+<li>wskazanie, że dobrze skonstruowana polityka prorodzinna jest w stanie zapewnić kobiecie możliwość jednocześnie oddawać się macierzyństwu i bycia aktywną zawodowo, </li>
+<li>wskazanie, że dane dotyczące zmniejszającej się dzietności w Polsce są nieoptymistyczne</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #a5d6a7; height: 155px; width: 357px;">Fakty, które zostały przedstawione tylko w jednym tekście.</td>
+<td style="width: 356px; height: 155px;">
+<ul>
+<li>przedstawienie danych liczbowych dot. wielkości wskaźnika dzietności oraz wielkości populacji europejskiej obecnie oraz w 2050 r., </li>
+<li>wskazanie, że tylko w Europie zmniejsza się wskaźnik dzietności, a na innych kontynentach on rośnie, </li>
+<li>podkreślenie, że duży wzrost liczby ludności może doprowadzić do fal migracyjnych, ponieważ Ziemia nie będzie w stanie zapewnić ludziom m.in. żywności i wody</li>
+</ul>
+</td>
+<td style="width: 361px; height: 155px;">
+<ul>
+<li>wskazanie, że wpływ na współcześnie obniżanie się wskaźnika dzietności ma transformacja ustrojowa oraz postrzeganie wielodzietnych rodzin za patologie, </li>
+<li>wskazanie głosu niektórych z komentatorów, którzy uważają, że spadek liczby ludności jest dobry, ponieważ tym samym jest mniejsze ubóstwo, a kobiety mają możliwość spełnienia zawodowego</li>
+</ul>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td style="background-color: #a5d6a7; height: 431px; width: 357px;">Ocena podejścia obu autorów do kwestii spadku wskaźnika dzietności. </td>
+<td style="width: 356px; height: 431px;">A. Rozwadowska wskazuje, że z roku na rok dochodzi do spadku dzietności w Europie. Używa ona sformułowań typu "znowu", "nie ma z czego się cieszyć", aby podkreślić, w jak złej kondycji społeczno-demograficznej znajduje się Europa oraz Polska. Jej zdaniem dane z Eurostatu uwidaczniają, że Europejki są coraz mniej skłonne do rodzenia dzieci i oddawaniu się macierzyństwu. W ocenie autorki tekstu ma miejsce nieustanne obniżanie się wskaźnika dzietności (w 2016 r. wynosił on 1,6, zaś w 2017 r. - 1,59), a tym samym zagrożony jest próg gwarantujący zastępowalność pokoleń (wynoszący 2,1). A. Rozwadowska wskazuje, że nieprawdą jest, że więcej dzieci rodzi się w państwach patriarchalnych, a jako przykład podaje Francję, w której w 2017 r. był najwyższy w Europie wskaźnik dzietności - 1,9. Jej zdaniem wpływ na taką sytuację ma odpowiednio prowadzona polityka prorodzinna. Wskazuje ona również, że w Polsce owa polityka prorodzina jest niewłaściwe prowadzona i państwo za mało środków przeznacza na wsparcie rodzin z dziećmi. Apeluje ona, że przyszłość Europy rysuje się w czarnych barwach, ponieważ zgodnie z raportem ONZ w ciągu 30 lat w Europie zmniejszy się populacja o ok 26 mln ludzi, przy czym na innych kontynentach liczba ludności będzie rosła. Jej zdaniem niemożliwy jest ciągły wzrost liczby ludności na świecie, ponieważ wyczerpane zostaną możliwości żywnościowe, itd., co w konsekwencji doprowadzi do fal migracyjnych. </td>
+<td style="width: 361px; height: 431px;">P. Wójcik opracował zagadnienie problemu dzietności w krajach Europy Środkowo-Wschodniej z innej perspektywy, a mianowicie biorąc pod uwagę proces transformacji ustrojowej oraz idące za nią konsekwencje dotyczące przewartościowania własnego życia przez wiele rodzin w zakresie zepchnięcia rodziny na plan boczny i wybór życia zawodowego. Wskazuje on, że często takie działanie nie było wyborem ludzi, lecz koniecznością w celu "utrzymania się na powierzchni" (wzrost bezrobocia). Według jego oceny za obniżenie się dzietności odpowiada również utwierdzenie się w społeczeństwie przekonania, że najbardziej optymalnym rozwiązaniem jest model rodziny 2+1, a rodziny z większą liczbą dzieci zaczęły uchodzić za patologiczne. Przedstawia on nawet opinie komentatorów, którzy widzą pozytywne strony zmniejszającej się dzietności, co związane jest choćby z tym, że mniejsza dzietność, to jednocześnie mniejsze ubóstwo rodzin, mniejsza eksploatacja środowiska i większe możliwości zawodowe kobiet. Niemniej sam P. Wójcik wskazuje, że zmniejszająca się dzietność stanowi zagrożenie dla systemów zabezpieczenia społecznego, stabilności rodzin oraz dynamizacji społeczeństwa. Podkreśla on również, że dobrze skonstruowany system prorodzinny jest w stanie wspomóc kobiety w w jednoczesnym wychowywaniu dzieci i w pracy zawodowej. </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>W obu tekstach pojawiły się informacje o tym, że w Europie Środkowo-Wschodniej, w tym w Polsce, spada w ostatnich latach wskaźnik dzietności. Oba teksty przekazały również informację o tym, że zachodzi zjawisko starzenia się populacji europejskiej. Oba artykuły są również zgodne w tym, że dobrze skonstruowana polityka prorodzinna, w tym świadczenia wychowawcze i ulgi dla rodziców, mogą sprawić, że na świat będzie przychodzić więcej dzieci.</p>
+<p>Poza tym jednak teksty znacząco różnią się w swych przekazach. Tekst pierwszy utrzymuje, że zasadniczo nie ma nic złego w tym, iż populacja Europy, w tym Europy Środkowo-Wschodniej, zmniejsza się, ponieważ ogólnie liczba ludności na świecie wzrasta. Tekst pierwszy wieszczy, że problemem świata nie będzie zmniejszająca się liczba ludności, ale przyrost liczby mieszkańców globu, co może doprowadzić do sytuacji, w której dla niektórych ludzi na kuli ziemskiej braknie w przyszłości pożywienia.</p>
+<p>Drugi z tekstów utrzymuje natomiast, że spadek liczby dzieci może wiązać się z negatywnymi konsekwencjami dla systemu emerytalnego, gospodarki, a także kondycji instytucji rodziny. W drugim z tekstów wyraźnie widoczne jest poparcie dla modelu rodzin wielodzietnych.</p><br>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. coffee </p>
+<p>2. Venice</p>
+<p>3. ticket office</p>
+<p>4. George</p>
+<p>5. concert hall</p>
+<p> </p>
+<p>a. was making</p>
+<p>b. broke</p>
+<p>c. had bought</p>
+<p><strong>Uzasadnienie (a-c):</strong> kiedy opisujemy dłuższą czynność wykonywaną w momencie, kiedy odbyło się inne wydarzenie, używamy czasu <em>past continuous</em> (<em>was/were</em> + czasownik z -ing). Do opisania krótkiego wydarzenia używamy <em>past simple</em>. Do opisania czynności, która odbyła się przed innymi wydarzeniami w przeszłości, używamy czasu <em>past perfect</em> (<em>had </em>+ <em>past participle</em>).</p>
+<p><br/>d. was going</p>
+<p>e. met</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy dłuższą czynność wykonywaną w momencie, kiedy odbyło się inne wydarzenie, używamy czasu <em>past continuous</em>. Do opisania krótkiego wydarzenia używamy <em>past simple</em>. </p>
+<p><br/>f. had sold</p>
+<p><strong>Uzasadnienie:</strong> do opisania czynności, która odbyła się przed innymi wydarzeniami w przeszłości, używamy czasu <em>past perfect</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. were, hadn't done </p>
+<p><strong>Uzasadnienie:</strong> czynność wykonana później - <em>past simple</em>. Czynność wykonana przed tą czynnością / powód - <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).  </p>
+<p>2. had already bought, went</p>
+<p><strong>Uzasadnienie:</strong> czynność wykonana wcześniej - <em>past perfect</em> (<em>had </em>+ <em>past participle</em>). Czynność wykonana po tej czynności - <em>past simple</em>.</p>
+<p>3. got, had left</p>
+<p><strong>Uzasadnienie:</strong> czynność wykonana później - <em>past simple</em>. Czynność wykonana przed tą czynnością - <em>past perfect</em> (<em>had </em>+ <em>past participle</em>).</p>
+<p>4. were walking, saw</p>
+<p><strong>Uzasadnienie:</strong> dłuższa czynność, którą przerwało krótsze wydarzenie - <em>past continuous</em> (<em>was/were</em> + czasownik z -ing). Krótkie wydarzenie - <em>past simple</em>. </p>
+<p>5. had never heard, was</p>
+<p><strong>Uzasadnienie:</strong> doświadczenie życiowe do pewnego momentu w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle</em>). Zakończona czynność w przeszłości - <em>past simple</em>.</p>
+<p>6. was flying, read</p>
+<p><strong>Uzasadnienie:</strong> dłuższa czynność (<em>past continuous </em>- lot samolotem), która była tłem dla zakończonej czynności (<em>past simple </em>- przeczytanie dwóch artykułów).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. a </p>
+<p><strong>Uzasadnienie:</strong> w pytaniu o czynność wykonaną przed innym wydarzeniem w przeszłości używamy czasu <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle</em>). </p>
+<p>2. b</p>
+<p><strong>Uzasadnienie:</strong> w pytaniu o czynność, która była w trakcie, kiedy wydarzyło się coś innego ("Steven złamał rękę") używamy czasu <em>past continuous</em> (<em>was/were</em> + podmiot + czasownik z -ing).</p>
+<p>3. a</p>
+<p><strong>Uzasadnienie:</strong> w pytaniu o zakończoną czynność w konkretnym momencie w przeszłości używamy czasu <em>past simple</em> (<em>did</em><strong> </strong>+ podmiot + bezokolicznik).</p>
+<p>4. b</p>
+<p><strong>Uzasadnienie:</strong> w pytaniu o czynność, która była w trakcie, kiedy wydarzyło się coś innego ("widziałem/am Jacka i Chrisa") używamy czasu <em>past continuous</em> (<em>was/were</em> + podmiot + czasownik z -ing).</p>
+<p>5. a</p>
+<p><strong>Uzasadnienie:</strong> w pytaniu o sytuację, która odbyła się przed innym wydarzeniem w przeszłości, używamy czasu <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. was playing</p>
+<p><strong>Uzasadnienie:</strong> spójnik <em>while </em>(podczas gdy) wprowadza czas ciągły (<em>continuous</em>). Używamy czasu <em>past continuous </em>(<em>was/were</em> + czasownik z -ing), aby opisać trwanie jakiejś czynności w przeszłości. </p>
+<p>2. had never seen</p>
+<p><strong>Uzasadnienie:</strong> życiowe doświadczenie, które trwało do pewnego momentu w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. had forgotten</p>
+<p><strong>Uzasadnienie:</strong> sytuacja, która odbyła się przed innymi wydarzeniami w przeszłości - <em>past perfect</em> (<em>had </em>+ <em>past participle</em>).</p>
+<p>4. messaged</p>
+<p><strong>Uzasadnienie:</strong> czynność wykonana w konkretnym momencie w przeszłości - <em>past simple</em>. Ten czas wprowadza spójnik <em>when </em>(kiedy).</p>
+<p>5. was studying</p>
+<p><strong>Uzasadnienie:</strong> dłuższa czynność wykonywana w momencie, kiedy odbyło się inne wydarzenie - <em>past continuous </em>(<em>was/were</em> + czasownik z -ing). </p>
+<p>6. got </p>
+<p><strong>Uzasadnienie:</strong> zakończona czynność w konkretnym momencie w przeszłości - <em>past simple</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. (przykład), Had you been </p>
+<p><strong>Uzasadnienie:</strong> pytanie o czynność wykonaną przed innym wydarzeniem w przeszłości - <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed). W czasie typu <em>perfect</em>, kiedy mówimy, że ktoś gdzieś pojechał i stamtąd wrócił, nie używamy 3. formy czasownika <em>go </em>(<em>gone</em>), tylko 3. formy czasownika <em>to be</em>. </p>
+<p>2. watched, Had you ever seen</p>
+<p><strong>Uzasadnienie:</strong> pytanie o czynność wykonaną w konkretnym momencie w przeszłości - <em>past simple</em> (<em>did </em>+ podmiot + bezokolicznik). Pytanie o czynność wykonaną przed innym wydarzeniem w przeszłości - <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle</em>).</p>
+<p>3. were you doing, Had you finished</p>
+<p><strong>Uzasadnienie:</strong> pytanie o czynność, która była w trakcie w konkretnym momencie w przeszłości - <em>past continuous</em> (<em>was/were</em> + podmiot + czasownik z -ing). Pytanie o czynność zakończoną przed innym wydarzeniem w przeszłości - <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle</em>).</p>
+<p>4. did you leave, Had your parents already left</p>
+<p><strong>Uzasadnienie:</strong> pytanie o czynność wykonaną w konkretnym momencie w przeszłości - <em>past simple</em> (<em>did </em>+ podmiot + bezokolicznik). Pytanie o czynność wykonaną przed innym wydarzeniem w przeszłości - <em>past perfect</em> (<em>had </em>+ podmiot + <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. (przykład)</p>
+<p>2. could have helped to build the statues</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>could have + past participle </em>(tu: końcówka -ed), aby spekulować na temat czynności wykonanej w przeszłości. </p>
+<p>3. out when we had finished lunch</p>
+<p><strong>Uzasadnienie</strong>: czynność wykonana wcześniej, zwłaszcza jeśli w zdaniu czynności nie są przedstawione chronologicznie (zjedliśmy lunch, wyszliśmy), musi być wyrażona w czasie <em>past perfect.</em></p>
+<p>4. was dead because it hadn't rained all summer</p>
+<p><strong>Uzasadnienie</strong>: brak deszczu był przyczyną określonego stanu w przeszłości, dlatego musimy czynność <em>rain </em>(padać) wyrazić w czasie <em>past perfect</em>.</p>
+<p>5. can't have been Jack because he's on holiday at the moment</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>can't have + past participle </em>(tu: III kolumna w tabeli czasowników nieregularnych), aby wyrazić pewność odnośnie konkretnej sytuacji w przeszłości.</p>
+<p>6. must have been really excited when she saw an elephant outside her hotel</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>must have + past participle</em>, aby wyrazić pewność odnośnie konkretnej sytuacji w przeszłości.</p><br>

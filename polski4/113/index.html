@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Bohater, kiedy pozostaje sam, pogrąża się w bezczynności lub też śpi. Z uwagą obserwuje swoje ciało i nazywa jego części składowe: "Moja ręka", "Moje palce". Duże wrażenie robi na nim to, że ręka wykonuje pomyślane przez niego czynności, podlega jego woli. Skupia się więc na doświadczeniu swej cielesności. W momencie gdy pojawiają się inne postacie, Bohater jest zmuszony do wejścia z nimi w pewne interakcje. Wtedy też przyjmuje określone role i dostosowuje do nich swoje zachowanie czy sposób wypowiedzi. Spotkanie z rodzicami wtłacza Bohatera w rolę dziecka, syna karconego za swoje zachowanie: "Coś mnie podkusiło, tatusiu. Jakiś diabeł, tatusiu!". Następnie Bohater staje się dorosłym człowiekiem, któremu zaoferowano kupno psa. Kiedy decyduje się na jego przyjęcie, wchodzi w rolę opiekuna. Troszczy się o nowego towarzysza: głaszcze go, rozmawia z nim zapewnia mu wodę do picia. </p>
+<p> </p>
+<p>b) Didaskalia podkreślają przede wszystkim nieokreśloność Bohatera - nie zostaje wskazany jego wiek, wygląd, praca. Może być tym samym każdym, ponieważ pozbawia się go charakterystycznych cech. Istotne jest to, że w sztuce zastępują go także inni ludzie - jego tożsamość zdaje się płynna, nieukształtowana. Didaskalia ponadto zaznaczają bierność postaci - zazwyczaj leży, kontempluje swoje ciało lub też siedzi na łóżku. Jedyne formy skromnej aktywności wyzwala w niej obecność Bobika. Rodzice mają niezbyt dobrą opinię na temat syna. Przede wszystkim są zatroskani jego postawą i brakiem działania. Obawiają się o jego przyszłość czy też brak ambicji: "Ma czterdzieści lat i jest dopiero dyrektorem administracyjnym operetki". Są rozczarowani jego zachowaniem, zaś Ojciec oskarża Bohatera o kradzież złotówki. Dezaprobatę rodziców budzi także donosicielstwo syna oraz jego sposób zwracania się do Ojca. Swoje zdanie na temat Bohatera wyraża także Pan z Przedziałkiem. Traktuje go w nieco protekcjonalny sposób: "[...] pan jest za mały [...]".</p>
+<p>Polifoniczność ta powoduje zderzenie się różnych punktów widzenia. Bohater jest bowiem przedstawiany z odmiennych perspektyw, odwołujących się do innych okresów z jego życia. Zabieg ten sugeruje przy tym pewne rozbicie samego Bohatera - jego tożsamość jest mozaikowa, niejednorodna. Wskazuje to na niezbyt optymistyczną wizję kondycji jednostki. Polifonia zaznacza także rozpad rzeczywistości - nie można jej w jednoznaczny sposób określić, każdy głos ma to samo znaczenie - podobnie jak mężczyzny z dzieła Różewicza. </p>
+<p>Wypowiedź Chóru Starców ("Trąd / trądzik / trefl / trele / Trembowla / trębacz / trener / tresura") stanowi dość swobodne wyliczenie przypadkowych słów - łączy je to, że zawierają cząstkę "tr-". Sama obecność Chóru Starców to nawiązanie do tradycji tragedii greckiej. W dziele Różewicza chór ten stanowi raczej parodię. Jego wypowiedź zaś wskazuje na to, iż słowa zatracają swój sens. Są pozbawione dotychczasowych znaczeń. Wypowiedź Chóru Starców świadczy także o niemożności komunikacji międzyludzkiej, skutecznego porozumienia się.</p>
+<p> </p>
+<p>c) Chór recytuje fragment dzieła Adama Mickiewicza pt. <em>Oda do młodości</em>.</p>
+<p> </p>
+<p>d) Postawa Bohatera zaprzecza wartościom zawartym w przytoczonym fragmencie:</p>
+<ul>
+<li>Bohater jest bierny, co przeczy postawie ukazanej we fragmencie dzieła romantycznego poety.</li>
+<li>Nieliczne działania postaci nie mają wzniosłego ani heroicznego charakteru. </li>
+<li>Nie okazuje chęci, by dokonać czegoś wielkiego. </li>
+</ul><br>

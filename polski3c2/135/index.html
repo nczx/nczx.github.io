@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Popo³udnie zostaje przedstawione w impresjonistyczny sposób. Jest to jasna pora dnia, rozœwietlona promieniami s³oñca, które odbijaj¹ siê od z³ocistego zbo¿a i b³yszcz¹cych blach. Zastosowana w tej czêœci metafora ("popo³udnia wiejskie grzej¹ ¿ytem / s³oñce dzwoni w rzekê z rozb³yskanych blach / ¿ycie - pola - z³otolite") podkreœla œwietlisty charakter przedstawionego krajobrazu. Powietrze w tym czasie jest silnie rozgrzane, zaœ pejza¿ - przesycony z³otem. Stanowi ono symbol wiecznoœci, ¿ywotnoœci oraz doskona³oœci - wskazuje na niezmienny porz¹dek wiejskiej rzeczywistoœci oraz jej niew¹tpliwe bogactwo. Z tego te¿ powodu znacz¹ce staje siê zestawienie "¿ycie - pola - z³otolite". Elementy te s¹ ze sob¹ bezpoœrednio z³¹czone, poniewa¿ rozkwit natury, bujne i z³ociste zbo¿a zapewniaj¹ dostatek i pokarm dla mieszkañców wsi.</p>
+<p>Nastrój ulega zmianie pod wieczór - staje siê bardziej wyciszony, gdy¿ przychodzi czas odpoczynku i zakoñczenia pracy. Metafora "Wieczorem przez niebo pomost" sugeruje przejœciowy charakter tej pory, która ³¹czy dzieñ z noc¹. Z kolei sposób ukazania krów mlecznych, znaku dostatku i zamo¿noœci, które prze¿uwaj¹ "[...] nad korytem pe³nym zmierzchu" zaznacza niezmiennoœæ porz¹dku wiejskiej rzeczywistoœci. Œwiadczy tak¿e o obojêtnoœci zwierz¹t wzglêdem otaczaj¹cego ich œwiata.</p>
+<p>Najwiêcej w¹tpliwoœci oraz niepokoju wprowadza jednak nocna sceneria. W czasie tym pozornie znajome i zwyczajne elementy rzeczywistoœci nabieraj¹ z³owrogiego znaczenia. Staj¹ siê zapowiedzi¹ niepokoj¹cej przysz³oœci oraz z³a: "Nocami spod ramion krzy¿ów na rozdrogach / sypie siê gwiazd b³êkitne próchno". Krzy¿ i próchno w tym kontekœcie mo¿na postrzegaæ jako znak œmierci oraz destrukcji. Nawet pozornie pogodne metaforyczne obrazy ("chmurki siedz¹ przed progiem w murawie / to kule bia³ego puchu") wprowadzaj¹ pewn¹ dwuznacznoœæ, poniewa¿ ³¹cz¹ w sobie niewinnoœæ (biel) oraz sugestiê wojny (kula). Z³owrogie wra¿enia ³agodzi jednak codzienny i swojski rytm nocy ("Ksiê¿yc idzie srebrne chusty praæ") zapewniaj¹cy poczucie bezpieczeñstwa i przynale¿noœci do bliskich sercu realiów. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przyk³adowe elementy tworz¹ce nastrój spokoju i harmonii: </p>
+<ul>
+<li>siano i jego zapach;</li>
+<li>¿yto;</li>
+<li>z³ociste pola;</li>
+<li>rzeka i s³oñce;</li>
+<li>krowy;</li>
+<li>chmury;</li>
+<li>dmuchawiec;</li>
+<li>ksiê¿yc;</li>
+<li>œwierszcze;</li>
+<li>melodia kantyczki. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Odwo³ania do tematyki religijnej œwiadcz¹ o tym, i¿ wiara stanowi nieod³¹czny element egzystencji na wsi, jest wpisana w tê rzeczywistoœæ. Ponadto odzwierciedla ona rytm tamtejszego ¿ycia, zapewnia poczucie ci¹g³oœci oraz sta³oœci panuj¹cego tam ³adu: "Wieczorem przez niebo pomost / wieczór i nieszpór". Przejawy ¿ycia religijnego s¹ wpisane w krajobraz: "Nocami spod ramion krzy¿ów na rozdrogach" i zapewne przypominaj¹ o istnieniu sfery <em>sacrum</em>, kieruj¹ uwagê cz³owieka w stronê ¿ycia wiecznego. Stanowi¹ one o harmonii rzeczywistoœci, gdy¿ nawi¹zuj¹ do pewnych tradycji oraz staj¹ siê Ÿród³em pocieszenia i ulgi, strzeg¹ przed katastrof¹:</p>
+<p><em>a ukryta w nim melodia kantyczki</em></p>
+<p><em>tuli do mnie dzieciêce policzki</em></p>
+<p><em>chroni przed z³em. </em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowe fragmenty wprowadzaj¹ce niepokój: </p>
+<ul>
+<li>"[...] z rozb³yskanych blach";</li>
+<li>"Nocami spod ramion krzy¿ów na rozdrogach / sypie siê gwiazd b³êkitne próchno";</li>
+<li>"[...] kule bia³ego puchu";</li>
+<li>"czegó¿ siê baæ";</li>
+<li>"chroni przed z³em". </li>
+</ul>
+<p> </p>
+<p>Józef Czechowicz w niezwykle subtelny sposób zaznacza mo¿liwoœæ nadejœcia katastrofy. Jej zapowiedzi s¹ bowiem niejako wpisane w sielankowy wiejski krajobraz, jednak na razie nie stanowi¹ realnego zagro¿enia. Obecnoœæ z³a, przemijania i œmierci jawi siê jako coœ potencjalnego. Te zjawiska nie wysuwaj¹ siê na pierwszy plan, przez co w utworze dominuje harmonijna oraz pogodna wizja rzeczywistoœci. Sygna³y te jednak w pewien sposób zaburzaj¹ wizjê arkadii, wprowadzaj¹ niejednoznacznoœæ. Podmiot liryczny pragnie bowiem sam siebie przekonaæ, ¿e nic z³ego siê nie mo¿e wydarzyæ. Jest wiêc to w pewnym stopniu rozpaczliwa próba zaklinania rzeczywistoœci i zachowania bezpiecznej przestrzeni. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Motyw kantyczki jest obecny w ostatniej strofie utworu: </p>
+<p><em>Przecie¿ siano pachnie snem</em></p>
+<p><em>a ukryta w nim melodia kantyczki</em></p>
+<p><em>tuli do mnie dzieciêce policzki.</em></p>
+<p>Kantyczka, rozumiana jako popularna pieœñ o charakterze religijnym lub te¿ kolêda, wprowadza do utworu Józefa Czechowicza dodatkowe sensy. Przede wszystkim stanowi odniesienie do pewnej sta³ej tradycji oraz ¿ycia religijnego - by³o ono wa¿ne dla mieszkañców wsi. Kieruje tak¿e uwagê w sferê<em> sacrum</em>, tego, co odleg³e od codziennoœci. Przypomina równie¿ o ci¹g³oœci zwyczajów, poniewa¿ kolêdy to istotna czêœæ œwi¹t, która zawiera przes³anie ewangeliczne. Wywo³uj¹ one pozytywne skojarzenia z domem, bliskimi osobami, spokojem i poczuciem bezpieczeñstwa. Takie te¿ funkcje kantyczka zdaje siê pe³niæ w utworze Czechowicza: jest elementem odwo³uj¹cym siê do harmonijnego i znajomego œwiata, w którym panuje niezmienny i uœwiêcony porz¹dek, gdzie nie istnieje jakiekolwiek widmo zagro¿enia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Motyw snu w pewien sposób wp³ywa na odrealnienie ukazanej rzeczywistoœci, która jest zawieszona miêdzy tym, co prawdziwe i fantastyczne. Wp³ywa przy tym znacz¹co na nastrojowoœæ utworu oraz odsy³a do innych czasów, kiedy to sny ludzi by³y spokojne, niezak³ócone przeczuciem nadchodz¹cej katastrofy oraz œmierci: "Siano pachnie snem / siano pachnia³o w dawnych snach". Jednoczeœnie wspomniany motyw wprowadza do utworu pewn¹ subiektywn¹ perspektywê. Odwo³uje siê do wra¿eñ, przeczuæ i niepokojów konkretnej jednostki, która poszukuje ukojenia i ochrony przed potencjalnym niebezpieczeñstwem: </p>
+<p><em>Przecie¿ siano pachnie snem</em></p>
+<p><em>a ukryta w nim melodia kantyczki</em></p>
+<p><em>tuli do mnie dzieciêce policzki. </em></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>W utworze Józefa Czechowicza obecne s¹ elementy synestezji oraz instrumentacji g³oskowej. Odbieranie bodŸców za pomoc¹ ró¿nych zmys³ów mo¿na dostrzec przyk³adowo w nastêpuj¹cych fragmentach:</p>
+<ul>
+<li>"popo³udnia wiejskie grzej¹ ¿ytem";</li>
+<li>"s³oñce dzwoni w rzekê z rozb³yskanych blach";</li>
+<li>"Przecie¿ siano pachnie snem / a ukryta w nim melodia kantyczki / tuli do mnie dzieciêce policzki".</li>
+</ul>
+<p>Synestezja pog³êbia ukazan¹ wizjê rzeczywistoœci, pozwala na doœwiadczenie jej za pomoc¹ ró¿nych zmys³ów - nieraz w zaskakuj¹cym zestawieniu. Wp³ywa na plastycznoœæ przedstawienia, podkreœla tak¿e harmonijny obraz wsi oraz natury, która oddzia³uje na percepcjê cz³owieka. Wa¿n¹ funkcjê pe³ni tak¿e instrumentacja g³oskowa:</p>
+<ul>
+<li>"Siano pachnie snem / siano pachnia³o w dawnych snach / popo³udnia wiejskie grzej¹ ¿ytem";</li>
+<li>"Wieczorem przez niebo pomost / wieczór i nieszpór";</li>
+<li>"œwierszczyki œwiergoc¹ w stogach".</li>
+</ul>
+<p>Jej zastosowanie kszta³tuje warstwê dŸwiêkow¹ utworu - np. poprzez nagromadzenie g³osek szeleszcz¹cych ("rz") lub sycz¹cych ("s") wywo³uje dodatkowe wra¿enia brzmieniowe. Mo¿liwe w ten sposób staje siê wyra¿enie odg³osów typowych dla wsi, co tak¿e wp³ywa na nastrojowoœæ przedstawienia. Instrumentacja g³oskowa wzmacnia przy tym intensywnoœæ doznañ odbiorcy tekstu. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
+<p>.</p><br>

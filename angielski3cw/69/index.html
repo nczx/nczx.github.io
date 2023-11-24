@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź:</strong> </p>
+<p>b</p>
+<p>(To artykuł wyjaśniający powody, dla których ludzie tak bardzo lubią historie kryminalne.)</p>
+<p><strong>Uzasadnienie: </strong>celem artykułu jest wyjaśnienie, dlaczego ludzie lubią kryminały. Wskazuje na to tytuł tekstu i pytanie zadane we wprowadzeniu ("We love crime stories!" - Uwielbiamy kryminały!; "So, why are we so attracted to them?" - A więc, dlaczego tak nas do nich ciągnie?).</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. C </p>
+<p>(Wszyscy uwielbiają tajemnice) </p>
+<p><strong>Fragment w tekście: </strong>"Humans love solving puzzles (...)." - Ludzie uwielbiają rozwiązywać zagadki. </p>
+<p>2. F</p>
+<p>(Jest to straszne - ale bezpieczne) </p>
+<p><strong>Fragment w tekście: </strong>"(...) allows us to be frightened while at the same time knowing we are not in physical danger." - (...) pozwala nam się bać i jednocześnie wiedzieć, że nie grozi nam fizyczne niebezpieczeństwo.</p>
+<p>3. A</p>
+<p>(Dobro kontra zło) </p>
+<p><strong>Fragment w tekście: </strong>"People are fascinated by the fight between right and wrong (...)." - Ludzie są zafascynowani walką między dobrem a złem (...).</p>
+<p>4. E</p>
+<p>(To sprawa ewolucji) </p>
+<p><strong>Fragment w tekście: </strong>"(...) we've developed our ability to notice things that could harm us (...)." - (...) rozwinęliśmy naszą zdolność do zauważania rzeczy, które mogłyby nam zaszkodzić (...).</p>
+<p>5. B</p>
+<p>(Jesteśmy tylko obserwatorami) </p>
+<p><strong>Fragment w tekście: </strong>"We're not the victim or law-breaker, we are just watching (...)." - Nie jesteśmy ofiarą ani nie łamiemy prawa, po prostu obserwujemy (...).</p>
+<p><s class="odr-strikethrough">D</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. It provides a workout for the brain and gives a sense of satisfaction. </p>
+<p><strong>Fragment w tekście: </strong>"Not only does this provide a workout for our brain, but it also gives us a sense of satisfaction (...)." - Nie dość, że zapewnia to trening dla naszego mózgu, to jeszcze daje poczucie satysfakcji (...). </p>
+<p>2. It allows us to be frightened while knowing we are not in physical danger.</p>
+<p><strong>Fragment w tekście: </strong>"Like going on a roller coaster at a funfair, reading about or watching a killer, smuggler or thief allows us to be frightened while at the same time knowing we are not in physical danger." - Podobnie jak w przypadku jazdy kolejką górską w parku rozrywki, oglądanie lub czytanie o mordercy, przemytniku czy złodzieju pozwala nam się bać, a jednocześnie wiedzieć, że nie grozi nam bezpośrednie niebezpieczeństwo.</p>
+<p>3. We can learn how to protect ourselves against terrible people and how to make good decisions at tough times.</p>
+<p><strong>Fragment w tekście: </strong>"First, we can learn how to protect ourselves against such individuals. Second, we might think about our own emotions and how we make good decisions at tough times. This can make us better at dealing with challenges." - Po pierwsze, możemy nauczyć się, jak chronić się przed takimi osobami. Po drugie, możemy zastanowić się nad własnymi emocjami i nad tym, w jaki sposób podejmujemy dobre decyzje w trudnych chwilach. To może sprawić, że będziemy lepiej radzić sobie z wyzwaniami.</p>
+<p>4. The writer suggests that we might feel relieved that terrible events are happening to other people, and not us.</p>
+<p><strong>Fragment w tekście: </strong>"We're not the victim or law-breaker, we are just watching, relieved that it is all happening to someone else and not us." - Nie jesteśmy ofiarą ani przestępcą, tylko oglądamy, z ulgą, że wszystko to dzieje się komuś innego, a nie nam.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>One crime story I've read is <em>Murder on the Orient Express</em> by Agatha Christie. Detective Poirot is travelling on a train with thirteen other passengers. One of them - Ratchett - gets murdered during the night. It wasn't easy to predict the ending because all twelve passengers are involved in the crime.</p>
+<p>There were a lot of red herrings. For example, numerous passengers give each other an alibi for the night of the murder.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Jednym z kryminałów, które przeczytałem/am, jest <em>Morderstwo w Orient Expressie </em>Agathy Christie. Detektyw Poirot podróżuje pociągiem z trzynastoma innymi pasażerami. Jeden z nich - Ratchett - zostaje zamordowany w nocy. Nie było łatwo przewidzieć zakończenia, ponieważ wszystkich dwunastu pasażerów jest zamieszanych w zbrodnię.</p>
+<p>Było wiele fałszywych tropów. Na przykład wielu pasażerów daje sobie nawzajem alibi na noc morderstwa.</p><br>

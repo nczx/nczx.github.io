@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Rozmowa wstępna</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. My favourite TV programme is an American show titled <em>The Office</em>. I've watched all 8 seasons twice already and it's great. It makes me laugh and overall it's a great story with incredible characters.</p>
+<p>(Moim ulubionym programem telewizyjnym jest amerykański serial <em>Biuro</em>. Obejrzałem/am wszystkie 8 sezonów już dwa razy i jest świetny. Rozśmiesza mnie i ogólnie jest to świetna historia z niesamowitymi postaciami.)</p>
+<p><br/>2. If I wanted to earn some money, I would do it during the summer. I usually spend my weekends studying or resting. I think I'd get tired quickly if I had to work at weekends.</p>
+<p>(Gdybym chciał/a zarobić trochę pieniędzy, zrobił(a)bym to latem. Weekendy zazwyczaj spędzam na nauce lub odpoczynku. Myślę, że szybko bym się zmęczył/a, gdybym musiał/a pracować w weekendy.)</p>
+<p><br/>3. Yes, I do. I think it's a good exercise for the brain. And it's very satisfying when you manage to solve a puzzle.</p>
+<p>(Tak. Myślę, że to dobre ćwiczenie dla mózgu. I jest to bardzo satysfakcjonujące, gdy udaje się rozwiązać zagadkę.)</p>
+<p><br/>4. I think there are a lot of computer-based jobs for teens. For example, they can offer their services to create websites, logos, banners, or graphics. Teenagers who enjoy writing, photography, or making videos can create their own content and monetise it through platforms like YouTube or TikTok. Finally, they can offer online tutoring in maths or foreign languages.</p>
+<p>(Sądzę, że istnieje wiele ofert pracy dla nastolatków związanych z komputerami. Mogą na przykład oferować swoje usługi w zakresie tworzenia stron internetowych, logo, banerów lub grafiki. Nastolatki, które lubią pisać, fotografować lub nagrywać filmy, mogą tworzyć własne treści i zarabiać na nich za pośrednictwem platform takich jak YouTube czy TikTok. Wreszcie, mogą oferować korepetycje online z matematyki lub języków obcych.)</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>A</strong>: Hi, could you give me some advice? I'm planning on getting a summer job but I don't know what to choose. </p>
+<p><strong>B</strong>: Sure. But why do you want to get a job in the first place?</p>
+<p><strong>A</strong>: Well, I figured it's time for me to start saving up. I want to have money to spend on things I enjoy.</p>
+<p><strong>B</strong>: Fair enough. And what kind of jobs are you interested in?</p>
+<p><strong>A</strong>: I thought about working at a café or in a restaurant. I also considered fruit picking but I think it's too exhausting.</p>
+<p><strong>B</strong>: Well, that's true. OK, I think these two are pretty similar. I'd just make sure your job isn't far from where you live. But what about the working hours? Waiters sometimes finish work kind of late.</p>
+<p><strong>A</strong>: I don't mind. I've got lots of free time in summer.</p>
+<p><strong>B</strong>: Have you got any skills or experience?</p>
+<p><strong>A</strong>: Well, no, but working at a café or a restaurant is often many people's first job. I think I'd be able to do it after some training. As I've just said, I've got lots of free time in summer so I can even work up to 6 hours a day.</p>
+<p><strong>B</strong>: That's quite a lot if this is your first time. I think you should start slow so that you aren't tired all the time.</p>
+<p><strong>A</strong>: Maybe you're right. I'll think about it. Thanks for your help!</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p><strong>A</strong>: Cześć, czy mógłbyś/mogłabyś mi coś doradzić? Planuję znaleźć pracę na lato, ale nie wiem, co wybrać.</p>
+<p><strong>B</strong>: Jasne, ale dlaczego w ogóle chcesz znaleźć pracę?</p>
+<p><strong>A</strong>: Cóż, doszedłem/doszłam do wniosku, że nadszedł czas, abym zaczął/zaczęła oszczędzać. Chcę mieć pieniądze na rzeczy, które lubię.</p>
+<p><strong>B</strong>: W porządku. A jakiego rodzaju praca cię interesuje?</p>
+<p><strong>A</strong>: Myślałem/am o pracy w kawiarni lub restauracji. Rozważałem/am też zbieranie owoców, ale myślę, że to zbyt wyczerpujące.</p>
+<p><strong>B</strong>: Cóż, to prawda. OK, myślę, że te dwie prace są dość podobne. Upewnił(a)bym się tylko, że praca nie jest daleko od miejsca zamieszkania. Ale co z godzinami pracy? Kelnerzy czasami kończą dość późno.</p>
+<p><strong>A</strong>: Nie przeszkadza mi to. Latem mam dużo wolnego czasu.</p>
+<p><strong>B</strong>: Czy masz jakieś umiejętności lub doświadczenie?</p>
+<p><strong>A</strong>: Cóż, nie, ale praca w kawiarni lub restauracji jest często pierwszą pracą wielu ludzi. Myślę, że był(a)bym w stanie to robić po pewnym przeszkoleniu. Jak już powiedziałem/am, latem mam dużo wolnego czasu, więc mogę pracować nawet 6 godzin dziennie.</p>
+<p><strong>B</strong>: To sporo, jeśli to twój pierwszy raz. Myślę, że powinieneś/powinnaś zacząć powoli, aby nie czuć się zmęczonym/ą przez cały czas.</p>
+<p><strong>A</strong>: Może masz rację. Zastanowię się nad tym. Dzięki za pomoc!</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>In the photo, I can see two people dressed in protective clothing. They have some equipment and they're spraying the grass with it. Behind them, there's something that looks like a spaceship. It's very strange. I'm not sure I understand what's happening in this picture. Maybe it's a clip from a science fiction film.</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Na zdjęciu widzę dwie osoby ubrane w odzież ochronną. Mają jakiś sprzęt i spryskują nim trawę. Za nimi jest coś, co wygląda jak statek kosmiczny. To bardzo dziwne. Nie jestem pewny/a, czy rozumiem, co się dzieje na tym zdjęciu. Może to ujęcie z filmu science fiction.</p>
+<p> </p>
+<p>1. They're wearing masks so it's impossible to tell from their facial expressions. They might be scared because they're doing something dangerous.</p>
+<p>(Noszą maski, więc nie można tego stwierdzić na podstawie wyrazu ich twarzy. Mogą być przestraszeni, ponieważ robią coś niebezpiecznego.)</p>
+<p><br/>2. I sometimes watch science fiction films, but it's not like I'm a huge fan. I guess it's interesting to see what the future might look like.</p>
+<p>(Czasami oglądam filmy science fiction, ale nie jestem ich wielkim fanem / wielką fanką. Myślę, że ciekawie jest widzieć, jak może wyglądać przyszłość.)</p>
+<p><br/>3. Last week I woke up in the middle of the night. My dog was barking and there was some noise outside. I didn't understand what was happening but it turned out my neighbours were having a party.</p>
+<p>(W zeszłym tygodniu obudziłem/am się w środku nocy. Mój pies szczekał, a na zewnątrz panował hałas. Nie wiedziałem/am, co się dzieje, ale okazało się, że moi sąsiedzi urządzili sobie imprezę.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>I think the first poster is more suitable. It simply looks professional, like an ad for a TV station. It might make people interested in checking it out because it lists all the programmes it offers.</p>
+<p>I wouldn't choose the second poster. Although the girl in it looks very friendly, it looks like a clip from a TV broadcast. It wouldn't make people want to watch it because it suggests Poplar High TV is only about the news.</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Myślę, że pierwszy plakat jest bardziej odpowiedni. Wygląda po prostu profesjonalnie, jak reklama stacji telewizyjnej. Może sprawić, że ludzie będą zainteresowani obejrzeniem jej, ponieważ zawiera listę wszystkich programów, które oferuje.</p>
+<p>Nie wybrał(a)bym drugiego plakatu. Chociaż dziewczyna na nim wygląda bardzo przyjaźnie, wygląda to jak klip z transmisji telewizyjnej. Nie sprawi, że ludzie będą chcieli to obejrzeć, ponieważ sugeruje, że Poplar High TV dotyczy tylko wiadomości.</p>
+<p> </p>
+<p>1. I guess it might happen in the next 30 or 40 years. The younger generations rarely read traditional newspapers.</p>
+<p>(Myślę, że może to nastąpić w ciągu najbliższych 30 lub 40 lat. Młodsze pokolenia rzadko czytają tradycyjne gazety.)</p>
+<p><br/>2. It's hard to say. The majority of the news doesn't concern young people because it's about taxes, political scandals, celebrities, the economy, and so on. Most teens naturally just don't care about things like that. </p>
+<p>(Trudno powiedzieć. Większość wiadomości nie dotyczy młodych ludzi, ponieważ są to informacje o podatkach, skandalach politycznych, celebrytach, gospodarce itp. Większość nastolatków po prostu nie dba o takie rzeczy.)</p><br>

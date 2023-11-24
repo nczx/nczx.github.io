@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Elementy tragiczne i komiczne w cytowanym fragmencie utworu Głowackiego łączą się płynnie ze sobą. Autor pokazuje w ten sposób wielowymiarowość ludzkich losów.Historia nieszczęśliwej miłości i zaprzepaszczonej kariery Saszy wzbudza w czytelniku żal i współczucie. Jednocześnie jednak opowieść bezdomnego może rozbawić. Dowcipnie brzmi jego wyjaśnienie, dlaczego wyskoczył z płonącego budynku ("Było strasznie gorąco") oraz temat książki pisanej przez profesora z Brooklynu. Ambiwalentne odczucia może budzić także scena ubierania Saszy. Pokazuje bowiem, jak tragiczny jest los ludzi znajdujących się w błędnym kole kryzysu bezdomności - brak pieniędzy i dachu nad głową uniemożliwia im zadbanie o siebie, ich wizerunek z kolei wyklucza ich ze starań o zmianę swojej sytuacji. Próby przebrania bezdomnego i idące za nimi przekonanie o natychmiastowym podniesieniu jego szans na rynku pracy dzięki ubraniu czystych butów i białej koszuli mają natomiast charakter komiczny. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Sasza to postać tragiczna. W przeszłości był utalentowanym artystą, ze względów politycznych musiał wyjechać ze swojej ojczyzny - Rosji. W Stanach Zjednoczonych jego twórczość nie spotkała się z ciepłym przyjęciem, zaczął trudnić się więc remontami. Podobnie nieudane było jego życie osobiste - żona zostawiła go dla profesora, którego poznała dzięki Saszy. Zrozpaczony mężczyzna podjął nieudaną próbę samobójczą. Można określić go mianem bohatera romantycznego. Wskazuje na to przede wszystkim stosunek do miłości traktowanej jako najważniejsza wartość w życiu. Pozostawiony przez ukochaną Sasza nie widzi sensu istnienia, targa się więc na swoje życie, tak jak czynili to jego literaccy poprzednicy: tytułowy bohater <em>Cierpień młodego Wertera </em>czy Gustaw z IV części <em>Dziadów </em>Adama Mickiewicza. Na romantyczne korzenie postaci bezdomnego wskazuje również wykonywana przez niego profesja. Jest malarzem, artystą obdarzonym szczególną wrażliwością. </p>
+<p>Przykłady z literatury i filmu - część indywidualna zadania.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Anita jest osobą nietuzinkową. Z jednej strony została doświadczona przez życie - znajduje się w kryzysie bezdomności, zmarł jej ukochany. Jednocześnie jednak pozostaje pełna dziecięcej radości. Wskakuje na Saszę "[...] jak mała dziewczynka", nie potrafi opanować ekscytacji wizją wspólnego życia. W jej reakcji na słowa Saszy uwidacznia się także ogromne pragnienie bliskości i założenia rodziny wynikające z długiej samotności. W swojej ocenie rzeczywistości zdaje się naiwna, prostolinijna, choć niektórym jej obserwacjom trudno odmówić słuszności. Jest przekonana, że uczesanie bezdomnego i ubranie go w czystą białą koszulę zwiększy jego szanse na zdobycie dobrej posady, mówi: "jak masz białą koszulę, to możesz uczyć". Zdaje sobie jednak sprawę z tego, co świadczy o statusie materialnym człowieka, szczególną uwagę zwracając na zęby - swoisty znak zaniedbania w oczach innych. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Saszę i Anitę połączył kryzys bezdomności. Oboje trafili do obcego kraju, w którym nie potrafią się odnaleźć. Nadrzędnym pragnieniem obojga jest powrót do społeczeństwa, rozpoczęcie nowego życia. Sasza mówi: "Musimy dostać się pod jakiś dach. Jak jesteś na ulicy, nikt cię nie traktuje jak człowieka" . Dokuczliwa samotność zbliża ich do siebie, sprawia, że czują się sobie bliscy. Dojmującą potrzebę bliskości i stabilizacji zdają się wręcz mylić z romantycznym uczuciem.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Bohaterowie zdają się z jednej strony rozumieć swoje położenie, z drugiej zaś łudzić się w kwestii możliwości poprawy swojego losu. Wiedzą, że wizerunek bezdomnego zamyka im szanse na zdobycie pracy, a więc, paradoksalnie, również domu. Podejmują więc postanowienie zmiany swojego wyglądu, ich wysiłki są jednak niewspółmierne do osiągniętego efektu. Założenie białej koszuli i czystych butów nie czyni ich atrakcyjnymi dla pracodawcy, choć bezdomni zdają się pielęgnować w sobie takie przekonanie. Oderwane od rzeczywistości jest także założenie Saszy, że uzyska wsparcie od ambasady. Mężczyzna łudzi się, że otrzymany wiele lat temu list jest przepustką do powrotu do ojczyzny, przecenia jego wartość.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Anita w słowach: "Koszula pomaga. Ale zęby i buty są najważniejsze. Bez nich do niczego nie dojdziesz. Bez zębów i butów nie można wydostać się z parku" wskazuje na znaczenie wizerunku człowieka w jego sukcesie życiowym. Dostrzega, że ludzie zwracają uwagę na powierzchowność i na jej podstawie oceniają kompetencje jednostki. Bezdomna kobieta zwraca szczególną uwagę na dwa elementy, które mogą świadczyć o statusie majątkowym i społecznym - zęby i buty. Stan tych pierwszych traktowany jest często jako wyznacznik tego, jak ktoś dba o higienę osobistą. Wpływ na to ma także kultura Hollywood, promująca śnieżnobiały, nieskazitelny uśmiech. Buty z kolei są częścią garderoby, która stosunkowo szybko niszczy się pod wpływem warunków atmosferycznych i ciągłego używania. Osoba w kryzysie bezdomności nie ma możliwości dbania o obuwie i częstego zmieniania go. Wybór tych dwóch elementów wizerunku demaskuje więc utrwalone w społeczeństwie przekonania.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Sasza z sentymentem wspomina swoją ojczyznę. Jest przekonany, że cieszy się tam dobrą sławą, mówi: "[...] w Rosji o mnie pamiętają". Jest do niej przywiązany, zdaje się nie brać pod uwagę przyczyn, dla których musiał ją opuścić. Nie czuje się dobrze w Stanach Zjednoczonych. Nie jest w nim bowiem synem artysty i utalentowanym malarzem, lecz jedynie pracownikiem budowlanych. Sentyment do dawnej ojczyzny wpływa na jego ocenę, wyraźnie idealizuje Rosję ("O, Nowy Jork to jest nic w porównaniu z Rosją)"). Przepełnia go duma ze swojego pochodzenia.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Choć bohaterowie nie mówią wprost o swoich emocjach, na podstawie ich wypowiedzi można stwierdzić, co jest dla nich ważne. Sasza z rozrzewnieniem wspomina swoją karierę artystyczną. Jest dumny z tego, co osiągnął. Chwali się opiniami, które usłyszał o swojej twórczości, mówi: "[...] powiedzieli, że to, co ja dorysowałem, jest o wiele lepsze. I że jestem nowym Picassem". Wydaje się, że szczególnie istotne jest dla niego kwestia pamięci i dziedzictwa - podkreśla wielopokoleniowość talentu malarskiego, jest też przekonany, że Rosjanie o nim nie zapomnieli. </p>
+<p>Najważniejszą wartością w życiu Anity zdaje się rodzina i bezpieczeństwo. Poszukuje bliskości wśród innych bezdomnych - najpierw przywiązuje się do Johna, potem zaś do Saszy. Jest uradowana perspektywą zamieszkania z tym ostatnim, gotowa jest wyjechać do obcego kraju, by nie pozostać samą. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br>

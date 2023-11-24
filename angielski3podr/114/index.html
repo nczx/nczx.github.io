@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. the present</p>
+<p><strong>Uzasadnienie</strong>: <em>there's no time like the present </em>- co masz zrobić jutro, zrób dziś. </p>
+<p>2. tell</p>
+<p><strong>Uzasadnienie</strong>: <em>time will tell - </em>czas pokaże.</p>
+<p>3. you're having fun</p>
+<p><strong>Uzasadnienie</strong>: <em>time flies when you're having fun </em>- czas szybko leci, kiedy dobrze się bawisz.</p>
+<p>4. than never</p>
+<p><strong>Uzasadnienie</strong>: <em>better late than never </em>- lepiej późno niż wcale.</p>
+<p>5. timing</p>
+<p><strong>Uzasadnienie</strong>: <em>perfect timing </em>- idealne wyczucie czasu.</p>
+<p>6. back the clock</p>
+<p><strong>Uzasadnienie</strong>: <em>you can't turn back the clock </em>- nie da się cofnąć czasu.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. in </p>
+<p><strong>Uzasadnienie</strong>: <em>turn in early </em>- położyć się wcześnie spać. </p>
+<p>2. over</p>
+<p><strong>Uzasadnienie</strong>: <em>invite somebody over </em>- zaprosić kogoś w gości.</p>
+<p>3. about</p>
+<p><strong>Uzasadnienie</strong>: <em>get out and about </em>- wychodzić z domu.</p>
+<p>4. up</p>
+<p><strong>Uzasadnienie</strong>: <em>catch up on something </em>- nadrobić zaległości w czymś.</p>
+<p>5. in</p>
+<p><strong>Uzasadnienie</strong>: <em>sleep in </em>- pospać dłużej, spać do późna.</p>
+<p>6. out</p>
+<p><strong>Uzasadnienie</strong>: <em>stay out late </em>- wracać późno do domu.</p>
+<p>7. out</p>
+<p><strong>Uzasadnienie</strong>: <em>point out that </em>- zauważyć, że.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. if/whether I had slept enough </p>
+<p><strong>Uzasadnienie</strong>: <em>present perfect → </em><em>past perfect. </em>Pytania tak/nie zamieniamy na mowę zależną, używając spójnika <em>if </em>lub <em>whether </em>(czy). Zmieniamy też szyk na zdanie twierdzące (podmiot + czasownik). </p>
+<p>2. ever playing that game</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>deny doing something </em>(zaprzeczyć, że coś się zrobiło).</p>
+<p>3. (that) they were leading a rather nocturnal life at that moment</p>
+<p><strong>Uzasadnienie</strong>: <em>present continuous → past continuous; this → that.</em></p>
+<p>4. me not to reveal his magic trick to anyone</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>tell somebody not to do something </em>(powiedzieć komuś, by czegoś nie robił).</p>
+<p>5. to tell Mum what I had done if I touched her things one more time</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>threaten to do something </em>(zagrozić, że coś się zrobi). W dalszej części zdania stosujemy zasadę następstwa czasów: <em>past simple → past perfect, present simple → past simple.</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Blake argued that console games were better than computer games. </p>
+<p>2. The label warned that the game included adult language.</p>
+<p><strong>Uzasadnienie (1, 2)</strong>: oryginalna wypowiedź byłaby w czasie <em>present</em> simple, bo opisuje ogólne fakty ('Console games are better than ...' / 'The game includes ...'), dlatego zmieniamy go na czas <em>past simple</em>.</p>
+<p>3. My school counsellor suggested that I should lead a less hectic life.</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>suggest </em>(sugerować) + <em>that </em>(że) + zdanie podrzędne z <em>should</em>.</p>
+<p>4. The game master asked everyone if/whether they had played the game before.</p>
+<p><strong>Uzasadnienie</strong>: pytania typu tak/nie przekształcamy na mowę zależną za pomocą spójnika <em>if </em>lub <em>whether </em>(czy). Oryginalna wypowiedź byłaby w czasie <em>present perfect</em>, bo dotyczy życiowych doświadczeń ('Have you played the game before?'). Ten czas zmienia się na <em>past perfect </em>w mowie zależnej.</p>
+<p>5. Mum said that she disliked the fact that I chilled out on the sofa every Sunday afternoon.</p>
+<p><strong>Uzasadnienie</strong>: oryginalna wypowiedź byłaby w czasie <em>present simple</em>, bo opisuje czyjąś opinię i czyjeś nawyki. Ten czas zmienia się na <em>past simple</em> w mowie zależnej.</p>
+<p>6. I advised my cousin to have a quiet night in.</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>advise somebody to do something </em>(poradzić komuś, by coś zrobił).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. jealousy  </p>
+<p>2. inactive</p>
+<p>3. thieves</p>
+<p>4. carefully</p>
+<p>5. unbelievable</p>
+<p>6. strengthening</p>
+<p><strong>Uzasadnienie</strong>: czasownik z końcówką -ing pozwala utworzyć orzeczenie w czasie <em>future continuous</em> (<em>will be + -ing</em>).</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Kapitanowie szkolnej drużyny piłkarskiej lub przewodniczący klasy są często obiektem podziwu i <strong>zazdrości</strong> - są fajni i mają bogate życie towarzyskie. Jednak maniak/czka komputerowy/a taki/a jak ja ma wieść nudny i <strong>nieaktywny </strong>styl życia. To nieprawda. Owszem, jestem przyklejony/a do ekranu, ale jestem niczym prywatny śledczy. Widzicie, w świecie gier wirtualnych istnieją <strong>złodzieje</strong>, którzy kradną czyjeś konto w grze, przejmują ich ekwipunek i sprzedają go innym graczom za prawdziwe pieniądze. Kiedy coś takiego przytrafia się moim przyjaciołom, staram się pomóc. W zeszłym tygodniu padło na mojego przyjaciela Billa. Dostał jakieś maile o aktualizacji od dystrybutora gier i nie przeczytał ich wystarczająco <strong>ostrożnie</strong>. Po prostu kliknął na link i... stracił dostęp do swojego konta. To <strong>niewiarygodne, </strong>jak łatwo oszukać ludzi. Pomogłem/am mu odzyskać swoje konto. Analizowanie tego, jak pracują hakerzy to teraz moje hobby, ale w przyszłości chciał(a)bym pracować dla rządu. Będę <strong>wzmacniać </strong>ich bezpieczeństwo i ochraniać ich przed atakami hakerów. To dopiero jest fajne, co?</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. B</p>
+<p><strong>Uzasadnienie</strong>: używamy zaimka względnego <em>who</em>, aby wprowadzić zdanie podrzędne dotyczące osoby ("dla każdego, kto żyje na innej planecie...").  </p>
+<p>2. C </p>
+<p><strong>Uzasadnienie</strong>: na konieczność użycia czasu <em>present perfect </em>wskazuje nam spójnik <em>since </em>(odkąd).</p>
+<p>3. D</p>
+<p><strong>Uzasadnienie</strong>: aby spekulować na temat przeszłości, używamy konstrukcji <em>must have + past participle.</em></p>
+<p>4. C</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>persuade somebody <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">to</span> do something </em>(przekonać kogoś, by coś zrobił).</p>
+<p>5. C</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>tell somebody that </em>(powiedzieć komuś, że).</p>
+<p>6. D</p>
+<p><strong>Uzasadnienie</strong>: oryginalna wypowiedź zawierałaby konstrukcję <em>be going to</em> w czasie teraźniejszym, bo opisuje plany lub zamiary. W mowie zależnej zmieniamy ją na <em>was/were going to</em>.</p>
+<p>7. B</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past simple</em> dla opisania czynności zakończonej w przeszłości. Konstrukcja w stronie biernej: <em>to be + past participle.</em></p>
+<p>8. C</p>
+<p><strong>Uzasadnienie</strong>: <em>I wish + past simple</em>, by opisać życzenia odnośnie teraźniejszości.</p>
+<p>9. D</p>
+<p><strong>Uzasadnienie</strong>: II tryb warunkowy: <em>if + past simple, would + </em>bezokolicznik.</p><br>

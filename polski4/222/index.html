@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W utworze przedstawiono pozornie zwyczajną sytuację, która rozgrywa się w wesołym miasteczku lub w innej przestrzeni zapewniającej rozrywkę. Podmiot liryczny zachęca kobiety, także z dziećmi, aby wsiadły do karuzeli. Wiersz opisuje więc ruch karuzeli (w tym jej rozpędzanie się czy zatrzymanie) - powoduje on, że kolory się rozmywają, zaś kobiety są niczym Madonna. W ten sposób prosta zabawa zostaje powiązana ze sferą<em> sacrum</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Ruch i zmienne tempo karuzeli zostają oddane za pomocą:</p>
+<ul>
+<li>graficznego przedstawienia tekstu - występują w nim różne wcięcia sugerujące zwalnianie obrotów karuzeli;</li>
+<li>zróżnicowanej liczby sylab w poszczególnych wersach ("I coraz wolniej karuzela / Puszcza refren / i peryfe / rafa"); </li>
+<li>krótkich oraz rytmicznych słów ("Płyta, / Taka / płyta");</li>
+<li>paralelizmów oddających ruch karuzeli oraz zmieniające się obrazy ("- białe konie / - bryka / - czarne konie / - bryka / - rude konie / - bryka");</li>
+<li>wykrzyknień ("Zakręcone!");</li>
+<li>dzielenia wyrazów na wersy ("I peryfe / rafa / elickie");</li>
+<li>czasowników nazywających intensyfikujący się ruch ("Drgnęły", "Ruszył", "Migają");</li>
+<li>powtórzeń ("Płyta, / Taka / płyta");</li>
+<li>anafor ("I lambrekiny siodeł, / I gorejące wzory bryk");</li>
+<li>elips oraz równoważników zdania ("A one w Leonardach min, / W obrotach Rafaela, / W okrągłych ogniach, klatkach z lin, / W przedmieściach i niedzielach."). </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Fragmenty, w których pojawia się nawiązanie do kolorów:</p>
+<ul>
+<li>"w trzy ogniste farbki";</li>
+<li>"I trzy są końskie maści: / od sufitu / od dębu / od marchwi."; </li>
+<li>"I gorejące wzory bryk / Kwiecisto-laurkowe.";</li>
+<li>"białe konie";</li>
+<li>"czarne konie";</li>
+<li>"rude konie".</li>
+</ul>
+<p> </p>
+<p>Kolorystyka przedstawiona w utworze nawiązuje do intensywnej farby, która jest typowa dla karuzeli. Jaskrawość wywołuje tym samym skojarzenia z tandetą, kiczem. Staje się przejawem sztuki niskiej, która jednak w oczach podmiotu lirycznego zostaje uwznioślona. Jednocześnie sposób przedstawienia kolorystyki w utworze może być nawiązaniem do sztuki ludowej. Ona także bowiem operuje wyrazistymi barwami. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Poeta osiągnął efekt melodyjności za pomocą:</p>
+<ul>
+<li>powtórzeń ("- białe konie / - bryka / - czarne konie / - bryka - rude konie"); </li>
+<li>zapisu graficznego;</li>
+<li>rymów ("A one w Leonardach min, / [...] / W okrągłych ogniach, w klatkach z lin");</li>
+<li>instrumentacji głoskowej ("Madonna i madonna / W nieodmiennej pozie tkwi");</li>
+<li>zmiennego rytmu dzieła;</li>
+<li>anafor i wyliczeń ("W obrotach Rafaela, / W okrągłych ogniach, w klatkach z lin, / W przedmieściach i niedzielach.");</li>
+<li>powtórzenia - niczym refren - cząstki wyrazu ("Do bryk sześciokonnych / ...ściokonnych").</li>
+</ul>
+<p> </p>
+<p>W swoim utworze poeta nie tylko wykorzystuje rozmaite środki, by wzmocnić melodyjność dzieła, ale  także bezpośrednio odwołuje się do motywu muzycznego. Świadczą o tym słowa: "Lata dookoła / Gramofonowa / Płyta, / Taka / płyta"; "I coraz wolniej karuzela / Puszcza refren". W ten sposób Białoszewski łączy muzykę z samą karuzelą, dostrzega łączące je podobieństwo, które wiąże się z powtarzalnością ruchu oraz tym, iż obroty karuzeli przypominają obroty płyty gramofonowej. Melodyjność wzbogaca warstwę brzmieniową wiersza, który w ten sposób niejako w pełny sposób oddaje doświadczenie przejażdżki na karuzeli. Odzwierciedla też atmosferę zabawy, a przy tym nawiązuje do muzyki towarzyszącej uruchomionej karuzeli. Ponadto można uznać, iż melodyjność wiersza służy artyście wyrażeniu swoich subiektywnych wrażeń związanych z tą formą rozrywki. Wiersz oddaje tym samym pełnię doświadczenia: nie tylko ruchu, ale też warstwy dźwiękowej, wskazuje przy tym na oryginalność świata poetyckiego Białoszewskiego. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Zjawiskiem charakterystycznym dla twórczości Mirona Białoszewskiego jest łączenie ze sobą odmiennych języków: w tym przypadku potocznego oraz literackiego. Przejawiają się one w tekście na różne sposoby. Ten pierwszy uobecnia się na przykład poprzez składnię. Jest ona dość swobodna, uproszczona, niekoniecznie zgodna z zasadami poprawnościowymi, można dostrzec obecność skrótów myślowych: "Lata dokoła / Gramofonowa / Płyta, / Taka / płyta". Typowe dla języka potocznego są także elementy świadczące o ładunku emocjonalnym, np. zdrobnienia ("farbki) czy też wykrzyknienia sugerujące zachwyt ("Magnifikat!"). Innym przejawem języka potocznego stają się także powtórzenia ("I lambrekiny siodeł, / I gorejące wzory bryk"), ograniczenie różnorodności spójników (dominuje spójnik "i"), urwane wyrazy ("Wsiadajcie / w sześcio...!"). W wierszu Białoszewskiego pojawiają się również zabiegi typowe dla języka literackiego. To tzw. słownictwo książkowe ("Magnifikat!") oraz rozliczne środki stylistyczne (np. wykrzyknienia, epitety, powtórzenia, anafory itd.), przewaga rzeczowników. Połączenie tych języków polega na tym, że ich właściwości się przenikają, ponadto pewne wyrażenia typowe dla języka potocznego jednocześnie można rozpatrywać w kontekście zastosowania środków stylistycznych.</p>
+<p>Zabieg ten odzwierciedla przede wszystkim poetycki światopogląd Białoszewskiego. Jako twórca poezji lingwistycznej, eksperymentator, łączy w swym wierszu sprzeczne pierwiastki - sferę <em>sacrum</em> oraz <em>profanum</em>. Połączenie języka literackiego z potocznym świadczy o pewnym zachwianiu dotychczasowego podziału na kulturę wysoką i niską. W ten sposób poeta szczególne znaczenie nadaje codzienności, uwzniośla ją, zaś sferę <em>profanum</em> niejako sprowadza do tego co przyziemne. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowe zabiegi typowe dla poezji lingwistycznej:</p>
+<ul>
+<li>eksperymenty językowe, np. urwanie wyrazów ("Wsiadajcie / w sześcio...!"); </li>
+<li>neologizmy ("I peryfe / rafa / elickie");</li>
+<li>skróty myślowe ("A która jest natchniona / - szóstka koni / - one / - szóstka koni / - one / - szóstka koni / - one");</li>
+<li>język mówiony ("Wsiadajcie madonny / madonny");</li>
+<li>kolokwializmy ("Lata dookoła");</li>
+<li>konwencja kiczu ("Migają w krąg anglezy grzyw / I lamberkiny siodeł, / I gorejące wzory bryk / Kwiecisto-laurkowe")</li>
+<li>wykorzystywanie wieloznaczności słów ("Drgnęły madonny").</li>
+</ul>
+<p> </p>
+<p>Zabiegi typowe dla poezji lingwistycznej świadczą o stosunku Białoszewskiego do językowego tworzywa. Poeta sprawdza bowiem w ten sposób możliwości języka, dąży do znalezienia nowej formy komunikacji - pozbawionej ograniczeń czy konwenansów. Znajduje oryginalny i niezwykły sposób na to, by pozornie przyziemnym zjawiskom nadać szczególną wartość. Z tego też powodu <em>Karuzela z madonnami</em> stanowi zabawę z językiem, jego możliwościami czy znaczeniami poszczególnych słów. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowo:</p>
+<p>Ważnym elementem utworu Białoszewskiego jest motyw madonny, który ujawnia się już w samym tytule (<em>Karuzela z madonnami</em>). Madonny zostają najpełniej scharakteryzowane słowami: "I peryfe / rafa / elickie / madonny / przed / mieścia". Na tej podstawie można uznać, że bohaterki z wiersza poety to mieszkanki przedmieść, peryferii miasta. Być może są one także matkami, które wraz z dziećmi bawią się na karuzeli. Określenie ich mianem madonn stanowi nawiązanie do bogactwa znaczeń kulturowych związanych z tym pojęciem. Nie tylko bowiem w ten sposób Białoszewski uwzniośla mieszkanki obrzeży miasta i nadaje im niemal sakralny wymiar. Stają się one jednocześnie uosobieniem pozytywnych wartości, jak np. piękna, czystości, miłości, opieki. Ponadto określenie madonn neologizmem "peryferafaelickich" stanowi nawiązanie do sztuki, sposobu przedstawiania Maryi z Dzieciątkiem. Dochodzi do połączenia sfery <em>sacrum</em> oraz <em>profanum</em>, a zarazem dowartościowania kultury niskiej przez wysoką. Tym samym madonny z wiersza stają się przedstawicielkami świata, w którym na znaczeniu zyskuje to, co powszechnie uznane za przyziemne czy mniej podniosłe. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Indywidualne </p><br>

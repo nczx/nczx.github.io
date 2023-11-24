@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Dom, w którym zamieszkał narrator, położony był dość na zboczu, w oddaleniu od innych domostw. Wydawał się zarośnięty, zaniedbany. Narrator twierdzi, że  "[...] ręka gospodarza dbała widocznie ostatnio tylko o to, by nie dać zarosnąć ścieżkom między grządkami". Pielęgnacja ogrodu ograniczona została więc do minimum. Okna od strony zbocza zostały okratowane, choć, jak zauważa opowiadający, " [...] i bez tego było coś z dobrowolnej klauzury w ukośnej prłaszczyźnie zagradzającej drogę wzrokowi". Dom staje się symbolem intencjonalnego odosobnienia lub samotności. Choć narrator porównuje jego pomieszczenia do klasztornych cel, w których można w spokoju oddawać się kontemplacji i modlitwie, nosi on również cechy więzienia czy pustelni. Zdaje się zapomniany przez cały świat, można przypuszczać, że właśnie tak czuł się mieszkający w nim niegdyś człowiek.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Trędowaty mieszkający w wieży szczególnie dużo uwagi poświęca swojemu ogrodowi. Pielęgnacja roślin może być swoistym lekiem na samotność, umożliwia bowiem kontakt z czymś, co żyje, rośnie, rozwija się. Troska o kwiaty i drzewa jest więc najbliższym substytutem relacji z człowiekiem. Owocami swojej pracy Lebrosso obdarowuje odwiedzające go niekiedy dzieci. Przyroda staje się więc łącznikiem między samotnym mężczyzną, a innymi ludźmi. W zamyśle stojącym za pielęgnacją ogrodu przez trędowatego pobrzmiewają echa filozofii franciszkańskiej, skupiającej się szczególnie na związku między jednostką a innymi żywymi organizmami. Według świętego z Asyżu przyroda jest darem dla człowieka od Boga, należy więc nie tylko się nią cieszyć, ale również dbać o jej dobrostan. Samotny mężczyzna za cel obiera sobie pomnożenie rzeczonego daru, a co za tym idzie - duchowe i materialne wzbogacenie świata, w którym żyje.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Lebrosso czerpie siłę z religii. Stara się podążać śladami Chrystusa i, zgodnie z jego nauką, pokochać swoją samotność i traktować ją jako okazję do autorefleksji i kontemplacji. Szczególną wartością było dla niego samo życie. Celebrować codzienne czynności, choćby oddychanie, skupianie uwagi na pozornie zwykłych rzeczach. W medytacji polegającej na obserwacji tego, co go otacza, odnajdował ucieczkę od bólu i cierpienia. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Słowa Lebrossa dotyczą tego, jaką postawę należy przyjąć w obliczu samotności. Mężczyzna uważa, że człowiek koniec końców pozostawiony jest samemu sobie. Jeśli nauczy się kochać ten stan, dostrzeże korzyści nieobcowania z innymi. Natomiast osoba spragniona kontaktu, niepogodzona z własnym losem, będzie w samotności skazana na cierpienie. Można uznać więc, że Lebrosso postuluje ascezę, wyzbycie się tęsknoty za drugim człowiekiem, by osiągnąć wewnętrzny spokój.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Narrator w zdaniu "Miasto wydawało się stąd pustynią" zdaje się snuć refleksje na temat ludzkiej samotności. Ulubionym miejscem Lebrossa do obserwacji miasta było to, z którego leżąca nieopodal miejscowość wydawała się pusta. Taki jego wygląd ma metaforyczne znaczenie. Wskazuje, że jednostka, nawet w przestrzeni tak gwarnej i ruchliwej jak centrum miasta, jest osamotniona. Potwierdzają to kolejne słowa trędowatego: "Nieszczęśliwy człowiek jest samotny wszędzie". Paradoksalnie widok ten mógł dodawać mężczyźnie otuchy, pozwalał dostrzec bowiem połączenie między nim a resztą społeczeństwa - wszyscy byli na swój sposób wyobcowani.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Chociaż akcja opowiadania rozgrywa się w słonecznych Włoszech, narrator stosunkowo mało miejsca poświęca światłu, skupiając się przede wszystkim na ciemności. Sam komentuje to zresztą następująco: "Wjazd do Val d'Aosta musi na każdym podróżnym robić wrażenie przeskoku z królestwa światła do królestwa półmroku". Położona między skałami dolina Aosty wydaje się, choć piękna, tajemnicza, niedostępna i niepokojąca.</p>
+<p>Podobne wrażenie na narratorze wywiera dom, w którego opisie  również zwraca uwagę na niedostatek promieni słonecznych, pisze " tylne, zawsze ciemne pokoje wychodziły wprost na pochyłość [..]. Było coś z z dobrowolnej klauzury w ukośnej płaszczyźnie zagradzającej drogę wzrokowi". Panujący w budynku mrok, podobnie jak ten ogarniający dolinę, stanowi symbol jej odizolowania od świata, sekretności. Narrator wykorzystuje kontrast między światłem a ciemnością również w opisie Lebrossa: "Trędowaty nakrył głowę szerokim kapeluszem, którego opuszczone skrzydła zasłoniły mu prawie zupełnie twarz. Poprowadził najpierw gościa ku części nasłonecznionej ogrodu [...]". W tym przypadku cień staje się swego rodzaju kryjówką, mężczyzna chowa w nim swoją brzydotę. Jednocześnie jednak z dumą prezentuje pełen światła ogród kwiatowy, który jest dla niego niewyczerpalnym źródłem piękna i radości.</p>
+<p>Ciemność kojarzona jest więc na przestrzeni tekstu ze skrytością i samotnością, opuszczeniem czy brzydotą. Jasność z kolei symbolizuje to co estetyczne, otwarte, łatwo dostępne. Kolejne warstwy cienia - dolina, dom i kapelusz, niczym szkatułka, zamykają w sobie bohaterów, odizolowują od reszty świata.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Nawiązanie do dzieł sztuki w tekście uzupełniają perspektywę autora o kontekst kulturowy. Pokazują, że w literaturze i sztuce nawiązuje tradycja myślenia o wieży jako o miejscu odosobnienia lub wręcz - więzieniu. Ilustracja <em>Okrągła wieża </em>Giovanniego Batisty Piranesiego może zostać uznana za komentarz do opowiadania Gustawa Herlinga-Grudzińskiego. Przedstawione na niej schody prowadzące donikąd mogą być interpretowane jako symbol zagubienia lub bezcelowości. Znamienny wydaje się również tytuł cyklu <em>- </em><em>Wyimaginowane więzienia</em>. Przedstawione w nim wyobrażone budowle stanowią pułapkę dla człowieka. Mimo tego, że nie są prawdziwymi zakładami karnymi, więżą go. Niebędący przecież skazańcem Lebrosso zmuszony jest tkwić w jednym miejscu, jak gdyby tytułowa wieża stała się dla niego więzieniem.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne</p><br>

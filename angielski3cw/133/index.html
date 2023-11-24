@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. that </p>
+<p><strong>Uzasadnienie</strong>: <em>that </em>pełni tutaj dwie funkcje: (a) zaimka względnego ("której") oraz (b) spójnika ("że") wprowadzającego zdanie podrzędne. </p>
+<p>2. down</p>
+<p><strong>Uzasadnienie</strong>: <em>let somebody down </em>- rozczarować kogoś; <em>slow down </em>- zwalniać.</p>
+<p>3. up</p>
+<p><strong>Uzasadnienie</strong>: <em>put your hair up in a ponytail </em>- wiązać włosy w koński ogon; <em>cheer somebody up </em>- poprawiać komuś humor.</p>
+<p>4. lost</p>
+<p><strong>Uzasadnienie</strong>: <em>get lost </em>- zgubić się; <em>a </em><em>lost match </em>- stracony mecz.</p>
+<p>5. against</p>
+<p><strong>Uzasadnienie</strong>: <em>fight against someone </em>- walczyć przeciwko komuś; <em>against the law </em>- wbrew prawu.</p>
+<p>6. Wind</p>
+<p><strong>Uzasadnienie</strong>: <em>wind farms </em>- farma wiatrowa; <em>a cold wind </em>- zimny wiatr.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. date </p>
+<p><strong>Uzasadnienie</strong>: <em>go on a date </em>- iść na randkę; <em>today's date </em>- dzisiejsza data; <em>the expiry date </em>- data ważności. </p>
+<p>2. drive</p>
+<p><strong>Uzasadnienie</strong>: <em>drive a car </em>- prowadzić samochód; <em>drive somebody crazy </em>- doprowadzać kogoś do szaleństwa; <em>drive back </em>- zapędzić (o zwierzętach gospodarskich).</p>
+<p>3. cover</p>
+<p><strong>Uzasadnienie</strong>: <em>cover stories </em>- relacjonować historie; <em>cover </em>- zakrywać; <em>cover something up </em>- zatuszować, ukryć coś.</p>
+<p>4. let</p>
+<p><strong>Uzasadnienie</strong>: <em>let somebody do something </em>- pozwolić komuś coś zrobić; <em>let yourself go </em>- odpuścić sobie; <em>let a flat </em>- wynajmować (komuś) mieszkanie.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. active </p>
+<p><strong>Uzasadnienie</strong>: <em>make your credit card active </em>- aktywować swoją kartę kredytową; <em>be active </em>- prowadzić aktywny styl życia; <em>the alarm becomes active </em>- alarm się włącza. </p>
+<p>2. call</p>
+<p><strong>Uzasadnienie</strong>: <em>call somebody names </em>- obrzucać kogoś wyzwiskami; <em>call somebody </em>- zadzwonić do kogoś; <em>call a foul </em>- odgwizdać faul.</p>
+<p>3. order</p>
+<p><strong>Uzasadnienie</strong>: <em>give an order </em>- wydać rozkaz; <em>place an order </em>- złożyć zamówienie; <em>in order </em>- w (odpowiednim) porządku.</p>
+<p>4. company</p>
+<p><strong>Uzasadnienie</strong>: <em>clothing company </em>- firma odzieżowa; <em>enjoy somebody's company </em>- lubić czyjeś towarzystwo; <em>in the company of adults </em>- w towarzystwie dorosłych.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. heart </p>
+<p><strong>Uzasadnienie</strong>: <em>have a heart </em>- okazać serce/współczucie; <em>have </em><em>problems with one's heart </em>- mieć problemy z sercem; <em>follow your heart </em>- podążać za głosem serca (kierować się przeczuciem). </p>
+<p>2. manage</p>
+<p><strong>Uzasadnienie</strong>: <em>manage to do something </em>- zdołać coś zrobić; <em>manage on little money </em>- poradzić sobie mając niewiele pieniędzy; <em>manage one's business </em>- zarządzać swoją firmą.</p>
+<p>3. lead</p>
+<p><strong>Uzasadnienie</strong>: <em>lead a happy life </em>- wieść szczęśliwe życie; <em>lead an army </em>- przewodzić armii; <em>lead a discussion </em>- poprowadzić dyskusję.</p>
+<p>4. save</p>
+<p><strong>Uzasadnienie</strong>: <em>save somebody </em>- ocalić kogoś; <em>save something for a rainy day </em>- zachować coś na czarną godzinę; <em>save something </em>- zachować/zatrzymać coś.</p><br>

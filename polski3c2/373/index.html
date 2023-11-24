@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Pobudka wiêŸniów nastêpuje o 5.30. Ci jeszcze œpi¹cy s¹ szarpani za nogi przez "razwodczika", nieco subtelniej stara siê ich obudziæ "dniewalny". Nastêpnie mieszkañcy baraku le¿¹ przez kilka minut bez ruchu, przygotowuj¹ siê w ten sposób do kolejnego dnia. Potem udaj¹ siê przed kuchniê, gdzie tworz¹ trzy kolejki - dla ka¿dej przeznaczony jest inny posi³ek, co zale¿y od wyrabianej normy. Œniadanie przed szóst¹ otrzymuj¹ wiêŸniowe, którzy posiadaj¹ przepustkê (np. pos³ugacze, technicy, specjaliœci). O 6.30 zamykane s¹ okna, nastêpuje wymarsz brygad. Przed nim wiêŸniowe szybko zjadaj¹ posi³ek i zbieraj¹ siê na wartowni. Na okreœlony znak ustawiaj¹ siê w brygady - z przodu zazwyczaj starsi, m³odsi - z ty³u. Pocz¹tkowe godziny pracy s¹ trudne dla wiêŸniów, poniewa¿ wymagaj¹ od nich przyzwyczajenia siê do rytmu pracy. W czasie przerwy obiadowej tylko stachanowcy otrzymuj¹ posi³ek. Pozostali wiêŸniowe spêdzaj¹ chwile przy ognisku i pal¹ wspólnego papierosa. Dopiero dwie godziny przed koñcem pracy wiêŸniowie o¿ywiaj¹ siê, poniewa¿ myœl¹ ju¿ o odpoczynku i posi³ku - rozmawiaj¹ ze sob¹ i œmiej¹ siê. Samotnoœæ po powrocie wywo³uje jednak ich cierpienie i przyczynia siê do utraty nadziei. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>G³ód zyskuje decyduj¹c¹ rolê w procesie wyniszczenia wiêŸniów oraz ich upokorzenia - zaspokojenie tej podstawowej potrzeby staje siê niemal sensem ¿ycia. Przede wszystkim pozwala na szybk¹ i bezwzglêdn¹ eliminacjê najs³abszych jednostek. które s¹ os³abione niedoborem po¿ywienia: "W brygadach, które mia³y niedobór w normie globalnej, m³odszych wypuszczano na przód, aby zarabiali na czasie szybkoœci¹ marszu, ci¹gn¹c za sob¹ bardziej niedo³ê¿nych. Ta naturalna selekcja odm³adza³a brygady w b³yskawicznym tempie, wyrzucaj¹c po pewnym czasie starszych do Trupiarni". Tym samym g³ód prowadzi do fizycznej degradacji ofiar, ostatecznie przyczynia siê do œmierci czy chorób. Jednoczeœnie zjawisko to wp³ywa przede wszystkim na psychikê wiêŸniów, gdy¿ stanowi element kontroli i podporz¹dkowania ich. Zaczynaj¹ siê oni kierowaæ pierwotnymi instynktami, wol¹ przetrwania, co prowadzi do ich odcz³owieczenia. Wszystkie ich myœli wi¹¿¹ siê z nieustannym poczuciem g³odu. W zwi¹zku z tym zanika solidarnoœæ wœród wiêŸniów, poniewa¿ ich zawiœæ budz¹ posi³ki innych: "To tutaj najczêœciej wybucha³y spory, to tutaj g³osy przechodzi³y najczêœciej od pokornego skomlenia ¿ebraczego do wysokiego falsetu gniewu, zazdroœci i nienawiœci". Przez doœwiadczenie g³odu wiêŸniowe trac¹ sw¹ wolnoœæ, poniewa¿ zrobi¹ wszystko, aby zdobyæ jedzenie, mo¿na ich w pe³ni wykorzystaæ do niewolniczej pracy: "W znakomitej wiêkszoœci wypadków metoda wyciskania z wiêŸniów maksymalnego wysi³ku fizycznego przy minimalnej podwy¿ce racji ¿ywnoœciowej dzia³a³a g³adko i sprawnie. Cz³owiek g³odny nie filozofuje, gotów jest zrobiæ wszystko, aby zdobyæ dodatkow¹ ³y¿kê strawy". Prowadzi to nawet do sytuacji, ¿e wiêŸniowie zaczynaj¹ pilnowaæ siebie nawzajem, by wyrobiæ normy, co destrukcyjnie wp³ywa na ich relacje oraz moralnoœæ: "By³o w tym wszystkim coœ nieludzkiego, coœ ³amiacego bezlitoœnie jedyn¹ wiêŸ ³¹cz¹c¹, zdawa³oby siê, wiêŸniów w sposób naturalny [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Z³udne uczucie wolnoœci zapewnia moment po powrocie z pracy, kiedy wiêŸniowe le¿¹ na pryczach. Potwierdza to fragment: "Le¿¹c samotnie na pryczy, mo¿na siê by³o nareszcie poczuæ wolnym - wolnym od pracy, od wspó³towarzyszy wiêziennych, od czasu, który p³yn¹³ jak stygn¹ca smo³a." Jednoczeœnie samotnoœæ staje siê Ÿród³em wewnêtrznego cierpienia oraz rozpaczy, dlatego te¿ poczucie wolnoœci jest pozorne. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>S³owa narratora wskazuj¹ na ambiwalentny stosunek wiêŸniów do samotnoœci. Z jednej bowiem strony stanowi coœ upragnionego, swoist¹ ucieczkê, poniewa¿ zapewnia namiastkê wolnoœci: "[..] od pracy, od wspó³towarzyszy wiêziennych, od czasu, który p³yn¹³ jak stygn¹ca smo³a". Z drugiej jednak strony osi¹gniêcie tego stanu budzi cierpienie, ale nie przyczynia siê do jego uszlachetnienia. Przypomina bowiem przede wszystkim o trudnym po³o¿eniu wiêŸniów, wymaga samotnego zmierzenia siê ze swym losem. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Porównanie to zaznacza sugestywn¹ analogiê miêdzy losem wiêŸniów i rozbitka - wszyscy bowiem znajduj¹ siê w ekstremalnej sytuacji. Nadzieja pe³ni w ich przypadku nieco dwuznaczn¹ rolê. W momencie walki o ocalenie jest przydatna, poniewa¿ mobilizuje do dzia³ania, nie pozwala na poddanie siê, gdy¿ wi¹¿e siê z wiar¹ na odmianê swego losu. Powrót do baraku (niczym dop³yniêcie na bezludn¹ wyspê) przypomina jednak o z³udnym charakterze nadziei. W tym momencie staje siê ona Ÿród³em cierpienia, poniewa¿ sytuacja uwiêzionych jest beznadziejna, nie mog¹ liczyæ na jak¹kolwiek zmianê swego tragicznego po³o¿enia i nie maj¹ nawet na co czekaæ. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Fragmenty z opisem natury:</p>
+<ul>
+<li><em>Dopiero przed samym apelem porannym niebo zaró¿owi³o siê lekko na skraju horyzontu, roztapiaj¹c siê po chwili w zimnob³êkitnym odblasku œniegu.</em></li>
+<li><em>Ciemny pu³ap nieba zamyka³ nas od góry [...].</em></li>
+<li><em>W zonie by³o ju¿ widno, z rzedn¹cych ciemnoœci  wy³ania³y siê najpierw oszronione druty, a potem olbrzymia p³achta œniegu, siêgaj¹ca do ledwie widocznej linii lasu na skraju horyzontu.</em></li>
+<li><em>Ksiê¿yc mêtnia³ powoli, zamro¿ony w lodowatej tafli nieba jak kr¹¿ek cytryny w galarecie. Ostatnie gwiazdy topnia³y, migoc¹c jeszcze przez chwilê na rozjaœniaj¹cym siê szybko tle.</em></li>
+</ul>
+<p> </p>
+<p>Opisy natury akcentuj¹ przede wszystkim wra¿enia wzrokowe - zwi¹zane z kolorystyk¹ danych elementów, zmieniaj¹cym siê œwiat³em - oraz bezruch. Wskazuj¹ tak¿e na podzia³ przestrzeni: wiêŸniowie obserwuj¹ œwiat z zamkniêtego obszaru, co sugeruje ich brak wolnoœci. W przedstawieniu natury istotne jest równie¿ podkreœlenie jej bezmiaru. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>W tekœcie mo¿na dostrzec trzy nastêpuj¹ce perspektywy:</p>
+<ul>
+<li>Perspektywa kronikarska -&gt; Herling Grudziñski w swym dziele odwo³uje siê do faktów oraz w³asnych doœwiadczeñ. Przedstawia wydarzenia w uk³adzie chronologicznym. W rzetelny sposób opisuje realia ¿ycia w obozie, jego organizacjê czy porz¹dek dnia, co buduje wiarygodnoœæ przedstawienia. Tym samym <em>Inny œwiat</em> staje siê zapisem autentycznego doœwiadczenia obozowej rzeczywistoœci, ale tak¿e mechanizmów jej funkcjonowania.  </li>
+<li>Perspektywa psychologiczna -&gt; Autor interesuje siê przede wszystkim psychik¹ osoby skazanej, która musi radziæ sobie w skrajnie nieprzyjaznych warunkach. Z tego te¿ powodu analizuje wp³yw warunków w obozie na prze¿ycia oraz zachowania uwiêzionych, np. w kontekœcie g³odu, wycieñczaj¹cej pracy. Interesuj¹ go tak¿e uczucia i myœli skazanych oraz uniwersalne mechanizmy kszta³towania ich postaw: "Cz³owiek g³odny nie filozofuje, gotów jest zrobiæ wszystko, aby zdobyæ dodatkow¹ ³y¿kê strawy". </li>
+<li>Perspektywa filozoficzna -&gt; Herling-Grudziñski poszerza swój wywód o perspektywê filozoficzn¹. W swym tekœcie odwo³uje siê bowiem do uniwersalnych wartoœci czy idei (np. nadziei, samotnoœci). Kluczowa staje siê w tym kontekœcie tematyka moralna oraz refleksje na temat cz³owieczeñstwa, godnoœci i tego, jak istotê ludzk¹ mo¿na z³amaæ. Porusza w ten sposób ponadczasowe zagadnienia zwi¹zane z podstawowymi problemami. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br>

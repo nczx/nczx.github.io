@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Głównym problemem w utworze Miłosza jest kwestia ocalenia moralnego świata. Sugerują to pierwsze wersy utworu skierowane do twórcy: "Gdzież jest, poeto, ocalenie? / Czy coś ocalić może ziemię? / Cóż dał tak zwany świt pokoju?". Całość dzieła jest więc poświęcona rozważaniom na temat tego, jak istota ludzka powinna postępować względem rzeczywistości oraz bezlitosnych mechanizmów historii, by zachować swe człowieczeństwo. Z tego też powodu poeta proponuje przyjęcie określonej postawy, która opiera się na nieufności względem rozmaitych teorii czy ideologii fałszującej rzeczywistość. Miłosz docenia za to siłę moralną zwykłego człowieka - jego równowaga umysłu i ducha stanowi formę ocalenia. </p>
+<p>Zagadnienie to w czasie powstania <em>Traktatu moralnego</em> miało ścisły związek z ówczesną sytuacją polityczną. Dzieło Miłosza pojawiło się bowiem kilka lat po zakończeniu II wojny światowej. Wydarzenie to na nowo określiło kształt Europy, ale też przyczyniło się do zachwiania dotychczasowego systemu wartości. Po tym konflikcie zmieniła się także sytuacja Polski, ponieważ znalazła się w strefie wpływów sowieckich, zaś obywatele byli poddawani indoktrynacji, żyli w ciągłym poczuci zagrożenia. Na tej podstawie można stwierdzić, iż dzieło Miłosza stanowi odpowiedź na ówczesne wydarzenia, ponieważ poeta poszukuje sposobu na to, by ocalić moralność człowieka, a jednocześnie nie unika krytyki nieprzyjaznej rzeczywistości. Jest to wyrazista deklaracja twórcy stojącego po stronie zasad etycznych.</p>
+<p>Problem ten ma uniwersalny wymiar, gdyż można go także odnieść do współczesności - niespokojnej, ale też pełnej sprzecznych sygnałów. Zawarte w dziele przemyślenia mają charakter uniwersalny i mogą stanowić dla współczesnego człowieka drogowskaz; przypominają mu o znaczeniu serca oraz rozumu, nieufności względem rozpowszechnianych teorii. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W wierszu wypowiada się poeta, który jest także myślicielem i erudytą. Kieruje swą wypowiedź do rozmówcy zadającego mu pytanie: "Gdzież jest, poeto, ocalenie?". Prawdopodobnie podmiot liryczny prowadzi sam ze sobą rozmowę - pytanie to pretekst do rozwinięcia wypowiedzi na temat proponowanych zasad moralnych.</p>
+<p>W utworze można dostrzec obecność dwóch funkcji językowych, które łączą pewne cechy. Pierwszą z nich można określić mianem retorycznej. Przejawia się ona już w konstrukcji dzieła - składa się z trzech zasadniczych części. Pierwsza z nich stanowi wstęp - podmiot liryczny sygnalizuje w nim podejmowaną tematykę ("Gdzież jest, poeto, ocalenie?"). W rozwinięciu przytacza argumenty oraz stara się przekonać odbiorcę do przyjęcia określonej postawy: "A więc pamiętaj - w trudną porę / Marzeń masz być ambasadorem". Zakończenie zaś to podsumowanie rozważań i wezwanie: "Idźmy w pokoju, ludzie prości. / Przed nami jest / - »Jądro ciemności«". W utworze wykorzystane są także środki typowe dla tekstów retorycznych, m.in.: anafora ("Nie mów: konwencja długich noży. Nie wątpię, że jest bardzo zła"), apostrofa ("Gdzież jest, poeto, ocalenie?"), inwersja ("Więc tak się moja rzecz zaczyna"), wyliczenie ("Grzebie systemy, wiary, szkoły"), czasowniki w 1. os. lp oraz lm ("Jak długo, rzec nie umiem, potrwa", "Zbyt wieleśmy widzieli zbrodni").</p>
+<p>W tekście można dostrzec także funkcję impresywną. Retoryczny i impresywny charakter traktatu świadczy o tym, iż jego głównym zadaniem jest wpłynięcie na odbiorcę, przekonanie go do postawy przedstawianej przez osobę mówiącą. Sama zaś funkcja impresywna przejawia się przede wszystkim w licznych formach rozkazujących ("Sięgaj i przędzę bierz za przędzą", "Czyń, póki dni ci się nie skończą"), charakterystycznych zwrotach świadczących o konieczności ("trzeba"). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowe zasady: </p>
+<ul>
+<li>Nie ufaj bezkrytycznie wszelkim teoriom i programom.</li>
+<li>Zachowaj zdolność do krytycznego myślenia i weryfikowania informacji.</li>
+<li>Zawsze dąż do poznania faktów, nie opieraj się tylko na sposobie opisu rzeczywistości, który może być fałszywy.</li>
+<li>Pamiętaj o mechanizmach tworzących ideologie i teorie - zachowuj sceptycyzm.</li>
+<li>Szanuj przeszłość i tradycję - wyciągaj z nich wnioski.</li>
+<li>Kieruj się w swych wyborach zasadami moralnymi. </li>
+<li>Troszcz się o równowagę swego ducha i serca. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Między człowiekiem a historią występuje pewna zależność. Dzieje jawią się jako fatalna siła, która kształtuje los jednostek. Jest ona niepowstrzymana, przynosi ze sobą katastrofy, które prowadzą do destrukcji rzeczywistości. Dochodzi do zagłady wielu istnień: "Epoka nasza czyli zgon, / Ogromna <em>Die Liquidation</em>". Dzieje kształtują rzeczywistość, a więc mogą także prowadzić do załamania zasad moralnych czy manipulacji faktami. Niejednokrotnie tragiczne wydarzenia odbierają ludziom nadzieję, podstawowe punkty odniesienia: "Żywot grabarza jest wesoły, / Grzebie systemy, wiary, szkoły, / Ubija nad tym ziemię gładko / Piórem, naganem czy łopatką, Pełen nadziei, że o wiośnie / Cudny w tym miejscu kwiat wyrośnie. / A wiosny nima. Zawsze grudzień".</p>
+<p>Człowiek wobec mechanizmów historii zdaje się bezbronny, może im tylko ulegnąć: "Choćbyś zazdrościł psom i ptakom, / Musisz ją przyjąć jako taką, / A więc po prostu jak zdarzenie / Na naszej obrotowej scenie - / I płyniesz w tym społecznym fakcie, / Jak orzech w Nilu katarakcie". Jednocześnie Miłosz podkreśla, iż człowiek ma w sobie siłę i wartość. Może bowiem łagodzić wydarzenia poprzez zachowanie zasad moralnych. W ten sposób pojedyncze postawy jednostek przyczyniają się do subtelnej przemiany rzeczywistości, złagodzenia prawideł historii. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowe argumenty potwierdzające, że historia to dla człowieka fatum:</p>
+<ul>
+<li>Historia wpływa na los ludzi, bardzo często wiąże się z tragicznymi dla nich zdarzeniami.</li>
+<li>Istota ludzka nie może przyspieszyć zachodzących na świecie zmian.</li>
+<li>Przeszłość, nawet tragiczna, cały czas oddziałuje na egzystencję jednostki. </li>
+<li>Los człowieka zostaje zestawiony z orzechem w katarakcie, co świadczy o bezsilności względem potężniejszych sił.</li>
+<li>Istota ludzka może tylko łagodzić "bieg lawiny", ale nie może go zatrzymać.</li>
+</ul>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Ocaleniem jest dla poety przede wszystkim prosty człowieka oraz wszystko to, co sobą reprezentuje; sam sobie przynosi ratunek. Tylko bowiem równowaga serca i rozumu pozwala na odzyskanie porządku moralnego, który ułatwia funkcjonalnie w rzeczywistości. Prostota jawi się jako kluczowa wartość, ponieważ pozwala ona na wyzbycie się iluzji, zapewnia poznanie istoty faktów bez wpływu jakichkolwiek ideologii. Wskazują na to słowa: "Sięgaj i przędze bierz za przędzą, / Aż kruche nitki się rozkręcą / I na dnie z wolna się ukaże / Poczwarka nietykalnych zdarzeń". Prosty człowiek, pamiętający o tradycji, kierujący się swym rozsądkiem, potrafi odpowiednio intepretować chaotyczny świat, działa według ściśle określonych zasad. Dzięki temu nie ulega zgubnym wpływom, odkrywa harmonię w nieskomplikowanej egzystencji. Mimo chaosu rzeczywistości odnajduje stałe punkty odniesienia, zyskuje spokój. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowo:</p>
+<p>Mianem "moralności" można określić zbiór pewnych zasad, które kształtują postępowanie człowieka, i są uznane za odpowiednie. Określają one także, co jest uznane za zło, a co za dobro. </p>
+<p>Moralność, zgodnie z utworem Miłosza, jest ważna w kontekście ocalenia nie tylko ludzkiej kultury, ale także całej planety. Wynika to z faktu, iż przyczynia się ona do uporządkowania rzeczywistości, rozdzielenia od siebie zła i dobra. Dzięki niej człowiek może opanować otaczający go chaos, znaleźć w życiu drogowskazy, które wskażą mu właściwe postępowanie oraz zapewnią spokojną egzystencję. Moralność jest ratunkiem dla ludzkiej kultury, ponieważ czerpie z tradycji, przypomina o tym, co najpiękniejsze w istocie ludzkiej. Uodparnia na bezsensowne lub fałszywe ideologie, które wprowadzają zamęt. Ponadto pozwala na zachowanie dorobku kulturowego, może także łagodzić wstrząsy historyczne i przejawy niesprawiedliwości. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Przykładowe zabiegi retoryczne:</p>
+<ul>
+<li>anafora -&gt; "Nie mów: konwencja długich noży. / Nie wątpię, że jest bardzo zła"; </li>
+<li>apostrofa -&gt; "Gdzież jest, poeto, ocalenie?";</li>
+<li>formy trybu rozkazującego oraz czasowniki w 1. os. lm -&gt; "Marzeń masz być ambasadorem", "Zbyt wieleśmy widzieli zbrodni";</li>
+<li>słownictwo wartościujące -&gt; "androny", "łotrach";</li>
+<li>pytania wskazujące na podejmowane w dalszej części kwestie -&gt; "Czy coś ocalić może ziemię? / Cóż dał tak zwany świt pokoju?";</li>
+<li>hiperbola oraz ironia -&gt; "Odstępców straszą celą ciemną, / Śpiewają w prasie pieśń wojenną, / Ogniste ogłaszają wici / Sztandarem słów bez definicji".</li>
+</ul>
+<p> </p>
+<p>Miłosz przełamuje konwencję rozprawy naukowej na dwa sposoby. Pierwszym z nich jest forma, ponieważ poeta wybiera zapis wierszowany, w dodatku wykorzystuje rymy parzyste. Taka budowa dzieła wywołuje raczej skojarzenia z utworem poświęconym błahej lub lekkiej tematyce - jest więc dość zaskakującym wyborem. Konwencja rozprawy naukowej zostaje także przełamana przez ukształtowanie wypowiedzi - nie jest to traktat filozoficzny, lecz moralny. Sam zaś Miłosz zdaje się prowadzić swoistą grę z tym typem pisarstwa, gdyż jego utwór nie jest pozbawiony ironii czy humoru. Świadczy to o tym, iż twórczo wykorzystuje pewne konwencje, bawi się nimi, poszukuje nowych form wyrazu dla swojej myśli. Zabieg ten może również sugerować, iż w nowej rzeczywistości konieczne staje się przełamywanie dotychczasowych konwencji. </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Poezja Miłosza ma charakter erudycyjny. Świadczy o tym fakt, iż w swych dziełach twórca chętnie odwołuje się do różnych dziedzin. W <em>Traktacie moralnym</em> nawiązuje m.in. do mitów, Biblii, literatury, historii. Wskazuje to na jego oczytanie oraz szerokie horyzonty intelektualne.</p>
+<p> </p>
+<p>Przykładowe aluzje:</p>
+<table border="1" style="border-collapse: collapse; width: 737px; height: 1224px;">
+<tbody>
+<tr style="height: 24px;">
+<td style="background-color: #aed581; text-align: center; height: 24px; width: 315.325px;"><strong>Fragment</strong></td>
+<td style="background-color: #aed581; text-align: center; height: 24px; width: 414.675px;"><strong>Interpretacja</strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Traktat moralny</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Tytuł utworu sugeruje charakter dzieła, które przybiera kształt rozprawy naukowej. Ma za zadanie wywołać w odbiorcy pewne skojarzenia, podkreślić znaczenie podejmowanego tematu. Jest to także czytelne nawiązanie do dzieł filozoficznych. Odwołanie do traktatu sugeruje nie tylko powagę zagadnienia, ale wprowadza też pewną ironię - wynika ona z wierszowanej formy dzieła, obecności rymów.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Islandzkie przeglądając sagi</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Jest to nawiązanie do staroskandynawskich opowieści o legendarnych postaciach. Ich przywołanie służy zaprezentowaniu postawy człowieka, który je czyta, ale jednoczesnej zachowuje wobec nich sceptycyzm. </td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 315.325px; text-align: center; height: 47px;"><em>W staroindyjskie wątpisz mity</em></td>
+<td style="width: 414.675px; text-align: center; height: 47px;">Mity to element wiary starożytnych. Porządkowały one rzeczywistość, tłumaczyły zjawiska i pochodzenie człowieka. W dziele Miłosza, podobnie jak sagi islandzkie, są przywołane po to, by zilustrować postawę człowieka względem tych opowieści. Staje się to pretekstem do dalszych rozważań. </td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;">
+<p><em>Tak na dzisiejsze spojrzyj baśnie.</em></p>
+<p><em>Trochę z ukosa. [...]</em></p>
+</td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Osoba mówiąca odwołuje się do tego gatunku, aby wyrazić refleksję na temat współczesności. Mianem "dzisiejszych baśni" określa zapewne aktualne teorie lub światopoglądy, które nie zapewniają poznania, lecz stanowią wręcz coś nierealnego. Z tego też powodu apeluje, by traktować je w krytyczny sposób. Ich charakter jest bowiem zbliżony do mitów czy sag.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;">
+<p><em>Odstępców starszą celą ciemną, </em></p>
+<p><em>Śpiewają w prasie pieśń wojenną,</em></p>
+<p><em>Ogniste ogłaszają wici</em></p>
+<p><em>Sztandarem słów bez definicji</em></p>
+</td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Fragment ten prawdopodobnie nawiązuje do historycznych zjawisk - związanych z rewolucjami lub komunistyczną rzeczywistością. W takim świecie dominuje terror, prasa głosi propagandę. Słowa zaś zatracają swe podstawowe sensy, panuje atmosfera ciągłego zagrożenia. </td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Ogromna Die Liquidation</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Miłosz w tym wersie odwołuje się do wydarzeń historycznych - II wojny światowej, eksterminacji dokonywanej przez Niemców. W ten sposób zarysowuje charakter znanych sobie czasów - przepełnionych śmiercią czy zniszczeniem.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Piórem, naganem czy łopatką</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Nagan jest bronią używaną zazwyczaj przez sowieckie służby bezpieczeństwa. Wzmianka na jej temat świadczy o destrukcyjnym wpływie tych organów na rzeczywistość. Przyczyniają się one bowiem do zniszczenia tego, co zapewnia człowiekowi system wartości.</td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Nie mów: konwencja długich noży</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Słowa te stanowią aluzję do akcji, która miała na celu pozbycie się przeciwników politycznych Hitlera. Świadczą o wpływie przeszłości na teraźniejszość. Są także ostrzeżeniem przed powtarzaniem się pewnych mechanizmów - brutalnej walki o władzę. </td>
+</tr>
+<tr style="height: 43px;">
+<td style="width: 315.325px; text-align: center; height: 43px;">
+<p><em>Na naszej obrotowej scenie - </em></p>
+<p><em>I płyniesz w tym społecznym fakcie, </em></p>
+<p><em>Jak orzech w Nilu katarakcie.</em></p>
+</td>
+<td style="width: 414.675px; text-align: center; height: 43px;">Fragment ten stanowi nawiązanie do motywu <em>theatrum mundi</em>. Sugeruje bowiem bezradność człowieka względem nieubłagalnych mechanizmów historii. Wpływa na niego fatalna siła uniemożliwiająca zmianę sytuacji.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 315.325px; text-align: center; height: 17px;"><em>Na służbę grzmi samarytańską</em></td>
+<td style="width: 414.675px; text-align: center; height: 17px;">Jest to nawiązanie biblijne. "Samarytański" to taki, który jest miłosierny, skłonny do pomagania innym ludziom. </td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Uznawać je za chleb powszedni</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Uznanie czegoś za chleb powszedni odnosi się do bredni. Oznacza uznanie ich za coś zwyczajnego, wpisanego w codzienność. Wskazuje to na specyfikę czasów, w których jest wiele bezsensownych teorii, nieprawdy itd. </td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 315.325px; text-align: center; height: 24px;"><em>Nie czekaj darmo treuga Dei</em></td>
+<td style="width: 414.675px; text-align: center; height: 24px;">Łacińska formuła oznacza zakaz wojny w czasie adwentu i postu. Poeta odwołuje się do niej, by wyrazić prawdę na temat losu człowieka. Nie może on bowiem liczyć na chwilę wytchnienia, cały czas musi podejmować swój trud. </td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 315.325px; text-align: center; height: 21px;"><em>- "Jądro ciemności"</em></td>
+<td style="width: 414.675px; text-align: center; height: 21px;">Jest to aluzja do powieści Josepha Conrada. Sugeruje ona wejście w trudne czasy, które stanowią sprawdzian moralności. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Przykładowe prawdy historiozoficzne:</p>
+<ul>
+<li>W dziejach nieustannie zdają się powtarzać tragiczne wydarzenia lub katastrofy.</li>
+<li>W obliczu niespokojnych czasów jednostka musi znaleźć dla siebie ocalenie - z tego też powodu często ulega manipulacji.</li>
+<li>Dochodzi do ciągłego starcia człowieka oraz nieubłagalnych mechanizmów historii, co może wywoływać poczucie bezradności. </li>
+<li>Człowiek ma jednak możliwość łagodzenia biegu dziejów poprzez swoje zachowanie, przeciwstawianie się złu.</li>
+<li>Harmonia ciała i umysłu staje się przeciwwagą dla mechanizmów historii.</li>
+</ul>
+<p> </p>
+<p>Porównanie refleksji Miłosza z romantykami - część indywidualna </p><br>

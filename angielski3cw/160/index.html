@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>4.1. E </p>
+<p>(Kilka powodów, ale jeden cel)</p>
+<p><strong>Fragment w tekście: </strong>"But a strong respect for the past, a need to put human ingenuity to use and a desire to attract visitors have combined to bring a number of memorable places back to life." - Jednak silny szacunek dla przeszłości, potrzeba wykorzystania ludzkiej pomysłowości i chęć przyciągnięcia odwiedzających połączyły się, aby przywrócić do życia wiele niezapomnianych miejsc. </p>
+<p>4.2. A</p>
+<p>(Leczenie blizn po doświadczonej przemocy)</p>
+<p><strong>Fragment w tekście: </strong>"Another victim of World War II was the Polish capital (...). While most people thought the charm of the Old Town (...) was lost forever, an ambitious project helped to rebuild it and, consequently, revived the old spirit of the city." - Kolejną ofiarą II wojny światowej była stolica Polski (...). Podczas gdy większość ludzi myślała, że urok Starego Miasta (...) został utracony na zawsze, ambitny projekt pomógł go odbudować, a co za tym idzie, ożywić dawnego ducha miasta.</p>
+<p>4.3. D</p>
+<p>(Walka z przyrodą)</p>
+<p><strong>Fragment w tekście: </strong>"The mysterious and ancient place has been threatened by both conflict and the forces of nature, which has meant that it has been almost entirely consumed by the jungle more than once in its history." - To tajemnicze i starożytne miejsce było narażone zarówno na konflikty, jak i siły natury, co oznaczało, że niejednokrotnie w swojej historii zostało niemal całkowicie pochłonięte przez dżunglę.</p>
+<p>4.4. C</p>
+<p>(Nawet skromne domy są warte ocalenia)</p>
+<p><strong>Fragment w tekście: </strong>"On a more human scale, the restoration of slave dwellings on plantations (...) enables visitors to get an idea of how unpaid workers lived (...)." - W bardziej ludzkiej skali, przywrócenie mieszkań niewolników na plantacjach (...) pozwala odwiedzającym zrozumieć, jak żyli nieopłacani pracownicy (...).</p>
+<p><s class="odr-strikethrough">B</s>, <s class="odr-strikethrough">F</s></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>5.1. D </p>
+<p>(W tym tekście Karina dostaje poradę odnośnie tego, jak może rozwiązać problem.)</p>
+<p><strong>Fragment w tekście:</strong> "Why don't you suggest they move the group each time they meet? It might be easier for everyone." - Może zaproponuj, żeby za każdym razem zmieniali miejsce spotkania? To może być dla wszystkich ułatwieniem. </p>
+<p>5.2. A</p>
+<p>(Ten tekst jest zaproszeniem do wzięcia udziału w badaniu.)</p>
+<p><strong>Fragment w tekście:</strong> "Meet one of our researchers once a month in order to share your opinions." - Raz w miesiącu spotkaj się z jednym z naszych badaczy, aby podzielić się swoimi opiniami.</p>
+<p>5.3. C</p>
+<p>(Ten tekst przedstawia niektóre z powodów zdecydowania się na zdalne nauczanie.)</p>
+<p><strong>Fragment w tekście:</strong> "The Roland University Education Department is studying the popularity of online university studies, the reasons for choosing online courses and the satisfaction levels of online students. The pie chart below demonstrates some reasons for online learning choices." - Dział Edukacji na Uniwersytecie Rolanda bada popularność studiów zdalnych, powody wyboru kursów internetowych i poziom satysfakcji studentów uczących się przez Internet. Poniższy wykres kołowy pokazuje niektóre powody wyboru nauki zdalnej.</p>
+<p> </p>
+<p><br/><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>5.4. work full-time</p>
+<p>(... ale czasem chciałabym nie musieć <strong>pracować na pełny etat </strong>i jednocześnie się uczyć.)</p>
+<p><strong>Fragment w tekście:</strong> (B) "I'm doing an online course that's been made available to me through my current workplace (...). The only issue is the time the group starts. I don't finish work until 7:00 pm on Thursdays, and I need some time to commute to the town centre." - Biorę udział w kursie online, który oferuje mi moje obecne miejsce pracy (...). Jedynym problemem jest godzina, o której grupa się spotyka. W czwartki kończę pracę dopiero o 19:00 i potrzebuję trochę czasu na dojazd do centrum miasta.</p>
+<p>5.5. almost half</p>
+<p>(... i <strong>prawie połowa </strong>z nich - dokładnie czterdzieści dziewięć procent - decydują się na studia zdalne z powodu innych zobowiązań...)</p>
+<p><strong>Fragment w tekście:</strong> (C) "Current commitments do not allow me to attend campus-based courses - 49%." - Obecne zobowiązania nie pozwalają mi na uczestnictwo w zajęciach na kampusie - 49%.</p>
+<p>5.6. different location</p>
+<p>(W zeszły czwartek zapytałam organizatorów, czy możemy się spotykać w <strong>innym miejscu</strong> każdego miesiąca...)</p>
+<p><strong>Fragment w tekście:</strong> (D) "Why don't you suggest they move the group each time they meet? It might be easier for everyone." - Może zaproponuj, żeby za każdym razem zmieniali miejsce spotkania? To może być dla wszystkich ułatwieniem.</p><br>

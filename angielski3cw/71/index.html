@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse: collapse; width: 478px; height: 221.137px; border-width: 1px; border-spacing: 5px; border-color: rgb(34, 30, 120);">
+<tbody>
+<tr style="background-color: rgb(217, 230, 242); height: 36.8523px;">
+<td style="width: 141.341px; background-color: rgb(166, 186, 225); height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); text-align: center; padding: 5px;"><strong>Czasownik</strong></td>
+<td style="width: 141.091px; background-color: rgb(166, 186, 225); height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); text-align: center; padding: 5px;"><strong>Rzeczownik (czynność) </strong></td>
+<td style="width: 154.273px; background-color: rgb(166, 186, 225); height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); text-align: center; padding: 5px;"><strong>Rzeczownik (osoba) </strong></td>
+</tr>
+<tr style="height: 36.8523px;">
+<td style="width: 141.341px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">to hack<br/>(hakować)</td>
+<td style="width: 141.091px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">hacking<br/>(hakerstwo)</td>
+<td style="width: 154.273px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a <strong>hacker</strong><br/>(haker)  </td>
+</tr>
+<tr style="height: 36.8523px;">
+<td style="width: 141.341px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">to commit fraud<br/>(popełnić oszustwo)</td>
+<td style="width: 141.091px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">fraud<br/>(oszustwo)</td>
+<td style="width: 154.273px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a <strong>fraudster</strong><br/>(oszust)</td>
+</tr>
+<tr style="height: 36.8523px;">
+<td style="width: 141.341px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">to bully<br/>(dręczyć)</td>
+<td style="width: 141.091px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;"><strong>bullying</strong><br/>(dręczenie)</td>
+<td style="width: 154.273px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a bully / <strong>bullies</strong><br/>(dręczyciel/dręczyciele)</td>
+</tr>
+<tr style="height: 36.8523px;">
+<td style="width: 141.341px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">to con<br/>(okantować)</td>
+<td style="width: 141.091px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a con<br/>(przekręt)</td>
+<td style="width: 154.273px; height: 36.8523px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a <strong>conman</strong><br/>(kanciarz)</td>
+</tr>
+<tr style="height: 36.875px;">
+<td style="width: 141.341px; height: 36.875px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">to scam<br/>(naciągać)</td>
+<td style="width: 141.091px; height: 36.875px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">scam<br/>(oszustwo, szwindel)</td>
+<td style="width: 154.273px; height: 36.875px; border-width: 1px; border-color: rgb(34, 30, 120); padding: 5px;">a <strong>scammer</strong><br/>(naciągacz)</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. conman  </p>
+<p>2. spam</p>
+<p>3. hacker</p>
+<p>4. opened</p>
+<p>5. click on</p>
+<p>6. cyber bullying</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Czy wiedzieliście, że...</p>
+<p>• policja wreszcie zaaresztowała oszusta, który udawał, że jest Georgem Clooney'em, gwiazdą filmową, aby nakłonić ludzi do kupienia ubrań z jego strony internetowej. Ten internetowy <strong>kanciarz</strong> nabierał ludzi od 2013 roku.</p>
+<p>• Gary Thuerk wysłał pierwszy <strong>spam</strong> w 1978 roku. Próbował sprzedać system komputerowy przez internet.</p>
+<p>• brytyjski nastolatek, Kane Gamble, włamał się do domowego telewizora i komputera szefa bezpieczeństwa USA i uzyskał dostęp do dokumentów państwowych. Ten <strong>haker </strong>został skazany na dwa lata w zakładzie poprawczym.</p>
+<p>• wirus ILOVEYOU jest jednym z najgorszych wirusów komputerowych. Wyglądał jak niegroźna wiadomość mailowa, ale kiedy ludzie <strong>otwierali </strong>załącznik, wirus wysyłał maila do wszystkich kontaktów tej osoby i niszczył ich komputery. Jednak dwie osoby, które go napisały, nie poszły do więzienia - w tamtym czasie nie było prawa o wirusach, więc nie popełnili przestępstwa. To pokazuje, jak ważne jest, by chronić się w internecie i nigdy nie <strong>klikać w </strong>link, któremu się nie ufa.</p>
+<p>• W Kalifornii, USA, <strong>cyberprzemoc </strong>- wykorzystywanie komunikacji elektronicznej w celu wywołania u ludzi poczucia strachu lub zagrożenia - jest przestępstwem. Dręczyciele mogą być skazani nawet na rok więzienia lub dostać grzywnę w wysokości tysiąca dolarów.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1 - <strong>d </strong> (cyberprzemoc) </p>
+<p>2 - <strong>a</strong>  (phishing, wyłudzanie informacji poprzez podszywanie się)</p>
+<p>3 - <strong>e </strong> (niechciane reklamy)</p>
+<p>4 - <strong>b</strong>  (dane do logowania)</p>
+<p>5 - <strong>c </strong> (kradzież tożsamości)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. login details </p>
+<p>(Nigdy nie zapisuj <strong>danych do logowania</strong> (haseł, nazw użytkownika itp.), bo ktoś mógłby je wykorzystać.) </p>
+<p>2. identity theft</p>
+<p>(Nie chciał(a)bym być ofiarą <strong>kradzieży tożsamości</strong>, kiedy to ktoś kradnie twoje osobiste informacje, aby podszywać się pod ciebie.)</p>
+<p>3. junk mail</p>
+<p>(Mam dość otrzymywania <strong>niechcianych reklam</strong>! Po prostu usuwam je wszystkie. Nie chcę czytać reklam rzeczy, których nie potrzebuję.)</p>
+<p>4. cyber bullying</p>
+<p>(W <strong>cyberprzemocy</strong> telefony komórkowe i Internet są wykorzystywane do krzywdzenia, zawstydzania, a nawet straszenia ludzi. To okropne!)</p>
+<p>5. phishing scam</p>
+<p>(<strong>Phishing</strong> polega na tym, że ktoś próbuje cię nabrać, abyś podał swoje poufne informacje bankowe, przez wysyłanie e-maila, który wygląda jak pochodzący z twojego banku.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. c  </p>
+<p>2. a</p>
+<p>3. d</p>
+<p>4. b</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Przykładowe odpowiedzi:</strong></p>
+<p>1. Because he doesn't break the law.  </p>
+<p>2. He found bugs and security flaws in large companies' Internet applications, and made them safer for people to use.</p>
+<p>3. The amount of money that Santiago earned.</p>
+<p>4. She thinks it would be a good idea to teach students about dangers of hacking and staying safe online.</p>
+<p>5. Because his old laptop was hacked.</p><br>

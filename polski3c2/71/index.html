@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe s³owa klucze:</p>
+<ul>
+<li><em>s³owo; </em></li>
+<li><em>prawdziwem;</em></li>
+<li><em>³ad;</em></li>
+<li><em>koniecznoœæ;</em></li>
+<li><em>jedynoœæ;</em></li>
+<li><em>ostatecznoœæ;</em></li>
+<li><em>wielkiej. </em></li>
+</ul>
+<p> </p>
+<p>S³owa te mo¿na uznaæ za kluczowe, poniewa¿ okreœlaj¹ istotê tytu³owej<em> Rzeczy Czarnoleskiej. </em>Zaznaczaj¹ jej zwi¹zek ze s³owem oraz okreœlonymi wartoœciami, które pozwalaj¹ na uporz¹dkowanie wczeœniejszego chaosu. Œwiadcz¹ tak¿e o jej wyj¹tkowoœci, poniewa¿ ma ona absolutny oraz ostateczny wymiar, kszta³tuje rzeczywistoœæ i staje siê Ÿród³em wolnoœci cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Rola Kochanowskiego w historii polskiej literatury - przyk³ady: </p>
+<ul>
+<li>stworzy³ polski jêzyk literacki;</li>
+<li>w twórczy przekszta³ci³ motywy i gatunki obecne w literaturze antycznej;</li>
+<li>napisa³ ponadczasowe dzie³a, które nie straci³y nic ze swego uniwersalnego charakteru;</li>
+<li>wykreowa³ nowy system wersyfikacyjny;</li>
+<li>utworzy³ wzorzec fraszki;</li>
+<li>okreœli³ znaczenie rymu;</li>
+<li>eksperymentowa³ w zakresie budowy wiersza;</li>
+<li>rozwin¹³ techniki artystyczne, wykorzystanie œrodków wyrazu. </li>
+</ul>
+<p> </p>
+<p>Zas³ugi poety:</p>
+<ul>
+<li>rozwój wersyfikacji, troska o jasnoœæ, precyzjê jêzyka -&gt; "S³owo siê z wolna w brzmieniu przeistacza, / Staje siê tem prawdziwem";</li>
+<li>wprowadzenie do literatury idei typowych dla kultury antycznej (klasycyzm renesansowy) -&gt; "Z chaosu ³ad siê tworzy.";</li>
+<li>poruszanie uniwersalnych tematów, które t³umacz¹ egzystencjê cz³owieka -&gt; "G³uchy nierozum, ciemny sens cz³owieczy / Ostrym promieniem na wskroœ przeœwietlony". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Twórczoœæ renesansowego artysty przypomina Tuwimowi o znaczeniu literatury, poniewa¿ nadaje ona g³êbszy sens s³owom, a przez to reprezentuj¹ ono pewne uniwersalne wartoœci: "S³owo siê z wolna w brzmieniu przeistacza, / Staje siê tem prawdziwem". Taka dzia³alnoœæ to zjawisko porz¹dkuj¹ce rzeczywistoœæ - poeta podobnie jak Stwórca zastêpuje chaos ³adem, nadaje nieokreœlonym formom ostateczny kszta³t. Literatura w ujêciu Tuwima stanowi to, co pozwala cz³owiekowi na odkrycie prawdy o sobie, prowadzi do jego duchowego przebudzenia. Nie bez znaczenia jest tak¿e trud poety, który musi odpowiednio wykorzystaæ natchnienie, by zamieniæ je w dzie³o. Tym samym twórczoœæ Kochanowskiego przypomina o ponadczasowych zmaganiach cz³owieka, staraj¹cego siê zamieniæ inspiracjê w s³owo, oraz wp³ywie literatury na rzeczywistoœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowo:</p>
+<p>S³owo w poezji, wed³ug Tuwima, ulega przemianie, staje siê znakiem prawdy. Idea przybiera jego postaæ, nastêpnie chaos zostaje zast¹piony ³adem oraz koniecznoœci¹. S³owo poetyckie zyskuje zaœ w ten sposób samoœwiadomoœæ: "Sam siê uk³ada w swoj¹ ostatecznoœæ / I wo³a, jak siê nazywa". Wp³ywa przy tym na cz³owieka, gdy¿ zapewnia mu wolnoœæ i poznanie. S³owo w sztuce tym samym odwo³uje siê do uniwersalnych zjawisk i kszta³tuje istotê ludzk¹, zyskuje szczególne znaczenie. Z kolei s³owa w codziennej komunikacji odwo³uj¹ siê raczej do konkretnych sytuacji, s¹ pozbawione g³êbszych sensów i nie maj¹ takiego oddzia³ywania jak jêzyk poezji. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Zainteresowanie Tuwima twórczoœci¹ Kochanowskiego jest uwarunkowane ówczesnymi realiami. Dwudziestolecie miêdzywojenne to czas, w którym rodz¹ siê totalitaryzmy, rozwija siê propaganda oraz rozpoczyna siê dominacja kultury masowej. Czynniki te zaœ prowadz¹ do wypaczenia pojêæ oraz wartoœci (np. godnoœci cz³owieka, znaczenia s³owa). Z tego te¿ powodu inspiracj¹ dla twórcy staje siê renesansowy humanizm jako forma ratunku, przywrócenia pojêciom ich w³aœciwego znaczenia oraz walki o prawdê. Idea³y te staj¹ siê przeciwwag¹ dla rzeczywistoœci, dlatego te¿ Tuwim - za pomoc¹ odniesieñ do Kochanowskiego - stara siê je pielêgnowaæ, przypomnieæ o ich znaczeniu. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br>

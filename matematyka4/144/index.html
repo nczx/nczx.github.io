@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<table border="1" style="width: 952px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 114px;">
+<tbody>
+<tr>
+<td style="width: 948px;">
+<p><strong>Pole powierzchni całkowitej stożka</strong> o promieniu podstawy <strong>r</strong> i tworzącej długości <strong>l</strong> wyraża się wzorem:</p>
+<p><math-expr expr="P_c=P_p+P_b=pir^2+pirl=pir(r+l)" syntax="text"></math-expr></p>
+<p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy stożka, a <strong>P<sub>b</sub></strong> jest polem powierzchni bocznej tego stożka.  </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table border="1" style="width: 861px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 107px;">
+<tbody>
+<tr>
+<td style="width: 857px;">
+<p><strong>Objętość stożka</strong> o promieniu podstawy <strong>r</strong> i wysokości długości <strong>h</strong> wyraża się wzorem:</p>
+<p><math-expr expr="V=1/3P_p cdot h = 1/3 pir^2h" syntax="text"></math-expr></p>
+<p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy stożka.  </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Podany w treści zadania trójkąt obracamy wokół boku<strong> AB</strong> i otrzymujemy pewną bryłę. </p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Rysunek:  </p>
+<p><img alt="" height="360" src="./data/1223452-0.jpg" width="441"/></p>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>AOC</strong> mamy:</p>
+<p><math-expr expr="\displaystyle h_1^2+12^2=13^2"></math-expr></p>
+<p><math-expr expr="h_1^2+144=169" syntax="text"></math-expr></p>
+<p><math-expr expr="h_1^2=25 \ \ \ ^^ \ \ \ h_1&gt;0" syntax="text"></math-expr>    </p>
+<p><math-expr expr="h_1=5" syntax="text"></math-expr></p>
+<hr/>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>BOC</strong> mamy:</p>
+<p><math-expr expr="h_2^2+12^2=15^2" syntax="text"></math-expr></p>
+<p><math-expr expr="h_2^2+144=225" syntax="text"></math-expr></p>
+<p><math-expr expr="h_2^2=81 \ \ \ ^^ \ \ \ h_2&gt;0" syntax="text"></math-expr></p>
+<p><math-expr expr="h_2=9" syntax="text"></math-expr></p>
+<hr/>
+<p>Wyznaczmy pole powierzchni bocznej górnego stożka. Mamy:</p>
+<p><math-expr expr="P_1=pi cdot 12 cdot 13=156 pi" syntax="text"></math-expr></p>
+<p>Wyznaczmy pole powierzchni bocznej dolnego stożka. Mamy:</p>
+<p><math-expr expr="P_2=pi cdot 12 cdot 15=180pi" syntax="text"></math-expr>       </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">pole powierzchni tej bryły</span>. Mamy:</p>
+<p><math-expr expr="P=P_1+P_2=156pi+180pi=ul(ul(336 pi ))" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Wyznaczmy objętość górnego stożka. Mamy:</p>
+<p><math-expr expr="V_1=1/3 cdot pi cdot 12^2 cdot 5 = 1/3 pi cdot 144 cdot 5 = 240pi" syntax="text"></math-expr></p>
+<p>Wyznaczmy objętość dolnego stożka. Mamy:</p>
+<p><math-expr expr="V_2=1/3 pi cdot 12^2 cdot 9 = 1/3 pi cdot 144 cdot 9 = 432pi" syntax="text"></math-expr>   </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">objętość tej bryły</span>. Mamy:</p>
+<p><math-expr expr="V=V_1+V_2=240pi+432pi=ul(ul(672 pi ))" syntax="text"></math-expr>  </p>
+<hr/><hr/>
+<p><strong>b)</strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="408" src="./data/1223452-1.jpg" width="407"/></p>
+<p>Korzystając ze związku między długościami boków w trójkącie <strong>BDC</strong> o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>, <strong>90<sup>o</sup></strong> mamy:</p>
+<p><math-expr expr="x=1/2 cdot 6 = 3" syntax="text"></math-expr></p>
+<p>oraz</p>
+<p><math-expr expr="r=3sqrt3" syntax="text"></math-expr>   </p>
+<p>Korzystając ze związku między długościami boków w trójkącie <strong>ADC</strong> o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>, <strong>90<sup>o</sup></strong> mamy:</p>
+<p><math-expr expr="l=2 cdot 3sqrt3=6sqrt3" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Wyznaczmy pole powierzchni bocznej stożka <strong>ECA</strong>. Mamy:</p>
+<p><math-expr expr="P_1=pi cdot 3sqrt3 cdot 6sqrt3=54pi" syntax="text"></math-expr>  </p>
+<p>Wyznaczmy pole powierzchni bocznej stożka <strong>ECB</strong>. Mamy:</p>
+<p><math-expr expr="P_2=pi cdot 3sqrt3 cdot 6=18sqrt3 pi" syntax="text"></math-expr>  </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">pole powierzchni otrzymanej bryły</span>. Mamy:</p>
+<p><math-expr expr="P=P_1+P_2=54pi+18sqrt3pi=ul(ul( 18pi(3+sqrt3) ))" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Wyznaczmy objętość stożka <strong>ECA</strong>. Mamy:</p>
+<p><math-expr expr="V_1=1/3 cdot pi cdot (3sqrt3)^2 cdot 9 = 3pi cdot 27=81pi" syntax="text"></math-expr>  </p>
+<p>Wyznaczmy objętość stożka <strong>ECB</strong>. Mamy:</p>
+<p><math-expr expr="V_2=1/3 cdot pi cdot (3sqrt3)^2 cdot 3 = 27pi" syntax="text"></math-expr>  </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">objętość otrzymanej bryły</span>. Mamy:</p>
+<p><math-expr expr="V=V_1-V_2=81pi-27pi=ul(ul( 54pi) )" syntax="text"></math-expr>  </p>
+<hr/><hr/>
+<p><strong>c)</strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="354" src="./data/1223452-2.jpg" width="495"/></p>
+<p>Zauważmy, że</p>
+<p><math-expr expr="3^2+4^2=5^2" syntax="text"></math-expr></p>
+<p>zatem na mocy <strong>twierdzenia odwrotnego do twierdzenia Pitagorasa</strong>, trójkąt <strong>ABC</strong> jest prostokątny.  </p>
+<p>Odcinek <strong>OC</strong> jest długością wysokości trójkąta prostokątnego opuszczoną na przeciwprostokątną. Mamy więc:</p>
+<p><math-expr expr="r = frac(abs(AC) cdot abs(CB))(abs(AB)) = frac(3cdot4)(5)=12/5" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>AOC</strong> mamy:</p>
+<p><math-expr expr="h_1^2+(12/5)^2=3^2" syntax="text"></math-expr></p>
+<p><math-expr expr="h_1^2+144/25=9" syntax="text"></math-expr></p>
+<p><math-expr expr="h_1^2=81/25 \ \ \ ^^ \ \ \ h_1&gt;0" syntax="text"></math-expr></p>
+<p><math-expr expr="h_1=9/5" syntax="text"></math-expr></p>
+<p>więc</p>
+<p><math-expr expr="h_2=5-9/5=16/5" syntax="text"></math-expr>      </p>
+<hr/>
+<p>Wyznaczmy pole powierzchni bocznej górnego stożka. Mamy:</p>
+<p><math-expr expr="P_1=pi cdot 12/5 cdot 3 = 7,2pi" syntax="text"></math-expr></p>
+<p>Wyznaczmy pole powierzchni bocznej dolnego stożka. Mamy:</p>
+<p><math-expr expr="P_2=pi cdot 12/5 cdot 4 = 9,6 pi" syntax="text"></math-expr>       </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">pole powierzchni tej bryły</span>. Mamy:</p>
+<p><math-expr expr="P=P_1+P_2=7,2pi+9,6pi=ul(ul(16,8pi ))" syntax="text"></math-expr>  </p>
+<hr/>
+<p>Wyznaczmy objętość górnego stożka. Mamy:</p>
+<p><math-expr expr="V_1=1/3 cdot pi cdot (12/5)^2 cdot 9/5 = 3/5 pi cdot 144/25=432/125pi=3,456 pi" syntax="text"></math-expr></p>
+<p>Wyznaczmy objętość dolnego stożka. Mamy:</p>
+<p><math-expr expr="V_2=1/3 cdot pi cdot (12/5)^2 cdot 16/5 = 1/3 pi cdot 144/25 cdot 16/5 pi = 768/125pi=6,144 pi" syntax="text"></math-expr>   </p>
+<p>Wyznaczmy <span style="text-decoration: underline;">objętość tej bryły</span>. Mamy:</p>
+<p><math-expr expr="V=V_1+V_2=3,456 pi + 6,144 pi=ul(ul(9,6 pi ))" syntax="text"></math-expr></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<table border="1" style="width: 952px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 114px;"> <tbody> <tr> <td style="width: 948px;"> <p><strong>Pole powierzchni całkowitej stożka</strong> o promieniu podstawy <strong>r</strong> i tworzącej długości <strong>l</strong> wyraża się wzorem:</p> <p><span> <math-expr expr="P_c=P_p+P_b=pir^2+pirl=pir(r+l)" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy stożka, a <strong>P<sub>b</sub></strong> jest polem powierzchni bocznej tego stożka.  </p> </td> </tr> </tbody> </table> <p> </p> <p>Rysunek:  </p> <p><img alt="" height="388" src="./data/1223951-0.jpg" width="457"/></p> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>ABO</strong> otrzymujemy:  </p> <p><span> <math-expr expr="r^2+x^2=10^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="r^2=100-x^2" syntax="text"></math-expr> </span>       </p> <hr/> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>OBC</strong> otrzymujemy:  </p> <p><span> <math-expr expr="r^2+(13-x)^2=13^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="100-x^2+169-26x+x^2=169" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="-26x=-100 \ \ \ |:(-26)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='x=50/13 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Czyli </p> <p><span> <math-expr expr="r^2=100-x^2 =100-(50/13)^2 = 100-2500/169 = 14400/169 \ \ \ ^^ \ \ \ r&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='r=120/13 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Obliczmy pole powierzchni górnego stożka. Mamy:</p> <p><span> <math-expr expr='P_1=pi*120/13*13=120pi \ ["cm"^2]' syntax="text"></math-expr> </span>   </p> <p>Obliczmy pole powierzchni dolnego stożka. Mamy:</p> <p><span> <math-expr expr='P_2=pi*120/13*10=1200/13pi \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Obliczmy <strong>pole powierzchni</strong> otrzymanej bryły. Mamy:</p> <p><span> <math-expr expr='P=P_1+P_2 = 120pi+1200/13pi = (1560pi+1200pi)/13 = ul(ul( 2760/13pi \ ["cm"^2] ))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Dwa stożki złączono podstawami o polu <strong>16𝜋 cm<sup>2</sup></strong> i otrzymano bryłę, której przekrój jest deltoidem. </p> <p>Niech <strong>r</strong> będzie długością promienia tej podstawy. Mamy więc:  </p> <p><span> <math-expr expr="pir^2=16pi\  \ \ \ |:pi" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="r^2=16 \ \ \ ^^ \ \ \ r&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='r=4\ ["cm"]' syntax="text"></math-expr> </span>     </p> <p>Naszkicujmy deltoid będący przekrojem tej bryły: </p> <p><img alt="" height="331" src="./data/1223289-0.jpg" width="336"/></p> <p>Pole tego przekroju wynosi <strong>60 cm<sup>2</sup></strong>. Mamy więc</p> <p><span> <math-expr expr="(8 cdot (h_1+h_2))/2=60" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="4(h_1+h_2)=60 \ \ \ |:4" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='h+1+h_2=15\ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>a)</strong></p> <p>Wyznaczmy objętość tej bryły jako sumę objętości stożka "dolnego" i "górnego". Mamy:</p> <p><span> <math-expr expr='V=1/3*16pi*h_1+1/3*16pi*h_2= 16/3pi (h_1+h_2)=16/3 pi cdot 15 = ul(ul( 80 pi \ ["cm"^3] ))' syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Rysunek:</p> <p><img alt="" height="328" src="./data/1223289-1.jpg" width="367"/></p> <p>Zauważmy, że </p> <p><span> <math-expr expr="x+2x=15" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="3x=15 \ \ \ |:3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='x=5 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>więc</p> <p><span> <math-expr expr='2x=10 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy długość tworzącej górnego stożka. Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>COB</strong> mamy:</p> <p><span> <math-expr expr="r^2+(2x)^2=l_1^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="4^2+10^2=l_1^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="16+100=l_1^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="l_1^2=116 \ \ \ ^^ \ \ \ l_1&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='l_1=2sqrt29 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni bocznej tego stożka. Mamy:</p> <p><span> <math-expr expr='P_1=pi*4*2sqrt29=ul(8sqrt29pi \ ["cm"^2] )' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy długość tworzącej dolnego stożka. Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>COB</strong> mamy:</p> <p><span> <math-expr expr="r^2+x^2=l_2^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="4^2+5^2=l_2^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="16+25=l_2^2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="41=l_2^2 \ \ \ ^^ \ \ \ l_2&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr='l_2=sqrt41 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni bocznej tego stożka. Mamy:</p> <p><span> <math-expr expr='P_2=pi*4*sqrt41 = ul(4sqrt41pi \ ["cm"^2] )' syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <span style="text-decoration: underline;">pole powierzchni tej bryły</span>. Mamy:</p> <p><span> <math-expr expr='P=P_1+P_2 = 8sqrt29pi +4sqrt41pi= ul(ul( 4pi(2sqrt29+sqrt41)\ ["cm"^2]' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<table border="1" style="width: 952px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc; height: 114px;"> <tbody> <tr> <td style="width: 948px;"> <p><strong>Pole powierzchni całkowitej stożka</strong> o promieniu podstawy <strong>r</strong> i tworzącej długości <strong>l</strong> wyraża się wzorem:</p> <p><span> <math-expr expr="P_c=P_p+P_b=pir^2+pirl=pir(r+l)" syntax="text"></math-expr> </span></p> <p>gdzie <strong>P<sub>p</sub></strong> jest polem powierzchni podstawy stożka, a <strong>P<sub>b</sub></strong> jest polem powierzchni bocznej tego stożka.  </p> </td> </tr> </tbody> </table> <p> </p> <p>Rysunek:  </p> <p><img alt="" height="323" src="./data/1223293-0.jpg" width="361"/></p> <p>Wyznaczmy pole powierzchni podstawy tego stożka. Mamy:</p> <p><span> <math-expr expr="P_p=pir^2" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole powierzchni podstawy tego stożka. Mamy:</p> <p><span> <math-expr expr="P_b=pirl" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <span style="text-decoration: underline;">stosunek tych pól</span>. Mamy:</p> <p><span> <math-expr expr="frac(P_p)(P_b)=frac(pir^2)(pirl)=r/l= sin alpha" syntax="text"></math-expr> </span>  </p> <p><strong>co kończy dowód.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p><strong>a)</strong></p>
+<p>Rysunek:  </p>
+<p><img alt="" height="422" src="./data/1224047-0.jpg" width="400"/></p>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>APO</strong> mamy:</p>
+<p><math-expr expr="x^2+(6sqrt3)^2=12^2" syntax="text"></math-expr></p>
+<p><math-expr expr="x^2+108=144" syntax="text"></math-expr></p>
+<p><math-expr expr="x^2=36 \ \ \ ^^ \ \ \ x&gt;0" syntax="text"></math-expr></p>
+<p><math-expr expr="x=6" syntax="text"></math-expr></p>
+<p>Wyznaczmy <strong>tangens</strong> kąta <span style="font-weight: 400;"><strong>𝛼</strong>. Mamy:</span></p>
+<p><math-expr expr='"tg" \ alpha = frac(2sqrt3)(6)=sqrt3/3' syntax="text"></math-expr></p>
+<p>więc</p>
+<p><math-expr expr="ul(ul( alpha = 30^@ ))" syntax="text"></math-expr>       </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Rysunek:</p>
+<p><img alt="" height="437" src="./data/1224047-1.jpg" width="427"/></p>
+<p>W koło będące podstawą tego stożka wpisano kwadrat o boku długości <strong>6</strong>. Promień tego koła stanowi połowę przekątnej tego kwadratu. Mamy więc:</p>
+<p><math-expr expr="r=frac(6sqrt2)(2)=3sqrt2" syntax="text"></math-expr>  </p>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>OKS</strong> mamy:</p>
+<p><math-expr expr="l^2=7^2+(3sqrt2)^2" syntax="text"></math-expr></p>
+<p><math-expr expr="l^2=49+18" syntax="text"></math-expr></p>
+<p><math-expr expr="l^2=67 \ \ \ ^^ \ \ \ l&gt;0" syntax="text"></math-expr></p>
+<p><math-expr expr="l=sqrt67" syntax="text"></math-expr>     </p>
+<p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>PAS</strong> mamy:</p>
+<p><math-expr expr="h^2+3^2=(sqrt67)^2" syntax="text"></math-expr></p>
+<p><math-expr expr="h^2+9=67" syntax="text"></math-expr></p>
+<p><math-expr expr="h^2=58 \ \ \ ^^ \ \ \ h&gt;0" syntax="text"></math-expr></p>
+<p><math-expr expr="h=sqrt58" syntax="text"></math-expr></p>
+<p>Wyznaczmy<strong> pole</strong> trójkąta <strong>BAS</strong>. Mamy:</p>
+<p><math-expr expr="P=frac(6 cdot sqrt58)(2)=ul(ul( 3sqrt58) )" syntax="text"></math-expr></p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Rysunek:  </p> <p><img alt="" height="457" src="./data/1224093-0.jpg" width="448"/></p> <p>Korzystając ze związku między długościami boków w trójkącie o kątach <strong>30<sup>o</sup></strong>, <strong>60<sup>o</sup></strong>, <strong>90<sup>o</sup></strong> mamy:</p> <p><span> <math-expr expr='x=6 \ ["cm"]' syntax="text"></math-expr> </span></p> <p>oraz</p> <p><span> <math-expr expr='h=12 \ ["cm"]' syntax="text"></math-expr> </span>   </p> <hr/> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>OAS</strong> mamy:</p> <p><span> <math-expr expr="l^2=(6sqrt3)^2+10^2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="l^2=108+100" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="l^2=208 \ \ \ ^^ \ \ \ l&gt;0" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='l=sqrt208 \ ["cm"]' syntax="text"></math-expr> </span>     </p> <hr/> <p>Korzystając z <strong>twierdzenia Pitagorasa</strong> dla trójkąta <strong>CPS</strong> mamy:</p> <p><span> <math-expr expr="12^2+(1/2a)^2=(sqrt208)^2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="144+1/4a^2=208" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="1/4a^2=64 \ \ \ | cdot 4" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="a^2=256 \ \ \ ^^ \ \ \ a&gt;0" syntax="text"></math-expr> </span>     </p> <p><span> <math-expr expr='a=16 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <hr/> <p>Wyznaczmy <strong>pole</strong> trójkąta <strong>CDS</strong>. Mamy:</p> <p><span> <math-expr expr='P=frac(16 cdot 12)(2)=ul(ul( 96 \ ["cm"^2] ))' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Stożek przecięto płaszczyzną prostopadłą do jego wysokości i otrzymano dwie bryły - mniejszy stożek i stożek ścięty. </p> <p>Naszkicujmy przekrój osiowy tego stożka. Mamy:  </p> <p><img alt="" height="341" src="./data/1224212-0.jpg" width="419"/></p> <hr/> <p><strong>a)</strong></p> <p>Wiemy, że</p> <p><span> <math-expr expr="r_1=6, \ \ \ r_2=4, \ \ \ abs(O_1O_2)=5" syntax="text"></math-expr> </span> </p> <p>Korzystając z <span style="text-decoration: underline;">podobieństwa</span> trójkątów <strong>SO<sub>2</sub>D</strong> oraz <strong>SO<sub>1</sub>B</strong> mamy:</p> <p><span> <math-expr expr="frac( abs(SO_2))(4)=frac(abs(SO_2)+5)(6)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="6abs(SO_2)=4 abs(SO_2) +20" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="2 abs(SO_2)=20 \ \ \ |:2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(SO_2)=10" syntax="text"></math-expr> </span>    </p> <p>zatem</p> <p><span> <math-expr expr="abs(SO_1)=10+5=15" syntax="text"></math-expr> </span> </p> <p>Wyznaczmy objętość stożka <strong>ABS</strong>. Mamy:</p> <p><span> <math-expr expr="V_1=1/3 cdot pi cdot 6^2 cdot 15=5 cdot 36pi=180pi" syntax="text"></math-expr> </span></p> <p>Wyznaczmy objętość mniejszego stożka <strong>CDS</strong>. Mamy:</p> <p><span> <math-expr expr="V_2= 1/2 cdot pi cdot 4^2 cdot 10 = 160/3 pi" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy <strong>objętość stożka ściętego</strong>. Mamy:</p> <p><span> <math-expr expr="V=V_1-V_2=180pi - 160/3 pi = ul(ul( 380/3 pi ))" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Wiemy, że</p> <p><span> <math-expr expr="r_1=12, \ \ \ r_2=9, \ \ \ abs( sphericalangle ASB) = 90^@" syntax="text"></math-expr> </span> </p> <p>Rozważmy trójkąt prostokątny równoramienny <strong>ABS</strong>. Zatem trójkąt <strong>AO<sub>1</sub>S</strong> jest również trójkątem prostokątnym równoramiennym, więc</p> <p><span> <math-expr expr="abs(SO_1)=abs(AO_1)=12" syntax="text"></math-expr> </span> </p> <p>Rozważmy trójkąt prostokątny równoramienny <strong>CDS</strong>. Zatem trójkąt <strong>CO<sub>2</sub>S</strong> jest również trójkątem prostokątnym równoramiennym, więc</p> <p><span> <math-expr expr="abs(SO_2)=abs(AO_2)=9" syntax="text"></math-expr> </span> </p> <p>Wyznaczmy objętość stożka <strong>ABS</strong>. Mamy:</p> <p><span> <math-expr expr="V_1=1/3 cdot pi cdot 12^2 cdot 12 = 4pi cdot 144=576 pi" syntax="text"></math-expr> </span> </p> <p>Wyznaczmy objętość mniejszego stożka <strong>CDS</strong>. Mamy:</p> <p><span> <math-expr expr="V_2=1/3 pi cdot 9^2 cdot 9 = 3pi cdot 81 = 243 pi" syntax="text"></math-expr> </span> </p> <p>Wyznaczmy <strong>objętość stożka ściętego</strong>. Mamy:</p> <p><span> <math-expr expr="V=V_1-V_2=576 pi - 243 pi = ul(ul( 333 pi ))" syntax="text"></math-expr> </span> </p><br>

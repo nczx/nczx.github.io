@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Doktor Rieux postrzega swój zawód jako powołanie. W młodości jednak wybór takiego zawodu wynikał z nieco przyziemnych okoliczności: "[...] był to wybór w pewien sposób abstrakcyjny; bo chciałem być lekarzem, bo jest to zawód jak każdy inny, jeden z tych, który wybierają młodzi ludzie. Może także dlatego, że nastręczał szczególnych trudności dla syna robotnika jak ja". Pierwsze zetknięcie ze śmiercią znacząco wpłynęło na postawę bohatera. Postrzega bowiem swój zawód jako nieustanną walką z chorobą, śmiercią - jego działania są reakcją na obojętność Boga. Chociaż czasem odczuwa bezradność, tymczasowy charakter sukcesu, to uważa, że jego zaangażowanie ma sens. Jest więc obrońcą pokrzywdzonych, buntuje się przeciwko złu poprzez opiekę nad cierpiącymi. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Bóg nie zajmuje istotnego miejsca w światopoglądzie doktora. Uważa on siebie za jednostkę niewierzącą czyli ateistę. Brak wiary jest dla niego motywacją, by walczyć ze śmiercią. Bohater ponadto sprzeciwia się też Bogu, który zdaje się nieobecny, nieczuły na cierpienie ludzi. Potwierdzają to słowa doktora: "[...] może lepiej jest dla Boga, że nie wierzy się w niego i walczy ze wszystkich sił ze śmiercią, nie wznoszący oczu ku temu niebu, gdzie on milczy". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Rieux jest motywowany przede wszystkim przez swój system wartości (niewiara w Boga) oraz zawód, doświadczenie biedy. Uważa, że jego obowiązkiem jest walka o życie każdego człowieka, ratowanie go przed chorobą. Postrzega siebie jako obrońcę najsłabszych więc stanowczo sprzeciwia się śmierci. Jest przekonany o słuszności nieustającej walki - nawet ze świadomością tego, iż sukces bywa tymczasowy. Z kolei motywację Tarrou stanowi potrzeba zrozumienia. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Słowa pacjenta wyrażają ogólną refleksję na temat ludzkiej egzystencji. Porównanie jej do dżumy sugeruje absurd, którym jest przesycone życie. Rzeczywistość - podobnie jak choroba - bywa niezrozumiała, groźna, przesycona złem. Ponadto wypowiedź chorego określa sytuację człowieka. Pozostaje on osamotniony, jest zdany tylko na siebie w obliczu niepojętych zdarzeń, nie zawsze sensownych z ludzkiej perspektywy. </p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Przykładowe teksty kultury:</p>
+<ul>
+<li>
+<em>Lalka</em>, Prus; </li>
+<li>
+<em>Zdążyć przed panem Bogiem</em>, Krall;</li>
+<li>
+<em>Znachor</em>, Dołęga-Mostowicz;</li>
+<li>serial <em>Dr House;</em>
+</li>
+<li>
+<em>Przebudzenie</em>, reż. Harold;</li>
+<li>
+<em>Bogowie</em>, reż. Palkowski. </li>
+</ul>
+<p> </p>
+<p>Przygotowanie analizy - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Przesłanie moralne utworu zachęca do przyjęcia pewnej postawy w obliczu dżumy. Człowiek wobec zła, absurdu nie powinien być bierny. Ważne jest to, aby nawet w trudnej sytuacji postępować we właściwy sposób, co jest bez wątpienia przejawem heroizmu. Doktor Rieux zauważa bowiem, że tak ekstremalne sytuacje wydobywają z człowieka całe piękno i poświęcenie dla innych. Ważne jest też, aby mimo wątpliwości, zagrożenia nie rezygnować z aktywnej postawy, solidarności, wytrwałości czy skłonności do buntowania się. Niebezpieczeństwo może bowiem powrócić w każdej chwili: "Wiedział bowiem, [...] że bakcyl dżumy nigdy nie umiera i nie znika, że może przez dziesiątki lat pozostać uśpiony w meblach i bieliźnie, że czeka cierpliwie  [...], i że nadejdzie być może dzień, kiedy na nieszczęście ludzi i dla ich nauki dżuma obudzi swe szczury i pośle je, by umierały w szczęśliwym mieście". </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>Uwaga! Jest to odpowiedź na podstawie przytoczonego fragmentu.</strong></p>
+<p>Bohaterstwem w świeci absurdu jest bunt oraz aktywna postawa, o czym świadczy zachowanie doktora Rieux. Działania tej postaci warunkuje jej poczucie obowiązku względem innych ludzi i potrzeba solidarności. Chociaż doktor wie, że jego zwycięstwa są tymczasowe, to nie zamierza się poddawać: "Zawsze, wiem o tym! Ale to nie powód, żeby zaniechać walki". Mężczyzna nie kieruje się wiarą w Boga, lecz swym człowieczeństwem i przekonaniem o tym, że niezależnie od okoliczności należy postępować we właściwy sposób: "[...] może lepiej jest dla Boga, że nie wierzy się w niego i walczy ze wszystkich sił ze śmiercią, nie wznosząc oczu ku temu niebu, gdzie on milczy". Z tego też powodu nie ulega rozpaczy czy zniechęceniu, lecz konsekwentnie walczy z zarazą na wszelkie możliwe sposoby. Bohaterstwo polega więc na tym, że jednostka prowadzi nieustającą walkę z absurdem i w tym celu dąży do opanowania swojego rozdarcia wewnętrznego. Ważne jest sumienne spełnianie swych obowiązków, służba innym ludziom oraz wyrażanie ciągłego sprzeciwu wobec pewnych zjawisk. </p><br>

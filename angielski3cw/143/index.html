@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a - 6 </p>
+<p>(błąd leksykalny)</p>
+<p><strong>Uzasadnienie</strong>: wyraz <em>stuffier </em>(bardziej duszno) nie ma sensu w kontekście tego zdania. Dzięki oczyszczeniu powietrza w pokoju może być mniej duszno, tj. <em>less stuffy</em>. </p>
+<p>b - 5</p>
+<p>(powtórzenie przymiotnika)</p>
+<p><strong>Uzasadnienie</strong>: przymiotnik <em>interesting </em>(ciekawy) pojawia się już w poprzednim zdaniu.</p>
+<p>c - 3</p>
+<p>(błąd w pisowni)</p>
+<p><strong>Uzasadnienie</strong>: przysłówek <em>unintentionally </em>(nieumyślnie) ma niewłaściwą pisownię.</p>
+<p>d - 1</p>
+<p>(powtórzenie frazy rzeczownikowej)</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>science exhibition </em>(wystawa naukowa) pojawia się już w poprzednim zdaniu.</p>
+<p>e - 4</p>
+<p>(błąd gramatyczny)</p>
+<p><strong>Uzasadnienie</strong>: czas <em>past perfect </em>został niepoprawnie utworzony (poprawnie byłoby <em>had studied</em>) i jego użycie w zdaniu jest nieuzasadnione. W tym kontekście powinniśmy użyć czasu <em>past simple</em>, bo opisujemy różne czynności następujące po sobie. </p>
+<p>f - 7</p>
+<p>(nieprecyzyjny fragment)</p>
+<p><strong>Uzasadnienie</strong>: ten fragment powinien odnosić się do odbiorcy (realizacja ostatniego punktu polecenia). Pytanie powinno dotyczyć tego, czy Colin jest zainteresowany odwiedzeniem wystawy.</p>
+<p>g - 2</p>
+<p>(błąd interpunkcyjny)</p>
+<p><strong>Uzasadnienie</strong>: przed przyimkami nie stawiamy przecinka.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>Hi, Colin,</p>
+<p>Thank you for your last email. Guess what! Last week our school organised a science exhibition. <strong>The event's</strong> main focus was how to improve indoor air quality.  </p>
+<p>My class decided to prepare a <strong>presentation about</strong> chemicals that we might <strong>unintentionally</strong> inhale. We <strong>studied </strong>the ingredients of paints, candles and cleaning products, and prepared a list of the most harmful ones. It appears that some of them can cause serious health problems such as fatigue and allergies.</p>
+<p>The exhibition was very interesting. The part I enjoyed most was the display of air-purifying plants prepared by class 2C. It is <strong>fascinating</strong> to see how we  can clean the air and make our flats <strong>less stuffy</strong> at the same time.</p>
+<p>It was also inspiring to see what other students are interested in. <strong>Would you like to come and see the exhibition for yourself? </strong>It is on until the end of the month. Let me know what you think.</p>
+<p>Take care!</p>
+<p>XYZ</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Cześć, Colin,</p>
+<p>dziękuję za twój ostatni e-mail. Nie zgadniesz! W zeszłym tygodniu nasza szkoła zorganizowała wystawę naukową. Głównym tematem wydarzenia było to, jak poprawić jakość powietrza w pomieszczeniach.</p>
+<p>Moja klasa postanowiła przygotować prezentację na temat substancji chemicznych, które możemy nieumyślnie wdychać. Zbadaliśmy składniki farb, świec i środków czystości i przygotowaliśmy listę tych najbardziej szkodliwych. Okazuje się, że niektóre z nich mogą powodować poważne problemy zdrowotne, takie jak zmęczenie i alergie.</p>
+<p>Wystawa była bardzo interesująca. Część, która najbardziej mi się podobała, to pokaz roślin oczyszczających powietrze, przygotowany przez klasę 2C. Fascynujące jest to, jak możemy oczyścić powietrze i jednocześnie sprawić, że w naszych mieszkaniach będzie mniej duszno.</p>
+<p>Inspirujące było również zobaczyć, czym interesują się inni uczniowie. Chcesz przyjść i zobaczyć wystawę osobiście? Wystawa trwa do końca miesiąca. Daj znać, co o tym sądzisz.</p>
+<p>Na razie!</p>
+<p>XYZ</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>Hi, Sally,</em></p>
+<p><em>Thank you for your last email. Guess what happened last week! </em>Our school organised an exhibition about the most important inventions of the 20th century. </p>
+<p>My class decided to prepare a presentation that focused on the field of medicine. We did hours of online research and I learned a lot. For example, did you know that the polio vaccine was so effective it helped to completely eliminate the disease in Europe by 2002? </p>
+<p>The exhibition itself was very informative. The part I enjoyed most was the display of everyday objects we use to this day. We usually take things like the zip for granted. It made me appreciate them much more!</p>
+<p>Taking part in events like this is a great way to learn new things while having fun. You can definitely remember everything better this way! </p>
+<p>Would you like to come and see the exhibition? It's on until the end of the month. Let me know what you think!</p>
+<p>Take care,</p>
+<p>XYZ</p>
+<p><br/>(Liczba słów: 150<strong>*</strong>)</p>
+<p><strong>* </strong>Z wyłączeniem słów pisanych kursywą, które zostały podane na początku wypowiedzi.)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Cześć, Sally,</p>
+<p>dziękuję za ostatni e-mail. Zgadnij, co wydarzyło się w zeszłym tygodniu! Nasza szkoła zorganizowała wystawę na temat najważniejszych wynalazków XX wieku.</p>
+<p>Moja klasa postanowiła przygotować prezentację, która skupiała się na dziedzinie medycyny. Przeprowadziliśmy wiele godzin badań online i wiele się nauczyłem/am. Na przykład, czy wiedziałaś, że szczepionka przeciwko polio była tak skuteczna, że pomogła całkowicie wyeliminować tę chorobę w Europie do 2002 roku? </p>
+<p>Sama wystawa była bardzo pouczająca. Najbardziej podobał mi się pokaz przedmiotów codziennego użytku, których używamy do dziś. Zazwyczaj bierzemy takie rzeczy jak zamek błyskawiczny za pewnik. To sprawiło, że doceniłem/am je znacznie bardziej!</p>
+<p>Udział w takich wydarzeniach to świetny sposób na to, by nauczyć się nowych rzeczy, dobrze się przy tym bawiąc. W ten sposób można wszystko lepiej zapamiętać! </p>
+<p>Chciałabyś przyjść i zobaczyć wystawę? Jest otwarta do końca miesiąca. Daj mi znać, co myślisz!</p>
+<p>Trzymaj się</p>
+<p>XYZ</p><br>

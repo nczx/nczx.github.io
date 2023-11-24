@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. taking </p>
+<p><strong>Uzasadnienie</strong>: <em>consider + gerund. </em></p>
+<p>2. to study</p>
+<p><strong>Uzasadnienie</strong>:<em> want + to-infinitive</em>.</p>
+<p>3. wanting</p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>about + gerund</em>. </p>
+<p>4. to celebrate</p>
+<p><strong>Uzasadnienie</strong>: w zdaniu celowym stosujemy <em>to-infinitive</em>.</p>
+<p>5. finish</p>
+<p><strong>Uzasadnienie</strong>: <em>let + object + infinitive without to</em>. </p>
+<p>6. join</p>
+<p><strong>Uzasadnienie</strong>: po czasownikach modalnych występuje bezokolicznik bez <em>to</em>. </p>
+<p>7. to buy</p>
+<p><strong>Uzasadnienie</strong>: w zdaniu celowym stosujemy <em>to-infinitive</em>.</p>
+<p>8. Learning </p>
+<p><strong>Uzasadnienie</strong>: czasownik z końcówką <em>-ing</em> w funkcji podmiotu w zdaniu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. going </p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>of + gerund</em>.  </p>
+<p>2. to go </p>
+<p><strong>Uzasadnienie</strong>: <em>want + object + to-infinitive</em>. </p>
+<p>3. doing</p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>for + gerund</em>. </p>
+<p>4. explaining</p>
+<p><strong>Uzasadnienie</strong>: czasownik z końcówką <em>-ing</em> w funkcji podmiotu w zdaniu. </p>
+<p>5. not going</p>
+<p><strong>Uzasadnienie</strong>: <em>regret + gerund </em>oznacza - "żałuję, że...".</p>
+<p>6. to get</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>it + be</em><em> + adjective + to-infinitive</em>. </p>
+<p>7. to say</p>
+<p><strong>Uzasadnienie</strong>: <em>need + to-infinitive</em>. </p>
+<p>8. to mention</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>it + be + adjective + to-infinitive</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. need you to buy </p>
+<p><strong>Uzasadnienie</strong>: <em>need</em> + dopełnienie + bezokolicznik z <em>to</em>. </p>
+<p>2. they don't want him to leave</p>
+<p><strong>Uzasadnienie</strong>: <em>want</em> + dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>3. expects us to be</p>
+<p><strong>Uzasadnienie</strong>: <em>expect </em>+ dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>4. invited me to come </p>
+<p><strong>Uzasadnienie</strong>: <em>invite </em>+ dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>5. encouraged us to work </p>
+<p><strong>Uzasadnienie</strong>: <em>encourage</em> + dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>6. don't allow us to use </p>
+<p><strong>Uzasadnienie</strong>: <em>allow </em>+ dopełnienie + bezokolicznik z <em>to</em>.</p>
+<p>7. prefers him not to call </p>
+<p><strong>Uzasadnienie</strong>: <em>prefer </em>+ dopełnienie + (not) + bezokolicznik z <em>to</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. let us use dictionaries during exams.</p>
+<p><strong>Uzasadnienie</strong>: <em>let + object + infinitive without to</em>. </p>
+<p>2. workers have been made to stay late three times this week.</p>
+<p><strong>Uzasadnienie</strong>: <em>be made + to-infinitiv</em>e.  </p>
+<p>3. you allowed to leave lessons earlier if you have a good reason?</p>
+<p><strong>Uzasadnienie</strong>: <em>be allowed + to-infinitive</em>.</p>
+<p>4. your boss make you cover up tattoos at work?</p>
+<p><strong>Uzasadnienie</strong>: <em>make + object + infinitive without to</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. worth renting a flat </p>
+<p><strong>Uzasadnienie</strong>: <em>be worth + -ing</em>.  </p>
+<p>2. trying to decide what</p>
+<p><strong>Uzasadnienie</strong>: <em>try</em> + bezokolicznik z <em>to</em> oznacza, że próbujemy coś zrobić i wkładamy w to wysiłek. </p>
+<p>3. asked us to accompany </p>
+<p><strong>Uzasadnienie</strong>: <em>ask</em> + dopełnienie + czasownik z <em>to</em>. </p>
+<p>4. of going to work </p>
+<p><strong>Uzasadnienie</strong>: przyimek <em>of + -ing</em>.</p>
+<p>5. of you to help </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>be</em> + przymiotnik + <em>of sb</em> + bezokolicznik z <em>to</em>. </p>
+<p>6. he misses meeting his</p>
+<p><strong>Uzasadnienie</strong>: <em>miss + -ing</em>. </p><br>

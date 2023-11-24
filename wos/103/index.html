@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) <strong>Rozwój internetu</strong> ma ogromny wpływ na przemiany zachodzące w mediach i społeczeństwie, ponieważ daje on możliwość komunikowania się niemalże z każdego miejsca na świecie z ludźmi z innych stron świata, co więcej wysłana wiadomość może zostać błyskawicznie dostarczona do pojedynczych osób, danej grupy społecznej lub może zostać ona skierowana do całego społeczeństwa. Autor tekstu wskazuje, że internet działa na rzecz demokratyzacji mediów, co przekłada się na potencjał tego narzędzia. Niemniej A. Boyd zauważa również, że internet stanowi nieograniczony zbiór rożnego rodzaju informacji, które nie są istotne dla ludzi, przez co zaśmiecają one przestrzeń wirtualną, a nawet stanowią zagrożenie dla odbiorców (np. materiały pornograficzne). Podkreśla on, że szeroki dostęp do internetu rodzi różnego rodzaju problemy, dlatego też podchodzi on do tego narzędzia z dozą nieufności. </p>
+<p> </p>
+<p>b) Ocena stanowi indywidualne zadanie. Sam/a musisz przygotować tę część zadania. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p>Rozwój Internetu sprawił, że w zasadzie większość użytkowników urządzeń, z których można połączyć się z siecią, może nie tylko na bieżąco śledzić to, co publikowane jest w Internecie, ale też samodzielnie się wypowiadać na różne tematy. Doszło w związku z tym do <strong><span style="text-decoration: underline;">demokratyzacji mediów</span></strong>. Jednostki zostały też zalane coraz większą liczbą docierających do nich informacji, które jednak nie zawsze są prawdziwe, sprawdzone i wartościowe nie tylko z poznawczego, ale też moralnego punktu widzenia.</p>
+<p><strong>b)</strong></p>
+<p>Autor odniósł się do możliwości, jakie oferuje Internet, w dużej mierze krytycznie. Przyznał, że dostęp do sieci spowodował demokratyzację mediów, ale zarazem sprawił, iż rozpowszechniają się informacje, które nie zawsze są sprawdzone, prawdziwe i wartościowe. Stwierdził, że wyszukiwarki internetowe nie zawsze są w stanie oddzielić to, co istotne, od tego, co powierzchowne. Orzekł, że rozwój sieci prowadzi do zalewu społeczeństwa tzw. 'internetowymi śmieciami'. Swoje zdanie wypowiedział w 2001 roku, jednak trzeba przyznać, że zachowuje ono aktualność również w latach 20-tych XXI wieku. Oczywiście, po upływie czasu Internet znacząco się udoskonalił, oferuje dziś więcej możliwości, niż jeszcze dwie dekady temu. Niemniej jednak nadal poważnymi problemami są dezinformacja, internetowy hejt czy nadmiar niepotrzebnych danych, którymi osaczany jest użytkownik.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><strong>-&gt; </strong><em>Istotą zadania jest obejrzenie podczas jednego dnia serwisów informacyjnych emitowanych przez trzy różne stacje telewizyjne (na przykład Telewizję Polską, TVN i Polsat), a następnie porównanie różnic ich przekazów. Poniżej zawarto najogólniejsze wskazówki dotyczące tego, na czym polegają różnice pomiędzy przekazami medialnymi poszczególnych stacji telewizyjnych i z czego zazwyczaj wynikają.</em></p>
+<p><strong><em>-&gt; </em></strong>Różnice pomiędzy przekazami medialnymi różnych stacji telewizyjnych wynikają z wielu czynników, takich jak:</p>
+<ol>
+<li>
+<p>Polityka redakcyjna: Każda stacja telewizyjna ma swoją politykę redakcyjną, która określa sposób, w jaki przekazuje informacje. Ta polityka może obejmować podejście do źródeł informacji, narracji, prezentacji i interpretacji zdarzeń. Na przykład, jedna stacja telewizyjna może być bardziej skłonna do przedstawiania informacji w sposób kontrowersyjny, natomiast inna może kłaść większy nacisk na sprawdzanie faktów i prezentowanie ich w sposób obiektywny.</p>
+</li>
+<li>
+<p>Wartości i przekonania: Wartości i przekonania dziennikarzy i personelu danej stacji telewizyjnej mogą wpłynąć na sposób, w jaki przekazują informacje. Na przykład, stacja telewizyjna o poglądach liberalnych może mieć skłonność do przedstawiania informacji z perspektywy lewicowej, podczas gdy stacja o poglądach konserwatywnych może mieć skłonność do przedstawiania informacji z perspektywy prawicowej.</p>
+</li>
+<li>
+<p>Grupy docelowe: Stacje telewizyjne często starają się przyciągnąć określone grupy widzów, co może wpłynąć na sposób, w jaki przekazują informacje. Na przykład, stacja telewizyjna, która skierowana jest do młodszej publiczności, może przedstawiać informacje w sposób bardziej dynamiczny i w formie krótszych segmentów, w porównaniu do stacji telewizyjnej skierowanej do starszych widzów.</p>
+</li>
+<li>
+<p>Właściciele stacji telewizyjnych: Właściciele stacji telewizyjnych mogą mieć wpływ na sposób, w jaki przedstawiane są informacje. Na przykład, stacje telewizyjne należące do dużych koncernów medialnych mogą mieć skłonność do przedstawiania informacji w sposób, który jest zgodny z interesami biznesowymi i politycznymi tych koncernów.</p>
+</li>
+<li>
+<p>Konkurencja: W konkurencyjnym środowisku medialnym stacje telewizyjne starają się przyciągnąć uwagę widzów, co może prowadzić do przedstawiania informacji w sposób bardziej spektakularny i emocjonalny. Dlatego też często można zaobserwować, że w czasie wyborów czy ważnych wydarzeń, stacje telewizyjne konkurują o uwagę widzów i starają się przyciągnąć ich uwagę za pomocą bardziej kontrowersyjnych przekazów.</p>
+</li>
+<li>
+<p>Charakterystyka rynku: Stacje telewizyjne często dostosowują swoje przekazy do potrzeb rynku medialnego, podążając za dominującymi trendami, bo to pozwala osiągać im zyski finansowe (na przykład dzięki emitowaniu reklam).</p>
+</li>
+</ol><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Każdy z nas ma określone zdania na poszczególne tematy. Oczywiście dziennikarze starają się być obiektywni w swojej pracy, ale jednak zawsze w jakiś sposób będzie przez nich przemawiać ich "własne zdanie". Dlatego też trudno mówić o pełnym niezależnym przekazie medialnym. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, ponieważ wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Wydaje się, że nie może istnieć coś takiego, jak 'niezależny przekaz medialny', ponieważ informacje w mediach są przygotowywane przez konkretnych ludzi, którzy mają własne poglądy i preferencje światopoglądowe, a także zainteresowania. To wszystko wpływa zaś nie tylko na to, w jaki sposób informują oni opinię publiczną o różnych wydarzeniach, ale nawet na to, o czym ją informują i w jakiej kolejności. Całkowicie niezależne media i dziennikarstwo nie są więc możliwe do urzeczywistnienia. Na pewno jednak dziennikarze powinni się starać informować odbiorców o różnych wydarzeniach maksymalnie rzetelnie i mimo iż nie są w stanie osiągnąć pełnego obiektywizmu, to powinni do niego dążyć jako do swoistego ideału.</p><br>

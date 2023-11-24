@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Za podmiot liryczny w utworze mo¿na uznaæ matkê lub w szerszym kontekœcie - rodzica. Œwiadczy o tym czu³oœæ, z jak¹ siê wypowiada do odbiorcy swej wypowiedzi. Nim jest zaœ ukochane dziecko, na co wskazuje apostrofa: "Oddzielili ciê, syneczku [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Osoba mówi¹ca nie wyra¿a swoich uczuæ w bezpoœredni sposób. Zamiast tego skupia siê na swym utraconym dziecku - sposób opowiadania o nim sugeruje cierpienie i rozpacz osoby mówi¹cej. W wypowiedzi tej zaznacza siê przede wszystkim czu³oœæ, na co wskazuje apostrofa, w której wystêpuje zdrobnienie: "Oddzielili ciê, syneczku, od snów [...]". Podmiot lirycznym ze zmar³ym ³¹czy wiêc silna wiêŸ emocjonalna, mi³oœæ. Na ból podmiotu wskazuje tak¿e bogata metaforyka. Podkreœla ono tragiczny wymiar losu syna, któremu odebrano mo¿liwoœæ normalnego ¿ycia: "malowali krajobrazy w ¿ó³te œciegi po¿óg, / wyszywali wisielcami drzew p³yn¹ce morze". Osoba mówi¹ca jest równie¿ zasmucona tym, i¿ wojna zabra³a synowi cz³owieczeñstwo, wprowadzi³a do jego egzystencji okrucieñstwo i strach. Wskazuje na to wyliczenie oraz zawarte w nim epitety: "Odchowali ciê w ciemnoœci, odkarmili bochnem trwóg, / przemierzy³eœ po omacku najwstydliwsze z ludzkich dróg". Jednoczeœnie osobê mówi¹c¹ drêczy poczucie niepewnoœci, które ujawnia siê w pytaniu retorycznym koñcz¹cym wiersz: "Czy to by³a kula, synku, czy to serce pêk³o?". </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>Wiersz Baczyñskiego mo¿na rozpatrywaæ w kontekœcie toposu<em> stabat Mater Dolorosa</em>. Wynika to z podjêtej przez poetê tematyki oraz kreacji podmiotu lirycznego. Osoba mówi¹ca w utworze to matka, która wyra¿a swój ¿al zwi¹zany ze œmierci¹ ukochanego syna. Podobnie jak Matka Boska jest przepe³niona smutkiem i cierpieniem, nie mo¿e siê pogodziæ z przedwczesnym odejœciem dziecka. Z kolei zmar³ego i Chrystusa ³¹czy to, i¿ ich œmieræ jest niezawiniona, a przy tym okrutna. S¹ niewinnymi ofiarami, op³akiwanymi przez swe rodzicielki. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Kontrast dziecka i wojny jest zauwa¿alny na kilku p³aszczyznach. Przede wszystkim mo¿na dostrzec rozbie¿noœæ miêdzy stosunkiem podmiotu do dziecka a jego losem. Osoba mówi¹ca zwraca siê bowiem z czu³oœci¹ i mi³oœci¹ do swego syna. Jest dla niej ukochanym oraz niewinnym dzieckiem, które dopiero zaczyna swe ¿ycie - wszystko, co najwa¿niejsze powinno dopiero nast¹piæ w przysz³oœci ("Oddzieli ciê, syneczku, od snów, co jak motyl dr¿¹"). Los syna jest jednak odleg³y od harmonii i spokoju, poniewa¿ zostaje naznaczony tragedi¹ wojny. W ¿yciu dziecka tym samym pojawia siê œmieræ oraz zniszczenie. Kontrast wyra¿a siê jednak najsilniej w opozycji ciemnoœæ-jasnoœæ. S³owa te wprowadzaj¹ dodatkowe sensy symboliczne. Podmiot liryczny bowiem mówi o zmar³ym: "[...] jasny synku [...]". Epitet ten mo¿na rozpatrywaæ w rozmaity sposób - jako znak czystoœci, niewinnoœci, ¿ycia, radoœci, wreszcie - moralnoœci czy szczêœcia. Ma wiêc przede wszystkim pozytywny charakter. Jego odwrotnoœæ stanowi mrok - przynale¿ny do wojennej rzeczywistoœci - "Odchowali ciê w ciemnoœci [...]", "[...] z ciemn¹ broni¹ w noc". On z kolei symbolizuje zagro¿enie, z³o, niepokój, nienawiœæ, œmieræ, ¿a³obê i niemo¿noœæ poznania. Zestawienie to podkreœla tragizm doœwiadczeñ syna, którego niewinnoœæ zostaje zderzona ze œmierci¹ oraz walk¹. Wszystkie pozytywne wartoœci ulegaj¹ zakwestionowaniu, poniewa¿ dochodzi do odwrócenia naturalnego porz¹dku œwiata (dziecko, m³ody cz³owiek staje siê ¿o³nierzem i przedwczeœnie umiera). </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Wrogowie dziecka w utworze pozostaj¹ bli¿ej nieokreœleni. Podmiot liryczny opisuje ich dzia³ania i wp³yw na syna, jednak nigdy nie zostaj¹ nazwani, ukonkretnieni. Dla osoby mówi¹cej to po prostu "oni": </p>
+<p><em>Oddzielili ciê syneczku od snów co jak motyl dr¿¹</em></p>
+<p><em>Haftowali ci syneczku smutne oczy rud¹ krwi¹</em></p>
+<p><em>Malowali krajobrazy w ¿ó³te œciegi po¿óg</em></p>
+<p><em>Wyszywali wisielcami drzew p³yn¹ce morze  </em></p>
+<p><em> Wyuczyli ciê syneczku ziemi twej na pamiêæ </em></p>
+<p> </p>
+<p><em>Gdyœ jej œcie¿ki powycina³ ¿elaznymi ³zami  </em></p>
+<p><em> Odchowali ciê w ciemnoœci odkarmili bochnem trwóg.   </em></p>
+<p>Zabieg ten wprowadza dodatkowe sensy do utworu, pog³êbia zawart¹ w nim refleksjê. Pozbawienia wroga twarzy, czy nazwy, sugeruje bowiem wszechobecnoœæ z³a oraz zagro¿enia. Brak sprecyzowania, kim jest wróg, buduje uniwersaln¹ myœl na temat wojennej rzeczywistoœci. Przeciwnik mo¿e mieæ bowiem ró¿ne oblicza i charakter. To nie tylko dos³ownie ¿o³nierz, ale te¿ dowódca, który kieruje uczestnikami walki, czy ludzie przyczyniaj¹cy siê do wybuchu konfliktu. Ta swoista wieloznacznoœæ wp³ywa na ponadczasowoœæ przekazu, przypomina o tym, ¿e z³o przejawia siê na ró¿ne sposoby, jest bezosobowe. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>S³owo "elegia" w tytule jest cenn¹ wskazówk¹ interpretacyjn¹, poniewa¿ sugeruje tematykê utworu oraz przyjêt¹ w nim perspektywê. Wskazuje na to, i¿ poeta odwo³uje siê do gatunku ukszta³towanego ju¿ w staro¿ytnoœci, a przy tym przedstawia uniwersaln¹ refleksjê na temat œmierci, porusza zagadnienie ¿a³oby. Ponadto odwo³anie siê do elegii wprowadza okreœlon¹ tonacjê emocjonaln¹ - podnios³¹ i powa¿n¹, odzwierciedlaj¹c¹ smutek i cierpienie po stracie. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>a) Pomnik Jarnuszkiewicza przedstawia w doœæ realistyczny sposób ma³ego powstañca. To kilkuletni ch³opiec, który ma na g³owie za du¿y he³m - ozdabia go bia³o-czerwona przepaska. Równie¿ jego buty i p³aszcz nie pasuj¹ do wzrostu dziecka. Przez ramiê dziecka jest przewieszony karabin maszynowy. Jadwiga Janus z kolei ukazuje swego bohatera w mniej dos³owny sposób. Wychudzone dziecko, pozbawione twarzy, wtula siê w bry³ê, która kszta³tem przypomina serce. Obok jego postaci mo¿na dostrzec pust¹ przestrzeñ odzwierciedlaj¹c¹ sylwetkê malca.</p>
+<p> </p>
+<p>b) Idealizacja u Jarnuszkiewicza polega na uwznioœleniu bohaterskiej postawy dzieci. Ch³opiec zostaje ukazany jak odwa¿ny i dzielny ¿o³nierz. Artysta skupia siê wiêc wy³¹cznie na aspekcie, który podkreœla niezwykle dojrza³¹ postawê najm³odszych. Pomnik ten stanowi nie tylko upamiêtnienie, ale przede wszystkim pochwa³ê tego poœwiêcenia. Z kolei Janus decyduje siê na deheroizacjê. Los dzieci, ukazany w jej dziele, jest pozbawiony wznios³oœci. Artystka akcentuje przede wszystkim dramat i cierpienie dzieci, które doœwiadczy³y koszmaru wojny. Pomnik ten przypomina te¿ o tym, ¿e w bólu najm³odszych nie ma piêkna i szlachetnoœci, poniewa¿ dotyka niewinnych.</p>
+<p> </p>
+<p>c) Dzie³a artystów odwo³uj¹ siê do podobnej problematyki. W wierszu Baczyñskiego wyra¿one zostaj¹ uczucia matki cierpi¹cej po stracie ukochanego syna. Jej ból wynika przede wszystkim z okrucieñstwa, którego doœwiadczy³. Twórcy pomników tak¿e poruszaj¹ temat wp³ywu wojny, z³a na dzieci. Ró¿ni ich jednak perspektywa: Jarnuszkiewicz idealizuje walkê dzieci, zaœ Janus skupia siê na tragizmie ich losu. </p>
+<p> </p>
+<p>d) Czêœæ indywidualna </p><br>

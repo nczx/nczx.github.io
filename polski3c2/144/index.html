@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Przytoczone sformu³owanie œwiadczy o tym, ¿e w utworze wypowiada siê osoba starsza, doœwiadczona ju¿ przez ¿ycie, a wiêc dysponuj¹ca pewn¹ m¹droœci¹ ¿yciow¹. Porównanie zaœ œwiec¹cej g³owy do œwiecznika nasuwa skojarzenie z mêdrcem lub prorokiem, który potrafi dostrzec wiêcej ni¿ zwyk³y cz³owiek, przeczuwa nadchodz¹ce wydarzenia, lub te¿ osob¹ œwiêt¹ (aureola). Dna uliczek sugeruj¹ poznanie rzeczywistoœci równie¿ w jej mniej przyjemnej ods³onie - byæ mo¿e zetkniêcie z bied¹, ludzkimi dramatami, negatywn¹ stron¹ ludzkoœci. Same ulice miast w czasie potopu ulegn¹ destrukcji, zmieni siê wiêc ich dotychczasowy charakter.</p>
+<p> </p>
+<p>b)<strong> Uwaga! Polecenie dotyczy prawdopodobnie czwartej strofy, a nie przedostatniej.</strong></p>
+<p>Osoba mówi¹ca uto¿samia siê ze wszystkimi ludŸmi, których dotykaj¹ tragiczne wydarzenia; jej cz¹stka jest w ka¿dym bliŸnim. Dowodzi to zdolnoœci do wspó³odczuwania i zrozumienia drugiego cz³owieka - niezale¿nie od tego, czy spe³nia rolê ofiary, czy te¿ kata. Podmiot liryczny kumuluje doœwiadczenia rozmaitych jednostek: "ja przy folia³ach jurysta / zakrztuszony wo³aniem gaz / ja œpi¹ca poœród jaskrów". Jego s³owa: "bêdê strzela³ do siebie i mar³ wielokrotnie" przypominaj¹ równie¿ o tym, i¿ koszmar ten dotyka ka¿dego cz³owieka, poniewa¿ powoduje upadek zasad moralnych, ka¿de zaœ zabicie cz³owieka w pewien sposób przyczynia siê do œmierci duchowej sprawcy. Tym samym poeta oraz jego twórczoœæ staj¹ siê noœnikiem ludzkich doœwiadczeñ, dramatów i rozterek. Nie pozwala na to, aby zosta³y zapomniane. Ponadto mo¿na z tego wzglêdu za³o¿yæ, i¿ pe³ni on rolê g³osu sumienia, a przez to wlaczy o piêkno i harmoniê œwiata.</p>
+<p> </p>
+<p>c) W przedostatniej strofie pojawia siê motyw ¿niw. Traci on jednak swój pozytywny wymiar, poniewa¿ wprowadza apokaliptyczne nastroje: "o ¿niwa ¿niwa huku i blasków". Stanowi zapowiedŸ koñca œwiata, groŸnych i przera¿aj¹cych wydarzeñ, które wykraczaj¹ poza ludzk¹ wyobraŸniê. Zabieg ten sugeruje katastrofizm ukazanej sytuacji, jej nieodwracalny charakter oraz nadejœcie ostatecznych czasów. Potêguje z³owrog¹ wizjê nadchodz¹cych zdarzeñ i bezradnoœæ cz³owieka wobec jego losu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Osoba mówi¹ca w niezwykle sugestywny sposób opisuje nadci¹gaj¹c¹ katastrofê. Jest przekonana o tym, i¿ przyjd¹ czasy pogardy i nienawiœci, kiedy to pojawi¹ siê nastroje antysemickie. Sygnalizuj¹ je ataki na œwi¹tyniê: "roztrzaskane szybki synagog". Œwiat pogr¹¿y siê w niepowstrzymanym zniszczeniu oraz konflikcie, zostanie wrêcz poch³oniêty przez ogieñ. Z³owrog¹ atmosferê podkreœla tak¿e cierpienie ludzi, których egzystencjê naznacza g³ód oraz brak poczucia bezpieczeñstwa. Apokaliptyczny wymiar tej sytuacji akcentuje wzmianka na temat "potopu gor¹cego" oraz "czerwonego udoju" symbolizuj¹cego rozlew krwi. Zag³ada ta ma tak¿e wymiar miêdzyludzki - prowadzi do upadku wartoœci moralnych, zezwierzêcenia cz³owieka, który nie dostrzega w drugiej osobie bliŸniego: "zapytamy siê wzajem kto zacz". W nowej rzeczywistoœci œmieræ staje siê codziennoœci¹. Jej tragizm polega na tym, i¿ jest wszechobecna, ale te¿ niespodziewana i brutalna. Dotyczy ka¿dego niezale¿nie od wieku oraz jego postawy ¿yciowej czy wyznawanych wartoœci:</p>
+<p><em>i dziecko w ¿ywej pochodni</em></p>
+<p><em>i bomb¹ trafiony w stallach</em></p>
+<p><em>i powieszony podpalacz.</em></p>
+<p>Wiersz zdaje siê równie¿ zapowiadaæ proroczo rzeczywistoœæ obozów koncentracyjnych: "p³omieñ mi³oœci / nagoœæ", "zakrztuszony wo³aniem gaz". Sam zaœ sposób ukazania zag³ady wyró¿nia siê bogat¹ symbolik¹ oraz wyrazist¹ metaforyk¹, co wzmacnia przera¿aj¹cy charakter wizji nadchodz¹cych czasów - pozbawionych nadziei i pokoju.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Fragment: </p>
+<p><em>tak chodziæ tak ogl¹daæ sceny sny festyny</em></p>
+<p><em>roztrzaskane szyby synagog</em></p>
+<p><em>p³omieñ po³ykaj¹cy grube statków liny</em></p>
+<p><em>p³omieñ mi³oœci</em></p>
+<p><em>nagoœæ </em></p>
+<p><em>[...]</em></p>
+<p><em>ja gdym z p³ugiem do bruzdy przywar³</em></p>
+<p><em>ja przy folia³ach jurysta</em></p>
+<p><em>zakrztuszony wo³aniem gaz</em></p>
+<p><em>ja œpi¹ca poœród jaskrów</em></p>
+<p><em>i dziecko w ¿ywej pochodni</em></p>
+<p><em>i bomb¹ trafiony w stallach</em></p>
+<p><em>i powieszony podpalacz</em></p>
+<p><em>ja czarny krzy¿yk na listach</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>"Ludzi g³odnych p³acz" sugeruje przede wszystkim ból oraz bezradnoœæ osób, które cierpi¹ z powodu zag³ady œwiata. Z kolei "ryk g³odnych ludzi" wywo³uje skojarzenia ze wœciek³oœci¹, narastaj¹cym gniewem oraz dehumanizacj¹ cz³owieka. Zatraca swój g³os, przypomina raczej dzikie zwierzê, które ulega pierwotnym instynktom i nie kieruje siê jakimikolwiek zasadami moralnymi. Gra jêzykowa w tych cytatach polega na pewnej zmianie natê¿enia sytuacji: p³acz staje siê rykiem, natomiast ludzie zostaj¹ zast¹pieni ludem. Ten zabieg umo¿liwia wyraziste zaprezentowanie metamorfozy istoty ludzkiej, która - pod wp³ywem przera¿aj¹ce rzeczywistoœci - zatraca swe cz³owieczeñstwo. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo:</p>
+<p>Apel podmiotu lirycznego to swoiste ponaglenie, które nakazuje nie zatrzymywanie siê i obserwacjê przera¿aj¹cej rzeczywistoœci, lecz przyjêcie aktywnej postawy. S³owa te pojawiaj¹ siê w pocz¹tkowej czêœci oraz utworu oraz na koñcu - stanowi swoist¹ klamrê. Niesie ona za sob¹ g³êbsze sensy, poniewa¿ tworzy ko³o. Jest to przestroga dla ludzkoœci: je¿eli nie przerwie dotychczasowego ³añcucha przemocy i nienawiœci, zag³ada bêdzie ca³y czas obecna w ¿yciu cz³owieka. Konieczne staje siê wiêc przeobra¿enie rzeczywistoœci oraz pobudzenie sumienia ludzkoœci, by zapobiec katastrofie i dehumanizacji. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

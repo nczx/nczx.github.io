@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Zdania prawdziwe to <strong><span style="text-decoration: underline;">a</span></strong>,  <span style="text-decoration: underline;"><strong>c</strong></span>, <span style="text-decoration: underline;"><strong>e</strong></span> oraz <span style="text-decoration: underline;"><strong>f</strong></span>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>E 330</strong> - kwas cytrynowy - pełni rolę przeciwutleniacza</p>
+<p><strong>E 338</strong> - kwas fosforowy(V) - pełni rolę przeciwutleniacza</p>
+<p><strong>E 150d</strong> - karmel syntetyczny - barwnik</p>
+<p><strong>E 954</strong> - sacharyna - substancja słodząca</p>
+<p><strong>E 950</strong> - acesulfam K - substancja słodząca</p>
+<p><strong>E 951</strong> - aspartam - substancja słodząca </p>
+<p><strong>E 211</strong> - benzoesan sodu - konserwant, hamuje rozwój pleśni i drożdży</p>
+<p><strong>E 202</strong> - sorbinian potasu - konserwant</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Wzór:</p> <p><img alt="" height="100" src="./data/934815-0.jpg" width="145"/></p> <p><br/>Masa cząsteczkowa kwasu salicylowego (C<sub>9</sub>H<sub>8</sub>O<sub>4</sub>) wynosi 180 u. Masa atomowa węgla to 12 u.</p> <p> <math-expr expr="%C=(9*m_C)/m_(C_9H_8O_4)*100%=(9*12\ u)/(180\ u)*100%=60%" syntax="text"></math-expr>   </p> <p><strong>Zawartość procentowa węgla w cząsteczce tego kwasu to 60%.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zaznaczone wiązanie to wiązanie  <span style="text-decoration: underline;"><em><strong> peptydowe </strong></em></span>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<ul>
+<li>szkło - <em>słoik po kremie, stłuczona szklanka</em>
+</li>
+<li>metal -  <em>pokrywka od słoika, folia aluminiowa, kapsel od butelki</em>
+</li>
+<li>papier - <em>książka w miękkiej okładce, papier pakowy, tektura</em>
+</li>
+<li>tworzywa sztuczne - <em>karton po mleku, opakowanie po margarynie</em>
+</li>
+<li>baterie - <em>akumulatorek</em>
+</li>
+<li>inne - <em>tkanina</em>
+</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Opis doświadczenia:</p>
+<p>Na przekrojonego ziemniaka nanosimy kroplę jodyny.</p>
+<p><br/>Obserwacje:</p>
+<p> Ziemniak barwi się na intensywnie niebieski kolor.</p>
+<p><br/>Wniosek:</p>
+<p>Zaszła reakcja charakterystyczna świadcząca o obecności skrobi w ziemniaku.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Aminokwasy łączą się ze sobą poprzez wiązanie peptydowe. Powstaje ono w wyniku połączenia grupy karboksylowej jednej cząsteczki aminokwasu z grupą aminową drugiej cząsteczki.</p> <p>Równanie reakcji: </p> <p> <math-expr expr="NH_2CH(COOH)CH_2CH_2COOH+NH_2CH(CH_2SH)COOH+NH_2CH_2COOH-&gt;NH_2CH(COOH)CH_2CH_2CONHCH(CH_2SH)CONHCH_2COOH+2\ H_2O" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Liczymy zawartość chloru w jednym m<sup>3</sup> powietrza w pomieszczeniu:</p> <p> <math-expr expr="75\ m^3\ \ -\ \ 60\ g_(Cl_2)" syntax="text"></math-expr>    </p> <p> <math-expr expr="1\ m^3\ \ -\ \ m_(Cl_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(Cl_2)=(1\ m^3*60\ g)/(75\ m^3)=0,8\ g=800\ mg" syntax="text"></math-expr>   </p> <p><strong>W jednym m<sup>3</sup> powietrza w pomieszczeniu znajduje się <span style="text-decoration: underline;">800 mg</span> chloru. Jest to wartość <span style="text-decoration: underline;">mniejsza</span> niż LC<sub>50</sub> chloru.</strong></p><br>

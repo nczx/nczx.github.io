@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W utworze mo¿na dostrzec cechy typowe dla lamentu. Przede wszystkim wiersz Ró¿ewicza jest wyrazem skargi podmiotu lirycznego, który opowiada o wp³ywie wojny na swój los. Odczuwa bowiem kryzys wartoœci, uwa¿a, ¿e bezpowrotnie straci³ sw¹ niewinnoœæ. Osoba mówi¹ca wyra¿a ¿al oraz cierpienie, poniewa¿ postrzega siebie jako poranion¹ jednostkê, niezdoln¹ do zwyk³ej egzystencji i cieszenia siê œwiatem: "Okaleczony nie widzia³em / ani nieba ani ró¿y / ptaka gniazda drzewa / œwiêtego Franciszka / Achillesa i Hektora". Jednoczeœnie odbiorc¹ swej wypowiedzi czyni przedstawicieli ró¿nych profesji i wraz z nimi tworzy wspólnotê - staj¹ siê œwiadkami wyznania. Nawi¹zanie do tradycji literackiej lamentu podkreœla powa¿ny oraz smutny nastrój dzie³a, które ukazuje straty duchowe podmiotu lirycznego. Jest to swoiste po¿egnanie z niewinnoœci¹, dawnym ¿yciem, ale tak¿e przekonaniem o istnieniu rzeczywistoœci duchowej. Lament ten wynika wiêc z kryzysu œwiatopogl¹dowego i poczucia pustki. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Podmiot liryczny kieruje swe s³owa do przedstawicieli ró¿nych profesji. S¹ to nie tylko duchowni, ale tak¿e urzêdnicy, osoby zajmuj¹ce siê edukacj¹ oraz moralnoœci¹, s¹downictwem, sztuk¹, medycyn¹, wreszcie rzemieœlnicy oraz ojciec, czyli najprawdopodobniej Bóg. Osoba mówi¹ca zwraca siê wiêc do ogó³u spo³eczeñstwa:</p>
+<p><em>[...] do was kap³ani</em></p>
+<p><em>nauczyciele sêdziowie artyœci</em></p>
+<p><em>szewcy lekarze referenci</em></p>
+<p><em>i do ciebie mój ojcze.</em></p>
+<p>Osoba mówi¹ca powo³uje tych przedstawicieli na œwiadków swego wyznania. Ostatnia strofa stanowi w ten sposób punkt kulminacyjny opowieœci podmiotu lirycznego, poniewa¿ przed wszystkimi ludŸmi i samym Bogiem deklaruje swe zw¹tpienie w ¿ycie pozagrobowe. W ten sposób oficjalnie - pod wp³ywem wojennych doœwiadczeñ - wyra¿a swój brak wiary oraz nieuznanie podstawowych dogmatów wiary. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Atrybuty m³odoœci:</p>
+<p><em>niech was smuk³oœæ mego cia³a nie zwodzi </em></p>
+<p><em>ani tkliwa biel szyi</em></p>
+<p><em>ani jasnoœæ otwartego czo³a</em></p>
+<p><em>ani puch nad s³odk¹ warg¹</em></p>
+<p><em>ni œmiech cherubiñski</em></p>
+<p><em>ni krok elastyczny</em></p>
+<p> </p>
+<p><em>niech was moja niewinnoœæ </em></p>
+<p><em>nie </em><em>wzrusza</em></p>
+<p><em>ani moja </em><em>czystoœæ</em></p>
+<p><em>ani moja </em><em>s³aboœæ</em></p>
+<p><em>kruchoœæ i prostota</em></p>
+<p> </p>
+<table border="1" style="border-collapse:collapse;width:777px;height:726px;">
+<tbody>
+<tr style="height:37px;">
+<td style="background-color:#aed581;text-align:center;width:255.625px;height:37px;"><strong>Œrodek wyrazu artystycznego</strong></td>
+<td style="background-color:#aed581;text-align:center;width:255.625px;height:37px;"><strong>Przyk³ad </strong></td>
+<td style="background-color:#aed581;text-align:center;width:255.75px;height:37px;"><strong>Funkcja</strong></td>
+</tr>
+<tr style="height:114px;">
+<td style="width:255.625px;text-align:center;height:114px;">epitet</td>
+<td style="width:255.625px;text-align:center;height:114px;">
+<p><em>nad s³odk¹ warg¹</em></p>
+<p> </p>
+<p><em>œmiech cherubiñski</em></p>
+<p> </p>
+<p><em>krok elastyczny</em></p>
+</td>
+<td style="width:255.75px;text-align:center;height:114px;">Epitety ukonkretniaj¹ sposób przedstawienia m³odoœci. Podkreœlaj¹ tak¿e piêkno oraz pozorn¹ niewinnoœæ podmiotu lirycznego, jego subteln¹ urodê czy ogóln¹ sprawnoœæ. </td>
+</tr>
+<tr style="height:203px;">
+<td style="width:255.625px;text-align:center;height:203px;">metafora</td>
+<td style="width:255.625px;text-align:center;height:203px;"><em>[...] tkliwa biel szyi</em></td>
+<td style="width:255.75px;text-align:center;height:203px;">Metafora ta prowadzi do oryginalnego po³¹czenia s³ów. Szyja zostaje bowiem okreœlona mianem "tkliwej", co zazwyczaj odnosi siê do okreœlenia osoby ciep³ej, czu³ej, serdecznej. Równie¿ biel wprowadza pozytywn¹ symbolikê, poniewa¿ reprezentuje czystoœæ oraz ¿ycie duchowe.  </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:255.625px;text-align:center;height:18px;">anafora</td>
+<td style="width:255.625px;text-align:center;height:18px;">
+<p><em>ani tkliwa biel szyi</em></p>
+<p><em>ani jasnoœæ otwartego czo³a</em></p>
+<p><em>ani puch nad s³odk¹ warg¹</em></p>
+</td>
+<td style="width:255.75px;text-align:center;height:18px;">Anafora "ani" wzmacnia si³ê wypowiedzi, podwa¿a wizerunek podmiotu jako niewinnego m³odzieñca. Wyra¿a zaprzeczenie obiegowej opinii. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:255.625px;text-align:center;height:18px;">paralelizm + elipsa</td>
+<td style="width:255.625px;text-align:center;height:18px;">
+<p><em>niech was moja niewinnoœæ </em></p>
+<p><em>nie wzrusza</em></p>
+<p><em>ani moja czystoœæ</em></p>
+<p><em>ani moja s³aboœæ</em></p>
+</td>
+<td style="width:255.75px;text-align:center;height:18px;">Paralelizm sk³adniowy oraz elipsa prowadz¹ do skondensowanego wyra¿enia kluczowych treœci. Oddaj¹ surowoœæ s¹du osoby mówi¹cej. </td>
+</tr>
+<tr style="height:18px;">
+<td style="width:255.625px;text-align:center;height:18px;">wyliczenie</td>
+<td style="width:255.625px;text-align:center;height:18px;">
+<p><em>ani moja s³aboœæ</em></p>
+<p><em>kruchoœæ i prostota</em></p>
+</td>
+<td style="width:255.75px;text-align:center;height:18px;">Wyliczenie wyodrêbnia elementy, które wed³ug podmiotu lirycznego nie powinny zwodziæ s³uchaczy. Zabieg ten urozmaica i precyzuje wywód. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Fraza ta stanowi szczere i brutalne wyznanie podmiotu lirycznego, który decyduje siê na ujawnienie bolesnej prawdy. Postrzega siebie jako bezwzglêdn¹ istotê, mordercê bezwzglêdnego w swych dzia³aniach. Tragiczna sytuacja podmiotu lirycznego jednoczeœnie ³¹czy siê z utrat¹ wra¿liwoœci czy ludzkich odruchów. Œwiadczy o tym zestawienie go z narzêdziem czy mieczem; miejsce zasad moralnych zajmuj¹ pierwotne instynkty. Zabieg ten podkreœla bezradnoœæ osoby mówi¹cej wobec niepojêtej i okrutnej si³y, która prowadzi do rozlewu krwi. Pod jej wp³ywem cz³owiek zdaje siê traciæ swoj¹ woln¹ wolê oraz podmiotowoœæ, jest tylko narzêdziem przynosz¹cym œmieræ. Prowadzi to do okaleczenia jego psychiki oraz za³amania systemu wartoœci. </p><br>

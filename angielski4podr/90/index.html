@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Należy samodzielnie odpowiedzieć na pytania 2 i 3. </strong></p>
+<p>1. He finds it difficult because he's overloaded with the news from TV and the Internet. Moreover, some reports are fake news or they are biased. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Odpowiedzi: </strong></p>
+<p>1. The main purpose is to warn the readers against fake news and to inform them how to recognise false news stories. </p>
+<p>(Głównym celem jest ostrzeżenie czytelników przed fake newsami i poinformowanie ich, jak rozpoznać zmyślone historie.)</p>
+<p>2. The author enumerates some ways to identify fake news and gives examples to illustrate them. </p>
+<p>(Autor wymienia kilka sposobów na zidentyfikowanie fake newsów i podaje przykłady, żeby je zilustrować.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście:</strong> "Fake news headlines often use clickbait: an outrageous statement which is designed to shock you, make you angry or at least get you to click out of curiosity." - Nagłówki fake newsów często używają clickbaitów: bulwersujących komunikatów skonstruowanych tak, żeby szokowały, wzbudzały złość albo przynajmniej skłaniały czytelnika do kliknięcia w nie z ciekawości. </p>
+<p>2. C</p>
+<p><strong>Fragment w tekście:</strong> "Fake news is sometimes used to get readers to click on links to other products or services that have nothing to do with the 'news' story." - Fake newsy są czasem wykorzystywane do sprowokowania czytelnika do kliknięcia w link do innych produktów i usług, które nie mają nic wspólnego z rzeczonym newsem.</p>
+<p>3. B</p>
+<p><strong>Fragmenty w tekście:</strong> "Fake news headlines often use clickbait: an outrageous statement which is designed to shock you (...)" - Nagłówki fake newsów często używają clickbaitów: bulwersujących komunikatów skonstruowanych tak, żeby szokowały (...).</p>
+<p>"(...) fake news sites often try to pull a fast one by using a real URL with a fake extension to direct you to a different site." - (...) strony publikujące fake newsy często próbują zrobić nas w konia poprzez używanie prawdziwego adresu URL z fałszywymi rozszerzeniami w celu przekierowania nas do innych stron. </p>
+<p>"Fake news is sometimes used to get readers to click on links to other products or services that have nothing to do with the 'news' story." - Fake newsy są czasem wykorzystywane do sprowokowania czytelnika do kliknięcia w link do innych produktów i usług, które nie mają nic wspólnego z rzeczonym newsem.</p>
+<p>4. B</p>
+<p><strong>Fragmenty w tekście:</strong> "You shouldn't necessarily trust news from one source. Can you find the sam facts on other sites? If the story you've 'discovered' is <em>really</em> true, it will pop up in other places soon enough." - Nie powinniśmy ufać wiadomościom z jednego źródła. Czy da się znaleźć tę samą informację na innych stronach? Jeśli historia, którą 'odkryłeś/aś' jest <em>naprawdę</em> prawdziwa, niedługo pojawi się też w innych miejscach. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Even though we are constantly informed about what is happening in the world, in fact we cannot be sure since the news might be fake. </p>
+<p>(Mimo, że ciągle jesteśmy informowani, co dzieje się na świecie, tak naprawdę nie możemy być pewni, ponieważ informacje mogą być fałszywe.)</p>
+<p><strong>Fragment w tekście:</strong> "In a world of twenty-four-hour news, online news sites that get updated constantly, and social media feeds that change every minute, the irony is that it's often difficult to know what's really going on in the world." - W świecie całodobowego dostępu do wiadomości, nieprzerwanie aktualizowanych informacyjnych stron internetowych i treści w mediach społecznościowych, które zmieniają się w każdej minucie, ironiczne jest to, że często trudno jest zorientować się, co tak naprawdę dzieje się na świecie.  </p>
+<p>2. They inform about the source of the news they publish.</p>
+<p>(Informują o źródle wiadomości, które publikują.)</p>
+<p><strong>Fragment w tekście:</strong> "A reliable news website will always provide the source of its information by inserting a link so that you can get to the original article or study." - Wiarygodne strony informacyjne zawsze podają źródła swoich wiadomości za pomocą linka, tak żeby czytelnik mógł dotrzeć do artykułu źródłowego.</p>
+<p>3. What differentiates various types of texts is the level of objectivity.</p>
+<p>(Tym, co odróżnia różne rodzaje tekstów jest poziom obiektywizmu.)</p>
+<p><strong>Fragment w tekście:</strong> "Within journalistic writing, there are different types of objectivity: articles, blogs, op-eds, comments, letters to the editor ..." - Różne teksty dziennikarskie charakteryzują się innym poziomem obiektywizmu: artykuły, blogi, felietony, komentarze, listy do redakcji...</p>
+<p>4. It means that it might be true. </p>
+<p>(Oznacza to, że może być prawdziwa.)</p>
+<p><strong>Fragment w tekście:</strong> "If the story you've 'discovered' is <em>really</em> true, it will pop up in other places soon enough." - Jeśli historia, którą 'odkryłeś/aś' jest <em>naprawdę</em> prawdziwa, niedługo pojawi się też w innych miejscach. </p>
+<p>5. On an 'About' page, you can find background information about the organisation who publishes the news.</p>
+<p>(W sekcji 'About' można znaleźć podstawowe informacje na temat organizacji, która publikuje wiadomości.)</p>
+<p><strong>Fragment w tekście:</strong> "Background about the organisation publishing the news or information will be provided by a reputable website (...)" - Wiarygodna strona zapewni podstawowe informacje o organizacji publikującej wiadomości. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. tall story (bujda) </p>
+<p>2. hoax (kaczka dziennikarska, oszustwo)</p>
+<p>3. common practice (powszechna praktyka)</p>
+<p>4. out of curiosity (z ciekawości)</p>
+<p>5. pull a fast one (zrobić kogoś w konia, oszukać)</p>
+<p>6. break a big story (przekazać coś jako pierwszy)</p>
+<p>7. the same old story (stara historia, nic nowego)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. tall story</p>
+<p>(Mam nadzieję, że nie uwierzyłeś/aś w jego <strong>bujdę</strong> - wszyscy wiedzieli, że blefował.) </p>
+<p>2. hoax</p>
+<p>(Josh dostał nagrodę za najlepszy kanał na YouTube? Sądzę, że to <strong>oszustwo</strong>, więc wstrzymaj się jeszcze z gratulacjami.)</p>
+<p>3. the same old story</p>
+<p>(<strong>Nic nowego</strong> - mój młodszy brat pakuje się w tarapaty i jakimś cudem to moja wina!)</p>
+<p>4. break a big story</p>
+<p>(Poczekaj na jakieś potwierdzenie zanim <strong>jako pierwszy/a przekażesz tę wiadomość</strong> - jeśli powiesz wszystkim, a okaże się, że to nieprawda, będziesz się wstydzić.)</p>
+<p>5. common practice</p>
+<p>(Przedstawianie sobie gości to <strong>powszechna praktyka</strong>.)</p>
+<p>6. out of curiosity</p>
+<p>(Kliknąłem/kliknęłam w link <strong>z ciekawości</strong> i nagle ekran zrobił się czarny!)</p>
+<p>7. pull a fast one </p>
+<p>(Jeśli chcesz <strong>zrobić w konia</strong> swoją klasę, powiedz im, że jutro jest test z historii.)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Research impulse</a><br>
+<p>Indywidualne</p><br>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przyk³adowo (na podstawie wybranych tekstów z podrêcznika):</p>
+<p>Elementy filozofii Bergsona ukazane w tekœcie Borzyma mo¿na z ca³¹ pewnoœci¹ odnaleŸæ w utworach lirycznych Leœmiana. Badacz akcentuje bowiem znaczenie wysi³ku odbiorcy, który musi wyzbyæ siê pewnych przyzwyczajeñ, by w ten sposób dopasowaæ siê do obiektu badañ. Za spraw¹ takiej postawy mo¿e on poszerzyæ wiedzê o œwiecie, dokonaæ "twórczych odkryæ". Kwestie te szczególnie s¹ obecne w <em>Topielcu. </em>W wierszu tym bowiem poeta niejako rezygnuje z rozs¹dku i logiki, natomiast wskazuje na znaczenie intuicji w procesie poznania. Umys³owy trud, o którym wspomina tak¿e Agnieszka Kluba ("[...] cech¹ charakterystyczn¹ jest rzadko spotykane po³¹czenie przenikliwych zamyœleñ nad kwestiami wa¿nymi dla ka¿dego cz³owieka z fascynuj¹cymi poetyckimi œwiatami."), pozwala na przekroczenie pewnych ograniczeñ, co pozwala na zetkniêcie siê z inn¹ sfer¹. Bohater <em>Topielca</em> w swej ¿¹dzy poznania d¹¿y do ca³kowitego zjednoczenia siê z tajemnicz¹ zieleni¹. Proces ten pozwala wiêc na dopasowanie siê do obiektu badañ, pozwala na zapoznanie siê z jego istot¹. Dzia³anie bohatera ("A¿ nagle w niecierpliwej zapragn¹³ ¿a³obie / Zwiedziæ duchem na prze³aj zieleñ sam¹ w sobie") prowadz¹ do poszerzenia wiedzy postaci o rzeczywistoœci: przestaje byæ cz³owiekiem, zaœ stapia siê w jedno z natur¹, odkrywa coœ nowego. Podobne elementy filozofii Bergsona mo¿na dostrzec w <em>Œwidrydze i Midrydze.</em> Szalony taniec bohaterów z Po³udnic¹ w pewnym momencie zmienia ich sytuacjê, poniewa¿ przekraczaj¹ granicê miêdzy ¿yciem a œmierci¹. Dokonuj¹ wiêc pewnego odkrycia, które poszerza refleksjê na temat œwiata, a jednoczeœnie zaprzecza rozumowi. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>a) Przyk³adowe zabiegi:</p>
+<ul>
+<li>epitety -&gt; "ruchy dziwne", "str¹cona kaskada"; </li>
+<li>metafory -&gt; "Cia³o me, wklête w korowód istnienia";</li>
+<li>hiperbole -&gt; "I pieœni¹ ca³e ogarniam niebiosy, / I Ziemiê ca³¹ widzê poprzez œpiew!";</li>
+<li>uosobienia -&gt; "Bije do g³owy rozœpiewana krew";</li>
+<li>synestezja -&gt; "Zmierzchami t³umi¹c purpurowy ¿al";</li>
+<li>neologizmy, które nazywaj¹ nowe zjawiska -&gt; "wklête";</li>
+<li>wyrazy dŸwiêkonaœladowcze -&gt; "turkot";</li>
+<li>odwo³ywanie siê do rozmaitych zmys³ów - wzroku ("purpurowy ¿al"), s³uchu ("w œpiewie"), dotyku ("W pierœ m¹ uderza");</li>
+<li>przedstawienie kontrastowych przestrzeni: ziemi i nieba;</li>
+<li>ukazanie cia³a (jako Ÿród³a doœwiadczeñ, poznania) w ruchu oraz w kontekœcie jego otoczenia i zwi¹zanych z tym bodŸców -&gt; "Zna ruchy dziwne i znieruchomienia"; "Zna pl¹sy gwiezdne, wszechœwiatów tanecznoœæ". </li>
+</ul>
+<p> </p>
+<p>b) Czêœæ indywidualna </p><br>

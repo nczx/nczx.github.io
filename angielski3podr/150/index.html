@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Konstrukcji <em>I wish/If only</em> używamy z czasem <em>Past simple</em>, jeśli chcemy wyrazić życzenie, żeby obecny albo przyszły stan rzeczy był inny. Używamy też tej formy, żeby wyrazić żal odnośnie własnej osoby.</strong></p>
+<p><strong>W pierwszej i trzeciej osobie liczby pojedynczej możemy użyć formy <em>were</em> zamiast <em>was.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. I wish/If only I had a cat.  </p>
+<p>3. I wish/If only I could ride a moped.</p>
+<p>4. I wish/If only she was/were my friend.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<p><strong>Uwaga! II tryb warunkowy tworzymy według następującej konstrukcji:</strong></p>
+<p style="padding-left: 40px;"><em><strong>if + past simple, would +</strong></em><strong> bezokolicznik.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p><br/>2. If someone saw me pick it up, I would tell this person I want to return it to the police.</p>
+<p>(Gdyby ktoś zobaczył, jak go podnoszę, powiedział(a)bym tej osobie, że chcę go zwrócić policji.) </p>
+<p><br/>3. If there was money in the wallet, it wouldn't change my decision.</p>
+<p>(Gdyby w portfelu były pieniądze, nie zmieniłoby to mojej decyzji.)</p>
+<p><br/>4. If there was a phone number in the wallet, I would try calling it first.</p>
+<p>(Gdyby w portfelu znajdował się numer telefonu, spróbował(a)bym najpierw pod niego zadzwonić.)</p>
+<p><br/>5. If no one answered the phone, I would send a text and say I'm going to take the wallet to a police station.</p>
+<p>(Gdyby nikt nie odebrał telefonu, wysłał(a)bym SMS-a z informacją, że zamierzam zabrać portfel na posterunek policji.)</p>
+<p><br/>6. If someone accused me of stealing the wallet, I would explain that it wasn't my intention.</p>
+<p>(Gdyby ktoś oskarżył mnie o kradzież portfela, wyjaśnił(a)bym, że nie było to moim zamiarem.) </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Drugi tryb warunkowy tworzymy w następujący sposób:</strong></p>
+<p style="padding-left: 40px;"><strong><em>If</em> + <em>past simple</em>, <em>would</em> + bezokolicznik.</strong></p>
+<p><strong>Konstrukcji <em>I wish/If only</em> używamy z czasem <em>past simple</em>, jeśli chcemy wyrazić życzenie, żeby obecny albo przyszły stan rzeczy był inny. Używamy też tej formy, żeby wyrazić żal odnośnie własnej osoby.</strong></p>
+<p><strong>W pierwszej i trzeciej osobie liczby pojedynczej możemy użyć formy <em>were</em> zamiast <em>was.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. he was/were poor  </p>
+<p>2. wouldn't be</p>
+<p>3. didn't have to go</p>
+<p>4. would spend all his time</p>
+<p>5. I were you</p>
+<p>6. only I knew</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Konstrukcji z <em>I wish/If only</em> używamy z czasem <em>past perfect</em> (<em>had </em>+ <em>past participle</em>), jeśli chcemy wyrazić żal, że jakaś sytuacja w przeszłości potoczyła się w dany sposób.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. I wish/If only I hadn't lost my phone.  </p>
+<p>3. I wish/If only she had watered the plant.</p>
+<p>4. I wish/If only he hadn't scored a goal.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Trzeci tryb warunkowy tworzymy w następujący sposób:</strong></p>
+<table border="1" style="border-collapse: collapse; border-width: 1px; border-color: #ffffff;">
+<tbody>
+<tr>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255);"><em><strong>If + past perfect,</strong></em></td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255);"><em><strong> </strong></em><strong><em>would/wouldn't have</em> + <em>past participle</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(warunek)</strong></td>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(rezultat)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p> </p>
+<p>1. he hadn't destroyed the carpet, he wouldn't have had to pay for it. </p>
+<p>2. I hadn't left the meatloaf on the table, the dog wouldn't have eaten it</p>
+<p>3. we had told them we were coming, they would have been at home</p>
+<p>4. he hadn't used a fake ID, the shop assistant wouldn't have called the police</p>
+<p>5. you had paid your bills, they wouldn't have cut off your Internet</p>
+<p>6. she had signed out of her account, nobody / no one would have stolen her data</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Trzeci tryb warunkowy tworzymy w następujący sposób:</strong></p>
+<table border="1" style="border-collapse: collapse; border-width: 1px; border-color: #ffffff;">
+<tbody>
+<tr>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255);"><em><strong>If + past perfect,</strong></em></td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255);"><em><strong> </strong></em><strong><em>would/wouldn't have</em> + <em>past participle</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(warunek)</strong></td>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(rezultat)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br/>Konstrukcji z <em>I wish/If only</em> używamy z czasem <em>past perfect (had</em> + <em>past participle</em>), jeśli chcemy wyrazić żal, że jakaś sytuacja w przeszłości potoczyła się w dany sposób.</strong></p>
+<hr/>
+<p> </p>
+<p>1. wouldn't have paid  </p>
+<p>2. had told me</p>
+<p>3. I had checked</p>
+<p>4. hadn't offended</p>
+<p>5. would have let</p><br>

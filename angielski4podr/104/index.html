@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p><span style="text-decoration: underline;">reported statements:</span></p>
+<p>I spoke to Mr Gareth Ford, who had reported the excessive night noise. </p>
+<p>(...) he told me it was the first time he had called the police , but there had been similar problems in the past.</p>
+<p>The owner admitted to being too loud and promised he would turn the music down. </p>
+<p>He informed me that he was aware of the fact that if the police were called again, he would be fined. - <strong>direct speech:</strong> "I am aware that if the police is called again, I will be fined."</p>
+<p> </p>
+<p><span style="text-decoration: underline;">reported questions:</span></p>
+<p>I asked him whether such incidents had happened before (...). - <strong>direct speech:</strong> "Did such incidents ever happen before?"</p>
+<p>I asked the owner how many tenants lived there (...). </p>
+<p> </p>
+<p><span style="text-decoration: underline;">reported commands:</span></p>
+<p>(...) and told him to show me some form of identification. - <strong>direct speech:</strong> "Show me some form of identification, please." </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. With <em>tell</em> we need an object, e.g:<em> He told <strong>me</strong>/<strong>him</strong>/<strong>them</strong> he was happy</em>. With <em>say</em> we don't use objects, e.g.: <em>He said he was happy</em>. </p>
+<p>(Z <em>tell</em> używamy dopełnienia, np. (...). Z <em>say</em> nie używamy dopełnienia, np.: (...).) </p>
+<p>2. No, we don't. <em>That</em> is optional after <em>say</em> and <em>tell</em>, e.g.: <em>She told me (that) she really liked me</em>. and <em>They said (that) they needed to go to the toilet</em>. </p>
+<p>(Nie. <em>That</em> jest opcjonalne po słowach <em>say</em> i tell, np.: (...).)</p>
+<p>3. a. past simple changes into past perfect.</p>
+<p>    (past simple zmienia się w past perfect.)</p>
+<p>    b. <em>tomorrow</em> changes into <em>the next/following day</em> and <em>here</em> changes into <em>there</em>. </p>
+<p>     ("jutro" zmienia się w "następnego/kolejnego dnia", a "tutaj" zmienia się w "tam".)</p>
+<p>4. a. we use the word order typical of an affirmative sentence, i.e. subject + verb, not the other way round, like in questions.</p>
+<p>    (używamy składni typowej dla zdania twierdzącego, tj. podmiot + orzeczenie, nie odwrotnie, jak w przypadku pytań.)</p>
+<p>    b. question mark changes into a dot. </p>
+<p>    (znak zapytania zmienia się w kropkę.)</p>
+<p>5. We use <em>if</em> or <em>whether</em>.</p>
+<p>(Używamy <em>if</em> albo <em>whether</em>.)</p>
+<p>6. We use the to-infinitive form of the reported verb.</p>
+<p>(Używamy przytaczanego czasownika w formie bezokolicznika z <em>to</em>.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. They told <strong>me</strong> they were going to decide themselves. </p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>tell</em> wymaga dopełnienia, np. <em>me/you/her/him</em>, itd.</p>
+<p>direct speech: "We are going to decide ourselves." </p>
+<p>2. <span style="text-decoration: line-through;">him</span>/ <span style="text-decoration: line-through;">said</span> <strong>told</strong></p>
+<p><strong>Uzasadnienie</strong>: możemy użyć albo czasownika <em>say</em> bez dopełnienia, albo <em>tell</em> z dopełnieniem.</p>
+<p>direct speech: "The flat was was rented yesterday."</p>
+<p>3. <span style="text-decoration: line-through;">if</span> <strong>that</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>if</em> (czy) używamy w mowie zależnej w pytaniach, a w zdaniach twierdzących - <em>that</em> (że).</p>
+<p>direct speech: "The owner will pay for the damage."</p>
+<p>4. <span style="text-decoration: line-through;">was he happy</span> <strong>if he was happy</strong></p>
+<p><strong>Uzasadnienie</strong>: w pytaniach w mowie zależnej, na które możemy odpowiedzieć "tak/nie" stosujemy <em>if</em> lub <em>whether</em> oraz szyk zdania oznajmującego. </p>
+<p>direct speech: "Are you happy about moving to the countryside?"</p>
+<p>5. <span style="text-decoration: line-through;">don't</span> <strong>not to</strong></p>
+<p>Uzasadnienie: w poleceniach w mowie zależnej używamy konstrukcji <em>tell sb (not) to do sth</em>. </p>
+<p>direct speech: "Don't worry!"</p>
+<p>6. <span style="text-decoration: line-through;">?</span> <strong>.</strong> </p>
+<p><strong>Uzasadnienie</strong>: W pytaniach przytoczonych w mowie zależnej na końcu zdania stawiamy kropkę. </p>
+<p>direct speech: "Are you looking for a fully furnished flat?"</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>W pytaniach w mowie zależnej stosujemy szyk zdania twierdzącego (pomiot + orzeczenie), a na końcu stawiamy kropkę. Pytania, które wymagają odpowiedzi "tak/nie" wprowadzamy za pomocą <em>if</em> albo <em>whether</em>, a w pytaniach szczegółowych zostawiamy zaimek pytający (np. <em>who, where</em>). Przytaczamy pytanie za pomocą słowa <em>ask</em> (pytać). "Cofamy" czas i zmieniamy określenia czasu i miejsca oraz zaimki wskazujące tak, jak w zdaniach twierdzących w mowie zależnej.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p>1. I asked my friend how often she cleaned the staircase or cleared the pavement of snow in winter. </p>
+<p>2. I asked my friend if he made noise late at night.</p>
+<p>3. I asked my friend whether she had ever reported that her neighbours violated the rules. </p>
+<p>4. I asked my friend when he had last lent something to a neighbour.</p>
+<p>5. I asked my friend what she would do if her next-door neighbour asked her to water the plants for a month. </p>
+<p>6. I asked my friend if he knew his neighbours' surnames.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>W mowie zależnej używamy tzw. <em>reporting verbs</em> (np. <em>tell</em>, <em>say</em>). Jeśli występują one w czasie przeszłym, należy w przytaczanej wypowiedzi przesunąć czas o jeden wstecz według następującego schematu:</strong></p>
+<p><em><strong>present simple → past simple</strong></em></p>
+<p><em><strong>present continuous → past continuous</strong></em></p>
+<p><em><strong>present perfect simple → past perfect simple</strong></em></p>
+<p><em><strong>past simple → past perfect simple</strong></em></p>
+<p><em><strong>past perfect simple → past perfect simple</strong></em></p>
+<p><em><strong>will → would</strong></em></p>
+<p><strong>Zmieniamy też określenia czasu (np. <em>today</em> → <em>that day</em>) i miejsca (np. <em>here </em>→ <em>there</em>) oraz zaimki wskazujące (np. <em>this </em>→ <em>that</em>). </strong></p>
+<p><strong>W pytaniach w mowie zależnej stosujemy szyk zdania twierdzącego (podmiot + orzeczenie), a na końcu stawiamy kropkę. Pytania, które wymagają odpowiedzi "tak/nie" wprowadzamy za pomocą </strong><strong><em>if</em></strong><strong> albo </strong><strong><em>whether</em></strong><strong>, a w pytaniach szczegółowych zostawiamy zaimek pytający (np. </strong><strong><em>who, where</em></strong><strong>). Przytaczamy pytanie za pomocą słowa </strong><strong><em>ask</em></strong><strong> (pytać). "Cofamy" czas i zmieniamy określenia czasu i miejsca oraz zaimki wskazujące tak, jak w zdaniach twierdzących w mowie zależnej.</strong></p>
+<p><strong>Komendy i polecenia w mowie zależnej przytaczamy używając konstrukcji: <em>tell sb (not) to do sth</em>, np.: </strong><em><strong>"Don't touch it"  → He told me not to touch it. </strong></em></p>
+<hr/>
+<p> </p>
+<p>1. were going to move  </p>
+<p>2. the name of the owner was</p>
+<p>3. would call me later that</p>
+<p>4. us not to do anything </p>
+<p>5. been a fire the previous </p>
+<p>6. to meet them there the next</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

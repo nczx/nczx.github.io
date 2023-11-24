@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W czêœci I ukazane zostaj¹ przygotowania do do balu. Panuje atmosfera podniecenia i wytê¿onego oczekiwania na to wydarzenie, zmobilizowane s¹ s³u¿by zapewniaj¹ce bezpieczeñstwo, pojawiaj¹ siê tak¿e tajniacy. Powoli przyje¿d¿aj¹ goœcie, zaœ w szatni panuje t³ok. W dalszej czêœci jest ju¿ opis samego balu. Uœwietnia go wystêp orkiestry na czterech estradach - gra ona jazz, wywo³uje ¿ywe reakcje s³uchaczy. Przy bufecie Burbon i Rastakowski jedz¹ flaki, zaœ Donna Diana spo¿ywa wo³u. Z kolei ksi¹¿ê gruziñski poch³ania wieprzowinê, a pijany w³adca Kaukazu dŸga ¿onê grafa widelcem w biust. Zgromadzeni goœcie oddaj siê ob¿arstwu: walcz¹ ze sob¹ o kawior, zachwycaj¹ siê bie³ug¹. Æwierciomirski poœwiêca sw¹ uwagê sarninie, natomiast Esterhazy, pod wp³ywem alkoholu, tworzy z wêdlin przek³adañca, po czym upuszcza go na talerz Donny. Goœcie balu zachowuj¹ siê w ha³aœliwy sposób, nad nim czuwaj¹ zaœ kelnerzy. W pobliskich hotelach dochodzi tymczasem do rozpusty: pojawiaj¹ siê tam na moment uczestniczki zabawy, które nastêpnie wracaj¹ na bal. X czêœæ utworu jest poœwiêcona dziennikarzom przygotowuj¹cym artyku³ na temat wydarzenia oraz ¿yciu zwyk³ych ludzi zmierzaj¹cych do pracy. Bal zostaje ostatecznie ukazany w prasie jako coœ donios³ego. Czêœæ XI kontynuuje parodiê publicystyki, wprowadza tak¿e postaæ Jaszczura, który wkracza na salê, gdzie bawi siê elita. Utwór koñczy siê zaœ zag³ad¹ uczestników balu, apokalips¹ ukazanej rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Opis w prasie przedstawia w zupe³nie innym œwietle wydarzenia. Tytu³owy bal w rzeczywistoœci bowiem stanowi przejaw rozpusty, wyzwala w uczestnikach najni¿sze instynkty, sk³onnoœæ do pijañstwa i ob¿arstwa:</p>
+<p><em>Przy bufecie - ¿³opanina,</em></p>
+<p><em>Parskanina, mlaskanina,</em></p>
+<p><em>Burbon z m³odym Rastakowskim</em></p>
+<p><em>Serpentynê flaków wcina,</em></p>
+<p><em>Na talerzu Donny Diany</em></p>
+<p><em>Ryczy wó³ zamordowany. </em></p>
+<p>Z kolei w prasie wydarzenie to zostaje ukazane jako bardzo wa¿ne i podnios³e: "Wielki bal z dziejow¹ rol¹!". Przypisuje mu siê g³êbsze sensy:</p>
+<p><em>Nad poziomy! w lot i w polot!</em></p>
+<p><em>Czas uderzyæ w czynów stal!</em></p>
+<p><em>Ideolo - ideolo - </em></p>
+<p><em>Uda³ siê ten piêkny bal!</em></p>
+<p><em><em>Ideolo - ideolo - </em></em></p>
+<p><em><em>Czynem! duchem! wiar¹! wol¹!</em></em></p>
+<p><em><em>Hej do walki! zniszczyæ nêdzê!</em></em></p>
+<p>Na tej podstawie mo¿na wysnuæ wniosek, i¿ propaganda oraz media maj¹ znacz¹cy wp³yw na wartoœciowanie okreœlonych sytuacji, co niekoniecznie odpowiada prawdzie. Zaznacza siê tutaj rozdŸwiêk miêdzy rzeczywistoœci¹ a sposobem jej ukazania w prasie. Prowadzi to do usprawiedliwienia elit oraz zak³amania ich prawdziwego wizerunku. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rzeczywistoœæ ukazana w dziele Juliana Tuwima ma groteskowy charakter, co wi¹¿e siê z hiperbolizacj¹ pewnych zjawisk oraz bohaterów, po³¹czeniem sprzecznych pierwiastków. Tytu³owy bal zostaje bowiem opisywany w prasie jako uroczyste i wa¿ne wydarzenie, któremu przypisuje siê dziejow¹ rolê. Podnios³oœæ tego spotkania towarzyskiego, jego wagê, zaznaczaj¹ ju¿ pocz¹tkowe wersy:</p>
+<p><em>Dzisiaj wielki bal w Operze!</em></p>
+<p><em>Sam Potê¿ny Archikrator</em></p>
+<p><em>Da³ najwy¿szy protektorat. </em></p>
+<p>Szybko jednak patetyczny nastrój ustêpuje przyziemnym realiom:</p>
+<p><em>Wszelka dziwka majtki pierze</em></p>
+<p><em>I na kredyt kiecki bierze,</em></p>
+<p><em>Na ulicach œcisk i zator. </em></p>
+<p>Groteskowy charakter zyskuje tym samym zabawa elit, która jest pozbawiona jakichkolwiek zasad przyzwoitoœci. Zamo¿ni oraz powszechnie szanowani ludzie zachowuj¹ siê niczym dzikie zwierzêta. D¹¿¹ wy³¹cznie do zaspokojenia swych podstawowych potrzeb, pogr¹¿aj¹ siê w pijañstwie i ob¿arstwie: "Przy bufecie - ¿³opanina, / Parskanina, mlaskanina". Ich beztroska zabawa kontrastuje z wyrazistym obrazem cierpi¹cych zwierz¹t - atrakcji kulinarnej: "Ryczy wó³ zamordowany"; "Rozdzierane kaczki wrzeszcz¹". Bal wyzwala wiêc w bohaterach najni¿sze instynkty, poniewa¿ trac¹ nad sob¹ kontrolê, oddaj¹ siê przy tym równie¿ rozpuœcie seksualnej ("Seksualny kontredansik: / Na momencik, na kwadransik"). Nie przypominaj¹ ludzi powa¿anych, godnych zaufania, lecz jednostki œmieszne i niefrasobliwe. Groteskê pog³êbia zestawienie szalonej, dynamicznej zabawy z codziennoœci¹ przeciêtnych ludzi:</p>
+<p><em>A ju¿ ludzie pracy wstali:</em></p>
+<p><em>W rzeŸniach byd³o zabijali,</em></p>
+<p><em>Karabiny nabijali,</em></p>
+<p><em>Interesy ubijali.</em></p>
+<p>Jej surowoœæ, zwyczajnoœæ nie przystaje do pozbawionego trosk ¿ycia elit. Zgromadzeni na balu mog¹ sobie bowiem pozwoliæ na wszystko, natomiast reszta spo³eczeñstwa musi skupiæ siê na przetrwaniu, zaspokojeniu podstawowych potrzeb. Atmosferê dziwnoœci pog³êbia tak¿e wprowadzenie do dzie³a elementów fantastycznych. Jaszczur oraz ma³py sugeruj¹ now¹ perspektywê o charakterze symbolicznym, która zdaje siê zupe³nie nie pasowaæ do uczestników balu pogr¹¿onych w rozpustnej zabawie. </p>
+<p>Konwencja ta wzmacnia wymowê poematu, poniewa¿ ukazuje zepsucie elit, ale tak¿e jej œmiesznoœæ czy przyziemnoœæ. Pozwala autorowi na sarkastyczne oraz ironiczne zaprezentowanie rzeczywistoœci oraz jej krytykê. Wzmacnia te¿ katastroficzny nastrój dzie³a, poniewa¿ taki œwiat, w ca³ym swym rozpasaniu i upadku zasad, mo¿e zmierzaæ tylko ku ostatecznej zag³adzie. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Katastrofizm utworu przejawia siê przede wszystkim w kreacji ukazanej rzeczywistoœci. Zabawa elit, pozbawiona jakichkolwiek zahamowañ, rozpustna, przepe³niona zepsuciem, wywo³uje skojarzenia z Sodom¹, co sugeruje, i¿ uczestnicy balu podziel¹ jej los. Nieœwiadomi swej sytuacji zmierzaj¹ w stronê nieuchronnej katastrofy. Z³owró¿bn¹ zapowiedzi¹ w tym kontekœcie staje siê obecnoœæ si³ z³a: "Wszystkich wszyscy diabli wziêli / diabli wziêli / diabli wziêli", a tak¿e postaæ Jaszczura, przywo³uj¹ca na myœl apokaliptyczne wizje. Z kolei ekspresjonizm przejawia siê w warstwie jêzykowej: wyra¿a ona silne emocje podmiotu lirycznego oraz wyraziœcie zarysowany jego stosunek do rzeczywistoœci:</p>
+<p><em>A najgorzej przy kawiorze:</em></p>
+<p><em>Tam - na zabój, tam - na no¿e,</em></p>
+<p><em>A jak z³api¹ - szczerz¹ zêby</em></p>
+<p><em>I smaruj¹ g³odne gêby</em></p>
+<p><em>Czarn¹ mazi¹ jesiotrow¹,</em></p>
+<p><em>A bie³ugi bia³e k³êby</em></p>
+<p><em>¯r¹ od razu na surowo,</em></p>
+<p><em>Bo to dobrze, bo to zdrowo!</em></p>
+<p>Znacz¹ce staje siê tym samym zastosowanie wykrzyknieñ, wyra¿eñ potocznych czy wulgarnych. Inny znak ekspresjonizmu stanowi groteskowa wizja œwiata, hiperbolizacja (np. zachowañ bohaterów) i deformacja. Dzie³o tak¿e, zgodnie z za³o¿eniami ekspresjonistów, ma na celu oddzia³ywanie na odbiorcê: szokuje go, zaskakuje dosadnoœci¹ przedstawienia, jednak nie pozostawia obojêtnym. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Œrodki oraz ich przyk³ady z tekstu:</p>
+<ul>
+<li>wyliczenie -&gt; "Zaje¿d¿aj¹ futra, fraki, / Lœni¹ce laki, szapoklaki", "Zaje¿d¿aj¹ gronostaje / I brajtszwance, / Barbarossy, Oxenstierny / I Braganze, / Zaje¿d¿aj¹ Buicki, Royce'y, / I Hispany", "Tempo: szampan, szatan, szantan";</li>
+<li>hiperbola -&gt; "Rozdzierane kaczki wrzeszcz¹, / T³uszczem ciekn¹, w zêbach trzeszcz¹, / A najgorzej przy kawiorze: / Tam - na zabój, tam - na no¿e", "I na wszystkie strony pchany / Klaps go w talerz Donny Diany, / W ostry sos - wiêc ryk pijany, / Œmiech prezesów i burbonów - - / A nad wszystkim - pu³k garsonów / Fruwa zmotoryzowany" </li>
+<li>metonimia -&gt; "Zaje¿d¿aj¹ gronostaje", "Zaje¿d¿aj¹ Buicki [...]".</li>
+</ul>
+<p> </p>
+<p>Zastosowane œrodki wp³ywaj¹ na plastycznoœæ przedstawienia, ale przede wszystkim oddaj¹ atmosferê tytu³owego balu przesycon¹ zepsuciem, przesad¹ oraz niew¹tpliw¹ hipokryzj¹ elit. Pozwalaj¹ na ukazanie groteskowej i przesadzonej rzeczywistoœci, przepe³nionej chaosem, która nieuchronnie zmierza w stronê zag³ady. Wyliczenia podkreœlaj¹ przepych, ale te¿ pozwalaj¹ na zarysowanie luksusowej egzystencji elit. Z kolei hiperbole wyolbrzymiaj¹ zaprezentowane postawy i s³u¿¹ zakwestionowaniu elitarnoœci bohaterów, wartoœciuj¹ ich w negatywny sposób. Równie istotn¹ funkcjê pe³ni¹ metonimie, poniewa¿ sugeruj¹ stosunek podmiotu lirycznego do rzeczywistoœci, a przy tym zapewniaj¹ kondensacjê treœci i kieruj¹ uwagê odbiorcy na okreœlony aspekt opisanego œwiata. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowo:</p>
+<p>Julian Tuwim w swym utworze wykorzystuje elementy, które s¹ typowe dla stylu potocznego i dotycz¹ ró¿nych p³aszczyzn. Poeta bowiem chêtnie odwo³uje siê do s³ownictwa typowego dla codziennej komunikacji. Wyró¿nia siê ono ekspresj¹, a wiêc sugeruje stosunek mówi¹cego do danego zjawiska, jego subiektywizm. Szczególn¹ rolê odgrywaj¹ zdrobnienia ("hotelikach", "kontredansik", "kwadransik"), poniewa¿ mog¹ wskazywaæ na pewn¹ ironiê, dystans wzglêdem ukazanej rzeczywistoœci. Elementy stylu potocznego umo¿liwiaj¹ tak¿e barwne, wiarygodne oraz plastyczne zaprezentowanie realiów, ale przy tym oddaj¹ atmosferê szalonej, wyzbytej jakichkolwiek ograniczeñ, zabawy:</p>
+<p><em>Co za gracja, co za w³adza!</em></p>
+<p><em>Co za pompa! Jezu Chry...!</em></p>
+<p><em>Zaje¿d¿aj¹ futra, fraki,</em></p>
+<p><em>Lœni¹ce laki, szapoklaki,</em></p>
+<p><em>Uwijaj¹ siê tajniaki</em></p>
+<p><em>W paltocikach Burberry. </em></p>
+<p>Istotna jest tak¿e obecnoœæ wulgaryzmów lub wyrazów nacechowanych negatywnie: "Wszelka dziwka majtki pierze", "Dziwkom ³ydki s³odko dr¿¹", "¯r¹ od razu na surowo", "diabli wziêli". Ich funkcja w utworze jest znacz¹ca, poniewa¿ ujawniaj¹ one szokuj¹c¹ i brutaln¹ prawdê na temat elit uczestnicz¹cych w balu. Kontrastuj¹ tak¿e z informacjami w gazetach. Uczestnicy balu ulegaj¹ najni¿szym instynktom, zostaj¹ przedstawieni wrêcz na podobieñstwo zwierz¹t. Z kolei liczne wykrzyknienia ("Precz z niedol¹! Precz z niewol¹!") wzmacniaj¹ ekspresjê dzie³a, nadaj¹ mu okreœlony ³adunek emocjonalny. </p>
+<p>Styl potoczny oddzia³uje równie¿ na sk³adniê, kompozycjê utworu. Wzmacnia dynamizm wiersza; w przyziemnej rzeczywistoœci zostaje odkryta jej swoista poetyckoœæ oraz rytm. Z tego te¿ powodu Tuwim chêtnie wykorzystuje powtórzenia zapewniaj¹ce rytmicznoœæ oraz wra¿enie intensywnoœci doznañ, rozgor¹czkowania:</p>
+<p><em>I boty! numerek! bez numerka!</em></p>
+<p><em>I jeszcze pudrem</em></p>
+<p><em>I jeszcze usta</em></p>
+<p><em>I lustra lustrem</em></p>
+<p><em>I znów do lustra</em></p>
+<p><em>I ju¿ - do lo¿y - która? druga...</em></p>
+<p>Warto równie¿ wspomnieæ o swobodnej sk³adni, wrêcz niestarannej, poniewa¿ odzwierciedla ona jêzyk mówiony: jego naturalnoœæ i zmiennoœæ. Elipsy prowadz¹ do kondensacji wypowiedzi ("I ju¿ - wzi¹æ, i ju¿ - udami") i - podobnie jak fragmenty zakoñczone wielokropkiem, przeskoki myœlowe - zachêcaj¹ czytelnika do dopowiedzenia sobie pozosta³ej treœci. </p>
+<p>Tym samym wykorzystywany przez Tuwima styl potoczny staje siê dla autora tworzywem, które dostosowuje do swoich potrzeb. Za pomoc¹ w³aœciwoœci wykorzystanych elementów kreuje on wiarygodn¹ oraz intensywn¹ wizjê œwiata, która tak¿e nawi¹zuje do konkretnych realiów. Takie przetworzenie jest przy tym zgodne z koncepcj¹ sztuki poety, poniewa¿ codziennoœæ staje siê dla niego Ÿród³em twórczoœci i inspiracji. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br>

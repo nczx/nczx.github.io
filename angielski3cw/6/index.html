@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. (przykład)</p>
+<p>2. insensitive</p>
+<p>(wrażliwy - <strong>nieczuły</strong>)</p>
+<p>3. dishonest</p>
+<p>(szczery - <strong>nieuczciwy</strong>)  </p>
+<p>4. disloyal</p>
+<p>(lojalny - <strong>nielojalny</strong>)</p>
+<p>5. immature</p>
+<p>(dojrzały - <strong>niedojrzały</strong>)</p>
+<p>6. impatient</p>
+<p>(cierpliwy - <strong>niecierpliwy</strong>)</p>
+<p>7. unreliable</p>
+<p>(godny zaufania - <strong>zawodny</strong>)</p>
+<p>8. irresponsible</p>
+<p>(odpowiedzialny - <strong>nieodpowiedzialny</strong>)</p>
+<p>9. unsociable</p>
+<p>(towarzyski - <strong>nietowarzyski</strong>)</p>
+<p>10. intolerant</p>
+<p>(tolerancyjny - <strong>nietolerancyjny</strong>)</p>
+<p>11. unimaginative</p>
+<p>(z bogatą wyobraźnią - <strong>pozbawiony wyobraźni</strong>)</p>
+<p>12. impolite</p>
+<p>(uprzejmy - <strong>nieuprzejmy</strong>)</p>
+<p> </p>
+<p><strong>Uwaga! Pozostałą część zadania (zaznaczenie opisujących nas przymiotników) należy wykonać indywidualnie.</strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. next-door neighbour  (sąsiad z naprzeciwka/z domu obok)  </p>
+<p>2. classmates  (koledzy i koleżanki z klasy)</p>
+<p>3. colleagues  (koledzy i koleżanki z pracy)</p>
+<p>4. travel buddies  (kompani podróży)</p>
+<p>5. opponents, rivals  (przeciwnicy, rywale)</p>
+<p>6. teammates  (koledzy/koleżanki z drużyny)</p>
+<p><s class="odr-strikethrough">relatives</s>, <s class="odr-strikethrough">strangers</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. siblings  </p>
+<p>2. rival</p>
+<p>3. enemies</p>
+<p>4. relative</p>
+<p>5. colleague</p>
+<p>6. a close friend</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Komiksy są pełne ciekawych związków, trochę tak jak życie! Weźmy na przykład Thora i Lokiego. Są <strong>rodzeństwem</strong> - Loki jest adoptowanym bratem Thora - ale i ze sobą walczą. Zdarza się, że współpracują, by zmierzyć się z innym <strong>rywalem</strong>, ale nie dogadują się za dobrze. Zdecydowanie nie są przyjaciółmi, ale tak naprawdę nie można ich też nazwać <strong>wrogami</strong>.</p>
+<p>A co jeśli chodzi o Clarka Kenta, który jest, oczywiście, Supermanem? Wychowali go jego rodzice, Martha i Jonathan Kent, ale tak naprawdę nie są jego <strong>krewnymi</strong> - znaleźli Supermana, kiedy był małym dzieckiem i zaopiekowali się nim. Później odkryli, że pochodzi z innej planety. Clark pracuje jako dziennikarz i jest zakochany w swojej <strong>koleżance z pracy</strong>, reporterce Lois Lane. W niektórych komiksach z serii <em>Supermana</em>, w gazecie pojawia się kolejna postać, Jimmy Olsen. Staje się <strong>bliskim przyjacielem </strong>Clarka Kenta, który często ratuje go przed niebezpieczeństwem.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<table border="1" style="border-collapse: collapse; width: 514px; height: 162.182px; border-width: 1px; border-spacing: 5px; border-color: #434D7A;">
+<tbody>
+<tr style="background-color: rgb(194, 194, 214); height: 24.4773px;">
+<td style="width: 118.443px; border-width: 1px; border-color: rgb(67, 77, 122); height: 24.4773px; text-align: center; padding: 5px;"><strong>-ness</strong></td>
+<td style="width: 106.42px; border-width: 1px; border-color: rgb(67, 77, 122); height: 24.4773px; text-align: center; padding: 5px;"><strong>-ty</strong></td>
+<td style="width: 117.148px; border-width: 1px; border-color: rgb(67, 77, 122); height: 24.4773px; text-align: center; padding: 5px;"><strong>-ity</strong></td>
+<td style="width: 117.17px; border-width: 1px; border-color: rgb(67, 77, 122); height: 24.4773px; text-align: center; padding: 5px;"><strong>-ence/-ance</strong></td>
+</tr>
+<tr style="height: 45.8977px;">
+<td style="width: 118.443px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;"><em>friendliness</em><br/>(przyjacielskość)</td>
+<td style="width: 106.42px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">honesty<br/>(szczerość) </td>
+<td style="width: 117.148px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">maturity<br/>(dojrzałość) </td>
+<td style="width: 117.17px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">patience<br/>(cierpliwość)</td>
+</tr>
+<tr style="height: 45.8977px;">
+<td style="width: 118.443px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">kindness<br/>(dobroć)</td>
+<td style="width: 106.42px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">loyalty<br/>(lojalność)</td>
+<td style="width: 117.148px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">reliability<br/>(niezawodność)</td>
+<td style="width: 117.17px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.8977px; text-align: center; padding: 5px;">tolerance<br/>(tolerancyjność)</td>
+</tr>
+<tr style="height: 45.9091px;">
+<td style="width: 118.443px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.9091px; text-align: center; padding: 5px;">politeness<br/>(uprzejmość)</td>
+<td style="width: 106.42px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.9091px; text-align: center; padding: 5px;">-</td>
+<td style="width: 117.148px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.9091px; text-align: center; padding: 5px;">sensitivity<br/>(wrażliwość)</td>
+<td style="width: 117.17px; border-width: 1px; border-color: rgb(67, 77, 122); height: 45.9091px; text-align: center; padding: 5px;">-</td>
+</tr>
+</tbody>
+</table><br>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>1. criticised </p>
+<p>2. educational</p>
+<p>3. cookery</p>
+<p>4. valuable</p>
+<p>5. nutritious</p>
+<p>The extra words are <strong>drama</strong> and <strong>gloomy</strong>.</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Telewizja zawsze była powszechnie <strong>krytykowana</strong> za bycie stratą czasu i przyczynianie się do wzrostu otyłości poprzez zachęcanie do prowadzenia siedzącego trybu życia. Jednak pomimo jej wad, w telewizji dostępnych jest wiele kanałów <strong>edukacyjnych</strong> poruszających takie zagadnienia jak nauka, historia i sztuki piękne. Programy tworzone przez nadawców takich jak Discovery Channel są zarówno oparte na faktach, ale też zapewniają rozrywkę. Nawet bardziej popularne programy takie jak quizy czy programy <strong>kulinarne</strong> mogą pomóc nam nauczyć się czegoś o otaczającym nas świecie. W niektórych teleturniejach pojawiają się pytania z zakresu przedmiotów szkolnych, więc mogą być źródłem <strong>cennych</strong> informacji dla nastolatków. A wiedza, jak przygotować <strong>pożywny</strong> i względnie tani posiłek jest jedną z najbardziej przydatnych rzeczy jakich można się nauczyć, bez względu na to, czy jest się emerytem, młodym rodzicem czy nastolatkiem, który zaraz opuści dom rodzinny. Nie odrzucajmy telewizji tylko dlatego, że część programów nie jest warta uwagi. Wykorzystaj te programy, które mają jakąś wartość. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>1. the smelliest </p>
+<p>2. affordable</p>
+<p>3. beaten</p>
+<p>4. complaints</p>
+<p>5. residents </p>
+<p>The extra words are <strong>insure</strong> and <strong>refuse</strong>.</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Myślisz, że wielkie wysypisko śmieci może zostać przekształcone w piękny park? Taka transformacja właśnie ma miejsce na nowojorskiej wyspie Staten Island. Kiedyś była miejscem wysypiska zajmującego powierzchnię 2200 akrów, a teraz wyspa zyskała reputację <strong>najbardziej śmierdzącego</strong> miejsca w mieście i w konsekwencji była uważana za bardzo nieatrakcyjne miejsce do mieszkania. Oczywiście ta opinia spowodowała, że ceny mieszkań utrzymywały się na dosyć <strong>osiągalnym</strong> poziomie i dla wielu ludzi oznaczało to jedyną szansę na wejście na drabinę rynku nieruchomości w dzielnicy stosunkowo bliskiej do Nowego Jorku. Staten Island znajduje się nieco na <strong>uboczu </strong>(<em>off the beaten track</em> - na uboczu), ale regularnie kursujące promy łączą ją z Manhattanem, co ułatwia podróż do pracy i z powrotem. Po wielu <strong>skargach</strong> na zapach podjęto decyzję o zamknięciu ostatniego działającego wysypiska śmieci w Nowym Jorku w 2001 roku. Jednak słaba organizacja utylizacji śmieci doprowadziła do poważnego skażenia ziemi i wody, dlatego stworzenie z z tego miejsca dzielnicy przyjemnej do mieszkania nie jest łatwe. Dobra wiadomość dla <strong>mieszkańców</strong> wyspy jest taka, że pierwszy etap projektu jest prawie skończony, a całość powinna zakończyć się do 2036 roku. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>1. employment  </p>
+<p>2. boredom</p>
+<p>3. decision</p>
+<p>4. apprenticeship</p>
+<p>5. tuition</p>
+<p>The extra words are <strong>adapt</strong> and <strong>employ</strong>.</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Pierwsze prace rzadko są tymi najlepszymi, szczególnie, kiedy zaczynasz pracować jako nastolatek. Moim pierwszym miejscem <strong>zatrudnienia</strong> była miejscowa biblioteka publiczna. Pracowałem/am w budynku, w którym zajmowano się nowymi książkami, tymi nieprawidłowo oddanymi oraz uszkodzonymi. Doświadczyłem/am tam poziomu <strong>znudzenia</strong>, jakiego nie znałem/am nigdy wcześniej. Nie potrzebowałem/am umiejętności podejmowania <strong>decyzji</strong>, ponieważ mówiono mi dokładnie, co mam robić. Nie potrzebowałem/am umiejętności zarządzania czasem, bo tam nigdy nie było pośpiechu. To było okropne. Nie miałem/am nawet z kim porozmawiać, bo przez większość czasu pracowałem/am sam/a. Nauczyłem/am się jednak wiele o sobie i o tym, czego powinienem/powinnam szukać w swojej przyszłej pracy. Po skończeniu szkoły zrobiłem/am <strong>praktyki</strong> <strong>zawodowe</strong> w dużej firmie medialnej. Przerodziło się to w pracę na pełny etat, ale rozwój osobisty również jest ważny, dlatego zapisałem/am się na studia zaoczne. Moja firma pomaga mi z <strong>czesnymi</strong>, a kiedy skończę studia będę mieć szansę na zdobycie wyższego stanowiska. Nawet jeśli się to nie uda, i tak będę szczęśliwszy/a niż kiedy pracowałem/am w bibliotece. </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>1. challenging </p>
+<p>2. losing</p>
+<p>3. vocational </p>
+<p>4. willingness</p>
+<p>5. resourceful</p>
+<p>The extra words are <strong>employ</strong> and <strong>manage</strong>.</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Jedną z <strong>najtrudniejszych</strong> zmian życiowych jest sytuacja, kiedy nagle stajemy się bezrobotni. Większość osób polega na swojej pracy nie tylko po to, żeby osiągnąć bezpieczeństwo finansowe, ale  też poczucie życiowego celu. Podczas pandemii koronawirusa <strong>utrata</strong> pracy może być jeszcze bardziej problematyczna, ponieważ nie jest tak łatwo znaleźć nową posadę. Ważne jednak, żeby się nie poddawać. Możliwe jest nauczenie się nowego zawodu na kursach <strong>zawodowych</strong>, które mogą być dostępne bezpłatnie dla bezrobotnych. Jeśli chodzi o ubieganie się o pracę, ważne jest pokazanie potencjalnemu pracodawcy, dlaczego powinien wybrać ciebie. Spróbuj przekonać go o swojej <strong>chęci</strong> do wykonywania każdej koniecznej pracy, nawet zadań, których inni nie chcą robić. W obecnej sytuacji pracodawcy szukają też elastycznych, <strong>zaradnych</strong> ludzi, gotowych do pracy pod presją i przejmowania inicjatywy oraz zmotywowanych wewnętrznie. Czy to właśnie ty?</p><br>

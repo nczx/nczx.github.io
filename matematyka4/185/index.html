@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Uzasadnimy, że suma miar kątów w dowolnym trójkącie jest równa <strong>180<sup>o</sup></strong>. </p> <p>Rysunek:  </p> <p><img alt="" height="253" src="./data/1239895-0.jpg" width="431"/></p> <p>Prosta <strong>k</strong> jest równoległa do boku <strong>AB</strong> tego trójkąta. </p> <p>Zauważmy, że kąty <span style="font-weight: 400;"><strong>𝛼</strong> i <strong>𝛼<sub>1</sub></strong> są kątami naprzemianległymi, zatem te kąty są równe. </span></p> <p><span style="font-weight: 400;">Zauważmy, że kąty <strong>𝛽</strong> i <strong>𝛽<sub>1</sub></strong> są kątami naprzemianległymi, zatem te kąty są równe. </span></p> <p><span style="font-weight: 400;">Wyznaczmy sumę miar kątów tego trójkąta. Mamy:</span></p> <p><span style="font-weight: 400;"> <span> <math-expr expr="alpha + beta + gamma = alpha_1 + beta_1 + gamma = 180^@" syntax="text"></math-expr> </span>  </span></p> <p><strong>ckd. </strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Uzasadnimy, że dwusieczne dwóch sąsiednich kątów równoległoboku przecinają się pod kątem prostym. </p> <p>Suma kątów przy wierzchołkach <strong>A</strong> i <strong>B</strong> wynosi <strong>180<sup>o</sup></strong>. Mamy zatem:   </p> <p><span> <math-expr expr="alpha/2 + alpha/2 + beta/2 + beta/2 = 180^@" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="alpha + beta = 180^@ \ \ \ |:2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="alpha/2 + beta/2 = 90^@" syntax="text"></math-expr> </span>  </p> <p>Rozważmy trójkąt <strong>ABP</strong>. Wiedząc, że suma miar kątów w trójkącie wynosi <strong>180<sup>o</sup></strong> mamy: </p> <p><span> <math-expr expr="delta + underbrace(alpha/2 + beta/2)_(=90^@) = 180^@" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="delta + 90^@ = 180^@" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="delta = 90^@" syntax="text"></math-expr> </span>  </p> <p>A więc dwusieczne dwóch sąsiednich kątów równoległoboku przecinają się pod kątem prostym. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Uzasadnimy, że jeśli środek okręgu opisanego na trójkącie jest środkiem jednego z tych boków, to ten trójkąt jest prostokątny.</p> <p>Rysunek:  </p> <p><img alt="" height="236" src="./data/1239897-0.jpg" width="246"/></p> <p>Punkt <strong>O</strong> jest środkiem okręgu opisanego na trójkącie <strong>ABC</strong>. Zatem punkt <strong>O</strong> jest środkiem boku <strong>AB</strong>. </p> <p>Kąt <span style="font-weight: 400;"><strong>𝛼</strong> jest kątem wpisanym opartym na tym samym łuku co kąt środkowy <strong>AOB</strong>. </span></p> <p><span style="font-weight: 400;">Wyznaczmy miarę kąta 𝛼. Mamy:</span></p> <p><span style="font-weight: 400;"> <span> <math-expr expr="alpha = 1/2 cdot 180^@ = 90^@" syntax="text"></math-expr> </span>  </span></p> <p><span style="font-weight: 400;">Uzasadniliśmy, że podany trójkąt jest <span style="text-decoration: underline;">trójkątem prostokątnym</span>. </span></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>a)</strong></p> <p>Rysunek:  </p> <p><img alt="" height="188" src="./data/1239898-0.jpg" width="580"/></p> <p>Z treści zadania wiemy, że: </p> <p><span> <math-expr expr="|AD|=|A_1 D_1|, \ \ |AB| = |A_1 B_1| ,  \ \  |BC|=|B_1 C_1|" syntax="text"></math-expr> </span></p> <p>Środkowa <strong>AD</strong> i <strong>A<sub>1</sub>D<sub>1</sub></strong> podzieliła bok <strong>CB</strong> i <strong>C<sub>1</sub>B<sub>1</sub></strong> na dwie równe części. Stąd: </p> <p><span> <math-expr expr="|BD| = |B_1 D_1|" syntax="text"></math-expr> </span>  </p> <p>Zatem trójkąty <strong>ABD</strong> i <strong>A<sub>1</sub>B<sub>1</sub>D<sub>1</sub></strong> są <span style="text-decoration: underline;">przystające</span> na mocy cechy <strong>BBB</strong>. Odpowiednie kąty mają równe miary, zatem:</p> <p><span> <math-expr expr="abs( sphericalangle CDA )= abs( sphericalangleC_1 D_1 A_1 )" syntax="text"></math-expr> </span>  </p> <p>oraz również mamy: </p> <p><span> <math-expr expr="|AD|=|A_1 D_1| \ , \ |DC| = |D_1 C_1|" syntax="text"></math-expr> </span>  </p> <p>Na podstawie cechy przystawania <strong>BKB</strong> trójkąty <strong>ADC</strong> i <strong>A<sub>1</sub>D<sub>1</sub>C<sub>1</sub></strong> są <span style="text-decoration: underline;">przystające</span>. Czyli:</p> <p><span> <math-expr expr="|AC| = |A_1 C_1|" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Rysunek: </p> <p><img alt="" height="191" src="./data/1239898-1.jpg" width="582"/></p> <p>Z treści zadania wiemy, że</p> <p><span> <math-expr expr="abs(AD)=abs(A_1D_1), \ \ abs( sphericalangle CAD)= abs( sphericalangleC_1 A_1 D_1), \ \  abs( sphericalangle ADB)= abs( sphericalangleA_1 D_1 B_1 )" syntax="text"></math-expr> </span></p> <p>Zatem również</p> <p><span> <math-expr expr="abs( sphericalangle ADC)= abs( sphericalangleA_1 D_1 C_1 )" syntax="text"></math-expr> </span>   </p> <p>Na mocy cechy przystawania <strong>KBK</strong> trójkąty <strong>ADC</strong> i <strong>A<sub>1</sub>D<sub>1</sub>C<sub>1</sub></strong> są <span style="text-decoration: underline;">przystające</span>, zatem:</p> <p><span> <math-expr expr='abs(AC)=abs(A_1C_1), \ \ abs(CD)=abs(C_1D_1) \ \ "i" \ \  abs( sphericalangle ACD)= abs( sphericalangle A_1 C_1 D_1 )' syntax="text"></math-expr> </span>  </p> <p>Środkowa <strong>AD</strong> i <strong>A<sub>1</sub>D<sub>1</sub></strong> podzieliła bok <strong>CB</strong> i <strong>C<sub>1</sub>B<sub>1</sub></strong> na dwie równe części. Stąd: </p> <p><span> <math-expr expr="abs(CB)=abs(C_1B_1)" syntax="text"></math-expr> </span></p> <p>Na mocy cechy przystawania <strong>BKB</strong> trójkąty<strong> ABC</strong> i <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1</sub></strong> są <span style="text-decoration: underline;">przystające</span>, zatem:</p> <p><span> <math-expr expr="abs(AB)=abs(A_1B_1)" syntax="text"></math-expr> </span>  </p><br>

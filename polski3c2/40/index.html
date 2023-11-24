@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór Boles³awa Leœmiana otwiera metafora: "W zwiewnych nurtach kostrzewy [...]". W wyrazisty oraz sensualny sposób zaznacza ona podobieñstwo wystêpuj¹ce miêdzy zieleni¹ a wod¹, poniewa¿ ta pierwsza zdaje siê poruszaæ podobnie jak strumieñ. Pozornie zwyk³y element rzeczywistoœci tym samym ulega przekszta³ceniu, które podkreœla niezwyk³oœæ oraz tajemniczoœæ ukazanego w wierszu œwiata. Jednoczeœnie metafora ta ³¹czy siê z tytu³em dzie³a. <em>Topielec</em> bowiem to demon wodny lub cz³owiek, który siê utopi³.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Wêdrowiec z utworu Leœmiana, który "Przewêdrowa³ œwiat ca³y z ob³oków w ob³oki" pragnie poznaæ istotê zieleni. Kiedy zatrzymuje siê pod drzewem, nawiedza go demon zieleni. Skutecznie uwodzi wêdrowca, kusi go i czaruje w taki sposób, ¿e bohater wiersza zag³êbia siê w zieleñ, ulega z czasem potêdze natury. Ta fascynacja prowadzi do jego odcz³owieczenia, stopniowego zespalania siê z natur¹. Mê¿czyzna przekracza granice poznania, wtapia siê w zieleñ, co ostatecznie powoduje jego œmieræ i ca³kowite zjednoczenie z przyrod¹. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Wydarzenia rozgrywaj¹ siê w przestrzeni o niejasnym statusie, poniewa¿ las tam zamienia siê w ³¹kê. Miejsce to nabiera symbolicznego znaczenia, gdy¿ dochodzi w nim do przejœcia, przemiany jednego zielonego bytu w inny. Zdaje siê wiêc to byæ niezwyk³a i cudowna przestrzeñ, która umo¿liwia przekroczenie pewnych granic, przejœcie z jednej rzeczywistoœci do innej. Tym samym w niej mo¿liwa staje siê przemiana wêdrowca, poniewa¿ jednoczy siê on z natur¹ i pozostawia po sobie tylko cia³o. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Zieleñ w utworze Leœmiana mo¿na rozpatrywaæ na p³aszczyŸnie ró¿nych symbolicznych funkcji. Przede wszystkim zdaje siê byæ istot¹ œwiata natury, do której poznania tak usilnie d¹¿y bohater tekstu. Staje siê jednak tak¿e przyczyn¹ odcz³owieczenia wêdrowca, niepokonan¹ i tajemnicz¹ si³¹, przed któr¹ nie mo¿na siê obroniæ: "[...] le¿y oto martwy w stu wiosen bezdeni, / Cienisty, jak bór w borze - topielec zieleni". Zieleñ ma tym samym w sobie czyst¹ energiê umo¿liwiaj¹c¹ niezwyk³¹ metamorfozê cz³owieka, jego nieodwo³alne scalenie z przyrod¹. Stanowi ona równie¿ doœwiadczenie wszechobecnoœci: wystêpuje wszêdzie, otacza wêdrowca i przenosi go do innego œwiata. Zieleñ w wierszu Leœmiana to nie tylko jednak znak tajemnicy, cudownoœci, próby przekroczenia granic poznania. Wi¹¿e siê bowiem z dzia³aniem si³ demonicznych - to "demon zieleni" czyni wszystko, aby zachêciæ wêdrowca do zag³êbienia siê w ni¹, uwodzi go: "I wabi³ nieustannych rozkwitów poœpiechem, / I nêci³ ust zdyszanych tajemnym bezœmiechem, / I czarowa³ zniszczot¹ wonnnych niedowcieleñ". Mo¿na w niej dostrzec tak¿e zapowiedŸ destrukcji, odarcia z tego, co doczesne - bohater zatraca swe cz³owieczeñstwo, a jego zw³oki zostaj¹ porzucone - niczym pusta skorupa. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Anafory i powtórzenia pe³ni¹ w utworze kilka wa¿nych funkcji. Przede wszystkim buduj¹ napiêcie oraz atmosferê niesamowitoœci, a wrêcz baœniowoœci. Rytmizuj¹ równie¿ tekst i wp³ywaj¹ na jego dynamizacjê. S³u¿¹ ponadto podkreœleniu natê¿enia zabiegów stosowanych przez demona, które maj¹ na celu skuszenie bohatera, aby pod¹¿y³ w zieleñ. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<table border="1" style="border-collapse:collapse;width:625px;height:397px;">
+<tbody>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:190.125px;"><strong>Neologizm</strong></td>
+<td style="background-color:#aed581;text-align:center;width:190.125px;"><strong>Budowa</strong></td>
+<td style="background-color:#aed581;text-align:center;width:234.75px;"><strong>Znaczenie </strong></td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">wszechleœnym</td>
+<td style="width:190.125px;text-align:center;">dodanie do <em>leœny</em> przedrostka <em>wszech-</em>
+</td>
+<td style="width:234.75px;text-align:center;">'coœ leœnego w najwy¿szym stopniu;</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">bezœmiechem</td>
+<td style="width:190.125px;text-align:center;">dodanie do <em>œmiech</em> przedrostka <em>bez-</em>
+</td>
+<td style="width:234.75px;text-align:center;">'pozbawiony œmiechu'</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">zniszczota</td>
+<td style="width:190.125px;text-align:center;">dodanie cz¹stki <em>-ota</em> do formy utworzonej od czasownika <em>zniszczyæ</em>
+</td>
+<td style="width:234.75px;text-align:center;">'zniszczenie czegoœ'</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">niedowcieleñ</td>
+<td style="width:190.125px;text-align:center;">dodanie do rzeczownika przyrostków <em>nie-</em> i <em>do-</em>
+</td>
+<td style="width:234.75px;text-align:center;">'coœ, co nie jest do koñca wcielone'</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">zamrocz</td>
+<td style="width:190.125px;text-align:center;">utworzenie rzeczownika od czasownika <em>zamroczyæ</em> (odciêcie koñcówki <em>-yæ</em>)</td>
+<td style="width:234.75px;text-align:center;">'to, co wyró¿nia siê mrokiem'</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">bezœwiat</td>
+<td style="width:190.125px;text-align:center;">dodanie do rzeczownika <em>œwiat </em>przedrostka<em> bez-</em>
+</td>
+<td style="width:234.75px;text-align:center;">'to, co nie nale¿y do œwiata'</td>
+</tr>
+<tr>
+<td style="width:190.125px;text-align:center;">bezbrzask</td>
+<td style="width:190.125px;text-align:center;">dodanie do rzeczownika <em>brzask </em>przedrostka<em> bez-</em>
+</td>
+<td style="width:234.75px;text-align:center;">'brak brzasku'</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Neologizmy w znacz¹cy sposób wp³ywaj¹ na interpretacjê wiersza - s¹ zabiegiem typowym dla Leœmiana. Przede wszystkim buduj¹ wizjê niezwyk³ej rzeczywistoœci, która wymyka siê oczywistym s¹dom. Jest oryginalna i niesamowita, tajemnicza, gdy¿ pojawiaj¹ siê w niej nowe zjawiska, które trzeba nazwaæ. Zastosowanie neologizmów ponadto pog³êbia sensy utworu, mo¿liwoœci jego odczytania. Uwypuklaj¹ bowiem pewne elementy, ale wprowadzaj¹ tak¿e treœci filozoficzne, poniewa¿ sugeruj¹ istnienie innej sfery, której nie mo¿na poj¹æ rozumem. Kieruj¹ wiêc uwagê cz³owieka w stronê tego, co zagadkowe, niejasne, a przy tym pobudzaj¹ jego wyobraŸniê. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Podró¿ wêdrownika staje siê przyczyn¹ jego dehumanizacji: "A on bieg³ wybrze¿ami coraz innych œwiatów, / Odcz³owieczaj¹c duszê i oddech wœród kwiatów". Bohater stopniowo zatraca wiêc swe cz³owieczeñstwo natomiast, coraz silniej jednoczy siê z zieleni¹, zostaje w ni¹ wcielony. Ostatecznie sytuacja ta prowadzi do jego œmierci, poniewa¿ mê¿czyzna przekracza granice poznania i zostaje po nim tylko cia³o:</p>
+<p style="font-weight:400;"><em>A¿ zabrn¹³ w takich jagód rozdzwonione dzbany.</em></p>
+<p style="font-weight:400;"><em>W tak¹ zamrocz paproci, w takich cisz kurhany,</em></p>
+<p style="font-weight:400;"><em>W taki bezœwiat zaroœli, w taki bez brzask g³uchy,</em></p>
+<p style="font-weight:400;"><em>W takich szumów ostatnie kêdyœ zawieruchy,</em></p>
+<p style="font-weight:400;"><em>¯e le¿y oto martwy w stu wiosen bezdeni,</em></p>
+<p><em>Cienisty, jak bór w borze - topielec zieleni.</em></p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Zwrot "zatopiæ siê w czymœ" oznacza przenoœnie "byæ czymœ zafascynowanym, zajmowaæ siê tylko tym i nie zwracaæ uwagi na nic innego; byæ przez coœ poch³oniêtym". Gra jêzykowa zawarta w tytule polega na tym, i¿ niesie on za sob¹ przynajmniej dwa odmienne znaczenia - w zale¿noœci od interpretacji. Z jednej bowiem strony tytu³owy <em>Topielec </em>mo¿e oznaczaæ ofiarê. Staje siê ni¹ wêdrownik, bohater utworu, który tonie w zieleni (niczym w wodzie) i w efekcie swej nieposkromionej ciekawoœci, woli poznania tajemnic natury, traci ¿ycie. Z drugiej jednak strony tytu³ dzie³a mo¿e odnosiæ siê do wêdrownika nie jako ofiary, lecz cz³owieka zafascynowanego zieleni¹, który scala siê, zostaje przez ni¹ poch³oniêty lub te¿ zamienia siê w demona.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>WypowiedŸ Boles³awa Leœmiana œwiadczy o tym, i¿ interesuje go metafizyczny aspekt przyrody oraz jej istota. Postrzega j¹ jako ¿ywy, œwiadomy byt, który przyci¹ga go do siebie, ale tak¿e wywo³uje ¿al, kiedy poeta musi siê z nim rozstaæ. S³owa autora s¹ zgodne z treœci¹ i przes³aniem <em>Topielca</em>, poniewa¿ w wierszu tym natura zyskuje ¿ycie: jest czyst¹ si³¹, energi¹, która pozwala na uwodzenie cz³owieka, a ostatecznie jego cudowne przeistoczenie, czyli po³¹czenie z przyrod¹, stanie siê jej cz¹stk¹. Równie¿ wêdrowiec postrzega j¹ w taki sposób jak sam Leœmian: bohatera interesuje istota oraz tajemnica natury, chce j¹ zg³êbiæ. Œwiadczy to przede wszystkim o metafizycznym charakterze tych poszukiwañ. Nie bez znaczenia jest równie¿ fakt, i¿ wa¿na staje siê relacja miêdzy cz³owiekiem a zieleni¹ - d¹¿¹ do kontaktu, wzajemnie na siebie oddzia³uj¹, poniewa¿ cierpi¹ z powodu roz³¹ki. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+Indywidualne<br>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. sibling</p>
+<p>(brat lub siostra: <strong>rodzeństwo</strong>) </p>
+<p>2. relative</p>
+<p>(ktoś z twojej rodziny: <strong>krewny/a</strong>)</p>
+<p>3. buddy</p>
+<p>(kolega/koleżanka, z którym/ą podróżujesz: <strong>towarzysz/ka podróży</strong>)</p>
+<p>4. opponent</p>
+<p>(osoba, przeciwko której grasz na meczu: <strong>przeciwnik</strong>)</p>
+<p>5. stranger</p>
+<p>(osoba, której nie znasz: <strong>nieznajomy/a</strong>)</p>
+<p>6. acquaintance</p>
+<p>(osoba, którą znasz, ale nie jesteś z nią bardzo blisko: <strong>znajomy/a</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. patient</p>
+<p><strong>Uzasadnienie</strong>:<strong> </strong><em>patient</em> (cierpliwy) <em>≠ impatient</em> (niecierpliwy). Do utworzenia antonimów pozostałych przymiotników użyjemy przedrostka un- (<em>unfriendly</em> - nieprzyjazny, <em>unkind</em> - nieżyczliwy). </p>
+<p>2. imaginative</p>
+<p><strong>Uzasadnienie</strong>:<strong> </strong><em>imaginative </em>(z wyobraźnią) <em>≠ unimaginative</em> (pozbawiony wyobraźni). Do utworzenia antonimów pozostałych przymiotników użyjemy przedrostka dis- (<em>disloyal</em>- nielojalny, <em>dishonest</em> - nieuczciwy). </p>
+<p>3. responsible</p>
+<p><strong>Uzasadnienie</strong>:<strong> </strong><em>responsible </em>(odpowiedzialny) <em>≠ irresponsible</em> (nieodpowiedzialny). Do utworzenia antonimów pozostałych przymiotników użyjemy przedrostka im- (<em>immature </em>- niedojrzały, <em>impatient</em> - niecierpliwy).</p>
+<p>4. polite</p>
+<p><strong>Uzasadnienie</strong>:<strong> </strong><em>polite</em> (uprzejmy) <em>≠ impolite</em> (nieuprzejmy). Do utworzenia antonimów pozostałych przymiotników użyjemy przedrostka in- (<em>insensitive</em> - niewrażliwy, <em>intolerant</em> - nietolerancyjny).</p>
+<p>5. responsible</p>
+<p><strong>Uzasadnienie</strong>: <em>responsible </em>(odpowiedzialny) <em>≠ irresponsible</em> (nieodpowiedzialny). Do utworzenia antonimów pozostałych przymiotników użyjemy przedrostka un- (<em>unreliable</em> - nierzetelny, <em>unsociable</em> - nietowarzyski). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Istnieją dwa rodzaje zdań przydawkowych - definiujące i niedefiniujące. Zdania definiujące podają istotną informację na temat jakiejś rzeczy/osoby/miejsca itp., która jest głównym sensem całego zdania. W takich zdaniach nie używamy przecinka przed zaimkiem względnym.</strong></p>
+<p><strong>Zdania niedefiniujące podają dodatkową informację, bez której zdanie ciągle ma sens. Takie zdania oddzielamy przecinkami.</strong></p>
+<hr/>
+<p> </p>
+<p>1. non-defining</p>
+<p>This is a photo of my mum<strong>,</strong> who was on holiday in Greece at the time.  </p>
+<p>2. defining </p>
+<p>(bez przecinka)</p>
+<p>3. defining</p>
+<p>4. non-defining</p>
+<p>Our dog escaped during a walk<strong>,</strong> which was really annoying because it took ages to find him.</p>
+<p>5. non-defining</p>
+<p>We often go to visit my dad's twin brother<strong>,</strong> who organises great barbecues.</p>
+<p>6. defining</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1 - e </p>
+<p>(Bądźmy ze sobą w kontakcie.) </p>
+<p>2 - c</p>
+<p>(Rugby to nie moja działka.)</p>
+<p>3 - a</p>
+<p>(Tom działa mi na nerwy.)</p>
+<p>4 - d</p>
+<p>(Simone i Jaqui wdali się w sprzeczkę.)</p>
+<p>5 - f</p>
+<p>(To brzmi jak świetny plan.)</p>
+<p>6 - b</p>
+<p>(Łatwo jest poznawać przyjaciół.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. friendly  </p>
+<p>2. relationship</p>
+<p>3. arguments</p>
+<p>4. immature</p>
+<p><s class="odr-strikethrough">hurt</s>, <s class="odr-strikethrough">imagine</s></p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Jak bym siebie opisał? Sądzę, że jestem bardzo <strong>przyjazny</strong>. Ludzie mnie lubią, i ze wszystkimi się dogaduję. Jestem towarzyski i lubię poznawać nowych ludzi. Ale w domu sprawy mają się inaczej. Nie mam dobrej <strong>relacji</strong> z bratem. Jest ode mnie trzy lata młodszy i często mnie irytuje. Wchodzi do mojego pokoju bez pytania i czasem zabiera moje gry wideo. Wdajemy się w wiele <strong>kłótni</strong>. Moi rodzice się złoszczą, bo nie lubią hałasu. Mój brat jest dość <strong>niedojrzały</strong> i kiedy mówię mu, żeby wyszedł z mojego pokoju, krzyczy i trzaska drzwiami od swojej sypialni. Potem oboje mamy kłopoty, co jest nie fair!</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. I'm not a fan  </p>
+<p>2. help each other</p>
+<p><strong>Uzasadnienie</strong>: czynność ma zostać wykonana z wzajemnością (ja pomogę tobie, ty mnie), dlatego używamy zaimka <em>each other</em>.</p>
+<p>3. Do you agree</p>
+<p><strong>Uzasadnienie</strong>: tworzymy pytanie w czasie <em>present simple: </em><em>do/does </em>+ osoba + bezokolicznik.</p>
+<p>4. I've had enough</p>
+<p>5. I made myself</p>
+<p><strong>Uzasadnienie</strong>: czynność została wykonana względem podmiotu, dlatego używamy zaimka zwrotnego. <em>I </em>(ja) - <em>myself </em>(sobie).</p><br>

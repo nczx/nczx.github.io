@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a) Baczyñski przedstawia przesz³oœæ w pozytywny sposób. Œwiadczy o tym dobór epitetów j¹ opisuj¹cych. S³owa: "zdrój [...] chy¿y", "wody szerokie", "bujne ob³oki" podkreœlaj¹ piêkno i dynamiczny charakter natury znanej z dzieciñstwa. Œwiat jawi siê jako rozleg³y, nieska¿ony dzia³aniami cz³owieka, bogaty. Równie¿ "ziemia [...] têga" wprowadza pozytywne skojarzenia, poniewa¿ poeta ukazuje j¹ jako coœ stabilnego oraz potê¿nego - zapewnia wiêc poczucie bezpieczeñstwa i zaufania. "Go³êbia m³odoœæ" tak¿e sugeruje harmonijny wymiar przesz³oœci. Go³¹b symbolizuje bowiem pozytywne wartoœci: pokój, niewinnoœæ, mi³oœæ, wreszcie ³agodnoœæ i odrodzenie. Z tego te¿ powodu m³odoœæ stanowi pogodny i radosny czas, pozbawiony przemocy i wojny.</p>
+<p> </p>
+<p>b) Wskazane motywy wprowadzaj¹ do wiersza Baczyñskiego dodatkow¹ symbolikê, a przy tym jednoznacznie wskazuj¹ na sytuacjê bohatera utworu. Œwiat³o pojawia siê we fragmencie dotycz¹cym krêgu: "Kr¹g jak no¿em z wolna rozcina, / przetnie œwiat³o, zanim dzieñ minie". Przypomina tym samym o pewnym porz¹dku rzeczywistoœci, mo¿e tak¿e symbolizowaæ ¿ycie, poznanie, radoœæ, duchowoœæ. Wartoœci te zostaj¹ jednak brutalnie naruszone przez kr¹g, który rozcina œwiat³o. Dochodzi wiêc do zniszczenia dotychczasowego ³adu, naruszenia praw rzeczywistoœci i jej pozytywnego wymiaru. W przeciwieñstwie do œwiat³a noc stanowi reprezentacjê odmiennych znaczeñ. Jest czasem, który wywo³uje niepewnoœæ oraz poczucie zagro¿enia - ukrywa przed cz³owiekiem prawdê o otaczaj¹cym go œwiecie. Dodatkowo w porze tej narasta œwiadomoœæ zbli¿aj¹cej siê œmierci, co potêguj¹ s³yszalne dŸwiêki: "Noc¹ s³yszê, jak coraz bli¿ej / dr¿¹c i graj¹c kr¹g siê zaciska". Noc zmusza do konfrontacji, refleksji nad przesz³oœci¹ i teraŸniejszoœci¹, podkreœla rozdŸwiêk miêdzy nimi. W wierszu obecny jest tak¿e motyw wody i nieba - skojarzony z m³odoœci¹. Wp³ywa on na sielankow¹ wizjê rzeczywistoœci. Natura zostaje przedstawiona jako element, który kszta³tuje ¿ycie i to¿samoœæ podmiotu lirycznego. Woda i niebo to przewodnicy osoby mówi¹cej - ucz¹ j¹ piêkna, radoœci, ciekawoœci œwiata: "wyhuœta³a mnie chmur ko³yska", "A mnie przecie¿ wody szerokie / na dŸwigarach swych nios³y p³atki". Woda w kulturze oznacza przede wszystkim prawdê, m¹droœæ i oczyszczenie. Wp³ywa wiêc na wra¿liw¹ naturê podmiotu, jego niewinnoœæ. Równie¿ motyw nieba wprowadza podobne znaczenia, poniewa¿ reprezentuje porz¹dek œwiata, a tak¿e rzeczywistoœæ duchow¹, zbawienie itp. </p>
+<p> </p>
+<p>c) Sformu³owanie to wyra¿a nie tylko pewne zaskoczenie, ale tak¿e wprowadza przeciwstawienie. Podmiot liryczny w ten sposób zaznacza swoje poczucie rozdŸwiêku miêdzy sielankow¹ m³odoœci¹ i brutaln¹ teraŸniejszoœci¹. Nie mo¿e uwierzyæ, ¿e spokojny i beztroski czas na ³onie natury ustêpuje doœwiadczeniu wojny. Niedowierzanie to wynika z faktu, i¿ nic nie przygotowa³o go na przysz³oœæ, która zaprzecza wartoœciom kluczowym w m³odoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przeczucie nadchodz¹cej œmierci opisuje metafora krêgu:</p>
+<ul>
+<li>"Noc¹ s³yszê, jak coraz bli¿ej / dr¿¹c i graj¹c kr¹g siê zaciska"; </li>
+<li>"Kr¹g powolny dzieñ czy noc kr¹¿y / ostrzem œwiszcz¹c tnie ju¿ przy ustach";</li>
+<li>"Kr¹g jak no¿em z wolna rozcina, / przetnie œwiat³o, zanim dzieñ minie";</li>
+<li>"krêgiem ostrym rozdarty na pó³".</li>
+</ul>
+<p>Wp³ywa ona na wyrazistoœæ przekazu, poniewa¿ sugeruje zagro¿enie, którego nie mo¿na unikn¹æ. Kr¹g jest bowiem ostateczn¹ pu³apk¹ - otacza ona podmiot liryczny z ka¿dej strony, nieustannie siê zaciska, co œwiadczy o beznadziejnoœci po³o¿enia mówi¹cego. Ca³y czas ma on œwiadomoœæ tego, i¿ œmieræ zbli¿a siê coraz bardziej - nie mo¿e tym samym zmieniæ swego po³o¿enia czy uciec. Metafora ta wprowadza tak¿e grozê, poniewa¿ kr¹g ca³y czas przypomina o swym istnieniu, dotyka ju¿ bezpoœrednio bohatera wiersza. Zastosowany œrodek wyrazu artystycznego w obrazowy sposób oddaje doœwiadczenia cz³owieka w czasie wojny - ci¹g³e niebezpieczeñstwo, fatalizm losu, niepewnoœæ, a tak¿e brutalny i przedwczesny koniec ¿ycia. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Baczyñski dynamizuje tekst za pomoc¹:</p>
+<ul>
+<li>licznych czasowników w czasie teraŸniejszym (lub przesz³ym), które oddaj¹ ruch -&gt; "siê zaciska", "wyhuœta³a", "nios³y", "rozcina", "przetnie"; </li>
+<li>metafor -&gt; "dr¿¹c i graj¹c kr¹g siê zaciska";</li>
+<li>kontrastów -&gt; "Noc¹ s³yszê, jak coraz bli¿ej / dr¿¹c i graj¹c kr¹g siê zaciska. / A mnie przecie¿ zdrój rzeŸbi³ chy¿y, / wyhuœta³a mnie chmur ko³yska.";</li>
+<li>porównañ -&gt; "g³owê rzucê pod wiatr jak granat";</li>
+<li>epitety -&gt; "zdarzeñ zamêt";</li>
+<li>o¿ywienia -&gt; "Kr¹g powolny dzieñ czy noc kr¹¿y";</li>
+<li>przerzutnie -&gt; "A mnie przecie¿ wody szerokie / na dŸwigarach swych nios³y p³atki";</li>
+<li>elipsa -&gt; "a odwaga - gdy œmierci¹ nios³o".</li>
+</ul>
+<p>Zabiegi te wp³ywaj¹ na atmosferê dzie³a oraz w wyrazisty sposób zaznaczaj¹ tragiczn¹ sytuacjê podmiotu lirycznego. Nagromadzenie czasowników ruchu w czasie przesz³ym s³u¿y bowiem zaprezentowaniu pozytywnej wizji przesz³oœci, która wp³ywa na ukszta³towanie siê to¿samoœci osoby mówi¹cej. Sprawia tak¿e, ¿e œwiat jawi siê jako przyjazny, bezpieczny, rozleg³y, ale tak¿e zmienny. Czasowniki dotycz¹ce aktualnej sytuacji podmiotu maj¹ raczej statyczny charakter - ruch dotyczy przede wszystkim  krêgu. Wprowadza to atmosferê grozy oraz niew¹tpliwego osaczenia. Bohater jest niejako uwiêziony, nie mo¿e uciec, zaœ zbli¿aj¹cy siê kr¹g ca³y czas stanowi zapowiedŸ nadci¹gaj¹cej tragedii. Dynamizacja tekstu za pomoc¹ wskazanych œrodków œwiadczy tak¿e o metamorfozie rzeczywistoœci, kontraœcie miêdzy sielankowym czasem m³odoœci a brutalnymi realiami wojny. Ponadto wprowadza poczucie niepokoju, poniewa¿ podmiot liryczny nie mo¿e znaleŸæ ¿adnego punktu odniesienia - ¿yje w ci¹g³ym zagro¿eniu oraz chaosie. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Podmiot liryczny w utworze Baczyñskiego przyjmuje refleksyjn¹ oraz rozliczeniow¹ postawê. Wraca bowiem pamiêci¹ do szczêœliwego czasu dzieciñstwa, który kontrastuje z jego obecn¹ sytuacj¹. M³odoœæ bohatera jawi siê bowiem jako sielankowy okres, który wyró¿nia siê poczuciem bezpieczeñstwa, piêknem, doœwiadczeniem harmonii oraz poznawaniem œwiata natury: "A mnie przecie¿ zdrój rzeŸbi³ chy¿y, / wyhuœta³a mnie chmur ko³yska". TeraŸniejszoœæ przypomina osobie mówi¹cej o nieuchronnym zagro¿eniu i nadci¹gaj¹cej œmierci, staje siê Ÿród³em cierpienia i odcz³owieczenia. Przynosi mu gorycz, poniewa¿ podmiot liryczny ma œwiadomoœæ, ¿e jego los jest tragiczny: "a ja przeœpiê czas wielkiej rzeŸby / z g³ow¹ ciê¿k¹ na karabinie", odebrane zostaje mu coœ cennego. Z kolei w opisie przysz³oœci osoba mówi¹ca przyjmuje postawê wieszcza, poniewa¿ przepowiada to, co nast¹pi. Wie, ¿e jest bezradna wobec niesprzyjaj¹cych okolicznoœci historycznych, skazana na poœwiêcenie: "g³owê rzucê pod wiatr jak granat, / piersi zgniecie czas czarn¹ ³ap¹". Przysz³e wypadki s¹ wiêc ponure, bolesne dla bohatera, poniewa¿ nie wie, czy zachowa siê o nim pamiêæ. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>a) Kontekstem dla tej metafory jest bez w¹tpienia biografia samego poety. Baczyñski to przedstawiciel pokolenia wojennego, który bra³ udzia³ w powstaniu warszawskim, nale¿a³ do AK. Jego doœwiadczenie ¿yciowe jest wiêc naznaczone wojn¹, co odzwierciedla sens przytoczonej metafory. Przypomina bowiem o tym, i¿ m³odym ludziom zosta³o odebrano prawo do dorastania, kszta³towania swej to¿samoœci. Zamiast tego wojna sta³a siê jedyn¹ znan¹ im codziennoœci¹, zmieni³a na zawsze ich egzystencjê, poniewa¿ omin¹³ ich wa¿ny moment ¿ycia. </p>
+<p> </p>
+<p>b) Epitet zawarty w s³owach "wielkiej rzeŸby" podkreœla przede wszystkim znaczenie tego momentu oraz jego donios³oœæ. Jest wiêc to niepowtarzalna chwila, która bêdzie mieæ ogromny wp³yw na ludzi oraz przysz³oœæ. Z kolei okreœlenie g³owy mianem "ciê¿kiej" wyraziœcie okreœla sytuacjê osoby mówi¹cej. Nie uczestniczy ona w tym procesie, jest poza g³ównym nurtem zdarzeñ. Epitet ten mo¿e sugerowaæ tak¿e ogrom trudnych doœwiadczeñ oraz niemo¿noœæ zmiany swego losu. </p>
+<p> </p>
+<p>c) S³owo "rzeŸba" ma zwi¹zek z czasownikiem "rzezaæ", który oznacza nie tylko 'ci¹æ, rzeŸbiæ, wydobywaæ kszta³t', ale tak¿e kiedyœ 'zabijaæ, biæ'. "Czas wielkiej rzeŸby" w utworze Baczyñskiego w symboliczny sposób odwo³uje siê do sytuacji m³odych ludzi bior¹cych udzia³ w dzia³aniach wojennych. Oznacza bowiem to, ¿e zosta³a im odebrana mo¿liwoœæ ukszta³towania swej to¿samoœci, œwiatopogl¹du czy systemu wartoœci. Tym samym - w przeciwieñstwie do rzeŸby rozumianej jako dzie³o artystyczne - nie udaje im siê osi¹gn¹æ ostatecznego kszta³tu. Metafora ta mo¿e tak¿e odwo³ywaæ siê do znaczenia "rzeŸby" jako 'formy ukszta³towania terenu'. Taka interpretacja przypomina o tym, i¿ wojna wp³ywa na oblicze ca³ej rzeczywistoœci - nie tylko w sensie dos³ownym (zniszczenie miast i innych obszarów przez np. bombardowanie), lecz tak¿e metaforycznym (zmienia na dobre spo³eczeñstwo i panuj¹ce w nim relacje, przyczynia siê do przemian historyczno-politycznych). Ponadto - w odniesieniu do etymologii - jest to byæ mo¿e zaznaczenie charakteru tego momentu, w którym zabijanie innych staje siê czymœ naturalnym oraz powszechnym. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>W przytoczonym fragmencie wiersza pojawiaj¹ siê nowe przemyœlenia, które dotycz¹ mi³oœci, ale wprowadzaj¹ now¹ perspektywê. <em>Z g³ow¹ na karabinie</em> odwo³uje siê bowiem do tego uczucia, która wi¹¿e siê z wielkimi sprawami; m³odzieñczy idealizm tym samym staje siê przyczyn¹ poœwiêcenia ¿ycia. Z kolei drugi utwór ukazuje mi³oœæ w kontekœcie relacji kobiety i mê¿czyzny. Jest on zafascynowany cia³em, które skrywa w sobie piêkno oraz tajemnicê: "które siê w formach s³owiczych usta³o, / jak mleko p³ynie w szklanym smuk³ym dzbanie". Mi³oœæ dotyczy tak¿e ojczyzny. Chocia¿ jest zniszczona wojn¹, przepe³niona œmierci¹ i strachem, to jednak nadal budzi ciep³e uczucia: "I pokocha³eœ jeszcze ziemiê grozy / z ognistym œladem wielkich kroków bo¿ych". Tym samym mo¿na zauwa¿yæ, ¿e poeta wprowadza dwóch nowych odbiorców mi³oœci oraz swoist¹ kameralnoœæ, ponadto zaznacza podobieñstwo miêdzy wybrank¹ a ojczyzn¹, które s¹ tak samo wa¿ne. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Utwór koñcz¹ s³owa:</p>
+<p><em>bo to by³a ¿ycia nieœmia³oœæ,</em></p>
+<p><em>a odwaga - gdy œmierci¹ nios³o.</em></p>
+<p><em>Umrzeæ przyjdzie, gdy siê kocha³o </em></p>
+<p><em>wielkie sprawy wielk¹ mi³oœci¹. </em></p>
+<p>Zakoñczenie utworu wprowadza uniwersaln¹ perspektywê, która reprezentuje losy ca³ego pokolenia uwik³anego w wojnê. Specyfika ich egzystencji stanowi odwrócenie typowego porz¹dku, poniewa¿ ¿ycie budzi w nich niepewnoœæ, natomiast œmieræ przyjmuj¹ z odwag¹ i zdecydowaniem. Podmiot liryczny zdaje siê przekonany o nieuchronnoœci przedwczesnej œmierci. Jest ona wynikiem wielkich oraz bezwarunkowych uczuæ patriotycznych, które niejako sk³aniaj¹ do poœwiêcenia w imiê najwy¿szych wartoœci - ojczyzny, wolnoœci ("wielkie sprawy"). Mog¹ mieæ tak¿e swe Ÿród³o w m³odzieñczym idealizmie czy emocjonalnoœci ("g³upia mi³oœæ"). Sentencjonalnoœæ dwóch ostatnich wersów wynika nie tylko z ich zwiêz³oœci. Przede wszystkim zawieraj¹ one ogóln¹ myœl o refleksyjnym charakterze: przypominaj¹ o tym, ¿e trzeba zap³aciæ za swe oddanie wy¿szym wartoœciom. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<table border="1" style="border-collapse:collapse;width:911px;height:446px;">
+<tbody>
+<tr>
+<td style="width:300.3px;"> </td>
+<td style="background-color:#aed581;text-align:center;width:300.3px;"><em><strong>Testament mój</strong></em></td>
+<td style="background-color:#aed581;text-align:center;width:300.4px;"><em><strong>Z g³ow¹ na karabinie </strong></em></td>
+</tr>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:300.3px;"><strong>Sytuacja liryczna</strong></td>
+<td style="width:300.3px;text-align:center;">Osoba mówi¹ca, poeta, rozlicza siê ze swej egzystencji, przeczuwa nadchodz¹c¹ œmieræ. Z tego powodu wspomina swe ¿ycie, ale tak¿e przekazuje ¿yj¹cym sw¹ wolê i przes³anie. </td>
+<td style="width:300.4px;text-align:center;">W utworze wypowiada siê osoba, która znajduje siê w œmiertelnym zagro¿eniu, czego metafor¹ jest zaciskaj¹cy siê kr¹g. Uczestniczy ona w konflikcie wojennym: "z g³ow¹ ciê¿k¹ na karabinie", ale tak¿e przewiduje sw¹ przysz³oœæ.</td>
+</tr>
+<tr>
+<td style="background-color:#aed581;text-align:center;width:300.3px;"><strong>Postawa podmiotu lirycznego</strong></td>
+<td style="width:300.3px;text-align:center;">Podmiot liryczny okreœla przede wszystkim melancholia oraz refleksyjna postawa. Odczuwa smutek na myœl o losie ojczyzny, na której rzecz dzia³a³. Mimo cierpienia oraz ¿alu gorliwe zachêca ¿yj¹cych, by nie tracili nadziei, lecz walczyli o swój kraj. Chocia¿ czuje siê niedoceniony, to jednak ma nadziejê, ¿e po œmierci bêdzie kszta³towa³ ducha rodaków.    </td>
+<td style="width:300.4px;text-align:center;">Podmiot liryczny rozwa¿a wp³yw wojny na swoj¹ egzystencjê. Z czu³oœci¹ wspomina szczêœliwy czas dzieciñstwa, który kontrastuje z surowymi realiami czasu walki. Osoba mówi¹ca ma œwiadomoœæ nadci¹gaj¹cej œmierci i tragizmu swego losu: "Obskoczony przez zdarzeñ zamêt, / krêgiem ostrym rozdarty na pó³, / g³owê rzucê pod wiatr jak granat". Odczuwa w pewnym stopniu ¿al i gorycz, jednak wie, i¿ nie mog³aby post¹piæ inaczej, co wynika z jej uczuæ i systemu wartoœci. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

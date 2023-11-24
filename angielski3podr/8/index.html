@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. Yes, there is this one place where I'd like to live one day. It's in Spain. I'd like to live there because the weather is fantastic. It's much warmer than in Poland.</p>
+<p>(Tak, jest takie jedno miejsce, w którym chciał(a)bym kiedyś zamieszkać. Znajduje się ono w Hiszpanii. Chciał(a)bym tam zamieszkać, ponieważ pogoda jest fantastyczna. Jest dużo cieplej niż w Polsce.)</p>
+<p><br/>2. My aunt works for an IT company. I'd like to have a job like hers one day. She's a cyber security specialist. </p>
+<p>(Moja ciocia pracuje w firmie informatycznej. Chciał(a)bym kiedyś mieć taką pracę jak ona. Jest specjalistką od cyberbezpieczeństwa.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Przykładowa odpowiedź:  </strong></p>
+<p>Tom and Edward are strangers. They meet one day and decide to switch places, because they look like twins.</p>
+<p>(Tom i Edward są nieznajomymi. Poznają się pewnego dnia i postanawiają zamienić się miejscami, ponieważ wyglądają jak bliźniacy.)</p>
+<p><strong>Fragment w tekście: </strong>"The boys looked like twins, but the lives which they lived were very different. Curious to see the other side of life, the boys switched places." - Chłopcy wyglądali jak bliźniacy, ale życie, które obaj wiedli, było zupełnie inne. Ciekawi, jak wygląda druga strona życia, zamienili się miejscami.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Nine.</p>
+<p><strong>Uzasadnienie</strong>: w tekście znajduje się 9 zdań przydawkowych. Wprowadzone są zaimkami względnymi, takimi jak <em>who</em> (tu: który),<em> which</em> (tu: które),<em> where</em> (gdzie)<em>,</em> <em>that</em> (tu: którzy),<em> when</em> (kiedy) i <em>whose </em>(tu: którego). </p>
+<p><br/>2a. who / that</p>
+<p><strong>Fragmenty w tekście</strong>: "Tom was a boy who lived in the (...). (...) the rich people that lived in the royal palace." - Tom był chłopcem, który mieszkał w (...). (...) bogaci ludzie, którzy mieszkali w pałacu królewskim.</p>
+<p>b. which / that</p>
+<p><strong>Fragmenty w tekście</strong>: "(...) a better life, which would be free of (...). (...) a decision that would change their lives (...)." - (...) lepsze życie, które byłoby wolne od (...). (...) decyzja, która miała odmienić ich życia (...).</p>
+<p>c. where</p>
+<p><strong>Fragment w tekście</strong>: "(...) a place where he could sit (...)." - (...) miejsce, w którym mógł usiąść (...).</p>
+<p>d. when</p>
+<p><strong>Fragment w tekście </strong>"He always went there when he had nothing else to do." - Szedł tam zawsze, kiedy nie miał nic innego do roboty.</p>
+<p>e. whose</p>
+<p><strong>Fragment w tekście</strong>: "(...) a boy whose beautiful clothes (...)." - (...) chłopiec, którego piękne ubrania (...).</p>
+<p><br/>3. Yes.</p>
+<p><strong>Uzasadnienie</strong>: podkreślone fragmenty zawierają zdania przydawkowe niedefiniujące. Są oddzielone przecinkiem i wprowadzają dodatkową informację, bez której zdanie ciągle ma sens.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! </strong><strong>W zdaniach przydawkowych definiujących używamy następujących zaimków:</strong></p>
+<p><em><strong>who/that</strong></em> -<strong> w odniesieniu do <em>osób.</em></strong><br/><strong><em>which/that</em> - w odniesieniu do rzeczy, zwierząt i miejsc (kiedy opisujemy, że jakieś są)<em>.</em></strong><br/><strong><em>where</em> - w odniesieniu do miejsc (kiedy opisujemy, że coś się w nich znajduje albo dzieje)<em>.</em></strong><br/><strong><em>when</em> - w odniesieniu do okresu czasu (kiedy opisujemy, że coś się wtedy dzieje)<em>.</em></strong><br/><strong><em>whose</em> - kiedy chcemy opisać posiadanie albo pokrewieństwo.</strong></p>
+<hr/>
+<p> </p>
+<p>1. where </p>
+<p>2. which/that</p>
+<p>3. when</p>
+<p>4. who/that</p>
+<p>5. whose</p>
+<p><br/><br/></p>
+<p><br/><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. A place where I like to hang out with my friends is our local pizzeria. </p>
+<p>(Miejsce, gdzie lubię spędzać czas z przyjaciółmi to nasza miejscowa pizzeria.)</p>
+<p><br/>2. An object that is important to my mum is her watch.</p>
+<p>(Przedmiot, który jest ważny dla mojej mamy, to jej zegarek.)</p>
+<p><br/>3. A stranger helped me when I was on holiday with my parents. I was 6 years old and I got lost. The lady helped me find my parents.</p>
+<p>(Nieznajoma osoba pomogła mi, gdy byłem/am na wakacjach z rodzicami. Miałem/am 6 lat i zgubiłem/am się. Ta pani pomogła mi odnaleźć rodziców.)</p>
+<p><br/>4. Ms Kowalska is a person who is one of my neighbours. She's very nice and she's got a beautiful cat.</p>
+<p>(Pani Kowalska to osoba, która jest jedną z moich sąsiadek. Jest bardzo miła i ma pięknego kota.)</p>
+<p><br/>5. My aunt is a relative whose surname is different than mine. It's because she changed her name after she got married.</p>
+<p>(Moja ciotka jest krewną, której nazwisko jest inne niż moje. To dlatego, że zmieniła nazwisko po wyjściu za mąż.)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Uwaga! Zdania przydawkowe niedefiniujące zawierają dodatkowe informacje odnośnie osoby, rzeczy, pojęcia lub miejsca, którego dotyczą. Są oddzielone przecinkami i używamy w nich </strong><strong>następujących zaimków:</strong></p>
+<p><strong><em>who</em> - w odniesieniu do osób.</strong><br/><strong><em>which </em>- w odniesieniu do rzeczy, zwierząt i miejsc (kiedy opisujemy, że jakieś są).</strong><br/><strong><em>where </em>- w odniesieniu do miejsc (kiedy opisujemy, że coś się w nich znajduje albo dzieje).</strong><br/><strong><em>when</em> - w odniesieniu do okresu czasu (kiedy opisujemy, że coś się wtedy dzieje).</strong><br/><strong><em>whose</em> - kiedy chcemy opisać posiadanie albo pokrewieństwo.</strong></p>
+<p><strong>W zdaniach przydawkowych niedefiniujących nie używamy <em>that</em>.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. Edinburgh, where my father was born, is a beautiful city. </p>
+<p>3. My next-door neighbours, who used to live in Canada, are really friendly.</p>
+<p>4. That was the final match of the season, which was our best season ever.</p>
+<p>5. Freddie Mercury, whose songs are all-time classics, is my favourite singer.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. (przykład)</p>
+<p>2. whose</p>
+<p>My best friend<strong>,</strong> whose birthday is on the same day as mine<strong>,</strong> is three hours older than me. </p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o czyimś posiadaniu, używamy zaimka <em>whose.</em> To zdanie podaje dodatkową informację, bez której zdanie ciągle ma sens, dlatego jest to zdanie niedefiniujące - należy oddzielić je przecinkami. </p>
+<p>3. when</p>
+<p>Remember that week when we were doing our exams? It was really hot.</p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o okresie czasu, używamy <em>when.</em> To zdanie podaje informację, która jest potrzebna, żeby zdanie miało sens, dlatego jest to zdanie definiujące - nie oddzielamy go przecinkami.</p>
+<p>4. that</p>
+<p>She found a flatmate that she can trust.</p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o osobie, w zdaniu definiującym możemy użyć <em>that.</em> To zdanie podaje informację, która jest potrzebna, żeby zdanie miało sens, dlatego jest to zdanie definiujące - nie oddzielamy go przecinkami.</p>
+<p>5. which</p>
+<p>The city of Ankara<strong>,</strong> which is the capital of turkey<strong>,</strong> is in Asia.</p>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o jakimś miejscu, że jakieś są, używamy zaimka <em>which.</em> To zdanie podaje dodatkową informację, bez której zdanie ciągle ma sens, dlatego jest to zdanie niedefiniujące - należy oddzielić je przecinkami.</p>
+<p><br/><strong><br/>Odpowiedź:</strong></p>
+<p>Zaimki <em>which,</em> <em>who</em> albo <em>that</em> możemy pominąć w zdaniach definiujących, jeśli pełnią funkcję dopełnienia w zdaniu (jeśli występuje po nich rzeczownik albo zaimek osobowy, który jest podmiotem). Taki zaimek występuje w zdaniu <strong>4</strong>.</p><br><a style="color:red; font-size:25px;">#BRAINTEASER</a><br>
+<p><strong>Odpowiedź:  </strong></p>
+<p>It's the word "your".</p>
+<p><br/><strong>Uzasadnienie odpowiedzi:</strong></p>
+<p>Odpowiedzią zagadki jest wyraz "your". Bez zaimka "your" w "your enemy" i "your friend", "twój wróg" i "twój przyjaciel" nie są już "twoi".</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Rozwiązanie na obrazku:</strong> </p>
+<p><img alt="" height="373" src="./data/1199702-0.jpg" width="800"/></p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Ta osoba, która urodziła się w Sulechowie, zdobyła nagrodę Nobla w dziedzinie literatury w 2018 roku.</p>
+<p> </p>
+<p><strong>Rozwiązanie zagadki:</strong> Olga Tokarczuk</p><br>

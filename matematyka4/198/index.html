@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 27</a><br>
+<p><strong>a)</strong></p> <p>Rozwiążemy nierówność:</p> <p><span> <math-expr expr="abs(2x+4) leq 6" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="2abs(x+2) leq 6 \ \ \ |:2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(x+2) leq 3" syntax="text"></math-expr> </span></p> <p>Korzystając z <span style="text-decoration: underline;">własności wartości bezwzględnej</span> mamy:   </p> <p><span> <math-expr expr="x+2 leq 3 \ \ \ ^^ \ \ \ x+2 geq -3" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="x leq 1 \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ x geq -5" syntax="text"></math-expr> </span></p> <p>czyli</p> <p><span> <math-expr expr="ulul x in langle -5, \ 1 rangle" syntax="text"></math-expr> </span>       </p> <hr/> <p><strong>b)</strong></p> <p>Rozwiążemy nierówność:</p> <p><span> <math-expr expr="abs(2x+3) &gt;1" syntax="text"></math-expr> </span></p> <p>Korzystając z <span style="text-decoration: underline;">własności wartości bezwzględnej</span> mamy: </p> <p><span> <math-expr expr="2x+3&gt;1 \ \ \ vv \ \ \ 2x+3 &lt; -1" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="2x&gt; -2 \ \ \ \ \ \ \ \ \ \ \ \ \ 2x&lt; -4" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x &gt; -1 \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ x&lt; -2" syntax="text"></math-expr> </span></p> <p>czyli</p> <p><span> <math-expr expr="ul(ul( x in (-infty, -2) cup (-1, \ infty)" syntax="text"></math-expr> </span>             </p> <hr/> <p><strong>c)</strong></p> <p>Rozwiążemy nierówność:</p> <p><span> <math-expr expr="abs(5-10x) geq 4+ 2abs(x-1/2)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="10abs(1/2-x) - 2abs(x-1/2) geq 4" syntax="text"></math-expr> </span>   </p> <p><span> <math-expr expr="10abs(x-1/2)-2abs(x-1/2) geq 4" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="8abs(x-1/2) geq 4 \ \ \ |:8" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(x-1/2) geq 1/2" syntax="text"></math-expr> </span>    </p> <p>Korzystając z <span style="text-decoration: underline;">własności wartości bezwzględnej</span> mamy: </p> <p><span> <math-expr expr="x-1/2 geq 1/2 \ \ \ vv \ \ \ x-1/2 leq -1/2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="x geq 1 \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ x leq 0" syntax="text"></math-expr> </span></p> <p>czyli</p> <p><span> <math-expr expr="ul(ul( x in (-infty, \ 0 rangle cup langle 1, \ infty )" syntax="text"></math-expr> </span>       </p> <hr/> <p><strong>d)</strong></p> <p>Rozwiążemy nierówność:</p> <p><span> <math-expr expr="abs(5x+25) - abs(3x+15) &gt;7+ abs(x+5)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="5abs(x+5) - 3abs(x+5) &gt;7+ abs(x+5)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(x+5) &gt;7" syntax="text"></math-expr> </span></p> <p>Korzystając z <span style="text-decoration: underline;">własności wartości bezwzględnej</span> mamy: </p> <p><span> <math-expr expr="x+5&gt;7 \ \ \ vv \ \ \ x+5&lt; -7" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="x &gt;2 \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ x &lt; -12" syntax="text"></math-expr> </span></p> <p>czyli</p> <p><span> <math-expr expr="ul(ul( x in (-infty, -12) cup( 2, \ infty)" syntax="text"></math-expr> </span>       </p><br><a style="color:red; font-size:25px;">Zadanie 28</a><br>
+<p><strong>a)</strong></p>
+<p>Rozwiążemy równanie:</p>
+<p><math-expr expr="|x|+|x+2|=8" syntax="text"></math-expr>  </p>
+<p>Zauważmy, że w zależności od znaku wyrażenia pod wartością bezwzględną równanie ma inną postać. Pierwsza wartość bezwzględna zmienia znak w <strong>x=0</strong> a druga w <strong>x=-2</strong>.</p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo, -2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x-(x+2)=8" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x-x-2=8" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x=10 \ \ \ |:(-2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=-5 \ \ \ ^^ \ \ \ x in (-oo, -2)" syntax="text"></math-expr>         </p>
+<p><math-expr expr="ul( x=-5)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; -2, \ 0)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+x+2=8" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2!=8" syntax="text"></math-expr>  </p>
+<p>Podane równanie jest sprzeczne.</p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 0,+oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x+x+2=8" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x=6 \ \ \ |:2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=3 \ \ \ ^^ \ \ \ x in &lt;&lt; 0,+oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x=3)" syntax="text"></math-expr>  </p>
+<p>Zapiszmy ostateczne rozwiązanie danego równania:</p>
+<p><math-expr expr="ulul x in {-5, \ 3}" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Rozwiążemy równanie:</p>
+<p><math-expr expr="|x-3|+|1-x|=2" syntax="text"></math-expr>  </p>
+<p>Zauważmy, że w zależności od znaku wyrażenia pod wartością bezwzględną równanie ma inną postać. Pierwsza wartość bezwzględna zmienia znak w <strong>x=3</strong> a druga w <strong>x=1</strong>.</p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo, \ 1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x-3)+(1-x)=2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+3+1-x=2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x+4=2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x=-2 \ \ \ |:(-2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=1 \ \ \ ^^ \ \ \ x in (-oo, \ 1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul x in O/" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; 1, \ 3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="{{{\displaystyle -{\left({x}-{3}\right)}-{\left(1-\right.}{x)}={2}}}}"></math-expr>  </p>
+<p><math-expr expr="-x+3-1+x=2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2=2" syntax="text"></math-expr></p>
+<p>czyli </p>
+<p><math-expr expr="ul( x in &lt;&lt; 1, \ 3)" syntax="text"></math-expr>   </p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 3, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x-3-1+x=2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x=6 \ \ \ |:2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=3 \ \ \ ^^ \ \ \ x in &lt;&lt; 3, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul x=3" syntax="text"></math-expr>  </p>
+<p>Zapiszmy ostateczne rozwiązanie danego równania:</p>
+<p><math-expr expr="ulul x in &lt;&lt; 1,3&gt;&gt;" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Rozwiążemy równanie:</p>
+<p><math-expr expr="|2x-1|=x+|x+4|" syntax="text"></math-expr>  </p>
+<p>Zauważmy, że w zależności od znaku wyrażenia pod wartością bezwzględną równanie ma inną postać. Pierwsza wartość bezwzględna zmienia znak w <strong>x=<sup>1</sup>/<sub>2</sub></strong> a druga w <strong>x=-4</strong>.</p>
+<p><strong>Przypadek I</strong>, gdy <math-expr expr="x in (-oo, -4)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(2x-1)=x-(x+4)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x+1=x-x-4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x=-5 \ \ \ |:(-2)" syntax="text"></math-expr>   </p>
+<p><math-expr expr="x=5/2 \ \ \ ^^ \ \ \ x in (-oo,-4)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul x in O/" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; -4, \ 1/2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(2x-1)=x+x+4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x+1=x+x+4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x+1=2x+4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-4x=3 \ \ \ |:(-4)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=-3/4 \ \ \ ^^ \ \ \ x in &lt;&lt; -4, \ 1/2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x = -3/4 )" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 1/2, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x-1=x+x+4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x-1=2x+4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-1!=4" syntax="text"></math-expr>  </p>
+<p>Otrzymujemy sprzeczność.</p>
+<p>Zapiszmy ostateczne rozwiązanie danego równania:</p>
+<p><math-expr expr="ulul x=-3/4" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>d)</strong></p>
+<p>Rozwiążemy równanie:</p>
+<p><math-expr expr="|3+2x|=12-3|x-3|" syntax="text"></math-expr>  </p>
+<p>Zauważmy, że w zależności od znaku wyrażenia pod wartością bezwzględną równanie ma inną postać. Pierwsza wartość bezwzględna zmienia znak w <strong>x=<sup>-3</sup>/<sub>2</sub></strong> a druga w <strong>x=3</strong>.</p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo, -3/2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(3+2x)=12-3(-(x-3))" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-3-2x=12-3(-x+3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-3-2x=12+3x-9" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-5x=6 \ \ \ |:(-5)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=-1 1/5 \ \ ^^ \ \ x in (-oo, -3/2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ulx\in \emptyset" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; -3/2, \ 3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="3+2x=12-3(-(x-3))" syntax="text"></math-expr>  </p>
+<p><math-expr expr="3+2x=12-3(-x+3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="3+2x=12+3x-9" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x=0 \ \ \ |:(-1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=0 \ \ \ ^^ \ \ \ x in &lt;&lt; -3/2, \ 3)" syntax="text"></math-expr></p>
+<p><math-expr expr="ul( x=0)" syntax="text"></math-expr>    </p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 3, \ oo)" syntax="text"></math-expr>   </p>
+<p><math-expr expr="3+2x=12-3(x-3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="3+2x=12-3x+9" syntax="text"></math-expr>  </p>
+<p><math-expr expr="5x=18 \ \ \ |:5" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x=3 3/5 \ \ \ ^^ \ \ \ x in &lt;&lt; 3, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x= 3 3/5)" syntax="text"></math-expr>  </p>
+<p>Zapiszmy ostateczne rozwiązanie danego równania:</p>
+<p><math-expr expr="ulul x in {0, \ 3 3/5}" syntax="text"></math-expr>  </p><br><a style="color:red; font-size:25px;">Zadanie 29</a><br>
+<p><strong>a)</strong></p>
+<p>Rozwiążemy nierówność:</p>
+<p><math-expr expr="|x-7| &gt;= |x+3|" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo,-3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x-7) &gt;= -(x+3)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+7 &gt;= -x-3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="7 &gt;= -3" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność tożsamościową, czyli  </p>
+<p><math-expr expr="ul( x in (-oo, -3)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; -3, \ 7)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x-7) &gt;= x+3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+7 &gt;= x+3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x &gt;= -4 \ \ \ |:(-2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &lt;= 2 \ \ \ ^^ \ \ \ x in &lt;&lt; -3, \ 7)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ulx in &lt;&lt; -3, 2&gt;&gt;" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 7, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x-7 &gt;= x+3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-7 &gt;= 3" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność sprzeczną.</p>
+<p>Zapiszmy ostateczne rozwiązanie tej nierówności:</p>
+<p><math-expr expr="ulul x in (-oo, \ 2&gt;&gt;" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Rozwiążemy nierówność:</p>
+<p><math-expr expr="|x+5| &lt; |x+1|" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo, -5)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x+5) &lt; -(x+1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x-5 &lt; -x-1" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-5 &lt; -1" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność tożsamościową, czyli</p>
+<p><math-expr expr="ul( x in (-oo,-5)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="\displaystyle{x}\in{\left\langle-{5},-{1}\right)}"></math-expr>  </p>
+<p><math-expr expr="x+5 &lt; -(x+1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x+5 &lt; -x-1" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x &lt; -6 \ \ \ |:2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &lt; -3 \ \ \ ^^ \ \ \ x in &lt;&lt; -5,-1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x in &lt;&lt; -5,-3)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek III</strong>, gdy <math-expr expr="\displaystyle x\in\left\langle-1,\infty\right)"></math-expr>  </p>
+<p><math-expr expr="x+5 &lt; x+1" syntax="text"></math-expr>  </p>
+<p><math-expr expr="5 &lt; 1" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność sprzeczną.</p>
+<p>Zapiszmy ostateczne rozwiązanie tej nierówności:</p>
+<p><math-expr expr="ul(ul( x in (-oo, -3)" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Rozwiążemy nierówność:</p>
+<p><math-expr expr="|x|+|x-2| &gt;=4" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo, \ 0)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x-(x-2) &gt;=4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x-x+2 &gt;=4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x &gt;= 2 \ \ \ |:(-2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &lt;= -1 \ \ \ ^^ \ \ \ x in (-oo, \ 0)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul x in (-oo,-1&gt;&gt;" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; 0, \ 2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x-(x-2) &gt;=4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x-x+2 &gt;=4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2 &gt;=4" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność sprzeczną.</p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 2, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x+x-2 &gt;= 4" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x &gt;= 6 \ \ \ |:2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &gt;= 3 \ \ \ ^^ \ \ \ x in &lt;&lt; 2, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x in &lt;&lt; 3, \ oo)" syntax="text"></math-expr>  </p>
+<p>Zapiszmy ostateczne rozwiązanie tej nierówności:</p>
+<p><math-expr expr="ul(ul( x in (-oo,-1&gt;&gt;uu&lt;&lt; 3, \ oo)" syntax="text"></math-expr>  </p>
+<hr/>
+<p><strong>d)</strong></p>
+<p>Rozwiążemy nierówność:</p>
+<p><math-expr expr="|x-1|+|x+1| &lt; 3" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek I</strong>, gdy  <math-expr expr="x in (-oo,-1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x-1)-(x+1) &lt; 3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+1-x-1 &lt; 3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-2x &lt; 3 \ \ \ |:(-2)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &gt; -3/2 \ \ \ ^^ \ \ \ x in (-oo,-1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x in (-3/2,-1)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek II</strong>, gdy  <math-expr expr="x in &lt;&lt; -1, \ 1)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-(x-1)+x+1 &lt; 3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="-x+1+x+1 &lt; 3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2&lt; 3" syntax="text"></math-expr>  </p>
+<p>Otrzymaliśmy nierówność tożsamościową, czyli</p>
+<p><math-expr expr="ul( x in &lt;&lt; -1, \ 1)" syntax="text"></math-expr>  </p>
+<p><strong>Przypadek III</strong>, gdy  <math-expr expr="x in &lt;&lt; 1, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x-1+x+1 &lt; 3" syntax="text"></math-expr>  </p>
+<p><math-expr expr="2x &lt; 3 \ \ \ |:2" syntax="text"></math-expr>  </p>
+<p><math-expr expr="x &lt; 3/2 \ \ \ ^^ \ \ \ x in&lt;&lt; 1, \ oo)" syntax="text"></math-expr>  </p>
+<p><math-expr expr="ul( x in &lt;&lt; 1, \ 3/2)" syntax="text"></math-expr>  </p>
+<p>Zapiszmy ostateczne rozwiązanie tej nierówności:</p>
+<p><math-expr expr="ul(ul( x in (-3/2, \ 3/2)" syntax="text"></math-expr></p><br><a style="color:red; font-size:25px;">Zadanie 30</a><br>
+<p><span>Dane jest równanie:</span></p> <p><span> <math-expr expr="|(xy)/(y^2-x^2)*((x^2+y^2)/(2xy)+1)|=2" syntax="text"></math-expr> </span>  </p> <p>Założenie:  </p> <p><span> <math-expr expr="y^2-x^2ne 0 \ \ \ \ \ \ ^^ \ \ \ \ \ \ 2xy ne 0" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="y^2 ne x^2 \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x ne 0 \ \ ^^ \ \ y ne 0" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="y ne x \ \ ^^ \ \ y ne -x" syntax="text"></math-expr> </span></p> <p>Podsumowując mamy:</p> <p><span> <math-expr expr="ul y ne x, \ \ y ne -x, \ \ x ne 0, \ \ y ne 0" syntax="text"></math-expr> </span>    </p> <p>Przekształcamy równoważnie podane równanie i mamy:</p> <p><span> <math-expr expr="|(xy)/(y^2-x^2)*((x^2+y^2)/(2xy)+1)|=2" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="|(xy)/(y^2-x^2)*((x^2+y^2)/(2xy)+(2xy)/(2xy))|=2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="|(xy)/(y^2-x^2)*((x^2+2xy+y^2)/(2xy))|=2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="|(xy)/((y-x)(y+x))*(x+y)^2/(2xy)|=2" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="|(x+y)/(2(y-x))|=2" syntax="text"></math-expr> </span>  </p> <p>Korzystając z <span style="text-decoration: underline;">własności wartości bezwzględnej</span> mamy:</p> <p><span> <math-expr expr="frac(x+y)(2(y-x))=2 \ \ \ \ \ \ \ vv \ \ \ \ \ \ \  frac(x+y)(2(y-x))=-2" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="x+y=4y-4x \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x+y=-4y+4x" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="-3y=-5x \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ 5y=3x" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="y=5/3x \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y=3/5x" syntax="text"></math-expr> </span>  </p> <p>Rozwiązaniem tego równania są dwie proste określone równaniami <strong>y=<sup>5</sup>/<sub>3</sub>x</strong> oraz <strong>y=<sup>3</sup>/<sub>5</sub>x</strong> bez punktu o współrzędnych <strong>(0, 0)</strong>. </p> <p>Rysunek:</p> <p><img alt="" height="443" src="./data/1245069-0.jpg" width="448"/></p><br><a style="color:red; font-size:25px;">Zadanie 31</a><br>
+<p>Oznaczmy przez <strong>x</strong> początkową cenę towarów<strong> A</strong> i <strong>B</strong>.</p> <hr/> <p><strong>a) </strong></p> <p>Cenę towaru <strong>A</strong> obniżano dwukrotnie, za każdym razem o<strong> 20%</strong>. Zatem cena towaru <strong>A</strong> po pierwszej obniżce wynosiła <strong>0,8x</strong>, a po drugiej obniżce wynosi  </p> <p><span> <math-expr expr="0,8 cdot 0,8x = 0,64x" syntax="text"></math-expr> </span>  </p> <p>Cenę towaru <strong>B</strong> obniżono jednokrotnie o <strong>40%</strong>, zatem obecnie jego cena jest równa <strong>0,6x</strong>.</p> <p><strong>Odp</strong>. Towar <strong>B</strong> jest obecnie tańszy. </p> <hr/> <p><strong>b) </strong></p> <p>Cenę towaru <strong>A</strong> zwiększano dwukrotnie, za każdym razem o<strong> 20%</strong>. Zatem cena towaru <strong>A</strong> po pierwszej podwyżce wynosiła <strong>1,2x</strong>, a po drugiej podwyżce wynosi</p> <p><span> <math-expr expr="1,2 cdot 1,2x = 1,44x" syntax="text"></math-expr> </span>  </p> <p>Cenę towaru <strong>B</strong> zwiększono jednokrotnie o <strong>40%</strong>, zatem obecnie jego cena jest równa <strong>1,4x</strong>.</p> <p><strong>Odp</strong>. Towar <strong>B</strong> jest obecnie tańszy. </p> <hr/> <p><strong>c) </strong></p> <p>Cenę towaru <strong>A</strong> obniżono o <strong>20%</strong>, czyli wynosiła ona <strong>0,8x</strong>. Następnie, cenę zwiększono o <strong>20%</strong>, więc wynosi ona obecnie</p> <p><span> <math-expr expr="1,2 cdot 0,8x = 0,96 x" syntax="text"></math-expr> </span>  </p> <p>Cena towaru <strong>B</strong> nie uległa zmianie, więc nadal wynosi <strong>x</strong>. </p> <p><strong>Odp</strong>. Towar <strong>A</strong> jest obecnie tańszy. </p><br><a style="color:red; font-size:25px;">Zadanie 32</a><br>
+<p>Cena brutto pewnego towaru wynosi <strong>176,55 zł</strong>. Na daną cenę składa się cena netto wynosząca <strong>x</strong> oraz podatek w wysokości <strong>7%</strong>. </p> <p>Mamy stąd:  </p> <p><span> <math-expr expr="x + 7%x = 176,55" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x+0,07x=176,55" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="1,07x = 176,55 \ \ \ |: 1,07" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x =165" syntax="text"></math-expr> </span>  </p> <p>Cena netto tego towaru wynosi <strong>165 zł</strong>. </p> <p>Podatek zostaje podwyższony do <strong>22%</strong>. Wyznaczmy <span style="text-decoration: underline;">cenę brutto po podwyższeniu podatku</span>. Mamy:</p> <p><span> <math-expr expr='165+22%*165 = 165 * 0,22*165= 165+36,30= ulul 201,30  \ ["zł"]' syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 33</a><br>
+<p>Kwotę w wysokości <strong>x [zł]</strong> wpłacono do banku na lokatę roczną oprocentowaną <strong>3,5%</strong> w skali roku. </p> <p>Od odsetek bank odprowadził <strong>20%</strong> podatek w wysokości <strong>14 zł</strong>. Zatem odsetki wynosiły  </p> <p><span> <math-expr expr='5 cdot 14 = 70 \ ["zł"]' syntax="text"></math-expr> </span>  </p> <p>Zatem <strong>3,5%</strong> kwoty wpłaconej do banku jest równe uzyskanym odsetkom. Mamy stąd: </p> <p><span> <math-expr expr="3,5%x = 70" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="0,035x = 70 \ \ \ |:0,035" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="x = 2000" syntax="text"></math-expr> </span>  </p> <p><strong>Odp.</strong> Na lokatę do banku wpłacono <strong>2000 zł</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 34</a><br>
+<p><strong>a)</strong></p> <p>Oprocentowanie w banku początkowo równe <strong>5%</strong> wzrosło o <strong>1,2</strong> punktu procentowego, więc wynosi obecnie<strong> 6,2%</strong>. </p> <p>Wyznaczmy, o ile procent wzrosło to oprocentowanie. Mamy:   </p> <p><span> <math-expr expr="(6,2%)/(5%)*100% = 6,2*20% = 124%" syntax="text"></math-expr> </span>  </p> <p>Zatem oprocentowanie w tym banku <span style="text-decoration: underline;">wzrosło o <strong>24%</strong></span>.</p> <hr/> <p><strong>b)</strong></p> <p>Oprocentowanie w banku początkowo równe <strong>5%</strong> zmalało o <strong>20%</strong>, więc wynosi obecnie<strong> 4%</strong>. </p> <p>Zatem oprocentowanie <span style="text-decoration: underline;">zmalało o<strong> 1</strong> punkt procentowy</span>.</p><br>

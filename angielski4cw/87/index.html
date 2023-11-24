@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. rustic </p>
+<p>2. rural</p>
+<p>3. fully-furnished</p>
+<p>4. utilities</p>
+<p>5. estate</p>
+<p>6. amenities</p>
+<p>7. run-down</p>
+<p>8. shack</p>
+<p> </p>
+<p><strong>The extra words are: hustle and tenement.</strong></p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>X: Znalazłem/am reklamę domu na wakacje. Mówią w niej, że jest to piękna <strong>rustykalna</strong> posiadłość w cichej <strong>wiejskiej</strong> okolicy. </p>
+<p>Y: Jest <strong>w pełni</strong> <strong>umeblowana</strong>?</p>
+<p>X: Tak... Cóż, jest tu kilka krzeseł. </p>
+<p>Y: Jakie ma <strong>usługi komunalne</strong>?</p>
+<p>X: Agent <strong>nieruchomości</strong> mówi, że ma światło, kiedy świeci słońce, wodę, kiedy pada i prąd.</p>
+<p>Y: Prąd?</p>
+<p>X: Tak, musisz przynieść swoje własne baterie. </p>
+<p>Y: A co z <strong>udogodnieniami</strong>? Ma siłownię?</p>
+<p>Y: Jest tu wielka strefa do ćwiczeń i romantyczny system oświetlenia. </p>
+<p>X: Masz na myśli, że to okropna, <strong>zaniedbana chałupa</strong>, ale można ćwiczyć na zewnątrz dookoła domu, a w dachu są dziury, przez które  światło księżyca wpada do środka!</p>
+<p>Y: O, widziałeś/aś już zdjęcia! Więc co myślisz?</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a. Dan </p>
+<p>b. Amelia</p>
+<p>c. Sonia</p>
+<p>d. Nigel</p>
+<p>e. Ben</p>
+<p>f. Charles</p>
+<p>g. Meg </p>
+<p>h. Manfred</p>
+<p> </p>
+<p><strong>Tłumaczenie:</strong></p>
+<p>Kto</p>
+<p>a. ma stałe zlecenie?</p>
+<p>b. nie lubi pozostałych mieszkańców?</p>
+<p>c. jest zaniepokojony stopami procentowymi?</p>
+<p>d. ma debet?</p>
+<p>e. ma średnie zarobki?</p>
+<p>f. mieszka w domku letniskowym?</p>
+<p>g. ma rozsądną cenowo nieruchomość?</p>
+<p>h. nie używa przelewów bankowych?</p>
+<p>1. Jakby dodać do siebie zarobki wszystkich ludzi i podzielić je przez ich ilość to uzyskany wynik dałby wysokość zarobków Bena. </p>
+<p>2. Nigel wydał za dużo na wakacjach i teraz jest na minusie. Ma minus 200 £!</p>
+<p>3. Manfred nadal używa czeków do płacenia. Wiesz, kawałków papieru, które się podpisuje i wysyła na pocztę. Nie ufa niczemu, co internetowe. </p>
+<p>4. Dom Meg jest piękny i wcale niedrogi dla kogoś, kto zarabia sensowną płacę.</p>
+<p>5. Wszystkie rachunki Dana za media są opłacane prosto z banku każdego miesiąca. </p>
+<p>6. Tak, Charles zaprojektował to specjalnie tak, żeby wyglądało jak miejsce, do którego jeździmy na narty w Zermatt.</p>
+<p>7. Sonia jest wściekła. Kiedy wzrosły z 3% do 5% oznaczało to, że jej rata kredytu wzrosła do ponad 1000 £ miesięcznie. </p>
+<p>8. Mieszkanie jest świetne, widok fantastyczny, ale Amelia mówi, że ludzie w budynku nie są zbyt przyjaźni. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. couldn't  </p>
+<p><strong>Uzasadnienie</strong>: <em>can't</em> w mowie zależnej zmienia się w <em>couldn't</em>. </p>
+<p>2. if he felt</p>
+<p><strong>Uzasadnienie</strong>: pytania w mowie zależnej wprowadzane są za pomocą słów <em>if/whether</em>, a szyk zdania jest taki, jak w zdaniu twierdzącym.</p>
+<p>3. said</p>
+<p><strong>Uzasadnienie</strong>: <em>say</em> w przeciwieństwie do <em>tell</em> nie wymaga dopełnienia. </p>
+<p>4. his name is</p>
+<p><strong>Uzasadnienie</strong>: zdanie twierdzące - wymagana odpowiednia składnia: podmiot + orzeczenie. </p>
+<p>5. would</p>
+<p><strong>Uzasadnienie</strong>: w mowie zależnej <em>will</em> zmienia się w <em>would</em>. </p>
+<p>6. encouraged</p>
+<p><strong>Uzasadnienie</strong>: po <em>encourage</em> występuje dopełnienie oraz bezokolicznik z <em>to</em>. </p>
+<p>7. claimed</p>
+<p><strong>Uzasadnienie</strong>: po <em>claim</em> występuje <em>that</em> oraz całe zdanie (podmiot + orzeczenie + reszta zdania). </p>
+<p> </p>
+<p>a. 6</p>
+<p>b. 8</p>
+<p>c. 1</p>
+<p>d. 5</p>
+<p>e. 4</p>
+<p>f. 7</p>
+<p>g. 2</p>
+<p>h. 3</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. where I had been </p>
+<p>2. why I hadn't answered my phone</p>
+<p><strong>Uzasadnienie 1,2:</strong> w mowie zależnej w pytaniach występuje szyk zdania twierdzącego; czas <em>present perfect</em> i <em>past simple</em> zmieniają się w <em>past perfect</em>. </p>
+<p>3. to turn my music off</p>
+<p><strong>Uzasadnienie</strong>: komendy/polecenia w mowie zależnej przytaczamy używając konstrukcji: <em>tell sb (not) to do sth</em>.</p>
+<p>4. he couldn't hear himself think</p>
+<p><strong>Uzasadnienie</strong>: <em>can't</em> w mowie zależnej zmienia się w <em>couldn't</em>, a <em>myself</em> w tym przypadku w <em>himself</em>. </p>
+<p>5. where her new bracelet was</p>
+<p><strong>Uzasadnienie:</strong> w mowie zależnej w pytaniach występuje szyk zdania twierdzącego, czas present simple zmienia się w past simple.</p>
+<p>6. me of borrowing it without asking</p>
+<p><strong>Uzasadnienie: </strong><em>accuse</em> + (dopełnienie) + przyimek + -<em>ing</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. if/whether</p>
+<p><strong>Uzasadnienie</strong>: pytania w mowie zależnej wprowadzane są za pomocą słów <em>if/whether. </em></p>
+<p>2. who</p>
+<p><strong>Uzasadnienie</strong>: <em>defining relative clause</em> z zaimkiem względnym <em>who</em>, odnoszącym się do osoby. </p>
+<p>3. been</p>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>present perfect.</em> </p>
+<p>4.  would</p>
+<p><strong>Uzasadnienie</strong>: hipotetyczna sytuacja z teraźniejszości/przyszłości - drugi tryb warunkowy. </p>
+<p>5. out</p>
+<p><strong>Uzasadnienie</strong>: <em>pass out</em> - zemdleć.</p>
+<p>6. used </p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś przyzwyczajenia - <em>be used to</em>. </p>
+<p>7. edge</p>
+<p><strong>Uzasadnienie</strong>: <em>cutting-edge technology</em> - nowatorska technologia.</p>
+<p>8. must</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie przekonania o czymś - <em>must</em>. </p><br>

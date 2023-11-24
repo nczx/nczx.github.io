@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Rysunek:  </p>
+<p><img alt="" height="300" src="./data/1194089-0.jpg" width="345"/></p>
+<p>Niech punkty <strong>M</strong>, <strong>P</strong>, <strong>Q</strong> będą środkami krawędzi sześcianu - odpowiednio -<strong> A<sub>1</sub>B<sub>1</sub></strong>,<strong> CC<sub>1</sub></strong>, <strong>CD</strong>. </p>
+<p>Zauważmy, że długość przekątnej ściany bocznej wynosi<strong> 2√2 </strong>oraz (z <strong>tw. Pitagorasa</strong>) długość odcinka <strong>|BP|=√5</strong>.</p>
+<hr/>
+<p><strong>a)</strong></p>
+<p>Wskażemy przykładowy odcinek o końcach należących do krawędzi sześcianu, którego długości rzutów prostokątnych na ściany sześcianu przyjmują wartość <strong>√5 </strong>oraz <strong>2√2</strong>. </p>
+<p>Jest to odcinek <strong>MC</strong>. </p>
+<p><em>Wyjaśnienie:</em></p>
+<p>Punkty <strong>M</strong> i <strong>C</strong> rzutujemy na ścianę <strong>ADD<sub>1</sub>A<sub>1</sub></strong> i otrzymujemy odpowiednio punkty <strong>A<sub>1</sub></strong> i <strong>D</strong>. Długość tego odcinka to <strong>2√2</strong>. </p>
+<p>Punkty <strong>M </strong>i<strong> C</strong> rzutujemy na ścianę <strong>ABCD</strong> i otrzymujemy odpowiednio punkt będący środkiem krawędzi<strong> AB </strong>i punkt <strong>C.</strong> Długość tego odcinka to <strong>√5</strong>.</p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Wskażemy przykładowy odcinek o końcach należących do krawędzi sześcianu, którego długości rzutów prostokątnych na ściany sześcianu przyjmują wartość <strong>2 </strong>oraz <strong>2√2</strong>. </p>
+<p>Jest to odcinek <strong>MQ</strong>. </p>
+<p><em>Wyjaśnienie:</em></p>
+<p>Punkt<strong> M</strong> i <strong>Q</strong> rzutujemy na ścianę <strong>ABCD</strong> i otrzymujemy odpowiednio punkt będący środkiem odcinka <strong>AB</strong> i punkt <strong>Q</strong>. Długość tego odcinka to <strong>2</strong>. </p>
+<p>Punkty <strong>M</strong> i <strong>Q</strong> rzutujemy na ścianę <strong>BCC<sub>1</sub>B<sub>1</sub></strong> i otrzymujemy odpowiednio punkty <strong>B<sub>1</sub></strong> oraz <strong>C</strong>. Zatem <strong>|B<sub>1</sub>C|=2√2</strong>.</p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Wskażemy przykładowy odcinek o końcach należących do krawędzi sześcianu, którego długości rzutów prostokątnych na ściany sześcianu przyjmują wartość <strong>√2</strong><strong> </strong>oraz <strong>√5</strong>. </p>
+<p>Jest to odcinek <strong>MP</strong>. </p>
+<p><em>Wyjaśnienie:</em></p>
+<p>Punkty <strong>M </strong>i<strong> P</strong> rzutujemy na ścianę <strong>ABCD</strong> i otrzymujemy odpowiednio punkt będący środkiem krawędzi<strong> AB </strong>i punkt <strong>C.</strong> Długość tego odcinka to <strong>√5</strong>.</p>
+<p>Punkty <strong>M </strong>i<strong> P</strong> rzutujemy na ścianę <strong>CDD<sub>1</sub>C<sub>1</sub></strong> i otrzymujemy odpowiednio punkt będący środkiem krawędzi<strong> C<sub>1</sub>D<sub>1</sub> </strong>i punkt <strong>C.</strong> Długość tego odcinka to <strong>√2</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Trójkąt <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1</sub></strong> jest rzutem prostokątnym trójkąta <strong>ABC</strong> na płaszczyznę <strong>P</strong>. </p>
+<hr/>
+<p><strong>a) </strong></p>
+<p>Długości boków trójkąta <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1</sub></strong> są mniejsze lub równe długościom boków trójkąta <strong>ABC</strong>. </p>
+<p>Zatem obwód trójkąta <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1 </sub><span style="text-decoration: underline;">nie</span></strong> może być większy od obwodu trójkąta <strong>ABC</strong>.</p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Korzystając z przykładu <strong>a)</strong> stwierdzamy, że pole trójkąta <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1 </sub><span style="text-decoration: underline;">nie</span></strong> może być większe od pola trójkąta <strong>ABC</strong>.</p>
+<hr/>
+<p><strong>c)</strong></p>
+<p>Miara kąta <strong>A<sub>1</sub>B<sub>1</sub>C<sub>1</sub></strong> może być większa od miary kąta <strong>ABC</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Podamy brakujące uzasadnienia dowodu <span style="text-decoration: underline;">twierdzenia o prostej prostopadłej do płaszczyzny</span>. </p> <hr/> <p><span style="text-decoration: underline;"><strong>Uzasadnienie 1</strong></span> - <strong>|BD|=|CD|</strong> oraz <strong>|BF|=|CF|</strong></p> <p>Zauważmy, że <span style="font-weight: 400;">ponieważ <strong>AD</strong> to wspólny bok, <strong>|AB|=|AC|</strong>,  |<strong>∢BAD|=|∢DAC|, </strong>zatem na mocy cechy przystawania<strong> bkb </strong>mamy <strong>△BAD≡△DAC</strong>, czyli<strong> |BD|=|CD|</strong>.</span></p> <p><span style="font-weight: 400;">Zauważmy, że ponieważ <strong>AF </strong>to wspólny bok, <strong>|AB|=|AC|</strong>,<strong> |∢BAF|=|∢FAC|</strong>, zatem na mocy cechy przystawania<strong> bkb </strong>mamy <strong>△BAF≡△FAC</strong>, czyli<strong> |BF|=|CF|</strong>.</span></p> <hr/> <p><strong><span style="text-decoration: underline;">Uzasadnienie 2</span></strong> - <strong>△BDF≡△CDF</strong></p> <p><span style="font-weight: 400;">Wiemy, że</span></p> <ul> <li><span style="font-weight: 400;"> <span> <math-expr expr="abs(BD)=abs(CD)" syntax="text"></math-expr> </span> </span></li> <li><span style="font-weight: 400;"> <span> <math-expr expr="abs(BF)=abs(CF)" syntax="text"></math-expr> </span> </span></li> <li><span style="font-weight: 400;">  Podane trójkąty mają wspólny bok <strong>DF</strong>.</span></li> </ul> <p><span style="font-weight: 400;">Zatem na mocy cechy <strong>bbb</strong> przystawania trójkątów, <strong>△BDF≡△CDF</strong>.</span></p> <hr/> <p><span style="font-weight: 400;"><strong><span style="text-decoration: underline;">Uzasadnienie 3</span></strong> - <strong>|CE|=|BE|</strong></span></p> <p><span style="font-weight: 400;">Odcinki <strong>CE</strong> i <strong>BE</strong> są wysokościami opuszczonymi na podstawę <strong>DF</strong> trójkątów przystających<strong> △BDF</strong> i <strong>△</strong><strong>CDF</strong>, czyli <strong>|CE|=|BE|</strong>. </span></p> <hr/> <p><span style="font-weight: 400;"><strong><span style="text-decoration: underline;">Uzasadnienie 4</span> </strong>- <strong>∢BAE=∢CAE=90<sup>o</sup></strong></span></p> <p><span style="font-weight: 400;">Skoro <strong>|CE|=|BE|</strong>, to trójkąt <strong>BEC</strong> jest równoramienny i odcinek <strong>AE</strong> jest wysokością tego trójkąta. Zatem <strong>∢BAE=∢CAE=90<sup>o</sup></strong>.</span></p><br>

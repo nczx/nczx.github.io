@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. (that/which) + a</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny. </p>
+<p>2. for which + c</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>3. where + c</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>4. whose + a</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>5. who/that + c</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. who/that we had   albo: we had </p>
+<p>D</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny. </p>
+<p>2. whose racket </p>
+<p>D</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>3. , where the English national team plays, </p>
+<p>N</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>4. when I met Maria  albo: I met Maria</p>
+<p>D</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Można pominąć zaimek względny. </p>
+<p>5. , whose dad used to be a professional racing driver, </p>
+<p>N</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>. Nie można pominąć zaimka względnego.</p>
+<p>6. where we always meet</p>
+<p>D</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. Nie można pominąć zaimka względnego. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <span style="text-decoration: line-through;">who is</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu teraźniejszego (<em>blocking)</em>. </p>
+<p>2. <span style="text-decoration: line-through;">which is</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>watched</em>).</p>
+<p>3. <span style="text-decoration: line-through;">which had been</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>handed</em>).</p>
+<p>4. <span style="text-decoration: line-through;">who was</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione wyrażeniem przyimkowym (<em>at the match</em>). </p>
+<p>5. <span style="text-decoration: line-through;">which were</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu teraźniejszego (<em>leading)</em>.</p>
+<p>6. <span style="text-decoration: line-through;">who were</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione wyrażeniem przyimkowym (<em>next to</em>). </p>
+<p>7. <span style="text-decoration: line-through;">who is</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu teraźniejszego (<em>taking)</em>.</p>
+<p>8. <span style="text-decoration: line-through;">who were</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu teraźniejszego (<em>running)</em>.</p>
+<p><span style="text-decoration: line-through;">which was</span></p>
+<p><strong>Uzasadnienie</strong>: zaimek względny i czasownik mogą zostać zastąpione imiesłowem czasu przeszłego (<em>provided</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. which/that</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. </p>
+<p>2. which</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>.</p>
+<p>3. that</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>. To zdanie znajduje się wewnątrz wtrąconego <em>non-defining relative clause</em> oddzielonego przecinkiem.</p>
+<p>4. who</p>
+<p><strong>Uzasadnienie:</strong> zaimek względny <em>who</em> odnosi się do mitycznego bohatera <em>Cú Chulainn.</em></p>
+<p>5. whose</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>.</p>
+<p>6. which</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>.</p>
+<p>7. when</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>.</p>
+<p>8. who</p>
+<p><strong>Uzasadnienie:</strong> informacja dodatkowa, oddzielona przecinkiem -<em> non-defining relative clause</em>.</p>
+<p>9. whose</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>.</p>
+<p>10. where</p>
+<p><strong>Uzasadnienie:</strong> informacja niezbędna do prawidłowego zrozumienia sensu zdania, której nie oddzielamy przecinkiem - <em>defining relative clause</em>.</p><br>

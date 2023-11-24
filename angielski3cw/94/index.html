@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. helmet  (kask)  </p>
+<p>2. goggles  (gogle)</p>
+<p>3. gloves  (rękawice)</p>
+<p>4. skis  (narty)</p>
+<p>5. racket  (rakieta)</p>
+<p>6. net  (siatka)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. track  </p>
+<p>2. finishing<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Jestem na stadionie lekkoatletycznym, a biegacze są na <strong>torze</strong> wyścigowym. Stoję tuż obok linii <strong>mety</strong>, więc powinienem/powinnam mieć dobry widok na zwycięzcę.<br/><br/></p>
+<p>3. surfboards</p>
+<p>4. wetsuits<br/><br/><strong>Tłumaczenie: </strong></p>
+<p>Zawodnicy leżą na swoich <strong>deskach surfingowych</strong> na morzu, czekając na dobrą falę. Wszyscy mają założone <strong>stroje piankowe</strong>, ponieważ woda jest bardzo zimna.<br/><br/></p>
+<p>5. court</p>
+<p>6. fair<br/><br/><strong>Tłumaczenie:</strong></p>
+<p>Na <strong>korcie</strong> tenisowym trwa kłótnia. Serbski zawodnik skarży się, że jego przeciwnik oszukuje. Straszna szkoda. Wszyscy mieli nadzieję, że w tym roku zobaczymy więcej zachowań <strong>fair</strong> play po problemach, których byliśmy świadkiem w zeszłym roku.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1 - c</p>
+<p>(Tom jest na <strong>boisku </strong>do baseballa.) </p>
+<p>2 - e</p>
+<p>(Będziemy jeździć na łyżwach na <strong>lodowisku</strong>.)</p>
+<p>3 - f</p>
+<p>(Na <strong>stadionie </strong>jest wielki tłum.)</p>
+<p>4 - a</p>
+<p>(Nie mogę tego podnieść. Muszę użyć mniejszych <strong>ciężarków</strong>.)</p>
+<p>5 - b</p>
+<p>(Jestem początkujący/a, więc muszę jeździć na nartach na łatwym <strong>stoku</strong>.)</p>
+<p>6 - d</p>
+<p>(Po raz pierwszy widzę prawdziwy <strong>ring </strong>bokserski.)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. foul  </p>
+<p>2. feign</p>
+<p>3. referee</p>
+<p>4. severe</p>
+<p>5. sprain</p>
+<p>6. enhancing</p>
+<p>7. match-fixing</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>X: Czy uważasz, że w piłce nożnej występuje problem z <strong>nieuczciwą</strong> grą?</p>
+<p>Y: Nie bardzo. Bardziej martwią mnie zawodnicy, którzy <strong>udają</strong> kontuzje, licząc na to, że <strong>sędzia</strong> pokaże żółtą lub czerwoną kartkę drugiemu zawodnikowi. Czasami gra jest przerywana, ponieważ wygląda na to, że zawodnik doznał <strong>poważnej</strong> kontuzji, a potem, gdy dostaje rzut wolny, podskakuje i kontynuuje grę jak zwykle. Czasami wydaje się, że zawodnik ma złamaną nogę, albo przynajmniej doznał poważnego <strong>zwichnięcia</strong>.</p>
+<p>X: A co z substancjami stosowanymi do <strong>zwiększenia</strong> sprawności?</p>
+<p>Y: Naprawdę nie sądzę, by stanowiły one problem. Mogą dać ci więcej energii, ale nie sprawią, że będziesz bardziej zręczny. Bardziej martwi mnie <strong>ustawianie meczów</strong>, ponieważ czasami wyniki są zbyt dziwne, by je wytłumaczyć.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. tournament </p>
+<p>2. trophy</p>
+<p>3. racket</p>
+<p>4. beat</p>
+<p>5. net</p>
+<p>6. fair</p>
+<p><br/><strong>Tłumaczenie:</strong></p>
+<p>Gratuluję wygranej w <strong>turnieju</strong> tenisowym. Czy możemy zrobić ci zdjęcie, na którym trzymasz <strong>trofeum</strong>? I trzymaj <strong>rakietę</strong> w powietrzu drugą ręką. Wspaniale. A gdzie jest zawodniczka, którą <strong>pokonałaś</strong> w finale? O, tam jest. Przepraszam, czy mogę zrobić wam obu zdjęcie? Możecie stanąć obok <strong>siatki</strong>. Po jednej osobie z każdej strony. A teraz podajcie sobie ręce. Mecz był świetnym przykładem gry <strong>fair</strong> play, więc uśmiechnijcie się do siebie i podajcie sobie ręce. Doskonale. Dziękuję.</p><br>

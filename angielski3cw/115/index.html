@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Czasu <em>future perfect </em>używamy do opisania czynności, która zostanie zakończona przed określonym punktem w przyszłości.</strong></p>
+<p><strong>Konstrukcja: </strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Zdania twierdzące</span>: Podmiot + <em>will </em><em>have </em>+ <em>past participle </em>(III kolumna w tabelce czasowników nieregularnych lub końcówka -ed)</strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Zdania przeczące</span>: Podmiot + <em>won't have + past participle </em></strong></p>
+<p><strong><span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">Pytania</span>: <em>Will </em>+ podmiot + <em>have + past participle</em>.</strong></p>
+<hr/>
+<p> </p>
+<p>1. (przykład)</p>
+<p>2. will have finished </p>
+<p>3. Will ... have completed</p>
+<p>4. will have voted</p>
+<p>5. won't have done</p>
+<p>6. won't have had</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. 'll be waiting  </p>
+<p>2. 'll be speaking</p>
+<p><strong>Uzasadnienie (1-2):</strong> czynność w trakcie trwania w określonym momencie w przyszłości - czas <em>future continuous</em> (<em>will/won't be </em>+ czasownik z końcówką -ing).</p>
+<p>3. won't have bought</p>
+<p><strong>Uzasadnienie:</strong> czynność, która zostanie zakończona przed określonym momentem w przyszłości (<em>will/won't have + past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>4. be doing</p>
+<p><strong>Uzasadnienie:</strong> czynność w trakcie trwania w określonym momencie w przyszłości - czas <em>future continuous</em> (pytanie: <em>will</em> + podmiot + be + czasownik z końcówką -ing).</p>
+<p>5. have given</p>
+<p><strong>Uzasadnienie:</strong> czynność, która zostanie zakończona przed określonym momentem w przyszłości (pytanie: <em>will</em> + podmiot + <em>have + past participle</em>).</p>
+<p>6. won't be working</p>
+<p><strong>Uzasadnienie:</strong> czynność w trakcie trwania w określonym momencie w przyszłości - czas <em>future continuous</em> (<em>will/won't be </em>+ czasownik z końcówką -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. will have begun  </p>
+<p>2. will have started</p>
+<p><strong>Uzasadnienie (1-2):</strong> czynność, która zostanie zakończona przed określonym momentem w przyszłości (<em>will/won't have + past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
+<p>3. will be working</p>
+<p>4. will be watching</p>
+<p><strong>Uzasadnienie (3-4):</strong> czynność w trakcie trwania w określonym momencie w przyszłości - czas <em>future continuous</em> (<em>will/won't be </em>+ czasownik z końcówką -ing).</p>
+<p>5. 'll have met</p>
+<p>6. I'll have finished</p>
+<p><strong>Uzasadnienie (5-6):</strong> czynność, która zostanie zakończona przed określonym momentem w przyszłości (<em>will/won't have + past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. be able to</p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>can't</em> nie ma formy przyszłej. Zamiast niego używamy <em>will (not) be able to</em>. </p>
+<p>2. have to</p>
+<p><strong>Uzasadnienie: </strong>po czasowniku <em>need </em>brakuje <em>to</em>, dlatego wybranie tej opcji będzie niepoprawne gramatycznie. Konstrukcja <em>will have to</em> wyraża konieczność w przyszłości.</p>
+<p>3. won't need </p>
+<p><strong>Uzasadnienie: </strong>konstrukcja <em>won't need to</em>, aby mówić o braku konieczności w przyszłości.</p>
+<p>4. have to</p>
+<p><strong>Uzasadnienie:</strong> czasownik modalny <em>must</em> nie ma formy przyszłej. Zamiast niego używamy <em>have to</em>.</p>
+<p>5. need to</p>
+<p><strong>Uzasadnienie:</strong> po czasowniku posiłkowym <em>will/won't</em> używamy bezokolicznika. Forma <em>has to</em> będzie tutaj niepoprawna gramatycznie. Konstrukcja <em>won't need to </em>wyraża brak konieczności w przyszłości.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga!</strong></p>
+<p><strong>Form przyszłych czasowników modalnych używamy, żeby wyrazić:</strong></p>
+<p><strong><em>will be able to </em>- że w przyszłości nastąpi możliwość wykonania jakiejś czynności.</strong></p>
+<p><strong><em>won't be able to</em> - że w przyszłości nie będzie możliwości wykonania jakiejś czynności.</strong></p>
+<p><strong><em>will have to / will need to</em> - że w przyszłości nastąpi obowiązek albo przymus wykonania jakiejś czynności.</strong></p>
+<p><strong><em>won't have to / won't need to</em> - że w przyszłości nie będzie obowiązku albo przymusu wykonania jakiejś czynności.</strong><br/><br/></p>
+<p><strong>Czasowniki modalne <em>can </em>i <em>must </em>nie mają form przyszłych. </strong></p>
+<hr/>
+<p> </p>
+<p>1. will be able to </p>
+<p>2. will have/need to</p>
+<p>3. won't have/need to</p>
+<p>4. will be able to</p>
+<p>5. won't be able to</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! </strong></p>
+<p><strong>W zdaniach okolicznikowych czasu dotyczących przyszłości używamy następującej konstrukcji:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 410px; height: 63px; border-width: 1px; border-color: #ffffff;"><colgroup><col style="width: 49.1173%;"/><col style="width: 50.8189%;"/></colgroup>
+<tbody>
+<tr>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong><em>future simple</em></strong></td>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>spójnik + <em>present simple</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(zdanie główne)</strong></td>
+<td style="text-align: center; border-width: 1px; border-color: rgb(255, 255, 255);"><strong>(zdanie podrzędne)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>lub:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 410px; height: 62px; border-width: 1px; border-color: rgb(255, 255, 255);"><colgroup><col style="width: 193.5px;"/><col style="width: 216.5px;"/></colgroup>
+<tbody>
+<tr>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); text-align: center;"><strong>spójnik + <em>present simple</em></strong></td>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); text-align: center;"><em><strong>future simple</strong></em></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-color: rgb(255, 255, 255); text-align: center;"><strong>(zdanie podrzędne)</strong></td>
+<td style="border-color: rgb(255, 255, 255); border-width: 1px; text-align: center;"><strong>(zdanie główne)</strong></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Spójniki, jakie występują w zdaniach okolicznikowych czasu to m.in.: <em>when </em>(kiedy), <em>as soon as </em>(jak tylko), <em>until </em>(dopóki nie). </strong></p>
+<p><strong>Przykłady:</strong></p>
+<p style="padding-left: 40px;"><em><strong>I will let you know <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">as soon as</span> I learn anything more.</strong></em><strong> <br/></strong><strong>(Dam ci znać, jak tylko dowiem się więcej.)</strong></p>
+<p style="padding-left: 40px;"><em><strong>I will find a job <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">once</span> I finish school.</strong></em><strong> <br/></strong><strong>(Znajdę pracę jak już skończę szkołę.)</strong></p>
+<hr/>
+<p> </p>
+<p>1. find </p>
+<p><strong>Uzasadnienie</strong>: <em>find a job </em>- znaleźć pracę. </p>
+<p>2. won't book</p>
+<p><strong>Uzasadnienie</strong>: <em>book a holiday </em>- zarezerwować wakacje.</p>
+<p>3. 'll leave</p>
+<p><strong>Uzasadnienie</strong>: <em>leave home </em>- opuścić dom rodzinny.</p>
+<p>4. understands</p>
+<p><strong>Uzasadnienie</strong>: <em>understand a topic </em>- zrozumieć temat.</p>
+<p>5. 'll retire</p>
+<p><strong>Uzasadnienie</strong>: <em>retire from work </em>- przejść na emeryturę.</p>
+<p>6. turns</p>
+<p><strong>Uzasadnienie</strong>: <em>turn seventeen </em>- skończyć siedemnaście lat.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. be able to afford </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie <em>be able to </em>+ bezokolicznik, które w czasie <em>future simple </em>(<em>will + </em>bezokolicznik) wyraża możliwość w przyszłości. </p>
+<p>2. until she wins</p>
+<p><strong>Uzasadnienie</strong>: zdanie okolicznikowe czasu: <em>future simple</em> w zdaniu głównym; spójnik (<em>until </em>- dopóki nie) + <em>present simple </em>w zdaniu podrzędnym. Dodajemy końcówkę -s do czasownika dla <em>she, he, it</em>.</p>
+<p>3. will have to work </p>
+<p><strong>Uzasadnienie</strong>: <em>will have to </em>+ bezokolicznik, aby opisać konieczność w przyszłości.</p>
+<p>4. I won't be able</p>
+<p><strong>Uzasadnienie</strong>: <em>won't be able to</em>, aby opisać brak możliwości w przyszłości.</p>
+<p>5. we won't have to do </p>
+<p><strong>Uzasadnienie</strong>: <em>won't have to </em>+ bezokolicznik, by opisać brak konieczności w przyszłości.</p>
+<p>6. as soon as she arrives</p>
+<p><strong>Uzasadnienie</strong>: zdanie okolicznikowe czasu: <em>future simple</em> w zdaniu głównym; spójnik (<em>as soon as </em>- jak tylko) + <em>present simple </em>w zdaniu podrzędnym. Dodajemy końcówkę -s do czasownika dla <em>she, he, it</em>.</p><br>

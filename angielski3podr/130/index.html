@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. a score</p>
+<p><strong>Uzasadnienie</strong>: niepasującym wyrazem jest <em>a score </em>(wynik). Pozostałe utworzą wyrażenia z czasownikiem <em>lose: lose a game </em>- przegrać mecz, <em>lose a goal </em>- puścić bramkę. </p>
+<p>2. football</p>
+<p><strong>Uzasadnienie</strong>: nie pasuje wyraz <em>football</em> (piłka nożna). Pozostałe utworzą wyrażenia z rzeczownikiem <em>court: basketball court </em>- boisko do koszykówki, <em>tennis court </em>- kort tenisowy.</p>
+<p>3. strength</p>
+<p><strong>Uzasadnienie</strong>: <em>strength </em>(siła) nie pasuje, bo w odróżnieniu do pozostałych wyrazów nie utworzy wyrażenia z rzeczownikiem <em>sport</em>. <em>Indoor sport </em>- sport halowy, <em>year-round sport </em>- sport uprawiany przez cały rok.</p>
+<p>4. an opponent</p>
+<p><strong>Uzasadnienie</strong>: <em>an opponent </em>(przeciwnik) nie pasuje. Pozostałe wyrazy utworzą wyrażenia z czasownikiem <em>win: win a trophy - </em>zdobyć trofeum, <em>win a championship </em>- wygrać mistrzostwa.</p>
+<p>5. computer</p>
+<p><strong>Uzasadnienie</strong>: <em>computer </em>(komputer) nie pasuje. Pozostałe wyrazy utworzą wyrażenia z rzeczownikiem <em>play: fair/foul play </em>- uczciwa/nieuczciwa gra.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu. </strong></p>
+<p>1. accurate </p>
+<p>(Jeśli twoja piłka ciągle nie trafia do dołka, musisz sprawić, żeby twój zamach golfowy był bardziej <strong>celny</strong>.) </p>
+<p>2. slope</p>
+<p>(To mój ulubiony <strong>stok</strong> narciarski w tej okolicy - trudny, ale przyjemny.)</p>
+<p>3. enhancing</p>
+<p>(Do tej pory trzech sportowców zostało oskarżonych o branie substancji <strong>poprawiających</strong> wydajność.)</p>
+<p>4. disqualified</p>
+<p>(Każdy zawodnik przyłapany na stosowaniu dopingu zostanie natychmiast <strong>zdyskwalifikowany</strong>.)</p>
+<p>5. went</p>
+<p>(Kiedy polska drużyna zdobyła te czwartą bramkę, kibice <strong>oszaleli</strong>.)</p>
+<p><strong>Uzasadnienie: </strong>oszaleć - <em>go wild</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. much, many</p>
+<p><strong>Uzasadnienie:</strong> przed rzeczownikami niepoliczalnymi (<em>practice </em>- praktyka) używamy określenia <em>much,</em> a przed policzalnymi (<em>medals - </em>medale) używamy <em>many.</em> </p>
+<p>2. loads of, several</p>
+<p><strong>Uzasadnienie:</strong> przed rzeczownikami niepoliczalnymi (<em>information - </em>informacja) możemy użyć określenia <em>loads of</em>, a przed policzalnymi (<em>runners - </em>biegacze) możemy użyć <em>several</em>. </p>
+<p>3. to sign up, signing up</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik <em>remember </em>oznacza "pamiętać, żeby coś zrobić", używamy po nim bezokolicznika z <em>to</em>, a kiedy oznacza "przypomnieć sobie, że coś się zrobiło", używamy po nim formy z końcówką -ing. </p>
+<p>4. Participating, to participate</p>
+<p><strong>Uzasadnienie:</strong> kiedy czasownik pełni w zdaniu funkcję podmiotu, stawiamy go w formie z końcówką -ing, a po czasowniku <em>agree </em>(zgadzać się) używamy bezokolicznika z <em>to.</em></p>
+<p>5. None, neither</p>
+<p><strong>Uzasadnienie:</strong> przed rzeczownikami opisującymi grupę większą niż dwie osoby (<em>my friends </em>- moi przyjaciele) używamy określenia <em>none,</em> a przed rzeczownikami opisującymi dwie rzeczy (<em>legs - </em>nogi) używamy <em>neither.</em> </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Przykładowe rozwiązanie:</strong> </p>
+<p>1. There are plenty of ways to get fit, no matter what sports you prefer doing / to do.  </p>
+<p><strong>Uzasadnienie</strong>: zdanie w czasie <em>present simple</em>, ponieważ jest to stwierdzenie ogólne na temat tego, co zawsze jest prawdziwe. Konstrukcja <em>there is/there are</em>, by powiedzieć, że coś istnieje. <em>A way <span style="text-decoration: underline var(--odr-text-decoration-color); -webkit-text-decoration: underline var(--odr-text-decoration-color);">to</span> do something </em>- sposób na zrobienie czegoś. Czasownik <em>prefer </em>połączy się zarówno z bezokolicznikiem z <em>to</em>, jak i z czasownikiem z końcówką -ing.</p>
+<p>2. During car races every driver stops to change tires at least once.</p>
+<p><strong>Uzasadnienie</strong>: zdanie w czasie <em>present simple</em>, ponieważ opisane jest coś, co dzieje się zawsze. Dla 3. osoby l. pojedynczej dodajemy -s do czasownika. Czasownik <em>stop </em>w znaczeniu "zatrzymać się, by coś zrobić" łączy się z bezokolicznikiem z <em>to</em>.</p>
+<p>3. I really miss doing outdoor sports when the weather gets bad.</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>miss </em>(tęsknić) łączy się z czasownikiem z końcówką -ing. W zdaniu okolicznikowym czasu (tutaj wprowadza je spójnik <em>when </em>- kiedy) używamy czasu <em>present simple</em>, kiedy mówimy o jakichś sytuacjach ogółem. Dlatego dla 3. osoby l. pojedynczej dodajemy -s do czasownika.</p>
+<p>4. My PE teacher encouraged / is encouraging me to join the rowing club.</p>
+<p><strong>Uzasadnienie</strong>: <em>encourage somebody to do something </em>- zachęcić kogoś do zrobienia czegoś. Bez dodatkowych informacji nie sposób stwierdzić, czy chodzi o przeszłość, czy teraźniejszość. Używamy <em>past simple</em> w założeniu, że chodzi o zakończoną czynność w przeszłości ("nauczyciel zachęcił mnie") lub czasu <em>present continuous</em>, jeśli chodzi o tymczasową czynność w teraźniejszości ("nauczyciel zachęca mnie").</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. to warm up </p>
+<p><strong>Uzasadnienie</strong>: drugie zdanie jest relacją pierwszego, dlatego należy je uzupełnić zgodnie z zasadami tworzenia mowy zależnej. W mowie zależnej, czasowniki w trybie rozkazującym mają formę bezokolicznika z <em>to. </em>Konstrukcja: <em>remind somebody to do something </em>- przypomnieć komuś, by coś zrobił. </p>
+<p>2. (that) he was feigning</p>
+<p><strong>Uzasadnienie</strong>: <em>pretend to be injured = feign an injury </em>(symulować kontuzję).</p>
+<p>3. where I had put his</p>
+<p><strong>Uzasadnienie</strong>: drugie zdanie jest relacją pierwszego, dlatego należy je uzupełnić zgodnie z zasadami tworzenia mowy zależnej. W mowie zależnej, czas <em>past simple</em> zamieniamy na <em>past perfect.</em></p>
+<p>4. to be looked at</p>
+<p><strong>Uzasadnienie</strong>: czynność w drugim zdaniu jest wykonywana względem podmiotu, dlatego należy je uzupełnić zgodnie z konstrukcją strony biernej. Czasownik <em>need </em>łączy się z <em>to</em>.</p>
+<p>5. it if you could send</p>
+<p><strong>Uzasadnienie</strong>: po czasowniku <em>appreciate </em>(docenić) używamy dopełnienia (<em>it</em>) oraz zdania wprowadzonego za pomocą spójnika <em>if </em>(gdybyś).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. B </p>
+<p><strong>Fragment w tekście: </strong>"She must have been around five when Grandma said, 'Let me show you something beautiful,' turning on the World Ballroom Dance Championships." - Musiała mieć około pięciu lat, kiedy babcia powiedziała: "Chodź, pokażę ci coś pięknego", i włączyła Mistrzostwa Świata w Tańcu Towarzyskim. </p>
+<p>2. A</p>
+<p><strong>Fragment w tekście: </strong>"Ally discovered that it's one thing to be able to recognise the rhythm of the music (an ability she'd acquired through watching the championships) (...)." - Ally odkryła, że umiejętność rozpoznawania rytmu muzyki (umiejętność, którą nabyła dzięki oglądaniu mistrzostw) to jedno (...).</p>
+<p>3. D</p>
+<p><strong>Fragment w tekście: </strong>"She avoided the truth and told Grandma about her teacher and the other dancers instead. (...) Ally knew she wasn't made for this and quit. She wouldn't have told Grandma about it if she had asked." - Unikała prawdy i zamiast tego opowiadała babci o swojej nauczycielce i innych tancerkach. (...) Ally wiedziała, że nie jest do tego stworzona i odeszła. Nie powiedziałaby o tym babci, gdyby ta zapytała.</p>
+<p>4. D</p>
+<p><strong>Fragment w tekście: </strong>"So, shall we call the school? You've already missed a few lessons." - Więc, czy mamy zadzwonić do szkoły? Opuściłaś już kilka lekcji.</p>
+<p><br/>5. exercise even one hour a day</p>
+<p><strong>Fragment w tekście: </strong>"One hour of physical activity a day might not e a difficult goal, yet (...) eight out of ten adolescents fail to reach it." - Jedna godzina wysiłku fizycznego dziennie nie wydaje się trudnym celem, a jednak (...) ośmiu na dziesięciu nastolatków nie udaje się go osiągnąć.</p>
+<p>6. learning to live with discomfort</p>
+<p><strong>Fragment w tekście: </strong>"Surprisingly, everyday activities can provide solutions. They can be used to learn to live with discomfort and get us moving." - Co zaskakujące, codzienne czynności mogą stanowić rozwiązanie. Dzięki nim możemy nauczyć się żyć z poczuciem dyskomfortu i nakłonić nas do ruchu.</p>
+<p>7. walking and talking on the phone</p>
+<p><strong>Fragment w tekście: </strong>"Forget social media and call your friends. Hearing someone's voice is so much nicer than seeing a row of emojis. And while you're waiting for them to pick up - start walking and don't stop till you hang up." - Zapomnij o mediach społecznościowych i zadzwoń do swoich przyjaciół. Usłyszenie czyjegoś głosu jest o wiele milsze niż oglądanie rzędu emotikon. A kiedy czekasz, aż odbiorą - zacznij chodzić i nie zatrzymuj się, dopóki się nie rozłączysz.</p>
+<p>8. lose weight or strengthen your muscles</p>
+<p><strong>Fragment w tekście: </strong>"Gaining weight and losing stamina didn't happen overnight - and neither will losing kilos or strengthening your muscles." - Przybranie na wadze i utrata wytrzymałości nie nastąpiły z dnia na dzień - i podobnie będzie z utratą kilogramów czy wzmocnieniem mięśni.</p><br>

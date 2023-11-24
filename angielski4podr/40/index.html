@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a. = We don't have to let this happen!</p>
+<p>(To nie musi tak być. = Nie musimy pozwolić, żeby to się wydarzyło!) </p>
+<p> </p>
+<p>b. = We'd better do something ASAP., We have to do something.</p>
+<p>(Musimy podjąć działanie. = Lepiej zróbmy coś jak najszybciej., Musimy coś zrobić.)</p>
+<p> </p>
+<p>c. = The Residents Action Group can organise a demonstration. </p>
+<p>(Lokalni aktywiści mają prawo protestować. = Grupa mieszkańców może organizować demonstracje.)</p>
+<p> </p>
+<p>d. = This must be some kind of a joke.</p>
+<p>(Jestem pewien/pewna, że to żart. = To musi być jakiś żart.)</p>
+<p> </p>
+<p>e. = It might have been pressure from the mayor (...)</p>
+<p>(Możliwe jest, że burmistrz użył perswazji. = To mogła być presja ze strony burmistrza (...))</p>
+<p> </p>
+<p>f. = Luckily, we needn't have worried.</p>
+<p>(Niepotrzebnie się martwiliśmy. = Na szczęście niepotrzebnie się martwiliśmy.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Modal verbs: present</strong></p>
+<p><strong>Rule 1 </strong></p>
+<p>We use <em>must</em>, <em>have</em> <em>to</em> and <em>need to</em> to express obligation. - We have to do something. </p>
+<p><strong>Rule 2</strong></p>
+<p>We use <em>don't have to/need to</em> and <em>needn't</em> to express a lack of obligation. - It needn't happen - we can stop it.</p>
+<p><strong>Rule 3</strong></p>
+<p>We use<em> can't</em> and <em>mustn't</em> to express prohibition. - We mustn't let this crazy plan go ahead. </p>
+<p><strong>Rule 4</strong></p>
+<p>We use <em>can</em>, <em>could</em> and <em>may</em> to express permission. - The Residents Action Group can organise a demonstration. </p>
+<p><strong>Rule 5</strong></p>
+<p>We use <em>ought</em> <em>to</em>, <em>should(n't)</em> and<em> had better</em> to give advice. - Someone ought to contact the newspapers.</p>
+<p><strong>Rule 6</strong></p>
+<p>We use <em>may</em>, <em>might</em> and <em>could</em> to express possibility/probability. - This could be a huge disaster for our town.</p>
+<p><strong>Rule 7</strong></p>
+<p>We use <em>can't</em> and <em>must</em> for speculation/deduction. - The mayor can't be serious!</p>
+<p><strong>Rule 8</strong></p>
+<p>We use <em>can</em> and <em>can't</em> to talk about (in)ability. - I agree, but we can't stop them.</p>
+<p> </p>
+<p><strong>Modal verbs: past</strong></p>
+<p><strong>Rule 9</strong></p>
+<p>We use <em>must/can't/couldn't have</em> + past participle to talk about certainty in the past. - The Residents Action Group must have won their campaign (...). </p>
+<p><strong>Rule 10 </strong></p>
+<p>We use <em>may/might/could have</em> + past participle to talk about possibility in the past. - It might have been pressure from the mayor (...)</p>
+<p><strong>Rule 11</strong></p>
+<p>We use <em>should(n't) have</em> + past participle  to show regret for a past action. - Most residents say she shouldn't have backed the idea in the first place.</p>
+<p><strong>Rule 12</strong></p>
+<p>We use<em> needn't have</em> + past participle  to say that something that happened was unnecessary. - Luckily, we needn't have worried.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. may I/can I/ could I turn</p>
+<p><strong>Uzasadnienie</strong>: pytanie o pozwolenie - <em>can/may/could</em>. </p>
+<p>2. might/may forget to</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie prawdopodobieństwa - <em>might/may</em>.</p>
+<p>3. can't/mustn't feed</p>
+<p><strong>Uzasadnienie</strong>: zakaz - <em>can't/mustn't</em>.</p>
+<p>4. don't have to/don't need to/needn't give </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie braku przymusu - <em>don't have to/don't need to/needn't</em>. </p>
+<p>5. can't be</p>
+<p><strong>Uzasadnienie</strong>: spekulacje - <em>can't</em>. </p>
+<p>6. better call </p>
+<p><strong>Uzasadnienie</strong>: dawanie rady - <em>had better</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. can't have been</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości - <em>can't have + past participle</em>. </p>
+<p>2. shouldn't have done</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie żalu, że coś się wydarzyło w przeszłości - <em>shouldn't have + past participle</em>.</p>
+<p>could have lent</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie możliwości w przeszłości - <em>could have + past participle</em>.</p>
+<p>3. needn't have watered</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie, że coś wydarzyło się niepotrzebnie -<em> needn't have + past participle</em>.</p>
+<p>4. must have closed down</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie pewności do wydarzenia z przeszłości -<em> can't have + past participle</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

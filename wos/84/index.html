@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Różnice pomiędzy wynikami poszczególnych sondaży a rezultatami I tury wyborów prezydenckich w 2015 r.:</strong></span></p>
+<ul>
+<li>we wszystkich sondażach (z lutego 2015 r., marca 2015 r., kwietnia 2015 r.) bardzo dużą przewagę miał Bronisław Komorowski nad pozostałymi kandydatami na urząd prezydenta, </li>
+<li>Andrzej Duda oraz Paweł Kukiz mieli znacznie mniejsze poparcie sondażowe niż to realne, które zostało im oddane w ramach wyborów prezydenckich w I turze wyborów w 2015 r., </li>
+<li>Bronisław Komorowski miał poparcie sondażowe na poziomie 43-63%, zaś Andrzej Duda na poziomie 15-26%, zaś w wyniki wyborów wskazały, że Bronisław Komorowski miał 33,77%, zaś Andrzej Duda - 34,76%.</li>
+</ul>
+<p>Podane w opinii publicznej informacje sondażowe mogły istotnie wpłynąć na ostateczne wyniki głosowania, ponieważ zgodnie z informacjami zawartymi w tekście źródłowym wynika, że w I turze wyborów prezydenckich mieliśmy do czynienia z bardzo niską frekwencją wyborczą. Prawdopodobnie wyborcy nie zdecydowali się pójść na wybory, ponieważ wierząc w wyniki sondażowe uważali, że ich głos nic nie zmieni, np. zwolennicy kandydatury Bronisława Komorowskiego nie poszli głosować, ponieważ uważali, że przecież ich kandydat ma bardzo dużą przewagę na rywalami, więc ich głos nie ma znaczenia w tych wyborach. Z kolei część wyborców np. Pawła Kukiza uważała, że ich kandydat ma tak małe poparcie (według sondażów ok 2-7%), że oddanie na niego głosu byłoby jego tzw. "zmarnowaniem", zaś jak pokazały wyniki I tury wyborów, Paweł Kukiz miał poparcie na poziomie 20,8%. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>W pierwszej turze wyborów prezydenckich w Polsce w 2015 roku największe poparcie uzyskali: Andrzej Duda (34,76%) i Bronisław Komorowski (33,77%). Trzeci wynik uzyskał Paweł Kukiz (20,80%), zaś pozostali kandydaci (Janusz Korwin-Mikke, Magdalena Ogórek, Adam Jarubas, Janusz Palikot, Grzegorz Braun, Marian Kowalski, Paweł Tanajno i Jacek Wilk) zgromadzili w sumie 10,67% głosów.</p>
+<p>Wyniki te odbiegały jednak od tego, co przewidywały sondaże z miesięcy poprzedzających wybory. Przede wszystkim dawały one znacznie wyższe poparcie Bronisławowi Komorowskiemu, który jeszcze w lutym 2015 roku mógł zgodnie z przewidywaniami sondaży liczyć na 63% głosów, w marcu na 48%, a w kwietniu na 43%. Sondaże pomyliły się też w odniesieniu do Andrzeja Dudy i Pawła Kukiza, dla których przewidywały znacznie niższe poparcie, niż faktycznie uzyskali oni w wyborach, które odbyły się 10 maja 2015 roku. Andrzejowi Dudzie sondaże dawały maksymalnie 27% głosów poparcia, zaś Pawłowi Kukizowi co najwyżej 7% głosów poparcia. </p>
+<p>Podawane opinii publicznej informacje o sondażach i ich wynikach mogły istotnie wpłynąć na ostateczne wyniki głosowania. Przede wszystkim sondaże przewidywały stosunkowo wysokie poparcie dla Bronisława Komorowskiego, dając mu wyraźną przewagę nad konkurentami. Wnioskując po wynikach sondaży, przedstawiciele jego elektoratu mogli myśleć, że Bronisława Komorowskiego czeka pewne zwycięstwo. Część z osób popierających Komorowskiego mogło to uspokoić, wskutek czego nie poszli na wybory, sądząc, że ich kandydat i tak wygra, bo będzie miał poparcie innych. Przy mobilizacji przedstawicieli pozostałych elektoratów, zapewniło to lepsze wyniki jego konkurentom. </p>
+<p>Ogólnie rzecz biorąc, sondaże przedwyborcze nie zawsze okazują się trafne, ponieważ wielu respondentów nie ujawnia na ich potrzeby swoich rzeczywistych preferencji wyborczych. Niektórzy ankietowani w dniu wyborów podejmują zaś ostatecznie inne decyzje, aniżeli deklarowane wcześniej przy okazji sondażu. Inni z kolei finalnie nie biorą udziału w głosowaniu.</p><br>

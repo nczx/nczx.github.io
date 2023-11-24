@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie:   </strong></p>
+<table border="1" style="border-collapse: collapse; width: 428px; height: 334px; border-width: 1px; border-color: rgb(34, 30, 120);"><colgroup><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/><col style="width: 36px;"/></colgroup>
+<tbody>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">C</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Z</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">J</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">K</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(197, 201, 236); height: 17.4545px; border-color: rgb(34, 30, 120);">U</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">C</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">B</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">O</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">O</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">I</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">M</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">G</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">G</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">F</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; background-color: rgb(253, 221, 182); height: 17.4545px; border-color: rgb(34, 30, 120);">K</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">V</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">P</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">X</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">G</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">X</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">W</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">L</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Z</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">L</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">W</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">W</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">G</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">L</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">O</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">C</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">X</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">K</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">M</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">M</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">H</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">P</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">J</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Z</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">L</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">S</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">I</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">V</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">I</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">L</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">U</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">L</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Y</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Q</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120); background-color: rgb(196, 226, 199);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">X</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">C</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">U</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">T</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">V</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">Z</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">I</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">V</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">I</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(255, 212, 243); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">W</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">D</td>
+</tr>
+<tr style="height: 17.4545px;">
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">F</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">G</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">S</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">A</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(253, 221, 182); border-color: rgb(34, 30, 120);">Y</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">W</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">O</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(197, 201, 236); border-color: rgb(34, 30, 120);">N</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">D</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">E</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; background-color: rgb(196, 226, 199); border-color: rgb(34, 30, 120);">R</td>
+<td style="border-width: 1px; text-align: center; height: 17.4545px; border-color: rgb(34, 30, 120);">X</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table border="1" style="border-collapse: collapse; width: 549px; height: 509px; border-width: 1px; border-spacing: 5px; border-color: rgb(34, 30, 120);">
+<tbody>
+<tr style="height: 57.3636px;">
+<td style="width: 128.273px; background-color: rgb(178, 194, 255); text-align: center; height: 57.3636px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);">
+<p><strong>verb + that<br/></strong>(czasownik + <em>that</em>)</p>
+</td>
+<td style="width: 131.648px; background-color: rgb(178, 194, 255); text-align: center; height: 57.3636px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);">
+<p><strong>verb + to<br/></strong>(czasownik + <em>to</em>)</p>
+</td>
+<td style="width: 117.955px; background-color: rgb(178, 194, 255); text-align: center; height: 57.3636px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);">
+<p><strong>verb + object + to<br/></strong>(czasownik + dopełnienie + <em>to</em>)</p>
+</td>
+<td style="width: 127.489px; background-color: rgb(178, 194, 255); text-align: center; height: 57.3636px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120);">
+<p><strong>verb + if<br/></strong>(czasownik + <em>if</em>)</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>admit<br/>(przyznawać)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>agree</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>advise<br/>(radzić)</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>ask<br/>(zapytać)</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>agree<br/>(zgadzać się)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>offer<br/>(proponować)</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>ask<br/>(prosić)</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>wonder<br/>(zastanawiać się)</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>explain<br/>(wyjaśniać)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>promise</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>invite<br/>(zapraszać)</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>promise<br/>(obiecywać)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>refuse <br/>(odmawiać)</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>promise</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>say<br/>(powiedzieć)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>tell<br/>(powiedzieć)</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+</tr>
+<tr style="height: 45.4545px;">
+<td style="width: 128.273px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>suggest<br/>(sugerować)</p>
+</td>
+<td style="width: 131.648px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+<td style="width: 117.955px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+<td style="width: 127.489px; height: 45.4545px; border-width: 1px; padding: 5px; border-color: rgb(34, 30, 120); text-align: center;">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. assured, added </p>
+<p>(Monika zapytała, czy Juan widział jej zegarek, ale on <strong>zapewnił</strong> ją, że nie. <strong>Dodał</strong>, że może być w łazience.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>assure somebody that </em>oraz <em>add that</em>. </p>
+<p><br/>2. persuaded, pointed out</p>
+<p>(Kelnerka <strong>namówiła</strong> nas na spróbowanie łososia. Powiedziała, że jest pyszny i <strong>podkreśliła</strong>, że jest w specjalnej ofercie.)</p>
+<p><strong>Uzasadnienie</strong>: <em>persuade somebody to do something </em>oraz <em>point out that</em>.<br/><br/></p>
+<p>3. insisted, argued, confirmed</p>
+<p>(<strong>Nalegała</strong>, żebym wyszedł/wyszła natychmiast, bo inaczej spóźnię się na autobus. <strong>Argumentowałem/am</strong>, że mogę jechać następnym autobusem, ale ona sprawdziła rozkład jazdy i <strong>potwierdziła</strong>, że nie dotrę do kina na czas, jeśli pojadę następnym.)</p>
+<p><strong>Uzasadnienie</strong>: czasowniki <em>insist, argue </em>oraz <em>confirm </em>występują w konstrukcji czasownik + <em>that</em>.</p>
+<p><br/>4. denied, confessed</p>
+<p>(Moja młodsza siostra <strong>zaprzeczyła</strong>, że zabrała moją grę wideo, ale ja wiedziałem, że to zrobiła i w końcu <strong>przyznała</strong>, że to prawda.)</p>
+<p><strong>Uzasadnienie</strong>: czasowniki <em>deny </em>i <em>confess </em>występują w konstrukcji czasownik + <em>that</em>.</p>
+<p><br/>5. complained</p>
+<p>(Mały chłopiec <strong>poskarżył się</strong>, że nikt go nie słucha i powiedział, że to niesprawiedliwe.)</p>
+<p><strong>Uzasadnienie</strong>: czasownik <em>complain </em>łączy się z <em>that</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. promise </p>
+<p>("Nikomu nie powiem." - <strong>obiecywać</strong>) </p>
+<p>2. refuse</p>
+<p>("Nie, nie zrobię tego!" - <strong>odmówić</strong>)</p>
+<p>3. invite</p>
+<p>("Czy chciał(a)byś przyjść na moją imprezę?" - <strong>zaprosić</strong>)</p>
+<p>4. agree</p>
+<p>("Tak, też uważam, że to dobry pomysł." - <strong>zgodzić się</strong>)</p>
+<p>5. advise</p>
+<p>("Na twoim miejscu porozmawiał(a)bym o tym z twoją siostrą." - <strong>doradzić</strong>)</p>
+<p>6. admit</p>
+<p>("Właściwie, to moja wina. Ja zgubiłem/am twoją kurtkę." - <strong>przyznawać</strong>)</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1 - e </p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>apologise for doing something </em>(przepraszać, że coś się zrobiło). </p>
+<p>2 - f</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>forbid somebody to do something </em>(zabronić komuś coś robić).</p>
+<p>3 - a</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>warn somebody that </em>(ostrzec kogoś, że).</p>
+<p>4 - c</p>
+<p>(Moja starsza siostra wyjawiła, że jest zaręczona.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>reveal that </em>(wyjawić, że).</p>
+<p>5 - d</p>
+<p>(Rząd ogłosił, że zostanie wprowadzone nowe prawo w kwestii recyklingu.)</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>announce that </em>(ogłosić, że).</p>
+<p>6 - b</p>
+<p><strong>Uzasadnienie</strong>: konstrukcja <em>threaten to do something </em>(zagrozić, że się coś zrobi).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. insisted, late </p>
+<p>(Maria <strong>upierała się</strong>, że zostanie poza domem <strong>do późna</strong>, mimo że była zmęczona.) </p>
+<p>2. pointed, inactive</p>
+<p>(Kiedy Callum poskarżył się, że nie ma kondycji, jego rodzice <strong>zwrócili uwagę</strong>, że ostatnio prowadził bardzo <strong>nieaktywny</strong> tryb życia.)</p>
+<p>3. invited ... over</p>
+<p>(Sara <strong>zaprosiła</strong> nas <strong>do siebie</strong> na obiad.)</p>
+<p>4. complained, fed</p>
+<p>(Gdyby psy umiały mówić, myślę, że nasz <strong>poskarżyłby się</strong>, że nie <strong>nakarmiliśmy</strong> go przed wyjściem.) </p>
+<p>5. added, peace</p>
+<p>(Najpierw Olivia powiedziała nam, że jest zmęczona i zestresowana. Potem <strong>dodała</strong>, że jedyne, czego potrzebuje, to trochę ciszy i <strong>spokoju</strong>.) </p>
+<p>6. suggested, chill</p>
+<p>(Wszyscy się kłócili. Hector <strong>zasugerował</strong>, że powinniśmy się wszyscy <strong>wyluzować</strong>!) </p><br>

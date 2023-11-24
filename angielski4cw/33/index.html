@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>a. = household</p>
+<p>(ludzie mieszkający w domu albo mieszkaniu, uważani za jednostkę = <strong>gospodarstwo domowe</strong>) </p>
+<p>b. = edible</p>
+<p>(bezpieczne lub wystarczająco dobre do zjedzenia = <strong>jadalne</strong>)</p>
+<p>c. = landfill</p>
+<p>(Duża dziura w ziemi, w której zakopuje się śmieci = <strong>wysypisko śmieci</strong>)</p>
+<p>d. = redistributing unused food to charity</p>
+<p>(zmienianie sposobu rozdzielania czegoś pomiędzy ludźmi = <strong>redystrybucja niezużytych produktów do organizacji charytatywnych</strong>)</p>
+<p>e. = keep track of </p>
+<p>(być świadomym i poinformowanym o = <strong>być na bieżąco z</strong> )</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>b</p>
+<p><strong>Uzasadnienie:</strong> In paragraphs 1 and 2, the author informs the readers about the amount of food waste and the costs it generates. In the following two paragraphs, there are some solutions and pieces of advice on how to waste less. </p>
+<p>(W akapitach 1 i 2 autor informuje czytelników o ilości marnowanego jedzenia i kosztach jakie to zjawisko generuje. W kolejnych dwóch akapitach znajdują się pewne rozwiązania i rady na temat tego, jak marnować mniej.)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. D</p>
+<p><strong>Fragment w tekście:</strong> "(...) roughly one-third of all food produced each year is wasted - 1.3 billion tones of it - and we are all culprits: farmers, the food industry, shops and restaurants and individual consumers." - (...) niemal jedna trzecia wyprodukowanego co roku jedzenia jest marnowana - 1,3 miliarda ton - i wszyscy jesteśmy sprawcami: farmerzy, przemysł spożywczy, sklepy i restauracje i indywidualni konsumenci. </p>
+<p>2. D</p>
+<p><strong>Fragment w tekście:</strong> "In a single year, the average UK household throws away around £800 worth of edible food which ends up in landfill, generating five million tones of greenhouse gases." - W ciągu roku przeciętne gospodarstwo domowe w Zjednoczonym Królestwie wyrzuca żywność możliwą do zjedzenia o wartości 800 £, która ląduje na wysypisku śmieci, wytwarzając pięć milionów ton gazów cieplarnianych.</p>
+<p>3. A</p>
+<p><strong>Fragment w tekście:</strong> "Since 2016 in France, it has been illegal for supermarkets to destroy edible food; instead it has to be donated to charities or food banks. Arash Derambarsh, who campaigned for the law, is trying to get similar measures adopted worldwide." - Od 2016 roku we Francji jest zakaz wyrzucania przez supermarkety produktów, które można jeszcze zjeść; zamiast tego muszą one być przekazane do organizacji charytatywnych i banków żywności. Arash Derambarsh, który opowiadał się za wprowadzeniem tego prawa, teraz stara się, żeby podobne rozwiązania wprowadzono na całym świecie.</p>
+<p>4. B</p>
+<p><strong>Fragment w tekście:</strong> "Fresh Pantry, for example, keep track of the items you have in your fridge, freezer and cupboards and their expiry dates. The app allows you to see what food you need to use up and also to plan your shopping list around the food you have." - Na przykład Fresh Pantry monitoruje produkty, które masz w lodówce, zamrażalniku i szafkach oraz ich daty ważności. Aplikacja pozwala zauważyć, które produkty musisz zużyć, a także pomaga zaplanować listę zakupów uwzględniając te, które już masz. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. food wasted each year </p>
+<p>(marnowane każdego roku jedzenie) </p>
+<p>2. this pollution</p>
+<p>(to zanieczyszczenie)</p>
+<p>3. edible food</p>
+<p>(produkty możliwe jeszcze do zjedzenia)</p>
+<p>4. other restaurants</p>
+<p>(inne restauracje)</p>
+<p>5. weekly menu</p>
+<p>(tygodniowy jadłospis)</p><br>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Tytu³owy "wczorajszy" to osoba, do której zwraca siê podmiot liryczny w wierszu. Wychowa³a siê ona w przedwojennej rzeczywistoœci, co ukszta³towa³o jej wra¿liwoœæ oraz relacjê ze œwiatem: "Modlitwê nocnych cieni rozwiesisz jak wiêcierz / na s³odkich oczach dziewann i szumach topolich". Mo¿na powiedzieæ, i¿ jest poet¹: "³ukiem wiersza wysokie ksiê¿ycowe t³o / wprowadzisz w bezmiar dolin -". Odwo³uje siê przede wszystkim do tradycji romantycznych, poezji sentymentalnej czy m³odopolskiej. Interesuje j¹ bowiem harmonia i piêkno natury, skupia siê tak¿e na jej kontemplacji oraz wyra¿eniu swoich prze¿yæ. Twórczoœæ ta ma wiêc subiektywny charakter, jest ukierunkowana na wra¿enia jednostki, a przy tym subtelna i kameralna, nastawiona na przejawy ¿ycia: "[...] trzepot ptaków rozsiejesz ziarnisty, / rozleg³¹ piersi¹ ujmiesz horyzonty [...]". Wzorce te maj¹ wiêc pozytywny wydŸwiêk. Zmienia siê to jednak w realiach wojennych, poniewa¿ s¹ one nieadekwatne do zaistnia³ej sytuacji. Wtedy inna jest ich ocena, okazuje siê, i¿ cechuje je u³uda, fa³sz, poniewa¿ nie wyra¿aj¹ ju¿ prawdy na temat œwiata. Staj¹ siê wrêcz zagro¿eniem: "[...] Nie ukoi³ twoich ust œpiew drzewa", "i nie daj mówiæ wiatrom o liliowych zmierzchach. // Bo k³ami¹. Bo œpiewaj¹ gorej¹c¹ law¹", "Ka¿ trawie, by milcza³a. Jej œpiew ciê zad³awi". Wojna wymusza na "wczorajszym" zmianê modelu poezji, który zyskuje zaanga¿owany charakter, ma zachêcaæ do dzia³ania. Liryka ta jest przepe³niona trudem, ¿alem i cierpieniem, stanowi formê walki - zrywa wiêc z wczeœniejsz¹ lekkoœci¹ i subtelnoœci¹. Dobitnie jej charakter, brak wczeœniejszej idealizacji i sielanki, zaznaczaj¹ s³owa: "Myœla³eœ: bêdzie proœciej. / A tu s³owa, œpiewne s³owa trzeba zamieniaæ, / by godzi³y jak oszczep". </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Anafora ta wskazuje na sytuacjê oraz doœwiadczenia "wczorajszego". Podkreœla bowiem rozdŸwiêk miêdzy wojennymi realiami, a tym, co ukszta³towa³o jego wra¿liwoœæ. Osoba ta do tej pory mia³a okreœlon¹ wizjê œwiata, poczucie bezpieczeñstwa i zakorzenienia w przyjaznych realiach: "Ufa³eœ: na niebo jak na strunê miêkko z³o¿ysz d³oñ". Okazuje siê jednak, i¿ teraŸniejszoœæ zaburza harmonijn¹ wizjê. Zastosowanie czasownika "ufaæ" w formie przesz³ej akcentuje wiêc utratê z³udzeñ oraz groŸny wymiar obcego i nowego œwiata, w którym nie ma ju¿ pokoju i ³adu. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Klechda pojawia siê w kontekœcie czasu przedwojennego: "Klechda z omsza³ych lat". Wywo³uje przede wszystkim skojarzenia z naiwnoœci¹, dzieciñstwem, niezwyk³ymi, ale te¿ okrutnymi zdarzeniami, co sugeruj¹ s³owa: "- œwity w klechdzie powiewa³y krwawe -". Cytat "Tak¹ klechd¹ prze³ama³ siê dzieñ / walcz¹cej / Warszawy" œwiadczy o na³o¿eniu siê na siebie dwóch rzeczywistoœci. Walka o stolicê nabiera symbolicznego znaczenia, poniewa¿ zyskuje rysy legendarne. Jednoczeœnie s³owa te zaznaczaj¹ powrót tragicznych zdarzeñ: panuje bowiem wojenne okrucieñstwo oraz rozlew krwi. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowe rozwi¹zanie: </p>
+<table border="1" style="border-collapse:collapse;width:741px;height:683px;">
+<tbody>
+<tr style="height:17px;">
+<td style="background-color:#aed581;text-align:center;width:367px;height:17px;"><strong>Przyk³adowy fragment</strong></td>
+<td style="background-color:#aed581;text-align:center;width:367px;height:17px;"><strong>Analiza</strong></td>
+</tr>
+<tr style="height:591px;">
+<td style="width:367px;text-align:center;height:591px;">
+<p><em>Wtedy -</em></p>
+<p><em>rozwiod³y siê nad miastem ornamenty ³un</em></p>
+<p><em>na z³otych kolcach wie¿yc i be³kocie Wis³y,</em></p>
+<p><em>muzyka - lecz nie nieba - kr¹¿y³a jak sen,</em></p>
+<p><em>dziœ wiesz:</em></p>
+<p><em>to skowyt strza³ów na brukach siê wi³,</em></p>
+<p><em>otacza³, chodzi³ wokó³ jak zb³¹kany zwierz. </em></p>
+</td>
+<td style="width:367px;text-align:left;height:591px;">
+<ul>
+<li>Zastosowane epitety (np. "z³otych", "zb³¹kany") wp³ywaj¹ na plastycznoœæ oraz wyrazistoœæ przedstawienia. </li>
+<li>Metafory (np. "rozwiod³y siê nad miastem ornamenty ³un") buduj¹ apokaliptyczny wymiar przedstawionych zdarzeñ. Podkreœlaj¹ totalny charakter zniszczenia.</li>
+<li>Elipsa ("muzyka - lecz nie nieba [...]") dynamizuje tekst oraz pozwala na kondensacjê treœci. Silnie zaznacza specyfikê nowej rzeczywistoœci, w której nie ma ju¿ piêkna i harmonii.</li>
+<li>Porównanie ("[...] kr¹¿y³a jak sen") wydobywa podobieñstwo miêdzy zestawionymi elementami. Pozwala na ukazanie muzyki jako zjawiska ulotnego, wrêcz nierealnego. Wynika to z grozy wojennych realiów.</li>
+<li>O¿ywienie "skowytu strza³ów" wprowadza niepokoj¹ca atmosferê oraz poczucie zagro¿enia. Wyliczenie czasowników nazywaj¹cych ruch ("[...] na brukach siê wi³, / otacza³, chodzi³ [...]") sugeruje osaczenie, niemo¿noœæ ucieczki, ale dynamizuje tak¿e poetyckie obrazowanie. Zastosowanie onomatopei ("be³kot", "skowyt") wzmacnia natomiast warstwê brzmieniowa dzie³a. Samo zaœ porównanie "skowytu strza³ów" do "zb³¹kanego zwierza" wyra¿a nastrój niepokoju, poniewa¿ strza³y staj¹ siê czymœ nieprzewidywalnym. Niczym groŸny zwierz mog¹ zaatakowaæ w ka¿dej chwili. </li>
+</ul>
+</td>
+</tr>
+<tr style="height:327px;">
+<td style="width:367px;text-align:center;height:327px;">
+<p><em>Ksiê¿yc sierpem zmru¿one rzêsy kosi³,</em></p>
+<p><em>wœród krzy¿y zwija³ œwiat³a purpurow¹ nitkê;</em></p>
+<p><em>¿o³nierze nieœli dr¿¹ce, spokornia³e oczy</em></p>
+</td>
+<td style="width:367px;text-align:left;height:327px;">
+<ul>
+<li>Upersonifikowany ksiê¿yc zostaje przedstawiony w kontraœcie z dawnymi czasami ("[...] utoczysz dotkniêciem, / ³ukiem wiersza wysokie ksiê¿ycowe t³o"). Zyskuje on z³owrogi sens, poniewa¿ zdaje siê, i¿ ¿o³nierze stanowi¹ jego ¿niwo. Wra¿enie to pog³êbia obecnoœæ krzy¿y (kojarzonych z mogi³ami) oraz motyw nitki - okreœlenie jej epitetem "purpurowa" przywodzi na myœl rozlan¹ krew.</li>
+<li>Epitety (np. "dr¿¹ce", "spokornia³e") zarysowuj¹ sytuacjê walcz¹cych oraz ich niepokój czy strach. Z kolei instrumentacja g³oskowa (nagromadzenie g³oski "r") wzmacnia warstwê brzmieniow¹, przypomina ona wrêcz warczenie, wywo³uje raczej negatywne odczucia - koresponduje to z zaprezentowan¹ w utworze rzeczywistoœci¹.</li>
+</ul>
+</td>
+</tr>
+<tr style="height:189px;">
+<td style="width:367px;text-align:center;height:189px;">
+<p><em>kiedy m³odzi plecami wsparci o wiecznoœæ</em></p>
+<p><em>odchodzili w g³êbokie pos³ania.</em></p>
+<p><em>Wiêc nakry³y ich ob³oki podobne kulistym mleczom</em></p>
+<p><em>i wiatr, któremuœ wierzy³ - sk³ada³ poca³unki umar³ym.</em></p>
+<p> </p>
+</td>
+<td style="width:367px;text-align:left;height:189px;">
+<ul>
+<li>Metafory i eufemizmy ("kiedy m³odzi plecami wsparci o wiecznoœæ / odchodzili w g³êbokie pos³ania.") pozwalaj¹ na oryginalne, ale te¿ niedos³owne przedstawienie œmierci walcz¹cych. Nabiera ona ³agodnoœci, która jest odleg³a od brutalnych doœwiadczeñ. </li>
+<li>Epitety (np. "g³êbokie", "kulistym") wp³ywaj¹ na plastycznoœæ oraz ukonkretnienie przedstawienia. </li>
+<li>Personifikacja wiatru pozwala na ukazanie go w niezwyk³y sposób - jako ¿a³obnika, który oddaje ho³d poleg³ym - sugeruje to uwznioœlenie ich poœwiêcenia, ale tak¿e samotnoœæ. </li>
+</ul>
+</td>
+</tr>
+<tr style="height:203px;">
+<td style="width:367px;text-align:center;height:203px;">
+<p><em>Nie wiedzia³eœ, ¿e d³oñ, któr¹ uczy³eœ œpiewaæ,</em></p>
+<p><em>potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹,</em></p>
+<p><em>gniewu unosiæ ¿agiew - </em></p>
+<p><em>Ufa³eœ. Nie ukoi³ twoich ust œpiew drzewa</em></p>
+<p><em>i oczu blask nie zaj¹³ pod kopu³¹ he³mu</em></p>
+<p><em>i serca nie nasyci krzyk wbity na bagnet.</em></p>
+</td>
+<td style="width:367px;text-align:left;height:203px;">
+<ul>
+<li>Przedstawienie d³oni mo¿na postrzegaæ jako synekdochê. W tej sytuacji reprezentuje ona ca³ego cz³owieka i jego postawê, która w czasie wojny ulega drastycznej przemianie. Zaznacza siê tutaj kontrast miêdzy tym, co by³o ("[...] d³oñ, któr¹ uczy³eœ œpiewaæ") oraz teraŸniejszoœci¹ ("potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹").</li>
+<li>Liczne metafory ("Nie ukoi³ twoich ust œpiew drzewa / i oczu blask nie zaj¹³ pod kopu³¹ he³mu / i serca nie nasyci krzyk wbity na bagnet.") podkreœlaj¹ tragizm sytuacji cz³owieka poznaj¹cego okrucieñstwo i przemoc. Z tego powodu nic nie mo¿e go ukoiæ - wojna negatywnie wp³ywa na jego ¿ycie duchowe. </li>
+<li>Anafora w dwóch ostatnich wersach ("i oczu blask nie zaj¹³ pod kopu³¹ he³mu / i serca nie nasyci krzyk wbity na bagnet.)<br/> podkreœla równorzêdnoœæ wyliczonych zjawisk, zaœ inwersja (np. "i serca nie nasyci krzyk wbity na bagnet.") wprowadza patos oraz podnios³y nastrój.</li>
+</ul>
+</td>
+</tr>
+<tr style="height:172px;">
+<td style="width:367px;text-align:center;height:172px;">
+<p><em>Dzisiaj - </em></p>
+<p><em>w piaskach cmentarzy</em></p>
+<p><em>powiêd³y echa strza³ów,</em></p>
+<p><em>wiruje b³êkit niski jak wczoraj ³askawy,</em></p>
+<p><em>jak lustro.</em></p>
+</td>
+<td style="width:367px;text-align:left;height:172px;">
+<ul>
+<li>Przenoœne ukazanie echa zaznacza zmniejszaj¹c¹ siê intensywnoœæ doznañ. Odg³osy strza³ów s³abn¹ niczym wiêdn¹ce roœliny, co sugeruje przemijanie. </li>
+<li>Epitety ("niski", "³askawy") ponownie wp³ywaj¹ na plastycznoœæ przedstawienia oraz nastrojowoœæ, ³agodz¹ wspomnienie wojennych zdarzeñ.</li>
+<li>Porównania ("[...]  / jak wczoraj ³askawy, / jak lustro.") precyzuj¹ wygl¹d i w³aœciwoœci b³êkitu. </li>
+</ul>
+</td>
+</tr>
+<tr style="height:172px;">
+<td style="width:367px;text-align:center;height:172px;">
+<p><em>Nazbyt duszno jest s³owom na wargach</em></p>
+<p><em>ciosanym z ³un i ¿alu o wadze kamienia - </em></p>
+<p><em>Myœla³eœ - bêdzie proœciej.</em></p>
+<p><em>A tu s³owa, œpiewne s³owa trzeba zamieniaæ,</em></p>
+<p><em>by godzi³y jak oszczep. </em></p>
+</td>
+<td style="width:367px;text-align:left;height:172px;">
+<ul>
+<li>S³owa zostaj¹ ukazane za pomoc¹ metafor oraz o¿ywienia. Akcentuj¹ one wp³yw wojny na charakter poezji - wi¹¿e siê ona z trudem, poniewa¿ konieczne staje siê przedstawienie bolesnych treœci. Przekaz ten wzmacnia s³ownictwo zwi¹zane z ciosaniem - zaznacza wysi³ek twórcy. </li>
+<li>Dostrzegalna w tym fragmencie jest tak¿e hiperbolizacja ("Nazbyt duszno jest s³owom na wargach / ciosanym z ³un i ¿alu o wadze kamienia") - oddaje ona wra¿enia zwi¹zane z wojn¹ (niepokój, ciê¿ar doœwiadczenia, niemo¿noœæ ujêcia za pomoc¹ s³ów koszmaru).</li>
+<li>Elipsa ("Myœla³eœ - bêdzie proœciej.") kondensuje treœæ, ale pobudza tak¿e czytelnika, aby sam uzupe³ni³ brakuj¹ce elementy. </li>
+<li>Porównanie s³ów do oszczepu wskazuje na nieprzyjazny charakter rzeczywistoœæ. Powoduje ona, i¿ s³owa - niegdyœ "œpiewne" - staj¹ siê narzêdziem walki i ataku. </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Podmiot liryczny odkrywa, ¿e wojna na dobre zmienia charakter rzeczywistoœci. Dawny œwiat wartoœci i piêkna, harmonii, sielankowej poezji ulega destrukcji. Zamiast tego zaczyna dominowaæ cierpienie, œmieræ, wszystko, co wywo³uje negatywne skojarzenia: "Nie wiedzia³eœ, ¿e d³oñ, któr¹ uczy³eœ œpiewaæ / potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹, / gniewu unosiæ ¿agiew -". Z tego te¿ powodu osoba mówi¹ca dochodzi do wniosku, i¿ nie mo¿na powróciæ do dawnego œwiata oraz zwi¹zanego z nim modelu poezji. Wyra¿aj¹ to s³owa: "Bo k³ami¹. Bo œpiewaj¹ gorej¹ca law¹, / ¿e znowu d³oñ na niebo jak na strunê z³o¿ysz, / muzykê podasz ustom -". Ponadto podmiot liryczny odkrywa, i¿ walka za ojczyznê wcale nie wi¹¿e siê ze s³aw¹ i pamiêci¹ przejawiaj¹c¹ siê we wspania³ych opowieœciach. Zamiast tego odczuwalne jest cierpienie i trud zwi¹zany z tym, aby s³owo sta³o siê broni¹, wspiera³o walcz¹cych. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Natura w utworze Gajcego stanowi wspomnienie czasów przedwojennych. Jest znakiem zatraconych w czasie konfliktu wartoœci: piêkna, prostoty, harmonii, pokoju. Reprezentuje wizjê rzeczywistoœci, która zapewnia poczucie stabilnoœci, bezpieczeñstwa oraz zaufania: "[...] na niebo jak na strunê miêkko z³o¿ysz d³oñ, / muzykê podasz ustom [...]". To ona kszta³tuje wra¿liwoœæ i to¿samoœæ "wczorajszego", poniewa¿ wzrasta on w sielankowych i przyjaznych realiach. Przyroda zachêca bohatera do kontemplacyjnej postawy, a tak¿e oddzia³uje na kszta³t jego poezji. Jest ona bowiem przesi¹kniêta nastrojowoœci¹, intymnym charakterem i fascynacj¹ otoczeniem: "³ukiem wiersza wysokie ksiê¿ycowe t³o / wprowadzisz w bezmiar dolin -". Jednoczeœnie natura wyzwala w bohaterze aktywn¹ postawê, sprawia, i¿ odczuwa swoj¹ wiêŸ ze œwiatem: "[...] trzepot ptaków rozsiejesz ziarnisty". Wojenne prze¿ycia jednak zmieniaj¹ relacjê "wczorajszego" z natur¹. Okazuje siê bowiem, i¿ chocia¿ w przesz³oœci natura by³a Ÿród³em inspiracji oraz wdziêcznym tematem poezji, nie przystaje do obecnych realiów. Staje siê tym samym symbolem minionych czasów, do których nie mo¿na ju¿ wróciæ. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przyk³adowe kontrasty w utworze:</p>
+<ul>
+<li>
+<strong>Krótkie wersy i strofy - d³ugie wersy oraz strofy</strong> -&gt; W utworze Gajcy zestawia obok siebie wersy i strofy o ró¿niej d³ugoœci. W jednym z wersów znajduje siê zaledwie jedno s³owo ("ufa³eœ..."), zaœ w kolejnym - ju¿ piêæ ("Ksiê¿yc sierpem zmru¿one rzêsy kosi³"). Równie¿ obszernoœæ strof jest zró¿nicowana: jedne sk³adaj¹ siê z jednego wersu, zaœ inne np. z piêciu, szeœciu czy siedmiu. Kontrast ten dotyczy wiêc kompozycji wiersza. Prowadzi do jego dynamizacji oraz urozmaicenia. Jednoczeœnie zabieg ten pozwala na zaakcentowanie sensu okreœlonych s³ów - pojedynczy wyraz w wersie wybrzmiewa w pe³ny sposób, zwraca na siebie uwagê odbiorcy. Zastosowanie zaœ strof o ró¿ne d³ugoœci odzwierciedla równie¿ atmosferê chaosu i niepokoju, w wiarygodny sposób oddaje odczucia podmiotu lirycznego, który styka siê z nieprzyjazn¹ rzeczywistoœci¹. </li>
+<li>
+<strong>Przesz³oœæ - teraŸniejszoœæ</strong> -&gt; Miniony czas oraz realia wojenne nie tylko siê ró¿ni¹, ale wywo³uj¹ tak¿e odmienne uczucia. Podkreœla to rozdŸwiêk miêdzy czasem pokoju i konfliktu oraz zarysowuje doœwiadczenia "wczorajszego". W wierszu Gaj¹cego przesz³oœæ wywo³uje pozytywne skojarzenia. Zapewnia poczucie bezpieczeñstwa oraz mo¿liwoœæ samodzielnego poznawania œwiata, uczy wra¿liwoœci i kontemplacji otoczenia. Jest ³agodna, subtelna i sielankowa: "Modlitwê nocnych cieni rozwiesisz jak wiêcierz / na s³odkich oczach dziewann i szumach topolich." Wojenne realia burz¹ tê harmonijn¹ oraz optymistyczn¹ wizjê rzeczywistoœci. Nawet pozytywnie postrzegane wczeœniej element pejza¿u nagle staj¹ siê obce i z³owrogie: "Ksiê¿yc sierpem zmru¿one rzêsy kosi³". TeraŸniejszoœæ stanowi odwrotnoœæ minionych czasów, co potêguje tragizm sytuacji "wczorajszego". </li>
+<li>
+<strong>Dawny model poezji</strong> - <strong>nowy model poezji</strong> -&gt; W utworze zestawione ze sob¹ zostaj¹ dwie koncepcje poezji, które reprezentuj¹ odmienne wartoœci. Dawna liryka opisuje subiektywne odczucia poety, jest podporz¹dkowana jego wra¿liwoœci. Ma przy tym kameralny i nastrojowy charakter, wi¹¿e siê z natur¹ jako Ÿród³em natchnienia: "³ukiem wiersza wysokie ksiê¿ycowe t³o / wprowadzisz w bezmiar dolin -". Nowy model poezji jest odpowiedzi¹ na wojenne realia. Doœwiadczenie jednostki zastêpuje s³u¿ba ojczyŸnie. Zmienia siê tak¿e tematyka i nastrój poezji, poniewa¿ ma ona zagrzewaæ do walki, wzmacniaæ uczucia patriotyczne. Nie ma w niej miejsca na opiewanie bogactwa natury czy skupienie siê na ¿yciu wewnêtrznym pisz¹cego. Inn¹ funkcjê liryki okreœlaj¹ s³owa: "A tu s³owa, œpiewne s³owa trzeba zamieniaæ, / by godzi³y jak oszczep". Skontrastowanie dwóch typów poezji podkreœla nieprzystawanie przedwojennych wzorców do nowej rzeczywistoœci. Pozwala tak¿e na wydobycie charakterystycznych cech tych modeli. </li>
+<li>
+<strong>Cz³owiek przed wojn¹ - cz³owiek w czasie wojny</strong> -&gt; Cz³owiek przed wojn¹ to istota naiwna, wolna i beztroska, która mo¿e cieszyæ siê niespiesznym poznawaniem œwiata. Jest ufn¹ istot¹, poniewa¿ nie doœwiadcza niczego, co zburzy³oby jej poczucie bezpieczeñstwa. Wydaje siê jej tak¿e, ¿e cz³owiek nie wykazuje zdolnoœci do okrucieñstwa czy zabijania: "Nie wiedzia³eœ, ¿e d³oñ, któr¹ uczy³eœ œpiewaæ / potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹". Wojna jednak szybko weryfikuje optymistyczne przekonania cz³owieka. Musi on bowiem zmierzyæ siê ze wszechobecnym zniszczeniem, œmierci¹, przebudzeniem siê w ludziach pierwotnych instynktów: "i serca nie nasyci³ krzyk wbity na bagnet". Ponadto wszystkie jego romantyczne i naiwne przekonania s¹ nieadekwatne do tego, co doœwiadcza: "Wierzy³eœ: s³owiczym pieniem wierszy pop³ynie s³awa harda / i wzejdzie w barwnych têczach, obudzi siê w mitach". Kontrast ten s³u¿y wskazaniu wp³ywu konfliktu na los cz³owieka oraz akcentuje tragizm jego sytuacji. </li>
+<li>
+<strong>Dawne wartoœci - aktualne wartoœci</strong> -&gt; W przesz³oœci liczy³o siê przede wszystkim piêkno, harmonia, zaufanie, ³agodnoœæ, wra¿liwoœæ, kontemplacja wynikaj¹ca z kontaktu z bogatym œwiatem natury. W czasie tym kluczowe s¹ wiêc pozytywne wartoœci œwiadcz¹ce o szczególnej wiêzi ³¹cz¹cej cz³owieka z otoczeniem. Wartoœci te jednak zostaj¹ zapomniane podczas wojny. TeraŸniejszoœæ w wierszu odwo³uje siê bowiem do innych elementów: walki, poœwiêcenia, obrony ojczyzny, patriotyzmu. </li>
+<li>
+<strong>Natura - cz³owiek</strong> -&gt; Natura w utworze Gajcego ma sielankowy oraz pozytywny charakter. Jest piêkna i spokojna, wrêcz liryczna: "[...] trzepot ptaków rozsiejesz ziarnisty". Wyró¿nia j¹ niezmiennoœæ oraz stabilnoœæ, za sprawa której w cz³owieku budzi siê ufnoœæ oraz wra¿liwoœæ: "[...] na niebo jak na strunê miêkko z³o¿ysz d³oñ, / muzykê podasz ustom, utoczysz dotkniêciem". Z tak¹ wizj¹ kontrastuje cz³owiek jako Ÿród³o wojny. Dzia³ania istoty ludzkiej prowadz¹ do zaburzenia porz¹dku, powoduj¹ niszczenie œwiata nie tylko w kontekœcie strat materialnych, ale równie¿ duchowych. Okazuje siê bowiem, i¿ w czasie konfliktu ludzie zatracaj¹ swe cz³owieczeñstwo, kieruje nimi nienawiœæ oraz okrucieñstwo. Z tego powodu cz³owiek oraz jego dzia³ania jawi¹ siê jako zaprzeczenie œwiata przyrody, gdyœ prowadz¹ do unicestwienia dotychczasowej równowagi. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Podmiot liryczny wyra¿a stanowcz¹ i jednoznaczn¹ postawê. Zachêca bowiem "wczorajszego" do tego, aby dostosowa³ siê do nowych realiów, odrzuci³ swój wczeœniejszy system wartoœci i przyj¹³ nowy model sztuki. Osoba mówi¹ca doskonale rozumie, ¿e rzeczywistoœæ zmieni³a swój charakter, przez co nie zapewnia ju¿ poczucia bezpieczeñstwa. Z tego te¿ powodu wypowiadaj¹cy siê jest pozbawiony z³udzeñ, poniewa¿ wie, i¿ tym samym zmienia siê rola poety i jego twórczoœci: "Ka¿ trawie, by milcza³a. Jej œpiew ciê zad³awi, / spowije wat¹ wzruszeñ i ciœnie w niepamiêæ". Podmiot liryczny musi siê po¿egnaæ z ide¹ przyjaznego œwiata, bezpieczeñstwa, pokoju, piêkna, harmonii, kontemplacji rzeczywistoœci. Zamiast nich kluczowe staj¹ siê inne idee, odpowiadaj¹ce dramatycznym realiom egzystencji. Wœród nich mo¿na wymieniæ m.in.: zaanga¿owanie, patriotyzm, walkê, poœwiêcenie, lirykê zaanga¿owan¹, która umacnia walcz¹cych. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Model pierwszy poezji wi¹¿e siê z rzeczywistoœci¹ przedwojenn¹. Jest to liryka nastrojowa, kameralna, w której ujawnia siê wra¿liwoœæ poety oraz jego silny zwi¹zek z rzeczywistoœci¹. ród³em natchnienia staje siê piêkno i delikatnoœæ œwiata natury. Œwiadcz¹ o tym s³owa: "[...] na niebo jak na strunê miêkko z³o¿ysz d³oñ, / muzykê podasz ustom, utoczysz dotkniêciem". Poezja ta odzwierciedla harmoniê oraz przyjazny charakter œwiata, który ods³ania przed cz³owiekiem swój duchowy wymiar: "³ukiem wiersza wysokie ksiê¿ycowe t³o / wprowadzisz w bezmiar dolin -". Poeta mo¿e wiêc skupiæ siê na subiektywnych doznaniach, zaœ w swych utworach wyra¿a przede wszystkim w³asne doœwiadczenie rzeczywistoœci. S¹ wiêc to echa poezji sentymentalnej, romantycznej oraz m³odopolskiej. W nich to przyroda staje siê wa¿nym zagadnieniem, który umo¿liwia artyœcie wyra¿enie swoich odczuæ, dominuje tak¿e kameralna tematyka. </p>
+<p>Czas wojny zmienia jednak charakter poezji: utwory wyra¿aj¹ce osobiste prze¿ycia, opiewaj¹ce œwiat natury nie oddaj¹ nowych realiów. W zwi¹zku z tym konieczna staje siê zmiana modelu liryki. Wszechobecna œmieræ, cierpienie, brutalnoœæ wymagaj¹ bowiem od twórcy przyjêcia nowej roli oraz nadania jego dzie³om innych funkcji ni¿ do tej pory. Okazuje siê w ten sposób, i¿ nie mo¿na wróciæ do dawnej poezji, co podkreœlaj¹ s³owa: "i nie daj mówiæ wiatrom o lilowych zmierzchach. // Bo k³ami¹. Bo œpiewaj¹ gorej¹c¹ law¹, / ¿e znowu d³oñ na niebo jak na strunê z³o¿ysz". Drugi model wywo³uje skojarzenia z poezj¹ tyrtejsk¹, zaanga¿owan¹, patriotyczn¹ - zostaje podporz¹dkowanym wojennym realiom, ma pobudzaæ obywateli do walki. W ten sposób liryka staje siê swoist¹ broni¹ i s³u¿y okreœlonym celom: "A tu s³owa, œpiewne s³owa trzeba zamieniaæ, / by godzi³y jak oszczep". </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przyk³adowo:</p>
+<p>Osoba mówi¹ca jest zdeterminowana i konsekwentna w swych pogl¹dach. O jej stanowczej postawie œwiadcz¹ liczne czasowniki w trybie rozkazuj¹cym ("rozbrój", "odejmij", "nie daj mówiæ"). Nie ma ona jakichkolwiek z³udzeñ, i¿ mo¿liwe jest ¿ycie w zgodzie z dawnym systemem wartoœci, jej os¹d realiów jest trzeŸwy oraz bolesny: "Nie wiedzia³eœ, ¿e d³oñ któr¹ uczy³eœ œpiewaæ / potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹". Przepe³nia j¹ wola dzia³ania, ale tak¿e zaduma nad tym, jakie wojna wywo³a³a przemiany w rzeczywistoœci: "Myœla³eœ: bêdzie proœciej. / A tu s³owa, œpiewne s³owa trzeba zamieniaæ, / by godzi³y jak oszczep". W jej sposobie wypowiedzi zaznacza siê tak¿e swoista troska o "wczorajszego", wspó³czucie, poniewa¿ podmiot liryczny zdaje siê rozumieæ tragizm jego sytuacji, rozdŸwiêk miêdzy wczeœniejszymi doœwiadczeniami a wojn¹: "A tobie - dni wczorajsze w oczach nie ostyg³y, / ufa³eœ...". Z tego tez powodu wspiera odbiorcê swej wypowiedzi, poniewa¿ udziela mu rad.</p>
+<p> </p>
+<p>Wyra¿enie opinii na temat s³usznoœci wyboru - czêœæ indywidualna </p><br>

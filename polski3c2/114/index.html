@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Utwór opisuje to, co spotyka Haniê po upadku z drabiny. Zdarzenie przyci¹ga uwagê domowników: niektórzy zapalaj¹ gromnicê, zaœ ktoœ inny dzwoni po lekarza. Pojawia siê tak¿e pani z dzieæmi, która klêka przy s³u¿¹cej i pyta o to, kogo z rodziny Hani mo¿e poinformowaæ o nieszczêœliwym wypadku. Okazuje siê, ¿e pracodawczyni w ogóle nie zna dziewczyny: ani jej rodziny, ani adresu. Na jej s³owa s³u¿¹ca podaje nazwê wioski (Nêdza) oraz gminy (Krzywda). Stwierdza równie¿, i¿ nikt do niej nie przyjedzie. Ojciec dziewczyny zgin¹³ w walce z Rosjanami, brat zosta³ zabrany przez Niemców, a siostry zmar³y. Hania wspomina tak¿e o zjawie swej zmar³ej matki, która nawiedza j¹ nocami. Bohaterka nie ma kogo zawiadomiæ, nie chce te¿ lekarza, poniewa¿ jest œwiadoma nadchodz¹cej œmierci. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Tytu³owa bohaterka utworu to Hania, która staje siê ofiar¹ nieszczêœliwego wypadku - spada z drabiny. Jest ona prost¹ dziewczyn¹ ze wsi, która straci³a wszystkich cz³onków swej rodziny. Ojciec zgin¹³ w walce z Rosjanami, brata zabrali Niemcy, równie¿ siostry oraz matka Hani odesz³y z tego œwiata. S³u¿¹ca zostaje ukazana jako dobra i spokojna osoba, która nie chce, aby ktokolwiek martwi³ siê jej losem. Mimo ciê¿kich doœwiadczeñ ¿yciowych oraz obojêtnoœci pracodawców, którzy nic o niej nie wiedz¹, bohaterka utworu nikogo nie oskar¿a. Zdaje siê byæ pogodzona z tym, co j¹ spotka³o, akceptuje nadchodz¹c¹ œmieræ. Wyró¿nia siê pokor¹, wra¿liwoœci¹ oraz ³agodnoœci¹, przywi¹zaniem do bliskich. Œwiadczy o tym sposób jej wypowiedzi na temat bliskich. Zdrobnienia ("Tatuœ", "siostrzyczki, "nó¿ki") podkreœlaj¹ czu³oœæ oraz mi³oœæ, jak¹ s³u¿¹ca darzy krewnych. Prostota wypowiedzi dziewczyny, brak wyszukanych œrodków jêzykowych wskazuj¹ na jej przynale¿noœæ do ni¿szych warstw spo³ecznych. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Domownicy reaguj¹ zasadniczo na nieszczêœliwy wypadek s³u¿¹cej: "pal¹ przy niej gromnicê. / Ktoœ po doktora dzwoni". Jednak¿e reakcja pani zdaje siê nieadekwatna do zaistnia³ej sytuacji, zbyt wywa¿ona: "Oj, Hania¿ to zabita?!" / [...] / "Mo¿e siê co odmieni... / Poœlemy wraz depeszê, / niech siê swoi poœpiesz¹". Pani domu jest obojêtna na los dziewczyny, poniewa¿ w ogóle jej nie zna: nic nie wie na temat miejsca zamieszkania ani najbli¿szej rodziny. Mo¿na wiêc powiedzieæ, ¿e widzi w niej tylko osobê, która wykonuje pewne obowi¹zki, lecz nie jest dla niej cz³owiekiem, lecz kimœ niewidzialnym. Œwiadczy to o nierównoœci ubo¿szych warstw wzglêdem zamo¿nych oraz uprzywilejowanych. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przytoczone s³owa Hani w kontekœcie ca³ego utworu zyskuj¹ znaczenie metaforyczne, a wrêcz uniwersalne. Staj¹ siê bowiem refleksj¹ na temat sytuacji ¿yciowej najni¿szych warstw, których egzystencja jest naznaczona nêdz¹. S³u¿¹ca z utworu polskiej poetki staje siê swoist¹ reprezentantk¹ ludzi uciemiê¿onych, pozbawionych mo¿liwoœci spokojnego ¿ycia, krzywdzonych lub ignorowanych przez bliŸnich. S³owa bohaterki: "Niechaj siê nikt nie troska!... / Nêdza zowie siê wioska, / a gmina moja Krzywda..." zawieraj¹ w sobie nieco goryczy. Przypominaj¹ bowiem o tym, i¿ sytuacja najubo¿szych stanowi coœ oczywistego i niezmiennego - z tego powodu nie budzi wspó³czucia, potrzeby zmiany, lecz stanowi typowy element rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>W utworze obecne s¹ pewne skromne przejawy komizmu. Œwiadczy o tym chocia¿by wywa¿ona reakcja pani domu, która nie do koñca zdaje siê przejmowaæ sytuacj¹ swej s³u¿¹cej, wrêcz bagatelizuje tragiczny wypadek:</p>
+<p><em>Wesz³a pani i pyta:</em></p>
+<p><em>"Oj, Hania¿ to zabita?!"</em></p>
+<p><em>Klêka przy niej na ziemi:</em></p>
+<p><em>"Mo¿e siê co odmieni...</em></p>
+<p><em>Poœlemy wraz depeszê,</em></p>
+<p><em>niech siê swoi poœpiesz¹. </em></p>
+<p>Za inny przejaw komizmu mo¿na tak¿e uznaæ odpowiedŸ bohaterki na pytanie o to, gdzie jest jej dom: "Nêdza zowie siê wioska, / a gmina moja Krzywda...". Oprócz sensu dos³ownego s³owa te w przenoœny sposób wskazuj¹ na wyzysk i cierpienie ni¿szych warstw, których losem nikt siê nie interesuje. Wskazane przejawy komizmu nieco ³agodz¹ doœæ powa¿n¹ tematykê utworu, pozwalaj¹ tak¿e na subteln¹ krytykê spo³ecznych nierównoœci - bez zbêdnego moralizatorstwa. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Malarz obiektem swego zainteresowania czyni dziewczynkê, czyli tytu³ow¹ <em>¯ebraczkê</em>. Znajduje siê ona w centrum dzie³a, wyró¿nia j¹ tak¿e ubiór: bia³a koszula oraz czerwona spódnica. Wygl¹d bohaterki i jej powierzchownoœæ raczej nie sugeruj¹ bezpoœrednio trudnej egzystencji oraz nêdzy. Jej jedynymi znakami zdaj¹ siê zniszczone buty oraz sama koszula, poniewa¿ jest zbyt du¿a - ma szerokie rêkawy, ods³ania ramiê. Twarz ¿ebrz¹cej wyra¿a smutek, niepewnoœæ, cierpienie. Sorokin w wyrazisty sposób zaznacza dystans miêdzy zamo¿n¹ warstw¹ a najubo¿sz¹: dziewczynka zostaje bowiem ukazana w szczegó³owy sposób, natomiast przedstawienie dobroczyñcy zostaje ograniczone do namalowanej d³oni, która wrêcza datek. Dzie³o malarza podkreœla tym samym osamotnienie dzieci znajduj¹cych siê w trudnej sytuacji. Zdane s¹ wy³¹cznie na siebie, musz¹ walczyæ o prze¿ycie. </p><br>

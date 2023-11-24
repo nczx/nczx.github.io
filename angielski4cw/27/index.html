@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. mute</p>
+<p>(obserwować kogoś w mediach społecznościowych, ale chwilo blokować jego posty: <strong>wyciszyć</strong>) </p>
+<p>2. lean</p>
+<p>(szczupły, niegruby:<strong> chudy</strong>)</p>
+<p>3. knuckles</p>
+<p>(stawy na samym dole palców, gdzie łączą się z wierzchem dłoni: <strong>kłykcie</strong>)</p>
+<p>4. host</p>
+<p>(komputer, który kontroluje i komunikuje się z innymi komputerami: <strong>host*</strong>)</p>
+<p>5. slender</p>
+<p>(szczupły i delikatny, zazwyczaj w atrakcyjny sposób: <strong>smukły</strong>.)</p>
+<p>6. obese</p>
+<p>(z dużą nadwagą: <strong>otyły</strong>)</p>
+<p>7. implants</p>
+<p>(przedmioty włożone pod skórę albo do czyjegoś ciała: <strong>implanty</strong>)</p>
+<p>8. broad band</p>
+<p>(rodzaj szybkiego Internetu: <strong>szerokopasmowy</strong>)</p>
+<p>9. lungs</p>
+<p>(mamy je dwa w naszym organizmie i pobierają one powietrze i wydalają je kiedy oddychamy: <strong>płuca</strong>)</p>
+<p>10. kidneys</p>
+<p>(organy w ciele, które pomagają pozbyć się odpadów przemiany materii i filtrować krew: <strong>nerki</strong>)</p>
+<p> </p>
+<p><strong>*</strong> <em>Host</em> to komputer, który podłączony do sieci pełni zadanie nadrzędne, udostępniając innym, połączonym z nim komputerom swoje dane, np. pliki lub programy. W tym znaczeniu <em>host</em> nie ma tłumaczenia na język polski i używa się anglojęzycznej wersji. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. defective </p>
+<p>2. assistant</p>
+<p>3. judgement</p>
+<p>4. solutions</p>
+<p>5. conclusion</p>
+<p>6. possibilities</p>
+<p> </p>
+<p><strong>The two extra words are</strong>: communicate and value. </p>
+<p> </p>
+<p><strong>Tłumaczenie tekstu (wstawione słowa zostały pogrubione):</strong></p>
+<p>Nagroda Ig Nobla</p>
+<p>Badania naukowe są odpowiedzialne za wiele wynalazków, które ulepszyły nasze życie - od odnawialnej energii po przełomy w medycynie. Jednak czasami ludzie mogą wątpić w znaczenie niektórych badań. Dzieje się tak, ponieważ wynalazki są w pewien sposób <strong>wadliwe</strong>, więc mogą powodować więcej problemów, niż rozwiązywań. Jednak nawet jeśli te pomysły działają, niektórzy mogą zastanawiać się, dlaczego potrzebujemy tych produktów. Czy wirtualny <strong>asystent</strong>, który wykonuje za nas podstawowe zadania jest naprawdę niezbędny? Jeśli pomysł jest wystarczająco dziwny, może otrzymać nagrodę Ig Nobla. Nagrody te są przyznawane ludziom, którzy, w <strong>ocenie</strong> organizatorów, spróbowali znaleźć <strong>rozwiązania</strong> problemów, które tak naprawdę nie muszą zostać rozwiązane. Na przykład Nagroda w dziedzinie psychologii w 2022 roku została przyznana dwóm naukowcom, którzy starali się znaleźć związek między osobami o osobowości narcystycznej a wyglądem, a konkretnie brwiami. Doszli oni do <strong>wniosku</strong>, że istotnie, wyraziste brwi ujawniają narcystyczne cechy osobowości. </p>
+<p>Być może największą innowacją w przyznawaniu nagród jest pomysł autorstwa organizatorów. Jeden aspekt ceremonii przyznawania nagród, który może być irytujący to zbyt długie przemowy. Podczas ceremonii rozdania Nagród Ig Nobla obecna jest ośmioletnia dziewczynka, która daje temu kres przez wejście na scenę i wypowiedzenie następujących słów: "Przestańcie. Jestem znudzona". Wyobraź sobie <strong>możliwości</strong>, które daje ten pomysł - mógłby zostać wykorzystany podczas przemów polityków, w programach typu <em>talk show</em> albo w audycjach radiowych kiedy DJ daje się ponieść!</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. we <span style="text-decoration: line-through;">will go</span> to the cinema</p>
+<p>we <strong>are going</strong> to the cinema</p>
+<p><strong>Uzasadnienie</strong>: opis sytuacji zaplanowanej na najbliższą przyszłość, której szczegóły są już znane - czas <em>present continuous</em>.  </p>
+<p>I<span style="text-decoration: line-through;">'m paying</span> you when I meet you at the cinema.</p>
+<p>I'll pay you when I meet you at the cinema.</p>
+<p><strong>Uzasadnienie</strong><em>: </em>zdanie czasowe, czynność, która wydarzy się w przyszłości <em>- will. </em></p>
+<p>You <span style="text-decoration: line-through;">are</span> going to pay me at the cinema lat time (...)</p>
+<p>You <strong>were</strong> going to pay me at the cinema lat time (...)</p>
+<p><strong>Uzasadnienie</strong>: opis zamiaru dotyczącego przyszłości przedstawiony z perspektywy przeszłości -<em> were going to</em>.</p>
+<p> </p>
+<p>2. I'm stuk in traffic, so I'm sorry, but I<span style="text-decoration: line-through;">'m being</span> late.</p>
+<p>I'm stuk in traffic, so I'm sorry, but I'm going to be late.</p>
+<p><strong>Uzasadnienie</strong>: przewidywanie przyszłości na podstawie obserwacji - <em>be going to + bezokolicznik</em>.</p>
+<p>Don't worry, though. I will <span style="text-decoration: line-through;">be arriving</span> by 12.55 pm.</p>
+<p>Don't worry, though. I will <strong>have arrived</strong> by 12.55 pm.</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do określonego czasu w przyszłości - czas <em>future perfect</em>.</p>
+<p>(...) and at one c'clock you<span style="text-decoration: line-through;"> are having</span> your lunch break. </p>
+<p>(...) and at one c'clock you <strong>have</strong> your lunch break. </p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w harmonogramie - czas <em>present simple</em>.</p>
+<p>(...) I <span style="text-decoration: line-through;">will be driving</span> for five hours.</p>
+<p>(...) I <strong>will have been</strong> <strong>driving</strong> for five hours.</p>
+<p><strong>Uzasadnienie</strong>: czynność, która w określonym momencie w przyszłości będzie trwała już jakiś czas - czas <em>future perfect continuous</em>.</p>
+<p> </p>
+<p>3. (...) I <span style="text-decoration: line-through;">will have been doing</span> my English homework.</p>
+<p>(...) I <strong>will be doing</strong> my English homework.</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która będzie odbywała się w konkretnym momencie w przyszłości - czas <em>future continuous</em>.</p>
+<p>But we <span style="text-decoration: line-through;">are having</span> PE at three o'clock on Thursdays.</p>
+<p>But we <strong>have</strong> PE at three o'clock on Thursdays.</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie zaplanowane w harmonogramie - czas <em>present simple</em>.</p>
+<p>(...) I <span style="text-decoration: line-through;">will be forgetting</span> my PE kit.</p>
+<p>(...) I<strong>'m going to forget</strong> my PE kit.</p>
+<p><strong>Uzasadnienie</strong>: opis zamiaru dotyczącego przyszłości, który może ulec zmianie -<em> be going to + bezokolicznik</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. won</p>
+<p><strong>Uzasadnienie</strong>: wydarzenie, które miało miejsce w konkretnym momencie w przeszłości i jest zakończone - czas <em>past simple</em>. </p>
+<p>2. sums</p>
+<p><strong>Uzasadnienie</strong>: <em>vast sums</em> - ogromne sumy (pieniędzy).</p>
+<p>3. problematic</p>
+<p><strong>Tłumaczenie zdania:</strong> Inne materiały były już dostępne, jednak były one <strong>problematyczne</strong>, ze względu na zawartość toksycznych chemikaliów i niebiodegradowalny skład.</p>
+<p>4. feasible</p>
+<p> <strong>Tłumaczenie zdania:</strong> Kara odkryła, że byłoby <strong>wykonalne</strong> stworzenie z odpadów materiału, który byłby tani i przyjazny środowisku. </p>
+<p>5. graduates</p>
+<p><strong>Uzasadnienie</strong>: zdarzenie zaplanowane odgórnie w programie studiów - czas <em>present simple</em>.</p>
+<p>6. will use</p>
+<p><strong>Uzasadnienie</strong>: ogólne nadzieje dotyczące przyszłości - <em>will + bezokolicznik</em>. </p>
+<p>7. studying</p>
+<p><strong>Uzasadnienie</strong>: opis czyjegoś przyzwyczajenia - konstrukcja <em>be used to</em> + czasownik z końcówką -<em>ing</em>. </p>
+<p>8. will have inspired</p>
+<p><strong>Uzasadnienie</strong>: sytuacja, która wydarzy się do określonego czasu w przyszłości - czas <em>future perfect</em>.</p><br>

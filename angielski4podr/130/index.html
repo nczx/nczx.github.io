@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. dissertation</p>
+<p>(Na koniec studiów każdy student musi napisać <strong>rozprawę naukową</strong> na wybrany temat.) </p>
+<p>2. tuition</p>
+<p>(Chciałem/am studiować zarządzanie w biznesie, ale <strong>czesne</strong> okazały się za wysokie.)</p>
+<p>3. determination</p>
+<p>(Studenci wykazujący duże pokłady <strong>determinacji</strong> są zazwyczaj tymi, którzy kończą studia z najlepszymi wynikami.)</p>
+<p>4. willingness</p>
+<p>(Twoja <strong>chęć</strong> do nauki jest imponująca, jednak za dobrymi intencjami musi iść ciężka praca.)</p>
+<p>5. residence</p>
+<p>(Mieszkałem/am w <strong>akademiku</strong>, ponieważ moich rodziców nie było stać na wynajem mieszkania dla mnie kiedy byłem/am studentem/studentką.)</p>
+<p>6. accounting</p>
+<p>(Żeby studiować <strong>rachunkowość</strong> i finanse musisz mieć analityczny umysł i radzić sobie z obliczeniami.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. making </p>
+<p>2. adaptable </p>
+<p>3. management</p>
+<p>4. resourceful</p>
+<p>5. resolution</p>
+<p>6. solving</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Spersonalizowane uczenie się</p>
+<p>W ostatnich latach wielu ekspertów analizowało sposób, w jaki uczy się młodych ludzi. Według nich w przyszłości sami uczniowie będą bardziej zaangażowani w proces <strong>podejmowania</strong> decyzji związanych z programem nauczania, a nauczyciele będą otwarci na wkład uczniów w tworzenie treści i metodologii. Zatem nauczyciele będą musieli zachować otwarte umysły, być świadomi konkretnych problemów uczniów oraz gotowi do <strong>przystosowania się</strong> do ich indywidualnych potrzeb. Uczenie się poprzez tworzenie projektów obejmuje pracę jako część zespołu i uczy podstaw współpracy oraz umiejętności <strong>zarządzania</strong> czasem. Takie podejście stanie się zdecydowanie bardziej powszechne. W rezultacie uczniowie będą bardziej <strong>zaradni</strong> i będą mieli większą kontrolę nad procesem uczenia się. Praca w grupie obejmuje podstawowe umiejętności <strong>rozwiązywania</strong> konfliktów, takie jak chęć nauki osiągania kompromisów. Te istotne umiejętności <strong>rozwiązywania</strong> problemów będą bardzo przydatne w życiu zawodowym, podkreślają eksperci. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. inviting</p>
+<p><strong>Uzasadnienie</strong>: <em>remember </em>+ czasownik z -<em>ing</em> oznacza, że przypominamy sobie robienie czegoś.  </p>
+<p>2. studying</p>
+<p><strong>Uzasadnienie</strong>: <em>consider </em>+ czasownik z końcówka -<em>ing.</em></p>
+<p>3. to find </p>
+<p><strong>Uzasadnienie</strong>: ogólnie panująca opinia - podmiot + czasownik w stronie biernej + <em>to do</em>. </p>
+<p>4. talking</p>
+<p><strong>Uzasadnienie</strong>: <em>go on </em>+ czasownik z -<em>ing</em> oznacza, "kontynuować". </p>
+<p>5. to push</p>
+<p><strong>Uzasadnienie</strong>: <em>try </em>+ bezokolicznik z to oznacza, że próbujemy coś zrobić i wkładamy w to wysiłek. </p>
+<p>6. to have chosen</p>
+<p><strong>Uzasadnienie</strong>: ogólnie panująca opinia; wydarzenie, które miało miejsce wcześniej niż wypowiedź - podmiot + czasownik w stronie biernej + <em>to have done</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. are believed to be rules </p>
+<p><strong>Uzasadnienie</strong>: opis ogólnej opinii - <em>There</em> + czasownik w stronie biernej + <em>to be</em>.  </p>
+<p>2. hadn't meant to hit </p>
+<p><strong>Uzasadnienie</strong>: <em>mean</em> + bezokolicznik z <em>to</em>. </p>
+<p>3. regrets saying those things</p>
+<p><strong>Uzasadnienie</strong>: <em>regret</em> + czasownik z końcówką -<em>ing</em> oznacza "żałować, że się coś zrobiło". </p>
+<p>4. you mind holding my bag </p>
+<p><strong>Uzasadnienie</strong>: <em>mind</em> + czasownik z końcową -<em>ing</em>.</p>
+<p>5. is said to have failed</p>
+<p><strong>Uzasadnienie: </strong>opis opinii o sytuacji, która wydarzyła się w przeszłości - podmiot + czasownik w stronie biernej + <em>to have done</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. to</p>
+<p><strong>Uzasadnienie</strong>: <em>It</em> + czasownik + przymiotnik + bezokolicznik z <em>to</em>. </p>
+<p>2. will</p>
+<p><strong>Uzasadnienie</strong>: ogólne przewidywania na przyszłość - czas future simple.</p>
+<p>3. which/that</p>
+<p><strong>Uzasadnienie</strong>: <em>defining relative clause</em> z zaimkiem względnym <em>which</em> albo <em>that</em>. </p>
+<p>4. should</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie powinności - czasownik modalny <em>should</em>.</p>
+<p>5. doing</p>
+<p><strong>Uzasadnienie</strong>: <em>be interested in</em> + rzeczownik albo czasownik z końcówką -<em>ing</em>.</p>
+<p>6. might </p>
+<p><strong>Uzasadnienie</strong>: wyrażenie prawdopodobieństwa - czasownik modalny <em>might</em>.</p>
+<p>7. be</p>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie future simple - <em>will + be + past participle</em>.</p>
+<p>8. can</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie (braku) możliwości - czasownik modalny <em>can</em>.</p>
+<p>9. want</p>
+<p><strong>Uzasadnienie</strong>: wyrażenie chęci, żeby ktoś coś zrobił - konstrukcja <em>want sb to do sth</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. mind</p>
+<p><strong>Uzasadnienie</strong>:<em> change one's mind</em> - zmieniać zdanie; <em>mind your own business</em> - pilnuj swojego nosa; <em>on sb's mind</em> - w głowie. </p>
+<p>2. out</p>
+<p><strong>Uzasadnienie</strong>: <em>out of condition</em> - bez kondycji; <em>go all out to do sth</em> - bardzo się starać coś zrobić; <em>out of curiosity</em> - z ciekawości.</p>
+<p>3. story</p>
+<p><strong>Uzasadnienie</strong>: <em>the same old story</em> - nic nowego;<em> tall story</em> - bujda; <em>big story</em> - duża sprawa, gorący temat.</p>
+<p>4. edge</p>
+<p><strong>Uzasadnienie</strong>: <em>on the edge of one's seat</em> - w napięciu; <em>have the edge</em> - mieć przewagę;<em> cutting-edge</em> - najnowocześniejszy.</p><br>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Zwroty użyte we wpisie na blogu:</strong></p>
+<p> - As ... (Kiedy...)  </p>
+<p> - When ... (Kiedy...)</p>
+<p> - (soon) afterwards (wkrótce po tym)</p>
+<p> - After (Po...)</p>
+<p> - though (ale)</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong></p>
+<p>1. After </p>
+<p>(<strong>Po</strong> zniknięciu księżniczki strażnicy zamku zaczęli skarżyć się na dziwne odgłosy w nocy.) </p>
+<p>2. afterwards</p>
+<p>(Nastąpił ogromny huk, a <strong>potem</strong> w domu zapanowała ciemność.)</p>
+<p>3. afterwards</p>
+<p>(Chodźmy do muzeum, a <strong>potem</strong> zjemy kolację.)</p>
+<p>4. after</p>
+<p>(Zatrzymali się przy domku i <strong>po</strong> krótkiej dyskusji postanowili tam przenocować.)</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>1. As Alex touched the gift, his heart was beating fast. </p>
+<p>(Kiedy Alex dotykał prezentu, jego serce biło szybko.) </p>
+<p>2. One cold dark evening, someone knocked on the door, so I opened it.</p>
+<p>(Pewnego zimnego, mrocznego wieczoru ktoś zapukał do drzwi, więc je otworzyłem/am.)</p>
+<p>3. When I looked outside, there was no one there, but I saw a package.</p>
+<p>(Kiedy wyjrzałem/am na zewnątrz, nikogo tam nie było, ale zobaczyłem/am paczkę.)</p>
+<p>4. I opened the box in order to see what was in it.</p>
+<p>(Otworzyłem/am pudełko, aby zobaczyć, co w nim jest.)</p>
+<p>5. While we were looking at the letter, we heard a strange sound.</p>
+<p>(Kiedy czytaliśmy list, usłyszeliśmy dziwny dźwięk.)</p>
+<p>6. The lights had suddenly gone out, and, as a result, we were sitting in the darkness.</p>
+<p>(Światło nagle zgasło, w wyniku czego siedzieliśmy w ciemności.)</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p><strong>Uwaga! Rozwiązanie przykładowe. Zawiera wszystkie zdania, w których można wstawić/zamienić podane przysłówki. Do zeszytu należy przepisać wybrane trzy.</strong></p>
+<p><strong>Wstawione przysłówki zostały pogrubione w tłumaczeniu.</strong></p>
+<hr/>
+<p> </p>
+<p>As Alex gently touched the gift, his heart was beating quickly/fast. </p>
+<p>(Kiedy Alex <strong>delikatnie</strong> dotykał prezentu, jego serce biło <strong>szybko</strong>.) <br/><br/></p>
+<p>One cold dark evening, someone loudly knocked on the door, so I opened it.</p>
+<p>(Pewnego zimnego, ciemnego wieczoru ktoś <strong>głośno</strong> zapukał do drzwi, więc je otworzyłem.)</p>
+<p><br/>When I carefully looked outside, there was no one there, but I saw a package.</p>
+<p>(Kiedy <strong>ostrożnie</strong> wyjrzałem na zewnątrz, nikogo tam nie było, ale zobaczyłem paczkę.)</p>
+<p><br/>I slowly opened the box in order to see what was in it.</p>
+<p>(<strong>Powoli</strong> otworzyłem pudełko, aby zobaczyć co w nim jest.)</p>
+<p><br/>While we were carefully looking at the letter, we suddenly heard a strange sound.</p>
+<p>(Kiedy <strong>uważnie</strong> czytaliśmy list, <strong>nagle</strong> usłyszeliśmy dziwny dźwięk.)</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>Notes: </strong>(notatki)</p>
+<p>• place and time (czas i miejsce): in the 1960s in Gdansk (w latach 60-tych XX wieku w Gdańsku)</p>
+<p>• main characters (główni bohaterowie): my grandfather's friends (znajomi mojego dziadka) </p>
+<p>• what happened (co się stało): someone disappeared (ktoś zniknął)</p>
+<p>• my opinion (moja opinia): I don't believe this person ran away. I think he had an accident. (Nie wierzę, że ta osoba uciekła. Myślę, że miał on wypadek.)</p>
+<p> </p>
+<p><strong>Blog post: </strong>(wpis na blogu)</p>
+<p><em>Today, I have a bit of my family history to tell you. Last week, I visited my grandma, and she told me this really intriguing story. </em>It happened back in the 1960s in Gdansk, when my grandfather was a student. He had two best friends: Jan and Piotr.</p>
+<p>One day, they all went to a party - a bonfire in the woods. After some time, Jan stood up and said he would go get more wood for the bonfire. Soon afterwards, everyone heard a scream. My grandpa noticed Jan still hadn't come back so he convinced a few people to help look for him. However, they couldn't find him, even later when the police got involved. Jan was simply gone.</p>
+<p>Some say he ran away. I think it's possible he got lost and then had an accident. I definitely don't believe he just left. What do you guys think?</p>
+<p><br/>(Liczba słów: 148)</p>
+<p> </p>
+<p><strong>Tłumaczenie: </strong></p>
+<p>Dziś mam Wam do opowiedzenia trochę historii mojej rodziny. W zeszłym tygodniu odwiedziłem/am moją babcię, a ona opowiedziała mi naprawdę intrygującą historię. Wydarzyła się ona w latach 60. w Gdańsku, kiedy mój dziadek był studentem. Miał dwóch najlepszych przyjaciół: Jana i Piotra.</p>
+<p>Pewnego dnia wszyscy poszli na imprezę - ognisko w lesie. Po jakimś czasie Jan wstał i powiedział, że pójdzie po więcej drewna do ogniska. Niedługo potem wszyscy usłyszeli krzyk. Mój dziadek zauważył, że Jan nadal nie wrócił, więc namówił kilka osób, aby pomogły go szukać. Nie znaleźli go jednak, nawet później, gdy zaangażowała się policja. Jan po prostu zniknął.</p>
+<p>Niektórzy mówią, że uciekł. Ja uważam, że to możliwe, że się zgubił, a potem miał wypadek. Zdecydowanie nie wierzę, że po prostu odszedł. Co o tym sądzicie?</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><strong>A legend of Sir Twardowski </strong>(legenda o Panu Twardowskim)</p>
+<p>Twardowski made a deal with a devil in return for his soul. The devil could only take Twardowski's soul in Rome, so the man never went there. Finally, the devil caught Twardowski in a tavern called Rome. As punishment for tricking the devil, Twardowski is stuck on the moon forever.</p>
+<p>(Liczba słów: 50)</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Twardowski zawarł umowę z diabłem w zamian za swoją duszę. Diabeł mógł zabrać duszę Twardowskiego tylko w Rzymie, więc mężczyzna nigdy tam nie pojechał. W końcu diabeł złapał Twardowskiego w karczmie o nazwie Rzym. Za karę za oszukanie diabła, Twardowski utknął na zawsze na księżycu.</p><br>

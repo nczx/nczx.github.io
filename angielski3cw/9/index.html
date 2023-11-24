@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p><strong>c </strong></p>
+<p>(Celem artykułu jest poinformować ludzi o zaletach posiadania wielu różnych przyjaciół.)</p>
+<p><strong>Fragment w tekście: </strong>"We are social animals, and research has shown that strong friendships are associated with living longer, being healthier, having better memories, being able to deal better with problems, and feeling more relaxed." - Jesteśmy zwierzętami społecznymi, a badania wykazały, że silne przyjaźnie wiążą się z dłuższym życiem, zdrowiem, lepszymi wspomnieniami, lepszym radzeniem sobie z problemami i poczuciem większego odprężenia.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. e (Przyjaźnie są dla nas dobre.)</p>
+<p><strong>Uzasadnienie</strong>: pierwszy akapit podaje cel napisania artykułu ("Jesteśmy zwierzętami społecznymi, a badania wykazały, że silne przyjaźnie wiążą się z dłuższym życiem, zdrowiem, ..."). </p>
+<p>2. c (Mówiąc ogólnie, nasi znajomi mają do nas podobne zainteresowania, wartości i charaktery.)</p>
+<p><strong>Uzasadnienie</strong>: drugi akapit opisuje, że nasi znajomi są podobni nas ("Myślą i zachowują się w sposób podobny do nas i łatwiej rozumiemy ich myśli i uczucia...").</p>
+<p>3. a (Naukowcy odkryli, że znajomi, którzy bardzo różnią się od nas samych, mogą drastycznie zwiększyć naszą kreatywność.)</p>
+<p><strong>Uzasadnienie</strong>: trzeci akapit opisuje, że posiadanie różnych znajomych jest dobre dla naszego mózgu ("Kontakt z ludźmi z innego miejsca, pokolenia, kultury czy pochodzenia sprawia, że nasz mózg pracuje, ponieważ musimy przetwarzać nowe, złożone informacje...").</p>
+<p>4. f (A więc co zrobić, żeby mieć szersze grono znajomych?)</p>
+<p><strong>Uzasadnienie</strong>: czwarty akapit dotyczy okazji do poznawania różnych ludzi ("Dołączanie do klubów poza szkołą albo udział w wolontariacie so wspaniałe sposoby na poznanie ludzi z różnych środowisk i grup wiekowych...").</p>
+<p>5. b (Bardziej zróżnicowane przyjaźnie nie są rzecz jasna tylko dobre dla naszej kreatywności.)</p>
+<p><strong>Uzasadnienie</strong>: ostatni akapit opisuje inne zalety posiadania różnych znajomych ("Pomagają nam również stawać się bardziej otwartymi i rozwijać się jako ludzie...").</p>
+<p><s class="odr-strikethrough">d</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. They can make us live longer, be healthier, have better memories, deal better with problems and feel more relaxed. </p>
+<p><strong>Fragment w tekście</strong>: "We are social animals, and research has shown that strong friendships are associated with living longer, being healthier, having better memories, being able to deal better with problems, and feeling more relaxed." - Jesteśmy zwierzętami społecznymi, a badania wykazały, że silne przyjaźnie wiążą się z dłuższym życiem, zdrowiem, lepszymi wspomnieniami, lepszym radzeniem sobie z problemami i poczuciem większego odprężenia.</p>
+<p>2. It's good for us because it makes our brains process new complex information, which makes us think more creatively.</p>
+<p><strong>Fragment w tekście</strong>: "Mixing with people from a different place, generation, culture or background gives our brain a workout because we have to process new complex information which is unpredictable. (...) in other words, we can think more creatively." - Kontakt z ludźmi z innego miejsca, pokolenia, kultury czy pochodzenia sprawia, że nasz mózg pracuje, ponieważ musimy przetwarzać nowe, złożone informacje, które są nieprzewidywalne (...) innymi słowy, możemy myśleć bardziej twórczo.</p>
+<p>3. They're good for our brains because they enable us to see things from different perspectives.</p>
+<p><strong>Fragment w tekście</strong>: "Books, plays and films (...) can have the same effect on our brains because they enable us to see things from different perspectives." - Książki, sztuki teatralne i filmy (...) mogą mieć taki sam wpływ na nasze mózgi, ponieważ pozwalają nam zobaczyć rzeczy z różnych perspektyw.</p>
+<p>4. We can stop thinking about different people as 'others', and consider them to be friends instead.</p>
+<p><strong>Fragment w tekście</strong>: "When we stop thinking of people who are different from ourselves as 'other' and consider them to be friends instead, then we are closer to creating more tolerant society." - Kiedy przestaniemy myśleć o ludziach, którzy różnią się od nas jako o "innych", a zamiast tego uznamy ich za przyjaciół, wtedy będziemy bliżej stworzenia bardziej tolerancyjnego społeczeństwa.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>1. To meet people of different ages and backgrounds, I could join new clubs and organisations. Another good idea is to become a volunteer. This would be a great opportunity to interact with people from various backgrounds and age groups.</p>
+<p>(Aby poznać ludzi w różnym wieku i z różnych środowisk, mógłbym/mogłabym dołączyć do nowych klubów i organizacji. Innym dobrym pomysłem jest zostanie wolontariuszem. Byłaby to świetna okazja do interakcji z ludźmi z różnych środowisk i grup wiekowych.)</p>
+<p><br/>2. Having more diverse friendships widens your worldview and makes you more tolerant. It might also improve your communication skills and help you be more sensitive.</p>
+<p>(Posiadanie bardziej zróżnicowanych przyjaźni poszerza światopogląd i czyni nas bardziej tolerancyjnymi. Może to również poprawić umiejętności komunikacyjne i pomóc być bardziej wrażliwym.) </p><br>

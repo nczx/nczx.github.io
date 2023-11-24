@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. calm </p>
+<p>(X: Dobrze się czujesz?</p>
+<p>Y: Tak, wszystko w porządku. Czuję się naprawdę <strong>spokojnie</strong>.) <br/><br/></p>
+<p>2. sad</p>
+<p>(X: Co się stało?</p>
+<p>Y: Jestem <strong>smutny/a</strong>.)<br/><br/></p>
+<p>3. optimistic</p>
+<p>(X: Jak sądzisz, jak poszło przesłuchanie?</p>
+<p>Y: Czuję się <strong>optymistycznie</strong>. Sądzę, że dostanę tę rolę.)<br/><br/></p>
+<p>4. kind</p>
+<p>(X: Dzięki, że jesteś taki/a <strong>dobry/a</strong>. </p>
+<p>Y: Drobiazg!)<br/><br/></p>
+<p>5. surprised</p>
+<p>(X: Nie spodziewałem/am się, że Jake przyjdzie na imprezę.</p>
+<p>Y: No, ja też byłem/am <strong>zdziwiony/a</strong>.)<br/><br/></p>
+<p>6. embarrassed</p>
+<p>(X: Zrobiłeś/aś się czerwony/a jak burak.</p>
+<p>Y: Tak, wiem. Łatwo się <strong>zawstydzam</strong>.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. surprised </p>
+<p>(Wygrałem konkurs śpiewania! Nie mogłem w to uwierzyć! Byłem taki <strong>zaskoczony</strong> i szczęśliwy! - Hafiz, 16 lat) </p>
+<p>2. lonely</p>
+<p>3. bored</p>
+<p>(Moje dwie najlepsze koleżanki przez cały tydzień nie chodziły do szkoły z powodu choroby. Czułam się trochę <strong>samotna</strong>, ponieważ nie miałam z kim rozmawiać. <strong>Nudziło mi się</strong> też, ponieważ nie możemy się spotykać, i nie mam nic innego do robienia. - Izzy, 15 lat)</p>
+<p>4. embarrassed</p>
+<p>(Popełniłam na lekcji głupią pomyłkę i wszyscy się ze mnie śmiali. Czułam się taka <strong>zawstydzona</strong>! Musiałam zakryć twarz. - Caroline, 14 lat)</p>
+<p>5. sympathetic</p>
+<p>(Miałem problem, a kiedy powiedziałem o nim mojemu koledze, nie śmiał się ze mnie. Był <strong>pełen współczucia</strong>. Naprawdę mnie wysłuchał i starał się zrozumieć. Był bardzo miły. Czuję się o wiele lepiej. - David, 15 lat)</p>
+<p>6. jealous</p>
+<p>(Mój brat jedzie na wakacje ze swoimi znajomymi, a mnie nie wolno. Moi rodzice mówią, że jeden zbyt młoda. <strong>Zazdroszczę</strong> mu. Szkoda, że nie mogą pojechać - ma tyle szczęścia! -  Natalia, 15 lat)</p>
+<p><s class="odr-strikethrough">content</s>, <s class="odr-strikethrough">joyful</s>, <s class="odr-strikethrough">satisfied</s></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. (przykład), surprise </p>
+<p>(zaskoczenie) </p>
+<p><strong>Fragment w tekście</strong>: "I was so surprised and happy!" - Byłem taki zaskoczony i szczęśliwy! </p>
+<p>2. loneliness, boredom</p>
+<p>(samotność, nuda)</p>
+<p><strong>Fragment w tekście</strong>: "I've felt a bit lonely because I haven't had anyone to talk to. I've been bored too (...)." - Czułam się trochę samotna, ponieważ nie miałam z kim rozmawiać. Nudziło mi się też (...).</p>
+<p>3. embarrassment</p>
+<p>(zawstydzenie)</p>
+<p><strong>Fragment w tekście</strong>: "I felt so embarrassed!" - Czułam się taka zawstydzona!</p>
+<p>4. sympathy, kindness</p>
+<p>(współczucie, życzliwość)</p>
+<p><strong>Fragment w tekście</strong>: "He was very sympathetic. (...) He was very kind" - Był pełen współczucia. (...) Był bardzo miły.</p>
+<p>5. jealousy</p>
+<p>(zazdrość)</p>
+<p><strong>Fragment w tekście</strong>: "I'm jealous of him." - Zazdroszczę mu.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1 - d  </p>
+<p>2 - b</p>
+<p>3 - e</p>
+<p>4 - a</p>
+<p><s class="odr-strikethrough">c</s></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. his ticket  </p>
+<p>2. before the concert</p>
+<p>3. buy his album</p>
+<p>4. more exciting</p>
+<p>5. was taking selfies</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. about </p>
+<p><strong>Uzasadnienie</strong>: <em>be </em><em>excited about something </em>- być czymś podekscytowanym/ą. </p>
+<p>2. waste</p>
+<p><strong>Uzasadnienie</strong>: <em>a waste of something </em>- strata / marnotrawstwo czegoś.</p>
+<p>3. respect</p>
+<p><strong>Uzasadnienie</strong>: <em>respect for something </em>- szacunek do czegoś.</p>
+<p>4. worth</p>
+<p><strong>Uzasadnienie</strong>: <em>be worth something </em>- być wartym czegoś.</p>
+<p>5. expecting</p>
+<p><strong>Uzasadnienie</strong>: <em>expect </em>- oczekiwać. Czasownik z końcówką z -ing, dzięki czemu powstaje czas <em>past continuous </em>(<em>was/were + </em>czasownik z -ing).</p>
+<p>6. all</p>
+<p><strong>Uzasadnienie</strong>: <em>at all </em>- wcale. </p><br>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span> </p>
+<p>Wejście Polski do Unii Europejskiej przyspieszyło proces ujednolicania standardów w naszym kraju oraz u zachodnich sąsiadów. Po piętnastu latach naszej obecności w UE widoczne staje się również to, że poprawie ulegają perspektywy młodych ludzi. W Polsce realizowanych jest szereg programów, w ramach których mogą się oni rozwijać. Dodatkowo państwo polskie wspiera młodych ludzi w ich wejściu na rynek pracy, poprzez płatne staże oraz dofinansowania na założenie własnej działalności gospodarczej. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
+<p>Wydaje się, że nie zanosi się na to, aby w stosunkowo bliskiej przyszłości poprawiły się perspektywy dla młodych ludzi w Polsce. Oczywiście, w Polsce szereg ludzi ma dobrą pracę i może cieszyć się z wysokich zarobków. Dotyczy to jednak ludzi z określonymi umiejętnościami, przede wszystkim informatycznymi, ewentualnie z zakresu finansów, zarządzania, rachunkowości czy bankowości. Dobrze zarabiają też lekarze i prawnicy, a regularnie wzrastają płace pielęgniarek i położnych. W pozostałych branżach jest zaś o wiele gorzej, a nie wszyscy mogą być przecież programistami, specjalistami z obszaru IT, prawnikami, lekarzami czy ekonomistami w wielkich bankach. Polska jest krajem bardzo dużych dysproporcji zarobkowych między ludźmi, a choć podobne tendencje zauważa się również w innych państwach, to jednak znacznie większa część społeczeństwa niż w Polsce może tam liczyć na godne warunki płacowe i zatrudnieniowe (dotyczy to zwłaszcza tzw. 'starych' krajów Unii Europejskiej, takich jak Belgia, Holandia, Niemcy czy Francja).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>Na podstawie tekstu źródłowego należy wskazać, że jego autor przedstawił cechy społeczeństwa współczesnego, które wiąże się z tym, że współczesny człowiek żyje <strong>w świecie informacji,</strong> jego dążeniem jest  jak najszybsze uzyskanie informacji, bowiem to ona stanowi <strong>najwyższą wartość</strong>. Człowiek ten cechuje się również <strong>konsumpcjonizmem</strong> o szczególnym charakterze, a mianowicie do posiadanie tego, co jest w danym momencie najbardziej popularne. Autor tekstu wskazuje również, że życie takiego człowieka oddane jest "bez reszty konsumpcji". Wszystko, co znajduje się wokół człowieka traktowane jest przez niego jako elementy konsumpcji. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p>Autor przytoczonego fragmentu tekstu przedstawił cechy współczesnego społeczeństwa, ponieważ wskazał między innymi na to, że dużą rolę odgrywa w nim <strong><span style="text-decoration: underline;">konsumpcja</span></strong>, która staje się dla wielu współczesnych jednostek celem samym w sobie i czymś, co nadaje ich życiu sens (o współczesnym społeczeństwie mówi się nawet właśnie jako o <strong><span style="text-decoration: underline;">społeczeństwie konsumpcyjnym</span></strong>). Ponadto autor przywołanego fragmentu tekstu nawiązał do <strong><span style="text-decoration: underline;">dużej dynamiki zmian</span></strong>, jakie dokonują się we współczesnym życiu społecznym.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Współczesne problemy młodego pokolenia:</strong></span></p>
+<ul>
+<li><strong>Bezrobocie</strong> - to jeden z najpoważniejszych problemów społecznych w naszym kraju. Część społeczeństwa polskiego boryka się z problemem znalezienia i utrzymania pracy. Bezrobocie dotyka nie tylko ludzi zwolnionych z pracy, ale także ludzi młodych, którzy pomimo wyższego wykształcenia nie mogą znaleźć zatrudnienia. Wielu Polaków straciło pracę po upadku dużych zakładów państwowych na przykład hut, fabryk oraz kopalń.</li>
+<li><strong>Głód</strong> - jest jednym z największych problemów współczesnego świata. Jego przyczyną są najczęściej wojny i klęski żywiołowe, głównie długotrwałe susze. Kraje Trzeciego Świata nie są w stanie wyprodukować wystarczającej ilości pożywienia, zwłaszcza, że liczba ich mieszkańców wzrasta w bardzo szybkim tempie. Głód oraz niewystarczające zasoby wody pitnej sprzyjają licznym chorobom. Do pogorszenia zdrowia przyczyniają się również niski poziom higieny osobistej oraz niewystarczająca opieka lekarska. Większość krajów afrykańskich boryka się także z problemem braku wody pitnej. </li>
+<li><strong>Narastające nierówności społeczne</strong> - dysproporcje między bogatymi o biednymi.</li>
+<li><strong>Przestępczość zorganizowana</strong> - rozkwit międzynarodowego handlu narkotykami, bronią, kradzionymi dziełami sztuki oraz ludźmi. </li>
+<li><strong>Zagrożenie terrorystyczne</strong> - terroryzm jest obecnie jednym z największych problemów występujących we współczesnym świecie. Zamachy terrorystyczne wymierzane są najczęściej przeciwko niewinnym ludziom - cywilom. Największe zagrożenie niosą ze sobą terroryści Państwa Islamskiego (ISIS). Terroryzm niesie ze sobą poczucie niewyobrażalnego strachu oraz terroru. Wiąże się z użyciem siły i pogwałceniem wszelkich praw danej zbiorowości. Współczesne grupy terrorystyczne działają z inspiracji oraz z przyzwoleniem władz państwowych. Najgorsze jest jednak to, że zagrożenia terrorystyczne są nieprzewidywalne. Jedyną, skuteczną formą walki z tym zjawiskiem jest dobry wywiad oraz doskonale wyszkolone służby specjalne.;</li>
+<li><strong>Zagrożenia ekologiczne</strong> – dewastacja środowiska naturalnego, zwiększenie emisji spalin do atmosfery, ocieplenie klimatu, rabunkowa wycinka lasów, problem z utylizacją śmieci i odpadów, </li>
+<li><strong>Efekt cieplarniany</strong> - emisja zanieczyszczeń przemysłowych do atmosfery sprawia, że podwyższa się średnia temperatura w Polsce. Zimy są cieplejsze, a latem nasz kraj cierpi z powodu powtarzających się powodzi i huraganów. Zmiany klimatyczne najdotkliwiej odczuwają polscy rolnicy.</li>
+<li><strong>Uzależnienie od alkoholu i narkotyków </strong>- w Polce z roku na rok wzrasta liczba osób uzależnionych od środków odurzających, niestety wśród nich znajdują się także nieletni. Alkoholizm i narkomania zwiększają przestępczość oraz patologie społeczne.</li>
+<li><strong>Uzależnienie od internetu</strong> - jak wynika z badań przeprowadzonych przez CBOS w Polsce jest już około 100 tys. osób uzależnionych od internetu, a kolejnych 750 tys. jest na ten problem poważnie narażonych. Problem najczęściej dotyka dzieci oraz osoby młode.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego sformułowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowa lista najistotniejszych zagrożeń, z jakimi mogą się spotkać młodzi ludzie w Polsce:</span></em></p>
+<p>Niektóre z najważniejszych zagrożeń, z jakimi mogą się spotkać młodzi ludzie w Polsce to:</p>
+<ul>
+<li>Cyberprzemoc i niebezpieczeństwa związane z używaniem Internetu.</li>
+<li>Używanie narkotyków i alkoholu.</li>
+<li>Bezrobocie i trudności z zatrudnieniem.</li>
+<li>Brak bezpiecznego i stabilnego środowiska rodzinnego.</li>
+<li>Nierówności społeczne i brak możliwości rozwoju.</li>
+<li>Zaburzenia psychiczne i brak dostępności do opieki zdrowotnej.</li>
+<li>Zagrożenie przemocą w rodzinie.</li>
+</ul>
+<p><strong><em>-&gt; </em></strong><span style="text-decoration: underline;"><em>Wybrane informacje na temat jednego z zagrożeń, z jakimi mogą się spotkać młodzi ludzie w Polsce - używanie narkotyków i alkoholu:</em></span></p>
+<p>Używanie narkotyków i alkoholu może mieć poważne negatywne konsekwencje dla zdrowia fizycznego i psychicznego młodych ludzi, które mogą się utrzymywać przez całe życie. Mogą one powodować problemy z układem nerwowym, sercowo-naczyniowym, układem pokarmowym, a także prowadzić do chorób takich jak depresja, uzależnienie, bezsenność i stany lękowe.</p>
+<p>Używanie narkotyków i alkoholu może również negatywnie wpłynąć na relacje z rodziną i przyjaciółmi. Z jednej strony, uzależnienie od tych substancji może powodować izolację i oddalanie się od bliskich osób, z drugiej strony, rodzina i przyjaciele często są narażeni na negatywne skutki zachowań powodowanych przez używanie tych substancji, takie jak agresja czy kłopoty finansowe.</p>
+<p>Używanie narkotyków i alkoholu przez młodych ludzi może również mieć negatywny wpływ na funkcjonowanie całego społeczeństwa. Wzrost liczby osób uzależnionych i związane z tym problemy zdrowotne i społeczne pociągają za sobą dodatkowe obciążenie dla systemów opieki zdrowotnej i społecznej, co w konsekwencji może prowadzić do większych wydatków publicznych i obniżenia jakości życia w całym społeczeństwie.</p>
+<p>Podsumowując, używanie narkotyków i alkoholu przez młodych ludzi może mieć poważne negatywne konsekwencje dla ich zdrowia, relacji z najbliższymi i funkcjonowania całego społeczeństwa. Dlatego ważne jest, aby młodzi ludzie byli świadomi tych ryzyk i unikali używania tych substancji.</p>
+<p><strong><em>-&gt; </em></strong><em><span style="text-decoration: underline;">Przykładowe sposoby przeciwdziałania wybranemu zagrożeniu dotykającemu młodych ludzi w Polsce, jakim jest używanie narkotyków i alkoholu:</span></em></p>
+<p>Można przeciwdziałać używaniu narkotyków i alkoholu u młodych ludzi na przykład poprzez:</p>
+<ol>
+<li>
+<p>Edukację i uświadamianie: Promowanie edukacji na temat szkodliwych skutków używania narkotyków i alkoholu może pomóc młodym ludziom w uniknięciu stosowania tych substancji.</p>
+</li>
+<li>
+<p>Wsparcie społeczne: Wsparcie ze strony rodziny i przyjaciół może pomóc młodym ludziom w unikaniu używania narkotyków i alkoholu.</p>
+</li>
+<li>
+<p>Zajęcia pozaszkolne: Udział w zajęciach pozaszkolnych i pogłębianie zainteresowań może pomóc młodym ludziom w uniknięciu niepożądanych zachowań, takich jak używanie narkotyków i alkoholu.</p>
+</li>
+<li>
+<p>Programy prewencyjne: Skuteczne programy prewencyjne również mogą pomóc młodym ludziom w unikaniu sięgania po narkotyki i alkohol.</p>
+</li>
+<li>
+<p>Interwencja w przypadku uzależnienia: Skuteczne leczenie i interwencja w przypadku uzależnienia od narkotyków i alkoholu może pomóc młodym ludziom w powrocie na właściwą ścieżkę.</p>
+</li>
+</ol><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Główne problemy współczesnej Polski:</strong></span></p>
+<ul>
+<li><span style="text-decoration: underline;"><strong>Bezrobocie</strong></span> - to jeden z najpoważniejszych problemów społecznych w naszym kraju. Część społeczeństwa polskiego boryka się z problemem znalezienia i utrzymania pracy. Bezrobocie dotyka nie tylko ludzi zwolnionych z pracy, ale także ludzi młodych, którzy pomimo wyższego wykształcenia nie mogą znaleźć zatrudnienia. Wielu Polaków straciło pracę po upadku dużych zakładów państwowych na przykład hut, fabryk oraz kopalń.</li>
+<li><span style="text-decoration: underline;"><strong>Emigracja zarobkowa Polaków</strong></span> - wielu młodych, wykształconych obywateli naszego kraju przenosi się na stałe do państw Europy Zachodniej w poszukiwaniu pracy oraz lepszych warunków życia. W wyniku trwałej emigracji Polska traci fachowców w wielu ważnych dziedzinach.</li>
+<li><span style="text-decoration: underline;"><strong>Alkoholizm</strong></span> - Częste spożywanie alkoholu nawet w małych dawkach prowadzi do alkoholizmu. Człowiek przestaje wtedy kontrolować swoje zachowanie. Pod wpływem trunku staje się agresywny i krzywdzi innych ludzi. Alkoholik zapomina o najważniejszych potrzebach. Gotów jest kupić alkohol nawet gdy brakuje mu pieniędzy na jedzenie. Alkoholizm jest przyczyną chorób serca i układu krwionośnego. Prowadzi on do marskości wątroby. </li>
+<li><span style="text-decoration: underline;"><strong>Narkomania</strong></span> - narkotyki wyniszczają organizmy ludzi, którzy je biorą, prowadzą do śmierci. By zdobyć pieniądze na środki odurzające narkomani wyprzedają swą własność, tracą domy i rodziny, popełniają przestępstwa.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Przyczyny wyżej wymienionych problemów społecznych:</strong></span></p>
+<ul>
+<li>modernizacja rolnictwa i brak zapotrzebowania na dużą liczbę osób do pracy na roli i niedostosowanie wykształcenia do aktualnych potrzeb rynku- dotyka obszary wiejskie;</li>
+<li>likwidacja zakładów przemysłowych i niedostosowanie wykształcenia do aktualnych potrzeb rynku- dotyka miast na obszarach przemysłowych np. Górnym Śląsku;</li>
+<li>brak pracy w okresie od zakończenia edukacji do znalezienia pracy - dotyka głównie większych miast.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Przyczyny indywidualne alkoholizmu:</strong></span></p>
+<ul>
+<li>problemy emocjonalne,</li>
+<li>problemy egzystencjalne,</li>
+<li>depresja,</li>
+<li>poczucie bezradności,</li>
+<li>brak perspektyw,</li>
+<li>uzależnienie,</li>
+<li>uwarunkowania genetyczne (większa podatność na popadanie w nałogi).</li>
+</ul>
+<p><strong><span style="text-decoration: underline;">Przyczyny społeczno-kulturowe:</span></strong></p>
+<ul>
+<li>przemoc w rodzinie,</li>
+<li>bieda,</li>
+<li>alkoholizm w rodzinie,</li>
+<li>patologiczne środowisko dorastania,</li>
+<li>świętowanie wydarzeń, imprez okolicznościowych z alkoholem w tle (wesela, święta, urodziny, itd.).</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Przyczyny demograficzne:</strong></span></p>
+<ul>
+<li>kultura spożywania alkoholu w danym państwie/regionie,</li>
+<li>egzystowanie w biednym rejonie świata, bez perspektyw na poprawę własnego losu,</li>
+<li>brak odpowiedniej edukacji.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>Zadanie ma charakter indywidualny. Dlatego proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
+<p>Współczesna Polska zmaga się z wieloma problemami społecznymi, takimi jak na przykład:</p>
+<ol>
+<li>Nierówności ekonomiczne i trudności niektórych ludzi na rynku pracy.</li>
+<li>Niskie płace i brak stabilności zatrudnienia.</li>
+<li>Niski poziom bezpieczeństwa socjalnego.</li>
+<li>Brak dostępności do opieki zdrowotnej dla wszystkich obywateli (trudności z tym mają zwłaszcza najubożsi).</li>
+<li>Niskie nakłady na edukację i nierówności w dostępie do wiedzy.</li>
+<li>Różnice regionalne i brak równości szans.</li>
+<li>Brak równości i dyskryminacja osób niepełnosprawnych.</li>
+</ol>
+<p><strong>[A]</strong></p>
+<p>Proces naprawy wskazanych obszarów życia społecznego jest hamowany przez wiele czynników, w tym:</p>
+<ol>
+<li>Brak politycznej woli i zaangażowania w rozwiązywanie problemów społecznych.</li>
+<li>Konflikt interesów i brak współpracy między różnymi frakcjami politycznymi.</li>
+<li>Niedostateczne zasoby finansowe i brak inwestycji w rozwiązania systemowe.</li>
+<li>Koncentracja władzy i brak zaangażowania społeczeństwa w proces polityczny.</li>
+<li>Nieefektywne działanie instytucji państwowych i brak zaufania do nich.</li>
+<li>Brak zrozumienia i edukacji społeczeństwa na temat ważnych problemów społecznych.</li>
+<li>Kultura obwiniania i brak zaangażowania w rozwiązywanie wspólnych problemów.</li>
+<li>Brak współpracy międzynarodowej i brak wsparcia dla rozwiązań globalnych.</li>
+</ol>
+<p><strong>[B]</strong></p>
+<p>Aby dążyć do rozwiązania wymienionych problemów społecznych, można podjąć następujące działania:</p>
+<ol>
+<li>Zwiększenie politycznej woli i zaangażowania w rozwiązywanie problemów społecznych.</li>
+<li>Wspieranie współpracy między różnymi frakcjami politycznymi i budowanie porozumienia.</li>
+<li>Inwestowanie w rozwiązania systemowe i zwiększanie nakładów finansowych, przede wszystkim na ochronę zdrowia, edukację i rozwój zapóźnionych gospodarczo regionów.</li>
+<li>Dążenie do równości władzy i zwiększenie zaangażowania społeczeństwa w proces polityczny.</li>
+<li>Poprawianie efektywności instytucji państwowych i budowanie zaufania do nich.</li>
+<li>Edukowanie społeczeństwa i zwiększanie świadomości na temat ważnych problemów społecznych.</li>
+<li>Promowanie kultury odpowiedzialności i zaangażowania w rozwiązywanie wspólnych problemów.</li>
+<li>Wspieranie współpracy międzynarodowej i dążenie do rozwiązań globalnych.</li>
+</ol><br>

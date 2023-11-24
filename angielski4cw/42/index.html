@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. volleyball, hockey</p>
+<p>(siatkówka, hokej) </p>
+<p>2. golf, judo</p>
+<p>3. snorkelling, white water rafting</p>
+<p>(nurkowanie, rafting)</p>
+<p>4. sailing, surfing</p>
+<p>(żeglarstwo, surfing)</p>
+<p>5. tennis, basketball</p>
+<p>(tenis, koszykówka)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. limit</p>
+<p><strong>Uzasadnienie</strong>: <em>push oneself to the limit</em> - zmusić się do wielkiego wysiłku. </p>
+<p>2. shape</p>
+<p><strong>Uzasadnienie</strong>: <em>get into shape</em> - nabrać formy.</p>
+<p>3. lacks </p>
+<p><strong>Uzasadnienie</strong>: <em>lack determination</em> - nie mieć determinacji.</p>
+<p>4. form </p>
+<p><strong>Uzasadnienie</strong>: <em>be in peak form</em> - być w szczytowej formie.</p>
+<p>5. set</p>
+<p><strong>Uzasadnienie</strong>: <em>set oneself a goal</em> - wyznaczyć sobie cel.</p>
+<p>6. come</p>
+<p><strong>Uzasadnienie</strong>: <em>come first</em> - zajmować pierwsze miejsce.</p>
+<p>7. out</p>
+<p><strong>Uzasadnienie</strong>: <em>out of condition</em> - bez kondycji.</p>
+<p>8. best </p>
+<p><strong>Uzasadnienie</strong>: <em>personal best</em> - rekord życiowy.</p>
+<p>9. attain</p>
+<p><strong>Uzasadnienie</strong>: <em>attain goals</em> - osiągać cele.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. determination </p>
+<p>2. peak</p>
+<p>3. limit</p>
+<p>4. first</p>
+<p>5. shape</p>
+<p>6. personal</p>
+<p>7. set</p>
+<p>8. attained</p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Niesamowita Sifan</p>
+<p>Sifan Hassan urodziła się w Etiopii, ale przyjechała do Niderlandów jako uchodźczyni w 2008 roku. Mimo, że nigdy nie brakowało jej <strong>determinacji</strong>, nawet ona nigdy nie mogła wyobrażać sobie, że trzynaście lat później będzie podwójną mistrzynią olimpijską. </p>
+<p>Sifan wzięła udział w trzech wyścigach podczas olimpiady w Tokio: na 1500 m, 5000 m i 10000 m. Nie tylko musiała być w <strong>szczytowej</strong> formie, żeby zakwalifikować się do drużyny olimpijskiej, ale też zmusiła się do<strong> wielkiego wysiłku</strong>, ponieważ wydarzenia te odbywały się w tak niedużym odstępie czasu, że musiała biec w sześciu wyścigach w zaledwie osiem dni. Wtedy, podczas wyścigu kwalifikacyjnego do finału na 1500 m, przewróciła się na początku ostatniego okrążenia. Wstała jednak szybko i mimo wszystko dobiegła <strong>pierwsza</strong>. </p>
+<p>Zaledwie jedenaście godzin później, z bolącą po upadku nogą i ręką, zdobyła złoto w finałowym biegu na 5000 m. Nie było jednak czasu na relaks. Musiała nabrać <strong>formy</strong> przed biegiem na 10000 m. Tym razem nie tylko zdobyła złoto i pobiła swój własny rekord <strong>życiowy</strong>, ale pobiła światowy rekord o dziesięć sekund. Naprawdę była nie do zatrzymania!</p>
+<p>Bez względu na to, jakie cele Sifan <strong>postawiła</strong> sobie przed zawodami, zdecydowanie nie tylko je <strong>osiągnęła</strong>, ale jej dokonania przewyższyły oczekiwania bardziej niż ktokolwiek mógłby sobie wyobrazić. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. strengthen </p>
+<p>(Jeśli chcesz <strong>wzmocnić</strong> mięśnie, powinieneś/powinnaś skorzystać z porady trenera personalnego.) </p>
+<p>2. injury</p>
+<p>(Niestety jego kariera wcześnie się zakończyła przez <strong>uraz</strong> spowodowany uprawianiem sportu.)</p>
+<p>3. competitive</p>
+<p>(Sonia jest zaciekle <strong>ambitna</strong> i nie znosi przegrywać.)</p>
+<p>4. strength </p>
+<p>(Potrzebujesz trenera i psychologa, żeby pomógł ci rozwijać fizyczną i psychiczną <strong>siłę</strong>.)</p>
+<p>5. involving</p>
+<p>(Wykup specjalne ubezpieczenie od aktywności <strong>wiążących się</strong> z dużym ryzykiem.)</p>
+<p>6. been </p>
+<p>(Sean <strong>jest</strong> ostatnio pod dużą presją.)</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. competitors</p>
+<p>(Dwudziestu <strong>uczestników</strong> ścigało się po torze najszybciej jak mogli.) </p>
+<p>2. determined</p>
+<p>(Jestem <strong>zdeterminowany/a</strong>, żeby wypaść lepiej w tym roku.)</p>
+<p>3. personal</p>
+<p>(Jeśli masz trenera <strong>personalnego</strong>, będziesz wykonywać ćwiczenia przygotowane specjalnie dla ciebie.</p>
+<p>4. uninjured</p>
+<p>(Upadł bardzo groźnie, ale na szczęście wstał <strong>bez żadnych obrażeń</strong>.)</p>
+<p>5. undeveloped</p>
+<p>(Na skraju miasta jest kawałek <strong>niezagospodarowanej</strong> ziemi, którą można by przekształcić w stadion lekkoatletyczny.)</p><br>

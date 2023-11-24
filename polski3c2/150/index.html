@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Na podstawie przytoczonego fragmentu:</p>
+<p>Cezary zyskuje informacje na temat Polski od swego ojca, a wiêc z subiektywnego Ÿród³a. Seweryn Baryka roztacza przed nim optymistyczn¹ wizjê kraju, w którym pojawi³a siê nowa cywilizacja. W jego opowieœci ojczyzna jawi siê jako przestrzeñ rozwoju, gdzie znacz¹cej poprawie ulega komfort ¿ycia, co ma zwi¹zek z koncepcj¹ szklanych domów oraz ogólnym postêpem w technice: "Nie takie szk³o! Baryka - nasz imiennik - produkuje szk³o belkowe. Za pomoc¹ olbrzymiej si³y, któr¹ ma darmo od pr¹du zachodniego, zw³aszcza wobec wiatrów zachodnich, które tam trwaj¹ niemal stale, otrzymuje niezmiern¹ masê popêdu elektrycznego, z którego  pomoc¹ topi piasek nadmorski". Polska to miejsce, gdzie piêkno ³¹czy siê z u¿ytecznoœci¹, a ludzie ciesz¹ siê dostatkiem oraz godnymi warunkami ¿ycia w futurystycznym otoczeniu: "[...] zobaczysz w zewnêtrznych i wewnêtrznych kompozycjach kolorowych chat nowoczesnych polskich ch³opów". Pozytywny wizerunek Polski przejawia siê tak¿e w relacjach miêdzyludzkich, poniewa¿ fabryka Baryki dzia³a na zasadzie wspó³pracy  techników, artystów oraz pracowników. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Huta szk³a wykorzystuje dogodne uwarunkowania przyrodnicze u³atwiaj¹ce wytwarzanie niezbêdnej energii: "Za pomoc¹ olbrzymiej si³y, któr¹ ma darmo od pr¹du zachodniego, zw³aszcza wobec wiatrów zachodnich, które tam trwaj¹ niemal stale, otrzymuje niezmiern¹ masê popêdu elektrycznego, z którego pomoc¹ topi piasek nadmorski...". Huta wytwarza wszystkie elementy niezbêdne do stworzenia estetycznego i funkcjonalnego domu dla ka¿dego cz³owieka - niezale¿nie od jego pozycji spo³ecznej. Jest ponadto wspóln¹ w³asnoœci¹ wszystkich pracowników. Jej sposób przedstawienia nawi¹zuje do wzoru gospodarki i spo³eczeñstwa, który mo¿na okreœliæ mianem socjalizmu utopijnego. Nie dochodzi bowiem do wyzysku ludu przez warstwy uprzywilejowane, zaœ sam zak³ad nale¿y do wszystkich zatrudnionych. S¹ wiêc oni traktowani w równy sposób. Ponadto huta korzystnie wp³ywa na sytuacjê ogó³u: wszyscy s¹ traktowani w równy sposób, maj¹ dostêp do najnowszych osi¹gniêæ techniki, które podnosz¹ komfort ¿ycia. Tym samym wizja relacji spo³ecznych staje siê wyidealizowana, harmonijna. Mo¿na w niej dostrzec tak¿e pewne echa hase³ pozytywizmu: utylitaryzmu czy nawet pracy organicznej. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>W przytoczonym fragmencie w utopijny sposób zostaje przedstawiona wizja Polski oraz tworz¹cego j¹ spo³eczeñstwa. ¯ycie bowiem w tym kraju jawi siê jako doskona³e oraz harmonijne. Postêp cywilizacyjny i techniczny, a zw³aszcza szklane domy dostêpne dla ka¿dego cz³owieka, zapewniaj¹ wszystkim idealne warunki do ¿ycia - nie ma wiêc ubóstwa, nierównoœci spo³ecznych. Domy obywateli ³¹cz¹ w sobie piêkno i u¿ytecznoœæ, przy tym nie wymagaj¹ wielkich nak³adów finansowych: "Szklane domy kosztuj¹ niezmiernie tanio, gdy¿ przecie przy ich budowie nie ma mularzów, cieœlów, stolarzy i gonciarzy. Sam materia³ jeno, transport na miejsce i dwu, trzech monterów. Sam dom - bez robót ziemnych - buduje siê w ci¹gu trzech, czterech dni. Jest to bowiem tylko sk³adanie czêœci dopasowanych w fabryce. Materia³, nawet z wynagrodzeniem artystów, nie kosztuje nad morzem dro¿ej ni¿ na miejscu drzewo budulcowe". Utopijny charakter przedstawionej rzeczywistoœci przejawia siê tak¿e w ukszta³towaniu relacji spo³ecznych. Nie ma wyzysku, pracownicy, technicy i twórcy s¹ sobie równi, poniewa¿ wspó³pracuj¹ w fabryce. Panuje ogólna troska o sytuacjê wszystkich warstw, artyœci zaœ, kieruj¹c siê m¹droœci¹, tworz¹ u¿yteczne rozwi¹zania. Wspólnota ta prowadzi wiêc idealne i szczêœliwe ¿ycie pozbawione jakichkolwiek trosk czy konfliktów. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

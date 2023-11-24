@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Uwaga! Wybrane odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. B</p>
+<p>(Zdanie 1: Fakty przedstawione w filmie dokumentalnym zdecydowanie były błędne.</p>
+<p>Zdanie 2: Fakty przedstawione w filmie dokumentalnym <strong>z pewnością były błędne.</strong>) </p>
+<p><strong>Uzasadnienie:</strong> pewność odnośnie wydarzenia z przeszłości wyrażamy za pomocą konstrukcji <em>must have + past participle</em>. </p>
+<p>2. A</p>
+<p>(Zdanie 1: Znamy się, ale nie jesteśmy bliskimi przyjaciółmi.</p>
+<p>Zdanie 2: <strong>Jesteśmy znajomymi.</strong>) </p>
+<p>3. B</p>
+<p>(Zdanie 1: Nasz protest na rzecz środowiska będzie jutro ważnym tematem.</p>
+<p>Zdanie 2: Nasz protest na rzecz środowiska <strong>trafi na nagłówki</strong>.) </p>
+<p>4. C</p>
+<p>(Zdanie 1: Wydaje mi się, że Hamish gra na gitarze.</p>
+<p>Zdanie 2: Hamish gra na gitarze, <strong>prawda</strong><strong>?</strong>) </p>
+<p><strong>Uzasadnienie:</strong> tworzymy pytanie rozłączne. W czasie <em>present simple</em> do jego utworzenia używamy czasownika posiłkowego (tu: <em>does</em> dla <em>she, he, it</em>). Kiedy zdanie jest w formie twierdzącej, pytanie rozłączne musi mieć formę przeczącą.</p>
+<p>5. B</p>
+<p>(Zdanie 1: Obejrzyjmy wiadomości. Może będzie historia o wypadku.</p>
+<p>Zdanie 2: Obejrzyjmy wiadomości. <strong>Być może będzie</strong> historia o wypadku.) </p>
+<p>6. A</p>
+<p>(Zdanie 1: Które szkolne przedmioty lubisz?</p>
+<p>Zdanie 2: Którymi szkolnymi przedmiotami <strong>się interesujesz</strong><strong>?</strong>) </p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>be interested in something </em>(interesować się czymś).</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. whose dad comes from</p>
+<p><strong>Uzasadnienie:</strong> kiedy w zdaniu przydawkowym dodajemy informację o czyimś posiadaniu albo pokrewieństwie, używamy zaimka względnego <em>whose</em>. W czasie <em>present simple</em> dla 3. osoby l. pojedynczej dodajemy do czasownika końcówkę -s. </p>
+<p>2. is sure to turn</p>
+<p><strong>Uzasadnienie:</strong> wyrażenie <em>be sure</em> (z pewnością) <em>to do something. </em>Odmieniamy czasownik "być" w czasie teraźniejszym. <em>Wallet </em>(portfel) = <em>it </em>(to). Dla 3. osoby l. pojedynczej używamy formy <em>is</em>.</p>
+<p>3. I had only written</p>
+<p><strong>Uzasadnienie:</strong> kiedy opisujemy, że jakaś czynność została wykonana przed innymi wydarzeniami w przeszłości, używamy czasu <em>past perfect</em> (<em>had + past participle</em>).</p>
+<p>4. do you usually listen to</p>
+<p><strong>Uzasadnienie:</strong> pytania o regularnie wykonywane czynności zadajemy za pomocą czasu <em>present simple</em> (<em>do/does</em> + podmiot + bezokolicznik). Kiedy czasownik łączy się z przyimkiem (<em>listen to music </em>- słuchać muzyki), stawiamy go na końcu pytania.</p>
+<p>5. I'll be able</p>
+<p><strong>Uzasadnienie:</strong> kiedy przewidujemy przyszłość na podstawie naszych przemyśleń, używamy czasu <em>future simple</em> (<em>will</em> + bezokolicznik).</p>
+<p>6. has only been having</p>
+<p><strong>Uzasadnienie:</strong> do podkreślenia okresu wykonywania niezakończonej czynności, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czas. z -ing).</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. must have been in a </p>
+<p><strong>Uzasadnienie:</strong> konstrukcja <em>must have + past participle </em>(III kolumna w tabeli czasowników nieregularnych), by wyrazić pewność co do wydarzenia z przeszłości. <em>Be in a good/bad mood </em>- być w złym/dobrym humorze. </p>
+<p>2. really talented guitarist</p>
+<p><strong>Uzasadnienie:</strong> konstrukcja: przysłówek + przymiotnik + rzeczownik.</p>
+<p>3. I've been cooking</p>
+<p><strong>Uzasadnienie:</strong> do podkreślenia okresu wykonywania niezakończonej czynności, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing). </p>
+<p>4. neighbours and relatives</p>
+<p>5. I had been there before</p>
+<p><strong>Uzasadnienie:</strong> kiedy jakaś czynność została wykonana przed innymi wydarzeniami w przeszłości, używamy czasu <em>past perfect</em> (<em>had </em>+ <em>past participle</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p><em>Hi. Today I want to tell you about</em> an interesting TV programme called <em>Wonders of the World</em>. It's available on streaming platforms, which means you can watch it whenever you want. I usually use Amazon Prime. There aren't many episodes but the series is very enjoyable.</p>
+<p>The programme covers interesting topics like ancient civilisations and wildlife. It allows you to learn about faraway places and their mysteries. I enjoy watching it because it's educational and fun, and the presenters make the information easy to understand. The footage is also incredible.</p>
+<p>I would recommend this series to teens who love learning and want to explore fascinating facts beyond their textbooks.</p>
+<p>Let me know if you've watched it!</p>
+<p><br/>(Liczba słów: 116)</p>
+<p><br/><strong>Tłumaczenie: </strong></p>
+<p>Cześć, dzisiaj chcę Wam opowiedzieć o ciekawym programie telewizyjnym o nazwie Wonders of the World. Jest on dostępny na platformach streamingowych, co oznacza, że można go oglądać kiedy tylko się chce. Ja zazwyczaj korzystam z Amazon Prime. Nie ma wielu odcinków, ale serial jest bardzo przyjemny.</p>
+<p>Program obejmuje interesujące tematy, takie jak starożytne cywilizacje i dzika przyroda. Pozwala poznać odległe miejsca i ich tajemnice. Lubię go oglądać, ponieważ jest edukacyjny i zabawny, a prezenterzy sprawiają, że informacje są łatwe do zrozumienia. Materiał filmowy jest również niesamowity.</p>
+<p>Polecił(a)bym ten serial nastolatkom, którzy uwielbiają się uczyć i chcą odkrywać fascynujące fakty wykraczające poza ich podręczniki.</p>
+<p>Dajcie znać, czy już go oglądaliście!</p><br>

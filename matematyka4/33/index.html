@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p><strong>a)</strong></p>
+<p>Wiemy, że <strong>5</strong> posłów (3 z partii <strong>X</strong> i <strong>2</strong> z partii <strong>Y</strong>) zajmuje wspólną pięcioosobową ławę na sali sejmowej. <br/>Posłowie jednej partii siedzą obok siebie.</p>
+<p>Należy uzasadnić, że są <strong>24</strong> sposoby zajęcia miejsc przez posłów.</p>
+<p><span style="text-decoration:underline;">Mamy dwie możliwe sytuacje:</span> </p>
+<p><strong>1) <br/></strong>Na pierwszych trzech miejscach siadają posłowie z partii <strong>X</strong>, a na dwóch kolejnych posłowie z partii <strong>Y</strong>. <br/>Wtedy możliwości rozłożenia posłów mamy: <strong>3! · 2! = 3 · 2 · 2 = 12</strong>.</p>
+<p><strong>2) <br/></strong>Na pierwszych dwóch miejscach siadają posłowie z partii <strong>Y</strong>, a na trzech kolejnych posłowie z partii <strong>X</strong>. <br/>Wtedy możliwości rozłożenia posłów mamy: <strong>2! · 3! = 2 · 3 · 2 = 12</strong>.</p>
+<p>Wnioskujemy, że posłowie mogą zająć miejsca na <strong>24</strong> sposoby,<br/>co należało uzasadnić.</p>
+<hr/>
+<p><strong>b)</strong></p>
+<p>Wiemy, że <strong>7</strong> posłów (<strong>3</strong> z partii <strong>X</strong> i <strong>4</strong> z partii <strong>Y</strong>) zajmuje wspólną siedmioosobową ławę na sali sejmowej. <br/>Posłowie jednej partii nie siedzą obok siebie.</p>
+<p>Należy obliczyć, na ile sposobów posłowie mogą zasiąść na ławie.</p>
+<p>Wobec tego siedzą naprzemiennie. Możliwe będzie to tylko wtedy, kiedy na pierwszym miejscu będzie siedział <br/>poseł z partii <strong>Y</strong> (bo jest ich parzysta liczba, a posłów z partii <strong>X</strong> jest nieparzysta liczba).</p>
+<p>Wnioskujemy, że posłowie mogą zająć miejsca na <strong>4 · 3 · 3 · 2 · 2 · 1 · 1 = 144</strong> sposoby.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Z treści zadania wiemy, że grupa <strong>12</strong> uczniów (<strong>4</strong> dziewcząt i <strong>8</strong> chłopców) zajmuje wspólny <br/>dwunastomiejscowy rząd w kinie.</p> <hr/> <p><strong>a)</strong></p> <p>Obliczamy, na ile sposobów uczniowie mogą zająć miejsca tak, aby dziewczęta siedziały razem.</p> <p>Wobec tego przyjmijmy, że dziewczęta zajmują jedno z dziewięciu miejsc (łączymy cztery miejsca zajęte<br/> przez dziewczęta w jedno - wtedy będą siedziały obok siebie) oraz mogą się miedzy sobą permutować. <br/>Natomiast chłopcy zajmują pozostałe <strong>8</strong> miejsc na <strong>8!</strong> sposobów.</p> <p>Wnioskujemy, że wszystkich możliwych sposobów ułożenia dzieci mamy:</p> <p><span> <math-expr expr="((9),(1))*4!*8! =9*4*3*2*8*7*6*5*4*3*2=8\ 709\ 120" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Obliczamy, na ile sposobów uczniowie mogą zająć miejsca tak, aby chłopcy siedzieli razem.</p> <p>Wobec tego przyjmijmy, że chłopcy zajmują jedno z pięciu miejsc (łączymy osiem miejsc zajętych<br/> przez chłopców w jedno - wtedy będą siedzieli obok siebie) oraz mogą się miedzy sobą permutować. <br/>Natomiast dziewczęta zajmują pozostałe <strong>4</strong> miejsca na <strong>4!</strong> sposobów.</p> <p>Wnioskujemy, że wszystkich możliwych sposobów ułożenia dzieci mamy:</p> <p><span> <math-expr expr="((5),(1))*8!*4! =5*8*7*6*5*4*3*2*4*3*2=4\ 838\ 400" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>W skład rady uczniów wchodzi po dwoje przedstawicieli z każdej klasy.<br/>Zatem <strong>2</strong> osoby z klasy <strong>IIIa</strong>, <strong>2</strong> osoby z klasy <strong>IIIb</strong>, <strong>2</strong> osoby z klasy <strong>III</strong><strong>c</strong>, <strong>2</strong> osoby z klasy <strong>IVa</strong> <br/>oraz <strong>2</strong> osoby z klasy <strong>IVb</strong>.</p> <p>Łącznie w skład rady uczniów wchodzi <strong>2 · 5 = 10</strong> osób.</p> <hr/> <p><strong>a)</strong></p> <p>Sprawdzamy, na ile sposobów możemy wybrać <strong>5</strong> osobową delegację:  </p> <p><span> <math-expr expr="((10),(5))=(10!)/(5!*5!)=(10*9*8*7*6)/(5*4*3*2)=2*3*2*7*3=252" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Sprawdzamy, na ile sposobów możemy wybrać <strong>5</strong> osobową delegację tak, aby był w niej <br/>przedstawiciel każdej klasy:</p> <p><span> <math-expr expr="2*2*2*2*2=2^5=32" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>c)</strong></p> <p>Sprawdzamy, na ile sposobów możemy wybrać <strong>5</strong> osobową delegację tak, aby przynajmniej<br/>jedna klasa była reprezentowana przez dwoje uczniów. <br/>Wtedy możemy mieć:</p> <ul> <li>dwoje przedstawicieli z jednej klasy (wybieramy jedną klasę z pięciu) oraz trzech przedstawicieli <br/>z czterech pozostałych klas (każdego wybieramy na <strong>2</strong> sposoby)</li> <li>po dwoje przedstawicieli z dwóch klas (wybieramy z pięciu klas dwie klasy) oraz jeden przedstawiciel <br/>z trzech pozostałych klas (wybieramy go na <strong>2</strong> sposoby) więc: </li> </ul> <p><span> <math-expr expr="((5),(1))*((4),(3))*2^3+((5),(2))*((3),(1))*2=5*4*8+(5!)/(2!*3!)*3*2=160+10*6=160+60=220" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Z treści zadania wiemy, że do klubu golfowego należy <strong>20</strong> mężczyzn i <strong>10</strong> kobiet.<br/>Członkowie klubu wybierają przewodniczącego, wiceprzewodniczącego i sekretarza.<br/>Obliczamy, ile jest taki sytuacji, gdy zostanie wybrana przynajmniej jedna kobieta.  <br/>Zatem ilość takich sytuacji, to różnica pomiędzy wyborem dowolnych trzech osób z grona <strong>30</strong> osób, a wyborem <br/>tylko trzech mężczyzn. Wobec tego:</p> <p><span> <math-expr expr="((30),(3))*3!-((20),(3))*3! =" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="=(30!)/(3!*27!)*6-(20!)/(3!*17!)*6=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=(30*29*28)/6*6-(20*19*18)/6*6=" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="=30*29*28-20*19*18=" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="=24360-6840=17520" syntax="text"></math-expr> </span> </p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
+<p>Z treści zadania wiemy, że w szufladzie znajduje się <strong>10</strong> par rękawiczek, każda para <br/>jest innego koloru.</p>
+<p>Obliczamy, na ile sposobów możemy wyciągnąć cztery rękawiczki, aby wśród nich nie było żadnej pary.</p>
+<p>Pierwszą rękawiczkę możemy wyciągnąć na  <strong>20</strong> sposobów (<strong>10 par</strong> rękawiczek, to jest to samo, co <strong>20 rękawiczek</strong>).<br/>Po wyciągnięciu pierwszej rękawiczki zostaje nam w szufladzie <strong>19</strong> rękawiczek z czego jedna, jest tego samego koloru, <br/>który wyciągnęliśmy jako pierwszy, wobec tego kolejną rękawiczkę możemy wyciągnąć na <strong>19-1=18</strong> sposobów.<br/>Wyciągając trzecią rękawiczkę, w szufladzie mamy łącznie <strong>18</strong> rękawiczek z czego dwie są tego samego koloru, którego <br/>są już wyciągnięte rękawiczki, zatem trzecią rękawiczkę wyciągamy na <strong>18-2=16</strong> sposobów.<br/>Czwartą rękawiczkę wyciągamy z puli <strong>17</strong> rękawiczek z czego <strong>3</strong> rękawiczki są tego samego koloru, jakiego są już <br/>wyciągnięte rękawiczki, zatem trzecią rękawiczkę wyciągamy na <strong>17-3=14</strong> sposobów.</p>
+<p>Pamiętając o tym, że jeśli najpierw wyciągniemy rękawiczkę koloru <strong>X</strong>, następnie koloru <strong>Y</strong>, kolejno koloru <strong>Z</strong>, a na końcu <br/>koloru <strong>W</strong> (dostaniemy <strong>XYZW</strong>), to ta czwórka jest taka sama jak czwórka <strong>XYWZ</strong>, <strong>XWZY</strong>, itd. Dlatego też musimy podzielić możliwości przez <strong>4!</strong>, aby uniknąć tych powtórzeń.</p>
+<p>Wobec tego wszystkich możliwości wyciągnięcia rękawiczek mamy:</p>
+<p><math-expr expr="(20*18*16*14)/(4!)=80640/24=3360" syntax="text"></math-expr>  </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
+<p>Z treści zadania wiemy, że w konkursie kulinarnym wzięło udział <strong>12 </strong>par małżeńskich. <br/>Do drugiego etapu jury wybrało<strong> 8 </strong>osób.</p> <hr/> <p><strong>a)</strong></p> <p>Należy uzasadnić, że jeśli wśród wybranych osób jest tylko jedna para małżeńska, to takiego wyboru <br/>można dokonać na ponad <strong>350 000 </strong>sposobów.</p> <p>Zauważmy, że w związku z powyższym wybieramy <strong>1</strong> parę z <strong>dwunastu</strong> wszystkich par, a następnie wybieramy <br/><strong>6</strong> par z <strong>jedenastu</strong> pozostałych i z tych <strong>6</strong> par wybieramy po jednej osobie na <strong>2</strong> sposoby, więc łącznie wszystkich <br/>możliwych wyborów mamy:</p> <p><span> <math-expr expr="((12),(1))*((11),(6))*2^6=12*(11!)/(6!*5!)*64=768*(11*10*9*8*7)/(5*4*3*2)=" syntax="text"></math-expr> </span> </p> <p><span> <math-expr expr="=768*11*2*3*7=354\ 816\ &gt; \ 350\ 000" syntax="text"></math-expr> </span> </p> <p>co należało uzasadnić.</p> <hr/> <p><strong>b)</strong></p> <p>Należy uzasadnić, że jeśli wśród wybranych osób są dwie pary małżeńskie, to takiego wyboru <br/>można dokonać na poda <strong>220 000 </strong>sposobów.</p> <p>Zauważmy, że w związku z powyższym wybieramy <strong>2</strong> pary z <strong>dwunastu</strong> wszystkich par, a następnie wybieramy <br/><strong>4</strong> pary z <strong>dziesięciu</strong> pozostałych i z tych <strong>4</strong> par wybieramy po jednej osobie na <strong>2</strong> sposoby, więc łącznie wszystkich <br/>możliwych wyborów mamy:</p> <p><span> <math-expr expr="((12),(2))*((10),(4))*2^4=(12!)/(2!*10!)*(10!)/(4!*6!)*16=(12*11)/2*(10*9*8*7)/(4*3*2)*16=" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="=66*10*3*7*16=221\ 760\ &gt; \ 220\ 000" syntax="text"></math-expr> </span>  </p> <p>co należało uzasadnić.</p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
+<p>Z treści zadania wiemy, że w hostelu jest <strong>pięć </strong>pokoi o numerach od <strong>1</strong> do <strong>5</strong>, gdzie numer pokoju wskazuje <br/>liczbę miejsc noclegowych.</p>
+<p>Zauważmy, że <strong>1+2+3+4+5=15</strong>, wobec tego, aby rozlokować <strong>15</strong> osób w tych <strong>5</strong> pokojach, to w każdym <br/>pokoju musi być maksymalna możliwa liczba osób. Zatem</p>
+<ul>
+<li>w pierwszym pokoju jest jedno miejsce i wybieramy jedną z 15 osób</li>
+<li>w drugim pokoju są dwa miejsca i wybieramy dwie osoby z pozostałych 14 osób</li>
+<li>w trzecim pokoju są trzy miejsca i wybieramy trzy osoby z pozostałych 12 osób</li>
+<li>w czwartym pokoju są cztery miejsca i wybieramy cztery osoby z pozostałych 9 osób</li>
+<li>w ostatnim pokoju jest pięć miejsc i wybieramy pięć osób z pozostałych 5 osób</li>
+</ul>
+<p>Wnioskujemy, że w tym hostelu możemy rozlokować <strong>15</strong> osób na <strong>37 837 800 </strong>sposobów, bo:  </p>
+<p><math-expr expr="((15),(1))*((14),(2))*((12),(3))*((9),(4))*((5),(5))=" syntax="text"></math-expr></p>
+<p><math-expr expr="=15*(14!)/(2!*12!)*(12!)/(3!*9!)*(9!)/(4!*5!)*1=" syntax="text"></math-expr></p>
+<p><math-expr expr="=15*(14*13)/2*(12*11*10)/6*(9*8*7*6)/(4*3*2)=" syntax="text"></math-expr>     </p>
+<p><math-expr expr="=15*7*13*2*11*10*3*2*7*3=" syntax="text"></math-expr></p>
+<p><math-expr expr="=37\ 837\ 800" syntax="text"></math-expr>   </p><br>

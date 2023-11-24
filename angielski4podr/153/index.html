@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>W mowie zależnej używamy tzw. </strong><strong><em>reporting verbs</em></strong><strong>, np. </strong><strong><em>tell </em>i</strong><strong> </strong><strong><em>say</em></strong><strong> ( </strong><strong>z </strong><strong><em>tell</em></strong><strong> używamy dopełnienia, np.</strong><strong><em> He told me he was sad</em></strong><strong>, a z </strong><strong><em>say</em></strong><strong> nie, np.</strong><strong><em> He said he was sad</em></strong><strong>)</strong><strong>. Jeśli występują one w czasie przeszłym, należy w przytaczanej wypowiedzi przesunąć czas o jeden wstecz według następującego schematu:</strong></p>
+<p><strong><em>present simple → past simple</em></strong></p>
+<p><strong><em>present continuous → past continuous</em></strong></p>
+<p><strong><em>present perfect simple → past perfect simple</em></strong></p>
+<p><strong><em>past simple → past perfect simple</em></strong></p>
+<p><strong><em>past continuous  → past perfect continuous</em></strong></p>
+<p><strong><em>past perfect simple → past perfect simple</em></strong></p>
+<p><strong><em>will → would</em></strong></p>
+<p><strong>Zmieniamy też określenia czasu (np. </strong><strong><em>today</em></strong><strong> → </strong><strong><em>that day</em></strong><strong>) i miejsca (np. </strong><strong><em>here </em></strong><strong>→ </strong><strong><em>there</em></strong><strong>) oraz zaimki wskazujące (np. </strong><strong><em>this </em></strong><strong>→ </strong><strong><em>that</em></strong><strong>). </strong></p>
+<p><strong>W pytaniach w mowie zależnej stosujemy szyk zdania twierdzącego (podmiot + orzeczenie), a na końcu stawiamy kropkę. Pytania, które wymagają odpowiedzi "tak/nie" wprowadzamy za pomocą </strong><strong><em>if</em></strong><strong> albo </strong><strong><em>whether</em></strong><strong>, a w pytaniach szczegółowych zostawiamy zaimek pytający (np. </strong><strong><em>who, where</em></strong><strong>). Przytaczamy pytanie za pomocą słowa </strong><strong><em>ask</em></strong><strong> (pytać). "Cofamy" czas i zmieniamy określenia czasu i miejsca oraz zaimki wskazujące tak, jak w zdaniach twierdzących w mowie zależnej.</strong></p>
+<p><strong>Komendy i polecenia w mowie zależnej przytaczamy używając konstrukcji: </strong><strong><em>tell sb (not) to do sth</em></strong><strong>, np.: </strong><strong><em>"Don't touch it"  → He told me not to touch it.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. Sam said that I could tell him about my holiday that evening. </p>
+<p>2. Kim told me that she had played a match there the day before.</p>
+<p>3. She asked me what we had been listening to.</p>
+<p>4. He asked if I had seen his laptop.</p>
+<p>5. He told me not to tell his sister what had happened. </p>
+<p>6. The man told us to take the money to the bank. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <span style="text-decoration: line-through;">can't</span> <strong>couldn't</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>can't</em> w mowie zależnej zmienia się w <em>couldn't. </em></p>
+<p>2. <span style="text-decoration: line-through;">tomorrow</span> <strong>the next day</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>tomorrow </em>w mowie zależnej zmienia się w <em>the next/following day.</em></p>
+<p>3. <span style="text-decoration: line-through;">that</span> <strong>if</strong></p>
+<p><strong>Uzasadnienie</strong>: w pytaniach w mowie zależnej używamy <em>if</em> (czy). </p>
+<p>4. <span style="text-decoration: line-through;">was that information</span> <strong>that information was</strong></p>
+<p><strong>Uzasadnienie</strong>: w pytaniach w mowie zależnej stosujemy szyk zdania twierdzącego (podmiot + orzeczenie). </p>
+<p>5. <span style="text-decoration: line-through;">he already called her</span> <strong>he had already called her</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>czas present perfect i past simple </em>w mowie zależnej zmieniają się w czas <em>past perfect.</em></p>
+<p>6. <span style="text-decoration: line-through;">is going</span> <strong>was going </strong></p>
+<p><strong>Uzasadnienie</strong>: <em>be going to </em>w mowie zależnej zmienia się w <em>was/were going to.</em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>W mowie zależnej używamy tzw. </strong><strong><em>reporting verbs</em></strong><strong>, np. </strong><strong><em>tell </em>i</strong><strong> </strong><strong><em>say</em></strong><strong> ( </strong><strong>z </strong><strong><em>tell</em></strong><strong> używamy dopełnienia, np.</strong><strong><em> He told me he was sad</em></strong><strong>, a z </strong><strong><em>say</em></strong><strong> nie, np.</strong><strong><em> He said he was sad</em></strong><strong>)</strong><strong>. Jeśli występują one w czasie przeszłym, należy w przytaczanej wypowiedzi przesunąć czas o jeden wstecz według następującego schematu:</strong></p>
+<p><strong><em>present simple → past simple</em></strong></p>
+<p><strong><em>present continuous → past continuous</em></strong></p>
+<p><strong><em>present perfect simple → past perfect simple</em></strong></p>
+<p><strong><em>past simple → past perfect simple</em></strong></p>
+<p><strong><em>past perfect simple → past perfect simple</em></strong></p>
+<p><strong><em>will → would</em></strong></p>
+<p><strong>Zmieniamy też określenia czasu (np. </strong><strong><em>today</em></strong><strong> → </strong><strong><em>that day</em></strong><strong>) i miejsca (np. </strong><strong><em>here </em></strong><strong>→ </strong><strong><em>there</em></strong><strong>) oraz zaimki wskazujące (np. </strong><strong><em>this </em></strong><strong>→ </strong><strong><em>that</em></strong><strong>). </strong></p>
+<p><strong>W pytaniach w mowie zależnej stosujemy szyk zdania twierdzącego (podmiot + orzeczenie), a na końcu stawiamy kropkę. Pytania, które wymagają odpowiedzi "tak/nie" wprowadzamy za pomocą </strong><strong><em>if</em></strong><strong> albo </strong><strong><em>whether</em></strong><strong>, a w pytaniach szczegółowych zostawiamy zaimek pytający (np. </strong><strong><em>who, where</em></strong><strong>). Przytaczamy pytanie za pomocą słowa </strong><strong><em>ask</em></strong><strong> (pytać). "Cofamy" czas i zmieniamy określenia czasu i miejsca oraz zaimki wskazujące tak, jak w zdaniach twierdzących w mowie zależnej.</strong></p>
+<p><strong>Komendy i polecenia w mowie zależnej przytaczamy używając konstrukcji: </strong><strong><em>tell sb (not) to do sth</em></strong><strong>, np.: </strong><strong><em>"Don't touch it"  → He told me not to touch it.</em></strong></p>
+<hr/>
+<p> </p>
+<p>1. to know if I would  </p>
+<p>2. they could give her </p>
+<p>3. come shopping with him</p>
+<p>4. had texted me the night </p>
+<p>5. not to try to make </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. having</p>
+<p><strong>Uzasadnienie</strong>: <em>deny</em> + -<em>ing</em>. </p>
+<p>2. to throw</p>
+<p><strong>Uzasadnienie</strong>: <em>threaten </em>+ bezokolicznik <em>z to</em>.</p>
+<p>3. congratulate</p>
+<p><strong>Uzasadnienie</strong>: <em>congratulate </em>+ dopełnienie + przyimek + -<em>ing</em>.</p>
+<p>4. that it was</p>
+<p><strong>Uzasadnienie</strong>: <em>agree </em>+ <em>that</em> + reszta zdania. </p>
+<p>5. to study</p>
+<p><strong>Uzasadnienie</strong>: <em>encourage </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p>
+<p>6. recommend</p>
+<p><strong>Uzasadnienie</strong>: <em>recommend + (that)</em> + podmiot + bezokolicznik bez <em>to</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Paul promised to do his homework on time. </p>
+<p><strong>Uzasadnienie</strong>: <em>promise </em>+ bezokolicznik <em>z to</em>. </p>
+<p>2. I advised her to learn to drive. </p>
+<p><strong>Uzasadnienie</strong>: <em>advise </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p>
+<p>3. They admitted that they had cheated in the test.</p>
+<p><strong>Uzasadnienie</strong>: <em>admit </em>+ <em>that</em> + reszta zdania.</p>
+<p>4. Jane thanked him for helping her. </p>
+<p><strong>Uzasadnienie</strong>: <em>thank </em>+ dopełnienie + przyimek + -<em>ing</em>.</p>
+<p>5. Dad insisted that we leave before 2 pm.</p>
+<p><strong>Uzasadnienie</strong>: <em>insist + (that)</em> + podmiot + bezokolicznik bez <em>to</em>. </p>
+<p>6. We complained that the food was too cold.</p>
+<p><strong>Uzasadnienie</strong>: <em>complain </em>+ <em>that</em> + reszta zdania.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. accused me of lying </p>
+<p><strong>Uzasadnienie</strong>: <em>accuse </em>+ dopełnienie + przyimek + -<em>ing</em>. </p>
+<p>2. never refuse to take </p>
+<p><strong>Uzasadnienie</strong>: <em>refuse </em>+ bezokolicznik <em>z to</em>.</p>
+<p>3. that we wait </p>
+<p><strong>Uzasadnienie</strong>: <em>suggest + (that)</em> + podmiot + bezokolicznik bez <em>to</em>. </p>
+<p>4. begging me not to leave</p>
+<p><strong>Uzasadnienie</strong>: <em>beg </em>+ dopełnienie + (<em>not</em>) bezokolicznik <em>z to</em>.</p>
+<p>5. offered to help </p>
+<p><strong>Uzasadnienie</strong>: <em>offer </em>+ bezokolicznik <em>z to</em>.</p>
+<p>6. can persuade Dad to go </p>
+<p><strong>Uzasadnienie</strong>: <em>persuade </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p><br>

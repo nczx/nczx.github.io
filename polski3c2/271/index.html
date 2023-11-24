@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<table border="1" style="border-collapse:collapse;width:691px;height:253px;">
+<tbody>
+<tr>
+<td colspan="4" style="width:687px;background-color:#ccffff;text-align:center;"><strong>S³ownictwo</strong></td>
+</tr>
+<tr>
+<td style="background-color:#99cccc;text-align:center;width:169.5px;"><strong>woda</strong></td>
+<td style="background-color:#99cccc;text-align:center;width:169.5px;"><strong>ogieñ</strong></td>
+<td style="background-color:#99cccc;text-align:center;width:169.5px;"><strong>ziemia </strong></td>
+<td style="background-color:#99cccc;text-align:center;width:169.5px;"><strong>powietrze </strong></td>
+</tr>
+<tr>
+<td style="width:169.5px;">
+<ul>
+<li><em>zab³ys³a woda;</em></li>
+<li><em>zaranna rosa;</em></li>
+<li><em>ha w wodospadach;</em></li>
+<li><em>strumieñ;</em></li>
+</ul>
+</td>
+<td style="width:169.5px;">
+<ul>
+<li><em>p³on¹ca miedŸ;</em></li>
+<li><em>w œwitaniu pa³aj¹cym;</em></li>
+</ul>
+</td>
+<td style="width:169.5px;">
+<ul>
+<li><em>pó³ globu;</em></li>
+<li><em>wierzb;</em></li>
+<li><em>drog¹;</em></li>
+<li><em>pagórków;</em></li>
+<li><em>droga;</em></li>
+<li><em>wierzbiny;</em></li>
+</ul>
+</td>
+<td style="width:169.5px;">
+<ul>
+<li><em>powietrze rwiesz to pêd to pêd u czo³a wiatr i wiatr;</em></li>
+<li><em>u piêt promienie wierzb unosi wiatr i wiatrem koñ;</em></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>¯ywio³y maj¹ w kulturze bogat¹ symbolikê, poniewa¿ ich harmonijne wspó³istnienie stanowi kluczowy element istnienia bytów i ca³ego œwiata. W utworze Czechowicza wywo³uj¹ konkretne skojarzenia, np. ze spokojem i ¿yciem (woda), zagro¿eniem, zniszczeniem (ogieñ), sta³oœci¹ (ziemia), zmiennoœci¹, dynamizmem (powietrze). Utwór poety sugeruje jednak swoiste zachwianie porz¹dku; po³¹czenie ¿ywio³ów wprowadza poczucie grozy i niepewnoœci, poniewa¿ rzeczywistoœæ traci swoj¹ stabilnoœæ, zaœ same wydarzenia nasuwaj¹ na myœl apokaliptyczne obrazowanie. Sposób ukazania ¿ywio³ów tym samym odzwierciedla chaos i pesymistyczn¹ wizjê œwiata. Symbolika ta pog³êbia dramatyczn¹ wymowê dzie³a, poniewa¿ sugeruje, i¿ niemo¿liwe jest ocalenie œwiata, a koniec jest nieunikniony. Taki sposób przywo³ania ¿ywio³ów wp³ywa tak¿e na kosmiczny wymiar katastrofy, podkreœla bezradnoœæ cz³owieka wobec œwiata, który utraci³ swój dotychczasowych porz¹dek.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przyk³adowe nawi¹zania:</p>
+<ul>
+<li>bogactwo elementów symbolicznych; </li>
+<li>atmosfera niepokoju, zagro¿enia;</li>
+<li>wizyjnoœæ przedstawienia: "lecz zginie gdy siê w niebo wleje p³on¹ca miedŸ";</li>
+<li>wykorzystanie motywów typowych dla Apokalipsy: ognia, powietrza, tr¹bki;</li>
+<li>przedstawienie zag³ady œwiata;</li>
+<li>obecnoœæ jeŸdŸców.</li>
+</ul>
+<p> </p>
+<p>Nawi¹zania do Apokalipsy poszerzaj¹ perspektywê utworu wiersza. Nadaj¹ mu uniwersalny wymiar, a przy tym wzmacniaj¹ katastroficzne nastroje dzie³a. Ponadto wskazuj¹ na tragizm sytuacji ukazanej w wierszu, gdy¿ przedstawiony zostaje kres œwiata znanego cz³owiekowi - jest on nieuchronny. Odwo³anie do tej tradycji sugeruje równie¿ dramat losu istoty ludzkiej. Mierzy siê ona z niepojêtym zdarzeniem, jest bezbronna wobec ¿ywio³ów oraz zagro¿enia. Apokalipsa dzieje siê bowiem na jej oczach, mo¿na j¹ wiêc skojarzyæ z wojennymi doœwiadczeniami. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>.</p><br>

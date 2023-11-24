@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. identify</p>
+<p>(Zanim zadecydujemy, co zrobić, musimy <strong>określić</strong> plusy i minusy każdego planu działania.) </p>
+<p>2. predict</p>
+<p>(Nie wiemy na pewno, co się stanie, ale możemy <strong>przewidzieć</strong> efekty naszych działań wzorując się na starych danych.)</p>
+<p>3. consider</p>
+<p>(Nie podejmuj decyzji za szybko. <strong>Rozważ</strong> alternatywne rozwiązania, które mogą mieć taki sam albo lepszy skutek.)</p>
+<p>4. brainstorm</p>
+<p>(Zamierzamy pracować razem, żeby <strong>znaleźć rozwiązanie za pomocą burzy mózgów</strong>.)</p>
+<p>5. draw</p>
+<p>(To niemożliwe, żeby <strong>wyciągnąć</strong> wnioski na podstawie tak małej próbki.)</p>
+<p>6. use</p>
+<p>(Czasem, kiedy nie mamy konkretnych faktów, musimy po prostu <strong>użyć</strong> intuicji.)</p>
+<p>7. suspend</p>
+<p>(Nie ma pośpiechu. <strong>Wstrzymajmy</strong> <strong>się</strong> z wydawaniem opinii aż będziemy mieć więcej danych.)</p>
+<p>8. imagine </p>
+<p>(To wspaniały wynalazek. Tylko <strong>wyobraź sobie</strong> możliwości takiego urządzenia!)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. brainstormed solutions  </p>
+<p>2. consider alternatives</p>
+<p>3. identified pros and cons</p>
+<p>4. imagine possibilities</p>
+<p>5. predicting the effects</p>
+<p>6. draw conclusions</p>
+<p> </p>
+<p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
+<p>Przyglądaliśmy się sposobom rozwinięcia branży dostaw paczek do domu tak, żeby zmniejszyć koszty i ulepszyć usługę. Najpierw <strong>za pomocą burzy mózgów szukaliśmy rozwiązań</strong> problemu szybkiej dostawy. Na początku wszyscy zaczęli mówić o dronach, ale chcieliśmy też <strong>rozważyć inne opcje</strong>, takie jak drukarki 3D. Kiedy już mieliśmy kilka pomysłów, <strong>rozważyliśmy wady i zalety</strong> każdego z nich. Na przykład drony wydają się idealnym rozwiązaniem, ale w ich przypadku pojawia się problem limitu wagi i bezpieczeństwa klienta. Nie mogliśmy zdecydować się na najlepszą opcję i ruszyć dalej, więc spróbowaliśmy <strong>wyobrazić sobie możliwości</strong>, które niosą za sobą przyszłe technologiczne zmiany. Na przykład, rozwój drukowania w 3D może znacząco zmniejszyć zapotrzebowanie na dostawy do domu. Nie wiemy, co przyniesie przyszłość, ale dzięki <strong>przewidywaniu efektów</strong>, możemy założyć, że rynek zwiększy się w najbliższej przyszłości. Przyjrzeliśmy się też analizom kilku firm, które  odniosły sukces oraz takim, które upadły. Trudno było <strong>wyciągnąć wnioski</strong> na podstawie ograniczonych przykładów, ale...</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Odpowiedź: </strong></p>
+<p>a, b</p><br><a style="color:red; font-size:25px;">WATCH OUT</a><br>
+<p>1. (przykład)</p>
+<p>2. (przykład)</p>
+<p>3. (przykład)</p>
+<p>4. name </p>
+<p>5. activity</p>
+<p>6. activity</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Go </p>
+<p>2. 100,000</p>
+<p>3. Emilia</p>
+<p>4. Baxter</p>
+<p>5. payments</p>
+<p>6. clean up </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. extremely popular </p>
+<p>2. humans</p>
+<p>3. doubled</p>
+<p>4. have a conversation</p>
+<p>5. open a new account</p>
+<p>6. do the job independently</p>
+<p>7.  in Europe yet</p><br>

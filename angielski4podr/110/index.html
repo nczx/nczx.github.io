@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>a. F <span style="text-decoration: line-through;">to sell their houses</span> <strong>to have their house redecorated </strong></p>
+<p>b. F <span style="text-decoration: line-through;">My friend</span><strong> I </strong></p>
+<p>c. T</p>
+<p>d. T</p>
+<p>e. F <span style="text-decoration: line-through;">they had to borrow the money for a makeover</span> <strong>they couldn't have afforded it without the TV station's help</strong></p>
+<p>f. F <span style="text-decoration: line-through;">back out of the show</span> <strong>sue the show's producers</strong></p>
+<p>g. T</p>
+<p>h. <span style="text-decoration: line-through;">after </span><strong>before</strong></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>a. verb + to </p>
+<p>b. verb + -ing</p>
+<p>c. verb + that</p>
+<p>d. verb + that</p>
+<p>e. verb + that</p>
+<p>f. verb + to</p>
+<p>g. verb + -ing</p>
+<p>h. verb + to</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. <span style="text-decoration: line-through;">shooting</span> <strong>to shoot</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>threaten</em> + bezokolicznik z <em>to</em>. </p>
+<p>2. <span style="text-decoration: line-through;">to</span> <strong>that</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>promise </em>+ <em>that</em>.</p>
+<p>3.<span style="text-decoration: line-through;"> to come</span> <strong>coming</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>insist </em>+ przyimek + -<em>ing</em>.</p>
+<p>4. <span style="text-decoration: line-through;">tell</span> <strong>telling</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>accuse </em>+ dopełnienie + przyimek + (<em>not</em>) -<em>ing</em>.</p>
+<p>5. <span style="text-decoration: line-through;">have</span> <strong>having</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>deny </em>+ <em>-ing</em>.</p>
+<p>6. <span style="text-decoration: line-through;">filing</span> <strong>to file</strong></p>
+<p><strong>Uzasadnienie</strong>: <em>order </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p>
+<p>7. accused me <strong>of</strong> not watering</p>
+<p><strong>Uzasadnienie</strong>: <em>accuse </em>+ dopełnienie + przyimek + (<em>not</em>) -<em>ing</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Thomas denied that he had invited Megan.</p>
+<p> <strong>Uzasadnienie</strong>: <em>deny </em>+ <em>that</em>. </p>
+<p>2. Mr Gee encouraged me to have another piece of cake.</p>
+<p><strong>Uzasadnienie</strong>: <em>encourage </em>+ dopełnienie + bezokolicznik <em>z to</em>.</p>
+<p>3. Beth agreed to give me a lift the following day.</p>
+<p><strong>Uzasadnienie</strong>: <em>agree </em>+ bezokolicznik <em>z to</em>.</p>
+<p>4. Mike explained that it had been a misunderstanding.</p>
+<p><strong>Uzasadnienie</strong>: <em>explain </em>+ <em>that</em>.</p>
+<p>5. Paul offered to stay there and wait for everyone to leave. </p>
+<p><strong>Uzasadnienie</strong>: <em>offer </em>+ bezokolicznik <em>z to</em>.</p>
+<p>6. Karen accused me of forgetting to pay the rent. </p>
+<p><strong>Uzasadnienie</strong>: <em>accuse </em>+ dopełnienie + przyimek + (<em>not</em>) -<em>ing</em>.</p>
+<p>7. Billie promised that she wouldn't tell my secret. </p>
+<p><strong>Uzasadnienie</strong>: <em>promise </em>+ <em>that</em>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. reporting </p>
+<p>2. paying</p>
+<p>3. see</p>
+<p>4. ignore</p>
+<p>5. get</p>
+<p>6. doing</p>
+<p>buying</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Brain Teaser</a><br>
+<p><strong>Odpowiedź</strong>: </p>
+<p>a calendar</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
+<p>Indywidualne</p><br>

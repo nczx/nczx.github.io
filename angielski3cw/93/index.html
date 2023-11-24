@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Breakdancing.  </p>
+<p><strong>Fragment w tekście: </strong>"In an attempt to reach out to younger viewers, they are adding new events, some of which might be a little bit controversial. One example is breakdancing." - Próbując dotrzeć do młodszych widzów, dodają nowe wydarzenia, z których niektóre mogą być nieco kontrowersyjne. Jednym z przykładów jest breakdance.</p>
+<p>2. To make young people interested in The Olympic Games.</p>
+<p><strong>Fragment w tekście: </strong>"(...) even the Olympic organisers are worried that, perhaps, the next generation won't be as interested in watching the traditional sports which most people associate with the championships." - (...) nawet organizatorzy olimpiady obawiają się, że być może kolejne pokolenie nie będzie tak zainteresowane oglądaniem tradycyjnych sportów, które większości ludzi kojarzą się z mistrzostwami.</p>
+<p> </p>
+<p> </p>
+<p><strong><br/>Poniżej przedstawiona jest przykładowa odpowiedź do tego zadania. Każdy uczeń może rozwiązać je w inny sposób. Poniższe rozwiązanie traktuj jako wzór, na podstawie którego stworzysz własną odpowiedź.</strong></p>
+<hr/>
+<p> </p>
+<p>3. It was an interesting attempt at getting more people involved in the Olympics, but I'm not sure it makes sense. Breakdancing isn't a sport where you can easily measure someone's success. Judging the athletes in this category is going to be very subjective.</p>
+<p>(Była to interesująca próba zaangażowania większej liczby osób w Igrzyska Olimpijskie, ale nie jestem pewny/a, czy ma to sens. Breakdance nie jest sportem, w którym można łatwo zmierzyć czyjś sukces. Ocena sportowców w tej kategorii będzie bardzo subiektywna.)</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Nazwy sportów pojawiające się w tekście:</strong></p>
+<p> - golf  </p>
+<p> - football  (piłka nożna)</p>
+<p> - gymnastics  (gimnastyka)</p>
+<p> - basketball  (koszykówka)</p>
+<p> - tennis  (tenis)</p>
+<p> - windsurfing </p>
+<p> - marathon running  (maraton)</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. C </p>
+<p>(W którym akapicie autor/ka pisze, że niełatwo zdecydować, kto powinien zostać mistrzem?)</p>
+<p><strong>Fragment w tekście: </strong>"Where sports are marked by judges there can be controversy. Perhaps the judges favour one person over another because of their nationality and give them a higher mark than they deserve." - Tam, gdzie sporty są oceniane przez sędziów, mogą pojawić się kontrowersje. Być może sędziowie faworyzują jedną osobę z powodu jej narodowości i dają jej wyższą ocenę niż na to zasługuje. </p>
+<p>2. B</p>
+<p>(... pisze jaki zdaniem niektórych ludzi jest prawdziwy sens tańca?)</p>
+<p><strong>Fragment w tekście: </strong>"In their view, dance is a creative art form without winners or losers." - Ich zdaniem taniec jest twórczą formą sztuki bez zwycięzców ani przegranych.</p>
+<p>3. D</p>
+<p>(... pisze o tym, że breakdance jest trudniejszy niż się wydaje?)</p>
+<p><strong>Fragment w tekście: </strong>"If you think it is so easy, try it! You might be surprised!" - Jeśli myślisz, że to takie proste, spróbuj! Możliwe, że się zdziwisz!</p>
+<p>4. A</p>
+<p>(... wyjaśnia znaczenie jakiegoś słowa?)</p>
+<p><strong>Fragment w tekście: </strong>"One dictionary defines sport as 'an activity in which players or teams compete against each other, usually an an activity that involves physical effort.'" - Jeden ze słowników definiuje sport jako "czynność, podczas której uczestnicy lub zespoły rywalizują ze sobą, zwykle wymagająca wysiłku fizycznego".</p>
+<p>5. D</p>
+<p>(... twierdzi, że wiek zawodników jest powodem negatywnego nastawienia niektórych ludzi?)</p>
+<p><strong>Fragment w tekście: </strong>"I have a feeling, though, that a lot of the criticism is because this is a sport practised by young people." - Mam jednak wrażenie, że duża część krytyki wynika z tego, że jest to sport uprawiany przez młodzież.</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Uwaga! Wstawione odpowiedzi zostały pogrubione w tłumaczeniu.</strong> </p>
+<p>1. physical effort </p>
+<p><strong>Fragment w tekście: </strong>(A) "(...) dance definitely involves a lot of physical effort." - (...) taniec zdecydowanie wiąże się z dużym wysiłkiem fizycznym. </p>
+<p>2. competitive</p>
+<p><strong>Fragment w tekście: </strong>(A) "(...) but that doesn't mean it can't be competitive." - (...) ale to nie znaczy, że nie może działać na zasadzie rywalizacji.</p>
+<p>3. expensive</p>
+<p><strong>Fragment w tekście: </strong>(D) "(...) there are almost no costs involved at all (...)." - (...) nie wiążą się z tym prawie żadne koszty (...).</p>
+<p>4. sport</p>
+<p><strong>Fragment w tekście: </strong>(A) "(...) whether breakdancing (...) can be considered as a sport." - (...) czy breakdance (...) można uznać za sport.</p>
+<p>5. winner</p>
+<p><strong>Fragment w tekście: </strong>(C) "(...) there is no clear winner." - (...) nie ma jednoznacznego zwycięzcy.</p>
+<p>6. judges</p>
+<p><strong>Fragment w tekście: </strong>(C)<strong> </strong>"Perhaps the judges favour one person over another (...)." - Być może sędziowie faworyzują jedną osobę kosztem drugiej (...).</p>
+<p> </p>
+<p><strong>Tłumaczenie:</strong></p>
+<table border="1" style="text-align: center; border-collapse: collapse; width: 445px; height: 114px;">
+<tbody>
+<tr>
+<td style="width: 441px;">
+<p><span style="text-decoration: underline;">Breakdance powinien być na olimpiadzie</span></p>
+<p> - wymaga <strong>wysiłku fizycznego</strong></p>
+<p> - <strong>jest formą rywalizacji</strong></p>
+<p> - każdy może wziąć udział, ponieważ nie jest <strong>drogi</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 441px;">
+<p><span style="text-decoration: underline;">Breakdance nie powinien być na olimpiadzie</span></p>
+<p> - nie jest prawdziwym <strong>sportem</strong></p>
+<p> - trudno wyłonić <strong>zwycięzców</strong></p>
+<p> - <strong>sędziowie</strong> mogą nie zawsze być sprawiedliwi</p>
+</td>
+</tr>
+</tbody>
+</table><br>

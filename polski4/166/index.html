@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo:</p>
+<p>Istota podróży w ujęciu Herberta tkwi w tym, że stanowi nie tylko realizację marzeń. Przede wszystkim służy konfrontacji wyobrażeń i faktów, autentycznemu doświadczeniu miejsca, by wyrobić sobie na tej podstawie własną opinię. Podróż staje się źródłem uniwersalnej refleksji, a ponadto przyczynia się do zjednoczenia przeszłości i teraźniejszości. Istota podróży dla Herberta jest podobna do tego, co zauważa Gadacz w swym tekście: "Czy tajemnica prawdziwego doświadczenia podróży nie tkwi w zmianie naszego nastawienia?". Kwestię tę można również dostrzec w eseju poety. Za sprawą podróży przekracza pewną granicę, która może wywoływać poczucie dyskomfortu: dochodzi bowiem do zderzenia wyobrażeń z rzeczywistością, co wywołuje pewne obawy, niepokój. Jednocześnie w ten sposób podróż ubogaca Herberta, ponieważ zmienia się jego nastawienie: pewne doświadczenia budzą zachwyt, inne zaś nie, ale stają się przy tym źródłem uniwersalnej refleksji. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo:</p>
+<p>W sensie egzystencjalnym doświadczenie miejsca staje się przełomowym momentem, na który oczekiwał pisarz. Może bowiem wreszcie w wielowymiarowy sposób doświadczyć przestrzeni, którą do tej pory znał jedynie z książek czy swoich wyobrażeń, znaleźć odpowiedź na zadawane sobie pytania. Prowadzi to także do zderzenia się dwóch sfer: wyobrażeń, wiedzy z autentycznym przeżyciem duchowym, silnie oddziałującym na emocje i stan podróżnika. Akropol w książkach zostaje bowiem sprowadzony do precyzyjnych informacji, nie można jednak go poznać za pomocą wszystkich zmysłów. Buduje to dystans między miejscem a człowiekiem, ale wzmacnia też potrzebę bezpośredniego kontaktu: "Zdjęcia, rysunki, opisy stanowiły pokarm wodnisty, pozbawiony zapachu, koloru i tła. Znałem nieźle topografię, wymiary i kontur głównych świątyń, ale cały ich zespół położony był nieodmiennie na płaszczyźnie, miał barwę gipsu, nie oddychał światłem, a niebo nad nim było z papieru".</p>
+<p>Znalezienie się w znanej do tej pory z książek przestrzeni wywołuje niezwykle silne, uczucia, wręcz swoiste oczyszczenie: "Wysoko w górze - on!". Wiąże się też z nieposkromioną cierpliwością - pozwala ona na cierpliwe znoszenie wszelakich niedogodności. Spotkanie z Akropolem niejako umożliwia ponadto pisarzowi przekroczenie granic czasu. W sensie egzystencjalnym poznaje on przestrzeń na różnych płaszczyznach, które dodatkowo są wzbogacone o kontekst historyczny, kulturowy itd. W ten sposób poznaje także lepiej siebie, dzięki czemu na nowo określa swój stosunek względem Akropolu.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Obawa Herberta wynika przede wszystkim z tego, jak ważne miejsce Akropol zajmuje w jego umyśle. Poeta jest nim zafascynowany, nawet wprost stwierdza: "Nie ma na świecie budowli, która tak trwale okupowała moją wyobraźnię". Zetknięcie się z Akropolem wywołuje tym samym pewne oczekiwania, ponieważ obcowanie z nim za pomocą rysunków czy opisów nie oddaje jego istoty. Z tego też powodu piszący obawia się tego zderzenia wyobrażeń z rzeczywistością, ponieważ sytuacja ta może być źródłem rozczarowania: "[...] rósł we mnie strach że konfrontacja  zniszczy to, co przez wiele lat budowały cierpliwe domysły". Herbert martwi się tym, iż nie odczuje wyjątkowości Akropolu, nie doświadczy silnych emocji, a zamiast tego będzie machinalnie podtrzymywać przekonanie o znaczeniu Akropolu - niepoparte faktycznym wzruszeniem: "Czy wezmę udział w trwającym od wieków sprzysiężeniu zachwytu, które polega - wiemy to dobrze - nie tyle na wciąż odnawiającym się wzruszeniu, ile na sile wmówienia, na repetycji wiary". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Herbert w swym eseju odwołuje się do dwóch sposobów zwiedzania Akropolu. Pierwszy z nich, dzienny, to metafora zwiedzania, które opiera się na analitycznym podejściu. Ważne są więc fakty, informacje w przewodniku, obserwacja poszczególnych części istniejących elementów architektonicznych. Takie zwiedzanie odwołuje się do konkretu, studiowania pozostałości dostrzegalnych za pomocą wzroku. Zwiedzanie nocne zyskuje zaś bardziej metaforyczny charakter. Wiąże się ze zmianą perspektywy - ulega ona poszerzeniu: obserwujący nie skupia się na detalach, ale postrzega Akropol jako pewną całość oraz rzeźbę. Ponadto odbiera to miejsce za pomocą różnych zmysłów. Nocne zwiedzanie polega też na tym, że różne perspektywy czasowe i historyczne zaczynają się na siebie nakładać, co wzbogaca odbiór przestrzeni: "Akropol, jaki miałem przed oczami, sprowadzony do szkieletu, odarty z ciała, był dla mnie zarówno dziełem woli, ładu, jak i chaosu, artystów, historii [...]". </p>
+<p> </p>
+<p>Wyrażenie swojego zdania - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowe fragmenty:</p>
+<ul>
+<li><em>Góra, na której stoją świątynie Akropolu, jest piękna; z trzech stron gwałtownie spadające, prawie prostopadłe stoki o kolorze sinoszarym. Tylko od strony morza sto jest łagodniejszy, ale zawsze pielgrzymka na święte wzgórze miała charakter dość uciążliwego wspinania się. Skała Akropolu ma wysokość 50 metrów. Płaski szczyt góry ma kształt zbliżony do trójkąta o podstawie 150 metrów i długości 300 metrów. </em></li>
+<li><em>Partenon jest na pewno jedną z najpiękniejszych świątyń doryckich. Wydaje się znacznie większy i potężniejszy, niż wskazują na to realne wymiary: długość - 69, szerokość - 31, wysokość 17 metrów. [...] Stoi na potężnym stylobacie o trzech stopniach nieidentycznej wysokości. Najwyższy jest stopień, na którym opierają się kolumny.</em></li>
+<li><em>Spojrzenie Greków biegło nieodmiennie ku pustym dziś szczytowym partiom świątyni, na których Fidiasz wyrzeźbił spór o Attykę między Posejdonem a Ateną (fronton zachodni) i narodziny Ateny (fronton wschodni). Rzexby były polichromowane złotem, malowane błękitem, czerwienią i brązem [...]. </em></li>
+</ul>
+<p>Partie tekstu, odwołujące się do wcześniejszej wiedzy, wzbogacają warstwę informacyjną, gdyż wprowadzają ogólną wiedzę na temat miejsca, z którym zmierzy się piszący. Stanowią także zapowiedź zderzenia dotychczasowych wyobrażeń Herberta z autentycznym doświadczeniem miejsca. Za ich sprawą tekst poety staje się wielowymiarowy, gdyż ukazuje dwie perspektywy: jedna opiera się na faktach, liczbach, a druga wynika z emocji zwiedzającego. Wskazują także na erudycję autora oraz jego fascynację Akropolem.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Przykładowo:</p>
+<p>Podkreślony fragment stanowi uniwersalną refleksję na temat wrażliwości współczesnego człowieka w zetknięciu ze starożytną sztuką oraz sposobu jej odbioru. Według Herberta bowiem obecnie postrzega się antyczną architekturę poprzez pryzmat ułomności - to ona staje się dla współczesnego obserwatora wyznacznikiem piękna. Z tego też powodu rzadko kiedy myśli się o tych zabytkach w kontekście ich pierwotnego wyglądu. Zadowolenie estetyczne nie jest tym samym efektem zmierzenia się z budynkiem w jego oryginalnej formie, ale wynika z tego, iż można dostrzec zależność między działalnością człowieka a siłami natury. To ona przyciąga uwagę i zainteresowanie współczesnego człowieka, który nie czuje potrzeby, by "[...] dopowiedzieć całość [...]", jest dla niego wystarczająca. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Rozwiązanie poniżej: </p>
+<table border="1" style="border-collapse: collapse; width: 540px; height: 480px;">
+<tbody>
+<tr style="height: 30px;">
+<td style="background-color: #aed581; text-align: center; width: 259.95px; height: 30px;"><strong>Przykładowa perspektywa</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 273.05px; height: 30px;"><strong>Przykładowy fragment</strong></td>
+</tr>
+<tr style="height: 59px;">
+<td style="width: 259.95px; text-align: center; height: 59px;">geograficzna</td>
+<td style="width: 273.05px; text-align: center; height: 59px;"><em>Góra, na której stoją świątynie Akropolu, jest piękna; z trzech stron gwałtownie  spadające, prawie prostopadłe stoki o kolorze sinoszarym. Tylko od strony morza stok jest łagodniejszy [...]. </em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">matematyczna</td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>[...] długość - 69, szerokość - 31, wysokość 17 metrów.</em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">historii sztuki</td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>Rzeźby były polichromowane złotem, malowane błękitem, czerwienią i brązem [...].  </em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">osoby zafascynowanej Akropolem</td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>Akropol był cudem rzeczywistym. Nie wodził zmysłów na pokuszenie, nie obiecywał, że będzie czymś więcej niż jest.</em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">zwiedzającego</td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>Sprawdzanie planu, badanie struktury całości, dotykanie kamieni, wyobrażanie sobie tego, co zginęło [...]. </em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">poety oraz estety</td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>Najtrudniej było mi znaleźć porozumienie z Erechtejonem. Portyk kariatyd szpeciły metalowe rury podpór, odbierające budowli sens i zamierzoną lekkość. </em></td>
+</tr>
+<tr style="height: 30px;">
+<td style="width: 259.95px; text-align: center; height: 30px;">historyczna </td>
+<td style="width: 273.05px; text-align: center; height: 30px;"><em>[...] był dla mnie zarówno dziełem woli, ładu, jak i chaosu, artystów i historii, Peryklesa i Morosiniego, Iktinosa i grabieżców.</em></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Mnogość perspektyw w opisie Akropolu ma ścisły związek z wyznacznikami gatunkowymi eseju. Taka forma wypowiedzi cechuje się bowiem dużą swobodą: nie tylko pod względem struktury, ale także punktów odniesienia, przykładów, stylu czy wykorzystanych środków językowych. Z tego też powodu forma eseju umożliwia zaprezentowanie rozmaitych perspektyw, które wzajemnie się przenikają oraz uzupełniają. Świadczą one także o subiektywizmie wypowiedzi, ponieważ wybiera je sam autor, który w ten sposób udowadnia swoją erudycję oraz głębokie zainteresowanie opisywanym miejscem. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Subiektywizm w eseju stanowi jedną z jego charakterystycznych cech. W tekście Herberta pozwala na przybliżenie wielu cennych informacji dotyczących Akropolu oraz zaprezentowanie go z różnych perspektyw. Wzbogaca to treść dzieła, ale także pozwala na zaprezentowanie przeżyć piszącego oraz jego osobistego stosunku do spuścizny śródziemnomorskiej kultury. W ten sposób Herbert może zamanifestować swój indywidualizm, wrażliwość czy przedstawić refleksję na temat wyprawy do Grecji. Zabieg ten nadaje ponadto esejowi osobisty charakter, wprowadza nową perspektywę. Łączy ona w sobie fakty, odczucia i przemyślenia, prywatne interpretacje rzeczywistości. Odwołanie do własnych doświadczeń również uwiarygodnia esej, ponieważ w ten sposób piszący odwołuje się do czegoś, co sam poznał. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Przykładowe zabiegi stylistyczne: </p>
+<table border="1" style="border-collapse: collapse; width: 646px; height: 678px;">
+<tbody>
+<tr style="height: 43px;">
+<td style="background-color: #aed581; text-align: center; width: 212.788px; height: 43px;"><strong>Zabieg stylistyczny</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 211.225px; height: 43px;"><strong>Cytat</strong></td>
+<td style="background-color: #aed581; text-align: center; width: 211.988px; height: 43px;"><strong>Funkcja</strong></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">wykrzyknienie</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>Wysoko w górze - on!</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Oddaje silne emocje piszącego, jego podekscytowanie sytuacją. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">pytanie retoryczne</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>I czy będę miał odwagę przyznać się [...], jeśli święte wzgórze i ocalałe na nim resztki świątyń nie przemówią do mnie, jeśli okażą się jedną z wielu, a nie jedyną czy przynajmniej wyjątkową ruiną, pośród wielu  rozsianych na świecie ruin? </em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Wyraża niepewność, wskazuje na kwestię, której nie można jednoznacznie rozstrzygnąć.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">epitet</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>[...] jedną z najpiękniejszych świątyń doryckich.</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Wskazuje na cechy danego elementu, ukonkretnia go, wzbogaca obrazowanie. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">wyliczenie</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>Szukanie hotelu, złośliwości bagaży, pierwsze niepewne błądzenie po mieście.</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Prowadzi do kondensacji treści, wskazuje na elementy, które tworzą pierwsze doświadczenia związane z pobytem w Atenach. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">personifikacja</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>[...] świątynia zdaje się mówić [...]. </em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Służy metaforycznemu oraz oryginalnemu przedstawieniu rzeczywistości. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">metafora</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>Nie ma na świecie budowli, która tak trwale okupowała moją wyobraźnię. </em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Pozwala na nadaniu słowom nowych, zaskakujących sensów. Wskazuje na to, jak mocno myśl o Akropolu była obecna w umyśle piszącego.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">porównanie</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>Już w tych liczbach odkryć można naturalny moduł i zasadę proporcji, jakby ziemia sama podawała pierwszy takt rytmom architektury.</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Umożliwia zaakcentowanie zależności między budową Akropolu a naturą. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">ironia</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>[...] i to wcale nie "dyskretnie", jak chcą bladzi esteci.</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Zabieg ten świadczy o dystansie piszącego względem przedstawionej postawy oraz krytycznym stosunku do rzeczywistości.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 212.788px; height: 22px; text-align: center;">powtórzenie</td>
+<td style="width: 211.225px; height: 22px; text-align: center;"><em>[...] że kapitel kolumny  nie podtrzymuje niczego, że marmurowy policzek  bogini traci nagle swoją cielesną gładkość [...].</em></td>
+<td style="width: 211.988px; height: 22px; text-align: center;">Wpływa na rytmiczność zdania, wzmacnia przekazywane treści. </td>
+</tr>
+<tr>
+<td style="width: 212.788px; text-align: center;">inwersja</td>
+<td style="width: 211.225px; text-align: center;"><em>Najtrudniej było mi znaleźć porozumienie z Erechtejonem.</em></td>
+<td style="width: 211.988px; text-align: center;">Uwydatnia odczucia wynikające z doświadczenia Erechtejonu.</td>
+</tr>
+<tr>
+<td style="width: 212.788px; text-align: center;">peryfraza</td>
+<td style="width: 211.225px; text-align: center;"><em>[...] jońska świątynia [...]</em></td>
+<td style="width: 211.988px; text-align: center;">Pozwala na uniknięcie powtórzeń, a jednocześnie wzbogaca wypowiedź. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
+<p>Przykładowo:</p>
+<p>Tytuł ten przywołuje na myśl skojarzenia z motywem labiryntu, ale przypomina również o cywilizacji minojskiej, która rozkwitła na Krecie. Zdaje się też nawiązywać do mitu o Minotaurze. W znaczeniu symbolicznym labirynt  to reprezentacja sytuacji bez wyjścia, ale także duchowej podróży w celu poznania swojej tożsamości, można go także rozpatrywać jako niełatwą drogę do zdobycia skarbu (osiągnięcia celu).</p>
+<p>Sensy te są obecne w odczytaniu tytułu dzieła Herberta, ponieważ labiryntem dla niego staje się dorobek starożytnej kultury - ona z kolei rozwijała się na terenie śródziemnomorskim, co uzasadnia określenie "nad morzem". Labirynt w ujęciu Herberta to zderzenie dorobku starożytnych z wrażliwością oraz świadomością współczesnego człowieka. Poznawanie dawnych wytworów jednak nie jest łatwe, prowadzi do zagubienia, ponieważ trzeba mieć na uwadze różnice w postrzeganiu świata, inną ocenę pewnych zjawisk. Z tego też powodu obcowanie z kulturą śródziemnomorską przypomina wędrówkę po labiryncie, ponieważ stanowi coś wymagającego. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
+<p>Indywidualne </p><br>

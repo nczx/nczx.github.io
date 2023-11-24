@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p>a) Zdaniem respondentów szersze kompetencje powinien posiadać do prezydenta, bowiem 31% respondentów opowiedziało się za takim rozwiązaniem (z kolei za rozszerzeniem uprawnień premiera opowiedziało się 11,2% ankietowanych). </p>
+<p>b) Przykładowe możliwości, dla których respondenci uważają, że należy rozszerzyć kompetencje prezydenta:</p>
+<ul>
+<li>prezydent jest głową państwa, dlatego powinien mieć szerokie kompetencje, </li>
+<li>prezydent jest wybierany przez naród w wyborach powszechnych, więc skoro wybiera go suweren, to powinien on mieć  szerokie kompetencje, </li>
+<li>premier jest mianowany, a nie wybierany w wyborach przez suwerena, więc jego władza ma mniejszą legitymizację niż prezydenta.</li>
+</ul>
+<p> </p>
+<p>c) Przyczyny, dla których większość badanych nie wskazała w odpowiedzi ani prezydenta, ani premiera:</p>
+<ul>
+<li>z uwagi na brak zainteresowania przez nich sprawami politycznymi, </li>
+<li>ponieważ ludzie uważają, że zarówno premier, jak i prezydent posiadają odpowiednie kompetencje, </li>
+<li>ze względu na brak wiedzy dotyczącej zakresu kompetencji premiera i prezydenta. </li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong>a)</strong></p>
+<p><strong><span style="text-decoration: underline;">Zdaniem respondentów szersze kompetencje powinien posiadać prezydent. Sądzi tak wszakże 31% ankietowanych</span></strong>. 11,2% badanych opowiada się zaś za tym, aby większe kompetencje zostały przydzielone premierowi. Jednak 37,1% respondentów twierdzi, że ani prezydent, ani premier nie powinni mieć szerszych prerogatyw. 20,7% badanych nie ma w tej kwestii zdania.</p>
+<p><strong>b)</strong></p>
+<p>Wydaje się, że większe poparcie dla poszerzenia kompetencji prezydenta może się brać z tego, iż w świadomości społecznej to właśnie prezydent figuruje jako najważniejsza osoba w państwie, a wybory prezydenckie od początku istnienia III Rzeczypospolitej cieszą się w Polsce dużą popularnością - notuje się w nich wyższą frekwencję niż w jakichkolwiek innych wyborach. Zwykle też właśnie wybory prezydenckie wzbudzają w Polsce największe emocje. Premierzy zmieniają się częściej, a obywatele nie mają takiej jasności w kwestii uprawnień Prezesa Rady Ministrów, jak w przypadku prerogatyw prezydenckich.</p>
+<p><strong>c)</strong></p>
+<p>O tym, że większość badanych nie wskazała w odpowiedzi ani prezydenta, ani premiera mogło zadecydować to, iż znaczna część z nich nie interesuje się sprawami politycznymi i jest im obojętne, kto będzie miał więcej władzy. Inni mogli natomiast uznać, że już teraz zarówno prezydent, jak i premier mają wystarczające kompetencje i nie należy niczego zmieniać. Jeszcze inni mogli z kolei twierdzić, że większe kompetencje powinno się przypisać innemu ośrodkowi władzy, na przykład parlamentowi.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><strong>Rząd (Rada Ministrów)</strong> sprawuje władzę wykonawczą. Głównym zadaniem ministerstw jest wykonywanie ustaw przyjętych przez parlament. Rząd jest gospodarzem troszczącym się o państwo: dba o bezpieczeństwo w kraju, nadzoruje budowę nowych inwestycji państwowych, finansuje polską służbę zdrowia. Ponadto kontroluje pracę innych urzędów państwowych oraz wydatki państwa. Na czele rządu stoi <strong>Prezes Rady </strong><span style="font-size: 14px;"><strong>Ministrów</strong></span>, czyli - <strong>premier</strong>. </p>
+<p>Pierwszym elementem w procedurze tworzenia rządu jest wyznaczenie <strong>Prezesa Rady Ministrów przez Prezydenta Rzeczypospolitej Polskiej</strong>. Najczęściej Prezydent RP wskazuje na to stanowisko osobę nominowaną przez partię, która zwyciężyła w wyborach parlamentarnych. <strong>Prezes Rad Ministrów przedstawia Prezydentowi skład nowego rządu</strong>, po czym <strong>prezydent powołuje członków Rady Ministrów</strong>. Następnie <strong>premier przedstawia sejmowi program działania rządu oraz zwraca się do posłów z prośbą o udzielenie mu wotum zaufania.</strong> Po <strong>uzyskaniu owego wotum zaufania</strong>, Rada Ministrów rozpoczyna swoją działalność.</p>
+<p><span style="text-decoration: underline;"><strong>Rada Ministrów wydaje następujące akty prawne:</strong></span></p>
+<ul>
+<li>rozporządzenia,</li>
+<li>uchwały, </li>
+<li>zarządzenia. </li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Przykładowe kompetencje Rady Ministrów:</strong></span></p>
+<p><strong>Rząd zapewnia państwu bezpieczeństwo zewnętrzne poprzez:</strong></p>
+<ul>
+<li>sprawowanie nadzoru nad siłami zbrojnymi, </li>
+<li>planowanie i realizacja przygotowań obronnych państwa zapewniających jego funkcjonowanie w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny, w tym planowanie przedsięwzięć gospodarczo-obronnych oraz zadań wykonywanych na rzecz Sił Zbrojnych i wojsk sojuszniczych,</li>
+<li>przygotowywanie systemu kierowania bezpieczeństwem narodowym, w tym obroną państwa, i organów władzy publicznej do funkcjonowania na stanowiskach kierowania,</li>
+<li>utrzymywanie stałej gotowości obronnej państwa, wnioskowanie do Prezydenta Rzeczypospolitej Polskiej o jej podwyższanie w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny oraz o jej obniżanie stosownie do zmniejszania stopnia zagrożenia,</li>
+<li>określanie obiektów szczególnie ważnych dla bezpieczeństwa państwa, w tym obronności, oraz przygotowywanie ich szczególnej ochrony,</li>
+<li>przygotowanie na potrzeby obronne państwa i utrzymywanie w stałej gotowości jednolitych systemów obserwacji, pomiarów, analiz, prognozowania i powiadamiania,</li>
+<li>przygotowanie systemu stałych dyżurów na czas zewnętrznego zagrożenia bezpieczeństwa państwa i wojny,</li>
+<li>określanie zasad wykorzystania służby zdrowia i infrastruktury technicznej państwa na potrzeby obronne, w tym sposobu zabezpieczania przestrzeni powietrznej i wód terytorialnych w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny,</li>
+<li>zapewnianie funkcjonowania systemu szkolenia obronnego w państwie,</li>
+<li>prowadzenie kontroli stanu przygotowań obronnych w państwie.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Kompetencje Rady Ministrów w dziedzinie obronności na podstawie art 6 Ustawy z dnia 21 listopada 1967 r. o powszechnym obowiązku obrony Rzeczypospolitej Polskiej:</strong></span></p>
+<ul>
+<li>opracowywanie projektów strategii bezpieczeństwa narodowego,</li>
+<li>planowanie i realizacja przygotowań obronnych państwa zapewniających jego funkcjonowanie w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny, w tym planowanie przedsięwzięć gospodarczo-obronnych oraz zadań wykonywanych na rzecz Sił Zbrojnych i wojsk sojuszniczych,</li>
+<li>przygotowywanie systemu kierowania bezpieczeństwem narodowym, w tym obroną państwa, i organów władzy publicznej do funkcjonowania na stanowiskach kierowania,</li>
+<li>utrzymywanie stałej gotowości obronnej państwa, wnioskowanie do Prezydenta Rzeczypospolitej Polskiej o jej podwyższanie w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny oraz o jej obniżanie stosownie do zmniejszania stopnia zagrożenia,</li>
+<li>określanie obiektów szczególnie ważnych dla bezpieczeństwa państwa, w tym obronności, oraz przygotowywanie ich szczególnej ochrony,</li>
+<li>przygotowanie na potrzeby obronne państwa i utrzymywanie w stałej gotowości jednolitych systemów obserwacji, pomiarów, analiz, prognozowania i powiadamiania,</li>
+<li>przygotowanie systemu stałych dyżurów na czas zewnętrznego zagrożenia bezpieczeństwa państwa i wojny,</li>
+<li>określanie zasad wykorzystania służby zdrowia i infrastruktury technicznej państwa na potrzeby obronne, w tym sposobu zabezpieczania przestrzeni powietrznej i wód terytorialnych w razie zewnętrznego zagrożenia bezpieczeństwa i w czasie wojny,</li>
+<li>zapewnianie funkcjonowania systemu szkolenia obronnego w państwie,</li>
+<li>określenie warunków i trybu planowania i finansowania zadań wykonywanych w ramach przygotowań obronnych państwa realizowanych przez organy administracji rządowej i organy samorządu terytorialnego, sposób ich nakładania oraz właściwość organów w tych sprawach, w tym ujętych w planowaniu operacyjnym i programach obronnych,</li>
+<li>określenie organizacji i trybu przygotowania systemu kierowania bezpieczeństwem narodowym, w tym obroną państwa, oraz warunki funkcjonowania organów władzy publicznej na stanowiskach kierowania,</li>
+<li>określenie stanu gotowości obronnej państwa, ich rodzaje, warunki wprowadzania, zadania związane z podwyższaniem gotowości obronnej państwa i tryb ich realizacji, organizację i zadania w zakresie tworzenia systemu stałych dyżurów na potrzeby podwyższania gotowości obronnej państwa oraz właściwość organów w tych sprawach,</li>
+<li>określenie obiektów szczególnie ważne dla bezpieczeństwa i obronności państwa, ich kategorie, a także zadania w zakresie ich szczególnej ochrony oraz właściwość organów w tych sprawach,</li>
+<li>określenie organizacji i warunków przygotowania oraz sposób funkcjonowania systemów obserwacji, pomiarów, analiz, prognozowania i powiadamiania o skażeniach na terytorium Rzeczypospolitej Polskiej oraz właściwość organów w tych sprawach,</li>
+<li>określenie warunków i sposobów przygotowania i wykorzystania transportu morskiego, kolejowego, samochodowego, lotniczego, żeglugi śródlądowej oraz infrastruktury drogowej i kolejowej na potrzeby obronne państwa, a także ich ochrony w czasie wojny oraz właściwość organów w tych sprawach,</li>
+<li>określenie warunków i sposobów przygotowania i wykorzystania systemów łączności na potrzeby obronne państwa oraz właściwość organów w tych sprawach,</li>
+<li>określenie warunków i sposobów przygotowania i wykorzystania podmiotów leczniczych w rozumieniu przepisów o działalności leczniczej na potrzeby obronne państwa oraz właściwość organów w tych sprawach,</li>
+<li>określenie organizacji szkolenia obronnego w państwie, podmioty objęte tym szkoleniem, zadania w zakresie planowania i realizacji szkolenia obronnego oraz właściwość organów w tych sprawach,</li>
+<li>określenie zakresu i sposobu prowadzenia przez organy administracji rządowej i samorządu terytorialnego kontroli realizacji zadań obronnych wykonywanych przez jednostki organizacyjne i przedsiębiorców.</li>
+</ul>
+<p>Uprawnieniem Rady Ministrów jest }<strong>prowadzenie polityki zagranicznej Rzeczypospolitej Polskiej, a tym samym sprawuje ona ogólne kierownictwo w dziedzinie stosunków z innymi państwami i organizacjami międzynarodowymi</strong>. Na podstawie art. 146 Konstytucji RP należy wskazać, że Rada Ministrów posiada szerokie kompetencje w dziedzinie zewnętrznych stosunków kraju. Do kompetencji w sferze polityki zagranicznej Rady Ministrów szczególnie należy:</p>
+<ul>
+<li>zapewnianie bezpieczeństwa zewnętrznego państwa,</li>
+<li>sprawowanie ogólnego kierownictwa w dziedzinie stosunków z innymi państwami oraz organizacjami międzynarodowymi, </li>
+<li>zawieranie umów międzynarodowych, które wymagają ratyfikacji, </li>
+<li>zatwierdzanie oraz wypowiadanie umów międzynarodowych.</li>
+</ul>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<p><strong><span style="text-decoration: underline;">Rada Ministrów (potocznie: rząd) odpowiada za prowadzenie polityki wewnętrznej i zagranicznej, a także koordynuje działalność administracji państwowej</span></strong>. Na czele rządu stoi <strong><span style="text-decoration: underline;">Prezes Rady Ministrów, tj. premier, któremu podlegli są ministrowie, kierujący pracami poszczególnych resortów</span></strong> (ewentualnie wykonujący swoje zadania jako tzw. ministrowie bez teki). W polskim systemie ustrojowym <strong><span style="text-decoration: underline;">Rada Ministrów odpowiada za swoją działalność przed sejmem</span></strong>. Wobec poszczególnych ministrów, a także w stosunku do całej Rady Ministrów, posłowie mogą uchwalić tzw. <strong><span style="text-decoration: underline;">wotum nieufności</span></strong>. </p>
+<p><strong><span style="text-decoration: underline;">Rząd zajmuje się przede wszystkim bieżącym zarządzaniem państwem, podejmując decyzje dotyczące różnych obszarów działania państwa oraz metod rozwiązywania występujących problemów. Rada Ministrów może również zgłaszać projekty ustaw i wprowadzać w życie te, które uprzednio uchwalił parlament. W celu wykonywania ustaw (ich realizowania) rząd, premier, jak też ministrowie, wydają tzw. rozporządzenia</span></strong>. </p>
+<p>Bardzo ważną kompetencją rządu jest <strong><span style="text-decoration: underline;">przygotowywanie projektu budżetu państwa</span></strong>, tzn. planu jego dochodów i wydatków na różne sfery życia publicznego. Ponadto <strong><span style="text-decoration: underline;">Rada Ministrów sprawuje nadzór nad bezpieczeństwem zewnętrznym i wewnętrznym państwa</span></strong>, w tym przede wszystkim kontroluje siły zbrojne i określa reguły pracy policji.</p>
+<p>Rada Ministrów - wraz z Prezydentem RP - sprawuje w Polsce władzę wykonawczą. Toteż doniosłą rolę odgrywa wzajemna współpraca tych ośrodków. Obejmuje ona zwłaszcza sprawy związane z dyplomacją i wojskiem. Dlatego Rada Ministrów, a dokładniej premier, dysponuje prerogatywą tzw. <strong><span style="text-decoration: underline;">kontrasygnaty</span></strong>, co oznacza, że część aktów prawnych, jakie wydaje Prezydent RP, zaczyna obowiązywać dopiero po podpisaniu ich przez szefa rządu (premiera). </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>Dwa zdania prawdziwe to: </strong></span></p>
+<p><strong>A.</strong> Aby powiodła się pierwsza próba powołania rządu, Sejm RP musi mu udzielić wotum zaufania bezwzględną większością głosów. </p>
+<p><strong>D.</strong> W trzeciej próbie wyłonienia rządu premier i ministrowie są powoływani przez Prezydenta RP. </p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; background-color: #e64a19;"><strong>Dwa zdania prawdziwe:</strong></td>
+<td style="width: 50%; background-color: #ffccbc;">
+<p>Aby powiodła się pierwsza próba powołania rządu, Sejm RP musi mu udzielić wotum zaufania bezwzględną większością głosów. <strong>[A]</strong></p>
+<p>W trzeciej próbie wyłonienia rządu premier i ministrowie są powoływani przez Prezydenta RP. <strong>[D]</strong></p>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Rozwiązanie 1.:</strong></p>
+<p><span style="text-decoration: underline;"><strong>A. centralny organ administracji rządowej</strong></span></p>
+<p>komendant główny policji</p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>B. organ administracji rządowej niezespolonej  </strong></span></p>
+<p>dyrektor Izby Administracji Skarbowej w Poznaniu</p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>C. organ administracji rządowej zespolonej </strong></span></p>
+<p>śląski kurator oświaty</p>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>D. naczelny organ administracji rządowej</strong></span></p>
+<p>minister edukacji narodowej</p>
+<p> </p>
+<p><strong>Rozwiązanie 2.:</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr style="text-align: center;">
+<td style="background-color: #5959ab; height: 17px; width: 48.3304%;"><strong>Organ władzy</strong></td>
+<td style="background-color: #5959ab; height: 17px; width: 51.5818%;"><strong>Wyjaśnienie</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #bc8f8f; height: 17px; width: 48.3304%;"><strong>[1] </strong>minister edukacji narodowej</td>
+<td style="background-color: #bc8f8f; height: 17px; width: 51.5818%;"><strong>[D] </strong>naczelny organ administracji rządowej</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #bc8f8f; height: 17px; width: 48.3304%;"><strong>[3] </strong>śląski kurator oświaty </td>
+<td style="background-color: #bc8f8f; height: 17px; width: 51.5818%;"><strong>[C] </strong>organ administracji rządowej zespolonej</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #bc8f8f; height: 17px; width: 48.3304%;"><strong>[4] </strong>komendant główny policji</td>
+<td style="background-color: #bc8f8f; height: 17px; width: 51.5818%;"><strong>[A] </strong>centralny organ administracji rządowej</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #bc8f8f; height: 17px; width: 48.3304%;"><strong>[5] </strong>dyrektor Izby Administracji Skarbowej w Poznaniu </td>
+<td style="background-color: #bc8f8f; height: 17px; width: 51.5818%;"><strong>[B] </strong>organ administracji rządowej niezespolonej</td>
+</tr>
+<tr style="height: 17px;">
+<td style="background-color: #bc8f8f; height: 17px; width: 48.3304%;"><span style="text-decoration: line-through;"><strong>[2] </strong>starosta powiatu gdańskiego</span></td>
+<td style="background-color: #bc8f8f; height: 17px; width: 51.5818%;"> </td>
+</tr>
+</tbody>
+</table><br>

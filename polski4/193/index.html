@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Tematem eseju jest rola proroków na przestrzeni wieków oraz stosunek do ich przewidywań. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>W społeczeństwie antycznym prorok jest bezradny, ponieważ nie dochodzi do jego dialogu z ludem. Same zaś przepowiednie odwołują się do istnienia sił wyższych i możliwości zapłacenia za wskazówki lub też opierają się na zdolności przewidywania. Z kolei w społeczeństwie republikańskim ujawnia się dwuznaczna sytuacja proroka. Łatwiej mu przewidywać, gdy opiera się na obliczalnych czynnikach, zaś ludzie są bierni. Wtedy jednak cieszy się mniejszym posłuchem niż w odwrotnej sytuacji. Buduje to jego poczucie osamotnienia. W społeczeństwie autorytarnym prorok zasadniczo jest pozbawiony znaczenia, ponieważ nie oferuje ludziom nowej wiedzy i niemożliwe jest odwrócenie przepowiadanych zdarzeń. Sama zaś opinia ludzi nie ma znaczenia, więc nie występuje dialog. Źródło tych różnic tkwi w odmiennym charakterze relacji łączących proroka i odbiorców oraz w ich zaangażowaniu. Można się go takze dopatrywać w tym, że te systemy różnie odnoszą się do swobód obywateli, możliwości wyrażania przez nich swego zdania. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Słowa autora ("stanowisko proroka w republice jest pełne sprzeczności wewnętrznych") wskazują na napięcie, które nieustannie towarzyszy prorokowi. Niezgodność wynika z tego, iż zawsze pozostaje on osamotniony i bezradny w relacji ze słuchaczami. Jeżeli trafnie przewiduje przyszłość, to nie spotyka się z reakcją odbiorców. Może być też odwrotna sytuacja - jeśli możliwość przewidzenia jest mniejsza, to wtedy ludzie zdają się być bardziej nią zainteresowani. W każdej jednak z tych sytuacji prorok znajduje się w trudnym położeniu, gdyż dialog ten nie jest harmonijny, zrównoważony, przynoszący upragnione skutki. To swoiste uwikłanie, z którego nie można znaleźć wyjścia. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowo:</p>
+<p>Bezradność i smutek proroków wynikają przed wszystkim z ich trudnego położenia. Zazwyczaj bowiem ich starania pozostają bezowocne, gdyż reakcja ludu jest odwrotnie proporcjonalna do trafności przepowiedni. Można tutaj dostrzec problem z dialogiem, który nie jest zrównoważony, obustronny. Z tego też powodu prorok może mieć wrażenie, iż jego działania są bezużyteczne, co budzi frustrację. Ponadto zdarza się, iż zdolność przewidywania nie jest doceniania, ponieważ obywatele nie dostrzegają jej znaczenia. Prorok jest więc samotny i niezrozumiany przez innych. Jego misja zdaje się być niewdzięczna, ponieważ nie wiąże się z długowiecznością, a przynosi raczej niechęć. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Fragment ten stanowi dygresję. Przede wszystkim jest ona typowym elementem w eseju, co wiąże się z jego swobodną budową. Ponadto wskazuje na subiektywny punkt widzenia, a przy tym ubogaca wypowiedź, gdyż odwołuje się do osobistych doświadczeń piszącego. W ten sposób przytoczona anegdota nawiązuje do głównego problemu, staje się źródłem uniwersalnej refleksji, czyniąc tekst atrakcyjnym dla czytelnika. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Cytat będący podsumowaniem wywodu: "Jeżeli Europa, zrujnowana tymi szaleństwami, ma uniknąć zagłady, mieszkańcy jej muszą nauczyć się lepiej przewidywać skutki swych czynów i nie mogą lekceważyć tych, którzy to potrafią". </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Wypowiedź Kassandry świadczy o niewdzięcznym losie proroka. Jego dar staje się swoistym przekleństwem, który przyczynia się do osamotnienia jednostki. Nie cieszy się ona poparciem czy zrozumieniem innych ludzi, a za to staje się obiektem kpin. Jej niezwykła umiejętność nie zmienia rzeczywistości, nie ułatwia dialogu z innymi, prowadzi natomiast do wykluczenia czy alienacji. Podkreśla to tragizm losu proroka.  </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Podkreślone pytania wskazują na interesujące autora kwestie oraz urozmaicają jego wywód. Ponadto sygnalizują tok wywodu czy kwestie budzące niejednoznaczne odczucia, a mogące pobudzić umysł odbiorcy. </p><br>

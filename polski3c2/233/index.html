@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przyk³adowe fragmenty:</p>
+<ul>
+<li>"[...] poniewa¿ wierzê w ¿ycie pozagrobowe, / spotkamy siê na pewno w Wielkim Zderzaczu Hadronów.";</li>
+<li>"[...] Czy / to, co zaczê³o siê w ogniu, ma szanse na po¿ar? I czy zd¹¿ymy / jeszcze uciec do ch³odnej staroœci, która mo¿e przed³u¿yæ / nam wszystkie terminy wa¿noœci?";</li>
+<li>"[...] Pani kartkowa³a nerwowo ucieczkê, / chocia¿ bêd¹c w promieniu piêciu metrów od wybuchu / naszej mi³oœci nie mia³a pani szans na prze¿ycie". </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Metafory dotycz¹ce mi³oœci:</p>
+<ul>
+<li><em>Zapewne bêdzie pani cz¹stk¹ liczby, któr¹ dodam do siebie. / Suma nie bêdzie wymaga³a ¿adnego wyjaœnienia. To mniej / wiêcej tyle ile wynosi mi³oœæ.;</em></li>
+<li><em>Droga pani Schubert, temperatura naszej mi³oœci wynosi / 1200 stopni Celsjusza.;</em></li>
+<li><em>Czy to, co zaczê³o siê w ogniu, ma szanse na po¿ar? / I czy zd¹¿ymy / jeszcze uciec do ch³odnej staroœci, która mo¿e przed³u¿yæ / nam wszystkie terminy wa¿noœci?;</em></li>
+<li><em>Droga pani, Schubert, niepokój, jak pani zapewne pamiêta, / narodzi³ siê w bibliotece poœród odurzonych zdañ.;</em></li>
+<li><em>[...] bêd¹c w promieniu piêciu metrów od wybuchu / naszej mi³oœci nie mia³a pani szans na prze¿ycie.</em></li>
+</ul>
+<p> </p>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przyk³adowo:</p>
+<p>"Katastrofa" w kontekœcie relacji nadawcy i pani Schubert mo¿e oznaczaæ negatywne zjawisko lub pewn¹ sytuacjê, która stanowi zagro¿enie dla ich wiêzi. Byæ mo¿e jest to roz³¹ka lub te¿ coœ innego (np. nieporozumienie, zawirowanie ¿yciowe, œmieræ), co stanowi przeszkodê dla bohaterów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>W zacytowanych utworach mo¿na dostrzec cechy typowe dla gatunku okreœlanego mianem prozy poetyckiej. £¹cza w sobie elementy typowe dla liryki oraz prozy. Charakterystyczn¹ w³aœciwoœci¹ gatunkow¹ jest na przyk³ad tematyka podjêta przez poetkê. Listy pisz¹cego skierowane do pani Schubert nie tylko wyra¿aj¹ odczucia nadawcy, ale tak¿e odwo³uj¹ siê do uniwersalnej i ponadczasowej tematyki. Poruszaj¹ bowiem problem mi³oœci, up³ywu czasu, têsknoty czy te¿ nieuchronnego spotkania ze œmierci¹: "[...] poniewa¿ wierzê w ¿ycie pozagrobowe, / spotkamy siê na pewno w Wielkim Zderzaczu Hadronów". Utwory te s¹ tak¿e nasycone bogactwem rozmaitych zabiegów artystycznych (np. epitetami, metaforami, pytaniami retorycznymi). Mo¿na w nich dostrzec tak¿e obecnoœæ paralelizmu, poniewa¿ ka¿dy tekst rozpoczyna siê zwrotem do adresatki, po czym nastêpuj¹ rozwa¿ania pisz¹cego, oraz podzia³ na wersy (jak w liryce). </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Nadawc¹ listów jest mê¿czyzna, dla którego bardzo wa¿na jest relacja z pani¹ Schubert. To do niej kieruje wszystkie swe listy, co œwiadczy o sile ³¹cz¹cego ich uczucia. Pisz¹cego mo¿na okreœliæ mianem intelektualisty - wyró¿nia siê szerokimi zainteresowaniami naukowymi, cechuje siê tak¿e refleksyjn¹ natur¹ i sk³onnoœci¹ do g³êbokiej analizy. Prawdopodobnie interesuje siê tak¿e literatur¹, poniewa¿ wspomina spotkanie z adresatk¹ w bibliotece. Ma on poetyck¹ naturê, o czym œwiadcz¹ metaforyczne obrazy: "Droga Pani Schubert, nasz œwiat, to niby odrêczne pismo / Bogów, ale marny styl...". To wra¿liwa i powa¿na jednostka, dla której liczy siê mi³oœæ, bliskoœæ oraz wspomnienie ukochanej osoby. Niejednoznaczny jest jednak stosunek nadawcy do wiary czy rozumu, chocia¿ elementy te stanowi¹ istotn¹ czêœæ wypowiedzi mê¿czyzny. Z jednej bowiem strony odwo³uje siê do Bogów oraz ¿ycia pozagrobowego - sugeruje to przekonanie o istnieniu jakiejœ wy¿szej instancji wp³ywaj¹cej na egzystencjê cz³owieka. Z drugiej jednak - ¿ycie pozagrobowe postrzega w kontekœcie Wielkiego Zderzacza Hadronów, co sugeruje znacz¹c¹ rolê nauki w ¿yciu mê¿czyzny. Zdaje siê ona wrêcz wkraczaæ w sferê ducha, co budzi akceptacjê nadawcy, stanowi wa¿n¹ czêœæ jego œwiatopogl¹du. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Mi³oœæ - przynajmniej w przypadku nadawcy listów - pe³ni wa¿n¹ funkcjê, poniewa¿ wywiera niezaprzeczalny wp³yw na jego egzystencjê, przyczynia siê do jego refleksyjnego nastroju. Pisz¹cy nie potrafi zapomnieæ o swej wybrance, ca³y czas analizuje ³¹cz¹c¹ ich relacjê. Uczcie to jest czymœ nieuchronnym - piêknym, ale te¿ groŸnym: "Pani kartkowa³a nerwowo ucieczkê, / chocia¿ bêd¹c w promieniu piêciu metrów od wybuchu / naszej mi³oœci nie mia³a pani szans na prze¿ycie". Mi³oœæ przypomina wiêc kataklizm, który na dobre odmienia ¿ycie, lecz te¿ zapewne przynosi niejednokrotnie cierpienie. Wp³ywa te¿ na perspektywê nadawcy, poniewa¿ postrzega rzeczywistoœæ, swoj¹ teraŸniejszoœæ i przysz³oœæ w kontekœcie ukochanej kobiety. Uczucie podtrzymuje w nim nadziejê na to, ¿e kiedyœ, byæ mo¿e po œmierci, ponownie spotka pani¹ Schubert. Mi³oœæ jest jednak tak¿e Ÿród³em têsknoty i oczekiwania, stanowi kluczowe doœwiadczenie egzystencjalne. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>.</p><br>

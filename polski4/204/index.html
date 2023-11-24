@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Fragment wskazujący na przyczyny nienawiści:</p>
+<p><em>Religia nie religia - </em></p>
+<p><em>byle przyklęknąć na starcie.</em></p>
+<p><em>Ojczyzna nie ojczyzna -  </em></p>
+<p><em>byle się zerwać do biegu.</em></p>
+<p><em>Niezła i sprawiedliwość na początek.</em></p>
+<p>Nienawiść wynika bardzo często ze szlachetnych, zdawałoby się, kwestii czy wartości. Może być uwarunkowana religią, przywiązaniem do ojczyzny czy nawet sprawiedliwością. Skutkiem tych zjawisk jest przebudzenie się zła, które od tej pory staje się samoistną siłą, niemożliwą do powstrzymania. W efekcie kształtuje ono historię, rzeczywistość. Dodatkowo stanowi źródło destrukcji, gdyż przyczynia się do narastania konfliktów, wojen. Jest także powodem zbrodni i śmierci wielu niewinnych ludzi: "Ile dywanów z ludzi porozpościerała / na ilu placach, stadionach". </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Puenta utworu zawiera się we fragmencie:</p>
+<p><em>Mówią, że ślepa. Ślepa?</em></p>
+<p><em>Ma bystre oczy snajpera </em></p>
+<p><em>i śmiało patrzy w przyszłość</em></p>
+<p><em>- ona jedna. </em></p>
+<p>W zakończeniu poetka odwołuje się do znanego sformułowania "ślepa nienawiść". Określa ono to uczucie jako takie, które odbiera człowiekowi rozsądek i obiektywizm, zdolność właściwego rozpoznania sytuacji. Puenta zaprzecza jednak takiemu wizerunkowi nienawiści. Zestawia się ją ze snajperem - zabieg ten podkreśla, że wspomniane uczucie jest cierpliwe, opanowane i czeka na sprzyjającą dla siebie chwilę, by zaatakować. Nie zamierza też zniknąć z życia ludzi, co stanowi dość gorzką refleksję na temat kondycji współczesnego człowieka i jego przyszłości. Można być bowiem pewnym, iż ponownie dojdzie do rozlewu krwi lub konfliktów. Wskazuje na to pewność nienawiści ("i śmiało patrzy w przyszłość"), ponieważ przyszłość nie budzi jej niepokoju, wie, że i tak zatriumfuje. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Przykładowo:</p>
+<p>Autorka wiersza unika w swym dziele dydaktyzmu czy bezpośredniego potępienia nienawiści. Zamiast tego, wykorzystując przewrotny humor oraz ironię, podejmuje próbę opisania i zrozumienia fenomenu zła na świecie. Nadanie mu ludzkich cech, ukazanie jako sportowca pozwala na wyraziste przedstawienie siły nienawiści, która w aktywny sposób kształtuje ludzkie dzieje i nigdy nie znika na dobre: "Jak lekko bierze wysokie przeszkody. / Jakie to łatwe dla niej - skoczyć, dopaść". Z wiersza wynika, że każdy, nawet pozornie szlachetny, powód może przyczynić się do narastania zła, a ono samo budzi zaś swoistą fascynację swym groźnym pięknem. Przesłanie utworu pozostaje jednak dość gorzkie, ponieważ puenta przypomina o wszechobecności nienawiści w ludzkim życiu. Rozpoznaje więc bolączki rzeczywistości, a jednocześnie ostrzega przed zgubnym wpływem zła: "Mówią, że ślepa. Ślepa? / Ma bystre oczy snajpera / i śmiało patrzy w przyszłość / - ona jedna". </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowo: </p>
+<table border="1" style="border-collapse: collapse; width: 577px; height: 596px;">
+<tbody>
+<tr style="height: 19px;">
+<td style="background-color: #80cbc4; text-align: center; width: 285.114px; height: 19px;"><strong>Cecha </strong></td>
+<td style="background-color: #80cbc4; text-align: center; width: 285.17px; height: 19px;"><strong>Omówienie </strong></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">podejmowanie uniwersalnych zagadnień </td>
+<td style="width: 285.17px; height: 22px; text-align: center;">W wierszach Szymborskiej obecne są rozważania na tematy, które dotyczą wszystkich ludzi. Poetka bowiem porusza bowiem problem np. dobra i zła, możliwości poznawczych, wreszcie aktu tworzenia. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">odwołania do pozornie zwykłych zjawisko/elementów codzienności</td>
+<td style="width: 285.17px; height: 22px; text-align: center;">Szymborska w swych dziełach odwołuje się do pozornie banalnych spraw, które stanowią pretekst do snucia uniwersalnej refleksji na temat człowieka i jego miejsca w świecie. Przykładem jest wiersz <em>Rozmowa z kamieniem</em>. Dialog ze zwyczajną bryłą uświadamia ograniczone możliwości istoty ludzkiej, która nie może go przeniknąć.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">prostota/oszczędność języka</td>
+<td style="width: 285.17px; height: 22px; text-align: center;">Chociaż poetka wykorzystuje rozmaite środki językowe, to w jej utworach nie ma wyszukanych sformułowań, które byłyby niezrozumiałe dla przeciętnego odbiorcy. Zamiast tego wybiera zwięzły, lecz wyrazisty sposób wypowiedzi.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">ironia</td>
+<td style="width: 285.17px; height: 22px; text-align: center;">W utworach Szymborskiej często pojawiają się ironiczne sformułowania. Wyrażają one zazwyczaj stosunek do rzeczywistości, przede wszystkim zdystansowanie. </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">niezwykły koncept oraz puenta</td>
+<td style="width: 285.17px; height: 22px; text-align: center;">Poetka dąży do zaskoczenia czytelnika nieoczywistością swojego toku myślenia. Z tego powodu bardzo często puenta wiersza jest odmienna od oczekiwań odbiorcy.</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 285.114px; height: 22px; text-align: center;">humor</td>
+<td style="width: 285.17px; height: 22px; text-align: center;">Poetka w swych wierszach nie ukazuje świata w poważny, patetyczny sposób. Zamiast tego z humorem porusza nieraz poważne czy trudne zagadnienia. </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przykładowo (na podstawie wybranych tekstów):</p>
+<p> </p>
+<p>Przykładowe funkcje konceptu:</p>
+<ul>
+<li>Przykuwa uwagę odbiorcy -&gt; oryginalny pomysł na konstrukcję wiersza (np. <em>Życie na poczekaniu</em>) angażuje czytelnika. Sprawia, że staje się on autentycznie zainteresowany utworem, ponieważ nie wie, do czego zmierza autor. Ponadto pobudza to jego wyobraźnię.</li>
+<li>Pozwala na wyrażenie w oryginalny sposób uniwersalnej prawdy. -&gt; Koncept w utworach Szymborskiej łączy w sobie oryginalność oraz prostotę. Przykładowo w wierszu <em>Nienawiść</em> tytułowe uczucie zostaje ukazane na podobieństwo człowieka, co stanowi nietypowy zabieg. Uwypukla on jednak pewne charakterystyczne cechy nienawiści, w tym jej siłę czy determinację.</li>
+<li>Buduje niejednoznaczną wizję rzeczywistości. -&gt; Koncept służy zadziwieniu odbiorcy. W pewnym stopniu może odzwierciedlać złożoną naturę rzeczywistości, która wymyka się jednoznacznym osądom. Potwierdza to <em>Rozmowa z kamieniem </em>- w utworze tym nieistotny element staje się przyczynkiem do filozoficznej refleksji.</li>
+</ul>
+<p> </p>
+<p>Przykładowe funkcje puenty:</p>
+<ul>
+<li>Stanowi wyraziste podsumowanie wiersza. -&gt; W<em> Rozmowie z kamieniem </em>puenta niejako wyraża kluczową refleksję dzieła. Przypomina bowiem o ograniczonych możliwościach człowieka. </li>
+<li>Oddziałuje na odbiorcę. -&gt; Ze względu na umiejscowienie (na końcu) może zapaść mu w pamięć czy zmusić do zastanowienia, np. na temat mocy nienawiści (<em>Nienawiść</em>). W ten sposób staje się również niejako przestrogą. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowo (na podstawie wybranych utworów):</p>
+<p>Intelektualizm to typowa cecha twórczości Szymborskiej. Przejawia się na różnych płaszczyznach. Jedną z nich jest na przykład podejmowana przez poetkę tematyka. W swych dziełach bowiem nieustannie odwołuje się do rzeczywistości, ale także historii czy kultury. W ten sposób prowadzi dialog, który umożliwia odkrycie prawdy o świecie, ale też samym człowieku i jego możliwościach poznawczych. Tak jest np. w wierszu pt. <em>Rozmowa z kamieniem</em>. Tytułowy dialog staje się pretekstem do rozważań na temat pragnień człowieka, lecz również porusza zagadnienie jego ograniczonych możliwości. Nie może on bowiem wniknąć w istotę swego rozmówcy, ten pozostaje nieodgadniony: "Nie mam drzwi - mówi kamień". O intelektualnym charakterze twórczości Szymborskiej świadczy również uniwersalność podejmowanej refleksji, nieraz o filozoficznym wymiarze. Uobecnia się to w <em>Monologu dla</em> Kasandry. Przywołanie mitologicznej postaci służy ukazaniu postawy ludzi, którzy nie chcą myśleć o nieuchronności śmierci. Z tego też powodu odwracają się od bohaterki, która wieszczy ich zagładę. Zamiast tego pragną cieszyć się doczesnością.</p>
+<p>Intelektualizm przejawia się także w strukturze utworów. Poetka bowiem rezygnuje z górnolotnego czy wyszukanego słownictwa. Zamiast tego preferuje prostotę, oszczędność języka, przez co przesłanie wiersza nieraz silniej oddziałuje na czytelnika, zmusza go do zastanowienia. W utworach dominują pewne środki wyrazu. Można do nich zaliczyć m.in. paradoks, ironię. Ujawniają się np. w wierszu <em>Nienawiść</em>. W nim tytułowe zjawisko zostaje ukazane na podobieństwo człowieka, niczym sportowiec, który doskonale radzi sobie ze wszystkim przeszkodami. Z tego tez powodu tylko nienawiść nie musi się obawiać przyszłości, ponieważ pozostaje niezagrożona: "Ma bystre oczy snajpera / i śmiało patrzy w przyszłość / - ona jedna". Ponadto struktura wierszy bardzo często opiera się na śmiałym koncepcie. W <em>Życiu na poczekaniu</em> ludzka egzystencja zostaje porównania do występu na scenie, z kolei <em>Miniatura średniowieczna </em>wykorzystuje nawiązania do średniowiecznej sztuki - poetka snuje refleksję na temat historii oraz mechanizmów wymazywania niewygodnych obrazów. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+<p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
+<p>Indywidualne </p><br>
