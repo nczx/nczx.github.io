@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>A. Junge Menschen verbringen zu viel Zeit im Netz und das ist ein großes Risiko für ihr reales Leben. <br/><em>Młodzi ludzie spędzają za dużo czasu w sieci i jest to wielkie zagrożenie dla ich realnego życia. </em></p>
+<p><strong>5.</strong> Nastolatkowie zagłębiają się w wirtualny świat. Smartfony, tablety i inne urządzenia należą do ich codzienności. Rodzice boją się, że ich dzieci spędzają za dużo czasu online i uzależnią się. Powinno się jednak mówić o tym ryzyku w mediach i uświadamiać zagrożenia.  </p>
+<p><br/>B. Jugendliche wollen nicht so gern zu Hause helfen, weil ihnen die Regeln in der Familie nicht gefallen. <br/><em>Nastolatkowie nie chcą zbyt chętnie pomagać w domu, ponieważ nie podobają się im zasady w rodzinie. </em></p>
+<p><strong>1.</strong> Nastolatkowie nie chcą mieć obowiązków w domu. Protestują przeciwko rodzinnym zasadom. Często prowadzi to do konfliktów z rodzicami. W tej sytuacji konieczny jest otwarty dialog między rodzicami a dzieckiem. </p>
+<p><br/>C. Teenager wollen ihren Eltern zeigen, dass sie erwachsen werden, und akzeptieren manchmal nicht, was die Eltern von ihnen erwarten. <br/><em>Nastolatkowie chcą pokazać rodzicom, że stają się dorośli i czasami nie akceptują tego, czego rodzice od nich oczekują. </em></p>
+<p><strong>4.</strong> Nastolatkowie ignorują zakazy rodziców. Pokazują tym, że dorastają i mają własne zdanie. Rodzice również chcą najlepiej dla swoich dzieci i myślą o dobrym życiu dla nich. Nie ma powodów do paniki - ignorancja nie jest wieczna. </p>
+<p><br/>D. Junge Menschen stellen viele Fragen und gehen damit ihren Eltern auf die Nerven. <br/><em>Młodzi ludzie zadają dużo pytań i działają tym rodzicom na nerwy. </em></p>
+<p><strong>2.</strong> Nastolatkowie dyskutują o każdym szczególe i wszystko kwestionują. Uważają, że argumenty rodziców są absurdalne. To może nieźle rozzłościć rodziców. Jak to? Dlaczego? Po co? Pytania bez końca. Ale rodzice kiedyś też tacy byli, prawda?</p>
+<p><br/>E. Teenager denken praktisch, deshalb wollen sie in bestimmten Situationen einen Vorteil für sich finden. <br/><em>Nastolatkowie myślą praktycznie, dlatego w określonych sytuacjach chcą znaleźć dla siebie jakąś korzyść. </em></p>
+<p><strong>3.</strong> Nastolatkowie interpretują wszystko tak, jak im się podoba. Myślą praktycznie i chcą czerpać z okazji jak najwięcej zysku. Rodzice powinni powiedzieć konkretnie i jednoznacznie, czego oczekują. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Die Eltern wollen das Beste und denken an ein gutes Leben für ihre Kinder. (C)<br/><em>Rodzice chcą najlepiej i myślą o dobrym życiu dla swoich dzieci.  </em></p>
+<p>2. Technologie gehört zum Alltag von Jugendlichen. (A)<br/><em>Technologia należy do codzienności nastolatków. </em></p>
+<p>3. Viele Jugendliche vertiefen sich in die virtuelle Welt. (E)<br/><em>Dużo nastolatków zagłębia się w wirtualny świat. </em></p>
+<p>4. Junge Menschen protestieren gegen die Regeln zu Hause. (B)<br/><em>Młodzi ludzie protestują przeciwko zasadom w domu. </em></p>
+<p>5. Sie fragen viel und diskutieren über Details. (D) <br/><em>Dużo pytają i dyskutują o szczegółach. </em></p>
+<p> </p>
+<p>Rekcja czasownika to stałe połączenie czasownika z dopełnieniem przyimkowym. To przyimek z rzeczownikiem w odpowiednim przypadku. </p><br>

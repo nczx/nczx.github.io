@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>1) </strong>Wątpliwości związane z wybuchem powstania warszawskiego pojawiły się już w sierpniu 1944 r., już w trakcie walk.</p>
+<p><strong>2) </strong>Argumentu zwolenników wybuchu powstania (wymienione w tekście):  </p>
+<ul>
+<li>decyzja gen. Tadeusza Komorowskiego o wybuchu powstania zyskała zgodę premiera rządu na uchodźstwie, Stanisława Mikołajczyka, </li>
+<li>antyniemieckie nastroje gnębionej przez okupantów ludności stolicy musiały doprowadzić do wybuchu walk, </li>
+<li>Polska została uchroniona przed losem kolejnej sowieckiej republiki, ponieważ zryw uzmysłowił Stalinowi i komunistom niezwykłą determinację Polaków w dążeniu do niepodległości, </li>
+<li>postawa powstańców warszawskich wpływała na kształtowanie się postaw opozycyjnych wobec władz PRL, </li>
+<li>żołnierze Armii Krajowej oddali podczas walk swoje życie, po to by społeczeństwo stało się wolne. </li>
+</ul>
+<p>Argumenty przeciwników wybuchu powstania (wymienione w tekście):</p>
+<ul>
+<li>powstanie doprowadziło do zatrważającej liczby ofiar, ogromnego cierpienia i niemal całkowitego zniszczenia Warszawy, </li>
+<li>powstańcy nie osiągnęli założonych wcześniej celów, </li>
+<li>decyzję o wybuchu powstania negatywnie oceniali oficerowie Komendy Głównej AK, </li>
+<li>rozkazu o wybuchu powstania nie wydał naczelny wódz, gen. Kazimierz Sosnkowski, </li>
+<li>powstanie warszawskie było przestrogą dla nowego pokolenia Polaków przed tragicznymi konsekwencjami romantycznych i źle ocenionych zrywów powstańczych. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Polityka okupacyjna Niemiec na ziemiach polskich:</strong> </p>
+<p>Władzę w Generalnym Gubernatorstwie sprawował Hans Frank, urzędujący na Wawelu. W urzędach na obszarze GG <strong>dopuszczano używanie języka polskiego.</strong> Niemcy zachowali jedynie dawne szkoły podstawowe i średnie zawodowe, w których uczono tylko czytania, pisania, podstaw matematyki i zawodu. Pozostawiono również polską policję, nazywaną "granatową". Niemieckie władze okupacyjne pozwoliły również na<strong> publikowanie prasy polskojęzycznej, objętej cenzurą</strong> (tzw. "gadzinówki").</p>
+<p>Po zajęciu tych obszarów Niemcy szybko przystąpili do <strong>eksterminacji polskiej inteligencji.</strong> Już 6 listopada 1939 r. aresztowano w Krakowie <strong>183 wykładowców i pracowników Uniwersytetu Jagiellońskiego i innych krakowskich uczelni</strong>. Większość z nich trafiła do obozu koncentracyjnego w Dachau. W pierwszej połowie 1940 r. Niemcy rozpoczęli <strong>akcję AB</strong>, podczas której aresztowali i rozstrzelali w Palmirach kilka tysięcy osób: działaczy społecznych, artystów, urzędników. Zginęli wówczas m.in. Maciej Rataj i Janusz Kusociński. Po zajęciu Lwowa w lipcu 1941 r., podobny los spotkał tamtejszych ludzi nauki. Niemcy zamordowali polskich profesorów wykładających na Uniwersytecie Jana Kazimierza oraz Politechnice Lwowskiej. Wśród zamordowanych znalazł się m.in. Kazimierz Bartel oraz Tadeusz Boy-Żeleński.</p>
+<p>Celem niemieckiej polityki okupacyjnej na terenach wcielonych do III Rzeszy była <strong>likwidacja Polaków i poddanie tych obszarów kolonizacji niemieckiej</strong>. Z terenów włączonych do Rzeszy deportowano Polaków do GG (ok. 900 tys.) i na roboty przymusowe do Niemiec. Na ich miejsce sprowadzono ok. 360 tys. <strong>kolonistów niemieckich.</strong> Polski majątek zagrabiono, a następnie przekazano Niemcom. Pozostałych na tych terenach Polaków - pozbawiono praw obywatelskich, nakazano kłaniać się Niemcom i ustępować im pierwszeństwa. Ludność cywilną poddano <strong>masowemu terrorowi.</strong> Zakazano wszelkiej polskiej działalności sportowej i kulturalnej, zlikwidowano polskie szkolnictwo, językiem urzędowym stał się język niemieckim. Zmieniono nazwy ulic oraz miast, np. Poznań na Posen. W celu germanizacji wcielonych terenów, naziści wprowadzili niemiecką listę narodowościową - volkslistę.</p>
+<p><strong>Polityka okupacyjna ZSRS na ziemiach polskich: </strong></p>
+<p>Po agresji <strong>Armii Czerwonej</strong> na Polskę 17 września 1939 r., wschodnie ziemie naszego kraju zostały włączone do ZSRR. Sowieci bardzo szybko rozpoczęli akcję eksterminacji Polaków, poddając polską ludność licznym <strong>represjom</strong>. Rozpoczęto aresztowania polskich działaczy politycznych i społecznych, oficerów, ziemian, właścicieli fabryk, urzędników i nauczycieli. Wschodni zaborca, dążył w pierwszej kolejności do likwidacji polskiej <strong>inteligencji</strong>. Setki tysięcy Polaków, uznanych za wrogów klasowych wywieziono z kraju. Przymusowe<strong> przesiedlenia</strong> prowadzono w latach 1940-1941. Polaków wywożono głównie do Kazachstanu, na Syberię oraz wschodnią Ukrainę, gdzie umierali masowo z głodu, wycieńczenia oraz surowego klimatu. Szczególnie tragiczny los spotkał polskich oficerów, wziętych do niewoli przez Rosjan. Wiosną 1940 r. zostali oni pomordowani na rozkaz Stalina strzałem w tył głowy. Masowych egzekucji dokonano w <strong>Katyniu</strong> koło Smoleńska, Kalininie oraz Charkowie na Ukrainie. Sowieci zamordowali blisko 22 tysiące obywateli Rzeczypospolitej.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Rząd Rzeczpospolitej Polskiej na uchodźstwie </strong>funkcjonował w latach 1939-1990. Był kontynuacją władz II RP. Powstał <strong>w wyniku okupacji całego terytorium Polski w 1939 r.</strong> i<strong> ucieczki polityków po agresji III Rzeszy i ZSRR.</strong> W nocy, z 17 na 18 września 1939 r., prezydent Ignacy Mościcki, premier Felicjan Sławoj Składkowski, minister spraw zagranicznych Józef Beck i inni członkowie rządu znaleźli się w Rumunii. Rano dołączył do nich Wódz Naczelny, marszałek Edward Rydz-Śmigły. Mimo obietnic złożonych przez rumuńskiego ambasadora (zapewnienie "gościny i prawa przejazdu),gabinet został niemal.  natychmiast internowany. Wynikało to z niezgody polskich polityków na zrzeczenie się prerogatyw państwowych. </p>
+<p>Wobec zaistniałej sytuacji Mościcki wysłał nominację na prezydenta do ambasadora RP w Rzymie Bolesława Wieniawy-Długoszowskiego. Rząd francuski nie widział jednak możliwości współpracy między obydwoma państwami z prezydentem Wieniawą i 27 września urząd ten został powierzony <strong>Władysławowi Raczkiewiczowi</strong>, który na swego następcę wybrał <strong>gen. Kazimierza Sosnkowskiego</strong>. Ostatecznie głowa państwa urząd prezesa Rady Ministrów powierzyła generałowi Władysława Sikorskiego, który wkrótce powołał do życia nowy rząd. </p>
+<p>Pierwsza siedziba rządu RP na uchodźstwie była w Paryżu. Kolejna w Angers. Pod koniec czerwca 1940 r. polscy politycy przenieśli się do Londynu. Dlatego też rząd na uchodźstwie był nazywany <strong>rządem londyńskim.</strong> Władze te były uznawane na arenie międzynarodowej za jedyny legalny rząd do lipca 1945 r. Rząd nie został uznany przez III Rzeszę i ZSRR i ich sojuszników.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Polską organizację konspiracyjną w czasie II wojny światowej nazywa się państwem podziemnym, ponieważ:</strong></p>
+<ul>
+<li>zdołała ona utworzyć <strong>ogół instytucji i organów państwowych Rzeczpospolitej Polskiej</strong> upoważnionych przez władze Rzeczpospolitej na uchodźstwie do działalności na okupowanych obszarach Polski w okresie II wojny światowej (1939-1945), </li>
+<li>zapewniło ono ciągłość działalności państwa polskiego na jego własnym terytorium w warunkach okupacji prowadzonej przez wrogów, </li>
+<li>w żadnym innym kraju znajdującym się pod okupacją nie funkcjonowało tak dobrze zorganizowane państwo podziemne, które swoją działalnością obejmowało zarówno <strong>sprawy wojskowe</strong> (działalność militarna i rozbudowa potencjału wojskowego, prowadzenie walki o suwerenność i niepodległość kraju, chronił pion cywilny i zapewniał bezpieczeństwo jego pracownikom),<strong> jak i cywilne </strong>(utrzymanie ciągłości instytucji państwowych, przygotowanie państwa do przejęcia władzy po zakończeniu działań wojennych, utrzymanie ducha walki w społeczeństwie polskim, nadzorowanie administracji cywilnej, wymiaru sprawiedliwości i edukacji). </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Cele planu "Burza":</strong></p>
+<p><strong>a) polityczny </strong>- uznanie AK za gospodarza na wyzwolonych ziemiach i rządu emigracyjnego jako legalnego (skłonienie Sowietów do uznania polskich praw do ziem II Rzeczypospolitej, na które wkraczała Armia Czerwona),  </p>
+<p><strong>b) militarny </strong>- wspólne wyzwalanie ziem polskich z Armią Czerwoną (próba współpracy polsko-sowieckiej w walce z Niemcami). </p>
+<p><strong>Skutki planu "Burza":</strong></p>
+<ul>
+<li>łącznie akcja "Burza" objęła tereny praktycznie całej II Rzeczpospolitej,</li>
+<li>cel militarny został osiągnięty,</li>
+<li>realizacja celu politycznego zakończyła się fiaskiem, </li>
+<li>powtórzenie znanego schematu, charakterystycznego dla Armii Czerwonej: współpraca w czasie walk, a po ich zakończeniu - aresztowania dowódców i rozbrojenie oddziałów, </li>
+<li>aresztowanie ok. 50 tys. żołnierzy (do końca wojny) i wcielanie ich do armii Berlinga lub wywożonie do obozów w głąb Rosji</li>
+<li>osłabienie AK,</li>
+<li>miały miejsce liczne pacyfikacje polskich wsi i miasteczek,</li>
+<li>deportacje Polaków w głąb Rosji,</li>
+<li>grabież polskich dóbr kultury. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Okoliczności zbrodni katyńskiej:</strong></p>
+<p>We wrześniu 1939 r. Sowieci aresztowali przedstawicieli polskiej inteligencji, wojskowych oraz urzędników. Blisko 22 tys. oficerów znalazło się w  obozach w <strong>Ostaszkowie, Starobielsku i Kozielsku.</strong> W większości byli to rezerwiści - lekarze, prawnicy, nauczyciele oraz dziennikarze, którzy  <strong>stanowili elitę II Rzeczypospolitej</strong>. Decyzją Józefa Stalina zostali w większości zamordowani wiosną 1940 r. w <strong>Katyniu,</strong> Charkowie i Miednoje. Wszyscy polscy oficerowie zostali zamordowani przez funkcjonariuszy NKWD bestialskim strzałem w tył głowy i pochowani wspólnie w "dołach śmierci". </p>
+<p>Ten przerażający akt ludobójstwa stanowił nie tylko okrutny cios dla polskiej armii, ale także był elementem planowej akcji eksterminacyjnej, skierowanej przeciwko elicie narodu polskiego. Nie da się oszacować ogromu strat odniesionych <strong>na skutek rozkazu wydanego przez najwyższe władze Związku Socjalistycznych Republik Sowieckich. </strong></p>
+<p><strong>Zbrodnia Katyńska</strong> to jednocześnie <strong>zbrodnia ludobójstwa</strong>, <strong>zbrodnia wojenna </strong>i <strong>zbrodnia przeciwko ludzkości</strong>.</p>
+<p><strong>Konsekwencje zbrodni katyńskiej:</strong></p>
+<ul>
+<li>pozbawienie Polski elity narodowej,</li>
+<li>ukrywanie zbrodni przez Józefa Stalina, </li>
+<li>okrutny cios dla polskiej armii,</li>
+<li>skutek planowej akcji eksterminacyjnej, skierowanej przeciwko elicie narodu polskiego, </li>
+<li>
+<strong>zbrodnia katyńska</strong> to jednocześnie <strong>zbrodnia ludobójstwa</strong>, <strong>zbrodnia wojenna </strong>i <strong>zbrodnia przeciwko ludzkości, </strong>
+</li>
+<li>
+<strong>13 kwietnia 1943 r.</strong> berlińskie radio podało informację o<strong> odkryciu w lesie katyńskim pod Smoleńskiem masowych grobów polskich oficerów, </strong>
+</li>
+<li>
+<strong>pretekst do zerwania przez ZSRS stosunków dyplomatycznych z Polską</strong> i oskarżył gen. Sikorskiego o współpracę z Niemcami. Stalin miał już co do Polski własne plany. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Udział Polaków w akacjach militarnych aliantów:</strong></p>
+<p><strong>a) na froncie zachodnim</strong></p>
+<ul>
+<li>mimo że polska armia została pokonana w październiku 1939 r., żołnierze nie złożyli broni i walczyli dalej,</li>
+<li>polscy żołnierze, lotnicy i marynarze opuściło okupowaną ojczyznę, by kontynuować walkę u boku sił alianckich, </li>
+<li>polskie oddziały na emigracji powstały już we wrześniu 1939 r. i mimo licznych klęsk (np. pod Dunkierką i ewakuacji wojsk alianckich do Wielkiej Brytanii) wciąż wspierały Francję w walce z III Rzeszą,  </li>
+<li>wspieranie Norwegów podczas bitwy o Narwik, </li>
+<li>Polacy wyróżnili się podczas bitwy o Anglię w 1940 r. (Dywizja 302 i 303), </li>
+<li>także polska marynarka angażowała się w wydarzenia wojenne - eskortowała konwoje, transportowała wojska, przeprowadzała patrole (np. ORP "Piorun" odkrył położenie niemieckiego pancernika "Bismarck"),</li>
+<li>zaangażowanie polskiego wojska, lotnictwa i marynarki w lądowanie w Normandii (np. okrążenie Niemców pod Falaise w 1944 r., wyzwolenie Ypres, Gandawy, Bredy), </li>
+<li>w 1945 r. Polacy zdobyli niemiecką bazę morską w Wilhelmshaven, </li>
+<li>udział w alianckiej operacji "Market Garden". </li>
+</ul>
+<p><strong>b) na froncie południowym</strong></p>
+<ul>
+<li>2 Korpus Polski pokonał Niemców podczas bitwy na Monte Cassino w 1943 r. i przyczynił się do otwarcia drogi na Rzym, </li>
+<li>polskie oddziały wyzwoliły Ankonę w 1944 r. i Bolonię w 1945 r.. </li>
+</ul>
+<p><strong>c) podczas walk w Afryce</strong></p>
+<ul>
+<li>w Afryce Północnej Polacy walczyli u boku brytyjskich i australijskich pułków podczas oblężenia Tobruku w 1941 r., </li>
+<li>zdobycie twierdzy Bardia, która zamykała nadmorską szosę prowadzącą do Trypolisu w styczniu 1943 r., </li>
+<li>walki pod koniec stycznia 1942 r. (ofensywa gen. Rommla), </li>
+<li>polscy piloci transportowi zaczęli pełnić nad Afryką służbę przeprowadzając samoloty w różnych kierunkach tego rozległego kontynentu, </li>
+<li>działalność Polskiego Zespołu Myśliwskiego, który stacjonował na lotniskach w Tunezji wiosną 1943 r.</li>
+</ul><br>

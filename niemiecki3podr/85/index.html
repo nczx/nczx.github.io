@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Dreimal im Jahr führen die Schüler ein Theaterstück in der Schule auf. (A)<br/><em>Trzy razy w roku uczniowie wystawiają w szkole sztukę teatralną.  </em></p>
+<p>2. Die Mitglieder der Theater-AG müssen sich auf die Aufführung gut vorbereiten. (F)<br/><em>Członkowie koła teatralnego muszą dobrze przygotować się do występu.</em></p>
+<p>3. Sie machen Proben und lernen ihre Texte auswendig. (E)<br/><em>Robią próby i uczą się swoich tekstów na pamięć. </em></p>
+<p>4. Lisa hilft bei den Frisuren. (B)<br/><em>Lisa pomaga przy fryzurach. </em></p>
+<p>5. Die Schüler laden zu der Aufführung den Direktor, die Lehrer und ihre Mitschüler ein. (C)<br/><em>Uczniowie zapraszają na przedstawienie dyrektora, nauczycieli i innych uczniów. </em></p>
+<p>6. In der Sporthalle bauen sie eine richtige Bühne auf. (D) <br/><em>W hali sportowej budują prawdziwą scenę. </em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. auf dem Sportplatz  </p>
+<p>2. ein Theaterstück </p>
+<p>3. die Kunst-AG </p>
+<p>4. Graffitis </p>
+<p> </p>
+<p><em>Koło teatralne organizuje happening na boisku. Członkowie koła teatralnego wystawią sztukę. W tym happeningu weźmie udział także koło muzyczne i plastyczne. Ich członkowie dadzą koncert i zorganizują wystawę obrazów i fotografii. Namalują też graffiti na szkolnym dziedzińcu. </em></p>
+<p> </p>
+<p>Wyraz, który został podany dodatkowo i nie pasuje do tekstu: <em>Pfadfinder</em> - harcerz, harcerze.  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Paul erzählt von seinem Hobby. - Paul opowiada o swoim hobby.  </p>
+<p>2. Die Schüler diskutieren über Kunst, Theater und Musik. - Uczniowie dyskutują o sztuce, teatrze i muzyce.</p>
+<p>3. Herr Winter denkt an alle Aufgaben. - Pan Winter myśli o wszystkich zadaniach. </p>
+<p>4. Der Lehrer bittet um Hilfe. - Nauczyciel prosi o pomoc. </p>
+<p>5. Das Publikum lacht über das Stück. - Publiczność śmieje się ze sztuki. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>- Was für eine AG besuchst du in deiner Schule? (Na jakie koło zainteresowań uczęszczasz w szkole?) <br/>- Ich gehöre der Theater-AG an. (Należę do koła teatralnego.) <br/>- Was macht ihr in der AG? (Co robicie na tych zajęciach?)  <br/>- Wir bereiten uns auf die Aufführungen vor. (Przygotowujemy się do przedstawień.) </p>
+<p>- Was für einer AG gehört dein Gesprächspartner / deine Gesprächspartnerin? (Do jakiego koła zainteresowań należy twój rozmówca / twoja rozmówczyni?) <br/>- Er / Sie gehört der Theater-AG an. (Należy do koła teatralnego.) <br/>- Was macht er / sie in der Theater-AG? (Co robi na zajęciach koła teatralnego?) <br/>- Er / Sie bereitet sich auf die Aufführungen vor. (Przygotowuje się do przedstawień.) </p>
+<p> </p>
+<p><br/>- Was für eine AG besuchst du in deiner Schule? (Na jakie koło zainteresowań uczęszczasz w szkole?) <br/>- Ich besuche die Kunst-AG. (Uczęszczam na koło plastyczne.) <br/>- Was macht ihr in der AG? (Co robicie na tych zajęciach?) <br/>- Wir nehmen an Bilder- und Fotoausstellungen teil. (Bierzemy udział w wystawach obrazów i zdjęć.) </p>
+<p>- Was für einer AG gehört dein Gesprächspartner / deine Gesprächspartnerin? (Do jakiego koła zainteresowań należy twój rozmówca / twoja rozmówczyni?) <br/>- Er / Sie gehört der Kunst-AG an. (Należy do koła plastycznego.) <br/>- Was macht er / sie in der Kunst-AG? (Co robi na zajęciach koła plastycznego?) <br/>- Er / Sie nimmt an Bilder- und Fotoausstellungen teil. (Bierze udział w wystawach obrazów i zdjęć.) </p>
+<p> </p>
+<p>- Was für eine AG besuchst du in deiner Schule? (Na jakie koło zainteresowań uczęszczasz w szkole?) <br/>- Ich bin Mitglied der Musik-AG. (Jestem członkiem koła muzycznego.) <br/>- Was macht ihr in der AG? (Co robicie na tych zajęciach?) <br/>- Wir proben für Konzerte. (Robimy próby przed koncertami.) </p>
+<p>- Was für einer AG gehört dein Gesprächspartner / deine Gesprächspartnerin? (Do jakiego koła zainteresowań należy twój rozmówca / twoja rozmówczyni?) <br/>- Er / Sie gehört der Musik-AG an. (Należy do koła muzycznego.) <br/>- Was macht er / sie in der Musik-AG? (Co robi na zajęciach koła muzycznego?) <br/>- Er / Sie probt für Konzerte. (Robi próby przed koncertami.) </p><br>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p>Pol Pot został obalony w 1979 r. przez partyjną opozycję, popartą przez Wietnam. Czerwoni Khmerzy wycofali się do dżungli w zachodniej części kraju. Pot podjął walkę z reżimem Hun Sena. W 1985 r. oficjalnie zrzekł się przywództwa nad Czerwonymi Khmerami, jednak nadal odgrywał znaczną rolę w życiu politycznym Kambodży. Zmarł w 1988 r., okoliczności jego śmierci nie są do końca jasne. </p>
+<p><img alt="" height="257" src="./data/1181591-0.jpg" width="343"/></p>
+<p>Grób Pol Pota w Anlong Veng, źródło zdjęcia: Wikimedia Commons. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>W 1885 r. największa indyjska partia polityczna - <strong>Indyjski Kongres Narodowy</strong> - wykorzystała zaangażowanie Brytyjczyków w wojnę i wysunęła postulat przyznania Indiom niepodległości. Rząd brytyjski nie spełnił tych żądań, a nawet zaostrzył kurs wobec ruchu wyzwoleńczego. Doprowadziło to do licznych wystąpień zbrojnych przeciwko władzy kolonialnej, tłumionych przez wojska brytyjskie. </p>
+<p>W tak napiętej sytuacji aktywność polityczną rozpoczął <strong>Mahatma Gandhi</strong>.  Wykorzystał on swe wcześniejsze doświadczenia w zmaganiach z administracją kolonialną i przeciwstawił zbrojnej konfrontacji taktykę obywatelskiego nieposłuszeństwa. Metoda biernego oporu, którą poparła większość Hindusów, była dokuczliwa dla władz kolonialnych. Uwięzienie Gandhiego nie przyniosło zamierzonego skutku. Brytyjczycy musieli zasiąść do rozmów. W obradach tzw. indyjskiego Okrągłego Stołu wzięli udział przedstawiciele władz brytyjskich oraz delegaci dwóch największych społeczności religijnych Indii: hinduistów i muzułmanów. W 1935 r. parlament przyjął ustawę o przekształceniu Indii w federację prowincji oraz księstw. Wciąż jednak władza znajdowała się w rękach gubernatorów i wicekróla.</p>
+<p>Dopiero po zakończeniu II wojny światowej utrzymanie panowania nad Indiami okazało się niemożliwe. Na pomocy trójstronnych porozumień między hinduistami, muzułmanami i Brytyjczykami utworzono dwa państwa <strong>Indie </strong>i <strong>Pakistan</strong>. <strong>15 sierpnia 1947 roku proklamowano ich niepodległość</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Wojnę koreańską z lat 1950-1953 można podzielić na dwa zasadnicze etapy:</p>
+<ul>
+<li>wojna manewrowa - od 1950 r. do 1951 r., </li>
+<li>wojna pozycyjna - od 1951 r. do 1953 r.  </li>
+</ul>
+<p><strong>Przebieg wojny:</strong></p>
+<p><strong>Etap wojny manewrowej: </strong></p>
+<ul>
+<li>25 czerwca - 15 września 1950 r. - wykorzystując znaczną przewagę w ludziach i sprzęcie, Koreańska Armia Ludowa zajmuje 95% półwyspu, </li>
+<li>14 - 21 lipca 1950 r. - bitwa pod Deajeon, amerykańska 24. Dywizja Piechoty zostaje rozbita przez Koreańską Armię Ludową,</li>
+<li>10 września - 25 października 1950 r. - desant morski sił ONZ w Inczon rozpoczyna odwrót wojsk północnokoreańskich,</li>
+<li>15 - 19 września 1950 r. - bitwa o Inczon,</li>
+<li>26 października 1950 r. - 9 czerwca 1951 r. - na front wkraczają Chińscy Ochotnicy Ludowi, </li>
+<li>maj - czerwiec 1951 r. - po kontrofensywie sił ONZ front stabilizuje się na tzw. linii Kansas–Wyoming. </li>
+</ul>
+<p><strong>Etap wojny pozycyjnej:</strong></p>
+<ul>
+<li>lipiec 1951 r. - pierwsza tura rokowań pokojowych, która nie przyniosła oczekiwanych skutków, </li>
+<li>przez dwa lata toczą się walki na linii frontu.</li>
+</ul>
+<p><strong>Zakończenie wojny:</strong></p>
+<ul>
+<li>27 lipca 1953 r. w miejscowości Punmandżom (na granicy Korei Północnej i Korei Południowej) podpisano rozejm.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Rola Mao Zedonga w historii Chin: </strong></p>
+<ul>
+<li>przywódca Chińskiej Republiki Ludowej w latach 1949-1976,  </li>
+<li>wprowadził totalitarne rządy w Chinach (rządy jednej partii, kult wodza),</li>
+<li>przebudował system polityczny, gospodarczy i społeczny Chin (wprowadzono cenzurę, skolektywizowano wieś, znacjonalizowano przemysł i handel), </li>
+<li>zainicjował proces kolektywizacji, </li>
+<li>zainicjował szereg kampanii, np. przeciwko prawicowcom, wielki skok naprzód, rewolucja kulturalna,</li>
+<li>przyczynił się także do rozłamu w bloku wschodnim i zaognienia stosunków z ZSRR, </li>
+<li>pod koniec życia doprowadził do ocieplenia stosunków ze Stanami Zjednoczonymi, </li>
+<li>jego myśli zebrane w "czerwonej książeczce" były katechizmem Chińczyków,</li>
+<li>przywódca ChRL był najważniejszą postacią w państwie, wielkim przywódcą komunistycznym, prowadzącym swoich rodaków "ku świetlanej przyszłości", </li>
+<li>na skutek polityki prowadzonej przez Mao Zedonga ponad milion ludzi zostało zabitych, a wiele milionów - represjonowano.  </li>
+</ul><br>

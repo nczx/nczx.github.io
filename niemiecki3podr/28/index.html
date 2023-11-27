@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Sport machen (uprawiać sport) - <strong>Claudia </strong></p>
+<p>2. Attraktionen in der Umgebung besuchen (odwiedzać atrakcje w okolicy) - <strong>Silke </strong></p>
+<p>3. in der Sonne liegen (leżeć w słońcu) - <strong>Claudia</strong></p>
+<p>4. im Garten arbeiten (pracować w ogrodzie) - <strong>Silke </strong></p>
+<p>5. klettern (wspinać się) - <strong>Thomas </strong></p>
+<p>6. Windsurfing betreiben (uprawiać windsurfing) - <strong>Claudia </strong></p>
+<p>7. wandern (wędrować) - <strong>Thomas </strong></p>
+<p>8. joggen (biegać) - <strong>Claudia </strong></p>
+<p>9. kurze Reisen machen (urządzać krótkie wycieczki) - <strong>Silke </strong></p>
+<p>10. Strandball spielen (grać w piłkę plażową) - <strong>Claudia </strong></p>
+<p>11. tauchen (nurkować) - <strong>Claudia </strong></p>
+<p>12. Freunde besuchen (odwiedzać przyjaciół) - <strong>Silke </strong></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Claudia hat den Urlaub am Meer verbracht. Sie hat in der Sonne gelegen, aber auch viel Sport gemacht. Sie hat Strandball gespielt und getaucht. Sie ist gejoggt und hat Windsurfing betrieben. </p>
+<p><em>Claudia spędziła urlop nad morzem. Leżała w słońcu, ale również uprawiała dużo sportu. Grała w piłkę na plaży i nurkowała. Biegała i uprawiała windsurfing. </em></p>
+<p><br/>Silke hat den Urlaub zu Hause verbracht. Sie hat Attraktionen in der Umgebung besucht und kurze Reisen gemacht. Silke hat auch im Garten gearbeitet und Freunde besucht. </p>
+<p><em>Silke spędziła urlop w domu. Odwiedziła atrakcje w okolicy i organizowała krótkie wycieczki. Silke pracowała też w ogrodzie i odwiedzała przyjaciół. </em></p>
+<p><br/>Thomas ist im Gebirge gewandert und geklettert. </p>
+<p><em>Thomas wędrował i wspinał się w górach. </em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Lena ist schon oft nach Italien gefahren, weil das Land für Touristen attraktiv ist. <br/><em>Lena już często jeździła do Włoch, ponieważ ten kraj jest atrakcyjny dla turystów. <br/></em><strong>FALSCH </strong></p>
+<p>"Wir waren zum ersten Mal in Italien und ich kann das Land nur empfehlen". - Po raz pierwszy byliśmy we Włoszech i mogę tylko polecić ten kraj.  </p>
+<p><br/>2. Lena ist auf der Rückreise nach Hause nach Österreich gefahren. <br/><em>Lena w drodze powrotnej do domu pojechała do Austrii.<br/></em><strong>FALSCH </strong></p>
+<p>"Im August war ich in Österreich. Ich bin mit meiner besten Freundin in die Alpen nach Kitzbühel gefahren. Auf der Rückreise sind wir an den Bodensee gefahren". - W sierpniu byłam w Austrii. Pojechałam z moją najlepszą przyjaciółką w Alpy, do Kitzbühel. W drodze powrotnej pojechałyśmy nad Jezioro Bodeńskie. </p>
+<p><br/>3. Lena will in der Zukunft auch die Schweiz besuchen. <br/><em>Lena chce w przyszłości odwiedzić także Szwajcarię. <br/></em><strong>RICHTIG </strong></p>
+<p>"Im nächsten Jahr will ich unbedingt in die Schweiz fahren". - W przyszłym roku koniecznie chcę jechać do Szwajcarii. </p>
+<p><br/>4. Tomek und Christian haben sich in Polen getroffen, weil sie das geplant haben. <br/><em>Tomek i Christian spotkali się w Polsce, ponieważ tak planowali. </em><br/><strong>FALSCH </strong></p>
+<p>"Ich war auch in Polen. Schade, dass wir uns nicht getroffen haben". - Byłem też w Polsce. Szkoda, że się nie spotkaliśmy. </p>
+<p><br/>5. Christian mag Windsurfing. <br/><em>Christian lubi windsurfing. <br/></em><strong>RICHTIG </strong></p>
+<p>"Windsurfen ist mein neues Hobby". - Windsurfing to moje nowe hobby.</p><br>

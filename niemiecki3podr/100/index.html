@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. sich abends mit Freunden treffen (E) - spotykać się wieczorami z przyjaciółmi  </p>
+<p>2. Noten verbessern müssen (A) - musieć poprawić oceny </p>
+<p>3. sich für Freiwilligenarbeit engagieren (B) - angażować się w wolontariat </p>
+<p>4. ein Sportfest für Kinder veranstalten (C) - organizować imprezę sportową dla dzieci </p>
+<p>5. am Sporttag teilnehmen (D) - brać udział w dniu sportu </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Patrick, <span style="text-decoration: underline;">der</span> sich abends mit Freunden trifft, soll mehr für Mathe lernen. <br/><em>Patrick, który wieczorami spotyka się z przyjaciółmi, powinien więcej uczyć się na matematykę.<br/></em>rodzaj męski, mianownik </p>
+<p>2. Der Lehrer spricht mit den Schülern, <span style="text-decoration: underline;">die</span> Noten verbessern müssen. <br/><em>Nauczyciel rozmawia z uczniami, którzy muszą poprawić oceny. <br/></em>liczba mnoga, mianownik </p>
+<p>3. Ich bin stolz auf meinen Bruder, <span style="text-decoration: underline;">der</span> sich für Freiwilligenarbeit engagiert. <br/><em>Jestem dumny z mojego brata, który angażuje się w wolontariat. </em><br/>rodzaj męski, mianownik</p>
+<p>4. In der Goethestraße liegt die Schule, <span style="text-decoration: underline;">die</span> ein Sportfest für Kinder veranstaltet. <br/><em>Przy ulicy Goethego leży szkoła, która organizuje imprezę sportową dla dzieci. <br/></em>rodzaj żeński, mianownik </p>
+<p>5. Wann findet der Sporttag statt, <span style="text-decoration: underline;">an dem</span> ihr teilnehmt?<br/><em>Kiedy odbędzie się dzień sportu, w którym weźmiecie udział?</em><br/>rodzaj męski, celownik, teilnehmen an + Dativ </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Paul soll ein Referat für ... schreiben.<br/><em>Paul powinien napisać referat na ... .</em></p>
+<p>A. Mathe - matematykę <br/><strong>B. Biologie</strong> - biologię  </p>
+<p>2. Paul und seine Freunde besuchen Kinder ... in Berlin. <br/><em>Paul i jego przyjaciele odwiedzają dzieci ... w Berlinie. </em></p>
+<p><strong>A. in einem Kinderheim</strong> - w domu dziecka <br/>B. in einer Schule - w szkole </p>
+<p>3. Die Schüler möchten ... einen Spiel- und Sporttag organisieren.<br/><em>Uczniowie ... chcieliby zorganizować dzień zabaw i sportu. </em></p>
+<p><strong>A. Ende Juni</strong> - pod koniec czerwca <br/>B. Ende Juli - pod koniec lipca </p>
+<p>4. ... muss die Diplome für die Gewinner machen. <br/><em>... musi zrobić dyplomy dla zwycięzców. </em></p>
+<p><strong>A. Paul </strong><br/>B. Pauls Klassenlehrerin - Wychowawczyni Paula </p>
+<p>5. ... Sponsoren gefunden.<br/><em>... sponsorów. </em></p>
+<p>A. Die Eltern haben - Rodzice znaleźli <br/><strong>B. Die Klassenlehrerin hat</strong> - Wychowawczyni znalazła </p><br>

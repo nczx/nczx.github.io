@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Clemens właśnie zdał maturę. Był najlepszym pływakiem w szkole, dlatego chce studiować na Akademii Wychowania Fizycznego w Kolonii. Potrzebuje pieniędzy na mieszkanie w Kolonii.</p>
+<p><strong>D.</strong> "Für die kommende Sommersaison sucht die Ferienschwimmschule Shark Schwimmlehrer/innen". - Na nadchodzący sezon letni wakacyjna szkoła pływania "Shark" szuka instruktorów / instruktorek pływania.  </p>
+<p><br/>2. Daniela uwielbia dzieci, dlatego planuje studia pedagogiczne. Jest bardzo kontaktowa, kreatywna i ma świetne pomysły. Teraz szuka jakiejś oferty na lato. </p>
+<p><strong>A.</strong> "Für den Start in die Saison sucht die Touristikagentur "Experiences" Kinderanimateure". - Na początek sezonu agencja turystyczna "Experiences" szuka animatorów dla dzieci. </p>
+<p><br/>3. Tobias kilka tygodni temu poznał przepiękną Greczynkę. Melinda pracuje jako kelnerka na Krecie, dlatego on szuka tam posady, by być z nią razem. Potrafi pracować w grupie i jest wesoły. Chętnie gotuje.</p>
+<p><strong>E.</strong> "Ein gut eingespieltes Team auf der griechischen Insel Kreta wartet gerade auf dich". - Dobrze zgrany team na greckiej wyspie Krecie czeka właśnie na ciebie. </p>
+<p><br/>4. Penelope uwielbia Francję i kulturę francuską. W przyszłym roku zdaje maturę, dlatego chciałaby poprawić znajomość języka francuskiego. </p>
+<p><strong>B.</strong> "Café + Eisdiele "SUN" sucht junge Leute für die ganze Sommersaison. Wichtig: Französisch- und Englischkenntnisse notwendig". - Kawiarnia i lodziarnia "SUN" szuka młodych ludzi na cały sezon letni. Ważne: konieczna znajomość języka francuskiego i angielskiego. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Clemens interessiert sich für Sport und war der beste Schwimmer in seinem Gymnasium, deshalb möchte er Sportmanagement studieren und als Trainer arbeiten. (C) <br/><em>Clemens interesuje się sportem i był najlepszym pływakiem w swoim gimnazjum, dlatego chciałby studiować sport management i pracować jako trener.  </em></p>
+<p>2. Daniela mag die Arbeit mit Kindern und kann mit ihnen kreativ umgehen, deshalb möchte sie später einmal Pädagogin werden. (B) <br/><em>Daniela lubi pracę z dziećmi i potrafi obchodzić się z nimi kreatywnie, dlatego chciałaby w przyszłości zostać pedagogiem. </em></p>
+<p>3. Tobias hat sich in eine Griechin verliebt, deshalb will er im Sommer in Griechenland arbeiten. (D)<br/><em>Tobias zakochał się w pewnej Greczynce, dlatego w lecie chce pracować w Grecji. </em></p>
+<p>4. Penelope findet Frankreich toll, deshalb ist das Studium in der französischen Hauptstadt ihr Traum. (A)<br/><em>Penelope uważa, że Francja jest świetna, dlatego studia w stolicy Francji są jej marzeniem. </em></p><br>

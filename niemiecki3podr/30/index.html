@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><em>Präteritum</em> to czas przeszły prosty. Dla wyrażenia przeszłości czasowniki modalne występują najczęściej w czasie przeszłym <em>Präteritum</em>. Ich odmiana wygląda następująco:</p>
+<table border="1" style="height: 269px;width: 883px;text-align: center;border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="width: 124px;"> </td>
+<td style="background-color: #8bc34a;">können</td>
+<td style="background-color: #8bc34a;">sollen</td>
+<td style="background-color: #8bc34a;">mögen</td>
+<td style="background-color: #8bc34a;">dürfen</td>
+<td style="background-color: #8bc34a;">müssen</td>
+<td style="background-color: #8bc34a;">wollen</td>
+</tr>
+<tr>
+<td style="width: 124px;">ich</td>
+<td style="width: 123px;">konnte</td>
+<td style="width: 123px;">sollte</td>
+<td style="width: 123px;">mochte </td>
+<td style="width: 123px;">durfte</td>
+<td style="width: 122px;">musste</td>
+<td style="width: 123px;">wollte</td>
+</tr>
+<tr>
+<td style="width: 124px;">du</td>
+<td style="width: 123px;">konntest</td>
+<td style="width: 123px;">solltest</td>
+<td style="width: 123px;">mochtest</td>
+<td style="width: 123px;">durftest</td>
+<td style="width: 122px;">musstest</td>
+<td style="width: 123px;">wolltest</td>
+</tr>
+<tr>
+<td style="width: 124px;">er, sie, es</td>
+<td style="width: 123px;">konnte</td>
+<td style="width: 123px;">sollte</td>
+<td style="width: 123px;">mochte</td>
+<td style="width: 123px;">durfte</td>
+<td style="width: 122px;">musste</td>
+<td style="width: 123px;">wollte</td>
+</tr>
+<tr>
+<td style="width: 124px;">wir</td>
+<td style="width: 123px;">konnten</td>
+<td style="width: 123px;">sollten</td>
+<td style="width: 123px;">mochten</td>
+<td style="width: 123px;">durften</td>
+<td style="width: 122px;">mussten</td>
+<td style="width: 123px;">wollten</td>
+</tr>
+<tr>
+<td style="width: 124px;">ihr</td>
+<td style="width: 123px;">konntet</td>
+<td style="width: 123px;">solltet</td>
+<td style="width: 123px;">mochtet</td>
+<td style="width: 123px;">durftet</td>
+<td style="width: 122px;">musstet</td>
+<td style="width: 123px;">wolltet</td>
+</tr>
+<tr>
+<td style="width: 124px;">sie, Sie</td>
+<td style="width: 123px;">konnten</td>
+<td style="width: 123px;">sollten</td>
+<td style="width: 123px;">mochten</td>
+<td style="width: 123px;">durften</td>
+<td style="width: 122px;">mussten</td>
+<td style="width: 123px;">wollten</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Pamiętaj: Czasowniki modalne w 1. i 3. os. l. poj. mają taką samą formę. Czasowniki modalne mające przegłos w bezokoliczniku, tracą go w formie czasu przeszłego <em>Präteritum.</em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<ul>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, weil er seine Pläne ändern musste. (Tomek jest niezadowolony z wakacji, ponieważ musiał zmienić swoje plany.)  </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, denn er konnte nicht mit seinen Freunden an die Ostsee fahren.  (Tomek jest niezadowolony z wakacji, ponieważ nie mógł jechać z przyjaciółmi nad Morze Bałtyckie.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, denn er war erkältet. (Tomek jest niezadowolony z wakacji, ponieważ był przeziębiony.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, weil er die ganze Woche im Bett liegen musste.  (Tomek jest niezadowolony z wakacji, ponieważ cały tydzień musiał leżeć w łóżku.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, denn seine Freunde konnten nicht auf ihn warten.  (Tomek jest niezadowolony z wakacji, ponieważ jego przyjaciele nie mogli na niego czekać.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, weil die Rückreise von Portugal eine Katastrophe war.  (Tomek jest niezadowolony z wakacji, ponieważ podróż powrotna z Portugalii była katastrofą.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, denn er und seine Eltern sind zu spät zum Flughafen gekommen. (Tomek jest niezadowolony z wakacji, ponieważ on i jego rodzice za późno przybyli na lotnisko.) </li>
+<li>Tomek ist mit seinen Sommerferien nicht zufrieden, weil er und seine Eltern mit dem Zug zurückkommen mussten.  (Tomek jest niezadowolony z wakacji, ponieważ on i jego rodzice musieli wracać pociągiem.) </li>
+</ul>
+<p> </p>
+<p><br/>Uwaga, po spójniku <em>denn</em> występuje szyk prosty zdania, a po spójniku <em>weil</em> obowiązuje szyk końcowy. </p><br>

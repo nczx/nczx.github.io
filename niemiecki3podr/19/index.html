@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Prawidłowo uporządkowany dialog: </p>
+<p>1. <strong>E.</strong> Entschuldigen Sie bitte, wie komme ich zum Bahnhof? <br/><em>Przepraszam, jak dojdę na dworzec? </em></p>
+<p>2. <strong>B.</strong> Zum Bahnhof? <br/><em>Na dworzec?  </em></p>
+<p>3. <strong>K.</strong> Ja. Ist das weit von hier? Soll ich mit dem Bus oder mit der Straßenbahn fahren? <br/><em>Tak. Czy to daleko stąd? Powinnam jechać autobusem lub tramwajem?</em></p>
+<p>4. <strong>C.</strong> Nein, das ist nicht so weit. Sie können zu Fuß zum Bahnhof gehen.<br/><em>Nie, to nie jest daleko. Może pani iść na dworzec pieszo. </em>  </p>
+<p>5. <strong>D.</strong> Super! Aber ich habe nicht viel Zeit. <br/><em>Super! Ale nie mam za dużo czasu. </em></p>
+<p>6. <strong>A.</strong> Sie brauchen nur etwa zehn Minuten. Gehen Sie zuerst geradeaus. Und dann an der Kreuzung nach links. <br/><em>Potrzebuje pani około dziesięciu minut. Najpierw proszę iść prosto. Następnie na skrzyżowaniu w lewo. </em></p>
+<p>7. <strong>F.</strong> Moment... Geradeaus und links. Und dann? <br/><em>Chwileczkę. Prosto i w lewo. A później? </em></p>
+<p>8. <strong>H.</strong> Dann etwa fünfzig Meter geradeaus bis zum Goetheplatz. Hinter dem Platz ist schon der Bahnhof. <br/><em>Później około 50 metrów prosto aż do placu Goethego. Za placem jest dworzec. </em></p>
+<p>9. <strong>G.</strong> Das ist wirklich nicht weit. Vielen Dank. <br/><em>To rzeczywiście niedaleko. Dziękuję. </em></p>
+<p>10. <strong>I.</strong> Gern geschehen. Schönen Tag noch! <br/><em>Nie ma za co. Miłego dnia! </em></p>
+<p>11.<strong> J.</strong> Danke, gleichfalls. <br/><em>Dziękuję, wzajemnie. </em></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Berlin ist größer als Wien. / Wien ist kleiner als Berlin.<br/><em>Berlin jest większy niż Wiedeń. </em>/<em> Wiedeń jest mniejszy niż Berlin.  </em></p>
+<p>2. In Berlin leben mehr Menschen als in Wien.<br/><em>W Berlinie mieszka więcej ludzi niż w Wiedniu. </em></p>
+<p>3. In Berlin sind die Menschen im Durchschnitt älter als in Wien. / In Wien sind die Menschen in Durchschnitt jünger als in Berlin. <br/><em>Średnio w Berlinie ludzie są starsi niż w Wiedniu.</em> /<em> Średnio w Wiedniu ludzie są młodsi niż w Berlinie. </em></p>
+<p>4. In Berlin gibt es mehr Kinos als in Wien. <br/><em>W Berlinie jest więcej kin niż w Wiedniu. </em></p>
+<p>5. In Berlin gibt es genauso viel Theater wie in Wien.<br/><em>W Berlinie jest tyle samo teatrów ile w Wiedniu. </em></p>
+<p>6. Die Fahrradwege in Wien sind länger als in Berlin. / Die Fahrradwege in Berlin sind kürzer als in Wien.<br/><em>Ścieżki rowerowe w Wiedniu są dłuższe niż w Berlinie. </em>/<em> Ścieżki rowerowe w Berlinie są krótsze niż w Wiedniu. </em></p>
+<p>7. Unter den Touristen ist Berlin populärer als Wien.<br/><em>Wśród turystów Berlin jest bardziej popularny niż Wiedeń. </em></p>
+<p>8. Der Weihnachtsmarkt in Wien ist älter als in Berlin. <br/><em>Jarmark bożonarodzeniowy w Wiedniu jest starszy niż w Berlinie. </em></p>
+<p> </p>
+<p>Stopień wyższy przymiotnika / przysłówka (<em>Komparativ</em>) tworzy się, dodając do tematu stopnia równego (<em>Positiv</em>) przyrostek -<em>er</em>, przy czym przymiotniki / przysłówki jednosylabowe z samogłoską tematyczną <em>a, o, u</em> przeważnie otrzymują przegłos (<em>alt - älter, kurz - kürzer</em>). Przymiotniki / przysłówki kończące się na -<em>er, -el</em> tracą samogłoskę <em>e</em> przed przyrostkiem stopnia wyższego (<em>teuer - teurer, dunkel - dunkler</em>). Porównując przymiotniki w stopniu wyższym, używa się słówka <em>als</em> (niż).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br>

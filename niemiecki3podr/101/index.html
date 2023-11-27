@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Wer soll seine Noten verbessern? - Paul.<br/><em>Kto powinien poprawić swoje oceny? - Paul.  </em></p>
+<p>2. Was liest Paul? - Schullektüren. <br/><em>Co czyta Paul? - Lektury szkolne. </em></p>
+<p>3. Wie heißen Pauls Freunde? - Lisa und Frank. <br/><em>Jak mają na imię przyjaciele Paula? - Lisa i Frank. </em></p>
+<p>4. Gegen wen haben die Schüler letztes Jahr Fußball gespielt? - Gegen die Lehrer. <br/><em>Przeciwko komu w ubiegłym roku uczniowie grali w piłkę nożną? - Przeciwko nauczycielom. </em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Letztes Jahr hatten die Mütter keine Lust, Fußball zu spielen.<br/><em>Rok temu matki nie miały ochoty grać w piłkę nożną. <br/></em><strong>FALSCH </strong></p>
+<p>Letztes Jahr hatten die Mütter keine Lust, Volleyball zu spielen. - Rok temu matki nie miały ochoty grać w siatkówkę. </p>
+<p>2. In diesem Jahr haben die Organisatoren vor, Spiele für die Schüler und die Kinder aus dem Kinderheim zu organisieren.<br/><em>W tym roku organizatorzy mają zamiar zorganizować gry i zabawy dla uczniów i dla dzieci z domu dziecka. <br/></em><strong>RICHTIG </strong></p>
+<p>3. Sie haben auch geplant, ein Handball- und ein Basketballturnier zu veranstalten.<br/><em>Zaplanowali również zorganizowanie turnieju piłki ręcznej i koszykówki. <br/></em><strong>FALSCH </strong></p>
+<p>Sie haben auch geplant, ein Fußball- und ein Basketballturnier zu veranstalten. - Zaplanowali również zorganizowanie turnieju piłki nożnej i koszykówki. <em><br/></em></p>
+<p>4. Die Kinder haben die Möglichkeit, Hockey, Ruby, Tennis und Breakdance kennen zu lernen.<br/><em>Dzieci będą miały możliwość poznać takie sporty jak: hokej, rugby, tenis i breakdance. <br/></em><strong>RICHTIG </strong></p>
+<p>5. Es ist nötig, Getränke und Snacks für die Lehrer zu kaufen. <br/><em>Konieczne jest, by kupić napoje i przekąski dla nauczycieli. <br/></em><strong>FALSCH </strong></p>
+<p>Es ist nötig, Getränke und Snacks für die Teilnehmer zu kaufen. - Konieczne jest, by kupić napoje i przekąski dla uczestników. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>- Wir spielen am Wochenende Volleyball. Habt ihr Lust? (W weekend gramy w siatkówkę. Macie ochotę?) <br/>- Nein, wir haben keine Lust, am Wochenende Volleyball zu spielen. (Nie, nie mamy ochoty grać w weekend w siatkówkę.)  </p>
+<p>- Wir kaufen nach der Schule ein. Hast du Zeit? (Po szkole robimy zakupy. Masz czas?) <br/>- Ja, ich habe Zeit, nach der Schule einzukaufen. (Tak, mam czas iść na zakupy po szkole.) </p>
+<p>- Wir helfen den Kindern aus dem Kinderheim. Habt ihr Zeit? (Pomagamy dzieciom z domu dziecka. Macie czas?) <br/>- Nein, wir haben keine Zeit, den Kindern aus dem Kinderheim zu helfen. (Nie, nie mamy czasu pomagać dzieciom z domu dziecka.) </p>
+<p>- Ich gehe am Abend in die Pizzeria. Hast du Lust? (Idę wieczorem do pizzerii. Masz ochotę?) <br/>- Ja, ich habe Lust, am Abend in die Pizzeria zu gehen. (Tak, mam ochotę iść wieczorem do pizzerii.) </p>
+<p> </p>
+<p>Konstrukcja bezokolicznik + <em>zu</em> pozwala na umieszczenie w zdaniu dwóch czasowników. Używa się jej również po wyrażeniach rzeczownikowych (np. <em>Lust / Zeit / Geld / ... haben</em>) oraz przymiotnikowych (np. <em>es ist nett / gut / ...</em>).</p>
+<p>Polega ona na umieszczeniu słowa <em>zu</em> przed drugim czasownikiem, który znajduje się na końcu zdania w bezokoliczniku. W przypadku czasowników rozdzielnie złożonych słowo <em>zu</em> występuje między przedrostkiem a czasownikiem głównym, a w przypadku bezokoliczników złożonych poprzedza ostatni wyraz (np. <em>spazieren zu gehen</em>).</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>1. Es ist nötig, Menschen zu helfen. - To potrzebne, by pomagać ludziom.  </p>
+<p>2. Wir beginnen bald, Rugby zu spielen. - Zaraz zaczynamy grać w rugby. </p>
+<p>3. Er hat vor, an dem Sporttag teilzunehmen. - On ma zamiar wziąć udział w dniu sportu. </p>
+<p>4. Es ist wichtig, sich für Freiwilligenarbeit zu engagieren. - Ważne jest, by angażować się w wolontariat. </p>
+<p> </p>
+<p> </p>
+<p>Konstrukcja bezokolicznik + zu polega na umieszczeniu słowa <em>zu</em> przed drugim czasownikiem, który znajduje się na końcu zdania w bezokoliczniku. W przypadku czasowników rozdzielnie złożonych słowo <em>zu</em> występuje między przedrostkiem a czasownikiem głównym, a w przypadku bezokoliczników złożonych poprzedza ostatni wyraz (np. <em>spazieren zu gehen</em>).</p>
+<p>Występuje w zdaniu po wszystkich czasownikach z wyjątkiem czasowników modalnych, <em>helfen</em> (pomagać), <em>hören</em> (słyszeć, słuchać), <em>sehen</em> (widzieć, patrzeć), <em>lassen</em> (kazać, zostawiać, zlecać), <em>spüren</em> (czuć), <em>fühlen</em> (czuć), <em>gehen</em> (chodzić), <em>kommen</em> (iść, przychodzić), <em>lernen</em> (uczyć się), <em>lehren</em> (uczyć), <em>bleiben</em> (zostawać).</p><br>

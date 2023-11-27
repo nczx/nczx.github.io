@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Sytuacja polityczna w Polsce w latach 1944-1947:</strong></p>
+<ul>
+<li>
+<strong>lipiec 1944</strong> <strong>r. </strong>- powołanie <strong>Polskiego Komitetu Wyzwolenie Narodowego (PKWN) w Moskwie</strong> - marionetkowego, tymczasowego organu władzy wykonawczej w Rzeczypospolitej. Na jego czele stanął Edward Osóbka - Morawski. W skład organu wchodzili działacze Związku Patriotów Polskich (ZPP) i członkowie Krajowej Rady Narodowej.  </li>
+<li>Nowy organ władzy był całkowicie zależny od Związku Sowieckiego oraz jego przywódcy - Józefa Stalina. </li>
+<li>Siedziba PKWN mieściła się w Lublinie. Sprawował on władzę na terenach na zachód od linii Curzona (Polska lubelska). Wprowadzono tam nowy podział administracyjny, a jego strukturami zarządzali komuniści. </li>
+<li>
+<strong>6 września 1944 r.</strong> - PKWN wydał dekret o reformie rolnej, którą przeprowadzano bez odszkodowań dla dotychczasowych obywateli.</li>
+<li>
+<strong>31 grudnia 1944 r.</strong> -  PKWN za zgodą Stalina został przekształcony w <strong>Rząd Tymczasowy Rzeczypospolitej Polskiej</strong>. Premierem został Edward Osóbka - Morawski. </li>
+<li>
+<strong>luty 1945 r.</strong> - rząd przeniósł swoją siedzibę do Warszawy. </li>
+<li>
+<strong>marzec 1945 r.</strong> - nastąpiło aresztowanie <strong>16 przywódców Polskiego Państwa Podziemnego </strong>m.in. Leopolda Okulickiego, Jana Stanisława Jankowskiego, Kazimierza Pużaka. Zostali oni wywiezieni do Moskwy, gdzie w dn. 18 - 21 czerwca 1945 r. odbył się dla nich proces pokazowy (<strong>proces szesnastu</strong>). Aresztowanych skazano na kilkuletnie więzienie, które nie wszyscy przeżyli. </li>
+<li>
+<strong>28 czerwca 1945 r.</strong> - powołano <strong>Tymczasowy Rząd Jedności Narodowej (TRJN)</strong>. Jego premierem został Edward-Osóbka Morawski, a wicepremierami: Władysław Gomułka oraz Stanisław Mikołajczyk. Polska Partia Robotnicza zatrzymała wszystkie kluczowe ministerstwa. </li>
+<li>
+<strong>5 lipca 1945 r.</strong> - TRJN został uznany przez Wielką Brytanię i Stany Zjednoczone. Wycofały one swoje poparcie dla Rządu Polskiego na Wychodźstwie.</li>
+<li>
+<strong>30 czerwca 1946 r.</strong> - komuniści zorganizowali <strong>referendum ludowe</strong>, na którym wzywali do głosowania <strong>"trzy razy tak</strong>". Głosowanie poprzedziła kampania propagandowa komunistów. Stosowano terror i przeprowadzano aresztowania przeciwników politycznych.</li>
+<li>
+<strong>19 stycznia 1947 r.</strong> - przeprowadzono<strong> wybory do sejmu ustawodawczeg</strong>o. Wyniki głosowania zostały sfałszowane przez komunistów. Według oficjalnych danych Blok Demokratyczny uzyskał 80% głosów, PSL - 10%, a pozostałe partie - 10%.</li>
+<li>
+<strong>19 lutego 1947 r.</strong> - sejm uchwalił tzw. małą konstytucję. Głową państwa został prezydent, wybierany przez parlament na okres 7 lat. Urząd ten objął <strong>Bolesław Bierut</strong>. Władzę wykonawczą sprawował sejm. Na jego czele stanął <strong>Józef Cyrankiewicz</strong>.</li>
+<li>Powołano<strong> Radę Państwa</strong> - do jej kompetencji należało m.in. wyrażanie zgody na uchwalanie budżetu oraz wstępne zatwierdzanie dekretów z mocą ustawy wydawanych przez rząd. W skład Rady Państwa wchodzili: prezydent, marszałek i wicemarszałkowie sejmu, prezes Najwyższej Izby Kontroli oraz kilku posłów.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Metody, z których wykorzystaniem komuniści zdobyli władzę w kraju:</strong></p>
+<ul>
+<li>
+<strong>izolacja rządu londyńskiego przez komunistów</strong>, np. dymisja premiera Stanisława Mikołajczyka, który nie chciał zgodzić się na granicę przebiegającą wzdłuż linii Curzona,  </li>
+<li>stacjonowanie na obszarze Polski Lubelskiej żołnierzy <strong>Armii Czerwonej,</strong> a na dwóch mieszkańców - przypadał 1 <strong>funkcjonariusz NKWD,</strong> </li>
+<li>tworzenie przez komunistów <strong>partii fasadowych,</strong> które odtworzono, by zamknąć usta osobom nie wierzącym w demokratyczne intencje komunistów (fikcja demokracji). Były to: PPS (Polska Partia Socjalistyczna), SL (Stronnictwo Ludowe), SD (Stronnictwo Demokratyczne), </li>
+<li>
+<strong>rozprawa z przywódcami Polski Podziemnej</strong>, czyli proces szesnastu. Dowództwo Armii Czerwonej zaprosiło na rozmowy do Moskwy szesnastu przywódców Polski Podziemnej, m.in. Leopolda Okulickiego "Niedźwiadka", Jana Stanisława Jankowskiego - Delegata Rządu na Kraj oraz Kazimierza Pużaka - przewodniczącego Rady Jedności Narodowej, którzy zostali aresztowani i pod zarzutem prowadzenia wrogiej działalności wobec ZSRS -  skazani w procesie szesnastu na kary więzienia. Większość skazanych już z więzienia nie wyszła. Proces pokazał prawdziwe oblicze "nowej władzy",</li>
+<li>komuniści przy pomocy NKWD zwalczali przedstawicieli władz Polski Podziemnej, zwłaszcza AK i WiN-u, </li>
+<li>
+<strong>stosowanie masowego terroru</strong> - NKWD oraz UB niszczyli wszystkich, którzy przeciwstawiali się nowej władzy,</li>
+<li>
+<strong>sfałszowanie</strong> przez komunistów referendum <strong>"3 razy tak"</strong> (30 czerwca 1946 r.) - liczne fałszerstwa w komisjach obwodowych i okręgowych,</li>
+<li>
+<strong>skrytobójstwa</strong> dokonywane na przedstawicielach opozycji - tylko jesienią 1947 r. w niewyjaśnionych okolicznościach zanotowano 30 wypadków śmierci. Za tymi morderstwami stało UB, </li>
+<li>
+<strong>masowe aresztowania</strong>, </li>
+<li>
+<strong>sfałszowanie wyborów do Sejmu</strong> ustawodawczego (19 stycznia 1947 r.).</li>
+</ul><br>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>A. Er ist im Juni 1981 in der Schweiz geboren. Er ist 173 cm groß und sehr sportlich. Er ist verheiratet und hat einen Sohn und eine Tochter. Er hat vier olympische Goldmedaillen beim Skispringen gewonnen.<br/>Das ist <strong>Simon</strong> <strong>Amman</strong>. </p>
+<p><em>Urodził się w czerwcu 1981 roku w Szwajcarii. Ma 173 cm wzrostu i jest bardzo wysportowany. Jest żonaty, ma syna i córkę. Wygrał cztery złote medale olimpijskie w skokach narciarskich. </em></p>
+<p> </p>
+<p>B. Sie ist in Linz in Österreich geboren. Als Teenager hat sie Saxophonspielen gelernt. Sie hat an der Castingshow "Starmania" teilgenommen. Sie ist sozial engagiert, hilft in einem Kinderhospiz und unterstützt die "McDonald´s Kinderhilfe Stiftung". Sie hat eine Tochter. <br/>Das ist <strong>Christina</strong> <strong>Stürmer</strong>. </p>
+<p><em>Urodziła się w Austrii, w mieście Linz. Jako nastolatka uczyła się gry na saksofonie. Brała udział w programie "Starmania". Angażuje się społecznie, pomaga w hospicjum dla dzieci i wspiera Fundację Ronalda McDonalda. Ma córkę. </em></p>
+<p> </p>
+<p>C. Er ist in Barcelona geboren. Er ist zweisprachig: Deutsch und Spanisch. Er hat mit vielen internationalen Stars (mit Regisseuren und Schauspielern) zusammengearbeitet. International bekannt ist er durch die Hauptrolle in dem Kinofilm "Good Bye, Lenin!" (2003) geworden. Den Film haben über sechs Millionen Menschen in der Welt gesehen. Er hat einen Sohn, er heißt Anton. <br/>Das ist <strong>Daniel</strong> <strong>Brühl</strong>. </p>
+<p><em>Urodził się w Barcelonie. Jest dwujęzyczny: język niemiecki i hiszpański. Współpracował z wieloma międzynarodowymi gwiazdami (reżyserami i aktorami). Światową sławę zyskał dzięki roli w filmie kinowym "Good Bye, Lenin!" (2003). Film obejrzało ponad 6 milionów osób na całym świecie. Ma syna o imieniu Anton. </em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>- Wen möchtest du kennen lernen und warum? (Kogo chciałbyś poznać i dlaczego?)  <br/>- Ich möchte Christina Stürmer kennen lernen, weil ich mich für Popmusik interessiere. (Chciałbym poznać Christinę Stürmer, ponieważ interesuję się popem.) </p>
+<p>- Wen möchtest du kennen lernen und warum? (Kogo chciałbyś poznać i dlaczego?) <br/>- Ich möchte Simon Amman kennen lernen, weil ich mich für Skispringen interessiere. (Chciałbym poznać Simona Ammana, ponieważ interesuję się skokami narciarskimi.) </p>
+<p>- Wen möchtest du kennen lernen und warum? (Kogo chciałbyś poznać i dlaczego?) <br/>- Ich möchte Daniel Brühl kennen lernen, weil ich mich für Hollywoodfilme interessiere. (Chciałbym poznać Daniela Brühla, ponieważ interesuję się filmami z Hollywood.) </p>
+<p><br/>Po spójniku <em>weil</em> (ponieważ) obowiązuje stosowanie końcowego szyku zdania. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Daniel Brühl hat mit vielen Stars zusammengearbeitet. <br/><em>Daniel Brühl współpracował z wieloma gwiazdami.  </em></p>
+<p>Daniel Brühl ist international bekannt geworden. <br/><em>Daniel Brühl zdobył międzynarodową sławę. </em></p>
+<p>Christina Stürmer hat an einer Castingshow teilgenommen. <br/><em>Christina Stürmer brała udział w programie typu talent show. </em></p>
+<p>Christina Stürmer hat Saxophonspielen gelernt. <br/><em>Christina Stürmer uczyła się grać na saksofonie. </em></p>
+<p>Simon Amman ist in der Schweiz geboren. <br/><em>Simon Amman urodził się w Szwajcarii. </em></p>
+<p>Simon Amman hat vier olympische Goldmedaillen gewonnen. <br/><em>Simon Amman wygrał cztery złote medale olimpijskie. </em></p><br>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Skischule  </p>
+<p>2. Snowboard </p>
+<p>3. einen Helm </p>
+<p>4. ausleihen </p>
+<p>5. auswählen </p>
+<p><br/><em>Frank rozmawia przez telefon ze <strong>szkołą</strong> <strong>narciarską</strong>, ponieważ nie potrafi jeździć na <strong>snowboardzie</strong>. Nie ma własnego sprzętu. Do jazdy na snowboardzie potrzebuje deski snowboardowej, butów i <strong>kasku</strong>. Wszystko to może <strong>wypożyczyć</strong> w wypożyczalni sprzętu sportowego "Meier". Frank może zamówić sprzęt online. Musi tylko <strong>wybrać</strong> miejsce odbioru. </em></p>
+<p> </p>
+<p><br/>Podano dodatkowo:</p>
+<p>Skilehrerteam - drużyna instruktorów narciarstwa </p>
+<p>kaufen - kupować </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Was bietet "Sportausrüstung Meier"? <br/><em>Co oferuje "Wypożyczalnia sprzętu sportowego Meier"? </em></p>
+<p>A. Bei "Sportausrüstung Meier" kann man Sportausrüstungen nur ausleihen. - Sprzęt sportowy można jedynie wypożyczyć.<br/><strong>B. "Sportausrüstung Meier" verkauft und verleiht Sportausrüstungen.</strong> - "Wypożyczalnia sprzętu sportowego Meier" sprzedaje i wypożycza sprzęt.  </p>
+<p>"Im Sommer verkaufen und verleihen wir Equipment für Nordic Walking und zum Wandern, aber auch Mountainbikes". - Latem sprzedajemy i wypożyczamy sprzęt do nordic walking, wędrowania, a także rowery górskie. </p>
+<p><br/>2. Wann kann man Sportausrüstungen erhalten?<br/><em>Kiedy można otrzymać sprzęt sportowy? </em></p>
+<p><strong>A. Ganzjährig.</strong> - Przez cały rok. <br/>B. Im Winter. - W zimie. </p>
+<p>"Wir haben Sportausrüstungen für das ganze Jahr". - Mamy sprzęt sportowy na cały rok.</p>
+<p><br/>3. Was bietet "Sportausrüstung Meier" seinen Kunden noch?<br/><em>Co jeszcze oferuje swoim klientom "Wypożyczalnia sprzętu sportowego Meier"?</em></p>
+<p>A. Kompetente Beratung und Service. - Kompetentne doradztwo i serwis. <br/><strong>B. Preisgünstige Sportausrüstungen und kompetente Beratung.</strong> - Sprzęt sportowy w korzystnych cenach i kompetentne doradztwo. </p>
+<p>"[...] wenn sie eine moderne Sportausrüstung zu einem guten Preis brauchen. [...] Bei allen Fragen beraten wir Sie gern vor Ort. Kundenservice ist uns wichtig. Unsere kompetenten Mitarbeiter warten auf Sie". - [...] kiedy potrzebują państwo nowoczesnego sprzętu sportowego w dobrej cenie. [...] Na wszystkie pytania odpowiemy państwu na miejscu. Obsługa klienta jest dla nas ważna. Nasi kompetentni pracownicy czekają na państwa. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>- Ich möchte Ski fahren und brauche einen Skianzug. (Chciałbym jeździć na nartach i potrzebuję kombinezonu narciarskiego.) <br/>- Du kannst ihn online bestellen. Du musst nur die Kleidergröße eintragen. (Możesz zamówić go online. Musisz podać tylko rozmiar ubrania.)  </p>
+<p>- Ich möchte Ski fahren und brauche Skistöcke. (Chciałbym jeździć na nartach i potrzebne mi są kijki.) <br/>- Du kannst sie online bestellen. Du musst nur die Körpergröße in cm eintragen. (Możesz zamówić je online. Musisz podać tylko wzrost w centymetrach.) </p>
+<p>- Ich möchte snowboarden und brauche ein Snowboard. (Chciałbym jeździć na snowboardzie i potrzebuję deski snowboardowej.) <br/>- Du kannst es online bestellen. Du musst nur die Körpergröße in cm und dein Gewicht eintragen. (Możesz zamówić ją online. Musisz tylko podać wzrost w centymetrach i twoją wagę.) </p>
+<p>- Ich möchte Mountainbike fahren und brauche einen Helm. (Chciałbym jeździć na rowerze górskim i potrzebuję kasku.) <br/>- Du kannst ihn online bestellen. Du musst nur Art und Größe auswählen. (Możesz zamówić go online. Musisz wybrać tylko rodzaj i rozmiar.) </p><br>

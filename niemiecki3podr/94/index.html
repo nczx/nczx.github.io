@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <strong>C.</strong> Globetrotter - globtroter </p>
+<p>"Reisen ist mein Leben. Ich bin einundzwanzig und habe schon viele Länder in Europa besucht". - Podróżowanie to moje życie. Mam 21 lat i odwiedziłem już wiele krajów w Europie.  </p>
+<p>2. <strong>A.</strong> Extremsportler - osoba uprawiająca sporty ekstremalne </p>
+<p>"Drachenfliegen, Bungeespringen, Fallschirmspringen und Freiklettern finde ich am besten". - Uważam, że najlepsze są latanie na lotni, skoki na bungee, skoki ze spadochronem i wspinaczka klasyczna. </p>
+<p>3. <strong>B.</strong> Freiwilliger - wolontariusz </p>
+<p>"Menschen und Tiere brauchen unsere Hilfe. Helfen ist das Ziel meines Lebens". - Ludzie i zwierzęta potrzebują naszej pomocy. Pomaganie to cel mojego życia. </p>
+<p>4. <strong>D.</strong> Ökofreak - fan ekologii </p>
+<p>"Ökologie spielt eine wichtige Rolle in meinem Leben". - Ekologia odgrywa ważną rolę w moim życiu. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Ein Extremsportler ist ein Mensch, der Adrenalin mag. - Sportowiec ekstremalny to człowiek, który lubi adrenalinę.  </p>
+<p>2. Ein Freiwilliger ist eine Person, die gern Menschen und Tieren hilft. - Wolontariusz to osoba, która chętnie pomaga ludziom i zwierzętom.</p>
+<p>3. Ein Ökofreak repräsentiert ein Lebensmodell, das die Umwelt schützt. - Fan ekologii reprezentuje styl życia, który chroni środowisko.</p>
+<p>4. Globetrotter sind Menschen, die sehr viel reisen. - Globtroterzy to ludzie, którzy bardzo dużo podróżują. </p>
+<p> </p>
+<p>Zdania przydawkowe to zdania poboczne. Oznacza to, że czasownik zajmuje ostatnie miejsce. Tworzymy je za pomocą zaimka względnego <em>der</em> / <em>die </em>/ <em>das </em>/<em> die</em>, który odmienia się przez przypadki. Funkcja tych zdań to opisanie rzeczownika. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Zaimki względne: </p>
+<table border="1" style="height: 168px;width: 644px;text-align: center;border-collapse: collapse;">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 126px;height: 29px;"> </td>
+<td style="background-color: #9ccc65;height: 29px;">Maskulinum </td>
+<td style="background-color: #9ccc65;height: 29px;">Femininum </td>
+<td style="background-color: #9ccc65;height: 29px;">Neutrum </td>
+<td style="background-color: #9ccc65;height: 29px;">Plural</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 126px;height: 46px;">Nominativ <br/>mianownik </td>
+<td style="width: 126px;height: 46px;">der</td>
+<td style="width: 126px;height: 46px;">die  </td>
+<td style="width: 125px;height: 46px;">das</td>
+<td style="width: 125px;height: 46px;">die</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 126px;height: 46px;">Dativ <br/>celownik </td>
+<td style="width: 126px;height: 46px;">dem</td>
+<td style="width: 126px;height: 46px;">der</td>
+<td style="width: 125px;height: 46px;">dem</td>
+<td style="width: 125px;height: 46px;">denen </td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 126px;height: 47px;">Akkusativ <br/>biernik </td>
+<td style="width: 126px;height: 47px;">den</td>
+<td style="width: 126px;height: 47px;">die</td>
+<td style="width: 125px;height: 47px;">das</td>
+<td style="width: 125px;height: 47px;">die</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p> </p>
+<p><em>Cześć Hannes!<br/>Muszę ci napisać, co mi się dzisiaj przytrafiło. Poznałem pewną miłą dziewczynę. Ma na imię Simone. Jest wolontariuszką w domu spokojnej starości. Jest taka wrażliwa i opiekuńcza. Sądzę, że się zakochałem. Simone pomaga wielu seniorom, których odwiedza raz w tygodniu. Ludzie, którym pomaga, są bardzo wdzięczni. Simone uważa, że pan Schmidt, któremu czyta książki, jest wyjątkowo miły. Jest chory i stary. Simone uwielbia też zwierzęta. Szczególnie konie. Opiekuje się koniem o imieniu Dino, którego co piątek szczotkuje i karmi. Jutro idę z Simone do domu spokojnej starości, ponieważ chcę spędzać z nią dużo czasu. Jest osobą, którą uważam za wspaniałą. To się nazywa miłość od pierwszego wejrzenia! </em><br/><em>Trzymaj się. Odezwę się wkrótce!</em><br/><em>Jonas </em></p><br>

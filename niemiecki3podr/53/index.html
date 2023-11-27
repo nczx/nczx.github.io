@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Lauras Mutter hat den grünen Mantel gekauft.<br/><em>Mama Laury kupiła zielony płaszcz.  </em></p>
+<p>2. Laura hat für ihre Mutter die schwarze Tasche ausgesucht.<br/><em>Laura znalazła dla mamy czarną torebkę. </em></p>
+<p>3. Dazu passen am besten die eleganten Schuhe. <br/><em>Najlepiej pasują do tego eleganckie buty. </em></p>
+<p><br/><br/>Zadając pytanie o konkretną rzecz lub osobę, chcąc uzyskać konkretną informację, używamy zaimka pytającego "welch-", który odmienia się przez przypadki i rodzaje. <span style="text-decoration: underline;">Odmienia się on tak jak rodzajnik określony.</span> Odpowiadając na pytanie zadane zaimkiem "welch-", stosujemy rodzajnik określony.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>- Welches Sweatshirt hat Agnes ausgesucht? Das schwarze oder das graue? (Którą bluzę wyszukała Agnes? Czarną czy szarą?) <br/>- Sie hat das graue Sweatshirt ausgesucht. (Wyszukała szarą bluzę.)  </p>
+<p>- Welches T-Shirt hat die Tochter gekauft? Das blaue oder das weiße? (Którą koszulkę kupiła córka? Niebieską czy białą?) <br/>- Die Tochter hat das weiße T-Shirt gekauft. (Córka kupiła białą koszulkę.) </p>
+<p>- Welche Winterjacke hat Laura gekauft? Die kurze und modische oder die lange und modische? (Którą kurtkę zimową kupiła Laura? Krótką i modną czy długą i modną?) <br/>- Laura hat die kurze und modische Winterjacke gekauft. (Laura kupiła krótką i modną kurtkę zimową.)</p>
+<p>- Welche Schuhe passen dazu? Die eleganten oder die sportlichen? (Które buty do tego pasują? Eleganckie czy sportowe?) <br/>- Dazu passen die sportlichen Schuhe. (Do tego pasują sportowe buty.) </p>
+<p> </p>
+<p>Zadając pytanie o konkretną rzecz lub osobę, chcąc uzyskać konkretną informację, używamy zaimka pytającego "welch-", który odmienia się przez przypadki i rodzaje. Odmienia się on tak jak rodzajnik określony. Odpowiadając na pytanie zadane zaimkiem "welch-", stosujemy rodzajnik określony.</p>
+<p><br/>Odmiana przymiotnika z rodzajnikiem określonym:</p>
+<table border="1" style="height: 149px;width: 523px;text-align: center;">
+<tbody>
+<tr style="height: 29px;">
+<td rowspan="2" style="width: 90px;height: 60px;"> </td>
+<td colspan="3" style="width: 289px;height: 29px;background-color: #ffca28;">Singular </td>
+<td rowspan="2" style="width: 122px;height: 60px;background-color: #ffca28;">Plural </td>
+</tr>
+<tr style="height: 31px;">
+<td style="background-color: #ffe082;height: 31px;">Maskulinum </td>
+<td style="background-color: #ffe082;height: 31px;">Femininum </td>
+<td style="background-color: #ffe082;height: 31px;">Neutrum </td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 90px;height: 17px;">Nominativ<br/>mianownik  </td>
+<td style="width: 100px;height: 17px;">-e</td>
+<td style="width: 94px;height: 17px;">-e</td>
+<td style="width: 83px;height: 17px;">-e</td>
+<td style="width: 122px;height: 17px;">-en</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 90px;height: 17px;">Akkusativ<br/>biernik </td>
+<td style="width: 100px;height: 17px;">-en</td>
+<td style="width: 94px;height: 17px;">-e</td>
+<td style="width: 83px;height: 17px;">-e</td>
+<td style="width: 122px;height: 17px;">-en</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+<p>A. Laura zieht für die Schule das schwarze T-Shirt und die blaue Jeans an. Sie trägt die weißen Sportschuhe und die dunkle Sonnenbrille. <br/><em>Laura ubiera do szkoły czarny t-shirt i niebieskie jeansy. Nosi białe buty sportowe i ciemne okulary przeciwsłoneczne. </em></p>
+<p>B. Laura zieht für die Party das schicke Kleid an. Sie trägt die eleganten Schuhe mit hohen Absätzen. <br/><em>Laura ubiera na imprezę stylową sukienkę. Nosi eleganckie buty z wysokimi obcasami. </em></p>
+<p> </p>
+<p>Odpowiedzią na pytanie <em>welch-?</em> jest rzeczownik z rodzajnikiem określonym.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
+Indywidualne<br>

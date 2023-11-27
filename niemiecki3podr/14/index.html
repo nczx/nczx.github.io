@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Warum ist Tamara nach Wien gefahren? <br/><em>Dlaczego Tamara pojechała do Wiednia?</em></p>
+<p>A. Sie hat an einem Klassenausflug teilgenommen. - Brała udział w wycieczce klasowej. <br/>B. Ihre Eltern haben die Reise organisiert. - Rodzice zorganizowali wycieczkę. <br/><strong>C. Familie Schwalbe hat Tamara und ihre Eltern eingeladen. - Rodzina Schwalbe zaprosiła Tamarę i jej rodziców. </strong><br/>D. Sie hat an einem Schüleraustausch teilgenommen. - Brała udział w wymianie uczniowskiej.  </p>
+<p>"Ich war dort aber nicht allein, sondern mit meinen Eltern. Familie Schwalbe (ich habe bei der Familie vor einem Jahr beim Austausch gewohnt) hat uns nach Wien eingeladen". - Nie byłam tam jednak sama, lecz z rodzicami. Rodzina Schwalbe (mieszkałam u tej rodziny rok temu na wymianie) zaprosiła nas do Wiednia. </p>
+<p><br/>2. Was ist der Prater? <br/><em>Co to jest Prater?</em></p>
+<p>A. Ein Zoo. - Ogród zoologiczny. <br/>B. Ein Paradies für Senioren. - Raj dla seniorów. <br/>C. Ein Stadtpark. - Park miejski. <br/><strong>D. Ein Vergnügungspark. - Park rozrywki. </strong></p>
+<p>"Dann waren wir alle zusammen im Prater. Das ist ein Vergnügungspark. Ein Paradies für Alt und Jung". - Później wszyscy razem odwiedziliśmy Prater. To park rozrywki. Raj dla starszych i młodszych. </p>
+<p><br/>3. Was ist das Hauptthema des Textes? <br/><em>Co jest głównym tematem tekstu?</em></p>
+<p>A. Klassenausflug nach Wien. - Wycieczka klasowa do Wiednia. <br/><strong>B. Wochenendbesuch der Familie in Wien. - Weekendowy pobyt rodziny w Wiedniu.</strong><br/>C. Wiens Attraktionen. - Atrakcje Wiednia. <br/>D. Freizeit in der Stadt. - Czas wolny w mieście. </p>
+<p>"Das letzte Wochenende war ich in Wien. Ich war dort aber nicht allein, sondern mit meinen Eltern. [...] Wir haben schnell unsere Koffer gepackt und sind mit dem Auto nach Wien gefahren. [...] Und ich habe mit Mama und Papa kein einziges Mal gestritten". - W ostatni weekend byłam w Wiedniu. Nie byłam tam jednak sama, lecz z rodzicami. [...] Szybko spakowaliśmy walizki i pojechaliśmy do Wiednia samochodem. [...] Ani raz nie pokłóciłam się z mamą i tatą. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. <strong>A.</strong> gemacht </p>
+<p>Podano błędnie: gedacht - denken - myśleć.</p>
+<p>2. <strong>A.</strong> passiert </p>
+<p>Imiesłów czasu przeszłego czasownika <em>passieren</em> to <em>passiert</em>.  </p>
+<p>3.<strong> B.</strong> gesehen </p>
+<p>Imiesłów czasu przeszłego czasownika <em>sehen</em> to <em>gesehen</em>. </p>
+<p>4. <strong>B.</strong> spazieren gegangen </p>
+<p>Imiesłów czasu przeszłego czasownika <em>gehen</em> to <em>gegangen</em>. </p>
+<p>5. <strong>B.</strong> gehört</p>
+<p>Imiesłów czasu przeszłego czasownika <em>hören </em>to <em>gehört</em>. </p>
+<p>6. <strong>B.</strong> gefallen </p>
+<p>Podane błędnie: fallen - upadać, padać. <br/>Czasownik <em>gefallen</em> oznacza podobać się, a imiesłów czasu przeszłego to <em>gefallen</em>. </p>
+<p>7. <strong>A.</strong> gesprochen </p>
+<p>Podano błędnie: gebrochen - brechen - łamać. </p>
+<p><br/><br/>Tłumaczenie dialogu: </p>
+<p><em>- Hej, Ilse! Miło cię widzieć! </em><br/><em>- Hej, Tamara! Wszystko w porządku w Wiedniu? Jak minął dzisiaj dzień? Co robiłaś?</em><br/><em>- Dzień był super! Rodzina Schwalbe wszystko dokładnie zaplanowała. Tak wiele się dzisiaj wydarzyło. </em><br/><em>- Tak? Opowiadaj! </em><br/><em>- Ta, najpierw wszyscy byliśmy w mieście, w centrum. Wiesz, że lubię architekturę. Wiedeń jest taki piękny.</em><br/><em>- Widzieliście dom Hundertwassera?</em><br/><em>- Jasne! A później katedrę św. Szczepana i spacerowaliśmy wzdłuż Kärntner Straße. W niedzielę odwiedziliśmy pałac Schönbrunn. </em><br/><em>- Pałac Schönbrunn?</em><br/><em>- Tak, jest przepiękny. Każdego roku odwiedza go mnóstwo turystów.</em><br/><em>- Tak, słyszałam o tym pałacu. </em><br/><em>- Bardzo się nam podobał. </em><br/><em>- Dzień był więc bardzo intensywny. Pewnie jesteś teraz zmęczona, prawda?</em><br/><em>- O tak, jestem wykończona. Ale opłacało się. Dużo mówiłam też po niemiecku.</em><br/><em>- Super! Wracacie jutro, prawda?</em><br/><em>- Zgadza się. Widzimy się we wtorek. Cześć!</em><br/><em>- Pa, do wtorku! </em></p><br>

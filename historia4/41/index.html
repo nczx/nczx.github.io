@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Sytuacja poszczególnych narodów w okupowanej Europie zależała od takich czynników jak: </strong></p>
+<ul>
+<li>przekonanie nazistów o wyższości Niemców nad innymi narodowościami, </li>
+<li>polityka Hitlera wobec podbitych państw, przywódca III Rzeszy inaczej traktował państwa Europy Zachodniej, a inaczej Europy Środkowej i Wschodniej zamieszkała przez ludność słowiańską. </li>
+</ul>
+<p>Zgodnie z planami Adolfa Hitlera kraje Europy Zachodniej miały stać się częścią powojennego świata. Dlatego też mieszkańców tych państw nie spotykały aż tak surowe represje, jak to miało miejsce w przypadku Europy Wschodniej. Okupacja była traktowana jako tymczasowe rozwiązanie. Inaczej traktowano więc narody germańskie (np. Holendrów czy Duńczyków) oraz nacje związane z historią Niemiec (np. Alzatczyków). Także we Francji nie organizowano masowych egzekucji, łapanek czy grabieży majątków. Niemcy nie zrezygnowali jednak z pełnej kontroli tych obszarów. W każdym okupowanym państwie stacjonowało niemieckie wojsko oraz działała Służba Bezpieczeństwa, które okrutnie reagowały wobec działalności ruchu oporu. </p>
+<p>Chociaż w Protektoracie Czech i Moraw urzędował czeski prezydent i rząd, były to jednak pozory niezależności. Protektorat był w pełni podporządkowany polityce Niemiec. Najbardziej znanym z niemieckich protektorów był Reinhard Heydrich. Polityka, jaką Niemcy prowadzili w Czechach różniła się od tej, której doświadczyło społeczeństwo polskie. Wynikało to z gospodarczego znaczenia Protektoratu Czech i Moraw, w którym funkcjonowały zakłady Škody, w których produkowano czołgi, artylerię i amunicję.</p>
+<p>Niemcy w bezwzględny sposób odnosili się do ludności Europy Wschodniej. Słowian, Romów i Żydów traktowano jako podludzi. Do grupy tej zaliczano także osoby niepełnosprawne czy homoseksualne. Naziści dążyli więc do ich wyeliminowania. Argumentowali to koniecznością poszerzenie przestrzeni życiowej dla Niemców, którzy należą do przedstawicieli nadludzi. W tym celu został opracowany Generalny Plan Wschodni. Ci, których oszczędzono mieli stać się sługami i wykonywać najcięższą pracę niewolniczą. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Kraje, w których opór wobec niemieckiej okupacji był szczególnie silny to:</strong></p>
+<ul>
+<li>Polska,  </li>
+<li>Francja, </li>
+<li>Grecja, </li>
+<li>Jugosławia,</li>
+<li>Dania, </li>
+<li>Norwegia, </li>
+<li>Belgia,</li>
+<li>Holandia. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Postaw mieszkańców państw Europy wobec władz okupacyjnych:</strong></p>
+<ul>
+<li>
+<strong>kolaboracja </strong>to współpraca z nieprzyjacielem, okupantem. Podczas II wojny światowej naziści nawiązywali współpracę z lokalnymi partiami faszystowskimi lub narodowymi. Można wyróżnić kolaborację polityczną, ideologiczną i wojskową. Pierwsza z wymienionych była realizowana przez instytucje władzy (np. rząd). Kolaboracja ideologiczna wynikała ze zbliżenia programowego, wojskowa zaś polegała m.in. na udziale ochotniczych formacji wojskowych w armii niemieckiej. </li>
+<li>
+<strong>ruch oporu </strong>to walka społeczeństw przeciwko okupacyjnym. Przybierał różne formy i funkcjonował w wielu państwach, m.in. we Francji, Polsce, Jugosławii, Grecji. Ruch oporu narodził się we Francji. Francuski Wewnętrzny Ruch Oporu swą działalność rozpoczął w latach 40. XX wieku, skierowany był przeciwko niemiecko-włoskiemu okupantowi oraz władzom kolaboracyjnym podczas II wojny światowej. W 1940 r. miały miejsce pierwsze manifestacje paryskich studentów, będące wyrazem sprzeciwu wobec okupacji niemieckiej, włoskiej oraz marionetkowemu rządowi w Vichy. Ruch Oporu najsilniej rozwijał się w południowej Francji, najsłabiej zaś w strefie północnej. Był podporządkowany władzom emigracyjnym Francji, które były kierowane przez Charles’a de Gaulle’a. <em>La Resistance</em> organizował pomoc dla jeńców wojennych, ale również propagandę, działania sabotujące i dywersyjne. Udzielał wsparcia akcjom zbrojnym prowadzonym przez siły alianckie.</li>
+<li>
+<strong>prowadzenie walki zbrojnej</strong>, np. sabotaż lub dywersja, angażowanie się w działania partyzanckie. </li>
+<li>
+<strong>stosowanie biernego oporu</strong>, np. sabotowanie decyzji i zarządzeń władz, organizowanie strajków i manifestacji, prowadzenie działalności na czarnym rynku.</li>
+<li>
+<strong>obojętność</strong> wynikająca z obawy o utratę życia, podjęcie próby "normalnego" funkcjonowania w nowych okolicznościach.</li>
+</ul><br>

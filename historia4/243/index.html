@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Przyczyny upadku bloku wschodniego w latach 80. i 90. XX w. to np.:</strong></p>
+<ul>
+<li>znaczne pogorszenie stanu gospodarki, </li>
+<li>niewydolność systemu gospodarki centralnie planowanej,  </li>
+<li>rosnąca przepaść technologiczna między blokiem zachodnim a wschodnim, </li>
+<li>ogromne zadłużenia państw bloku wschodniego, które uniemożliwiały rozwój technologiczny i wzrost innowacyjności, </li>
+<li>pogarszanie się stopy życiowej społeczeństw państw komunistycznych, </li>
+<li>brak perspektyw i możliwości rozwoju dla ludzi, </li>
+<li>postawa państw Zachodnich wobec USA, </li>
+<li>wielowymiarowe osłabienie ZSRS (polityczne, gospodarcze) w stosunku do Stanów Zjednoczonych, </li>
+<li>wybuch wojny w Afganistanie, </li>
+<li>katastrofa czarnobylska, </li>
+<li>kryzys władzy w ZSRS i przejęcie władzy przez Michaiła Gorbaczowa, który sformułował projekt śmiałych reform - głasnost, pierestrojka, uskorienie, </li>
+<li>Jesień Narodów w państwach bloku komunistycznego,</li>
+<li>blok komunistyczny przestał stanowić polityczny monolit (np. Jugosławia prowadziła własną politykę), </li>
+<li>represje w stosunku do opozycji politycznej stanowiły wyraz niestabilność władzy komunistycznej, </li>
+<li>ukryte bezrobocie, czyli nadmiar niepotrzebnych etatów, </li>
+<li>korupcja, </li>
+<li>wszechobecna cenzura i propaganda. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Katastrofa w Czarnobylu</strong> (26 kwietnia 1986 r.) w znaczący sposób wpłynęła na przemiany społeczno-polityczne w ZSRS. Najważniejsze zmiany to np.:</p>
+<ul>
+<li>katastrofa pokazała, że <strong>partia manipuluje informacjami</strong> i ukrywała przed obywatelami, ale także opinią międzynarodową wydarzenia z Czarnobyla, co negatywnie odbiło się na zdrowiu milionów ludzi,  </li>
+<li>utajnienie informacji przez Moskwę doprowadziło do <strong>erozji zaufania do władz</strong>, </li>
+<li>
+<strong>głasnost</strong> sprzyjała rozprzestrzenianiu informacji i plotek na temat katastrofy, </li>
+<li>wydarzenia w Czarnobylu wzmacniały społeczne przekonanie, że dla władz ważniejszy od ludzkiego zdrowia i życia jest <strong>własny interes</strong>, </li>
+<li>wybuch reaktora jeszcze bardziej<strong> obniżył katastrofalny stan kraju</strong>, a zwłaszcza instalacji atomowych, </li>
+<li>Czarnobyl <strong>skompromitował sowiecki sektor atomowy</strong> i podważył autorytet czołowych uczonych, </li>
+<li>zaniepokojenie stanem środowiska oraz troska o życie i zdrowie ludzkie stały się głośnymi hasłami <strong>ruchów niepodległościowych</strong>,</li>
+<li>Ukraińcy w 1991 r. zagłosowali za <strong>secesją z ZSRR</strong>, </li>
+<li>pod względem politycznym katastrofa czarnobylska przyczyniła się do <strong>upadku ZSRS </strong>w 1991 r.</li>
+</ul>
+<p><img alt="" height="496" src="./data/1189947-0.jpg" width="378"/></p>
+<p>Mapa przedstawiająca przemieszanie się chmury radioaktywnej wyemitowanej po katastrofie w elektrowni atomowej w Czarnobylu, stan na 27 kwietnia 1986 r., źródło zdjęcia: www. przystanekhistoria.pl</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Działania podjęte przez administrację Reagana w stosunku do ZSRS:</strong></p>
+<ul>
+<li>dążenie do ograniczenia wpływów ZSRS na świecie, </li>
+<li>twarda polityka wobec ZSRS,</li>
+<li>nawiązanie współpracy politycznej z Wielką Brytanią i RFN,   </li>
+<li>rozpoczęcie wyścigu zbrojeń przez USA, co wynikało z posiadania przewagi technologicznej i dysponowania potężną gospodarką, </li>
+<li>unowocześnienie amerykańskiej armii, </li>
+<li>rozmieszczenie w Europie rakiet balistycznych - Pershing 2, Cruise, </li>
+<li>militaryzacja przestrzeni kosmicznej (program gwiezdnych wojen) - pozbawienie ZSRS możliwości przeprowadzenia skutecznego ataku nuklearnego na USA i sprawie, że Sowieci staliby się bezbronni w przypadku wojny,</li>
+<li>doprowadzenie do jeszcze większego osłabienia gospodarczego ZSRS poprzez:</li>
+</ul>
+<p>- ograniczenie sprzedaży towarów i usług do państw bloku wschodniego, </p>
+<p>- zmniejszenie przepływu nowych technologii, </p>
+<p>- obniżenie cen surowców, ze sprzedaży których Sowieci czerpali znaczne zyski (nawiązanie przez USA współpracy gospodarczej z Arabią Saudyjską). </p>
+<p><strong>Wpływ polityki administracji Reagana na upadek bloku wschodniego:</strong></p>
+<p>Prezydentura Ronalda Reagana charakteryzowała się twardą polityką wobec ZSRS. Przejawiała się ona m.in. poprzez wyścig ekonomiczny i gospodarczy, który doprowadził do obniżenia cen ropy naftowej oraz nałożenia embarga na nowe technologie. Także ogłoszenie programu gwiezdnych wojen od 1983 r. oraz rozkręcenie wyścigu zbrojeń sprawiło, że Sowieci nie byli w stanie nadążyć w światowym współzawodnictwie z USA i ich sojusznikami. Co więcej, w Afganistanie USA wspierało mudżahedinów, m.in. poprzez dostawy broni, wysyłanie doradców i instruktorów. W innych częściach świata Amerykanie wspierali antykomunistyczne organizacje walczące z lokalnymi reżimami (np. Contras w Nikaragui czy "Solidarność" w Polsce). Stany Zjednoczone chciały doprowadzić do osłabienia ZSRS na wielu płaszczyznach, co w konsekwencji doprowadziło do stopniowego wyswobadzania się państw z zależności sowieckiej, a ostatecznie upadku bloku wschodniego. </p>
+<p><img alt="" height="261" src="./data/1190002-0.jpg" width="205"/></p>
+<p>Ronald Reagan, źródło zdjęcia: Wikimedia Commons. </p><br>

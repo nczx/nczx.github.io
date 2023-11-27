@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <strong>D. Meine Lieblingsjahreszeit</strong> - Moja ulubiona pora roku  </p>
+<p><em>Wyjątkowo lubię lato. Lubię, kiedy jest gorąco i kiedy mocno świeci słońce. W tym czasie mam wakacje i w końcu mogę robić to, co chcę. Kiedy skończy się szkoła, od razu wyjeżdżam - najpierw na obóz młodzieżowy na Sycylię. Lato we Włoszech to moje marzenie. Później odwiedzę babcię w Tatrach. Na początku sierpnia polecę z rodzicami do Egiptu. Potrzebuję nowych ubrań i w weekend idę na zakupy z przyjaciółkami. W letnich miesiącach czuję się najlepiej. A jaka jest wasza ulubiona pora roku?  </em></p>
+<p><br/>2. <strong>A. Wetterprognose fürs Wochenende</strong> - Prognoza pogody na weekend </p>
+<p><em>Nadal jest tu zima! Wprawdzie ociepla się, śnieg przechodzi w deszcz, tylko w Alpach nadal sypie. Ale już w piątek nadejdzie silny wiatr znad Morza Północnego. Kolejny nagły spadek temperatury z dużą ilością śniegu wciąż jest możliwy. Do soboty będzie sypał śnieg na południu Niemiec, przybędzie maksymalnie 20-30 centymetrów nowej pokrywy śnieżnej. Mówimy o temperaturach do -20 stopni lub niższych. Instytut meteorologii informuje, że zima utrzyma się jeszcze przynajmniej do połowy lutego. Dopiero po połowie lutego można spodziewać się pierwszych oznak wiosny. </em></p>
+<p><br/>3. <strong>B. Eigene Tasche dient dem Umweltschutz</strong> - Własna torba służy ochronie środowiska </p>
+<p><em>Byłam pół roku w Niemczech. Od stycznia do połowy czerwca mieszkałam w Hanowerze. Co najbardziej spodobało mi się wśród Niemców? Ich zdanie dotyczące ochrony środowiska. Szczególnie podczas robienia zakupów. W ogóle nie używają foliowych reklamówek. Kiedy idą na zakupy, zabierają ze sobą swoje materiałowe torby. To ma służyć ochronie środowiska. Też się tego nauczyłam. Od tego czasu zawsze mam przy sobie własną torbę. Ostatnio kupiłam kilka rzeczy w butiku: koszulki, nową spódnicę, krótkie spodenki. Wszystko zapakowałam do mojej materiałowej torby. To powinien być nowy trend w Polsce. </em></p>
+<p> </p>
+<p>Nagłówek, który został podany dodatkowo i nie pasuje do żadnego tekstu: </p>
+<p>C. Klamotten rund um das Jahr - Ubrania na cały rok </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Text 1</p>
+<p>1. Im Herbst ist das Wetter ...<br/><em>Pogoda jesienią jest ... </em></p>
+<p>A. fantastisch. - fantastyczna. <br/><strong>B. nicht stabil.</strong> - niestabilna. <br/>C. monoton. - monotonna.  </p>
+<p>2. Die Person fühlt sich im Herbst ...<br/><em>Jesienią ta osoba czuje się ... </em></p>
+<p>A. optimistisch. - optymistycznie. <br/>B. gelangweilt. - znudzona. <br/><strong>C. pessimistisch.</strong> - pesymistycznie. </p>
+<p><br/>Text 2</p>
+<p>1. Die Person hat sich am Wochenende ... angezogen. <br/><em>Ta osoba ubrała się ... w weekend. </em></p>
+<p><strong>A. warm</strong> - ciepło <br/>B. verrückt - zwariowanie <br/>C. kalt - cienko </p>
+<p>2. Die Person ist ...<br/><em>Ta osoba jest ...</em></p>
+<p>A. zufrieden. - zadowolona. <br/><strong>B. verärgert.</strong> - rozzłoszczona. <br/>C. dick. - gruba. </p>
+<p><br/>Text 3</p>
+<p>1. Sonja trägt in der Schule ...<br/><em>W szkole Sonja nosi ...</em></p>
+<p>A. einen eleganten Rock und ein T-Shirt. - elegancką spódnicę i koszulkę. <br/><strong>B. eine Jeans und ein Sweatshirt.</strong> - jeansy i bluzę. <br/>C. einen Minirock oder ein Kleid. - miniówkę lub sukienkę. </p>
+<p>2. Sonja interessiert sich für ...<br/><em>Sonja interesuje się ...</em></p>
+<p><strong>A. die neuesten Trends in der Mode.</strong> - najnowszymi trendami w modzie.  <br/>B. Einkaufen. - zakupami. <br/>C. Partys. - imprezami. </p><br>

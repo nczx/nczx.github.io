@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe rozwiązanie zadania: </p>
+<p><br/>Das ist Patricia. Sie ist nicht groß, sie ist ein Meter fünfundsechzig groß. Ihre Haare sind kurz und blond. Patricia hat grüne Augen. Sie ist pünktlich und ordentlich. In ihrer Freizeit schläft sie gern und sieht gern Filme. Ihre Hobbys sind Kino und Reisen. Sie möchte später einmal Englischlehrerin werden. Das ist ihr Traum.</p>
+<p><em>To jest Patricia. Nie jest wysoka, ma 1,65 m wzrostu. Jej włosy są krótkie i koloru blond. Patricia ma zielone oczy. Jest punktualna i ułożona. W wolnym czasie lubi spać i oglądać filmy. Jej hobby to kino i podróże. W przyszłości chciałaby zostać nauczycielką angielskiego. To jej marzenie. </em></p>
+<p><br/>Das ist Ivan. Er ist groß, er ist ein Meter fünfundachtzig groß. Ivan hat kurze dunkle Haare und graue Augen. Er ist nett, aber auch ein bisschen chaotisch. In seiner Freizeit hilft er gern Tieren und fährt Rad. Sport und Biologie sind seine Hobbys. Er möchte später einmal als Tierarzt arbeiten. </p>
+<p><em>To jest Ivan. Jest wysoki, ma 1,85 m wzrostu. Ivan ma krótkie ciemne włosy i szare oczy. Jest miły, ale również nieco chaotyczny. W wolnym czasie lubi pomagać zwierzętom i jeździć na rowerze. Sport i biologia to jego hobby. W przyszłości chciałby pracować jako weterynarz. </em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Wymienione w nagraniu:</p>
+<p>A. beim Spielen mit Kindern - podczas zabawy z dziećmi </p>
+<p>H. mit Liedern - z piosenek  </p>
+<p>C. mit Apps - dzięki aplikacjom </p>
+<p>M. in der Schule - w szkole </p>
+<p>K. in einem individuellen Unterricht - na lekcjach indywidualnych  </p>
+<p>F. über Skype - przez Skype'a</p>
+<p>I. in einem Kurs - na kursie </p>
+<p>G. mit Onlinetests - dzięki internetowym testom </p>
+<p>J. mit YouTube-Filmen - z filmów na YouTube </p>
+<p>L. über Facebook und Instagram - dzięki portalom takim jak Facebook i Instagram </p>
+<p> </p>
+<p><br/>Podane dodatkowo: </p>
+<p>B. beim Reisen - podróżując </p>
+<p>D. beim Lesen von Originaltexten - dzięki czytaniu oryginalnych tekstów </p>
+<p>E. beim Sehen von Kinofilmen - przez oglądanie filmów kinowych </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>- Sag  mal, was ist deine Muttersprache? (Powiedz, jaki jest twój język ojczysty?) <br/>- Türkisch, ich komme aus der Türkei. (Turecki, pochodzę z Turcji.)  <br/>- Und welche Fremdsprachen sprichst du? (A w jakich językach obcych mówisz?) <br/>- Ich spreche perfekt Bulgarisch und ganz gut Englisch. (Mówię perfekcyjnie po bułgarsku i całkiem dobrze po angielsku.) <br/>- Wie lernst du die Fremdsprachen? (Jak uczysz się tych języków obcych?) <br/>- Ich spreche mit Freunden über Skype und lese kurze Texte. (Rozmawiam przez Skype'a z przyjaciółmi i czytam krótkie teksty.) </p>
+<p><br/>- Sag  mal, was ist deine Muttersprache? (Powiedz, jaki jest twój język ojczysty?) <br/>- Chinesisch, ich komme aus China. (Chiński, pochodzę z Chin.) <br/>- Und welche Fremdsprachen sprichst du? (A w jakich językach obcych mówisz?) <br/>- Ich spreche sehr gut Japanisch und ein paar Worte Schwedisch. (Mówię bardzo dobrze po japońsku i kilka słów po szwedzku.) <br/>- Wie lernst du die Fremdsprachen? (Jak uczysz się tych języków obcych?) <br/>- Ich lerne mit Apps und sehe kurze Filme. (Uczę się przez aplikacje i oglądam krótkie filmiki.) </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>1. Czy masz dla mnie słownik? - Hast du ein Wörterbuch für mich?  </p>
+<p>2. Czy znasz ją dobrze? - Kennst du sie gut? </p>
+<p>3. On interesuje się muzyką. Kupimy dla niego płytę CD. - Er interessiert sich für Musik. Wir kaufen eine CD für ihn. </p>
+<p>4. Mamy dla was prezenty. - Wir haben Geschenke für euch. </p>
+<p>5. On chciałby cię poznać. - Er möchte dich kennenlernen. </p>
+<p><br/><br/>Zaimek osobowy w bierniku:</p>
+<table border="1" style="height: 317px;text-align: center;width: 245px;" width="218">
+<tbody>
+<tr>
+<td style="background-color: #90caf9;width: 116px;">Nominativ <br/>(mianownik)</td>
+<td style="background-color: #90caf9;width: 113px;">Akkusativ <br/>(biernik)</td>
+</tr>
+<tr>
+<td style="width: 116px;">ich</td>
+<td style="width: 113px;">mich</td>
+</tr>
+<tr>
+<td style="width: 116px;">du</td>
+<td style="width: 113px;">dich</td>
+</tr>
+<tr>
+<td style="width: 116px;">er</td>
+<td style="width: 113px;">ihn</td>
+</tr>
+<tr>
+<td style="width: 116px;">sie</td>
+<td style="width: 113px;">sie</td>
+</tr>
+<tr>
+<td style="width: 116px;">es</td>
+<td style="width: 113px;">es</td>
+</tr>
+<tr>
+<td style="width: 116px;">wir</td>
+<td style="width: 113px;">uns</td>
+</tr>
+<tr>
+<td style="width: 116px;">ihr</td>
+<td style="width: 113px;">euch </td>
+</tr>
+<tr>
+<td style="width: 116px;">sie / Sie</td>
+<td style="width: 113px;">sie / Sie</td>
+</tr>
+</tbody>
+</table><br>

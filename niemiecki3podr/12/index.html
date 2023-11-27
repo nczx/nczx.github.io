@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Johanna hat in der Schule in Paris keine Fremdsprachen gelernt.<br/><em>Joanna nie uczyła się żadnych języków obcych w szkole w Paryżu. <br/></em><strong>FALSCH</strong></p>
+<p>"Ich habe Spanisch und Latein gelernt". - Uczyłam się hiszpańskiego i łaciny.  </p>
+<p>2. Sie findet die Franzosen freundlich und fleißig.<br/><em>Uważa, że Francuzi są uprzejmi i pracowici. <br/></em><strong>FALSCH</strong></p>
+<p>"Die Franzosen sind nett, aber manchmal ein bisschen eingebildet und faul". - Francuzi są mili, ale czasami nieco zarozumiali i leniwi. </p>
+<p>3. Ihre Freundin möchte später einmal dolmetschen. <br/><em>Jej przyjaciółka chciałaby w przyszłości tłumaczyć. <br/></em><strong>RICHTIG </strong></p>
+<p>"Sie möchte später einmal Dolmetscherin werden und für die Europäische Union in Brüssel arbeiten". - W przyszłości chciałaby zostać tłumaczem i pracować w Brukseli dla Unii Europejskiej.</p>
+<p><br/><br/>1. Paweł hat am Anfang ein bisschen Deutsch gesprochen. <br/><em>Paweł na początku trochę mówił po niemiecku. </em><br/><strong>FALSCH </strong></p>
+<p>"Ich habe am Anfang kein Wort Deutsch gesprochen und habe nichts verstanden". - Na początku nie mówiłem ani słowa po niemiecku i nic nie rozumiałem.</p>
+<p>2. Seine Freundin macht jetzt eine Karriere als Musikerin. <br/><em>Jego dziewczyna robi teraz karierę jako muzyk. </em><br/><strong>RICHTIG </strong></p>
+<p>"Das war ihre Tür zur Karriere. Jetzt nimmt die Band ihre erste CD auf". - To były drzwi do jej kariery. Teraz zespół nagrywa pierwszą płytę. </p>
+<p>3. Lisa besucht Paweł oft. <br/><em>Lisa często odwiedza Pawła. </em><br/><strong>FALSCH </strong></p>
+<p>"Lisa trifft sich nicht so oft mit mir, aber wir skypen oder whatsappen fast jeden Tag". - Lisa nie spotyka się ze mną zbyt często, ale prawie codziennie komunikujemy się przez Skype'a i WhatsAppa. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. trägt  </p>
+<p>2. fährt </p>
+<p>3. spricht </p>
+<p><em>Astrid jest najlepszą przyjaciółką Johanny. Jest bardzo atrakcyjna. <strong>Nosi</strong> modne ubrania. Jest w dobrej formie i ma świetną figurę. Astrid jest bardzo wysportowana. W wolnym czasie <strong>jeździ</strong> na rowerze. <strong>Mówi</strong> w trzech językach obcych. Chciałaby pracować jako tłumacz. </em></p>
+<p><br/>4. nimmt </p>
+<p>5. trifft </p>
+<p><em>Lisa jest Francuzką, ale od wielu lat mieszka w Niemczech. Ma wiele talentów. Śpiewa w zespole. Czasami <strong>bierze</strong> <strong>udział</strong> w pokazach talentów. Właśnie zaczyna swoją karierę i nie ma za dużo czasu. Lisa niestety nie <strong>spotyka</strong> się często ze swoim chłopakiem Pawłem. </em></p>
+<p> </p>
+<p>Czasownik, który został podany dodatkowo i nie pasuje do żadnej luki: <em>helfen</em> - pomagać. </p>
+<p><br/><br/>Część czasowników w języku niemieckim odmienia się nieregularnie. Nieregularna odmiana dotyczy tylko drugiej i trzeciej osoby liczby pojedynczej. Występuje wtedy wymiana samogłosek w obrębie tematu: <em>a</em> ulega zmianie na <em>ä</em>, <em>e</em> na <em>i</em> lub <em>ie</em>. </p><br>

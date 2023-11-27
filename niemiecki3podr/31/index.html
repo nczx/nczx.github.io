@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Lena Voigt ist mit dem Auto (B) gefahren und mit dem Flugzeug (F) geflogen.<br/><em>Lena Voigt jechała samochodem i leciała samolotem. </em></p>
+<p>2. Max Reitner ist mit dem Zug (D) und mit dem Mountainbike (E) gefahren.<br/><em>Max Reitner jechał pociągiem i rowerem górskim. </em></p>
+<p>3. Helga Wieland ist mit dem Bus (A) und mit dem Schiff (C) gefahren. <br/><em>Helga Wieland jechała autobusem i płynęła statkiem. </em></p>
+<p> </p>
+<p>Jeśli chcemy powiedzieć, że poruszamy się jakimś środkiem transportu, używamy przyimka <em>mit</em>. Przyimek <em>mit</em> zawsze łączy się z celownikiem. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Przykładowe dialogi:</p>
+<p>- Wo warst du in den Ferien? (Gdzie byłeś w wakacje?) <br/>- Ich war am Meer. (Byłem nad morzem.) <br/>- Mit wem warst du da? (Z kim tam byłeś?) <br/>- Mit meinen Freunden. (Z przyjaciółmi.) <br/>- Womit bist du in die Ferien gefahren? (Czym pojechałeś na wakacje?) <br/>- Mit dem Bus. (Autobusem.) <br/>- Was konntest du da machen? (Co mogłeś tam robić?) <br/>- Ich konnte dort schwimmen. (Mogłem tam pływać.)  </p>
+<p><br/>- Wo warst du in den Ferien? (Gdzie byłeś w wakacje?) <br/>- Ich war in den USA. (Byłem w Stanach Zjednoczonych.)<br/>- Mit wem warst du da? (Z kim tam byłeś?) <br/>- Mit meiner Schwester. (Z siostrą.) <br/>- Womit bist du in die Ferien gefahren? (Czym pojechałeś na wakacje?) <br/>- Ich bin mit dem Flugzeug geflogen. (Poleciałem samolotem.) <br/>- Was konntest du da machen? (Co mogłeś tam robić?) <br/>- Ich konnte dort Englisch sprechen. (Mogłem tam mówić po angielsku.) </p>
+<p><br/>- Wo warst du in den Ferien? (Gdzie byłeś w wakacje?) <br/>- Ich war in Spanien. (Byłem w Hiszpanii.) <br/>- Mit wem warst du da? (Z kim tam byłeś?) <br/>- Mit meinen Eltern. (Z rodzicami.) <br/>- Womit bist du in die Ferien gefahren? (Czym pojechałeś na wakacje?) <br/>- Mit dem Auto. (Samochodem.) <br/>- Was konntest du da machen? (Co mogłeś tam robić?) <br/>- Ich konnte dort besichtigen. (Mogłem tam zwiedzać.) </p>
+<p><br/>- Wo warst du in den Ferien? (Gdzie byłeś w wakacje?) <br/>- Ich war im Gebirge. (Byłem w górach.) <br/>- Mit wem warst du da? (Z kim tam byłeś?) <br/>- Mit meiner Freundin. (Z przyjaciółką / dziewczyną.) <br/>- Womit bist du in die Ferien gefahren? (Czym pojechałeś na wakacje?) <br/>- Mit dem Fahrrad. (Rowerem.) <br/>- Was konntest du da machen? (Co mogłeś tam robić?) <br/>- Ich konnte dort wandern. (Mogłem tam wędrować.) </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>Przykładowo:</p>
+<p>Frank hat die Sommerferien an der Adria verbracht. Er ist mit seinen Eltern und seiner Schwester gereist. Sie sind mit dem Auto gefahren. Die Reise mit dem Auto ist praktisch, bequem und schnell. An der Adria konnte Frank surfen, schwimmen und sich sonnen. Er und seine Schwester durften in die Disco gehen. Sie mussten aber um 23.00 Uhr im Zimmer sein. </p>
+<p><br/><em>Frank spędził wakacje nad Adriatykiem. Podróżował z rodzicami i siostrą. Pojechali samochodem. Podróż samochodem jest praktyczna, wygodna i szybka. Nad Adriatykiem Frank mógł surfować, pływać i się opalać. On i jego siostra mogli chodzić na dyskoteki. O 23:00 musieli być jednak w pokoju. </em></p><br>

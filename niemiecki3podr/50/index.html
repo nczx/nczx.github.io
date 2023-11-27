@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Dialog A:</p>
+<p>1. <strong>G.</strong> Was für einen Pullover suchen Sie denn?  </p>
+<p>2. <strong>E.</strong> Welche Größe haben Sie?</p>
+<p>3.<strong> C.</strong> Kann ich den Pullover anprobieren? </p>
+<p>4. <strong>F.</strong> Was kostet der Pullover? </p>
+<p><br/><em>- Dzień dobry! Szukam jakiegoś swetra.</em><br/><strong><em>- Jakiego swetra pan szuka?</em></strong><br/><em>- Ciepłego, zielonego swetra na zimę. </em><br/><strong><em>- Jaki ma pan rozmiar?</em></strong><br/><em>- XL.</em><br/><em>- A jak się panu podoba ten sweter?</em><br/><em>- Uważam, że jest świetny. <strong>Mogę go przymierzyć?</strong></em><br/><em>- Tak, tam są przymierzalnie. </em><br/><em>- Dziękuję. </em><br/><em>- Pasuje panu ten sweter?</em><br/><em>- Tak, wezmę go.</em><br/><em>- Naprawdę dobrze na panu leży. Chciałby pan torbę za dziesięć centów?</em><br/><em>- Poproszę. <strong>Ile kosztuje ten sweter?</strong></em><br/><em>- 19,99 euro. Do zapłaty jest w sumie 20,09 euro. </em></p>
+<p> </p>
+<p>Dialog B:</p>
+<p>5. <strong>B.</strong> Guten Tag! Was kann ich für dich tun?</p>
+<p>6. <strong>D.</strong> Welche Größe hast du?</p>
+<p>7.<strong> A.</strong> Möchtest du es anprobieren? </p>
+<p><br/><strong><em>- Dzień dobry! W czym mogę pomóc?</em></strong><br/><em>- Dzień dobry! Szukam jakiejś czerwonej sukienki na wiosnę.</em><br/><strong><em>- Jaki masz rozmiar?</em></strong><br/><em>- M. </em><br/><em>- Tutaj mamy ładną, czerwoną sukienkę. <strong>Chciałabyś ją przymierzyć?</strong></em><br/><em>- Tak. Mają państwo przymierzalnię?</em><br/><em>- Tak, tam są. </em><br/><em>- Ta sukienka mi nie pasuje i nie do końca mi się podoba. Nie kupię jej. Mimo to bardzo dziękuję za pomoc.</em><br/><em>- Nie ma za co. </em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Der Mann möchte Kleidung kaufen.<br/><em>Mężczyzna chciałby kupić ubranie. <br/></em><strong>DIALOG 1 </strong> </p>
+<p>2. Das Mädchen macht Einkäufe in einem Bekleidungsgeschäft. <br/><em>Dziewczyna robi zakupy w sklepie odzieżowym. </em><br/><strong>DIALOG 2</strong></p>
+<p>3. Die Person hat keine Kleidung gekauft.<br/><em>Ta osoba nie kupiła ubrania. <br/></em><strong>DIALOG 2</strong></p>
+<p>4. Der Kunde / Die Kundin sucht warme Kleidung.<br/><em>Klient(ka) szuka ciepłego ubrania. <br/></em><strong>DIALOG 1</strong></p>
+<p>5. Die Kleidung gefällt der Person und die Person nimmt sie.<br/><em>Ubranie podoba się tej osobie i ta osoba je bierze. <br/></em><strong>DIALOG 1</strong></p>
+<p>6. Der Kunde / Die Kundin sucht rote Kleidung. <br/><em>Klient(ka) szuka czerwonego ubrania. </em><br/><strong>DIALOG 2 </strong></p>
+<p><br/><br/>Tłumaczenia dialogów: </p>
+<p>Dialog 1: </p>
+<p><em>- Dzień dobry! Szukam jakiegoś swetra.</em><br/><em>- Jakiego swetra pan szuka?</em><br/><em>- Ciepłego, zielonego swetra na zimę. </em><br/><em>- Jaki ma pan rozmiar?</em><br/><em>- XL.</em><br/><em>- A jak się panu podoba ten sweter?</em><br/><em>- Uważam, że jest świetny. Mogę go przymierzyć?</em><br/><em>- Tak, tam są przymierzalnie. </em><br/><em>- Dziękuję. </em><br/><em>- Pasuje panu ten sweter?</em><br/><em>- Tak, wezmę go.</em><br/><em>- Naprawdę dobrze na panu leży. Chciałby pan torbę za dziesięć centów?</em><br/><em>- Poproszę. Ile kosztuje ten sweter?</em><br/><em>- 19,99 euro. Do zapłaty jest w sumie 20,09 euro. </em></p>
+<p> </p>
+<p>Dialog 2: </p>
+<p><em>- Dzień dobry! W czym mogę pomóc?</em><br/><em>- Dzień dobry! Szukam jakiejś czerwonej sukienki na wiosnę.</em><br/><em>- Jaki masz rozmiar?</em><br/><em>- M. </em><br/><em>- Tutaj mamy ładną, czerwoną sukienkę. Chciałabyś ją przymierzyć?</em><br/><em>- Tak. Mają państwo przymierzalnię?</em><br/><em>- Tak, tam są. </em><br/><em>- Ta sukienka mi nie pasuje i nie do końca mi się podoba. Nie kupię jej. Mimo to bardzo dziękuję za pomoc.</em><br/><em>- Nie ma za co. </em></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Przykładowe dialogi:</p>
+<p>- Guten Tag! Ich suche eine Bluse und einen Rock. (Dzień dobry! Szukam jakiejś bluzki i spódnicy.) <br/>- Was für eine Bluse und was für einen Rock suchen Sie denn? (Jakiej bluzki i jakiej spódnicy pani szuka?) <br/>- Ich suche eine gelbe Bluse und einen grünen Rock für den Sommer. (Szukam żółtej bluzki i zielonej spódnicy na lato.)  <br/>- Welche Größe haben Sie? (Jaki ma pani rozmiar?) <br/>- Ich habe Größe S. (S.) <br/>- Und wie gefällt Ihnen die Bluse hier? (Jak się pani podoba ta bluzka?) <br/>- Ich finde die Bluse toll. (Uważam, że jest świetna.) <br/>- Und wie gefällt Ihnen der Rock hier? (A jak się pani podoba ta spódnica?) <br/>- Er ist super. Kann ich die Bluse und den Rock anprobieren? (Jest super. Mogę przymierzyć tę bluzkę i tę spódnicę?) <br/>- Ja, hier sind die Umkleidekabinen. (Tak, tutaj są przymierzalnie.) <br/>- Danke. (Dziękuję.) <br/>- Passen die Bluse und der Rock? (Czy ta bluzka i spódnica pasują?) <br/>- Ja, ich nehme sie. (Tak, wezmę je.) <br/>- Der Rock steht Ihnen wirklich gut. Möchten Sie eine Tüte für zehn Cent? (Naprawdę dobrze leży na pani ta spódnica. Chciałaby pani torbę za dziesięć centów?) <br/>- Ja, bitte. Was kosten die Bluse und der Rock? (Poproszę. Ile kosztują bluzka i spódnica?) <br/>- Die Bluse kostet 15,99 Euro und der Rock kostet 17,49 Euro. Das macht dann zusammen 33,54 Euro. (Bluzka kosztuje 15,99 euro, a spódnica 17,49 euro. Do zapłaty jest łącznie 33,54 euro.) </p>
+<p> </p>
+<p>- Guten Tag! Was kann ich für dich tun? (Dzień dobry! W czym mogę pomóc?) <br/>- Guten Tag! Ich suche eine elegante, dunkelblaue Hose für den Schulabschluss. (Dzień dobry! Szukam eleganckich i ciemnoniebieskich spodni na zakończenie roku szkolnego.)  <br/>- Welche Größe hast du? (Jaki masz rozmiar?) <br/>- Ich habe Größe M. (M.) <br/>- Hier haben wir eine schöne, elegante Hose. (Tutaj mamy ładne, eleganckie spodnie.) <br/>- Ja. Haben Sie hier eine Umkleidekabine? (Tak. Mają tu państwo przymierzalnię?) <br/>- Ja, dort sind die Kabinen. (Tak, tam są.) <br/>- Die Hose passt nicht und gefällt mir nicht wirklich. Sie passt nicht so gut zu einem weißen Hemd. Trotzdem vielen Dank für Ihre Hilfe. (Te spodnie mi nie pasują i nie do końca mi się podobają. Nie pasują za dobrze do białej koszuli. Mimo to bardzo dziękuję za pomoc.) <br/>- Keine Ursache. (Nie ma za co.) </p><br>

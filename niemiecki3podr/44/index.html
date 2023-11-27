@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <strong>C.</strong> der Herbst - jesień  </p>
+<p>2. <strong>B.</strong> der Sommer - lato </p>
+<p>3. <strong>A.</strong> der Frühling - wiosna </p>
+<p>4. <strong>D.</strong> der Winter - zima </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>- Wie lange dauert der Sommer? (Jak długo trwa lato?) <br/>- Der Sommer dauert drei Monate. (Lato trwa trzy miesiące.) <br/>- Welche Monate gehören zum Sommer? (Które miesiące należą do lata?)  <br/>- Zum Sommer gehören die Monate Juni, Juli und August. (Do lata należą miesiące takie jak czerwiec, lipiec i sierpień.) <br/>- Und wann beginnt der Sommer? (A kiedy zaczyna się lato?) <br/>- Der Sommer beginnt am einundzwanzigsten Juni. (Lato zaczyna się 21 czerwca.) </p>
+<p><br/>- Wie lange dauert der Herbst? (Jak długo trwa jesień?) <br/>- Der Herbst dauert drei Monate. (Jesień trwa trzy miesiące.) <br/>- Welche Monate gehören zum Herbst? (Które miesiące należą do jesieni?) <br/>- Zum Herbst gehören die Monate September, Oktober und November. (Do jesieni należą miesiące takie jak wrzesień, październik i listopad.) <br/>- Und wann beginnt der Herbst? (A kiedy zaczyna się jesień?) <br/>- Der Herbst beginnt am dreiundzwanzigsten September. (Jesień zaczyna się 23 września.) </p>
+<p><br/>- Wie lange dauert der Winter? (Jak długo trwa zima?) <br/>- Der Winter dauert drei Monate. (Zima trwa trzy miesiące.) <br/>- Welche Monate gehören zum Winter? (Które miesiące należą do zimy?) <br/>- Zum Winter gehören die Monate Dezember, Januar und Februar. (Do zimy należą miesiące takie jak grudzień, styczeń i luty.) <br/>- Und wann beginnt der Winter? (A kiedy zaczyna się zima?) <br/>- Der Winter beginnt am einundzwanzigsten Dezember. (Zima zaczyna się 21 grudnia.) </p>
+<p> </p>
+<p><br/>By powiedzieć, że coś wydarzyło się lub ma miejsce któregoś dnia, używamy przyimka <em><span class="tbg">am,</span> </em>a do liczebnika głównego od 1-19 dodajemy końcówkę -<em>ten</em>. Do liczebników powyżej 20 dodajemy końcówkę -<em>sten</em>. </p>
+<p>Wyjątki: </p>
+<ul>
+<li>am 1. - am ersten </li>
+<li>am 3. - am dritten</li>
+<li>am 7. - am siebten </li>
+<li>am 8. - am achten </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>A. Es ist bewölkt. - Jest pochmurno.  </p>
+<p>B. Es regnet. - Pada deszcz. </p>
+<p>C. Es blitzt und donnert. - Błyska się i grzmi. </p>
+<p>D. Es ist sonnig und warm / heiß. - Jest słonecznie i ciepło / gorąco. </p>
+<p>E. Es schneit und es ist frostig. - Sypie śnieg i jest mroźno. </p>
+<p>F. Es ist windig. - Jest wietrznie. </p>
+<p> </p>
+<p>Tłumaczenie tekstów: </p>
+<p>Karl: Moją ulubioną porą roku jest lato, ponieważ mam wtedy wakacje. W tym czasie można odpocząć i dużo podróżować. Dni są najdłuższe. Jest słonecznie i ciepło, czasami nawet gorąco. Bardzo aktywnie spędzam czas: jeżdżę na rowerze lub na deskorolce. </p>
+<p>Tina: Najbardziej lubię zimę. Sypie śnieg i jest mroźno. Kiedy jest dużo śniegu, dzieci dobrze się bawią. W grudniu świętuje się Boże Narodzenie. Nie tylko najmłodsi cieszą się na myśl o prezentach. </p>
+<p>Antje: Wiosną życie jest dużo prostsze. Rano jest jeszcze chłodno, ale w ciągu dnia ociepla się. Czasami pada deszcz, ale przeważnie świeci słońce. Wszystko zielenieje. Często się błyska i grzmi. Dużo ludzi spędza czas na łonie przyrody i... zakochuje się, szczególnie w maju. Uwielbiam wiosnę! </p>
+<p>Anke: Wiem, że niewiele ludzi lubi jesień. Jest dość zimno. Jest pochmurno i wietrznie. Ale ja lubię tę porę roku. Liście stają się kolorowe i spadają na ziemię. Jesień jest taka melancholijna...</p><br>

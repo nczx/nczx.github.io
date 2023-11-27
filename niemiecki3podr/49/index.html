@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>- Was ziehst du an, wenn es sonnig ist? (Co ubierasz, kiedy jest słonecznie?)  <br/>- Einen kurzen Rock und ein blaues T-Shirt. (Krótką spódnicę i niebieską koszulkę.) </p>
+<p>- Was ziehst du an, wenn es kühl ist? (Co ubierasz, kiedy jest chłodno?) <br/>- Einen dicken Pullover und eine lange Hose. (Gruby sweter i długie spodnie.) </p>
+<p>- Was ziehst du an, wenn es windig ist? (Co ubierasz, kiedy jest wietrznie?) <br/>- Eine warme Jacke und ein neues Sweatshirt. (Ciepłą kurtkę i nową bluzę.) </p>
+<p>- Was ziehst du an, wenn es heiß ist? (Co ubierasz, kiedy jest gorąco?) <br/>- Ein buntes Sommerkleid und schwarze Ballerinas. (Kolorową letnią sukienkę i czarne baleriny.) </p>
+<p> </p>
+<p>Uwaga, po spójniku <em>wenn</em> obowiązuje szyk końcowy zdania. <br/><br/></p>
+<p>W tym zadaniu występuje odmiana przymiotnika w bierniku po rodzajniku nieokreślonym. Schemat odmiany prezentuje się następująco:</p>
+<table border="1" style="height: 195px;width: 587px;text-align: center;">
+<tbody>
+<tr>
+<td rowspan="2" style="width: 111px;"> </td>
+<td colspan="3" style="width: 324px;background-color: #4db6ac;">Singular </td>
+<td rowspan="2" style="width: 118px;background-color: #4db6ac;">Plural </td>
+</tr>
+<tr>
+<td style="background-color: #b2dfdb;">Maskulinum </td>
+<td style="background-color: #b2dfdb;">Femininum </td>
+<td style="background-color: #b2dfdb;">Neutrum </td>
+</tr>
+<tr>
+<td style="width: 111px;">Nominativ <br/>mianownik </td>
+<td style="width: 98px;">ein + -er</td>
+<td style="width: 110px;">eine + -e</td>
+<td style="width: 116px;">ein + -es</td>
+<td style="width: 118px;">-e</td>
+</tr>
+<tr>
+<td style="width: 111px;">Akkusativ<br/>biernik</td>
+<td style="width: 98px;">einen + -en</td>
+<td style="width: 110px;">eine + -e</td>
+<td style="width: 116px;">ein + -es</td>
+<td style="width: 118px;">-e</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p>Rzeczy, które Marta ma w swojej walizce, zostały pogrubione. </p>
+<p><br/>1. ein blaues Kleid - niebieska sukienka </p>
+<p>2. eine grüne Bluse - zielona bluzka </p>
+<p><strong>3. ein rotes Kleid</strong> - czerwona sukienka  </p>
+<p><strong>4. vier bunte T-Shirts</strong> - cztery kolorowe koszulki </p>
+<p><strong>5. blaue Sandalen </strong>- niebieskie sandały </p>
+<p><strong>6. zwei warme Pullover </strong>- dwa ciepłe swetry</p>
+<p><strong>7. bequeme Sportschuhe</strong> - wygodne buty sportowe </p>
+<p><strong>8. eine leichte Jacke</strong> - cienka kurtka </p>
+<p><strong>9. schwarze Ballerinas </strong>- czarne baleriny </p>
+<p><strong>10. rote Flip-Flops </strong>- czerwone japonki </p>
+<p><strong>11. eine dunkle Jeans </strong>- ciemne jeansy </p>
+<p>12. eine warme Jacke - ciepła kurtka </p>
+<p> </p>
+<p>Wenn es warm und sonnig ist, braucht Martha ein rotes Kleid, vier bunte T-Shirts, blaue Sandalen, rote Flip-Flops. <br/><em>Kiedy jest ciepło i słonecznie, Martha potrzebuje czerwonej sukienki, czterech kolorowych koszulek, niebieskich sandałów, czerwonych japonek. </em></p>
+<p>Wenn es kalt und windig ist, braucht Martha zwei warme Pullover, eine leichte Jacke und eine dunkle Jeans. <br/><em>Kiedy jest zimno i wietrznie, Martha potrzebuje dwóch ciepłych swetrów, cienkiej kurtki i ciemnych jeansów. </em></p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br>

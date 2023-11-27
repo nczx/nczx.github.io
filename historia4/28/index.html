@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><span style="text-decoration:underline;"><strong>Metody podboju nowych terenów zastosowane przez Sowietów w 1939-1940: </strong></span></p>
+<ul>
+<li>
+<strong>Przeprowadzenie agresji zbrojnej - </strong>w myśl tajnego porozumienia III Rzeszy i ZSRS część obszaru Europy Środkowej miała znaleźć się w sowieckiej strefie wpływów. </li>
+<li>
+<strong>Tworzenie sowieckich baz wojskowych w państwach sąsiednich - </strong>dotyczyło to głównie państw bałtyckich.</li>
+<li>
+<strong>Szukanie pretekstu do wypowiedzenia wojny - </strong>Sowieci zażądali od Finów oddania Przesmyku Karelskiego i półwyspu Hanko.</li>
+<li>
+<strong>Przeprowadzenie zamachu stanu przy udziale sowieckiego wojska i przedstawicieli lokalnej partii komunistycznej - </strong>w taki sposób Stalin przejął władzę w państwach bałtyckich. </li>
+<li><strong>Aresztowanie lokalnych elit politycznych.</strong></li>
+<li><strong>Fałszowanie wyborów i referendów, aby zwyciężali zwolennicy ZSRS.</strong></li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><span style="text-decoration:underline;"><strong>Postawy państw Europy Zachodniej w stosunku do agresji III Rzeszy w 1940 r.:</strong></span></p>
+<ul>
+<li><strong>Neutralność</strong></li>
+</ul>
+<p>W obliczu ekspansji niemieckiej na obszar <strong>Danii</strong>. Niewidzący możliwości odparcia najeźdźcy Duńczycy poddali się. Na początku II wojny światowej<strong> Belgia i Holandia</strong> były krajami neutralnymi. Nie opowiadały się po żadnej ze stron. Nie uchroniło ich to jednak przed agresją niemiecką. Na obszarze wspomnianych państw powstały strefy okupacyjne. </p>
+<ul>
+<li><strong>Walka</strong></li>
+</ul>
+<p>Część państw zaatakowanych przez III Rzeszę za wszelką cenę starała się utrzymać swoją niezależność. W taki sposób walczyli m.in. <strong>Norwegowie</strong>. Pomimo zaciętych działań zbrojnych nie dali rady odeprzeć najeźdźcy. </p>
+<p>Opór wobec Rzeszy próbowali stawić również Francuzi, którzy byli wspierani przez oddziały brytyjskie. W wyniku sforsowania Ardenów wojsko francuskie utraciło swoje wsparcie, co przypieczętowało klęskę tego państwa. Władze Rzeszy powołały na terenie Francji nowe państwo kolaboracyjne tzw. Państwo Vichy. Nie wszyscy Francuzi jednak poddali się, część z Charlesem de Gaullem na czele stworzyli Komitet Wolna Francja, który na emigracji wspierał dalszą walkę z Niemcami.</p>
+<p>Do walki z Niemcami ruszyli także <strong>Brytyjczycy</strong> w trakcie wielomiesięcznego starcia, które przeszło do historii jako bitwa o Anglię wojska brytyjskie wspierane przez żołnierzy z Polski, Czech i Kanady pokonali siły powietrzne Rzeszy. Ponadto Wielka Brytania stała się schronem dla wielu przedstawicieli władz, którzy musieli uchodzić ze swoich państw.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><span style="text-decoration:underline;"><strong>Zadanie ma charakter indywidualny. Rozwiązanie zawiera wyłącznie wskazówki do sformułowania samodzielnej odpowiedzi!</strong></span></p>
+<ul>
+<li><strong>Znaczenie bitwy o Anglię (10 VII-31 X 1940) </strong></li>
+</ul>
+<p>Bitwa powietrzna o Anglię miała wielkie znaczenie dla dalszych losów II wojny światowej. Dzięki porażce odniesionej przez Luftwaffe - Adolf Hitler został zmuszony do odłożenia w czasie planowanej inwazji na Wielką Brytanię i ostatecznej rezygnacji z tego planu.</p>
+<p>Poza tym , brytyjskie zwycięstwo przy udziale polskich lotników z Dywizjonu 302 i 303 - miało niesamowitą wartość symboliczną - po raz pierwszy w tym konflikcie klęska stała się udziałem Niemców. Upadł mit o niezwyciężonym Wehrmachcie.</p>
+<p>Porażka Luftwaffe, co prawda, nie odwróciła jeszcze losów wojny, niemniej pozwoliła uwierzyć ponoszącym dotychczas niemal same klęski na lądzie i w powietrzu aliantom we własne siły. Bitwa o Anglię kosztowała Niemców utratę ok. 1700 maszyn oraz ponad 2,5 tys. pilotów.</p>
+<ul>
+<li><strong>Znaczenie zaangażowania państw Osi w konflikt na Bałkanach</strong></li>
+</ul>
+<p>Przeprowadzenie działań zbrojnych na Bałkanach przez władze III Rzeszy wpłynęły znacząco na opóźnienie planowanej agresji niemieckiej na ZSRS. Dla Rzeszy zaangażowanie w konflikty przysporzyło kolejnych sprzymierzeńców w postaci Węgier, Rumunii i Bułgarii oraz przeciwników w postaci rozbudowanych struktur jugosłowiańskiej partyzantki, które w dalszej perspektywie przyczyniły się do stopniowego wyzwalania swojego państwa spod zwierzchności Rzeszy.</p><br>

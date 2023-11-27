@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Przemiany polityczne w Polsce w latach 1953-1956:</strong></p>
+<ul>
+<li>początkowe (po śmierci Stalina) zaostrzenie represji, np. internowanie prymasa Wyszyńskiego, nadal skazywano przeciwników politycznych na karę śmierci, </li>
+<li>Bierut zrezygnował z urzędu premiera, stanowisko przejął po nim Józef Cyrankiewicz, </li>
+<li>zlikwidowano Komisję Specjalną do Walki z Nadużyciami i Szkodnictwem Gospodarczym,  </li>
+<li>Ministerstwo Bezpieczeństwa Publicznego przekształcono w Komitet ds. Bezpieczeństwa Publicznego, </li>
+<li>zwierzchnik MBP Stanisław Radkiewicz został odsunięty na boczny tor, </li>
+<li>wypuszczono w grudniu 1954 r. na wolność Władysława Gomułkę, </li>
+<li>rozpoczął się proces odchodzenia od rządów jednostki na rzecz władzy kolegialnej, </li>
+<li>postępujący rozpad w środowisku partii rządzącej - podział na puławian i natolińczyków,</li>
+<li>trudności ekonomiczne wywołane nieudolną polityką PZPR, </li>
+<li>wybór Władysława Gomułki na I sekretarza PZPR i zapowiedź realizacji polskiej drogi do socjalizmu, </li>
+<li>unormowanie warunków stacjonowania wojsk sowieckich w Polsce, </li>
+<li>opuszczenie państwa przez sowieckich "doradców" wojskowych, </li>
+<li>unormowanie kwestii związanych z rozliczeniami finansowymi między Polską a ZSRS, </li>
+<li>zwolnienie prymasa Wyszyńskiego i innych więźniów politycznych (ok. 6 tys. osób), </li>
+<li>zrezygnowano z kolektywizacji rolnictwa, </li>
+<li>utworzono Służbę Bezpieczeństwa, </li>
+<li>Katowicom przywrócono oryginalną nazwę, </li>
+<li>zreformowano centralny system zarządzania gospodarką.</li>
+</ul>
+<p><strong>Przemiany społeczne w latach 1953-1956:</strong></p>
+<ul>
+<li>wydanie zgody na publikację powieści sensacyjnej "Zły" napisanej przez Leopolda Tyrmanda i "Poematu dla dorosłych" Adama Ważyka,</li>
+<li>zorganizowanie wystawy "Arsenał", </li>
+<li>wzrost popularności prądów artystycznych i literackich, ale także mody i muzyki z Zachodu, </li>
+<li>osłabienie cenzury, </li>
+<li>organizowanie demonstracji ulicznych, np. w Poznaniu, jako wyraz niezadowolenia społeczeństwa z sytuacji politycznej i ekonomicznej w państwie, </li>
+<li>reaktywowano zlikwidowany po II wojnie światowej Związek Harcerstwa Polskiego, </li>
+<li>zmniejszono terror, </li>
+<li>złagodzono dyskurs wobec Kościoła katolickiego, </li>
+<li>władze wsparły produkcję artykułów spożywczych.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Odwilż </strong>to pojęcie oznaczające <strong>złagodzenie represyjnej polityki władz komunistycznych</strong>. Nazwa pochodzi od powieści Ilji Erenburga opublikowanej w 1954 r. pod tytułem "Odwilż". </p>
+<p>Przykłady odwilży:</p>
+<ul>
+<li>wygłoszenie referatu "O kulcie jednostki i jego następstwach" przez pierwszego sekretarza KPZR Nikitę Chruszczowa, </li>
+<li>osłabła cenzura i represje,</li>
+<li>bardziej swobodnie rozwijała się kultura, </li>
+<li>PZPR zliberalizowała kurs,</li>
+<li>zrezygnowano z popierania socrealizmu w sztuce,</li>
+<li>w ramach amnestii wypuszczono wielu więźniów politycznych,</li>
+<li>doprowadzono do porozumienia z prymasem Polski Stefanem Wyszyńskim, którego zwolniono z internowania,</li>
+<li>Polakom umożliwiono na powrót z terenów ZSRS oraz sowieckich łagrów,</li>
+<li>Katowicom przywrócono oryginalną nazwę (wcześniej - Stalinogród), </li>
+<li>zezwolono na rozwiązanie większości spółdzielni produkcyjnych, zaprzestano procesu przymusowej kolektywizacji rolnictwa,</li>
+<li>złagodzono dyskurs wobec Kościoła katolickiego,</li>
+<li>władze wsparły produkcję artykułów spożywczych,</li>
+<li>zreformowano centralny system zarządzania gospodarką,</li>
+<li>zreformowano aparat bezpieczeństwa - UB przemianowano na SB (Służbę Bezpieczeństwa).</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Podczas trwania odwilży w Polsce władza <strong>początkowo złagodziła kurs</strong> wobec Kościoła katolickiego. W październiku 1956 r. <strong>zezwolono na uwolnienie z aresztu prymasa Stefana Wyszyńskiego</strong>, zaś w grudniu - <strong>przywrócono możliwość nauczania religii w szkołach i uchylono wyrok wydany na biskupa kieleckiego Czesława Kaczmarka</strong>. <strong>Kościół odzyskał kontrolę nad prasą katolicką</strong>, w tym nad "Tygodnikiem Powszechnym". <strong>Ocieplenie państwo-Kościół</strong>, nie trwało jednak długo. Ochłodzenie nastąpiło już w połowie 1957 roku, kiedy prymas Wyszyński podjął przygotowania do obchodów "1000-lecia chrztu Polski". Władze w odpowiedzi podjęły uchwałę sejmową o państwowych obchodach "Tysiąclecia Państwa Polskiego." Miano eksponować tradycje polskiej państwowości i uczcić rocznicę budową tysiąca nowych szkół (hasło: "Tysiąc szkół na Tysiąclecie"). <strong>Już we wrześniu 1961 r. ponownie zabroniono nauki religii w szkołach, odmawiano zgody na budowę nowych kościołów, powoływano kleryków do wojska, utrudniano organizowanie pielgrzymek oraz religijnych uroczystości. </strong></p><br>

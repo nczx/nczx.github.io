@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Wyścig pracy</strong> polegał na kilku- lub nawet kilkunastokrotnym przekraczaniu wyznaczonych norm przez pracowników zakładów pracy, np. w wydobyciu surowców. Stachanowcami, czyli przodownikami pracy nazywano pracowników, którzy znacznie przekroczyli normy pracy przewidziane do wykonania. Konsekwencją tego było podnoszenie norm pracy dla wszystkich pracowników bez podnoszenia wynagrodzeń za pracę.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Polska utraciła <strong>ziemie wschodnie</strong> (Kresy Wschodnie), otrzymując jako rekompensatę obszary na północy i zachodzie należące wcześniej do Niemiec. Były to tzw. <strong>Ziemie Odzyskane</strong>, które obejmowały tereny dużej części Śląska, ziemi lubuskiej, Pomorza Zachodniego ze Szczecinem, Pomorza Wschodniego z Gdańskiem oraz południowej części Prus Wschodnich, czyli Warmię i Mazury. Nowa granica państwa na zachodzie została oparta na <strong>Bugu, Odrze i Nysie Łużyckiej</strong>, a na wschodzie o <strong>linię Curzona</strong>. Po zakończeniu II wojny światowej przywrócono przebieg granicy polsko-czechosłowackiej z lat 1920-1938 (<strong>utrata przez Polskę Zaolzia</strong>; ostateczne porozumienie graniczne zapadło w 1958 r.). Polsce po II wojnie wojnie światowej przyznano obszar Kotliny Kłodzkiej, rejony Raciborza i Głubczyc. Przywrócono także przebieg granicy sprzed września 1938 r. na Spiszu i Orawie. </p>
+<p>Polska, mimo że teoretycznie należała do obozu zwycięzców, utraciła w ostatecznym rachunku ok. 20% terytorium.</p>
+<p><img alt="" height="442" src="./data/1188166-0.jpg" width="548"/></p>
+<p>Mapa Polski po II wojnie światowej, źródło mapy: Google Grafika, opracowanie własne. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Przed nową (komunistyczną) władzą stanęło trudne zadanie: <strong>odbudowa zniszczonego kraju</strong> i <strong>zagospodarowanie poniemieckich tzw. Ziem Odzyskanych</strong>. Pozbawionemu fachowców i niepopularnemu rządowi komunistycznemu pomógł jednak entuzjazm Polaków, którzy nie czekając na rozstrzygnięcia polityczne, sami zaczęli odbudowę kraju. Powszechny zapał wykorzystali komuniści, organizując życie gospodarcze na wzór sowiecki.</p>
+<p>3 stycznia 1946 r. wydano ustawę, na mocy której <strong>znacjonalizowano przemysł</strong>. Państwo przejęło na własność fabryki, kopalnie i zakłady przemysłowe zatrudniające więcej niż 50 robotników na zmianę. Powołano <strong>Centralny Urząd Planowania</strong>, kierowany przez prof. Czesława Bobrowskiego. Utworzono Komisję Specjalną do Walki z Nadużyciami i Szkodnictwem Gospodarczym, która miała prawo bez wyroku sądowego zamykać w obozach pracy tzw. "szkodników" i "spekulantów" oraz konfiskować ich majątki. Do 1948 r. komisja skazała ponad 10 tys. osób. W ten sposób zlikwidowano znaczną część prywatnego handlu, jednak nie zdołano go całkiem wyeliminować. </p>
+<p>W 1947 r. ogłoszono Plan Odbudowy Gospodarczej - <strong>plan 3-letni (1947-1949)</strong>, który zakładał, że w ciągu trzech kolejnych lat uruchomione zostaną najważniejsze zakłady przemysłowe: kopalnie, porty, stocznie, huty oraz fabryki maszyn, samochodów i traktorów. Dążono do zagospodarowania tzw. Ziem Odzyskanych oraz zapewnienia lepszych warunków bytowych ludności przez odbudowę i budowę nowych mieszkań oraz poprawę zaopatrzenia w żywność. Dzięki wielkiemu wysiłkowi społecznemu, współzawodnictwie pracy, realnym założeniom oraz równorzędnemu rozwojowi sektora konsumpcyjnego i inwestycyjnego - plan 3-letni został w zasadzie<strong> zrealizowany pomyślnie</strong>. </p>
+<p>W Polsce decyzję o <strong>kolektywizacji rolnictwa</strong> podjął KC PPR we wrześniu <strong>1948 r.</strong> Kolektywizacja polegała na przymusowym wstępowanie rolników do spółdzielni. Proces ten był połączony ze zjawiskiem łączenia gruntów rolnych we wspólnoty spółdzielcze. Przymus kolektywizacyjny doprowadził do spadku produkcji rolnej i stworzył perspektywę szybkiej ruiny rolnictwa w kraju. </p>
+<p>Kolejnym planem polskiej gospodarki był <strong>plan 6-letni</strong> <strong>(1950-1955)</strong>. Założenia planu były następujące: wzrost w stosunku do roku 1949 o ponad 150% produkcji przemysłowej, o 60% rolnej, o 112% dochodu narodowego. Były one od początku niemal niemożliwe do zrealizowania. Kierownictwo partyjne często nie brało pod uwagę czynnika ekonomicznego, bezkrytycznie wprowadzając w życie wytyczne z Moskwy. Mimo propagandy i wielkiego wysiłku - plan ten wykonano tylko w ok. 2/3, przy czym nowe fabryki powstały z reguły w starych okręgach przemysłowych - w Warszawie i na Śląsku. W ramach planu 6-letniego wybudowano m.in. <strong>Hutę im. Lenina w Nowej Hucie pod Krakowem</strong>, <strong>Fabrykę Samochodów Osobowych i Elektrociepłownię na Żeraniu w Warszawi</strong>e, <strong>hutę aluminium w Skawinie</strong>, <strong>fabryki maszyn rolniczych w Płocku i Poznaniu</strong>, <strong>stocznie w Gdyni i Szczecinie</strong>. Załamanie planu 6-letniego stworzyło warunki do pierwszego w historii PRL społecznego buntu przeciwko władzy.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Kolektywizacja</strong> - proces łączenia gruntów chłopskich w gospodarstwa będące własnością spółdzielczą. </p>
+<p><strong>Nacjonalizacja</strong> - upaństwowienie, przejęcie przez państwo na własność przedsiębiorstw, zakładów przemysłowych i prywatnych banków. </p><br>

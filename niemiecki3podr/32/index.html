@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Fahren wir ins Ausland! Wir brauchen etwas Neues. - <strong>E.</strong> Pojedźmy za granicę! potrzebujemy czegoś nowego.  </p>
+<p>2. Ich will nicht dorthin fahren, denn das ist nichts für mich. - <strong>D.</strong> Nie chcę tam pojechać, bo to nie dla mnie. </p>
+<p>3. Wir müssen ein Angebot in Reisekatalogen suchen. - <strong>B.</strong> Musimy poszukać jakiejś oferty w katalogach. </p>
+<p>4. Aufenthalt mit Vollpension ist viel besser. - <strong>C.</strong> Pobyt z pełnym wyżywieniem jest o wiele lepszy. </p>
+<p>5. Wir sollten alles selbst planen, dann haben wir mehr Freiheit. - <strong>A.</strong> Powinniśmy wszystko sami zaplanować, będziemy mieć wtedy więcej swobody. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Wir fahren an die Ostsee. Fahrt ihr auch <strong>dorthin</strong>? - Jedziemy nad Morze Bałtyckie. Wy też tam jedziecie?  </p>
+<p>2. Er lebt jetzt in Warschau. Wie lange wohnt er <strong>dort</strong>? - On mieszka teraz w Warszawie. Jak długo tam mieszka?</p>
+<p>3. Er arbeitet bei Siemens. Er ist <strong>dort</strong> Ingenieur. - On pracuje w firmie Siemens. Jest tam inżynierem.</p>
+<p>4. Ich fliege nach Mallorca. Katrin fliegt auch <strong>dorthin</strong>. - Lecę na Majorkę. Katrin też tam leci. </p>
+<p> </p>
+<p><em>Dort</em> to odpowiedź na pytanie <em>wo?</em>, występuje w zdaniach, które nie wyrażają ruchu, przemieszczenia. </p>
+<p><em>Dorthin</em> to odpowiedź na pytanie <em>wohin?</em>, występuje w zdaniach, które wyrażają ruch, przemieszczenie, jakąś interakcję. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="height: 436px;width: 793px;text-align: center;border-collapse: collapse;">
+<tbody>
+<tr style="height: 51px;">
+<td style="background-color: #4db6ac;width: 393px;height: 51px;">mit Reisebüro<br/><em>podróż z biurem podróży </em>
+</td>
+<td style="background-color: #4db6ac;width: 393px;height: 51px;">selbstorganisiert <br/><em>podróż samodzielnie zorganizowana </em>
+</td>
+</tr>
+<tr style="height: 34px;">
+<td style="background-color: #b2dfdb;width: 393px;height: 34px;">PRO</td>
+<td style="background-color: #b2dfdb;width: 393px;height: 34px;">PRO</td>
+</tr>
+<tr style="height: 37px;">
+<td style="width: 393px;height: 37px;">alles ist erledigt: Tickets, Zimmer, Verpflegung <br/><em>wszystko jest załatwione: bilety, pokoje, wyżywienie </em>
+</td>
+<td style="width: 393px;height: 37px;">alles selbst planen, das bedeutet Freiheit<br/><em>wszystko planować samemu, to oznacza </em><em>swobodę </em>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 393px;height: 47px;">Komfort <br/><em>komfort </em>
+</td>
+<td style="width: 393px;height: 47px;">es kostet weniger <br/><em>kosztuje mniej </em>
+</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 393px;height: 44px;">das Reisebüro trägt die Verantwortung für alles <br/><em>biuro podróży ponosi za wszystko odpowiedzialność </em>
+</td>
+<td style="width: 393px;height: 44px;">die Reise ist spontan <br/><em>podróż jest spontaniczna </em>
+</td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 393px;height: 51px;">Angebote mit einem Rabatt für Stammkunden <br/><em>oferty z rabatem dla stałych klientów</em>
+</td>
+<td style="width: 393px;height: 51px;">mit eigenem Auto reisen können <br/><em>móc podróżować własnym samochodem</em>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 393px;height: 47px;">Hilfe und einen Rat bekommen <br/><em>dostawać pomoc i radę </em>
+</td>
+<td style="width: 393px;height: 47px;"> </td>
+</tr>
+<tr style="height: 35px;">
+<td style="background-color: #b2dfdb;width: 393px;height: 35px;">CONTRA</td>
+<td style="background-color: #b2dfdb;width: 393px;height: 35px;">CONTRA </td>
+</tr>
+<tr style="height: 50px;">
+<td style="width: 393px;height: 50px;">es ist teuer <br/><em>jest drogo </em>
+</td>
+<td style="width: 393px;height: 50px;">Risiko <br/><em>ryzyko </em>
+</td>
+</tr>
+</tbody>
+</table><br>

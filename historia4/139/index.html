@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>"Zimna wojna"</strong> to stan napięcia i rywalizacji politycznej oraz militarnej między blokami państw komunistycznych, zdominowanymi przez ZSRR a państwami demokratycznego Zachodu - na czele z USA. Była to wojna polityczna, propagandowa i gospodarcza, toczyła się na wszystkich kontynentach. Cechował ją: wyścig zbrojeń, konfrontacja ideologiczna, walka o wpływy na terenach peryferyjnych oraz instrumentalne traktowanie wymiany handlowej i kulturalnej.</p>
+<p><strong>Przyczyny zimnej wojny to:</strong></p>
+<ul>
+<li>zakończenie II wojny światowej,</li>
+<li>ukształtowanie się dwóch bloków polityczno-militarnych: zachodniego (demokratycznego) na czele z USA i wschodniego (komunistycznego) na czele z ZSRS,</li>
+<li>zmniejszenie roli przedwojennych mocarstw - Francji i Wielkiej Brytanii,</li>
+<li>sowiecka polityka zmierzająca do maksymalnego rozszerzenia wpływów, prowadząca do podporządkowania wschodniej Europy ZSRR i zagrażająca również innym częściom kontynentu,</li>
+<li>po zakończeniu II wojny światowej ZSRS i USA przystąpiły do rywalizacji o światowe przywództwo,</li>
+<li>przemówienie Winstona Churchilla w Fulton 5 marca 1946 r. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Przyczyny wybuchu powstania węgierskiego w 1956 r.:</strong></p>
+<ul>
+<li>śmierć Józefa Stalina, </li>
+<li>domaganie się przez Węgrów zmian i demokratyzacji życia,  </li>
+<li>odsunięcie od władzy Imre Nagy, </li>
+<li>wydarzenia w innych państwach bloku wschodniego, </li>
+<li>chłopi byli niezadowoleni z polityki rolnej (kolektywizacja),</li>
+<li>dziennikarze i literaci narzekali na warunki swojej pracy i domagali się wolności słowa,</li>
+<li>studenci skarżyli się na warunki nauki i kryteria przyjmowania na uniwersytety,</li>
+<li>zapaść ekonomiczna i niskie standardy życia Węgrów. </li>
+</ul>
+<p><strong>Przebieg:</strong></p>
+<p>Pod wpływem "odwilży", 23 X 1956 r., wybuchło <strong>powstanie węgierskie</strong>. Wówczas studenci politechniki w Budapeszcie uzyskali zgodę na manifestację, podczas której chcieli przedstawić swoje żądania względem władzy. Przemarsz Węgrów miał zakończyć się na placu Józefa Bema, gdzie studenci mieli przeczytać swoje żądania, jednak marsz trwał dalej i coraz więcej ludzi się do niego się przyłączało. Część manifestujących poszła pod parlament, część pod radiostację w celu nagłośnienia niezadowolenia społecznego z polityki węgierskiej. To właśnie z budynku radiostacji dobyły się pierwsze strzały i rozpoczęło się krwawe tłumienie powstania. Od 4 do 10 listopada 1956 roku wojska armii sowieckiej zbrojnie interweniowały w wygaszaniu powstania. Działania rozpoczęły się 4 listopada o godz. 4:00 na sygnał "Grom". W akcji brało udział 58 tys. radzieckich żołnierzy. </p>
+<p><strong>Następstwa powstania węgierskiego w 1956 r.:</strong></p>
+<ul>
+<li>doszło do interwencji wojsk Związku Radzickiego,</li>
+<li>za udział w powstaniu skazanych na śmierć zostało 230 osób (w tym Imre Nagy), a ok. 35 tysięcy uwięziono,</li>
+<li>ZSRR powołał na Węgrzech wierny sobie rząd z Janosem Kadarem na czele, </li>
+<li>rozpoczęła się masowa emigracja z Węgier, szczególnie przez Austrię do RFN,</li>
+<li>blok wschodni ogarnął strach przed interwencją wojsk radzieckich, </li>
+<li>wydarzenia na Węgrzech doprowadziły do załamania ideologicznego wewnątrz partii komunistycznych na świecie, szczególnie z Europy Zachodniej.</li>
+</ul>
+<p><img alt="" height="417" src="./data/1181151-0.jpg" width="301"/> </p>
+<p>Flaga powstańców węgierskich na jednej z ulic Budapesztu, źródło zdjęcia: Wikimedia Commons. </p><br>

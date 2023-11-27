@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Erika und ihr Freund sind seit dem Gymnasium in einer Hip-Hop-Gruppe. Sie möchten im Sommer an einem <strong>Tanz-Workshop</strong> teilnehmen.<br/><em>Erika i jej chłopak od czasu gimnazjum są w pewnej grupie hip-hopowej. W lecie chcieliby wziąć udział w warsztatach tanecznych.  </em></p>
+<p>2. Ich interessiere mich für englische Aufführungen, deshalb brauche ich die <strong>Theater-AG</strong> bei uns in der Schule. <br/><em>Interesuję się angielskimi przedstawieniami, dlatego potrzebuję w naszej szkole koła teatralnego. </em></p>
+<p>3. Die Mitglieder der <strong>Kunst-AG</strong> organisieren jedes Jahr eine Bilder- und Fotoausstellung.<br/><em>Członkowie koła plastycznego co roku organizują wystawę obrazów i zdjęć. </em></p>
+<p>4. Für alle <strong>Pfadfinder</strong> sind diese Werte wichtig: Freiheit, Wahrheit, Hoffnung und Solidarität. <br/><em>Dla wszystkich harcerzy ważne są takie wartości jak: wolność, prawda, nadzieja i solidarność. </em></p>
+<p>5. Mein Bruder ist Mitglied von <strong>Greenpeace</strong>. Er organisiert mit seinen Freunden verschiedene Aktionen für die Umwelt. <br/><em>Mój brat jest członkiem Greenpeace. Organizuje ze swoimi przyjaciółmi różne akcje na rzecz ochrony środowiska. </em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>1. Die Schüler arbeiten an der Intonation. - Uczniowie pracują nad intonacją. <br/>arbeiten an + Dativ  </p>
+<p>2. Sie treffen sich vor der Aufführung jeden Tag. - Spotykają się codziennie przed występem. </p>
+<p>3. Der Lehrer hilft bei den Kostümen. - Nauczyciel pomaga przy kostiumach. <br/>helfen bei + Dativ </p>
+<p>4. Wir möchten unsere Freunde zu dem Theaterstück einladen. - Chcielibyśmy zaprosić naszych przyjaciół na sztukę teatralną. <br/>einladen zu + Dativ </p>
+<p>5. Die Eltern drücken ihrem Sohn für das Happening die Daumen. - Rodzice trzymają kciuki za happening syna. <br/>Po przyimku <em>für</em> obowiązuje stosowanie biernika. </p>
+<p> </p>
+<p>Rodzajnik określony w celowniku i bierniku:</p>
+<table border="1" style="height: 172px;text-align: center;width: 567px;" width="567">
+<tbody>
+<tr style="height: 31px;">
+<td style="width: 91px;height: 31px;"> </td>
+<td style="background-color: #ffa726;height: 31px;">rodzaj męski</td>
+<td style="background-color: #ffa726;height: 31px;">rodzaj żeński</td>
+<td style="background-color: #ffa726;height: 31px;">rodzaj nijaki </td>
+<td style="background-color: #ffa726;height: 31px;">liczba mnoga </td>
+</tr>
+<tr style="height: 40px;">
+<td style="width: 91px;height: 40px;">Nominativ <br/><em>mianownik</em>
+</td>
+<td style="width: 107px;height: 40px;">der</td>
+<td style="width: 110px;height: 40px;">die</td>
+<td style="width: 108px;height: 40px;">das</td>
+<td style="width: 117px;height: 40px;">die</td>
+</tr>
+<tr style="height: 40px;">
+<td style="width: 91px;height: 40px;">Dativ<br/><em>celownik</em>
+</td>
+<td style="width: 107px;height: 40px;">dem</td>
+<td style="width: 110px;height: 40px;">der</td>
+<td style="width: 108px;height: 40px;">dem</td>
+<td style="width: 117px;height: 40px;">den, + -n</td>
+</tr>
+<tr style="height: 41px;">
+<td style="width: 91px;height: 41px;">Akkusativ<br/><em>biernik</em>
+</td>
+<td style="width: 107px;height: 41px;">den</td>
+<td style="width: 110px;height: 41px;">die</td>
+<td style="width: 108px;height: 41px;">das</td>
+<td style="width: 117px;height: 41px;">die</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. Paul hat ein neues Hobby: Theater. <br/><em>Paul ma nowe hobby: teatr.  </em></p>
+<p>2. Er besucht die Theater-AG.<br/><em>Chodzi na koło teatralne. </em></p>
+<p>3. Die Schüler machen viel in der AG. Sie arbeiten an der Aussprache und an der Intonation. Sie schulen Gestik und Mimik. Sie diskutieren über Kunst, Musik und Theater. Sie lernen Texte auswendig und machen Proben. <br/><em>Uczniowie dużo robią na tym kole zainteresowań. Pracują nad wymową i intonacją. Szkolą gestykę i mimikę. Dyskutują o sztuce, muzyce i teatrze. Uczą się tekstów na pamięć i robią próby. </em></p>
+<p>4. Pauls AG organisiert am Freitagnachmittag ein Happening auf dem Sportplatz. <br/><em>Koło zainteresowań organizuje w piątek po południu happening na boisku. </em></p><br>

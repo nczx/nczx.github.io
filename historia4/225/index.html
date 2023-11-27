@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p>9 października <strong>1980 r.</strong> Czesław Miłosz został laureatem Literackiej Nagrody Nobla. Nagroda Nobla dla Miłosza była interpretowana jako wyraz poparcia dla politycznych przemian zachodzących we wschodnim bloku. Trudno bowiem uznać za przypadek, że polski emigracyjny poeta otrzymał ją w roku utworzenia Solidarności. Otrzymanie Nagrody Nobla przez Miłosza nagłośniło polską sprawę na arenie międzynarodowej oraz otworzyło mu drogę do polskich czytelników.</p>
+<p><img alt="" height="360" src="./data/1188958-0.jpg" width="236"/></p>
+<p>Czesław Miłosz w 1999 r., źródło zdjęcia: Wikimedia Commons.</p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>14 sierpnia 1980 r.</strong> robotnicy Stoczni Gdańskiej im. Lenina rozpoczęli strajk. Stoczniowcy sprzeciwiali się kolejnym podwyżkom cen i domagali się przywrócenia do pracy suwnicowej Anny Walentynowicz. Latem 1980 r. strajki ogarnęły już całą Polskę. Władze były przerażone ich zasięgiem i tym razem nie odważyły się użyć siły.</p>
+<p>Na czele strajku w Stoczni Gdańskiej stanął <strong>Lech Wałęsa</strong>. Utworzono <strong>Międzyzakładowy Komitet Strajkowy</strong> (MKS), który opracował <strong>21 postulatów</strong>. Protestujących robotników wsparli przedstawiciele<strong> inteligencji</strong>. 31 sierpnia komunistyczne władze podpisały w Gdańsku porozumienia za strajkującymi (porozumienia sierpniowe).  We wrześniu 1980 r. powstał <strong>Niezależny Samorządny Związek Zawodowy "Solidarność"</strong>, który oficjalnie zarejestrowano w listopadzie. </p>
+<p>"Solidarność" stała się nie tylko związkiem zawodowym, ale także największym ruchem społeczno-politycznym w dziejach Polski. W 1981 r. liczyła ok. 9,5 mln członków (na 35 milionów Polaków). Była legalną opozycją wobec władz PRL i jedyną niezależną obywatelską organizacją w całym bloku wschodnim.</p>
+<p><img alt="" height="202" src="./data/1188971-0.jpg" width="399"/></p>
+<p>Źródło grafiki: www.old.pum.edu.pl</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Karnawał "Solidarności"</strong> to okres <strong>kilkunastu miesięcy od sierpnia 1980 do wydarzenia wprowadzenia stanu wojennego 13 grudnia 1981 r.</strong> Charakteryzował się względnym <strong>osłabieniem reżimu komunistycznego</strong>, który objawiał się przez ograniczenie cenzury i zagwarantowania niewielkich swobód obywatelskich. Ponadto w tym czasie ruch "Solidarności" rósł w siłę i stawał się coraz popularniejszy. Był to czas (15 miesięcy) legalnej działalności "Solidarności", podczas którego społeczeństwo po raz pierwszy niemal zachłysnęło się wolnością. Niezadowolone władze komunistyczne, dostrzegając obawy wynikające z rozrostu opozycji podjęły, decyzję o wprowadzeniu stanu wojennego.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Działania podjęte przez komunistów w celu ograniczenia w społeczeństwie wpływów "Solidarności" to np.:</strong></p>
+<ul>
+<li>podsycanie nastrojów zniechęcenia wobec "Solidarności",  </li>
+<li>kontrolowanie mediów i stosowanie propagandy, </li>
+<li>zrzucanie odpowiedzialności za trudności ekonomiczne na strajkujących i "Solidarność", </li>
+<li>inwigilowanie struktur "Solidarności", </li>
+<li>prześladowanie członków "Solidarności", zastraszanie ich oraz członków rodzin, </li>
+<li>rozpowszechnienie fałszywych informacji mających oczernić członków "Solidarności". </li>
+</ul><br>

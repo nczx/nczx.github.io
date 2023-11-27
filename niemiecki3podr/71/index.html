@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. <strong>B.</strong> sehen kann </p>
+<p>Po spójniku <em>dass</em> obowiązuje szyk końcowy zdania. W zdaniach z czasownikami modalnymi oznacza to, że czasownik modalny w odmienionej formie zajmuje ostatnie miejsce w zdaniu, a poprzedza go drugi czasownik w formie bezokolicznika.  </p>
+<p>2. <strong>C.</strong> trotzdem - mimo to </p>
+<p>"Es ist manchmal total stressig und ich lebe jeden Tag in Hektik, trotzdem bietet der Beruf interessante Aufgaben". - Czasami jest stresująco, każdego dnia żyję w pośpiechu, mimo to ten zawód oferuje ciekawe zadania. </p>
+<p>obwohl - chociaż (po tym spójniku występuje szyk końcowy zdania) <br/>dass - że (po tym spójniku występuje szyk końcowy zdania) </p>
+<p>3. <strong>A.</strong> vor </p>
+<p>Mowa o czasowniku rozdzielnie złożonym <em>vorbereiten</em> - przygotowywać. </p>
+<p>4. <strong>B.</strong> obwohl - chociaż </p>
+<p><em>Obwohl</em> jest jedynym spójnikiem spośród podanych propozycji, po którym występuje szyk końcowy zdania. Po spójnikach <em>aber</em> i <em>denn</em> występuje szyk prosty. </p>
+<p>5. <strong>C.</strong> keine </p>
+<p>"Ich habe noch keine eigene Familie, aber in ein paar Jahren möchte ich einen Mann und Kinder haben". - Nie mam jeszcze własnej rodziny, ale za kilka lat chciałabym mieć męża i dzieci. </p>
+<p>6. <strong>B.</strong> weil - ponieważ </p>
+<p>Szyk końcowy zdania występuje po spójniku <em>weil</em>. Po spójniku <em>denn</em> jest to szyk prosty, a po spójniku <em>also</em> - przestawny. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. </p>
+<p>- Hallo, ich bin neu hier. Kannst du mir mit dem Kopierer helfen? (Cześć, jestem tu nowy. Możesz pomóc mi z kserokopiarką?) <br/>- ...</p>
+<p>A. Ja, jetzt habe ich keine Zeit. (Tak, teraz nie mam czasu.) <br/><strong>B. Ja, ich glaube schon.</strong> (Tak, tak myślę.)  </p>
+<p><br/>2. </p>
+<p>- ...<br/>- Der Kopierer ist in Raum 11. Wenn Sie fertig sind, melden Sie sich bitte bei mir. (Ksero jest w pomieszczeniu 11. Kiedy pan skończy, proszę się u mnie zgłosić.) </p>
+<p><strong>A. Wo finde ich denn den Kopierer?</strong> (Gdzie znajdę kserokopiarkę?) <br/>B. Funktioniert der Kopierer richtig? (Czy ksero działa poprawnie?) </p>
+<p><br/>3. </p>
+<p>- Was soll ich zuerst machen? (Co mam zrobić najpierw?) <br/>- ... </p>
+<p>A. Stecke die Kopie in den Briefumschlag. (Włóż kopię do koperty.) <br/><strong>B. Hebe zuerst die Klappe.</strong> (Najpierw podnieś klapę.) </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Ich muss mehr Deutsch lernen, sonst kann ich nicht in Berlin studieren. (B)<br/><em>Muszę uczyć się więcej niemieckiego, w przeciwnym razie nie będę mógł studiować w Berlinie.  </em></p>
+<p>2. Meine Cousine will Anwältin werden, also muss sie Jura studieren. (C)<br/><em>Moja kuzynka chce zostać adwokatem, musi więc studiować prawo. </em></p>
+<p>3. Sie hat Angst vorm Fliegen, trotzdem will sie Stewardess werden. (D)<br/><em>Ona boi się latać, mimo to chce zostać stewardessą. </em></p>
+<p>4. Ich finanziere dir einen Kochkurs in Paris, damit du in deinem Traumberuf als Koch arbeiten kannst. (A)<br/><em>Sfinansuję ci kurs gotowania w Paryżu, żebyś mógł pracować w swoim wymarzonym zawodzie jako kucharz.</em></p>
+<p>5. Er möchte eine Wohnung mieten, deshalb sucht er einen Sommerjob, um Geld für die Wohnung zu verdienen. (E)<br/><em>On chciałby wynająć jakieś mieszkanie, dlatego szuka pracy wakacyjnej, by zarobić pieniądze na to mieszkanie. </em></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br>

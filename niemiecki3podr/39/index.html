@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1. C. Nordsee  </p>
+<p>2. E. Insel </p>
+<p>3. A. konnte </p>
+<p>4. G. dort </p>
+<p>5. D. Rückreise </p>
+<p> </p>
+<p><em>Jaka szkoda, że moje wakacje już minęły. Spędziłem świetnie czas z przyjaciółmi. W pierwszym tygodniu wakacji pojechaliśmy nad <strong>Morze Północne</strong>. Byliśmy na <strong>wyspie</strong> Wangerooge. Mieszkaliśmy w małym hotelu ze śniadaniem i obiadokolacją. To były dwa cudowne tygodnie z dużą ilością słońca, plaży i windsurfingu. <strong>Mogłem</strong> też nurkować i jeździć na rowerze. To ciekawe, że nie mogą <strong>tam</strong> jeździć żadne samochody. W <strong>drodze powrotnej</strong> pojechaliśmy do Bremy. Na pewno jeszcze wrócę nad Morze Północne. </em></p>
+<p> </p>
+<p><em>Wyrazy, które podano dodatkowo: </em></p>
+<p>B. dorthin - tam (występuje w zdaniach, które wyrażają ruch, przemieszczenie, wskazują kierunek, jest to odpowiedź na pytanie <em>wohin?</em>) </p>
+<p>F. Meer - morze (wskazując kierunek z tym rzeczownikiem, używa się formy ściągniętej <em>ans</em>: ans Meer fahren - jechać nad morze) </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. Als er auf Teneriffa war, hat er sein Spanisch verbessert. (A)<br/><em>Kiedy był na Teneryfie, poprawił swój hiszpański.  </em></p>
+<p>Kiedy używamy nazw wysp (np. <em>Sizilien, Kreta, Mallorca</em>), określając miejsce, stosujemy przyimek <em>auf</em>, natomiast określając kierunek - przyimek <em>nach</em>.</p>
+<p><br/>2. Wir waren eine Woche in Berlin. Wir haben dort viel Deutsch gesprochen. (A)<br/><em>Byliśmy tydzień w Berlinie. Dużo mówiliśmy tam po niemiecku. </em></p>
+<p><em>Dort</em> to odpowiedź na pytanie <em>wo?</em>, występuje w zdaniach, które nie wyrażają ruchu, przemieszczenia. <br/><em>Dorthin</em> to odpowiedź na pytanie<em> wohin?</em>, występuje w zdaniach, które wyrażają ruch, przemieszczenie, wskazują kierunek. </p>
+<p><br/>3. Immer wenn wir am Meer sind, spielen wir Strandvolleyball. (B)<br/><em>Zawsze kiedy jesteśmy nad morzem, gramy w siatkówkę plażową. </em></p>
+<p>Spójnika <em>als</em> używamy jedynie wtedy, kiedy mówimy o jakimś wydarzeniu lub czynności, która miała miejsce jednorazowo w przeszłości.</p>
+<p><em>Wenn</em> używamy w pozostałych przypadkach, kiedy mówimy o czynnościach i wydarzeniach powtarzających się, regularnych, mających miejsce w przeszłości, teraźniejszości i przyszłości. Słowo <em>immer</em> dodatkowo wskazuje na konieczność zastosowania <em>wenn</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Wir haben Pyramiden gesehen, als wir in Ägypten waren.<br/><em>Widzieliśmy piramidy, kiedy byliśmy w Egipcie. </em></p>
+<p>Spójnika <em>als</em> używamy jedynie wtedy, kiedy mówimy o jakimś wydarzeniu lub czynności, która miała miejsce jednorazowo w przeszłości. Występuje po nim szyk końcowy zdania.  </p>
+<p><br/>2. Urlaub auf Mallorca ist nichts für mich und ich will nicht dorthin fahren.<br/><em>Urlop na Majorce to nic dla mnie i nie chcę tam jechać. </em></p>
+<p><em>Dorthin</em> to odpowiedź na pytanie<em> wohin?</em>, występuje w zdaniach, które wyrażają ruch, przemieszczenie, wskazują kierunek. </p>
+<p><br/>3. Lena fährt im Sommer in die Schweiz, weil das Land sehr interessant ist. <br/><em>Lena jedzie latem do Szwajcarii, ponieważ ten kraj jest bardzo ciekawy. </em></p>
+<p>Wskazując kierunek, którym jest kraj rodzaju żeńskiego lub w liczbie mnogiej, używamy przyimka <em>in</em> z rodzajnikiem określonym w bierniku: <em>in die</em>. </p>
+<p><br/>4. Wir wollten in die USA fliegen, aber die Tickets waren zu teuer. <br/><em>Chcieliśmy lecieć do USA, ale bilety były za drogie. </em></p>
+<p>Wskazując kierunek, którym jest kraj rodzaju żeńskiego lub w liczbie mnogiej, używamy przyimka <em>in</em> z rodzajnikiem określonym w bierniku: <em>in die</em>. </p>
+<p><br/>5. Wenn wir am Meer sind, baden wir oft. <br/><em>Kiedy jesteśmy nad morzem, często się kąpiemy.</em></p>
+<p><em>Wenn</em> używamy wtedy, kiedy mówimy o czynnościach i wydarzeniach powtarzających się, regularnych, mających miejsce w przeszłości, teraźniejszości i przyszłości. Po <em>wenn</em> występuje szyk końcowy zdania. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+Indywidualne<br>

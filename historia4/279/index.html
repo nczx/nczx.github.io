@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe <strong>korzyści </strong>wynikające ze zjawiska globalizacji:</p>
+<ul>
+<li>nasilenie mobilizacji i przepływu dóbr, kapitałów i siły roboczej w skali ogólnoświatowej,</li>
+<li>rozwój transportu, komunikacji, telekomunikacji,  </li>
+<li>szybki przepływ informacji w mediach, </li>
+<li>traktowanie przez podmioty gospodarcze całości globu jako jednego rynku,</li>
+<li>utworzenie międzynarodowych instytucji finansowych,</li>
+<li>liberalizacja handlu międzynarodowego,</li>
+<li>likwidacja barier celnych,</li>
+<li>swobodna wymiana walut,</li>
+<li>wolność w przepływie kapitału, </li>
+<li>łatwiejszy i szybszy dostęp do wiedzy - korzystnie wpływa na rozwój społeczeństwa i wzrost poziomu wykształcenia, </li>
+<li>wzrost tolerancyjności - zmniejsza ilość konfliktów wśród ludności, </li>
+<li>międzynarodowy rynek pracy - możliwość pracy w innym państwie stanowi alternatywę w przypadku braku zadowalającej pracy lub płacy w ojczystym kraju. </li>
+</ul>
+<p>Przykładowe <strong>zagrożenia </strong>wynikające ze zjawiska globalizacji:</p>
+<ul>
+<li>narastają nierówności społeczne wskutek nierównomiernej dystrybucji dóbr, usług i finansów, </li>
+<li>dochodzi do wyparcia firm krajowych / lokalnych, </li>
+<li>na rynku dominują produkty z Azji (np. Chin, Korei), </li>
+<li>dochodzi do dominacji społeczeństwa konsumpcyjnego nad twórczym, </li>
+<li>rodzimy kapitał podmiotów gospodarczych jest wypierany przez międzynarodowe korporacje, </li>
+<li>następuje odpływ wysoko kwalifikowanych pracowników do państw wyżej rozwiniętych, </li>
+<li>dochodzi do  koncentracji inwestycji w określonych regionach świata, </li>
+<li>w pogoni za zyskiem ignoruje się sprawy z ochroną środowiska,</li>
+<li>zatrata różnorodności obyczajów, kultur i języka,</li>
+<li>kultura, praca i życie poddawane są bezwzględnym prawom rynkowym,</li>
+<li>zatracenie wartości,</li>
+<li>zatrata więzi społecznych, które powodują zagubienie i osamotnienie ludzi,</li>
+<li>wzrost znaczenia marketingu, który ma znaczący wpływ na trendy.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Skutki ataków terrorystycznych na USA w 2001 r.:</strong></p>
+<ul>
+<li>
+<strong>zginęło 2996 osób</strong> (2977 ofiar i 19 terrorystów), </li>
+<li>szok, panika, rozpacz oraz poczucie solidarności i nadzieja,  </li>
+<li>ogłoszenie przez prezydenta George'a W. Busha <strong>"wojny z terroryzmem"</strong> (działania militarne prowadzone przez USA oraz inne państwa mające na celu unieszkodliwienie międzynarodowych grup terrorystycznych oraz uniemożliwienie wspierania ich przez "państwa zbójnickie"), </li>
+<li>
+<strong>atak USA i sojuszników na Afganistan</strong> rządzony przez talibów, gdzie przebywał Osama bin Laden, </li>
+<li>
+<strong>zwiększenie środków bezpieczeństwa</strong> na lotniskach, w innych miejscach publicznych skupiających duże grupy ludzi, </li>
+<li>wprowadzenie ustaw antyterrorystycznych (ograniczających jednocześnie prawa obywatelskie) w wielu państwach,</li>
+<li>pomimo wzmożonych działań antyterrorystycznych we wszystkich krajach Europy Zachodniej doszło wkrótce do <strong>kolejnych ataków islamskich terrorystów</strong>,</li>
+<li>poważny <strong>kryzys w branży lotniczej i turystyce</strong>, </li>
+<li>straty materialne i infrastrukturalne, </li>
+<li>zmiana świadomości i zachowań społecznych, </li>
+<li>światowy terroryzm zagraża obecnie pokojowi na całym globie. </li>
+</ul>
+<p><img alt="" height="346" src="./data/1190726-0.jpg" width="461"/></p>
+<p>Płonące wieżowce WTC z World Financial Center, źródło zdjęcia: Wikimedia Commons.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Zagrożenia współczesnego świata:</strong></p>
+<ul>
+<li>podział świata na bogatą Północ i biedne Południe,  </li>
+<li>zamachy terrorystyczne, </li>
+<li>przestępczość zorganizowana, </li>
+<li>kryzys klimatyczny, </li>
+<li>konflikty zbrojne między państwami, </li>
+<li>głód, </li>
+<li>nadmierny przyrost naturalny na Południu, </li>
+<li>niekontrolowane migracje,</li>
+<li>klęski przyrodnicze, </li>
+<li>pandemie i choroby zakaźne, </li>
+<li>globalizacja. </li>
+</ul><br>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<table border="1" style="border-collapse:collapse;width:100%;">
+<tbody>
+<tr style="text-align:center;">
+<td colspan="2" style="width:50%;background-color:#e6ee9c;"><strong>Hiperinflacja na przełomie lat 80. i 90. XX w. w Polsce</strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="background-color:#32cd32;"><strong>Przyczyny </strong></td>
+<td style="background-color:#32cd32;"><strong>Skutki </strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="width:50%;">
+<ul>
+<li>załamanie gospodarki PRL, </li>
+<li>transformacja gospodarcza,</li>
+<li>Polska znalazła się na skraju bankructwa,  </li>
+<li>brak funduszy na bieżącą działalność polityczną,</li>
+<li>utrata zdolności przez Polskę do spłaty zagranicznego zadłużenia, </li>
+<li>nastąpił niekontrolowany wzrost cen, </li>
+<li>niesprawna struktura gospodarki rynkowej, </li>
+<li>drukowanie pieniędzy przez Bank Polski niemających pokrycia w towarach dostępnych na rynku, </li>
+</ul>
+</td>
+<td style="width:50%;">
+<ul>
+<li>plan Balcerowicza - odejście od gospodarki scentralizowanej i przejście do gospodarki rynkowej,</li>
+<li>denominacja złotówki, </li>
+<li>prywatyzacja przedsiębiorstw państwowych, </li>
+<li>znaczne obniżenie inflacji i deficytu budżetowego,</li>
+<li>likwidacja niedoborów rynkowych,</li>
+<li>uzyskanie zgody wierzycieli na redukcję zadłużenia zagranicznego,</li>
+<li> bankructwa i likwidacja wielu przedsiębiorstw państwowych,</li>
+<li>redukcja zatrudnienia (wzrost bezrobocia), </li>
+<li>utworzenie Funduszu Stabilizacji Złotego,</li>
+<li>znaczny spadek stopy życiowej licznych grup ludności,</li>
+<li> zapaści całych gałęzi gospodarki krajowej, </li>
+<li>reforma systemu podatkowego, </li>
+<li>podniesienie stóp procentowych</li>
+<li>ogólna poprawa koniunktury w Polsce. </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Celem planu Leszka Balcerowicza była <strong>transformacja</strong>, czyli <strong>przekształcenie polskiej gospodarki z centralnie planowanej na kapitalistyczną gospodarkę rynkową</strong>.</p>
+<p><strong>Główne zadania planu Balcerowicza to</strong>:</p>
+<ul>
+<li>prywatyzacja przedsiębiorstw państwowych i budowa sektora prywatnego,</li>
+<li>ograniczenie deficytu budżetowego,</li>
+<li>walka z inflacją,</li>
+<li>rezygnacja z urzędowego regulowania cen - ceny miały być regulowane przez rynek (popyt i podaż).</li>
+</ul>
+<p><img alt="" height="240" src="./data/1191346-0.jpg" width="359"/></p>
+<p>Leszek Balcerowicz, źródło zdjęcia: Wikimedia Commons. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<table border="1" style="border-collapse:collapse;width:100%;">
+<tbody>
+<tr style="text-align:center;">
+<td colspan="2" style="width:50%;background-color:#ccff66;"><strong>Transformacja gospodarcza Polski </strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="background-color:#ccff00;"><strong>Skutki pozytywne</strong></td>
+<td style="background-color:#ccff00;"><strong>Skutki negatywne</strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="width:50%;">
+<ul>
+<li>spadek inflacji - w drugiej połowie 1990 r. miesięczna inflacja spadła do poziomu 2%, </li>
+<li>umocnienie złotego, </li>
+<li>otwarcie polskiej gospodarki na świat, </li>
+<li>napływ zagranicznych inwestycji, </li>
+<li>poprawa zaopatrzenia w sklepach, zniknęły długie kolejki, </li>
+<li>polepszenie sytuacji finansowej państwa,  </li>
+<li>ograniczenie działalności hut i kopalni, które miały i mają destrukcyjny wpływ środowisko przyrodnicze,</li>
+<li>wprowadzanie nowych technologii, które pozwoliły na obniżenie kosztów produkcji,</li>
+<li>poprawa jakości wyrobów przemysłowych, co zwiększyło ich konkurencyjność na światowym rynku,</li>
+<li>możliwość zakładania własnej działalności gospodarczej pozwoliła na poprawę sytuacji materialnej wielu osób,</li>
+<li>większa dostępność i różnorodność produktów, które są dostępne w sklepach,</li>
+<li>uniezależnienie polityczne i gospodarcze od Rosji oraz otwarcie się naszego kraju na państwa Europy Zachodniej, co pozwoliło nam na przystąpienie do NATO i Unii Europejskiej - przynosi to szereg korzyści, np. możliwość bezproblemowego wyjazdu do innych państw członkowskich.</li>
+</ul>
+</td>
+<td style="width:50%;">
+<ul>
+<li>spadek realnych dochodów znacznej części zatrudnionych (ceny rosły szybciej niż płace), </li>
+<li>nagły i znaczny wzrost bezrobocia, </li>
+<li>pogorszenie się sytuacji materialnej biedniejszej części społeczeństwa,</li>
+<li>wiele fabryk ograniczyło produkcję lub splajtowało, </li>
+<li>wzrost napięć i protestów społecznych,</li>
+<li>upadek Państwowych Gospodarstw Rolnych i utrata źródeł dochodów przez osoby tam pracujące,</li>
+<li>prywatyzacja wielu przedsiębiorstw odbyła się z szeregiem nieprawidłowości (wykorzystywanie powiązań rodzinnych, korupcji itd.),</li>
+<li>pogorszenie stosunków politycznych i dyplomatycznych z Rosją,</li>
+<li>załamanie się przemysłu włókienniczego w okolicach Łodzi przez napływ tańszych tkanin oraz odzieży z Azji Wschodniej</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br>

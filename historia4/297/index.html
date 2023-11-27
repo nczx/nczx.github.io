@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Województwa, których nazwy pochodzą od historycznych krain geograficznych to:</strong></p>
+<ul>
+<li>województwo wielkopolskie (łac. Polonia Maior), </li>
+<li>województwo małopolskie (łac. Polonia Minor),  </li>
+<li>województwo mazowieckie (łac. Mazovia), </li>
+<li>województwo kujawsko-pomorskie, (łac. Cuiavia), </li>
+<li>województwo śląskie (łac. Silesia), </li>
+<li>województwo pomorskie (łac. Pomerania),</li>
+<li>województwo podlaskie (łac. Podlachia),</li>
+<li>województwo warmińsko-mazurskie. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Mimo, że premierem rządu w <strong>1989 r.</strong> został <strong>Tadeusz Mazowiecki,</strong> to resorty siłowe w dalszym ciągu były podporządkowane komunistom. Generał Czesław Kiszczak kierował MSW, natomiast gen. Florian Siwicki - MON. Dochodziło do wielu nadużyć i zatajania zbrodni systemu komunistycznego. Celowo niszczono i palono akta wytworzone przez poprzednią władzę. </p>
+<p>W <strong>styczniu 1990 r., </strong>podczas XI Zjazdu partii, podjęto decyzję o <strong>rozwiązaniu PZPR</strong>. Część działaczy PZPR (m.in. Leszek Miller i Aleksander Kwaśniewski) utworzyła nową partię -  <strong>Socjaldemokrację Rzeczpospolitej Polskiej</strong>, jej struktury oraz działalność była finansowana z przejętego majątku PZPR oraz tzw. moskiewskiej pożyczki. SdRP skupiła wokół siebie koalicję mniejszych ugrupowań lewicowych i utworzyła <strong>Sojusz Lewicy Demokratycznej. </strong>Koalicja w 1999 r. przekształciła się w jednolitą partię. </p>
+<p><strong>Zjednoczone Stronnictwo Ludowe </strong>(partia satelicka wobec PZPR) przekształciło się w <strong>Polskie Stronnictwo Ludowe </strong>(PSL). Nastąpiła utrata znaczenia przez <strong>Stronnictwo Demokratyczne </strong>(partia satelicka PZPR). Swoją działalność rozpoczęły nowe ugrupowania polityczne, które w znacznym stopniu wywodziły się z obozu solidarnościowego (po 1989 r. zaczął się rozpadać z powodu wizji przyszłej Polski). Do pierwszego podziału doszło już w 1990 r. i powstało <strong>Porozumienie Centrum </strong>(PC, popierające Lecha Wałęsę) i <strong>Ruch Obywatelski Akcja Demokratyczna </strong>(popierał Tadeusza Mazowieckiego). Po klęsce Mazowieckiego w wyborach jego zwolennicy założyli <strong>Unię Demokratyczną. N</strong>a polskiej scenie politycznej działały takie partie jak: PC, Zjednoczenie Chrześcijańsko-Narodowe, Kongres Liberalno-Demokratyczny, Konfederacja Polski Niepodległej, NSZZ "Solidarność". Oprócz tych sił działało ponad 100 mniejszych ugrupowań partyjnych, które chciały zaistnieć na scenie politycznej. Sytuacja polityczna ewoluowała i w następnych latach pojawiły się nowe partie, np. Akcja Wyborcza Solidarność czy Unia Wolności. </p>
+<p>25 listopada 1990 r. odbyła się <strong>pierwsza tura wolnych wyborów prezydenckich</strong>. Były to nie tylko pierwsze powszechne wybory prezydenckie w III RP, ale i w całej historii Polski. Najwięcej głosów zebrali Lech Wałęsa oraz Stanisław Tymiński. Druga tura odbyła się 9 grudnia 1990 r. Wzięło w niej udział 53,39% uprawnionych do głosowania obywateli. <strong>Lecha Wałęsę</strong> poparło 74,25% głosujących, natomiast Stana Tymińskiego 25,75%. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Przedstaw główne postanowienia Konstytucji Rzeczypospolitej Polskiej uchwalonej w 1997 r.:</strong></p>
+<ul>
+<li>zachowanie suwerenności narodu,</li>
+<li>przestrzeganie zasady legalizmu,  </li>
+<li>przestrzeganie zasady pomocniczości, </li>
+<li>obowiązywanie społecznej gospodarki rynkowej, </li>
+<li>funkcjonowanie republikańskiej formy państwa, </li>
+<li>obowiązywanie zasady reprezentacji politycznej,</li>
+<li>obowiązywanie zasady demokratycznego państwa prawa, </li>
+<li>trójpodział władzy, </li>
+<li>pluralizm społeczny i polityczny, </li>
+<li>dbanie o zrównoważony rozwój, </li>
+<li>funkcjonowanie zasady sprawiedliwości społecznej, </li>
+<li>bezstronność religijna, światopoglądowa i filozoficzna władz publicznych. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Trójpodział władzy jest bardzo ważną zasadą w funkcjonowaniu demokratycznego państwa, ponieważ:</strong></p>
+<ul>
+<li>jasno określa i precyzuje zakres obowiązków władzy ustawodawczej, wykonawczej i sądowniczej, </li>
+<li>zapobiega przejęciu kontroli przez jeden organ władzy,  </li>
+<li>sprawia, że władza ustawodawcza, wykonawcza i sądownicza oddziałują na siebie, kontrolują i jednocześnie hamują, </li>
+<li>pozwala uniknąć sytuacji, w której jedna z władz zaczyna dominować nad pozostałymi, </li>
+<li>wpływa na zachowanie autonomii przez poszczególne władze. </li>
+</ul><br>

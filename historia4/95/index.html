@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Po klęsce Polski we wrześniu 1939 r. zachowano ciągłość władz na emigracji poprzez:</strong></p>
+<ul>
+<li>przeniesienie się z Rumunii do Francji, a następnie Londynu,  </li>
+<li>zyskanie uznania przez znaczną część państw, dzięki czemu rząd na uchodźstwie mógł podejmować decyzje i prowadzić negocjacje z aliantami, </li>
+<li>odtworzenie polskiej armii na Zachodzie, </li>
+<li>powołanie Delegatury Rządu na Kraj jako organu administracji państwowej na terenach okupowanych, </li>
+<li>zawieranie układów z innymi państwami (np. układ Sikorski-Majski),</li>
+<li>reprezentowanie interesów Polski na arenie międzynarodowej. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Skutki paktu Sikorski-Majski:</strong></p>
+<ul>
+<li>uwolnienie Polaków więzionych w sowieckich łagrach,  </li>
+<li>szansa na powrót naszych rodaków do ojczyzny, </li>
+<li>Polacy wypuszczeni z więzień i aresztów zostali objęci amnestią, </li>
+<li>utworzenie polskiej armii na terytorium ZSRR,</li>
+<li>przywrócenie stosunków między Polską a ZSRS, </li>
+<li>nastąpiła wymiana ambasadorów pomiędzy dwoma państwami, </li>
+<li>wzajemna pomoc i wsparcie w walce z Niemcami,</li>
+<li>potwierdzenie nieważności paktu Ribbentrop-Mołotow z 1939 r.,</li>
+<li>w układzie Sikorski-Majski nie uregulowano sprawy powojennej wschodniej granicy Polski. </li>
+</ul>
+<p><img alt="" height="239" src="./data/1180447-0.jpg" width="357"/></p>
+<p>Podpisanie układu Sikorski-Majski w Londynie 30 lipca 1941 r., źródło zdjęcia: Wikimedia Commons. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Okoliczności ujawnienia zbrodni katyńskiej:</strong></p>
+<p>11 kwietnia 1943 r. niemiecka Agencja Transocean poinformowała o "odkryciu masowego grobu ze zwłokami 3.000 oficerów polskich" w Katyniu. 13 kwietnia informacje te potwierdzono na konferencji w Berlinie. Ten dzień wskazuje się za symboliczną rocznicę Zbrodni Katyńskiej. Sowieckie Biuro Informacyjne 15 kwietnia odpowiedziało, że polscy jeńcy zostali zamordowani przez Niemców. Generał Władysław Sikorski pamiętał, że od lata 1941 r. bezskutecznie próbował uzyskać od Stalina informacje o losie polskich oficerów. Przywódca ZSRR twierdził wtedy, że przebywają oni na terenie Mandżurii. Rząd RP na uchodźstwie polecił swojemu przedstawicielowi w Szwajcarii zwrócić się do Międzynarodowego Czerwonego Krzyża z prośbą o powołanie komisji do zbadania odkrytych grobów. 17 kwietnia 1943 r. strona polska złożyła w tej sprawie oficjalną notę w Genewie. Dowiedziała się wówczas, że również Niemcy zwrócili się do MCK o wszczęcie dochodzenia. Władza niemiecka chciała w ten sposób sprowokować konflikt pomiędzy aliantami. </p>
+<p><strong>Wpływ ujawnienia zbrodni katyńskiej na sytuację międzynarodową Polski:</strong></p>
+<ul>
+<li>zerwanie stosunków dyplomatycznych między Polską a ZSRS, </li>
+<li>Stalin miał już plan co do Polski - chciał stworzyć w Polsce podporządkowany sobie rząd składający się z polskich komunistów, </li>
+<li>Stalin oskarżył gen. Sikorskiego o współpracę z Niemcami, </li>
+<li>osłabienie znaczenia polski w obozie alianckim, </li>
+<li>w sprawie katyńskiej Polacy nie uzyskali wsparcia ze strony przywódców mocarstw zachodnich,</li>
+<li>Niemcy zorganizowali własne dochodzenie w sprawie katyńskiej -  eksperci jednomyślnie podpisali sprawozdanie, w którym stwierdzali, iż egzekucje na polskich jeńcach wykonano w marcu i kwietniu 1940 r.</li>
+</ul>
+<p><img alt="" height="335" src="./data/1180508-0.jpg" width="496"/></p>
+<p>Pomnik i ołtarz w Katyniu, źródło zdjęcia: Wikimedia Commons. </p><br>

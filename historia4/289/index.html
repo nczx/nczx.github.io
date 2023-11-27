@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Wybory kontraktowe</strong> są określane także jako <strong>wybory czerwcowe.</strong> Były to pierwsze częściowo wolne wybory w historii Polski po II wojnie światowej. Pierwsza tura odbyła się <strong>4 czerwca 1989 r.</strong>, druga zaś 18 czerwca. Zasady przeprowadzenia wyborów kontraktowych został ustalone i doprecyzowane podczas <strong>rozmów</strong> <strong>Okrągłego Stołu</strong> (6 luty - 5 kwietnia 1989 r.). Ustalono, że PZPR oraz jej satelici obsadzą, co najmniej <strong>299 (65%) miejsc w Sejmie</strong>. Pozostałe mandaty poselskie w liczbie 161 (35%) zostały przeznaczone dla kandydatów bezpartyjnych. Walka o te miejsca oraz walka o wszystkie mandaty senatorskie (100) miała charakter otwarty i demokratyczny. Wbrew oczekiwaniom władz i "Solidarność" zdobyła praktycznie wszystko, na co pozwalały okrągłostołowe ustalenia.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Wydarzenia, które doprowadziły do powołania niekomunistycznego premiera w 1989 r.:</strong></p>
+<ul>
+<li>angażowanie się Tadeusza Mazowieckiego w działalność opozycyjną i wydarzenia<strong> jesieni narodów</strong>, </li>
+<li>od września 1988 r. w <strong>Magdalence</strong> odbywały się <strong>nieoficjalne spotkania władzy</strong> <strong>z opozycją</strong>, w czasie których zadecydowano o podjęciu rozmów Okrągłego Stołu,</li>
+<li>
+<strong>obrady Okrągłego Stołu</strong> trwały od 6 lutego do 5 kwietnia 1989 r. Uczestniczyli w nich reprezentanci komunistycznej władzy pod kierownictwem gen. Czesława Kiszczaka oraz przedstawiciele "Solidarności" z Lechem Wałęsą na czele,  </li>
+<li>porozumienia Okrągłego Stołu zostały podpisane 5 kwietnia 1989 r. Jednym z ustaleń było <strong>przeprowadzenie częściowo wolnych wyborów</strong>. Zwycięstwo odnieśli w nich kandydaci "Solidarności". W <strong>wyborach prezydenckich</strong>, które przeprowadzono 19 lipca 1989 r. Zgromadzenie Narodowe przewagą jednego głosu wybrało <strong>gen. Wojciecha Jaruzelskiego</strong>, który wyznaczył na premiera gen. Czesława Kiszczaka,</li>
+<li>19 sierpnia 1989 r. prezydent Wojciech Jaruzelski przyjął rezygnację gen. Kiszczaka. 24 sierpnia 1989 r. na wniosek prezydenta Sejm kontraktowy wybrał na premiera <strong>Tadeusza Mazowieckiego</strong>. Poparcia udzieliła mu Krajowa Komisja Wykonawcza NSZZ "Solidarność". 378 posłów oddało głos za, 4 było przeciwko i 41 wstrzymało się od głosu. Tym samym Mazowieckiemu powierzono misję utworzenia nowego rządu. Był on <strong>pierwszym niekomunistycznym premierem</strong> w Polsce od zakończenia II wojny światowej, </li>
+<li>
+<strong>12 września 1989 r.</strong> doszło do oficjalnego rządu kierowanego przez Tadeusza Mazowieckiego.</li>
+</ul>
+<p><img alt="" height="371" src="./data/1190995-0.jpg" width="273"/></p>
+<p>Tadeusz Mazowiecki, źródło zdjęcia: Wikimedia Commons. </p><br>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. <strong>Polizist </strong></p>
+<p>"Na ja, mit sieben Jahren wollte ich Feuerwehrmann werden oder Polizist, wie die meisten Jungen". - No tak, w wieku siedmiu lat chciałem zostać strażakiem lub policjantem, jak większość chłopców.  </p>
+<p>2. <strong>Jungen </strong></p>
+<p>"Viele Jungen wollen eine Uniform tragen und Helden spielen". - Dużo chłopców chce nosić mundur i odgrywać rolę bohatera. </p>
+<p>3. <strong>bauen </strong></p>
+<p>"Also Bauingenieur, weil ich tolle Häuser bauen wollte". - Inżynierem budownictwa, ponieważ chciałem budować wspaniałe domy. </p>
+<p>4. <strong>Lehrerin </strong></p>
+<p>"Dann wollte sie Lehrerin sein und mit Kindern arbeiten". - Później chciała być nauczycielką i pracować z dziećmi. </p>
+<p>5. <strong>helfen </strong></p>
+<p>"Fremdsprachen helfen in diesem Beruf". - Języki obce pomagają w tym zawodzie. </p>
+<p><br/><br/>Podane dodatkowo: <em>Sekretärin</em> - sekretarka, <em>lernen</em> - uczyć się. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>- Warum willst du Polizist werden? (Dlaczego chcesz zostać policjantem?) <br/>- Ich will Polizist werden, um Kriminalfälle zu lösen. (Chcę zostać policjantem, by rozwiązywać zagadki kryminalne.)  </p>
+<p>- Warum willst du Ärztin werden? (Dlaczego chcesz zostać lekarką?) <br/>- Ich will Ärztin werden, um kranken Menschen zu helfen. (Chcę zostać lekarką, by pomagać chorym ludziom.) </p>
+<p>- Warum willst du Mechaniker werden? (Dlaczego chcesz zostać mechanikiem?) <br/>- Ich will Mechaniker werden, um Autos zu reparieren. (Chcę zostać mechanikiem, by naprawiać samochody.) </p>
+<p>- Warum willst du Koch werden? (Dlaczego chcesz zostać kucharzem?) <br/>- Ich will Koch werden, um gut zu kochen. (Chcę zostać kucharzem, by dobrze gotować.) </p>
+<p> </p>
+<p><br/>Konstrukcja<em> um ... zu</em> występuje w zdaniach celowych, które odpowiadają na pytania:<em> wozu?</em> (po co?),<em> warum?</em> (dlaczego?), <em>zu welchem Zweck?</em> (w jakim celu?). Konstrukcja ta jest stosowana tylko wtedy, kiedy w zdaniu głównym (nadrzędnym) i zdaniu pobocznym (podrzędnym) występuje ten sam podmiot. </p>
+<p>Czasownik w bezokoliczniku na końcu zdania poprzedza słowo <em>zu</em>. W przypadku czasowników rozdzielnie złożonych, <em>zu</em> występuje między przedrostkiem a czasownikiem głównym. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>- Papa / Mama, ich will Koch werden und möchte Kochen lernen. (Tato / Mamo, chcę zostać kucharzem i chciałbym nauczyć się gotować.)  <br/>- Toll! Ich finanziere dir einen Kochkurs in Paris, damit du Kochen lernst. (Świetnie! Sfinansuję ci kurs gotowania w Paryżu, żebyś nauczył się gotować.) </p>
+<p>- Papa / Mama, ich will Ärztin werden und möchte Menschen helfen. (Tato / Mamo, chcę zostać lekarką i chciałabym pomagać ludziom.) <br/>- Toll! Ich schicke dich zum Medizinstudium an die Universität in Berlin, damit du Menschen hilfst. (Świetnie! Wyślę cię na studia medyczne na Uniwersytet Berliński, żebyś pomagała ludziom.) </p>
+<p><br/><br/>W zdaniach celowych, które odpowiadają na pytania:<em> wozu?</em> (po co?),<em> warum?</em> (dlaczego?), <em>zu welchem Zweck?</em> (w jakim celu?) występuje konstrukcja bezokolicznikowa <em>um ... zu</em> lub spójnik <em>damit</em>. Spójnika <em>damit</em> używamy wtedy, kiedy w zdaniu głównym (nadrzędnym) i zdaniu pobocznym (podrzędnym) występują różne podmioty. Po tym spójniku obowiązuje szyk końcowy zdania. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>Po spójniku <em>damit</em> występuje szyk <strong>zdania</strong> <strong>pobocznego</strong>.  </p>
+<p>W zdaniu z konstrukcją <em>um ... zu</em> występuje zawsze ten sam <strong>podmiot</strong>. W drugiej części zdania nie umieszczamy podmiotu, a czasownik w <strong>bezokoliczniku</strong> znajduje się na końcu zdania. </p>
+<p><br/><br/>Podano dodatkowo: D. formie odmienionej. </p><br>

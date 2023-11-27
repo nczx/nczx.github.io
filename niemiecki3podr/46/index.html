@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>Przykładowe rozwiązanie zadania: </p>
+<table border="1" style="height: 411px;width: 707px;text-align: center;border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="background-color: #64b5f6;">der Frühling<br/><em>wiosna</em>
+</td>
+<td style="background-color: #64b5f6;">der Sommer<br/><em>lato </em>
+</td>
+<td style="background-color: #64b5f6;">der Herbst<br/><em>jesień </em>
+</td>
+<td style="background-color: #64b5f6;">der Winter <br/><em>zima</em>
+</td>
+</tr>
+<tr>
+<td style="width: 174px;">die Schuhe <br/><em>buty</em><br/>elegante Schuhe<br/><em>eleganckie buty</em>
+</td>
+<td style="width: 174px;">das T-Shirt <br/><em>koszulka </em><br/>ein blaues T-Shirt <br/><em>niebieska koszulka</em>
+</td>
+<td style="width: 173px;">die Hose <br/><em>spodnie  </em><br/>eine helle Hose <br/><em>jasne spodnie</em>
+</td>
+<td style="width: 173px;">die Mütze <br/><em>czapka</em><br/>eine rote Mütze <br/><em>czerwona czapka </em>
+</td>
+</tr>
+<tr>
+<td style="width: 174px;">die Jeans<br/><em>jeansy</em><br/>eine blaue Jeans <br/><em>niebieskie jeansy </em>
+</td>
+<td style="width: 174px;">der Rock<br/><em>spódnica</em><br/>ein kurzer Rock <br/><em>krótka spódnica </em>
+</td>
+<td style="width: 173px;">der Pullover <br/><em>sweter</em><br/>ein gelber Pullover <br/><em>żółty sweter</em>
+</td>
+<td style="width: 173px;">die Jacke <br/><em>kurtka</em><br/>eine grüne Jacke<br/><em>zielona kurtka</em>
+</td>
+</tr>
+<tr>
+<td style="width: 174px;">das Hemd <br/><em>koszula</em><br/>ein kariertes Hemd<br/><em>koszula w kratkę </em>
+</td>
+<td style="width: 174px;">das Kleid <br/><em>sukienka </em><br/>ein gelbes Kleid <br/><em>żółta sukienka </em>
+</td>
+<td style="width: 173px;">der Mantel <br/><em>płaszcz</em><br/>ein schicker Mantel<br/><em>stylowy płaszcz</em>
+</td>
+<td style="width: 173px;">die Handschuhe <br/><em>rękawiczki </em><br/>bunte Handschuhe<br/><em>kolorowe rękawiczki</em>
+</td>
+</tr>
+<tr>
+<td style="width: 174px;">die Bluse <br/><em>bluzka </em><br/>eine elegante Bluse <br/><em>elegancka bluzka</em>
+</td>
+<td style="width: 174px;"> </td>
+<td style="width: 173px;">das Sweatshirt <br/><em>bluza</em><br/>ein blaues Sweatshirt<br/><em>niebieska bluza </em>
+</td>
+<td style="width: 173px;">der Schal <br/><em>szalik </em><br/>ein roter Schal <br/><em>czerwony szalik </em>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Tabela prezentuje odmianę przymiotnika z rodzajnikiem nieokreślonym. </p>
+<p>Przeprowadzenie rozmów w parach to indywidualna część zadania. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Końcówki przymiotnika w mianowniku (<em>Nominativ</em>) po rodzajniku nieokreślonym: </p>
+<p>Das ist ein blau<strong>er</strong> Pullover. - To jest niebieski sweter. </p>
+<p>Das ist eine rot<strong>e</strong> Bluse. - To jest czerwona bluzka. </p>
+<p>Das ist ein elegant<strong>es</strong> Kleid. - To jest elegancka sukienka. </p>
+<p>Das sind bequem<strong>e</strong> Schuhe. - To są wygodne buty.</p>
+<p><br/><br/>Uwaga, zapamiętaj, że dla rzeczowników w liczbie mnogiej nie istnieje rodzajnik nieokreślony. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Tłumaczenie dialogu:</p>
+<p><em>- Już się cieszę na myśl o imprezie w ogrodzie. A ty? </em><br/><em>- Ja też. Ale nie wiem, co mam ubrać. </em><br/><em>- Ja też nie. Może jakąś sukienkę. Jak ci się podoba ta żółta sukienka?  </em><br/><em>- Jest bardzo ładna. W tej sukience wyglądasz świetnie!</em><br/><em>- A może ubiorę jakąś spódnicę? Czyż ta niebieska spódnica nie jest ładna? A do tego biała bluzka. </em><br/><em>- Ale to przecież impreza w ogrodzie! Ta niebieska spódnica jest za elegancka. A żółta sukienka pasuje ci o wiele bardziej. Do tego pasują też te niebieskie baleriny. </em><br/><em>- Masz rację. Dzięki, Luise. Fajnie, że cię mam. Chodź, teraz wybierzemy coś dla ciebie. </em></p>
+<p> </p>
+<p>Końcówki przymiotnika w mianowniku (<em>Nominativ</em>) po rodzajniku określonym:</p>
+<p>Mir gefällt der blau<strong>e</strong> Rock. - Podoba mi się ta niebieska spódnica. </p>
+<p>Mir gefällt die weiß<strong>e</strong> Bluse. - Podoba mi się ta biała bluzka. </p>
+<p>Mir gefällt das gelb<strong>e</strong> Kleid. - Podoba mi się ta żółta sukienka. </p>
+<p>Mir gefallen die blau<strong>en</strong> Ballerinas. - Podobają mi się te niebieskie baleriny. </p><br>

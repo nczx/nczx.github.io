@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Anna legt ihre Klamotten in den Schrank. (A) - Anna wkłada swoje ubrania do szafy.<br/>Zaimek dzierżawczy w bierniku. </p>
+<p>2. Ich helfe meiner Mutter in der Küche. (B) - Pomagam mamie w kuchni. <br/>Zaimek dzierżawczy w celowniku.  </p>
+<p>3. Wir räumen unsere Wohnung auf. (A) - Sprzątamy nasze mieszkanie. <br/>Zaimek dzierżawczy w bierniku. </p>
+<p>4. Er lernt gern in seinem Zimmer. (C) - On lubi się uczyć w swoim pokoju. <br/>Zaimek dzierżawczy w celowniku.</p>
+<p>5. Wann besuchst du deinen Vater? (C) - Kiedy odwiedzisz swojego tatę?<br/>Zaimek dzierżawczy w bierniku. </p>
+<p>6. In der Stadt gibt es einen Blumenladen. (C) - W mieście jest kwiaciarnia. <br/>Rodzajnik nieokreślony w bierniku.</p>
+<p>7. Es gibt keine Autos auf dieser Straße. (B) - Na tej ulicy nie ma żadnych samochodów. <br/>Przeczenie <em>kein</em> w bierniku. </p>
+<p><br/>Po wyrażeniu <em>es gibt</em> zawsze używa się biernika. </p>
+<p><br/>Zaimek dzierżawczy informuje, co do kogoś należy. Znajduje się on bezpośrednio przed rzeczownikiem, zajmuje miejsce rodzajnika. Odmienia się przez przypadki i rodzaje. <span style="text-decoration: underline;">Zaimki dzierżawcze odmieniają się tak samo jak rodzajnik nieokreślony "ein", a w liczbie mnogiej występuje odmiana taka sama jak dla rodzajnika określonego "die"</span>. <br/>Zaimki dzierżawcze dla poszczególnych osób to:</p>
+<ul>
+<li>ich - mein</li>
+<li>du - dein</li>
+<li>er - sein</li>
+<li>sie - ihr</li>
+<li>es - sein</li>
+<li>wir - unser</li>
+<li>ihr - euer</li>
+<li>sie - ihr</li>
+<li>Sie - Ihr</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<table border="1" style="height: 489px;width: 645px;text-align: center;border-collapse: collapse;">
+<tbody>
+<tr style="height: 27px;">
+<td style="background-color: #8bc34a;height: 27px;">PRO </td>
+<td style="background-color: #8bc34a;height: 27px;">CONTRA </td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 319px;height: 51px;">Man kann bequem zu Hause sitzen. <br/><em>Można wygodnie siedzieć w domu. </em>
+</td>
+<td style="width: 319px;height: 51px;">Man kann die Ware nicht in die Hand nehmen.<br/><em>Nie można wziąć towaru do ręki. </em>
+</td>
+</tr>
+<tr style="height: 51px;">
+<td style="width: 319px;height: 51px;">Das geht schnell und ist praktisch.<br/><em>To szybkie i praktyczne. </em> </td>
+<td style="width: 319px;height: 51px;">Das Bild entspricht nicht immer der Realität.<br/><em>Zdjęcie nie zawsze odpowiada rzeczywistości. </em>  </td>
+</tr>
+<tr style="height: 68px;">
+<td style="width: 319px;height: 68px;">Manchmal sind Produkte billiger als in einem normalen Geschäft. <br/><em>Czasami towary są tańsze niż w normalnym sklepie. </em>
+</td>
+<td style="width: 319px;height: 68px;">Die Lieferung dauert manchmal zu lange.<br/><em>Dostawa trwa czasami za długo. </em>
+</td>
+</tr>
+<tr style="height: 68px;">
+<td style="width: 319px;height: 68px;">Man kann die Preise vergleichen.<br/><em>Można porównać ceny. </em>
+</td>
+<td style="width: 319px;height: 68px;">Lange Lieferungszeit kostet manchmal viel Nerven.<br/><em>Długi czas dostawy czasami kosztuje dużo nerwów. </em>
+</td>
+</tr>
+<tr style="height: 68px;">
+<td style="width: 319px;height: 68px;">Die Zeit spielt keine Rolle, denn man kann Tag und Nacht bestellen. <br/><em>Czas nie gra żadnej roli, ponieważ można zamawiać przez cały dzień i całą noc. </em>
+</td>
+<td style="width: 319px;height: 68px;">Onlineeinkaufen ist mit einem Risiko verbunden. <br/><em>Zakupy internetowe związane są z pewnym ryzykiem. </em>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 319px;height: 46px;">Es gibt keine Schlangen an der Kasse.<br/><em>Nie ma kolejek do kas. </em> </td>
+<td style="width: 319px;height: 46px;">Jemand kann unsere Daten hacken.<br/><em>Ktoś może wykraść nasze dane. </em>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 319px;height: 47px;">Man kann alles kaufen.<br/><em>Można kupić wszystko. </em> </td>
+<td style="width: 319px;height: 47px;"> </td>
+</tr>
+<tr style="height: 52px;">
+<td style="width: 319px;height: 52px;">Man kann die Ware zurückschicken oder umtauschen. <br/><em>Towar można odesłać lub wymienić. </em>
+</td>
+<td style="width: 319px;height: 52px;"> </td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 319px;height: 48px;">Man spart Zeit. <br/><em>Oszczędza się czas. </em>
+</td>
+<td style="width: 319px;height: 48px;"> </td>
+</tr>
+</tbody>
+</table><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
+Indywidualne<br>

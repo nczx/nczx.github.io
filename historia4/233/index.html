@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>W nocy z 12 na 13 grudnia 1981 r.</strong> nowy przywódca PRL – <strong>generał Wojciech Jaruzelski</strong> ogłosił <strong>wprowadzenie stanu wojennego</strong>. Władzę w kraju objęli wyżsi dowódcy wojskowi skupieni w <strong>Wojskowej Radzie Ocalenia Narodowego</strong> (WRON). To posunięcie było niezgodne z konstytucją PRL, ponieważ trwała wówczas sesja sejmu i to on sprawował najwyższą władzę w państwie.</p>
+<p>Na ulice polskich miast wyjechały <strong>czołgi i opancerzone transportery</strong>. Funkcjonariusze MO i SB aresztowali ok. 5 tys. działaczy "Solidarności" oraz osób rzekomo zagrażających bezpieczeństwu państwa. Na terenie Polski rozlokowano 70 tys. żołnierzy z bronią i ciężkim sprzętem oraz 30 tys. milicjantów. Wprowadzono liczne obostrzenia:</p>
+<ul>
+<li>członkom "Solidarności" zakazano prowadzenia działalności, kilkanaście tysięcy działaczy zamknięto w ośrodkach internowania i więzieniach,</li>
+<li>zawieszono prawa i swobody obywatelskie,</li>
+<li>wprowadzono godzinę policyjną - obowiązywał odtąd zakaz wychodzenia z domu po godz. 22:00 do 6:00 rano następnego dnia,  </li>
+<li>wprowadzono patrole wojskowe, które skutecznie wzbudzały lęk wśród obywateli,</li>
+<li>zawieszono działalność organizacji niezależnych od państwa, </li>
+<li>oddziały wojska i milicji tłumiły protesty obywatelskie. W czasie stanu wojennego zginęło kilkadziesiąt osób. Do ofiar stanu wojennego należy między innymi dziewięciu górników z katowickiej kopalni "Wujek", </li>
+<li>wprowadzono cenzurę korespondencji, </li>
+<li>kontrolowanie rozmów telefonicznych, </li>
+<li>anulowanie rozmów międzymiastowych, </li>
+<li>zawieszono działalność organizacji niezależnych od państwa, </li>
+<li>zawieszenie wszystkich tytułów prasowych poza "Trybuną Ludu" i "Żołnierzem Wolności", </li>
+<li>dziennikarze pracujący w mediach w czasie stanu wojennego zostali starannie dobrani. Część z nich, podejrzewana o sprzyjanie "Solidarności", straciła pracę. W niektórych redakcjach zwolniono większość pracowników, </li>
+<li>dziennikarze prowadzący "Dziennik Telewizyjny" występowali w mundurach. Czytali teksty, które wcześniej osobiście zaakceptował Wojciech Jaruzelski. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p>Opozycja, mimo wprowadzenia stanu wojennego nie zrezygnowała ze swoich działań. <strong>"Solidarność"</strong> odbudowała stroje struktury w <strong>podziemiu</strong>. Ważną rolę odegrało otrzymanie przez Lecha Wałęsa <strong>Nagrody Nobla</strong>. Pozytywne nastawienie wobec opozycji wykazywał także papież Jan Paweł II, którzy odwiedził Polskę w m.in. w 1983 r. Konspiracyjna działalność "Solidarności" była prowadzona po omacku - metodą prób i błędów poznawano, które działania są skuteczne, a które lepiej unikać. Utworzono<strong> Tymczasową Komisję Koordynacyjną NSZZ "Solidarność"</strong>, której zadaniem koordynowanie działań, mających na celu zniesienie stanu wojennego, uwolnienie aresztowanych i przywrócenie praw obywatelskich. Najważniejsza działalność podziemnej "Solidarności" polegała na prowadzeniu drugiego obiegu - wydawano różnorodne pisma zakładowe, regionalne i inne. Poruszały one zagadnienia kulturalne, polityczne i fachowe. </p>
+<p>Dopiero od 1986 r., gdy wyszła na wolność większość przetrzymywanych więźniów politycznych, działacze "Solidarności" zaczęli ujawniać struktury związkowe. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Sytuacja gospodarcza Polski w latach 1981-1988:</strong></p>
+<ul>
+<li>gospodarka PRL w latach 80. znajdowała się w stanie ostrego kryzysu, a apogeum kryzysu nastąpiło w 1981 r.,  </li>
+<li>w 1981 r. odnotowano spadek dochodu narodowego o 22%, </li>
+<li>wraz z wprowadzeniem stanu wojennego, kontrolę nad przedsiębiorstwami objęli komisarze wojskowi, którzy nie mieli odpowiednich kompetencji i nie byli przygotowani do sprawowania takich funkcji,  </li>
+<li>sytuację gospodarczą pogorszyło nałożenie na Polskę sankcji przez USA,</li>
+<li>w najgorszym położeniu było rolnictwo,</li>
+<li>w 1983 r. podniesiono ceny artykułów spożywczych i innych o 100%, co obniżyło realny dochody ludności o ok. 30%, </li>
+<li>doszło do zubożenia Polaków,</li>
+<li>stale rosło zadłużenie zagraniczne, </li>
+<li>sytuacja ekonomiczna sprawiła, że z Polski wyjechało ok. 1 mln osób, w tym wiele z wyższym wykształceniem (specjalistów), </li>
+<li>po zniesieniu stanu wojennego w gospodarce nastąpiła stagnacja, a ponad 80% produktów było niedostępnych na rynku, </li>
+<li>władza próbowała wdrożyć reformy gospodarcze, tzw. I etap i II etap reformy gospodarczej, jednakże nie przyniosły one oczekiwanych efektów, </li>
+<li>w grudniu 1988 r. przyjęto ustawę Wilczka, która wprowadziła wolność działalności gospodarczej oraz zrównała sektor publiczny z sektorem prywatnym.</li>
+</ul><br>

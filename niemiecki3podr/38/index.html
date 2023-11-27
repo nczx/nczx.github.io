@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p>1. Rita ma 16 lat i latem chciałaby pojechać z przyjaciółmi do Paryża. Jest to w sumie osiem osób. Nie mają zbyt dużo pieniędzy.  </p>
+<p><strong>B.</strong> <em>Pociągiem być może nie podróżuje się zbyt szybko, ale za to dość wygodnie. Czasami pociąg ma opóźnienie lub zatrzymuje się na wielu stacjach. Podróż tym środkiem transportu jest idealna dla ludzi, którzy nie mają prawa jazdy lub chcą podróżować w większej grupie.  </em></p>
+<p><br/>2. Elfriede i Klaus są seniorami z Hamburga. Chcą odwiedzić przyjaciół z dawnych lat w Nowym Jorku, ale Klaus nie chce lecieć samolotem. On i jego żona uwielbiają luksus i mają dużo czasu. </p>
+<p><strong>A.</strong> <em>Podróż statkiem trwa wprawdzie dość długo, ale jest bardzo przyjemna. Można wdychać świeże morskie powietrze i opalać się na pokładzie. Taka wycieczka nie kosztuje mało, ale jest bardzo komfortowa. To raj dla ludzi, którzy potrzebują spokoju i odprężenia. </em></p>
+<p><br/>3. Karsten często musi odbywać podróże służbowe. W tym tygodniu w piątek musi dostać się do Londynu, a w sobotę do Warszawy. Przy sobie zawsze ma małą walizkę, ponieważ nie potrzebuje zbyt wielu rzeczy. </p>
+<p><strong>C.</strong> <em>Podróż samolotem jest najszybsza, a jednocześnie najdroższa. Dużo ludzi podróżuje tym środkiem transportu za granicę i w ten sposób oszczędza czas. Podróż jest bardzo komfortowa. Samolotem można dotrzeć do większych miast. Nie wolno jednak zabierać ze sobą zbyt wiele toreb i walizek. </em></p>
+<p><br/>4. Andreas jest bardzo aktywny. Uwielbia naturę i chętnie podróżuje w góry. W tym roku z najlepszym przyjacielem chce wędrować podczas urlopu. Musi być w dobrej formie, dlatego trzy razy w tygodniu chodzi na siłownię. </p>
+<p><strong>DLA TEJ OSOBY NIE PASUJE ŻADEN TEKST </strong></p>
+<p><br/>5. Thomas ma 19 lat i od dwóch miesięcy ma prawo jazdy. Tego lata po raz pierwszy chce wyruszyć w dłuższą podróż. Chciałby robić dużo postojów i zwiedzać ciekawe miejsca. </p>
+<p><strong>D.</strong> <em>Samochodem można jechać, dokąd się chce. Można się zatrzymać i zrobić krótką przerwę, kiedy jest się zmęczonym. Tym środkiem transportu można dotrzeć do wielu miejsc. Podróż jest wprawdzie wygodna, ale czasami może być męcząca dla kierowcy, ponieważ cały czas musi być skoncentrowany. Podróż samochodem jest dość droga, ponieważ benzyna nie jest tania. </em></p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><span style="text-decoration: underline;"><strong>PERSON 1:</strong></span></p>
+<p><strong>B.</strong> Er hat online ein Angebot von einem Reisebüro gefunden. <br/><em>W Internecie znalazł ofertę biura podróży.  </em></p>
+<p><strong>D.</strong> Er hat die Koffer gepackt.<br/><em>Spakował walizki. </em></p>
+<p><strong>G.</strong> Er hat den Hund zur Tochter gebracht. <br/><em>Zawiózł psa do córki. </em></p>
+<p><strong>H.</strong> Er hat im Internet Kommentare gelesen. <br/><em>Przeczytał komentarze w Internecie. </em><br/><br/></p>
+<p><span style="text-decoration: underline;"><strong><br/>PERSON 2:</strong></span></p>
+<p><strong>A.</strong> Sie hat das Auto in die Werkstatt gebracht.<br/><em>Zawiozła samochód do warsztatu. </em></p>
+<p><strong>C.</strong> Sie hat das Auto vollgetankt. <br/><em>Zatankowała samochód do pełna. </em></p>
+<p><strong>E.</strong> Sie hat im Internet recherchiert. <br/><em>Poszperała w Internecie. </em></p>
+<p><strong>F.</strong> Sie hat alles selbst organisiert. <br/><em>Wszystko zorganizowała sama. </em></p><br>

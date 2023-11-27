@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>1) </strong>Polska nie przystąpiła do planu Marshalla, ponieważ:</p>
+<ul>
+<li>Stalin uważał, że pomoc finansowa od USA stanowi zagrożenie dla wpływów sowieckich w Europie Środkowo-Wschodniej,  </li>
+<li>Stalin nie chciał, by Polska uzależniła się finansowo od Zachodu, </li>
+<li>w ZSRS uważano Plan Odbudowy Europy przyniesienie utratę samodzielności gospodarczej i suwerenności małych krajów. </li>
+</ul>
+<p><strong>2) </strong>Efekty planu Marshalla dla Europy Zachodniej:</p>
+<ul>
+<li>szybsze podźwignięcie się ze zniszczeń i powojennego kryzysu gospodarczego, </li>
+<li>wzbogacenie się Europy Zachodniej, </li>
+<li>ukształtowanie się modelu opiekuńczego państwa dobrobytu, które zabezpiecza interesy obywateli przed problemami gospodarczymi (np. utratą pracy), </li>
+<li>niespotykany wcześniej wzrost i dobra koniunktura, </li>
+<li>plan Marshalla był jednym z pierwszych impulsów do integracji europejskiej.</li>
+</ul>
+<p>Efekty planu Marshalla dla Europy Środkowo-Wschodniej:</p>
+<ul>
+<li>powolne i mozolne wychodzenie ze zniszczeń i powojennego kryzysu gospodarczego,</li>
+<li>ubożenie Europy Środkowo-Wschodniej, </li>
+<li>wzrost znaczenia gospodarki centralnie planowanej, </li>
+<li>niechronienie interesów obywateli przed problemami gospodarczymi. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Proces kształtowania się dwóch państw niemieckich po 1945 r.:</strong></p>
+<ul>
+<li>szczegółowe ustalenia wobec Niemiec podjęto na konferencji w Poczdamie (lipiec/sierpień 1945 r.),</li>
+<li>terytorium Niemiec podzielono na <strong>4 strefy okupacyjne: amerykańską, brytyjską, francuską i sowiecką</strong>, a obszar Berlina na<strong> 4 sektory</strong>, osobno zarządzane przez: <strong>Stany Zjednoczone, Francję, Wielką Brytanię i ZSRS, </strong>
+</li>
+<li>powołano<strong> Sojuszniczą Radę Kontroli</strong>, która sprawowała władzę nad strefami okupacyjnymi. Miały one tworzyć gospodarczą całość,</li>
+<li>w 1946 r. Stany Zjednoczone, Wielka Brytania i Francja uznały porozumienie się ze Stalinem za niemożliwe i rozpoczęły proces łączenia zachodnich stref okupacyjnych w jedno państwo,</li>
+<li>zwieńczeniem ich działań była powstała w <strong>1949 r. Republika Federalna Niemiec</strong> (RFN) ze stolicą w Bonn, jednocześnie połączono zachodnie sektory Berlina w tzw. Berlin Zachodni. Państwo to zostało uznane przez demokratyczne kraje zachodu. Na czele rządy stanął <strong>Konrad Adenauer, </strong>
+</li>
+<li>w odpowiedzi na powstanie RFN Stalin przekształcił sowiecką strefę okupacyjną w <strong>Niemiecką Republikę Demokratyczną </strong>(NRD) ze stolicą we wschodnim Berlinie. Na czele państwa stanęli <strong>Wilhelm Pieck </strong>(prezydent) i <strong>Walter Ulbricht.</strong>
+</li>
+</ul>
+<p><strong><img alt="" height="274" src="./data/1187593-0.jpg" width="239"/></strong></p>
+<p>Mapa przedstawiająca RFN i NRD, źródło mapy: Wikimedia Commons.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Żelazna kurtyna </strong>to pojęcie odnoszące się do izolacji państw pozostających pod dominacją ZSRS od niekomunistycznego świata. Churchill tłumaczył, że żelazna kurtyna to granica wpływów między demokratycznym Zachodem a komunistycznym Wschodem. Kraje znajdujące się na wschód od tej linii są w strefie wpływów sowieckich. </p>
+<p><strong>Powstanie żelaznej kurtyny: </strong></p>
+<p>Pojęcie żelaznej kurtyny odnosi się do sytuacji po II wojnie światowej. Premier Wielkiej Brytanii, Winston Churchill, wygłosił 5 marca 1946 r. w Fulton (USA) przemowę, w której wezwał Stany Zjednoczone do przeciwstawienia się działaniom i polityce Józefa Stalina. To wystąpienie uważa się za początek zimnej wojny. Za najbardziej wymowny dowód istnienia żelaznej kurtyny uważa się budowę muru berlińskiego.</p>
+<p><img alt="" height="358" src="./data/1187625-0.jpg" width="355"/></p>
+<p>Autor mapy: K. Chariza i zespół, źródło: www.zpe.gov.pl</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p><strong>Proces dekolonizacji Azji Południowej - najważniejsze informacje:</strong></p>
+<p><strong>Azja Południowa </strong>to region Azji obejmujący kraje subkontynentu indyjskiego na południe od Himalajów, czyli m.in. <strong>Indie</strong>, <strong>Pakistan</strong>, Nepal, Bhutan, Bangladesz oraz wyspiarskie państwa Sri Lankę i Malediwy. </p>
+<p>W 1885 r. największa indyjska partia polityczna - <strong>Indyjski Kongres Narodowy</strong> - wykorzystała zaangażowanie Brytyjczyków w wojnę i wysunęła postulat przyznania Indiom niepodległości. Rząd brytyjski nie spełnił tych żądań, a nawet zaostrzył kurs wobec ruchu wyzwoleńczego. Doprowadziło to do licznych wystąpień zbrojnych przeciwko władzy kolonialnej, tłumionych przez wojska brytyjskie. </p>
+<p>W tak napiętej sytuacji aktywność polityczną rozpoczął  <strong>Mahatma Gandhi</strong>. Wykorzystał on swe wcześniejsze doświadczenia w zmaganiach z administracją kolonialną i przeciwstawił zbrojnej konfrontacji taktykę obywatelskiego nieposłuszeństwa. Metoda biernego oporu, którą poparła większość Hindusów, była dokuczliwa dla władz kolonialnych. Uwięzienie Gandhiego nie przyniosło zamierzonego skutku. Brytyjczycy musieli zasiąść do rozmów. W obradach tzw. indyjskiego Okrągłego Stołu wzięli udział przedstawiciele władz brytyjskich oraz delegaci dwóch największych społeczności religijnych Indii: hinduistów i muzułmanów. W 1935 r. parlament przyjął ustawę o przekształceniu Indii w federację prowincji oraz księstw. Wciąż jednak władza znajdowała się w rękach gubernatorów i wicekróla.</p>
+<p>Dopiero po zakończeniu II wojny światowej utrzymanie panowania nad Indiami okazało się niemożliwe. Na pomocy trójstronnych porozumień między hinduistami, muzułmanami i Brytyjczykami utworzono dwa państwa <strong>Indie </strong>i <strong>Pakistan</strong>. <strong>15 sierpnia 1947 roku proklamowano ich niepodległość</strong>.</p>
+<p>W 1971 roku od Pakistanu oderwała się kolejna prowincja, tworząc <strong>Bangladesz.</strong></p>
+<p> </p>
+<p><strong>Proces dekolonizacji Azji Południowo-Wschodniej - najważniejsze informacje: </strong></p>
+<p><strong>Azja Południowo-Wschodnia</strong> to region Azji obejmujący Półwysep Indochiński i Archipelag Malajski wraz z Filipinami. Należą do niego takie państwa jak Mjanma, Tajlandia, Kambodża, Laos, Wietnam, Malezja, Singapur, Indonezja, Timor Wschodni, Brunei i<span class="flagicon"> </span>Filipiny.</p>
+<p>W 1945 r. siły komunistyczne wyparły wojska francuskie z północnego <strong>Wietnamu </strong>i utworzyły Demokratyczną Republikę Wietnamu. Wietnam Południowy ze stolicą w Sajgonie pozostał w rękach Europejczyków, którzy dążyli do utrzymania wpływów w regionie. Francuzi zdołali zająć znaczną część Wietnamu Północnego, jednak komuniści uzyskali pomoc od Związku Radzieckiego i odzyskali straty.</p>
+<p>W 1946 r. niepodległość ogłosiły <strong>Filipiny</strong>. Doszło do tego za zgodą Stanów Zjednoczonych. USA nie chciały, by na tym terenie doszło do rozwoju partyzantki komunistycznej. </p>
+<p>W 1948 r. Brytyjczycy wycofali się z <strong>Birmy</strong>.</p>
+<p>W 1949 r., po czteroletniej wojnie z kolonistami holenderskimi, niepodległość zdobyła<strong> Indonezja</strong>.</p>
+<p class="animation-ready">W 1954 r. Francuzi zostali ostatecznie pokonani pod <strong><span class="foreign">Dien Bien Phu </span></strong><span class="foreign">(</span><span class="foreign">decydująca bitwa I wojny indochińskiej)</span> przez wietnamskich komunistów. W czasie I wojny indochińskiej Francja straciła prawie 120 tysięcy żołnierzy. </p>
+<p class="animation-ready">W latach 60. niepodległość otrzymały <strong>Malezja</strong> i <strong>Singapur. </strong></p>
+<p class="animation-ready"><strong><img alt="" height="630" src="./data/1187676-0.jpg" width="609"/></strong></p>
+<p class="animation-ready">Mapa przedstawiająca dekolonizację Azji, autor mapy: K. Chariza i zespół, źródło mapy: www.zpe.gov.pl</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p><strong>Proces integracji państw Europy Zachodniej po II wojnie światowej - najważniejsze etapy:</strong></p>
+<table border="1" style="border-collapse:collapse;width:100%;">
+<tbody>
+<tr style="height:17px;text-align:center;">
+<td style="background-color:#ccff00;width:13.2584%;height:17px;"><strong>Data</strong></td>
+<td style="background-color:#ccff00;width:65.8211%;height:17px;"><strong>Wydarzenie</strong></td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">8 maja 1945 r. </td>
+<td style="width:65.8211%;height:17px;">zakończenie II wojny światowej</td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">1947 r. </td>
+<td style="width:65.8211%;height:17px;">realizacja planu Marshalla, jeden z pierwszych impulsów do integracji europejskiej  </td>
+</tr>
+<tr style="height:35px;text-align:center;">
+<td style="width:13.2584%;height:35px;">4 kwietnia 1949 r.</td>
+<td style="width:65.8211%;height:35px;">utworzenie NATO - międzyrządowy sojusz na rzecz bezpieczeństwa między Stanami Zjednoczonymi, Kanadą i dziesięcioma państwami Europy Zachodniej</td>
+</tr>
+<tr style="height:35px;text-align:center;">
+<td style="width:13.2584%;height:35px;">5 maja 1949 r. </td>
+<td style="width:65.8211%;height:35px;">ustanowienie Rady Europy - odpowiedzialna za promowanie demokracji, ochrony praw człowieka i praworządności</td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">9 maja 1950 r. </td>
+<td style="width:65.8211%;height:17px;">Robert Schuman (francuski minister spraw zagranicznych) przedstawia plan zacieśnienia współpracy europejskiej i proponuje integrację przemysłu węgla i stali w Europie Zachodniej (Deklaracja Schumana)</td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">18 kwietnia 1951 r. </td>
+<td style="width:65.8211%;height:17px;">powstanie Europejskiej Wspólnoty Węgla i Stali </td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">3 września 1953 r.</td>
+<td style="width:65.8211%;height:17px;">wejście w życie Europejskiej konwencji praw człowieka</td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">25 marca 1957 r.</td>
+<td style="width:65.8211%;height:17px;">podpisanie traktatów rzymskich - ustanowienie Europejskiej Wspólnoty Gospodarczej (EWG) oraz Europejskiej Wspólnoty Energii Atomowej (EWEA lub Euratom)</td>
+</tr>
+<tr style="height:17px;text-align:center;">
+<td style="width:13.2584%;height:17px;">19 marca 1958 r.</td>
+<td style="width:65.8211%;height:17px;">narodziny Parlamentu Europejskiego </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Przyczyny integracji państw Europy Zachodniej po II wojnie światowej:</strong></p>
+<ul>
+<li>zakończenie II wojny światowej i zwycięstwo sił alianckich, </li>
+<li>ukształtowanie się żelaznej kurtyny i rozpoczęcie ziemnej wojny, </li>
+<li>pilna potrzeba odbudowy gospodarek po zniszczeniach wojennych, </li>
+<li>obawa przed wzrostem znaczenia wpływów komunistycznych, </li>
+<li>ogłoszenie planu Marshalla, </li>
+<li>likwidacja hegemonistycznych pobudek niektórych państw rządzonych przez agresywnych przywódców, </li>
+<li>dążenie do zapewnienia trwałego dobrobytu ludom zamieszkującym kontynent europejski, co wiązało się z ideałami szeroko rozumianego humanizmu, </li>
+<li>dążenie do nawiązania współpracy gospodarczej między państwami europejskimi (wspieranie tej idei przez USA), </li>
+<li>dążenie do skutecznego stawiania oporu (bariery) gospodarczego komunizmowi, </li>
+<li>postulowanie braterstwa narodów, </li>
+<li>dążenie do pogłębiania współpracy ogólnoeuropejskiej w różnych dziedzinach życia gospodarczego i społecznego,</li>
+<li>budowania więzi natury militarnej między państwami Europy, </li>
+<li>umacnianie i rozwój ponadnarodowych zasad integracji, </li>
+<li>zachowanie decydującego wpływu państw członkowskich na rozwój integracji. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p><strong>Największe konflikty zbrojne okresu zimnej wojny (wybrane przykłady):</strong></p>
+<ul>
+<li><strong>wojna domowa w Grecji (1944 r. - 1949 r.)</strong></li>
+</ul>
+<p>Wojna domowa w Grecji stanowiła przejaw zaostrzania się rywalizacji między Zachodem, na czele z USA i Wschodem, kierowanym przez ZSRS. Od grudnia 1944 r. do 1949 r. (z przerwami) na terenie Grecji trwały starcia pomiędzy <strong>rządowymi siłami zbrojnymi</strong>, wspomaganymi militarnie i logistycznie przez Wielką Brytanię oraz Stany Zjednoczone, a <strong>komunistycznymi siłami DSE</strong>, wywodzącymi się spośród części kombatantów lewicowego ruchu oporu EAM-ELAS. Od 1948 r. byli oni wspieranie przez ZSRS. Konflikt zakończył się zwycięstwem sił rządowych. </p>
+<ul>
+<li>
+<strong>blokada Berlina</strong> <strong>(1948 r. - 1949 r.)  </strong>
+</li>
+</ul>
+<p>23/24 czerwca 1948 r. władza strefy radzieckiej ogłosiła blokadę <strong>zachodnich sektorów Berlina</strong> oraz odcięła dostawy elektryczności do miasta. Zablokowano wszelkie szalki komunikacyjne, które dostarczały towary do pozostałych części Niemiec przez strefę radziecką. Sowiecka blokada Berlina Zachodniego nie przyniosła zamierzonych skutków, ponieważ Amerykanie i Brytyjczycy zorganizowali <strong>most lotniczy</strong> i przez ok.<strong> 11 miesięcy</strong> przewozili pożywienie, paliwo, opał. W czasie trwania blokady w ramach mostu powietrznego odbyło się ok. 277 tysięcy lotów. Sowieci, świadomi klęski blokady, znieśli ją 12 maja 1949 r. Świadczyła jednak o stopniowym kształtowaniu się dwóch niezależnych ośrodków państwowych na terenie Niemiec.</p>
+<ul>
+<li><strong>kryzys berliński (1961 r.)</strong></li>
+</ul>
+<p>Drugi kryzys berliński to epizod zimnej wojny, którego efektem była budowa Muru Berlińskiego. Kryzys został wywołany przez ultimatum Chruszczowa, który domagał się wycofania wojsk zachodnich z Berlina.</p>
+<ul>
+<li><strong>wojna koreańska (1950 r. - 1953 r.) </strong></li>
+</ul>
+<p>Wojna w Korei szybko przerodziła się w konflikt zimnowojenny. <strong>Związek Sowiecki</strong> zaopatrywał <strong>Koreę Północą</strong> w czołgi, samoloty i artylerię. Z kolei <strong>Amerykanie</strong> wspierali <strong>Koreę Południową</strong>. Plan ataku na Koreę Południową przygotowali sowieccy generałowie. W czerwcu 1950 r. armia północnokoreańska wtargnęła do Korei Południowej. Opanowała ją w ciągu dwóch miesięcy, z wyjątkiem niewielkich obszarów, położonych na południowym wschodzie. Rada Bezpieczeństwa ONZ potępiła agresję Korei Północnej i podjęła decyzję o wysłaniu na objęte konfliktem obszary swych sił pokojowych. We wrześniu 1950 r. desantu w Korei dokonały wojska amerykańskie, które w ciągu miesiąca zajęły prawie cały kraj, aż po granicę chińską. Z pomocą zagrożonej Korei Północnej przyszły komunistyczne Chiny. Pod naporem chińskich oddziałów - siły ONZ wycofały się daleko na południe. Front zatrzymał się na 38 równoleżniku. W 1953 r. przedstawiciele Korei Północnej, ONZ oraz Chin podpisali rozejm, który zakończył działania zbrojne oraz rozdzielił oba państwa koreańskie wzdłuż ówczesnej linii frontu. Pokoju nie zawarto do dnia dzisiejszego.</p>
+<ul>
+<li><strong>wojna wietnamska (1955 r. - 1975 r.)</strong></li>
+</ul>
+<p><strong>Wojna w Wietnamie</strong> toczona w latach 1957-1975, była konfliktem zbrojnym pomiędzy komunistycznym <strong>Wietnamem Północnym</strong> popieranym przez Chiny i Związek Sowiecki, a <strong>Wietnamem Południowym</strong>, wspieranym przez Stany Zjednoczone. <strong>W 1957 r.</strong> Vietcong (tj. wietnamscy komuniści) opanował znaczne tereny Wietnamu Południowego, rozpoczynając wojnę. W odpowiedzi Stany Zjednoczone rozpoczęły naloty na Wietnam Północny<strong> (1964 r.)</strong> i wprowadziły do walki siły lądowe. Po kilku latach ponad 500 tys. amerykańskich żołnierzy wspierało wojska południowowietnamskie w starciach z Vietcongiem i armią północnowietnamską. Mimo swej mocarstwowości, Stany Zjednoczone nie były w stanie wygrać wojny w Wietnamie. Dodatkowo, przegrały ją propagandowo (media ukazywały zbrodnie dokonywane przez Amerykanów, w rzeczywistości obie strony dopuszczały się okrucieństw). <strong>W 1973 r. </strong>Stany Zjednoczone zawarły porozumienie z Wietnamem Północnym i w ciągu dwóch miesięcy wycofały swe wojska z Wietnamu Południowego. Dwa lata później armia północnowietnamska zdobyła Sajgon <strong>(1975 r.)</strong>.<strong>W 1976 r.</strong> proklamowano powstanie zjednoczonej Socjalistycznej Republiki Wietnamu. Ok. 300 tys. ludzi zostało zamkniętych w "obozach reedukacyjnych", gdzie poddawano ich torturom i przymusowej indoktrynacji. W ciągu kolejnych dwudziestu lat - blisko 2 mln Wietnamczyków uciekło z kraju.</p>
+<ul>
+<li><strong>kryzys kubański (1962 r.)</strong></li>
+</ul>
+<p>W 1959 r.<strong> Fidel Castro</strong> <strong>obalił proamerykańską dyktaturę na Kubie</strong>. W odwecie <strong>USA wprowadziły embargo na handel z Kubą</strong>. Kubański przywódca nawiązał współpracę z  <strong>ZSRR (Nikitą Chruszczowem)</strong> i zaczął wprowadzać na wyspie <strong>ustrój socjalistyczny</strong>. W 1962 r. amerykański samolot szpiegowski <strong>sfotografował na Kubie radzieckie wyrzutnie rakiet zdolnych do przenoszenia głowic jądrowych</strong>. Prezydent USA - <strong>John F. Kennedy</strong> ogłosił <strong>blokadę morską</strong> Kuby. W odpowiedzi Chruszczow wysłał radziecką <strong>flotę wojenną</strong> na Kubę. Sowiecki dyktator zgodził się zdemontować wyrzutnie w zamian za usunięcie blokady oraz amerykańską obietnicę nieatakowania Kuby. Na skutek kryzysu kubańskiego powstała <em><strong>gorąca linia</strong></em> łącząca <strong>Moskwę</strong> z <strong>Pentagonem.</strong> Chruszczowa zmuszono do <strong>rezygnacji</strong> z funkcji przywódcy ZSRS. Kuba pozostała państwem uzależnionym od pomocy Związku Sowieckiego.</p>
+<ul>
+<li><strong>Praska Wiosna (1968 r.)</strong></li>
+</ul>
+<p>W nocy z 20 na 21 sierpnia 1968 r. do Czechosłowacji wkroczyły wojska Układu Warszawskiego (ponad 200 tys. żołnierzy). Armie Związku Sowieckiego, Polski, NRD, Węgier oraz Bułgarii rozpoczęły operację o kryptonimie <strong>"Dunaj"</strong>. Liczbę ofiar interwencji Układu Warszawskiego szacuje się na ok. 200 osób. Blisko 300 osób uciekło na Zachód. Aleksander Dubček został aresztowany, wywieziony do Moskwy i zmuszony do rezygnacji z reform. W państwie zapanowała tzw. "normalizacja"- powrócono do poprzednich metod rządzenia.</p>
+<ul>
+<li><strong>radziecka interwencja w Afganistanie (1979 r. - 1989 r.)</strong></li>
+</ul>
+<p>Interwencja radziecka w Afganistanie została przeprowadzona w grudniu 1979 r. jako odpowiedź na przewrót rządowy, w wyniku którego władzę objął <strong>Hafizullah Amin. </strong>Nowy prezydent niechętnie widział obecność wojsk radzieckich w Afganistanie. W wyniku interwencji radzieckiej zginął Amin, a władzę objął akceptowany przez ZSRR <strong>Babrak Karmal. </strong>W czasie wojny w Afganistanie wojska sowieckie niszczyły afgańskie wsie i mordowały ich mieszkańców. Na skutek prowadzonych działań zbrojnych zginęło od 0,5 do 2 mln Afgańczyków. Ok. 3 mln odniosło rany a ponad 5 mln ludzi uciekło za granicę. Amerykanie wsparli mudżahedinów. w 1989 r. wojska sowieckie wycofały się z Afganistanu.</p>
+<p><img alt="" height="579" src="./data/1187774-0.jpg" width="819"/></p>
+<p>Źródło zdjęć: Wikimedia Commons. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
+<p><strong>Najważniejsze organizacje polityczne i gospodarcze utworzone po 1945 r. - wybrane przykłady:</strong></p>
+<p><span style="text-decoration: underline;"><strong>ORGANIZACJA NARODÓW ZJEDNOCZONYCH</strong></span></p>
+<p><strong><span style="font-weight: 400;">Jednym ze skutków zakończenia II wojny światowej było utworzenie </span>Organizacji Narodów Zjednoczonych (ONZ). <span style="font-weight: 400;">Organizacja</span> <span style="font-weight: 400;">powstała w 26 czerwca </span>1945 r. </strong>(wejście w życie Karty Narodów Zjednoczonych), <strong><span style="font-weight: 400;">choć idea jej powołania pojawiła się już w trakcie trwania światowego konfliktu. </span><span style="font-weight: 400;">Głównym autorem koncepcji ONZ był prezydent USA Franklin Delano Roosevelt.</span><span style="font-weight: 400;"> ONZ zastąpiła funkcjonującą od 1920 r. Ligę Narodów i działa do dziś. </span></strong></p>
+<p><strong>Cele ONZ:  </strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">uniwersalny charakter organizacji, </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">utrzymywanie międzynarodowego pokoju i bezpieczeństwa,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">rozwijanie przyjaznych stosunków między państwami członkowskimi,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">rozwiązywanie problemów gospodarczych, społecznych, humanitarnych, kulturowych,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">dbanie o przestrzeganie praw człowieka,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">stanowienie ośrodka współpracy do osiągnięcia powyższych celów,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">pokojowe rozstrzyganie konfliktów,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">podejmowanie działań w wypadku łamania międzynarodowego pokoju i bezpieczeństwa.</span></li>
+</ul>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">ORGANIZACJA TRAKTATU PÓŁNOCNOATLANTYCKIEGO</span> </strong></p>
+<p><strong>Organizacja Traktatu Północnoatlantyckiego (NATO) </strong>powstała 24 sierpnia <strong>1949 r. </strong>(wejście w życie traktatu waszyngtońskiego). Bezpośrednimi przyczynami utworzenia Sojuszu Północnoatlantyckiego było dążenie ZSRR do narzucenia systemu komunistycznego innym państwom oraz rywalizacja polityczna i militarna określana mianem zimnej wojny.</p>
+<p><strong>Cele NATO:</strong></p>
+<ul>
+<li>obrona militarna przed atakiem ze strony ZSRS i jego państw satelickich, od 1955 r. zorganizowanych w strukturę Układu Warszawskiego,</li>
+<li>po rozpadzie ZSRS i rozwiązaniu Układu Warszawskiego w 1991 roku, zadaniem NATO jest zapewnienie pokoju w Europie na fundamencie demokratycznym,</li>
+<li>rozwijanie bezpieczeństwa międzynarodowego,</li>
+<li>ingerowanie w regiony, w których pokój jest zagrożony,</li>
+<li>pełnienie roli stabilizacyjnej - podejmowanie działań zapobiegających rozprzestrzenianiu konfliktów regionalnych,</li>
+<li>gwarantowanie bezpieczeństwa zewnętrznego państw członkowskich. </li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>EUROPEJSKA WSPÓLNOTA WĘGLA I STALI</strong></span></p>
+<p><strong><span class="tytul">Europejska Wspólnota Węgla i Stali </span></strong><span class="oboczn"><strong>(EWWiS) </strong>to międzynarodowa </span><span class="def">organizacja utworzona na podstawie terminowego traktatu zawartego 18 IV 1951 r. w Paryżu na okres 50 lat przez Belgię, Francję, Holandię, Luksemburg, RFN i Włochy. </span>  </p>
+<p><strong><span class="def">Cele EWWiS:</span></strong></p>
+<ul>
+<li class="e-glowka"><span class="def">stworzenie wspólnego rynku na surowce i produkty przemysłu węglowego i stalowego, </span></li>
+<li class="e-glowka"><span class="def">stopniowe zniesienie ceł i innych opłat oraz ograniczeń ilościowych w obrocie surowcami i produktami między państwami członkowskimi, </span></li>
+<li class="e-glowka"><span class="def">zniesienie przeszkód w swobodnym przepływie siły roboczej, </span></li>
+<li class="e-glowka"><span class="def">ustanowienie jednolitych taryf transportowych,</span></li>
+<li class="e-glowka"><span class="def">zapewnienie wolnej konkurencji w ramach wspólnego rynku.</span></li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong><span class="def">UNIA EUROPEJSKA</span></strong></span></p>
+<p><span class="def"><strong>Unia Europejska (UE)</strong> to gospodarczo-polityczny związek 27 demokratycznych państw europejskich. Unia powstała 1 listopada 1993 r. na mocy podpisanego 7 lutego 1992 r. traktatu z Maastricht.</span></p>
+<p><strong><span class="def">Cele UE:</span></strong></p>
+<ul>
+<li><span class="def">trwały i zrównoważony rozwój oraz postęp społeczno-gospodarczy, </span></li>
+<li><span class="def">wzmacnianie ochrony praw i interesów obywateli UE,</span></li>
+<li><span class="def"> utrzymywanie i rozwijanie UE jako obszaru wolności, bezpieczeństwa i sprawiedliwości,</span></li>
+<li><span class="def">zachowanie i rozwijanie wspólnego dorobku prawnego.</span></li>
+</ul>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">UKŁAD WARSZAWSKI</span></strong></p>
+<p>Przyjęcie RFN do NATO zostało odebrane przez ZSRS i podległe mu państwa komunistyczne za akt wrogości. W odpowiedzi w <strong>1955 r.</strong> powstał <strong>Układ Warszawski</strong>. W jego skład weszły takie państwa jak: ZSRS, Polska, Węgry, Bułgaria, Rumunia, Albania, Czechosłowacja i NRD. Układ był przeciwwagą dla NATO, ale także dodatkową instytucją kontrolującą państwa znajdujące się w sowieckiej strefie wpływów. </p>
+<p><strong>Cele Układu Warszawskiego:</strong></p>
+<ul>
+<li>zacieśnienie kontroli ZSRS nad państwami bloku wschodniego, </li>
+<li>jednolicenie polityki zagranicznej i militarnej ZSRS i państw od niego uzależnionych, </li>
+<li>konfrontacje z siłami Zachodu.</li>
+</ul>
+<p> </p>
+<p><span style="text-decoration: underline;"><strong>RADA WZAJEMNEJ POMOCY GOSPODARCZEJ</strong></span></p>
+<p><strong>Rada Wzajemnej Pomocy Gospodarczej (RWPG</strong>) to organizacja powołana w Moskwie w 1949 r. w celu koordynowania współpracy gospodarczej bloku państw podporządkowanych ZSRR. </p>
+<p><strong>Cele RWPG:</strong></p>
+<ul>
+<li>koordynowanie współpracy gospodarczej bloku państw podporządkowanych ZSRR, </li>
+<li>kontrapozycja wobec planu Marshalla oraz powstania Organizacji Europejskiej Współpracy Gospodarczej,</li>
+<li>narzucenie silnych więzi gospodarczych państwom socjalistycznym, co wiązało wiązało się z jeszcze większym uzależnieniem ich od ZSRS, </li>
+<li>wspierania rozwój gospodarek narodowych państw członkowskich i pomagać w ich uprzemysłowieniu, </li>
+<li>doprowadzenie do osiągnięcia dobrobytu przez socjalistyczne społeczeństwa. </li>
+</ul>
+<p><img alt="" height="637" src="./data/1187860-0.jpg" width="749"/></p>
+<p>Źródło grafik: Wikimedia Commons. </p>
+<p>Inne międzynarodowe organizacje polityczne i gospodarcze powstałe po 1945 r. to np.:</p>
+<ul>
+<li>Amnesty International, </li>
+<li>CEFTA - Środkowoeuropejskie Stowarzyszenie Wolnego Handlu, </li>
+<li>EFTA - Europejskie Stowarzyszenie Wolnego Handlu, </li>
+<li>FAO - Organizacja Narodów Zjednoczonych ds. Wyżywienia i Rolnictwa, </li>
+<li>G-8 - Grupa G8, </li>
+<li>IHF - Międzynarodowa Helsińska Federacja Praw Człowieka, </li>
+<li>MBOR - Międzynarodowy Bank Odbudowy i Rozwoju, </li>
+<li>NAFTA - Północnoamerykański Układ Wolnego Handlu, </li>
+<li>OBWE - Organizacja Bezpieczeństwa i Współpracy w Europie, </li>
+<li>OJA - Organizacja Jedności Afryki, </li>
+<li>OPEC - Organizacja Krajów Eksportujących Ropę Naftową, </li>
+<li>UNASUR - Unia Narodów Południowoamerykańskich, </li>
+<li>WHO - Światowa Organizacja Zdrowia, </li>
+<li>WTO - Światowa Organizacja Handlu. </li>
+</ul><br>

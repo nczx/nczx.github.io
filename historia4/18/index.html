@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><span style="text-decoration:underline;"><strong>Zadanie ma charakter indywidualny. Rozwiązanie zawiera wyłącznie wskazówki do sformułowania samodzielnej odpowiedzi!</strong></span></p>
+<p><strong>Ocena pozytywna: </strong></p>
+<ul>
+<li>Brak ostrej reakcji rządów zahamował ofensywę niemiecką na jakiś czas. </li>
+<li>Rząd brytyjski i francuski nie dawały pretekstu do rozpoczęcia przez nazistów kampanii na Zachód.</li>
+<li>Postępowanie rządów dawało możliwość na lepsze przygotowanie się do późniejszych działań zbrojnych. </li>
+</ul>
+<p><strong>Ocena krytyczna:</strong></p>
+<ul>
+<li>Brak podjęcia przez Wielką Brytanię i Francję działań na rzecz pomocy Polsce były oznaką złamania postanowień sojuszu pomiędzy tymi krajami oraz oznaczał poświęcenie terenów polskich.</li>
+<li>Brak realizacji postanowień sojuszu z Brytyjczykami i Francuzami przekonał Stalina do rozpoczęcia ofensywy na ziemie polskie. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><span style="text-decoration:underline;"><strong>Etapy wojny obronnej Polski w 1939 r.:</strong></span></p>
+<ul>
+<li>Początek wojny polsko - niemieckiej nastąpił <strong>1 września 1939 r</strong>., gdy <strong>o godz. 4:45 pancernik "Schleswig - Holstein" rozpoczął ostrzał Westerplatte</strong>. Obrona polskiego wybrzeża, odizolowana od całości działań wojennych nie posiadała większego znaczenia militarnego, ale miała istotny wymiar polityczny i moralny. Tylko jeden dzień bronili się pracownicy <strong>Poczty Polskiej w Gdańsku</strong>. Zaledwie 50 pocztowców dowodzonych przez ppor. Konrada Guderskiego poddało się, gdy gmach poczty został podpalony niemieckimi miotaczami ognia.</li>
+<li>Równocześnie wojsko niemieckie (hen. von Reichenaua, von Blaskowitza, gen. Lista) zaatakowało granice Polski głównie od południa i północnego zachodu. Spowodowało to wycofanie się w głąb kraju broniących Polski armii: Pomorze (gen. Władysław Bortnowski), Kraków (gen. Antoni Szylling), Poznań (gen. Tadeusz Kutrzeba), Łódź (gen. Juliusz Rómmel).</li>
+<li>Od początku walk inicjatywa należała do liczniejszej i lepiej uzbrojonej armii niemieckiej, która liczyła ok. 1,8 mln żołnierzy, 2900 czołgów, 4000 samolotów. Wojsko polskie odpowiednio: 1 mln żołnierzy, 600 czołgów, 380 samolotów.</li>
+<li>W efekcie przewagi niemieckiej już w nocy z 4 na 5 września 1939 r. rozpoczęto ewakuację rządu RP z Warszawy.</li>
+<li>Przez pierwsze trzy dni trwała <strong>tzw. bitwa graniczna</strong>. Mimo bohaterskiej postawy Polaków m.in. <strong>pod Mokrą</strong>, gdzie Niemcy stracili wiele czołgów, polska linia obrony została przerwana w kilku miejscach. Żołnierze polscy nie poddawali się, stawiali przeciwnikowi zaciekły opór. </li>
+<li>Przykładem wielkiego bohaterstwa Polaków była <strong>obrona Wizny</strong> (7 - 10 września 1939 r.). 720 Polaków dowodzonych przez kpt. Władysława Raginisa przez trzy dni powstrzymywało natarcie dwóch niemieckich dywizji pancernych. Obrona Wizny określana jest także mianem <em><strong>"polskich Termopil"</strong></em>, ponieważ w trakcie walk zginęła większość obrońców.</li>
+<li>Największą batalią wojny obronnej Polski była <strong>bitwa nad Bzurą</strong> (9 - 22 września 1939 r.), która wstrzymała atak na Warszawę, ale nie mogła zmienić losów tej fazy wojny. Wojsko dowodzone przez generałów: Tadeusza Kutrzebę i Władysława Bortnowskiego prowadziły walki aż do 22 września. W bitwie nad Bzurą zginęło 15 tys. polskich żołnierzy, a 100 tys. dostało się do niemieckiej niewoli. </li>
+<li>
+<strong>Warszawa broniła się do 28 września 1939 r</strong>. Decyzję o poddaniu się stolicy spowodowała wzrastająca liczba ofiar wśród ludności cywilnej oraz brak perspektyw na jakąkolwiek pomoc mocarstw zachodnich.</li>
+<li>Dłużej niż stolica bronił się<strong> Modlin</strong> - do 29 września oraz<strong> Hel</strong> - do 2 października.</li>
+<li>W dniach od 2 - 6 października <strong>Samodzielna Grupa Operacyjna "Polesie" gen. Franciszka Kleeberga stoczyła ostatnią w tej kampanii bitwę - pod Kockiem</strong>.</li>
+<li>To starcie zakończyło wojnę obronną Polski, rozpoczynając zarazem nowy etap walki z Niemcami i ich sojusznikami - wojnę konspiracyjną, partyzancką.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><span style="text-decoration:underline;"><strong>Przyczyny niemieckich sukcesów militarnych we wrześniu 1939 r.:</strong></span></p>
+<ul>
+<li>Przewaga militarna III Rzeszy, która znacząco przekraczała zasób sił polskich.</li>
+<li>Granica polsko-niemiecka była niezwykle trudna do obrony ze względu na brak naturalnych przeszkód takich jak góry, rzeki czy jeziora.</li>
+<li>Siły niemieckie zaatakowały z trzech stron.</li>
+<li>Niemieccy żołnierze dopuszczali się ataków na ludność cywilną. </li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Rozstrzygniecie: <strong>Agresja ZSRS wywarła ogromny wpływ na wynik wojny obronnej.</strong></p>
+<p><span style="text-decoration:underline;">Uzasadnienie: </span></p>
+<p>Wkroczenie Armii Czerwonej na terytorium II Rzeczpospolitej przyczyniło się do pogorszenia położenia Polaków, którzy dzielnie stawiali opór niemieckim żołnierzom. Próba walki z obydwoma najeźdźcami nie była możliwa. Wojsko Polskie nie było tak liczebne ani nie posiadało wystarczającego uzbrojenia. Ponadto decyzją naczelnego wodza było unikanie walki z siłami sowieckimi. Było to ciche przyzwolenie na działania armii ZSRS i dalszego rozpadu II RP. </p><br>

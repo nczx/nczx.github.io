@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>1.</p>
+<p>- ...<br/>- Du brauchst ein Trikot, Sportschuhe und einen Ball. - Potrzebujesz koszulki, butów sportowych i piłki. </p>
+<p>A. Was ist beim Fußballspielen wichtig? - Co jest ważne w graniu w piłkę nożną?<br/><strong>B. Was brauche ich zum Fußballspielen?</strong> - Czego potrzebuję do grania w piłkę nożną?<br/>C. Brauche ich einen Fußball? - Potrzebuję piłki do grania w piłkę nożną?  </p>
+<p>2.</p>
+<p>- Wo ist Tanja? - Gdzie jest Tanja? <br/>- Ich sehe sie ... - Widzę, jak ... </p>
+<p>A. mit dem Skilehrer zu sprechen. <br/>B. spricht mit dem Skilehrer.<br/><strong>C. mit dem Skilehrer sprechen.</strong> - rozmawia z instruktorem narciarstwa. </p>
+<p>Po czasowniku <em>sehen</em> nie występuje konstrukcja bezokolicznik + <em>zu</em>. Drugi czasownik znajduje się w formie bezokolicznika na końcu zdania. </p>
+<p>3. </p>
+<p>- Sag mal, was habt ihr heute vor? - Powiedz, co macie dzisiaj w planach?<br/>- ... </p>
+<p>A. Ihr habt vor, in den Kletterpark zu fahren. - Macie zamiar jechać do parku wspinaczkowego. <br/><strong>B. Wir haben vor, in den Kletterpark zu fahren.</strong> - Mamy zamiar jechać do parku wspinaczkowego. <br/>C. Wir planten, in den Kletterpark zu fahren. - Planowaliśmy jechać do parku wspinaczkowego. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
+<p>1. A. deutscher </p>
+<p>Odmiana przymiotnika z rodzajnikiem nieokreślonym - mianownik, rodzaj męski. Przymiotnik otrzymuje końcówkę -<em>er</em>.  </p>
+<p>2. C. hat </p>
+<p>W czasie przeszłym <em>Perfekt</em> czasowniki <em>schreiben</em> i <em>arbeiten</em> łączą się z czasownikiem posiłkowym <em>haben</em>. Czasownik posiłkowy <em>haben</em> odmieniony został dla osoby <em>er</em> (<em>der Globetrotter</em>).</p>
+<p>3. A. zu helfen </p>
+<p>Konstrukcja bezokolicznik + <em>zu</em> pozwala na umieszczenie w zdaniu dwóch czasowników i używana jest również z wyrażeniami przymiotnikowymi (np. <em>es ist gut / nötig .</em>..).</p>
+<p>4. A. denen </p>
+<p>Rekcja czasownika: <em>träumen von + Dativ</em>. Zaimek względny dla rzeczowników w liczbie mnogiej (<em>die Weltreisen</em>) w celowniku to <em>denen</em>. </p>
+<p>5. C. wo </p>
+<p>"Er hat viele Länder in Europa, Afrika, Asien und Südamerika bereist, wo er viele Erfahrungen gesammelt hat". - Zwiedził wiele krajów w Europie, Afryce, Azji i Ameryce Południowej, gdzie zebrał wiele doświadczeń. </p>
+<p>Słówko <em>wo</em> pełni funkcję zaimka względnego. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
+<p>1. Man kann im Schwimmbad schwimmen. Auf der Piste kann man Ski laufen. <br/><em>Pływać można na basenie. Na stoku narciarskim można jeździć na nartach. </em></p>
+<p>2. Zum Schwimmen braucht man einen Badeanzug oder eine Badehose, eine Badekappe und eine Schwimmbrille. Zum Skilaufen braucht man einen Skianzug, Skier, Knieschützer, einen Schutzhelm und Skistöcke.<br/><em>Do pływania potrzeba stroju kąpielowego lub kąpielówek, czepka i okularów pływackich. Do jazdy na nartach potrzeba kombinezonu narciarskiego, nart, ochraniaczy, kasku i kijków. </em></p>
+<p>3. Pytanie indywidualne. </p>
+<p>4. Pytanie indywidualne. </p><br>

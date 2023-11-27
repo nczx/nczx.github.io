@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Plan gospodarczy</strong> wdrażany w pierwszej połowie lat 70. przez Edwarda Gierka polegał na:</p>
+<ul>
+<li>zaplanowaniu wzrost dochodu narodowego o ok. 35%,  </li>
+<li>przyroście zatrudnienia o 1 800 000 osób,</li>
+<li>szczególnym rozwijaniu sektora przemysłowego, </li>
+<li>prowadzeniu aktywnej polityki kredytowej, </li>
+<li>przeznaczaniu pozyskanych funduszy na zakup zagranicznych licencji, budowę fabryk i rozwój infrastruktury, </li>
+<li>ogólnym ożywieniu gospodarczym, </li>
+<li>odbudowie transportu,</li>
+<li>szybkim wzroście stopy życiowej społeczeństwa.</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<table border="1" style="border-collapse:collapse;width:100%;">
+<tbody>
+<tr style="text-align:center;">
+<td colspan="2" style="width:50%;height:17px;background-color:#99cc00;"><strong>Strajki robotnicze w 1976 r.</strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="background-color:#ccff00;"><strong>Przyczyny </strong></td>
+<td style="background-color:#ccff00;"><strong>Skutki </strong></td>
+</tr>
+<tr style="text-align:center;">
+<td style="width:50%;height:17px;">
+<ul>
+<li>ogłoszenie przez premiera Piotra Jaroszewicza drastycznych podwyżek cen niektórych artykułów konsumpcyjnych sięgających nieraz nawet do 70%,  </li>
+<li>niezadowolenie z wprowadzenia zmian w konstytucji PRL (1976 r.) - Gierek przyjął służalczą postawę wobec Moskwy, </li>
+<li>załamanie się polityki gospodarczej PRL w wyniku narastającego zadłużenia zagranicznego - braki w zaopatrzeniu w żywność, ekipa Gierka wprowadziła bony towarowe na podstawowe produkty żywnościowe,</li>
+<li>uwidocznienie kontrastu pomiędzy głoszoną przez władze propagandą sukcesu ("budowa drugiej Polski"), a szarą rzeczywistością.</li>
+</ul>
+</td>
+<td style="width:50%;height:17px;">
+<ul>
+<li>wystąpienia robotnicze w Radomiu, Ursusie i Płocku zostały brutalnie stłumione przez milicję oraz ZOMO,</li>
+<li>wielu robotników straciło pracę,</li>
+<li>wiele osób aresztowano, a zatrzymanych bito, słynne stały się tzw. ścieżki zdrowia, </li>
+<li>robotnicy, którzy brali udział w demonstracjach byli szykanowani i zwalniani z pracy, </li>
+<li>represje wobec protestujących spowodowały powstanie Komitetu Obrony Robotników (KOR) z Jackiem Kuroniem, Janem Lityńskim i Janem Józefem Lipskim na czele. Udział w pracach KOR-u brali również: Antoni Macierewicz, Adam Michnik i Zbigniew Romaszewski,</li>
+<li>po raz pierwszy w powojennej historii doszło do sojuszu inteligencji z robotnikami, </li>
+<li>aby w przyszłości uniknąć zamieszek, po wydarzeniach Czerwca 1976 r. władze wprowadziły tzw. ciche podwyżki.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" height="339" src="./data/1188820-0.jpg" width="474"/></p>
+<p>Radomski czerwiec 1976 r., źródło zdjęcia: www.dzieje.pl</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
+<p>Wybór <strong>Karola Wojtyły</strong> na papieża był istotny z kilku powodów. Jan Paweł II był Polakiem, który poznał życie i problemy ludności w komunistycznym kraju, doświadczył represji władz, wobec Kościoła i jego osoby osobiście, więc spodziewano się wsparcia z jego strony. Poza tym im mocniej władza naciskała na Kościół, tym mocniej społeczeństwo o niego walczyło. Wybór Karola Wojtyły na papieża pokazywał, że stolica Piotrowa widzi tę walkę, docenia ją i chce wesprzeć poprzez wybór Polaka na głowę Kościoła. Do tego należy zwrócić na kwestie psychologiczne. Uciśniony naród w tych smutnych czasach otrzymał zastrzyk <strong>nadziei</strong>, a także <strong>wiary</strong>. Polacy mogli czuć się zauważeni, a przy tym zdawać sobie sprawę, że wśród najpotężniejszych ludzi świata mają przyjaciela i opiekuna, który szczególną uwagę będzie przykuwał do wydarzeń dziejących się w Polsce.</p>
+<p>Wybór Polaka na papieża (16 października 1978 r.) wywołał wielki entuzjazm polskich katolików i niepokój komunistów. Jan Paweł II był pierwszym papieżem, który konsekwentnie dążył do poznania współczesnego świata i podjęcia próby rozwiązania trudnych problemów cywilizacyjnych. Nawoływał do <strong>pokoju</strong>,<strong> tolerancji</strong> oraz <strong>sprawiedliwości</strong>. Papież-Polak dla komunistów z PZPR okazał się nie lada problemem. dla polskiego społeczeństwa natomiast stanowił ogromne wsparcie. Wspólne modlitwy z papieżem pozwoliły wielu Polakom zrozumieć, jak dużą potęgę wspólnie stanowią. Społeczeństwo po raz pierwszy poczuło swoją siłę. Jan Paweł II bardzo życzliwie odnosił się do <strong>opozycji demokratycznej</strong>.</p>
+<p><img alt="" height="347" src="./data/1188838-0.jpg" width="263"/></p>
+<p>Jan Paweł II, źródło zdjęcia: Wikimedia Commons. </p><br>

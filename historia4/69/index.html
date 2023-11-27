@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset='UTF-8'>
+<style>
+    @font-face{font-family:KaTeX_Main fallback;size-adjust:95%;src:local("Times New Roman"),local("LiberationSerif")}@font-face{font-family:KaTeX_Main fallback;size-adjust:83%;src:local("Noto Serif")}:root{--odr-text-decoration-color:currentColor;--odr-math-text-font-family:KaTeX_Main,"KaTeX_Main fallback",serif}.odr-strikethrough{text-decoration-color:var(--odr-text-decoration-color)}.odr-downdiagonalstrike,.odr-updiagonalstrike{-webkit-text-size-adjust:100%;text-size-adjust:100%;display:inline-block;position:relative;white-space:nowrap}.odr-downdiagonalstrike:not(.odr-strikethrough),.odr-updiagonalstrike:not(.odr-strikethrough){text-decoration:none}.odr-downdiagonalstrike:after,.odr-updiagonalstrike:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0}.odr-updiagonalstrike:before{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-downdiagonalstrike:after{background:linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-updiagonalstrike:before.odr-downdiagonalstrike:after{background:linear-gradient(to right bottom,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px)),linear-gradient(to right top,transparent calc(50% - 1px),var(--odr-text-decoration-color) 49.5%,var(--odr-text-decoration-color) 50.5%,transparent calc(50% + 1px))}.odr-comment,.odr-footnote{font-size:.8333357142857143em}math-expr{font-size:1.15rem}.katex{font-family:var(--odr-math-text-font-family)}.katex-display>.katex{white-space:normal}.katex-html>.base{padding-bottom:.25em;padding-top:.25em} 
+</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.js"></script>
+<script src="https://unpkg.com/asciimath2tex@1.2.1/dist/asciimath2tex.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+        const parser = new AsciiMathParser();
+        document.addEventListener("DOMContentLoaded", function () {
+            const mathExprs = document.querySelectorAll('math-expr');
+    
+            mathExprs.forEach(function (element) {
+                var expr = element.getAttribute('expr');
+                const span = document.createElement('span');
+
+                if (!expr.includes("\\displaystyle")) {
+                    var expr = parser.parse(expr);
+                }
+
+                katex.render(expr, span, {
+                    throwOnError: false,
+                });
+                
+                element.appendChild(span);
+            });
+        });
+</script>
+</head>
+<a style="color:red; font-size:25px;">?</a><br>
+<p><strong>Błędy, które zadecydowały o niepowodzeniu operacji "Market Garden" to:</strong></p>
+<ul>
+<li>aliantom udało się przejąć kontrolę nad pierwszymi mostami, ale ostatecznie nie zdobyto ostatniego mostu w Arnhem,  </li>
+<li>niemiecka kontrofensywa zniszczyła brytyjską I Dywizję Powietrznodesantową, </li>
+<li>błędy w planowaniu działań wojsk alianckich popełnione przez marsz. Montgomery-ego,</li>
+<li>mylne wyobrażenie dowódców brytyjskich o tym, co dziać się będzie na niemieckim odcinku obrony pod Arnhem,</li>
+<li>niesprzyjające warunki pogodowe, </li>
+<li>porażka alianckiego wywiadu - brak rozpoznania sił korpusu pancernego SS, jaki znajdował się w rejonie Arnhem. </li>
+</ul>
+<p><img alt="" height="254" src="./data/1179904-0.jpg" width="323"/></p>
+<p>Lądowanie brytyjskich spadochroniarzy w okolicach Arnhem, źródło zdjęcia: Wikimedia Commons. </p><br><a style="color:red; font-size:25px;">Zadanie 1</a><br>
+<p><strong>Etapy formowania się koalicji antyhitlerowskiej:</strong></p>
+<ul>
+<li>Formalnie koalicja przeciwko Niemcom narodziła się <strong>3 września 1939 r.</strong>, gdy Wielka Brytania i Francja wypowiedziały wojnę Niemcami.  </li>
+<li>Angażowanie się Polaków w wojnę poza granicami ojczyzny (np. wysłanie do Finlandii brytyjsko-francusko-polskiego korpusu ekspedycyjnego). </li>
+<li>W miarę odnoszenia przez Wehrmacht sukcesów militarnych, coraz więcej rządów przystępowało do koalicji antyhitlerowskiej. </li>
+<li>Atak Niemiec na ZSRR <strong>22 czerwca 1941 r.</strong> doprowadził do zmiany stosunku Winstona Churchilla do ZSRR. W interesie Wielkiej Brytanii leżało, by wesprzeć Józefa Stalina w walce III Rzeszą. Premier Wielkiej Brytanii liczył, że Sowieci odeprą niemiecką agresją i przyczynią się do klęski Hitlera. </li>
+<li>ZSRS i Wielka Brytania <strong>12 lipca 1941 r.</strong> podpisały akt o wzajemnej współpracy w walce z III Rzeszą. Podobne porozumienia z ZSRS zawarły polski i czechosłowacki rząd na emigracji oraz Wolni Francuzi. </li>
+<li>
+<strong>14 sierpnia 1941 r. </strong>premier Wielkiej Brytanii i prezydent USA podpisali dokument określany jako Karta Atlantycka. </li>
+<li>W <strong>październiku 1941 r.</strong> podpisano w Moskwie układ o objęciu ZSRS umową <em>Lend-Lease</em>. Rozpoczęto wysyłanie do Sowietów konwojów z bronią, amunicją, surowcami. </li>
+<li>Japończycy uderzyli na amerykańską bazę w Pearl Harbour <strong>7 grudnia 1941 r.</strong> Kilka godzin później wypowiedzieli wojnę USA. 11 grudnia zrobiły to także Niemcy i Włochy. Stany Zjednoczone ze względu na potencjał militarny, ludzki i gospodarczy stały się trzecim państwem, którego decyzje zaważyły na dalszych losach wojny. </li>
+<li>
+<strong>1 stycznia 1942 r. </strong>Deklarację Narodów Zjednoczonych podpisało 26 państw. Dokument ten zamykał proces formowania się programu koalicji antyhitlerowskiej. </li>
+<li>Zorganizowanie pierwszej konferencji wielkiej trójki w Teheranie w dniach od <strong>28 listopada</strong> do <strong>1 grudnia 1943 r.</strong>
+</li>
+</ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
+<p><strong>Znaczenie bitwy na łuku kurskim dla przebiegu walk na froncie wschodnim:</strong></p>
+<p>Zwycięstwo Armii Czerwonej w tym starciu przyniosło zwrot w działaniach wojennych na wschodzie. Niemcy stracili zdolność do przeprowadzania jakiejkolwiek ofensywy. Od sierpnia 1943 r. Sowieci zaczęli przesuwać się na zachód. Batalia uwidoczniła znaczne braki taktyczne niemieckiej kadry dowódczej. Niemcy ponieśli klęskę, po której nie byli w stanie się już podnieść. Klęska Wehrmachtu dodawała żołnierzom Armii Czerwonej znacznej pewności siebie.</p>
+<p><img alt="" height="265" src="./data/1179927-0.jpg" width="418"/></p>
+<p>Niemieckie czołgi na pozycjach bojowych podczas bitwy na łuku kurskim, źródło zdjęcia: Wikimedia Commons. </p><br>
