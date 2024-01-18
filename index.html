@@ -53,27 +53,203 @@
             height: 50px; /* Adjust the size as needed */
             margin: 10px;
         }
+        .topic-input {
+            width: 50px; /* Adjust the size as needed */
+        }
+        button {
+ appearance: button;
+ background-color: #1899D6;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ cursor: pointer;
+ display: inline-block;
+ font-size:10px;
+ font-weight: 700;
+ letter-spacing: .8px;
+ line-height: 10px;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 5px 5px;
+ text-align: center;
+ text-transform: uppercase;
+ touch-action: manipulation;
+ transform: translateZ(0);
+ transition: filter .2s;
+ user-select: none;
+ -webkit-user-select: none;
+ vertical-align: middle;
+ white-space: nowrap;
+}
+
+button:after {
+ background-clip: padding-box;
+ background-color: #1CB0F6;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ bottom: -4px;
+ content: "";
+ left: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ z-index: -1;
+}
+
+button:main, button:focus {
+ user-select: auto;
+}
+
+button:hover:not(:disabled) {
+ filter: brightness(1.1);
+}
+
+button:disabled {
+ cursor: auto;
+}
+
+button:active:after {
+ border-width: 0 0 0px;
+}
+
+button:active {
+ padding-bottom: 10px;
+}
     </style>
 </head>
 <body>
     <h1>Choose a Subject</h1>
     <ul>
-        <li><a href="/matematyka/index.html">matematyka 3</a></li>
-        <li><a href="/matematyka4/index.html">matematyka 4</a></li>
-        <li><a href="/polski/index.html">polski 3 czesc 1</a></li>
-        <li><a href="/polski3c2/index.html">polski 3 czesc 2</a></li>
-        <li><a href="/polski4/index.html">polski 4</a></li>
-        <li><a href="/angielski3podr/index.html">angielski 3 podrecznik</a></li>
-        <li><a href="/angielski3cw/index.html">angielski 3 cwiczenia</a></li>
-        <li><a href="/angielski4podr/index.html">angielski 4 podrecznik</a></li>
-        <li><a href="/angielski4cw/index.html">angielski 4 cwiczenia</a></li>
-        <li><a href="/niemiecki3podr/index.html">niemiecki 3 podrecznik</a></li>
-        <li><a href="/historia4/index.html">historia</a></li>
-        <li><a href="/chemia2/index.html">chemia 2</a></li>
-        <li><a href="/wos/index.html">wos</a></li>
-        <li><a href="/fizyka/index.html">Fizyka</a></li>
+        <li>
+            <a href="/matematyka/index.html">🧮 matematyka 3</a>     <!-- Manual Input Section -->
+            <label for="matematykaTopicInput">Strona:</label>
+            <input type="number" id="matematykaTopicInput" class="topic-input">
+            <button onclick="generateLink('/matematyka/', 'matematykaTopicInput')">➡️</button>
+            <div id="matematykaLinkContainer">
+                <ol id="matematykaLinkList"></ol>
+            </div>
+        </li>
+        <li>
+            <a href="/matematyka4/index.html">🧮 matematyka 4</a>
+            <label for="matematyka4TopicInput">Strona:</label>
+            <input type="number" id="matematyka4TopicInput" class="topic-input">
+            <button onclick="generateLink('/matematyka4/', 'matematyka4TopicInput')">➡️</button>
+            <div id="matematyka4LinkContainer">
+                <ol id="matematyka4LinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/polski/index.html">📖 polski 3 czesc 1</a>
+        <label for="polskiTopicInput">Strona:</label>
+        <input type="number" id="polskiTopicInput" class="topic-input">
+        <button onclick="generateLink('/polski/', 'polskiTopicInput')">➡️</button>
+        <div id="polskiLinkContainer">
+            <ol id="polskiLinkList"></ol>
+        </div>
+        </li>
+        <li><a href="/polski3c2/index.html">📖 polski 3 czesc 2</a>
+            <label for="polski3c2TopicInput">Strona:</label>
+            <input type="number" id="polski3c2TopicInput" class="topic-input">
+            <button onclick="generateLink('/polski3c2/', 'polski3c2TopicInput')">➡️</button>
+            <div id="polski3c2LinkContainer">
+                <ol id="polski3c2LinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/polski4/index.html">📖 polski 4</a>
+            <label for="polski4TopicInput">Strona:</label>
+            <input type="number" id="polski4TopicInput" class="topic-input">
+            <button onclick="generateLink('/polski4/', 'polski4TopicInput')">➡️</button>
+            <div id="polski4LinkContainer">
+                <ol id="polski4LinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/angielski3podr/index.html">🍵 angielski 3 podrecznik</a>
+            <label for="angielski3podrTopicInput">Strona:</label>
+            <input type="number" id="angielski3podrTopicInput" class="topic-input">
+            <button onclick="generateLink('/angielski3podr/', 'angielski3podrTopicInput')">➡️</button>
+            <div id="angielski3podrLinkContainer">
+                <ol id="angielski3podrLinkList"></ol>
+            </div></li>
+        <li><a href="/angielski3cw/index.html">🍵 angielski 3 cwiczenia</a>
+            <label for="angielski3cwTopicInput">Strona:</label>
+            <input type="number" id="angielski3cwTopicInput" class="topic-input">
+            <button onclick="generateLink('/angielski3cw/', 'angielski3cwTopicInput')">➡️</button>
+            <div id="angielski3cwLinkContainer">
+                <ol id="angielski3cwLinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/angielski4podr/index.html">🍵 angielski 4 podrecznik</a>
+            <label for="angielski4podrTopicInput">Strona:</label>
+            <input type="number" id="angielski4podrTopicInput" class="topic-input">
+            <button onclick="generateLink('/angielski4podr/', 'angielski4podrTopicInput')">➡️</button>
+            <div id="angielski4podrLinkContainer">
+                <ol id="angielski4podrLinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/angielski4cw/index.html">🍵 angielski 4 cwiczenia</a>
+            <label for="angielski4cwTopicInput">Strona:</label>
+            <input type="number" id="angielski4cwTopicInput" class="topic-input">
+            <button onclick="generateLink('/angielski4cw/', 'angielski4cwTopicInput')">➡️</button>
+            <div id="angielski4cwLinkContainer">
+                <ol id="angielski4cwLinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/niemiecki3podr/index.html">🍺 niemiecki 3 podrecznik</a>
+            <label for="niemiecki3podrTopicInput">Strona:</label>
+            <input type="number" id="niemiecki3podrTopicInput" class="topic-input">
+            <button onclick="generateLink('/niemiecki3podr/', 'niemiecki3podrTopicInput')">➡️</button>
+            <div id="niemiecki3podrLinkContainer">
+                <ol id="niemiecki3podrLinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/historia4/index.html">📜 historia</a>
+            <label for="historia4TopicInput">Strona:</label>
+            <input type="number" id="historia4TopicInput" class="topic-input">
+            <button onclick="generateLink('/historia4/', 'historia4TopicInput')">➡️</button>
+            <div id="historia4LinkContainer">
+                <ol id="historia4LinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/chemia2/index.html">📜 chemia 2</a>
+            <label for="chemia2TopicInput">Strona:</label>
+            <input type="number" id="chemia2TopicInput" class="topic-input">
+            <button onclick="generateLink('/chemia2/', 'chemia2TopicInput')">➡️</button>
+            <div id="chemia2LinkContainer">
+                <ol id="chemia2LinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/wos/index.html">🌎 wos</a>
+            <label for="wosTopicInput">Strona:</label>
+            <input type="number" id="wosTopicInput" class="topic-input">
+            <button onclick="generateLink('/wos/', 'wosTopicInput')">➡️</button>
+            <div id="wosLinkContainer">
+                <ol id="wosLinkList"></ol>
+            </div>
+        </li>
+        <li><a href="/fizyka/index.html">🧲 Fizyka</a>
+            <label for="fizykaTopicInput">Strona:</label>
+            <input type="number" id="fizykaTopicInput" class="topic-input">
+            <button onclick="generateLink('/fizyka/', 'fizykaTopicInput')">➡️</button>
+            <div id="fizykaLinkContainer">
+                <ol id="fizykaLinkList"></ol>
+            </div>
+        </li>
     </ul>
 
+    <script>
+        function generateLink(baseDirectory, inputId) {
+            var inputTopic = document.getElementById(inputId).value;
+            var directory = baseDirectory + inputTopic + '/';
+            var linkList = document.getElementById(inputId.replace('TopicInput', 'LinkList'));
+            linkList.innerHTML = '<li><a href="' + directory + '">Choice ' + inputTopic + '</a></li>';
+            
+            // Redirect immediately after generating the link
+            window.location.href = directory;
+        }
+    </script>
 
     <div class="image-container">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 1">
