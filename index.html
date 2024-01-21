@@ -243,10 +243,6 @@ button:active {
         function generateLink(baseDirectory, inputId) {
             var inputTopic = document.getElementById(inputId).value;
             var directory = baseDirectory + inputTopic + '/';
-            var linkList = document.getElementById(inputId.replace('TopicInput', 'LinkList'));
-            linkList.innerHTML = '<li><a href="' + directory + '">Choice ' + inputTopic + '</a></li>';
-            
-            // Redirect immediately after generating the link
             window.location.href = directory;
         }
     </script>
