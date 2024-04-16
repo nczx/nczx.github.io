@@ -4,122 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject Choice</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #333;
-            padding: 20px 0;
-        }
-        h2 {
-            color: #505050;
-            padding: 20px 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0077b6;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #ff6b6b;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image {
-            width: 50px; /* Adjust the size as needed */
-            height: 50px; /* Adjust the size as needed */
-            margin: 10px;
-        }
-        .topic-input {
-            width: 50px; /* Adjust the size as needed */
-        }
-        button {
- appearance: button;
- background-color: #1899D6;
- border: solid transparent;
- border-radius: 16px;
- border-width: 0 0 4px;
- box-sizing: border-box;
- color: #FFFFFF;
- cursor: pointer;
- display: inline-block;
- font-size:10px;
- font-weight: 700;
- letter-spacing: .8px;
- line-height: 10px;
- margin: 0;
- outline: none;
- overflow: visible;
- padding: 5px 5px;
- text-align: center;
- text-transform: uppercase;
- touch-action: manipulation;
- transform: translateZ(0);
- transition: filter .2s;
- user-select: none;
- -webkit-user-select: none;
- vertical-align: middle;
- white-space: nowrap;
-}
-
-button:after {
- background-clip: padding-box;
- background-color: #1CB0F6;
- border: solid transparent;
- border-radius: 16px;
- border-width: 0 0 4px;
- bottom: -4px;
- content: "";
- left: 0;
- position: absolute;
- right: 0;
- top: 0;
- z-index: -1;
-}
-
-button:main, button:focus {
- user-select: auto;
-}
-
-button:hover:not(:disabled) {
- filter: brightness(1.1);
-}
-
-button:disabled {
- cursor: auto;
-}
-
-button:active:after {
- border-width: 0 0 0px;
-}
-
-button:active {
- padding-bottom: 10px;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Choose a Subject</h1>
@@ -239,22 +124,75 @@ button:active {
         </li>
     </ul>
 
-    <script>
-        function generateLink(baseDirectory, inputId) {
-            var inputTopic = document.getElementById(inputId).value;
-            var directory = baseDirectory + inputTopic + '/';
-            var linkList = document.getElementById(inputId.replace('TopicInput', 'LinkList'));
-            linkList.innerHTML = '<li><a href="' + directory + '">Choice ' + inputTopic + '</a></li>';
-            
-            // Redirect immediately after generating the link
-            window.location.href = directory;
-        }
-    </script>
-
+  <section class="switch">
+    <h4 id="h4">light mode</h4>
+ <div class="container">
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+    </label>
+</div></section> 
     <div class="image-container">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 1">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 2">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 3">
     </div>
+    <script>
+        function generateLink(baseDirectory, inputId) {
+            var inputTopic = document.getElementById(inputId).value;
+            var directory = baseDirectory + inputTopic + '/';
+            window.location.href = directory;
+        }
+        const toggleSwitch = document.getElementById('darkModeToggle');
+const h4 = document.getElementById('h4');
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+function switchTheme() {
+    if (toggleSwitch.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        h4.innerHTML = "dark mode";
+    } else {
+        document.body.removeAttribute('data-theme');
+        h4.innerHTML = "light mode";
+    }
+}
+
+// Function to toggle dark mode theme
+function toggleDarkMode(isDarkMode) {
+    if (isDarkMode) {
+        document.body.setAttribute('data-theme', 'dark');
+        h4.innerHTML = "dark mode";
+    } else {
+        document.body.removeAttribute('data-theme');
+        h4.innerHTML = "light mode";
+
+    }
+}
+
+// Function to check and set dark mode preference
+function checkDarkModePreference() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    toggleDarkMode(isDarkMode);
+    // Set the state of the dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.checked = isDarkMode;
+}
+
+// Function to handle dark mode toggle change
+function handleDarkModeToggleChange() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const isDarkMode = darkModeToggle.checked;
+    localStorage.setItem('darkMode', isDarkMode);
+    toggleDarkMode(isDarkMode);
+}
+
+// Add event listener for dark mode toggle change
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('change', handleDarkModeToggleChange);
+
+// Check dark mode preference on page load
+checkDarkModePreference();
+
+    </script>
 </body>
 </html>

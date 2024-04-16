@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Choices</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <h1>Choose a English Topic</h1>
-    <div class="container">
-        <label class="switch" style="display:none">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider round"></span>
-        </label>
-    <ol>
-        <script>
-            // Generate links to directories from /10/ to /323/
-            for (var i = 4; i <= 175; i++) {
-                var directory = '/angielski3cw/' + i + '/';
-                document.write('<li><a href="' + directory + '">Choice ' + i + '</a></li>');
-            }
-            const toggleSwitch = document.getElementById('darkModeToggle');
-const h4 = document.getElementById('h4');
+const toggleSwitch = document.getElementById('darkModeToggle');
+
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 function switchTheme() {
     if (toggleSwitch.checked) {
         document.body.setAttribute('data-theme', 'dark');
-        h4.innerHTML = "dark mode";
     } else {
         document.body.removeAttribute('data-theme');
-        h4.innerHTML = "light mode";
+    }
+}
+function toggleDarkMode(isDarkMode) {
+    if (isDarkMode) {
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.removeAttribute('data-theme');
     }
 }
 
@@ -38,11 +21,8 @@ function switchTheme() {
 function toggleDarkMode(isDarkMode) {
     if (isDarkMode) {
         document.body.setAttribute('data-theme', 'dark');
-        h4.innerHTML = "dark mode";
     } else {
         document.body.removeAttribute('data-theme');
-        h4.innerHTML = "light mode";
-
     }
 }
 
@@ -69,8 +49,3 @@ darkModeToggle.addEventListener('change', handleDarkModeToggleChange);
 
 // Check dark mode preference on page load
 checkDarkModePreference();
-
-        </script>
-    </ol>
-</body>
-</html>
