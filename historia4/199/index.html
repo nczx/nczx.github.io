@@ -93,4 +93,43 @@
 <li>zreformowano centralny system zarządzania gospodarką,</li>
 <li>zreformowano aparat bezpieczeństwa - UB przemianowano na SB (Służbę Bezpieczeństwa).</li>
 </ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Podczas trwania odwilży w Polsce władza <strong>początkowo złagodziła kurs</strong> wobec Kościoła katolickiego. W październiku 1956 r. <strong>zezwolono na uwolnienie z aresztu prymasa Stefana Wyszyńskiego</strong>, zaś w grudniu - <strong>przywrócono możliwość nauczania religii w szkołach i uchylono wyrok wydany na biskupa kieleckiego Czesława Kaczmarka</strong>. <strong>Kościół odzyskał kontrolę nad prasą katolicką</strong>, w tym nad "Tygodnikiem Powszechnym". <strong>Ocieplenie państwo-Kościół</strong>, nie trwało jednak długo. Ochłodzenie nastąpiło już w połowie 1957 roku, kiedy prymas Wyszyński podjął przygotowania do obchodów "1000-lecia chrztu Polski". Władze w odpowiedzi podjęły uchwałę sejmową o państwowych obchodach "Tysiąclecia Państwa Polskiego." Miano eksponować tradycje polskiej państwowości i uczcić rocznicę budową tysiąca nowych szkół (hasło: "Tysiąc szkół na Tysiąclecie"). <strong>Już we wrześniu 1961 r. ponownie zabroniono nauki religii w szkołach, odmawiano zgody na budowę nowych kościołów, powoływano kleryków do wojska, utrudniano organizowanie pielgrzymek oraz religijnych uroczystości. </strong></p><br>
+<p>Podczas trwania odwilży w Polsce władza <strong>początkowo złagodziła kurs</strong> wobec Kościoła katolickiego. W październiku 1956 r. <strong>zezwolono na uwolnienie z aresztu prymasa Stefana Wyszyńskiego</strong>, zaś w grudniu - <strong>przywrócono możliwość nauczania religii w szkołach i uchylono wyrok wydany na biskupa kieleckiego Czesława Kaczmarka</strong>. <strong>Kościół odzyskał kontrolę nad prasą katolicką</strong>, w tym nad "Tygodnikiem Powszechnym". <strong>Ocieplenie państwo-Kościół</strong>, nie trwało jednak długo. Ochłodzenie nastąpiło już w połowie 1957 roku, kiedy prymas Wyszyński podjął przygotowania do obchodów "1000-lecia chrztu Polski". Władze w odpowiedzi podjęły uchwałę sejmową o państwowych obchodach "Tysiąclecia Państwa Polskiego." Miano eksponować tradycje polskiej państwowości i uczcić rocznicę budową tysiąca nowych szkół (hasło: "Tysiąc szkół na Tysiąclecie"). <strong>Już we wrześniu 1961 r. ponownie zabroniono nauki religii w szkołach, odmawiano zgody na budowę nowych kościołów, powoływano kleryków do wojska, utrudniano organizowanie pielgrzymek oraz religijnych uroczystości. </strong></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -45,4 +45,43 @@
 <p>W XVI w. w³oski plac Campo di Fiori jest miejscem handlu. Staje siê tak¿e miejscem spalenia Giordana Bruna - myœliciela oskar¿onego o herezjê. Po jego œmierci ludzie szybko wracaj¹ co codziennoœci i handlu. Z kolei w Warszawie dochodzi do likwidacji getta. Niemcy morduj¹ ¯ydów i niszcz¹ dzielnicê, zaœ za murem panuje zwyczajne ¿ycie - ludzie beztrosko siê bawi¹ na karuzeli. Ró¿nice miêdzy tymi wydarzeniami to przede wszystkim ich czas (XVI w. i XX w.) i miejsce (W³ochy i Polska). Ponadto spalenie Bruna ma wymiar jednostkowy, zaœ w getcie ginie wiele ludzi. Odmienne s¹ tak¿e przyczyny oraz sprawcy tych zdarzeñ. Filozof zostaje ukarany przez Koœció³ za swe pogl¹dy. Z kolei w Warszawie ¯ydzi s¹ mordowani przez Niemców ze wzglêdu na sw¹ to¿samoœæ. Podobieñstwo tych sytuacji polega zaœ na tym, i¿ ofiarami staj¹ siê niewinni ludzie. Ich dramat nie jest zaœ zauwa¿ony przez otoczenie, które szybko zapomina o tragicznych wydarzeniach. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Mi³osz zauwa¿a, ¿e ludzie s¹ obojêtni na cierpienie drugiej osoby, nie potrafi¹ zrozumieæ tragedii ofiar. Bardzo szybko zapominaj¹ o nich i wracaj¹ do codziennych spraw: "A ledwo p³omieñ przygasn¹³, / Znów pe³ne by³y tawerny". Podobnie mo¿na okreœliæ postawê mieszkañców Warszawy. Oddaj¹ siê beztroskiej zabawie w momencie, gdy za murami getta mordowani s¹ ludzie: "Czasem wiatr z domów p³on¹cych / Przynosi³ czarne latawce, / £apali skrawki w powietrzu / Jad¹cy na karuzeli". W tym kontekœcie karuzela, kojarzona z rozrywk¹, przyjemnoœci¹ i czerpaniem radoœci z ¿ycia, zyskuje nowe sensy. Staje siê znakiem obojêtnoœci, odwrócenia wzroku od krzywdy drugiego cz³owieka, bagatelizowaniu z³a, a przy tym skupienia siê na prostej rozrywce mimo dramatycznych realiów. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Przyk³adowo:</p>
-<p>Karuzela z wiersza Mi³osza i opowieœci Edelmana symbolizuje przede wszystkim obojêtnoœæ oraz przywi¹zanie do beztroskiego oraz zwyczajnego ¿ycia. Osoby bawi¹ce siê w ten sposób nie dostrzegaj¹ dramatu niewinnych ofiar, który rozgrywa siê obok nich. Tym samym karuzela mo¿e tak¿e oznaczaæ przyzwolenie na dokonuj¹ce siê z³o, brak woli, by poznaæ bolesn¹ prawdê. Stanowi ona równie¿ formê odwrócenia uwagi od drastycznych realiów. </p><br>
+<p>Karuzela z wiersza Mi³osza i opowieœci Edelmana symbolizuje przede wszystkim obojêtnoœæ oraz przywi¹zanie do beztroskiego oraz zwyczajnego ¿ycia. Osoby bawi¹ce siê w ten sposób nie dostrzegaj¹ dramatu niewinnych ofiar, który rozgrywa siê obok nich. Tym samym karuzela mo¿e tak¿e oznaczaæ przyzwolenie na dokonuj¹ce siê z³o, brak woli, by poznaæ bolesn¹ prawdê. Stanowi ona równie¿ formê odwrócenia uwagi od drastycznych realiów. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

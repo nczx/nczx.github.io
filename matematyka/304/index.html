@@ -21,4 +21,43 @@
 <p>Zauważamy, że siedemnastolatek o wzroście <strong>186 cm</strong> mieści się w <strong>90. centylu</strong>, zatem </p>
 <p><strong>10%</strong> jego rówieśników jest wyższych od niego.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Zapisujemy rozmiary sprzedanych butów w kolejności od najniższego do najwyższego:  </p> <p> <object class="math big" data="./data/1115282-0.svg" type="image/svg+xml"></object>  </p> <p>Wszystkich sprzedanych butów było <strong>12</strong>, zatem medianą jest średnia arytmetyczna</p> <p>dwóch sąsiednich wartości środkowych:</p> <p> <object class="math big" data="./data/1115282-1.svg" type="image/svg+xml"></object> </p> <p>Z kolei dominantą jest rozmiar, którego sprzedano najwięcej, czyli: <strong>42</strong>. </p> <p>Na podstawie wartości dominującej możemy stwierdzić, że rozmiar</p> <p>butów <strong>42</strong> był kupowany najczęściej.</p><br>
+<p>Zapisujemy rozmiary sprzedanych butów w kolejności od najniższego do najwyższego:  </p> <p> <object class="math big" data="./data/1115282-0.svg" type="image/svg+xml"></object>  </p> <p>Wszystkich sprzedanych butów było <strong>12</strong>, zatem medianą jest średnia arytmetyczna</p> <p>dwóch sąsiednich wartości środkowych:</p> <p> <object class="math big" data="./data/1115282-1.svg" type="image/svg+xml"></object> </p> <p>Z kolei dominantą jest rozmiar, którego sprzedano najwięcej, czyli: <strong>42</strong>. </p> <p>Na podstawie wartości dominującej możemy stwierdzić, że rozmiar</p> <p>butów <strong>42</strong> był kupowany najczęściej.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

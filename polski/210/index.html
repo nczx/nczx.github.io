@@ -20,4 +20,43 @@
 <p>Znając istotę sporu między romantykami a klasykami można powiedzieć, że jest to wypowiedź drwiąca, której głównym celem jest ośmieszenie oraz obrażenie osoby bądź zbiorowości, do której się odnosi. Klasycy nie zgadzali się z poglądami romantyków, którzy odrzucili tradycję, skupiając się na rewolucyjnych dążeniach, również w aspekcie literackim. Romantycy zaś dostrzegali potrzebę zwrócenia się ku duchowości oraz ludowości, co dla klasyków stało się miarą zabobonu oraz głupoty. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>W wierszu "Uważam, że cię kocham", który jest pozbawiony znaków interpunkcyjnych pojawiają się sformułowania, które stoją poza związkami w zdaniu, np. "chyba" oraz "mam nadzieję". Można je traktować jako wtrącenia, dopowiedzenia. Wprawdzie nie zostały wydzielone za pomocą nawiasu, lecz mają charakter parentezy.</p>
-<p>Z kolei w utworze "Tancerz" Julian Tuwim w celu wyrażenia ironii wykorzystuje wyrazy nacechowane stylistycznie, a konkretnie zdrobnienia  ("kroczek", "boczek") oraz ekspresywizmy, które zazwyczaj niosą ze sobą pozytywne konotacje ("słodko", "wdzięcznie"). Ironię ostatecznie zdradza puenta wiersza w postaci obrazowej metafory i wykrzyknienia: "Bodaj cię piorun trzasł!". </p><br>
+<p>Z kolei w utworze "Tancerz" Julian Tuwim w celu wyrażenia ironii wykorzystuje wyrazy nacechowane stylistycznie, a konkretnie zdrobnienia  ("kroczek", "boczek") oraz ekspresywizmy, które zazwyczaj niosą ze sobą pozytywne konotacje ("słodko", "wdzięcznie"). Ironię ostatecznie zdradza puenta wiersza w postaci obrazowej metafory i wykrzyknienia: "Bodaj cię piorun trzasł!". </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

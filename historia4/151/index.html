@@ -49,4 +49,43 @@
 <li>Liban.</li>
 </ul>
 <p><strong>2) </strong>Porty morskie, którymi dysponował Izrael w 1948 r.: Tel Alwiw - Jafa, Hajfa. </p>
-<p>Porty morskie, które uzyskał Irak w wyniku walk z 1967 r.: Gaza, Al-Ariszm, Romani, Port Said, Suez, Abu Zanima, Szaram asz-Szajch, Eljat. </p><br>
+<p>Porty morskie, które uzyskał Irak w wyniku walk z 1967 r.: Gaza, Al-Ariszm, Romani, Port Said, Suez, Abu Zanima, Szaram asz-Szajch, Eljat. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

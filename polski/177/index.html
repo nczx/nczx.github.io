@@ -33,4 +33,43 @@ Indywidualne<br><head><meta charset="UTF-8"></head>
 <p>*<em>Druga część zadania odnosi się do całości lektury, a takie zadania aktualnie traktujemy jako indywidualne.*</em></p>
 <p> </p>
 <p><strong>c)</strong></p>
-<p>Autorka zbioru opowiadań "Guguły" wyznaje, że dzieciństwo, język i pamięć minionych zdarzeń zdeterminowały jej dorosłe życie. Miejsce, w którym się wychowała, wpłynęło zarówno na jej decyzje życiowe, jak i twórczość literacką. Dzięki zanurzeniu w kilku odrębnych kodach językowych i umiejętności przełączania się pomiędzy nimi, zyskała literatura, jaką tworzy. Język pisanych utworów stał się precyzyjny, a wewnętrzny język nieustannie się rozwija. </p><br>
+<p>Autorka zbioru opowiadań "Guguły" wyznaje, że dzieciństwo, język i pamięć minionych zdarzeń zdeterminowały jej dorosłe życie. Miejsce, w którym się wychowała, wpłynęło zarówno na jej decyzje życiowe, jak i twórczość literacką. Dzięki zanurzeniu w kilku odrębnych kodach językowych i umiejętności przełączania się pomiędzy nimi, zyskała literatura, jaką tworzy. Język pisanych utworów stał się precyzyjny, a wewnętrzny język nieustannie się rozwija. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

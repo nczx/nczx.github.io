@@ -59,4 +59,43 @@
 <p>- Wo warst du in den Ferien? (Gdzie byłeś w wakacje?) <br/>- Ich bin mit dem Flugzeug nach Griechenland geflogen. Und du? (Poleciałem samolotem do Grecji. A ty?) <br/>- Ich bin mit dem Auto nach Spanien gefahren. (Pojechałem samochodem do Hiszpanii.) <br/>- Mit dem Auto? Das dauert aber lange. (Samochodem? To przecież długo trwa.) <br/>- Du hast Recht. Aber die Reise mit dem Auto ist bequem. (Masz rację. Ale podróż samochodem jest wygodna.) </p>
 <p><br/>Dialog 2:</p>
 <p>- Wo hast du die Sommerferien verbracht? (Gdzie spędziłeś wakacje?)<br/>- Ich bin mit dem Zug in die Alpen gefahren. Und du? (Pojechałem pociągiem w Alpy. A ty?) <br/>- Ich bin nach Mallorca geflogen. (Poleciałem na Majorkę.) <br/>- Mit dem Flugzeug? Das ist aber teuer. (Samolotem? To przecież drogie.) <br/>- Du hast Recht. Aber die Reise mit dem Flugzeug ist schnell. (Masz rację. Ale podróż samolotem jest szybka.) </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

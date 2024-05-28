@@ -76,4 +76,43 @@
 <li><em>Maju, maju!</em></li>
 </ul>
 <p> </p>
-<p>Osoba mówi¹ca w wierszu reprezentuje pozytywn¹, optymistyczn¹ postawê ¿yciow¹. Czerpie przyjemnoœæ ze swej podró¿y, jest wra¿liwa na piêkno otoczenia. Rozkwitaj¹ca majem przyroda staje siê dla niej Ÿród³em inspiracji, a tak¿e radoœci i entuzjazmu. Podmiot liryczny jest silnie zwi¹zany ze sw¹ rzeczywistoœci¹, kocha miasto w jego codziennej ods³onie.  </p><br>
+<p>Osoba mówi¹ca w wierszu reprezentuje pozytywn¹, optymistyczn¹ postawê ¿yciow¹. Czerpie przyjemnoœæ ze swej podró¿y, jest wra¿liwa na piêkno otoczenia. Rozkwitaj¹ca majem przyroda staje siê dla niej Ÿród³em inspiracji, a tak¿e radoœci i entuzjazmu. Podmiot liryczny jest silnie zwi¹zany ze sw¹ rzeczywistoœci¹, kocha miasto w jego codziennej ods³onie.  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

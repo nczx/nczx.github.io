@@ -63,4 +63,43 @@
 <p><em>Lisa jest Francuzką, ale od wielu lat mieszka w Niemczech. Ma wiele talentów. Śpiewa w zespole. Czasami <strong>bierze</strong> <strong>udział</strong> w pokazach talentów. Właśnie zaczyna swoją karierę i nie ma za dużo czasu. Lisa niestety nie <strong>spotyka</strong> się często ze swoim chłopakiem Pawłem. </em></p>
 <p> </p>
 <p>Czasownik, który został podany dodatkowo i nie pasuje do żadnej luki: <em>helfen</em> - pomagać. </p>
-<p><br/><br/>Część czasowników w języku niemieckim odmienia się nieregularnie. Nieregularna odmiana dotyczy tylko drugiej i trzeciej osoby liczby pojedynczej. Występuje wtedy wymiana samogłosek w obrębie tematu: <em>a</em> ulega zmianie na <em>ä</em>, <em>e</em> na <em>i</em> lub <em>ie</em>. </p><br>
+<p><br/><br/>Część czasowników w języku niemieckim odmienia się nieregularnie. Nieregularna odmiana dotyczy tylko drugiej i trzeciej osoby liczby pojedynczej. Występuje wtedy wymiana samogłosek w obrębie tematu: <em>a</em> ulega zmianie na <em>ä</em>, <em>e</em> na <em>i</em> lub <em>ie</em>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

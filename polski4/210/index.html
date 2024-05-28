@@ -47,4 +47,43 @@
 <p>Wyrażenie swojego zdania - część indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Autorzy wskazują na dwa paradygmaty. Pierwszy z nich ma charakter biologiczny. Odwołuje się do fizycznych objawów, które są wywołane miłością, wskazuje też na uniwersalne prawa dotyczące każdego człowieka czy też przemijanie. Drugi paradygmat jest kulturowy, odwołuje się w symboliczny sposób do Julii ze sztuki Szekspira. Świadczy o tym, że bohaterka wiersza istnieje niejako poza kategorią czasu, gdyż uosabia topos mający swe stałe miejsce w kulturze. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Przykładowo:</p>
-<p>Na podstawie tekstu miłość opisaną w utworze można zdefiniować jako zjawisko, które łączy w sobie dwa porządki oraz paradygmaty, niejednokrotnie sprzeczne. Sfera biologiczna, przejawiająca się w reakcjach organizmu na uczucie, łączy się z przemijaniem i rozdrażnieniem organizmu zakochanej kobiety. W pewien sposób miłość uzależnia ją od silnych doznań: "wzmogła / rytm serca". Z kolei sfera kulturowa przejawia się w nadaniu sytuacji bohaterki szerszej perspektywy, nawiązującej do dzieła Szekspira - uosabia ona bowiem uniwersalne zagadnienia. Tym samym miłość w wierszu poetki staje się połączeniem sprzecznych pierwiastków, które wzajemnie się uzupełniają. Nie można jej tym samym łatwo skategoryzować. </p><br>
+<p>Na podstawie tekstu miłość opisaną w utworze można zdefiniować jako zjawisko, które łączy w sobie dwa porządki oraz paradygmaty, niejednokrotnie sprzeczne. Sfera biologiczna, przejawiająca się w reakcjach organizmu na uczucie, łączy się z przemijaniem i rozdrażnieniem organizmu zakochanej kobiety. W pewien sposób miłość uzależnia ją od silnych doznań: "wzmogła / rytm serca". Z kolei sfera kulturowa przejawia się w nadaniu sytuacji bohaterki szerszej perspektywy, nawiązującej do dzieła Szekspira - uosabia ona bowiem uniwersalne zagadnienia. Tym samym miłość w wierszu poetki staje się połączeniem sprzecznych pierwiastków, które wzajemnie się uzupełniają. Nie można jej tym samym łatwo skategoryzować. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

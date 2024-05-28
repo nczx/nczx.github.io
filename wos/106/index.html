@@ -56,4 +56,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p><strong><span style="text-decoration: underline;">Korupcja</span></strong> to nadużycie władzy lub stanowiska publicznego w celu uzyskania nieuczciwej korzyści lub prywatnej korzyści na szkodę interesów publicznych. Korupcja może przybierać różne formy, takie jak łapówkarstwo, nepotyzm, sprzeniewierzenie publicznych środków, a także inne działania mające na celu osiągnięcie prywatnej korzyści poprzez nadużycie władzy lub funkcji publicznej.</p>
 <p>Korupcja jest zwykle związana z brakiem przejrzystości, jawności i uczciwości w rządzie, a także z nieodpowiedzialnością urzędników publicznych. Może ona prowadzić do poważnych skutków dla społeczeństwa, takich jak pogorszenie jakości usług publicznych, nierówności społeczne, wzrost ubóstwa, a nawet destabilizacja państwa. Korupcja sprawia, że ci, którzy mają możliwość przekupić przedstawicieli władzy czy urzędników, mogą nieuczciwie przyspieszyć pewne działania lub w inny sposób ułatwić sobie życie, co jest niesprawiedliwe względem tych, którzy takich możliwości nie mają.</p>
-<p>Walka z korupcją jest ważnym wyzwaniem dla wielu krajów i wymaga działań zarówno na poziomie krajowym, jak i międzynarodowym. W ramach walki z korupcją podejmuje się wiele działań, takich jak zwiększenie przejrzystości w rządzie, wzmocnienie kontroli i nadzoru, wprowadzenie surowszych kar dla osób dopuszczających się korupcji oraz edukacja społeczeństwa w zakresie wartości etycznych i odpowiedzialności władzy publicznej.</p><br>
+<p>Walka z korupcją jest ważnym wyzwaniem dla wielu krajów i wymaga działań zarówno na poziomie krajowym, jak i międzynarodowym. W ramach walki z korupcją podejmuje się wiele działań, takich jak zwiększenie przejrzystości w rządzie, wzmocnienie kontroli i nadzoru, wprowadzenie surowszych kar dla osób dopuszczających się korupcji oraz edukacja społeczeństwa w zakresie wartości etycznych i odpowiedzialności władzy publicznej.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

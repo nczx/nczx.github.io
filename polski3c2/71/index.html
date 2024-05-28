@@ -77,4 +77,43 @@
 <p>S³owo w poezji, wed³ug Tuwima, ulega przemianie, staje siê znakiem prawdy. Idea przybiera jego postaæ, nastêpnie chaos zostaje zast¹piony ³adem oraz koniecznoœci¹. S³owo poetyckie zyskuje zaœ w ten sposób samoœwiadomoœæ: "Sam siê uk³ada w swoj¹ ostatecznoœæ / I wo³a, jak siê nazywa". Wp³ywa przy tym na cz³owieka, gdy¿ zapewnia mu wolnoœæ i poznanie. S³owo w sztuce tym samym odwo³uje siê do uniwersalnych zjawisk i kszta³tuje istotê ludzk¹, zyskuje szczególne znaczenie. Z kolei s³owa w codziennej komunikacji odwo³uj¹ siê raczej do konkretnych sytuacji, s¹ pozbawione g³êbszych sensów i nie maj¹ takiego oddzia³ywania jak jêzyk poezji. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Zainteresowanie Tuwima twórczoœci¹ Kochanowskiego jest uwarunkowane ówczesnymi realiami. Dwudziestolecie miêdzywojenne to czas, w którym rodz¹ siê totalitaryzmy, rozwija siê propaganda oraz rozpoczyna siê dominacja kultury masowej. Czynniki te zaœ prowadz¹ do wypaczenia pojêæ oraz wartoœci (np. godnoœci cz³owieka, znaczenia s³owa). Z tego te¿ powodu inspiracj¹ dla twórcy staje siê renesansowy humanizm jako forma ratunku, przywrócenia pojêciom ich w³aœciwego znaczenia oraz walki o prawdê. Idea³y te staj¹ siê przeciwwag¹ dla rzeczywistoœci, dlatego te¿ Tuwim - za pomoc¹ odniesieñ do Kochanowskiego - stara siê je pielêgnowaæ, przypomnieæ o ich znaczeniu. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Jagna <em>występuje w "Chłopach" w roli profanatorki w rozumieniu Agambena, </em>ponieważ odrzuca świętości gromady lipieckiej - ziemię i religię, traktując je w taki sposób, jakby były one pozbawione świętości. Jeden z jej aktów profanacji odnosi się do ziemi, która jest dla niej zupełnie obojętna. Widać to w scenie z Hanką, kiedy Jagna rzuca pod nogi dokument poświadczający darowiznę ziemi. Drugim aktem profanacji jest uwiedzenie Jaśka, który był kandydatem na księdza. Jagna staje się w tym kontekście uosobieniem zmysłowości, która za nic ma sobie zasady oraz konwenanse społeczne. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

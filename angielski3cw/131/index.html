@@ -91,4 +91,43 @@
 <p>4. care of their pets</p>
 <p><strong>Uzasadnienie</strong>: <em>look after = take care of </em>(opiekować się). </p>
 <p>5. does this bike belong</p>
-<p><strong>Uzasadnienie</strong>: pytanie o podmiot ("Czyj jest ten rower?") zmieniamy na pytanie o dopełnienie ("Do kogo należy ten rower?"), czyli używamy szyku zdania pytającego. Czas <em>present simple</em> tak jak w zdaniu wyjściowym, czyli konstrukcja: zaimek pytający + <em>do/does </em>+ podmiot + czasownik + przyimek. </p><br>
+<p><strong>Uzasadnienie</strong>: pytanie o podmiot ("Czyj jest ten rower?") zmieniamy na pytanie o dopełnienie ("Do kogo należy ten rower?"), czyli używamy szyku zdania pytającego. Czas <em>present simple</em> tak jak w zdaniu wyjściowym, czyli konstrukcja: zaimek pytający + <em>do/does </em>+ podmiot + czasownik + przyimek. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

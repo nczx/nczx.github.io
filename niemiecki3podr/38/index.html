@@ -61,4 +61,43 @@
 <p><strong>A.</strong> Sie hat das Auto in die Werkstatt gebracht.<br/><em>Zawiozła samochód do warsztatu. </em></p>
 <p><strong>C.</strong> Sie hat das Auto vollgetankt. <br/><em>Zatankowała samochód do pełna. </em></p>
 <p><strong>E.</strong> Sie hat im Internet recherchiert. <br/><em>Poszperała w Internecie. </em></p>
-<p><strong>F.</strong> Sie hat alles selbst organisiert. <br/><em>Wszystko zorganizowała sama. </em></p><br>
+<p><strong>F.</strong> Sie hat alles selbst organisiert. <br/><em>Wszystko zorganizowała sama. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

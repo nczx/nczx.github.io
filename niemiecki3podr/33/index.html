@@ -51,4 +51,43 @@
 <p>- Wo warst du in den Ferien? (Gdzie byłeś na wakacjach?) <br/>- In Barcelona. (W Barcelonie.) <br/>- Wie hast du die Reise vorbereitet? (Jak przygotowałeś tę podróż?) <br/>- Ich habe im Internet recherchiert. (Poszperałem w Internecie.) </p>
 <p>- Wo warst du in den Ferien? (Gdzie byłeś na wakacjach?) <br/>- In der Türkei. (W Turcji.) <br/>- Wie hast du die Reise vorbereitet? (Jak przygotowałeś tę podróż?) <br/>- Ich habe im Reisebüro gefragt. (Pytałem w biurze podróży.) </p>
 <p>- Wo warst du in den Ferien? (Gdzie byłeś na wakacjach?) <br/>- An der Nordsee. (Nad Morzem Północnym.) <br/>- Wie hast du die Reise vorbereitet? (Jak przygotowałeś tę podróż?) <br/>- Ich habe alles selbst organisiert und den Koffer gepackt. (Wszystko sam zorganizowałem i spakowałem walizkę.) </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

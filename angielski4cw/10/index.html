@@ -109,4 +109,43 @@
 <p>wakacyjny obóz w Słowenii jest świetny! Braliśmy udział w  górskim spływie, który naprawdę <strong>podniósł</strong> nam <strong>poziom adrenaliny </strong>i w bardzo męczących wędrówkach górskich. Dziś pojechaliśmy do Wenecji. Musieliśmy wstać o 4.00 rano, bo podróż zajęła około 3 godzin. Uwielbiam spacerować <strong>krętymi alejkam</strong>i i <strong>polować</strong> na <strong>pamiątki</strong> w sklepach i na <strong>pchlich targach</strong>. Wspięliśmy się na wieżę, z której był piękny widok na <strong>panoramę miasta </strong>i, zadziwiająco, kiedy zaczęliśmy <strong>spacerować</strong> i oddalać się od słynnych <strong>atrakcji turystycznych</strong>, znaleźliśmy kilka cichych placów i kanałów, na których jedynymi ludźmi, na jakich się <strong>natknęliśmy</strong> byli tubylcy. Jutro jedziemy do Ljubljany, stolicy Słowenii. </p>
 <p>Do zobaczenia niedługo,</p>
 <p>Helen</p>
-<p>P.S. Dzięki, że włożyliście mi do apteczki <strong>środek odstraszający komary</strong>. Przydaje się. Rachel coś ugryzło i <strong>dostała wysypki</strong>, więc dzielę się z nią.</p><br>
+<p>P.S. Dzięki, że włożyliście mi do apteczki <strong>środek odstraszający komary</strong>. Przydaje się. Rachel coś ugryzło i <strong>dostała wysypki</strong>, więc dzielę się z nią.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

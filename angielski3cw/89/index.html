@@ -92,4 +92,43 @@
 <p>Gdyby poprosić ludzi o wymienienie cech dobrego pracownika - lub ogólnie dobrych cech charakteru - bycie zawsze na czas będzie prawdopodobnie jedną z nich. W Polsce punktualność jest ogólnie postrzegana jako coś pozytywnego, a w wielu sytuacjach jest wręcz wymagana. Jak to działa?</p>
 <p>Punktualności oczekuje się od nas w różnych sytuacjach, zwłaszcza tych formalnych. Dobrym tego przykładem jest chodzenie na rozmowy o pracę. Jeśli poszukasz wskazówek, jak zrobić dobre pierwsze wrażenie podczas ubiegania się o pracę, jest prawie pewne, że niespóźnianie się będzie na liście. Podobnie, trzeba być punktualnym w szkole i pracy. Pracodawcy i nauczyciele nie pochwalają spóźnialstwa, co jest zrozumiałe. Pojawiając się na czas, pokazujesz innym, że ich szanujesz. </p>
 <p>Podobnie jest z większością nieformalnych sytuacji. To prawda, że spóźnienie się na spotkanie z przyjaciółmi może nie mieć żadnych poważnych konsekwencji. Niektórzy nawet twierdzą, że grzecznie jest spóźnić się na imprezę w domu. Jednak może być inaczej, jeśli chodzi o chodzenie na randki. Zdecydowanie jest to uważane za niegrzeczne, gdy każesz drugiej osobie na siebie czekać. </p>
-<p>Tak więc jeśli jesteś obcokrajowcem odwiedzającym Polskę po raz pierwszy, pamiętaj o tych zasadach. Mogą one pomóc uniknąć nieprzyjemnych sytuacji. Inaczej jest jednak z naszymi pociągami. Prawie nigdy nie są na czas!</p><br>
+<p>Tak więc jeśli jesteś obcokrajowcem odwiedzającym Polskę po raz pierwszy, pamiętaj o tych zasadach. Mogą one pomóc uniknąć nieprzyjemnych sytuacji. Inaczej jest jednak z naszymi pociągami. Prawie nigdy nie są na czas!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

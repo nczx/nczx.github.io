@@ -35,4 +35,43 @@
 <p> </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p><strong>Przykładowe rozwiązanie:</strong></p>
-<p>Można powiedzieć, że zakończenie opowiadania Sławomira Mrożka ma sarkastyczny charakter. Słowa: <em>Odłożyłem spray i spać poszedłem. Wrócę do kuchni za pięćset lat </em>są przykładem autoironii, drwiny z samego siebie, która jest wyrazem rozgoryczenia. Bohater i jednocześnie narrator opowiadania zestawia pozorny rozwój karakonów z własnym rozwojem. Sugeruje tym samym, że tak prymitywne zwierzęta w pewnych aspektach znajdują się na wyższym poziomie ewolucji niż ludzie. Takie zakończenie utworu można rozpatrywać w szerszym kontekście, np. społeczno-historycznym. </p><br>
+<p>Można powiedzieć, że zakończenie opowiadania Sławomira Mrożka ma sarkastyczny charakter. Słowa: <em>Odłożyłem spray i spać poszedłem. Wrócę do kuchni za pięćset lat </em>są przykładem autoironii, drwiny z samego siebie, która jest wyrazem rozgoryczenia. Bohater i jednocześnie narrator opowiadania zestawia pozorny rozwój karakonów z własnym rozwojem. Sugeruje tym samym, że tak prymitywne zwierzęta w pewnych aspektach znajdują się na wyższym poziomie ewolucji niż ludzie. Takie zakończenie utworu można rozpatrywać w szerszym kontekście, np. społeczno-historycznym. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">?</a><br>
 <p>Do upadku komunizmu w Albanii doszło w latach <strong>1990-1991</strong>. W tym czasie doszło do serii protestów, strajków i manifestacji <strong>studenckich</strong>. Największe odbyły się w <strong>Tiranie</strong> i<strong> Kavai. </strong>Młodzi ludzie domagali się <strong>demokratyzacji życia politycznego</strong>, <strong>pluralizmu</strong> oraz <strong>niezależnej prasy</strong>. Co ciekawe, w Albanii wcześniej nie funkcjonowała zorganizowana opozycja antykomunistyczna. Antykomunizm albański został stworzony w  znacznej mierze przez "nawróconych" zwolenników komunizmu, którzy widzieli w zachodzących zmianach szansę dla siebie i rozwój kariery. </p>
-<p>31 marca 1991 r. w Albanii miały miejsce <strong>pierwsze wybory parlamentarne</strong>, w których sukces odniosła rządząca do tej pory Albańska Partia Pracy. Prezydentem został Ramiz Alia, zaś na czele rządu stanął Fatos Nano. Doszło do zmian w albańskiej konstytucji - wprowadzono podział władzy i poszerzono zakres swobód obywatelskich. </p><br>
+<p>31 marca 1991 r. w Albanii miały miejsce <strong>pierwsze wybory parlamentarne</strong>, w których sukces odniosła rządząca do tej pory Albańska Partia Pracy. Prezydentem został Ramiz Alia, zaś na czele rządu stanął Fatos Nano. Doszło do zmian w albańskiej konstytucji - wprowadzono podział władzy i poszerzono zakres swobód obywatelskich. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

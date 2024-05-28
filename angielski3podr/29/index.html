@@ -166,4 +166,43 @@
 <p> </p>
 <p><em>Weightless </em>by Marconi Union was written in 2012. It is supposed to help people reduce stress and anxiety, and lower blood pressure and heart rate. It was voted for being the most relaxing piece of music. I think it might work, because it's very calm. However, you'd have to listen to it regularly to see its effect in the long term.</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Utwór <em>Weightless</em> autorstwa Marconi Union został napisany w 2012 roku. Ma pomóc ludziom zredukować stres i niepokój, a także obniżyć ciśnienie krwi i tętno. Został przegłosowany za bycie najbardziej relaksującym utworem muzycznym. Myślę, że może zadziałać, bo jest bardzo spokojny. Jednak trzeba by było słuchać go regularnie, aby zobaczyć jego efekt w dłuższej perspektywie.</p><br>
+<p>Utwór <em>Weightless</em> autorstwa Marconi Union został napisany w 2012 roku. Ma pomóc ludziom zredukować stres i niepokój, a także obniżyć ciśnienie krwi i tętno. Został przegłosowany za bycie najbardziej relaksującym utworem muzycznym. Myślę, że może zadziałać, bo jest bardzo spokojny. Jednak trzeba by było słuchać go regularnie, aby zobaczyć jego efekt w dłuższej perspektywie.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

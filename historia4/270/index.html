@@ -93,4 +93,43 @@
 <li>
 <strong>1 listopada 1993 r.</strong> - <strong>w</strong><strong>ejście w życie traktatu z Maastricht. Od tego dnia istnieje Unia Europejska (UE)</strong>. </li>
 </ul><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<p>Proces integracji Polski z Unią Europejską był <strong>trudny</strong> i <strong>czasochłonny.</strong> Po latach zniewolenia (okres PRL) gospodarka oraz struktury państwa wymagały naprawy, przebudowy i unowocześnienia. <strong>W grudniu 1991 r.</strong> Polska podpisała  <strong>układ stowarzyszeniowy ze Wspólnotami Europejskimi. </strong>Jednak dopiero w <strong>1997 r. Rada Europejska </strong>podjęła decyzję o rozpoczęciu negocjacji z sześcioma państwami aspirującymi do UE, w tym Polski. <strong>W kwietniu 2003 r. podpisano w Atenach traktat akcesyjny,</strong> rozszerzający struktury Unii Europejskiej m.in. o Polskę. W tym samym roku odbyło się w naszym kraju referendum. Do poparcia integracji nawoływali nie tylko politycy, ale również Kościół katolicki (w tym ówczesny papież Jan Paweł II). Za przyjęciem Polski do UE w <strong>referendum ogólnokrajowym w 2003 r. </strong>opowiedziało się 77% głosujących. <strong>1 maja 2004 r. </strong>III RP została członkiem Unii Europejskiej. </p><br>
+<p>Proces integracji Polski z Unią Europejską był <strong>trudny</strong> i <strong>czasochłonny.</strong> Po latach zniewolenia (okres PRL) gospodarka oraz struktury państwa wymagały naprawy, przebudowy i unowocześnienia. <strong>W grudniu 1991 r.</strong> Polska podpisała  <strong>układ stowarzyszeniowy ze Wspólnotami Europejskimi. </strong>Jednak dopiero w <strong>1997 r. Rada Europejska </strong>podjęła decyzję o rozpoczęciu negocjacji z sześcioma państwami aspirującymi do UE, w tym Polski. <strong>W kwietniu 2003 r. podpisano w Atenach traktat akcesyjny,</strong> rozszerzający struktury Unii Europejskiej m.in. o Polskę. W tym samym roku odbyło się w naszym kraju referendum. Do poparcia integracji nawoływali nie tylko politycy, ale również Kościół katolicki (w tym ówczesny papież Jan Paweł II). Za przyjęciem Polski do UE w <strong>referendum ogólnokrajowym w 2003 r. </strong>opowiedziało się 77% głosujących. <strong>1 maja 2004 r. </strong>III RP została członkiem Unii Europejskiej. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

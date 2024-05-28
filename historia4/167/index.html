@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">?</a><br>
 <p><strong>1) </strong>Betty Friedan opisując sytuację kobiet w USA po II wojnie światowej wskazała znaczącą różnicę między ich położeniem przed i po konflikcie. Po zakończeniu globalnej wojny kobiety skoncentrowały się na prowadzeniu domostw. Ich życie stało się prostsze dzięki nowinkom technicznym, takim jak pralki i suszarki, a życie opierało się w głównej mierze na dbaniu o rodzinę i podtrzymywaniu domowego ogniska. Kobiety mimo tego, że były równe mężczyznom, nie zajmowały się "niekobiecymi problemami świata" i chciały, by to mężczyźni podejmowali najważniejsze decyzje. </p>
-<p><strong>2) </strong>"Problem", o którym mowa w tekście mógł polegać na tym, że kobiety nie angażowały się w szeroko rozumiane życie polityczne, a o sprawach, które ich bezpośrednio dotyczyły, decydowali mężczyźni. </p><br>
+<p><strong>2) </strong>"Problem", o którym mowa w tekście mógł polegać na tym, że kobiety nie angażowały się w szeroko rozumiane życie polityczne, a o sprawach, które ich bezpośrednio dotyczyły, decydowali mężczyźni. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

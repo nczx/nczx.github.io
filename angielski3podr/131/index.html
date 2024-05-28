@@ -65,4 +65,43 @@
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
 <p>Tak, myślę, że zarówno zdjęcie, jak i komentarze ilustrują to powiedzenie. Zdjęcie przedstawia zespół łyżwiarzy figurowych, którzy pozują jako grupa po zawodach. Wyglądają na pełnych entuzjazmu. W komentarzach ludzie wspominają o przyjaźni i o tym, że relacje między sportowcami są czymś wyjątkowym. </p>
-<p>Myślę, że to prawda, ponieważ relacje stają się silniejsze, gdy ludzie dzielą pasję i wspólny cel. Dlatego uważam, że dołączenie do drużyny sportowej to fantastyczny sposób na nawiązanie przyjaźni. Można spędzać razem czas podczas treningów, a nawet jeździć razem na zawody, by zdobywać medale i tytuły. Nie ma znaczenia, czy jest to tenis, piłka nożna, piłka ręczna czy siatkówka - sport zdecydowanie zbliża ludzi.</p><br>
+<p>Myślę, że to prawda, ponieważ relacje stają się silniejsze, gdy ludzie dzielą pasję i wspólny cel. Dlatego uważam, że dołączenie do drużyny sportowej to fantastyczny sposób na nawiązanie przyjaźni. Można spędzać razem czas podczas treningów, a nawet jeździć razem na zawody, by zdobywać medale i tytuły. Nie ma znaczenia, czy jest to tenis, piłka nożna, piłka ręczna czy siatkówka - sport zdecydowanie zbliża ludzi.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -71,4 +71,43 @@
 <p><em>mózgach, sercach, cichutko tną. </em></p>
 <p>Ostatnia strofa utworu bezpośrednio odwołuje się do zmarłych osób, których powinna dotyczyć tytułowa "rehabilitacja". Niczym duchy powracają do żyjących, zostają również porównani do diamentu ("[...] I ostrzy jak diament"). Zestawienie przychodzących z diamentem sugeruje pewne dodatkowe sensy. Diament bowiem to nie tylko kamień szlachetny, który wyróżnia się swym połyskiem oraz twardością i powstaje w głębi Ziemi. Jego mianem określa się także wartościowe, niezwykłe jednostki. Porównanie zmarłych do niego sugeruje jednoznaczność sytuacji, kiedy to wreszcie ma dojść do sprawiedliwej oceny, ale także nieuchronność tego wydarzenia. Zestawienie to może sugerować także pewną grozę, ponieważ konieczne staje się rozliczenie i oddanie sprawiedliwości zmarłym, przywrócenie im utraconej godności. Cały czas są obecni wśród żyjących, nie pozwalają im na zapomnienie o tym, co się wydarzyło, wręcz upominają się o rehabilitację ("[...] po szklanych / mózgach, sercach, cichutko tną"). </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-<p>Indywidualne </p><br>
+<p>Indywidualne </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

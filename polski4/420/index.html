@@ -56,4 +56,43 @@
 <p>Przykładowa odpowiedź:</p>
 <p>a) Dewaluacja słów, o której pisze autor, wynika z wieloletniego procesu rozwoju nowomowy na gruncie języka polskiego. Nadużywanie przez władze komunistyczne górnolotnych ("przeniknięte duchem wolności człowieka i poszanowania praw obywatela") lub silnie wartościujących sformułowań ("zbrodniczy prowokatorzy", "reakcyjne cele", "oszukańcze hasła"), składanie obietnic bez pokrycia ("Temu zadaniu chcemy poświęcić nasze wysiłki."), szerzenie dezinformacji ("[...] prowokatorzy i agenci imperialistyczni mieli na oku coś zupełnie innego.") czy zaklinanie rzeczywistości za pomocą hiperbol ("krwawe zajścia", "atmosfera podniecenia i niepokoju") i eufemizmów ("bolączki", "błędy", "obniżanie kosztów własnych") sprawiły, że wiele środków wyrazu straciło swą dotychczasową wymowę, a hasła odnoszące się do szlachetnych wartości oraz idei stały się z czasem nic nieznaczącymi sloganami ("demokratyzacja życia", "władza ludowa", "poszanowanie praw obywatela").</p>
 <p> </p>
-<p>b) Słowa, które utraciły swe znaczenie, przestały być dla odbiorców źródłem inspiracji ("Towarzysze! Obywatele! Ludu pracujący stolicy!"), ponadto nie są w stanie ich zastraszyć ("Tego imperialistyczni agenci boją się najbardziej.") ani nakłonić do określonych zachowań ("Podnoście wydajność pracy, zwalczajcie marnotrawstwo i obniżajcie koszty własne."). Przede wszystkim jednak pojęcia te nie znajdują żadnego potwierdzenia w działaniach mówiącego - ten może odwoływać się do nich bez namysłu, bez zobowiązań czy obawy przed negatywnymi konsekwencjami ("Temu zadaniu chcemy poświęcić nasze wysiłki."). Z kolei odbiorca takiego komunikatu nie powinien dłużej oczekiwać, że wypowiedziane słowa w jakikolwiek sposób wpłyną na rzeczywistość. Język ukształtowany przez nowomowę przypomina raczej pozbawiony treści i ekspresji bełkot, przez Kapuścińskiego zwany "cymbałami pusto brzmiącymi".</p><br>
+<p>b) Słowa, które utraciły swe znaczenie, przestały być dla odbiorców źródłem inspiracji ("Towarzysze! Obywatele! Ludu pracujący stolicy!"), ponadto nie są w stanie ich zastraszyć ("Tego imperialistyczni agenci boją się najbardziej.") ani nakłonić do określonych zachowań ("Podnoście wydajność pracy, zwalczajcie marnotrawstwo i obniżajcie koszty własne."). Przede wszystkim jednak pojęcia te nie znajdują żadnego potwierdzenia w działaniach mówiącego - ten może odwoływać się do nich bez namysłu, bez zobowiązań czy obawy przed negatywnymi konsekwencjami ("Temu zadaniu chcemy poświęcić nasze wysiłki."). Z kolei odbiorca takiego komunikatu nie powinien dłużej oczekiwać, że wypowiedziane słowa w jakikolwiek sposób wpłyną na rzeczywistość. Język ukształtowany przez nowomowę przypomina raczej pozbawiony treści i ekspresji bełkot, przez Kapuścińskiego zwany "cymbałami pusto brzmiącymi".</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

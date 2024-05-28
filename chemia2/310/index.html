@@ -74,4 +74,43 @@
 </ul><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Wzór sumaryczny kauczuku możemy zapisać jako  <math-expr expr="(C_5H_8)_n." syntax="text"></math-expr>   Masa cząsteczkowa pojedynczego mera kauczuku wynosi 68 u. Liczymy ilość merów w cząsteczce: </p> <p> <math-expr expr="m_((C_5H_8)_n)=n*m_(C_5H_8)" syntax="text"></math-expr>   </p> <p> <math-expr expr='340000\ u=n*68\ u\ \ \ "/":68\ u' syntax="text"></math-expr>   </p> <p> <math-expr expr="n=5000" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Cząsteczka kauczuku naturalnego składa się z 5000 merów.</strong>  </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Masa cząsteczkowa podanego związku to 322 u. Masa atomowa chloru, to 35,5 u. Liczymy zawartość procentową chloru w cząsteczce:</p> <p> <math-expr expr="%Cl=(4*35,5\ u)/(322\ u)*100%=44,1%" syntax="text"></math-expr>   </p> <p><strong>Odpowiedź: Zawartość procentowa chloru w cząsteczce tego związku chemicznego to 44,1%.</strong> </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Równanie reakcji: </p> <p> <math-expr expr="2\ H_2N-CH_2-CH_2-CH_2-CH_2-CH_2-COOH\ -&gt;\ H_2N-CH_2-CH_2-CH_2-CH_2-CH_2-CO-NH-CH_2-CH_2-CH_2-CH_2-CH_2-COOH\ +\ H_2O" syntax="text"></math-expr>    </p><br>
+<p>Równanie reakcji: </p> <p> <math-expr expr="2\ H_2N-CH_2-CH_2-CH_2-CH_2-CH_2-COOH\ -&gt;\ H_2N-CH_2-CH_2-CH_2-CH_2-CH_2-CO-NH-CH_2-CH_2-CH_2-CH_2-CH_2-COOH\ +\ H_2O" syntax="text"></math-expr>    </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -48,4 +48,43 @@
 <p>Los teatrów by³ uzale¿niony od kraju, w którym istnia³y. Na przyk³ad we Francji dzia³a³y bez wiêkszych zak³óceñ, wystawiano sztuki tamtejszych dramaturgów. Z kolei na polskich ziemiach funkcjonowa³o zaledwie kilka scen zaakceptowanych przez nazistów. Aktorzy jednak czêsto je bojkotowali. Kwit³o jednak konspiracyjne wystawianie sztuk. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Zdjêcie przedstawia szeœciu ¿o³nierzy, którzy na wyspie Iwo Jima stawiaj¹ flagê Stanów Zjednoczonych. Miejsce to zyskuje symboliczne znaczenie, poniewa¿ w trakcie kampanii na Pacyfiku toczy³y siê o nie za¿arte walki, by³o kluczowe tak¿e ze wzglêdów strategicznych. Zwalczenie oporu Japoñczyków umo¿liwi³o ¿o³nierzom wkroczenie na japoñskie wyspy macierzyste. Zdobycie Iwo Jimy jest wiêc wa¿nym momentem w czasie kampanii; jednoczeœnie wi¹¿e siê ono z ogromnym poœwiêceniem po obu stronach konfliktu. Symbolika zdjêcia wynika z jego historii, ale tak¿e z reprezentowanych przez ni¹ wartoœci. Stanowi bowiem pochwa³ê mêstwa, odwagi, determinacji amerykañskich ¿o³nierzy. Wskazuje tak¿e na ich silny patriotyzm, co odzwierciedla zatykana przez nich flaga. Zdjêcie symbolizuje tak¿e dumê i podziw, poniewa¿ ukazuje zwyciêstwo walcz¹cych. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

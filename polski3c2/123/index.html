@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>Podobieñstwo polega na tym, i¿ poeci w zbli¿ony sposób postrzegaj¹ artystê oraz sam akt tworzenia. Norwid akcentuje bowiem zwi¹zek piêkna i pracy jako Ÿród³a ¿ycia. Docenia prostych ludzi oraz ich twórczoœæ, poniewa¿ stanowi ona przejaw najwy¿szych wartoœci oraz ucieleœnia prawdê. Z tego te¿ powodu sztuka powinna byæ zakorzeniona w rzeczywistoœci. Podobn¹ postawê reprezentuje Przyboœ, poniewa¿ praca cieœli staje siê refleksj¹ na temat poezji. Do jej wykreowania konieczny jest ci¹g³y wysi³ek, gdy¿ tylko za jego spraw¹ mo¿liwe staje siê opanowanie s³ów, nadanie im w³aœciwego i po¿¹danego kszta³tu, prowadz¹ce do osi¹gniêcia doskona³oœci. </p><br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

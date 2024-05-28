@@ -14,4 +14,43 @@
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p><strong>a)</strong></p> <p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014979-0.svg" type="image/svg+xml"></object> </p> <p> </p> <p><strong>Wykresy funkcji  </strong> </p> <p><img alt="" height="375" src="./data/1014979-0.jpg" width="427"/></p> <hr/> <p><strong>b)</strong></p> <p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014979-1.svg" type="image/svg+xml"></object> </p> <p> </p> <p><strong>Wykresy funkcji </strong></p> <p><img alt="" height="478" src="./data/1014979-1.jpg" width="540"/></p> <hr/> <p><strong>c)</strong></p> <p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014979-2.svg" type="image/svg+xml"></object> </p> <p> </p> <p><strong>Wykresy funkcji </strong></p> <p><img alt="" height="505" src="./data/1014979-2.jpg" width="572"/></p> <hr/> <p><strong>d)</strong></p> <p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014979-3.svg" type="image/svg+xml"></object> </p> <p> </p> <p><strong>Wykresy funkcji </strong></p> <p><img alt="" height="567" src="./data/1014979-3.jpg" width="585"/></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014991-0.svg" type="image/svg+xml"></object> </p> <p>Jeśli funkcje miałyby punkty wspólne, to zachodziłaby równość  </p> <p> <object class="math big" data="./data/1014991-1.svg" type="image/svg+xml"></object> </p> <p>Przekształćmy powyższe równanie</p> <p> <object class="math big" data="./data/1014991-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1014991-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1014991-4.svg" type="image/svg+xml"></object> </p> <p>Wnioskujemy, że wykresy funkcji <strong>y=f(x)</strong> oraz <strong>y=af(x)</strong>, gdzie <strong>a</strong><span style="font-weight:400;"><strong>≠1</strong>, mają punkty wspólne, gdy funkcja <strong>f</strong> ma miejsca zerowe (czyli prawdziwe jest równanie <strong>f(x)=0</strong>).</span>    </p> <p> </p><br>
+<p>Z treści zadania wiemy, że</p> <p> <object class="math big" data="./data/1014991-0.svg" type="image/svg+xml"></object> </p> <p>Jeśli funkcje miałyby punkty wspólne, to zachodziłaby równość  </p> <p> <object class="math big" data="./data/1014991-1.svg" type="image/svg+xml"></object> </p> <p>Przekształćmy powyższe równanie</p> <p> <object class="math big" data="./data/1014991-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1014991-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1014991-4.svg" type="image/svg+xml"></object> </p> <p>Wnioskujemy, że wykresy funkcji <strong>y=f(x)</strong> oraz <strong>y=af(x)</strong>, gdzie <strong>a</strong><span style="font-weight:400;"><strong>≠1</strong>, mają punkty wspólne, gdy funkcja <strong>f</strong> ma miejsca zerowe (czyli prawdziwe jest równanie <strong>f(x)=0</strong>).</span>    </p> <p> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -80,4 +80,43 @@
 <p> </p>
 <p> </p>
 <p>Tryb rozkazujący dla drugiej osoby liczby pojedynczej tworzymy przez pozbycie się zaimka osobowego (<em>du</em>) oraz końcówki czasownika <em>-(e)st</em>, zarówno w czasownikach regularnych, jak i nieregularnych. Czasowniki, które podczas odmiany otrzymują przegłos, tracą go w trybie rozkazującym.</p>
-<p>Tryb rozkazujący dla drugiej osoby liczby mnogiej tworzymy, pomijając zaimek osobowy (<em>ihr</em>). Czasownik pozostaje bez zmian.</p><br>
+<p>Tryb rozkazujący dla drugiej osoby liczby mnogiej tworzymy, pomijając zaimek osobowy (<em>ihr</em>). Czasownik pozostaje bez zmian.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

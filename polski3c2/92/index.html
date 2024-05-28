@@ -83,4 +83,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>Przyk³adowo:</p>
 <p>Autor pragnie zwróciæ uwagê na to, i¿ konieczny jest wspólny wysi³ek. Nie nale¿y siê bowiem ograniczyæ do radoœci z powodu odzyskania niepodleg³oœci. Trzeba natomiast d¹¿yæ do zbudowania jednoœci Polski, poprawy sytuacji. W tym celu konieczne staje siê uzyskanie narodowej jednoœci, solidarne dzia³anie w duchu patriotyzmu. Jednoczeœnie poeta zwraca uwagê na ogólne znaczenie tradycji, a w szczególnoœci - dorobek czasów szlacheckich. Niejednoznaczna wymowa wiersza sugeruje, i¿ mo¿e staæ siê on si³¹ destruktywn¹ lub pozytywn¹ - w zale¿noœci od tego, czy punktem odniesienia stan¹ siê zalety, czy te¿ wady szlachty. Kluczow¹ kwesti¹ jest jednak wyzbycie siê jakichkolwiek w¹tpliwoœci lub uprzedzeñ, kierowanie siê przede wszystkim mi³oœci¹ do kraju i poszukiwanie kompromisu. </p>
 <p> </p>
-<p>Wyra¿enie swojego zdania - czêœæ indywidualna  </p><br>
+<p>Wyra¿enie swojego zdania - czêœæ indywidualna  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

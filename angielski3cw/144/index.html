@@ -88,4 +88,43 @@
 <p>W dzisiejszych czasach coraz więcej osób przedkłada potencjalne zarobki związane z karierą zawodową nad własne umiejętności i zainteresowania przy dokonywaniu wyborów edukacyjnych. Takie podejście ma zarówno zalety, jak i wady.</p>
 <p>Z jednej strony, skupienie się na zarobkach prowadzi do bezpieczeństwa finansowego i stabilności. Wybierając wysoko płatne zawody, ludzie mogą mieć lepsze możliwości utrzymania siebie i swoich rodzin, a także pozwolić sobie na wygodny styl życia. Dodatkowo, brak problemów finansowych zmniejsza ogólny stres i daje poczucie spełnienia i dobrego samopoczucia.</p>
 <p>Z drugiej strony, nieuwzględnienie umiejętności i zainteresowań może skutkować nieszczęśliwym życiem. Wykonywanie zawodu dla zysku finansowego może skutkować brakiem pasji, motywacji i poświęcenia. Co więcej, znacznie trudniej jest studiować i pracować w dziedzinie, którą uważa się za nieciekawą. Osoby studiujące tematy, które uważają za nudne, z większym prawdopodobieństwem poniosą porażkę i nigdy nie uzyskają dyplomu.</p>
-<p>Podsumowując, podczas gdy skupianie się na zarobkach przy wyborze kariery może zapewnić bezpieczeństwo finansowe, może mieć wpływ na samopoczucie ludzi. Chociaż prawdą jest, że kapitalizm sprawia, że nie można nie brać pod uwagę pieniędzy przy dokonywaniu wyborów zawodowych, być może powinniśmy spróbować znaleźć równowagę i poszukać kariery, która jest dobrze płatna, ale jednocześnie sprawia nam przyjemność.</p><br>
+<p>Podsumowując, podczas gdy skupianie się na zarobkach przy wyborze kariery może zapewnić bezpieczeństwo finansowe, może mieć wpływ na samopoczucie ludzi. Chociaż prawdą jest, że kapitalizm sprawia, że nie można nie brać pod uwagę pieniędzy przy dokonywaniu wyborów zawodowych, być może powinniśmy spróbować znaleźć równowagę i poszukać kariery, która jest dobrze płatna, ale jednocześnie sprawia nam przyjemność.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

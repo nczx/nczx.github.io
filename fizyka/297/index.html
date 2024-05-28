@@ -13,4 +13,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Prędkość oddalania się galaktyk jest wprost proporcjonalna do odległości od tej galaktyki. Zatem druga z galaktyk poruszająca się trzy razy szybciej musi znajdować się trzy razy dalej.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Główną siłą działającą w kosmosie jest grawitacja. Siła ta powoduje przyciąganie się wszelkiej masy, stąd twierdzono, że rozszerzanie Wszechświata powinno być hamowane. </p><br>
+<p>Główną siłą działającą w kosmosie jest grawitacja. Siła ta powoduje przyciąganie się wszelkiej masy, stąd twierdzono, że rozszerzanie Wszechświata powinno być hamowane. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

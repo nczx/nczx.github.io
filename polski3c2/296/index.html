@@ -46,4 +46,43 @@
 <p>Okupacja by³a czasem bardzo trudnym dla Polaków, jednak ich sytuacja nieco ró¿ni³a siê - w zale¿noœci od terenu, na którym ¿yli. Obszar kraju zosta³ bowiem podzielony na trzy czêœci. Œl¹sk, Pomorze i Wielkopolska wcielono do III Rzeszy. Tam d¹¿ono do eksterminacji Polaków oraz ich kultury. Uwaga hitlerowców koncentrowa³a siê przede wszystkim na przedstawicielach inteligencji oraz patriotach, których mordowano lub zamykano w obozach. Z centralnych województw powsta³o Generalne Gubernatorstwo. Zapewnia³o ono surowce oraz niezbêdn¹ si³ê robocz¹; na obszarze tym tak¿e d¹¿ono do podporz¹dkowania sobie Polaków przy u¿yciu przemocy oraz surowych ograniczeñ ¿ycia politycznego czy kulturalnego. Codziennoœci¹ sta³y siê tak¿e ³apanki, wywozy na przymusowe roboty itd. Podobne metody dzia³ania zastosowano na ziemiach wcielonych do ZSRR, gdzie dosz³o do wyniszczenia elity narodu. Czêsto zsy³ano tak¿e ludzi w g³¹b kraju lub wykorzystywano ich do ciê¿kiej pracy. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Dzia³alnoœæ Polskiego Pañstwa Podziemnego mia³a du¿y wp³yw na ówczesn¹ kulturê i sztukê. Przede wszystkim umo¿liwi³a przetrwanie narodowego ducha i nieoficjalny rozwój artystyczny. Nie tylko zapewnia³a edukacjê; pañstwo podziemne przyczyni³o siê do powstania ruchu wydawniczego. W ten sposób mo¿liwe sta³o siê wydawanie pism. Przekazywa³y one informacje lub te¿ rozpowszechnia³y teksty literackie, satyryczne. Rozpowszechniano tak¿e przedruki dzie³ emigracyjnych, antologie ówczesnych twórców. Mo¿na wiêc powiedzieæ, ¿e dzia³alnoœæ pañstwa podziemnego pozwoli³a na przetrwanie kultury i sztuki oraz jej tajne funkcjonowanie. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>¯ycie w Generalnym Gubernatorstwie by³o naznaczone wieloma trudnoœciami. Skromne przydzia³y kartkowe przyczyni³y siê do rozwoju czarnego rynku, dosz³o tak¿e do drastycznego wzrostu cen. Mimo surowych kar Polacy szukali rozwi¹zañ, np. przemycali po¿ywienie ze wsi do miasta. Postêpuj¹ce zubo¿enie spo³eczeñstwa sprawi³o, i¿ ludzie byli zmuszeni do przerabiania starych ubrañ czy zastêpowania skórzanego obuwia drewniakami, zamiast taksówek kursowa³y zaœ riksze. Niemcy d¹¿yli tak¿e do ograniczenia ¿ycia kulturalnego, co mia³o negatywny wp³yw na sytuacjê inteligencji. Dzia³ania te spowodowa³y zaistnienie kultury w podziemiu - miejscem spotkañ stawa³y siê zazwyczaj prywatne mieszkania. Niemcy wprowadzali do Generalnego Gubernatorstwa terror. Karali za s³uchanie radia, nadmierne zu¿ywanie pr¹du itd., ograniczali tak¿e prawa Polaków (strefy dla Niemców, godzina policyjna). Czêsto organizowano tak¿e ³apanki, wywo¿ono na przymusowe roboty lub zsy³ano do obozów koncentracyjnych. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

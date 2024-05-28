@@ -118,4 +118,43 @@
 <p> </p>
 <p>Zastosowane œrodki wzmacniaj¹ sugestywnoœæ przedstawienia oraz intensywnoœæ procesu tworzenia - nie tylko jego piêkno, ale te¿ sam trud. Najpe³niej oddaj¹ wiêc wizjê artysty. Zaznaczaj¹ przy tym dynamikê i dramatyzm przedstawionej sytuacji oraz prowadz¹ do nadania jej szczególnego sensu - uwznioœlenia. Ponadto nale¿y zauwa¿yæ, i¿ umo¿liwiaj¹ one kondensacjê treœci, poniewa¿ dzie³o mo¿na rozpatrywaæ na dwóch p³aszczyznach: dos³ownej oraz przenoœnej. W ten sposób utwór staje siê swoist¹ zagadk¹ dla czytelnika. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

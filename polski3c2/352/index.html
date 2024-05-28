@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Frazeologizmy biblijne przewrotnie pozwalaj¹ na wyra¿enie refleksji dotycz¹cej powodów i konsekwencji utraty wiary. Umo¿liwiaj¹ tak¿e wyra¿enie traumy oraz wyjawienie stanu emocjonalnego. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Utrata wiary to bezpoœredni wynik doœwiadczenia wojny oraz zwi¹zanego z tym okrucieñstwa i z³a. Sytuacja ta stanowi Ÿród³o wstrz¹su i jednoczeœnie prowadzi do rozpadu systemu wartoœci, poniewa¿ prowokuje pytania o obecnoœæ Boga. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Stanis³aw Burkot w swym tekœcie powo³uje siê na s³owa Kazimierza Nowosielskiego. Wed³ug tego krytyka poecie nie uda³o siê pokonaæ kryzysu œwiatopogl¹dowego. Mimo prze¿ycia wojny Ró¿ewicz nie potrafi³ ju¿ ¿yæ w zgodzie z dawnym porz¹dkiem œwiata. Tragiczne wydarzenia, których by³ œwiadkiem, na zawsze zburzy³y jego dotychczasow¹ wizjê rzeczywistoœci i nie uda³o siê jej nawet z czasem odbudowaæ. </p><br>
+<p>Stanis³aw Burkot w swym tekœcie powo³uje siê na s³owa Kazimierza Nowosielskiego. Wed³ug tego krytyka poecie nie uda³o siê pokonaæ kryzysu œwiatopogl¹dowego. Mimo prze¿ycia wojny Ró¿ewicz nie potrafi³ ju¿ ¿yæ w zgodzie z dawnym porz¹dkiem œwiata. Tragiczne wydarzenia, których by³ œwiadkiem, na zawsze zburzy³y jego dotychczasow¹ wizjê rzeczywistoœci i nie uda³o siê jej nawet z czasem odbudowaæ. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

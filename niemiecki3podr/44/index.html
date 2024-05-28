@@ -69,4 +69,43 @@
 <p>Karl: Moją ulubioną porą roku jest lato, ponieważ mam wtedy wakacje. W tym czasie można odpocząć i dużo podróżować. Dni są najdłuższe. Jest słonecznie i ciepło, czasami nawet gorąco. Bardzo aktywnie spędzam czas: jeżdżę na rowerze lub na deskorolce. </p>
 <p>Tina: Najbardziej lubię zimę. Sypie śnieg i jest mroźno. Kiedy jest dużo śniegu, dzieci dobrze się bawią. W grudniu świętuje się Boże Narodzenie. Nie tylko najmłodsi cieszą się na myśl o prezentach. </p>
 <p>Antje: Wiosną życie jest dużo prostsze. Rano jest jeszcze chłodno, ale w ciągu dnia ociepla się. Czasami pada deszcz, ale przeważnie świeci słońce. Wszystko zielenieje. Często się błyska i grzmi. Dużo ludzi spędza czas na łonie przyrody i... zakochuje się, szczególnie w maju. Uwielbiam wiosnę! </p>
-<p>Anke: Wiem, że niewiele ludzi lubi jesień. Jest dość zimno. Jest pochmurno i wietrznie. Ale ja lubię tę porę roku. Liście stają się kolorowe i spadają na ziemię. Jesień jest taka melancholijna...</p><br>
+<p>Anke: Wiem, że niewiele ludzi lubi jesień. Jest dość zimno. Jest pochmurno i wietrznie. Ale ja lubię tę porę roku. Liście stają się kolorowe i spadają na ziemię. Jesień jest taka melancholijna...</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -47,4 +47,43 @@
 <p><strong>Proste skośne</strong> nie leżą w jednej płaszczyźnie, zatem nie mają punktów wspólnych.   </p>
 <p>W prostych skośnych do prostej zawierającej krawędź <strong>AB</strong> zawierają się krawędzie <strong>SC</strong> oraz <strong>SD</strong>. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Rysunek:</p> <p><img alt="" height="291" src="./data/1194074-0.jpg" width="327"/></p> <p>Prosta <strong>l</strong> zawiera krawędź <strong>AA<sub>1</sub></strong> tego sześcianu. </p> <hr/> <p><strong>a)</strong></p> <p>Proste zawierające krawędzie tego sześcianu, które są równoległe do prostej <strong>l</strong> to:  </p> <p><span> <math-expr expr="BB_1, \ \ C C_1, \ \ DD_1" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Proste zawierające krawędzie tego sześcianu, które są prostopadłe do prostej <strong>l</strong> to:</p> <p><span> <math-expr expr="AB, \ \ BC, \ \ CD, \ \ AD, \ \ A_1B_1, \ \ B_1C_1, \ \ C_1D_1, \ \ A_1D_1" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Rysunek:</p> <p><img alt="" height="271" src="./data/1194075-0.jpg" width="304"/></p> <p>Wskażemy pary wierzchołków, które wyznaczają proste skośne nieprostopadłe do prostej<strong> l</strong>. Mamy:  </p> <p><span> <math-expr expr='B \ "i" \ C_1, \ \ \ B \ "i" \ D_1, \ \ \  C \ "i" \ B_1, \ \ \  C \ "i" \ D_1, \ \ \  D \ "i" \ B_1, \ \ \  D \ "i" \ C_1' syntax="text"></math-expr> </span>  </p><br>
+<p>Rysunek:</p> <p><img alt="" height="271" src="./data/1194075-0.jpg" width="304"/></p> <p>Wskażemy pary wierzchołków, które wyznaczają proste skośne nieprostopadłe do prostej<strong> l</strong>. Mamy:  </p> <p><span> <math-expr expr='B \ "i" \ C_1, \ \ \ B \ "i" \ D_1, \ \ \  C \ "i" \ B_1, \ \ \  C \ "i" \ D_1, \ \ \  D \ "i" \ B_1, \ \ \  D \ "i" \ C_1' syntax="text"></math-expr> </span>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

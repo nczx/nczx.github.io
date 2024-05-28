@@ -71,4 +71,43 @@
 <p>1. To meet people of different ages and backgrounds, I could join new clubs and organisations. Another good idea is to become a volunteer. This would be a great opportunity to interact with people from various backgrounds and age groups.</p>
 <p>(Aby poznać ludzi w różnym wieku i z różnych środowisk, mógłbym/mogłabym dołączyć do nowych klubów i organizacji. Innym dobrym pomysłem jest zostanie wolontariuszem. Byłaby to świetna okazja do interakcji z ludźmi z różnych środowisk i grup wiekowych.)</p>
 <p><br/>2. Having more diverse friendships widens your worldview and makes you more tolerant. It might also improve your communication skills and help you be more sensitive.</p>
-<p>(Posiadanie bardziej zróżnicowanych przyjaźni poszerza światopogląd i czyni nas bardziej tolerancyjnymi. Może to również poprawić umiejętności komunikacyjne i pomóc być bardziej wrażliwym.) </p><br>
+<p>(Posiadanie bardziej zróżnicowanych przyjaźni poszerza światopogląd i czyni nas bardziej tolerancyjnymi. Może to również poprawić umiejętności komunikacyjne i pomóc być bardziej wrażliwym.) </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

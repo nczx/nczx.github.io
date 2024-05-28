@@ -106,4 +106,43 @@
 <p><br/><strong>Rozwiązanie II </strong></p>
 <p>This is a poster for a film titled <em>Footloose</em>. The poster is a clip from the film. It shows people dancing at a party. In the foreground, there is a boy and a girl who are dancing next to each other. I think they're the main characters. In the background, there are lots of other people too. They might be their friends from school. The people in this poster look like they're having fun. They're relaxed and it seems like they're enjoying themselves at the party. </p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Jest to plakat do filmu pod tytułem <em>Footloose.</em> Na plakacie znajduje się klip z filmu. Przedstawia on ludzi tańczących na imprezie. Na pierwszym planie jest chłopak i dziewczyna, którzy tańczą obok siebie. Wydaje mi się, że to główni bohaterowie. W tle jest też wiele innych osób. Mogą to być ich przyjaciele ze szkoły. Ludzie na tym plakacie wyglądają, jakby dobrze się bawili. Są zrelaksowani i wygląda na to, że podoba im się na tej imprezie.</p><br>
+<p>Jest to plakat do filmu pod tytułem <em>Footloose.</em> Na plakacie znajduje się klip z filmu. Przedstawia on ludzi tańczących na imprezie. Na pierwszym planie jest chłopak i dziewczyna, którzy tańczą obok siebie. Wydaje mi się, że to główni bohaterowie. W tle jest też wiele innych osób. Mogą to być ich przyjaciele ze szkoły. Ludzie na tym plakacie wyglądają, jakby dobrze się bawili. Są zrelaksowani i wygląda na to, że podoba im się na tej imprezie.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

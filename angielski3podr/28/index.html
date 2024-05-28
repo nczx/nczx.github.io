@@ -136,4 +136,43 @@
 <p> </p>
 <p>I have a few favourite artists and Rammstein is one of them. It's a metal band from Germany. Its lead singer's name is Till Lindemann and he's got an interesting voice. I like their songs because they're very catchy. I always try to look up the lyrics so that I can sing along. They often go on tours and I've heard that they perform as well live as on their studio albums. Their concerts get great reviews. I have a playlist of their songs on my phone and I listen to it when I exercise.</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Mam kilku ulubionych artystów i Rammstein jest jednym z nich. Jest to zespół metalowy pochodzący z Niemiec. Jego główny wokalista nazywa się Till Lindemann i ma ciekawy głos. Lubię ich piosenki, ponieważ są bardzo chwytliwe. Zawsze staram się sprawdzać tekst, żeby móc śpiewać razem z nimi. Często jeżdżą w trasy koncertowe i słyszałem/am, że na żywo wypadają równie dobrze jak na swoich albumach studyjnych. Ich koncerty zbierają świetne recenzje. Mam playlistę z ich piosenkami w telefonie i słucham jej podczas ćwiczeń.</p><br>
+<p>Mam kilku ulubionych artystów i Rammstein jest jednym z nich. Jest to zespół metalowy pochodzący z Niemiec. Jego główny wokalista nazywa się Till Lindemann i ma ciekawy głos. Lubię ich piosenki, ponieważ są bardzo chwytliwe. Zawsze staram się sprawdzać tekst, żeby móc śpiewać razem z nimi. Często jeżdżą w trasy koncertowe i słyszałem/am, że na żywo wypadają równie dobrze jak na swoich albumach studyjnych. Ich koncerty zbierają świetne recenzje. Mam playlistę z ich piosenkami w telefonie i słucham jej podczas ćwiczeń.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

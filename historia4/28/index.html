@@ -76,4 +76,43 @@
 <ul>
 <li><strong>Znaczenie zaangażowania państw Osi w konflikt na Bałkanach</strong></li>
 </ul>
-<p>Przeprowadzenie działań zbrojnych na Bałkanach przez władze III Rzeszy wpłynęły znacząco na opóźnienie planowanej agresji niemieckiej na ZSRS. Dla Rzeszy zaangażowanie w konflikty przysporzyło kolejnych sprzymierzeńców w postaci Węgier, Rumunii i Bułgarii oraz przeciwników w postaci rozbudowanych struktur jugosłowiańskiej partyzantki, które w dalszej perspektywie przyczyniły się do stopniowego wyzwalania swojego państwa spod zwierzchności Rzeszy.</p><br>
+<p>Przeprowadzenie działań zbrojnych na Bałkanach przez władze III Rzeszy wpłynęły znacząco na opóźnienie planowanej agresji niemieckiej na ZSRS. Dla Rzeszy zaangażowanie w konflikty przysporzyło kolejnych sprzymierzeńców w postaci Węgier, Rumunii i Bułgarii oraz przeciwników w postaci rozbudowanych struktur jugosłowiańskiej partyzantki, które w dalszej perspektywie przyczyniły się do stopniowego wyzwalania swojego państwa spod zwierzchności Rzeszy.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

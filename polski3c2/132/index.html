@@ -63,4 +63,43 @@
 <p>Przyk³adowo:</p>
 <p>Tytu³ <em>Równanie serca </em>w kontekœcie treœci wiersza mo¿na rozpatrywaæ na ró¿ne sposoby. Przede wszystkim wywo³uje on skojarzenia zwi¹zane z matematyk¹. Równanie to bowiem wyra¿enia, których uk³ad prowadzi do odkrycia niewiadomej. W ten sposób tytu³ wiersza zdaje siê sugerowaæ mo¿liwoœæ okreœlenia statusu cz³owieka, jego miejsca i roli w znanej mu rzeczywistoœci. Podmiot liryczny postrzega siebie jako obroñcê porz¹dku natury, chce j¹ chroniæ przed zgubnym wp³ywem cz³owieka. Z drugiej strony <em>Równanie serca</em> mo¿ne oznaczaæ "czynienie g³adkim, równym". W kontekœcie wiersza by³oby nim odzyskiwanie równowagi duchowej, swoistego rytmu. Podmiot liryczny zdaje siê bowiem godziæ z tym, i¿ œwiat równie¿ bez niego mo¿e funkcjonowaæ, znajduje te¿ dla siebie cel. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

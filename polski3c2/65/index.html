@@ -59,4 +59,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p><em>Na papierowe wasze ko³nierzyki!</em></p>
 <p>Ulegaj¹ wiêc one najni¿szym instynktom, a jednoczeœnie pozwalaj¹ mê¿czyznom na zaspokojenie ich ¿¹dz. S¹ grzeszne i wyuzdane, liczy siê dla nich tylko czysty biologizm: "RodŸcie, a jak najwiêcej! Trzeba miasto siliæ!". O ich brutalnoœci i szale œwiadczy tak¿e sposób traktowania narodzonych dzieci, które czeka niezwykle okrutny los: "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Taki dialog z tradycj¹ s³u¿y prowokacji, poniewa¿ burzy zakorzenione stereotypy czy przekonania. Sugeruje tak¿e, i¿ pewne przypisywane kobietom i matkom cechy wynikaj¹ z kultury i ogólnie przyjêtych zasad. Trac¹ one jednak na znaczeniu, kiedy do g³osu dochodz¹ pierwotne instynkty. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
 Indywidualne<br><a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -65,4 +65,43 @@
 <p><br/><br/>W zdaniach celowych, które odpowiadają na pytania:<em> wozu?</em> (po co?),<em> warum?</em> (dlaczego?), <em>zu welchem Zweck?</em> (w jakim celu?) występuje konstrukcja bezokolicznikowa <em>um ... zu</em> lub spójnik <em>damit</em>. Spójnika <em>damit</em> używamy wtedy, kiedy w zdaniu głównym (nadrzędnym) i zdaniu pobocznym (podrzędnym) występują różne podmioty. Po tym spójniku obowiązuje szyk końcowy zdania. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Po spójniku <em>damit</em> występuje szyk <strong>zdania</strong> <strong>pobocznego</strong>.  </p>
 <p>W zdaniu z konstrukcją <em>um ... zu</em> występuje zawsze ten sam <strong>podmiot</strong>. W drugiej części zdania nie umieszczamy podmiotu, a czasownik w <strong>bezokoliczniku</strong> znajduje się na końcu zdania. </p>
-<p><br/><br/>Podano dodatkowo: D. formie odmienionej. </p><br>
+<p><br/><br/>Podano dodatkowo: D. formie odmienionej. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

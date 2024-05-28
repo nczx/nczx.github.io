@@ -29,4 +29,43 @@
 <a style="color:red; font-size:25px;">Zadanie Doświadczenie</a><br>
 <p>W butelce znajduje się pewna objętość powietrza. Kiedy butelka znajduje się w zamrażalce, powietrze w niej zamknięte ochładza się i zmniejsza swoją objętość, co skutkuje zapadnięcie się butelki pod siłą ciśnienia zewnętrznego. </p>
 <p>Jeżeli butelkę będziemy ogrzewać w ciepłej wodzie, to powietrze w niej zawarte zwiększy swoją temperaturę i objętość, co spowoduje ponowne rozepchanie butelki.</p>
-<p>Zjawisko to ilustruje rozszerzalność cieplną objętościową powietrza.</p><br>
+<p>Zjawisko to ilustruje rozszerzalność cieplną objętościową powietrza.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

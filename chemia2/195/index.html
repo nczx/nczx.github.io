@@ -50,4 +50,43 @@
 <p>Równanie reakcji:</p> <p> <math-expr expr="HCOOH+CH_3CH_2OH#(rlarw)^(H_2SO_(4\ (stęż.)))HCOOCH_2CH_3+H_2O" syntax="text"></math-expr>   </p> <p>Nazwa systematyczna:</p> <p><span style="text-decoration: underline;"><em><strong> metanian etylu </strong></em></span> </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Równanie reakcji: </p> <p> <math-expr expr="C_(17)H_(33)COOH+CH_3CH_2OH#(rlarw)^(H_2SO_(4\ (stęż.)))C_(17)H_(33)COOCH_2CH_3+H_2O" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Opisany wzór salicylany metylu: </p>
-<p><img alt="" height="145" src="./data/933244-0.jpg" width="201"/></p><br>
+<p><img alt="" height="145" src="./data/933244-0.jpg" width="201"/></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

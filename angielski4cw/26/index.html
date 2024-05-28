@@ -53,4 +53,43 @@
 <p>1. Nowadays (w dzisiejszych czasach): at the moment (w tej chwili) </p>
 <p>2. Soon (niedługo): it's only a matter of time before (to tylko kwestia czasu zanim), before long (wkrótce)</p>
 <p>3. One day (pewnego dnia): in the near future (w bliskiej przyszłości), someday soon (któregoś dnia), sooner or later (prędzej czy później)</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

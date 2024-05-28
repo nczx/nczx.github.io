@@ -76,4 +76,43 @@
 <li>pomoc techniczna,</li>
 <li>wsparcie ekonomiczne. </li>
 </ul>
-<p>Największej pomocy ZSRS udzieliła Wielka Brytania oraz USA, które objęły Związek Sowiecki wsparciem w ramach ustawy<strong> Lend-Lease Act</strong>. W sumie to ZSRS trafiła 1/5 dostaw w ramach Lend-Lease Act.</p><br>
+<p>Największej pomocy ZSRS udzieliła Wielka Brytania oraz USA, które objęły Związek Sowiecki wsparciem w ramach ustawy<strong> Lend-Lease Act</strong>. W sumie to ZSRS trafiła 1/5 dostaw w ramach Lend-Lease Act.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

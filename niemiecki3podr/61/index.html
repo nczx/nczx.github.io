@@ -50,4 +50,43 @@
 <p><strong>A. Sie kann viele Fremdsprachen sprechen und ist sehr kommunikativ.</strong> - Potrafi mówić w wielu językach i jest bardzo komunikatywna. <br/>B. Sie kann mit Stress umgehen und ist kontaktfreudig. - Potrafi obchodzić się ze stresem i chętnie nawiązuje kontakty. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Przykładowo: </p>
 <p>Anna ist Callcenteragentin von Beruf und arbeitet seit acht Monaten bei einer Bank. Anna ist kommunikativ, teamfähig und gut organisiert. Das sind ihre Stärke. Anna spricht auch drei Fremdsprachen: Englisch, Deutsch und Spanisch. Sie ist aber oft gestresst. </p>
-<p><em>Anna jest konsultantką call center i od ośmiu miesięcy pracuje w banku. Anna jest komunikatywna, potrafiąca pracować w grupie i dobrze zorganizowana. To jej mocne strony. Anna mówi też w trzech językach obcych: angielskim, niemieckim i hiszpańskim. Często jest jednak zestresowana. </em></p><br>
+<p><em>Anna jest konsultantką call center i od ośmiu miesięcy pracuje w banku. Anna jest komunikatywna, potrafiąca pracować w grupie i dobrze zorganizowana. To jej mocne strony. Anna mówi też w trzech językach obcych: angielskim, niemieckim i hiszpańskim. Często jest jednak zestresowana. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

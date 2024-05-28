@@ -2,4 +2,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Korzystamy z informacji zawartych nad treścią zadania (w podręczniku na stronie <strong>73</strong>).</p> <hr/> <p><strong>a)</strong></p> <ul> <li> <object class="math big" data="./data/1028838-0.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że </p> <p> <object class="math big" data="./data/1028838-1.svg" type="image/svg+xml"></object> </p> <p>Zatem  </p> <p> <object class="math big" data="./data/1028838-2.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <ul> <li> <object class="math big" data="./data/1028838-3.svg" type="image/svg+xml"></object> </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028838-4.svg" type="image/svg+xml"></object> </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028838-5.svg" type="image/svg+xml"></object>    </p> <hr/> <p><strong>c)</strong></p> <ul> <li> <object class="math big" data="./data/1028838-6.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028838-7.svg" type="image/svg+xml"></object>  </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028838-8.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Korzystamy z informacji zawartych nad treścią zadania (w podręczniku na stronie <strong>73</strong>).</p> <hr/> <p><strong>a)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-0.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-1.svg" type="image/svg+xml"></object> </p> <p>Zatem  </p> <p> <object class="math big" data="./data/1028870-2.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-3.svg" type="image/svg+xml"></object> </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-4.svg" type="image/svg+xml"></object>  </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028870-5.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>c)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-6.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-7.svg" type="image/svg+xml"></object> </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028870-8.svg" type="image/svg+xml"></object>   </p><br>
+<p>Korzystamy z informacji zawartych nad treścią zadania (w podręczniku na stronie <strong>73</strong>).</p> <hr/> <p><strong>a)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-0.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-1.svg" type="image/svg+xml"></object> </p> <p>Zatem  </p> <p> <object class="math big" data="./data/1028870-2.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-3.svg" type="image/svg+xml"></object> </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-4.svg" type="image/svg+xml"></object>  </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028870-5.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>c)</strong></p> <ul> <li> <object class="math big" data="./data/1028870-6.svg" type="image/svg+xml"></object>  </li> </ul> <p>Wiemy, że</p> <p> <object class="math big" data="./data/1028870-7.svg" type="image/svg+xml"></object> </p> <p>Zatem</p> <p> <object class="math big" data="./data/1028870-8.svg" type="image/svg+xml"></object>   </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

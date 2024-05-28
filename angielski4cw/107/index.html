@@ -93,4 +93,43 @@
 <p>4. Nie zaimponowały im płytki, które <strong>nie są zbyt kreatywne</strong>.</p>
 <p>5. Ale podobają im się płytki, które <strong>są identyczne</strong>.</p>
 <p>6. Matthew nie wie, co <strong>sprawiło, że sędziowie go wybrali</strong>, ale jest bardzo zadowolony, że <strong>wygrał</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

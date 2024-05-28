@@ -52,4 +52,43 @@
 <p>W utworze dominuje intymny i zmys³owy nastrój, który wynika z podejmowanej tematyki. Wiersz, jak wskazuje sam tytu³, opowiada bowiem o zbli¿eniu miêdzy kochaj¹cymi siê osobami - ma ono nie tylko wymiar fizyczny, ale równie¿ duchowy. Fantastyczne przemiany, którym ulegaj¹ bohaterowie, wprowadzaj¹ atmosferê tajemnicy oraz magii, pewnego odrealnienia sytuacji, przez co zyskuje ona uniwersalny, ponadczasowy wymiar. Wiersz jest tak¿e przesycony erotyzmem - wynika to ze œmia³ego obrazowania: "trysnê szumem bugaju", "Jeszcze tak w ciebie p³yn¹c [...]". Jedynie dedykacja koñcz¹ca utwór wprowadza pewien smutek oraz przeczucie roz³¹ki: "w ka¿dy czas - duch czekaj¹cy w prochu". Nastrój utworu ró¿ni siê od pozosta³ych dzie³ Baczyñskiego, poniewa¿ nie dominuje w nim niepokój, groza, wra¿enie nadci¹gaj¹cej katastrofy. Zamiast tego kluczowa jest subtelnoœæ, atmosfera tajemnicy i fascynacji ukochanym cz³owiekiem. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Dedykacja utworu, co mo¿na wywnioskowaæ na podstawie dopisku pod wierszem, jest poœwiêcona ukochanej Basi. Zakoñczenie wiersza przede wszystkim podkreœla niezmiennoœæ uczucia ³¹cz¹cego zakochanych. Nie wyobra¿aj¹ sobie ¿ycia bez siebie, o czym œwiadcz¹ s³owa: "Jeden dzieñ - a na têsknotê - wiek". Dedykacja ta podkreœla intymnoœæ relacji podmiotu lirycznego oraz jego wybranki. Pojedynczy dzieñ czy gest zostaj¹ bowiem zestawione z wiekiem oraz pochodem. Dla osoby mówi¹cej znaczenie ma tylko kochanka - skupia sw¹ uwagê wy³¹cznie na niej. Z tego te¿ powodu deklaruje, i¿ mimo up³ywu czasu, a nawet œmierci, ich mi³oœæ wszystko przetrwa, co wskazuje na jej duchowy charakter. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

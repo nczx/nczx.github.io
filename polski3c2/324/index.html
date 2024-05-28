@@ -46,4 +46,43 @@
 <p>Wed³ug niektórych badaczy katastrofizm zakoñczy³ siê przed wojn¹, poniewa¿ zak³adaj¹, ¿e ówczesne realia niejako sta³y siê "kresem cz³owieczego doœwiadczenia". Katastrofizm zdaje siê wiêc nie przystawaæ do takiej rzeczywistoœci, poniewa¿ groza staje siê faktem.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Literaturoznawcy doceniaj¹ wartoœæ katastrofizmu, pog³êbiaj¹ jego interpretacjê, poniewa¿ wychodz¹ poza utarte skojarzenia z biernoœci¹, pogr¹¿eniem siê w smutku i rozpaczy. Janusz Kryszak dostrzega buduj¹c¹ funkcjê tego zjawiska. Zyskuje ono pozytywny wymiar, poniewa¿ przynosi ratunek i pozwala cz³owiekowi na odzyskanie duchowego porz¹dku. Podobne jest stanowisko Bronis³awa Maja. On z kolei twierdzi, i¿ okreœlenie trudnoœci pozwala na poznanie prawdy oraz zmierzenie siê z ni¹. Tym samym cz³owiek przyjmuje aktywn¹ i zdecydowan¹ postawê, nie pogr¹¿a siê zaœ w marazmie, w pe³ni rozpoznaje sw¹ sytuacjê. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Przyk³adowo:</p>
-<p>Katastrofizm Gajcego by³ zaledwie jednym z etapów jego rozwoju artystycznego. Fakt ten ma du¿e znaczenie dla zrozumienia istoty tego zjawiska w jego poezji, poniewa¿ zyskuje ono pozytywny wymiar. Katastrofizm Gajcego nie jest bowiem przejawem biernoœci czy rezygnacji. Wrêcz przeciwnie: ostatecznie prowadzi do przezwyciê¿enia niemocy, gdy¿ wi¹¿e siê z przemian¹ postawy twórcy, co mo¿e sugerowaæ dojrza³oœæ. W ten sposób poezja Gajcego odzwierciedla "zrehabilitowany" sposób postrzegania katastrofizmu jako wartoœciowego zjawiska. </p><br>
+<p>Katastrofizm Gajcego by³ zaledwie jednym z etapów jego rozwoju artystycznego. Fakt ten ma du¿e znaczenie dla zrozumienia istoty tego zjawiska w jego poezji, poniewa¿ zyskuje ono pozytywny wymiar. Katastrofizm Gajcego nie jest bowiem przejawem biernoœci czy rezygnacji. Wrêcz przeciwnie: ostatecznie prowadzi do przezwyciê¿enia niemocy, gdy¿ wi¹¿e siê z przemian¹ postawy twórcy, co mo¿e sugerowaæ dojrza³oœæ. W ten sposób poezja Gajcego odzwierciedla "zrehabilitowany" sposób postrzegania katastrofizmu jako wartoœciowego zjawiska. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

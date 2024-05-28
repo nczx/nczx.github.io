@@ -2,4 +2,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <table border="1" style="height:134px;width:477px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:473.011px;"> <p>Przypomnijmy, że współrzędne wektora  <object class="math big" data="./data/1058436-0.svg" type="image/svg+xml"></object>  , gdzie </p> <p> <object class="math big" data="./data/1058436-1.svg" type="image/svg+xml"></object> </p> <p>możemy wyznaczyć następująco</p> <p> <object class="math big" data="./data/1058436-2.svg" type="image/svg+xml"></object>   </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1058436-3.svg" type="image/svg+xml"></object>  </p> <p> </p> <p><img alt="" height="352" src="./data/1058436-0.jpg" width="444"/></p> <hr/> <p>Współrzędne wektorów  </p> <p> <object class="math big" data="./data/1058436-4.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1058436-5.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1058436-6.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1058436-7.svg" type="image/svg+xml"></object>  </p> <p> </p> <p><img alt="" height="390" src="./data/1058436-1.jpg" width="488"/></p> <hr/> <p>Współrzędne wektorów</p> <p> <object class="math big" data="./data/1058436-8.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1058436-9.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1058436-10.svg" type="image/svg+xml"></object>   </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<table border="1" style="height:139px;width:417px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:413.011px;"> <p>Sumą wektorów </p> <p> <object class="math big" data="./data/1058475-0.svg" type="image/svg+xml"></object>  </p> <p>jest wektor</p> <p> <object class="math big" data="./data/1058475-1.svg" type="image/svg+xml"></object>    </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1058475-2.svg" type="image/svg+xml"></object> </p> <p> </p> <p><img alt="" height="356" src="./data/1058475-0.jpg" width="332"/></p> <p> <object class="math big" data="./data/1058475-3.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1058475-4.svg" type="image/svg+xml"></object> </p> <p> </p> <p><img alt="" height="323" src="./data/1058475-1.jpg" width="476"/></p> <p> <object class="math big" data="./data/1058475-5.svg" type="image/svg+xml"></object>   </p><br>
+<table border="1" style="height:139px;width:417px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:413.011px;"> <p>Sumą wektorów </p> <p> <object class="math big" data="./data/1058475-0.svg" type="image/svg+xml"></object>  </p> <p>jest wektor</p> <p> <object class="math big" data="./data/1058475-1.svg" type="image/svg+xml"></object>    </p> </td> </tr> </tbody> </table> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1058475-2.svg" type="image/svg+xml"></object> </p> <p> </p> <p><img alt="" height="356" src="./data/1058475-0.jpg" width="332"/></p> <p> <object class="math big" data="./data/1058475-3.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1058475-4.svg" type="image/svg+xml"></object> </p> <p> </p> <p><img alt="" height="323" src="./data/1058475-1.jpg" width="476"/></p> <p> <object class="math big" data="./data/1058475-5.svg" type="image/svg+xml"></object>   </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

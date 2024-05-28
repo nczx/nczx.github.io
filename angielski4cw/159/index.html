@@ -51,4 +51,43 @@
 <p>4.4. B</p>
 <p><span><strong>Fragment w tekście:</strong> "(...) it is up to us how we organise our daily activities which include screen time. For many students, online education is a change that allows them to set their own schedules , learn at their own pace and, paradoxically, find time for physical activity" - To od nas zależy, jak organizujemy nasze codzienne aktywności, w tym czas spędzany przed ekranem. Dla wielu uczniów edukacja online jest zmianą, która pozwala im ułożyć własny harmonogram, uczyć się we własnym tempie i, paradoksalnie, znaleźć czas na aktywność fizyczną. </span></p>
 <p><span>4.5. C</span></p>
-<p><span><strong>Uzasadnienie</strong>: tytuł najlepiej oddaje tematykę tekstu, czyli omówienie wyzwania, jakim jest czas spędzany codziennie przez ludzi przed ekranem. </span></p><br>
+<p><span><strong>Uzasadnienie</strong>: tytuł najlepiej oddaje tematykę tekstu, czyli omówienie wyzwania, jakim jest czas spędzany codziennie przez ludzi przed ekranem. </span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

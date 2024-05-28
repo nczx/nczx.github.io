@@ -105,4 +105,43 @@
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
 <p>Igor Mitoraj był polskim artystą, który zajął się rzeźbą po wizycie w Ameryce Południowi. Pomimo, że zaczął od pracy z brązem i pewnym rodzajem <strong>gliny</strong> - terakotą (<em>terra cotta</em> to po włosku 'wypiekana ziemia') w 1979, po wizycie we Włoszech <strong>przeszedł</strong> (moved on) do czegoś nowego - marmuru, chociaż w razie potrzeby używał też innych materiałów.</p>
-<p>Igor tworzył posągi i <strong>popiersia</strong> w klasycznym stylu, ale jego prace często przedstawiają tylko fragment ciała czy twarzy. Dlaczego? Jaką wiadomość starał się <strong>przekazać</strong> (get across)? Są dwa możliwe sposoby <strong>interpretacji</strong> jego stylu. Zgodnie z pierwszym z nich, greckie i rzymskie posągi zwykle są uszkodzone i jego prace pokazują podobny rodzaj zniszczeń. Inna interpretacja mówi, że rzeźby <strong>podkreślają</strong> delikatność ludzkiego ciała oraz nasze cierpienie, zwłaszcza kiedy się starzejemy. </p><br>
+<p>Igor tworzył posągi i <strong>popiersia</strong> w klasycznym stylu, ale jego prace często przedstawiają tylko fragment ciała czy twarzy. Dlaczego? Jaką wiadomość starał się <strong>przekazać</strong> (get across)? Są dwa możliwe sposoby <strong>interpretacji</strong> jego stylu. Zgodnie z pierwszym z nich, greckie i rzymskie posągi zwykle są uszkodzone i jego prace pokazują podobny rodzaj zniszczeń. Inna interpretacja mówi, że rzeźby <strong>podkreślają</strong> delikatność ludzkiego ciała oraz nasze cierpienie, zwłaszcza kiedy się starzejemy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

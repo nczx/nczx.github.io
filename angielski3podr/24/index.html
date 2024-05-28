@@ -137,4 +137,43 @@
 <p><strong>Questions to my partner: </strong>(pytania do kolegi/koleżanki z ławki)</p>
 <p>1. How long have you been playing basketball? (Jak długo grasz w koszykówkę?)</p>
 <p>2. Have you ever been to London? (Byłeś/aś kiedykolwiek w Londynie?)</p>
-<p>3. Have you been studying irregular verbs lately? (Uczyłeś/aś się ostatnio czasowników nieregularnych?)</p><br>
+<p>3. Have you been studying irregular verbs lately? (Uczyłeś/aś się ostatnio czasowników nieregularnych?)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

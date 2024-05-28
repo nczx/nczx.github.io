@@ -50,4 +50,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej oceny. Stąd proponowane rozwiązanie może przybrać wyłącznie postać przykładowej wskazówki pomocnej do samodzielnego opracowania odpowiedzi.</strong></p>
 <p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
-<p><strong><span style="text-decoration: underline;">Socjalizacja</span></strong> to proces przekazywania norm, wartości i zachowań społecznych przez rodzinę, szkołę i inne instytucje społeczne, dzięki któremu jednostka przystosowuje się do życia w danej społeczności. Wszystkie wskazane grupy i instytucje, tj. rodzina, szkoła, rówieśnicy, mass media, sąsiedzi czy wspólnoty religijne oddziałują na uspołecznienie młodego człowieka, w tym na przykład ucznia szkoły średniej i nastolatka. Dla człowieka w tym wieku <strong><span style="text-decoration: underline;">szczególnie doniosłe okazują się jednak grupa rówieśnicza, szkoła i mass media</span></strong>. Młody człowiek zawiera przyjaźnie i spędza wiele czasu w gronie swych rówieśników. Niektórzy z nich są dla niego wzorami postępowania i punktami odniesienia. Ważna jest też szkoła, rozumiana jako cała społeczność szkolna, w której oddziałują na niego nie tylko nauczyciele i inni pracownicy szkoły, ale też koledzy i koleżanki z klasy oraz innych grup. Wreszcie współcześnie duży wpływ, zwłaszcza jeśli chodzi o lansowanie określonych wzorców kulturowych, mają mass media, a w szczególności <strong><span style="text-decoration: underline;">Internet i media społecznościowe</span></strong>.</p><br>
+<p><strong><span style="text-decoration: underline;">Socjalizacja</span></strong> to proces przekazywania norm, wartości i zachowań społecznych przez rodzinę, szkołę i inne instytucje społeczne, dzięki któremu jednostka przystosowuje się do życia w danej społeczności. Wszystkie wskazane grupy i instytucje, tj. rodzina, szkoła, rówieśnicy, mass media, sąsiedzi czy wspólnoty religijne oddziałują na uspołecznienie młodego człowieka, w tym na przykład ucznia szkoły średniej i nastolatka. Dla człowieka w tym wieku <strong><span style="text-decoration: underline;">szczególnie doniosłe okazują się jednak grupa rówieśnicza, szkoła i mass media</span></strong>. Młody człowiek zawiera przyjaźnie i spędza wiele czasu w gronie swych rówieśników. Niektórzy z nich są dla niego wzorami postępowania i punktami odniesienia. Ważna jest też szkoła, rozumiana jako cała społeczność szkolna, w której oddziałują na niego nie tylko nauczyciele i inni pracownicy szkoły, ale też koledzy i koleżanki z klasy oraz innych grup. Wreszcie współcześnie duży wpływ, zwłaszcza jeśli chodzi o lansowanie określonych wzorców kulturowych, mają mass media, a w szczególności <strong><span style="text-decoration: underline;">Internet i media społecznościowe</span></strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

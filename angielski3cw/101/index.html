@@ -94,4 +94,43 @@
 <p>Sportowcy osiągający wysokie wyniki są zazwyczaj bardzo popularni, ale ze sławą wiąże się odpowiedzialność. Moim zdaniem sukces nie wystarczy, aby zostać gwiazdą sportu - trzeba być również wzorem do naśladowania dla młodych ludzi. </p>
 <p>Nastolatki często wzorują się na gwiazdach sportu. Ubóstwiają swoich ulubionych sportowców i chcą być tacy jak oni, co może motywować ich do osiągania celów. Jednak młodzi ludzie mają również tendencję do naśladowania wartości i zachowań swoich gwiazd. Czasami postawa lub osobowość sportowca może być bardziej inspirująca niż jego sukcesy. Przykłady pozytywnych cech osobowości obejmują dyscyplinę, uczciwość, sprawiedliwość i życzliwość. </p>
 <p>Z kolei rodzice chcieliby, aby ich dzieci znajdowały się pod wpływem pozytywnych wzorców do naśladowania. Chcą, aby rozumiały znaczenie ciężkiej pracy, poświęcenia i szacunku dla innych. Gwiazdy sportu, które mają te cechy, mogą inspirować rodziców do zachęcania swoich dzieci do uprawiania sportu, ponieważ mają świadomość, że będą one podlegać pozytywnym wpływom.</p>
-<p>Podsumowując, bycie gwiazdą sportu to coś więcej niż tylko odnoszenie sukcesów; oznacza to bycie dobrym przykładem dla młodych ludzi. Zarówno nastolatki, jak i rodzice rozumieją znaczenie gwiazd sportu, które prezentują wartości takie jak uczciwość i sprawiedliwość. Odgrywając tę rolę, sportowcy mogą inspirować i wpływać na młode osoby, pozytywnie wpływając na ich rozwój i marzenia. Z tego powodu jestem głęboko przekonany/a, że aby zostać gwiazdą sportu, potrzeba czegoś więcej niż tylko sukcesów.</p><br>
+<p>Podsumowując, bycie gwiazdą sportu to coś więcej niż tylko odnoszenie sukcesów; oznacza to bycie dobrym przykładem dla młodych ludzi. Zarówno nastolatki, jak i rodzice rozumieją znaczenie gwiazd sportu, które prezentują wartości takie jak uczciwość i sprawiedliwość. Odgrywając tę rolę, sportowcy mogą inspirować i wpływać na młode osoby, pozytywnie wpływając na ich rozwój i marzenia. Z tego powodu jestem głęboko przekonany/a, że aby zostać gwiazdą sportu, potrzeba czegoś więcej niż tylko sukcesów.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

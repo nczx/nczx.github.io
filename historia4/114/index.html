@@ -58,4 +58,43 @@
 </ul>
 <p><img alt="" height="412" src="./data/1180716-0.jpg" width="583"/></p>
 <p>Mapa przedstawiająca udział Polaków w walkach podczas II wojny światowej. Autor mapy: K. Chariza i zespół, źródło mapy: www.epodreczniki.pl</p>
-<p><strong>2) </strong>Władysław Anders wobec wzięcia do niewoli gen. Tadeusza Bora-Komorowskiego od 26 lutego do 27 maja 1945 pełnił obowiązki Naczelnego Wodza.</p><br>
+<p><strong>2) </strong>Władysław Anders wobec wzięcia do niewoli gen. Tadeusza Bora-Komorowskiego od 26 lutego do 27 maja 1945 pełnił obowiązki Naczelnego Wodza.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

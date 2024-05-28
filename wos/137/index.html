@@ -93,4 +93,43 @@
 <p>Obowiązki prezydenta RP sprawowały trzy osoby w dniu  <strong><span style="text-decoration: underline;">8 lipca 2010 r.,</span></strong> kiedy to po katastrofie smoleńskiej nowym prezydentem został wybrany Bronisław Komorowski. Do dnia wyborów pełnił on funkcję głowy państwa jako marszałek sejmu. Jednak po wyborze na głowę państwa (ale przed przysiężeniem) złożył on swój mandat poselski na ręce marszałka seniora, a tym samym funkcję prezydenta przejął marszałek senatu - Bogdan Borusewicz (pełnił tę funkcję od godz. 8:15 do godz. 18:30). Po wyborze nowego marszałka sejmu, czyli Grzegorza Schetyny, to on przejął funkcję głowy państwa. </p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p><strong><span style="text-decoration: underline;">Dniem, w którym obowiązki Prezydenta RP sprawowały trzy osoby, był 8 lipca 2010 roku</span></strong>. Obowiązki Prezydenta RP pełnili wówczas: Bronisław Komorowski, Bogdan Borusewicz i Grzegorz Schetyna. Miało to związek z katastrofą lotniczą w Smoleńsku, w której 10 kwietnia 2010 roku zginął Lech Kaczyński - sprawujący urząd prezydencki od 2005 roku. Jako że drugą osobą w państwie w chwili śmierci Lecha Kaczyńskiego był Bronisław Komorowski (Marszałek Sejmu RP), to on wówczas stał się pełniącym obowiązki Prezydenta RP. Do dnia nowych wyborów prezydenckich pełnił on funkcję głowy państwa jako Marszałek Sejmu RP. Jednak po wyborze na głowę państwa (ale przed zaprzysiężeniem) złożył on swój mandat poselski na ręce marszałka seniora, a tym samym funkcję prezydenta przejął Marszałek Senatu, tj. Bogdan Borusewicz (pełnił tę funkcję od godz. 8:15 do godz. 18:30). Po wyborze nowego Marszałka Sejmu RP, czyli Grzegorza Schetyny, to on przejął obowiązki głowy państwa. Pełnił te obowiązki od 8 lipca do 6 sierpnia 2010 roku, tj. do chwili zaprzysiężenia nowo wybranego Prezydenta RP, którym został Bronisław Komorowski.</p><br>
+<p><strong><span style="text-decoration: underline;">Dniem, w którym obowiązki Prezydenta RP sprawowały trzy osoby, był 8 lipca 2010 roku</span></strong>. Obowiązki Prezydenta RP pełnili wówczas: Bronisław Komorowski, Bogdan Borusewicz i Grzegorz Schetyna. Miało to związek z katastrofą lotniczą w Smoleńsku, w której 10 kwietnia 2010 roku zginął Lech Kaczyński - sprawujący urząd prezydencki od 2005 roku. Jako że drugą osobą w państwie w chwili śmierci Lecha Kaczyńskiego był Bronisław Komorowski (Marszałek Sejmu RP), to on wówczas stał się pełniącym obowiązki Prezydenta RP. Do dnia nowych wyborów prezydenckich pełnił on funkcję głowy państwa jako Marszałek Sejmu RP. Jednak po wyborze na głowę państwa (ale przed zaprzysiężeniem) złożył on swój mandat poselski na ręce marszałka seniora, a tym samym funkcję prezydenta przejął Marszałek Senatu, tj. Bogdan Borusewicz (pełnił tę funkcję od godz. 8:15 do godz. 18:30). Po wyborze nowego Marszałka Sejmu RP, czyli Grzegorza Schetyny, to on przejął obowiązki głowy państwa. Pełnił te obowiązki od 8 lipca do 6 sierpnia 2010 roku, tj. do chwili zaprzysiężenia nowo wybranego Prezydenta RP, którym został Bronisław Komorowski.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

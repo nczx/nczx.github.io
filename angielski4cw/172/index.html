@@ -69,4 +69,43 @@
 <p>10.3. conducting a great deal </p>
 <p><strong>Uzasadnienie</strong>: <em>despite</em> + czasownik z -<em>ing</em>; <em>a great deal</em> - duża ilość.</p>
 <p>10.4. is time we went</p>
-<p><strong>Uzasadnienie</strong>: życzenie dotyczące teraźniejszości lub bliskiej przyszłości - konstrukcja <em>It's (high) time</em> + rzeczownik/zaimek + <em>past simple</em>. </p><br>
+<p><strong>Uzasadnienie</strong>: życzenie dotyczące teraźniejszości lub bliskiej przyszłości - konstrukcja <em>It's (high) time</em> + rzeczownik/zaimek + <em>past simple</em>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

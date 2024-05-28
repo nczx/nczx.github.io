@@ -109,4 +109,43 @@
 <p>3. A</p>
 <p><strong>Uzasadnienie</strong>: aby wyrazić pewność odnośnie czegoś w teraźniejszości, używamy czasownika modalnego <em>can't</em>.</p>
 <p>4. C</p>
-<p><strong>Uzasadnienie</strong>: pewność odnośnie przeszłego wydarzenia wyrazimy za pomocą konstrukcji <em>couldn't have + past participle</em>. Odrzucamy wariant A, bo do spekulowania nie używamy <em>mustn't </em>(<em>must not</em>). Odrzucamy wariant B, bo czasownik <em>might </em>wyraża brak pewności.</p><br>
+<p><strong>Uzasadnienie</strong>: pewność odnośnie przeszłego wydarzenia wyrazimy za pomocą konstrukcji <em>couldn't have + past participle</em>. Odrzucamy wariant A, bo do spekulowania nie używamy <em>mustn't </em>(<em>must not</em>). Odrzucamy wariant B, bo czasownik <em>might </em>wyraża brak pewności.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

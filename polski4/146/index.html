@@ -145,4 +145,43 @@
 <p> </p>
 <ul>
 <li>Podział na wersy wpływa na kompozycję utworu. Obecność dłuższych i krótszych wersów sprawia, że sens pewnych słów zostaje podkreślony (np. "siedzieć i patrzeć / na uwijanie się trzmieli, loty ważek"), taki podział jest również czymś typowym dla dzieł lirycznych, ponieważ twórca może w dowolny sposób tworzyć segmenty tekstu, aby np. podkreślić znaczenie danego fragmentu. Z kolei interpunkcja ułatwia odbiór tekstu. Sprawia także, że w jednoznaczny sposób można odczytać myśl wyrażoną przez Miłosza, podzielić tekst na krótsze części. W ten sposób interpunkcja u Miłosza pełni funkcję porządkująca, ale czasem tez podkreśla uczucia podmiotu lirycznego (np. poprzez zastosowanie wykrzykników). </li>
-</ul><br>
+</ul><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

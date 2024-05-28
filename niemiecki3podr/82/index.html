@@ -49,4 +49,43 @@
 <p>B. Wo können junge Leute eine Arbeit finden? - Gdzie młodzi ludzie mogą znaleźć pracę? </p>
 <p>C. Was für Berufe sind für Jugendliche attraktiv? - Jakie zawody są atrakcyjne dla młodych ludzi?</p>
 <p><span style="text-decoration: underline;"><strong>D. Für wen sind Berufskompetenztests nützlich?</strong></span> - Dla kogo pożyteczne są testy kompetencji zawodowych?  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

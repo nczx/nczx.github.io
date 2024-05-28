@@ -121,4 +121,43 @@
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
 <p>Wiersz Peipera oraz obraz Chwistka, jako dzie³a awangardowe, ³¹czy przede wszystkim dostosowanie sztuki do nowej rzeczywistoœci. Artyœci podejmuj¹ bowiem tematykê zwi¹zan¹ z ówczesnymi przemianami spo³ecznymi lub cywilizacyjnymi. Obiektem ich zainteresowania staje siê przestrzeñ miejska - jej dynamika, ró¿norodnoœæ budowli, wp³yw na ¿ycie cz³owieka, ale te¿ sam geniusz istoty ludzkiej, który doprowadzi³ do powstania gmachów. W tym celu Peiper zrywa z dotychczasowymi tradycjami poetyckimi. Nie postrzega poezji jako Ÿród³a natchnienia, lecz staje siê ona dla niego konstrukcj¹ wymagaj¹c¹ precyzji oraz wytê¿onej pracy. Rezygnuje przy tym z opisywania uczuæ, poniewa¿ stosuje peryfrazy, elipsy czy metafory, które maj¹ wskazaæ odbiorcy emocje i przes³anie dzie³a: "Cz³owiek = ptak z wêgla". Wiersz<em> Ulica</em> to tak¿e przyk³ad ekonomii jêzyka i zastosowania ekwiwalentyzacji uczuæ. Z kolei awangardowy charakter obrazu Chwistka przejawia siê nie tylko w tematyce urbanistycznej, ale równie¿ antymimetycznym sposobie przedstawienia. <em>Miasto</em> ³¹czy w sobie inspiracje kubizmem, ekspresjonizmem oraz futuryzmem, co œwiadczy o sk³onnoœci do eksperymentowania. Przestrzeñ miejska zostaje ukazana w abstrakcyjny, uproszczony i zgeometryzowany sposób. Dominuj¹ kontrastowe zestawienia barw oraz grube kontury, brakuje tak¿e tradycyjnego, realistycznego odwzorowania zale¿noœci przestrzennych. Zabieg te umo¿liwiaj¹ zaprezentowanie subiektywnej i dynamicznej wizji miasta - jako fascynuj¹cego, wrêcz niepowtarzalnego zjawiska. </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
-<p>Fragment wiersza z utworem <em>Ulica</em> ³¹czy przede wszystkim motyw miasta. Poeta ukazuje swoj¹ fascynacjê budowlami, rozwojem techniki, ogólnym postêpem. Miasto jawi siê jako potê¿na si³a. Dzie³a te ³¹czy tak¿e zestawienie ze sob¹ dwóch porz¹dków: œwiata natury oraz nowoczesnoœci: w <em>Ulicy</em> tramwaj przypomina pawia, a w <em>Z górnego Œl¹ska</em> mo¿na odnaleŸæ odniesienie do cia³a: "dach z chmur, które paruj¹ ze spoconej skóry". Istotny staje siê równie¿ motyw nieba, poniewa¿ w <em>Ulicy</em> Peiper odwo³uje siê do s³oñca, zaœ w drugim wierszu - do chmur. </p><br>
+<p>Fragment wiersza z utworem <em>Ulica</em> ³¹czy przede wszystkim motyw miasta. Poeta ukazuje swoj¹ fascynacjê budowlami, rozwojem techniki, ogólnym postêpem. Miasto jawi siê jako potê¿na si³a. Dzie³a te ³¹czy tak¿e zestawienie ze sob¹ dwóch porz¹dków: œwiata natury oraz nowoczesnoœci: w <em>Ulicy</em> tramwaj przypomina pawia, a w <em>Z górnego Œl¹ska</em> mo¿na odnaleŸæ odniesienie do cia³a: "dach z chmur, które paruj¹ ze spoconej skóry". Istotny staje siê równie¿ motyw nieba, poniewa¿ w <em>Ulicy</em> Peiper odwo³uje siê do s³oñca, zaœ w drugim wierszu - do chmur. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

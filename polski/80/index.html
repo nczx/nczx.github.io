@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Wyrażenie "idealizm intersubiektywny ekspresjonizmu" można rozumieć jako zbiorową wiarę w istnienie świata pozaziemskiego, wiecznego i niezmiennego, którego człowiek nie jest w stanie poznać całkowicie. Określenia te zostały przypisane ekspresjonizmowi, a więc kierunkowi w sztuce, który skupia się przede wszystkim na prezentacji problemów społecznych. Nie jest to zatem głos jednostki, lecz świadomej zbiorowości ludzi. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Forma sonatowa jest jedną z form muzycznych, które zostały ukształtowane w klasycyzmie. Jej cechą charakterystyczną jest dualizm tematyczny (występowanie tematu głównego i pobocznego) i towarzysząca mu zmienność tonacji. Stąd mówi się o polifoniczności formy sonatowej. Z takim wielogłosem mamy również do czynienia w <em>Dies irae </em>Jana Kasprowicza. W wierszu tym pojawia się wiele różnych podmiotów lirycznych: niektóre wypowiedzi są kierowane m.in. do Adama, w innym zaś fragmencie to Adam jest podmiotem mówiącym. Podmiot zmienia się z pierwszej osoby liczby mnogiej na pierwszą osobę liczby pojedynczej, co zbliża ten utwór właśnie do formy sonatowej. </p><br>
+<p>Forma sonatowa jest jedną z form muzycznych, które zostały ukształtowane w klasycyzmie. Jej cechą charakterystyczną jest dualizm tematyczny (występowanie tematu głównego i pobocznego) i towarzysząca mu zmienność tonacji. Stąd mówi się o polifoniczności formy sonatowej. Z takim wielogłosem mamy również do czynienia w <em>Dies irae </em>Jana Kasprowicza. W wierszu tym pojawia się wiele różnych podmiotów lirycznych: niektóre wypowiedzi są kierowane m.in. do Adama, w innym zaś fragmencie to Adam jest podmiotem mówiącym. Podmiot zmienia się z pierwszej osoby liczby mnogiej na pierwszą osobę liczby pojedynczej, co zbliża ten utwór właśnie do formy sonatowej. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -49,4 +49,43 @@
 <p><strong><span style="text-decoration: underline;">Stygmatyzacja to negatywne i fałszywe przypisywanie cech, atrybutów i zachowań osobom z pewnej grupy społecznej na podstawie uprzedzeń i przesądów</span></strong>. Może prowadzić do dyskryminacji i izolacji osób stygmatyzowanych, a także do utrwalania nierówności społecznych.</p>
 <p><strong><span style="text-decoration: underline;">Stygmatyzacja pogarsza jakość życia jednostki, która jest stygmatyzowana. Rodzi ponadto bariery między różnymi grupami społecznymi</span></strong>. Ukazują to przytoczone teksty. W tekście 1. wskazano, że ludzie otyli, w tym otyłe dzieci, są złośliwie wyśmiewane, izolowane przez rówieśników i odrzucane. Uważa się je ponadto za leniwe i mało inteligentne, co powoduje u nich powstawanie problemów psychospołecznych, takich jak nieposłuszeństwo, agresja słowna lub przemoc fizyczna.</p>
 <p>W analogiczny sposób - o czym traktuje tekst 2. - wyklucza się ludzi biednych. <strong><span style="text-decoration: underline;">Negatywne stereotypy na ich temat pogłębieją ich wykluczenie społeczne</span></strong>, a to z kolei sprawia, że jeszcze trudniej wydostać się im z biedy, nawet gdyby bardzo się starali.</p>
-<p>Tekst 3. pokazuje z kolei, do jak kuriozalnych sytuacji może dochodzić w związku z dyskryminacją przedstawicieli innych grup etnicznych i narodowościowych, w tym wypadku Romów. Wyłącznie w oparciu o stereotypy ludność polska nie chce z Romami wchodzić w bliższe interakcje.</p><br>
+<p>Tekst 3. pokazuje z kolei, do jak kuriozalnych sytuacji może dochodzić w związku z dyskryminacją przedstawicieli innych grup etnicznych i narodowościowych, w tym wypadku Romów. Wyłącznie w oparciu o stereotypy ludność polska nie chce z Romami wchodzić w bliższe interakcje.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

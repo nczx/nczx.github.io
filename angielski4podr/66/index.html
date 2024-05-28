@@ -97,4 +97,43 @@
 <p>6. wearable </p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
-<p>Kilka tygodni temu mój ulubiony sportowiec pojawił się na boisku z butelką wody witaminowej w ręce. To był klasyczny przykład <strong>lokowania</strong> produktu, za co dostał pewnie mnóstwo pieniędzy. Naprawdę nie przeszkadzałoby mi to, gdyby nie fakt, że ten napój zawiera cukier! Według mnie sportowcy powinni promować zdrowe nawyki żywieniowe, a reklamowanie słodkich napojów jest czymś zupełnie przeciwnym. Właściwie jest to <strong>naruszenie</strong> podstawowych zasad żywienia - ze wszystkich niezdrowych nawyków żywieniowych, które mamy <strong>spożycie</strong> cukru jest najgorszym. Taki PR nie <strong>umacnia</strong> jego pozycji jako sportowca. Mam na myśli to, że jeśli potrzebuje pieniędzy, mogę wyobrazić sobie nieskończone inne <strong>możliwości</strong>. Mógłby na przykład reklamować urządzenia najnowszej technologii, <strong>które można nosić</strong> i stają się bardzo popularne. W każdym razie, cała ta sprawa jest dużym rozczarowaniem. </p><br>
+<p>Kilka tygodni temu mój ulubiony sportowiec pojawił się na boisku z butelką wody witaminowej w ręce. To był klasyczny przykład <strong>lokowania</strong> produktu, za co dostał pewnie mnóstwo pieniędzy. Naprawdę nie przeszkadzałoby mi to, gdyby nie fakt, że ten napój zawiera cukier! Według mnie sportowcy powinni promować zdrowe nawyki żywieniowe, a reklamowanie słodkich napojów jest czymś zupełnie przeciwnym. Właściwie jest to <strong>naruszenie</strong> podstawowych zasad żywienia - ze wszystkich niezdrowych nawyków żywieniowych, które mamy <strong>spożycie</strong> cukru jest najgorszym. Taki PR nie <strong>umacnia</strong> jego pozycji jako sportowca. Mam na myśli to, że jeśli potrzebuje pieniędzy, mogę wyobrazić sobie nieskończone inne <strong>możliwości</strong>. Mógłby na przykład reklamować urządzenia najnowszej technologii, <strong>które można nosić</strong> i stają się bardzo popularne. W każdym razie, cała ta sprawa jest dużym rozczarowaniem. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

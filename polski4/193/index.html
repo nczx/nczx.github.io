@@ -51,4 +51,43 @@
 <p>Cytat będący podsumowaniem wywodu: "Jeżeli Europa, zrujnowana tymi szaleństwami, ma uniknąć zagłady, mieszkańcy jej muszą nauczyć się lepiej przewidywać skutki swych czynów i nie mogą lekceważyć tych, którzy to potrafią". </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Przykładowo:</p>
 <p>Wypowiedź Kassandry świadczy o niewdzięcznym losie proroka. Jego dar staje się swoistym przekleństwem, który przyczynia się do osamotnienia jednostki. Nie cieszy się ona poparciem czy zrozumieniem innych ludzi, a za to staje się obiektem kpin. Jej niezwykła umiejętność nie zmienia rzeczywistości, nie ułatwia dialogu z innymi, prowadzi natomiast do wykluczenia czy alienacji. Podkreśla to tragizm losu proroka.  </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Podkreślone pytania wskazują na interesujące autora kwestie oraz urozmaicają jego wywód. Ponadto sygnalizują tok wywodu czy kwestie budzące niejednoznaczne odczucia, a mogące pobudzić umysł odbiorcy. </p><br>
+<p>Podkreślone pytania wskazują na interesujące autora kwestie oraz urozmaicają jego wywód. Ponadto sygnalizują tok wywodu czy kwestie budzące niejednoznaczne odczucia, a mogące pobudzić umysł odbiorcy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

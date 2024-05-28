@@ -11,4 +11,43 @@ Indywidualne<br><head><meta charset="UTF-8"></head>
 <p><strong>b)</strong></p>
 <p>Podany fragment został napisany w konwencji impresjonistycznej, lecz zawiera także elementy ekspresjonizmu. Do impresjonizmu zbliża go nastrojowość, antropomorfizacja świata przyrody, skupienie się na opisie ulotnych wrażeń, w tym barw oraz światła. Z kolei dzięki ekspresjonizmowi zyskał on na intensywności prezentacji uczuć - autor posłużył się tutaj bowiem hiperbolą:</p>
 <p><em>A spod ciężkich chmur, skłębionych nad ziemią, spod zielonawych szarug wychylały się chwilami szmaty pól poczerniałych, przemiękłych, rozpłaszczonych - to wybłyskiwały strugi spienionej wody, płynącej bruzdami, albo czerniały drzewa samotne na miedzach - jak przygięte, nabrzmiałe wilgocią, trzęsły ostatnimi łachmanami liści i szamotały się rozpaczliwie, niby psy na uwięzi. </em></p>
-<p> </p><br>
+<p> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

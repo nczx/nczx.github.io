@@ -155,4 +155,43 @@
 </ul>
 <p> </p>
 <p>I've heard that classical music is the best for studying because it helps you focus. It has no lyrics so you don't get distracted. I've also chosen these five pieces of music because they're some of my favourites. </p>
-<p>(Słyszałem/am, że muzyka klasyczna jest najlepsza do nauki, bo pomaga się skupić. Nie ma słów, więc nie rozprasza. Wybrałem/am też te pięć utworów, ponieważ są to jedne z moich ulubionych.)</p><br>
+<p>(Słyszałem/am, że muzyka klasyczna jest najlepsza do nauki, bo pomaga się skupić. Nie ma słów, więc nie rozprasza. Wybrałem/am też te pięć utworów, ponieważ są to jedne z moich ulubionych.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

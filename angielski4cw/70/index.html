@@ -115,4 +115,43 @@
 <p>W sezonie 4 widzimy jak Karol i Diana się poznają, ich <strong>zaręczyny</strong>, kiedy Karol zapytał Dianę, czy za niego wyjdzie, a ona się zgodziła, ich bajkowy ślub i ciążę Diany. Następnie śledzimy rozstanie <strong>małżonków</strong> i rozwód pary aż do momentu słynnego szokującego <strong>wywiadu</strong> dla w brytyjskiej telewizji. </p>
 <p>Czy <em>The Crown</em> doczeka się <strong>kontynuacji*</strong> - <em>Harry i Meghan w Kalifornii</em>? Cóż, podpisali umowę z Netflixem, więc jest to możliwe!</p>
 <p> </p>
-<p><strong>*</strong>spin-off to serial lub film opowiadający historię bohaterów innego serialu lub filmu. </p><br>
+<p><strong>*</strong>spin-off to serial lub film opowiadający historię bohaterów innego serialu lub filmu. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

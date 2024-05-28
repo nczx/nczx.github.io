@@ -153,4 +153,43 @@
 <p>Zmiana Konstytucji RP wprowadzona za pomocą ustawy, której tekst został zamieszczony w zadaniu dotyczyła rozszerzenia warunków, które musi spełnić osoba, aby mogła zostać zaprzysiężona na posła lub senatora, a mianowicie chodzi o to, że osoba, która została skazana prawomocnym wyrokiem na karę pozbawienia wolności za przestępstwo umyślne ścigane z oskarżenia publicznego nie może piastować w Polsce funkcji posła lub senatora.  </p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p>Zmiana <em>Konstytucji RP</em> wprowadzona za pomocą ustawy, której tekst przytoczono, dotyczyła wprowadzenia zapisu, wedle którego do Sejmu i Senatu RP nie może zostać wybrana osoba, którą skazano prawomocnym wyrokiem na karę pozbawienia wolności za przestępstwo umyślne ścigane z oskarżenia publicznego.</p><br>
+<p>Zmiana <em>Konstytucji RP</em> wprowadzona za pomocą ustawy, której tekst przytoczono, dotyczyła wprowadzenia zapisu, wedle którego do Sejmu i Senatu RP nie może zostać wybrana osoba, którą skazano prawomocnym wyrokiem na karę pozbawienia wolności za przestępstwo umyślne ścigane z oskarżenia publicznego.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

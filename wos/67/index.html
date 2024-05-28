@@ -101,4 +101,43 @@
 <p>Organizacje trzeciego sektora powinno od podmiotów należących do sektora drugiego i pierwszego odróżniać  to, że powinny one reprezentować interes społeczny w sposób bezstronny od polityki i władzy. Ich działalność opiera się na zasadach <em>non profit</em>, a więc działalności "nie dla zysku", co nie jest cechą organizacji z pierwszego i drugiego sektora. Ponadto organizacje sektora trzeciego wyróżnia również prowadzenie działalności na zasadach <em>pro publico bono</em>, czyli "dla dobra publicznego".</p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p><strong><span style="text-decoration: underline;">Tzw. trzeci sektor obejmuje działalność organizacji pozarządowych, tj. organizacji pożytku publicznego</span></strong>. Charakterystyczne dla tego typu organizacji jest to, że nie są one bezpośrednio zorientowane na zysk finansowy, jak również nie są prowadzone przez władze państwowe. W państwie, obok wspomnianego sektora trzeciego, funkcjonują jeszcze sektory pierwszy i drugi. <strong><span style="text-decoration: underline;">Sektor pierwszy</span><span style="text-decoration: underline;"> to obszar działania władzy i instytucji publicznych (państwowych)</span></strong>, zaś <strong><span style="text-decoration: underline;">sektor drugi obejmuje funkcjonowanie prywatnych przedsiębiorstw</span></strong>, dla których zasadniczym motywem działania jest chęć osiągnięcia zysku finansowego.</p><br>
+<p><strong><span style="text-decoration: underline;">Tzw. trzeci sektor obejmuje działalność organizacji pozarządowych, tj. organizacji pożytku publicznego</span></strong>. Charakterystyczne dla tego typu organizacji jest to, że nie są one bezpośrednio zorientowane na zysk finansowy, jak również nie są prowadzone przez władze państwowe. W państwie, obok wspomnianego sektora trzeciego, funkcjonują jeszcze sektory pierwszy i drugi. <strong><span style="text-decoration: underline;">Sektor pierwszy</span><span style="text-decoration: underline;"> to obszar działania władzy i instytucji publicznych (państwowych)</span></strong>, zaś <strong><span style="text-decoration: underline;">sektor drugi obejmuje funkcjonowanie prywatnych przedsiębiorstw</span></strong>, dla których zasadniczym motywem działania jest chęć osiągnięcia zysku finansowego.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

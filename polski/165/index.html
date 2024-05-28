@@ -19,4 +19,43 @@
 <a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Zarówno Andrzej Stasiuk, jak i Kazimierz Przerwa-Tetmajer ukazują naturę jako żywe, nieustannie zmieniające się byty. Obydwaj artyści dostrzegają zachodzące w niej zmiany, starając się je dokumentować. Stąd w ich utworach uwaga skupia się na tak ulotnych elementach przyrody, jak barwy, dźwięki, światło czy mgła. Są to cechy charakterystyczne dla obrazowania impresjonistycznego. Obydwu autorów łączy również uważność w obserwacji oraz metaforyzacja rzeczywistości, która staje się pretekstem do wyrażenia ważnych refleksji, zwłaszcza natury filozoficznej, np. na temat przemijania. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Cykliczność pór roku istotną rolę odgrywa w "Chłopach" Władysława Reymonta. Gromada lipiecka żyje i pracuje w okresach ściśle wyznaczonych przez naturę. Tekst Andrzeja Stasiuka zdaje się korespondować z tym utworem, ponieważ również i współczesny autor zauważa powtarzający się każdego roku cykl natury. Wprawdzie zamieszczony w podręczniku fragment przedstawia jedynie wycinek rzeczywistości, opis jesiennej przyrody, to jednak zawarta jest w nim refleksja na temat cykliczności: <em>Oglądamy coroczne zamieranie, coroczny pogrzeb świata, by zyskać pozór własnej nieśmiertelności? </em></p><br>
+<p>Cykliczność pór roku istotną rolę odgrywa w "Chłopach" Władysława Reymonta. Gromada lipiecka żyje i pracuje w okresach ściśle wyznaczonych przez naturę. Tekst Andrzeja Stasiuka zdaje się korespondować z tym utworem, ponieważ również i współczesny autor zauważa powtarzający się każdego roku cykl natury. Wprawdzie zamieszczony w podręczniku fragment przedstawia jedynie wycinek rzeczywistości, opis jesiennej przyrody, to jednak zawarta jest w nim refleksja na temat cykliczności: <em>Oglądamy coroczne zamieranie, coroczny pogrzeb świata, by zyskać pozór własnej nieśmiertelności? </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

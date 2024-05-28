@@ -51,4 +51,43 @@
 </table>
 <p> </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Słowa autorki tekstu mogą stanowić komentarz do obrazów poetyckich w wierszu Baudelaire'a. Mówi ona bowiem o kryzysie wszelkich wartości i poczuciu braku istnienia obiektywnej rzeczywistości, co zdają się potwierdzać słowa podmiotu lirycznego, który zdradza swoją fascynację znalezioną padliną. Zdaje się on podważać wszelkie obowiązujące dotąd zasady i wartości, ponieważ ma odwagę porównać swoją ukochaną do rozkładającego się ciała. Wiersz pokazuje, że nie istnieje już żadne tabu, nie trzeba liczyć się z konwenansami społecznymi - można odtąd szokować, epatować brzydotą i rozkładem.</p><br>
+<p>Słowa autorki tekstu mogą stanowić komentarz do obrazów poetyckich w wierszu Baudelaire'a. Mówi ona bowiem o kryzysie wszelkich wartości i poczuciu braku istnienia obiektywnej rzeczywistości, co zdają się potwierdzać słowa podmiotu lirycznego, który zdradza swoją fascynację znalezioną padliną. Zdaje się on podważać wszelkie obowiązujące dotąd zasady i wartości, ponieważ ma odwagę porównać swoją ukochaną do rozkładającego się ciała. Wiersz pokazuje, że nie istnieje już żadne tabu, nie trzeba liczyć się z konwenansami społecznymi - można odtąd szokować, epatować brzydotą i rozkładem.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

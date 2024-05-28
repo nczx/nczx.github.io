@@ -97,4 +97,43 @@
 <p>Cześć, dzisiaj chcę Wam opowiedzieć o ciekawym programie telewizyjnym o nazwie Wonders of the World. Jest on dostępny na platformach streamingowych, co oznacza, że można go oglądać kiedy tylko się chce. Ja zazwyczaj korzystam z Amazon Prime. Nie ma wielu odcinków, ale serial jest bardzo przyjemny.</p>
 <p>Program obejmuje interesujące tematy, takie jak starożytne cywilizacje i dzika przyroda. Pozwala poznać odległe miejsca i ich tajemnice. Lubię go oglądać, ponieważ jest edukacyjny i zabawny, a prezenterzy sprawiają, że informacje są łatwe do zrozumienia. Materiał filmowy jest również niesamowity.</p>
 <p>Polecił(a)bym ten serial nastolatkom, którzy uwielbiają się uczyć i chcą odkrywać fascynujące fakty wykraczające poza ich podręczniki.</p>
-<p>Dajcie znać, czy już go oglądaliście!</p><br>
+<p>Dajcie znać, czy już go oglądaliście!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

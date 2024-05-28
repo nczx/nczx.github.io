@@ -135,4 +135,43 @@
 <p><br/>When I get a job, I will be able to save money.</p>
 <p>(Kiedy dostanę pracę, będę w stanie zaoszczędzić pieniądze.)</p>
 <p><br/>Once I save money, I will be able to buy concert tickets and eat pizza whenever I want.</p>
-<p>(Gdy już zaoszczędzę pieniądze, będę mógł/mogła kupować bilety na koncerty i jeść pizzę, kiedy tylko zechcę.)</p><br>
+<p>(Gdy już zaoszczędzę pieniądze, będę mógł/mogła kupować bilety na koncerty i jeść pizzę, kiedy tylko zechcę.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -220,4 +220,43 @@
 <p>3. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana w liczbie mnogiej z wzajemnością (Duncan poznał Serge'a, a Serge poznał Duncana), używamy wyrażenia <em>each other</em>. </p>
 <p>4. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie, używamy zaimków zwrotnych. Zaimek osobowy w 3. osobie l. poj., w rodzaju męskim ma formę <em>himself.</em> </p>
 <p>5. <strong>Uzasadnienie:</strong> to zdanie przydawkowe podaje dodatkową informację, bez której zdanie w dalszym ciągu ma sens, dlatego jest to zdanie niedefiniujące. W zdaniach przydawkowych niedefiniujących nie używamy zaimka <em>that.</em></p>
-<p>6. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie, używamy zaimków zwrotnych. Zaimek osobowy w 1. osobie l. poj. ma formę <em>myself.</em> </p><br>
+<p>6. <strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana względem samego siebie, używamy zaimków zwrotnych. Zaimek osobowy w 1. osobie l. poj. ma formę <em>myself.</em> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

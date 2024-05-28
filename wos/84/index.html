@@ -55,4 +55,43 @@
 <p>W pierwszej turze wyborów prezydenckich w Polsce w 2015 roku największe poparcie uzyskali: Andrzej Duda (34,76%) i Bronisław Komorowski (33,77%). Trzeci wynik uzyskał Paweł Kukiz (20,80%), zaś pozostali kandydaci (Janusz Korwin-Mikke, Magdalena Ogórek, Adam Jarubas, Janusz Palikot, Grzegorz Braun, Marian Kowalski, Paweł Tanajno i Jacek Wilk) zgromadzili w sumie 10,67% głosów.</p>
 <p>Wyniki te odbiegały jednak od tego, co przewidywały sondaże z miesięcy poprzedzających wybory. Przede wszystkim dawały one znacznie wyższe poparcie Bronisławowi Komorowskiemu, który jeszcze w lutym 2015 roku mógł zgodnie z przewidywaniami sondaży liczyć na 63% głosów, w marcu na 48%, a w kwietniu na 43%. Sondaże pomyliły się też w odniesieniu do Andrzeja Dudy i Pawła Kukiza, dla których przewidywały znacznie niższe poparcie, niż faktycznie uzyskali oni w wyborach, które odbyły się 10 maja 2015 roku. Andrzejowi Dudzie sondaże dawały maksymalnie 27% głosów poparcia, zaś Pawłowi Kukizowi co najwyżej 7% głosów poparcia. </p>
 <p>Podawane opinii publicznej informacje o sondażach i ich wynikach mogły istotnie wpłynąć na ostateczne wyniki głosowania. Przede wszystkim sondaże przewidywały stosunkowo wysokie poparcie dla Bronisława Komorowskiego, dając mu wyraźną przewagę nad konkurentami. Wnioskując po wynikach sondaży, przedstawiciele jego elektoratu mogli myśleć, że Bronisława Komorowskiego czeka pewne zwycięstwo. Część z osób popierających Komorowskiego mogło to uspokoić, wskutek czego nie poszli na wybory, sądząc, że ich kandydat i tak wygra, bo będzie miał poparcie innych. Przy mobilizacji przedstawicieli pozostałych elektoratów, zapewniło to lepsze wyniki jego konkurentom. </p>
-<p>Ogólnie rzecz biorąc, sondaże przedwyborcze nie zawsze okazują się trafne, ponieważ wielu respondentów nie ujawnia na ich potrzeby swoich rzeczywistych preferencji wyborczych. Niektórzy ankietowani w dniu wyborów podejmują zaś ostatecznie inne decyzje, aniżeli deklarowane wcześniej przy okazji sondażu. Inni z kolei finalnie nie biorą udziału w głosowaniu.</p><br>
+<p>Ogólnie rzecz biorąc, sondaże przedwyborcze nie zawsze okazują się trafne, ponieważ wielu respondentów nie ujawnia na ich potrzeby swoich rzeczywistych preferencji wyborczych. Niektórzy ankietowani w dniu wyborów podejmują zaś ostatecznie inne decyzje, aniżeli deklarowane wcześniej przy okazji sondażu. Inni z kolei finalnie nie biorą udziału w głosowaniu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

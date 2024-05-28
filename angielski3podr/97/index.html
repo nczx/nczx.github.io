@@ -171,4 +171,43 @@
 <p>I think the last rule sounds nice, but it would be difficult to introduce it in my school. We are divided into classes, or groups, and we have all (or most) subjects as one group. This makes it hard for everyone to have a different schedule. </p>
 <p><br/><strong>Tłumaczenie: </strong></p>
 <p>Te zasady są oczywiście inne niż w Polsce. Nasze szkoły stosują oceny od 1 do 6, gdzie 6 jest najlepsza. Nie mamy kart spóźnień, ale możemy mieć kłopoty, jeśli ciągle się spóźniamy. Wreszcie, większość uczniów szkół średnich może wybrać tylko profil przed złożeniem podania do szkoły. Nie mogą wybrać poszczególnych przedmiotów, na które chcą uczęszczać.</p>
-<p>Myślę, że ostatnia zasada brzmi fajnie, ale trudno byłoby ją wprowadzić w mojej szkole. Jesteśmy podzieleni na klasy lub grupy i mamy wszystkie (lub większość) przedmiotów jako jedna grupa. To sprawia, że trudno jest każdemu mieć inny plan zajęć.</p><br>
+<p>Myślę, że ostatnia zasada brzmi fajnie, ale trudno byłoby ją wprowadzić w mojej szkole. Jesteśmy podzieleni na klasy lub grupy i mamy wszystkie (lub większość) przedmiotów jako jedna grupa. To sprawia, że trudno jest każdemu mieć inny plan zajęć.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

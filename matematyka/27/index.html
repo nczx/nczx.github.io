@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Wiemy, że funkcja <strong>f(x)=cosx</strong> jest funkcją okresową o okresie podstawowym <strong>T=2</strong><span style="font-weight:400;"><strong>𝜋</strong>.</span></p> <p><span style="font-weight:400;">W zadaniu skorzystamy z wykresu funkcji <strong>f</strong>.  </span></p> <p><span style="font-weight:400;"><img alt="" height="215" src="./data/1009592-0.jpg" width="568"/></span></p> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1009592-0.svg" type="image/svg+xml"></object> </p> <p>Z wykresu funkcji f odczytujemy, że</p> <p> <object class="math big" data="./data/1009592-1.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1009592-2.svg" type="image/svg+xml"></object> </p> <p>Z wykresu funkcji f odczytujemy, że</p> <p> <object class="math big" data="./data/1009592-3.svg" type="image/svg+xml"></object>   </p> <p>Powyższe rozwiązanie możemy zapisać jako</p> <p> <object class="math big" data="./data/1009592-4.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1009592-5.svg" type="image/svg+xml"></object> </p> <p>Z wykresu funkcji f odczytujemy, że</p> <p> <object class="math big" data="./data/1009592-6.svg" type="image/svg+xml"></object>   </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Z wykresu funkcji<strong> y=cosx </strong>możemy odczytać, że</p> <ul> <li> <span style="text-decoration:underline;">osie symetrii</span> wykresu funkcji <strong>y=cosx</strong>, to proste o równaniu   </li> </ul> <p style="padding-left:90px;"> <object class="math big" data="./data/1009602-0.svg" type="image/svg+xml"></object>  </p> <ul> <li><span style="font-weight:400;"><span style="text-decoration:underline;">środki symetrii</span> wykresu funkcji <strong>y=cosx</strong>, to punkty o współrzędnych </span></li> </ul> <p style="padding-left:90px;"><span style="font-weight:400;"> <object class="math big" data="./data/1009602-1.svg" type="image/svg+xml"></object> </span></p><br>
+<p>Z wykresu funkcji<strong> y=cosx </strong>możemy odczytać, że</p> <ul> <li> <span style="text-decoration:underline;">osie symetrii</span> wykresu funkcji <strong>y=cosx</strong>, to proste o równaniu   </li> </ul> <p style="padding-left:90px;"> <object class="math big" data="./data/1009602-0.svg" type="image/svg+xml"></object>  </p> <ul> <li><span style="font-weight:400;"><span style="text-decoration:underline;">środki symetrii</span> wykresu funkcji <strong>y=cosx</strong>, to punkty o współrzędnych </span></li> </ul> <p style="padding-left:90px;"><span style="font-weight:400;"> <object class="math big" data="./data/1009602-1.svg" type="image/svg+xml"></object> </span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

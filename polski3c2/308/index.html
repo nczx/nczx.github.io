@@ -73,4 +73,43 @@
 <p>W dos³ownym sposób "pokolenie" mo¿e oznaczaæ grupê osób zbli¿onych wiekiem lub bêd¹cych œwiadkiem okreœlonych wydarzeñ. Tytu³ wiersza Baczyñskiego sugeruje tym samym zainteresowanie okreœlonym pokoleniem, które - jak wynika z treœci utworu - doœwiadczy³o wojny. Tekst staje siê zapisem uniwersalnych prze¿yæ oraz rozterek wynikaj¹cych z tej tragicznej sytuacji. Ukazane pokolenie m³odych ludzi ¿yje w œwiecie grozy i przemocy. Dawna harmonia œwiata, jej sielankowy charakter, s¹ bezpowrotnie utracone. Uwypukla to niepokoj¹ce zestawienie bujnego, têtni¹cego ¿ycie œwiata natury z sygna³ami zagro¿enia i destrukcji: "i tylko chmury - palcom czy w³osom / podobne - sun¹ drapie¿nie w mrok", "Tylko ze œwierków na polu zwisa / g³owa obciêta strasz¹c jak krzyk", "ci¹gn¹ korzenie krew [...]". </p>
 <p>Pokolenie w wierszu Baczyñskiego ¿yje w ci¹g³ym strachu i grozie, ulega odcz³owieczeniu. Brutalnoœæ wojny, nieustanna przemoc maj¹ destrukcyjny wp³yw na jego los. Konieczne staje siê przyjêcie nowych zasad, które u³atwiaj¹ przetrwanie, ale jednoczeœnie odbieraj¹ wra¿liwoœæ, uczucia, czy jak¹kolwiek moralnoœæ. M³odzi w tej rzeczywistoœci wracaj¹ do pierwotnego stanu; przypominaj¹ raczej "z³ych troglodytów" ni¿ jednostki, które maj¹ swe marzenia i cele. Ich cierpienie jest nieskoñczone, poniewa¿ nawet we œnie drêcz¹ ich makabryczne wspomnienia ("[..] œni siê brat, który zgin¹³, / któremu oczy ¿ywcem wyk³uto, / któremu oczy ¿ywcem wyk³uto"). Pokolenie to zostaje pozbawionej zwyczajnej egzystencji: kryje siê w mroku (symbolu z³a i zagro¿enia), nie potrafi kochaæ, wyczuwa ci¹g³e zagro¿enie, wyzbywa siê jakichkolwiek s³aboœci. Niesie to za sob¹ jednak powa¿ne konsekwencje, gdy¿ w ten sposób walcz¹cy staj¹ siê bezwzglêdni, zniszczeniu ulega równie¿ ich duch i moralnoœæ. Tragizm losu bohatera wiersza nie ogranicza siê wy³¹cznie do prze¿ycia koszmaru wojny i œmierci. Przedstawiciele tego pokolenia nie mog¹ byæ tak¿e pewni, czy zostanie zachowana pamiêæ o nich - podwa¿a to nieco sens ich poœwiêcenia. Ocenione ono zostanie bowiem przez pryzmat czasu i historii, przez potomnych. Z tego te¿ powodu pojawia siê w¹tpliwoœæ na temat tego, jak kiedyœ bêdzie siê mówiæ o ich losie. Mog¹ bowiem staæ siê bohaterami zas³uguj¹cymi na chwa³ê i dzie³a lub te¿ popadn¹ w ca³kowite zapomnienie: "czy nam postawi¹, z litoœci chocia¿, / nad grobem krzy¿". </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
 <p>Przyk³adowo:</p>
-<p>Rysunek Baczyñskiego przedstawia trzech m³odzieñców, którzy przygl¹daj¹ siê swemu odbiciu w lustrze. Ono jednak zdaje siê ukazywaæ przysz³e losy bohaterów, poniewa¿ mo¿na w nim dostrzec postaci w mundurach - zamiast twarzy widaæ czaszki. Artysta w ten sposób wyra¿a refleksjê dotycz¹ca przeznaczenia i tragizmu jego pokolenia. Jest ono bowiem skazane na walkê, cierpienie, a w efekcie - przedwczesn¹ œmieræ. Tym samym Baczyñski podkreœla, i¿ pewna rola zostaje narzucona jego pokoleniu - straconemu, pozbawionemu zwyczajnego ¿ycia czy dorastania. </p><br>
+<p>Rysunek Baczyñskiego przedstawia trzech m³odzieñców, którzy przygl¹daj¹ siê swemu odbiciu w lustrze. Ono jednak zdaje siê ukazywaæ przysz³e losy bohaterów, poniewa¿ mo¿na w nim dostrzec postaci w mundurach - zamiast twarzy widaæ czaszki. Artysta w ten sposób wyra¿a refleksjê dotycz¹ca przeznaczenia i tragizmu jego pokolenia. Jest ono bowiem skazane na walkê, cierpienie, a w efekcie - przedwczesn¹ œmieræ. Tym samym Baczyñski podkreœla, i¿ pewna rola zostaje narzucona jego pokoleniu - straconemu, pozbawionemu zwyczajnego ¿ycia czy dorastania. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

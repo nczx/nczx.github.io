@@ -111,4 +111,43 @@
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p>Ustęp 1. artykułu 33. <em>Konstytucji RP</em> stanowi, że: 'Kobieta i mężczyzna w Rzeczypospolitej Polskiej mają równe prawa w życiu rodzinnym, politycznym, społecznym i gospodarczym'.</p>
-<p>Zapis ten nawiązuje do <strong><span style="text-decoration: underline;">partnerskiego (egalitarnego) modelu rodziny</span></strong>, który zakłada, że równouprawnieni małżonkowie (partnerzy) wspólnie podejmują decyzje związane z ich rodziną oraz mniej więcej po równo dzielą się obowiązkami domowymi. </p><br>
+<p>Zapis ten nawiązuje do <strong><span style="text-decoration: underline;">partnerskiego (egalitarnego) modelu rodziny</span></strong>, który zakłada, że równouprawnieni małżonkowie (partnerzy) wspólnie podejmują decyzje związane z ich rodziną oraz mniej więcej po równo dzielą się obowiązkami domowymi. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

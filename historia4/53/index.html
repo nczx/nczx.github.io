@@ -47,4 +47,43 @@
 <li>założenie w 2016 r. Muzeum Polaków ratujących Żydów podczas II wojny światowej im. Rodziny Ulmów,  </li>
 <li>utworzenie Sadu Pamięci. </li>
 </ul>
-<p><strong>2) Przykładowa odpowiedź: </strong>Upamiętnienie rodziny Ulmów nastąpiło wiele lat po wojnie, ponieważ w PRL temat Holocaustu był kontrowersyjny. W czasach komunizmu władze przyzwalały na występowanie antysemityzmu. Taka postawa doprowadziła do wydarzeń marcowych w 1968 r.</p><br>
+<p><strong>2) Przykładowa odpowiedź: </strong>Upamiętnienie rodziny Ulmów nastąpiło wiele lat po wojnie, ponieważ w PRL temat Holocaustu był kontrowersyjny. W czasach komunizmu władze przyzwalały na występowanie antysemityzmu. Taka postawa doprowadziła do wydarzeń marcowych w 1968 r.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

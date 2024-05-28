@@ -7,4 +7,43 @@
 <p><strong>Przykładowe rozwiązanie:</strong></p>
 <p>Zawiniona porażka jest banalnym działaniem, które doprowadza do niepowodzenia. W "Weselu" przykładem banalnej porażki jest zgubienie złotego rogu.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Chochoł w obydwu interpretacjach ma dwojaką naturę - ukryte gorące, żyjące wnętrze pod powierzchnią suchej i pustej słomy. Jednakże autorzy skupiają się na zupełnie innych aspektach tego symbolu. Maria Podraza-Kwiatkowska prezentuje interpretację, którą można określić jako pozytywną. Podkreśla ona kontekstualny charakter chochoła, który w jej mniemaniu jest symbolem dwoistości natury ludzkiej. Stąd przywołuje z literatury inne podobne przykłady, np. Mickiewiczowską lawę, Słowackiego "duszę anielską" czy ziarno ukryte na zimę, jak w micie eleuzyjskim. Każdy z tych przykładów wiąże się z nadzieją, ponieważ podkreśla wewnętrzne życie tkwiące pod skorupą i czekające na odpowiedni moment, by mogło odpowiednio rozkwitnąć. Z kolei Józef Tischner skupia się niejako na zewnętrznej, budzącej złe skojarzenia warstwie chochoła. Według niego jest ona zapowiedzią oraz oznaką obywatelskiej apatii, którą określa jako "sarmacką melancholię". </p><br>
+<p>Chochoł w obydwu interpretacjach ma dwojaką naturę - ukryte gorące, żyjące wnętrze pod powierzchnią suchej i pustej słomy. Jednakże autorzy skupiają się na zupełnie innych aspektach tego symbolu. Maria Podraza-Kwiatkowska prezentuje interpretację, którą można określić jako pozytywną. Podkreśla ona kontekstualny charakter chochoła, który w jej mniemaniu jest symbolem dwoistości natury ludzkiej. Stąd przywołuje z literatury inne podobne przykłady, np. Mickiewiczowską lawę, Słowackiego "duszę anielską" czy ziarno ukryte na zimę, jak w micie eleuzyjskim. Każdy z tych przykładów wiąże się z nadzieją, ponieważ podkreśla wewnętrzne życie tkwiące pod skorupą i czekające na odpowiedni moment, by mogło odpowiednio rozkwitnąć. Z kolei Józef Tischner skupia się niejako na zewnętrznej, budzącej złe skojarzenia warstwie chochoła. Według niego jest ona zapowiedzią oraz oznaką obywatelskiej apatii, którą określa jako "sarmacką melancholię". </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

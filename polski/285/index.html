@@ -6,4 +6,43 @@
 <p> </p>
 <p><strong>b)</strong></p>
 <p>1. Obecność środków artystycznych, które świadczą o ekspresji wypowiedzi, np. wykrzyknień <em>(Niech będzie skonem i</em> <em>Twoim!</em>) czy wyrazów o negatywnym nacechowaniu emocjonalnym (<em>rozszarpią, strzępy</em>).</p>
-<p>2. Hiperbolizacja stylu, wykorzystująca kontrastowe obrazowanie - pojawia się tutaj motyw cierpienia i krwi, który zostaje zestawiony z motywem światła (<em>Skrzydłami trzepocę / jak ptak ten nocny, / któremu okiem kazano skrwawionem / patrzeć w blask słońca</em>). </p><br>
+<p>2. Hiperbolizacja stylu, wykorzystująca kontrastowe obrazowanie - pojawia się tutaj motyw cierpienia i krwi, który zostaje zestawiony z motywem światła (<em>Skrzydłami trzepocę / jak ptak ten nocny, / któremu okiem kazano skrwawionem / patrzeć w blask słońca</em>). </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -72,4 +72,43 @@
 <p><strong>Znaczenie bitwy na łuku kurskim dla przebiegu walk na froncie wschodnim:</strong></p>
 <p>Zwycięstwo Armii Czerwonej w tym starciu przyniosło zwrot w działaniach wojennych na wschodzie. Niemcy stracili zdolność do przeprowadzania jakiejkolwiek ofensywy. Od sierpnia 1943 r. Sowieci zaczęli przesuwać się na zachód. Batalia uwidoczniła znaczne braki taktyczne niemieckiej kadry dowódczej. Niemcy ponieśli klęskę, po której nie byli w stanie się już podnieść. Klęska Wehrmachtu dodawała żołnierzom Armii Czerwonej znacznej pewności siebie.</p>
 <p><img alt="" height="265" src="./data/1179927-0.jpg" width="418"/></p>
-<p>Niemieckie czołgi na pozycjach bojowych podczas bitwy na łuku kurskim, źródło zdjęcia: Wikimedia Commons. </p><br>
+<p>Niemieckie czołgi na pozycjach bojowych podczas bitwy na łuku kurskim, źródło zdjęcia: Wikimedia Commons. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

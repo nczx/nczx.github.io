@@ -67,4 +67,43 @@
 <p>Labirynt w utworze Schulza to istotny element opisywanej rzeczywistoœci. Dotyczy on nie tylko miasta, jego ulic, ale przejawia siê tak¿e w sposobie ukazania zimowego nieba. Motyw ten s³u¿y przede wszystkim zbudowaniu tajemniczej i onirycznej atmosfery, jednak wyra¿a tak¿e prawdê na temat relacji cz³owieka ze œwiatem. Ten zaœ jest niejednoznaczny, zmienny, a tak¿e podstêpny, poniewa¿ zaburza sposób postrzegania terenu, wywo³uje w bohaterze niepokój oraz poczucie zagubienia. Miejski labirynt tworz¹ przede wszystkim ulice, które ca³y czas zdaj¹ siê ulegaæ przemianom, wprowadzaæ cz³owieka w b³¹d: "Otwieraj¹ siê w g³êbi miasta, ¿eby tak rzec, ulice podwójne, ulice sobowtóry, ulice k³amliwe i zwrotne." Sugeruje to subiektywizm doœwiadczania przestrzeni, jej fantastyczny charakter, umo¿liwiaj¹cy przekroczenie granic. W ten sposób narrator odkrywa sensualn¹ wizjê rzeczywistoœci, która staje siê dla niego Ÿród³em poznania, byæ mo¿e tak¿e sposobem na poszukiwanie prawdy czy w metaforycznym sensie - swej ¿yciowej drogi. Labirynt stanowi tak¿e przejaw fantazji, mo¿liwoœci wyobraŸni, chocia¿ przy tym jednoczeœnie pewnego zagubienia: "Oczarowana i zmylona wyobraŸnia wytwarza z³udne plany miasta, rzekomo dawno znane i wiadome, w których te ulice maj¹ swe miejsce i sw¹ nazwê [...]". Dochodzi do jego multiplikacji tak¿e na niebie, co wp³ywa na pog³êbienie wielowymiarowoœci œwiata: "[...] firmament gwiezdny jest tak rozleg³y i rozga³êziony, jakby rozpad³ siê, roz³ama³ i podzieli³ na labirynt odrêbnych niebios, wystarczaj¹cych, do obdzielenia ca³ego  miesi¹ca nocy [...]". Staje siê w ten sposób symbolem tego, co uniwersalne oraz symboliczne. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Sklepy zostaj¹ okreœlone mianem cynamonowych ze wzglêdu na ciemn¹ boazeriê, któr¹ s¹ wy³o¿one. Wywo³uje ona skojarzenia w³aœnie z cynamonem. Nazwa ta wskazuje tak¿e na ich niezwyk³oœæ, egzotykê oraz niepowtarzalnoœæ. Sklepy dostarczaj¹ bowiem piêkne, tajemnicze i pobudzaj¹ce wyobraŸniê przedmioty: "[...] ognie bengalskie, szkatu³ki czarodziejskie, marki krajów dawno zaginionych, chiñskie odbijanki, indygo, kalafonium z Malabaru, jaja owadów egzotycznych, papug, tukanów, ¿ywe salamandry i bazyliszki, korzeñ Mandragory, norymberskie mechanizmy, homunculusy w doniczkach, mikroskopy i lunety, a nade wszystko rzadkie i osobliwe ksi¹¿ki, stare folianty pe³ne przedziwnych rycin i osza³amiaj¹cych  historii". S¹ one w utworze symbolem tego, co magiczne, zagadkowe. Pobudzaj¹ przy tym marzenia i stanowi¹ obiekt fascynacji narratora, który decyduje siê odwiedziæ te sklepy. </p>
 <p> </p>
-<p>Czêœæ indywidualna - wyra¿enie swojego zadania</p><br>
+<p>Czêœæ indywidualna - wyra¿enie swojego zadania</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

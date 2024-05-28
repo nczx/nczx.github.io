@@ -12,4 +12,43 @@
 <a style="color:red; font-size:25px;">Zadanie 13</a><br>
 <p><strong>Założenie:</strong></p> <p>Liczby:</p> <p> <object class="math big" data="./data/1083529-0.svg" type="image/svg+xml"></object>  </p> <p>tworzą ciąg arytmetyczny.</p> <p><strong>Teza:</strong></p> <p>Liczby:</p> <p> <object class="math big" data="./data/1083529-1.svg" type="image/svg+xml"></object> </p> <p>tworzą ciąg arytmetyczny.</p> <hr/> <p><strong>Dowód:</strong></p> <p>Skoro liczby  </p> <p> <object class="math big" data="./data/1083529-2.svg" type="image/svg+xml"></object>  </p> <p>tworzą ciąg arytmetyczny, to zachodzi między sąsiednimi wyrazami tego ciągu zależność:</p> <p> <object class="math big" data="./data/1083529-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1083529-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-6.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-7.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-8.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-9.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-10.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1083529-11.svg" type="image/svg+xml"></object> </p> <p>Zatem wnioskujemy, że liczby:</p> <p> <object class="math big" data="./data/1083529-12.svg" type="image/svg+xml"></object> </p> <p>tworzą ciąg arytmetyczny. </p> <p> </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 14</a><br>
-<p><strong>Założenia:</strong></p> <p>Ciąg <strong>(a<sub>n</sub>)</strong> jest ciągiem arytmetycznym o wyrazach całkowitych, więc</p> <p> <object class="math big" data="./data/1083554-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1083554-1.svg" type="image/svg+xml"></object>  </p> <p>gdzie <strong>r</strong> jest liczba stałą.</p> <p><strong>Teza:</strong></p> <p>Ciąg <strong>(b<sub>n</sub>)</strong> określony za pomocą wzoru</p> <p> <object class="math big" data="./data/1083554-2.svg" type="image/svg+xml"></object>  </p> <p>jest ciągiem geometrycznym.</p> <hr/> <p><strong>Dowód: </strong></p> <p>Aby podany ciąg był ciągiem geometrycznym, to iloraz  </p> <p> <object class="math big" data="./data/1083554-3.svg" type="image/svg+xml"></object> </p> <p>musi być stały dla każdej liczby naturalnej dodatniej <strong>n</strong>.</p> <p>Wobec tego;</p> <p> <object class="math big" data="./data/1083554-4.svg" type="image/svg+xml"></object> </p> <p>Zauważamy, że iloraz przyjmuje stałą wartość dla każdej liczby naturalnej dodatniej n.</p> <p>Wobec tego ciąg (bn) jest ciągiem geometrycznym o ilorazie 2r, </p> <p>co kończy dowód.</p><br>
+<p><strong>Założenia:</strong></p> <p>Ciąg <strong>(a<sub>n</sub>)</strong> jest ciągiem arytmetycznym o wyrazach całkowitych, więc</p> <p> <object class="math big" data="./data/1083554-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1083554-1.svg" type="image/svg+xml"></object>  </p> <p>gdzie <strong>r</strong> jest liczba stałą.</p> <p><strong>Teza:</strong></p> <p>Ciąg <strong>(b<sub>n</sub>)</strong> określony za pomocą wzoru</p> <p> <object class="math big" data="./data/1083554-2.svg" type="image/svg+xml"></object>  </p> <p>jest ciągiem geometrycznym.</p> <hr/> <p><strong>Dowód: </strong></p> <p>Aby podany ciąg był ciągiem geometrycznym, to iloraz  </p> <p> <object class="math big" data="./data/1083554-3.svg" type="image/svg+xml"></object> </p> <p>musi być stały dla każdej liczby naturalnej dodatniej <strong>n</strong>.</p> <p>Wobec tego;</p> <p> <object class="math big" data="./data/1083554-4.svg" type="image/svg+xml"></object> </p> <p>Zauważamy, że iloraz przyjmuje stałą wartość dla każdej liczby naturalnej dodatniej n.</p> <p>Wobec tego ciąg (bn) jest ciągiem geometrycznym o ilorazie 2r, </p> <p>co kończy dowód.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

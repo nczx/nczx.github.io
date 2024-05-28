@@ -64,4 +64,43 @@
 <li>ciecze: C<sub>8</sub>H<sub>18</sub>, C<sub>5</sub>H<sub>12</sub>, C<sub>16</sub>H<sub>34</sub>;</li>
 <li>ciała stałe: C<sub>20</sub>H<sub>42</sub>;</li>
 </ul>
-<p><em>Węglowodory o 1-4 atomach węgla w cząsteczce występują w warunkach normalnych w stanie gazowym, 5-16 atomów węgla w stanie ciekłym, zaś poqyżej 17 atomów węgla w stanie stałym.</em></p><br>
+<p><em>Węglowodory o 1-4 atomach węgla w cząsteczce występują w warunkach normalnych w stanie gazowym, 5-16 atomów węgla w stanie ciekłym, zaś poqyżej 17 atomów węgla w stanie stałym.</em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

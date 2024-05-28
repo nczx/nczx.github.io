@@ -51,4 +51,43 @@
 <p>Konfrontacja Józia z samym sob¹ sugeruje dojœcie do g³osu treœci nieuœwiadomionych, które narrator wypiera z pamiêci. W scenie tej niepoznane do tej pory ¿ycie psychiczne niejako manifestuje swoj¹ obecnoœæ. Dochodzi te¿ do zasadniczego starcia trzech sfer psychiki: id, ego, superego, które akcentuje rozdarcie Józia. Ta pierwsza ze sfer wi¹¿e siê z poczuciem nieokreœlonoœci g³ównego bohatera. Mimo swojego wieku nadal nie zna swej to¿samoœci, postrzega siebie niczym niedojrza³e dziecko - zasadniczo dzia³a ono w zgodzie z popêdami i impulsami, ma subiektywny sposób postrzegania rzeczywistoœci. Id wi¹¿e siê tak¿e z nieœwiadomoœci¹, która jest Ÿród³em rozterek bohatera: "Gdy¿ na jawie by³em równie nieustalony, rozdarty - jak we œnie". Ego z kolei przejawia siê w rozpoznaniu swych relacji z otoczeniem oraz jasnym okreœleniu swej sytuacji: "Przeszed³em niedawno Rubikon nieuniknionego trzydziestka, min¹³em kamieñ milowy, z metryki, z pozorów wygl¹da³em na cz³owieka dojrza³ego, a jednak nie by³em nim - bo czym¿e by³em?".</p>
 <p>Kluczowe w tej scenie staje siê jednak superego, czyli uznane wartoœci moralne i idea³y, które zostaj¹ uwewnêtrznione. Narrator odczuwa bowiem silne naciski otoczenia ¿¹daj¹cego od bohatera jasnego okreœlenia swej to¿samoœci, doroœniêcia do okreœlonych ról spo³ecznych: "[..] ju¿ od dawna usi³owa³y na mnie wp³ywaæ, abym siê ustabilizowa³ jako ktoœ, a wiêc adwokat albo jako biuralista [...]". Jego niechêæ budzi œwiadomoœæ tego, i¿ cz³owiek ca³y czas jest postrzegany przez pryzmat drugiej jednostki, nigdy nie jest samoistny i wolny. Œwiat ogranicza go, zmusza do zachowywania siê zgodnie z pewnymi schematami czy konwencjami. Z tego te¿ powodu konfrontacja ze sob¹ silnie oddzia³uje na Józia, poniewa¿ to, co pozostawa³o w sferze nieœwiadomoœci zostaje ujawnione. Narrator musi siê zmierzyæ ze sob¹ - jako istot¹ zawieszon¹ miêdzy swoimi d¹¿eniami a wp³ywem otoczenia: "Nie, to wcale nie ja! To coœ przypadkowe, coœ obcego, narzuconego, jakiœ kompromis miêdzy œwiatem zewnêtrznym a wewnêtrznym, to wcale nie moje cia³o". Sytuacja ta wywo³uje wstrz¹s, ale prowadzi tak¿e Józia do swoistego oczyszczenia, buntu, poniewa¿ pragnie on samodzielnie okreœliæ swój kszta³t. Analiza siebie tym samym umo¿liwia bohaterowi zdiagnozowanie swych odczuæ oraz przyjêcie zdecydowanej postawy, samookreœlenia siê: "Niech kszta³t mój rodzi siê ze mnie, niech nie bêdzie zrobiony mi!". </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

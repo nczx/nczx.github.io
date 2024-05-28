@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p><strong>a)</strong></p> <p>Wykres ciągu:  </p> <p><span> <object class="math big" data="./data/1070931-0.svg" type="image/svg+xml"></object> </span>  </p> <p><img alt="" height="346" src="./data/1070931-0.jpg" width="657"/></p> <hr/> <p><strong>b)</strong></p> <p>Wykres ciągu:</p> <p><span> <object class="math big" data="./data/1070931-1.svg" type="image/svg+xml"></object> </span>  </p> <p><img alt="" height="253" src="./data/1070931-1.jpg" width="1075"/></p> <hr/> <p><strong>c)</strong></p> <p>Wykres ciągu:</p> <p><span> <object class="math big" data="./data/1070931-2.svg" type="image/svg+xml"></object> </span>   </p> <p><img alt="" height="388" src="./data/1070931-2.jpg" width="478"/></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1070968-0.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy  </p> <p> <object class="math big" data="./data/1070968-1.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="78" src="./data/1070968-0.jpg" width="456"/></p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1070968-2.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy</p> <p> <object class="math big" data="./data/1070968-3.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="99" src="./data/1070968-1.jpg" width="657"/></p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1070968-4.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy</p> <p> <object class="math big" data="./data/1070968-5.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="101" src="./data/1070968-2.jpg" width="703"/></p><br>
+<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1070968-0.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy  </p> <p> <object class="math big" data="./data/1070968-1.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="78" src="./data/1070968-0.jpg" width="456"/></p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1070968-2.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy</p> <p> <object class="math big" data="./data/1070968-3.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="99" src="./data/1070968-1.jpg" width="657"/></p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1070968-4.svg" type="image/svg+xml"></object>  </p> <p>Zaznaczamy na osi liczbowej pięć początkowych wyrazów ciągu, czyli wyrazy</p> <p> <object class="math big" data="./data/1070968-5.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="101" src="./data/1070968-2.jpg" width="703"/></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

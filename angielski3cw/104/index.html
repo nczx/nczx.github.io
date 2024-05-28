@@ -92,4 +92,43 @@
 <p>Co słychać? Właśnie wróciłem/am z podróży na Rapa Nui. Wycieczka była długa i wyczerpująca, ale zdecydowanie było warto. Wyspa była niesamowita - jest coś magicznego w tym miejscu. </p>
 <p>Zrobiłem/am kilka zdjęć, ale głównie podziwiałem/am posągi. Tak jak mówią niektórzy, one naprawdę wydają się czuwać nad wyspą. Wciąż nie mogę uwierzyć, że mogłem/am zobaczyć je osobiście. Nigdy nie zapomnę tego doświadczenia!</p>
 <p>Napisz wkrótce.</p>
-<p>XYZ</p><br>
+<p>XYZ</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

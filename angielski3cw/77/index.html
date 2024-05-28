@@ -76,4 +76,43 @@
 <p>Uzyskanie prawa jazdy jest często postrzegane jako ważny krok na drodze do niezależności, dlatego wielu młodych ludzi nie może się tego doczekać. Mimo to istnieją pewne kontrowersje co do minimalnego wieku wymaganego do tego celu. Jedną z sugestii jest podniesienie go do 20 roku życia. Istnieją argumenty za i przeciw takiemu rozwiązaniu. </p>
 <p>Jednym z argumentów za podniesieniem minimalnego wieku jest to, że młodsi kierowcy są często niedojrzali lub nieodpowiedzialni. Podniesienie wymaganego wieku mogłoby pomóc upewnić się, że nowi kierowcy będą mieli więcej czasu na rozwinięcie ważnych umiejętności, takich jak umiejętność podejmowania decyzji. Mogłoby to zmniejszyć ryzyko wypadków spowodowanych lekkomyślnym zachowaniem.</p>
 <p>Z drugiej strony, podniesienie wymaganego wieku może uniemożliwić młodym dorosłym uzyskanie niezależności i mobilności. Może to szczególnie ograniczyć możliwości dla nastolatków pochodzących z obszarów wiejskich. Co więcej, bycie starszym nie oznacza bycia bardziej dojrzałym. Ulepszenie programów kształcenia kierowców wydaje się być bardziej rozsądną strategią.</p>
-<p>Podsumowując, podniesienie wieku ubiegania się o prawo jazdy do 20 lat ma potencjalne korzyści, ale ma też swoje wady. Chociaż prawdą jest, że mogłoby to wyeliminować nieodpowiedzialne zachowania, może również ograniczyć niezależność młodych ludzi i nie być tak skuteczne, jak poprawa programów edukacji kierowców. Ostatecznie decyzja powinna zostać podjęta po przeanalizowaniu wszystkich dostępnych dowodów.</p><br>
+<p>Podsumowując, podniesienie wieku ubiegania się o prawo jazdy do 20 lat ma potencjalne korzyści, ale ma też swoje wady. Chociaż prawdą jest, że mogłoby to wyeliminować nieodpowiedzialne zachowania, może również ograniczyć niezależność młodych ludzi i nie być tak skuteczne, jak poprawa programów edukacji kierowców. Ostatecznie decyzja powinna zostać podjęta po przeanalizowaniu wszystkich dostępnych dowodów.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

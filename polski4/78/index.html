@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Niejasność zakończenia wynika z tego, iż radość okazują ci ludzie, którzy wcześniej poddali się zarazie. Ponadto znacząca staje się reakcja np. Rieuxa. Według niego dżuma sama odeszła, a nie ze względu na wysiłek walczących z nią ludzi. Nie można więc powiedzieć, że zakończenie jest jednoznacznie optymistyczne. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Bunt wynika z dwóch właściwości doktora Rieuxa - jego pesymizmu i nieufności. Sprzeciw bohatera staje się deklaracją niezależności jednostki względem absurdu. W związku z tym prowadzi on do wytworzenia się pewnych wartości, m.in. nadaniu złu ludzkiego sensu czy afirmacji człowieczeństwa, poczucia wspólnoty. Sprawia także, że pozornie bezsensowne działanie zyskuje sens, gdyż odzwierciedla cierpienie oraz wysiłek jednostki. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>"Trudny humanizm" doktora przejawia się przede wszystkim w jego postawie względem innych ludzi. Bohater buntuje się wobec tego, co złe i absurdalne, nie zgadza się na taką sytuację. Humanistyczny aspekt jego zachowania polega na tym, że Rieux skupia się na drugim człowieku, troszczy się o pokrzywdzonych, walczy z niesprawiedliwością. Czyni tak, chociaż wie, iż wrogie siły przeważają. Z tego powodu niemożliwe jest ostateczne osiągnięcie sukcesu. Mimo tego pozostaje wierny swoim zasadom, zaś jego trud stanowi najgłębszy przejaw człowieczeństwa, pozwala na wyrażenie ludzkiego wysiłku. </p><br>
+<p>"Trudny humanizm" doktora przejawia się przede wszystkim w jego postawie względem innych ludzi. Bohater buntuje się wobec tego, co złe i absurdalne, nie zgadza się na taką sytuację. Humanistyczny aspekt jego zachowania polega na tym, że Rieux skupia się na drugim człowieku, troszczy się o pokrzywdzonych, walczy z niesprawiedliwością. Czyni tak, chociaż wie, iż wrogie siły przeważają. Z tego powodu niemożliwe jest ostateczne osiągnięcie sukcesu. Mimo tego pozostaje wierny swoim zasadom, zaś jego trud stanowi najgłębszy przejaw człowieczeństwa, pozwala na wyrażenie ludzkiego wysiłku. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

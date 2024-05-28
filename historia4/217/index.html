@@ -90,4 +90,43 @@
 <p>Wybór <strong>Karola Wojtyły</strong> na papieża był istotny z kilku powodów. Jan Paweł II był Polakiem, który poznał życie i problemy ludności w komunistycznym kraju, doświadczył represji władz, wobec Kościoła i jego osoby osobiście, więc spodziewano się wsparcia z jego strony. Poza tym im mocniej władza naciskała na Kościół, tym mocniej społeczeństwo o niego walczyło. Wybór Karola Wojtyły na papieża pokazywał, że stolica Piotrowa widzi tę walkę, docenia ją i chce wesprzeć poprzez wybór Polaka na głowę Kościoła. Do tego należy zwrócić na kwestie psychologiczne. Uciśniony naród w tych smutnych czasach otrzymał zastrzyk <strong>nadziei</strong>, a także <strong>wiary</strong>. Polacy mogli czuć się zauważeni, a przy tym zdawać sobie sprawę, że wśród najpotężniejszych ludzi świata mają przyjaciela i opiekuna, który szczególną uwagę będzie przykuwał do wydarzeń dziejących się w Polsce.</p>
 <p>Wybór Polaka na papieża (16 października 1978 r.) wywołał wielki entuzjazm polskich katolików i niepokój komunistów. Jan Paweł II był pierwszym papieżem, który konsekwentnie dążył do poznania współczesnego świata i podjęcia próby rozwiązania trudnych problemów cywilizacyjnych. Nawoływał do <strong>pokoju</strong>,<strong> tolerancji</strong> oraz <strong>sprawiedliwości</strong>. Papież-Polak dla komunistów z PZPR okazał się nie lada problemem. dla polskiego społeczeństwa natomiast stanowił ogromne wsparcie. Wspólne modlitwy z papieżem pozwoliły wielu Polakom zrozumieć, jak dużą potęgę wspólnie stanowią. Społeczeństwo po raz pierwszy poczuło swoją siłę. Jan Paweł II bardzo życzliwie odnosił się do <strong>opozycji demokratycznej</strong>.</p>
 <p><img alt="" height="347" src="./data/1188838-0.jpg" width="263"/></p>
-<p>Jan Paweł II, źródło zdjęcia: Wikimedia Commons. </p><br>
+<p>Jan Paweł II, źródło zdjęcia: Wikimedia Commons. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

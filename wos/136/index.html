@@ -78,4 +78,43 @@
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p>W tekście nr 1 podkreślono, że prerogatywy przyznane polskiemu prezydentowi stawiają go raczej w roli 'honorowej głowy państwa'. Prezydent ponosi jedynie ograniczoną odpowiedzialność konstytucyjną, a głównym ośrodkiem władzy wykonawczej okazuje się Rada Ministrów. Autor tekstu nr 1 zwrócił uwagę na to, że największa kompetencja polskiego prezydenta wiąże się z tym, iż dysponuje on prawem weta. Prawo to jednak, zdaniem autora tekstu nr 1, jest czymś destrukcyjnym, a nie konstruktywnym. Prezydent może nie zgodzić się na wejście w życie danej ustawy niemal z każdego powodu, jaki uzna za istotny. Weto prezydenckie jest zaś trudne do odrzucenia przez Sejm RP, dlatego może ono dezorganizować prace władz ustawodawczej i wykonawczej. Zdaniem autora tekstu nr 1, warto by rozważyć zmniejszenie liczby głosów potrzebnych w Sejmie RP do odrzucenia weta. Najdalej idącym projektem autora tekstu nr 1 jest jednak propozycja, aby wybór prezydenta Polski następował w wyniku głosowania Zgromadzenia Narodowego. Wynika więc z tego, że autor tekstu nr 1 opowiada się za zredukowaniem kompetencji i znaczenia polskiego prezydenta.</p>
-<p>Tekst nr 2 odmiennie widzi pozycję prezydenta w ustroju państwa polskiego. Jego autor opowiada się za tym, aby prerogatywy prezydenta zostały w Polsce zwiększone. Przyznaje on, że prezydent powinien stać na czele rządu lub przynajmniej winien mieć decydujący głos w sprawie wyboru premiera. Twierdzi on, że prezydent nadal powinien być wybierany w wyborach powszechnych, gdyż Polacy chcą silnego prezydenta, posiadającego znaczącą pozycję ustrojową. Dodaje, że wybory prezydenckie cieszą się w Polsce dużą popularnością, co wynika z tego, iż są dla obywateli zrozumiałe, ponieważ wybierają oni konkretną osobę, która powinna mieć cechy męża stanu. Autor tekstu nr 2 sądzi, że powinno się poszerzyć zakres uprawnień prezydenta, gdyż dysponuje on silnym mandatem społecznym.</p><br>
+<p>Tekst nr 2 odmiennie widzi pozycję prezydenta w ustroju państwa polskiego. Jego autor opowiada się za tym, aby prerogatywy prezydenta zostały w Polsce zwiększone. Przyznaje on, że prezydent powinien stać na czele rządu lub przynajmniej winien mieć decydujący głos w sprawie wyboru premiera. Twierdzi on, że prezydent nadal powinien być wybierany w wyborach powszechnych, gdyż Polacy chcą silnego prezydenta, posiadającego znaczącą pozycję ustrojową. Dodaje, że wybory prezydenckie cieszą się w Polsce dużą popularnością, co wynika z tego, iż są dla obywateli zrozumiałe, ponieważ wybierają oni konkretną osobę, która powinna mieć cechy męża stanu. Autor tekstu nr 2 sądzi, że powinno się poszerzyć zakres uprawnień prezydenta, gdyż dysponuje on silnym mandatem społecznym.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

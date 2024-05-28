@@ -57,4 +57,43 @@
 <p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>a) Przytoczony fragment wiersza ujawnia podobieństwo refleksji Norwida do tej, którą wyraża Białoszewski w swych utworach. Poeci postrzegają bowiem rzeczywistość przez pryzmat tego, co codzienne, zwyczajne, a przez to często niezauważalne. Z tego też powodu szczególne znaczenie nadają przedmiotom codziennego użytku. W ich twórczości stają się one czymś niebanalnym, stanowią podstawowy przejaw egzystencji. Przypominają o minionych pokoleniach - jak u Norwida - a  przy tym stanowią nośnik dodatkowych sensów czy nawet kultury. Dochodzi w ten sposób do uwznioślenia zwyczajności. </p>
 <p> </p>
-<p>b) Część indywidualna </p><br>
+<p>b) Część indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

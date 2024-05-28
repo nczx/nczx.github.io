@@ -8,4 +8,43 @@
 <a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1022340-0.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>b) </strong> </p> <p> <object class="math big" data="./data/1022340-1.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1022340-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>d)</strong></p> <p> <object class="math big" data="./data/1022340-3.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>e)</strong></p> <p> <object class="math big" data="./data/1022340-4.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>f)</strong></p> <p> <object class="math big" data="./data/1022340-5.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 10</a><br>
-<p>Dla dowolnego kąta <span style="font-weight:400;"><strong>𝛽</strong> istnieje kąt <strong>𝛼 </strong><strong>∈ ⟨0°; 90°) </strong>taki, że </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-0.svg" type="image/svg+xml"></object> </span></p> <p><span style="font-weight:400;"> </span></p> <p><span style="font-weight:400;">Jeżeli 𝛼 ∈ ⟨0°; 45°〉, to korzystając z odpowiedniego wzoru redukcyjnego, wartości funkcji</span></p> <p><span style="font-weight:400;">kąta k∙90°+𝛼 możemy wyrazić za pomocą wartości funkcji trygonometrycznych kąta <strong>𝛼</strong>.</span></p> <p> </p> <p><span style="font-weight:400;">Jeżeli 𝛼 ∈ (45°; 90°), to </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-1.svg" type="image/svg+xml"></object> </span></p> <p> </p> <p><span style="font-weight:400;">Zatem korzystając z odpowiedniego wzoru redukcyjnego, wartości funkcji trygonometrycznych kąta </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-2.svg" type="image/svg+xml"></object>   <br/></span></p> <p>możemy wyrazić za pomocą wartości funkcji trygonometrycznych kąta (90°-𝛼). </p><br>
+<p>Dla dowolnego kąta <span style="font-weight:400;"><strong>𝛽</strong> istnieje kąt <strong>𝛼 </strong><strong>∈ ⟨0°; 90°) </strong>taki, że </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-0.svg" type="image/svg+xml"></object> </span></p> <p><span style="font-weight:400;"> </span></p> <p><span style="font-weight:400;">Jeżeli 𝛼 ∈ ⟨0°; 45°〉, to korzystając z odpowiedniego wzoru redukcyjnego, wartości funkcji</span></p> <p><span style="font-weight:400;">kąta k∙90°+𝛼 możemy wyrazić za pomocą wartości funkcji trygonometrycznych kąta <strong>𝛼</strong>.</span></p> <p> </p> <p><span style="font-weight:400;">Jeżeli 𝛼 ∈ (45°; 90°), to </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-1.svg" type="image/svg+xml"></object> </span></p> <p> </p> <p><span style="font-weight:400;">Zatem korzystając z odpowiedniego wzoru redukcyjnego, wartości funkcji trygonometrycznych kąta </span></p> <p><span style="font-weight:400;"> <object class="math big" data="./data/1023635-2.svg" type="image/svg+xml"></object>   <br/></span></p> <p>możemy wyrazić za pomocą wartości funkcji trygonometrycznych kąta (90°-𝛼). </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

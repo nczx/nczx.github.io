@@ -26,4 +26,43 @@
 <p>Dawka promieniowania kosmicznego pochłoniętego przez pasażerów lotów kontynentalnych zależy głównie od wysokości na jakiej leci samolot, od długości lotu i od szerokości geograficznej na jakiej ten lot się odbywa. Na poziomie morza aż do wysokości gór dawki promieniowania kosmicznego są małe w porównaniu z dawkami od radioaktywności ośrodka, ale rosną szybko wraz z wysokością. </p>
 <p><em>Cząstki promieniowania kosmicznego przenikając poprzez organizmy żywe, powodują różne zmiany w ich komórkach. Cząstki naładowane elektrycznie głównie wzbudzają i jonizują atomy, z których komórki są zbudowane, a niekiedy powodują zmiany w jądrach atomowych - wskutek wywołanych reakcji jądrowych. W procesie jonizacji z atomów są wyrywane elektrony, zaś w reakcjach jądrowych jądra atomów ulegają destrukcji. W danej warstwie materii jest odkładana określona energia bombardujących ją cząstek. Określonym stratom energetycznym odpowiada określona dawka działająca na dowolny materiał. Zmiany biologiczne w napromieniowanych organizmach są proporcjonalne do dawek i mocy promieniowania. Uszkodzenia radiacyjne zależą nie tylko od dawki promieniowania, lecz i od tego, jaki organ jest wystawiony na działanie promieniowania. Najbardziej czuła jest komórka w stadium wczesnego okresu dzielenia. Destrukcja jąder atomów - z jakich są zbudowane komórki prowadzi do zmian w strukturze i budowie chemicznej porażonej komórki - może to wywołać nieprawidłowości rozwoju.  </em></p>
 <p>W związku ze wzrostem dawki promieniowania kosmicznego wraz z wysokością szczególnie narażone są osoby często latające samolotami na dużym pułapie. Zgodnie z zaleceniami istnieje obowiązek prowadzenia oceny dawek otrzymywanych przez załogi, jeśli tylko dawki roczne mogą przekroczyć 1 mSv (w praktyce oznacza to załogi wszystkich samolotów o pułapie lotu ponad 8 km) oraz dążenie do zapewnienia by dawka nie przekroczyła 6 mSv. Zalecenia te stopniowo znajdują odzwierciedlenie w przepisach poszczególnych państw. W Polsce stało się to w roku 2000, z chwilą uchwalenia Prawa Atomowego.</p>
-<p>Załogi samolotów, których trasy przebiegały nad okolicami biegunów są szczególnie narażone ponieważ w tamtych rejonach występuje szczególnie intensywne promieniowanie kosmiczne, ze względu na przebieg toru ruchu cząstek promieniowania kosmicznego w ziemskim polu magnetycznym (z tego samego powodu zorze polarne powstają głównie w okolicach kół podbiegunowych).</p><br>
+<p>Załogi samolotów, których trasy przebiegały nad okolicami biegunów są szczególnie narażone ponieważ w tamtych rejonach występuje szczególnie intensywne promieniowanie kosmiczne, ze względu na przebieg toru ruchu cząstek promieniowania kosmicznego w ziemskim polu magnetycznym (z tego samego powodu zorze polarne powstają głównie w okolicach kół podbiegunowych).</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

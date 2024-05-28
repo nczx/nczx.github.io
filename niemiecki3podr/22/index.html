@@ -53,4 +53,43 @@
 <p>3. <strong>B.</strong> Die Person hat Geburtstagsgeschenke für ihren Freund im Internet bestellt. <br/><em>Ta osoba zamówiła w Internecie prezenty urodzinowe dla swojego przyjaciela. </em></p>
 <p>4. <strong>E.</strong> Die Person hatte keinen guten Tag, weil sie zu spät zur Schule gekommen ist. <br/><em>Ta osoba nie miała udanego dnia, ponieważ spóźniła się do szkoły. </em></p>
 <p><br/>Zdanie, które zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi:</p>
-<p>C. Die Person mag ihre Pflichten zu Hause nicht besonders und sie will mit ihren Eltern darüber sprechen. <br/><em>Ta osoba niezbyt lubi swoje obowiązki w domu i chce porozmawiać o tym z rodzicami. </em></p><br>
+<p>C. Die Person mag ihre Pflichten zu Hause nicht besonders und sie will mit ihren Eltern darüber sprechen. <br/><em>Ta osoba niezbyt lubi swoje obowiązki w domu i chce porozmawiać o tym z rodzicami. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

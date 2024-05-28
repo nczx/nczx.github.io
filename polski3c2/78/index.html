@@ -111,4 +111,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p><em>I ju¿ - do lo¿y - która? druga...</em></p>
 <p>Warto równie¿ wspomnieæ o swobodnej sk³adni, wrêcz niestarannej, poniewa¿ odzwierciedla ona jêzyk mówiony: jego naturalnoœæ i zmiennoœæ. Elipsy prowadz¹ do kondensacji wypowiedzi ("I ju¿ - wzi¹æ, i ju¿ - udami") i - podobnie jak fragmenty zakoñczone wielokropkiem, przeskoki myœlowe - zachêcaj¹ czytelnika do dopowiedzenia sobie pozosta³ej treœci. </p>
 <p>Tym samym wykorzystywany przez Tuwima styl potoczny staje siê dla autora tworzywem, które dostosowuje do swoich potrzeb. Za pomoc¹ w³aœciwoœci wykorzystanych elementów kreuje on wiarygodn¹ oraz intensywn¹ wizjê œwiata, która tak¿e nawi¹zuje do konkretnych realiów. Takie przetworzenie jest przy tym zgodne z koncepcj¹ sztuki poety, poniewa¿ codziennoœæ staje siê dla niego Ÿród³em twórczoœci i inspiracji. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

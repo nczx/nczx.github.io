@@ -141,4 +141,43 @@
 <p><br/>9. Have you ever seen a news item that was so interesting it should make the headlines?</p>
 <p>(Czy kiedykolwiek widziałeś newsa tak interesującego, że powinno trafić na pierwsze strony gazet?)</p>
 <p><br/>10. What kind of news attracts your attention more: local, national, or international news?</p>
-<p>(Jakiego rodzaju wiadomości bardziej przyciągają twoją uwagę: lokalne, krajowe, czy międzynarodowe?)</p><br>
+<p>(Jakiego rodzaju wiadomości bardziej przyciągają twoją uwagę: lokalne, krajowe, czy międzynarodowe?)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

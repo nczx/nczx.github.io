@@ -189,4 +189,43 @@
 <p>However, in Poland it's legal to get a moped licence at the age of 13. This means we can do it earlier than in some countries.</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
 <p>W Polsce legalny wiek na większość rzeczy to 18 lat. Tak więc na przykład na możliwość głosowania musimy czekać dłużej niż w Austrii, Brazylii czy Szkocji. Również na zostanie dawcą krwi musimy czekać dłużej niż w niektórych krajach, na przykład w Japonii, Kanadzie czy Wielkiej Brytanii.</p>
-<p>Jednak w Polsce można legalnie zdobyć prawo jazdy na motorower w wieku 13 lat. Oznacza to, że możemy to zrobić wcześniej niż w niektórych krajach.</p><br>
+<p>Jednak w Polsce można legalnie zdobyć prawo jazdy na motorower w wieku 13 lat. Oznacza to, że możemy to zrobić wcześniej niż w niektórych krajach.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

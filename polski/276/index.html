@@ -17,4 +17,43 @@
 <p>Interpretacja polega na wydobyciu ukrytego sensu w analizowanym zjawisku. W tym wypadku charakter interpretacyjny ma wskazanie funkcji ironii bądź celu jej użycia. </p>
 <p> </p>
 <p><strong>b)</strong></p>
-<p>Ironiczny dystans bohatera utworu polega na umniejszaniu swoich możliwości intelektualnych poprzez określenia negatywnie wartościujące, np. <em>Oj, ja głupi; Percepcja mi nie nadążyła, ot co. </em>Są one sprzeczne z tym, co prezentuje on w tekście. Jego opowieść świadczy bowiem o ogromnej elokwencji oraz wiedzy na temat sztuki. Narrator wymienia bowiem słynne dzieła malarskie i najważniejszych artystów danego okresu. </p><br>
+<p>Ironiczny dystans bohatera utworu polega na umniejszaniu swoich możliwości intelektualnych poprzez określenia negatywnie wartościujące, np. <em>Oj, ja głupi; Percepcja mi nie nadążyła, ot co. </em>Są one sprzeczne z tym, co prezentuje on w tekście. Jego opowieść świadczy bowiem o ogromnej elokwencji oraz wiedzy na temat sztuki. Narrator wymienia bowiem słynne dzieła malarskie i najważniejszych artystów danego okresu. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

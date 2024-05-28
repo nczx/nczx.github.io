@@ -133,4 +133,43 @@
 <p>5. D</p>
 <p><strong>Uzasadnienie:</strong> do opisania czynności, która została wykonana w bliżej nieokreślonym momencie w przeszłości (<em>recently</em> - ostatnio) używamy czasu <em>present perfect</em> (<em>have/has</em> + <em>past participle </em>- III kolumna w tabeli czasowników nieregularnych lub końcówka -ed).</p>
 <p>6. A</p>
-<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>now </em>- teraz) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czasownik z -ing). W tym znaczeniu (zastanawiać się) czasownik <em>think </em>nie jest statyczny, dlatego można użyć go w formie ciągłej.</p><br>
+<p><strong>Uzasadnienie:</strong> do opisania czynności wykonywanej w danym momencie (<em>now </em>- teraz) używamy czasu <em>present continuous</em> (<em>am/are/is</em> + czasownik z -ing). W tym znaczeniu (zastanawiać się) czasownik <em>think </em>nie jest statyczny, dlatego można użyć go w formie ciągłej.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -152,4 +152,43 @@
 <p>5. had been thrown</p>
 <p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past perfect</em>. Konstrukcja: <em>had been + </em>czasownik główny (tu: <em>throw away </em>- wyrzucać) w <em>past participle</em>.</p>
 <p>6. was being criticised by</p>
-<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past continuous</em>. Podmiot jest w 3. osobie l. pojedynczej, czyli użyjemy konstrukcji: <em>was being + </em>czasownik główny (tu: <em>criticise </em>- krytykować) w <em>past participle</em>. Po luce znajduje się wykonawca czynności (<em>an interviewer </em>- dziennikarz/dziennikarka), dlatego użyjemy dodatkowo przyimka <em>by </em>(przez).</p><br>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past continuous</em>. Podmiot jest w 3. osobie l. pojedynczej, czyli użyjemy konstrukcji: <em>was being + </em>czasownik główny (tu: <em>criticise </em>- krytykować) w <em>past participle</em>. Po luce znajduje się wykonawca czynności (<em>an interviewer </em>- dziennikarz/dziennikarka), dlatego użyjemy dodatkowo przyimka <em>by </em>(przez).</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

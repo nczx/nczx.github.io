@@ -46,4 +46,43 @@
 <p>W pierwszej strofie utworu autorka opisuje sytuacje, które miały miejsce po wprowadzeniu stanu wojennego. Władza przekroczyła granice prywatności jednostek. Naruszano nie tylko mir domowy, lecz także prawo do swobody w zakresie etyki. W słowach "[...] wchodzi w butach do środka sumienia" Kamieńska zdaje się wyrażać z jednej strony uniwersalne doświadczenie prób kształtowania moralności ludzi przez rządzących, z drugiej - nakłanianie lub zmuszanie artystów do przejścia na stronę władzy. Potwierdza to kolejny wers, w którym mowa jest o wyrywaniu języka z ciała - cenzurze. Osoby, które nie podporządkowały się socjalistycznej propagandzie, nie miały możliwości publikowania swojej twórczości, były więc systemowo uciszane. Podmiot liryczny zastanawia się więc, dlaczego rządzący, odebrawszy ludziom to, co najcenniejsze  - bezpieczeństwo, zasady moralne i wolność słowa, trzymają obywateli przy życiu.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Symbolikę domu w utworze <em>Grudzień 1981 </em>Anny Kamieńskiej  może odczytać na wiele sposobów - jako prywatność, ojczyznę, lub istotę ludzką. Na tę ostatnią interpretację wskazują szczególnie słowa "[...] wchodzi w butach do środka sumienia". Drzwi oddzielają świat zewnętrzny od wewnętrznego; chronią intymność i tożsamość jednostki. Akt pukania do nich jest próbą wdarcia się do umysłu i serca. Łańcuch kojarzy się ze zniewoleniem i uwięzieniem. Mówienie przez niego odczytać można jako próby dotarcia do ludzkich umysłów poprzez groźby, kary i ograniczenie wolności. Język jest symbolem mowy, wolności słowa, wyrażania własnego zdania. Jego wyrwanie skutkuje uciszeniem jednostki, ocenzurowaniem jej. Pustynię odczytywać można jako znak nicości, opuszczenia, samotności. Biel i czerwień symbolizują z jednej strony Polskę, z drugiej jednak odsyłają do dwóch przeciwnych obrazów - niewinności, pokoju oraz przemocy, rozlewu krwi. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Autorka nawiązuje do etosu walki romantycznej przede wszystkim w drugiej części utworu. Pisze: " Polska Polak Polacy / wymażcie to imię / święte przecierpiane". Wprowadza do utworu motyw martyrologiczny, wskazując na powtarzające się w kolejnych okresach historycznych cierpienie swoich rodaków. Dokonuje sakralizacji czynów bojowników o wolność ojczyzny.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

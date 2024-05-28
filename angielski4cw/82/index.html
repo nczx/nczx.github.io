@@ -101,4 +101,43 @@
 <p>4. beaten</p>
 <p>(Ten dom z pewnością znajduje się <strong>na uboczu</strong> (<em>off the beaten track</em>) - najbliższe miasto jest 10 km stąd.)</p>
 <p>5. financially</p>
-<p>(Czy jestem stabilny/a <strong>finansowo</strong>? Tak myślę. Zarabiam i wydaję 1400 £ miesięcznie.)</p><br>
+<p>(Czy jestem stabilny/a <strong>finansowo</strong>? Tak myślę. Zarabiam i wydaję 1400 £ miesięcznie.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

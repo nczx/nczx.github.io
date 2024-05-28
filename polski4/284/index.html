@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Według Zygmunta Kubiaka dziewiętnastowieczni intelektualiści pragnęli gwałtownej zmiany. Pragnęli odciąć się od mierności, drobnomieszczańskości i nijakości. Polscy myśliciele tej epoki, w tym szczególnie romantycy, dążyli do wielkich czynów w imię szczytnych idei. Patos i górnolotne wartości stały się podglebiem dla kolejnych pokoleń. Romantyzm leży u podstawy tożsamości Polaków.  Z niego wywodzi się skłonność do niepodległościowych zrywów, pragnienie buntu i emocjonalny stosunek do ojczyzny, lecz także niemożność stabilizacji i wprowadzenia ewolucyjnych, stopniowych przemian w społeczeństwie.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<p>Zygmunt Kubiak twierdzi, że za stworzenie systemów totalitarnych odpowiedzialni są intelektualiści, którzy chcieli zbuntować się przeciw naturze ludzkiej, uosabianej przez przedstawicieli warstw najniższych. Autor dostrzega, że rewolucjoniści wykorzystali niezrealizowane pragnienie zaspokojenia podstawowych potrzeb życiowych ludu do wywołania własnego przewrotu intelektualnego. Grupy najuboższe i najmniej wykształcone stały się swoistymi obiektami eksperymentalnymi. Kubiak uważa jednak, że to właśnie ci ludzie są w stanie przeciwstawić się powstawaniu systemów totalitarnych, ich bunt wywodzi się bowiem z prawdziwych, zakorzenionych w ludzkiej naturze potrzeb. Dostrzegają więc fałsz stojący za rewolucyjnymi ideami intelektualistów.</p><br>
+<p>Zygmunt Kubiak twierdzi, że za stworzenie systemów totalitarnych odpowiedzialni są intelektualiści, którzy chcieli zbuntować się przeciw naturze ludzkiej, uosabianej przez przedstawicieli warstw najniższych. Autor dostrzega, że rewolucjoniści wykorzystali niezrealizowane pragnienie zaspokojenia podstawowych potrzeb życiowych ludu do wywołania własnego przewrotu intelektualnego. Grupy najuboższe i najmniej wykształcone stały się swoistymi obiektami eksperymentalnymi. Kubiak uważa jednak, że to właśnie ci ludzie są w stanie przeciwstawić się powstawaniu systemów totalitarnych, ich bunt wywodzi się bowiem z prawdziwych, zakorzenionych w ludzkiej naturze potrzeb. Dostrzegają więc fałsz stojący za rewolucyjnymi ideami intelektualistów.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

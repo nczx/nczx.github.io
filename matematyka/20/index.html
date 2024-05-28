@@ -2,4 +2,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Miarę łukową kąta o mierze <span style="font-weight:400;"><strong>𝛼</strong> </span>możemy wyznaczyć</p> <ul> <li>przy pomocy wzoru  </li> </ul> <p> <object class="math big" data="./data/1008410-0.svg" type="image/svg+xml"></object>   </p> <ul> <li>korzystając z proporcji</li> </ul> <hr/> <p><strong>a)</strong></p> <ul> <li> <object class="math big" data="./data/1008410-1.svg" type="image/svg+xml"></object> </li> </ul> <p> <object class="math big" data="./data/1008410-2.svg" type="image/svg+xml"></object>  <br/></p> <hr/> <p><strong>b)</strong></p> <ul> <li> <object class="math big" data="./data/1008410-3.svg" type="image/svg+xml"></object> </li> </ul> <p> <object class="math big" data="./data/1008410-4.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <ul> <li> <object class="math big" data="./data/1008410-5.svg" type="image/svg+xml"></object> </li> </ul> <p> <object class="math big" data="./data/1008410-6.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>d)</strong></p> <ul> <li> <object class="math big" data="./data/1008410-7.svg" type="image/svg+xml"></object> </li> </ul> <p> <object class="math big" data="./data/1008410-8.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>e)</strong></p> <ul> <li> <object class="math big" data="./data/1008410-9.svg" type="image/svg+xml"></object> </li> </ul> <p> <object class="math big" data="./data/1008410-10.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Miarę kąta w stopniach możemy wyznaczyć przy pomocy wzoru  </p> <p> <object class="math big" data="./data/1008420-0.svg" type="image/svg+xml"></object>  </p> <p>gdzie kąt o mierze <span style="font-weight:400;"><strong>𝛼</strong> jest zapisany w mierze łukowej.</span></p> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1008420-1.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1008420-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1008420-3.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>d)</strong></p> <p> <object class="math big" data="./data/1008420-4.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>e)</strong></p> <p> <object class="math big" data="./data/1008420-5.svg" type="image/svg+xml"></object>  </p><br>
+<p>Miarę kąta w stopniach możemy wyznaczyć przy pomocy wzoru  </p> <p> <object class="math big" data="./data/1008420-0.svg" type="image/svg+xml"></object>  </p> <p>gdzie kąt o mierze <span style="font-weight:400;"><strong>𝛼</strong> jest zapisany w mierze łukowej.</span></p> <hr/> <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1008420-1.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1008420-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <p> <object class="math big" data="./data/1008420-3.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>d)</strong></p> <p> <object class="math big" data="./data/1008420-4.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>e)</strong></p> <p> <object class="math big" data="./data/1008420-5.svg" type="image/svg+xml"></object>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

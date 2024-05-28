@@ -134,4 +134,43 @@
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
 <p>W 2015 roku Serena Williams, słynna tenisistka, została pokonana przez Robertę Vinci w ważnym meczu podczas US Open. Wiele osób uznało tę porażkę za jedną z największych niespodzianek w historii tenisa. Jednak Serena nie pozwoliła, aby krytyka na nią wpłynęła. Zamiast tego znalazła dobre strony tej sytuacji i wykorzystała swoją porażkę jako motywację do poprawy.</p>
-<p>Serena jest uważana za jedną z najlepszych tenisistek w historii. Przez 319 tygodni była najwyżej sklasyfikowaną tenisistką w rankingu Women's Tennis Association. Pięć razy zakończyła rok jako numer jeden. Jest rekordzistką, jeśli chodzi o zdobycie 23 tytułów singlowych Wielkiego Szlema. Jest także jedyną zawodniczką, która zdobyła Złoty Szlem w karierze zarówno w singlu, jak i deblu. </p><br>
+<p>Serena jest uważana za jedną z najlepszych tenisistek w historii. Przez 319 tygodni była najwyżej sklasyfikowaną tenisistką w rankingu Women's Tennis Association. Pięć razy zakończyła rok jako numer jeden. Jest rekordzistką, jeśli chodzi o zdobycie 23 tytułów singlowych Wielkiego Szlema. Jest także jedyną zawodniczką, która zdobyła Złoty Szlem w karierze zarówno w singlu, jak i deblu. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

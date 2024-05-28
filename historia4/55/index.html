@@ -55,4 +55,43 @@
 <li>13 V 1943 r. - kapitulacja ostatnich oddziałów niemiecko-włoskich w Afryce.</li>
 </ul>
 <p><strong>2) </strong>Przebieg operacji Torch:</p>
-<p>Operacja "Torch" miała miejsce podczas II wojny światowej, została rozpoczęta przez siły aliantów w nocy z 7 na 8 listopada 1942 r. Zaplanowali oni jednoczesne zdobycie Casablanki, Oranu i Algieru, czyli portów we francuskiej Afryce Północnej. Przejęcie wybrzeża Afryki pozwoliło Aliantom planować kolejny ruch o dużym znaczeniu, czyli inwazję na Półwysep Apeniński i tym samym uderzenie w faszystowskie Włochy.</p><br>
+<p>Operacja "Torch" miała miejsce podczas II wojny światowej, została rozpoczęta przez siły aliantów w nocy z 7 na 8 listopada 1942 r. Zaplanowali oni jednoczesne zdobycie Casablanki, Oranu i Algieru, czyli portów we francuskiej Afryce Północnej. Przejęcie wybrzeża Afryki pozwoliło Aliantom planować kolejny ruch o dużym znaczeniu, czyli inwazję na Półwysep Apeniński i tym samym uderzenie w faszystowskie Włochy.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

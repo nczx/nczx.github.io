@@ -101,4 +101,43 @@
 <p>Y: A nie reklamy w telewizji?</p>
 <p>X: Nie, <strong>powód, dla którego bym ich nie wybrał/a</strong> to fakt, że technologia sprawiła, że bardzo łatwo jest je pominąć. Z resztą, kto dziś ogląda telewizję? <strong>Kolejny argument za</strong> bilbordami to fakt, że są tanie.<strong> Głęboko wierzę, że</strong> dobrze zaprojektowany bilbord przyciągnie więcej klientów niż cokolwiek innego. <strong>Jeśli chodzi o inne opcje</strong> - wyskakujące reklamy w Internecie, reklamy na boiskach sportowych, lokowanie produktu w filmach - nie sądzę, że powinniśmy ich używać. <strong>Szczerze mówiąc, żadna z tych opcji </strong><strong>do mnie </strong><strong>nie przemawia </strong>- wszystkie zdają się raczej denerwować ludzi, niż ich przyciągać. </p>
 <p>Y: Dobrze, a więc bilbordy. Zwołam zespół ds. projektowania i marketingu, żeby od razu się tym zajęli.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

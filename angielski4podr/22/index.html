@@ -60,4 +60,43 @@
 <p><strong>Uzasadnienie</strong>: the king of Norway and Denmark had a dead tooth, which was dark blue/grey, and it earned him the nickname Bluetooth.</p>
 <p>(Król Norwegii i Danii miał martwy ząb o ciemnoniebieskim/ciemnoszarym kolorze, co nadało mu przydomek Bluetooth.)<br/><br/></p>
 <p><strong>Źródło</strong>:</p>
-<p>https://www.bluetooth.com/about-us/bluetooth-origin</p><br>
+<p>https://www.bluetooth.com/about-us/bluetooth-origin</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

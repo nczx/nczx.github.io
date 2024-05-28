@@ -6,4 +6,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>W skali równomiernie temperowanej stosuje się podział oktawy na 12 równych części - półtonów. 12 półtonów daje pełną oktawę, czyli podwojenie częstotliwości dźwięku. Jeden półton możemy zatem określić jako stosunek częstotliwości równy:  <object class="math big" data="./data/994662-0.svg" type="image/svg+xml"></object>   </p> <p>Tercja wielka to cztery pół tony. Zatem stosunek częstotliwości dla tercji wielkiej będzie równy:  <object class="math big" data="./data/994662-1.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>W stroju równomiernie temperowanym stosuje się podział oktawy na 12 równych części - półtonów. 12 półtonów daje pełną oktawę, czyli podwojenie częstotliwości dźwięku. Jeden półton możemy zatem określić jako stosunek częstotliwości równy:  <object class="math big" data="./data/994701-0.svg" type="image/svg+xml"></object>   </p> <p>Stosunek częstotliwości dla kwarty to  <object class="math big" data="./data/994701-1.svg" type="image/svg+xml"></object>  </p> <p>Zatem musimy znaleźć taką liczbę <object class="math big" data="./data/994701-2.svg" type="image/svg+xml"></object>   (całkowitą), dla której w przybliżeniu poniższa równość będzie spełniona.</p> <p> <object class="math big" data="./data/994701-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/994701-4.svg" type="image/svg+xml"></object>  </p> <p>Korzystając z kalkulatora szukamy wyniku zbliżonego do <object class="math big" data="./data/994701-5.svg" type="image/svg+xml"></object>   przy podnoszenia do potęgi liczby <object class="math big" data="./data/994701-6.svg" type="image/svg+xml"></object>  , gdzie za wykładnik potęgi przyjmujemy kolejne liczby naturalne <object class="math big" data="./data/994701-7.svg" type="image/svg+xml"></object>  </p> <p>Dla <object class="math big" data="./data/994701-8.svg" type="image/svg+xml"></object>   otrzymujemy:</p> <p> <object class="math big" data="./data/994701-9.svg" type="image/svg+xml"></object>  </p> <p>Zatem kwarta to <strong>5</strong> półtonów.</p><br>
+<p>W stroju równomiernie temperowanym stosuje się podział oktawy na 12 równych części - półtonów. 12 półtonów daje pełną oktawę, czyli podwojenie częstotliwości dźwięku. Jeden półton możemy zatem określić jako stosunek częstotliwości równy:  <object class="math big" data="./data/994701-0.svg" type="image/svg+xml"></object>   </p> <p>Stosunek częstotliwości dla kwarty to  <object class="math big" data="./data/994701-1.svg" type="image/svg+xml"></object>  </p> <p>Zatem musimy znaleźć taką liczbę <object class="math big" data="./data/994701-2.svg" type="image/svg+xml"></object>   (całkowitą), dla której w przybliżeniu poniższa równość będzie spełniona.</p> <p> <object class="math big" data="./data/994701-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/994701-4.svg" type="image/svg+xml"></object>  </p> <p>Korzystając z kalkulatora szukamy wyniku zbliżonego do <object class="math big" data="./data/994701-5.svg" type="image/svg+xml"></object>   przy podnoszenia do potęgi liczby <object class="math big" data="./data/994701-6.svg" type="image/svg+xml"></object>  , gdzie za wykładnik potęgi przyjmujemy kolejne liczby naturalne <object class="math big" data="./data/994701-7.svg" type="image/svg+xml"></object>  </p> <p>Dla <object class="math big" data="./data/994701-8.svg" type="image/svg+xml"></object>   otrzymujemy:</p> <p> <object class="math big" data="./data/994701-9.svg" type="image/svg+xml"></object>  </p> <p>Zatem kwarta to <strong>5</strong> półtonów.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

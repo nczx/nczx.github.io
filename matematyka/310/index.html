@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p><span style="text-decoration:underline;"><strong>Firma X</strong></span></p> <p>Obliczamy średnie wynagrodzenie w firmie <strong>X</strong>:</p> <p> <object class="math big" data="./data/1116069-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116069-1.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy wariancję wynagrodzeń w firmie <strong>X</strong>:  </p> <p> <object class="math big" data="./data/1116069-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1116069-3.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1116069-4.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy odchylenie standardowe wynagrodzeń w firmie <strong>X</strong>:</p> <p> <object class="math big" data="./data/1116069-5.svg" type="image/svg+xml"></object>  </p> <hr/> <p><span style="text-decoration:underline;"><strong>Firma Y</strong></span></p> <p>Obliczamy średnie wynagrodzenie w firmie <strong>Y</strong>:</p> <p> <object class="math big" data="./data/1116069-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116069-7.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy wariancję wynagrodzeń w firmie <strong>Y</strong>:</p> <p> <object class="math big" data="./data/1116069-8.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1116069-9.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1116069-10.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy odchylenie standard</p> <p>owe wynagrodzeń w firmie <strong>Y</strong>:</p> <p> <object class="math big" data="./data/1116069-11.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<table border="1" style="height:189px;width:578px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:574px;"> <p>Wariancję liczb:<strong> x<sub>1</sub>, x<sub>2</sub>, ... , x<sub>n</sub></strong> wyraża się za pomocą wzoru:</p> <p> <object class="math big" data="./data/1116119-0.svg" type="image/svg+xml"></object>  </p> <p>gdzie:</p> <p> <object class="math big" data="./data/1116119-1.svg" type="image/svg+xml"></object>  </p> </td> </tr> </tbody> </table> <hr/> <p>Obliczamy średni staż pracy pracowników w tej firmie:  </p> <p> <object class="math big" data="./data/1116119-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-3.svg" type="image/svg+xml"></object>  </p> <p>Średni staż pracy, to <strong>4</strong> lata.</p> <hr/> <p>Obliczamy wariancję:</p> <p> <object class="math big" data="./data/1116119-4.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-5.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-6.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy odchylenie standardowe:</p> <p> <object class="math big" data="./data/1116119-7.svg" type="image/svg+xml"></object>  </p><br>
+<table border="1" style="height:189px;width:578px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:574px;"> <p>Wariancję liczb:<strong> x<sub>1</sub>, x<sub>2</sub>, ... , x<sub>n</sub></strong> wyraża się za pomocą wzoru:</p> <p> <object class="math big" data="./data/1116119-0.svg" type="image/svg+xml"></object>  </p> <p>gdzie:</p> <p> <object class="math big" data="./data/1116119-1.svg" type="image/svg+xml"></object>  </p> </td> </tr> </tbody> </table> <hr/> <p>Obliczamy średni staż pracy pracowników w tej firmie:  </p> <p> <object class="math big" data="./data/1116119-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-3.svg" type="image/svg+xml"></object>  </p> <p>Średni staż pracy, to <strong>4</strong> lata.</p> <hr/> <p>Obliczamy wariancję:</p> <p> <object class="math big" data="./data/1116119-4.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-5.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116119-6.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy odchylenie standardowe:</p> <p> <object class="math big" data="./data/1116119-7.svg" type="image/svg+xml"></object>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

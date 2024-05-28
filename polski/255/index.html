@@ -10,4 +10,43 @@
 <p>Podany fragment "Chłopów" Władysława Reymonta odwołuje się do kilku konwencji literackich. Występuje tu m.in. <strong>konwencja</strong> <strong>realistyczna, </strong>której istota polega na próbie jak najwierniejszego, obiektywnego odwzorowania rzeczywistości. Stąd tak szczegółowe odzwierciedlenie pracy chłopów na polu. Opis ten zawiera też elementy<strong> impresjonizmu</strong>. Rejestruje bowiem ulotne wrażenia narratora, takie jak barwy <em>(Rzędy kobiet czerwieniły się na kopaniskach...; popielate zagony rdzawiły</em> się) zmieniające się światło <em>(a w końcu już był cały widny na tle</em> słońca)<em>,</em> dym <em>(niebieskie warkocze dymów ciągnęły się nad</em> zagonami)<em>.</em> W opisie występują odniesienia do wielu zmysłów, w tym wzroku i słuchu <em>([...] to znowu śpiewka się zerwała lub krzyk nie wiadomo skąd powstały leciał nisko, tłukł się po bruzdach i dołach i tonął bez echa w jesiennej</em> <em>szarości</em>)<em>,</em> a przyroda została poddana zabiegowi ożywienia i antropomorfizacji. Opis siewcy z kolei<strong> nawiązuje do stylu biblijnego </strong>(motyw siewcy), który wykorzystuje również <strong>funkcję poetycką</strong>, ze względu na nagromadzenie licznych środków artystycznych (<em>[...] bosy chłop, z gołą głową, przewiązany płachtą - szedł wolno, nabierał ziarna z płachty i sial ruchem monotonnym, nabożnym i błogosławiącym ziemi, dochodził do końca zagonów, nabierał z worka zboża, nawracał i z wolna podchodził pod wzgórze, że najpierw głowa rozczochrana, potem ramiona, a w końcu już był cały widny na tle słońca z tym samym błogosławiącym ruchem siejby; z tym świętym rzutem rozrzucał zboże, co jak złoty pył kolistym wirem padało na ziemię</em>)<em>. </em></p>
 <p> </p>
 <p><strong>b)</strong></p>
-<p>Zarówno w utworze Weroniki Murek, jak i powieści Władysława Reymonta, na pierwszy plan życia wiejskiego wysuwa się ciężka praca. Życie ludności wiejskiej toczy się przede wszystkim na zewnątrz, nie zaś wewnątrz. Wieś Reymonta jest spokojna, a egzystencja jej mieszkańców zorganizowana jest przez cyklicznie powtarzające się pory roku. Widać tu wyraźnie kult ciężkiej pracy, która zdaje się być błogosławieństwem - dzięki niej można zdobyć żywność. Murek jednak zwraca przede wszystkim uwagę na różnorodność mieszkańców wsi - są to indywidua, a nie reprezentanci zbiorowości. Praca jest ciężka, często absurdalna i fatalnie wynagradzana. Życie wiejskie ma u niej charakter publiczny - nie ma tutaj tajemnicy, wszyscy obserwują się nawzajem i oceniają. Nikt nie może przejść niezauważony, nawet ksiądz odprawiający religijny rytuał.  </p><br>
+<p>Zarówno w utworze Weroniki Murek, jak i powieści Władysława Reymonta, na pierwszy plan życia wiejskiego wysuwa się ciężka praca. Życie ludności wiejskiej toczy się przede wszystkim na zewnątrz, nie zaś wewnątrz. Wieś Reymonta jest spokojna, a egzystencja jej mieszkańców zorganizowana jest przez cyklicznie powtarzające się pory roku. Widać tu wyraźnie kult ciężkiej pracy, która zdaje się być błogosławieństwem - dzięki niej można zdobyć żywność. Murek jednak zwraca przede wszystkim uwagę na różnorodność mieszkańców wsi - są to indywidua, a nie reprezentanci zbiorowości. Praca jest ciężka, często absurdalna i fatalnie wynagradzana. Życie wiejskie ma u niej charakter publiczny - nie ma tutaj tajemnicy, wszyscy obserwują się nawzajem i oceniają. Nikt nie może przejść niezauważony, nawet ksiądz odprawiający religijny rytuał.  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

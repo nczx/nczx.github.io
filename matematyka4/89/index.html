@@ -81,4 +81,43 @@
 <p>Proste<strong> l</strong> i<strong> k</strong> są prostopadłe (bo boki <strong>AD</strong> i <strong>DH</strong> są prostopadłe). </p>
 <p>Niech prosta <strong>n</strong> będzie prostą zawierającą bok <strong>DC</strong>. </p>
 <p>Proste <strong>l</strong> i<strong> n</strong> są prostopadłe (bo boki <strong>DH</strong> i <strong>DC</strong> są prostopadłe). </p>
-<p>Proste <strong>k</strong> i <strong>n <span style="text-decoration: underline;">nie</span></strong> są równoległe - są prostopadłe (bo boki <strong>AD</strong> i <strong>DC</strong> są prostopadłe). </p><br>
+<p>Proste <strong>k</strong> i <strong>n <span style="text-decoration: underline;">nie</span></strong> są równoległe - są prostopadłe (bo boki <strong>AD</strong> i <strong>DC</strong> są prostopadłe). </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

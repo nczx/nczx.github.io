@@ -49,4 +49,43 @@
 <li>ludobójstwa,</li>
 <li>zbrodni przeciwko ludzkości.</li>
 </ul>
-<p>W trakcie prac trybunału wniesiono 161 aktów oskarżenia. Dotyczyły one m.in. głów państw i rządów, najwyższych rangą dowódców wojskowych, ministrów oraz wysoko postawionych urzędników policji. Pierwszy wyrok zapadł w sprawie <strong>Drażena Erdemovicia </strong>(bośniacki Chorwat, saper w Armii Republiki Serbskiej, egzekutor podczas masakry w Srebrenicy) w 1996 r. Był to pierwszy proces dotyczący wydarzeń powiązanych z masakrą w Srebrenicy z 1995 r. Na karę dożywocia za ludobójstwo w Srebrenicy skazano <strong>sześciu dowódców Serbów bośniackich</strong>, w tym zwanego "rzeźnikiem Bałkanów" gen. <strong>Ratko Mladicia</strong>. <strong>Radovan Karadżić</strong> (prezydent samozwańczej Republiki Serbskiej w BiH) otrzymał w 2016 r. wyrok 40 lat więzienia za ludobójstwo w Srebrenicy, zbrodnie wojenne i zbrodnie przeciw ludzkości. Ostatni wyrok Międzynarodowego Trybunału Karnego dla byłej Jugosławii ogłoszono 1 grudnia 2017 r. podczas procesu apelacyjnego sześciu bośniackich Chorwatów. Według belgradzkich mediów postawionym w stan oskarżenia Serbom zasądzono w sumie 1024,5 lat więzienia, a Chorwatom 183 lata.</p><br>
+<p>W trakcie prac trybunału wniesiono 161 aktów oskarżenia. Dotyczyły one m.in. głów państw i rządów, najwyższych rangą dowódców wojskowych, ministrów oraz wysoko postawionych urzędników policji. Pierwszy wyrok zapadł w sprawie <strong>Drażena Erdemovicia </strong>(bośniacki Chorwat, saper w Armii Republiki Serbskiej, egzekutor podczas masakry w Srebrenicy) w 1996 r. Był to pierwszy proces dotyczący wydarzeń powiązanych z masakrą w Srebrenicy z 1995 r. Na karę dożywocia za ludobójstwo w Srebrenicy skazano <strong>sześciu dowódców Serbów bośniackich</strong>, w tym zwanego "rzeźnikiem Bałkanów" gen. <strong>Ratko Mladicia</strong>. <strong>Radovan Karadżić</strong> (prezydent samozwańczej Republiki Serbskiej w BiH) otrzymał w 2016 r. wyrok 40 lat więzienia za ludobójstwo w Srebrenicy, zbrodnie wojenne i zbrodnie przeciw ludzkości. Ostatni wyrok Międzynarodowego Trybunału Karnego dla byłej Jugosławii ogłoszono 1 grudnia 2017 r. podczas procesu apelacyjnego sześciu bośniackich Chorwatów. Według belgradzkich mediów postawionym w stan oskarżenia Serbom zasądzono w sumie 1024,5 lat więzienia, a Chorwatom 183 lata.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

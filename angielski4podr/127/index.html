@@ -79,4 +79,43 @@
 <p>Staż dla ciebie!</p>
 <p>Jesteś studentem potrzebującym dodatkowego zarobku? A może czujesz, że czas zbierać doświadczenie zawodowe do CV? Cokolwiek spowodowało, że czytasz tę reklamę, nasza oferta jest stworzona dla ciebie. Dlaczego? Nie wymagamy żadnych specjalnych kwalifikacji. Nauczymy cię wszystkiego, co musisz wiedzieć. Wszystko, czego szukamy to kilka cech charakteru. Pierwsza z nich to <strong>odporność psychiczna</strong>, ponieważ musisz być wystarczająco silny/a, żeby radzić sobie ze stresem. Potrzebujemy kogoś, kto byłby też <strong>godny zaufania</strong>, żeby mogli na nim polegać pozostali członkowie zespołu. Z pewnością będzie zaletą, jeśli posiadasz umiejętność <strong>rozwiązywania</strong> konfliktów - w naszej firmie ważne jest, aby szybko i efektywnie rozwiązywać problemy. Docenimy też <strong>pomysłowość</strong> - jeśli masz głowę pełną pomysłów przywitamy cię ciepło. Tak więc, jeśli jesteś <strong>błyskotliwą</strong> osobą, która szybko myśli - zgłoś się i dołącz do nas!</p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Indywidualne</p><br><a style="color:red; font-size:25px;">FAST FINISHERS</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

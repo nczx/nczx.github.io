@@ -53,4 +53,43 @@
 <p>W Polsce decyzję o <strong>kolektywizacji rolnictwa</strong> podjął KC PPR we wrześniu <strong>1948 r.</strong> Kolektywizacja polegała na przymusowym wstępowanie rolników do spółdzielni. Proces ten był połączony ze zjawiskiem łączenia gruntów rolnych we wspólnoty spółdzielcze. Przymus kolektywizacyjny doprowadził do spadku produkcji rolnej i stworzył perspektywę szybkiej ruiny rolnictwa w kraju. </p>
 <p>Kolejnym planem polskiej gospodarki był <strong>plan 6-letni</strong> <strong>(1950-1955)</strong>. Założenia planu były następujące: wzrost w stosunku do roku 1949 o ponad 150% produkcji przemysłowej, o 60% rolnej, o 112% dochodu narodowego. Były one od początku niemal niemożliwe do zrealizowania. Kierownictwo partyjne często nie brało pod uwagę czynnika ekonomicznego, bezkrytycznie wprowadzając w życie wytyczne z Moskwy. Mimo propagandy i wielkiego wysiłku - plan ten wykonano tylko w ok. 2/3, przy czym nowe fabryki powstały z reguły w starych okręgach przemysłowych - w Warszawie i na Śląsku. W ramach planu 6-letniego wybudowano m.in. <strong>Hutę im. Lenina w Nowej Hucie pod Krakowem</strong>, <strong>Fabrykę Samochodów Osobowych i Elektrociepłownię na Żeraniu w Warszawi</strong>e, <strong>hutę aluminium w Skawinie</strong>, <strong>fabryki maszyn rolniczych w Płocku i Poznaniu</strong>, <strong>stocznie w Gdyni i Szczecinie</strong>. Załamanie planu 6-letniego stworzyło warunki do pierwszego w historii PRL społecznego buntu przeciwko władzy.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p><strong>Kolektywizacja</strong> - proces łączenia gruntów chłopskich w gospodarstwa będące własnością spółdzielczą. </p>
-<p><strong>Nacjonalizacja</strong> - upaństwowienie, przejęcie przez państwo na własność przedsiębiorstw, zakładów przemysłowych i prywatnych banków. </p><br>
+<p><strong>Nacjonalizacja</strong> - upaństwowienie, przejęcie przez państwo na własność przedsiębiorstw, zakładów przemysłowych i prywatnych banków. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

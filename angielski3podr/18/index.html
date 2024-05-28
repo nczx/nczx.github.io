@@ -109,4 +109,43 @@
 <p>4. sounds good to me</p>
 <p><strong>Uzasadnienie</strong>: używamy czasownika <em>sound </em>(brzmieć) w czasie <em>present simple</em> (dodajemy końcówkę -s dla osób <em>she, he, it</em>). Dodajemy przyimek <em>to</em> (tu: dla) oraz wstawiamy zaimek osobowy <em>I </em>(ja) w formie dopełnienia (<em>me </em>- mnie).</p>
 <p>5. if you could help her</p>
-<p><strong>Uzasadnienie</strong>: tworzymy pytanie pośrednie za pomocą wyrażenia <em>I wonder if you could </em>(zastanawiam się, czy mógłbyś/mogłabyś). Wstawiamy zaimek osobowy <em>she </em>(ona) w formie dopełnienia (<em>her - </em>jej).</p><br>
+<p><strong>Uzasadnienie</strong>: tworzymy pytanie pośrednie za pomocą wyrażenia <em>I wonder if you could </em>(zastanawiam się, czy mógłbyś/mogłabyś). Wstawiamy zaimek osobowy <em>she </em>(ona) w formie dopełnienia (<em>her - </em>jej).</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

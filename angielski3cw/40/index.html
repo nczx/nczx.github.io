@@ -57,4 +57,43 @@
 <p>4. They build their nest on the ground, not in trees.</p>
 <p><strong>Fragment w tekście: </strong>"(...) not because the Asian hornets are especially aggressive, but because, unlike other hornets, they build their nests on the ground, not in trees, making it more likely that someone will accidentally disturb them." - (...) nie dlatego, że szerszenie azjatyckie są szczególnie agresywne, ale dlatego, że w przeciwieństwie do innych szerszeni budują swoje gniazda na ziemi, a nie na drzewach, co zwiększa prawdopodobieństwo, że ktoś przypadkowo je sprowokuje.</p>
 <p>5. Yes, he/she does.</p>
-<p><strong>Fragment w tekście: </strong>"The other equally bizarre and unbelievable stories on the website should have made this obvious, but this modern urban legend still spread, causing panic and fear as it did so." - Inne równie dziwaczne i niewiarygodne historie na stronie internetowej powinny były uświadomić to czytelnikom, ale ta nowoczesna miejska legenda i tak się rozprzestrzeniła, wywołując panikę i strach.</p><br>
+<p><strong>Fragment w tekście: </strong>"The other equally bizarre and unbelievable stories on the website should have made this obvious, but this modern urban legend still spread, causing panic and fear as it did so." - Inne równie dziwaczne i niewiarygodne historie na stronie internetowej powinny były uświadomić to czytelnikom, ale ta nowoczesna miejska legenda i tak się rozprzestrzeniła, wywołując panikę i strach.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

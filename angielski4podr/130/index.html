@@ -111,4 +111,43 @@
 <p>3. story</p>
 <p><strong>Uzasadnienie</strong>: <em>the same old story</em> - nic nowego;<em> tall story</em> - bujda; <em>big story</em> - duża sprawa, gorący temat.</p>
 <p>4. edge</p>
-<p><strong>Uzasadnienie</strong>: <em>on the edge of one's seat</em> - w napięciu; <em>have the edge</em> - mieć przewagę;<em> cutting-edge</em> - najnowocześniejszy.</p><br>
+<p><strong>Uzasadnienie</strong>: <em>on the edge of one's seat</em> - w napięciu; <em>have the edge</em> - mieć przewagę;<em> cutting-edge</em> - najnowocześniejszy.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Autorka uważa, że <em>Madame </em>wpisuje się w różne gatunki i stylistyki w zależności od tego, jakie jej wątki zostaną wzięte pod uwagę. Opisanie historii miłosnej czyni ją romansem. Przedstawienie realiów życia w Polsce okresu PRL-u wskazuje z kolei na powieść społeczno-obyczajową. Małgorzata Juda-Mieloch wysuwa także tezę, iż <em>Madame </em>nosi cechy epopei, jej akcja rozgrywa się bowiem w okresie przełomu historycznego danej społeczności, a rzeczywistość w niej ukazana ulega mityzacji.  Pod pewnymi względami przypomina ona także powieść inicjacyjną, opowiadającą o losach bohatera wkraczającego w dojrzałość.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Powieść Antoniego Libery  [...] "wymyka się jednoznacznym określeniom geneologicznym [...]", ponieważ nosi cechy różnych gatunków literackich. Małgorzata Juda-Mieloch zauważa, że chociaż <em>Madame </em>wpisuje wyraźnie w schemat tzw. <em>Bildungsroman, </em>czyli powieści inicjacyjnej, jednocześnie realizuje założenia innych odmian epiki. Jest więc dziełem synkretycznym pod względem gatunku, czytana może być przez pryzmat innych klisz interpretacyjnych.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Satyra, ironia i parodia  w <em>Madame </em>Antoniego Libery służą zdystansowaniu się od przyjętego wzorca gatunkowego. Autor dokonuje przekształceń w obrębie norm powieści inicjacyjnej, podkreślając tym samym wpisaną w tę odmianę schematyczność czy sztampowość. Z ironią podchodzi również do motywu artysty, niejako odbrązawiając go i odzierając z patosu. Wszelkie zabiegi budujące dystans między powieścią a tradycją pisarską wskazują przede wszystkim na świadomość i erudycję autora. Libera umiejętnie operuje wzorcami literackimi, pokazując jednocześnie ich powtarzalność.</p><br>
+<p>Satyra, ironia i parodia  w <em>Madame </em>Antoniego Libery służą zdystansowaniu się od przyjętego wzorca gatunkowego. Autor dokonuje przekształceń w obrębie norm powieści inicjacyjnej, podkreślając tym samym wpisaną w tę odmianę schematyczność czy sztampowość. Z ironią podchodzi również do motywu artysty, niejako odbrązawiając go i odzierając z patosu. Wszelkie zabiegi budujące dystans między powieścią a tradycją pisarską wskazują przede wszystkim na świadomość i erudycję autora. Libera umiejętnie operuje wzorcami literackimi, pokazując jednocześnie ich powtarzalność.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

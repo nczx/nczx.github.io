@@ -155,4 +155,43 @@
 <p>2. They usually have a time limit for solving the mysteries, which might make the guests feel like they should be in a rush.</p>
 <p>(Zazwyczaj mają one limit czasowy na rozwiązanie tajemnicy, co może sprawić, że goście poczują się, jakby powinni się spieszyć.)</p>
 <p>3. Some people might not enjoy mystery-themed activities or find such games too challenging or scary.</p>
-<p>(Niektórzy mogą nie lubić aktywności związanych z tajemnicami lub uważać takie gry za zbyt wymagające lub przerażające.)</p><br>
+<p>(Niektórzy mogą nie lubić aktywności związanych z tajemnicami lub uważać takie gry za zbyt wymagające lub przerażające.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

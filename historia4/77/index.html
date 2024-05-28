@@ -79,4 +79,43 @@
 <p>Konferencja w Poczdamie to ostatnie spotkanie przywódców krajów alianckich po II wojnie światowej. Odbyło się niedługo po zakończeniu działań militarnych w Europie. Obrady toczyły się w dniach<strong> od 17 lipca do 2 sierpnia 1945 r.</strong> Uczestniczyli w nich:<strong>  Józef Stalin</strong>, nowy prezydent USA <strong>- Harry </strong><strong>Truman</strong> oraz premier Wielkiej Brytanii - <strong>Clement Attlee </strong>(zastąpił na tym stanowisku Winstona Churchilla).</p>
 <p>Podczas konferencji poczdamskiej podjęto wiele ważnych decyzji określających nowy porządek polityczny świata, obowiązujący przez następne lata. </p>
 <p>Podjęto wówczas decyzje dotyczące powojennych granic. Zadecydowano o <strong>podziale Niemiec na 4 strefy okupacyjne: sowiecką, brytyjską, amerykańską i francuską. Berlin podzielono na analogiczne sektory</strong>. Utworzono Sojuszniczą Radę Kontroli nad okupowanymi Niemcami i zadecydowano o:<strong> demokratyzacji, demilitaryzacji, denazyfikacji i demonopolizacji.</strong> Zbrodniarze hitlerowcy mieli być ścigani i osądzeni przez Międzynarodowym Trybunałem w Norymberdze.</p>
-<p><strong>W sprawie Polski </strong>Wielka Brytania i Stany Zjednoczone uznały <strong>Tymczasowy Rząd Jedności Narodowej (TRJN)</strong>, a tym samym ostatecznie ustaliły <strong>zachodnią granicę Polski na linii Odry i Nysy Łużyckiej</strong>. Na wschodzie granicę miała wyznaczać linia Curzona. Gdańsk, Warmię i Mazury włączono do Polski. Zdecydowano o przymusowym wysiedleniu ludności niemieckiej z nowo wyznaczonych ziem polskich.</p><br>
+<p><strong>W sprawie Polski </strong>Wielka Brytania i Stany Zjednoczone uznały <strong>Tymczasowy Rząd Jedności Narodowej (TRJN)</strong>, a tym samym ostatecznie ustaliły <strong>zachodnią granicę Polski na linii Odry i Nysy Łużyckiej</strong>. Na wschodzie granicę miała wyznaczać linia Curzona. Gdańsk, Warmię i Mazury włączono do Polski. Zdecydowano o przymusowym wysiedleniu ludności niemieckiej z nowo wyznaczonych ziem polskich.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

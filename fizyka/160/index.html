@@ -17,4 +17,43 @@
 <p>Na płytce szklanej powstałyby tęczowe barwy na takiej samej zasadzie jak w bańce mydlanej. Kształt powierzchni na którą pada światło nie musi być kulisty. Tak samo tęczowe barwy mogą powstawać na rozpiętej błonie mydlanej na pętli zanim stworzymy z niej bańkę mydlaną. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Na zdjęciu <strong>A.</strong> widzimy powstające <strong>halo</strong> wokół Księżyca. Promienie światła odbitego od powierzchni Księżyca i docierające do atmosfery Ziemi <strong>ulegają załamaniu</strong> na kryształkach lodu zawieszonych w atmosferze. Wokół Księżyca powstaje prawie biały okrąg. Blade kolory tęczy możemy obserwować od wnętrza tego okręgu (kolor czerwony jest najbardziej wewnętrznym).</p>
-<p>Na zdjęciu <strong>B.</strong> widzimy powstający <strong>wieniec</strong> wokół Księżyca. Wieniec powstaje kiedy Księżyc (lub Słońce) są przesłonięte cienką warstwą chmur. Światło przechodzące przez półprzeźroczystą warstwę chmur <strong>ulega zjawisku dyfrakcji</strong>. Kolor czerwony możemy obserwować po zewnętrznej stronie wieńca.</p><br>
+<p>Na zdjęciu <strong>B.</strong> widzimy powstający <strong>wieniec</strong> wokół Księżyca. Wieniec powstaje kiedy Księżyc (lub Słońce) są przesłonięte cienką warstwą chmur. Światło przechodzące przez półprzeźroczystą warstwę chmur <strong>ulega zjawisku dyfrakcji</strong>. Kolor czerwony możemy obserwować po zewnętrznej stronie wieńca.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

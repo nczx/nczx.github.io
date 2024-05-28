@@ -127,4 +127,43 @@
 <p>"Schizoid" to osoba, która potrafi prze¿yæ wiêcej, wykazuje zainteresowanie czymœ wiêcej ni¿ codziennoœci¹, pogr¹¿a siê w œwiecie rozwa¿añ. Z kolei "pyknik" nie ma takich d¹¿eñ. Najwa¿niejsze jest dla niego tylko zaspokojenie podstawowych potrzeb, komfort ¿ycia: "Ma se radio, ma se stylo, ma se kino, ma se daktylo, ma se brzucho i nieœmierdz¹ce, nieciekn¹ce ucho, ma se syæko jak siê patrzy - czego mu trza?". Jego ocena nie jest zbyt pozytywna: "A sam w sobie jest œcierwo pod³e, guano pogodne, przebrzyd³e". </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Niechêæ szewców do panów przejawia siê w ich ironicznych oraz pogardliwych komentarzach na temat uprzywilejowanej warstwy. Bohaterowie s¹ rozgoryczeni nierównoœciami spo³ecznymi oraz postaw¹ panów, których egzystencja jest spokojna i komfortowa. Trud szewców przynosi im korzyœci, czuj¹ siê ponadto od nich lepsi: "Mo¿e ludzie to tylko oni - a my tylko bydlêce  œcierwa, z takimi wiecie, Panie Œwiêty, epifenomenami, by siê jeszcze gorzej mêczyæ i na ich uciechê skowytaæ".Sajetan jest przekonany o tym, i¿ panowie s¹ przyczyn¹ degradacji ¿yciowej: "A oni myœl¹ tak na pewno, brzuchacze zacygarzone, ociekaj¹ce takim œliskim koktejlem z ichniej rozkoszy i naszej smrodliwej, beznadziejnej w swej mêce". Mas tak¿e œwiadomoœæ, ¿e istniej¹ca "machina spo³eczna" powoduje, i¿ praca bêdzie nieskoñczona. Z kolei II Czeladnik postrzega panów jako Ÿród³o cierpienia. Ich pró¿noœæ, skupienie na metafizycznych odczuciach nie ma jednak pozytywnego wp³ywu na mniej uprzywilejowane warstwy, a wrêcz niszczy je: "[...] to s¹ te rzeczy, ta sakra ich suka, œlachcickie odpadki, co oni nazywaj¹ swymi metafizycznymi prze¿yciami. £echc¹ sobie nimi spasione brzuchy, a ka¿dy taki ³echt nasyconego bydlaka to nasz ból w kiszkach". Panowie ponadto d¹¿¹ do omamienia szewców, podporz¹dkowania ich umys³ów, co podkreœla dosadna metaforyka: "[...] a na nas to tê biegunkê umys³ow¹ puszczaj¹, aby nas jeszcze gorzej zatumaniæ, ni¿ to chcia³y wszelkie religianty na us³ugach feuda³ów i ciê¿kiego siê przemys³u wyg³upiaj¹ce". Szewcy zdaj¹ siê tak¿e zazdroœciæ panom mo¿liwoœci, jakie daje im ich sytuacja: dostatnia egzystencja ³¹czy siê bowiem tak¿e z potencjalnym rozwojem duchowym: "Ja bym chcia³ [...]  w ich pierzynach spaæ, ichnie ¿arcie ¿reæ a¿ do twardego rzygu, a potem ichnim duchem od zaœwiatów siê zach³ysn¹æ [...]". </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Katastroficzny charakter s³ów Sajetana przejawia siê w ich pesymizmie. Bohater negatywnie wypowiada siê na temat otaczaj¹cej go rzeczywistoœci, dostrzega jej nieuchronny upadek oraz kryzys cywilizacji: "Kona ona ludzkoœæ pod gniotem cielska gnij¹cego, z³oœliwego nowotwora kapita³u, na którym, nikiej putryfakcyjne owe b¹ble, faszystowskie rz¹dy powstaj¹ i pêkaj¹, puszczaj¹c smrodliwe gazy zagni³ej w sobie, w sosie w³asnym, bezosobowej ci¿by ludzkiej". Bohater jest równie¿ œwiadomy tego, i¿ cz³owiek zatraca swój indywidualizm i wyj¹tkowoœæ, jego miejsce zajmuje zaœ ujednolicony oraz przeciêtny t³um. W s³owach Sajetana mo¿na tak¿e dostrzec echa filozofii Fromma, która staje siê wa¿nym puntem odniesienia dla Witkiewicza. Bohater podobnie jak niemiecki myœliciel dostrzega osamotnienie, bezsilnoœæ cz³owieka, który doœwiadcza wyczerpania siê relacji miêdzyludzkich, pustki duchowej: "Ju¿ nic gadaæ nie trzeba. Wszystko jest wygadane do cna". W ten sposób <em>Szewcy</em> niejako odzwierciedlaj¹ egzystencjalne rozterki autora wywo³ane ówczesnym kryzysem kultury europejskiej oraz rozkwitem totalitaryzmu. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

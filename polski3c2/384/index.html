@@ -100,4 +100,43 @@
 </tbody>
 </table>
 <p> </p>
-<p>Moralne zwyciêstwo tych osób polega na tym, i¿ mimo brutalnych realiów ¿ycia nie zapominaj¹ o swym cz³owieczeñstwie i zasadach moralnych. Nie ulegaj¹ pierwotnym instynktom czy grozie wydarzeñ, lecz do koñca zachowuj¹ empatiê oraz mi³oœæ wzglêdem drugiego cz³owieka. Heroizm postawy tych ludzi przejawia siê równie¿ w tym, i¿ ryzykuj¹ swym ¿yciem, aby pomóc ofiarom - s¹ bezinteresowni oraz solidarni, gotowi do poœwiêcenia siebie. Kieruj¹ siê szlachetnoœci¹ oraz trosk¹ o los najs³abszych - nieobce s¹ im tym samym idee humanitaryzmu. </p><br>
+<p>Moralne zwyciêstwo tych osób polega na tym, i¿ mimo brutalnych realiów ¿ycia nie zapominaj¹ o swym cz³owieczeñstwie i zasadach moralnych. Nie ulegaj¹ pierwotnym instynktom czy grozie wydarzeñ, lecz do koñca zachowuj¹ empatiê oraz mi³oœæ wzglêdem drugiego cz³owieka. Heroizm postawy tych ludzi przejawia siê równie¿ w tym, i¿ ryzykuj¹ swym ¿yciem, aby pomóc ofiarom - s¹ bezinteresowni oraz solidarni, gotowi do poœwiêcenia siebie. Kieruj¹ siê szlachetnoœci¹ oraz trosk¹ o los najs³abszych - nieobce s¹ im tym samym idee humanitaryzmu. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

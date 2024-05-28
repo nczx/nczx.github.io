@@ -77,4 +77,43 @@
 <p>Ludzka natura w opowiadaniu Mrożka jawi się jako niespokojna, dąży do zaspokojenia pewnych potrzeb. Trudności życiowe, niepowodzenia, smutek sprawiają, że człowiek poszukuje czegoś, co przyniesie mu ulgę. Jej źródłem staje się nieszczęście drugiego człowieka, w porównaniu z którym własne problemy okazują się mniej znaczące. Przejawia się w tym pewien egoizm jednostki, która poprawia swoją sytuację kosztem drugiego człowieka, a przy tym zawsze rozpatruje siebie w kontekście innych. Tym samym ludzka natura jest przewrotna, ale też naznaczona słabością, niedoskonałością. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>Na obrazku ukazano schematycznie przedstawioną przestrzeń, przez którą biegną tory kolejowe. Na nich zaś znajduje się olbrzymi kamień, a w oddali można dostrzec zbliżający się pociąg. Po prawej stronie zgromadził się zaś tłum ludzi obserwujących sytuację. Rysunek satyryczny można uznać za komentarz do opowiadania. Przede wszystkim zdaje się odwoływać do podobnej refleksji: nadciągająca katastrofa budzi zainteresowanie tłumu, który wręcz jej oczekuje. Sytuację tę można połączyć z myślą zawartą w tekście, a dotyczącą ludzkiej natury. Okazuje się bowiem, iż cudze nieszczęście nie tylko budzi fascynację, ale także utwierdza niejednokrotnie człowieka w dobrym samopoczuciu. Ten bowiem uświadamia sobie, iż ktoś ma gorzej od niego. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>Indywidualne </p><br>
+<p>Indywidualne </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -70,4 +70,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p><br/>4. Tomek und Christian haben sich in Polen getroffen, weil sie das geplant haben. <br/><em>Tomek i Christian spotkali się w Polsce, ponieważ tak planowali. </em><br/><strong>FALSCH </strong></p>
 <p>"Ich war auch in Polen. Schade, dass wir uns nicht getroffen haben". - Byłem też w Polsce. Szkoda, że się nie spotkaliśmy. </p>
 <p><br/>5. Christian mag Windsurfing. <br/><em>Christian lubi windsurfing. <br/></em><strong>RICHTIG </strong></p>
-<p>"Windsurfen ist mein neues Hobby". - Windsurfing to moje nowe hobby.</p><br>
+<p>"Windsurfen ist mein neues Hobby". - Windsurfing to moje nowe hobby.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

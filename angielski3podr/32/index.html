@@ -56,4 +56,43 @@
 <p><br/>3. He mentions variety of bands and music styles, excellent sound quality and special effects, brilliant performances in Sunrise Arena. According to the author, the best thing were the workshops in the Teen Arena.</p>
 <p><strong>Fragment w tekście</strong>: "Last year, there were seven music stages to choose from, with a huge variety of bands and music styles (...) The sound quality and special effects were excellent. Don't miss the Sunrise Arena, I've seen some brilliant performances there. Teenagers should definitely check out the Teen Arena - their workshops have always been the best thing about the festival." - W zeszłym roku było siedem scen muzycznych do wyboru, z ogromną różnorodnością zespołów i stylów muzycznych (...) Jakość dźwięku i efekty specjalne były doskonałe. Nie przegapcie Sunrise Arena, widziałem tam kilka genialnych występów. Nastolatki powinny koniecznie odwiedzić Teen Arena - ich warsztaty zawsze były najlepszą rzeczą na festiwalu.</p>
 <p><br/>4. The reviewer thought there should be more showers and water bottles should be cheaper.</p>
-<p><strong>Fragment w tekście</strong>: "However, there should be more showers as they get crowded. The food was fantastic, but small bottles of water cost £2.50, which is too expensive." - Powinno być jednak więcej pryszniców, ponieważ jest tam tłoczno. Jedzenie było fantastyczne, ale małe butelki wody kosztowały 2,50 funta, co jest zbyt drogo.</p><br>
+<p><strong>Fragment w tekście</strong>: "However, there should be more showers as they get crowded. The food was fantastic, but small bottles of water cost £2.50, which is too expensive." - Powinno być jednak więcej pryszniców, ponieważ jest tam tłoczno. Jedzenie było fantastyczne, ale małe butelki wody kosztowały 2,50 funta, co jest zbyt drogo.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

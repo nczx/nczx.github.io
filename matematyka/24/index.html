@@ -67,4 +67,43 @@
 <a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p> <object class="math big" data="./data/1009307-0.svg" type="image/svg+xml"></object> </p> <p>Wiemy, że<strong> [x]</strong> - największa liczba całkowita nie większa od <strong>x</strong>, zatem   </p> <p> </p> <p> <object class="math big" data="./data/1009307-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1009307-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1009307-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1009307-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1009307-5.svg" type="image/svg+xml"></object> </p> <p> </p> <p>Z powyższych obliczeń możemy zauważyć, że dla dowolnej liczby całkowitej <strong>x</strong> funkcja <strong>f</strong> przyjmuje wartość równą <strong>0</strong>. Natomiast w pozostałych przypadkach wartość funkcji <strong>f </strong>jest z przedziału <strong>(0,1)</strong>.</p> <p> </p> <p>Wykres funkcji <strong>f</strong></p> <p><img alt="" height="404" src="./data/1009307-0.jpg" width="685"/></p> <p>Z wykresu funkcji <strong>f</strong> możemy odczytać, że okres podstawowy funkcji jest równy <strong>1</strong> (<strong>T=1</strong>).</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1009362-0.svg" type="image/svg+xml"></object>    </p> <p><img alt="" height="105" src="./data/1009362-0.jpg" width="701"/></p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1009362-1.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="178" src="./data/1009362-1.jpg" width="879"/></p><br>
+<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1009362-0.svg" type="image/svg+xml"></object>    </p> <p><img alt="" height="105" src="./data/1009362-0.jpg" width="701"/></p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1009362-1.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="178" src="./data/1009362-1.jpg" width="879"/></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

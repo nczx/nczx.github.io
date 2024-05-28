@@ -49,4 +49,43 @@
 <p>Na podstawie przedstawionych danych można stwierdzić, że młodzież w Polsce spotyka się z bardzo różnymi zagrożeniami, wśród których bardzo poważne jest już chociażby to, iż <strong><span style="text-decoration: underline;">spory odsetek osób deklaruje, iż żyje bardzo biednie lub skromnie</span></strong>. Choć od 2013 roku osób żyjących bardzo biednie lub skromnie jest coraz mniej, to jednak wciąż ich odsetek pozostaje na wysokim poziomie. W 2018 roku takich osób było około 20%. Warto zaś pamiętać, że bieda poważnie ogranicza szanse życiowe.</p>
 <p><strong><span style="text-decoration: underline;">Młodzież w wieku 11-15 lat często deklaruje też, że otrzymuje mało wsparcia ze strony rówieśników</span></strong>. 47,1% osób w wieku 11-15 lat oznajmiło na potrzeby badania, że poziom wsparcia ze strony rówieśników jest w ich przypadku niski, a dalsze 29,9% wskazało, iż jest on średni. <strong><span style="text-decoration: underline;">33,9% ankietowanych osób w wieku 11-15 lat sądzi natomiast, że otrzymuje zaledwie niskie wsparcie ze strony swoich rodziców</span></strong>. Wsparcie, nie tylko finansowe, ale też emocjonalne i duchowe, jest zaś bardzo ważne, zwłaszcza kiedy człowiek znajduje się w trudnych okolicznościach. Osamotnienie i brak pomocy są więc poważnymi zagrożeniami dla człowieka, które mogą spowodować na przykład popadnięcie jednostki w depresję.</p>
 <p>Wreszcie, jak wynika z przytoczonych statystyk, <strong><span style="text-decoration: underline;">osoby młode są również narażone na uzależnienia od różnego rodzaju używek</span></strong>. W latach 1995-2015 stale ponad 80% ankietowanych w wieku 15-16 lat deklarowało, że kiedykolwiek miało kontakt z <strong><span style="text-decoration: underline;">alkoholem</span></strong>. Ponad 50% młodych ludzi w tym wieku (w szczytowym pod tym względem okresie ponad 70%) używało zaś <strong><span style="text-decoration: underline;">papierosów</span></strong>. Dodatkowo, od mniej więcej 2011 roku pojawił się problem używania przez młodzież tzw. <strong><span style="text-decoration: underline;">dopalaczy</span></strong>, tak iż w latach 2011-2015 blisko 50% ankietowanych w wieku 15-16 lat deklarowało, że miało z nimi kontakt. W przedziale czasowym od 1995 do 2015 roku wzrósł też odsetek młodych ludzi deklarujących używanie <strong><span style="text-decoration: underline;">marihuany</span></strong>. Początkowo z marihuany korzystało kiedykolwiek około 10% osób w wieku 15-16 lat, zaś w 2015 roku około 26%. Nieco mniejszy odsetek osób w wieku 15-16 lat miewa natomiast kontakt z <strong><span style="text-decoration: underline;">lekami uspokajającymi/nasennymi</span></strong>, gdyż problem ten dotyczy niespełna 20% młodych ludzi. Około 10% młodzieży w wieku 15-16 lat przynajmniej raz miało natomiast kontakt z używaniem <strong><span style="text-decoration: underline;">substancji wziewnych</span></strong>.</p>
-<p>Reasumując, należy więc stwierdzić, że zagrożeniem dla polskiej młodzieży są nie tylko bieda, za którą idzie zmniejszenie szans życiowych, w tym edukacyjnych, ale też poczucie osamotnienia wynikające z braku należytego wsparcia ze strony rówieśników i rodziców. Poważnym zagrożeniem dla młodych ludzi w Polsce, negatywnie wpływającym na zdrowie fizyczne i psychiczne, mogą być też używki, w tym przede wszystkim najpopularniejsze, takie jak alkohol, papierosy, a w ostatnich latach także dopalacze.</p><br>
+<p>Reasumując, należy więc stwierdzić, że zagrożeniem dla polskiej młodzieży są nie tylko bieda, za którą idzie zmniejszenie szans życiowych, w tym edukacyjnych, ale też poczucie osamotnienia wynikające z braku należytego wsparcia ze strony rówieśników i rodziców. Poważnym zagrożeniem dla młodych ludzi w Polsce, negatywnie wpływającym na zdrowie fizyczne i psychiczne, mogą być też używki, w tym przede wszystkim najpopularniejsze, takie jak alkohol, papierosy, a w ostatnich latach także dopalacze.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

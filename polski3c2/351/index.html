@@ -91,4 +91,43 @@
 <p>c) M³odoœæ u Ró¿ewicza nie wi¹¿e siê z pozytywnymi doœwiadczeniami, co jest paradoksem. Okres ten, kojarzony z poznawaniem œwiata, kszta³towaniem siê to¿samoœci, niewinnoœci¹ i wra¿liwoœci¹, traci swe podstawowe cechy. Doœwiadczenie wojny wywiera na m³odoœæ negatywny wp³yw. Wiek bowiem nie wspó³gra z prze¿yciami podmiotu, który doœwiadcza okrucieñstwa wojny, prze¿ywa traumê. Jego zewnêtrzne piêkno kontrastuje z wewnêtrznym cierpieniem: "Nie jestem m³ody / niech was smuk³oœæ mego cia³a nie zwodzi / ani tkliwa biel szyi". M³odoœæ jest bolesna, poniewa¿ wi¹¿e siê z za³amaniem dotychczasowych systemów wartoœci, przez co podmiot liryczny odczuwa zagubienie, nie mo¿e w pe³ni okreœliæ swej to¿samoœci. Ma jedynie przekonanie o swej winie: "jestem morderc¹ / jestem narzêdziem"; podkreœla to tragizm dorastania w nieprzyjaznej rzeczywistoœci. M³odoœæ staje siê przekleñstwem, gdy¿ samo ocalenie nie przynosi ulgi - taki cz³owiek jest ju¿ na zawsze poraniony psychicznie, w¹tpi w jakiekolwiek wartoœci ("Pojêcia s¹ tylko wyrazami: / cnota i wystêpek / prawda i k³amstwo"). Czechowicz podobnie jak Ró¿ewicz prezentuje zgubienie m³odego cz³owieka, który próbuje odnaleŸæ siê w chaosie rzeczywistoœci, nie ma tak¿e ukszta³towanej to¿samoœci. Sugeruj¹ to s³owa: "jest nas dwudziestu dwóch". M³odoœæ wed³ug poety wi¹¿e siê z ograniczonymi mo¿liwoœciami i wiedz¹ cz³owieka: "Mam dopiero 22 lata / znam dopiero 22 piêtra". Mimo tego próbuje on okie³znaæ rzeczywistoœæ, ma te¿ œwiadomoœæ swej niepe³nej wiedzy: "zapomnia³em miliardy o swe dumie pamiêtam". </p>
 <p> </p>
 <p>d) Dla Ró¿ewicza czas dzieli siê na trzy p³aszczyzny: czas przed wojn¹, wojnê i rzeczywistoœæ po niej. Poeta zauwa¿a, i¿ up³yw czasu nie przynosi spokoju i pogodzenia siê z wydarzeniami. Konflikt ma bowiem destrukcyjny wp³yw na cz³owieka oraz jego sytuacjê, z tego powodu trauma jest ca³y czas obecna ("ocala³em / prowadzony na rzeŸ") i nie mo¿na powróciæ do dawnej wizji œwiata, poniewa¿ kluczowe pojêcia uleg³y wypaczeniu ("Jednako wa¿y cnota i wystêpek"). Czas tym samym nie leczy ran, co wskazuje na rozpad rzeczywistoœci, niemo¿noœæ osi¹gniêcia spokoju. Z kolei u Czechowicza czas jest czymœ nieprzerwanym, wi¹¿e siê z ci¹g³ymi zmianami oraz swoist¹ p³ynnoœci¹, która wywo³uje wra¿enie chaosu. Jednoczeœnie to potê¿na si³a ("nieskoñczony jest przemian ruch"), która zmienia za ka¿dym razem cz³owieka. Poetów ³¹czy przekonanie o tym, i¿ jest czynnikiem kszta³tuj¹cym cz³owieka oraz jego dzia³ania. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
-<p>. </p><br>
+<p>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -125,4 +125,43 @@
 <p>1. Young people generally spend a lot of time online, so it's more likely that's where they might come across criminals. It's also fairly easy to become a victim of cybercrime.</p>
 <p>(Młodzi ludzie zazwyczaj spędzają dużo czasu w Internecie, więc jest bardziej prawdopodobne, że to właśnie tam mogą natknąć się na przestępców. Dość łatwo jest również stać się ofiarą cyberprzestępczości.)</p>
 <p><br/>2. I think that cyber safety should definitely be part of school education. Cybercrime is getting more and more common so it should be addressed.</p>
-<p>(Myślę, że cyberbezpieczeństwo zdecydowanie powinno być częścią szkolnej edukacji. Cyberprzestępczość staje się coraz bardziej powszechna, więc należy się nią zająć.)</p><br>
+<p>(Myślę, że cyberbezpieczeństwo zdecydowanie powinno być częścią szkolnej edukacji. Cyberprzestępczość staje się coraz bardziej powszechna, więc należy się nią zająć.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

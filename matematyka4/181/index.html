@@ -42,4 +42,43 @@
 </script>
 </head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
-<p>Udowodnimy, że dla dowolnej liczby naturalnej <strong>n⩾3 </strong>istnieje liczba pierwsza <strong>p</strong> taka, że</p> <p><span> <math-expr expr="n&lt; p&lt; n!" syntax="text"></math-expr> </span>  </p> <hr/> <p>Dowód tego twierdzenia przeprowadzimy <span style="text-decoration: underline;">metodą nie wprost</span>. </p> <p>Dana jest liczba naturalna <strong>n</strong> taka, że <strong>n⩾3</strong>.</p> <p>Niech <strong>p</strong> będzie liczbą pierwszą taką, że  </p> <p><span> <math-expr expr="p leq n" syntax="text"></math-expr> </span>  </p> <p>i jest dzielnikiem liczby <strong>n!-1</strong>. </p> <p>Liczby <strong>n!-1</strong> oraz <strong>n!</strong> są względnie pierwsze, czyli <strong>nie</strong> mają żadnych wspólnych dzielników naturalnych oprócz liczby <strong>1</strong>. </p> <p>Liczba <strong>p</strong> <strong>nie</strong> może być dzielnikiem liczby <strong>n!</strong>. </p> <p>Każda liczba naturalna mniejsza lub równa n jest dzielnikiem liczby <strong>n!</strong>, ponieważ</p> <p><span> <math-expr expr="n! =1 cdot 2 cdot 3 cdot ldots cdot n" syntax="text"></math-expr> </span>  </p> <p>Zatem liczba <strong>p nie</strong> może być mniejsza bądź równa liczbie <strong>n</strong>. </p> <p>Otrzymujemy <span style="text-decoration: underline;">sprzeczność</span>. </p> <hr/> <p>Zatem udowodniliśmy, że dla dowolnej liczby naturalnej <strong>n⩾3 </strong>istnieje liczba pierwsza <strong>p</strong> taka, że</p> <p><span> <math-expr expr="n&lt; p&lt; n!" syntax="text"></math-expr> </span>  </p><br>
+<p>Udowodnimy, że dla dowolnej liczby naturalnej <strong>n⩾3 </strong>istnieje liczba pierwsza <strong>p</strong> taka, że</p> <p><span> <math-expr expr="n&lt; p&lt; n!" syntax="text"></math-expr> </span>  </p> <hr/> <p>Dowód tego twierdzenia przeprowadzimy <span style="text-decoration: underline;">metodą nie wprost</span>. </p> <p>Dana jest liczba naturalna <strong>n</strong> taka, że <strong>n⩾3</strong>.</p> <p>Niech <strong>p</strong> będzie liczbą pierwszą taką, że  </p> <p><span> <math-expr expr="p leq n" syntax="text"></math-expr> </span>  </p> <p>i jest dzielnikiem liczby <strong>n!-1</strong>. </p> <p>Liczby <strong>n!-1</strong> oraz <strong>n!</strong> są względnie pierwsze, czyli <strong>nie</strong> mają żadnych wspólnych dzielników naturalnych oprócz liczby <strong>1</strong>. </p> <p>Liczba <strong>p</strong> <strong>nie</strong> może być dzielnikiem liczby <strong>n!</strong>. </p> <p>Każda liczba naturalna mniejsza lub równa n jest dzielnikiem liczby <strong>n!</strong>, ponieważ</p> <p><span> <math-expr expr="n! =1 cdot 2 cdot 3 cdot ldots cdot n" syntax="text"></math-expr> </span>  </p> <p>Zatem liczba <strong>p nie</strong> może być mniejsza bądź równa liczbie <strong>n</strong>. </p> <p>Otrzymujemy <span style="text-decoration: underline;">sprzeczność</span>. </p> <hr/> <p>Zatem udowodniliśmy, że dla dowolnej liczby naturalnej <strong>n⩾3 </strong>istnieje liczba pierwsza <strong>p</strong> taka, że</p> <p><span> <math-expr expr="n&lt; p&lt; n!" syntax="text"></math-expr> </span>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

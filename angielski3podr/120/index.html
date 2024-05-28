@@ -133,4 +133,43 @@
 <p>• Lionel Messi - he's one of the most recognised football players. He's very skilful and focused on his goals. </p>
 <p>(Lionel Messi - jest jednym z najbardziej rozpoznawalnych piłkarzy. Jest bardzo utalentowany i skoncentrowany na swoich celach.)<br/><br/></p>
 <p>• LeBron James - he's a world-famous basketball player. He can be a role model due to his charity work and social activism.</p>
-<p>(LeBron James - jest światowej sławy koszykarzem. Może być wzorem do naśladowania ze względu na swoją działalność charytatywną i aktywizm społeczny.)</p><br>
+<p>(LeBron James - jest światowej sławy koszykarzem. Może być wzorem do naśladowania ze względu na swoją działalność charytatywną i aktywizm społeczny.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

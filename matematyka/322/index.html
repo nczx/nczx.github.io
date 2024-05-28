@@ -8,4 +8,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Obliczamy średnią temperaturę w pierwszym tygodniu korzystając z danych na wykresie:  </p> <p> <object class="math big" data="./data/1118416-0.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy średnią temperaturę w drugim tygodniu korzystając z danych na wykresie:</p> <p> <object class="math big" data="./data/1118416-1.svg" type="image/svg+xml"></object> </p> <p>Obliczamy średnią temperaturę w obu tygodniach korzystając z danych na wykresie:</p> <p> <object class="math big" data="./data/1118416-2.svg" type="image/svg+xml"></object> </p> <p>Zauważamy, że:</p> <p> <object class="math big" data="./data/1118416-3.svg" type="image/svg+xml"></object>    </p> <hr/> <p><strong>Odp: </strong><span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>D</strong></span><span style="text-decoration:underline;">.</span></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Wyznaczamy średnią liczb z wagami <strong>X</strong>: </p> <p> <object class="math big" data="./data/1118424-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1118424-1.svg" type="image/svg+xml"></object>  </p> <p>Wyznaczamy średnią liczb z wagami <strong>Y</strong>:</p> <p> <object class="math big" data="./data/1118424-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1118424-3.svg" type="image/svg+xml"></object> </p> <p>Wobec tego:</p> <p> <object class="math big" data="./data/1118424-4.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>Odp: </strong><span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>B</strong></span><span style="text-decoration:underline;">.</span></p><br>
+<p>Wyznaczamy średnią liczb z wagami <strong>X</strong>: </p> <p> <object class="math big" data="./data/1118424-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1118424-1.svg" type="image/svg+xml"></object>  </p> <p>Wyznaczamy średnią liczb z wagami <strong>Y</strong>:</p> <p> <object class="math big" data="./data/1118424-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1118424-3.svg" type="image/svg+xml"></object> </p> <p>Wobec tego:</p> <p> <object class="math big" data="./data/1118424-4.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>Odp: </strong><span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>B</strong></span><span style="text-decoration:underline;">.</span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

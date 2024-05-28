@@ -45,4 +45,43 @@
 <p>Do rozpadu Czechosłowacji na dwa państwa doszło <strong>31 grudnia 1992 r.</strong> Od 1 stycznia 1993 r. funkcjonowały dwa, niezależne od siebie państwa - <strong>Czechy</strong> i <strong>Słowacja.</strong> Za autorów decyzji o podziale Czechosłowacji uważa się Václava Klausa (czeski polityk) i Vladimíra Mečiara. (słowacki polityk).  </p>
 <p><strong>"Aksamitny rozwód"</strong> to potoczne określenie na rozpad Czechosłowacji. Nazwa nawiązuje do <strong>aksamitnej rewolucji,</strong> która miała miejsce jesienią 1989 r. w ramach Jesieni Narodów. Określenie "aksamitny" odnosi się do <strong>pokojowego przebiegu wydarzeń.</strong> </p>
 <p><img alt="" height="294" src="./data/1190041-0.jpg" width="580"/></p>
-<p>Podział Czechosłowacji, źródło mapy: Wikimedia Commons. </p><br>
+<p>Podział Czechosłowacji, źródło mapy: Wikimedia Commons. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

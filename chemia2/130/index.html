@@ -56,4 +56,43 @@
 <p>Zdania prawdziwe to  <span style="text-decoration: underline;"><em><strong> b oraz c </strong></em></span>.</p>
 <p><em>wyjaśnienie zdania fałszywego a: Glikole to alkohole dihydroksylowe.</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>a)</p> <p> <math-expr expr="CH_2OH-CH_2OH+2\ Na-&gt;CH_2ONa-CH_2ONa+H_2uarr" syntax="text"></math-expr>   </p> <p><br/>b) </p> <p> <math-expr expr="2\ CH_2OH-CH_2OH+5\ O_2-&gt;4\ CO_2uarr+6\ H_2O" syntax="text"></math-expr>   </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Najprostszym alkoholem polihydroksylowym jest etano-1,2-diol o wzorze CH<sub>2</sub>OH-CH<sub>2</sub>OH (wzór sumaryczny C<sub>2</sub>H<sub>6</sub>O<sub>2</sub>).</p> <p> <math-expr expr="m_(C_2H_6O_2)=62\ u" syntax="text"></math-expr>    </p> <p> <math-expr expr="m_C=12\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_H=1\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_O=16\ u" syntax="text"></math-expr>   </p> <p>Liczymy zawartość procentową poszczególnych pierwiastków:</p> <p> <math-expr expr="%C=(2*12\ u)/(62\ u)*100%=38,7%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%H=(6*1\ u)/(62\ u)*100%=9,7%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%O=(2*16\ u)/(62\ u)*100%=51,6%" syntax="text"></math-expr>     </p><br>
+<p>Najprostszym alkoholem polihydroksylowym jest etano-1,2-diol o wzorze CH<sub>2</sub>OH-CH<sub>2</sub>OH (wzór sumaryczny C<sub>2</sub>H<sub>6</sub>O<sub>2</sub>).</p> <p> <math-expr expr="m_(C_2H_6O_2)=62\ u" syntax="text"></math-expr>    </p> <p> <math-expr expr="m_C=12\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_H=1\ u" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_O=16\ u" syntax="text"></math-expr>   </p> <p>Liczymy zawartość procentową poszczególnych pierwiastków:</p> <p> <math-expr expr="%C=(2*12\ u)/(62\ u)*100%=38,7%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%H=(6*1\ u)/(62\ u)*100%=9,7%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%O=(2*16\ u)/(62\ u)*100%=51,6%" syntax="text"></math-expr>     </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

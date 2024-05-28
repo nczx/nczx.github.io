@@ -47,4 +47,43 @@
 <p>a)</p> <p> <math-expr expr="H-##C_(#H^|)^(#H_|)-##C_(#H^|)^(#H_|)-##C_(#H^|)^(#H_|)-##C_(#H^|)^(#H_|)-##N_(#H^|)^(#H_|)" syntax="text"></math-expr>   </p> <p><br/>b) </p> <p><img alt="" height="125" src="./data/933703-0.jpg" width="115"/></p> <p><br/>c)</p> <p><img alt="" height="150" src="./data/933703-1.jpg" width="76"/></p> <p><br/>d)</p> <p><img alt="" height="130" src="./data/933703-2.jpg" width="232"/></p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Równanie reakcji: </p> <p> <math-expr expr='CH_3CH_2CH_2NH_2+HCl#(-&gt;)^(H_2O)#(CH_3CH_2CH_2NH_3^+Cl^-)_("chlorek propylo-1-amoniowy")' syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Wzór difenyloaminy (<span> <math-expr expr="C_12H_11N" syntax="text"></math-expr> </span> )  to:</p> <p><img alt="" height="130" src="./data/933724-0.jpg" width="66"/></p> <p>Jest to zatem  <span style="text-decoration: underline;"><em><strong> amina drugorzędowa </strong></em></span>.</p> <p>Masa cząsteczkowa difenyloaminy:</p> <p><span> <math-expr expr="m=12*m_C+11*m_H+m_N=12*12\ u+11*1\ u+14\ u=bbul(169\ u)" syntax="text"></math-expr> </span>   </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Z treści zadania wiemy, że wchłonięciu uległo maksymalnie 6 <span style="font-weight: 400;">𝝁g kadmu. Wiemy też, że wchłonięciu ulega maksymalnie 80% wdychanego kadmu. Liczymy ilość wdychanego kadmu:</span></p> <p><span style="font-weight: 400;"> <math-expr expr="6\ mug\ \ -\ \ 80%" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"> <math-expr expr="x\ \ -\ \ 100%" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"> <math-expr expr="x=(100%*6\ mug)/(80%)=7,5\ mug" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"><strong>Odpowiedź: Osoba ta w ciągu doby wdycha 7,5 𝝁g kadmu.</strong>   </span></p><br>
+<p>Z treści zadania wiemy, że wchłonięciu uległo maksymalnie 6 <span style="font-weight: 400;">𝝁g kadmu. Wiemy też, że wchłonięciu ulega maksymalnie 80% wdychanego kadmu. Liczymy ilość wdychanego kadmu:</span></p> <p><span style="font-weight: 400;"> <math-expr expr="6\ mug\ \ -\ \ 80%" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"> <math-expr expr="x\ \ -\ \ 100%" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"> <math-expr expr="x=(100%*6\ mug)/(80%)=7,5\ mug" syntax="text"></math-expr>   </span></p> <p><span style="font-weight: 400;"><strong>Odpowiedź: Osoba ta w ciągu doby wdycha 7,5 𝝁g kadmu.</strong>   </span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -139,4 +139,43 @@
 <p>1. Yes, I think it's possible that space tourism will happen within the next 50 years. </p>
 <p>(Tak, myślę, że to możliwe, że turystyka kosmiczna pojawi się w ciągu najbliższych 50 lat.)</p>
 <p><br/>2. No, I wouldn't like to go on a space holiday. It would be expensive and I've seen too many disaster films set in space. There are lots of things that could go wrong.</p>
-<p>(Nie, nie chciał(a)bym pojechać na kosmiczne wakacje. Byłoby to drogie i widziałem/am zbyt wiele filmów katastroficznych osadzonych w kosmosie. Jest wiele rzeczy, które mogłyby pójść nie tak.)</p><br>
+<p>(Nie, nie chciał(a)bym pojechać na kosmiczne wakacje. Byłoby to drogie i widziałem/am zbyt wiele filmów katastroficznych osadzonych w kosmosie. Jest wiele rzeczy, które mogłyby pójść nie tak.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

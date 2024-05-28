@@ -56,4 +56,43 @@
 <p> </p>
 <p>1. Yes, I believe they do. Outdoor activities improve young people's lives by improving their physical health and encouraging them to be active. It's also a great opportunity to practise team work and make friends.</p>
 <p>(Tak, wierzę, że tak. Zajęcia na świeżym powietrzu poprawiają jakość życia młodych ludzi, poprawiając ich zdrowie fizyczne i zachęcając do aktywności. To także świetna okazja, by ćwiczyć pracę zespołową i nawiązywać przyjaźnie.)<br/><br/>2. I agree with this statement. When you spend time in an environment, you begin to understand it better. 'Care about' in this context means being interested and worried about the natural world. It's about feeling responsible and caring for nature, wanting to take steps to keep it safe.</p>
-<p>(Zgadzam się z tym stwierdzeniem. Kiedy spędza się czas w danym środowisku, zaczyna się je lepiej rozumieć. "Troszczyć się o" w tym kontekście oznacza być zainteresowanym światem przyrody i martwić się o niego. Chodzi o poczucie odpowiedzialności i troski o przyrodę, chęć podjęcia kroków w celu zapewnienia jej bezpieczeństwa.)</p><br>
+<p>(Zgadzam się z tym stwierdzeniem. Kiedy spędza się czas w danym środowisku, zaczyna się je lepiej rozumieć. "Troszczyć się o" w tym kontekście oznacza być zainteresowanym światem przyrody i martwić się o niego. Chodzi o poczucie odpowiedzialności i troski o przyrodę, chęć podjęcia kroków w celu zapewnienia jej bezpieczeństwa.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

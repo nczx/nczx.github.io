@@ -1,3 +1,42 @@
 <head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
-<p>Z podanego fragmentu nie wynika, kim dokładnie jest narrator. Swoją opowieść prowadzi w trzeciej osobie i relacjonuje to, co widzi. Prowadzona przez niego narracja jest konkretna, precyzyjna, ale pourywana i pozornie chaotyczna. Sposób, w jaki opisuje przestrzeń, można określić jako oszczędny. Jednak to właśnie w tych fragmentach pozwala sobie na elementy oceny - używa bowiem słów i środków artystycznych świadczących o nacechowaniu emocjonalnym, np.: <em>Jakże pięknie było na wsi! Jesień była w pełni!. </em>Zachowania bohaterów są natomiast ukazane przy pomocy słownictwa neutralnego, np.: <em>Chorzy nerwowo zbliżyli się do stołu. W miednicy leżała sterta marchwii, bulwiastej i wciąż brudnej od ziemi. Oczyszczali ją naprędce o spodnie i koszule i maczali w miodzie, spoglądając obojętnie to na gospodarza pozującego w tle Akropolu, to na proboszcza krążącego po pszczelisku z kropidłem i wodą święconą w plastikowym, czerwonym opakowaniu po sosie cygańskim Winiary. </em></p><br>
+<p>Z podanego fragmentu nie wynika, kim dokładnie jest narrator. Swoją opowieść prowadzi w trzeciej osobie i relacjonuje to, co widzi. Prowadzona przez niego narracja jest konkretna, precyzyjna, ale pourywana i pozornie chaotyczna. Sposób, w jaki opisuje przestrzeń, można określić jako oszczędny. Jednak to właśnie w tych fragmentach pozwala sobie na elementy oceny - używa bowiem słów i środków artystycznych świadczących o nacechowaniu emocjonalnym, np.: <em>Jakże pięknie było na wsi! Jesień była w pełni!. </em>Zachowania bohaterów są natomiast ukazane przy pomocy słownictwa neutralnego, np.: <em>Chorzy nerwowo zbliżyli się do stołu. W miednicy leżała sterta marchwii, bulwiastej i wciąż brudnej od ziemi. Oczyszczali ją naprędce o spodnie i koszule i maczali w miodzie, spoglądając obojętnie to na gospodarza pozującego w tle Akropolu, to na proboszcza krążącego po pszczelisku z kropidłem i wodą święconą w plastikowym, czerwonym opakowaniu po sosie cygańskim Winiary. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -51,4 +51,43 @@
 <li>nieustanna nêdza;</li>
 <li>nieskoñczona nêdza. </li>
 </ul><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Wed³ug autora nie ma mo¿liwoœci ucieczki od nudy. Chocia¿ bohaterowie d¹¿¹ do jej chwilowego rozproszenia, to ostatecznie nie mog¹ siê w pe³ni z niej wyzwoliæ. Równie¿ narastaj¹ca mechanizacja spo³eczeñstwa powoduje, i¿ monotonia staje siê dominuj¹cym elementem rzeczywistoœci i wkracza nawet w zagadnienia metafizyczne. </p><br>
+<p>Wed³ug autora nie ma mo¿liwoœci ucieczki od nudy. Chocia¿ bohaterowie d¹¿¹ do jej chwilowego rozproszenia, to ostatecznie nie mog¹ siê w pe³ni z niej wyzwoliæ. Równie¿ narastaj¹ca mechanizacja spo³eczeñstwa powoduje, i¿ monotonia staje siê dominuj¹cym elementem rzeczywistoœci i wkracza nawet w zagadnienia metafizyczne. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

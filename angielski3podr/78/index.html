@@ -280,4 +280,43 @@
 <p><br/>My family will probably have our kitchen renovated soon.</p>
 <p><strong>Uzasadnienie</strong>: zdanie opisujące przewidywania dotyczące przyszłości - czas <em>future simple</em>. Konstrukcja: <em>will have + </em>dopełnienie + <em>past participle</em>.</p>
 <p><br/>My grandma is having her solar panels fitted next week.</p>
-<p><strong>Uzasadnienie</strong>: zdanie opisujące szczegółowo zaplanowaną czynność w najbliższej przyszłości - czas <em>present continuous</em>. Konstrukcja: <em>am/is/are having/getting </em>+ dopełnienie + <em>past participle</em>.</p><br>
+<p><strong>Uzasadnienie</strong>: zdanie opisujące szczegółowo zaplanowaną czynność w najbliższej przyszłości - czas <em>present continuous</em>. Konstrukcja: <em>am/is/are having/getting </em>+ dopełnienie + <em>past participle</em>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

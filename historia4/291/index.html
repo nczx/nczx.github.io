@@ -51,4 +51,43 @@
 </li>
 <li>kolejną wadą obrad Okrągłego Stołu było to, że <strong>Polska była ostatnim z krajów Jesieni Ludów, w którym doszło do w pełni wolnych wyborów,</strong> a także to że transformacja doprowadziła do bogacenia się dawnej nomenklatury partyjnej.</li>
 </ul>
-<p><strong>2) </strong>Tytuł "Ku mniejszemu dobru" użyty przez przez Bernarda Margueritte'a może oznaczać liczne wątpliwości, ale także ciężki kompromis jaki został zawarty między władzą komunistyczną i opozycją, który ostatecznie doprowadził do bezkrwawej transformacji ustrojowo-gospodarczej. </p><br>
+<p><strong>2) </strong>Tytuł "Ku mniejszemu dobru" użyty przez przez Bernarda Margueritte'a może oznaczać liczne wątpliwości, ale także ciężki kompromis jaki został zawarty między władzą komunistyczną i opozycją, który ostatecznie doprowadził do bezkrwawej transformacji ustrojowo-gospodarczej. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -69,4 +69,43 @@
 <p>4. expressive eyes which </p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
-<p>Tekst zapoznaje nas ze street artem i z tym, jak wreszcie stał się formą <strong>sztuki</strong>. Zwraca uwagę na fakt, iż globalność tej dziedziny sprawia, że jest ona wyjątkowa w świecie sztuki. Następnie przedstawionych jest czworo dobrze znanych artystów ulicznych. Pierwszą z nich, Mademoiselle Maurice, zaintrygowało origami kiedy <strong>była w Japonii</strong> i teraz tworzy je sama, czasem z pomocą innych. Pez, artysta z Barcelony, znalazł inspirację w komiksach. Jego działa zawierają <strong>niebieski symbol ryby</strong>. Oprócz wystawiania swoich prac dookoła świata, Pez publikuje je również w książkach i w Internecie.  DALeast, chiński artysta specjalizujący się w malowaniu zwierząt, sprawia wrażenie tworzenia z metalu, jednak osiąga efekt 3D za pomocą farby. Czwarty artysta, znany jako C215, wykorzystuje sztukę do zwrócenia uwagi na problemy społeczne. Jego postaci mają niesamowicie <strong>pełne wyrazu oczy, które</strong> wywierają silny wpływ na oglądających je ludzi. Mimo, że jest Francuzem, jego prace pojawiły się w kilku krajach na świecie. </p><br>
+<p>Tekst zapoznaje nas ze street artem i z tym, jak wreszcie stał się formą <strong>sztuki</strong>. Zwraca uwagę na fakt, iż globalność tej dziedziny sprawia, że jest ona wyjątkowa w świecie sztuki. Następnie przedstawionych jest czworo dobrze znanych artystów ulicznych. Pierwszą z nich, Mademoiselle Maurice, zaintrygowało origami kiedy <strong>była w Japonii</strong> i teraz tworzy je sama, czasem z pomocą innych. Pez, artysta z Barcelony, znalazł inspirację w komiksach. Jego działa zawierają <strong>niebieski symbol ryby</strong>. Oprócz wystawiania swoich prac dookoła świata, Pez publikuje je również w książkach i w Internecie.  DALeast, chiński artysta specjalizujący się w malowaniu zwierząt, sprawia wrażenie tworzenia z metalu, jednak osiąga efekt 3D za pomocą farby. Czwarty artysta, znany jako C215, wykorzystuje sztukę do zwrócenia uwagi na problemy społeczne. Jego postaci mają niesamowicie <strong>pełne wyrazu oczy, które</strong> wywierają silny wpływ na oglądających je ludzi. Mimo, że jest Francuzem, jego prace pojawiły się w kilku krajach na świecie. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

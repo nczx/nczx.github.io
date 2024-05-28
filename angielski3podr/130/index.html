@@ -108,4 +108,43 @@
 <p>7. walking and talking on the phone</p>
 <p><strong>Fragment w tekście: </strong>"Forget social media and call your friends. Hearing someone's voice is so much nicer than seeing a row of emojis. And while you're waiting for them to pick up - start walking and don't stop till you hang up." - Zapomnij o mediach społecznościowych i zadzwoń do swoich przyjaciół. Usłyszenie czyjegoś głosu jest o wiele milsze niż oglądanie rzędu emotikon. A kiedy czekasz, aż odbiorą - zacznij chodzić i nie zatrzymuj się, dopóki się nie rozłączysz.</p>
 <p>8. lose weight or strengthen your muscles</p>
-<p><strong>Fragment w tekście: </strong>"Gaining weight and losing stamina didn't happen overnight - and neither will losing kilos or strengthening your muscles." - Przybranie na wadze i utrata wytrzymałości nie nastąpiły z dnia na dzień - i podobnie będzie z utratą kilogramów czy wzmocnieniem mięśni.</p><br>
+<p><strong>Fragment w tekście: </strong>"Gaining weight and losing stamina didn't happen overnight - and neither will losing kilos or strengthening your muscles." - Przybranie na wadze i utrata wytrzymałości nie nastąpiły z dnia na dzień - i podobnie będzie z utratą kilogramów czy wzmocnieniem mięśni.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

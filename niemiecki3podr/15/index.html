@@ -50,4 +50,43 @@
 <p><br/>Czas przeszły <em>Perfekt</em> z czasownikiem posiłkowym <em>sein</em> tworzą czasowniki wyrażające ruch i przemieszczenie (np. <em>fahren</em> - jechać, <em>gehen</em> - iść, chodzić), czasowniki określające zmianę stanu (<em>aufstehen</em> - wstawać, <em>einschlafen</em> - zasypiać), wyrażające zajście, wydarzenie (<em>passieren</em> - dziać się), a także wyjątki: <em>bleiben</em> - zostawać, <em>sein</em> - być, <em>werden</em> - stawać się, zostawać.</p>
 <p><br/>Czasowniki nierozdzielnie złożone wraz z czasownikami zakończonymi na -<em>ieren</em> (np. <em>studieren</em>, <em>telefonieren</em>) tworzą imiesłów czasu przeszłego bez przedrostka <em>ge</em>-.</p>
 <p><br/>W przypadku czasowników rozdzielnie złożonych (np. <em>aufräumen</em> - sprzątać, <em>aufstehen</em> - wstawać, <em>einkaufen</em> - kupować) przedrostek <em>ge</em>- znajduje się między przedrostkiem a tematem czasownika. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

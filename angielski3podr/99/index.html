@@ -74,4 +74,43 @@
 <p>• I agree with what it suggests about the justice system. It's true that criminals, such as thieves, robbers or murderers generally get arrested, go to court, and then to prison. However, many often escape justice and instead innocent people go to trial and get punished.</p>
 <p>(Zgadzam się z tym, co sugeruje na temat wymiaru sprawiedliwości. To prawda, że przestępcy, tacy jak złodzieje, rabusie czy mordercy, są zazwyczaj aresztowani, trafiają do sądu, a następnie idą do więzienia. Jednak wielu z nich często wymyka się wymiarowi sprawiedliwości, a zamiast tego niewinni ludzie stają przed sądem i zostają ukarani.)<br/><br/></p>
 <p>• Taking the law into your own hands means you're actually breaking it, so I don't think people should do it. Such people often act impulsively and they might not always be right. I agree that the justice system needs improvement but becoming a criminal yourself isn't the answer.</p>
-<p>(Branie prawa w swoje ręce oznacza, że tak naprawdę je łamiesz, więc uważam, że ludzie nie powinni tego robić. Tacy ludzie często działają impulsywnie i nie zawsze mają rację. Zgadzam się, że wymiar sprawiedliwości wymaga poprawy, ale zostanie przestępcą nie jest rozwiązaniem.)</p><br>
+<p>(Branie prawa w swoje ręce oznacza, że tak naprawdę je łamiesz, więc uważam, że ludzie nie powinni tego robić. Tacy ludzie często działają impulsywnie i nie zawsze mają rację. Zgadzam się, że wymiar sprawiedliwości wymaga poprawy, ale zostanie przestępcą nie jest rozwiązaniem.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

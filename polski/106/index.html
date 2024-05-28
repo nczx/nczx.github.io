@@ -4,4 +4,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Żeromski pokazuje w opowiadaniu właściwą dla literatury romantycznej przemianę mężczyzny w żołnierza, bojownika Sprawy walczącego o ideę wolności. W wyniku tej metamorfozy jest on pozbawiony nienawiści, zdolny do przebaczenia, co z kolei przypomina postawę typowo franciszkańską. Romantyczne nawiązania pojawiają się w opisie Winrycha, którego włosy zostają porównane do orlich piór. Kontekstu do tego porównania należy szukać w <em>Improwizacji </em>z <em>Dziadów cz. III. </em>Powstaniec ukazany jest niczym prometeiczny wojownik, opętany szaleńczą ideą walki oraz zdecydowany na poświęcenie. Winrych jednak został wykreowany na wzór św. Franciszka z Asyżu, ubrany w proste, skromne ubrania, pozbawiony luksusów, dobrej żywności i broni. W chwili śmierci widać w jego podejściu pojednanie z ludźmi, również własnymi oprawcami. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Fragment: "W ostatnim akcie historii Winrycha zapisała się więc miłość - a nie nienawiść, ofiara - a nie zemsta" mówi o postawie powstańca, który uległ przemianie. Został on pokazany jako odwrotność propagowanych w romantyzmie wzorców powstańczych. Konradowską nienawiść zastąpiła miłość właściwa św. Franciszkowi. Zamiast pieśni zemsty mamy ofiarę z własnego życia, oddaną idei wolności.</p><br>
+<p>Fragment: "W ostatnim akcie historii Winrycha zapisała się więc miłość - a nie nienawiść, ofiara - a nie zemsta" mówi o postawie powstańca, który uległ przemianie. Został on pokazany jako odwrotność propagowanych w romantyzmie wzorców powstańczych. Konradowską nienawiść zastąpiła miłość właściwa św. Franciszkowi. Zamiast pieśni zemsty mamy ofiarę z własnego życia, oddaną idei wolności.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

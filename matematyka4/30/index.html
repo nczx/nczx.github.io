@@ -66,4 +66,43 @@
 <p><strong><span style="color: rgb(24, 116, 220);">2)</span> </strong>wyrzuciliśmy cyfry: <strong>1, 2, 3</strong></p>
 <p>Z wyrzuconych cyfr możemy uzyskać liczby: <strong>123, 132, 213, 231, 312, 321</strong></p>
 <p>Wnioskujemy, że w ten sposób możemy otrzymać <strong>3+6=9</strong> liczb.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<p>Z treści zadania wiemy, że w liczbach czterocyfrowych ma nie występować cyfra <strong>0</strong>, a suma ich cyfr <br/>ma być mniejsza od <strong>35</strong>.</p> <p>Zauważmy, że, gdy mamy liczbę złożoną z cyfr  <strong>9, 9, 9, 9</strong> to ich suma wynosi <strong>36</strong>, natomiast, gdy <br/>mamy liczbę złożoną z cyfr <strong>9, 9, 9, 8</strong>, to sum jej cyfr wynosi <strong>35</strong>.</p> <p>Wnioskujemy, że aby suma cyfr w liczbie czterocyfrowej była mniejsza od <strong>35</strong>, to nie może to być liczba:<br/><strong>9999, 9998, 9989, 9899, 8999</strong>. Zatem mamy <strong>5</strong> liczb, które nie spełniają warunków zadania.</p> <p>Obliczamy, ile mamy wszystkich liczb czterocyfrowych, w których zapisie nie występuje <strong>0</strong>:</p> <p><span> <math-expr expr="9*9*9*9=6561" syntax="text"></math-expr> </span></p> <p>Zatem liczb czterocyfrowych, w których zapisie nie występuje <strong>0</strong> oraz których suma cyfr jest mniejsza <br/>od <strong>35</strong> mamy łącznie:</p> <p><span> <math-expr expr="6561-5=6556" syntax="text"></math-expr> </span>  </p><br>
+<p>Z treści zadania wiemy, że w liczbach czterocyfrowych ma nie występować cyfra <strong>0</strong>, a suma ich cyfr <br/>ma być mniejsza od <strong>35</strong>.</p> <p>Zauważmy, że, gdy mamy liczbę złożoną z cyfr  <strong>9, 9, 9, 9</strong> to ich suma wynosi <strong>36</strong>, natomiast, gdy <br/>mamy liczbę złożoną z cyfr <strong>9, 9, 9, 8</strong>, to sum jej cyfr wynosi <strong>35</strong>.</p> <p>Wnioskujemy, że aby suma cyfr w liczbie czterocyfrowej była mniejsza od <strong>35</strong>, to nie może to być liczba:<br/><strong>9999, 9998, 9989, 9899, 8999</strong>. Zatem mamy <strong>5</strong> liczb, które nie spełniają warunków zadania.</p> <p>Obliczamy, ile mamy wszystkich liczb czterocyfrowych, w których zapisie nie występuje <strong>0</strong>:</p> <p><span> <math-expr expr="9*9*9*9=6561" syntax="text"></math-expr> </span></p> <p>Zatem liczb czterocyfrowych, w których zapisie nie występuje <strong>0</strong> oraz których suma cyfr jest mniejsza <br/>od <strong>35</strong> mamy łącznie:</p> <p><span> <math-expr expr="6561-5=6556" syntax="text"></math-expr> </span>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

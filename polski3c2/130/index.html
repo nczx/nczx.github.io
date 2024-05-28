@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Kazimierz Wyka twierdzi, i¿ rzeczywistoœæ poetycka jest w wierszu przede wszystkim "wiedziana i powiedziana", wykracza wiêc poza to, co rzeczywiste. Z kolei Sandauer dopatruje siê innego charakteru tej rzeczywistoœci - jest dla niego nie "wiedziana", ale mimo wszystko widziana, powi¹zana z konkretnym zmys³em. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Zele twierdzi, ¿e wiersza Przybosia nie mo¿na uznaæ za przyk³ad liryki opisowej. Opis katedry, chocia¿ zaprezentowany w dokumentalny sposób, jest ukazany jednak przez pryzmat wra¿liwoœci i wyobraŸni podmiotu lirycznego. Sam zaœ budynek to pozornie g³ówny obiekt fascynacji wypowiadaj¹cego siê. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Przybosia szczególnie interesuje proces powstania budowli. Odkrywa tajemnice jej istnienia, dziêki czemu sam wchodzi w rolê twórcy i kreuje rzeczywistoœæ. Czyni to jednak w innym wymiarze ni¿ ludzie wznosz¹cy katedrê. </p><br>
+<p>Przybosia szczególnie interesuje proces powstania budowli. Odkrywa tajemnice jej istnienia, dziêki czemu sam wchodzi w rolê twórcy i kreuje rzeczywistoœæ. Czyni to jednak w innym wymiarze ni¿ ludzie wznosz¹cy katedrê. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

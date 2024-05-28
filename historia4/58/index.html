@@ -45,4 +45,43 @@
 <p><strong>1) </strong>Prezydent USA negatywnie ocenił postawę Japończyków. Wskazał, że Japonia fałszywie dążyła do zachowania pokoju, podczas gdy przez dłuższy czas przygotowywała plan ataku na Stany Zjednoczone. Atak uznał za haniebny. Roosevelt dążył, żeby Kongres uchwalił stan wojny między USA i Japonią. </p>
 <p><strong>2) </strong>Tak, orędzie Roosevelta, którego celem było uchwalenie przez Kongres stanu wojny między USA a Japonią, wyrażało postulat przedstawiony na plakacie. Grafika wzywała do pomszczenia ataku Japończyków na Pearl Harbour z morza i powietrza. </p>
 <p><strong><img alt="" height="291" src="./data/1179785-0.jpg" width="225"/></strong></p>
-<p>Źródło grafiki: www.digitalcollections.hclib.org</p><br>
+<p>Źródło grafiki: www.digitalcollections.hclib.org</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

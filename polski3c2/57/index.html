@@ -74,4 +74,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>W utworze Boles³awa Leœmiana pt. <em>Dziewczyna</em> mo¿na dostrzec obecnoœæ elementów typowych dla baœni. Jednym z nich jest na przyk³ad nieokreœlone miejsce oraz czas ukazanych wydarzeñ. Z tego te¿ powodu losy braci zdaj¹ siê rozgrywaæ poza tymi kategoriami, przez co nabieraj¹ uniwersalnego znaczenia, ukazuj¹ prawdê na temat cz³owieka, który d¹¿y do przekroczenia granic poznania. Równie¿ dobór bohaterów nawi¹zuje do baœni - dwunastu braci pojawia siê np. w utworach braci Grimm, w innych zaœ dzie³ach wystêpuje równie¿ postaæ kobieca oczekuj¹ca na uratowanie - podobnie jak tajemnicza dziewczyna: </p>
 <p><em>A poza murem p³aka³ g³os, dziewczêcy g³os zaprzepaszczony.</em><br/><br/><em>I pokochali g³osu dŸwiêk i chêtny domys³ o Dziewczynie,</em><br/><em>I zgadywali kszta³ty ust po tym, jak œpiew od ¿alu ginie…</em></p>
 <p>Leœmian jednak wykorzystuje nie tylko pewne elementy, ale równie¿ motywy czy typow¹ konstrukcjê baœni. Opisuje bowiem bohaterów, którzy mierz¹ siê z ogromnym wyzwaniem - staraj¹ siê pokonaæ przeszkody, by wyzwoliæ dziewczynê: "Porwali m³oty w tward¹ d³oñ i jêli w mury t³uc z ³oskotem! / I nie wiedzia³a œlepa noc, kto jest cz³owiekiem, a kto m³otem?". Ich trud ma tym samym umo¿liwiæ im osi¹gniêcie wymarzonego celu: "O, prêdzej skruszmy zimny g³az, nim œmieræ Dziewczynê rdz¹ powlecze!". W wierszu Leœmiana obecne s¹ tak¿e element cudownoœci podkreœlaj¹ce niezwyk³oœæ oraz niejednoznacznoœæ przedstawionej rzeczywistoœci. Mo¿na tu wymieniæ m.in. pracê cieni oraz m³oty, które przejê³y obowi¹zki braci. </p>
-<p>Poeta zdaje siê jednak przetwarzaæ konwencjê baœni na swój oryginalny sposób, o czym œwiadczy zakoñczenie utworu: m³oty ostatecznie krusz¹ mur, jednak okazuje siê, ¿e za nim znajduje siê pustka. Jest to pewna wskazówka interpretacyjna dla czytelnika. Nie ma tutaj bowiem typowego dla baœni zwyciêstwa dobra nad z³em, pojawia siê za to ponadczasowa refleksja na temat d¹¿eñ cz³owieka oraz granic poznania. Sugeruje to antybaœniowy wymiar rzeczywistoœci zwi¹zany z tragizmem cz³owieka, niemo¿noœci¹ zaspokojenia swych pragnieñ. Prowadzi to w efekcie do pog³êbionej zadumy filozoficznej. Umo¿liwia równie¿ poecie zaprezentowanie z³o¿onego wizerunku rzeczywistoœci: pe³nej cudownoœci, ale tak¿e grozy. </p><br>
+<p>Poeta zdaje siê jednak przetwarzaæ konwencjê baœni na swój oryginalny sposób, o czym œwiadczy zakoñczenie utworu: m³oty ostatecznie krusz¹ mur, jednak okazuje siê, ¿e za nim znajduje siê pustka. Jest to pewna wskazówka interpretacyjna dla czytelnika. Nie ma tutaj bowiem typowego dla baœni zwyciêstwa dobra nad z³em, pojawia siê za to ponadczasowa refleksja na temat d¹¿eñ cz³owieka oraz granic poznania. Sugeruje to antybaœniowy wymiar rzeczywistoœci zwi¹zany z tragizmem cz³owieka, niemo¿noœci¹ zaspokojenia swych pragnieñ. Prowadzi to w efekcie do pog³êbionej zadumy filozoficznej. Umo¿liwia równie¿ poecie zaprezentowanie z³o¿onego wizerunku rzeczywistoœci: pe³nej cudownoœci, ale tak¿e grozy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

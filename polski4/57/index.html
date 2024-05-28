@@ -45,4 +45,43 @@
 <p>Polskość w ujęciu poety wiąże się przede wszystkim z doświadczeniem świata natury. Przyroda bowiem jest tym, co wyraża istotę ojczyzny, tworzy kochaną oraz znajomą przestrzeń: "Wszystko wam oddam tylko nie te trawy / Łąk pokoszonych i cień pod modrzewiem". Dodatkowo wywołuje silne emocje podmiotu lirycznego. Nocna wędrówka wzmacnia subiektywne doznania osoby mówiącej, na moment przenosi ją w rodzime strony: "Zgaduję nagle, że idę mym krajem / I trawy pachną i więdną po polsku".  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Przykładowo:</p>
 <p>Natura zyskuje szczególne znaczenie w życiu podmiotu lirycznego. Staje się nie tylko tłem i źródłem refleksji dla osoby mówiącej. Przede wszystkim określa jej sytuację życiową. Wyzwala w podmiocie tęsknotę za rodzinnymi stronami, uświadamia mu, że nie znajduje się w znajomej i ukochanej przestrzeni. Dopiero wieczorny spacer pozwala na dostrzeżenie w krajobrazie cech typowych dla rodzimej przyrody. W ten sposób natura niejako zapewnia łączność podmiotu lirycznego z kluczowymi dla niego wartościami, ale jednocześnie wzmacnia jego melancholię. Takie pojmowanie rzeczywistości zdaje się zbieżne z ideałami obecnymi w romantyzmie. Wtedy to natura stawał się łącznikiem między tułaczem a jego ojczyzną. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Synestezja to zabieg polegający na tym, że jednemu zmysłowi przyporządkowuje się doznania typowe dla innego. W utworze Wierzyńskiego występuje we fragmentach: "Szuwarem pachną zamulone stawy", "I trawy pachną i więdną po polsku". Zabieg  ten wpływa na nastrój utworu - jest on oniryczny, tajemniczy. Ponadto synestezja pozwala na wyrażenie trudnych do uchwycenia przeżyć. Za jej pomocą poeta opisuje doznania człowieka, który tęskni za ojczyzną i w elementach przyrody odnajduje polskość. </p><br>
+<p>Synestezja to zabieg polegający na tym, że jednemu zmysłowi przyporządkowuje się doznania typowe dla innego. W utworze Wierzyńskiego występuje we fragmentach: "Szuwarem pachną zamulone stawy", "I trawy pachną i więdną po polsku". Zabieg  ten wpływa na nastrój utworu - jest on oniryczny, tajemniczy. Ponadto synestezja pozwala na wyrażenie trudnych do uchwycenia przeżyć. Za jej pomocą poeta opisuje doznania człowieka, który tęskni za ojczyzną i w elementach przyrody odnajduje polskość. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

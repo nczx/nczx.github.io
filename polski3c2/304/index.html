@@ -129,4 +129,43 @@
 </ul>
 <p>Podmiot liryczny wykazuje scpetycyzm wzglêdem takiej idealizacji. Ma bowiem œwiadomoœæ, ¿e uwznioœlenie walki nie oddaje brutalnych oraz prawdziwych realiów realiów. Pewnym potwierdzeniem s¹ s³owa: "Nie to, ¿e marzyæ, bo marzyæ krew". Koncentruje wiêc swoj¹ uwagê na konsekwencjach wojny, które s¹ pozbawione piêkna i patosu. </p>
 <p> </p>
-<p>e) S³owa te zyskuj¹ uniwersalny sens. Niezale¿nie bowiem od czasu czy okolicznoœci œmieræ ka¿dego ¿o³nierza to zgon konkretnej jednostki, której ¿ycie zosta³o gwa³townie przerwane. Jest wiêc to okrutna prawid³owoœæ zwi¹zana z mechanizmami historii oraz ludzkim poœwiêceniem dla wy¿szych wartoœci. Ponadto fragment ten w pewien sposób zwraca cz³owieczeñstwo ¿o³nierzom - nie s¹ bezimienn¹ mas¹, lecz ludŸmi - oraz potwierdza niezmiennoœæ cyklu historiozoficznego. Refleksja ta jest wiec doœæ gorzka i pesymistyczna. </p><br>
+<p>e) S³owa te zyskuj¹ uniwersalny sens. Niezale¿nie bowiem od czasu czy okolicznoœci œmieræ ka¿dego ¿o³nierza to zgon konkretnej jednostki, której ¿ycie zosta³o gwa³townie przerwane. Jest wiêc to okrutna prawid³owoœæ zwi¹zana z mechanizmami historii oraz ludzkim poœwiêceniem dla wy¿szych wartoœci. Ponadto fragment ten w pewien sposób zwraca cz³owieczeñstwo ¿o³nierzom - nie s¹ bezimienn¹ mas¹, lecz ludŸmi - oraz potwierdza niezmiennoœæ cyklu historiozoficznego. Refleksja ta jest wiec doœæ gorzka i pesymistyczna. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

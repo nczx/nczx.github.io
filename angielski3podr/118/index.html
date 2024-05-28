@@ -57,4 +57,43 @@
 <p><strong>Odpowiedź:</strong> </p>
 <p>I think Diana is talking about the friendships people make when they're part of a team or when they do the same sport. Perhaps she's trying to say that taking part in the same sport makes people's relationships stronger.</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Myślę, że Diana mówi o przyjaźniach, które ludzie nawiązują, gdy są częścią zespołu lub uprawiają ten sam sport. Być może próbuje powiedzieć, że uprawianie tego samego sportu wzmacnia relacje między ludźmi.</p><br>
+<p>Myślę, że Diana mówi o przyjaźniach, które ludzie nawiązują, gdy są częścią zespołu lub uprawiają ten sam sport. Być może próbuje powiedzieć, że uprawianie tego samego sportu wzmacnia relacje między ludźmi.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

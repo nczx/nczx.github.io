@@ -132,4 +132,43 @@
 <p><strong>Tłumaczenie: </strong></p>
 <p>W kwietniu 2015 roku doszło do włamania do skrytki depozytowej Hatton Garden w Londynie. Złodzieje ukradli pudełka z klejnotami, metale szlachetne i gotówkę. Według oficjalnych źródeł skradzione towary były warte około 14 milionów funtów, ale odnaleziono i zwrócono tylko równowartość 4,3 miliona funtów.</p>
 <p>Włamania dokonało sześciu starszych mężczyzn, którzy byli doświadczonymi złodziejami. Czterech innych mężczyzn również zostało oskarżonych o współudział.</p>
-<p>Według doniesień, włamywacze dostali się do budynku przez szyb windy. Następnie użyli mocnego wiertła, aby zrobić dziury w ścianach skarbca, które miały około 50 cm grubości. Po kradzieży towarów wydostali się na zewnątrz i odjechali furgonetką.</p><br>
+<p>Według doniesień, włamywacze dostali się do budynku przez szyb windy. Następnie użyli mocnego wiertła, aby zrobić dziury w ścianach skarbca, które miały około 50 cm grubości. Po kradzieży towarów wydostali się na zewnątrz i odjechali furgonetką.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

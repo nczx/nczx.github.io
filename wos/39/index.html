@@ -46,4 +46,43 @@
 <p>Sytuacja opisana w tekście oraz ta ukazana na ilustracji są do siebie podobne ze względu na to, że obie one opisują zjawisko <span style="text-decoration: underline;"><strong>stereotypu</strong></span>. Negatywny stereotyp, czyli taki, który stanowi nieprawdziwe i uproszczone przeświadczenie kreuje wizerunek danej grupy ludzi jako zły. Tego rodzaju stereotypy są przyczyną przejawów nietolerancji i utrudnień w zakresie budowania poprawnych relacji międzyludzkich.</p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p>W tekście ukazano sytuację, w której powstał <strong><span style="text-decoration: underline;">negatywny stereotyp</span></strong> na temat mieszkańców jednej z ulic, mianowicie ulicy Wesołej. Jako że w krótkim czasie przy ulicy Wesołej doszło do kilku kradzieży, <strong><span style="text-decoration: underline;">powstało nieuprawnione uogólnienie i uproszczenie poznawcze</span></strong>, iż okolica ta jest niebezpieczna i zamieszkiwana przez złodziei. Z kolei na rysunku ukazano sytuację, w której bez odpowiednich podstaw oskarżono uczniów określonej dzielnicy o to, że ich dobre rezultaty w nauce (oceny) są następstwem ściągania. <strong><span style="text-decoration: underline;">W obu opisanych sytuacjach doszło więc do stereotypizacji i zaszufladkowania pewnych grup społecznych</span></strong>.</p><br>
+<p>W tekście ukazano sytuację, w której powstał <strong><span style="text-decoration: underline;">negatywny stereotyp</span></strong> na temat mieszkańców jednej z ulic, mianowicie ulicy Wesołej. Jako że w krótkim czasie przy ulicy Wesołej doszło do kilku kradzieży, <strong><span style="text-decoration: underline;">powstało nieuprawnione uogólnienie i uproszczenie poznawcze</span></strong>, iż okolica ta jest niebezpieczna i zamieszkiwana przez złodziei. Z kolei na rysunku ukazano sytuację, w której bez odpowiednich podstaw oskarżono uczniów określonej dzielnicy o to, że ich dobre rezultaty w nauce (oceny) są następstwem ściągania. <strong><span style="text-decoration: underline;">W obu opisanych sytuacjach doszło więc do stereotypizacji i zaszufladkowania pewnych grup społecznych</span></strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

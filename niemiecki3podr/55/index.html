@@ -63,4 +63,43 @@
 <p>2. Die Personen befinden sich draußen. Sie gehen die Straße entlang. <br/><em>Te osoby znajdują się na zewnątrz. Idą wzdłuż ulicy. </em></p>
 <p>3. Das Wetter ist schlecht. Es regnet und es ist kalt. Es ist nass und feucht. Die Sonne scheint nicht. <br/><em>Pogoda jest brzydka. Pada deszcz i jest zimno. Jest mokro i wilgotno. Nie świeci słońce. </em></p>
 <p>4. Die Personen haben lange Hosen, warme Jacken und bequeme Schuhe an. Die Frau hat auch einen warmen Schal um. <br/><em>Te osoby mają na sobie długie spodnie, ciepłe kurtki i wygodne buty. Kobieta ma wokół szyi ciepły szal. </em></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

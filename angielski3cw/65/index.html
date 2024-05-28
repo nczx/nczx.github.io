@@ -88,4 +88,43 @@
 <p>Jak zielone jest moje miasto? Pozwólcie, że Wam powiem. Mieszkam w [nazwa miasta] od urodzenia. Jest małe, ale piękne, ponieważ otacza je wiele terenów zielonych.</p>
 <p>Od jakiegoś czasu stara się być przyjazne dla środowiska. Po pierwsze, wprowadzono program recyklingu. Teraz każdy musi segregować swoje odpady. W zeszłym miesiącu otwarto również dwa ogródki społeczne. Możemy uprawiać własną żywność bez użycia chemikaliów.</p>
 <p>Ale dlaczego mielibyśmy na tym poprzestać? Moje miasto może zrobić jeszcze więcej dla ochrony środowiska! Moglibyśmy wykorzystywać więcej paneli słonecznych i turbin wiatrowych do produkcji energii odnawialnej. A jeśli zachęcimy ludzi do chodzenia pieszo, jazdy na rowerze lub korzystania z transportu publicznego, możemy zmniejszyć zanieczyszczenie powodowane przez samochody.</p>
-<p>Muszę przyznać, że jestem naprawdę dumny/a z mojego rodzinnego miasta. Myślę, że powinno być inspiracją dla innych! Co o tym sądzicie? Dajcie znać w komentarzach.</p><br>
+<p>Muszę przyznać, że jestem naprawdę dumny/a z mojego rodzinnego miasta. Myślę, że powinno być inspiracją dla innych! Co o tym sądzicie? Dajcie znać w komentarzach.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

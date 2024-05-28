@@ -205,4 +205,43 @@
 <p>Nacisk ze strony zewnętrznej: Wpływ ze strony trzeciej, takiej jak lobbyści, media lub grupy interesu, może prowadzić do dodatkowej trudności w negocjacjach.</p>
 </li>
 </ol>
-<p>Aby zminimalizować te i inne przeszkody, ważne jest, aby strony uzyskały pełne zrozumienie swoich własnych potrzeb i oczekiwań, a także interesów i oczekiwań strony przeciwnej, a także aby zachować otwarty i szczery dialog, jak również respektować osobową godność wszystkich uczestników negocjacji.</p><br>
+<p>Aby zminimalizować te i inne przeszkody, ważne jest, aby strony uzyskały pełne zrozumienie swoich własnych potrzeb i oczekiwań, a także interesów i oczekiwań strony przeciwnej, a także aby zachować otwarty i szczery dialog, jak również respektować osobową godność wszystkich uczestników negocjacji.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

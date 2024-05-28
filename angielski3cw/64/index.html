@@ -59,4 +59,43 @@
 <p>4. A (... o niechcianym rekordzie świata.)</p>
 <p><strong>Fragment w tekście</strong>: "As a result, the World Bank calculated that the earthquake was the most expensive natural disaster in history." - W efekcie Bank Światowy obliczył, że to trzęsienie ziemi było najdroższą katastrofą naturalną w historii.</p>
 <p>5. B (... jak pamięta się o wydarzeniu.)</p>
-<p><strong>Fragment w tekście</strong>: "The monument shows a woman carrying books while walking through water, and it represents the efforts of students to save historic books from the university library when flood water threatened the building." - Pomnik przedstawia kobietę niosącą książki idąc przez wodę, co reprezentuje wysiłki studentów, aby uratować historyczne książki z biblioteki uniwersyteckiej, gdy powódź zagroziła budynkowi.</p><br>
+<p><strong>Fragment w tekście</strong>: "The monument shows a woman carrying books while walking through water, and it represents the efforts of students to save historic books from the university library when flood water threatened the building." - Pomnik przedstawia kobietę niosącą książki idąc przez wodę, co reprezentuje wysiłki studentów, aby uratować historyczne książki z biblioteki uniwersyteckiej, gdy powódź zagroziła budynkowi.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

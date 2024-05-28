@@ -112,4 +112,43 @@
 <p>Mir gefällt der blau<strong>e</strong> Rock. - Podoba mi się ta niebieska spódnica. </p>
 <p>Mir gefällt die weiß<strong>e</strong> Bluse. - Podoba mi się ta biała bluzka. </p>
 <p>Mir gefällt das gelb<strong>e</strong> Kleid. - Podoba mi się ta żółta sukienka. </p>
-<p>Mir gefallen die blau<strong>en</strong> Ballerinas. - Podobają mi się te niebieskie baleriny. </p><br>
+<p>Mir gefallen die blau<strong>en</strong> Ballerinas. - Podobają mi się te niebieskie baleriny. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

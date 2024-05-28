@@ -92,4 +92,43 @@
 <p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowa wypowiedź zawierająca argumenty na rzecz tego, że wśród współczesnej młodzieży więcej jest karierowiczów:</span></em></p>
 <p>O ile dzieci w początkowych stadiach nauki szkolnej - jak to dzieci - często są głośne, przeszkadzają, psocą i okazują się zwyczajnie niegrzeczne, myśląc głównie o zabawie, to jednak młodzież - powiedzmy już uczniowie ze starszych klas szkoły podstawowej, zwłaszcza VII i VIII - zaczynają myśleć o przyszłości i w większości przypadków skupiają się na zdobywaniu dobrych ocen. Mają bowiem przed sobą wybór szkoły średniej, a od tego, jaką szkołę wybiorą i na jaką specjalność postawią, może zależeć w dużej mierze ich sukces zawodowy (bądź jego brak). Żyjemy w rozwijającym się coraz intensywniej społeczeństwie informacyjnym, dla którego kluczowe są wiedza i specjalistyczne umiejętności. Wielu młodych ludzi ma tego świadomość i już w ostatnich klasach szkoły podstawowej, a zwłaszcza w szkole średniej, korzysta z dodatkowych korepetycji i doskonali znajomość języków obcych. Uczniowie szkół średnich robią zaś na ogół wszystko, aby zdobyć dobry zawód czy kontynuować naukę na prestiżowych studiach. Nie w głowach im rewolucje, bunty i przygody. Na pierwszym miejscu stawiają własną przyszłość, bogacenie się i zajęcie jak najwyższego miejsca w hierarchii społecznej. A wszystko to robią najczęściej metodami w pełni zgodnymi z obowiązującym prawem, a także normami społecznymi. Oczywiście, bawią się i imprezują, ale najczęściej w ugrzeczniony sposób, w klubach, na dyskotekach, dbając o dobrą prezencję i modny ubiór. Minęły czasy nastolatków będących buntownikami. Młodzi ludzie chcą dziś głównie robić karierę, aby później wygodnie i dostatnio żyć.</p>
 <p><em><strong>-&gt; </strong></em><em><span style="text-decoration: underline;">Przykładowa wypowiedź zawierająca argumenty na rzecz tego, że wśród współczesnej młodzieży więcej jest buntowników:</span></em></p>
-<p>Młodzi ludzie mają dziś bezproblemowy dostęp do Internetu i innych nowoczesnych technologii. Wymieniają się informacjami i poglądami, tak iż zwykle dość dobrze zdają sobie sprawę z panujących realiów. Wiedzą na przykład, że współczesna szkoła nie zawsze odpowiada potrzebom zmieniającego się dziś dynamicznie świata, a w szczególności nie nadąża za potrzebami rynku pracy. Stąd młodzi ludzie nierzadko w inteligentny sposób kontestują otaczającą ich rzeczywistość i z dystansem podchodzą do tego, co mówią im nauczyciele. Młodzież wie dziś bowiem, że formalne wykształcenie to nie wszystko. Trzeba bowiem doskonalić się na różnych kursach, w tym językowych, zdobywając umiejętności cenione we współczesnym świecie, zwłaszcza informatyczne. Wydaje się więc, że przedstawiciele współczesnej młodzieży bardzo często okazują się być buntownikami. Swój bunt kierują głównie przeciwko szkole i jej zwyczajom. O ich nonkonformizmie może niekiedy świadczyć ich złe zachowanie. Mniej lub bardziej świadomie wyrażają w ten sposób swoją krytykę pod adresem szkolnych porządków, które nie bardzo przystają do realiów współczesnego świata. Coraz częściej też młodzi ludzie potrafią mieć swoje zdanie, sprzeciwiając się nie tylko nauczycielom, ale też swoim rodzicom. Młodzież ma dziś swoje poglądy, czerpie informacje z różnych źródeł i nie daje się łatwo poddać próbom formatowania ze strony starszych pokoleń.</p><br>
+<p>Młodzi ludzie mają dziś bezproblemowy dostęp do Internetu i innych nowoczesnych technologii. Wymieniają się informacjami i poglądami, tak iż zwykle dość dobrze zdają sobie sprawę z panujących realiów. Wiedzą na przykład, że współczesna szkoła nie zawsze odpowiada potrzebom zmieniającego się dziś dynamicznie świata, a w szczególności nie nadąża za potrzebami rynku pracy. Stąd młodzi ludzie nierzadko w inteligentny sposób kontestują otaczającą ich rzeczywistość i z dystansem podchodzą do tego, co mówią im nauczyciele. Młodzież wie dziś bowiem, że formalne wykształcenie to nie wszystko. Trzeba bowiem doskonalić się na różnych kursach, w tym językowych, zdobywając umiejętności cenione we współczesnym świecie, zwłaszcza informatyczne. Wydaje się więc, że przedstawiciele współczesnej młodzieży bardzo często okazują się być buntownikami. Swój bunt kierują głównie przeciwko szkole i jej zwyczajom. O ich nonkonformizmie może niekiedy świadczyć ich złe zachowanie. Mniej lub bardziej świadomie wyrażają w ten sposób swoją krytykę pod adresem szkolnych porządków, które nie bardzo przystają do realiów współczesnego świata. Coraz częściej też młodzi ludzie potrafią mieć swoje zdanie, sprzeciwiając się nie tylko nauczycielom, ale też swoim rodzicom. Młodzież ma dziś swoje poglądy, czerpie informacje z różnych źródeł i nie daje się łatwo poddać próbom formatowania ze strony starszych pokoleń.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

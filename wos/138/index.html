@@ -46,4 +46,43 @@
 <p>Rysunek nawiązuje do zadania rządu związanego z  <span style="text-decoration: underline;"><strong>"opracowaniem projektu budżetu państwa i kierowanie jego wykonaniem"</strong></span>, bowiem to rząd wyznaczył kierunek walki z biedą (w roku biedy) oraz zaakceptował określone działania, które miały miejsce w jego ramach. </p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p>Zamieszczony rysunek satyryczny przedstawia trzy osoby. Jedna z nich, wyraźnie uśmiechnięta, pewnym krokiem maszeruje z transparentem, na którym widnieje hasło: 'BIEDO PRECZ!' Całej sytuacji przygląda się dwóch mężczyzn - sądząc po ich wyglądzie borykających się z ubóstwem - a jeden z nich mówi do drugiego: 'Wolałbym, żeby rząd inaczej wydał tych kilka milionów na obchody roku biedy'. Dwaj mężczyźni są krytycznie nastawieni do tego, w jaki sposób rozporządza się publicznymi pieniędzmi. Rysunek nawiązuje więc do zadania rządu, jakim jest <strong><span style="text-decoration: underline;">opracowywanie projektu budżetu państwa i kierowanie jego wykonaniem</span></strong>.</p><br>
+<p>Zamieszczony rysunek satyryczny przedstawia trzy osoby. Jedna z nich, wyraźnie uśmiechnięta, pewnym krokiem maszeruje z transparentem, na którym widnieje hasło: 'BIEDO PRECZ!' Całej sytuacji przygląda się dwóch mężczyzn - sądząc po ich wyglądzie borykających się z ubóstwem - a jeden z nich mówi do drugiego: 'Wolałbym, żeby rząd inaczej wydał tych kilka milionów na obchody roku biedy'. Dwaj mężczyźni są krytycznie nastawieni do tego, w jaki sposób rozporządza się publicznymi pieniędzmi. Rysunek nawiązuje więc do zadania rządu, jakim jest <strong><span style="text-decoration: underline;">opracowywanie projektu budżetu państwa i kierowanie jego wykonaniem</span></strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

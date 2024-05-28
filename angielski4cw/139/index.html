@@ -80,4 +80,43 @@
 <p>The extra words are <strong>attend</strong> and <strong>notice</strong>.</p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
-<p>Dla niektórych fanów filmów i przedstawień artystycznych długotrwała <strong>popularność</strong> musicali pozostaje tajemnicą. Zamiast wywoływać ekscytację, moment, w którym aktorzy zaczynają śpiewać w środku trwania normalnej rozmowy jest częściej źródłem zażenowania. A jednak unikalne <strong>połączenie</strong> zwykłych dialogów, śpiewu, tańca i <strong>spektakularnych</strong> efektów specjalnych nadal zapewnia rozrywkę milionom fanów. Być może dlatego, że musicale stale się rozwijały od czasu pierwszego otwarcia na Brodwayu w 1866 roku. Najnowsze przykłady obejmują <em>Hamiltona</em>, <strong>porywającą</strong> historię polityka o imieniu Alexander, która wykorzystuje muzykę hip-hopową oraz nową wersję <em>West Side Story</em>, wyreżyserowaną przez Stevena Spielberga, która w dużej mierze była filmowana <strong>w plenerze</strong> w Nowym Jorku i New Jersey. Mimo, że ten drugi film, oparty na <em>Romeo i Julii</em> Shakespeare'a, odniósł mniejszy sukces niż się spodziewano, nie ma wątpliwości, że musicale zostaną z nami. </p><br>
+<p>Dla niektórych fanów filmów i przedstawień artystycznych długotrwała <strong>popularność</strong> musicali pozostaje tajemnicą. Zamiast wywoływać ekscytację, moment, w którym aktorzy zaczynają śpiewać w środku trwania normalnej rozmowy jest częściej źródłem zażenowania. A jednak unikalne <strong>połączenie</strong> zwykłych dialogów, śpiewu, tańca i <strong>spektakularnych</strong> efektów specjalnych nadal zapewnia rozrywkę milionom fanów. Być może dlatego, że musicale stale się rozwijały od czasu pierwszego otwarcia na Brodwayu w 1866 roku. Najnowsze przykłady obejmują <em>Hamiltona</em>, <strong>porywającą</strong> historię polityka o imieniu Alexander, która wykorzystuje muzykę hip-hopową oraz nową wersję <em>West Side Story</em>, wyreżyserowaną przez Stevena Spielberga, która w dużej mierze była filmowana <strong>w plenerze</strong> w Nowym Jorku i New Jersey. Mimo, że ten drugi film, oparty na <em>Romeo i Julii</em> Shakespeare'a, odniósł mniejszy sukces niż się spodziewano, nie ma wątpliwości, że musicale zostaną z nami. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -67,4 +67,43 @@
 <p>- <em>Cera Alba</em> - <span style="text-decoration: underline;"><strong>wosk pszczeli (bielony)</strong></span> - substancja natłuszczająca, tworzy warstwę ochronną skóry</p>
 <p>- <em>Citric Acid</em> - <span style="text-decoration: underline;"><strong>kwas cytrynowy</strong></span> - funkcja rozświetlająca, zapobiega przebarwieniom</p>
 <p>- <em>Citronellol</em> - <span style="text-decoration: underline;"><strong>cytronelol</strong></span> - substancja zapachowa</p>
-<p>- <em>Eugenol</em> - <span style="text-decoration: underline;"><strong>eugenol</strong></span> - substancja zapachowa</p><br>
+<p>- <em>Eugenol</em> - <span style="text-decoration: underline;"><strong>eugenol</strong></span> - substancja zapachowa</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

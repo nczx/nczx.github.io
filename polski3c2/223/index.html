@@ -79,4 +79,43 @@
 <p>Przyk³adowo:</p>
 <p>Utwory Ró¿yckiego i Bursy ³¹czy podejmowana tematyka. Poeci ukazuj¹ bowiem codziennoœæ, która jest pozbawiona jakichkolwiek upiêkszeñ. Przepe³nia j¹ to, co prozaiczne i zasadniczo pozbawione jakiejkolwiek nadziei na zmianê. Ró¿ycki w swym wierszu zestawia, niczym w statystykach, trzy grupy. Odró¿nia je przyjêta sytuacja ¿yciowa. Niektórzy bowiem podejmuj¹ ryzyko, opuszczaj¹ miasto, które nie zapewnia im innych perspektyw. Los innych jest zaœ mniej optymistyczny. Okreœlenie pozosta³ych mieszkañców jako przynale¿nych do grup A i B sugeruje pewn¹ utratê to¿samoœci - jednostki zlewaj¹ siê w biern¹, pogr¹¿on¹ w monotonii masê. Ludzie ci oddaj¹ siê na³ogom (alkohol) i ¿yj¹ marzeniami, poniewa¿ rzeczywistoœæ jest dla nich nie do zniesienia: "[...] Gdyby siê uda³o // zamieszkaæ w szklanym domu, mo¿na rzek¹ dotrzeæ do oceanu [...]". Grupa B poszukuje natomiast ucieczki w wirtualnym œwiecie - mo¿na w nim wyjawiæ swoje uczucia, prowadziæ lepsze i bardziej ekscytuj¹ce ¿ycie, a wrêcz kilka ró¿nych. </p>
 <p>Utwór Bursy pozornie stanowi pochwa³ê sobotniego wieczoru. Osoba mówi¹ca wyra¿a zachwyt iloœci¹ alkoholu, czasem spêdzanym prawdopodobnie w barze ("a potem pl¹tanina / w kulisach tego raju / miêdzy pluszow¹ kotar¹ / a kuchni¹ za krat¹"). Miejsce to pe³ni istotn¹ funkcjê w ¿yciu podmiotu: "czu³em jak wyzwalam siê / od zbêdnego nadmiaru energii / w któr¹ wyposa¿y³a mnie m³odoœæ". S³owa te s¹ jednak przesycone ironi¹ i poczuciem rozczarowania rzeczywistoœci¹. M³ody cz³owiek buntuje siê przeciwko realiom, poniewa¿ nie znajduje celu w swoim ¿yciu, jest ograniczony przez czynniki niezale¿ne od niego. Jedyn¹ alternatyw¹ staje siê pisanie reporta¿y, co nie budzi przekonania mówi¹cego. </p>
-<p>Mimo ¿e utwory ³¹czy tematyka i zbli¿ona wizja rzeczywistoœci, doœæ pesymistyczna, to odró¿nia je przede wszystkim wyrazista ironia w wierszu Bursy. Ponadto nieco inna jest postawa bohaterów. U Ró¿yckiego dominuje znu¿enie, biernoœæ, beznadzieja, której nie mo¿na pokonaæ. Mieszkañcy miasta poddaj¹ siê jej, chocia¿ poszukuj¹ tak¿e ukojenia i ucieczki. Z kolei podmiot liryczny w <em>Sobocie</em>, choæ tak¿e rozgoryczony rzeczywistoœci¹, na swój sposób buntuje siê. Nie chce ulegaæ szarej rzeczywistoœci i dlatego oddaje siê prostym rozrywkom. </p><br>
+<p>Mimo ¿e utwory ³¹czy tematyka i zbli¿ona wizja rzeczywistoœci, doœæ pesymistyczna, to odró¿nia je przede wszystkim wyrazista ironia w wierszu Bursy. Ponadto nieco inna jest postawa bohaterów. U Ró¿yckiego dominuje znu¿enie, biernoœæ, beznadzieja, której nie mo¿na pokonaæ. Mieszkañcy miasta poddaj¹ siê jej, chocia¿ poszukuj¹ tak¿e ukojenia i ucieczki. Z kolei podmiot liryczny w <em>Sobocie</em>, choæ tak¿e rozgoryczony rzeczywistoœci¹, na swój sposób buntuje siê. Nie chce ulegaæ szarej rzeczywistoœci i dlatego oddaje siê prostym rozrywkom. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -120,4 +120,43 @@
 <p><em>I'll never forget the first football match I saw live. I was six and I went with my father to support our local team. </em>The stadium was filled with enthusiastic fans wearing our team's colours. I held my father's hand tightly, impatiently waiting for the game to begin. When the referee blew the whistle, the crowd started cheering, and my heart started beating faster with excitement. I didn't know it then, but this match would be the beginning of my love for football.</p>
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
-<p>Nigdy nie zapomnę pierwszego meczu piłki nożnej, który obejrzałem/am na żywo. Miałem/am sześć lat i poszedłem/poszłam z tatą kibicować naszej lokalnej drużynie. Stadion był wypełniony entuzjastycznymi kibicami ubranymi w barwy naszej drużyny. Mocno trzymałem/am ojca za rękę, niecierpliwie czekając na rozpoczęcie meczu. Gdy sędzia zagwizdał, tłum zaczął wiwatować, a moje serce zaczęło bić szybciej z podekscytowania. Wtedy jeszcze tego nie wiedziałem/am, ale ten mecz był początkiem mojej miłości do piłki nożnej.</p><br>
+<p>Nigdy nie zapomnę pierwszego meczu piłki nożnej, który obejrzałem/am na żywo. Miałem/am sześć lat i poszedłem/poszłam z tatą kibicować naszej lokalnej drużynie. Stadion był wypełniony entuzjastycznymi kibicami ubranymi w barwy naszej drużyny. Mocno trzymałem/am ojca za rękę, niecierpliwie czekając na rozpoczęcie meczu. Gdy sędzia zagwizdał, tłum zaczął wiwatować, a moje serce zaczęło bić szybciej z podekscytowania. Wtedy jeszcze tego nie wiedziałem/am, ale ten mecz był początkiem mojej miłości do piłki nożnej.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

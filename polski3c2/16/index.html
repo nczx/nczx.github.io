@@ -57,4 +57,43 @@
 <p> </p>
 <p>Do hitlerowskich Niemiec mo¿na odnieœæ: nazizm, rasizm, antysemityzm, komunizm, totalitaryzm, faszyzm.</p>
 <p>Do Rosji sowieckiej mo¿na odnieœæ: totalitaryzm, komunizm.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Nazizm narodzi³ siê w Niemczech nied³ugo po zakoñczeniu I wojny œwiatowej. By³ on protestem, reakcj¹ Niemiec przeciwko zakoñczeniu hegemonii Niemiec w Europie, systemowi wersalskiemu oraz kryzysowi powojennych lat, który doprowadzi³ do wzrostu wp³ywów lewicowych œrodowisk. Program ruchu zosta³ opracowany w 1920 r. przez Gottfrieda Federa, natomiast rozwiniêty przez Adolfa Hitlera w 1925 r. (<em>Mein Kampf</em>) i Alfreda Rosenberga (1930 r. - <em>Der Mythos des 20. Jahrhundets</em>). To ideologia ludzi pokonanych, rozczarowanych i spragnionych zemsty. Nazizm by³ skierowany przeciwko ideologiom próbuj¹cym stworzyæ nowy, powojenny ³ad: liberalizmowi, demokracji, pluralizmowi, komunizmowi, marksizmowi oraz wszelkim religiom.</p><br>
+<p>Nazizm narodzi³ siê w Niemczech nied³ugo po zakoñczeniu I wojny œwiatowej. By³ on protestem, reakcj¹ Niemiec przeciwko zakoñczeniu hegemonii Niemiec w Europie, systemowi wersalskiemu oraz kryzysowi powojennych lat, który doprowadzi³ do wzrostu wp³ywów lewicowych œrodowisk. Program ruchu zosta³ opracowany w 1920 r. przez Gottfrieda Federa, natomiast rozwiniêty przez Adolfa Hitlera w 1925 r. (<em>Mein Kampf</em>) i Alfreda Rosenberga (1930 r. - <em>Der Mythos des 20. Jahrhundets</em>). To ideologia ludzi pokonanych, rozczarowanych i spragnionych zemsty. Nazizm by³ skierowany przeciwko ideologiom próbuj¹cym stworzyæ nowy, powojenny ³ad: liberalizmowi, demokracji, pluralizmowi, komunizmowi, marksizmowi oraz wszelkim religiom.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

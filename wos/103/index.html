@@ -83,4 +83,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p><strong>Zadanie ma charakter indywidualny, ponieważ wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może zawierać wyłącznie przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi.</strong></p>
 <p><span style="text-decoration: underline;"><strong>Przykładowe wskazówki pomocne do samodzielnego opracowania odpowiedzi:</strong></span></p>
-<p>Wydaje się, że nie może istnieć coś takiego, jak 'niezależny przekaz medialny', ponieważ informacje w mediach są przygotowywane przez konkretnych ludzi, którzy mają własne poglądy i preferencje światopoglądowe, a także zainteresowania. To wszystko wpływa zaś nie tylko na to, w jaki sposób informują oni opinię publiczną o różnych wydarzeniach, ale nawet na to, o czym ją informują i w jakiej kolejności. Całkowicie niezależne media i dziennikarstwo nie są więc możliwe do urzeczywistnienia. Na pewno jednak dziennikarze powinni się starać informować odbiorców o różnych wydarzeniach maksymalnie rzetelnie i mimo iż nie są w stanie osiągnąć pełnego obiektywizmu, to powinni do niego dążyć jako do swoistego ideału.</p><br>
+<p>Wydaje się, że nie może istnieć coś takiego, jak 'niezależny przekaz medialny', ponieważ informacje w mediach są przygotowywane przez konkretnych ludzi, którzy mają własne poglądy i preferencje światopoglądowe, a także zainteresowania. To wszystko wpływa zaś nie tylko na to, w jaki sposób informują oni opinię publiczną o różnych wydarzeniach, ale nawet na to, o czym ją informują i w jakiej kolejności. Całkowicie niezależne media i dziennikarstwo nie są więc możliwe do urzeczywistnienia. Na pewno jednak dziennikarze powinni się starać informować odbiorców o różnych wydarzeniach maksymalnie rzetelnie i mimo iż nie są w stanie osiągnąć pełnego obiektywizmu, to powinni do niego dążyć jako do swoistego ideału.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -62,4 +62,43 @@
 <p>Tworzymy kody złożone z trzech liter i czterech cyfr. Cyfry i litery mogą się powtarzać.<br/>Wykorzystujemy do tego litery: <strong>A, B, C, D</strong>, oraz cyfry: <strong>1, 2, 3, 4, 5, 6</strong>.</p>
 <p>Wobec tego każdą literę do kodu możemy wybrać na  <strong>4</strong> sposoby, natomiast każdą cyfrę możemy <br/>wybrać na <strong>6</strong> sposobów.</p>
 <p>Łącznie wszystkich możliwych kodów mamy: <strong>4·4·4·6·6·6·6=82 944</strong>.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Pani ma do dyspozycji:</p> <ul> <li> <strong>3</strong> różne kapelusze</li> <li> <strong>6</strong> sukni</li> <li> <strong>4</strong> pary butów</li> </ul> <p>Czyli Pani może wybrać kapelusz na <strong>3 </strong>sposoby, suknię na <strong>6</strong> sposobów, natomiast buty na <strong>4</strong> sposoby.</p> <p>Wnioskujemy, że Pani może się ubrać na <strong>72</strong> sposoby, bo:</p> <p><span> <math-expr expr="3*6*4=72" syntax="text"></math-expr> </span> </p><br>
+<p>Pani ma do dyspozycji:</p> <ul> <li> <strong>3</strong> różne kapelusze</li> <li> <strong>6</strong> sukni</li> <li> <strong>4</strong> pary butów</li> </ul> <p>Czyli Pani może wybrać kapelusz na <strong>3 </strong>sposoby, suknię na <strong>6</strong> sposobów, natomiast buty na <strong>4</strong> sposoby.</p> <p>Wnioskujemy, że Pani może się ubrać na <strong>72</strong> sposoby, bo:</p> <p><span> <math-expr expr="3*6*4=72" syntax="text"></math-expr> </span> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -56,4 +56,43 @@
 <p>Przykładowo:</p>
 <p>a) Podmiot liryczny w wierszu Poświatowskiej jest zdesperowany. Wyraża głębokie przywiązanie do życia, przez co nie może się zgodzić na jego odejście: "przywieram do niego / mówię - życie / nie odchodź jeszcze". Słowa te sugerują, iż osoba mówiąca chce jeszcze zasmakować egzystencji, nie godzi się na jej koniec. Czyni wszystko, by zatrzymać przy sobie życie. Jest zrozpaczona, ale przy tym zdeterminowana: "wieszam mu się na szyi / krzyczę". Z kolei podmiot liryczny w wierszu Tuwima przejawia optymistyczną postawę. Nie obawia się bowiem rozstania z życiem, zamiast tego czerpie przyjemność z każdej chwili czy doświadczenia. Całym sobą chłonie rzeczywistość: "Rozprężę szeroko ramiona, / Nabiorę w płuca porannego wiewu". Egzystencja stanowi dla niego źródło niewyczerpanej radości. Być może powodem takiej postawy jest to, iż osoba mówiąca nie odczuwa jakiegokolwiek zagrożenia, nie dotyka jej bezpośrednio możliwość utraty życia.</p>
 <p> </p>
-<p>b) Krzyk w wierszu Poświatowskiej wyraża niezgodę i bunt podmiotu lirycznego. Sygnalizuje silne uczucia, które ogarniają osobę mówiącą, umożliwia ich uzewnętrznienie. Ponadto być może ma za zadanie zwrócenie uwagi życia na podmiot liryczny, przekonanie go do pozostania. Z kolei w wierszu Tuwima pełni odmienną funkcję. Chociaż też pozwala na wyrażenie emocji podmiotu lirycznego, to sugeruje zupełnie inne odczucia. Umożliwia bowiem zaprezentowanie euforii i zadowolenia wypowiadającego się. Życie bowiem zapewnia mu radość oraz pogodę ducha: "- Jakie to szczęście, że krew jest czerwona!". </p><br>
+<p>b) Krzyk w wierszu Poświatowskiej wyraża niezgodę i bunt podmiotu lirycznego. Sygnalizuje silne uczucia, które ogarniają osobę mówiącą, umożliwia ich uzewnętrznienie. Ponadto być może ma za zadanie zwrócenie uwagi życia na podmiot liryczny, przekonanie go do pozostania. Z kolei w wierszu Tuwima pełni odmienną funkcję. Chociaż też pozwala na wyrażenie emocji podmiotu lirycznego, to sugeruje zupełnie inne odczucia. Umożliwia bowiem zaprezentowanie euforii i zadowolenia wypowiadającego się. Życie bowiem zapewnia mu radość oraz pogodę ducha: "- Jakie to szczęście, że krew jest czerwona!". </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

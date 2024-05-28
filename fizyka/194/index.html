@@ -14,4 +14,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Minimalna długość fali:</p> <p> <object class="math big" data="./data/1084118-0.svg" type="image/svg+xml"></object>  </p> <p>Maksymalna długość fali:</p> <p> <object class="math big" data="./data/1084118-1.svg" type="image/svg+xml"></object>  </p> <p>Prędkość światła przyjmujemy jako:</p> <p> <object class="math big" data="./data/1084118-2.svg" type="image/svg+xml"></object> </p> <p>Stała Plancka jest równa:</p> <p> <object class="math big" data="./data/1084118-3.svg" type="image/svg+xml"></object>  </p> <hr/> <p>Prędkość fali elektromagnetycznej wyrazimy jako: </p> <p> <object class="math big" data="./data/1084118-4.svg" type="image/svg+xml"></object> </p> <p>Wyznaczmy częstotliwości <object class="math big" data="./data/1084118-5.svg" type="image/svg+xml"></object>   fal. </p> <p> <object class="math big" data="./data/1084118-6.svg" type="image/svg+xml"></object>  </p> <p>Maksymalna częstotliwość fali:</p> <p> <object class="math big" data="./data/1084118-7.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-8.svg" type="image/svg+xml"></object>  </p> <p>Minimalna częstotliwość fali:</p> <p> <object class="math big" data="./data/1084118-9.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-10.svg" type="image/svg+xml"></object>  </p> <hr/> <p>Energię <object class="math big" data="./data/1084118-11.svg" type="image/svg+xml"></object>   fotonów wyrazimy jako:</p> <p> <object class="math big" data="./data/1084118-12.svg" type="image/svg+xml"></object>  </p> <p>Minimalna energia fotonów:</p> <p> <object class="math big" data="./data/1084118-13.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-14.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-15.svg" type="image/svg+xml"></object>  </p> <p>Maksymalna energia fotonów:</p> <p> <object class="math big" data="./data/1084118-16.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-17.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1084118-18.svg" type="image/svg+xml"></object>  </p> <hr/> <p>Maksymalna energia światła widzialnego wynosi około 3,11 eV. Zatem efekt fotoelektryczny będzie wywoływany przez światło widzialne dla tych metali, których praca wyjścia jest mniejsza od tej energii.</p> <ul> <li>bar (2,5 eV)</li> <li>cez (2,1 eV)</li> <li>potas (2,2 eV)</li> <li>rubid (2,2 eV)</li> <li>stront (2,5 eV)</li> <li>sód (2,75 eV)</li> </ul><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Lampy kwarcowe emitują promieniowanie UV dzięki wzbudzeniu przez pole elektryczne par rtęci lub gazów szlachetnych. Nazwa tego urządzenia pochodzi od szkła kwarcowego użytego do jej budowy. Zwykłe szkło pochłania promieniowanie UV, dlatego użyto szkła kwarcowego, które pochłania je w niewielkim stopniu.</p><br>
+<p>Lampy kwarcowe emitują promieniowanie UV dzięki wzbudzeniu przez pole elektryczne par rtęci lub gazów szlachetnych. Nazwa tego urządzenia pochodzi od szkła kwarcowego użytego do jej budowy. Zwykłe szkło pochłania promieniowanie UV, dlatego użyto szkła kwarcowego, które pochłania je w niewielkim stopniu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

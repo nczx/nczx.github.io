@@ -54,4 +54,43 @@
 <p> </p>
 <p>b) Rezygnacja z tradycyjnego zapisu partii dialogowych zaciera granicê miêdzy wypowiedziami narratora, a s³owami wypowiedzianymi bezpoœrednio przez bohaterów, przez co tekst przypomina swobodny strumieñ. Mo¿e to tym samym wywo³ywaæ poczucie chaosu, oszo³omienia lub niepewnoœci wywo³anej tym, i¿ mieszaj¹ siê ze sob¹ np. wypowiedzi narratora i bohaterów. Jednoczeœnie zabieg ten w pewien sposób odzwierciedla sytuacjê i los bohaterów, byæ mo¿e te¿ ich pamiêæ, na któr¹ oddzia³uje wiek. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>. </p><br>
+<p>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

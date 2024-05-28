@@ -107,4 +107,43 @@
 <p>Zauważmy, że:</p>
 <p><math-expr expr="f(-1/4)=(-1/4)^3+2*(-1/4)+1=-1/64-1/2+1=31/64&gt;0" syntax="text"></math-expr></p>
 <p>Zatem w przedziale <strong>⟨-<sup>1</sup>/<sub>2</sub>, -<sup>1</sup>/<sub>4</sub>⟩ </strong>funkcja <strong>f</strong> ma miejsce zerowe.</p>
-<p>Wnioskujemy, że liczba <strong>x<sub>0</sub>=-<sup>1</sup>/<sub>4</sub></strong> jest przybliżeniem rozwiązania równania z dokładnością do <strong><sup>1</sup>/<sub>4</sub></strong>. </p><br>
+<p>Wnioskujemy, że liczba <strong>x<sub>0</sub>=-<sup>1</sup>/<sub>4</sub></strong> jest przybliżeniem rozwiązania równania z dokładnością do <strong><sup>1</sup>/<sub>4</sub></strong>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -46,4 +46,43 @@
 <p>a) Wed³ug Amiel pewne doœwiadczenia z czasem przechodz¹ do historii, staj¹ siê obiektem nauki i badañ. Mimo tego obowi¹zkiem staje siê nieustanne g³oszenie prawdy o prze¿yciach ocalonych w taki sposób, aby nie marginalizowaæ i podwa¿aæ ich wspomnieñ: "A m³ody adwokat mówi - Oni s¹ ju¿ starzy / nie mo¿na polegaæ na ich pamiêci". Istotna rola œwiadectwa by³ych wiêŸniów wynika równie¿ z tego, i¿ staj¹ siê g³osem zmar³ych, wraz z nimi odchodzi opowieœæ o uczuciach, cierpienie i okrucieñstwie. Konieczne jest wiêc rozliczenie siê z przesz³oœci i pozostawienie œladu po tragedii obozów, aby nie zapomnieæ o losie wiêŸniów, cz³owieczeñstwie. Podobnie Borowski za moralny obowi¹zek uznaje przekazanie opowieœci o obozowej rzeczywistoœci. Pragnie przeciwstawiæ siê k³amstwu, zachowaæ pamiêæ o zmar³ych wiêŸniach - wa¿na jest dla niego prawda. Obawia siê, i¿ dramatyczne zdarzenia nie zapisz¹ siê w historii, poniewa¿ Niemcy wymorduj¹ œwiadków, zaœ g³os ofiar zostanie zakrzyczany poprzez ludzi kultury i nauki, duchownych. </p>
 <p> </p>
 <p>b) Odwo³anie do lektury - czêœæ indywidualna </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
-<p>. </p><br>
+<p>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

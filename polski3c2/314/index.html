@@ -65,4 +65,43 @@
 <p> </p>
 <p>c) Dzie³a artystów odwo³uj¹ siê do podobnej problematyki. W wierszu Baczyñskiego wyra¿one zostaj¹ uczucia matki cierpi¹cej po stracie ukochanego syna. Jej ból wynika przede wszystkim z okrucieñstwa, którego doœwiadczy³. Twórcy pomników tak¿e poruszaj¹ temat wp³ywu wojny, z³a na dzieci. Ró¿ni ich jednak perspektywa: Jarnuszkiewicz idealizuje walkê dzieci, zaœ Janus skupia siê na tragizmie ich losu. </p>
 <p> </p>
-<p>d) Czêœæ indywidualna </p><br>
+<p>d) Czêœæ indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

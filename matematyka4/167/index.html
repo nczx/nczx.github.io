@@ -83,4 +83,43 @@
 <p>Wyznaczmy długość wysokości tego walca. Mamy:</p>
 <p><math-expr expr="{\displaystyle {h}={\frac{{{S}}}{{{2}\pi{r}}}}-r={\frac{{{S}}}{{{2}\pi{r}}}}-{\frac{{{2}\pi{r}^{{2}}}}{{{2}\pi{r}}}}={\frac{{{S}-{2}\pi{r}^{{2}}}}{{{2}\pi{r}}}}={\frac{{{S}-{2}\pi\cdot{\frac{{{S}}}{{{6}\pi}}}}}{{{2}\pi\cdot\sqrt{{{\frac{{{S}}}{{{6}\pi}}}}}}}}=}"></math-expr></p>
 <p><math-expr expr="{{{{\displaystyle ={\frac{{{S}-\frac{{S}}{{3}}}}{{{2}\pi\cdot\sqrt{{{\frac{{{S}}}{{{6}\pi}}}}}}}}=\;\frac{\frac{2S}{3}}{2\pi\;\cdot\sqrt{\frac{S}{6\pi}}}={\frac{{{}S}}{{{3}\pi\cdot\sqrt{\frac{S}{6\pi}}}}}\;\cdot\;\frac{\sqrt{\frac{S}{6\pi}}}{\sqrt{\frac{S}{6\pi}}}=\;\underline{{\underline{}}}}}}}"></math-expr>   </p>
-<p><math-expr expr="\displaystyle =\;\frac{S\cdot\sqrt{\frac{S}{6\pi}}}{3\pi\cdot\frac{S}{6\pi}}=\frac{\sqrt{\frac{S}{6\pi}}}{\frac{1}{2}}=2\sqrt{\frac{S}{6\pi}}=\sqrt{\frac{4S}{6\pi}}=\underline{{\underline{{\sqrt{{{\frac{{{2}{S}}}{{{3}\pi}}}}}}}}}"></math-expr></p><br>
+<p><math-expr expr="\displaystyle =\;\frac{S\cdot\sqrt{\frac{S}{6\pi}}}{3\pi\cdot\frac{S}{6\pi}}=\frac{\sqrt{\frac{S}{6\pi}}}{\frac{1}{2}}=2\sqrt{\frac{S}{6\pi}}=\sqrt{\frac{4S}{6\pi}}=\underline{{\underline{{\sqrt{{{\frac{{{2}{S}}}{{{3}\pi}}}}}}}}}"></math-expr></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

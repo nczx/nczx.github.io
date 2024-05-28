@@ -121,4 +121,43 @@
 <p>3. Dystans do hostelu w linii prostej wynosił tylko 2 km, ale musieliśmy przejść <strong>krętą ulicą/aleją/ścieżką</strong>, co wyniosło w sumie 5 km.</p>
 <p>4. Znaleźliśmy <strong>ustronną plażę</strong> z pięknym złotym piaskiem, o której wiedziało tylko kilka innych osób. </p>
 <p>5. Kiedy odsłoniły się chmury, zdaliśmy sobie sprawę, że byliśmy otoczeni przez<strong> górskie/ strzeliste/ zaśnieżone szczyty</strong>, wszystkie były 3000 metrów nad nami. </p>
-<p>6. Jechaliśmy z <strong>zapierającą dech w piersiach prędkością</strong> i musieliśmy poprosić kierowcę, żeby zwolnił. </p><br>
+<p>6. Jechaliśmy z <strong>zapierającą dech w piersiach prędkością</strong> i musieliśmy poprosić kierowcę, żeby zwolnił. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -53,4 +53,43 @@
 <p>3. <strong>D.</strong> Diese Person will arbeiten und sich erholen. Sie ist freundlich und möchte in einem Hotel als Kellner/in jobben. <br/><em>Ta osoba chce pracować i odpoczywać. Jest uprzejma i chciałaby pracować w hotelu jako kelnerka. </em></p>
 <p> </p>
 <p><br/>Zdanie, które zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi:</p>
-<p>C. Diese Person will in einem Hotel als Rezeptionist/in arbeiten.<br/><em>Ta osoba chce pracować w hotelu jako recepcjonist(k)a. </em></p><br>
+<p>C. Diese Person will in einem Hotel als Rezeptionist/in arbeiten.<br/><em>Ta osoba chce pracować w hotelu jako recepcjonist(k)a. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

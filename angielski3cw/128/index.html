@@ -90,4 +90,43 @@
 <p>Zdanie 2: Ta kurtka, którą kupiłem/am przez Internet <strong>jest zwyczajnie w złym rozmiarze</strong>.)<br/><br/>5. must have been told</p>
 <p><strong>Uzasadnienie</strong>: konstrukcja <em>must have + past participle</em>, by wyrazić pewność odnośnie przeszłości. <br/><br/>6. are too few eggs</p>
 <p>(Zdanie 1: Nie mamy wystarczająco dużo jajek, by zrobić omlet.</p>
-<p>Zdanie 2: <strong>Jest zbyt mało jajek</strong>, by zrobić omlet.)</p><br>
+<p>Zdanie 2: <strong>Jest zbyt mało jajek</strong>, by zrobić omlet.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

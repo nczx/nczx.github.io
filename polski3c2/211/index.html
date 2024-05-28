@@ -68,4 +68,43 @@
 <p> </p>
 <p>b) Groteskowoœæ przedstawienia polega na zastosowaniu kontrastów oraz przejaskrawieniu pewnych cech ukazanych postaci. Namalowane kobiety wyró¿niaj¹ siê mocnym makija¿em, bogato zdobionym z³ocistymi sukniami oraz starannymi fryzurami. Kontrastuj¹ wiêc w widoczny sposób z ¿ebrakami, których ubrania s¹ zniszczone, a sytuacja ¿yciowa - o wiele trudniejsza, pozbawiona nadziei. Groteska przejawia siê tak¿e w przesadzonej, nienaturalnej powierzchownoœci bohaterek. Na poczucie dziwnoœci wp³ywa upodobnienie jednej z kobiet do mê¿czyzny, rozci¹gniête lub wyd³u¿one oblicze innych postaci, czy te¿ uwydatnienie brzydoty dam z prawego skrzyd³a dzie³a. Prowadzi to do swoistego odrealnienia sytuacji. Podobne wra¿enia wywo³uje przedstawienie tañcz¹cej rudow³osej kobiety - jej nogi s¹ niezgrabnie wykrzywione, zaœ sam taniec nie ma wdziêku.</p>
 <p> </p>
-<p>c) Czêœæ indywidualna </p><br>
+<p>c) Czêœæ indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

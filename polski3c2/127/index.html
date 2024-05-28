@@ -104,4 +104,43 @@
 <p>Stwierdzenie, ¿e w wierszu Przyboœ pos³u¿y³ siê ekwiwalentyzowaniem uczuæ, mo¿na uznaæ za trafne. Podmiot liryczny w utworze nie wyra¿a bowiem wprost swoich uczuæ czy prze¿yæ. Zamiast tego wykorzystane zostaj¹ elementy pejza¿u górskiego, które wyraziœcie sugeruj¹ okreœlone stany emocjonalne i psychiczne. Tym samym doznania osoby mówi¹cej s¹ ukazane w poœredni sposób. Subiektywna metoda przedstawienia rzeczywistoœci œwiadczy o odczuwalnej grozie, niepokoju i smutku. Doznania te potêguje nieprzyjazna natura, która odzwierciedla cierpienie istoty ludzkiej. Bogactwo metafor, epitetów, personifikacji staje siê w ten sposób odpowiednikiem konkretnych uczuæ doœwiadczanych przez osobê mówi¹c¹, a tak¿e swoist¹ zagadk¹ dla odbiorcy, któr¹ musi samodzielnie rozwik³aæ. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Sposób ukazania natury w wierszu Przybosia w niczym nie przypomina jej pozytywnego wizerunku, jaki utrwali³ siê w wierszach polskich poetów. Góry bowiem przestaj¹ byæ przyjazn¹ dla cz³owieka przestrzeni¹, która zapewnia ukojenie, zachwyt, mo¿liwoœæ lepszego poznanie siebie. Zamiast tego przyroda zostaje przedstawiona jako niebezpieczny oraz bezlitosny ¿ywio³. Wywo³uje napiêcie oraz poczucie wyobcowania, co wi¹¿e siê z jej swym surowym charakterem: "To - wrzask wody obdzieranej siklaw¹ z ³o¿yska / i / gromobicie ciszy". Zestawienie natury i istoty ludzkiej podkreœla kruchoœæ cz³owieka, poniewa¿ nie ma on szans w starciu z górami: jego egzystencja jest znikoma wobec si³y przyrody. Ta relacja jest wiêc pozbawiona harmonii i poczucia bezpieczeñstwa, stanowi raczej nierówne starcie si³, które koñczy siê klêsk¹ cz³owieka. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

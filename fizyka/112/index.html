@@ -36,4 +36,43 @@
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Dane:</p> <p> <object class="math big" data="./data/1003276-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003276-1.svg" type="image/svg+xml"></object> </p> <p>Szukane:</p> <p> <object class="math big" data="./data/1003276-2.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie: </p> <p>Drogę <object class="math big" data="./data/1003276-3.svg" type="image/svg+xml"></object>   jaką musi przebyć światło ze Słońca do Ziemi wyrazimy jako:</p> <p> <object class="math big" data="./data/1003276-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003276-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003276-6.svg" type="image/svg+xml"></object> </p> <p>Wyznaczmy czas <object class="math big" data="./data/1003276-7.svg" type="image/svg+xml"></object>   jaki potrzebuje światło na dotarcie do Ziemi:</p> <p> <object class="math big" data="./data/1003276-8.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1003276-9.svg" type="image/svg+xml"></object>  </p> <p><strong>Odp. C.</strong></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<p>Dane:</p> <p> <object class="math big" data="./data/1003286-0.svg" type="image/svg+xml"></object> </p> <p>Prędkość dźwięku w powietrzu przyjmujemy jako:</p> <p> <object class="math big" data="./data/1003286-1.svg" type="image/svg+xml"></object> </p> <p>Szukane:</p> <p> <object class="math big" data="./data/1003286-2.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie: </p> <p>Prędkość <object class="math big" data="./data/1003286-3.svg" type="image/svg+xml"></object>   fali wyrażamy jako:</p> <p> <object class="math big" data="./data/1003286-4.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1003286-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003286-6.svg" type="image/svg+xml"></object>   </p> <p>Wyznaczmy długość tej fali dźwiękowej:</p> <p> <object class="math big" data="./data/1003286-7.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003286-8.svg" type="image/svg+xml"></object>   </p><br>
+<p>Dane:</p> <p> <object class="math big" data="./data/1003286-0.svg" type="image/svg+xml"></object> </p> <p>Prędkość dźwięku w powietrzu przyjmujemy jako:</p> <p> <object class="math big" data="./data/1003286-1.svg" type="image/svg+xml"></object> </p> <p>Szukane:</p> <p> <object class="math big" data="./data/1003286-2.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie: </p> <p>Prędkość <object class="math big" data="./data/1003286-3.svg" type="image/svg+xml"></object>   fali wyrażamy jako:</p> <p> <object class="math big" data="./data/1003286-4.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1003286-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003286-6.svg" type="image/svg+xml"></object>   </p> <p>Wyznaczmy długość tej fali dźwiękowej:</p> <p> <object class="math big" data="./data/1003286-7.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1003286-8.svg" type="image/svg+xml"></object>   </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

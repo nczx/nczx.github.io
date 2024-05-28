@@ -13,4 +13,43 @@
 </ul><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Główna różnica między kryzysem końca XIX w. a kryzysem schyłku XX w. wynika z odczuć uczestników danej kultury. Autor pisze, że o końcu wieku można mówić jedynie wtedy, gdy żyjący w tym czasie ludzie mają poczucie schyłkowości. Tego typu odczucia nie występowały u schyłku wieku XX. </p>
-<p>Inny argument jest taki, że epoka, w której żyjemy z wielu względów stanowi precedens w historii, dlatego trudno ją porównywać z innymi okresami. </p><br>
+<p>Inny argument jest taki, że epoka, w której żyjemy z wielu względów stanowi precedens w historii, dlatego trudno ją porównywać z innymi okresami. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

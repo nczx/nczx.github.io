@@ -247,4 +247,43 @@
 <p>Na ilustracji została przedstawiona <strong><span style="text-decoration: underline;">manipulacja,</span></strong> która związana jest z  przeinaczaniem faktów w zakresie liczebności osób manifestujących, co ma na celu udowodnić rację danej strony, co w gruncie rzeczy nie jest prawdą, bowiem jak widać na ilustracji przedstawiono garstkę osób manifestujących. Tym samym autor rysunku wskazał, że media mogą manipulować przedstawianym przez nie obrazem danych zdarzeń poprzez inscenizowanie wydarzeń, a następnie przekazywanie odbiorcom, jakoby były one rzeczywiste. </p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p>Manipulacja, którą prześmiewczo przedstawił autor rysunku, polega na tym, że <strong><span style="text-decoration: underline;">relacjonowane przez media zdarzenie jest w gruncie rzeczy inscenizowane</span></strong>. Inscenizacja to przedstawianie wyreżyserowanych scen odegranych przez aktorów jako rzeczywistych wydarzeń. Widz ma myśleć, że ogląda coś, co dzieje się naprawdę, żywiołowo i spontanicznie, tymczasem serwuje się mu odegraną scenkę, wprowadzając go w błąd.</p><br>
+<p>Manipulacja, którą prześmiewczo przedstawił autor rysunku, polega na tym, że <strong><span style="text-decoration: underline;">relacjonowane przez media zdarzenie jest w gruncie rzeczy inscenizowane</span></strong>. Inscenizacja to przedstawianie wyreżyserowanych scen odegranych przez aktorów jako rzeczywistych wydarzeń. Widz ma myśleć, że ogląda coś, co dzieje się naprawdę, żywiołowo i spontanicznie, tymczasem serwuje się mu odegraną scenkę, wprowadzając go w błąd.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

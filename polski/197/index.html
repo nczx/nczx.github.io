@@ -40,4 +40,43 @@
 <p>Nagromadzenie zdrobnień świadczy o pozytywnym emocjonalnym nacechowaniu tekstu. Sugeruje czułość i poufałość, jaką wyraża podmiot mówiący w wierszu.</p>
 <p> </p>
 <p>Wyraz "wyogromniały" składa się z przymiotnika "ogromny", przedrostka "wy-" oraz końcówki czasownikowej "-ały". Słowo to oznacza, że coś stało się wyjątkowo duże, ogromne. Zestawienie tego neologizmu ze zdrobnieniami buduje kontrast, co dodatkowo umniejsza desygnaty nazwane za pomocą zdrobnień. </p>
-<p> </p><br>
+<p> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

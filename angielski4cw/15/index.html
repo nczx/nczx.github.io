@@ -132,4 +132,43 @@
 <p>12. food</p>
 <p> </p>
 <p><strong>Tłumaczenie (odpowiedniki wstawionych słów zostały pogrubione):</strong></p>
-<p>Rok temu<strong> pojechałem/am</strong> do Londynu z rodziną. Nigdy wcześniej tam nie <strong>byłem/am</strong>. Naprawdę miło <strong>spędziliśmy</strong> czas i <strong>zobaczyliśmy</strong> wszystkie popularne atrakcje turystyczne. Moją ulubioną był London Eye, ogromny diabelski młyn w Londynie. <strong>Był</strong> kiedyś największym diabelskim młynem na świecie, ale teraz <strong>są</strong> trzy wyższe w Chinach, Singapurze i Ameryce. Jest to popularna atrakcja nie tylko wśród odwiedzających: ludzie wydają duże <strong>kwoty</strong>, żeby przyjechać do Londynu i wziąć ślub na diabelskim młynie! Od 2000 roku odbyło się na nim ponad pięćset ślubów. Do czasu aż dojechaliśmy z powrotem do domu <strong>zacząłem/zaczęłam (had started)</strong> już robić plany na następną wizytę! Chcę obaczyć kilka słynnych pchlich <strong>targów</strong> i pójść na wzgórze Primrose Hill, ze szczytu którego jest wspaniały widok na słynną, charakterystyczną <strong>panoramę</strong> Londynu. Podoba mi się Londyn. Nie trzeba się <strong>szczepić (get vaccinated)</strong> i nie ma dużego zagrożenia zatruciem <strong>pokarmowym</strong> - nawet w najtańszych kawiarniach i restauracjach. </p><br>
+<p>Rok temu<strong> pojechałem/am</strong> do Londynu z rodziną. Nigdy wcześniej tam nie <strong>byłem/am</strong>. Naprawdę miło <strong>spędziliśmy</strong> czas i <strong>zobaczyliśmy</strong> wszystkie popularne atrakcje turystyczne. Moją ulubioną był London Eye, ogromny diabelski młyn w Londynie. <strong>Był</strong> kiedyś największym diabelskim młynem na świecie, ale teraz <strong>są</strong> trzy wyższe w Chinach, Singapurze i Ameryce. Jest to popularna atrakcja nie tylko wśród odwiedzających: ludzie wydają duże <strong>kwoty</strong>, żeby przyjechać do Londynu i wziąć ślub na diabelskim młynie! Od 2000 roku odbyło się na nim ponad pięćset ślubów. Do czasu aż dojechaliśmy z powrotem do domu <strong>zacząłem/zaczęłam (had started)</strong> już robić plany na następną wizytę! Chcę obaczyć kilka słynnych pchlich <strong>targów</strong> i pójść na wzgórze Primrose Hill, ze szczytu którego jest wspaniały widok na słynną, charakterystyczną <strong>panoramę</strong> Londynu. Podoba mi się Londyn. Nie trzeba się <strong>szczepić (get vaccinated)</strong> i nie ma dużego zagrożenia zatruciem <strong>pokarmowym</strong> - nawet w najtańszych kawiarniach i restauracjach. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

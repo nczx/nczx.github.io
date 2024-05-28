@@ -55,4 +55,43 @@
 <p>Podane aminokwasy  <span style="text-decoration: underline;"><em><strong> są </strong></em></span> izomerami, ponieważ wzór sumaryczny każdego z nich to C<sub>6</sub>H<sub>13</sub>O<sub>2</sub>N.</p><br><a style="color:red; font-size:25px;">Zadanie 150</a><br>
 <p>a)</p> <p> <math-expr expr="NH_2-CH_2-COOH\ #(rlarw)^(H_2O)\ NH_3^(+)-CH_2-COO^-" syntax="text"></math-expr>    </p> <p><br/>b) </p> <p><img alt="" height="65" src="./data/938186-0.jpg" width="369"/></p> <p><br/>c)</p> <p><img alt="" height="90" src="./data/938186-1.jpg" width="393"/></p><br><a style="color:red; font-size:25px;">Zadanie 151</a><br>
 <p>a)  <math-expr expr="NH_2-CH_2-COOH\ +\ NaOH\ -&gt;\ NH_2-CH_2-COONa\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>b)   <math-expr expr="NH_2-CH_2-COOH\ +\ HCl\ -&gt;\ Cl^(-)NH_3^(+)-CH_2-COOH" syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 152</a><br>
-<p>Wzór sumaryczny tego aminokwasu to C<sub>4</sub>H<sub>9</sub>O<sub>3</sub>N. Liczymy masę cząsteczkową tego aminokwasu:</p> <p> <math-expr expr="m_(C_4H_9O_3N)=4*m_C+9*m_H+3*m_O+m_N=4*12\ u+9*1\ u+3*16\ u+14\ u=119\ u" syntax="text"></math-expr>   </p> <p><br/>Liczymy zawartość procentową poszczególnych pierwiastków:</p> <p> <math-expr expr="%C=(4*m_C)/m_(C_4H_9O_3N)*100%=(4*12\ u)/(119\ u)*100%=40,3%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%H=(9*m_H)/m_(C_4H_9O_3N)*100%=(9*1\ u)/(119\ u)*100%=7,6%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%O=(3*m_O)/m_(C_4H_9O_3N)*100%=(3*16\ u)/(119\ u)*100%=40,3%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%N=m_N/m_(C_4H_9O_3N)*100%=(14\ u)/(119\ u)*100%=11,8%" syntax="text"></math-expr>    </p><br>
+<p>Wzór sumaryczny tego aminokwasu to C<sub>4</sub>H<sub>9</sub>O<sub>3</sub>N. Liczymy masę cząsteczkową tego aminokwasu:</p> <p> <math-expr expr="m_(C_4H_9O_3N)=4*m_C+9*m_H+3*m_O+m_N=4*12\ u+9*1\ u+3*16\ u+14\ u=119\ u" syntax="text"></math-expr>   </p> <p><br/>Liczymy zawartość procentową poszczególnych pierwiastków:</p> <p> <math-expr expr="%C=(4*m_C)/m_(C_4H_9O_3N)*100%=(4*12\ u)/(119\ u)*100%=40,3%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%H=(9*m_H)/m_(C_4H_9O_3N)*100%=(9*1\ u)/(119\ u)*100%=7,6%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%O=(3*m_O)/m_(C_4H_9O_3N)*100%=(3*16\ u)/(119\ u)*100%=40,3%" syntax="text"></math-expr>   </p> <p> <math-expr expr="%N=m_N/m_(C_4H_9O_3N)*100%=(14\ u)/(119\ u)*100%=11,8%" syntax="text"></math-expr>    </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

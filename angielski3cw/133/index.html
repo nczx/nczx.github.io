@@ -77,4 +77,43 @@
 <p>3. lead</p>
 <p><strong>Uzasadnienie</strong>: <em>lead a happy life </em>- wieść szczęśliwe życie; <em>lead an army </em>- przewodzić armii; <em>lead a discussion </em>- poprowadzić dyskusję.</p>
 <p>4. save</p>
-<p><strong>Uzasadnienie</strong>: <em>save somebody </em>- ocalić kogoś; <em>save something for a rainy day </em>- zachować coś na czarną godzinę; <em>save something </em>- zachować/zatrzymać coś.</p><br>
+<p><strong>Uzasadnienie</strong>: <em>save somebody </em>- ocalić kogoś; <em>save something for a rainy day </em>- zachować coś na czarną godzinę; <em>save something </em>- zachować/zatrzymać coś.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

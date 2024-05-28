@@ -150,4 +150,43 @@
 <p>(Aby sprawić, by wybaczył/a ci kolega/koleżanka z pracy, powinno się porozmawiać z tą osobą i wyjaśnić całą sytuację.)</p>
 <p><br/><strong>Teacher: </strong></p>
 <p>You should apologise and say you're never going to do that thing again. You can offer to help him or her with something and offer to hand out tests, wipe the whiteboard, or arrange the seats.</p>
-<p>(Należy przeprosić i powiedzieć, że nigdy więcej nie zrobi się tej rzeczy. Można zaproponować mu/jej pomoc w czymś i zaproponować, że rozdasz testy, wytrzesz tablicę lub ułożysz krzesła.)</p><br>
+<p>(Należy przeprosić i powiedzieć, że nigdy więcej nie zrobi się tej rzeczy. Można zaproponować mu/jej pomoc w czymś i zaproponować, że rozdasz testy, wytrzesz tablicę lub ułożysz krzesła.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

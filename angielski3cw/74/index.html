@@ -125,4 +125,43 @@
 <p>Chociaż sztuka jest ogólnie uważana za coś pozytywnego, nie wszyscy zgadzają się w kwestii graffiti. Czy powinno być legalne? Istnieją argumenty za i przeciw takiemu stanowisku.</p>
 <p>Jednym z argumentów za legalizacją graffiti jest to, że może ono promować kreatywność i wyrażanie siebie. Pozwala artystom dzielić się z publicznością swoimi unikalnymi perspektywami i ożywia nieciekawe przestrzenie. Co więcej, decyzja ta może ograniczyć wandalizm. Gdy artyści mają możliwość legalnego wyrażania siebie, mogą być mniej skłonni do niszczenia własności prywatnej.</p>
 <p>Z drugiej strony, legalizacja graffiti może zwiększyć liczbę obiektywnie złych lub obraźliwych dzieł sztuki. Nie wszystkie graffiti są estetyczne, a niektóre mogą zawierać nieodpowiednie treści. Może to negatywnie wpłynąć na przestrzeń publiczną i zaszkodzić ogólnemu wizerunkowi miasta lub dzielnicy. Ponadto zalegalizowanie graffiti może być trudne w praktyce. Władze potrzebowałyby jasnych wytycznych, aby zachować równowagę między wolnością artystyczną a porządkiem publicznym.</p>
-<p>Podsumowując, legalizacja graffiti w miejscach publicznych ma zarówno zalety, jak i wady. Chociaż może zachęcać do kreatywności i zapobiegać wandalizmowi, niesie ze sobą również ryzyko nieatrakcyjnych i obraźliwych dzieł sztuki. Znalezienie równowagi między ekspresją artystyczną a utrzymaniem przestrzeni publicznej będzie wymagało starannej regulacji prawnej i zaangażowania społeczności.</p><br>
+<p>Podsumowując, legalizacja graffiti w miejscach publicznych ma zarówno zalety, jak i wady. Chociaż może zachęcać do kreatywności i zapobiegać wandalizmowi, niesie ze sobą również ryzyko nieatrakcyjnych i obraźliwych dzieł sztuki. Znalezienie równowagi między ekspresją artystyczną a utrzymaniem przestrzeni publicznej będzie wymagało starannej regulacji prawnej i zaangażowania społeczności.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

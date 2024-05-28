@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Łączenie języka literackiego z potocznym służy odzwierciedleniu skrajności. Dotyczą one podziału na dwie sfery: <em>sacrum</em> i <em>profanum</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Białoszewski w swych utworach odwraca dotychczasowy porządek. Konsekwentnie prowadzi bowiem do uświęcenia przyziemnych zjawisk oraz przypisania zwykłości elementom przynależnym do sfery świętości czy ducha. W ten sposób zmienia sposób postrzegania wspomnianych sfer, zamienia je miejscami. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Sakralizacja <em>profanum</em> u Białoszewskiego polega na tym, że poeta odnosi język literacki do codzienności, a potoczny - do sfery ducha. W związku z tym dochodzi do odwrócenia porządku: uświęcenia zwykłości i uzwyczajnienia <em>sacrum</em>. Sakralizacja zwykłych przedmiotów ściśle wiąże się z kontekstem słownym, ponieważ w ten sposób zyskują boskie przymioty, zostają skojarzone z litanią czy modlitwą. Jednocześnie poeta nie tylko nawiązuje do kontekstów religijnych, ale też do pojęcia kultury wysokiej. </p><br>
+<p>Sakralizacja <em>profanum</em> u Białoszewskiego polega na tym, że poeta odnosi język literacki do codzienności, a potoczny - do sfery ducha. W związku z tym dochodzi do odwrócenia porządku: uświęcenia zwykłości i uzwyczajnienia <em>sacrum</em>. Sakralizacja zwykłych przedmiotów ściśle wiąże się z kontekstem słownym, ponieważ w ten sposób zyskują boskie przymioty, zostają skojarzone z litanią czy modlitwą. Jednocześnie poeta nie tylko nawiązuje do kontekstów religijnych, ale też do pojęcia kultury wysokiej. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

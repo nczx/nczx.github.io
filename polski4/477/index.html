@@ -61,4 +61,43 @@
 <p>Za pomocą wskazanych wyżej zabiegów literackich Herbert przedstawia katedrę w Sienie jako arcydzieło pośredniczące w kontaktach człowieka ze sferą sacrum. By oddać nieuchwytną, tajemniczą aurę budowli, autor posługuje się plastycznym, silnie oddziałującym na wyobraźnię językiem, a także nawiązuje do pokrewnych dziedzin sztuki lub równie fascynujących zjawisk zachodzących w świecie przyrody.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Przykładowa odpowiedź:</p>
 <p>O tym, że katedra sieneńska jest znakiem kulturowym, może świadczyć fakt, iż w jej budowie uczestniczyło wiele pokoleń artystów, architektów oraz renowatorów sztuki. Dzięki temu budowla jawi się jako dziedzictwo epok, w których powstawała - poświadcza o ich oryginalności i w rzetelny sposób dokumentuje ewolucję myśli architektonicznej, jak również kategorii estetycznych ("[...] trzysta metrów kwadratowych, na których śledzić można rozwój sztuki od linearyzmu Domenica di Niccola aż do traktującego kamień po malarsku Domenica Beccafumiego."). Jako znak kulturowy katedra spełnia jeszcze jedną niezwykle istotną funkcję: silnie oddziałuje na wyobraźnię widza, prowokuje go do uniwersalnych refleksji na temat istoty piękna ("Pinturicchio jest jak kompozytor, o którym mówi się, że co prawda inwencja nie jest jego najmocniejszą stroną, ale ma słuch absolutny i doskonałą znajomość instrumentów, którymi się posługuje.").</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Zadanie indywidualne</p><br>
+<p>Zadanie indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

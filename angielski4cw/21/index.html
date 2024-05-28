@@ -68,4 +68,43 @@
 <p>5. tenth</p>
 <p> </p>
 <p><strong>Tłumaczenie tekstu (wstawione słowa pogrubiono):</strong></p>
-<p>Artykuł przygląda się nowym technologiom, które mogą ulepszyć nasze życie. Row-bot został skonstruowany, <strong>żeby pić</strong> zanieczyszczoną <strong>wodę</strong>. "Odcisk mózgu" może oznaczać, że pewnego dnia hasła zabezpieczające dane staną się <strong>niepotrzebne</strong>. Coraz mniej ludzi mieszka dziś <strong>na wiejskich</strong> obszarach, a dryfujące farmy zaopatrzą mieszkańców miast zarówno w <strong>ryby</strong> jak <strong>i warzywa</strong>. Na koniec, 50 000 ton resztek kawy przetwarzanej przez Bio-bean to zaledwie<strong> jedna dziesiąta</strong> ogółu resztek po kawie. Pomyśl tylko ile czystej energii moglibyśmy otrzymywać, jeśli używalibyśmy pozostałych dziewięciu dziesiątych. </p><br>
+<p>Artykuł przygląda się nowym technologiom, które mogą ulepszyć nasze życie. Row-bot został skonstruowany, <strong>żeby pić</strong> zanieczyszczoną <strong>wodę</strong>. "Odcisk mózgu" może oznaczać, że pewnego dnia hasła zabezpieczające dane staną się <strong>niepotrzebne</strong>. Coraz mniej ludzi mieszka dziś <strong>na wiejskich</strong> obszarach, a dryfujące farmy zaopatrzą mieszkańców miast zarówno w <strong>ryby</strong> jak <strong>i warzywa</strong>. Na koniec, 50 000 ton resztek kawy przetwarzanej przez Bio-bean to zaledwie<strong> jedna dziesiąta</strong> ogółu resztek po kawie. Pomyśl tylko ile czystej energii moglibyśmy otrzymywać, jeśli używalibyśmy pozostałych dziewięciu dziesiątych. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

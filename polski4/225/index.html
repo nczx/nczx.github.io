@@ -70,4 +70,43 @@
 </ul>
 <p> </p>
 <p>Podmiot liryczny odwołuje się do dwóch przeciwstawnych sfer. Sfera <em>profanum </em>jest tym, co dotyczy życia codziennego i świeckiego, poznaje się ją za pomocą zmysłów, jest zrozumiała dla człowieka. Z kolei <em>sacrum </em>wiąże się z wierzeniami i praktykami o charakterze religijnym. Sfera ta jest dostępna tylko dla wtajemniczonych, odwołuje się do spraw duchowych. W wierszu Białoszewskiego dochodzi do przewartościowania tych pojęć. <em>Sacrum</em> zostaje przedstawione w nieco ironiczny sposób - nie budzi zachwytu czy fascynacji, lecz znudzenie. Uwzniośleniu ulega natomiast codzienność - nabiera ona nieoczywistego uroku. Podmiot liryczny, odwołując się do warzyw czy podłogi, nadaje pozornie banalnym elementom szczególne znaczenie. Dochodzi do ich uświęcenia oraz pochwały. Tym samym codziennemu życiu zostaje nadany element religijny, duchowy. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Warzywa w utworze Białoszewskiego zostają opisane w niezwykły sposób, który podnosi ich rangę. Poeta bowiem z fascynacją poświęca swą uwagę istocie buraka - uważa ją za istotne zjawisko, które należy zbadać. Z tego też powodu przedstawia to warzywo za pomocą pleonazmu "Buraka burota", oznaczającego "bycie burakiem". Dogłębnie stara się wniknąć w istotę warzywa, ponieważ odwołuje się do jego warstw widocznych w procesie krojenia. Ponadto ukazuje go z czułością i przywiązaniem, niemal jako człowieka, na co wskazują słowa: "i jeszcze buraka starość, którą tak kochamy". W podobnej konwencji poeta opisuje kartofle. Zestawia je z fletem, znakiem sztuki lub też magicznych dźwięków. To jednak niepozorne warzywa zostają uwznioślone ("w kartofle - flet"). Ich struktura, zawartość nie są bowiem czymś banalnym, lecz zagadkowym i pięknym. Stają się dziełem sztuki, które wywołuje podziw. Świadczy o tym wykrzyknienie: "w kartofle rysunków i kształtów zatartych!". </p><br>
+<p>Warzywa w utworze Białoszewskiego zostają opisane w niezwykły sposób, który podnosi ich rangę. Poeta bowiem z fascynacją poświęca swą uwagę istocie buraka - uważa ją za istotne zjawisko, które należy zbadać. Z tego też powodu przedstawia to warzywo za pomocą pleonazmu "Buraka burota", oznaczającego "bycie burakiem". Dogłębnie stara się wniknąć w istotę warzywa, ponieważ odwołuje się do jego warstw widocznych w procesie krojenia. Ponadto ukazuje go z czułością i przywiązaniem, niemal jako człowieka, na co wskazują słowa: "i jeszcze buraka starość, którą tak kochamy". W podobnej konwencji poeta opisuje kartofle. Zestawia je z fletem, znakiem sztuki lub też magicznych dźwięków. To jednak niepozorne warzywa zostają uwznioślone ("w kartofle - flet"). Ich struktura, zawartość nie są bowiem czymś banalnym, lecz zagadkowym i pięknym. Stają się dziełem sztuki, które wywołuje podziw. Świadczy o tym wykrzyknienie: "w kartofle rysunków i kształtów zatartych!". </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

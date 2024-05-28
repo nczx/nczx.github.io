@@ -42,4 +42,43 @@
 </script>
 </head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
-<table border="1" style="height: 154px; width: 654px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 650px;"> <p><strong>Wzór Eulera</strong></p> <p>Dla dowolnego wielościanu wypukłego zachodzi zależność opisana tzw. wzorem Eulera:</p> <p><span> <math-expr expr="s-k+w=2" syntax="text"></math-expr> </span></p> <p>gdzie <strong>s</strong> oznacza liczbę ścian, <strong>k</strong> - liczbę krawędzi, <strong>w</strong> - liczbę wierzchołków. </p> </td> </tr> </tbody> </table> <p> </p> <p>Sprawdzimy prawdziwość <strong>wzoru Eulera</strong> dla wybranych wielościanów.</p> <hr/> <p><strong>1) </strong></p> <p><strong><span style="text-decoration: underline;"><em>szpiczasty kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>8</strong> ścian,   <strong>12</strong> krawędzi i <strong>6</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=8-12+6=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p> <hr/> <p><strong>2) </strong></p> <p><strong><span style="text-decoration: underline;"><em>gruby kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>9</strong> ścian, <strong>16</strong> krawędzi i <strong>9</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=9-16+9=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p> <hr/> <p><strong>3) </strong></p> <p><strong><span style="text-decoration: underline;"><em>cienki kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>10</strong> ścian, <strong>20</strong> krawędzi i <strong>12</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=10-20+12=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p><br>
+<table border="1" style="height: 154px; width: 654px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 650px;"> <p><strong>Wzór Eulera</strong></p> <p>Dla dowolnego wielościanu wypukłego zachodzi zależność opisana tzw. wzorem Eulera:</p> <p><span> <math-expr expr="s-k+w=2" syntax="text"></math-expr> </span></p> <p>gdzie <strong>s</strong> oznacza liczbę ścian, <strong>k</strong> - liczbę krawędzi, <strong>w</strong> - liczbę wierzchołków. </p> </td> </tr> </tbody> </table> <p> </p> <p>Sprawdzimy prawdziwość <strong>wzoru Eulera</strong> dla wybranych wielościanów.</p> <hr/> <p><strong>1) </strong></p> <p><strong><span style="text-decoration: underline;"><em>szpiczasty kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>8</strong> ścian,   <strong>12</strong> krawędzi i <strong>6</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=8-12+6=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p> <hr/> <p><strong>2) </strong></p> <p><strong><span style="text-decoration: underline;"><em>gruby kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>9</strong> ścian, <strong>16</strong> krawędzi i <strong>9</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=9-16+9=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p> <hr/> <p><strong>3) </strong></p> <p><strong><span style="text-decoration: underline;"><em>cienki kamień</em></span></strong></p> <p>Odczytujemy z rysunku, że ten wielościan ma <strong>10</strong> ścian, <strong>20</strong> krawędzi i <strong>12</strong> wierzchołków. </p> <p>Mamy więc:</p> <p><span> <math-expr expr="s-k+w=10-20+12=2" syntax="text"></math-expr> </span>  </p> <p>Czyli wzór ten jest prawdziwy dla podanego wielościanu. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -114,4 +114,43 @@
 <p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 13</a><br>
 <p>Indywidualne </p><br><a style="color:red; font-size:25px;">Zadanie 14</a><br>
 <p>Przykładowo:</p>
-<p>Grafika zwraca uwagę na zależność między językiem a eskalacją przemocy. Wynika z niej, iż język oraz komunikacja mogą prowadzić do wykluczenia pewnych grup lub jednostek, odizolowania ich od reszty społeczeństwa. Następnym etapem staje się dyskryminacja, która prowadzi do aktów przemocy, a wreszcie - eksterminacji. Piramida ta świadczy więc o tym, że mowa ma realny wpływ na rzeczywistość, jest - w określonych sytuacjach - głównym źródłem nienawiści, ponieważ prowokuje, zachęca do okazywania innym pogardy. W efekcie prowadzi to do narastających konfliktów i zagłady niepożądanych grup. Tym samym język jest pierwszą dziedziną, w której można dostrzec zapowiedź ewentualnego zagrożenia oraz aktów przemocy. </p><br>
+<p>Grafika zwraca uwagę na zależność między językiem a eskalacją przemocy. Wynika z niej, iż język oraz komunikacja mogą prowadzić do wykluczenia pewnych grup lub jednostek, odizolowania ich od reszty społeczeństwa. Następnym etapem staje się dyskryminacja, która prowadzi do aktów przemocy, a wreszcie - eksterminacji. Piramida ta świadczy więc o tym, że mowa ma realny wpływ na rzeczywistość, jest - w określonych sytuacjach - głównym źródłem nienawiści, ponieważ prowokuje, zachęca do okazywania innym pogardy. W efekcie prowadzi to do narastających konfliktów i zagłady niepożądanych grup. Tym samym język jest pierwszą dziedziną, w której można dostrzec zapowiedź ewentualnego zagrożenia oraz aktów przemocy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

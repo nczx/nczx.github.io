@@ -64,4 +64,43 @@
 <p>- Ich möchte Ski fahren und brauche einen Skianzug. (Chciałbym jeździć na nartach i potrzebuję kombinezonu narciarskiego.) <br/>- Du kannst ihn online bestellen. Du musst nur die Kleidergröße eintragen. (Możesz zamówić go online. Musisz podać tylko rozmiar ubrania.)  </p>
 <p>- Ich möchte Ski fahren und brauche Skistöcke. (Chciałbym jeździć na nartach i potrzebne mi są kijki.) <br/>- Du kannst sie online bestellen. Du musst nur die Körpergröße in cm eintragen. (Możesz zamówić je online. Musisz podać tylko wzrost w centymetrach.) </p>
 <p>- Ich möchte snowboarden und brauche ein Snowboard. (Chciałbym jeździć na snowboardzie i potrzebuję deski snowboardowej.) <br/>- Du kannst es online bestellen. Du musst nur die Körpergröße in cm und dein Gewicht eintragen. (Możesz zamówić ją online. Musisz tylko podać wzrost w centymetrach i twoją wagę.) </p>
-<p>- Ich möchte Mountainbike fahren und brauche einen Helm. (Chciałbym jeździć na rowerze górskim i potrzebuję kasku.) <br/>- Du kannst ihn online bestellen. Du musst nur Art und Größe auswählen. (Możesz zamówić go online. Musisz wybrać tylko rodzaj i rozmiar.) </p><br>
+<p>- Ich möchte Mountainbike fahren und brauche einen Helm. (Chciałbym jeździć na rowerze górskim i potrzebuję kasku.) <br/>- Du kannst ihn online bestellen. Du musst nur Art und Größe auswählen. (Możesz zamówić go online. Musisz wybrać tylko rodzaj i rozmiar.) </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

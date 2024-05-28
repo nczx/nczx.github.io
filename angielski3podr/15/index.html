@@ -113,4 +113,43 @@
 <p>Cześć wszystkim!</p>
 <p>W zeszłym miesiącu miałem/am ciekawe doświadczenie, gdy szukałem/am współlokatora i pomyślałem/am, że Wam o tym opowiem.</p>
 <p>Na ogłoszenie, które zamieściłem/am odpowiedziała pewna dziewczyna. Powiedziała mi, że jest zainteresowana i chciałaby się spotkać i omówić szczegóły. Wydawała się przyjazna, więc dałem/am jej adres. Wydała mi się otwartą i szczerą osobą, więc pomyślałem/am, że w końcu znalazłem/am nową współlokatorkę.</p>
-<p>Jednak kiedy przyszła obejrzeć mieszkanie, przyniosła ze sobą węża! Był żółty i obserwował mnie przez cały czas. Czułem/am się przez to bardzo niekomfortowo. W końcu musiałem/am jej odmówić, ponieważ nie mogłem/am sobie wyobrazić życia w jednym mieszkaniu z tym stworzeniem. Bo widzicie, ja panicznie boję się węży!</p><br>
+<p>Jednak kiedy przyszła obejrzeć mieszkanie, przyniosła ze sobą węża! Był żółty i obserwował mnie przez cały czas. Czułem/am się przez to bardzo niekomfortowo. W końcu musiałem/am jej odmówić, ponieważ nie mogłem/am sobie wyobrazić życia w jednym mieszkaniu z tym stworzeniem. Bo widzicie, ja panicznie boję się węży!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

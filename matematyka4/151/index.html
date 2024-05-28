@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Dane są dwa wielościany podobne.</p> <hr/> <p><strong>a)</strong></p> <p>Korzystając z podobieństwa tych wielościanów mamy:  </p> <p><span> <math-expr expr="(9)/(3,6) = (6)/(x)" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="9x = 21,6 \ \ \ |:9" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="ululx = 2,4" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy skalę podobieństwa<strong> k</strong> mniejszego wielościanu do większego. Mamy:</p> <p><span> <math-expr expr="k=x/6=(2,4)/6=ulul2/5" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Korzystając z podobieństwa tych wielościanów mamy:</p> <p><span> <math-expr expr="10/6 = 9/x" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="10x = 54 \ \ \ |:10" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="ululx = 27/5" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy skalę podobieństwa<strong> k</strong> mniejszego wielościanu do większego. Mamy:</p> <p><span> <math-expr expr="k=x/9=(27/5)/9=27/5*1/9= ulul3/5" syntax="text"></math-expr> </span>  </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<table border="1" style="height: 93px; width: 744px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 740px;"> <p>Jeśli skala podobieństwa brył podobnych jest równa <strong>a:b</strong>, to</p> <ul> <li>stosunek pól powierzchni tych brył jest równy <strong>a<sup>2</sup>:b<sup>2</sup></strong>,</li> <li>stosunek objętości tych brył jest równy <strong>a<sup>3</sup>:b<sup>3</sup></strong>.</li> </ul> </td> </tr> </tbody> </table> <p> </p> <p>Dane są dwa sześciany. Każde dwa sześciany są do siebie <span style="text-decoration: underline;">podobne</span>. </p> <p>Niech <strong>a</strong> będzie długością krawędzi większego sześcianu, a <strong>b</strong> długością krawędzi mniejszego sześcianu. </p> <p>Pole powierzchni pierwszego jest czterokrotnie większe od pola powierzchni drugiego z nich. Zapiszmy stosunek pól powierzchni tych sześcianów. Mamy:  </p> <p><span> <math-expr expr="a^2/b^2= 4" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="(a/b)^2 = 4 \ \ \ ^^ \ \ \ a/b&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a/b =2" syntax="text"></math-expr> </span>  </p> <p>Więc</p> <p><span> <math-expr expr="(a/b)^3 = 2^3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a^3/b^3 = 8" syntax="text"></math-expr> </span>  </p> <p><strong>Odp. </strong>Stosunek objętości większego sześcianu do mniejszego wynosi <strong>8:1</strong>.</p><br>
+<table border="1" style="height: 93px; width: 744px; border-collapse: collapse; border-color: #99cccc; background-color: #99cccc;"> <tbody> <tr> <td style="width: 740px;"> <p>Jeśli skala podobieństwa brył podobnych jest równa <strong>a:b</strong>, to</p> <ul> <li>stosunek pól powierzchni tych brył jest równy <strong>a<sup>2</sup>:b<sup>2</sup></strong>,</li> <li>stosunek objętości tych brył jest równy <strong>a<sup>3</sup>:b<sup>3</sup></strong>.</li> </ul> </td> </tr> </tbody> </table> <p> </p> <p>Dane są dwa sześciany. Każde dwa sześciany są do siebie <span style="text-decoration: underline;">podobne</span>. </p> <p>Niech <strong>a</strong> będzie długością krawędzi większego sześcianu, a <strong>b</strong> długością krawędzi mniejszego sześcianu. </p> <p>Pole powierzchni pierwszego jest czterokrotnie większe od pola powierzchni drugiego z nich. Zapiszmy stosunek pól powierzchni tych sześcianów. Mamy:  </p> <p><span> <math-expr expr="a^2/b^2= 4" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="(a/b)^2 = 4 \ \ \ ^^ \ \ \ a/b&gt;0" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a/b =2" syntax="text"></math-expr> </span>  </p> <p>Więc</p> <p><span> <math-expr expr="(a/b)^3 = 2^3" syntax="text"></math-expr> </span>  </p> <p><span> <math-expr expr="a^3/b^3 = 8" syntax="text"></math-expr> </span>  </p> <p><strong>Odp. </strong>Stosunek objętości większego sześcianu do mniejszego wynosi <strong>8:1</strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

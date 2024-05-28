@@ -100,4 +100,43 @@
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
 <p>Wolne stanowiska</p>
-<p>Szukamy pracowitych, zmotywowanych, <strong>pomysłowych</strong> kandydatów do pracy w naszej firmie. Najlepiej, żebyś był/a związany/a z <strong>zarządzaniem</strong> w biznesie albo ekonomią. Preferowany tytuł magistra, ale wyróżniający się kandydaci z tytułem licencjata również będą brani pod uwagę. Ci, którzy przejdą rekrutację będą mieli okazję zaprezentować doskonałe umiejętności <strong>rozwiązywania</strong> konfliktów, ponieważ stanowisko obejmuje negocjacje z klientami. Doświadczenie nie jest wymagane, a obecnie prowadzimy rozmowy ze studentami kończącymi studia. Zapraszamy studentów tego uniwersytetu do biura <strong>akademików</strong> od 12 do 15 maja. W celu aplikowania na to stanowisko proszę wypełnić formularz zgłoszeniowy i złożyć go w sekretariacie uniwersytetu przed 30 kwietnia. </p><br>
+<p>Szukamy pracowitych, zmotywowanych, <strong>pomysłowych</strong> kandydatów do pracy w naszej firmie. Najlepiej, żebyś był/a związany/a z <strong>zarządzaniem</strong> w biznesie albo ekonomią. Preferowany tytuł magistra, ale wyróżniający się kandydaci z tytułem licencjata również będą brani pod uwagę. Ci, którzy przejdą rekrutację będą mieli okazję zaprezentować doskonałe umiejętności <strong>rozwiązywania</strong> konfliktów, ponieważ stanowisko obejmuje negocjacje z klientami. Doświadczenie nie jest wymagane, a obecnie prowadzimy rozmowy ze studentami kończącymi studia. Zapraszamy studentów tego uniwersytetu do biura <strong>akademików</strong> od 12 do 15 maja. W celu aplikowania na to stanowisko proszę wypełnić formularz zgłoszeniowy i złożyć go w sekretariacie uniwersytetu przed 30 kwietnia. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

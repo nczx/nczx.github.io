@@ -150,4 +150,43 @@
 <p>Przykładowa odpowiedź:</p>
 <p>Aluzję do <em>Boskiej komedii</em> Tokarczuk zawarła w słowach: "Od razu zobaczył swoją Beatrycze - stała przy wyjściu, trzymając przed sobą kartkę z jego nazwiskiem i imieniem." Nazywając swą przewodniczkę imieniem ukochanej Dantego, profesor wyraża swe obawy związane z wizytą w obcym, nieprzyjaznym kraju, przypominającym piekło z wizji włoskiego poety. Bohater powierza Polce swe bezpieczeństwo, podobnie jak Dante pokładał ufność w nadprzyrodzonej protekcji Wergiliusza oraz Beatrycze. Moment, w którym "Gosha" nieoczekiwanie opuszcza Andrewsa, niejako przypieczętowuje jego los, zapowiadając żmudną, niebezpieczną tułaczkę - zarówno w przestrzeni, jak również w głąb własnej psychiki. Utożsamiając Polskę z dantejskim piekłem, Tokarczuk podkreśla grozę życia w PRL-owskiej rzeczywistości. Jednocześnie nadaje jej sakralny charakter, przejawiający się zwłaszcza w rytualizacji codzienności ("Miał wrażenie, że bierze udział w religijnym rytuale. Zabijanie ryby.").</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Zadanie indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Zadanie indywidualne</p><br>
+<p>Zadanie indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

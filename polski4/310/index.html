@@ -54,4 +54,43 @@
 <p>Wiersz Anny Kamieńskiej z kolei tylko częściowo opiera się na koncepcie bliskości codzienności. Autorka wspomina wprawdzie na początku o praktykach takich jak najścia w domach czy działalność dwulicowych agentów, w gruncie rzeczy jednak są one jedynie podstawą głębszej symboliki, rozwijanej w kolejnych dwóch strofach. Jako jedyna odwołuje się też do tradycji romantycznej, dokonując uwznioślenia i sakralizacji cierpienia narodu polskiego.</p>
 <p>Liryka Polkowskiego zdaje się najbardziej intymna spośród wszystkich podanych utworów. Autor nie pisze wprost o stanie wojennym, sugeruje jedynie obraz przesłuchania i płonącego ognia za plecami. Wydarzenie to staje się tłem dla rozgrywającego się dramatu w sumieniu podmiotu lirycznego, który musi wybierać między bezpieczeństwem dziecka a nieugiętością wobec władzy. Polkowski posługuje się bogactwem środków artystycznych, wplatając w tekst również wątki biblijne.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Poeci tworzący w okresie PRL-u posługiwali się konkretem, ich twórczość oparta była o bliską obserwację codziennych sytuacji. Niechęć do odwoływania się do pojęć ogólnych, abstrakcji wynikać może ze świadomości fałszowani rzeczywistości za pomocą języka. Komunistyczna propaganda dokonała przewartościowania takich pojęć jak wolność, równość, jedność. Stały się one pustymi hasłami, za którymi kryły się opresyjne często mechanizmy rządzące systemem totalitarnym.  Świadomi płynności znaczeń literaci uciekali od abstrakcji. Przedstawiając konkretne, bliskie im sytuacje, nie pozostawiali miejsca na nadinterpretacje i manipulacje. Wymowa ich tekstów stawała się jednoznaczna.</p><br>
+<p>Poeci tworzący w okresie PRL-u posługiwali się konkretem, ich twórczość oparta była o bliską obserwację codziennych sytuacji. Niechęć do odwoływania się do pojęć ogólnych, abstrakcji wynikać może ze świadomości fałszowani rzeczywistości za pomocą języka. Komunistyczna propaganda dokonała przewartościowania takich pojęć jak wolność, równość, jedność. Stały się one pustymi hasłami, za którymi kryły się opresyjne często mechanizmy rządzące systemem totalitarnym.  Świadomi płynności znaczeń literaci uciekali od abstrakcji. Przedstawiając konkretne, bliskie im sytuacje, nie pozostawiali miejsca na nadinterpretacje i manipulacje. Wymowa ich tekstów stawała się jednoznaczna.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

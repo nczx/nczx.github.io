@@ -45,4 +45,43 @@
 <p>Początek wiersza można odczytywać na rozmaite sposoby. Przede wszystkim przerzutnia po trzecim wersie zaznacza rozdzielenie sfery boskiej i ludzkiej. Z drugiej jednak strony pierwsze wersy utworu sugerują podobieństwo między Bogiem a człowiekiem - dotyczą ich te same zjawiska (narodziny, śmierć). W szerszej perspektywie z kolei można więc potraktować ten fragment jako refleksję na temat narodzin i zaniku wiary - nie tylko w życiu jednostki, ale ogółu ludzkości. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Przykładowo:</p>
 <p>Fenomenologia to kierunek filozoficzny, który wykształcił się w XX wieku. Opiera się on na przekonaniu, że w celu zbadania człowieka oraz świata trzeba odrzucić jakiekolwiek wstępne założenia i po prostu skupić się na opisie, oglądzie tego, co bezpośrednio się widzi lub doświadcza. Określenie poezji Różewicza mianem "fenomenologii wiary" świadczy o jej charakterze i podejmowanych tematach. Sugeruje to bowiem, iż liryka poety odwołuje się do tematyki filozoficznej. Różewicz odrzuca wstępne założenia i opisuje doświadczenia człowieka, który boryka się ze swymi rozterkami dotyczącymi obecności Boga lub Jego braku. Skupia się wyłącznie na tym, co można opisać - nie interesuje się abstrakcyjnymi zagadnieniami, lecz powraca do konkretnych reakcji czy odczuć istoty ludzkiej, by na ich podstawie scharakteryzować problem wiary. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Zdaniem autora od czytelnika zależy sposób odczytania poezji Różewicza. Może on bowiem albo dostrzec tylko przypadkowość i chaos, albo też ukryty porządek w dziełach poety. </p><br>
+<p>Zdaniem autora od czytelnika zależy sposób odczytania poezji Różewicza. Może on bowiem albo dostrzec tylko przypadkowość i chaos, albo też ukryty porządek w dziełach poety. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

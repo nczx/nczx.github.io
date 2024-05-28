@@ -74,4 +74,43 @@
 <p><br/>Wniosek:</p>
 <p>Zaszła reakcja charakterystyczna świadcząca o obecności skrobi w ziemniaku.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Aminokwasy łączą się ze sobą poprzez wiązanie peptydowe. Powstaje ono w wyniku połączenia grupy karboksylowej jednej cząsteczki aminokwasu z grupą aminową drugiej cząsteczki.</p> <p>Równanie reakcji: </p> <p> <math-expr expr="NH_2CH(COOH)CH_2CH_2COOH+NH_2CH(CH_2SH)COOH+NH_2CH_2COOH-&gt;NH_2CH(COOH)CH_2CH_2CONHCH(CH_2SH)CONHCH_2COOH+2\ H_2O" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Liczymy zawartość chloru w jednym m<sup>3</sup> powietrza w pomieszczeniu:</p> <p> <math-expr expr="75\ m^3\ \ -\ \ 60\ g_(Cl_2)" syntax="text"></math-expr>    </p> <p> <math-expr expr="1\ m^3\ \ -\ \ m_(Cl_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(Cl_2)=(1\ m^3*60\ g)/(75\ m^3)=0,8\ g=800\ mg" syntax="text"></math-expr>   </p> <p><strong>W jednym m<sup>3</sup> powietrza w pomieszczeniu znajduje się <span style="text-decoration: underline;">800 mg</span> chloru. Jest to wartość <span style="text-decoration: underline;">mniejsza</span> niż LC<sub>50</sub> chloru.</strong></p><br>
+<p>Liczymy zawartość chloru w jednym m<sup>3</sup> powietrza w pomieszczeniu:</p> <p> <math-expr expr="75\ m^3\ \ -\ \ 60\ g_(Cl_2)" syntax="text"></math-expr>    </p> <p> <math-expr expr="1\ m^3\ \ -\ \ m_(Cl_2)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(Cl_2)=(1\ m^3*60\ g)/(75\ m^3)=0,8\ g=800\ mg" syntax="text"></math-expr>   </p> <p><strong>W jednym m<sup>3</sup> powietrza w pomieszczeniu znajduje się <span style="text-decoration: underline;">800 mg</span> chloru. Jest to wartość <span style="text-decoration: underline;">mniejsza</span> niż LC<sub>50</sub> chloru.</strong></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

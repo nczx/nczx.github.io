@@ -99,4 +99,43 @@
 <p>3. All the participants were from <s class="odr-strikethrough">Cardiff</s> <strong>Wales</strong>.</p>
 <p>(<em>Two thousand young people from the poorest communities in Wales were invited to take part.</em>)</p>
 <p><br/>4. The speaker links crime to not having <s class="odr-strikethrough">a job</s> <strong>anything to do</strong>.</p>
-<p>(<em>... and, in areas where there is not much else to do, it can keep young people away from crime ...</em>)</p><br>
+<p>(<em>... and, in areas where there is not much else to do, it can keep young people away from crime ...</em>)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

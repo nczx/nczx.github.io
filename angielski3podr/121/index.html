@@ -110,4 +110,43 @@
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
 <p>Cześć wszystkim!</p>
-<p>Jestem wielkim fanem / wielką fanką szermierki, ale wydaje mi się, że ten sport jest trochę niedoceniany. Nie jest tak popularny jak piłka nożna czy siatkówka, ale uważam, że zdecydowanie warto się nim zainteresować. Teraz, gdy zbliżają się Mistrzostwa Świata w Szermierce, pomyślałem/am, że dam Wam znać. To fantastyczna okazja, aby zrobić pierwszy krok w świecie szermierki. Kto wie, może pokochacie to tak bardzo jak ja!</p><br>
+<p>Jestem wielkim fanem / wielką fanką szermierki, ale wydaje mi się, że ten sport jest trochę niedoceniany. Nie jest tak popularny jak piłka nożna czy siatkówka, ale uważam, że zdecydowanie warto się nim zainteresować. Teraz, gdy zbliżają się Mistrzostwa Świata w Szermierce, pomyślałem/am, że dam Wam znać. To fantastyczna okazja, aby zrobić pierwszy krok w świecie szermierki. Kto wie, może pokochacie to tak bardzo jak ja!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

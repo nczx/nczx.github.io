@@ -126,4 +126,43 @@
 <p><strong><br/>Scene 5:</strong> The alien finds a park. Kids are playing happily together, laughing and having fun. The alien feels happy and comforted by this sight.</p>
 <p>(Kosmitka znajduje park. Dzieci bawią się razem, śmieją się i dobrze się bawią. Czuje się szczęśliwa i pocieszona tym widokiem.)</p>
 <p><strong><br/>Scene 6:</strong> The alien decides to talk to some humans. She approaches a group of friends who welcome her warmly. They are curious and kind. The alien feels a connection and realises that humans can be good-hearted.</p>
-<p>(Kosmitka postanawia porozmawiać z ludźmi. Podchodzi do grupy przyjaciół, którzy witają go ciepło. Są zaciekawieni i mili. Kosmitka nawiązuje z nimi więź i zdaje sobie sprawę, że ludzie potrafią być serdeczni.)</p><br>
+<p>(Kosmitka postanawia porozmawiać z ludźmi. Podchodzi do grupy przyjaciół, którzy witają go ciepło. Są zaciekawieni i mili. Kosmitka nawiązuje z nimi więź i zdaje sobie sprawę, że ludzie potrafią być serdeczni.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

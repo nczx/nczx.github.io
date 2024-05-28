@@ -45,4 +45,43 @@
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>a) Jan Lechoñ proponuje now¹ wizjê ¿ycia, w której na znaczeniu trac¹ dotychczasowe mity czy tradycje narodowe. Poeta wyra¿a bunt przeciwko nim, poniewa¿ uwa¿a, ¿e ich formu³a ju¿ siê wyczerpa³a, a naród potrzebuje czegoœ wiêcej: "O! zwalcie¿ mi £azienki królewskie w Warszawie, / Bezduszne zimnym rylcem drapane marmury". Odradzaj¹cy siê kraj nie mo¿e wiêc ¿yæ przesz³oœci¹ i tym, co utrudnia jego rozkwit, poniewa¿ przez to nie realizuje swego potencja³u. Proponowana wizja ¿ycia opiera siê na zainteresowaniu codziennoœci¹ oraz chwil¹ obecn¹, przyjêciu bez w¹tpienia szerszej perspektywy: "Czy widzisz te kolumny na wyspie w teatrze, / Co widok mi zamknê³y daleki na na œcie¿aj? / Ja tobie rozkazujê! W W te s³upy uderzaj". Zamiast tego powinno siê dostrzegaæ piêkno i zmiennoœæ œwiata: "[...] niech jeno mi p³acze / Jesiennych wiatrów gêdŸba w pó³nagich badylach;". Konieczne staje siê tak¿e odejœcie od martyrologii i tematyki narodowowyzwoleñczej w literaturze: "A wiosn¹ - niechaj wiosnê, nie Polskê zobaczê". </p>
 <p> </p>
-<p>b) Porównanie postaw - czêœæ indywidualna</p><br>
+<p>b) Porównanie postaw - czêœæ indywidualna</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

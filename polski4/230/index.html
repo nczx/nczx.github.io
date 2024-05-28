@@ -124,4 +124,43 @@
 <p>b) Poeta nieustannie zmaga się z językiem, ponieważ on sam, gramatyka czy słowa, stanowią pewne ograniczenie w sposobie wrażenia myśli. Niekoniecznie bowiem mogą w pewni oddawać intencje czy też sensy, które pragnie wyrazić podmiot liryczny. Z tego powodu język oddala człowieka od jego celu, a nie przybliża do niego. Ponadto przyczynia się on do teatralizacji, przez co odbiera poczucie autentyczności, jest także źródłem skrępowania jednostki. Wskazują na to słowa: "kiedy mówię / to zupełnie / jakby długo kupowany / kalosz / czuję się / rozciągający się / pąs". Mówienie przynosi osobie mówiącej trud - dobieranie właściwych słów staje się czasochłonne, wiąże się z potężnym wysiłkiem oraz niepewnością.</p>
 <p> </p>
 <p>c) Poeta odwołuje się do francuskiego malarza, ponieważ uosabia on pewną koncepcję twórczości. Dominuje w niej tematyka codzienna, związana z nocnym życiem Paryża, oraz przedstawienie zwykłych ludzi - nawet z marginesu społecznego. Te cechy zdają się łączyć twórczość polskiego poety z francuskim artystą. Białoszewski określa jednak język w następujący sposób: "[...] kurtyzana / w sztucznych perłach zębów". Słowa te sugerują w pewien sposób sprzedajność i sztuczność języka oraz wynikające z tego ograniczenia. Podobnie więc jak malarz zwraca uwagę na dany element rzeczywistości, wywołujący ambiwalentne odczucia. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Indywidualne </p><br>
+<p>Indywidualne </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

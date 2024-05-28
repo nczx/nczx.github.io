@@ -104,4 +104,43 @@
 <p>11. each</p>
 <p><strong>Uzasadnienie:</strong> kiedy opisujemy, że czynność została wykonana z wzajemnością, używamy wyrażenia <em>each other</em>.</p>
 <p>12. which</p>
-<p><strong>Uzasadnienie:</strong> kiedy dodajemy komentarz do poprzedniego zdania za pomocą zdania przydawkowego, używamy zaimka względnego <em>which</em>.</p><br>
+<p><strong>Uzasadnienie:</strong> kiedy dodajemy komentarz do poprzedniego zdania za pomocą zdania przydawkowego, używamy zaimka względnego <em>which</em>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -59,4 +59,43 @@
 <p><math-expr expr="(W_{6}^{4})/(V_{6}^{4})=(6*6*6*6)/(6*5*4*3)=(6*6*6)/(5*4*3)=216/60=3,6&gt;3" syntax="text"></math-expr>  </p>
 <p>Wnioskujemy, że przy losowaniu ze zwracaniem możliwych do otrzymania liczb jest ponad <br/>trzykrotnie więcej niż przy losowaniu bez zwracania,</p>
 <p>co należało uzasadnić.</p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p><strong>a)</strong></p> <p>Mamy <strong>3</strong> szuflady i <strong>9</strong> kul (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">trzy</span> sposoby (do jednej z <strong>trzech </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>3<sup>9</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="3^9=19\ 683" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Mamy <strong>9</strong> szuflad i <strong>3</strong> kule (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">dziewięć</span> sposobów (do jednej z <strong>dziewięciu </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>9<sup>3</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="9^3=729" syntax="text"></math-expr> </span> </p><br>
+<p><strong>a)</strong></p> <p>Mamy <strong>3</strong> szuflady i <strong>9</strong> kul (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">trzy</span> sposoby (do jednej z <strong>trzech </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>3<sup>9</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="3^9=19\ 683" syntax="text"></math-expr> </span> </p> <hr/> <p><strong>b)</strong></p> <p>Mamy <strong>9</strong> szuflad i <strong>3</strong> kule (kule i szuflady rozróżniamy).</p> <p>Sprawdzamy, na ile sposobów możemy rozmieścić te kule.</p> <p>Każdą z kul możemy włożyć na <span style="text-decoration:underline;">dziewięć</span> sposobów (do jednej z <strong>dziewięciu </strong>szuflad).</p> <p>Zatem możemy rozmieścić kule w szufladach na <strong>9<sup>3</sup></strong> sposobów, a więc:</p> <p><span> <math-expr expr="9^3=729" syntax="text"></math-expr> </span> </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

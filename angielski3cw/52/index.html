@@ -58,4 +58,43 @@
 <p><strong>Uzasadnienie</strong>: zdanie po luce porównuje jakiś proces do serii randek, dlatego pasującym wprowadzeniem jest zdanie E: "Wymaga to od aplikantów stawienia się na miejscu dwukrotnie, albo więcej razy".</p>
 <p>4. B</p>
 <p><strong>Uzasadnienie</strong>: zdanie przed luką opisuje konkurencję wśród firm zewnętrznych prowadzących rekrutację, dlatego pasującą kontynuacją jest zdanie B: "Żeby upewnić się, że tak się stanie, wprowadzają coraz więcej testów, używając najnowszych możliwych technologii".</p>
-<p><s class="odr-strikethrough">C</s></p><br>
+<p><s class="odr-strikethrough">C</s></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

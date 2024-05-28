@@ -148,4 +148,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p><em>Och, s³awiê ja ciê, t³umie, wznios³ymi s³owami</em></p>
 <p><em>I ciebie, Wiosno, za to, ¿e siê zbrodniarz p³odzi!</em></p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>T³um w utworze Juliana Tuwima staje siê symboliczn¹ reprezentacj¹ cz³owieka ¿yj¹cego w mieœcie, a wiêc cywilizowanego. Kultura ma wp³yw na jego sposób zachowania, poniewa¿ t³umi jego pierwotne instynkt, zmusza do zaakceptowania pewnych zasad. W wierszu poety dochodzi jednak do wyzwolenia i rezygnacji z przyjêtych regu³. T³um staje siê wiêc symbolem powrotu do tego, co pierwotne lub te¿ wyzbycia siê jakichkolwiek zahamowañ bêd¹cych przejawem umowy spo³ecznej. Z tego powodu fascynuje Tuwima, ale jednoczeœnie budzi odrazê: "Ty gnoju miasta, tytanicznej krosty". W tym kontekœcie wiosna stanowi niejako katalizator szaleñstwa ludzi. Jako czas odrodzenia staje siê znakiem biologizmu, p³odnoœci, witalizmu, ¿ycia w jego najbardziej pierwotnej postaci. Wyzwala w t³umie zmys³owoœæ, która prowadzi do deprawacji i szokuj¹cych scen: "Wyrywajcie bachorom jêzyki boleœnie, / By, gdy je w dó³ rzucicie, nie mog³y ju¿ kwiliæ!". Rozkwit œwiata natury odpowiada w ten sposób dynamice zachowañ t³umu, który poszukuje spe³nienia w orgii, a sw¹ postaw¹ wyra¿a pêd ¿ycia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

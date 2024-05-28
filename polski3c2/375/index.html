@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Herling-Grudziñski wykorzystuje przede wszystkim wyra¿enia wartoœciuj¹ce. Z kolei Borowski siêga po inne œrodki wyrazu. Stosuje wiêc makabreskê, ironiê czy groteskê. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Wed³ug autora Herling-Grudziñski postrzega totalitarn¹ rzeczywistoœæ jako degeneracjê osi¹gniêæ kultury europejskiej. Jednoczeœnie pisarz ca³y czas odwo³uje siê do transcendentaliów i nie zapomina o znaczeniu tradycji europejskich, poniewa¿ pozostaj¹ one niezmiennym punktem odniesienia. Z kolei Borowski reprezentuje odmienne stanowisko, gdy¿ uznaje totalitaryzm za efekt rozwoju kultury. Jednoczeœnie odrzuca przekonanie o trwa³oœci tradycji, poniewa¿ Zag³ada niejako burzy dotychczasowy porz¹dek œwiata, wiêc trzeba na nowo tworzyæ kulturê.  </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

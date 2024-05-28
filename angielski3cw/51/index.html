@@ -118,4 +118,43 @@
 <p>11. will be flying</p>
 <p><strong>Uzasadnienie:</strong> do opisania, że jakaś czynność będzie w trakcie wykonywania w określonym momencie w przyszłości używamy czasu <em>future continuous</em> (<em>will be</em> + czasownik z -ing).</p>
 <p>12. herself</p>
-<p><strong>Uzasadnienie:</strong> do wyrażenia, że jakaś czynność zostanie wykonana względem samego siebie, używamy zaimków zwrotnych. W 3. osobie l. poj. rodzaju żeńskiego zaimek zwrotny ma formę <em>herself</em>.</p><br>
+<p><strong>Uzasadnienie:</strong> do wyrażenia, że jakaś czynność zostanie wykonana względem samego siebie, używamy zaimków zwrotnych. W 3. osobie l. poj. rodzaju żeńskiego zaimek zwrotny ma formę <em>herself</em>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

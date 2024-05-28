@@ -91,4 +91,43 @@
 <p>Cześć wszystkim! Dzisiaj pomyślałem/am, że opowiem coś o moim życiu jako studenta/studentki kryminalistyki. Zawsze marzyłem/am o tym, aby zostać technikiem kryminalistyki, więc ten kierunek był oczywistym wyborem. Bardzo interesuje mnie ten temat i cieszę się, że zostałem/am przyjęty/a. To spełnienie marzeń!</p>
 <p>Obecnie uczymy się wszystkiego o DNA. W przyszłym tygodniu będę głównie pracować w laboratorium. Dostaniemy różne próbki pobrane z miejsca zbrodni, a naszym celem będzie uzyskanie z nich DNA. Jestem naprawdę podekscytowany/a.</p>
 <p>Zazwyczaj wstaję około 7:00 rano, przygotowuję się i idę na wykłady. Nasza przerwa obiadowa jest około 13:00. Wszyscy studenci zazwyczaj jedzą w stołówce. Po lunchu pracujemy w laboratorium, co jest moją ulubioną częścią dnia. Zajęcia kończą się około 17:00 . Zazwyczaj jestem dość wyczerpany/a, więc biorę prysznic, jem kolację i czytam książkę, aż zasnę. </p>
-<p>Nie mogę się doczekać, aby przeczytać Wasze komentarze. Do następnego razu!</p><br>
+<p>Nie mogę się doczekać, aby przeczytać Wasze komentarze. Do następnego razu!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

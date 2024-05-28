@@ -159,4 +159,43 @@
 <p>• They don't know you personally so the advice might be very general instead of specific.</p>
 <p>(Nie znają cię osobiście, więc porady mogą być bardzo ogólne, a nie konkretne.)</p>
 <p><br/>• You usually can't ask follow-up questions or clarify anything. Simply talking to someone in real life might produce more accurate solutions.</p>
-<p>(Zazwyczaj nie można zadać dodatkowych pytań ani niczego wyjaśnić. Zwykła rozmowa z kimś w prawdziwym życiu może doprowadzić do bardziej trafnych rozwiązań.)</p><br>
+<p>(Zazwyczaj nie można zadać dodatkowych pytań ani niczego wyjaśnić. Zwykła rozmowa z kimś w prawdziwym życiu może doprowadzić do bardziej trafnych rozwiązań.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

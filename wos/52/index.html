@@ -46,4 +46,43 @@
 <p>Zagubienie i dezorganizację jednostek we współczesnym społeczeństwie powoduje <span style="text-decoration: underline;"><strong> szum informacyjny,</strong></span> czyli nadmiar różnorodnych wiadomości docierających do jednostek. </p>
 <p> </p>
 <p><strong>Rozwiązanie 2.:</strong></p>
-<p>Zagubienie i dezorientację jednostek we współczesnym społeczeństwie powoduje przede wszystkim <strong><span style="text-decoration: underline;">szum informacyjny</span></strong>. Polega on na tym, że do jednostki dociera zbyt wiele informacji, których nie jest ona w stanie przetworzyć. Ponadto niektóre z tych informacji są wzajemnie względem siebie sprzeczne, co tylko pogłębia zagubienie jednostek. Problemem towarzyszącym szumowi informacyjnemu jest także pojawianie się <strong><span style="text-decoration: underline;">fake newsów</span></strong>, czyli celowo spreparowanych fałszywych komunikatów, które mają za zadanie wprowadzać odbiorców w błąd.</p><br>
+<p>Zagubienie i dezorientację jednostek we współczesnym społeczeństwie powoduje przede wszystkim <strong><span style="text-decoration: underline;">szum informacyjny</span></strong>. Polega on na tym, że do jednostki dociera zbyt wiele informacji, których nie jest ona w stanie przetworzyć. Ponadto niektóre z tych informacji są wzajemnie względem siebie sprzeczne, co tylko pogłębia zagubienie jednostek. Problemem towarzyszącym szumowi informacyjnemu jest także pojawianie się <strong><span style="text-decoration: underline;">fake newsów</span></strong>, czyli celowo spreparowanych fałszywych komunikatów, które mają za zadanie wprowadzać odbiorców w błąd.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

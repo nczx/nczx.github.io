@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Według autora autoironia Rymkiewicza polega na tym, że dość przekornie traktuje podejmowane zagadnienie. Poeta z ironią odnosi się także do siebie, nie tylko rzeczywistości. Autoironia twórcy polega także na tym, że już sama "pośmiertność" w tytule zdaje się ulegać podważeniu. Również silnie wartościujące sfomułowanie "moje dzieło" wskazuje na ironię, którą Rymkiewicz kieruje w swoją stronę.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Ważnym punktem odniesienia dla utworu Jarosława Marka Rymkiewicza staje się tradycja romantyczna. Poeta stara się ją pogłębić, wejść z nią w dialog. Z tego też powodu odwołuje się do tematyki obecnej także w romantyzmie: relacji zmarłego twórcy ze swoim nieśmiertelnym dziełem. Motyw ten łączy Moje dzieło pośmiertne z <em>Gdy tu mój trup...</em> autorstwa Adama Mickiewicza. Również przywołanie do życia upiora nasuwa skojarzenia z <em>Dziadami</em> cz. II - balladą <em>Upiór</em>. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>U Rymkiewicza między trupem, trumną i upiorem zarysowuje się ścisła zależność - także w warstwie symbolicznej. Poeta bowiem nie tylko przedstawia wiersz w roli trumny, ale także ukazuje poetę jako trupa. Jednocześnie w wierszu ujawnia się drugie, znaczące połączenie, ponieważ twórca łączy trupa z wierszem, a trumnę przedstawia jako potwierdzenie istnienia poety. Rymkiewicz w ten sposób odwołuje się do pewnej tradycji literackiej ukazującej trwałość sławy poetyckiej, ale - poprzez wybór symbolicznych elementów - w szczególny sposób nawiązuje do romantycznych koncepcji. Wiersz bowiem - jako upiór - nie podlega przemijaniu tak jak ciało, pozostaje głosem artysty. </p><br>
+<p>U Rymkiewicza między trupem, trumną i upiorem zarysowuje się ścisła zależność - także w warstwie symbolicznej. Poeta bowiem nie tylko przedstawia wiersz w roli trumny, ale także ukazuje poetę jako trupa. Jednocześnie w wierszu ujawnia się drugie, znaczące połączenie, ponieważ twórca łączy trupa z wierszem, a trumnę przedstawia jako potwierdzenie istnienia poety. Rymkiewicz w ten sposób odwołuje się do pewnej tradycji literackiej ukazującej trwałość sławy poetyckiej, ale - poprzez wybór symbolicznych elementów - w szczególny sposób nawiązuje do romantycznych koncepcji. Wiersz bowiem - jako upiór - nie podlega przemijaniu tak jak ciało, pozostaje głosem artysty. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

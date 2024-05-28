@@ -78,4 +78,43 @@
 <p>4. The best thing about building the road was adding it to the map and driving along it.</p>
 <p><strong>Fragment w tekście: </strong>"It took a few weeks, and it was most rewarding when we added the road to the map and drove along it." - Zajęło nam to kilka tygodni, a największą satysfakcję sprawiało, gdy dodaliśmy drogę na mapie i przejechaliśmy po niej.</p>
 <p>5. Keelie thinks that interpersonal skills and learning to budget carefully will be helpful during her studies.</p>
-<p><strong>Fragment w tekście: </strong>"I also developed new skills, such as interpersonal skills and learning to budget carefully, which I'll be using during my degree and afterwards." - Rozwinęłam również nowe zdolności, takie jak umiejętności interpersonalne i opanowanie rozważnego gospodarowania budżetem, które będę wykorzystywać podczas studiów i po ich ukończeniu.</p><br>
+<p><strong>Fragment w tekście: </strong>"I also developed new skills, such as interpersonal skills and learning to budget carefully, which I'll be using during my degree and afterwards." - Rozwinęłam również nowe zdolności, takie jak umiejętności interpersonalne i opanowanie rozważnego gospodarowania budżetem, które będę wykorzystywać podczas studiów i po ich ukończeniu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

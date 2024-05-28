@@ -68,4 +68,43 @@
 <p>Anafora "jeszcze" organizuje strukturê wiersza. Wp³ywa bowiem na jego rytm oraz regularnoœæ, gdy¿ rozpoczyna ka¿dy z czterech segmentów tekstu. Wskazuje tak¿e na przekonania podmiotu lirycznego oraz jego pewnoœæ, wiarê. Przytoczona partyku³a sugeruje bowiem trwanie relacji, która po³¹czy³a osobê mówi¹c¹ z jej odbiorc¹, mimo mo¿liwoœci potencjalnego jej zakoñczenia. Œwiadczy wiêc ona o szczególnej wiêzi bohaterów - niezale¿nie od trudnoœci oraz ¿yciowych doœwiadczeñ. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Tytu³ wiersza to <em>Co siê staæ musi</em>. Zak³ada on wiêc pewn¹ koniecznoœæ oraz przekonanie o tym, i¿ pewne wydarzenia s¹ nieuchronne, musz¹ zaistnieæ w przysz³oœci. Jego perswazyjny charakter niesie ze sob¹ tak¹ konsekwencjê, i¿ œwiadczy o próbie przekonania siebie oraz odbiorcy utworu do przedstawionej w wierszu wizji przysz³ych sytuacji. Wskazuje wiêc na wiarê oraz determinacjê osoby mówi¹cej, nieuchronnoœæ tego, co nast¹pi.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

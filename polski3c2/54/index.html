@@ -93,4 +93,43 @@
 <p>Pierwsza przemiana odbywa siê, kiedy ¿o³nierz uznaje drewnianego Chrystusa za idealnego towarzysza w czasie swej wêdrówki. W tym momencie dochodzi do cudownego zdarzenia: "Chrystus, s³ysz¹c te s³owa, zsun¹³ siê na ziemiê, / Ów, co Boga wyciosa³, bity bywa³ w ciemiê!". Jezus tym samym odpowiada na ¿yczenie cz³owieka i przychodzi do niego, by dzieliæ z nim trudy podró¿y. Najwa¿niejsza jednak metamorfoza zachodzi ju¿ jednak w czasie wêdrówki: "Kto tam z nocy na pó³noc w burzê i zawiejê / Tak bardzo cz³owieczeje i tak bo¿yœcieje?". W wyniku wspomnianego spotkania Chrystus nabiera cech cz³owieka, zaœ ¿o³nierz przybli¿a siê do sfery duchowej. Bohaterowie wiêc wzajemnie na siebie oddzia³uj¹, dziel¹ siê swoj¹ to¿samoœci¹, co prowadzi do ich ubogacenia. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Koncepcja Boga ukazana w wierszu Leœmiana mo¿e byæ nieco zaskakuj¹ca. Bóg bowiem nie jest potê¿n¹ i doskona³¹ istot¹, odleg³¹ od cz³owieka i jego problemów. Figurka Jezusa, podobnie jak ¿o³nierz, zostaje pozbawiona doskona³oœci, okaleczona - przypomina wiêc istotê ludzk¹ ze wszystkimi jej s³aboœciami oraz defektami. Chrystus przyjmuje w utworze rolê towarzysza, d¹¿y tym samym do kontaktu z cz³owiekiem. Ma tak¿e œwiadomoœæ tego, i¿ nie jest wszechpotê¿ny, idealny: "Marna ze mnie soœnina, lecz piechur nie marny, / Przejdê wiecznoœæ piechtami, chocia¿em niezdarny". Przez to zbli¿a siê do ¿o³nierza, poniewa¿ dzieli jego cierpienie oraz odrzucenie: "Podzielimy siê mêk¹ - podzielnaæ jest mêka! - / Wszak ta sama nas ludzka skoœlawi³a rêka!". Oferuje mu jednak wsparcie i ¿yczliwoœæ: "Ty podeprzesz miê cia³em, ja ciebie soœnin¹". Mo¿na wiêc powiedzieæ, ¿e to koncepcja Boga rozumiej¹cego prze¿ycia cz³owieka, znaj¹cego jego doœwiadczenia. Jest On bowiem podobny do istoty ludzkiej - ze wszystkimi swymi u³omnoœciami, które paradoksalnie potwierdzaj¹ Jego si³ê. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Wyznaczenie na bohatera dzie³a kalekiego ¿o³nierza odzwierciedla przekonanie o tym, ¿e prawdziwy jest tylko ten, kto u³omny, niepozbawiony brzydoty. Poeta tym samym pragnie przedstawiæ jednostkê z defektem, poniewa¿ takie naruszenie jej granic cia³a prowadzi do uniwersalnych refleksji na temat relacji miêdzy doczesn¹ pow³ok¹ a dusz¹. Poczucie pe³ni nie prowokuje zaœ do takich rozmyœlañ. Cz³owiek okaleczony zyskuje zaœ g³êbsz¹ œwiadomoœæ siebie, swych pragnieñ i d¹¿eñ, gdy¿ wszystko osi¹ga z trudem. W tym kontekœcie "bo¿yœcieje" sugeruje wzrost duchowy ¿o³nierza (nabieranie cech Boga), g³êbokie doœwiadczenie swego istnienia, stanowi¹ce jednoczeœnie Ÿród³o namys³u na temat rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

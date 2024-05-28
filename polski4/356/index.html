@@ -47,4 +47,43 @@
 <p>Indywidualne</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>a) Osoba mówiąca w wierszu <em>Notre-Dame </em>odczuwa zachwyt i niedowierzanie przeplatający się z przerażeniem. Jest pod wrażeniem konstrukcji katedry, zastanawia się nad tym, kto zdołał ją stworzyć. Jednocześnie jednak przestrzeń, w której się znalazła, napełnia ją strachem. Podmiot liryczny wydaje się przytłoczony monumentalnością budowli. Podobne uczucia zdają się towarzyszyć narratorowi <em>Katedry. </em>Jest zachwycony i zaintrygowany, z uwagą studiuje powierzchnie, z których stworzona jest świątynia, wręcz zatraca się w nich. Piękno niesamowitych kształtów działa niemal onieśmielająco.</p>
 <p> </p>
-<p>b) Zarówno poeci, jak i malarze zwracają uwagę na fakt, że katedry zdają się nie być owocem pracy rąk ludzkich. Szczególnie dużo uwagi poświęcają budulcowi, z którego zostały wykonane świątynie. Przedstawiany jest niczym żywa tkanka, zdolna do samodzielnego rozrostu. Przypomina roślinę, porost lub szkielet. Znaczącym elementem wyróżnionym we wszystkich dziełach jest również wysokość katedry. Iglice wież zdają się sięgać niemal nieba, tworząc wewnątrz monumentalną, przytłaczającą swoją wielkością przestrzeń.</p><br>
+<p>b) Zarówno poeci, jak i malarze zwracają uwagę na fakt, że katedry zdają się nie być owocem pracy rąk ludzkich. Szczególnie dużo uwagi poświęcają budulcowi, z którego zostały wykonane świątynie. Przedstawiany jest niczym żywa tkanka, zdolna do samodzielnego rozrostu. Przypomina roślinę, porost lub szkielet. Znaczącym elementem wyróżnionym we wszystkich dziełach jest również wysokość katedry. Iglice wież zdają się sięgać niemal nieba, tworząc wewnątrz monumentalną, przytłaczającą swoją wielkością przestrzeń.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

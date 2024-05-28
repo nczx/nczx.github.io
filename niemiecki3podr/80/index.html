@@ -55,4 +55,43 @@
 <p>6. Wovor haben Teenager Angst? - C. Vor der Zukunft.<br/><em>Czego boją się nastolatkowie? - Przyszłości. </em></p>
 <p>7. Von wem haben Teenager Angst? - F. Vor ihren Eltern und Lehrern. <br/><em>Kogo boją się nastolatkowie? - Rodziców i nauczycieli. </em></p>
 <p><br/><br/>Pytania o rzeczy w przypadku czasownika wymagającego przyimka tworzymy przez połączenie <em>wo</em>- lub <em>wor-</em> (jeśli pierwszą literą przyimka jest samogłoska). Na przykład: <em>Woran denkst du?</em> (O czym myślisz?) </p>
-<p>W przypadku pytania o osoby używa się oddzielnie przyimka oraz zaimka pytającego w odpowiednim przypadku, np: <em>An wen denkst du?</em> (O kim myślisz?)</p><br>
+<p>W przypadku pytania o osoby używa się oddzielnie przyimka oraz zaimka pytającego w odpowiednim przypadku, np: <em>An wen denkst du?</em> (O kim myślisz?)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

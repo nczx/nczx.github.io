@@ -18,4 +18,43 @@
 <a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>Z treści zadania wiemy, że:</p> <p> <object class="math big" data="./data/1093843-0.svg" type="image/svg+xml"></object> </p> <p>Sprawdzamy, dla jakiego <strong>b</strong>:</p> <p> <object class="math big" data="./data/1093843-1.svg" type="image/svg+xml"></object> </p> <hr/> <p>Zauważamy, że:</p> <p><strong>A.</strong></p> <p> <object class="math big" data="./data/1093843-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1093843-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1093843-4.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1093843-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1093843-6.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>B. </strong> </p> <p> <object class="math big" data="./data/1093843-7.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1093843-8.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>C.</strong></p> <p> <object class="math big" data="./data/1093843-9.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1093843-10.svg" type="image/svg+xml"></object> </p> <hr/> <p><strong>D.</strong></p> <p> <object class="math big" data="./data/1093843-11.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1093843-12.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1093843-13.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1093843-14.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1093843-15.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>Odp:</strong> <span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>C</strong>.</span></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 10</a><br>
-<p>Z treści zadania wiemy, że pierwszy wyraz szeregu geometrycznego ma wartość:</p> <p><span> <object class="math big" data="./data/1093849-0.svg" type="image/svg+xml"></object> </span></p> <p>natomiast iloraz:</p> <p><span> <object class="math big" data="./data/1093849-1.svg" type="image/svg+xml"></object> </span></p> <p>Zauważamy, że:  </p> <p><span> <object class="math big" data="./data/1093849-2.svg" type="image/svg+xml"></object> </span></p> <p>Zatem szereg jest zbieżny. </p> <p>Wyznaczamy wartość sumy szeregu geometrycznego korzystając ze wzoru:</p> <p><span> <object class="math big" data="./data/1093849-3.svg" type="image/svg+xml"></object> </span></p> <p><span> <object class="math big" data="./data/1093849-4.svg" type="image/svg+xml"></object> </span>   </p> <hr/> <p><strong>Odp:</strong> <span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>B</strong>.</span></p><br>
+<p>Z treści zadania wiemy, że pierwszy wyraz szeregu geometrycznego ma wartość:</p> <p><span> <object class="math big" data="./data/1093849-0.svg" type="image/svg+xml"></object> </span></p> <p>natomiast iloraz:</p> <p><span> <object class="math big" data="./data/1093849-1.svg" type="image/svg+xml"></object> </span></p> <p>Zauważamy, że:  </p> <p><span> <object class="math big" data="./data/1093849-2.svg" type="image/svg+xml"></object> </span></p> <p>Zatem szereg jest zbieżny. </p> <p>Wyznaczamy wartość sumy szeregu geometrycznego korzystając ze wzoru:</p> <p><span> <object class="math big" data="./data/1093849-3.svg" type="image/svg+xml"></object> </span></p> <p><span> <object class="math big" data="./data/1093849-4.svg" type="image/svg+xml"></object> </span>   </p> <hr/> <p><strong>Odp:</strong> <span style="text-decoration:underline;">Poprawną odpowiedzią do zadania jest odpowiedź <strong>B</strong>.</span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

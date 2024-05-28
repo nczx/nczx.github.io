@@ -53,4 +53,43 @@
 <p>1. Clemens interessiert sich für Sport und war der beste Schwimmer in seinem Gymnasium, deshalb möchte er Sportmanagement studieren und als Trainer arbeiten. (C) <br/><em>Clemens interesuje się sportem i był najlepszym pływakiem w swoim gimnazjum, dlatego chciałby studiować sport management i pracować jako trener.  </em></p>
 <p>2. Daniela mag die Arbeit mit Kindern und kann mit ihnen kreativ umgehen, deshalb möchte sie später einmal Pädagogin werden. (B) <br/><em>Daniela lubi pracę z dziećmi i potrafi obchodzić się z nimi kreatywnie, dlatego chciałaby w przyszłości zostać pedagogiem. </em></p>
 <p>3. Tobias hat sich in eine Griechin verliebt, deshalb will er im Sommer in Griechenland arbeiten. (D)<br/><em>Tobias zakochał się w pewnej Greczynce, dlatego w lecie chce pracować w Grecji. </em></p>
-<p>4. Penelope findet Frankreich toll, deshalb ist das Studium in der französischen Hauptstadt ihr Traum. (A)<br/><em>Penelope uważa, że Francja jest świetna, dlatego studia w stolicy Francji są jej marzeniem. </em></p><br>
+<p>4. Penelope findet Frankreich toll, deshalb ist das Studium in der französischen Hauptstadt ihr Traum. (A)<br/><em>Penelope uważa, że Francja jest świetna, dlatego studia w stolicy Francji są jej marzeniem. </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

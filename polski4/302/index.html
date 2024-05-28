@@ -57,4 +57,43 @@
 <p>Narrator jest subiektywnym sprawozdawcą. Nie tylko relacjonuje zdarzenia, ale również je komentuje. Wyraża swoje zdanie na temat postaw bohaterów zajścia, np:  " [...] nieudolny kierowca zapędził się zbyt daleko" [...], " [...] ford, miękko i bezszelestnie, imponując zwrotnością [...] zajął miejsce w ciasnej przestrzeni". Używa słownictwa wartościującego  ("przebojowy, agresywny cham", "luksusowy kolos", "wspaniały", "cherlak w okularach").</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Marek Nowakowski w opowiadaniu zastosował narrację pierwszoosobową. Narrator jest bliskim obserwatorem opisywanych wydarzeń, częścią świata przedstawionego. Zabieg służy uwiarygodnieniu tekstu. Dostrzeżony przez narratora incydent staje się pretekstem do wysnucia tezy dotyczącej hierarchii społecznej w postkomunistycznej Polsce. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>Opowiadanie Marka Nowakowskiego tylko częściowo spełnia wymogi formalne sprawozdania. Zgodnie z definicją jest to tekst, w którym osoba będąca świadkiem jakiegoś zdarzenia przedstawia jego przebieg. Powinna zachować przy tym obiektywność i bezstronność, czego narrator <em>Górą "Edek" </em>nie robi. Wyraża własną opinie o zajściu, używa słownictwa wartościującego. Posługuje się także językowymi środkami artystycznymi (np. porównanie "sunął jak wieża oblężnicza"). To sprawia, że tekst trudno określić mianem zwięzłego, konkretnego czy neutralnego.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>Indywidualne</p><br>
+<p>Indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

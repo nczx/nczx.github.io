@@ -2,4 +2,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <table border="1" style="height:130px;width:531px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:527px;"> <p><strong>Średnia arytmetyczną </strong>n liczb: x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>n</sub> nazywamy liczbę:</p> <p> <object class="math big" data="./data/1114387-0.svg" type="image/svg+xml"></object>  </p> </td> </tr> </tbody> </table> <hr/> <p>Obliczamy średnią arytmetyczną ocen uzyskanych przez Basię:  </p> <p> <object class="math big" data="./data/1114387-1.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy średnią arytmetyczną ocen uzyskanych przez Tomka:</p> <p> <object class="math big" data="./data/1114387-2.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<p>Z treści zadania wiemy, że wynagrodzenia pracowników pewnej firmy, to:</p> <p> <object class="math big" data="./data/1114649-0.svg" type="image/svg+xml"></object>  </p> <p>Wobec tego wnioskujemy, że w firmie pracuje <strong>dziewięciu </strong>pracowników.</p> <hr/> <p>Wyznaczamy średnie zarobki pracowników:  </p> <p> <object class="math big" data="./data/1114649-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1114649-2.svg" type="image/svg+xml"></object>  </p> <p>Zauważamy, że poniżej średniej zarabia <strong>siedmiu</strong> pracowników.</p> <hr/> <p><strong>Odp: </strong>Poniżej średniej zarobków w tej firmie zarabia <strong>7</strong> pracowników.</p><br>
+<p>Z treści zadania wiemy, że wynagrodzenia pracowników pewnej firmy, to:</p> <p> <object class="math big" data="./data/1114649-0.svg" type="image/svg+xml"></object>  </p> <p>Wobec tego wnioskujemy, że w firmie pracuje <strong>dziewięciu </strong>pracowników.</p> <hr/> <p>Wyznaczamy średnie zarobki pracowników:  </p> <p> <object class="math big" data="./data/1114649-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1114649-2.svg" type="image/svg+xml"></object>  </p> <p>Zauważamy, że poniżej średniej zarabia <strong>siedmiu</strong> pracowników.</p> <hr/> <p><strong>Odp: </strong>Poniżej średniej zarobków w tej firmie zarabia <strong>7</strong> pracowników.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

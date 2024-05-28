@@ -171,4 +171,43 @@
 <p>Good communication would be useful for a psychologist. (Dobra komunikacja byłaby przydatna w pracy psychologa.)</p>
 <p>Problem-solving and time-management would be useful for a project manager. (Rozwiązywanie problemów i zarządzanie czasem będzie przydatne dla kierownika/czki projektu.)</p>
 <p>Critical thinking is a skill useful in sales and marketing. (Krytyczne myślenie to umiejętność przydatna w sprzedaży i marketingu.)</p>
-<p>Leadership is useful for anyone who works as a manager. (Zdolności przywódcze są przydatne dla każdego, kto pracuje jako menedżer/ka.)</p><br>
+<p>Leadership is useful for anyone who works as a manager. (Zdolności przywódcze są przydatne dla każdego, kto pracuje jako menedżer/ka.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

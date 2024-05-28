@@ -58,4 +58,43 @@
 <p><em>ad.b. Aldehydy o małych masach cząsteczkowych ulegają rozpuszczeniu w wodzie (np. wodny roztwór metanalu to formalina).</em></p>
 <p><em>ad.c. Cząsteczki aldehydów nie ulegają asocjacji.</em></p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Równanie reakcji: </p> <p> <math-expr expr="CH_3CH_2CHO+Ag_2O#(-&gt;)^(NH_(3\ (aq)),\ T)CH_3CH_2COOH+2\ Agdarr" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>a) Aldehyd cynamonowy <span style="text-decoration: underline;"><em><strong> nie jest </strong></em></span> aldehydem aromatycznym, ponieważ grupa aldehydowa w jego cząsteczce nie łączy się bezpośrednio z pierścieniem aromatycznym, tylko poprzez łańcuch węglowy.</p> <p><br/>b) Wzór sumaryczny tego związku możemy zapisać jako C<sub>9</sub>H<sub>8</sub>O. Jego masa cząsteczkowa wynosi więc:</p> <p> <math-expr expr="m_(C_9H_8O)=9*m_C+8*m_H+m_O=9*12\ u+8*1\ u+16\ u=132\ u" syntax="text"></math-expr>    </p><br>
+<p>a) Aldehyd cynamonowy <span style="text-decoration: underline;"><em><strong> nie jest </strong></em></span> aldehydem aromatycznym, ponieważ grupa aldehydowa w jego cząsteczce nie łączy się bezpośrednio z pierścieniem aromatycznym, tylko poprzez łańcuch węglowy.</p> <p><br/>b) Wzór sumaryczny tego związku możemy zapisać jako C<sub>9</sub>H<sub>8</sub>O. Jego masa cząsteczkowa wynosi więc:</p> <p> <math-expr expr="m_(C_9H_8O)=9*m_C+8*m_H+m_O=9*12\ u+8*1\ u+16\ u=132\ u" syntax="text"></math-expr>    </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

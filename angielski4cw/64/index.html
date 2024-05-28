@@ -56,4 +56,43 @@
 <p>4. C</p>
 <p><strong>Fragment w tekście:</strong> "As a young child, she lived in New York with her mother and a woman called Jeanne Bertrain. Jeanne was a critically praised photographer who specialised in portraits." - Jako małe dziecko mieszkała w Nowym Jorku z matką i kobietą nazywaną Jeanne Bertrain. Jeanne była uznaną przez krytyków fotografką, specjalizująca się w portretach. </p>
 <p>5. B</p>
-<p><strong>Fragment w tekście:</strong> "She was a committed socialist and feminist, and would always stick up for the less fortunate in society, her photos showing solidarity with their fate." - Była zdeklarowaną socjalistką i feministką i zawsze stawała w obronie tych, którzy mieli mniej szczęścia, a jej zdjęcia wyrażają solidarność z ich losem.</p><br>
+<p><strong>Fragment w tekście:</strong> "She was a committed socialist and feminist, and would always stick up for the less fortunate in society, her photos showing solidarity with their fate." - Była zdeklarowaną socjalistką i feministką i zawsze stawała w obronie tych, którzy mieli mniej szczęścia, a jej zdjęcia wyrażają solidarność z ich losem.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

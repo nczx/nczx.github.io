@@ -84,4 +84,43 @@
 <p> </p>
 <p><strong>*</strong> W tym zdaniu powinien zostać użyty czasownik "be", a zdanie powinno brzmieć: "Have they ever been to the USA?". W ten właśnie sposób pytamy o czyjeś doświadczenie.</p>
 <p>Zdania z czasownikiem "go" w czasie present perfect simple możemy użyć w innym kontekście, np. "Have they gone to the post office?" (Czy oni poszli na pocztę?) - oznacza to, że oni wyszli na pocztę, ale jeszcze nie wrócili, więc albo są w drodze, albo już dotarli na miejsce. Pytanie "Have they gone to the USA?" oznacza, że osoba je wypowiadająca zakłada, że oni pojechali do USA, ale stamtąd nie wrócili, a nie czy "Czy oni kiedykolwiek byli w Stanach Zjednoczonych?", jak zakładano w tym zadaniu. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-<p>indywidualne</p><br>
+<p>indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

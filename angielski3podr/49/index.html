@@ -109,4 +109,43 @@
 <p>Twardowski made a deal with a devil in return for his soul. The devil could only take Twardowski's soul in Rome, so the man never went there. Finally, the devil caught Twardowski in a tavern called Rome. As punishment for tricking the devil, Twardowski is stuck on the moon forever.</p>
 <p>(Liczba słów: 50)</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Twardowski zawarł umowę z diabłem w zamian za swoją duszę. Diabeł mógł zabrać duszę Twardowskiego tylko w Rzymie, więc mężczyzna nigdy tam nie pojechał. W końcu diabeł złapał Twardowskiego w karczmie o nazwie Rzym. Za karę za oszukanie diabła, Twardowski utknął na zawsze na księżycu.</p><br>
+<p>Twardowski zawarł umowę z diabłem w zamian za swoją duszę. Diabeł mógł zabrać duszę Twardowskiego tylko w Rzymie, więc mężczyzna nigdy tam nie pojechał. W końcu diabeł złapał Twardowskiego w karczmie o nazwie Rzym. Za karę za oszukanie diabła, Twardowski utknął na zawsze na księżycu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

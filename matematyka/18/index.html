@@ -16,4 +16,43 @@
 <a style="color:red; font-size:25px;">Zadanie 11</a><br>
 <p><strong>a)</strong></p> <p>W czasie <strong>godziny</strong> punkt na końcu wskazówki zegara zatoczy <span style="text-decoration:underline;">jeden pełny okrąg</span>, czyli obróci się o <strong>360°</strong>. Zatem pokona ona drogę (<strong>s</strong>) równą długości okręgu o promieniu <strong>10 cm</strong> (promień okręgu jest równy długości wskazówki minutowej zegara).</p> <p>Dostajemy  </p> <p> <object class="math big" data="./data/1008154-0.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p>W czasie <strong>250 minut (4 godziny 10 minut)</strong> punkt na końcu wskazówki zegara zatoczy <span style="text-decoration:underline;">cztery pełne okręgi</span> oraz 1/6 okręgu, czyli obróci się o<strong> 4 </strong><span style="font-weight:400;"><strong>· </strong></span><strong>360°+60°</strong>.</p> <p>Dostajemy </p> <p> <object class="math big" data="./data/1008154-1.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1008154-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>c)</strong></p> <p>W czasie <strong>doby</strong> punkt na końcu wskazówki zegara zatoczy <span style="text-decoration:underline;">24 pełne okręgi</span>, czyli obróci się o <strong>24 · 360°</strong>.</p> <p>Dostajemy</p> <p> <object class="math big" data="./data/1008154-3.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>d)</strong></p> <p>W czasie <strong>roku</strong> punkt na końcu wskazówki zegara zatoczy <span style="text-decoration:underline;"><strong>8760</strong> lub <strong>8784</strong> pełnych okręgów</span> (<strong>24 godziny</strong><span style="font-weight:400;"><strong> · 365 dni</strong> lub <strong>24 godziny · 366 dni</strong></span>), czyli obróci się o <strong>8760 · 360° </strong>lub<strong> 8784 · 360°</strong>.</p> <p>Dostajemy</p> <p> <object class="math big" data="./data/1008154-4.svg" type="image/svg+xml"></object>   </p> <p>lub </p> <p> <object class="math big" data="./data/1008154-5.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 12</a><br>
-<p>Oznaczmy przez <strong>r</strong> długość wskazówki minutowej zegara. Wobec tego wskazówka godzinowa zegara ma długość <strong>0,75r</strong>.  </p> <hr/> <p>Punkt na końcu wskazówki minutowej zegara przebył drogę <strong>36 cm</strong>. Zatem możemy zapisać</p> <p> <object class="math big" data="./data/1008385-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1008385-1.svg" type="image/svg+xml"></object> </p> <hr/> <p>W czasie, gdy wskazówka minutowa zatacza łuk o mierze <span style="font-weight:400;"><strong>𝛼</strong>, wskazówka godzinowa zatacza łuk o mierze <strong>12 razy mniejszej</strong> (np. w ciągu godziny wskazówka minutowa wykonuje obrót o 360º, a w tym czasie wskazówka godzinowa - obrót o 30º)</span> .</p> <hr/> <p>Obliczmy, jaką drogę w tym samym czasie przebył punkt na końcu wskazówki godzinowej zegara.</p> <p> <object class="math big" data="./data/1008385-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>Odp:</strong> <span style="text-decoration:underline;">Punkt na końcu wskazówki godzinowej zegara przebył drogę równą<strong> 2,25 cm</strong>.</span></p><br>
+<p>Oznaczmy przez <strong>r</strong> długość wskazówki minutowej zegara. Wobec tego wskazówka godzinowa zegara ma długość <strong>0,75r</strong>.  </p> <hr/> <p>Punkt na końcu wskazówki minutowej zegara przebył drogę <strong>36 cm</strong>. Zatem możemy zapisać</p> <p> <object class="math big" data="./data/1008385-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1008385-1.svg" type="image/svg+xml"></object> </p> <hr/> <p>W czasie, gdy wskazówka minutowa zatacza łuk o mierze <span style="font-weight:400;"><strong>𝛼</strong>, wskazówka godzinowa zatacza łuk o mierze <strong>12 razy mniejszej</strong> (np. w ciągu godziny wskazówka minutowa wykonuje obrót o 360º, a w tym czasie wskazówka godzinowa - obrót o 30º)</span> .</p> <hr/> <p>Obliczmy, jaką drogę w tym samym czasie przebył punkt na końcu wskazówki godzinowej zegara.</p> <p> <object class="math big" data="./data/1008385-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>Odp:</strong> <span style="text-decoration:underline;">Punkt na końcu wskazówki godzinowej zegara przebył drogę równą<strong> 2,25 cm</strong>.</span></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

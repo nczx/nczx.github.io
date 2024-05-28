@@ -71,4 +71,43 @@
 <p>Cytat ten wskazuje na przekonanie poetki o tym, ¿e pewne tradycje literackie w danym momencie ulegaj¹ wyczerpaniu, poniewa¿ trac¹ jakiekolwiek zwi¹zki z rzeczywistoœci¹. Okreœlenie "po¿ó³k³ej" sugeruje nieprzystawalnoœæ do realiów, podobnie jak pozbawiona ¿ycia Laura. Stanowisko Pawlikowskiej-Jasnorzewskiej wyra¿a tak¿e cytat: "Przyszli w proch siê rozsypaæ (p³ascy jak kwiat w ksi¹¿ce)". Okreœlona tradycja literacka staje siê wiêc martwa, powinna tym samym przejœæ do historii, gdy¿ nie mo¿e zaoferowaæ nic nowego ani aktualnego. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Przyk³adowo:</p>
 <p><em>Laura i Filon</em> Marii Pawlikowskiej-Jasnorzewskiej to przyk³ad aluzji literackiej. Autorka nawi¹zuje bowiem do oœwieceniowej sielanki Franciszka Karpiñskiego za pomoc¹ czytelnych sygna³ów. Œwiadczy o tym nie tylko identyczny tytu³ dzie³a, ale wybór g³ównych bohaterów: Laury i Filona. Ponadto przywo³uje w tekœcie podobn¹ sceneriê zdarzeñ - para spotyka siê na ³onie natury, pod jaworem - zmienia siê jednak charakter otoczenia. Przestaje byæ ono piêkn¹ i przyjazn¹ przestrzeni¹, a zyskuje nieco z³owrogi charakter: "A jawor by³ szumi¹cy, ponury i siny". Na aluzjê wskazuje tak¿e wzmianka o rekwizytach wystêpuj¹cych w oryginale - koszyku i malinach. W swym utworze jednak Pawlikowska-Jasnorzewska demaskuje wyczerpanie sentymentalnej konwencji, a tym samym wchodzi w polemikê z dotychczasowymi wzorcami. W ten sposób odniesienie do oœwieceniowego wiersza pozwala na udowodnienie, ¿e pewne tradycje nie s¹ ju¿ tak aktualne jak wczeœniej i nie mog¹ wyra¿aæ prawdy na temat rzeczywistoœci. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

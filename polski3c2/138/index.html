@@ -108,4 +108,43 @@
 <p>†</p>
 <p>c) èrÛd≥em tych motywÛw jest fascynacja úmierciπ - szczegÛlnie charakterystyczna dla úredniowiecza i baroku.</p>
 <p>†</p>
-<p>Dzie≥o malarskie - podobnie jak wiersz Czechowicza - przypomina o tym, øe úwiat doczesny jest nierozerwalnie powiπzany ze úmierciπ. Stanowi ona naturalny fina≥ egzystencji, nie moøna jej uniknπÊ. Artyúci starajπ siÍ dotknπÊ jej tajemnicy - ukazujπ wiÍc pewne sygna≥y lub elementy, ktÛre pozwalajπ na zetkniÍcie ze úmierciπ. Claesz wprowadza przedmioty niosπce za sobπ sensy symboliczne - przypominajπ one o kruchoúci øycia i tym, øe czas przybliøa kaødego cz≥owieka do odejúcia z tego úwiata. Z kolei Czechowicz akcentuje nak≥adanie siÍ na siebie dwÛch rzeczywistoúci, dwÛch p≥aszczyzn: øycia oraz úmierci. Dzie≥a artystÛw ≥πczy tym samym refleksyjny charakter oraz prÛba przedstawienia fenomenu nieuchwytnej úmierci.†</p><br>
+<p>Dzie≥o malarskie - podobnie jak wiersz Czechowicza - przypomina o tym, øe úwiat doczesny jest nierozerwalnie powiπzany ze úmierciπ. Stanowi ona naturalny fina≥ egzystencji, nie moøna jej uniknπÊ. Artyúci starajπ siÍ dotknπÊ jej tajemnicy - ukazujπ wiÍc pewne sygna≥y lub elementy, ktÛre pozwalajπ na zetkniÍcie ze úmierciπ. Claesz wprowadza przedmioty niosπce za sobπ sensy symboliczne - przypominajπ one o kruchoúci øycia i tym, øe czas przybliøa kaødego cz≥owieka do odejúcia z tego úwiata. Z kolei Czechowicz akcentuje nak≥adanie siÍ na siebie dwÛch rzeczywistoúci, dwÛch p≥aszczyzn: øycia oraz úmierci. Dzie≥a artystÛw ≥πczy tym samym refleksyjny charakter oraz prÛba przedstawienia fenomenu nieuchwytnej úmierci.†</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

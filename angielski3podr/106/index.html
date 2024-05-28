@@ -157,4 +157,43 @@
 <p>Uważam, że powiedzenie "Nie marnuj swojego życia, żyjąc cudzym" jest szczególnie ważne w dobie mediów społecznościowych.</p>
 <p>Dzięki stronom takim jak Instagram i TikTok, niektórym osobom udało się zostać "celebrytami mediów społecznościowych". Są to osoby z dużą liczbą obserwujących, a ich treści są niezwykle popularne.</p>
 <p>Nastolatkom bardzo łatwo jest porównywać się do takich celebrytów, którzy wydają się mieć idealne życie. Czasami można spędzić godziny na tych aplikacjach, konsumując treści, które ostatecznie są tylko wypełniaczem czasu. Można nawet zacząć porównywać się do osób, których zdjęcia zostały edytowane lub które używają różnych filtrów w swoich nagraniach wideo.</p>
-<p>Dlatego ważne jest, aby zachować zdrową równowagę - wyłączyć ekran, wyjść na zewnątrz i dobrze się bawić.</p><br>
+<p>Dlatego ważne jest, aby zachować zdrową równowagę - wyłączyć ekran, wyjść na zewnątrz i dobrze się bawić.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

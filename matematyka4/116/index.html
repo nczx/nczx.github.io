@@ -42,4 +42,43 @@
 </script>
 </head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p><strong>a)</strong></p> <p>Rysunek:  </p> <p><img alt="" height="402" src="./data/1208413-0.jpg" width="424"/></p> <p>Rozważmy trójkąt <strong>WES</strong>. Wyznaczmy <strong>tangens</strong> kąta <strong>𝛼</strong> tego trójkąta. Mamy:</p> <p><span> <math-expr expr='"tg" \ alpha=|SW|/|WE| = (2sqrt3)/6 = sqrt3/3' syntax="text"></math-expr> </span>  </p> <p>A stąd wiemy, że</p> <p><span> <math-expr expr="ulul alpha=30^@" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Dany jest ostrosłup prawidłowy czworokątny. </p> <p>Wiemy, że długość przekątnej kwadratu będącego podstawą tego ostrosłupa wynosi <strong>6 cm</strong>. Niech <strong>a</strong> będzie długością boku tego kwadratu. Stąd mamy:</p> <p><span> <math-expr expr="asqrt2=6 \ \ \ |:sqrt2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="a=frac(6)(sqrt2)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='a=3sqrt2 \ ["cm"]' syntax="text"></math-expr> </span>    </p> <p>Rysunek:</p> <p><img alt="" height="396" src="./data/1208413-1.jpg" width="429"/></p> <p>Zauważmy, że trójkąt <strong>WES</strong> jest trójkątem prostokątnym równoramiennym, czyli</p> <p><span> <math-expr expr='H=(3sqrt2)/2 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Obliczamy <span style="text-decoration: underline;">pole powierzchni podstawy</span> tego ostrosłupa. Mamy:</p> <p><span> <math-expr expr='P_p=(3sqrt2)^2=9*2=18 \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Obliczamy <span style="text-decoration: underline;">objętość</span> tego ostrosłupa. Mamy:</p> <p><span> <math-expr expr='V=1/3*18*(3sqrt2)/2=6*(3sqrt2)/2= ulul 9sqrt2\ ["cm"^3]' syntax="text"></math-expr> </span>  </p><br>
+<p><strong>a)</strong></p> <p>Rysunek:  </p> <p><img alt="" height="402" src="./data/1208413-0.jpg" width="424"/></p> <p>Rozważmy trójkąt <strong>WES</strong>. Wyznaczmy <strong>tangens</strong> kąta <strong>𝛼</strong> tego trójkąta. Mamy:</p> <p><span> <math-expr expr='"tg" \ alpha=|SW|/|WE| = (2sqrt3)/6 = sqrt3/3' syntax="text"></math-expr> </span>  </p> <p>A stąd wiemy, że</p> <p><span> <math-expr expr="ulul alpha=30^@" syntax="text"></math-expr> </span>  </p> <hr/> <p><strong>b)</strong></p> <p>Dany jest ostrosłup prawidłowy czworokątny. </p> <p>Wiemy, że długość przekątnej kwadratu będącego podstawą tego ostrosłupa wynosi <strong>6 cm</strong>. Niech <strong>a</strong> będzie długością boku tego kwadratu. Stąd mamy:</p> <p><span> <math-expr expr="asqrt2=6 \ \ \ |:sqrt2" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="a=frac(6)(sqrt2)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr='a=3sqrt2 \ ["cm"]' syntax="text"></math-expr> </span>    </p> <p>Rysunek:</p> <p><img alt="" height="396" src="./data/1208413-1.jpg" width="429"/></p> <p>Zauważmy, że trójkąt <strong>WES</strong> jest trójkątem prostokątnym równoramiennym, czyli</p> <p><span> <math-expr expr='H=(3sqrt2)/2 \ ["cm"]' syntax="text"></math-expr> </span>  </p> <p>Obliczamy <span style="text-decoration: underline;">pole powierzchni podstawy</span> tego ostrosłupa. Mamy:</p> <p><span> <math-expr expr='P_p=(3sqrt2)^2=9*2=18 \ ["cm"^2]' syntax="text"></math-expr> </span>  </p> <p>Obliczamy <span style="text-decoration: underline;">objętość</span> tego ostrosłupa. Mamy:</p> <p><span> <math-expr expr='V=1/3*18*(3sqrt2)/2=6*(3sqrt2)/2= ulul 9sqrt2\ ["cm"^3]' syntax="text"></math-expr> </span>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

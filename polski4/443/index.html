@@ -50,4 +50,43 @@
 <p>a) Refleksja dotycząca relacji między człowiekiem i naturą ma w wierszu Iwaszkiewicza ponadczasowy charakter, ponieważ odnosi się do doświadczeń bliskich każdemu człowiekowi - niezależnie od miejsca oraz czasów, w których żyje. Źródłem silnych przeżyć wewnętrznych podmiotu lirycznego jest nocna metamorfoza przyrody. Ta ożywa w ludzkiej wyobraźni, jednocześnie fascynuje i budzi pierwotny lęk, dobrze znany w każdej kulturze od zarania dziejów ("Kremowe róże w urnach pochylają głowę."). Wyczuwalna nocą aura mistycyzmu nosi znamiona archetypu ("Na nieskończonych drogach wielkich topól rzędy / Szeptem liści wieczorne sprawują obrzędy.").</p>
 <p> </p>
 <p>b) Natura ukazana w analizowanych utworach staje się przestrzenią archetypiczną, ponieważ do jej opisu wykorzystano uniwersalne metody poetyckiego obrazowania (symbole, toposy). Do ponadczasowych doświadczeń, które stają się udziałem osób mówiących, należą refleksje na temat życia i śmierci ("A teraz martwe lisy ja wam głos oddaję", "Kremowe róże w urnach pochylają głowę.") oraz kontemplacja natury, przywodząca na myśl uczestnictwo w mistycznym obrządku ("Jak na lisim pogrzebie żałobny proporzec", "Szeptem liści wieczorne sprawują obrzędy."). Kreując przestrzeń natury na wzór archetypu, poeci odsyłają odbiorcę do ogólnoludzkiego kodu kulturowego, rozumianego jako zbiór uniwersalnych przeżyć czy postaw wobec świata. Motywy te, dobrze znane wszystkim ludziom, można odnaleźć w każdej dziedzinie sztuki, niezależnie od epoki, w której powstało dane dzieło.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Zadanie indywidualne</p><br>
+<p>Zadanie indywidualne</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

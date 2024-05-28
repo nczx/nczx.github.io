@@ -30,4 +30,43 @@
 <p>Przykładowe jądra atomowe o takich samych liczbach masowych, ale różnych liczbach atomowych:</p> <p>Izotopy wodoru i helu: </p> <ul> <li> <object class="math big" data="./data/1091740-0.svg" type="image/svg+xml"></object> </li> </ul> <p>Wodór łatwo tworzy związki chemiczne, a hel jest najmniej aktywnym pierwiastkiem. Wodór jest łatwopalnym gazem, a hel nie. Oba pierwiastki tworzą bezwonne i bezsmakowe gazy oraz są nietoksyczne.</p> <hr/> <p>Izotopy węgla i azotu:</p> <ul> <li> <object class="math big" data="./data/1091740-1.svg" type="image/svg+xml"></object>  </li> </ul> <p>W warunkach normalnych węgiel jest ciałem stałym, a azot gazem. Oba pierwiastki są aktywne chemicznie. </p> <hr/> <p>Izotopy kryptonu i strontu:</p> <ul> <li> <object class="math big" data="./data/1091740-2.svg" type="image/svg+xml"></object> </li> </ul> <p>W warunkach normalnych stront jest ciałem stałym, a krypton gazem. Stront jest aktywnym pierwiastkiem, a krypton nie. Oba pierwiastki tworzą fluorki.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 10</a><br>
 <p>Po wyczerpaniu wodoru: </p>
-<p><strong>B.</strong> w Słońcu rozpocznie się przemiana helu w węgiel.</p><br>
+<p><strong>B.</strong> w Słońcu rozpocznie się przemiana helu w węgiel.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

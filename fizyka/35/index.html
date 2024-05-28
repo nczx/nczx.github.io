@@ -19,4 +19,43 @@
 <p>Obejrzyj film na kanale "Nauka. To Lubię." (poniższa ikona po kliknięciu otwiera link zewnętrzny do filmu na YT)</p>
 <p><a href="https://youtu.be/Renyj0UEa1I"><img alt="" height="47" src="./data/1146395-0.jpg" width="118"/></a></p>
 <hr/>
-<p>Obserwujemy roztapianie się lodu w naczyniu. Jednocześnie temperatura wody w naczyniu obniża się i spada poniżej 0℃. W kontakcie z wodą cząsteczki soli rozpadają się na jony sodu i chloru i łączą z cząsteczkami wody. Lód roztapia się by jego cząsteczki przyłączyły się do jonów soli. Do stopienia lodu jest potrzebna energia, która jest pobierana z mieszaniny wody, dlatego jej temperatura obniża się.</p><br>
+<p>Obserwujemy roztapianie się lodu w naczyniu. Jednocześnie temperatura wody w naczyniu obniża się i spada poniżej 0℃. W kontakcie z wodą cząsteczki soli rozpadają się na jony sodu i chloru i łączą z cząsteczkami wody. Lód roztapia się by jego cząsteczki przyłączyły się do jonów soli. Do stopienia lodu jest potrzebna energia, która jest pobierana z mieszaniny wody, dlatego jej temperatura obniża się.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

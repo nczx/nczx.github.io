@@ -112,4 +112,43 @@
 <p>6. birthmark</p>
 <p>(Ok, ale czasem jest to niezbędne, na przykład pozbywanie się <strong>blizn</strong>/ pieprzyków/ knykci po ciężkim urazie albo dużego/dużej trzustki/ nerki/ <strong>znamiona</strong>, które może sprawić, że ktoś czuje się niepewnie.)</p>
 <p>7. joints</p>
-<p>(Tylko kolana? Masz szczęście. Wszystkie moje <strong>stawy</strong> bolą. Jestem na liście oczekujących na operację. Za rok o tej porze nadal będę czekać.)</p><br>
+<p>(Tylko kolana? Masz szczęście. Wszystkie moje <strong>stawy</strong> bolą. Jestem na liście oczekujących na operację. Za rok o tej porze nadal będę czekać.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

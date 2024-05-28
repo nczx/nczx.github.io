@@ -51,4 +51,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p><strong>Zadanie ma charakter indywidualny, bo wymaga wyrażenia własnej opinii. Dlatego proponowane rozwiązanie może stanowić wyłącznie przykładową wskazówkę pomocną do samodzielnego opracowania odpowiedzi.</strong></p>
 <p><span style="text-decoration: underline;"><strong>Przykładowa odpowiedź:</strong></span></p>
-<p>W polskim społeczeństwie można obecnie dostrzec przejawy kryzysu rodziny, ponieważ rośnie liczba rozwodów, a zarazem spada liczba zawieranych małżeństw. W ostatnim czasie w Polsce odnotowywany jest również ujemny przyrost naturalny. Jednak mimo tych trendów, nie widać też na horyzoncie ryzyka całkowitego zaniku instytucji rodziny. Maleje liczba sformalizowanych związków małżeńskich, lecz ludzie wciąż tworzą rodziny, tyle że częściej w związkach nieformalnych. Kryzys rodziny w Polsce wydaje się więc częściowy, a poza tym przechodzi ona metamorfozę w kierunku innego dominującego modelu. Warto również zauważyć, że rodziny są we współczesnej Polsce wspierane za sprawą rozbudowanych programów socjalnych, na udział w których nie mogą liczyć na przykład osoby samotne. Rodzina zatem wciąż ma się w Polsce dobrze, a Polacy są narodem, którego przedstawiciele cenią wartości rodzinne.</p><br>
+<p>W polskim społeczeństwie można obecnie dostrzec przejawy kryzysu rodziny, ponieważ rośnie liczba rozwodów, a zarazem spada liczba zawieranych małżeństw. W ostatnim czasie w Polsce odnotowywany jest również ujemny przyrost naturalny. Jednak mimo tych trendów, nie widać też na horyzoncie ryzyka całkowitego zaniku instytucji rodziny. Maleje liczba sformalizowanych związków małżeńskich, lecz ludzie wciąż tworzą rodziny, tyle że częściej w związkach nieformalnych. Kryzys rodziny w Polsce wydaje się więc częściowy, a poza tym przechodzi ona metamorfozę w kierunku innego dominującego modelu. Warto również zauważyć, że rodziny są we współczesnej Polsce wspierane za sprawą rozbudowanych programów socjalnych, na udział w których nie mogą liczyć na przykład osoby samotne. Rodzina zatem wciąż ma się w Polsce dobrze, a Polacy są narodem, którego przedstawiciele cenią wartości rodzinne.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

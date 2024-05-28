@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Uzasadnimy, że trójkąty <strong>FDE</strong> i <strong>GAE</strong> są przystające. </p> <p>Zauważmy, że   </p> <p><span> <math-expr expr="abs( sphericalangle EDF) = 90^@ =  abs( sphericalangle EAG)" syntax="text"></math-expr> </span>  </p> <p>Ponadto, </p> <p><span> <math-expr expr="abs( sphericalangle DEF) = abs( sphericalangle GEA)" syntax="text"></math-expr> </span>  </p> <p>ponieważ miary kątów wierzchołkowych są równe. </p> <p>Dodatkowo, </p> <p><span> <math-expr expr="abs(DE)=abs(EA)" syntax="text"></math-expr> </span></p> <p>ponieważ punkt <strong>E</strong> jest środkiem boku <strong>AD</strong>.  </p> <p>Na mocy cechy przystawania <strong>KBK</strong>, trójkąty <strong>FDE</strong> i <strong>GAE</strong> są przystające. </p><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Rysunek:  </p> <p><img alt="" height="203" src="./data/1239903-0.jpg" width="345"/></p> <p>Skoro <strong>ABCD</strong> jest równoległobokiem, to <strong>|AB|=|CD|</strong> i <strong>|AD|=|BC|</strong>.</p> <p>Korzystając z cechy przystawania<strong> BBB</strong> stwierdzamy, że trójkąty <strong>ACD</strong> i <strong>ABC</strong> są <span style="text-decoration: underline;">przystające</span>. </p> <p>Pola trójkątów <strong>ACD</strong> i <strong>ABC</strong> są równe, zatem mamy:</p> <p><span> <math-expr expr="1/2 cdot abs(AC) cdot abs(DE) = 1/2 cdot abs(AC) cdot abs( FB) \ \ \ |: 1/2 abs(AC)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(DE)=abs(FB)" syntax="text"></math-expr> </span>   </p> <p>Wyznaczmy pole trójkąta <strong>APD</strong>. Mamy:</p> <p><span> <math-expr expr="P_(ADP)= 1/2 cdot abs(AP) cdot abs(DE)" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole trójkąta <strong>APD</strong>. Mamy:</p> <p><span> <math-expr expr="P_(ABP)= 1/2 cdot abs (AP) cdot abs( FB) = 1/2 cdot abs(AP) cdot abs(DE)" syntax="text"></math-expr> </span>  </p> <p>Zatem uzasadniliśmy, że:</p> <p><span> <math-expr expr="P_(ADP) = P_(ABP)" syntax="text"></math-expr> </span>  </p><br>
+<p>Rysunek:  </p> <p><img alt="" height="203" src="./data/1239903-0.jpg" width="345"/></p> <p>Skoro <strong>ABCD</strong> jest równoległobokiem, to <strong>|AB|=|CD|</strong> i <strong>|AD|=|BC|</strong>.</p> <p>Korzystając z cechy przystawania<strong> BBB</strong> stwierdzamy, że trójkąty <strong>ACD</strong> i <strong>ABC</strong> są <span style="text-decoration: underline;">przystające</span>. </p> <p>Pola trójkątów <strong>ACD</strong> i <strong>ABC</strong> są równe, zatem mamy:</p> <p><span> <math-expr expr="1/2 cdot abs(AC) cdot abs(DE) = 1/2 cdot abs(AC) cdot abs( FB) \ \ \ |: 1/2 abs(AC)" syntax="text"></math-expr> </span></p> <p><span> <math-expr expr="abs(DE)=abs(FB)" syntax="text"></math-expr> </span>   </p> <p>Wyznaczmy pole trójkąta <strong>APD</strong>. Mamy:</p> <p><span> <math-expr expr="P_(ADP)= 1/2 cdot abs(AP) cdot abs(DE)" syntax="text"></math-expr> </span>  </p> <p>Wyznaczmy pole trójkąta <strong>APD</strong>. Mamy:</p> <p><span> <math-expr expr="P_(ABP)= 1/2 cdot abs (AP) cdot abs( FB) = 1/2 cdot abs(AP) cdot abs(DE)" syntax="text"></math-expr> </span>  </p> <p>Zatem uzasadniliśmy, że:</p> <p><span> <math-expr expr="P_(ADP) = P_(ABP)" syntax="text"></math-expr> </span>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

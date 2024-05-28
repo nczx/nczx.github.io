@@ -53,4 +53,43 @@
 </ul>
 <p>W kwietniu 1945 r. były Duce próbował uciec do Szwajcarii. Został jednak rozpoznany przez partyzantów i rozstrzelany. 28 kwietnia 1945 r. jego ciało powieszono głową w dół na stacji benzynowej w Mediolanie.</p>
 <p><img alt="" height="302" src="./data/1179861-0.jpg" width="238"/></p>
-<p>Benito Mussolini, źródło zdjęcia: Wikimedia Commons.</p><br>
+<p>Benito Mussolini, źródło zdjęcia: Wikimedia Commons.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

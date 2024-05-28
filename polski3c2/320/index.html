@@ -176,4 +176,43 @@
 <p>Przyk³adowo:</p>
 <p>Osoba mówi¹ca jest zdeterminowana i konsekwentna w swych pogl¹dach. O jej stanowczej postawie œwiadcz¹ liczne czasowniki w trybie rozkazuj¹cym ("rozbrój", "odejmij", "nie daj mówiæ"). Nie ma ona jakichkolwiek z³udzeñ, i¿ mo¿liwe jest ¿ycie w zgodzie z dawnym systemem wartoœci, jej os¹d realiów jest trzeŸwy oraz bolesny: "Nie wiedzia³eœ, ¿e d³oñ któr¹ uczy³eœ œpiewaæ / potrafi nienawidziæ i piêœci¹ grubieæ pe³n¹". Przepe³nia j¹ wola dzia³ania, ale tak¿e zaduma nad tym, jakie wojna wywo³a³a przemiany w rzeczywistoœci: "Myœla³eœ: bêdzie proœciej. / A tu s³owa, œpiewne s³owa trzeba zamieniaæ, / by godzi³y jak oszczep". W jej sposobie wypowiedzi zaznacza siê tak¿e swoista troska o "wczorajszego", wspó³czucie, poniewa¿ podmiot liryczny zdaje siê rozumieæ tragizm jego sytuacji, rozdŸwiêk miêdzy wczeœniejszymi doœwiadczeniami a wojn¹: "A tobie - dni wczorajsze w oczach nie ostyg³y, / ufa³eœ...". Z tego tez powodu wspiera odbiorcê swej wypowiedzi, poniewa¿ udziela mu rad.</p>
 <p> </p>
-<p>Wyra¿enie opinii na temat s³usznoœci wyboru - czêœæ indywidualna </p><br>
+<p>Wyra¿enie opinii na temat s³usznoœci wyboru - czêœæ indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

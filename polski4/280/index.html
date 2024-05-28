@@ -57,4 +57,43 @@
 <p>Trzeci dar, sztylet, jest symbolem końca. Poeta otrzymuje go w momencie, w którym wspiął się już na wyżyny własnych możliwości i osiągnął to, co niedostępne dla innych śmiertelników. W darze tym ukryta jest sugestia samobójczej śmierci.</p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>Nawiązanie do konwencji baśniowej w opowiadaniu Borgesa ma charakter metafikcji. Bohaterowie mają świadomość tego, że istnieją w wymyślonej rzeczywistości, choć, paradoksalnie, akcja rozgrywa się w prawdziwych lokacjach, a jej tłem są wydarzenia historyczne. Jednocześnie jednak król z uśmiechem stwierdza: "jesteśmy postaciami z baśni [...]". Warto przy tym zauważyć, że tekst nie zachowuje cech typowych dla tego gatunku: można określić czas i miejsce akcji, nie występują postaci fantastyczne, trudno wyróżnić jednoznacznie strony dobra i zła. </p>
 <p>Wyraźna sugestia odautorska, że czytelnik ma do czynienia z baśnią, podważa realność prawdopodobieństwo opisanych wydarzeń. Wskazuje, że tekst ten należy odczytywać przede wszystkim w warstwie symbolicznej, nie jako odbicie rzeczywistości, lecz kreację artystyczną.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
-<p>Odwołania do dzieł z okresu starożytności i średniowiecza, a także wydarzeń historycznych osadzają utwór Borgesa w kręgu kulturowym Europy Zachodniej. Skupiają uwagę czytelnika wokół tematyki szeroko pojmowanej tradycji literackiej. Zabieg ten zwraca również uwagę na intertekstualne zależności między poszczególnymi tekstami. Bohaterowie wykreowani przez autora, choć, jak sami stwierdzają, baśniowi, znają wielkie dzieła literatury europejskiej. Borges zwraca więc uwagę na status prawdziwości i fikcji, sugerując, że wszystkie wydarzenia z przeszłości stają się jedynie opowieścią.</p><br>
+<p>Odwołania do dzieł z okresu starożytności i średniowiecza, a także wydarzeń historycznych osadzają utwór Borgesa w kręgu kulturowym Europy Zachodniej. Skupiają uwagę czytelnika wokół tematyki szeroko pojmowanej tradycji literackiej. Zabieg ten zwraca również uwagę na intertekstualne zależności między poszczególnymi tekstami. Bohaterowie wykreowani przez autora, choć, jak sami stwierdzają, baśniowi, znają wielkie dzieła literatury europejskiej. Borges zwraca więc uwagę na status prawdziwości i fikcji, sugerując, że wszystkie wydarzenia z przeszłości stają się jedynie opowieścią.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

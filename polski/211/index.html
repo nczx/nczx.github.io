@@ -32,4 +32,43 @@
 <p>Wiersz nawiązuje do poezji funeralnej, tworzonej ku czci zmarłej osoby. </p>
 <p> </p>
 <p><strong>d)</strong></p>
-<p>Antyczny motyw pomaga budować efekt autoironii. Szymborska bowiem napisała sobie samej wiersz nagrobny jeszcze za życia. Wykorzystanie odwołania do starożytności wprowadza patos, który autorka łamie, wywołując efekt komiczny. Świadczy to o jej ogromnym dystansie do siebie samej oraz własnej twórczości. </p><br>
+<p>Antyczny motyw pomaga budować efekt autoironii. Szymborska bowiem napisała sobie samej wiersz nagrobny jeszcze za życia. Wykorzystanie odwołania do starożytności wprowadza patos, który autorka łamie, wywołując efekt komiczny. Świadczy to o jej ogromnym dystansie do siebie samej oraz własnej twórczości. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

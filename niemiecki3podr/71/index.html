@@ -69,4 +69,43 @@
 <p>3. Sie hat Angst vorm Fliegen, trotzdem will sie Stewardess werden. (D)<br/><em>Ona boi się latać, mimo to chce zostać stewardessą. </em></p>
 <p>4. Ich finanziere dir einen Kochkurs in Paris, damit du in deinem Traumberuf als Koch arbeiten kannst. (A)<br/><em>Sfinansuję ci kurs gotowania w Paryżu, żebyś mógł pracować w swoim wymarzonym zawodzie jako kucharz.</em></p>
 <p>5. Er möchte eine Wohnung mieten, deshalb sucht er einen Sommerjob, um Geld für die Wohnung zu verdienen. (E)<br/><em>On chciałby wynająć jakieś mieszkanie, dlatego szuka pracy wakacyjnej, by zarobić pieniądze na to mieszkanie. </em></p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

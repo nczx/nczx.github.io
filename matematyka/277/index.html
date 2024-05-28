@@ -1,3 +1,42 @@
 <head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
-<p> <object class="math big" data="./data/1109230-0.svg" type="image/svg+xml"></object>  </p> <p>Funkcja <strong>f</strong> jest funkcją kwadratową.</p> <p>Wykresem funkcji <strong>f </strong>jest parabola ramionami skierowana w górę.</p> <p>Wierzchołek paraboli będące wykresem tej funkcji ma współrzędne <strong>(1, 0)</strong>.</p> <hr/> <p><strong>a)</strong></p> <p>Należy wyznaczyć najmniejsza i największą wartość funkcji <strong>f</strong> w przedziale domkniętym: </p> <p> <object class="math big" data="./data/1109230-1.svg" type="image/svg+xml"></object> </p> <p>Z rysunku przedstawionego obok treści zadania możemy zauważyć, że wartość największa  </p> <p>w tym przedziale jest przyjmowana dla <strong>x=-1</strong> i wynosi <strong>f(-1)=4</strong>, natomiast wartość najmniejsza</p> <p>jest przyjmowana dla <strong>x=1</strong> i wynosi <strong>f(1)=0</strong>.</p> <hr/> <p><strong>b)</strong></p> <p>Należy wyznaczyć najmniejszą i największą wartość funkcji <strong>f</strong> w przedziale domkniętym:</p> <p> <object class="math big" data="./data/1109230-2.svg" type="image/svg+xml"></object> </p> <p>Z rysunku możemy odczytać, że funkcja <strong>f</strong> rośnie w przedziale <strong>⟨1, oo)</strong> zatem również w przedziale </p> <p><strong>⟨2, 4〉</strong> jest rosnąca. Wobec tego funkcja f w przedziale<strong> ⟨2, 4〉</strong> przyjmuje wartość najmniejszą</p> <p>dla <strong>x=2</strong> i wynosi ona <strong>f(2)=1</strong>, natomiast wartość największą dla <strong>x=4</strong> i wynosi ona <strong>f(4)=9</strong>.</p><br>
+<p> <object class="math big" data="./data/1109230-0.svg" type="image/svg+xml"></object>  </p> <p>Funkcja <strong>f</strong> jest funkcją kwadratową.</p> <p>Wykresem funkcji <strong>f </strong>jest parabola ramionami skierowana w górę.</p> <p>Wierzchołek paraboli będące wykresem tej funkcji ma współrzędne <strong>(1, 0)</strong>.</p> <hr/> <p><strong>a)</strong></p> <p>Należy wyznaczyć najmniejsza i największą wartość funkcji <strong>f</strong> w przedziale domkniętym: </p> <p> <object class="math big" data="./data/1109230-1.svg" type="image/svg+xml"></object> </p> <p>Z rysunku przedstawionego obok treści zadania możemy zauważyć, że wartość największa  </p> <p>w tym przedziale jest przyjmowana dla <strong>x=-1</strong> i wynosi <strong>f(-1)=4</strong>, natomiast wartość najmniejsza</p> <p>jest przyjmowana dla <strong>x=1</strong> i wynosi <strong>f(1)=0</strong>.</p> <hr/> <p><strong>b)</strong></p> <p>Należy wyznaczyć najmniejszą i największą wartość funkcji <strong>f</strong> w przedziale domkniętym:</p> <p> <object class="math big" data="./data/1109230-2.svg" type="image/svg+xml"></object> </p> <p>Z rysunku możemy odczytać, że funkcja <strong>f</strong> rośnie w przedziale <strong>⟨1, oo)</strong> zatem również w przedziale </p> <p><strong>⟨2, 4〉</strong> jest rosnąca. Wobec tego funkcja f w przedziale<strong> ⟨2, 4〉</strong> przyjmuje wartość najmniejszą</p> <p>dla <strong>x=2</strong> i wynosi ona <strong>f(2)=1</strong>, natomiast wartość największą dla <strong>x=4</strong> i wynosi ona <strong>f(4)=9</strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

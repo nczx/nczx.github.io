@@ -141,4 +141,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p><strong><span style="text-decoration: underline;">Społeczność</span></strong> to ludność, którą łączy to, że wspólnie bierze udział w określonej dziedzinie życia społecznego. Przykładowo, uczniowie, nauczyciele i inni pracownicy szkoły współtworzą społeczność szkolną, piłkarze, trenerzy i inni pracownicy klubu piłkarskiego współtworzą społeczność konkretnego klubu piłkarskiego, zaś mieszkańcy jednej miejscowości uczestniczą wspólnie w tej samej społeczności lokalnej.</p>
 <p>Z kolei <strong><span style="text-decoration: underline;">grupa społeczna</span></strong> to co najmniej trzy osoby, których łączą bardziej bezpośrednie więzi, wynikające na przykład ze wspólnych zainteresowań (jak w przypadku członków konkretnego koła naukowego) lub z silnego poczucia przynależności (jak w przypadku rodziny).</p>
-<p>Jak wynika z powyższego, <strong><span style="text-decoration: underline;">grupa społeczna odznacza się silniejszymi i głębszymi relacjami między swymi członkami, aniżeli ma to miejsce w wypadku społeczności</span></strong>.</p><br>
+<p>Jak wynika z powyższego, <strong><span style="text-decoration: underline;">grupa społeczna odznacza się silniejszymi i głębszymi relacjami między swymi członkami, aniżeli ma to miejsce w wypadku społeczności</span></strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

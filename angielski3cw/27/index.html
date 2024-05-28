@@ -271,4 +271,43 @@
 <p>7. I've been listening</p>
 <p><strong>Uzasadnienie:</strong> kiedy opisujemy nieukończoną czynność, żeby podkreślić długi czas jej trwania, używamy czasu <em>present perfect continuous</em> (<em>have/has been</em> + czasownik z -ing).</p>
 <p>8. who</p>
-<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o jakiejś osobie (Alvaro Soler) w zdaniu przydawkowym, używamy zaimka <em>who</em>.</p><br>
+<p><strong>Uzasadnienie:</strong> do wprowadzenia informacji o jakiejś osobie (Alvaro Soler) w zdaniu przydawkowym, używamy zaimka <em>who</em>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

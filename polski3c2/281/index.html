@@ -54,4 +54,43 @@
 <li><em>przys³owiowe.</em></li>
 </ul>
 <p> </p>
-<p>b) S³owa te s¹ b³êdne, poniewa¿ powielaj¹ treœci wyra¿ane przez towarzysz¹ce im wyrazy. S¹ to b³êdy leksykalne (s³ownikowe). Obecnoœæ tych wyrazów mo¿na okreœliæ jako zbêdn¹, wiêc naruszaj¹ one tym samym jedno z kryteriów poprawnoœci jêzykowej - ekonomicznoœæ wypowiedzi.</p><br>
+<p>b) S³owa te s¹ b³êdne, poniewa¿ powielaj¹ treœci wyra¿ane przez towarzysz¹ce im wyrazy. S¹ to b³êdy leksykalne (s³ownikowe). Obecnoœæ tych wyrazów mo¿na okreœliæ jako zbêdn¹, wiêc naruszaj¹ one tym samym jedno z kryteriów poprawnoœci jêzykowej - ekonomicznoœæ wypowiedzi.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -117,4 +117,43 @@
 <p><br/>• It's acceptable to be annoyed with your friend or to get on each other's nerves. Disagreements are natural, you just have to compromise.</p>
 <p>However, it's unacceptable when your friend is dishonest, disloyal or unreliable. I'd also never be friends with someone who's unkind and tells me hurtful things. A behaviour like that means this person isn't actually your friend. A friend should support you and wish you well.</p>
 <p>(Dopuszczalne jest zirytowanie się na przyjaciela/przyjaciółkę lub wzajemne działanie sobie na nerwy. Nieporozumienia są naturalne, trzeba po prostu iść na kompromis.</p>
-<p>Niedopuszczalne jest jednak, gdy twój przyjaciel / twoja przyjaciółka jest nieuczciwy/a, nielojalny/a lub nierzetelny/a. Nigdy też nie zaprzyjaźnił(a)bym się z kimś, kto jest niemiły i mówi mi krzywdzące rzeczy. Takie zachowanie oznacza, że ta osoba nie jest tak naprawdę twoim przyjacielem. Przyjaciel powinien cię wspierać i życzyć ci dobrze.)</p><br>
+<p>Niedopuszczalne jest jednak, gdy twój przyjaciel / twoja przyjaciółka jest nieuczciwy/a, nielojalny/a lub nierzetelny/a. Nigdy też nie zaprzyjaźnił(a)bym się z kimś, kto jest niemiły i mówi mi krzywdzące rzeczy. Takie zachowanie oznacza, że ta osoba nie jest tak naprawdę twoim przyjacielem. Przyjaciel powinien cię wspierać i życzyć ci dobrze.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

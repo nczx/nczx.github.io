@@ -66,4 +66,43 @@
 <p>7. <strong>A.</strong> gesprochen </p>
 <p>Podano błędnie: gebrochen - brechen - łamać. </p>
 <p><br/><br/>Tłumaczenie dialogu: </p>
-<p><em>- Hej, Ilse! Miło cię widzieć! </em><br/><em>- Hej, Tamara! Wszystko w porządku w Wiedniu? Jak minął dzisiaj dzień? Co robiłaś?</em><br/><em>- Dzień był super! Rodzina Schwalbe wszystko dokładnie zaplanowała. Tak wiele się dzisiaj wydarzyło. </em><br/><em>- Tak? Opowiadaj! </em><br/><em>- Ta, najpierw wszyscy byliśmy w mieście, w centrum. Wiesz, że lubię architekturę. Wiedeń jest taki piękny.</em><br/><em>- Widzieliście dom Hundertwassera?</em><br/><em>- Jasne! A później katedrę św. Szczepana i spacerowaliśmy wzdłuż Kärntner Straße. W niedzielę odwiedziliśmy pałac Schönbrunn. </em><br/><em>- Pałac Schönbrunn?</em><br/><em>- Tak, jest przepiękny. Każdego roku odwiedza go mnóstwo turystów.</em><br/><em>- Tak, słyszałam o tym pałacu. </em><br/><em>- Bardzo się nam podobał. </em><br/><em>- Dzień był więc bardzo intensywny. Pewnie jesteś teraz zmęczona, prawda?</em><br/><em>- O tak, jestem wykończona. Ale opłacało się. Dużo mówiłam też po niemiecku.</em><br/><em>- Super! Wracacie jutro, prawda?</em><br/><em>- Zgadza się. Widzimy się we wtorek. Cześć!</em><br/><em>- Pa, do wtorku! </em></p><br>
+<p><em>- Hej, Ilse! Miło cię widzieć! </em><br/><em>- Hej, Tamara! Wszystko w porządku w Wiedniu? Jak minął dzisiaj dzień? Co robiłaś?</em><br/><em>- Dzień był super! Rodzina Schwalbe wszystko dokładnie zaplanowała. Tak wiele się dzisiaj wydarzyło. </em><br/><em>- Tak? Opowiadaj! </em><br/><em>- Ta, najpierw wszyscy byliśmy w mieście, w centrum. Wiesz, że lubię architekturę. Wiedeń jest taki piękny.</em><br/><em>- Widzieliście dom Hundertwassera?</em><br/><em>- Jasne! A później katedrę św. Szczepana i spacerowaliśmy wzdłuż Kärntner Straße. W niedzielę odwiedziliśmy pałac Schönbrunn. </em><br/><em>- Pałac Schönbrunn?</em><br/><em>- Tak, jest przepiękny. Każdego roku odwiedza go mnóstwo turystów.</em><br/><em>- Tak, słyszałam o tym pałacu. </em><br/><em>- Bardzo się nam podobał. </em><br/><em>- Dzień był więc bardzo intensywny. Pewnie jesteś teraz zmęczona, prawda?</em><br/><em>- O tak, jestem wykończona. Ale opłacało się. Dużo mówiłam też po niemiecku.</em><br/><em>- Super! Wracacie jutro, prawda?</em><br/><em>- Zgadza się. Widzimy się we wtorek. Cześć!</em><br/><em>- Pa, do wtorku! </em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

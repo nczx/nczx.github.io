@@ -77,4 +77,43 @@
 <p>The extra words are <strong>employ</strong> and <strong>manage</strong>.</p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
-<p>Jedną z <strong>najtrudniejszych</strong> zmian życiowych jest sytuacja, kiedy nagle stajemy się bezrobotni. Większość osób polega na swojej pracy nie tylko po to, żeby osiągnąć bezpieczeństwo finansowe, ale  też poczucie życiowego celu. Podczas pandemii koronawirusa <strong>utrata</strong> pracy może być jeszcze bardziej problematyczna, ponieważ nie jest tak łatwo znaleźć nową posadę. Ważne jednak, żeby się nie poddawać. Możliwe jest nauczenie się nowego zawodu na kursach <strong>zawodowych</strong>, które mogą być dostępne bezpłatnie dla bezrobotnych. Jeśli chodzi o ubieganie się o pracę, ważne jest pokazanie potencjalnemu pracodawcy, dlaczego powinien wybrać ciebie. Spróbuj przekonać go o swojej <strong>chęci</strong> do wykonywania każdej koniecznej pracy, nawet zadań, których inni nie chcą robić. W obecnej sytuacji pracodawcy szukają też elastycznych, <strong>zaradnych</strong> ludzi, gotowych do pracy pod presją i przejmowania inicjatywy oraz zmotywowanych wewnętrznie. Czy to właśnie ty?</p><br>
+<p>Jedną z <strong>najtrudniejszych</strong> zmian życiowych jest sytuacja, kiedy nagle stajemy się bezrobotni. Większość osób polega na swojej pracy nie tylko po to, żeby osiągnąć bezpieczeństwo finansowe, ale  też poczucie życiowego celu. Podczas pandemii koronawirusa <strong>utrata</strong> pracy może być jeszcze bardziej problematyczna, ponieważ nie jest tak łatwo znaleźć nową posadę. Ważne jednak, żeby się nie poddawać. Możliwe jest nauczenie się nowego zawodu na kursach <strong>zawodowych</strong>, które mogą być dostępne bezpłatnie dla bezrobotnych. Jeśli chodzi o ubieganie się o pracę, ważne jest pokazanie potencjalnemu pracodawcy, dlaczego powinien wybrać ciebie. Spróbuj przekonać go o swojej <strong>chęci</strong> do wykonywania każdej koniecznej pracy, nawet zadań, których inni nie chcą robić. W obecnej sytuacji pracodawcy szukają też elastycznych, <strong>zaradnych</strong> ludzi, gotowych do pracy pod presją i przejmowania inicjatywy oraz zmotywowanych wewnętrznie. Czy to właśnie ty?</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -168,4 +168,43 @@
 <p>Przykładowo:</p>
 <p>Tytuł ten przywołuje na myśl skojarzenia z motywem labiryntu, ale przypomina również o cywilizacji minojskiej, która rozkwitła na Krecie. Zdaje się też nawiązywać do mitu o Minotaurze. W znaczeniu symbolicznym labirynt  to reprezentacja sytuacji bez wyjścia, ale także duchowej podróży w celu poznania swojej tożsamości, można go także rozpatrywać jako niełatwą drogę do zdobycia skarbu (osiągnięcia celu).</p>
 <p>Sensy te są obecne w odczytaniu tytułu dzieła Herberta, ponieważ labiryntem dla niego staje się dorobek starożytnej kultury - ona z kolei rozwijała się na terenie śródziemnomorskim, co uzasadnia określenie "nad morzem". Labirynt w ujęciu Herberta to zderzenie dorobku starożytnych z wrażliwością oraz świadomością współczesnego człowieka. Poznawanie dawnych wytworów jednak nie jest łatwe, prowadzi do zagubienia, ponieważ trzeba mieć na uwadze różnice w postrzeganiu świata, inną ocenę pewnych zjawisk. Z tego też powodu obcowanie z kulturą śródziemnomorską przypomina wędrówkę po labiryncie, ponieważ stanowi coś wymagającego. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
-<p>Indywidualne </p><br>
+<p>Indywidualne </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

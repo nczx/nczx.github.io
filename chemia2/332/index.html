@@ -59,4 +59,43 @@
 <p>Ze względu na obecność niewiążącej pary elektronowej przy atomie azotu, metyloamina może w reakcjach przyłączać proton, pełniąc tym samym rolę zasady.</p> <p>a) reakcja z wodą: </p> <p> <math-expr expr="CH_3NH_2+H_2O-&gt;CH_3NH_3^++OH^-" syntax="text"></math-expr>   </p> <p><br/>b) reakcja z kwasem solnym:</p> <p> <math-expr expr="CH_3NH_2+HCl-&gt;CH_3NH_3^+Cl^-" syntax="text"></math-expr>    </p><br><a style="color:red; font-size:25px;">Zadanie 143</a><br>
 <p>a)</p> <p><img alt="" height="80" src="./data/937980-0.jpg" width="218"/></p> <p><br/>b) </p> <p> <math-expr expr="CH_3Cl+NH_3-&gt;CH_3NH_3^+Cl^-" syntax="text"></math-expr>   </p> <p><br/>c)</p> <p> <math-expr expr="CH_3-CH_2-NH_2\ +\ HCl\ -&gt;\ CH_3-CH_2-NH_3^+Cl^-" syntax="text"></math-expr>     </p><br><a style="color:red; font-size:25px;">Zadanie 144</a><br>
 <p>1.  <math-expr expr="CH_3-CH_2OH\ #(-&gt;)^(Al_2O_3,\ T)\ CH_2=CH_2\ +\ H_2O" syntax="text"></math-expr>   </p> <p><br/>2.   <math-expr expr="CH_2=CH_2\ +\ H_2\ #(-&gt;)^(kat.)\ CH_3-CH_3" syntax="text"></math-expr>   </p> <p><br/>3.  <math-expr expr='CH_3-CH_3\ +\ Br_2\ #(-&gt;)^("światło")\ CH_3-CH_2Br\ +\ HBr' syntax="text"></math-expr>   </p> <p><br/>4.</p> <ul> <li>etap I:  <math-expr expr="CH_3-CH_2Br\ +\ NH_3\ -&gt;\ CH_3-CH_2NH_3^+Br^-" syntax="text"></math-expr>   </li> <li>etap II:  <math-expr expr="CH_3-CH_2NH_3^+Br^(-)\ +\ NaOH\ -&gt;\ CH_3-CH_2-NH_2\ +\ H_2O\ +\ NaBr" syntax="text"></math-expr>     </li> </ul><br><a style="color:red; font-size:25px;">Zadanie 145</a><br>
-<p>Równanie reakcji:</p> <p><img alt="" height="80" src="./data/938015-0.jpg" width="218"/></p> <p>Zaczynamy od obliczenia masy HCl w jego roztworze:</p> <p> <math-expr expr="C_p=m_s/m_r*100%\ \ \ =&gt;\ \ \ m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(HCl)=(30%*80\ g)/(100%)=24\ g" syntax="text"></math-expr>   </p> <p><br/>Z równania reakcji widzimy, że stosunek molowy substratów wynosi 1:1. Masa molowa HCl to 36,5 g/mol. Liczymy, ile gramów aniliny wzięło udział w reakcji:</p> <p> <math-expr expr="93\ g\ \ -\ \ 36,5\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m\ \ -\ \ 24\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m=(24\ g*93\ g)/(36,5\ g)=61,2\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W reakcji udział wzięło 61,2 gram aniliny.</strong></p><br>
+<p>Równanie reakcji:</p> <p><img alt="" height="80" src="./data/938015-0.jpg" width="218"/></p> <p>Zaczynamy od obliczenia masy HCl w jego roztworze:</p> <p> <math-expr expr="C_p=m_s/m_r*100%\ \ \ =&gt;\ \ \ m_s=(C_p*m_r)/(100%)" syntax="text"></math-expr>   </p> <p> <math-expr expr="m_(HCl)=(30%*80\ g)/(100%)=24\ g" syntax="text"></math-expr>   </p> <p><br/>Z równania reakcji widzimy, że stosunek molowy substratów wynosi 1:1. Masa molowa HCl to 36,5 g/mol. Liczymy, ile gramów aniliny wzięło udział w reakcji:</p> <p> <math-expr expr="93\ g\ \ -\ \ 36,5\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m\ \ -\ \ 24\ g" syntax="text"></math-expr>   </p> <p> <math-expr expr="m=(24\ g*93\ g)/(36,5\ g)=61,2\ g" syntax="text"></math-expr>   </p> <p><br/><strong>Odpowiedź: W reakcji udział wzięło 61,2 gram aniliny.</strong></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

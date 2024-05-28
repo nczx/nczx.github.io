@@ -46,4 +46,43 @@
 <p><strong>2) </strong>Przykładowa odpowiedź:</p>
 <p>Wizyta Willy’ego Brandta w Warszawie miała przełomowe znaczenie dla polsko-niemieckich relacji. Dwadzieścia pięć lat po zakończeniu II wojny światowej Polska i Niemcy zachodnie zawarły układ "o podstawach normalizacji ich wzajemnych stosunków". Po złożeniu wieńców pod pomnikiem Bohaterów Getta kanclerz złamał protokół dyplomatyczny - zamiast skinięcia głową, padł na oba kolana i dłuższą chwilę trwał w milczeniu. Gest ten oznaczał uznanie winy i prośbę o wybaczenie.</p>
 <p><img alt="" height="477" src="./data/1188550-0.jpg" width="477"/> </p>
-<p>Kanclerz Willy Brandt  pod pomnikiem Bohaterów Getta w 1970 r., źródło zdjęcia: www.polin.pl</p><br>
+<p>Kanclerz Willy Brandt  pod pomnikiem Bohaterów Getta w 1970 r., źródło zdjęcia: www.polin.pl</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

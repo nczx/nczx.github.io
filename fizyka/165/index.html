@@ -9,4 +9,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p>Okulary polaryzacyjne są tak zbudowane, aby ich polaryzator nie przepuszczał refleksów światła odbitego od powierzchni płaskich. W celu ochrony przed odblaskami pochodzącymi od powierzchni pionowych należałoby by obrócić szkła okularów polaryzacyjnych o kąt 90°. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Antena wysyła falę spolaryzowaną pionowo, więc na przedłużeniach nadawczej anteny radiowej sygnał będzie bardzo słaby.</p><br>
+<p>Antena wysyła falę spolaryzowaną pionowo, więc na przedłużeniach nadawczej anteny radiowej sygnał będzie bardzo słaby.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -170,4 +170,43 @@
 <p><strong>Tłumaczenie: </strong></p>
 <p>Pierwsza Olimpijska Drużyna Uchodźców liczyła 10 członków. Dwoje z nich to na przykład Yusra Mardini i James Chiengjiek.</p>
 <p>Yusra Mardini jest syryjską pływaczką, która brała udział w Letnich Igrzyskach Olimpijskich 2016 i Letnich Igrzyskach Olimpijskich 2020 jako członkini Olimpijskiej Drużyny Uchodźców. W 2017 roku została Ambasadorem Dobrej Woli UNHCR. W 2023 roku ona i jej siostra znalazły się wśród 100 najbardziej wpływowych ludzi na świecie magazynu Time.</p>
-<p>James Chiengjiek jest biegaczem z Sudanu Południowego, który obecnie mieszka i trenuje w Kenii. Miał zaszczyt reprezentować drużynę olimpijską uchodźców zarówno na Letnich Igrzyskach Olimpijskich 2016, jak i na Igrzyskach Olimpijskich w Tokio w 2020 roku. Pomimo wyzwań, rywalizował w biegach na 400 m i 800 m, zajmując ostatnie miejsce w obu wyścigach. Na Igrzyskach Olimpijskich 2020 niestety potknął się z powodu kontaktu z innym sportowcem, co wpłynęło na jego występ w wyścigu na 800 metrów.</p><br>
+<p>James Chiengjiek jest biegaczem z Sudanu Południowego, który obecnie mieszka i trenuje w Kenii. Miał zaszczyt reprezentować drużynę olimpijską uchodźców zarówno na Letnich Igrzyskach Olimpijskich 2016, jak i na Igrzyskach Olimpijskich w Tokio w 2020 roku. Pomimo wyzwań, rywalizował w biegach na 400 m i 800 m, zajmując ostatnie miejsce w obu wyścigach. Na Igrzyskach Olimpijskich 2020 niestety potknął się z powodu kontaktu z innym sportowcem, co wpłynęło na jego występ w wyścigu na 800 metrów.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

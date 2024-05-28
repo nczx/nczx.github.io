@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>Tadeusz Nyczek uważa, że Artur jest nieodrodnym synem Stomila, ponieważ, podobnie jak on, ma naturę buntownika. Ojciec sprzeciwiał się zasadom ustanowionym przez pokolenie jego rodziców, za najważniejszą wartość w życiu człowieka uznawał wolność i do jej nieograniczonego panowania dążył. Artur tymczasem buntuje się przeciw chaosowi, który wywalczona przez Stomila swoboda wprowadziła do rzeczywistości, a opowiada się za powrotem do porządku. Bohaterów łączy więc potrzeba zmiany świata, różni jednak to, w imię czego walczą.</p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Według Tadeusza Nyczka odczłowieczanie  to proces, w którym bohater zatraca własną tożsamość, a poświęca się w całości idei. Artur początkowo przedstawiany jest jako student medycyny, krytycznie oceniający zasady panujące w rodzinnym domu. Jego charakter zmienia się jednak, a właściwie - zanika. Podporządkowuje się w całości misji uporządkowania rzeczywistości i wtłoczenia jej na powrót w ramy konwenansów. Inne wartości, które dotychczas wydawały się dla niego istotne, tracą na znaczeniu.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Tadeusz Nyczek twierdzi, że śmierć Artura jest konsekwencją nieuniknionych przemian dziejowych. Ginie, ponieważ nie sprawdził się w wyznaczonej sobie roli. Okazał się człowiekiem okrutnym i despotycznym, niezdolnym do współpracy z innymi członkami rodziny. Autor zwraca także uwagę, że zawiódł jako mężczyzna - traktował Alę przedmiotowo, a ślub z nią jako środek do wprowadzenia nowego ładu.</p><br>
+<p>Tadeusz Nyczek twierdzi, że śmierć Artura jest konsekwencją nieuniknionych przemian dziejowych. Ginie, ponieważ nie sprawdził się w wyznaczonej sobie roli. Okazał się człowiekiem okrutnym i despotycznym, niezdolnym do współpracy z innymi członkami rodziny. Autor zwraca także uwagę, że zawiódł jako mężczyzna - traktował Alę przedmiotowo, a ślub z nią jako środek do wprowadzenia nowego ładu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

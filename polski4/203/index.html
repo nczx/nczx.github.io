@@ -179,4 +179,43 @@
 <p><em>Bezsenność nie odbiera jej sił, ale dodaje. </em></p>
 <p>Siły nienawiści są niespożyte. Nawet kiedy zaczyna panować pokój, to nie oznacza to ostatecznego zwycięstwa nad złem. Pozostaje ono uśpione, ale w każdym momencie może powrócić. Również kiedy ulega przebudzeniu nie powoduje to, iż nienawiść słabnie. Niezależnie bowiem od sytuacji za każdym razem wzmacnia się i powraca z większą siłą.</p>
 <p> </p>
-<p>Paradoks w sposobie portretowania nienawiści polega na tym, że opiera się ona na przeciwstawnych elementach, co wywołuje zdumienie, niedowierzanie odbiorcy. W ten sposób poetka akcentuje jej siłę oraz uzasadnia, dlaczego wciąż pozostaje żywym zjawiskiem. Wyróżnia się bowiem doskonałą zdolnością adaptacji do różnych warunków, czerpie swą moc z różnych źródeł i zawsze znajduje powód dla swej obecności. Zastosowanie paradoksów umożliwia wielopłaszczyznowe przedstawienie nienawiści oraz dotknięcie jej istoty.  </p><br>
+<p>Paradoks w sposobie portretowania nienawiści polega na tym, że opiera się ona na przeciwstawnych elementach, co wywołuje zdumienie, niedowierzanie odbiorcy. W ten sposób poetka akcentuje jej siłę oraz uzasadnia, dlaczego wciąż pozostaje żywym zjawiskiem. Wyróżnia się bowiem doskonałą zdolnością adaptacji do różnych warunków, czerpie swą moc z różnych źródeł i zawsze znajduje powód dla swej obecności. Zastosowanie paradoksów umożliwia wielopłaszczyznowe przedstawienie nienawiści oraz dotknięcie jej istoty.  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

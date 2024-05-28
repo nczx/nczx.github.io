@@ -10,4 +10,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Dane:</p> <p>Okres fali wynosi:</p> <p> <object class="math big" data="./data/994254-0.svg" type="image/svg+xml"></object> </p> <p>Długość fali wynosi:</p> <p> <object class="math big" data="./data/994254-1.svg" type="image/svg+xml"></object>   </p> <p>Rozwiązanie:</p> <p><strong>a)</strong></p> <p>Prędkość <object class="math big" data="./data/994254-2.svg" type="image/svg+xml"></object>   fali wyznaczymy jako: </p> <p> <object class="math big" data="./data/994254-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/994254-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994254-5.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/994254-6.svg" type="image/svg+xml"></object> </p> <p><strong>b)</strong></p> <p>Odległość jaką ma przebyć fala:</p> <p> <object class="math big" data="./data/994254-7.svg" type="image/svg+xml"></object> </p> <p>Czas <object class="math big" data="./data/994254-8.svg" type="image/svg+xml"></object>   w jakim ta fala przebędzie tę odległość wyznaczymy jako:</p> <p> <object class="math big" data="./data/994254-9.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994254-10.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994254-11.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994254-12.svg" type="image/svg+xml"></object>     </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Dane:</p> <p> <object class="math big" data="./data/994276-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-1.svg" type="image/svg+xml"></object>  </p> <p>Szukane:</p> <p> <object class="math big" data="./data/994276-2.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie: </p> <p>Korzystamy ze wzoru na prędkość <object class="math big" data="./data/994276-3.svg" type="image/svg+xml"></object>   fali danego jako:</p> <p> <object class="math big" data="./data/994276-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-6.svg" type="image/svg+xml"></object> </p> <p>Stąd:</p> <p> <object class="math big" data="./data/994276-7.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-8.svg" type="image/svg+xml"></object>     </p><br>
+<p>Dane:</p> <p> <object class="math big" data="./data/994276-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-1.svg" type="image/svg+xml"></object>  </p> <p>Szukane:</p> <p> <object class="math big" data="./data/994276-2.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie: </p> <p>Korzystamy ze wzoru na prędkość <object class="math big" data="./data/994276-3.svg" type="image/svg+xml"></object>   fali danego jako:</p> <p> <object class="math big" data="./data/994276-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-6.svg" type="image/svg+xml"></object> </p> <p>Stąd:</p> <p> <object class="math big" data="./data/994276-7.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/994276-8.svg" type="image/svg+xml"></object>     </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

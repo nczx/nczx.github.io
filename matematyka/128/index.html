@@ -16,4 +16,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p> <object class="math big" data="./data/1062783-0.svg" type="image/svg+xml"></object> </p> <p>Trójkąt <strong>ABC</strong> w układzie współrzędnych</p> <p> <img alt="" height="374" src="./data/1062783-0.jpg" width="354"/></p> <hr/> <p><strong>a)</strong></p> <p>symetria względem osi <strong>OX </strong> </p> <p> <object class="math big" data="./data/1062783-1.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="468" src="./data/1062783-1.jpg" width="342"/></p> <hr/> <p><strong>b)</strong></p> <p>symetria względem osi <strong>OY</strong></p> <p> <object class="math big" data="./data/1062783-2.svg" type="image/svg+xml"></object>  </p> <p><img alt="" height="382" src="./data/1062783-2.jpg" width="485"/></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1062793-0.svg" type="image/svg+xml"></object> </p> <p>Współrzędne wierzchołków prostokąta w symetrii osiowej względem osi <strong>OX </strong> </p> <p> <object class="math big" data="./data/1062793-1.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1062793-2.svg" type="image/svg+xml"></object> </p> <p>Współrzędne wierzchołków prostokąta w symetrii osiowej względem osi <strong>OY</strong></p> <p> <object class="math big" data="./data/1062793-3.svg" type="image/svg+xml"></object>   </p><br>
+<p><strong>a)</strong></p> <p> <object class="math big" data="./data/1062793-0.svg" type="image/svg+xml"></object> </p> <p>Współrzędne wierzchołków prostokąta w symetrii osiowej względem osi <strong>OX </strong> </p> <p> <object class="math big" data="./data/1062793-1.svg" type="image/svg+xml"></object>   </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1062793-2.svg" type="image/svg+xml"></object> </p> <p>Współrzędne wierzchołków prostokąta w symetrii osiowej względem osi <strong>OY</strong></p> <p> <object class="math big" data="./data/1062793-3.svg" type="image/svg+xml"></object>   </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

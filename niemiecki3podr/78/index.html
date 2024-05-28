@@ -58,4 +58,43 @@
 <p>4. Junge Menschen protestieren gegen die Regeln zu Hause. (B)<br/><em>Młodzi ludzie protestują przeciwko zasadom w domu. </em></p>
 <p>5. Sie fragen viel und diskutieren über Details. (D) <br/><em>Dużo pytają i dyskutują o szczegółach. </em></p>
 <p> </p>
-<p>Rekcja czasownika to stałe połączenie czasownika z dopełnieniem przyimkowym. To przyimek z rzeczownikiem w odpowiednim przypadku. </p><br>
+<p>Rekcja czasownika to stałe połączenie czasownika z dopełnieniem przyimkowym. To przyimek z rzeczownikiem w odpowiednim przypadku. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

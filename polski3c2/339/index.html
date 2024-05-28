@@ -50,4 +50,43 @@
 <p> </p>
 <p>b) Wybawcza rola poezji wi¹¿e siê z tym, i¿ jest ona noœnikiem wy¿szych wartoœci (np. piêkna, wra¿liwoœci itd.), chroni tak¿e podstawowe sensy danych s³ów. Symbolizuje prawdê, poniewa¿ nie ma w niej wielkich, lecz pustych, wyrazów, k³amstwa czy manipulacji za pomoc¹ kwiecistych wyra¿eñ. Jej wybawcze znaczenie wynika równie¿ z tego, i¿ pozwala na dostrze¿enie piêkna i harmonii œwiata - przypomina wiêc ludziom o pozytywnych wartoœciach. Utrwala radosne doœwiadczenia i wszelkie przejawy cz³owieczeñstwa, dziêki czemu rzeczywistoœæ zachowuje stabilnoœæ: "[...] Zostawcie / Poetom chwilê radoœci, / Bo zginie wasz œwiat". </p>
 <p> </p>
-<p>c) Czêœæ indywidualna </p><br>
+<p>c) Czêœæ indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

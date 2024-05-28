@@ -73,4 +73,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Przyk³adowo:</p>
 <p>Kontekst filozoficzny, który stanowi komentarz do wiersza, to dorobek staro¿ytnych myœlicieli. Utwór odwo³uje siê bowiem do wspó³istnienia mi³oœci i œmierci - te przeciwstawne elementy ¿ycia wzajemnie siê dope³niaj¹, budz¹ tak¿e niew¹tpliw¹ fascynacjê podmiotu lirycznego, który pragnie dosiêgn¹æ tajemnicy istnienia. Mo¿na tutaj odnieœæ siê do stoicyzmu, poniewa¿ osoba mówi¹ca mimo wszystko akceptuje tê zale¿noœæ, traktuje wskazane wartoœci w ten sam sposób: "Pytasz, co w moim ¿yciu z wszystkich rzecz¹ g³ówn¹, / Powiem ci: œmieræ i mi³oœæ - obydwie zarówno.". Prowadzi to do uzyskania samoœwiadomoœci oraz okreœlenia swego miejsca w kosmicznym porz¹dku: "To one pêdz¹ wicher miêdzyplanetarny, / Ten wicher, co d¹³ w ziemiê, a¿ ludzkoœæ wyda³a, / Na wieczny smutek duszy, wieczn¹ rozkosz cia³a". Jednoczeœnie w utworze mo¿na dostrzec pewne echa przypominaj¹ce o pogl¹dach epikurejczyków - np. podkreœlenie znaczenia mi³oœci. </p>
 <p>Kolejny wa¿ny kontekst to szeroko pojêta filozofia baroku. W niej, w przeciwieñstwie do renesansu, zaznacza siê niepewny status cz³owieka, który mierzy siê ze œwiatem sprzecznych pierwiastków. Wywo³uje to jego poczucie niepewnoœci, poniewa¿ wszystko jest zmienne, ulotne, a tak¿e strach: "Jednej oczu siê czarnych, drugiej - modrych bojê". S³owa te zaznaczaj¹ tak¿e tragiczne rozdarcie cz³owieka. Pewnym punktem odniesienia staj¹ siê tak¿e pogl¹dy Kanta, gdy¿ podmiot wchodzi z nim w polemikê. Osoba mówi¹ca nie odczuwa harmonii rzeczywistoœci; ¿ycie wywo³uje tylko ci¹g³y niepokój.</p>
-<p>Trzeci kontekst to nurt filozoficzny, który wykszta³ci³ siê w dwudziestoleciu miêdzywojennym na bazie psychoanalizy Freuda. Przejawia siê w fascynacji przeciwstawnymi zjawiskami, które s¹ potê¿ne. Odwo³uj¹ siê one do zniszczenia (œmieræ) lub tez udoskonalenia ducha cz³owieka (mi³oœæ). </p><br>
+<p>Trzeci kontekst to nurt filozoficzny, który wykszta³ci³ siê w dwudziestoleciu miêdzywojennym na bazie psychoanalizy Freuda. Przejawia siê w fascynacji przeciwstawnymi zjawiskami, które s¹ potê¿ne. Odwo³uj¹ siê one do zniszczenia (œmieræ) lub tez udoskonalenia ducha cz³owieka (mi³oœæ). </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

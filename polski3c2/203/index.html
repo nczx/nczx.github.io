@@ -45,4 +45,43 @@
 <p>Wina, o której pisze autor, ma bezpoœredni zwi¹zek z ¿yciem cz³owieka, jego przekonaniem o swojej niezwyk³ej pozycji. Jest powi¹zana tak¿e z jedn¹ z jego aktywnoœci - poznaniem. Sprzecznoœæ polega na tym, ¿e wina pozwala na odnalezienie prawdy, ale jednoczeœnie rezygnacja z tego d¹¿enia staje siê potencjaln¹ win¹. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Przyk³adowo:</p>
 <p>Stwierdzenie to wskazuje na filozoficzny aspekt zniesienia winy, specyfikê jego charakteru. Sytuacja ta prowadzi bowiem do zderzenia przeciwstawnych pierwiastków: cz³owiek, chocia¿ nie czuje swej winy, uznaje j¹, przyznaje siê do niej. Prowadzi to do pogodzenia sprzecznoœci, dziêki czemu istota ludzka wychodzi ze stanu winy, co stanowi pozytywny przejaw rozwoju ducha.</p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Tragizm Józefa K. ma zwi¹zek z jego sytuacj¹ oraz brakiem mo¿liwoœci w³aœciwego rozpoznania swego losu. Nieuchronnie zbli¿a siê do dramatycznego fina³u. Chocia¿ ma przeb³yski tego, co powinien uczyniæ, jego stosunek do œwiata pozostaje taki sam jak wczeœniej. Nie potrafi uznaæ swej winy, przez co nie mo¿e unikn¹æ tragicznego zakoñczenia swej egzystencji. </p><br>
+<p>Tragizm Józefa K. ma zwi¹zek z jego sytuacj¹ oraz brakiem mo¿liwoœci w³aœciwego rozpoznania swego losu. Nieuchronnie zbli¿a siê do dramatycznego fina³u. Chocia¿ ma przeb³yski tego, co powinien uczyniæ, jego stosunek do œwiata pozostaje taki sam jak wczeœniej. Nie potrafi uznaæ swej winy, przez co nie mo¿e unikn¹æ tragicznego zakoñczenia swej egzystencji. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

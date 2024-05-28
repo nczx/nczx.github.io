@@ -69,4 +69,43 @@
 <p>4. unable</p>
 <p>5. difficulties</p>
 <p><br/><strong>Tłumaczenie:</strong></p>
-<p>Każdy, kto dużo podróżował, czy to w interesach, czy dla przyjemności, doskonale zdaje sobie sprawę z wad podróżowania. Nawet najbardziej <strong>żądna przygód</strong> osoba przyzna, że opóźnienia lub odwołania lotów oraz nieporozumienia związane z rezerwacją pokoju nie poprawiają samopoczucia. Czytałem/am jednak ostatnio kilka artykułów, w których argumentowano, że nawet te <strong>nieuniknione </strong>niedogodności są jednym z pozytywnych aspektów podróżowania. Jeden z autorów twierdzi, że nawet najbardziej katastrofalne doświadczenia w podróży mogą być dobre dla naszego zdrowia psychicznego, ponieważ ujawniają nasze umiejętności radzenia sobie i sprawiają, że jesteśmy silniejsi <strong>emocjonalnie</strong>, a także bardziej elastyczni. Chociaż nie powiem, że zgubienie bagażu, <strong>niemożność</strong> znalezienia hotelu, a następnie złamanie kostki podczas wakacji we Włoszech było przyjemnym doświadczeniem, pokazało mi to, że jestem silniejszy/a i bardziej zaradny/a, niż mi się wydawało. A to może być tylko dobra rzecz, którą warto wiedzieć w obliczu codziennych <strong>trudności</strong>.</p><br>
+<p>Każdy, kto dużo podróżował, czy to w interesach, czy dla przyjemności, doskonale zdaje sobie sprawę z wad podróżowania. Nawet najbardziej <strong>żądna przygód</strong> osoba przyzna, że opóźnienia lub odwołania lotów oraz nieporozumienia związane z rezerwacją pokoju nie poprawiają samopoczucia. Czytałem/am jednak ostatnio kilka artykułów, w których argumentowano, że nawet te <strong>nieuniknione </strong>niedogodności są jednym z pozytywnych aspektów podróżowania. Jeden z autorów twierdzi, że nawet najbardziej katastrofalne doświadczenia w podróży mogą być dobre dla naszego zdrowia psychicznego, ponieważ ujawniają nasze umiejętności radzenia sobie i sprawiają, że jesteśmy silniejsi <strong>emocjonalnie</strong>, a także bardziej elastyczni. Chociaż nie powiem, że zgubienie bagażu, <strong>niemożność</strong> znalezienia hotelu, a następnie złamanie kostki podczas wakacji we Włoszech było przyjemnym doświadczeniem, pokazało mi to, że jestem silniejszy/a i bardziej zaradny/a, niż mi się wydawało. A to może być tylko dobra rzecz, którą warto wiedzieć w obliczu codziennych <strong>trudności</strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

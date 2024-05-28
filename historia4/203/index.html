@@ -47,4 +47,43 @@
 <p><img alt="" height="303" src="./data/1188570-0.jpg" width="202"/></p>
 <p>Plakat autorstwa Józefa Mroszczaka z 1965 r., źródło: www.galeriagrafikiiplakatu.pl</p>
 <p><img alt="" height="293" src="./data/1188570-1.jpg" width="202"/></p>
-<p>Plakat autorstwa Henryka Tomaszewskiego z 1964 r., źródło: www.galeriagrafikiiplakatu.pl</p><br>
+<p>Plakat autorstwa Henryka Tomaszewskiego z 1964 r., źródło: www.galeriagrafikiiplakatu.pl</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

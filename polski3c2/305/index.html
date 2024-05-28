@@ -65,4 +65,43 @@
 <p>Z kolei elegijny charakter wiersza przejawia siê w jego tonacji emocjonalnej oraz podejmowanych zagadnieniach. Utwór wyró¿nia siê podnios³ym oraz powa¿nym nastrojem. Odwo³uje siê do przemijania, wyra¿a przy tym ¿a³obne odczucia. Dotycz¹ one nie tylko losu ludzi poleg³ych w czasie walki, ale uwaga zostaje zwrócona na los tych, którzy staj¹ siê stra¿nikami pamiêci o zmar³ych: "P³acz, matko, kochanko, przebacz". Wiersz - w przeciwieñstwie do trenów - nie dotyczy konkretnej jednostki, lecz przedstawia refleksje o uniwersalnym charakterze. Wyra¿a smutek i ¿al zwi¹zany z wszechobecn¹ œmierci¹: "wy te same ró¿e sadziæ jak g³os / na grobach przyjdziecie i d³oni¹ / odgarniecie wspomnienia i liœcie jak w³os". Jednoczeœnie ¿a³obê mo¿na odnieœæ w szerszej perspektywie do samej rzeczywistoœci - wojna nieodwracalnie zmienia jej kszta³t, sprawia, i¿ zostaje zaburzony dotychczasowy ³ad. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>Utwór Baczyñskiego zawiera koncepcjê dziejów, która odwo³uje siê do pewnej cyklicznoœci. Przesz³oœæ i teraŸniejszoœæ to dwie p³aszczyzny pozostaj¹ce jednak w uchwytnej zale¿noœci, poniewa¿ kszta³tuj¹ pamiêæ zbiorow¹. Historia jest zaœ splotem lat pokoju i konfliktów, na co wskazuje odniesienie siê do tradycji walk: "Arkebuzy dymi¹ce jeszcze widzê.", "i kanonier jeszcze rêkê trzyma³", "gdzie brak d³oni i rapierów œpiewu". Poeta zdaje siê podejmowaæ refleksjê na temat historiozofii, a przede wszystkim prowidencjalizmu. Zastanawia siê bowiem, czy na pewno œwiatem kieruje Bo¿a opatrznoœæ: "bo nie anio³, nie anio³ prowadzi", "Id¹, id¹ pochody, dok¹d id¹, / których prowadzi jak wygnañców ³aski / l¹d kr¹¿¹cy po niebie. A mo¿e / niebo po l¹dzie dm¹ce piaskiem". Wed³ug podmiotu lirycznego mechanizmy historii s¹ niezmienne i jednostka staje siê wobec nich bezradna, poniewa¿ nie mo¿e zmieniæ swej sytuacji. Zawsze pozostaje ofiar¹ procesów dziejowych ("to krew ta sama spod kity czy he³mu"). Miniony kataklizm dotyka bowiem kolejne pokolenia, które uczestnicz¹ w nowych konfliktach, co przyczynia siê do tragizmu ich egzystencji. </p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

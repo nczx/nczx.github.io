@@ -99,4 +99,43 @@
 <p>5. may</p>
 <p><strong>Uzasadnienie</strong>: czasowniki modalne <em>may </em>oraz <em>might</em> wyrażają niepewność i mogą być użyte do wyrażenia spekulacji na jakiś temat. Na polski tłumaczymy je raczej jako "(być) może".</p>
 <p>6. reckon</p>
-<p><strong>Uzasadnienie</strong>: <em>guess </em>(zgadywać, przypuszczać) ≈ <em>reckon </em>(sądzić).</p><br>
+<p><strong>Uzasadnienie</strong>: <em>guess </em>(zgadywać, przypuszczać) ≈ <em>reckon </em>(sądzić).</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

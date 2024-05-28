@@ -140,4 +140,43 @@
 <p>My parents and I don't always agree on everything. For example, I like spending my time on social media. My favourite apps are YouTube, TikTok, and Instagram. My parents, however, don't like it very much. They're a bit old-fashioned, I guess. They really enjoy playing board games and the only social media website they use is Facebook. My mum once asked me what the latest craze was and I told her that TikTok challenges had been very popular lately. I don't think she found it appealing. </p>
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
-<p>Moi rodzice i ja nie zawsze zgadzamy się we wszystkim. Ja na przykład lubię spędzać czas w mediach społecznościowych. Moje ulubione aplikacje to YouTube, TikTok i Instagram. Moi rodzice jednak nie przepadają za tym. Wydaje mi się, że są trochę staroświeccy. Bardzo lubią grać w gry planszowe, a jedynym portalem społecznościowym, z którego korzystają, jest Facebook. Moja mama zapytała mnie kiedyś, co jest najnowszym trendem, a ja powiedziałem/am jej, że ostatnio wyzwania na TikToku są bardzo popularne. Nie sądzę, by ją to zainteresowało.</p><br>
+<p>Moi rodzice i ja nie zawsze zgadzamy się we wszystkim. Ja na przykład lubię spędzać czas w mediach społecznościowych. Moje ulubione aplikacje to YouTube, TikTok i Instagram. Moi rodzice jednak nie przepadają za tym. Wydaje mi się, że są trochę staroświeccy. Bardzo lubią grać w gry planszowe, a jedynym portalem społecznościowym, z którego korzystają, jest Facebook. Moja mama zapytała mnie kiedyś, co jest najnowszym trendem, a ja powiedziałem/am jej, że ostatnio wyzwania na TikToku są bardzo popularne. Nie sądzę, by ją to zainteresowało.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

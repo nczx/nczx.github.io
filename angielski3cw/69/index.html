@@ -78,4 +78,43 @@
 <p> </p>
 <p><strong>Tłumaczenie: </strong></p>
 <p>Jednym z kryminałów, które przeczytałem/am, jest <em>Morderstwo w Orient Expressie </em>Agathy Christie. Detektyw Poirot podróżuje pociągiem z trzynastoma innymi pasażerami. Jeden z nich - Ratchett - zostaje zamordowany w nocy. Nie było łatwo przewidzieć zakończenia, ponieważ wszystkich dwunastu pasażerów jest zamieszanych w zbrodnię.</p>
-<p>Było wiele fałszywych tropów. Na przykład wielu pasażerów daje sobie nawzajem alibi na noc morderstwa.</p><br>
+<p>Było wiele fałszywych tropów. Na przykład wielu pasażerów daje sobie nawzajem alibi na noc morderstwa.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

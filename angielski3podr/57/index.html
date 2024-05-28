@@ -155,4 +155,43 @@
 <p>This programme started in 1985 so they must have lots of experience. Students can go live with American families and attend high school there. It sounds very interesting. I'd love to try it out because it sounds like an incredible opportunity.</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
 <p>Jest wiele dostępnych programów wymiany. Na przykład znalazłem/am informacje o Greenheart Exchange Programme. Pozwala on uczniom z obcych krajów uczyć się w USA.</p>
-<p>Program ten rozpoczął się w 1985 roku, więc muszą mieć dużo doświadczenia. Uczniowie mogą wyjechać i zamieszkać u amerykańskich rodzin i uczęszczać tam do szkoły średniej. Brzmi to bardzo interesująco. Chętnie bym spróbował/a, bo brzmi to jak niesamowita okazja.</p><br>
+<p>Program ten rozpoczął się w 1985 roku, więc muszą mieć dużo doświadczenia. Uczniowie mogą wyjechać i zamieszkać u amerykańskich rodzin i uczęszczać tam do szkoły średniej. Brzmi to bardzo interesująco. Chętnie bym spróbował/a, bo brzmi to jak niesamowita okazja.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

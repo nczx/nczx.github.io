@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
-<p>Przestrzeñ ukazana w utworze akcentuje przede wszystkim poczucie wyobcowania oraz dystans miêdzy artyst¹ a jego publik¹. Choæ znajduj¹ siê tu¿ obok siebie ("Tylko jeden krok ma³y od sali go dzieli"), nie ma miêdzy nimi porozumienia - zgromadzeni zdaj¹ siê byæ zagro¿eniem, kimœ nieprzyjaznym. Œwiadczy o tym równie¿ metaforyczne ukazanie wg³êbienia dla kapeli: "On wie, ¿e okop hardy w tej przepaœci roœnie, / Wiêc skry³ siê za okopem i zagra o wioœnie". Mochnacki zostaje tym samym ukazany jako cz³owiek, który niejako musi siê broniæ przed ludŸmi. Napiêcia te mog¹ wynikaæ z odmiennych oczekiwañ oraz tego, i¿ nie potrafi¹ znaleŸæ porozumienia. </p><br>
+<p>Przestrzeñ ukazana w utworze akcentuje przede wszystkim poczucie wyobcowania oraz dystans miêdzy artyst¹ a jego publik¹. Choæ znajduj¹ siê tu¿ obok siebie ("Tylko jeden krok ma³y od sali go dzieli"), nie ma miêdzy nimi porozumienia - zgromadzeni zdaj¹ siê byæ zagro¿eniem, kimœ nieprzyjaznym. Œwiadczy o tym równie¿ metaforyczne ukazanie wg³êbienia dla kapeli: "On wie, ¿e okop hardy w tej przepaœci roœnie, / Wiêc skry³ siê za okopem i zagra o wioœnie". Mochnacki zostaje tym samym ukazany jako cz³owiek, który niejako musi siê broniæ przed ludŸmi. Napiêcia te mog¹ wynikaæ z odmiennych oczekiwañ oraz tego, i¿ nie potrafi¹ znaleŸæ porozumienia. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

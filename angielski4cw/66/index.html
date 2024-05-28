@@ -96,4 +96,43 @@
 <p>11. cab</p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione):</strong></p>
-<p>Kocham <strong>filmy</strong> i uwielbiam chodzić do miejscowego <strong>kina</strong>. Wczoraj poszedłem/poszłam zobaczyć najnowszy film Marvela z kolegą. Jest popularny, ale nie musiałam/em stać w <strong>kolejce</strong> po bilety, bo kupiłem/am je w Internecie. Zawsze kupuję różne przekąski - <strong>czipsy</strong>, <strong>napoje gazowane</strong>, może jakieś <strong>słodycze</strong>. Mój kolega powiedział, żebym nie zawracał/a sobie głowy i kupił wielką paczkę czipsów w <strong>sklepie</strong> obok kina, bo były tańsze. Jednak osoba sprawdzająca bilety zauważyła je i mój kolega musiał je oddać. Po tym jak film się skończył chciałam/em zostać do samego końca, ale ekipa sprzątająca weszła do sali, żeby posprzątać <strong>śmieci</strong> przed  kolejnym seansem, więc wyszliśmy. Mój kolega odebrał czipsy od człowieka, który zabrał je przed filmem i staliśmy na <strong>chodniku</strong> przy <strong>parkingu</strong> dyskutując na temat filmu. Miałem/am zamiar wziąć <strong>taksówkę</strong> do domu, ale mama mojego kolegi podwiozła mnie do domu, więc zaoszczędziłem/am trochę pieniędzy. </p><br>
+<p>Kocham <strong>filmy</strong> i uwielbiam chodzić do miejscowego <strong>kina</strong>. Wczoraj poszedłem/poszłam zobaczyć najnowszy film Marvela z kolegą. Jest popularny, ale nie musiałam/em stać w <strong>kolejce</strong> po bilety, bo kupiłem/am je w Internecie. Zawsze kupuję różne przekąski - <strong>czipsy</strong>, <strong>napoje gazowane</strong>, może jakieś <strong>słodycze</strong>. Mój kolega powiedział, żebym nie zawracał/a sobie głowy i kupił wielką paczkę czipsów w <strong>sklepie</strong> obok kina, bo były tańsze. Jednak osoba sprawdzająca bilety zauważyła je i mój kolega musiał je oddać. Po tym jak film się skończył chciałam/em zostać do samego końca, ale ekipa sprzątająca weszła do sali, żeby posprzątać <strong>śmieci</strong> przed  kolejnym seansem, więc wyszliśmy. Mój kolega odebrał czipsy od człowieka, który zabrał je przed filmem i staliśmy na <strong>chodniku</strong> przy <strong>parkingu</strong> dyskutując na temat filmu. Miałem/am zamiar wziąć <strong>taksówkę</strong> do domu, ale mama mojego kolegi podwiozła mnie do domu, więc zaoszczędziłem/am trochę pieniędzy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -55,4 +55,43 @@
 <li>indywidualizacja języka bohaterów lirycznych ("najprzód", "a przyjdź");</li>
 <li>akcja ("Ujrzał jakiś młodzieniec w błysku reflektora / Twarz Wiecznego Przechodnia [...]", "I odszedł smutny.").</li>
 </ul><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Motto będące cytatem z Ewangelii według św. Marka nadaje wierszowi Balińskiego uniwersalny charakter. Efekt ten poeta osiąga, przekładając najważniejszy tekst kultury judeochrześcijańskiej na język XX wieku, naznaczony tragicznym doświadczeniem II wojny światowej, emigracji oraz obozów koncentracyjnych. Bohater wiersza, tytułowy smutny młodzieniec, podobnie jak jego biblijny pierwowzór deklaruje przed "Wiecznym Przechodniem" (Chrystusem), iż doskonale zna jego nauki ("O Panie, Ewangelię, którą opowiadasz [...], / Pamiętam.", "Nauczycielu, wszystkiego tego przestrzegałem od mojej młodości.") Mimo to podkreśla różnice między sobą a "młodzieńcem, co nie chciał się dzielić skarbami" - uważa, że nie ma nic cennego, gdyż wszystko już utracił ("Ale moje odmienne są dzieje, / Nie mam nic do oddania i nic do dzielenia"). Kiedy Chrystus żąda od bohatera, by oddał swe wspomnienia, ten zachowuje się w dokładnie taki sam sposób jak jego odpowiednik z Ewangelii ("Wreszcie opuścił głowę, ręce mu opadły... / I odszedł smutny."). Swą postawą dowodzi, iż bogactwo może przyjmować różne postacie, zarówno materialną, jak i duchową, których równie trudno się wyrzec. Historia opisana w Biblii, rozgrywająca się w całkowicie odmiennych okolicznościach, okazuje się aktualna nawet w realiach XX wieku.</p><br>
+<p>Motto będące cytatem z Ewangelii według św. Marka nadaje wierszowi Balińskiego uniwersalny charakter. Efekt ten poeta osiąga, przekładając najważniejszy tekst kultury judeochrześcijańskiej na język XX wieku, naznaczony tragicznym doświadczeniem II wojny światowej, emigracji oraz obozów koncentracyjnych. Bohater wiersza, tytułowy smutny młodzieniec, podobnie jak jego biblijny pierwowzór deklaruje przed "Wiecznym Przechodniem" (Chrystusem), iż doskonale zna jego nauki ("O Panie, Ewangelię, którą opowiadasz [...], / Pamiętam.", "Nauczycielu, wszystkiego tego przestrzegałem od mojej młodości.") Mimo to podkreśla różnice między sobą a "młodzieńcem, co nie chciał się dzielić skarbami" - uważa, że nie ma nic cennego, gdyż wszystko już utracił ("Ale moje odmienne są dzieje, / Nie mam nic do oddania i nic do dzielenia"). Kiedy Chrystus żąda od bohatera, by oddał swe wspomnienia, ten zachowuje się w dokładnie taki sam sposób jak jego odpowiednik z Ewangelii ("Wreszcie opuścił głowę, ręce mu opadły... / I odszedł smutny."). Swą postawą dowodzi, iż bogactwo może przyjmować różne postacie, zarówno materialną, jak i duchową, których równie trudno się wyrzec. Historia opisana w Biblii, rozgrywająca się w całkowicie odmiennych okolicznościach, okazuje się aktualna nawet w realiach XX wieku.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

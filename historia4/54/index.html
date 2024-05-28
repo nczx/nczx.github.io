@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">?</a><br>
 <p>Brytyjczycy podjęli tak stanowcze działania (zatopienie) wobec francuskiej floty, ponieważ obawiali się, że rząd Vichy może przekazać okręty III Rzeszy. Doprowadziłoby to do uzyskania przez nazistów przewagi na morzach i zwiększenia szans na udaną inwazję na Wielką Brytanię. Gdy Francuzi odrzucili warunki brytyjskie, okręty Royal Navy otworzyły ogień i zatopiły lub trwale uszkodziły francuskie statki. </p>
 <p><img alt="" height="226" src="./data/1179659-0.jpg" width="327"/></p>
-<p>Realizacja operacji "Catapult", źródło zdjęcia: Wikimedia Commons. </p><br>
+<p>Realizacja operacji "Catapult", źródło zdjęcia: Wikimedia Commons. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

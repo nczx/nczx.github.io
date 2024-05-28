@@ -9,4 +9,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Symbol pełni istotną rolę w tworzeniu sztuki autonomicznej, ponieważ tworzące go elementy ulegają przemianie, co prowadzi do powstania nowych wartości, sensów i skojarzeń. W ten sposób powstaje sztuka nie tyle oderwana od życia, co zupełnie od niego inna. </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Używanie terminu <em>symbolizm </em>znajduje uzasadnienie dla określenia epoki Młodej Polski ze względu na jego szerokie znaczenie w tym okresie literatury. Maria Podraza-Kwiatkowska mówi o symbolu jako o autonomicznym bycie, który można utożsamić z poezją. Podkreśla, że w tamtym czasie to twórczość symbolistyczna uważana była za jedyną prawdziwą. Fakt ten podkreśla powszechność obecności symbolu w sztuce młodopolskiej: malarstwie (np. dzieła Jacka Malczewskiego) oraz wszystkich trzech rodzajach literackich. Rozległa symbolika pojawia się w różnego rodzaju utworach wierszowanych, zarówno poetów zagranicznych (np. Charles Baudelaire, Artur Rimbaud, Paul Verlaine), jak i polskich (hymnach, np. <em>Dies irae </em>Jana Kasprowicza; sonetach, np. cykl <em>Krzak dzikiej róży w Ciemnych Smreczynach </em>Jana Kasprowicza, <em>Kowal </em>Leopolda Staffa). Dostrzec ją można również w prozie, czego przykładem jest uhonorowana Nagrodą Nobla powieść Władysława Stanisława Reymonta <em>Chłopi </em>(mitologiczna symbolika śmierci Boryny, Jagna jako symbol sił biologicznych i popędu seksualnego) czy opowiadanie Stefana Żeromskiego <em>Rozdzióbią nas kruki, wrony...</em> (tytułowe ptaki symbolizują przeciwników powstania, ale i zaborców, którzy rozrywają Polskę na kawałki)<em>. </em>Z kolei <em>Wesele </em>jest przykładem dramatu, którego cała konstrukcja oparta jest właśnie na rozbudowanej symbolice (chochoł, złoty róg, zjawy). </p><br>
+<p>Używanie terminu <em>symbolizm </em>znajduje uzasadnienie dla określenia epoki Młodej Polski ze względu na jego szerokie znaczenie w tym okresie literatury. Maria Podraza-Kwiatkowska mówi o symbolu jako o autonomicznym bycie, który można utożsamić z poezją. Podkreśla, że w tamtym czasie to twórczość symbolistyczna uważana była za jedyną prawdziwą. Fakt ten podkreśla powszechność obecności symbolu w sztuce młodopolskiej: malarstwie (np. dzieła Jacka Malczewskiego) oraz wszystkich trzech rodzajach literackich. Rozległa symbolika pojawia się w różnego rodzaju utworach wierszowanych, zarówno poetów zagranicznych (np. Charles Baudelaire, Artur Rimbaud, Paul Verlaine), jak i polskich (hymnach, np. <em>Dies irae </em>Jana Kasprowicza; sonetach, np. cykl <em>Krzak dzikiej róży w Ciemnych Smreczynach </em>Jana Kasprowicza, <em>Kowal </em>Leopolda Staffa). Dostrzec ją można również w prozie, czego przykładem jest uhonorowana Nagrodą Nobla powieść Władysława Stanisława Reymonta <em>Chłopi </em>(mitologiczna symbolika śmierci Boryny, Jagna jako symbol sił biologicznych i popędu seksualnego) czy opowiadanie Stefana Żeromskiego <em>Rozdzióbią nas kruki, wrony...</em> (tytułowe ptaki symbolizują przeciwników powstania, ale i zaborców, którzy rozrywają Polskę na kawałki)<em>. </em>Z kolei <em>Wesele </em>jest przykładem dramatu, którego cała konstrukcja oparta jest właśnie na rozbudowanej symbolice (chochoł, złoty róg, zjawy). </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

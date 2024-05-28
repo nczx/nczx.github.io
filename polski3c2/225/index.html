@@ -75,4 +75,43 @@
 <p>Refleksja narratora œwiadczy o tym, i¿ pozornie drobne, absurdalne wydarzenie w znacz¹cy sposób go ukszta³towa³o. Zetkniêcie z tajemniczym nieznajomym uczy wypowiadaj¹cego siê pokory. Sugeruje to, i¿ narrator w ten sposób wyzbywa siê swojej pychy, byæ mo¿e pewnego poczucia wy¿szoœci, poniewa¿ zostaje pokonany w pojedynku. Przegrywa w starciu z opanowaniem i cierpliwoœci¹ drugiej osoby, która do samego koñca zachowuje milczenie. Lekcja dojrza³oœci mo¿e wi¹zaæ siê tak¿e z tym, i¿ to otoczenie kszta³tuje jednostkê. Ostatecznie bowiem to narrator przejmuje rolê innych ludzi, którzy zadawali pytania, przez to jako pierwszy siê odzywa. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>Przyk³adowo:</p>
 <p>Efekt obserwatora oznacza to, i¿ sam akt obserwacji znacz¹co wp³ywa na zjawisko, które mu podlega. Pojêcie to mo¿na odnieœæ do relacji zachodz¹cej miêdzy osobami w parku a narratorem i jego przeciwnikiem. Obecnoœæ i pytania ludzi kszta³tuj¹ postawê pojedynkuj¹cych siê, motywuj¹ ich do upartego ignorowania wszelakich pytañ - bez nich nie by³oby mo¿liwe to starcie. Z tego te¿ powodu, kiedy bohaterowie zostaj¹ sami, narrator pierwszy przerywa milczenie, gdy¿ w ten sposób niejako sam realizuje rolê obserwatorów, gdy¿ s¹ w pewien sposób niezbêdni. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

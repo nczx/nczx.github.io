@@ -77,4 +77,43 @@
 <li>Stosunkowo mało Polaków, bo wedle statystyk 12%, preferuje tradycyjny model rodziny, w którym pracy zawodowej poświęca się jedynie mąż (partner), natomiast żona (partnerka) nie pracuje zawodowo (zarobkowo), gdyż skupia się na prowadzeniu domu i wychowywaniu dzieci. </li>
 <li>Mimo iż mało Polaków, bo 12% ankietowanych, preferuje tradycyjny model rodziny, to jednak w praktyce jego realizowanie deklaruje 26% badanych.</li>
 </ol>
-<p><em><strong>-&gt; </strong></em>Oczekiwania mieszkańców Polski dotyczące modelu rodziny nie zawsze są realizowane w rzeczywistości. Przykładowo, najwięcej respondentów, bo 56%, oczekuje, że realizowany będzie tzw. partnerski model rodziny, lecz faktycznie jego urzeczywistnianie stwierdza 33% badanych. Jedynie 12% ankietowanych deklaruje, że preferowanym przez nich modelem rodziny jest model tradycyjny, a jego realizowanie się w praktyce konstatuje 26% respondentów. Ogółem, 49% ankietowanych twierdzi, że dostrzega niezgodność preferowanego przez siebie modelu rodziny z tym, jaki jest faktycznie realizowany.</p><br>
+<p><em><strong>-&gt; </strong></em>Oczekiwania mieszkańców Polski dotyczące modelu rodziny nie zawsze są realizowane w rzeczywistości. Przykładowo, najwięcej respondentów, bo 56%, oczekuje, że realizowany będzie tzw. partnerski model rodziny, lecz faktycznie jego urzeczywistnianie stwierdza 33% badanych. Jedynie 12% ankietowanych deklaruje, że preferowanym przez nich modelem rodziny jest model tradycyjny, a jego realizowanie się w praktyce konstatuje 26% respondentów. Ogółem, 49% ankietowanych twierdzi, że dostrzega niezgodność preferowanego przez siebie modelu rodziny z tym, jaki jest faktycznie realizowany.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

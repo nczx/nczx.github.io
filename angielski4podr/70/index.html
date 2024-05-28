@@ -60,4 +60,43 @@
 <p><strong>Fragment w tekście:</strong> "Next, memory: images go directly to our long-term memory, unlike words which, are processed by our short-term memory." - Po drugie, pamięć: obrazy przechodzą bezpośrednio do naszej pamięci długotrwałej w przeciwieństwie do słów, które są przetwarzane przez pamięć krótkotrwałą. </p>
 <p>3. Images are more comprehensible.</p>
 <p>(Obrazy są bardziej zrozumiałe.)</p>
-<p><strong>Fragment w tekście:</strong> "Finally, comprehension: ninety-five percent of people will figure out the meaning of an image correctly compared to just seventy percent who will understand the written word." - Wreszcie, rozumienie: dziewięćdziesiąt pięć procent ludzi zrozumie znaczenie obrazu w porównaniu do siedemdziesięciu procent, którzy zrozumieją słowo pisane. </p><br>
+<p><strong>Fragment w tekście:</strong> "Finally, comprehension: ninety-five percent of people will figure out the meaning of an image correctly compared to just seventy percent who will understand the written word." - Wreszcie, rozumienie: dziewięćdziesiąt pięć procent ludzi zrozumie znaczenie obrazu w porównaniu do siedemdziesięciu procent, którzy zrozumieją słowo pisane. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -75,4 +75,43 @@
 <li>po zniesieniu stanu wojennego w gospodarce nastąpiła stagnacja, a ponad 80% produktów było niedostępnych na rynku, </li>
 <li>władza próbowała wdrożyć reformy gospodarcze, tzw. I etap i II etap reformy gospodarczej, jednakże nie przyniosły one oczekiwanych efektów, </li>
 <li>w grudniu 1988 r. przyjęto ustawę Wilczka, która wprowadziła wolność działalności gospodarczej oraz zrównała sektor publiczny z sektorem prywatnym.</li>
-</ul><br>
+</ul><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -65,4 +65,43 @@
 <p><br/>• It's a bit sad that our leaders aren't taking this a little more seriously ...</p>
 <p>(To trochę smutne, że nasi przywódcy nie traktują tego trochę poważniej...)</p>
 <p><br/>• Some people look down on Greta because she's very young. But I think she's right - it's time to take matters into our own hands.</p>
-<p>(Niektórzy patrzą na Gretę z góry, ponieważ jest bardzo młoda. Ale myślę, że ma rację - nadszedł czas, abyśmy wzięli sprawy w swoje ręce.)</p><br>
+<p>(Niektórzy patrzą na Gretę z góry, ponieważ jest bardzo młoda. Ale myślę, że ma rację - nadszedł czas, abyśmy wzięli sprawy w swoje ręce.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

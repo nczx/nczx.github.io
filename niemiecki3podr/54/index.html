@@ -65,4 +65,43 @@
 <p>1. Sonja trägt in der Schule ...<br/><em>W szkole Sonja nosi ...</em></p>
 <p>A. einen eleganten Rock und ein T-Shirt. - elegancką spódnicę i koszulkę. <br/><strong>B. eine Jeans und ein Sweatshirt.</strong> - jeansy i bluzę. <br/>C. einen Minirock oder ein Kleid. - miniówkę lub sukienkę. </p>
 <p>2. Sonja interessiert sich für ...<br/><em>Sonja interesuje się ...</em></p>
-<p><strong>A. die neuesten Trends in der Mode.</strong> - najnowszymi trendami w modzie.  <br/>B. Einkaufen. - zakupami. <br/>C. Partys. - imprezami. </p><br>
+<p><strong>A. die neuesten Trends in der Mode.</strong> - najnowszymi trendami w modzie.  <br/>B. Einkaufen. - zakupami. <br/>C. Partys. - imprezami. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

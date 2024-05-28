@@ -56,4 +56,43 @@
 <p>Za inny przejaw komizmu mo¿na tak¿e uznaæ odpowiedŸ bohaterki na pytanie o to, gdzie jest jej dom: "Nêdza zowie siê wioska, / a gmina moja Krzywda...". Oprócz sensu dos³ownego s³owa te w przenoœny sposób wskazuj¹ na wyzysk i cierpienie ni¿szych warstw, których losem nikt siê nie interesuje. Wskazane przejawy komizmu nieco ³agodz¹ doœæ powa¿n¹ tematykê utworu, pozwalaj¹ tak¿e na subteln¹ krytykê spo³ecznych nierównoœci - bez zbêdnego moralizatorstwa. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Malarz obiektem swego zainteresowania czyni dziewczynkê, czyli tytu³ow¹ <em>¯ebraczkê</em>. Znajduje siê ona w centrum dzie³a, wyró¿nia j¹ tak¿e ubiór: bia³a koszula oraz czerwona spódnica. Wygl¹d bohaterki i jej powierzchownoœæ raczej nie sugeruj¹ bezpoœrednio trudnej egzystencji oraz nêdzy. Jej jedynymi znakami zdaj¹ siê zniszczone buty oraz sama koszula, poniewa¿ jest zbyt du¿a - ma szerokie rêkawy, ods³ania ramiê. Twarz ¿ebrz¹cej wyra¿a smutek, niepewnoœæ, cierpienie. Sorokin w wyrazisty sposób zaznacza dystans miêdzy zamo¿n¹ warstw¹ a najubo¿sz¹: dziewczynka zostaje bowiem ukazana w szczegó³owy sposób, natomiast przedstawienie dobroczyñcy zostaje ograniczone do namalowanej d³oni, która wrêcza datek. Dzie³o malarza podkreœla tym samym osamotnienie dzieci znajduj¹cych siê w trudnej sytuacji. Zdane s¹ wy³¹cznie na siebie, musz¹ walczyæ o prze¿ycie. </p><br>
+<p>Malarz obiektem swego zainteresowania czyni dziewczynkê, czyli tytu³ow¹ <em>¯ebraczkê</em>. Znajduje siê ona w centrum dzie³a, wyró¿nia j¹ tak¿e ubiór: bia³a koszula oraz czerwona spódnica. Wygl¹d bohaterki i jej powierzchownoœæ raczej nie sugeruj¹ bezpoœrednio trudnej egzystencji oraz nêdzy. Jej jedynymi znakami zdaj¹ siê zniszczone buty oraz sama koszula, poniewa¿ jest zbyt du¿a - ma szerokie rêkawy, ods³ania ramiê. Twarz ¿ebrz¹cej wyra¿a smutek, niepewnoœæ, cierpienie. Sorokin w wyrazisty sposób zaznacza dystans miêdzy zamo¿n¹ warstw¹ a najubo¿sz¹: dziewczynka zostaje bowiem ukazana w szczegó³owy sposób, natomiast przedstawienie dobroczyñcy zostaje ograniczone do namalowanej d³oni, która wrêcza datek. Dzie³o malarza podkreœla tym samym osamotnienie dzieci znajduj¹cych siê w trudnej sytuacji. Zdane s¹ wy³¹cznie na siebie, musz¹ walczyæ o prze¿ycie. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

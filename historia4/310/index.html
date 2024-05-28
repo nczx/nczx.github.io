@@ -207,4 +207,43 @@
 </tbody>
 </table><br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Przystąpienie Polski do NATO było jednym z głównym celów polskiej polityki zagranicznej w latach 90. XX w. Zwolennicy integracji Polski z Organizacją Paktu Północnoatlantyckiego podkreślali, że przyniesie ona naszemu państwu <strong>stabilność</strong> i <strong>bezpieczeństwo.</strong> </p>
-<p>Przed przyjęciem do NATO, III RP musiała spełnić wiele wymagań m.in. zmodernizować broń oraz wdrożyć nowoczesny i bezpieczny system przekazywania informacji. <strong>W 1991 r</strong>.<strong> podjęto starania o przyjęcie do NATO</strong>. Główną przeszkodą okazało się stanowisko Rosji, która sprzeciwiała się rozszerzaniu granic sojuszu na Wschód. Ważną rolę w przekonaniu amerykańskich polityków do rozszerzenia NATO o państwa Europy Środkowo-Wschodniej-odegrali m.in. <strong>Jan Nowak-Jeziorański</strong> i <strong>Zbigniew Brzeziński</strong>. W<strong> 1999 r. Polska</strong> (wraz z Czechami i Węgrami) <strong>przystąpiła do NATO</strong>. Nasz kraj zyskał gwarancję obrony granic przez wojska sojuszu i wziął na sienie obowiązki wynikające z członkostwa, m.in. udział w akcjach zbrojnych NATO.</p><br>
+<p>Przed przyjęciem do NATO, III RP musiała spełnić wiele wymagań m.in. zmodernizować broń oraz wdrożyć nowoczesny i bezpieczny system przekazywania informacji. <strong>W 1991 r</strong>.<strong> podjęto starania o przyjęcie do NATO</strong>. Główną przeszkodą okazało się stanowisko Rosji, która sprzeciwiała się rozszerzaniu granic sojuszu na Wschód. Ważną rolę w przekonaniu amerykańskich polityków do rozszerzenia NATO o państwa Europy Środkowo-Wschodniej-odegrali m.in. <strong>Jan Nowak-Jeziorański</strong> i <strong>Zbigniew Brzeziński</strong>. W<strong> 1999 r. Polska</strong> (wraz z Czechami i Węgrami) <strong>przystąpiła do NATO</strong>. Nasz kraj zyskał gwarancję obrony granic przez wojska sojuszu i wziął na sienie obowiązki wynikające z członkostwa, m.in. udział w akcjach zbrojnych NATO.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

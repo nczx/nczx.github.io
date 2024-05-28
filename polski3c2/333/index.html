@@ -119,4 +119,43 @@
 <p>Przyk³adowo:</p>
 <p>Postawa podmiotu lirycznego nawi¹zuje w pewien sposób do kodeksu rycerskiego. Osoba mówi¹ca decyduje siê bowiem na poœwiêcenie siebie w imiê wy¿szych wartoœci, walczy za ojczyznê, poniewa¿ postrzega to jak swój moralny obowi¹zek. Jej zachowane, pe³ne godnoœci, przywodzi na myœl heroizm, którego wymagano od rycerzy: "Nie ¿ebym ul¹k³ siê lub p³aka³, / nie ¿ebym czeka³ ju¿ skazany". Podmiot liryczny pozostaje wierny pewnym idea³om, ale nie gloryfikuje walki, poniewa¿ dostrzega jej negatywny wp³yw na ducha cz³owieka: "I nigdy ust nie zmieni w skrzypce, / a oczu w œwiat³o. [...]". Tym samym niejako podwa¿a znaczenie kodeksu rycerskiego, poniewa¿ zwraca uwagê na swe rozterki, niejednoznacznoœæ oceny dzia³añ ¿o³nierzy ("jak ty - podniesiesz na mnie kamieñ / lub rzucisz ze wzgarda ziemi grudê"), którzy niekoniecznie zawsze korzystaj¹ ze szlachetnych metod. </p><br><a style="color:red; font-size:25px;">Zadanie 11</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 12</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

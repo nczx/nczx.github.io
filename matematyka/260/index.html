@@ -6,4 +6,43 @@
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <table border="1" style="height:177px;width:488px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:484px;"> <p><strong>Pochodna różnicy funkcji</strong></p> <p>Jeśli funkcje <strong>f</strong> i <strong>g</strong> mają pochodne w punkcie <strong>x</strong>, to:</p> <p> <object class="math big" data="./data/1103242-0.svg" type="image/svg+xml"></object>  </p> </td> </tr> </tbody> </table> <p><strong>Dowód:</strong></p> <p>Wyznaczamy pochodną różnicy funkcji <strong>f</strong> i <strong>g</strong> w punkcie <strong>x<sub>0</sub></strong>:  </p> <p> <object class="math big" data="./data/1103242-1.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103242-2.svg" type="image/svg+xml"></object>   </p> <p> <object class="math big" data="./data/1103242-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103242-4.svg" type="image/svg+xml"></object>   </p> <p>co kończy dowód.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 6</a><br>
-<table border="1" style="height:154px;width:559px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:555px;"> <p><strong>Pochodna ilorazu funkcji</strong></p> <p>Jeśli funkcje <strong>f</strong> i <strong>g</strong> mają pochodne w punkcie <strong>x</strong> oraz <strong>g(x)≠0</strong>, to:</p> <p> <object class="math big" data="./data/1103281-0.svg" type="image/svg+xml"></object> </p> </td> </tr> </tbody> </table> <p><strong>Dowód:</strong></p> <p>Wyznaczamy pochodną ilorazu funkcji <strong>f</strong> i <strong>g</strong> w punkcie <strong>x<sub>0</sub></strong>:  </p> <p> <object class="math big" data="./data/1103281-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103281-5.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-6.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103281-7.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1103281-8.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-9.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-10.svg" type="image/svg+xml"></object>  </p> <p>co kończy dowód.</p><br>
+<table border="1" style="height:154px;width:559px;border-collapse:collapse;border-color:#99cccc;background-color:#99cccc;"> <tbody> <tr> <td style="width:555px;"> <p><strong>Pochodna ilorazu funkcji</strong></p> <p>Jeśli funkcje <strong>f</strong> i <strong>g</strong> mają pochodne w punkcie <strong>x</strong> oraz <strong>g(x)≠0</strong>, to:</p> <p> <object class="math big" data="./data/1103281-0.svg" type="image/svg+xml"></object> </p> </td> </tr> </tbody> </table> <p><strong>Dowód:</strong></p> <p>Wyznaczamy pochodną ilorazu funkcji <strong>f</strong> i <strong>g</strong> w punkcie <strong>x<sub>0</sub></strong>:  </p> <p> <object class="math big" data="./data/1103281-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103281-5.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-6.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1103281-7.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1103281-8.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-9.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1103281-10.svg" type="image/svg+xml"></object>  </p> <p>co kończy dowód.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

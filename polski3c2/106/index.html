@@ -53,4 +53,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Samotnoœæ bohaterki utworu zosta³a ukazana w niezwykle subtelny sposób. Wskazuje ju¿ na ni¹ sam fakt, i¿ podmiot liryczny uwa¿nie opisuje kobietê, jednak nie czyni tego w odniesieniu do ludzi, którzy mogliby byæ wa¿ni dla staruszki. Zostaje wiêc ona przedstawiona wy³¹cznie przez pryzmat swojej osoby oraz oznak starzenia. Jej osamotnienie podkreœla jednak fragment: "wœród naszych m³odych twarzy / zawiewa œredniowieczem". Wskazuje on na mimowolny dystans podmiotu lirycznego wzglêdem kobiety. Nale¿¹ bowiem do dwóch innych rzeczywistoœci: jej u³omnoœæ, doœwiadczenia s¹ dla m³odych czymœ odleg³ym, a wrêcz nieznanym. Z tego te¿ powodu prawdopodobnie nie mog¹ zrozumieæ prze¿yæ bohaterki. </p><br><a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
 Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

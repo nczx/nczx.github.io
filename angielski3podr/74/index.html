@@ -138,4 +138,43 @@
 <p>• Cardboard Boxes: Transform them into storage organisers. Cut and fold the boxes to create compartments, and use them to store stationery, art supplies, or small toys. Decorate the boxes with colourful paper or drawings to make them fun and attractive.</p>
 <p>(Pudełka kartonowe: Przekształć je w organizery do przechowywania. Wytnij i złóż pudełka, aby utworzyć przegródki i użyj ich do przechowywania artykułów papierniczych, przyborów artystycznych lub małych zabawek. Udekoruj pudełka kolorowym papierem lub rysunkami, aby były ciekawe i atrakcyjne.)<br/><br/></p>
 <p>• Glass Jars: Turn them into candle holders or vases. Clean the jars, remove any labels, and decorate them with paint, ribbons, or fabric. Place candles inside or fill them with water and put in fresh flowers.</p>
-<p>(Szklane słoiki: Zamień je w świeczniki lub wazony. Wyczyść słoiki, usuń wszelkie etykiety i udekoruj je farbą, wstążkami lub tkaniną. Umieść w nich świece lub napełnij je wodą i włóż świeże kwiaty.)</p><br>
+<p>(Szklane słoiki: Zamień je w świeczniki lub wazony. Wyczyść słoiki, usuń wszelkie etykiety i udekoruj je farbą, wstążkami lub tkaniną. Umieść w nich świece lub napełnij je wodą i włóż świeże kwiaty.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

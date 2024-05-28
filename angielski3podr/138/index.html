@@ -114,4 +114,43 @@
 <p>1. I think every child should have the opportunity to learn to play a musical instrument. But ultimately, they should be able to do what they like. Not everyone has a talent or is even interested in learning how to play the guitar, the piano, or the drums.</p>
 <p>(Uważam, że każde dziecko powinno mieć możliwość nauki gry na instrumencie muzycznym. Ale ostatecznie powinno móc robić to, co lubi. Nie każdy ma talent lub jest nawet zainteresowany nauką gry na gitarze, pianinie lub perkusji.)</p>
 <p><br/>2. I'd say that art in general helps us communicate things language can't convey. Music isn't the only thing that can do it. I guess it's because the very act of creating art is very emotional. Musicians or painters often use their emotions or experiences as inspiration.</p>
-<p>(Powiedział(a)bym, że sztuka ogólnie pomaga nam komunikować rzeczy, których język nie jest w stanie przekazać. Muzyka nie jest jedyną rzeczą, która może to zrobić. Myślę, że to dlatego, że sam akt tworzenia sztuki jest bardzo emocjonalny. Muzycy lub malarze często wykorzystują swoje emocje lub doświadczenia jako inspirację.)</p><br>
+<p>(Powiedział(a)bym, że sztuka ogólnie pomaga nam komunikować rzeczy, których język nie jest w stanie przekazać. Muzyka nie jest jedyną rzeczą, która może to zrobić. Myślę, że to dlatego, że sam akt tworzenia sztuki jest bardzo emocjonalny. Muzycy lub malarze często wykorzystują swoje emocje lub doświadczenia jako inspirację.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

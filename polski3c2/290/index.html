@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
 <p>Kreacjonizm w przytoczonym fragmencie polega na specyficznym oraz subiektywnym przedstawieniu rzeczywistoœci - odleg³ym od zasad realizmu. Narrator zdaje siê na nowo tworzyæ œwiat - zgodnie z upodobaniami lub w³asn¹ wra¿liwoœci¹. Z tego te¿ powodu realia zatracaj¹ swój dotychczasowy, przewidywalny charakter. Zamiast tego pojawia siê w nich element magii, tajemnicy czy poetyckoœci. Kreacjonizm pozwala na ukazanie œwiata, który podlega ci¹g³ym metamorfozom: "A ku parkanowi ko¿uch traw podnosi siê wypuk³ym garbem pagórem [...]". Przedstawiciele œwiata natury zyskuj¹ g³os ("Z³ote œciernisko krzyczy [..]") lub te¿ ulegaj¹ zauwa¿alnej hiperbolizacji ("[...] w rzêsistym deszczu ognia wrzeszcz¹ œwierszcze; str¹ki nasion eksploduj¹ cicho jak koniki polne."). Rzeczywistoœæ w takiej postaci podlega zupe³nie innym prawom, jest wrêcz nieokie³znana, têtni¹ca ¿yciem: "[...] babska bujnoœæ sierpnia wyolbrzymia³a  w g³uche zapadliska ogromnych ³opuchów, rozpanoszy³a siê p³atami w³ochatych blach listnych, wybuja³ymi ozorami miêsistej zieleni". </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

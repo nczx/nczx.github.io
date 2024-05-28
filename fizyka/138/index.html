@@ -16,4 +16,43 @@
 <p>Poniższy schemat budowy lornetki przedstawia uproszczoną ideę tego rozwiązania (na schemacie pominięto układy soczewek niezbędne do działania lornetki): </p>
 <p><img alt="" height="639" src="./data/1007227-0.jpg" width="653"/></p>
 <p> </p>
-<p>W lornetkach zazwyczaj rozstaw obiektywów jest większy niż rozstaw okularów. Promienie światła wpadające do obiektywów lornetki muszą zostać zwężone, tak, aby mogły wpaść do naszych oczy. Jest to możliwe dzięki wykorzystaniu zjawiska całkowitego wewnętrznego odbicia w pryzmatach. Odpowiedni układ pryzmatów przemieści równolegle promień wpadający do lornetki. Jeżeli zastosowany układ pryzmatów jest ruchomy, to dodatkowo łatwo możemy zmieniać rozstaw okularów lornetki.</p><br>
+<p>W lornetkach zazwyczaj rozstaw obiektywów jest większy niż rozstaw okularów. Promienie światła wpadające do obiektywów lornetki muszą zostać zwężone, tak, aby mogły wpaść do naszych oczy. Jest to możliwe dzięki wykorzystaniu zjawiska całkowitego wewnętrznego odbicia w pryzmatach. Odpowiedni układ pryzmatów przemieści równolegle promień wpadający do lornetki. Jeżeli zastosowany układ pryzmatów jest ruchomy, to dodatkowo łatwo możemy zmieniać rozstaw okularów lornetki.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

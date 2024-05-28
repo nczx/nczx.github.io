@@ -10,4 +10,43 @@
 <hr/>
 <p>Woda na Ziemi występuje w trzech stanach skupienia - stałym (lód), ciekłym (woda) i gazowym (para wodna). Mgła to maleńkie kropelki wody zawieszone w powietrzu. Wilgotne powietrze wędruje do góry i kiedy natrafi na zimne warstwy powietrza ochładza się i skrapla. Zazwyczaj następuje to w wysokich partiach atmosfery i w ten sposób powstają chmury. Taki sam proces może zajść również tuż nad powierzchnią Ziemi i wtedy obserwujemy powstawanie mgły.</p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>W przypadku gotowania potraw ważna jest temperatura w jakiej przebywa gotowana potrawa. Doprowadzając wodę do wrzenia mamy pewność, że jej temperatura osiągnęła 100°C. Woda nie może osiągnąć już wyższej temperatury (bez zmiany ciśnienia), więc dostarczanie jej więcej ciepła (zwiększanie płomienia/mocy palnika) nie spowoduje jej ogrzewana, a jedynie przyspieszy proces przemiany w parę wodną, co nie jest dla nas korzystne, ponieważ chcemy aby potrawy były gotowane zanurzone w wodzie. Należy utrzymać taką minimalną moc palnika, która wystarczy do podtrzymania procesu wrzenia wody.</p><br>
+<p>W przypadku gotowania potraw ważna jest temperatura w jakiej przebywa gotowana potrawa. Doprowadzając wodę do wrzenia mamy pewność, że jej temperatura osiągnęła 100°C. Woda nie może osiągnąć już wyższej temperatury (bez zmiany ciśnienia), więc dostarczanie jej więcej ciepła (zwiększanie płomienia/mocy palnika) nie spowoduje jej ogrzewana, a jedynie przyspieszy proces przemiany w parę wodną, co nie jest dla nas korzystne, ponieważ chcemy aby potrawy były gotowane zanurzone w wodzie. Należy utrzymać taką minimalną moc palnika, która wystarczy do podtrzymania procesu wrzenia wody.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

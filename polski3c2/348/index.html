@@ -63,4 +63,43 @@
 <p> </p>
 <p>c) Wiersz i obraz ³¹czy wystêpowanie podobnych motywów. Dominuj¹cym jest doœwiadczenie wojny oraz cierpienia. Picasso i Ró¿ewicz udowadniaj¹, i¿ konflikt nie ma w sobie piêkna ani wznios³oœci. Jest jedynie Ÿród³em niewyobra¿alnej tragedii, która prowadzi do destrukcji. Dla podmiotu lirycznego w wierszu wojna staje siê przyczyn¹ za³amania œwiatopogl¹du, zw¹tpienia w podstawowe wartoœci: "Jednako wa¿y cnota i wystêpek / widzia³em: / cz³owieka który by³ jeden / wystêpny i cnotliwy". Picasso tak¿e akcentuje przede wszystkim cierpienie niewinnych ofiar, poniewa¿ niszczy ona przyjazn¹ wizjê rzeczywistoœci, a przynosi ból i rozpacz. Artyœci tym samym odwo³uj¹ siê tak¿e do motywu œmierci. Traci ona jednak swój podnios³y wymiar, gdy¿ zostaje sprowadzona wy³¹cznie do procesu biologicznego, jest pozbawiona sfery duchowej: "Cz³owieka tak siê zabija jak zwierzê". Równie¿ malarskie przedstawienie nie prowadzi do idealizacji œmierci, lecz podkreœla jej wstrz¹saj¹cy wymiar. Moment ten nie cechuje siê piêknem lub patosem, na co wskazuje ekspresja bohaterów dzie³a, ich dostrzegalne cierpienie lub rozcz³onkowanie. Wiersz i obraz ³¹czy tak¿e motyw œwiat³a i ciemnoœci - kontrastu. U Ró¿ewicza zaznacza on zagubienie moralne podmiotu lirycznego, który nie dostrzega ju¿ ró¿nicy miêdzy sprzecznymi wartoœciami. Traci wiêc sta³e punkty odniesienia, jest zagubiony. Z kolei w malarskim przedstawieniu œwiat³o i ciemnoœæ podkreœlaj¹ grozê ukazanej sytuacji, sugeruj¹ walkê miêdzy si³ami z³a a dobrem, nadziej¹. Taka zbie¿noœæ wskazuje na podobny sposób postrzegania wojny - jako zjawiska niepo¿¹danego, które wywo³uje sprzeciw. Dla twórców o podobnej wra¿liwoœci staje siê ona tylko Ÿród³em negatywnych doœwiadczeñ, cierpienia, zag³ady. Artyœci sw¹ uwagê kieruj¹ wiêc na doœwiadczenia ofiar konfliktu, byæ mo¿e po to, aby nikt o nich nie zapomnia³. W ten sposób uwra¿liwiaj¹ tak¿e odbiorców na podjêt¹ tematykê, byæ mo¿e z nadziej¹, i¿ wojna nigdy wiêcej siê nie powtórzy. </p><br><a style="color:red; font-size:25px;">Zadanie 9</a><br>
 <p>.</p><br><a style="color:red; font-size:25px;">Zadanie 10</a><br>
-<p>.</p><br>
+<p>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

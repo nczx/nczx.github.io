@@ -73,4 +73,43 @@
 <p><strong>Uzasadnienie</strong>: wyrażenie pewności do zdarzenia z przeszłości - <em>can't have + past participle</em>.</p>
 <p>4. be better </p>
 <p>5. were they designed </p>
-<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past simple </em>w liczbie mnogiej <em>- were+ past participle</em>. </p><br>
+<p><strong>Uzasadnienie</strong>: strona bierna w czasie <em>past simple </em>w liczbie mnogiej <em>- were+ past participle</em>. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

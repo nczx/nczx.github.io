@@ -17,4 +17,43 @@
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p>Słyszymy psa szczekającego za rogiem, ponieważ fala dźwiękowa ulega: </p>
 <p><strong>C.</strong> dyfrakcji</p>
-<p><em>Dyfrakcja to ugięcie fali na przeszkodzie napotykanej przez falę. Fala dźwiękowa docierająca do rogu budynku będzie się uginała i zacznie się rozchodzić w dodatkowym kierunku, co pozwoli jej dotrzeć do obserwatora stojącego za rogiem budynku.</em></p><br>
+<p><em>Dyfrakcja to ugięcie fali na przeszkodzie napotykanej przez falę. Fala dźwiękowa docierająca do rogu budynku będzie się uginała i zacznie się rozchodzić w dodatkowym kierunku, co pozwoli jej dotrzeć do obserwatora stojącego za rogiem budynku.</em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

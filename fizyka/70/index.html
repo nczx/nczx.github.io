@@ -6,4 +6,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p>Amplituda jest równa:</p> <p> <object class="math big" data="./data/993482-0.svg" type="image/svg+xml"></object>  </p> <p>Okres wynosi:</p> <p> <object class="math big" data="./data/993482-1.svg" type="image/svg+xml"></object>  </p> <p>Szkicujemy wykres przedstawiający sinusoidę o zadanych parametrach - amplituda i okres: </p> <p><img alt="" height="704" src="./data/993482-0.jpg" width="638"/></p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p>Okres drgań wahadła jest równy:</p> <p> <object class="math big" data="./data/993516-0.svg" type="image/svg+xml"></object>  </p> <p> </p> <p>Rysunek pomocniczy do zadania: </p> <p><img alt="" height="341" src="./data/993516-0.jpg" width="657"/></p> <p> </p> <p>Powyższy rysunek przedstawia kolejne położenia wahadła podczas trwania jednego okresu.</p> <p><strong>A</strong> - wahadło przechodzi przez położenie równowagi (w prawo)</p> <p><strong>B</strong> - maksymalne wychylenie wahadła (w prawo)</p> <p><strong>C</strong> - wahadło przechodzi przez położenie równowagi (w lewo)</p> <p><strong>D</strong> - maksymalne wychylenie wahadła (w lewo)</p> <p><strong>E</strong> - wahadło przechodzi przez położenie równowagi (w prawo)</p> <p> </p> <p>Odcinek czasowy między punktami A i E jest równy okresowi drgań wahadła, zatem odcinek czasowy <object class="math big" data="./data/993516-1.svg" type="image/svg+xml"></object>   pomiędzy sąsiednimi punktami (A i B, B i C, C i D oraz D i E) jest równy:</p> <p> <object class="math big" data="./data/993516-2.svg" type="image/svg+xml"></object>  </p> <p> </p> <p><strong>a)</strong></p> <p>Po czasie <strong>0,2 s</strong> wahadło znajdzie się w położeniu B - maksymalne wychylenie w prawą stronę.</p> <p><strong>b)</strong></p> <p>Po czasie <strong>0,4 s</strong> wahadło znajdzie się w położeniu C - wahadło przechodzi przez położenie równowagi i porusza się w lewą stronę.</p> <p><strong>c)</strong></p> <p>Po czasie <strong>0,8 s</strong> wahadło znajdzie się w położeniu E - wahadło przechodzi przez położenie równowagi w prawą stronę.</p><br>
+<p>Okres drgań wahadła jest równy:</p> <p> <object class="math big" data="./data/993516-0.svg" type="image/svg+xml"></object>  </p> <p> </p> <p>Rysunek pomocniczy do zadania: </p> <p><img alt="" height="341" src="./data/993516-0.jpg" width="657"/></p> <p> </p> <p>Powyższy rysunek przedstawia kolejne położenia wahadła podczas trwania jednego okresu.</p> <p><strong>A</strong> - wahadło przechodzi przez położenie równowagi (w prawo)</p> <p><strong>B</strong> - maksymalne wychylenie wahadła (w prawo)</p> <p><strong>C</strong> - wahadło przechodzi przez położenie równowagi (w lewo)</p> <p><strong>D</strong> - maksymalne wychylenie wahadła (w lewo)</p> <p><strong>E</strong> - wahadło przechodzi przez położenie równowagi (w prawo)</p> <p> </p> <p>Odcinek czasowy między punktami A i E jest równy okresowi drgań wahadła, zatem odcinek czasowy <object class="math big" data="./data/993516-1.svg" type="image/svg+xml"></object>   pomiędzy sąsiednimi punktami (A i B, B i C, C i D oraz D i E) jest równy:</p> <p> <object class="math big" data="./data/993516-2.svg" type="image/svg+xml"></object>  </p> <p> </p> <p><strong>a)</strong></p> <p>Po czasie <strong>0,2 s</strong> wahadło znajdzie się w położeniu B - maksymalne wychylenie w prawą stronę.</p> <p><strong>b)</strong></p> <p>Po czasie <strong>0,4 s</strong> wahadło znajdzie się w położeniu C - wahadło przechodzi przez położenie równowagi i porusza się w lewą stronę.</p> <p><strong>c)</strong></p> <p>Po czasie <strong>0,8 s</strong> wahadło znajdzie się w położeniu E - wahadło przechodzi przez położenie równowagi w prawą stronę.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

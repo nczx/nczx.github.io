@@ -131,4 +131,43 @@
 <p>By the age of forty, I will have got a degree and started my own business. I will have earned enough money to buy a house. I will have travelled the world and seen lots of beautiful places.</p>
 <p>(Do czterdziestki zdobędę stopień naukowy i założę własną firmę. Zarobię wystarczająco dużo pieniędzy, aby kupić dom. Zwiedzę świat i zobaczę wiele pięknych miejsc.)</p>
 <p><br/>At the age of forty, I will be living in a nice house. I will be taking care of my dogs and playing with them daily. I will also be planning another trip abroad.</p>
-<p>(W wieku czterdziestu lat będę mieszkać w ładnym domu. Będę zajmować się moimi psami i codziennie się z nimi bawić. Będę też planować kolejną podróż za granicę.)</p><br>
+<p>(W wieku czterdziestu lat będę mieszkać w ładnym domu. Będę zajmować się moimi psami i codziennie się z nimi bawić. Będę też planować kolejną podróż za granicę.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -92,4 +92,43 @@
 <p>4. regulations</p>
 <p>5. criminal</p>
 <p>6. punishment<br/><br/><strong>Tłumaczenie:</strong></p>
-<p>Zasady i <strong>przepisy </strong>dotyczące prawa międzynarodowego nie zawsze są łatwe do zrozumienia. W prawie <strong>karnym </strong>jest to łatwe. Jeśli ktoś zostanie uznany za winnego, zostanie wysłany do więzienia lub ukarany grzywną. Ale jeśli sąd jest winny, <strong>kara </strong>jest mniej jasna.</p><br>
+<p>Zasady i <strong>przepisy </strong>dotyczące prawa międzynarodowego nie zawsze są łatwe do zrozumienia. W prawie <strong>karnym </strong>jest to łatwe. Jeśli ktoś zostanie uznany za winnego, zostanie wysłany do więzienia lub ukarany grzywną. Ale jeśli sąd jest winny, <strong>kara </strong>jest mniej jasna.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

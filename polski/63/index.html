@@ -70,4 +70,43 @@
 <li>muzyczne kształtowanie wypowiedzi, które wiąże się z symbolicznym charakterem utworu; występowanie rymów oraz instrumentacji głoskowej, np.: "Cicho, cicho, nie budźmy śpiącej wody w kotlinie,/ lekko z wiatrem pląsajmy po przestworów głębinie...";</li>
 <li>synestezja, a więc mieszanie doznań pochodzących z różnych zmysłów, nie tylko wzroku, ale i słuchu oraz dotyku, np.: "(...) pijmy kwiatów woń rzeźwą, co na zboczach gór kwitną,/ dźwięczne, barwne i wonne, w głąb wzlatujmy błękitną.";</li>
 <li>psychizacja krajobrazu - oddanie przeżyć oraz stanów człowieka przy pomocy opisu przyrody, np.: "puchem mlecza się bawmy i ćmy błoną przeźroczą (...).". </li>
-</ul><br>
+</ul><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

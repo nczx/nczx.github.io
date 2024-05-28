@@ -88,4 +88,43 @@
 <p>8. observe</p>
 <p> </p>
 <p><strong>Tłumaczenie (wstawione słowa zostały pogrubione): </strong></p>
-<p><strong>Na</strong> diagramie widać, że ogólna oglądalność telewizji stopniowo <strong>spadała</strong> od 2010 roku z około 250 minut dziennie do nieco poniżej 200 minut. W 2020 roku miał miejsce mały wzrost, jednak nie <strong>odzwierciedla</strong> to szerszego trendu <strong>wśród</strong> oglądających, a raczej wyjątkową sytuację, kiedy kina i inne źródła rozrywki były zamknięte. Jednak, żeby zobaczyć sytuację w <strong>szerszej</strong> perspektywie, musimy przyjrzeć się różnym grupom wiekowym.  Widzimy wyraźny związek <strong>pomiędzy</strong> wiekiem a nawykami związanymi z oglądaniem. Spadek <strong>ilości</strong> minut, które ludzie poniżej 44 roku życia poświęcali na oglądanie telewizji był zdecydowanie bardziej radykalny niż ogólny ubytek. Właściwie, możemy <strong>zaobserwować</strong>, że oglądalność wśród młodszej publiczności spadła już w 2020 roku. Wydaje się oczywiste, że młodzi ludzie odrzucają telewizję i ciężko jest powiedzieć, co firmy związane z tradycyjną telewizją mogą zrobić, żeby to odwrócić. </p><br>
+<p><strong>Na</strong> diagramie widać, że ogólna oglądalność telewizji stopniowo <strong>spadała</strong> od 2010 roku z około 250 minut dziennie do nieco poniżej 200 minut. W 2020 roku miał miejsce mały wzrost, jednak nie <strong>odzwierciedla</strong> to szerszego trendu <strong>wśród</strong> oglądających, a raczej wyjątkową sytuację, kiedy kina i inne źródła rozrywki były zamknięte. Jednak, żeby zobaczyć sytuację w <strong>szerszej</strong> perspektywie, musimy przyjrzeć się różnym grupom wiekowym.  Widzimy wyraźny związek <strong>pomiędzy</strong> wiekiem a nawykami związanymi z oglądaniem. Spadek <strong>ilości</strong> minut, które ludzie poniżej 44 roku życia poświęcali na oglądanie telewizji był zdecydowanie bardziej radykalny niż ogólny ubytek. Właściwie, możemy <strong>zaobserwować</strong>, że oglądalność wśród młodszej publiczności spadła już w 2020 roku. Wydaje się oczywiste, że młodzi ludzie odrzucają telewizję i ciężko jest powiedzieć, co firmy związane z tradycyjną telewizją mogą zrobić, żeby to odwrócić. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

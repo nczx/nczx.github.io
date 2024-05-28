@@ -54,4 +54,43 @@ Indywidualne<br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 7</a><br>
 Indywidualne<br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p><em>Pieśń słoneczna </em>św. Franciszka z Asyżu jest utworem pochwalnym, z którego wręcz emanuje dobro i radość życia. Wiersz utrzymany jest w pogodnym tonie, a jego stylistyka cechuje się prostotą oraz umiarem. Dopiero na końcu utworu znajduje się ostrzeżenie dla grzeszników. Hymn Kasprowicza nawiązuje do dzieła średniowiecznego filozofa, jednak jego wersja utworu reinterpretuje oryginał. Kasprowicz tylko częściowo naśladuje pogodny ton wypowiedzi św. Franciszka. Poza oczywistymi nawiązaniami formalno-treściowymi, pojawiają się tutaj elementy zupełnie nowe. Kasprowicz nie uwalnia się całkowicie od młodopolskiej poetyki, którą charakteryzuje ekspresjonizm i katastrofizm. Stąd liczne zabiegi językowe, które przybliżają niektóre fragmenty tekstu do Apokalipsy św. Jana. Pojawiają się tutaj symbole, odwołania do motywów biblijnych, takich jak trąby anielskie czy Sąd Ostateczny. Autor sięga także do biografii samego Franciszka, by pokazać, że również jego egzystencja naznaczona była cierpieniem. Pomimo tego zachował on pogodę ducha i głosił afirmację życia. W ten sposób Kasprowicz pokazuje aktualność myśli średniowiecznego filozofa również w czasach przełomu wieków, kiedy to dominują nastroje katastroficzne oraz pesymistyczna wizja świata. W ten sposób poeta daje współczesnym narzędzie do przezwyciężenia spleenu oraz do nadania własnemu życiu nowej jakości. </p><br>
+<p><em>Pieśń słoneczna </em>św. Franciszka z Asyżu jest utworem pochwalnym, z którego wręcz emanuje dobro i radość życia. Wiersz utrzymany jest w pogodnym tonie, a jego stylistyka cechuje się prostotą oraz umiarem. Dopiero na końcu utworu znajduje się ostrzeżenie dla grzeszników. Hymn Kasprowicza nawiązuje do dzieła średniowiecznego filozofa, jednak jego wersja utworu reinterpretuje oryginał. Kasprowicz tylko częściowo naśladuje pogodny ton wypowiedzi św. Franciszka. Poza oczywistymi nawiązaniami formalno-treściowymi, pojawiają się tutaj elementy zupełnie nowe. Kasprowicz nie uwalnia się całkowicie od młodopolskiej poetyki, którą charakteryzuje ekspresjonizm i katastrofizm. Stąd liczne zabiegi językowe, które przybliżają niektóre fragmenty tekstu do Apokalipsy św. Jana. Pojawiają się tutaj symbole, odwołania do motywów biblijnych, takich jak trąby anielskie czy Sąd Ostateczny. Autor sięga także do biografii samego Franciszka, by pokazać, że również jego egzystencja naznaczona była cierpieniem. Pomimo tego zachował on pogodę ducha i głosił afirmację życia. W ten sposób Kasprowicz pokazuje aktualność myśli średniowiecznego filozofa również w czasach przełomu wieków, kiedy to dominują nastroje katastroficzne oraz pesymistyczna wizja świata. W ten sposób poeta daje współczesnym narzędzie do przezwyciężenia spleenu oraz do nadania własnemu życiu nowej jakości. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

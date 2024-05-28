@@ -72,4 +72,43 @@
 <p><br/>• People react to fictional characters differently than to people in real life. They are likely to stay away from mysterious people because they're afraid of them. As viewers or readers, however, they feel safe, so they find such people intriguing.</p>
 <p>(Ludzie reagują na postacie fikcyjne inaczej niż na osoby w prawdziwym życiu. Prawdopodobnie będą trzymać się z dala od tajemniczych osób, ponieważ się ich boją. Jako widzowie lub czytelnicy czują się jednak bezpiecznie, więc uważają takie osoby za intrygujące.)</p>
 <p><br/>• Fictional mysteries make life exciting. Novels, ancient tales, or thrillers have unforgettable plots. They aren't real, so you can try to solve their mysteries as a hobby. However, mysteries that happen in your real life can be destructive. When a family member goes missing, it's horrible and frightening. Some people spend their entire lives trying to find their loved ones without success.</p>
-<p>(Fikcyjne tajemnice sprawiają, że życie jest ekscytujące. Powieści, starożytne baśnie czy thrillery mają niezapomniane fabuły. Nie są one prawdziwe, więc można próbować rozwiązać ich tajemnice jako hobby. Jednak tajemnice, które zdarzają się w prawdziwym życiu, mogą być destrukcyjne. Kiedy zaginie ktoś z rodziny, jest to straszne i przerażające. Niektórzy ludzie spędzają całe życie, próbując znaleźć swoich bliskich bez skutku.)</p><br>
+<p>(Fikcyjne tajemnice sprawiają, że życie jest ekscytujące. Powieści, starożytne baśnie czy thrillery mają niezapomniane fabuły. Nie są one prawdziwe, więc można próbować rozwiązać ich tajemnice jako hobby. Jednak tajemnice, które zdarzają się w prawdziwym życiu, mogą być destrukcyjne. Kiedy zaginie ktoś z rodziny, jest to straszne i przerażające. Niektórzy ludzie spędzają całe życie, próbując znaleźć swoich bliskich bez skutku.)</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

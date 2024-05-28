@@ -42,4 +42,43 @@
 </script>
 </head>
 <a style="color:red; font-size:25px;">Na dobry pocz¹tek...</a><br>
-<p><em>Small talk</em> to typ rozmowy, która ma niezobowi¹zuj¹cy charakter i jest zazwyczaj prowadzona z niezbyt dobrze znanymi sobie osobami. Mo¿e dotyczyæ ró¿nych oraz ogólnych tematów (np. pogody, kultury, otoczenia), czêsto poprzedza w³aœciw¹ rozmowê. Zjawisko to jest przede wszystkim uwarunkowane kulturowo, poniewa¿ niejednokrotnie postrzega siê je jako przejaw dobrego wychowania, ¿yczliwoœci wzglêdem innych, odpowiedniej postawy w ¿yciu towarzyskim. Ma znacz¹cy wp³yw na budowanie relacji miêdzyludzkich, poniewa¿ prowadzi do ich ocieplenia, pozwala na podtrzymanie kontaktu, a przy tym prowadzi do rozwiniêcia umiejêtnoœci interpersonalnych.  </p><br>
+<p><em>Small talk</em> to typ rozmowy, która ma niezobowi¹zuj¹cy charakter i jest zazwyczaj prowadzona z niezbyt dobrze znanymi sobie osobami. Mo¿e dotyczyæ ró¿nych oraz ogólnych tematów (np. pogody, kultury, otoczenia), czêsto poprzedza w³aœciw¹ rozmowê. Zjawisko to jest przede wszystkim uwarunkowane kulturowo, poniewa¿ niejednokrotnie postrzega siê je jako przejaw dobrego wychowania, ¿yczliwoœci wzglêdem innych, odpowiedniej postawy w ¿yciu towarzyskim. Ma znacz¹cy wp³yw na budowanie relacji miêdzyludzkich, poniewa¿ prowadzi do ich ocieplenia, pozwala na podtrzymanie kontaktu, a przy tym prowadzi do rozwiniêcia umiejêtnoœci interpersonalnych.  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

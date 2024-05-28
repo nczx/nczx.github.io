@@ -125,4 +125,43 @@
 <p><strong>Uzasadnienie:</strong> używamy strony biernej, bo podmiot (<em>I </em>- ja) nie jest wykonawcą czynności (<em>beat </em>- pokonać). Opisujemy czynność zakończoną w przeszłości, więc używamy czasu <em>past simple</em>. Konstrukcja: <em>was/were + </em>czasownik główny w <em>past participle</em>.</p>
 <p>5. have/get</p>
 <p>6. have/get</p>
-<p><strong>Uzasadnienie (5, 6):</strong> konstrukcja <em>have/get something done</em>, aby opisać, że czynność została zlecona komuś innemu. Konstrukcja <em>be going to</em> oraz czasownik modalny przed luką łączą się z innym czasownikiem w formie bezokolicznika.</p><br>
+<p><strong>Uzasadnienie (5, 6):</strong> konstrukcja <em>have/get something done</em>, aby opisać, że czynność została zlecona komuś innemu. Konstrukcja <em>be going to</em> oraz czasownik modalny przed luką łączą się z innym czasownikiem w formie bezokolicznika.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

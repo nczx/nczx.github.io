@@ -77,4 +77,43 @@
 </tbody>
 </table>
 <p> </p>
-<p>b) Cz³owiek jest œciœle zwi¹zany z otaczaj¹cym go œwiatem, jednak staje siê on Ÿród³em zagro¿enia i niepokoju. Nawet sen nie zapewnia spokoju: "œpi¹cy ju¿ rêce unosz¹ a zasiani s¹ gêsto jak sieæ". Z tego te¿ powodu pojawia siê potrzeba ucieczki, unikniêcia apokaliptycznych zdarzeñ. Istota ludzka, która znajduje siê w centrum przedstawionej rzeczywistoœci, ostatecznie jednak nie mo¿e unikn¹æ katastrofy. Zostaje tym samym poch³oniêta przez bezlitosny ¿ywio³: "w potwornych ob³oków leju znikasz i ty i oni i wszystko". Cz³owiek zdaje siê gin¹æ wraz z dotychczasowym œwiatem, jest bezradny wobec bolesnych realiów. </p><br>
+<p>b) Cz³owiek jest œciœle zwi¹zany z otaczaj¹cym go œwiatem, jednak staje siê on Ÿród³em zagro¿enia i niepokoju. Nawet sen nie zapewnia spokoju: "œpi¹cy ju¿ rêce unosz¹ a zasiani s¹ gêsto jak sieæ". Z tego te¿ powodu pojawia siê potrzeba ucieczki, unikniêcia apokaliptycznych zdarzeñ. Istota ludzka, która znajduje siê w centrum przedstawionej rzeczywistoœci, ostatecznie jednak nie mo¿e unikn¹æ katastrofy. Zostaje tym samym poch³oniêta przez bezlitosny ¿ywio³: "w potwornych ob³oków leju znikasz i ty i oni i wszystko". Cz³owiek zdaje siê gin¹æ wraz z dotychczasowym œwiatem, jest bezradny wobec bolesnych realiów. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

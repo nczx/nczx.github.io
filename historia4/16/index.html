@@ -49,4 +49,43 @@
 <li>Zakończenie walki pod Kockiem, aby zachować siły na późniejszy czas.</li>
 </ul>
 <p><strong>2. Zadanie ma charakter indywidualny. Rozwiązanie zawiera wyłącznie wskazówki do sformułowania samodzielnej odpowiedzi!</strong></p>
-<p>Decyzja gen. Franciszka Kleeberga była<strong> słuszna</strong>. W obliczu poniesionych strat i liczebności sił przeciwnika sens dalszej walki polskich żołnierzy gdzieś zniknął. Odstąpienie żołnierzy od walki mogło wpłynąć bowiem korzystnie na walkę w przyszłości. Stwarzało nadzieję na przeżycie znacznej liczby polskich żołnierzy. </p><br>
+<p>Decyzja gen. Franciszka Kleeberga była<strong> słuszna</strong>. W obliczu poniesionych strat i liczebności sił przeciwnika sens dalszej walki polskich żołnierzy gdzieś zniknął. Odstąpienie żołnierzy od walki mogło wpłynąć bowiem korzystnie na walkę w przyszłości. Stwarzało nadzieję na przeżycie znacznej liczby polskich żołnierzy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

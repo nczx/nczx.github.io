@@ -145,4 +145,43 @@
 <p> </p>
 <p><em>A burglar got stuck in a chimney while trying to break into a house in Oxford. </em>The burglar's name was Benny, and he wasn't very smart. He thought he had the perfect plan to steal stuff during the holidays, but it turned into a big mess. What's worse, the owners were away. Poor Benny had to wait for a very long time before someone heard his cries for help ...</p>
 <p><br/><strong>Tłumaczenie: </strong></p>
-<p>Włamywacz utknął w kominie podczas próby włamania się do domu w Oxfordzie. Włamywacz miał na imię Benny i nie był zbyt bystry. Myślał, że ma idealny plan na kradzież rzeczy podczas świąt, ale skończyło się to wielkim zamieszaniem. Co gorsza, właścicieli nie było wtedy w domu. Biedny Benny musiał czekać bardzo długo, zanim ktoś usłyszał jego wołanie o pomoc...</p><br>
+<p>Włamywacz utknął w kominie podczas próby włamania się do domu w Oxfordzie. Włamywacz miał na imię Benny i nie był zbyt bystry. Myślał, że ma idealny plan na kradzież rzeczy podczas świąt, ale skończyło się to wielkim zamieszaniem. Co gorsza, właścicieli nie było wtedy w domu. Biedny Benny musiał czekać bardzo długo, zanim ktoś usłyszał jego wołanie o pomoc...</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

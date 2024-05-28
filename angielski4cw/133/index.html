@@ -73,4 +73,43 @@
 <p>3. respect</p>
 <p><strong>Uzasadnienie</strong>: <em>a sign of respect</em> - wyraz szacunku; <em>in what respect</em> - pod jakim względem; <em>have mutual respect</em> - mieć wzajemny szacunek.</p>
 <p>4. short</p>
-<p><strong>Uzasadnienie</strong>: <em>short</em> - niski/a; <em>fall short of sb's expectations</em> - nie spełniać czyichś oczekiwań; <em>be short of cash</em> - mieć mało pieniędzy. </p><br>
+<p><strong>Uzasadnienie</strong>: <em>short</em> - niski/a; <em>fall short of sb's expectations</em> - nie spełniać czyichś oczekiwań; <em>be short of cash</em> - mieć mało pieniędzy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

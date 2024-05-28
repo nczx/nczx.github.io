@@ -56,4 +56,43 @@
 <p><strong>Fragment w tekście</strong>: "Another story concerned three female dolphins which not only hunted in a group of three, but also spent time playing and resting together." - Inna historia jest związana z trzema samicami delfinów, które nie tylko polowały w trzyosobowej grupie, ale także spędzały czas na wspólnej zabawie i odpoczynku.</p>
 <p>4. D (Błędny pomysł)</p>
 <p><strong>Fragment w tekście</strong>: "Some scientists claimed that humans had evolved larger brains because of the need to socialise and form friendships. The fact that bats also behave in this way disproves this theory (...)." - Niektórzy naukowcy twierdzili, że większe mózgi ludzi wyewoluowały przez potrzebę socjalizacji i formowania przyjaźni. Fakt, że nietoperze również zachowują się w ten sposób, obala tę teorię (...).</p>
-<p><s class="odr-strikethrough">B</s>, <s class="odr-strikethrough">D</s></p><br>
+<p><s class="odr-strikethrough">B</s>, <s class="odr-strikethrough">D</s></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

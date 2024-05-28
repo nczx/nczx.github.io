@@ -60,4 +60,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Prowokacja artystyczna u Tuwima przejawia siê nie tylko w doborze tematyki i specyficznej kreacji œwiata przedstawionego. Ujawnia siê ona równie¿ w wierszu, który jasno okreœla stosunek poety do jego roli, ale te¿ krytyków. Sposobem na subteln¹ prowokacjê staje siê nonszalancki stosunek podmiotu lirycznego do adresatów jego wypowiedzi: "Tak to jade na przedniej platformie tramwaju, / Wielce szanowni panowie!". Osoba mówi¹ca d¹¿y bowiem do zszokowania krytyków sw¹ beztrosk¹ postaw¹ i umi³owaniem ¿yciem miasta, które staje siê zupe³nie nowym Ÿród³em inspiracji artystycznej. Podmiot niejako zapomina o powadze zwi¹zanej z dzia³alnoœci¹ poetyck¹ czy krytyczn¹ - zamiast tego proponuje odkrywanie piêkna codziennoœci. Wiersz tym samym staje siê wyzwaniem dla krytyków, deklaracj¹ twórczoœci nowej i nieskrêpowanej, powi¹zanej z tym, co aktualne.</p>
 <p>Z kolei w <em>Balu w operze </em>Tuwim wykorzystuje kontrasty oraz jêzyk, by stworzyæ wyrazisty, ale te¿ szokuj¹cy obraz elit. S¹ one pogr¹¿one w szalonej zabawie, chocia¿ nieuchronnie zbli¿aj¹ siê do ostatecznej katastrofy. Towarzysz¹cy im przepych zostaje zestawiony z fizjologi¹, pijañstwem i ob¿arstwem goœci: "Serpnetynê flaków wcina, / Na talerzu Donny / Ryczy wó³ zamordowany, D¿wachadze, prync gruziñski, / Rwie zêbami ty³ek œwiñski". Rzekome elity oddaj¹ siê wiêc podstawowym instynktom, s¹ zepsute. Prowokacyjny jest w utworze tak¿e jêzyk wypowiedzi. Mo¿na go okreœliæ mianem wulgarnego, bezpoœredniego, odwo³uj¹cego siê do tego, co potoczne i przyziemne: "Wszelka dziwka majtki pierze". </p>
 <p>Prowokacja artystyczna w twórczoœci Tuwima spe³nia kilka funkcji. Przede wszystkim umo¿liwia przedstawienie faktycznego obrazu cz³owieka - pozbawionego upiêkszeñ, stereotypów, wp³ywu kultury. Tym samym poeta przedstawia istotê ludzk¹ sprowadzon¹ do tego, co biologiczne i podstawowe. Zaskakuj¹ce czy wrêcz szokuj¹ce obrazy w pewien sposób uwznioœlaj¹ rzeczywistoœæ. Œwiadcz¹ bowiem o tym, i¿ aktualne realia staj¹ siê tematem twórczoœci literackiej. Ponadto prowokacyjny charakter wierszy Tuwima stanowi przejaw nowatorstwa, poszukiwania nieoczywistych form wyrazu, które nie pozostawiaj¹ czytelnika obojêtnym. </p><br><a style="color:red; font-size:25px;">Zadanie 4</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

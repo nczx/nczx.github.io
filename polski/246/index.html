@@ -12,4 +12,43 @@ Indywidualne<br><head><meta charset="UTF-8"></head>
 <p>W utworze Anny Świrszczyńskiej zostały ukazane trudne relacje duszy oraz ciała. Choć są zmuszone współtworzyć człowieka, to jednak bardzo różnią się od siebie. Dusza dba o własne potrzeby, ciało zaś zajmuje się jedynie sobą. Brak między nimi porozumienia - zdają się mówić różnym językiem, nie słuchając się wzajemnie i ignorując wzajemne potrzeby.</p>
 <p> </p>
 <p><strong>b)</strong></p>
-<p>Głównym podobieństwem w ujęciu duszy w wierszu młodopolskiego poety oraz w utworze współczesnym jest zamiłowanie duszy do filozoficznych rozważań, również tych natury ontologicznej czy eschatologicznej. Obydwa ujęcia zdają się pochylać nad pytaniem o sens ludzkiej egzystencji oraz jej kres ("Rozmiłowała się ma dusza/ W przepastnej nocy mgłach, / Gdy druh mój, śmierć, na połów rusza, / A przed nią lęk i strach."; "Dusza pyta ciała: / - W tobie czy we mnie zacznie się umieranie?"). Jednak w wierszu Kasprowicza dusza zdaje się harmonizować z ciałem, w przeciwieństwie do dychotomii duszy i ciała ukazanej u Świrszczyńskiej. To przecież poprzez zmysły, które są częścią ciała, dusza ma szansę odbierać rzeczywistość. Jej rozważania są z bardziej przyziemne - dostrzega piękno otaczającego ją świata, które oddziałuje na nią w sposób bezpośredni, powodując odczucie radości. </p><br>
+<p>Głównym podobieństwem w ujęciu duszy w wierszu młodopolskiego poety oraz w utworze współczesnym jest zamiłowanie duszy do filozoficznych rozważań, również tych natury ontologicznej czy eschatologicznej. Obydwa ujęcia zdają się pochylać nad pytaniem o sens ludzkiej egzystencji oraz jej kres ("Rozmiłowała się ma dusza/ W przepastnej nocy mgłach, / Gdy druh mój, śmierć, na połów rusza, / A przed nią lęk i strach."; "Dusza pyta ciała: / - W tobie czy we mnie zacznie się umieranie?"). Jednak w wierszu Kasprowicza dusza zdaje się harmonizować z ciałem, w przeciwieństwie do dychotomii duszy i ciała ukazanej u Świrszczyńskiej. To przecież poprzez zmysły, które są częścią ciała, dusza ma szansę odbierać rzeczywistość. Jej rozważania są z bardziej przyziemne - dostrzega piękno otaczającego ją świata, które oddziałuje na nią w sposób bezpośredni, powodując odczucie radości. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -97,4 +97,43 @@
 <p>Jest stylowa i bardzo nowoczesna. Pomaga mi również zmniejszyć mój ślad węglowy. Jest to produkt przyjazny dla środowiska, ponieważ wykorzystuje energię słoneczną do generowania energii elektrycznej. Posiada również energooszczędne żarówki LED. Ponadto jest wykonana z ekologicznych materiałów, takich jak bambus i plastik z recyklingu.</p>
 <p>Jeśli jesteście zainteresowani jej zakupem, możecie ją znaleźć na stronie internetowej firmy. Oferuje ona wysyłkę na cały świat, więc jest dostępna dla każdego.</p>
 <p>Gorąco polecam lampkę biurkową SolarBloom LED innym osobom dbającym o środowisko. To świetne rozwiązanie, jeśli często uczysz się lub pracujesz wieczorami i potrzebujesz dobrego źródła światła.</p>
-<p>Czy macie jakieś inne rekomendacje dotyczące ekologicznych produktów? Podzielcie się nimi w komentarzach!</p><br>
+<p>Czy macie jakieś inne rekomendacje dotyczące ekologicznych produktów? Podzielcie się nimi w komentarzach!</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

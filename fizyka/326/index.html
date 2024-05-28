@@ -20,4 +20,43 @@
 <a style="color:red; font-size:25px;">Zadanie 34</a><br>
 <p>Dane:</p> <p> <object class="math big" data="./data/1092519-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-1.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-3.svg" type="image/svg+xml"></object> </p> <p>Szukane:</p> <p> <object class="math big" data="./data/1092519-4.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-5.svg" type="image/svg+xml"></object> </p> <p>Rozwiązanie:  </p> <p>Liczba protonów w jądrze żelaza:</p> <p> <object class="math big" data="./data/1092519-6.svg" type="image/svg+xml"></object> </p> <p>Liczba nukleonów w jądrze żelaza:</p> <p> <object class="math big" data="./data/1092519-7.svg" type="image/svg+xml"></object> </p> <p>Liczba neutronów w jądrze żelaza:</p> <p> <object class="math big" data="./data/1092519-8.svg" type="image/svg+xml"></object> </p> <p> </p> <p>Obliczmy deficyt masy jądra żelaza:</p> <p> <object class="math big" data="./data/1092519-9.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-10.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1092519-11.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-12.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-13.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1092519-14.svg" type="image/svg+xml"></object>    </p> <p> </p> <p>Energia wiązania jądra żelaza będzie równa:</p> <p> <object class="math big" data="./data/1092519-15.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092519-16.svg" type="image/svg+xml"></object>   </p> <p> </p> <p>Energia wiązania przypadająca na jeden nukleon będzie równa:</p> <p> <object class="math big" data="./data/1092519-17.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 35</a><br>
-<p>Energia wiązania jadra helu wynosi: </p> <p> <object class="math big" data="./data/1092533-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092533-1.svg" type="image/svg+xml"></object>  </p> <p>W jądrze helu znajdują się 4 nukleony. Wyznaczmy energię wiązania przypadającą na jeden nukleon:</p> <p> <object class="math big" data="./data/1092533-2.svg" type="image/svg+xml"></object>   </p> <p>Energia wiązania na jeden nukleon dla jądra żelaza jest równa:</p> <p> <object class="math big" data="./data/1092533-3.svg" type="image/svg+xml"></object> </p> <p>Jądro żelaza ma większą energię wiązania przypadającą na jeden nukleon niż jądro helu.</p><br>
+<p>Energia wiązania jadra helu wynosi: </p> <p> <object class="math big" data="./data/1092533-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1092533-1.svg" type="image/svg+xml"></object>  </p> <p>W jądrze helu znajdują się 4 nukleony. Wyznaczmy energię wiązania przypadającą na jeden nukleon:</p> <p> <object class="math big" data="./data/1092533-2.svg" type="image/svg+xml"></object>   </p> <p>Energia wiązania na jeden nukleon dla jądra żelaza jest równa:</p> <p> <object class="math big" data="./data/1092533-3.svg" type="image/svg+xml"></object> </p> <p>Jądro żelaza ma większą energię wiązania przypadającą na jeden nukleon niż jądro helu.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

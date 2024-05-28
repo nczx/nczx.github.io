@@ -55,4 +55,43 @@
 <p>Powstała także <strong>1 Armia Wojska Polskiego</strong>. Uczestniczyła m.in. w walkach o <strong>Wał Pomorski </strong>(29 stycznia – 10/20 lutego 1945 r.). Szlak bojowy zakończyła w maju 1945 r. wyjściem na brzeg Łaby i szturmem części swoich oddziałów na Berlin. </p>
 <p>Na czele <strong>Wojska Polskiego </strong>stał gen. Michał Rola Żymierski. Latem 1944 r. sformowano także <strong>2 Armię Wojska Polskiego</strong>. Dowódcą mianowano gen. dyw. Karola Świerczewskiego. 2 Armia Wojska Polskiego brała udział m.in. w operacji łużyckiej (19-25 kwietnia 1945 r.) i praskiej (6-11 maja 1945 r.). </p>
 <p><img alt="" height="303" src="./data/1180734-0.jpg" width="407"/></p>
-<p>Wbijanie słupów granicznych nad Odrą przez żołnierzy 1 Armii WP w 1945 r., źródło zdjęcia: Wikimedia Commons. </p><br>
+<p>Wbijanie słupów granicznych nad Odrą przez żołnierzy 1 Armii WP w 1945 r., źródło zdjęcia: Wikimedia Commons. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

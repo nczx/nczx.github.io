@@ -61,4 +61,43 @@
 <p>3. A</p>
 <p><strong>Fragment w tekście:</strong> "His career as an artist really tok off when he had his first exhibition in Vienna in 1952. After the war, he had studied art, first in Vienna and then in Paris, where he changed his name" - Jego kariera jako artysty naprawdę nabrała tempa po pierwszej wystawie w Wiedniu w 1952 roku. Po wojnie studiował sztukę, najpierw w Wiedniu, a potem w Paryżu, gdzie zmienił nazwisko. </p>
 <p>4. A</p>
-<p><strong>Fragment w tekście:</strong> "Although he already had a vision of what he wanted to create, it still took six years before work could start on the building, with Hundertwasser being unimpressed with architect Josef Krawina's original models and diagrams" - Mimo, że miał już wizję tego, co chciał stworzyć, minęło sześć lat zanim budowa mogła ruszyć, ze względu na rozczarowanie Hundertwassera oryginalnymi modelami i diagramami projektanta, Josefa Krawiny. </p><br>
+<p><strong>Fragment w tekście:</strong> "Although he already had a vision of what he wanted to create, it still took six years before work could start on the building, with Hundertwasser being unimpressed with architect Josef Krawina's original models and diagrams" - Mimo, że miał już wizję tego, co chciał stworzyć, minęło sześć lat zanim budowa mogła ruszyć, ze względu na rozczarowanie Hundertwassera oryginalnymi modelami i diagramami projektanta, Josefa Krawiny. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

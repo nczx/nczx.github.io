@@ -124,4 +124,43 @@ Indywidualne<br><a style="color:red; font-size:25px;">Zadanie 5</a><br>
 <p><em>To rzek³szy, schwa³ prêdko próbkê do szuflady,</em></p>
 <p><em>a mnie pokaza³ sukno barwy - czekolady. - -</em></p>
 <p>Wskazuje ona na sytuacjê cz³owieka, który nie mo¿e sobie zagwarantowaæ, ¿e w jego ¿yciu bêd¹ tylko przyjemne chwile. Nie ma on tak¿e mo¿liwoœci, by w pe³ni zaplanowaæ sw¹ egzystencjê. Zamiast wymarzonego materia³u Czas oferuje wiêc osobie mówi¹cej sukno w kolorze czekolady. Skrawek ten zyskuje symboliczne znaczenie. Jego ciemny kolor wywo³uje skojarzenia ze smutkiem oraz trudnymi doœwiadczeniami. Z drugiej jednak strony czekoladowa barwa kojarzy siê ze s³odycz¹ i przyjemnoœci¹. Tym samym krawiec zdaje siê przypominaæ podmiotowi lirycznemu, ¿e w ¿ycie ka¿dego cz³owieka s¹ wpisane chwile radoœci, lecz tak¿e przygnêbienia. </p><br><a style="color:red; font-size:25px;">Zadanie 8</a><br>
-Indywidualne<br>
+Indywidualne<br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

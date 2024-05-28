@@ -60,4 +60,43 @@
 <p>6. Wie soll ich mich bewerben? <br/><em>Jak mam się rekrutować? </em></p>
 <p>A. Mündlich. Rufen Sie uns noch einmal an. - Ustnie. Proszę zadzwonić do nas jeszcze raz. <br/><strong>B. Schriftlich. Schicken Sie uns eine Bewerbung.</strong> - Pisemnie. Proszę wysłać nam podanie. </p><br><a style="color:red; font-size:25px;">Zadanie 6</a><br>
 <p>Przykładowo: </p>
-<p>- Guten Tag, Angela Schwarz, ALPINA-Hotel. Wie kann ich Ihnen helfen? (Dzień dobry, Angela Schwarz, Hotel ALPINA. W czym mogę pomóc?) <br/>- Guten Tag. Ist die Anzeige für den Job als Rezeptionist/-in noch aktuell? (Dzień dobry. Czy ogłoszenie o pracy jako recepcjonist(k)a nadal jest aktualne?)  <br/>- Ja, die Stelle ist noch frei. Warum möchten Sie in einem Hotel jobben? (Tak, ta posada jest jeszcze wolna. Dlaczego chciał(a)by pan(i) pracować w hotelu?) <br/>- Diese Arbeit finde ich interessant. Ich habe Germanistik studiert und will meine Deutschkenntnisse verbessern. (Tę pracę uważam za ciekawą. Studiowałem/-am germanistykę i chcę poprawić znajomość języka niemieckiego.) <br/>- Wann können Sie anfangen? (Kiedy może pan(i) zacząć?) <br/>- Ende Mai passt mir am besten. (Koniec maja najbardziej mi pasuje.) <br/>- Der Termin ist fantastisch. (Ten termin jest fantastyczny.) <br/>- Wie ist die Bezahlung? (Jakie jest wynagrodzenie?) <br/>- Sie bekommen 9 Euro pro Stunde. (Dostanie pan(i) 9 euro na godzinę.) <br/>- Wie soll ich mich bewerben? (Jak mam się rekrutować?) <br/>- Schriftlich. Sie sollten eine E-Mail mit Bewerbung schicken. (Pisemnie. Powinien pan / Powinna pani wysłać e-mail z podaniem o pracę.)  <br/>- Vielen Dank. Auf Wiederhören. (Bardzo dziękuję. Do usłyszenia.) <br/>- Auf Wiederhören. (Do usłyszenia.) </p><br>
+<p>- Guten Tag, Angela Schwarz, ALPINA-Hotel. Wie kann ich Ihnen helfen? (Dzień dobry, Angela Schwarz, Hotel ALPINA. W czym mogę pomóc?) <br/>- Guten Tag. Ist die Anzeige für den Job als Rezeptionist/-in noch aktuell? (Dzień dobry. Czy ogłoszenie o pracy jako recepcjonist(k)a nadal jest aktualne?)  <br/>- Ja, die Stelle ist noch frei. Warum möchten Sie in einem Hotel jobben? (Tak, ta posada jest jeszcze wolna. Dlaczego chciał(a)by pan(i) pracować w hotelu?) <br/>- Diese Arbeit finde ich interessant. Ich habe Germanistik studiert und will meine Deutschkenntnisse verbessern. (Tę pracę uważam za ciekawą. Studiowałem/-am germanistykę i chcę poprawić znajomość języka niemieckiego.) <br/>- Wann können Sie anfangen? (Kiedy może pan(i) zacząć?) <br/>- Ende Mai passt mir am besten. (Koniec maja najbardziej mi pasuje.) <br/>- Der Termin ist fantastisch. (Ten termin jest fantastyczny.) <br/>- Wie ist die Bezahlung? (Jakie jest wynagrodzenie?) <br/>- Sie bekommen 9 Euro pro Stunde. (Dostanie pan(i) 9 euro na godzinę.) <br/>- Wie soll ich mich bewerben? (Jak mam się rekrutować?) <br/>- Schriftlich. Sie sollten eine E-Mail mit Bewerbung schicken. (Pisemnie. Powinien pan / Powinna pani wysłać e-mail z podaniem o pracę.)  <br/>- Vielen Dank. Auf Wiederhören. (Bardzo dziękuję. Do usłyszenia.) <br/>- Auf Wiederhören. (Do usłyszenia.) </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

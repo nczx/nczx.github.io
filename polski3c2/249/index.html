@@ -165,4 +165,43 @@
 <p> </p>
 <p>Odk¹d Bartek pozbiera³ siê i <strong>wyszed³ z do³ka, œmia³o spogl¹da w przysz³oœæ, nie boj¹c siê niespodzianek, które szykuje dla niego los. </strong>-&gt; W zdaniu tym b³êdem stylistycznym jest u¿ycie modnego wyra¿enia ("wyjœæ z do³ka") oraz nadmierne skomplikowanie wypowiedzi (objêtoœæ). </p>
 <p> </p>
-<p>Zastêpca dyrektora<strong> dokona³ przedstawienia kandydatów wytypowanych do wziêcia udzia³u w konkursie. </strong>-&gt; W zdaniu zauwa¿alne jest niepotrzebne rozwleczenie tekstu. Tê sam¹ treœæ mo¿na wyraziæ w prosty i zwiêz³y sposób, bardziej zrozumia³y dla odbiorcy. </p><br>
+<p>Zastêpca dyrektora<strong> dokona³ przedstawienia kandydatów wytypowanych do wziêcia udzia³u w konkursie. </strong>-&gt; W zdaniu zauwa¿alne jest niepotrzebne rozwleczenie tekstu. Tê sam¹ treœæ mo¿na wyraziæ w prosty i zwiêz³y sposób, bardziej zrozumia³y dla odbiorcy. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

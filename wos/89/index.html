@@ -49,4 +49,43 @@
 <p><strong>Rozwiązanie 2.:</strong></p>
 <p>Nie ma jednoznacznej odpowiedzi na pytanie, które z mediów ma współcześnie największy wpływ na młodych ludzi, ponieważ wpływ mediów na młodych ludzi zależy od wielu czynników, w tym od kraju, kultury, stylu życia i preferencji indywidualnych osób. Różne media, takie jak telewizja, Internet, social media, radio czy prasa, mogą mieć różny wpływ na różne grupy młodych ludzi w różnych kontekstach.</p>
 <p>Jednak wydaje się, że szczególnie doniosły jest obecnie wpływ Internetu na młodych ludzi. To nowoczesny rodzaj mediów, a młodzi ludzie są tymi, którzy w głównej mierze są podatni na nowinki. Internet wydaje się dla nich najbardziej atrakcyjny, gdyż daje najwięcej możliwości, w tym stwarza okazję do publikowania własnych treści, na przykład na portalach społecznościowych. Wśród młodych ludzi wyjątkowo popularne są również różnego rodzaju komunikatory, takie jak Messenger, WhatsApp, Telegram czy Gadu-Gadu. Na młodych ludzi oddziałują silnie treści zamieszczane na YouTub'ie czy Tik-Tok'u.</p>
-<p>Nie oznacza to jednak, że młodzi ludzie nie korzystają z innych rodzajów mediów, takich jak radio czy telewizja. Lecz czynią to rzadziej, niż ich rówieśnicy sprzed lat.</p><br>
+<p>Nie oznacza to jednak, że młodzi ludzie nie korzystają z innych rodzajów mediów, takich jak radio czy telewizja. Lecz czynią to rzadziej, niż ich rówieśnicy sprzed lat.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

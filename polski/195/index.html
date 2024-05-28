@@ -22,4 +22,43 @@
 <a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p><strong>Zdania z czasownikami w czasie teraźniejszym: </strong></p>
 <p><em>Czerwona wstęga ognia przeleciała z jednego końca czworoboku na drugi - kule <strong>zaświstały</strong> w uszach jeźdźców, gdzieniegdzie człowiek <strong>jęknął</strong>, gdzieniegdzie koń się zwalił, linia jazdy <strong>łamie się</strong>, ale oni <strong>pędzą</strong> dalej; już dobiegają, już janczary <strong>słyszą</strong> chrapanie i zdyszany oddech koni - czworobok <strong>zbija się</strong> jeszcze ciaśniej i pochyla mur włóczni, trzymanych żylastymi rękoma, ku rozszalałym rumakom. </em></p>
-<p>Użycie czasu teraźniejszego do przedstawienia minionych zdarzeń to <em><strong>praesens historicum</strong>. </em>Jego użycie buduje dystans czasowy, nadając wypowiedzi większą dynamikę. </p><br>
+<p>Użycie czasu teraźniejszego do przedstawienia minionych zdarzeń to <em><strong>praesens historicum</strong>. </em>Jego użycie buduje dystans czasowy, nadając wypowiedzi większą dynamikę. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

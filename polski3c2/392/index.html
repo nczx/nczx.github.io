@@ -59,4 +59,43 @@
 <p> </p>
 <p>e) S³owa pani Czechny œwiadcz¹ o tym, i¿ wie, jaki ma wp³yw na otoczenie: nie wpisuje siê w jego oczekiwania, budzi niechêæ. Sugeruj¹ ponadto, ¿e jest potê¿n¹ jednostk¹, która jednak wywo³uje niepokój i obawy. Mo¿e to mieæ zwi¹zek z jej wiedz¹ czy doœwiadczeniami, tym, i¿ pozostaje niezale¿na oraz ekscentryczna. Takie zaklasyfikowanie kobiety mo¿e tak¿e s³u¿yæ jej oswojeniu czy wyjaœnieniu postawy. W symboliczny sposób œwiadczy o tym, i¿ Czechna dokonuje rzeczy nieosi¹galnych dla innych, czym jest np. prze¿ycie Zag³ady. </p>
 <p> </p>
-<p>f) Wyra¿enie swojego zdania - czêœæ indywidualna </p><br>
+<p>f) Wyra¿enie swojego zdania - czêœæ indywidualna </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

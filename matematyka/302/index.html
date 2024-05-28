@@ -8,4 +8,43 @@
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
 <p><strong>a)</strong></p> <p>Na przykład zestaw liczb:  </p> <p> <object class="math big" data="./data/1115219-0.svg" type="image/svg+xml"></object> </p> <p>Wyznaczamy średnią arytmetyczną:</p> <p> <object class="math big" data="./data/1115219-1.svg" type="image/svg+xml"></object>   </p> <p>Medianą podanego zestawu liczb jest liczba: <strong>2</strong>.</p> <p>Wobec tego mediana jest większa od średniej arytmetycznej, bo:</p> <p> <object class="math big" data="./data/1115219-2.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>b)</strong></p> <p>Na przykład zestaw liczb: </p> <p> <object class="math big" data="./data/1115219-3.svg" type="image/svg+xml"></object> </p> <p>Wyznaczamy średnią arytmetyczną:</p> <p> <object class="math big" data="./data/1115219-4.svg" type="image/svg+xml"></object>   </p> <p>Medianą podanego zestawu liczb jest liczba: <strong>2</strong>.</p> <p>Wobec tego mediana jest mniejsza od średniej arytmetycznej, bo:</p> <p> <object class="math big" data="./data/1115219-5.svg" type="image/svg+xml"></object>  </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 5</a><br>
-<p>Z treści zadania wiemy, że średnia arytmetyczna zestawu liczb:</p> <p> <object class="math big" data="./data/1115230-0.svg" type="image/svg+xml"></object>  </p> <p>jest równa <strong>7</strong>. Zatem wyznaczamy wartość <strong>x</strong> korzystając z równania:  </p> <p> <object class="math big" data="./data/1115230-1.svg" type="image/svg+xml"></object> </p> <p>  <object class="math big" data="./data/1115230-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1115230-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1115230-4.svg" type="image/svg+xml"></object>   </p> <p>Zatem:</p> <p> <object class="math big" data="./data/1115230-5.svg" type="image/svg+xml"></object> </p> <p>Ustawiamy liczby z zestawu w kolejności rosnącej i dostajemy:</p> <p> <object class="math big" data="./data/1115230-6.svg" type="image/svg+xml"></object>   </p> <p>Wszystkich liczb w zestawie jest <strong>10</strong>, wobec tego medianą jest średnia</p> <p>arytmetyczna sąsiednich wartości środkowych:</p> <p> <object class="math big" data="./data/1115230-7.svg" type="image/svg+xml"></object>  </p><br>
+<p>Z treści zadania wiemy, że średnia arytmetyczna zestawu liczb:</p> <p> <object class="math big" data="./data/1115230-0.svg" type="image/svg+xml"></object>  </p> <p>jest równa <strong>7</strong>. Zatem wyznaczamy wartość <strong>x</strong> korzystając z równania:  </p> <p> <object class="math big" data="./data/1115230-1.svg" type="image/svg+xml"></object> </p> <p>  <object class="math big" data="./data/1115230-2.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1115230-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1115230-4.svg" type="image/svg+xml"></object>   </p> <p>Zatem:</p> <p> <object class="math big" data="./data/1115230-5.svg" type="image/svg+xml"></object> </p> <p>Ustawiamy liczby z zestawu w kolejności rosnącej i dostajemy:</p> <p> <object class="math big" data="./data/1115230-6.svg" type="image/svg+xml"></object>   </p> <p>Wszystkich liczb w zestawie jest <strong>10</strong>, wobec tego medianą jest średnia</p> <p>arytmetyczna sąsiednich wartości środkowych:</p> <p> <object class="math big" data="./data/1115230-7.svg" type="image/svg+xml"></object>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

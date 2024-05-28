@@ -43,4 +43,43 @@
 </head>
 <a style="color:red; font-size:25px;">?</a><br>
 <p>Drugi zamach na Jana Pawła II miał miejsce <strong>12 maja 1982</strong> r. w <strong>Fatimie</strong> w Portugalii, podczas 11 podróży apostolskiej. </p>
-<p>Papież wyruszył do Portugalii w pierwszą rocznicę zamachu dokonanego przez Turka Mehmeta Ali Ağcę. Odwiedził sanktuarium w Fatimie, by podziękować Maryi za ocalenie życia. Wieczorem, 12 maja, Juan María Fernández y Krohn podjął próbę zasztyletowania Jana Pawła II. Zakończyła się ona niepowodzeniem, ponieważ atak został powstrzymany przez ochronę. Papież został niegroźnie zraniony<span style="font-size:11.6667px;">. </span>Zamachowiec tłumaczył policji, że Jan Paweł II jest komunistycznym szpiegiem, działającym na zlecenie Związku Radzieckiego. </p><br>
+<p>Papież wyruszył do Portugalii w pierwszą rocznicę zamachu dokonanego przez Turka Mehmeta Ali Ağcę. Odwiedził sanktuarium w Fatimie, by podziękować Maryi za ocalenie życia. Wieczorem, 12 maja, Juan María Fernández y Krohn podjął próbę zasztyletowania Jana Pawła II. Zakończyła się ona niepowodzeniem, ponieważ atak został powstrzymany przez ochronę. Papież został niegroźnie zraniony<span style="font-size:11.6667px;">. </span>Zamachowiec tłumaczył policji, że Jan Paweł II jest komunistycznym szpiegiem, działającym na zlecenie Związku Radzieckiego. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

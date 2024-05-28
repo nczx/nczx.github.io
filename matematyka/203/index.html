@@ -8,4 +8,43 @@
 <a style="color:red; font-size:25px;">Zadanie 7</a><br>
 <p>Z treści zadania wiemy, że:</p> <p> <object class="math big" data="./data/1087640-0.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087640-1.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087640-2.svg" type="image/svg+xml"></object> </p> <p>Ogólnie możemy zapisać, że:</p> <p> <object class="math big" data="./data/1087640-3.svg" type="image/svg+xml"></object> </p> <p>Należy obliczyć granicę: </p> <p> <object class="math big" data="./data/1087640-4.svg" type="image/svg+xml"></object> </p> <hr/> <p>Zauważamy, że:  </p> <p> <object class="math big" data="./data/1087640-5.svg" type="image/svg+xml"></object>       </p> <p> <object class="math big" data="./data/1087640-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1087640-7.svg" type="image/svg+xml"></object>  </p> <p>Wobec tego:</p> <p> <object class="math big" data="./data/1087640-8.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087640-9.svg" type="image/svg+xml"></object>   </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 8</a><br>
-<p>Z treści zadania wiemy, że:</p> <p> <object class="math big" data="./data/1087653-0.svg" type="image/svg+xml"></object> </p> <p>Obliczamy granicę:</p> <p> <object class="math big" data="./data/1087653-1.svg" type="image/svg+xml"></object> </p> <p>korzystając z tego, że:</p> <p> <object class="math big" data="./data/1087653-2.svg" type="image/svg+xml"></object>    </p> <hr/> <p>Wobec tego:  </p> <p> <object class="math big" data="./data/1087653-3.svg" type="image/svg+xml"></object>  </p> <p> </p> <p> <object class="math big" data="./data/1087653-4.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1087653-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087653-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1087653-7.svg" type="image/svg+xml"></object> </p> <p>Dostajemy:</p> <p> <object class="math big" data="./data/1087653-8.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087653-9.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1087653-10.svg" type="image/svg+xml"></object>  </p><br>
+<p>Z treści zadania wiemy, że:</p> <p> <object class="math big" data="./data/1087653-0.svg" type="image/svg+xml"></object> </p> <p>Obliczamy granicę:</p> <p> <object class="math big" data="./data/1087653-1.svg" type="image/svg+xml"></object> </p> <p>korzystając z tego, że:</p> <p> <object class="math big" data="./data/1087653-2.svg" type="image/svg+xml"></object>    </p> <hr/> <p>Wobec tego:  </p> <p> <object class="math big" data="./data/1087653-3.svg" type="image/svg+xml"></object>  </p> <p> </p> <p> <object class="math big" data="./data/1087653-4.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1087653-5.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087653-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1087653-7.svg" type="image/svg+xml"></object> </p> <p>Dostajemy:</p> <p> <object class="math big" data="./data/1087653-8.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1087653-9.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1087653-10.svg" type="image/svg+xml"></object>  </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

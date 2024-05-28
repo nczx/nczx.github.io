@@ -2,4 +2,43 @@
 <a style="color:red; font-size:25px;">Zadanie 3</a><br>
 <p><strong>a)</strong></p> <p> <object class="math big" data="./data/1116842-0.svg" type="image/svg+xml"></object> </p> <p>Obliczamy ocenę końcową Basi, czyli średnią ważoną jej ocen:  </p> <p> <object class="math big" data="./data/1116842-1.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116842-2.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy ocenę końcową Kasi, czyli średnią ważoną jej ocen:</p> <p> <object class="math big" data="./data/1116842-3.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116842-4.svg" type="image/svg+xml"></object>  </p> <hr/> <p><strong>b)</strong></p> <p> <object class="math big" data="./data/1116842-5.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy ocenę końcową Asi po zmianie wagi oceny za zrozumienie ze słuchu:</p> <p> <object class="math big" data="./data/1116842-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116842-7.svg" type="image/svg+xml"></object> </p> <p>Obliczamy ocenę końcową Basi po zmianie wagi oceny za zrozumienie ze słuchu:</p> <p> <object class="math big" data="./data/1116842-8.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116842-9.svg" type="image/svg+xml"></object> </p> <p>Obliczamy ocenę końcową Kasi po zmianie wagi oceny za zrozumienie ze słuchu:</p> <p> <object class="math big" data="./data/1116842-10.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1116842-11.svg" type="image/svg+xml"></object> </p> <p> </p> <p>Po zmianie wagi oceny za zrozumienie ze słuchu Basia będzie</p> <p>miała najwyższą ocenę końcową.</p> <p> </p><br><head><meta charset="UTF-8"></head>
 <a style="color:red; font-size:25px;">Zadanie 4</a><br>
-<p><strong>a)</strong></p> <p>Obliczamy średnia wysokość stypendium przypadającą na jednego studenta:  </p> <p> <object class="math big" data="./data/1117028-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1117028-1.svg" type="image/svg+xml"></object>  </p> <p>Na jednego studenta przypada średnio <strong>320 zł</strong>.</p> <hr/> <p><strong>b)</strong></p> <p>Wiemy, że:</p> <p> <object class="math big" data="./data/1117028-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1117028-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1117028-4.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1117028-5.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy średnia wysokość stypendium przypadającą na jednego studenta:</p> <p> <object class="math big" data="./data/1117028-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1117028-7.svg" type="image/svg+xml"></object>  </p> <p>Na jednego studenta przypada średnio <strong>420 zł</strong>.</p><br>
+<p><strong>a)</strong></p> <p>Obliczamy średnia wysokość stypendium przypadającą na jednego studenta:  </p> <p> <object class="math big" data="./data/1117028-0.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1117028-1.svg" type="image/svg+xml"></object>  </p> <p>Na jednego studenta przypada średnio <strong>320 zł</strong>.</p> <hr/> <p><strong>b)</strong></p> <p>Wiemy, że:</p> <p> <object class="math big" data="./data/1117028-2.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1117028-3.svg" type="image/svg+xml"></object> </p> <p> <object class="math big" data="./data/1117028-4.svg" type="image/svg+xml"></object>    </p> <p> <object class="math big" data="./data/1117028-5.svg" type="image/svg+xml"></object>  </p> <p>Obliczamy średnia wysokość stypendium przypadającą na jednego studenta:</p> <p> <object class="math big" data="./data/1117028-6.svg" type="image/svg+xml"></object>  </p> <p> <object class="math big" data="./data/1117028-7.svg" type="image/svg+xml"></object>  </p> <p>Na jednego studenta przypada średnio <strong>420 zł</strong>.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

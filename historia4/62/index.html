@@ -86,4 +86,43 @@
 <p><strong>Okoliczności przystąpienia Stanów Zjednoczonych do II wojny światowej:</strong></p>
 <p><strong>7 grudnia 1941 r</strong>. bez formalnego wypowiedzenia wojny, samoloty japońskie startujące z lotniskowców zaatakowały flotę amerykańską w <strong>Pearl Harbor na Hawajach</strong>. Rzucane z niewielkiej wysokości bomby i torpedy zatopiły lub uszkodziły 21 okrętów. Zginęło ponad 2 tysiące ludzi.</p>
 <p><strong>Dzień ataku na Pearl Harbor</strong> <strong>został uznany w Stanach Zjednoczonych za "dzień hańby"</strong>. Spowodowało to zmianę nastawienia społeczeństwa amerykańskiego wobec toczącej się II wojny światowej. Amerykanie przeszli od nastrojów izolacjonistycznych do chęci odwetu i czynnego włączenia się do działań zbrojnych po stronie aliantów.</p>
-<p>Dzień po ataku na Pearl Harbor prezydent USA - <strong>Franklin Delano Roosevelt</strong> zwrócił się do Kongresu, aby ten ogłosił stan wojny z Japonią.</p><br>
+<p>Dzień po ataku na Pearl Harbor prezydent USA - <strong>Franklin Delano Roosevelt</strong> zwrócił się do Kongresu, aby ten ogłosił stan wojny z Japonią.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

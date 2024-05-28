@@ -157,4 +157,43 @@
 <p>Opinie na temat wychowania fizycznego zawsze były podzielone. Niektórzy lubią aktywność fizyczną i uprawianie sportów zespołowych, podczas gdy inni nie są nimi zainteresowani. Moim zdaniem szkoły nie powinny wprowadzać obowiązkowego wychowania fizycznego, ale za to powinny oferować wiele różnych zajęć i aktywności sportowych. W ten sposób każdy uczeń może znaleźć coś, co sprawia mu przyjemność.</p>
 <p>Dla uczniów, którzy nie są zainteresowani sportem, konieczność uczęszczania na zajęcia wychowania fizycznego wiąże się z ogromnym stresem. Bycie zmuszanym do ćwiczeń sprawia, że ludzie ich nie lubią, co nie sprzyja promowaniu zdrowego stylu życia. Gdyby wychowanie fizyczne było nieobowiązkowe, uczniowie mogliby spróbować różnych aktywności, które lubią. Mogliby wybrać taniec, jogę, sztuki walki, a nawet wyprawy na świeżym powietrzu. To zmotywowałoby ich do aktywności i rozwijania zdrowych nawyków.</p>
 <p>Jednak nauczyciele wychowania fizycznego mogą argumentować, że sport nie powinien być opcjonalny, ponieważ jest ważny dla ogólnego stanu zdrowia. Mimo to uważam, że zmuszanie ludzi do robienia czegoś, czego nienawidzą, jest niepotrzebne. Dając uczniom więcej opcji, szkoły mogą upewnić się, że każdy ma szansę wziąć udział w zajęciach sportowych i czerpać z nich korzyści. </p>
-<p>Podsumowując, zdecydowanie uważam, że wychowanie fizyczne nie powinno być obowiązkowe, a szkoły powinny oferować szeroki zakres zajęć sportowych i aktywności fizycznych. Takie podejście przyniosłoby korzyści zarówno uczniom, jak i nauczycielom, ponieważ promowałoby pozytywne nastawienie do sprawności fizycznej, prowadząc do zdrowszego i szczęśliwszego życia.</p><br>
+<p>Podsumowując, zdecydowanie uważam, że wychowanie fizyczne nie powinno być obowiązkowe, a szkoły powinny oferować szeroki zakres zajęć sportowych i aktywności fizycznych. Takie podejście przyniosłoby korzyści zarówno uczniom, jak i nauczycielom, ponieważ promowałoby pozytywne nastawienie do sprawności fizycznej, prowadząc do zdrowszego i szczęśliwszego życia.</p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -113,4 +113,43 @@
 <p>4. I have had three siblings</p>
 <p><strong>Uzasadnienie</strong>: opis sytuacji, która rozpoczęła się w przeszłości i trwa nadal; w tym kontekście "have" jest czasownikiem statecznym, czyli nie występuje w formie <em>continuous</em> - czas <em>present perfect simple</em>.</p>
 <p>5. My mum has been trying </p>
-<p><strong>Uzasadnianie</strong>: powtarzająca się sytuacja rozpoczęta w przeszłości i trwająca nadal - <em>present perfect continuous.</em></p><br>
+<p><strong>Uzasadnianie</strong>: powtarzająca się sytuacja rozpoczęta w przeszłości i trwająca nadal - <em>present perfect continuous.</em></p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>

@@ -44,4 +44,43 @@
 <a style="color:red; font-size:25px;">Zadanie 1</a><br>
 <p>"Nowy œwiat" jest elementem rzeczywistoœci ju¿ istniej¹cej, poniewa¿ zawsze funkcjonuje w odniesieniu do niej. Przyk³adem staje siê tutaj nawi¹zanie Peipera do natury, z któr¹ zestawia tramwaj, a wiêc dzie³o techniki. Tym samym te dwie sfery nie s¹ sobie przeciwstawione, lecz ³¹czy je pewna zale¿noœæ. </p><br><a style="color:red; font-size:25px;">Zadanie 2</a><br>
 <p>Wprowadzenie "nowej substancji" do poezji polega na tym, ¿e poeta ukazuje w swym utworze now¹ sferê rzeczywistoœci. Odwo³uje siê bowiem do ¿ycia w mieœcie oraz osi¹gniêæ technicznych, które opisuje jednak w kontekœcie istniej¹cego œwiata. Interesuj¹ go te¿ zwi¹zane z tym transformacje. </p><br><a style="color:red; font-size:25px;">Zadanie 3</a><br>
-<p>Rola cz³owieka w procesie tworzenia nowego œwiata jest kluczowa. Jego zdolnoœci twórcze kszta³tuj¹ strukturê miasta. Jako jednostka niezale¿na i swobodna, pokonuje ograniczenia natury, przyczynia siê do rozwoju. Stanowi wiêc si³ê sprawcz¹, która przekszta³ca rzeczywistoœæ. </p><br>
+<p>Rola cz³owieka w procesie tworzenia nowego œwiata jest kluczowa. Jego zdolnoœci twórcze kszta³tuj¹ strukturê miasta. Jako jednostka niezale¿na i swobodna, pokonuje ograniczenia natury, przyczynia siê do rozwoju. Stanowi wiêc si³ê sprawcz¹, która przekszta³ca rzeczywistoœæ. </p><br><button id="prevPage">Poprzednia strona</button>
+<button id="nextPage">Nastepna strona</button>
+
+<script>
+    function PageUp(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]++;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+  
+    function PageDown(){
+        let url = window.location;
+        console.log(url.href);
+        let urlObject = new URL(url);
+        let path = urlObject.pathname;
+        let segments = path.split('/');
+        segments[segments.length - 2]--;
+        let newPath = segments.join('/');
+        urlObject.pathname = newPath;
+        let newUrl = urlObject.toString();
+        console.log(newUrl);
+        window.location.href = newUrl;
+    }
+
+    // Get buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+
+    // Set event listeners
+    prevButton.addEventListener('click', PageDown);
+    nextButton.addEventListener('click', PageUp);
+</script>
