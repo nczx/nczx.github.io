@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Subject Choices</title>
+    <!-- Critical dark mode styles - loaded first -->
+    <link rel="stylesheet" href="../darkmode.css">
+    <!-- Dark mode initialization script - must execute immediately -->
+    <script src="../darkmode.js"></script>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Choose a Topic</h1>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle">
+                <div class="slider round"></div>
+            </label>
+            <span id="themeText">Light Mode</span>
+        </div>
+    </header>
+    
+    <main class="subject-container">
+        <ol class="subject-list">
+            <!-- Links will be generated here by JavaScript -->
+            <script>
+                // Modify the range and directory as needed for each subject
+                for (var i = 1; i <= 100; i++) {
+                    var directory = './' + i + '/';
+                    document.write('<li class="subject-item"><a href="' + directory + '">Page ' + i + '</a></li>');
+                }
+            </script>
+        </ol>
+        
+        <div class="navigation-buttons">
+            <button id="prevPage">Poprzednia strona</button>
+            <a href="../index.html"><button>Strona główna</button></a>
+            <button id="nextPage">Nastepna strona</button>
+        </div>
+    </main>
+
+    <script>
+        function PageUp(){
+            let url = window.location;
+            let urlObject = new URL(url);
+            let path = urlObject.pathname;
+            let segments = path.split('/');
+            segments[segments.length - 2]++;
+            let newPath = segments.join('/');
+            urlObject.pathname = newPath;
+            let newUrl = urlObject.toString();
+            window.location.href = newUrl;
+        }
+      
+        function PageDown(){
+            let url = window.location;
+            let urlObject = new URL(url);
+            let path = urlObject.pathname;
+            let segments = path.split('/');
+            segments[segments.length - 2]--;
+            let newPath = segments.join('/');
+            urlObject.pathname = newPath;
+            let newUrl = urlObject.toString();
+            window.location.href = newUrl;
+        }
+
+        // Get buttons
+        const prevButton = document.getElementById('prevPage');
+        const nextButton = document.getElementById('nextPage');
+
+        // Set event listeners
+        if (prevButton) prevButton.addEventListener('click', PageDown);
+        if (nextButton) nextButton.addEventListener('click', PageUp);
+    </script>
+</body>
+</html> 

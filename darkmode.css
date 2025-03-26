@@ -1,0 +1,35 @@
+/* Critical dark mode styles to prevent flash */
+.preload * {
+    transition: none !important;
+}
+
+/* Dark mode - must be applied as early as possible */
+html.dark-mode,
+html.dark-mode body {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+}
+
+html.dark-mode header {
+    background-color: #1e1e1e !important;
+}
+
+html.dark-mode .subject-item,
+html.dark-mode li a {
+    background-color: #2d2d2d !important;
+    color: #61dafb !important;
+}
+
+html.dark-mode footer,
+html.dark-mode .container {
+    background-color: #1e1e1e !important;
+}
+
+html.dark-mode button {
+    background-color: #0d47a1 !important;
+}
+
+/* Smooth transitions after page loads */
+html:not(.preload) * {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+} 

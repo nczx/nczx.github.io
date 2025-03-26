@@ -1,3 +1,23 @@
+# Update all subject directories with new template
+$subjectDirs = @(
+    "matematyka",
+    "matematyka4",
+    "polski",
+    "polski3c2",
+    "polski4",
+    "angielski3podr",
+    "angielski3cw",
+    "angielski4podr",
+    "angielski4cw",
+    "niemiecki3podr",
+    "historia4",
+    "chemia2",
+    "wos",
+    "fizyka"
+)
+
+# Template content for subject index files
+$templateContent = @"
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,3 +72,16 @@
     </main>
 </body>
 </html>
+"@
+
+# Update each subject directory
+foreach ($dir in $subjectDirs) {
+    if (Test-Path "$dir") {
+        Write-Output "Updating $dir/index.html..."
+        Set-Content -Path "$dir/index.html" -Value $templateContent -Force
+    } else {
+        Write-Output "Directory $dir not found, skipping."
+    }
+}
+
+Write-Output "All subject directories updated successfully." 

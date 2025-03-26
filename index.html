@@ -3,196 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Subject Choice</title>
+    <!-- Critical dark mode styles - loaded first -->
+    <link rel="stylesheet" href="darkmode.css">
+    <!-- Dark mode initialization script - must execute immediately -->
+    <script src="darkmode.js"></script>
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Choose a Subject</h1>
-    <ul>
-        <li>
-            <a href="/matematyka/index.html">🧮 matematyka 3</a>     <!-- Manual Input Section -->
-            <label for="matematykaTopicInput">Strona:</label>
-            <input type="number" id="matematykaTopicInput" class="topic-input">
-            <button onclick="generateLink('/matematyka/', 'matematykaTopicInput')">➡️</button>
-            <div id="matematykaLinkContainer">
-                <ol id="matematykaLinkList"></ol>
-            </div>
-        </li>
-        <li>
-            <a href="/matematyka4/index.html">🧮 matematyka 4</a>
-            <label for="matematyka4TopicInput">Strona:</label>
-            <input type="number" id="matematyka4TopicInput" class="topic-input">
-            <button onclick="generateLink('/matematyka4/', 'matematyka4TopicInput')">➡️</button>
-            <div id="matematyka4LinkContainer">
-                <ol id="matematyka4LinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/polski/index.html">📖 polski 3 czesc 1</a>
-        <label for="polskiTopicInput">Strona:</label>
-        <input type="number" id="polskiTopicInput" class="topic-input">
-        <button onclick="generateLink('/polski/', 'polskiTopicInput')">➡️</button>
-        <div id="polskiLinkContainer">
-            <ol id="polskiLinkList"></ol>
+    <header>
+        <h1>Choose a Subject</h1>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle">
+                <div class="slider round"></div>
+            </label>
+            <span id="themeText">Light Mode</span>
         </div>
-        </li>
-        <li><a href="/polski3c2/index.html">📖 polski 3 czesc 2</a>
-            <label for="polski3c2TopicInput">Strona:</label>
-            <input type="number" id="polski3c2TopicInput" class="topic-input">
-            <button onclick="generateLink('/polski3c2/', 'polski3c2TopicInput')">➡️</button>
-            <div id="polski3c2LinkContainer">
-                <ol id="polski3c2LinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/polski4/index.html">📖 polski 4</a>
-            <label for="polski4TopicInput">Strona:</label>
-            <input type="number" id="polski4TopicInput" class="topic-input">
-            <button onclick="generateLink('/polski4/', 'polski4TopicInput')">➡️</button>
-            <div id="polski4LinkContainer">
-                <ol id="polski4LinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/angielski3podr/index.html">🍵 angielski 3 podrecznik</a>
-            <label for="angielski3podrTopicInput">Strona:</label>
-            <input type="number" id="angielski3podrTopicInput" class="topic-input">
-            <button onclick="generateLink('/angielski3podr/', 'angielski3podrTopicInput')">➡️</button>
-            <div id="angielski3podrLinkContainer">
-                <ol id="angielski3podrLinkList"></ol>
-            </div></li>
-        <li><a href="/angielski3cw/index.html">🍵 angielski 3 cwiczenia</a>
-            <label for="angielski3cwTopicInput">Strona:</label>
-            <input type="number" id="angielski3cwTopicInput" class="topic-input">
-            <button onclick="generateLink('/angielski3cw/', 'angielski3cwTopicInput')">➡️</button>
-            <div id="angielski3cwLinkContainer">
-                <ol id="angielski3cwLinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/angielski4podr/index.html">🍵 angielski 4 podrecznik</a>
-            <label for="angielski4podrTopicInput">Strona:</label>
-            <input type="number" id="angielski4podrTopicInput" class="topic-input">
-            <button onclick="generateLink('/angielski4podr/', 'angielski4podrTopicInput')">➡️</button>
-            <div id="angielski4podrLinkContainer">
-                <ol id="angielski4podrLinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/angielski4cw/index.html">🍵 angielski 4 cwiczenia</a>
-            <label for="angielski4cwTopicInput">Strona:</label>
-            <input type="number" id="angielski4cwTopicInput" class="topic-input">
-            <button onclick="generateLink('/angielski4cw/', 'angielski4cwTopicInput')">➡️</button>
-            <div id="angielski4cwLinkContainer">
-                <ol id="angielski4cwLinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/niemiecki3podr/index.html">🍺 niemiecki 3 podrecznik</a>
-            <label for="niemiecki3podrTopicInput">Strona:</label>
-            <input type="number" id="niemiecki3podrTopicInput" class="topic-input">
-            <button onclick="generateLink('/niemiecki3podr/', 'niemiecki3podrTopicInput')">➡️</button>
-            <div id="niemiecki3podrLinkContainer">
-                <ol id="niemiecki3podrLinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/historia4/index.html">📜 historia</a>
-            <label for="historia4TopicInput">Strona:</label>
-            <input type="number" id="historia4TopicInput" class="topic-input">
-            <button onclick="generateLink('/historia4/', 'historia4TopicInput')">➡️</button>
-            <div id="historia4LinkContainer">
-                <ol id="historia4LinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/chemia2/index.html">🧪 chemia 2</a>
-            <label for="chemia2TopicInput">Strona:</label>
-            <input type="number" id="chemia2TopicInput" class="topic-input">
-            <button onclick="generateLink('/chemia2/', 'chemia2TopicInput')">➡️</button>
-            <div id="chemia2LinkContainer">
-                <ol id="chemia2LinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/wos/index.html">🌎 wos</a>
-            <label for="wosTopicInput">Strona:</label>
-            <input type="number" id="wosTopicInput" class="topic-input">
-            <button onclick="generateLink('/wos/', 'wosTopicInput')">➡️</button>
-            <div id="wosLinkContainer">
-                <ol id="wosLinkList"></ol>
-            </div>
-        </li>
-        <li><a href="/fizyka/index.html">🧲 Fizyka</a>
-            <label for="fizykaTopicInput">Strona:</label>
-            <input type="number" id="fizykaTopicInput" class="topic-input">
-            <button onclick="generateLink('/fizyka/', 'fizykaTopicInput')">➡️</button>
-            <div id="fizykaLinkContainer">
-                <ol id="fizykaLinkList"></ol>
-            </div>
-        </li>
-    </ul>
+    </header>
+    
+    <main class="subject-container">
+        <ul class="subject-list">
+            <li class="subject-item">
+                <a href="/matematyka/index.html">🧮 matematyka 3</a>
+                <div class="page-selector">
+                    <label for="matematykaTopicInput">Strona:</label>
+                    <input type="number" id="matematykaTopicInput" class="topic-input">
+                    <button onclick="generateLink('/matematyka/', 'matematykaTopicInput')">➡️</button>
+                </div>
+                <div id="matematykaLinkContainer">
+                    <ol id="matematykaLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/matematyka4/index.html">🧮 matematyka 4</a>
+                <div class="page-selector">
+                    <label for="matematyka4TopicInput">Strona:</label>
+                    <input type="number" id="matematyka4TopicInput" class="topic-input">
+                    <button onclick="generateLink('/matematyka4/', 'matematyka4TopicInput')">➡️</button>
+                </div>
+                <div id="matematyka4LinkContainer">
+                    <ol id="matematyka4LinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/polski/index.html">📖 polski 3 czesc 1</a>
+                <div class="page-selector">
+                    <label for="polskiTopicInput">Strona:</label>
+                    <input type="number" id="polskiTopicInput" class="topic-input">
+                    <button onclick="generateLink('/polski/', 'polskiTopicInput')">➡️</button>
+                </div>
+                <div id="polskiLinkContainer">
+                    <ol id="polskiLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/polski3c2/index.html">📖 polski 3 czesc 2</a>
+                <div class="page-selector">
+                    <label for="polski3c2TopicInput">Strona:</label>
+                    <input type="number" id="polski3c2TopicInput" class="topic-input">
+                    <button onclick="generateLink('/polski3c2/', 'polski3c2TopicInput')">➡️</button>
+                </div>
+                <div id="polski3c2LinkContainer">
+                    <ol id="polski3c2LinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/polski4/index.html">📖 polski 4</a>
+                <div class="page-selector">
+                    <label for="polski4TopicInput">Strona:</label>
+                    <input type="number" id="polski4TopicInput" class="topic-input">
+                    <button onclick="generateLink('/polski4/', 'polski4TopicInput')">➡️</button>
+                </div>
+                <div id="polski4LinkContainer">
+                    <ol id="polski4LinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/angielski3podr/index.html">🍵 angielski 3 podrecznik</a>
+                <div class="page-selector">
+                    <label for="angielski3podrTopicInput">Strona:</label>
+                    <input type="number" id="angielski3podrTopicInput" class="topic-input">
+                    <button onclick="generateLink('/angielski3podr/', 'angielski3podrTopicInput')">➡️</button>
+                </div>
+                <div id="angielski3podrLinkContainer">
+                    <ol id="angielski3podrLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/angielski3cw/index.html">🍵 angielski 3 cwiczenia</a>
+                <div class="page-selector">
+                    <label for="angielski3cwTopicInput">Strona:</label>
+                    <input type="number" id="angielski3cwTopicInput" class="topic-input">
+                    <button onclick="generateLink('/angielski3cw/', 'angielski3cwTopicInput')">➡️</button>
+                </div>
+                <div id="angielski3cwLinkContainer">
+                    <ol id="angielski3cwLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/angielski4podr/index.html">🍵 angielski 4 podrecznik</a>
+                <div class="page-selector">
+                    <label for="angielski4podrTopicInput">Strona:</label>
+                    <input type="number" id="angielski4podrTopicInput" class="topic-input">
+                    <button onclick="generateLink('/angielski4podr/', 'angielski4podrTopicInput')">➡️</button>
+                </div>
+                <div id="angielski4podrLinkContainer">
+                    <ol id="angielski4podrLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/angielski4cw/index.html">🍵 angielski 4 cwiczenia</a>
+                <div class="page-selector">
+                    <label for="angielski4cwTopicInput">Strona:</label>
+                    <input type="number" id="angielski4cwTopicInput" class="topic-input">
+                    <button onclick="generateLink('/angielski4cw/', 'angielski4cwTopicInput')">➡️</button>
+                </div>
+                <div id="angielski4cwLinkContainer">
+                    <ol id="angielski4cwLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/niemiecki3podr/index.html">🍺 niemiecki 3 podrecznik</a>
+                <div class="page-selector">
+                    <label for="niemiecki3podrTopicInput">Strona:</label>
+                    <input type="number" id="niemiecki3podrTopicInput" class="topic-input">
+                    <button onclick="generateLink('/niemiecki3podr/', 'niemiecki3podrTopicInput')">➡️</button>
+                </div>
+                <div id="niemiecki3podrLinkContainer">
+                    <ol id="niemiecki3podrLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/historia4/index.html">📜 historia</a>
+                <div class="page-selector">
+                    <label for="historia4TopicInput">Strona:</label>
+                    <input type="number" id="historia4TopicInput" class="topic-input">
+                    <button onclick="generateLink('/historia4/', 'historia4TopicInput')">➡️</button>
+                </div>
+                <div id="historia4LinkContainer">
+                    <ol id="historia4LinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/chemia2/index.html">🧪 chemia 2</a>
+                <div class="page-selector">
+                    <label for="chemia2TopicInput">Strona:</label>
+                    <input type="number" id="chemia2TopicInput" class="topic-input">
+                    <button onclick="generateLink('/chemia2/', 'chemia2TopicInput')">➡️</button>
+                </div>
+                <div id="chemia2LinkContainer">
+                    <ol id="chemia2LinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/wos/index.html">🌎 wos</a>
+                <div class="page-selector">
+                    <label for="wosTopicInput">Strona:</label>
+                    <input type="number" id="wosTopicInput" class="topic-input">
+                    <button onclick="generateLink('/wos/', 'wosTopicInput')">➡️</button>
+                </div>
+                <div id="wosLinkContainer">
+                    <ol id="wosLinkList"></ol>
+                </div>
+            </li>
+            <li class="subject-item">
+                <a href="/fizyka/index.html">🧲 Fizyka</a>
+                <div class="page-selector">
+                    <label for="fizykaTopicInput">Strona:</label>
+                    <input type="number" id="fizykaTopicInput" class="topic-input">
+                    <button onclick="generateLink('/fizyka/', 'fizykaTopicInput')">➡️</button>
+                </div>
+                <div id="fizykaLinkContainer">
+                    <ol id="fizykaLinkList"></ol>
+                </div>
+            </li>
+        </ul>
+    </main>
 
-  <section class="switch">
-    <h4 id="h4">light mode</h4>
- <div class="container">
-    <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-    </label>
-</div></section> 
-    <div class="image-container">
+    <footer class="image-container">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 1">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 2">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 3">
-    </div>
+    </footer>
+    
     <script>
         function generateLink(baseDirectory, inputId) {
             var inputTopic = document.getElementById(inputId).value;
             var directory = baseDirectory + inputTopic + '/';
             window.location.href = directory;
         }
-        const toggleSwitch = document.getElementById('darkModeToggle');
-const h4 = document.getElementById('h4');
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-function switchTheme() {
-    if (toggleSwitch.checked) {
-        document.body.setAttribute('data-theme', 'dark');
-        h4.innerHTML = "dark mode";
-    } else {
-        document.body.removeAttribute('data-theme');
-        h4.innerHTML = "light mode";
-    }
-}
-
-// Function to toggle dark mode theme
-function toggleDarkMode(isDarkMode) {
-    if (isDarkMode) {
-        document.body.setAttribute('data-theme', 'dark');
-        h4.innerHTML = "dark mode";
-    } else {
-        document.body.removeAttribute('data-theme');
-        h4.innerHTML = "light mode";
-
-    }
-}
-
-// Function to check and set dark mode preference
-function checkDarkModePreference() {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    toggleDarkMode(isDarkMode);
-    // Set the state of the dark mode toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.checked = isDarkMode;
-}
-
-// Function to handle dark mode toggle change
-function handleDarkModeToggleChange() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const isDarkMode = darkModeToggle.checked;
-    localStorage.setItem('darkMode', isDarkMode);
-    toggleDarkMode(isDarkMode);
-}
-
-// Add event listener for dark mode toggle change
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('change', handleDarkModeToggleChange);
-
-// Check dark mode preference on page load
-checkDarkModePreference();
-
     </script>
 </body>
 </html>
