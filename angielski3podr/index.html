@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Subject Choices</title>
+    <!-- Base URL script - must be first to handle GitHub Pages -->
+    <script>
+        // Set the base URL for GitHub Pages compatibility
+        var baseUrl = '';
+        // Check if we're on GitHub Pages (contains github.io)
+        if (window.location.hostname.includes('github.io')) {
+            // Extract the repository name from the pathname
+            var pathSegments = window.location.pathname.split('/');
+            if (pathSegments.length > 1) {
+                baseUrl = '/' + pathSegments[1];
+            }
+        }
+    </script>
     <!-- Critical dark mode styles - loaded first -->
     <link rel="stylesheet" href="../darkmode.css">
     <!-- Dark mode initialization script - must execute immediately -->
@@ -30,25 +43,51 @@
             <script>
                 // Generate links to directories based on subject
                 // Modify range as needed per subject
-                var startPage = 10;
-                var endPage = 200;
+                var startPage = 4;
+                var endPage = 156;
                 
                 // Get current directory to determine subject name
                 var path = window.location.pathname;
                 var segments = path.split('/');
-                var subject = segments[segments.length - 2];
+                var subject = '';
+                
+                // Find the subject segment, accounting for GitHub Pages
+                for (var i = 0; i < segments.length; i++) {
+                    if (['matematyka', 'matematyka4', 'polski', 'polski3c2', 'polski4', 
+                         'angielski3podr', 'angielski3cw', 'angielski4podr', 'angielski4cw', 
+                         'niemiecki3podr', 'historia4', 'chemia2', 'wos', 'fizyka'].includes(segments[i])) {
+                        subject = segments[i];
+                        break;
+                    }
+                }
+                
+                if (!subject) {
+                    // Fallback: use the last directory segment
+                    subject = segments[segments.length - 2];
+                }
                 
                 // Generate links
                 for (var i = startPage; i <= endPage; i++) {
-                    var directory = '/' + subject + '/' + i + '/';
+                    var directory = baseUrl + '/' + subject + '/' + i + '/';
                     document.write('<li class="subject-item"><a href="' + directory + '">Page ' + i + '</a></li>');
                 }
             </script>
         </ol>
         
         <div class="home-button-container">
-            <a href="../index.html"><button>Strona główna</button></a>
+            <a href="javascript:void(0);" onclick="navigateTo('../index.html')"><button>Strona główna</button></a>
         </div>
     </main>
+    
+    <script>
+        // Navigation helper for GitHub Pages compatibility
+        function navigateTo(path) {
+            // Remove leading slash if present
+            if (path.startsWith('/')) {
+                path = path.substring(1);
+            }
+            window.location.href = baseUrl + '/' + path;
+        }
+    </script>
 </body>
 </html>

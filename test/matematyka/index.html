@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>Subject Content</title>
+    <title>Test Matematyka Choices</title>
     <!-- Base URL script - must be first to handle GitHub Pages -->
     <script>
         // Set the base URL for GitHub Pages compatibility
@@ -17,6 +17,7 @@
                 baseUrl = '/' + pathSegments[1];
             }
         }
+        console.log('Base URL set to:', baseUrl);
     </script>
     <!-- Critical dark mode styles - loaded first -->
     <link rel="stylesheet" href="../../darkmode.css">
@@ -27,7 +28,7 @@
 </head>
 <body>
     <header>
-        <h1>Subject Content</h1>
+        <h1>Test Matematyka Topics</h1>
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="darkModeToggle">
                 <input type="checkbox" id="darkModeToggle">
@@ -38,13 +39,18 @@
     </header>
     
     <main class="subject-container">
-        <!-- Content goes here -->
+        <ul class="subject-list">
+            <li class="subject-item">
+                <a href="javascript:void(0);" onclick="navigateTo('15/index.html')">Page 15</a>
+            </li>
+            <li class="subject-item">
+                <a href="javascript:void(0);" onclick="navigateTo('16/index.html')">Page 16</a>
+            </li>
+        </ul>
         
-        <div class="navigation-buttons">
-            <button id="prevPage">Poprzednia strona</button>
-            <a href="javascript:void(0);" onclick="navigateTo('../index.html')"><button>Spis treści</button></a>
-            <a href="javascript:void(0);" onclick="navigateTo('../../index.html')"><button>Strona główna</button></a>
-            <button id="nextPage">Nastepna strona</button>
+        <div class="home-button-container">
+            <a href="javascript:void(0);" onclick="navigateTo('../index.html')"><button>Back to Test</button></a>
+            <a href="javascript:void(0);" onclick="navigateTo('../../index.html')"><button>Back to Main</button></a>
         </div>
     </main>
 
@@ -55,9 +61,9 @@
             if (path.startsWith('/')) {
                 path = path.substring(1);
             }
+            console.log('Navigating to:', baseUrl + '/' + path);
             window.location.href = baseUrl + '/' + path;
         }
     </script>
-    <script src="../../content-navigation.js"></script>
 </body>
 </html> 

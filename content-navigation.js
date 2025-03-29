@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let url = window.location;
         let urlObject = new URL(url);
         let path = urlObject.pathname;
+        
+        // Remove baseUrl from path if it exists
+        if (typeof baseUrl !== 'undefined' && baseUrl && path.startsWith(baseUrl)) {
+            path = path.substring(baseUrl.length);
+        }
+        
         let segments = path.split('/');
         
         // Get the current page number
@@ -21,8 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPage > 1) {
             segments[segments.length - 2] = currentPage - 1;
             let newPath = segments.join('/');
-            urlObject.pathname = newPath;
-            window.location.href = urlObject.toString();
+            
+            // Add baseUrl back if needed
+            if (typeof baseUrl !== 'undefined' && baseUrl) {
+                // Remove leading slash if present
+                if (newPath.startsWith('/')) {
+                    newPath = newPath.substring(1);
+                }
+                newPath = baseUrl + '/' + newPath;
+            }
+            
+            window.location.href = newPath;
         }
     }
     
@@ -31,6 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let url = window.location;
         let urlObject = new URL(url);
         let path = urlObject.pathname;
+        
+        // Remove baseUrl from path if it exists
+        if (typeof baseUrl !== 'undefined' && baseUrl && path.startsWith(baseUrl)) {
+            path = path.substring(baseUrl.length);
+        }
+        
         let segments = path.split('/');
         
         // Get the current page number
@@ -39,8 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Go to next page
         segments[segments.length - 2] = currentPage + 1;
         let newPath = segments.join('/');
-        urlObject.pathname = newPath;
-        window.location.href = urlObject.toString();
+        
+        // Add baseUrl back if needed
+        if (typeof baseUrl !== 'undefined' && baseUrl) {
+            // Remove leading slash if present
+            if (newPath.startsWith('/')) {
+                newPath = newPath.substring(1);
+            }
+            newPath = baseUrl + '/' + newPath;
+        }
+        
+        window.location.href = newPath;
     }
     
     // Add event listeners
