@@ -6,7 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navigation helper for GitHub Pages compatibility
 function navigateTo(path) {
-    window.location.href = baseUrl + '/' + path;
+    // Remove leading slash if present
+    if (path.startsWith('/')) {
+        path = path.substring(1);
+    }
+    // Construct the full URL
+    var fullUrl = window.location.origin + baseUrl + '/' + path;
+    console.log('Navigating to:', fullUrl);
+    window.location.href = fullUrl;
 }
 
 // Link generation functionality
@@ -18,6 +25,13 @@ function generateLink(baseDirectory, inputId) {
         return;
     }
     
-    var directory = baseUrl + '/' + baseDirectory + inputTopic + '/';
-    window.location.href = directory;
+    // Remove trailing slash if present
+    if (baseDirectory.endsWith('/')) {
+        baseDirectory = baseDirectory.substring(0, baseDirectory.length - 1);
+    }
+    
+    // Construct the full URL
+    var fullUrl = window.location.origin + baseUrl + '/' + baseDirectory + '/' + inputTopic + '/';
+    console.log('Navigating to:', fullUrl);
+    window.location.href = fullUrl;
 }
