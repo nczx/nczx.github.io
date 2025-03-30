@@ -14,7 +14,7 @@ function generateLink(baseDirectory, inputId) {
     var inputTopic = document.getElementById(inputId).value;
     if (!inputTopic) {
         // Redirect to the subject index page if no topic is provided
-        navigateTo(baseUrl + '/' + baseDirectory + 'index.html');
+        navigateTo(baseDirectory + 'index.html');
         return;
     }
     
