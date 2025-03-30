@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Note: dark mode functionality is now in darkmode.js
 });
 
+// Navigation helper for GitHub Pages compatibility
+function navigateTo(path) {
+    window.location.href = baseUrl + '/' + path;
+}
+
 // Link generation functionality
 function generateLink(baseDirectory, inputId) {
     var inputTopic = document.getElementById(inputId).value;
-    if (!inputTopic) return;
+    if (!inputTopic) {
+        // Redirect to the subject index page if no topic is provided
+        navigateTo(baseUrl + '/' + baseDirectory + 'index.html');
+        return;
+    }
     
-    var directory = baseDirectory + inputTopic + '/';
+    var directory = baseUrl + '/' + baseDirectory + inputTopic + '/';
     window.location.href = directory;
 }

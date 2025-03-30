@@ -8,7 +8,7 @@
     <!-- Base URL script - must be first to handle GitHub Pages -->
     <script>
         // Set the base URL for GitHub Pages compatibility
-        var baseUrl = '';
+        var baseUrl = 'https://nczx.github.io/';
         // Check if we're on GitHub Pages (contains github.io)
         if (window.location.hostname.includes('github.io')) {
             // Extract the repository name from the pathname
@@ -201,25 +201,6 @@
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 2">
         <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.emoji.gg%2Femojis%2F3194-steamhappy.png&f=1&nofb=1&ipt=7965f68fd00f9e26ad3faa9d27a99d1e7327cb978246d9e8206bdab64018d031&ipo=images" alt="Image 3">
     </footer>
-    
-    <script>
-        // Navigation helper for GitHub Pages compatibility
-        function navigateTo(path) {
-            window.location.href = baseUrl + '/' + path;
-        }
-        
-        // Updated generateLink function
-        function generateLink(baseDirectory, inputId) {
-            var inputTopic = document.getElementById(inputId).value;
-            if (!inputTopic) {
-                // Redirect to the subject index page if no topic is provided
-                navigateTo(baseUrl + '/' + baseDirectory + 'index.html');
-                return;
-            }
-            
-            var directory = baseUrl + '/' + baseDirectory + inputTopic + '/';
-            window.location.href = directory;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
